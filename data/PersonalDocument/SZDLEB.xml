@@ -141,6 +141,7 @@
                           <measure type="leaf">38 Blatt, 18 Blatt
 												beschrieben, eingelegt Manuskript 2 Blatt,
 												Theaterkarte</measure>
+                        </span>
                           <span xml:lang="en">
                             <term type="objecttyp">Notebook</term>
                             
@@ -149,7 +150,7 @@
 												leaves; theatre ticket</measure>
                           </span>
                           <measure type="format">20x13 cm</measure>
-                        </span>
+                       
                       </extent>
                       <foliation>
                         <ab xml:lang="de">durchgehend nur recto paginiert</ab>
@@ -169,7 +170,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript 1
 												Blatt mit Adresse eigenhändig in violetter
 												Tinte</desc>
@@ -177,7 +178,7 @@
 												holograph in purple ink</desc>
                         <measure>11x8 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript 1
 												Blatt mit Notiz „Bajaderka von M. Petipa Musik von
 												G. Minkus Semjenowa“ eigenhändig (?) in
@@ -188,7 +189,7 @@
 												(?) in pencil</desc>
                         <measure>16x10 cm</measure> 
                      </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Theaterkarten des Moskauer Kunsttheaters, No 10 und No 11 auf einem Bogen, verso Datumsstempel 14. September 1928
 											</desc>
                         <desc xml:lang="en">theatre tickets for
@@ -297,7 +298,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript 3
 												Blatt eigenhändig in Bleistift mit dem Titel
 												„Richard Strauss 1935 Juni Brieg“</desc>
@@ -306,7 +307,7 @@
 												Strauss 1935 Juni Brieg&quot;</desc>
                         <measure>17x11 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Telegrammaufgabeblatt des Österreichischen Telegraph blanko</desc>
                         <desc xml:lang="en">Austrian Telegraph telegram form, blank</desc>
                         <measure>23x18 cm</measure>
@@ -338,6 +339,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Hauptbuch</title>
+              <title type="Einheitssachtitel" xml:lang="de">Hauptbuch</title>
+              <title type="Einheitssachtitel" xml:lang="en">Principal Ledger</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">&quot;Hauptbuch&quot; (Principal
 								Ledger)</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
@@ -446,7 +449,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">              
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">              
           <desc xml:lang="de">Brief des Verlags Mizpah
 												Publishing Co. LTD. an Stefan Zweig, datiert
 												Tel-Aviv, 7th January 1934</desc>
@@ -455,7 +458,7 @@
 												Tel-Aviv, 7th January 1934</desc>
                         <measure>28x22 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Postkarte des Verlags Curtis Brown LTD., datiert Berlin, d. 2.5.1933.</desc>
                         <desc xml:lang="en">postcard
 													from Curtis Brown Ltd, publishers, dated Berlin, 2
@@ -479,7 +482,7 @@
             <textClass>
               <keywords>
                 <term type="classification" xml:lang="de">Hauptbuch</term>
-                <term type="classification" xml:lang="en">General Ledger</term>
+                <term type="classification" xml:lang="en">Principal Ledger</term>
                 <term ref="http://d-nb.info/gnd/1080163751" type="person">Meingast,
 									Anna</term>
                 <term ref="http://d-nb.info/gnd/118637460" type="person">Zweig,
@@ -1329,7 +1332,7 @@
 												pencil</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">
+                        <span xml:lang="de">  
                           <term type="objecttyp">Notizbuch</term>
                           <measure type="leaf">28 Blatt, 24
 												Blatt beschrieben, eingelegt Typoskript 1
@@ -1357,7 +1360,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Typoskript 1 Blatt mit diversen Adressen in Paris, schwarzes Farbband mit eigenhändiger Anmerkung in violetter Tinte</desc>
                         <desc xml:lang="en">inserted typescript, 1 leaf with various Paris addresses, black ribbon with holograph annotation in purple ink</desc>
                       </item>
