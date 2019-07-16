@@ -1,0 +1,459 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Marie Antoinette</title>
+        <author>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
+						Karl-Franzens-Universität Graz </orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.thema.1</idno>
+        <date when="2017-12-15">15.12.2017</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
+      </editorialDecl>
+      <projectDesc>
+        <ab>
+          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
+        </ab>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
+					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
+					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
+					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+					(z.B. digitalen Editionen) möglich werden. </p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="Einleitung" xml:lang="de">
+        <p xml:lang="de">Über mehrere Jahre arbeitete <name>Stefan Zweig</name> an vier umfangreichen Werken, die thematisch in der Epoche der Französischen Revolution oder in deren Umfeld angesiedelt sind.
+					Zunächst entstand 1929 <hi style="italic">Joseph Fouché. Bildnis eines politischen Menschen</hi>, darauf folgten 1931 die Tragikomödie <hi style="italic">Das Lamm des Armen</hi>
+					und 1932 die Biographie <hi style="italic">Marie Antoinette – Bildnis eines mittleren Charakters</hi>. Der vierte Text ist ein Drama um den aus Mainz stammenden Revolutionär <name ref="#SZDPER.1569" type="person">Adam Lux</name>, an dem <name>Zweig</name> schon im Sommer 1928 geschrieben hatte. Es blieb jedoch unvollendet und wurde erst im Jahr 1984 aus
+					dem Nachlass veröffentlicht.</p>
+        <p xml:lang="de">
+          <hi style="italic">Marie Antoinette</hi> wurde schließlich eines der meistverkauften Bücher des Jahres 1932 und noch im Erscheinungsjahr der Erstausgabe in zahlreiche Sprachen
+					übersetzt. <name>Zweig</name> erzählt darin die Geschichte der in Wien geborenen Prinzessin <name ref="#SZDPER.907" type="person">Maria Antonia</name> aus dem Haus Habsburg, die
+					1770 im Alter von erst 15 Jahren mit dem Thronfolger Frankreichs, dem späteren <name ref="#SZDPER.863" type="person">König Louis XVI. </name>, verheiratet wurde und deren
+					ausschweifendes Leben als Königin <name ref="#SZDPER.907" type="person">Marie Antoinette</name> am Hof von Versailles während der Französischen Revolution unter der Guillotine
+					endete. Damit griff <name>Zweig</name> auf ein Kompositionsmuster zurück, das er schon zuvor in seinem erzählerischen Werk ausgiebig erprobt hatte. Denn auch in seinen Novellen
+					stehen häufig Personen im Mittelpunkt, deren gesellschaftlich hohe und vermeintlich sichere Position durch äußere Einflüsse und innere Konflikte so sehr erschüttert wird, dass
+					sogar ihr Leben bedroht sein kann. Mit der Biographie der schottischen Königin <name ref="#SZDPER.905" type="person">Maria Stuart</name> wählte <name>Zweig</name> einige Jahre
+					später nochmals einen ganz ähnlichen historischen Stoff für eines seiner Bücher aus. </p>
+        <p xml:lang="de">Unter den von ihm hinterlassenen Papieren fand sich bisher keine komplette Fassung des Manuskripts von <hi style="italic">Marie Antoinette</hi>, das als Buch in der Erstausgabe
+					beinahe 650 Druckseiten umfasst. Allerdings sind aus mehreren Arbeitsstufen und der Korrekturphase Skizzen, einzelne Kapitel oder Fragmente davon erhalten geblieben. In
+						<name>Zweigs</name> Autographensammlung, die ihm wichtige Anregungen für seine literarischen Arbeiten bot, ist außerdem eine beachtliche Zahl von Handschriften aus dem Umfeld
+						<name ref="#SZDPER.907" type="person">Marie Antoinettes</name> und der Zeit der Französischen Revolution nachweisbar. Unter den Bänden seiner Bibliothek sind keine Quellenwerke
+					für <hi style="italic">Marie Antoinette</hi> mehr vorhanden, allerdings liegen zahlreiche Belegexemplare von Übersetzungen des Buches als sogenannte „Hausexemplare“ vor.</p>
+        <p xml:lang="de">Die aus verschiedenen Beständen stammenden Materialien, erlauben in der hier erstmals präsentierten Zusammenstellung trotz der Lücken in der Überlieferung einen umfassenden Einblick
+					in die Arbeit <name>Stefan Zweigs</name> an einem seiner bekanntesten Werke.</p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6813" ref="#SZDLEB.2">Stefan Zweigs Tagebuch<lb></lb> aus dem Jahr 1931 </title>
+          <idno>SZ-AAP/L7</idno>
+        </head>
+
+        <p>Nach einer Pause von mehr als einem Jahrzehnt begann <name>Stefan Zweig</name> im Herbst 1931 erneut damit, Tagebuch zu führen. Der konkrete Anlass war, wie <name>Zweig</name>
+					selbst zu Beginn des Bandes angibt, der Tod <name ref="#SZDPER.1273" type="person">Arthur Schnitzlers</name>, doch auch die politischen Gegebenheiten haben ihn nach seinen eigenen
+					Worten dazu gebracht, seinen Tagesablauf zu resümieren. Mit <name ref="#SZDPER.1273" type="person">Schnitzler</name> war nach <name ref="#SZDPER.1170" type="person">Rainer Maria
+						Rilke</name> (1926) und <name ref="#SZDPER.630" type="person">Hugo von Hofmannsthal</name> (1929) ein weiterer Kollege verstorben, mit dem <name>Zweig</name> in Kontakt
+					gestanden hatte und den er seit seinen eigenen Anfängen als Schriftsteller bewunderte.</p>
+
+        <p>In den Zeitraum der Aufzeichnungen fällt auch <name>Zweigs</name> 50. Geburtstag am 28. November 1931, den er nicht zu Hause in Salzburg, sondern gemeinsam mit seinem Kollegen <name ref="#SZDPER.1552" type="person">Carl Zuckmayer</name> in München feierte. 
+          Ausführlich beschriebene literarische Projekte sind die Arbeit an der Biographie der französischen
+					Königin <name ref="#SZDPER.907" type="person">Marie Antoinette</name>, die in den Tageseintragungen meist mit dem Kürzel „M. A.“ bezeichnet ist, sowie Kontakte zu <name ref="#SZDPER.1374" type="person">Richard Strauss</name>, für dessen Oper <hi style="italic">Die schweigsame Frau</hi>
+
+          <name>Zweig</name> das Libretto verfasste. Zu einem späteren Zeitpunkt notierte <name>Zweig</name> auf der Titelseite des Tagebuchs mit blauem Buntstift „Richard Strauss darin“.
+					Dies geschah vermutlich während der Vorbereitungen seines autobiographischen Werkes <hi style="italic">Die Welt von Gestern</hi>, in dem er die Zusammenarbeit mit <name ref="#SZDPER.1374" type="person">Strauss</name> ausführlich schildert.</p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6835" ref="#SZDMSK.67">Lesezeichen der Lektüre<lb></lb> der Zeitschrift <hi style="italic">Le Moniteur</hi>
+          </title>
+          <idno>SZ-SAH/W1</idno>
+        </head>
+        <p>Zwar gibt <name>Stefan Zweig</name> in seinen Büchern nur selten die Fundstellen der von ihm benutzten Quellen und Zitate an, doch hat er sich für jede seiner
+					historisch-biographischen Arbeiten intensiv mit Originaldokumenten und primären Werken beschäftigt. </p>
+        <p>Aus zwei im Jahr 1840 erschienenen Bänden mit Nachdrucken der Pariser Tageszeitung <hi style="italic">Le Moniteur</hi> aus dem Jahr 1793, die <name>Stefan Zweig</name> bei seiner
+					Recherche zur Französischen Revolution durcharbeitete, sind 17 Lesezeichen mit seinen Notizen erhalten geblieben. Nacheinander riss und schnitt er während der Lektüre unter anderem
+					einen Briefentwurf, ein an ihn adressiertes Briefkuvert des Insel Verlags und einen Formularvordruck in schmale Streifen. Zwar sind die von <name>Zweig</name> benutzten Bücher
+					verschollen, doch haben sie dem Schauspieler <name ref="#SZDPER.1568" type="person">Georg Marischka</name>, aus dessen Nachlass die Lesezeichen stammen, offenbar noch zur Verfügung
+					gestanden, denn er nahm die Beschriftungen mit genauen Angaben der römischen Bandnummern und der Seitenzahlen der von <name>Zweig</name> gekennzeichneten Stellen vor. </p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6834" ref="#SZDMSK.283">Erste Werknotizen<lb></lb> zu <hi style="italic">Marie Antoinette</hi>
+          </title>
+          <idno>SZ-AP2/W-S11</idno>
+        </head>
+
+        <p>Das kleinformatige Notizbuch wurde von <name>Stefan Zweig</name> vermutlich zu Beginn der 1930er Jahre benutz und enthält Skizzen zu mehreren, zum Teil noch nicht identifizierten
+					Werken. Die ersten Seiten sind mit Aufzeichnungen zu einer Novelle gefüllt, wobei <name>Zweig</name> dieser Angabe hier noch die Bezeichnung „(Roman)“ hinzufügte. An mehreren
+					Stellen finden sich zudem unterschiedlich lange Notizen zu <hi style="italic">Marie Antoinette</hi>, die jeweils mit entsprechenden Überschriften <name>Zweigs</name> versehen sind.
+					Dem Inhalt und Charakter nach handelt es sich hierbei um Aufzeichnungen aus einem sehr frühen Arbeitsstadium.</p>
+        <p>Zahlreiche Seiten sind nicht beschriftet, mindestens ein beschriebenes Blatt wurde herausgetrennt. Auf dem davon im Buch verbliebenen Rest ist noch der Wortanfang „An“ der
+					Überschrift „Antoinette“ oder möglicherweise auch „Au“ für Autografen zu erkennen.</p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6826" ref="#SZDMSK.61">Werknotizen zum Kapitel<lb></lb>
+            <hi style="italic">Geheimnis des Alcovens</hi>
+          </title>
+          <idno>SZ-AAP/W42</idno>
+        </head>
+        <p>Wie beinahe alle bekannten Notizbücher <name>Stefan Zweigs</name> enthält auch dieses Exemplar Aufzeichnungen zu mehreren Werken sowie weitere kürzere Notizen. Den größten Teil
+					nehmen Entwürfe eines unveröffentlichten erzählerischen Werkes ein. Wie zumeist in dieser Arbeitsstufe schrieb <name>Stefan Zweig</name> den eigentlichen Text auf der rechten
+					Heftseite und fügte anschließend in oftmals mehreren Überarbeitungen auf der linken Seite Einfügungen und ausführliche Korrekturen hinzu. Die Ergänzungen sind zur Abgrenzung oft
+					schräg zur Schreibrichtung des Haupttextes notiert und zum Teil auch am Einsatz unterschiedlicher Schreibstoffe zu erkennen.</p>
+
+        <p>Zu einem anderen Zeitpunkt nutzte <name>Stefan Zweig</name> dasselbe Notizbuch in umgekehrter Richtung, wodurch sich die Ausrichtung des Textes entsprechend änderte. In diesem Teil
+					nimmt das spätere zweite Kapitel des Buches <hi style="italic">Marie Antoinette</hi> die meisten Seiten ein. Es handelt sich dabei um die vermutlich erste Fassung, die, wie bei
+						<name>Zweig</name> in dieser Arbeitsphase üblich, mit Bleistift geschrieben ist. Noch ist der spätere Titel des Kapitels <hi style="italic">Geheimnis des Alkovens</hi> nicht
+					gefunden, an seiner Stelle notierte <name>Zweig</name> noch „Schlagwort“. Die folgenden Aufzeichnungen bestehen aus oftmals unvollständigen und noch nicht komplett ausformulierten
+					Sätzen. Die wohl nächste Stufe der Bearbeitung dieses Kapitels ist ebenfalls erhalten geblieben. </p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6836" ref="#SZDMSK.68">Manuskript des Kapitels<lb></lb>
+            <hi style="italic">Geheimnis des Alcovens</hi>
+          </title>
+          <idno>SZ-SAH/W2</idno>
+        </head>
+        <p>Obwohl der Text in dieser mit Tinte niedergeschriebenen Fassung noch längst nicht seine endgültige Form erhalten hatte und von <name>Stefan Zweig</name> noch in mehreren Gängen
+					überarbeitet wurde, hat das Kapitel inzwischen die Überschrift „Geheimnis des Alcovens“ bekommen, bei der für den Druck der Erstausgabe lediglich die Schreibweise des Wortes
+					„Alcoven“ in „Alkoven“ geändert wurde.</p>
+        <p>Deutlich ist erkennbar, dass einige Worte und Satzteile nach der Niederschrift umgehend wieder gestrichenen wurden. Darauf folgte,
+					weiterhin mit der für <name>Zweigs</name> Manuskripte charakteristischen violetten Tinte, ein Korrekturgang, dem auch größere Passagen zum Opfer fielen, und schließlich, nun der
+					Übersichtlichkeit halber mit roter Tinte ausgeführt, eine letzte Überarbeitung dieser Stufe des Manuskripts. </p>
+
+        <p>In diesem Kapitel beschreibt <name>Stefan Zweig</name> mit offenen Worten die ehelichen Probleme nach der Hochzeit <name ref="#SZDPER.907" type="person">Marie Antoinetts</name> mit
+					dem französischen Dauphin und späteren König <name ref="#SZDPER.863" type="person">Louis XVI. </name> Nicht zuletzt aufgrund dieser von Zeitgenossen als allzu freizügig
+					kritisierten Passagen entschloss sich <name>Zweig</name>, das Kapitel bei der späteren Überarbeitung des Buches zu streichen und Teile daraus in andere Abschnitte einfließen zu
+					lassen. Als Zusatzmaterial hat sich ein ausführlicher Versionsvergleich zwischen dem vorliegenden Manuskript- und der Druckfassung erhalten, den der Schauspieler <name ref="#SZDPER.1568" type="person">Georg Marischka</name> angefertigt hat, in dessen Sammlung zu <name ref="#SZDPER.1017" type="person">Napoeleon I. </name> die Blätter
+						<name>Stefan Zweigs</name> nach dessen Tod gelangt waren. </p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6838 o:szd.6839 o:szd.6840 o:szd.6841" ref="#SZDMSK.69 #SZDMSK.70 #SZDMSK.71 #SZDMSK.72">Skizzen zu Kapiteln<lb></lb> von <hi style="italic"> Marie Antoinette</hi>
+          </title>
+          <idno>SZ-SAM/W1</idno>
+        </head>
+
+        <p>Die mit Tinte verfassten Blätter gehören vermutlich in dieselbe Bearbeitungsstufe des Gesamtmanuskripts wie jene zum Abschnitt <hi style="italic">Geheimnis des Alcovens</hi>. Sie
+					umfassen Teile mehrerer Kapitel, darunter <hi style="italic">Die neue Gesellschaft</hi> sowie <hi style="italic">Die Königin wird unbeliebt</hi> und <hi style="italic">Die letzte
+						Fahrt</hi>.</p>
+
+        <p>Deutlich ist zu erkennen, dass einige Passagen gleich nach der Niederschrift gestrichen oder geändert wurden. Außerdem hat es noch einen Korrekturgang in derselben violetten
+					Tintenfarbe gegeben. Ein nächster Überarbeitungsschritt mit roter Tinte wurde hier nicht ausgeführt oder ist nicht nötig gewesen. Einige Markierungen mit blauem Buntstift verweisen
+					auf längere Einfügungen, die auf gesonderten Blättern notiert waren, welche jedoch nicht mehr beiliegen. Das so als Ergänzung markierte Blatt zu einem Zitat <name ref="#SZDPER.489" type="person">Johann Wolfgang von Goethes</name> gehört in das Kapitel <hi style="italic">Die Freunde fliehen</hi>, dessen übrige Seiten fehlen.</p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6842" ref="#SZDMSK.66">Ein Bogen aus dem Typoskript<lb></lb> von <hi style="italic">Marie Antoinette</hi>
+            <lb></lb> mit Korrekturen</title>
+          <idno>SZ-SHB/W1</idno>
+        </head>
+        <p>Wie die meisten Teile der unterschiedlichen Arbeitsfassungen von <hi style="italic">Marie Antoinette</hi> ist auch die auf die handschriftlichen Ausarbeitungen folgende
+					Typoskriptfassung größtenteils verschollen. Auf einem der wenigen erhaltenen Einzelblätter ist zu sehen, dass auch an dieser vermeintlichen Reinschrift noch erhebliche Korrekturen
+					vorgenommen wurden, bis die Passage in veränderter Form in das Kapitel <hi style="italic">Die Eroberung von Paris</hi> übernommen wurde. Zur Niederschrift mit der Schreibmaschine
+					wurde ein besonders großes Papierformat gewählt, so dass genügend Platz für einen breiten Korrekturrand vorhanden war. </p>
+        <p>Nach der Übertragung in die nächste Stufe des Manuskripts wurde dieser Bogen als Makulatur wohl zum Verpacken eines Buches oder eines Papierstapels benutzt, wie an Resten von
+					Klebeband und den vor allem auf der Rückseite des Bogens deutlich sichtbaren Knickspuren zu erkennen ist. Die rückseitig notierte Angabe „1924“ bezieht sich vermutlich auf den
+					Inhalt dieses Pakets.</p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title ref="#SZDMSK.73">Korrekturfahnen der Erstausgabe<lb></lb> von <hi style="italic">Marie Antoinette</hi>
+          </title>
+          <idno>ARC. Ms. Var. 305 3</idno>
+          <ref>http://merhav.nli.org.il/primo-explore/fulldisplay?vid=NLI&amp;docid=NNL_ARCHIVE_AL003432560&amp;context=L&amp;lang=en&quot;</ref>
+        </head>
+        <p>Die als Fragment aus dem Nachlass von <name>Stefan Zweigs</name> italienischer Übersetzerin <name ref="#SZDPER.927" type="person">Lavinia Mazzucchetti</name> erhaltenen
+					Korrekturfahnen zu <hi style="italic">Marie Antoinette</hi> beginnen im Abschnitt <hi style="italic">Geheimnis des Alkovens</hi> und schließen das folgende Kapitel <hi style="italic">Debüt in Versailles</hi> und Teile von <hi style="italic">Der Kampf um ein Wort</hi> ein. Zum Großteil handelt es sich um den dritten Korrekturgang des Buches,
+					wie entsprechende Aufdrucke der Leipziger Druckerei Poeschel &amp; Trepte zu Beginn jedes Bogens ausweisen. Obwohl der Text bereits gesetzt war, wurden neben kleineren Korrekturen
+					noch immer ganze Absätze gestrichen. Ein Teil des Kapitels <hi style="italic">Der Kampf um ein Wort</hi> liegt wegen der intensiven Überarbeitung sogar zusätzlich in der vierten
+					Korrekturfassung vor, in der noch immer geändert wurde. Die hier bereits eingedruckten und zum Teil auch handschriftlich nachgetragenen Seitenüberschriften wurden wie auch die
+					Kapitelnummern nicht in den Druck der Erstausgabe übernommen. </p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6809 o:szd.6810 o:szd.6811 o:szd.6812" ref="#SZDLEB.4 #SZDLEB.5 #SZDLEB.6 #SZDLEB.7">Verlagsverträge zu Übersetzungen<lb></lb> von <hi style="italic">Marie
+							Antoinette</hi>
+          </title>
+          <idno>SZ-AAP/L13.1-13.4</idno>
+        </head>
+
+        <p>Die Nutzungs- und Übersetzungsrechte seiner Texte hat <name>Stefan Zweig</name> stets selbst verwaltet, was mit einem erheblichen Arbeitsaufwand für Buchhaltung und Korrespondenz
+					verbunden war. Wie zu zahlreichen seiner Werke haben sich auch zu <hi style="italic">Marie Antoinette</hi> Verträge mit ausländischen Verlagen erhalten. </p>
+      </div>
+      <div type="Thema" xml:lang="de">
+        <head>
+          <title facs="o:szd.6837" ref="#SZDLEB.3">Das Hauptbuch aus<lb></lb> Stefan Zweigs Büro</title>
+          <idno>SZ-SAM/L1</idno>
+        </head>
+        <p>Ein bedeutender Teil der Arbeit im Büro <name>Stefan Zweigs</name> galt der Vermarktung seines weltweit vertriebenen Werkes. Zur besseren Übersicht wurde ab August 1932 das so
+					genannte Hauptbuch angelegt, in dem auf vorgedruckten Doppelseiten die verkauften Rechte für jedes Werk und die dafür in Verträgen vereinbarten Konditionen mit Verlagen,
+					Übersetzern und Filmstudios festgehalten wurden.</p>
+
+        <p>In dem großformatigen Band sind in unregelmäßiger doch annähernd chronologischer Folge monographische Werke und in einigen Fällen auch Essays aus Sammelbänden einzeln aufgeführt und
+					über ein Inhaltsverzeichnis erschlossen. Für elf fremdsprachige Ausgaben, deren Erscheinen mit großer Sicherheit absehbar war, war bereits je eine Zeile vorgedruckt worden. Weitere
+					zehn Einträge in anderen Sprachen konnten in die Felder darunter eingeschrieben werden, wobei dieser Raum bei mehreren Titeln nur knapp ausreichte. Die handschriftlichen Einträge
+					stammen vor allem von <name>Stefan Zweig</name> selbst, von seiner Frau <name ref="#SZDPER.1556" type="person">Friderike</name> sowie von der Sekretärin <name ref="#SZDPER.1575" type="person">Anna Meingast</name>.</p>
+
+        <p>Als <name>Stefan Zweig</name> sich ab 1934 zunächst zeitweise in England niederließ und den Salzburger Haushalt 1937 schließlich ganz auflöste, verblieb das Hauptbuch auf seinen
+					ausdrücklichen Wunsch bei <name ref="#SZDPER.1575" type="person">Anna Meingast</name>. Der letzte Eintrag auf der Doppelseite 77 ist derjenige für den Sammelband <hi style="italic">Begegnungen mit Menschen, Büchern, Städten</hi>, der 1937 erschien. Vorsorglich war auf der Doppelseite 75 bereits der Band <hi style="italic">Ungeduld des Herzens</hi> noch
+					mit seinem Arbeitstitel <hi style="italic">Mord aus Mitleid</hi> eingetragen worden, nachdem die französische Rechte lange vor der Fertigstellung des Manuskripts schon im Dezember
+					1936 an den Pariser Verlag Grasset verkauft worden waren. Das Werk erschien in der deutschen Originalausgabe erst 1939, als das Hauptbuch nicht mehr aktualisiert wurde. Für den
+					weiteren Gebrauch in der Exilzeit war jedoch eine Abschrift davon erstellt worden, die in <name>Zweigs</name> Londoner Büro weitergeführt wurde und sich heute im Besitz seiner
+					Erben befindet.</p>
+      </div>
+      <div type="Einleitung" xml:lang="en">
+
+        <p>Over a period of several years <name>Stefan Zweig</name> worked on four substantial books set in the age and sphere of the French Revolution. 
+          The first of these was his biographical novel <hi style="italic">Joseph Fouché. Bildnis eines politischen Menschen</hi> (Joseph Fouche: The Portrait Of A Politician) from 1929, 
+          followed in 1931 by the tragicomedy <hi style="italic">Das Lamm des Armen</hi> (The One Ewe Lamb) and in 1932 by the biography <hi style="italic">Marie Antoinette – Bildnis eines mittleren Charakters</hi> 
+          (Marie Antoinette – The Portrait of an Average Woman). Zweig’s fourth enterprise was a play about the Mainz Jacobin <name ref="#SZDPER.1569" type="person">Adam Lux</name>. 
+          Although it had preoccupied <name>Zweig</name> as early as the summer of 1928, it remained unfinished and was ultimately published from his posthumous papers in 1984.</p>
+        <p>
+          <hi style="italic">Marie Antoinette</hi> turned out one of the best-selling titles of 1932, 
+          a book translated into several languages within the year of its publication. 
+          Here, <name>Zweig</name> narrates the story of the Vienna-born Princess <name ref="#SZDPER.907" type="person">Maria Antonia</name> of Habsburg, who in 1770, aged only fifteen, 
+          married the heir to the French throne, soon to be <name ref="#SZDPER.863" type="person">King Louis XVI.</name>, and whose extravagant life as Queen <name ref="#SZDPER.907" type="person">Marie Antoinette</name> 
+          at the court of Versailles ended under the guillotine during the French Revolution. 
+          Thus, <name>Zweig</name> resorted to a pattern of composition that he had extensively tried and tested in his earlier narrative prose: 
+          his novellas similarly tend to centre on personages whose august and seemingly secure position in society is shaken by external events and inner conflicts, 
+          to a degree that their very life may be in danger. A few years later, <name>Zweig</name> would choose a very similar historical subject matter in his biography of <name ref="#SZDPER.905" type="person">Mary</name>, Queen of Scots.</p>
+        <p>So far, no complete manuscript of <hi style="italic">Marie Antoinette</hi> – a book whose first edition runs to nearly 650 pages – has been discovered among <name>Zweig</name>’s posthumous papers. 
+          However, a number of drafts, individual chapters, and chapter fragments dating from various stages of writing and proofreading have survived. 
+          In addition, <name>Zweig</name>’s autograph collection, which served him as an important source of inspiration for several of his works, 
+          is known to have contained a significant number of manuscripts belonging to the sphere of <name ref="#SZDPER.907" type="person">Marie Antoinette</name> and the age of the French Revolution. 
+          While the remains of his library no longer include any source works for <hi style="italic">Marie Antoinette</hi>, they do comprise several voucher copies (so-called “Hausexemplare”) 
+          of his book in foreign-language editions.</p>
+        <p>In spite of the gaps in the transmission, the surviving materials, drawn from various collections and here presented as an ensemble for the first time, 
+          offer a detailed insight into <name>Stefan Zweig</name>’s work on one of his best-known books.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6835" ref="#SZDMSK.67">Journal kept during the autumn of 1931</title>
+        </head>
+
+        <p>After a more than decade-long hiatus, <name>Stefan Zweig</name> resumed keeping a journal in the autumn of 1931. 
+          As <name>Zweig</name> himself explains at the beginning of the volume, his specific motivation was the death of <name ref="#SZDPER.1273" type="person">Arthur Schnitzlers</name>, 
+          but he also points to the political circumstances as a reason for wishing to keep a record of the day-to-day events of his life. 
+          <name ref="#SZDPER.1273" type="person">Schnitzler</name>’s death, following that of <name ref="#SZDPER.1170" type="person">Rainer Maria
+            Rilke</name> (in 1926) und <name ref="#SZDPER.630" type="person">Hugo von Hofmannsthal</name> (in 1929), 
+          marked the passing of yet another colleague whom <name>Zweig</name> had known well and whom he had admired since his earliest days as a writer.</p>
+
+        <p>The space of the diary also covers <name>Zweig</name>’s 50th birthday on November 28, 1931, 
+          which he celebrated not at his Salzburg home, but with his colleague <name ref="#SZDPER.1552" type="person">Carl Zuckmayer</name> in Munich. 
+          Literary projects discussed in some detail include work on his biography of <name ref="#SZDPER.907" type="person">Marie Antoinette</name>, Queen of France, 
+          usually referenced in the journal by “M.A.”, and his communications with <name ref="#SZDPER.1374" type="person">Richard Strauss</name>, 
+          for whose opera <hi style="italic">Die schweigsame Frau</hi> (The Silent Woman) <name>Zweig</name> wrote the libretto. 
+          At some later point, <name>Zweig</name> added a note in blue crayon on the book’s title page, 
+          “Richard Strauss darin” (“Richard Strauss inside”) – probably in the course of preparations for his autobiographical work, 
+          <hi style="italic">Die Welt von Gestern</hi> (The World of Yesterday), in which he provides an extensive account of his collaboration with <name ref="#SZDPER.1374" type="person">Strauss</name>. 
+          </p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6835" ref="#SZDMSK.67">Bookmarks from a study of<lb></lb>
+            <hi style="italic">Le Moniteur</hi>
+          </title>
+          <idno>SZ-SAH/W1</idno>
+        </head>
+        <p>
+          <name>Zweig</name> rarely provides exact references for his quotations, yet all his historico-biographical studies 
+          were based on a close examination of original documents and primary sources.</p>
+
+        <p>17 bookmarks with his handwritten notes have survived, formerly inserted between the pages of two 1840 volumes 
+          reprinting the Parisian newspaper <hi style="italic">Le Moniteur Universel</hi> from 1793, through which <name>Stefan Zweig</name> worked his way in the 
+          course of his research. One by one, he tore and cut narrow strips from various pieces of paper, including a draft letter, 
+          an Insel Verlag envelope addressed to him, and a pre-printed form. While the set used by <name>Zweig</name> is no longer extant, 
+          the books must still have been available to the actor <name ref="#SZDPER.1568" type="person">Georg Marischka</name>, in whose estate the bookmarks were discovered: 
+          happily, he took care to note the precise volume and page numbers from which he removed the paper strips, thus allowing for 
+          identification of the sources consulted by <name>Zweig</name>.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6834" ref="#SZDMSK.283">First sketches for <lb></lb>
+            <hi style="italic">Marie Antoinette</hi>
+          </title>
+          <idno>SZ-AP2/W-S11</idno>
+        </head>
+        <p>
+
+          <name>Stefan Zweig</name> probably used this small-sized notebook during his travels in the early 1930s. It contains sketches for several works, 
+          some as yet unidentified. The first pages contain notes for a novella, a designation to which <name>Zweig</name> appended that of “(Roman)” (“novel”). 
+          There are also several jottings of varying length for <hi style="italic">Marie Antoinette</hi>, all captioned by <name>Zweigs</name>. 
+          Content and style indicate that these notes are from a very early stage of writing.</p>
+        <p>Numerous pages are blank, and at least one written page has been removed. On the stub that remained in the book the first letters of a word are legible
+          – “An” for the heading “Antoinette”, or possibly “Au” for “Autografen” (“Autographs”), as is written elsewhere.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6826" ref="#SZDMSK.61">Sketches for the chapter<lb></lb>
+            <hi style="italic">Geheimnis des Alcovens</hi>
+          </title>
+          <idno>SZ-AAP/W42</idno>
+        </head>
+        <p>Like nearly all known notebooks used by <name>Stefan Zweig</name>, this one contains notes for several works, 
+          along with additional briefer jottings. The major part is taken up by sketches for an unpublished work of fiction. 
+          As was his wont at this stage of work, <name>Stefan Zweig</name> wrote the text proper on the right-hand side, 
+          then added insertions and extensive corrections on the left, often going through several revisions. 
+          To increase their visibility, these additions are frequently written at an oblique angle to the main text, 
+          sometimes employing different writing materials.</p>
+
+        <p>At some point, <name>Stefan Zweig</name> reversed the notebook for further use, thus inverting the orientation of the text. 
+          In this section, most of the pages are occupied by the later part of the second chapter of <hi style="italic">Marie Antoinette</hi>. 
+          This is probably the first version, written in pencil, as would reflect <name>Zweig</name>’s habit at this stage. 
+          The chapter’s later title, <hi style="italic">Geheimnis des Alkovens</hi> (“Secret of the Alcove”), has not yet appeared; in its place, 
+          <name>Zweig</name> simply set down “Schlagwort” (“catchword”). The ensuing notes consist of frequently incomplete or not yet perfectly shaped sentences. 
+          What is likely the chapter’s next stage of revision has also been preserved.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6836" ref="#SZDMSK.68">Manuscript of the chapter<lb></lb>
+            <hi style="italic">Geheimnis des Alcovens</hi>
+          </title>
+          <idno>SZ-SAH/W2</idno>
+        </head>
+        <p>Although the text of this holograph ink draft is still far removed from its final shape and <name>Stefan Zweig</name> would subject it to several further revisions, 
+          the chapter now bears the caption “Geheimnis des Alcovens” (“Secret of the Alcove”) – a heading that would survive into the published first edition; 
+          merely the spelling of the word “Alcoven” was amended to “Alkoven”.</p>
+        <p>It is easy to discern that several words and parts of sentences were stricken out again shortly after being written. 
+          These changes were followed by a further revision which eliminated substantial passages of the text, 
+          still in the purple ink so distinctive of <name>Zweigs</name>’s manuscripts, and ultimately – in red ink, for the sake of clarity – 
+          by a final revision of this stage of the manuscript.</p>
+        <p>In this chapter <name>Stefan Zweig</name> gives a candid account of the marital problems <name ref="#SZDPER.907" type="person">Marie Antoinette</name> encountered with the French dauphin and later King <name ref="#SZDPER.863" type="person">Louis XVI.</name> 
+          Not least due to these passages, criticized as excessively risqué, <name>Zweig</name> decided to eliminate the chapter entirely in the course of his later revision, 
+          reworking parts of it into other sections of the book.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6838 o:szd.6839 o:szd.6840 o:szd.6841" ref="#SZDMSK.69 #SZDMSK.70 #SZDMSK.71 #SZDMSK.72">Sketches<lb></lb> for <hi style="italic">Marie Antoinette</hi>
+          </title>
+          <idno>SZ-SAM/W1</idno>
+        </head>
+
+        <p>These leaves, written in ink, probably reflect the same stage of the manuscript’s revision as those containing the separate chapter <hi style="italic">Geheimnis des Alcovens</hi>. 
+          They comprise parts of several chapters, including <hi style="italic">Die neue Gesellschaft</hi> (“The New Society”) and <hi style="italic">Die Königin wird unbeliebt</hi> (“The Queen Becomes Unpopular”), 
+          as well as <hi style="italic">Die letzte Fahrt</hi> (“Drive to the Scaffold”).</p>
+
+        <p>Again, a few passages were stricken out or changed immediately after being penned. There was one further revision in the same purple ink: 
+          an additional revision in red ink did not occur here, perhaps not being found necessary. 
+          Several editing marks in blue pencil reference longer insertions written on separate sheets, now lost. The page marked in blue pencil 
+          as an addition to a quotation from <name ref="#SZDPER.489" type="person">Johann Wolfgang von Goethes</name> belongs to the chapter <hi style="italic">Die Freunde fliehen</hi> (“Friends Desert”), 
+          the additional pages of which are lacking.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6842" ref="#SZDMSK.66">A corrected sheet from the typescript<lb></lb> of <hi style="italic">Marie Antoinette</hi>
+            <lb></lb> with corrections</title>
+          <idno>SZ-SHB/W1</idno>
+        </head>
+        <p>In common with most parts of the various stages of the <hi style="italic">Marie Antoinette</hi> working manuscripts, 
+          the typescript version that followed the holograph drafts is largely lost. One of the few surviving folios reveals that even this, 
+          supposedly a fair copy, was subjected to considerable further corrections before the passage was used – in revised form – for the chapter 
+          <hi style="italic">Die Eroberung von Paris</hi> (“Conquest of Paris”). An especially large paper size was used for typing, leaving a generous margin for corrections.</p>
+        <p>After the text was transferred to the next stage of revision, the sheet was used as waste paper to wrap a book or a stack of paper, as is indicated by remains of adhesive tape 
+          and by the crease marks particularly conspicuous on the reverse. The annotation “1924” on the back of the sheet probably refers to the contents of this package.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title ref="#SZDMSK.73">Galley proofs for the first edition<lb></lb> of <hi style="italic">Marie Antoinette</hi>
+          </title>
+          <idno>ARC. Ms. Var. 305 3</idno>
+          <ref>http://merhav.nli.org.il/primo-explore/fulldisplay?vid=NLI&amp;docid=NNL_ARCHIVE_AL003432560&amp;context=L&amp;lang=en&quot;</ref>
+        </head>
+        <p>The extant proofs for <hi style="italic">Marie Antoinette</hi> begin in the chapter <hi style="italic">Geheimnis des Alkovens</hi> and include the following chapter <hi style="italic">Debüt in Versailles</hi> (“Debut at Versailles”) 
+          as well as parts of <hi style="italic">Der Kampf um ein Wort</hi> (“Fight for a Word”). Most of these galleys are from the book’s third correction, as evidenced by the imprint at the head 
+          of each sheet prepared by the printer, Poeschel &amp; Trepte in Leipzig. Although the text was already set in type, <name>Zweig</name> continued not only to make small corrections, 
+          but also to strike out entire paragraphs. Indeed, due to the extensive redactions, one part of the chapter <hi style="italic">Der Kampf um ein Wort</hi> is present in an additional fourth galley, 
+          and even this contains further changes.
+          Like the chapter numbers, the page headlines printed here (and occasionally even added by hand) were not carried over into the printed first edition.</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6809 o:szd.6810 o:szd.6811 o:szd.6812" ref="#SZDLEB.4 #SZDLEB.5 #SZDLEB.6 #SZDLEB.7">Contracts<lb></lb> for <hi style="italic">Marie
+            Antoinette</hi>
+          </title>
+          <idno>SZ-AAP/L13.1-13.4</idno>
+        </head>
+        <p>Several contracts with foreign publishers concerning <hi style="italic">Marie Antoinette</hi> have survived, as they have for numerous other books by <name>Stefan Zweig</name>. 
+          <name>Zweig</name> always managed his own reprint and translation rights, and the necessary accounting and correspondence entailed a considerable workload. 
+          In an effort to streamline the administration of rights and the filing of documents, the contractual data and terms were copied to the so-called Hauptbuch (“main ledger”).</p>
+      </div>
+      <div type="Thema" xml:lang="en">
+        <head>
+          <title facs="o:szd.6837" ref="#SZDLEB.3">Main ledger from<lb></lb> 
+            Stefan Zweig&apos;s office</title>      
+    <idno>SZ-SAM/L1</idno>
+        </head>
+        <p>A significant portion of the work carried out in <name>Stefan Zweigs</name>’s office was dedicated to the marketing of his books, 
+          long distributed internationally. This task he performed himself. Seeking to keep track of these various records, 
+          he set up the so-called Hauptbuch (“main ledger”) in 1932, entering into pre-printed double page forms the sold rights 
+          for each work and the contractual conditions negotiated with the publishers, translators, and film studios.</p>
+
+        <p>In not entirely consistent, but roughly chronological order, the large-sized volume individually lists monographs 
+          and in some cases even essays in collections, all referenced in a separate table of contents. Separate lines were pre-printed 
+          for the eleven foreign-language editions which were most likely to be published; another ten lines were reserved for editions in other languages. 
+          In several cases, this space proved only barely sufficient. The handwritten entries are mostly by <name>Stefan Zweig</name> himself, by his wife <name ref="#SZDPER.1556" type="person">Friderike</name>, 
+          and by his secretary, <name ref="#SZDPER.1575" type="person">Anna Meingast</name>.</p>
+
+        <p>When <name>Stefan Zweig</name> began to settle in England in 1934 and finally dissolved his Salzburg residence entirely in 1937, 
+          he insisted that the ledger remain with <name ref="#SZDPER.1575" type="person">Anna Meingast</name>. The final entry is on double page 77, regarding the anthology 
+          <hi style="italic">Begegnungen mit Menschen, Büchern, Städten</hi> (“Encounters with People, Books, Cities”), published in 1937. In anticipation, 
+          double page 75 included the book <hi style="italic">Ungeduld des Herzens</hi> (“Impatience of the Heart”) under its earlier working title 
+          <hi style="italic">Mord aus Mitleid</hi> (“Murder by Compassion”), as the French rights had been sold to the Paris publisher Grasset in December 1936, 
+          long before the manuscript was completed. The German original edition appeared only in 1939, when the Hauptbuch was no longer kept up to date. 
+          However, a copy of the ledger was prepared for further use during <name>Zweig</name>’s exile; this was maintained at his London office and is today in the possession of his heirs.</p>
+      </div>
+    </body>
+  </text>
+  <facsimile>
+    <graphic mimeType="image/jpeg" url="info:fedora/o:szd.collection.1" xml:id="IMG.1"></graphic>
+  </facsimile>
+</TEI>

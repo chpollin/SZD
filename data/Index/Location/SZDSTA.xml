@@ -1,0 +1,195 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Standorte</title>
+        <title xml:lang="en">Location</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
+						Karl-Franzens-Universität Graz</orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.standorte</idno>
+        <date when="2017-12-15">15.12.2017</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Stefan</forename>
+            <surname>Matthias</surname>
+          </persName>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>ToDo: Organisationen und Sammlungen von Stefan Zweig in progress</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
+      </editorialDecl>
+      <projectDesc>
+        <ab>
+          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"></ref>
+        </ab>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
+					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
+					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
+					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+					(z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listOrg>
+        <org corresp="https://www.uni-salzburg.at/index.php?id=72" xml:id="SZDSTA.1">
+          <orgName ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+        </org>
+        <org corresp="https://fredonia.libguides.com/archives/zweig" xml:id="SZDSTA.2">
+          <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</orgName>
+          <country>USA</country>
+          <settlement>Fredonia</settlement>
+        </org>
+        <org corresp="http://web.nli.org.il/sites/nlis/en" xml:id="SZDSTA.3">
+          <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel</orgName>
+          <country>Israel</country>
+          <settlement>Jerusalem</settlement>
+        </org>
+        <org corresp="http://fondationbodmer.ch/en/" xml:id="SZDSTA.4">
+          <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer</orgName>
+          <country>Schweiz</country>
+          <settlement>Cologny-Genève</settlement>
+        </org>
+        <org corresp="https://www.bl.uk/" xml:id="SZDSTA.5">
+          <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
+        </org>
+        <org corresp="https://www.themorgan.org/" xml:id="SZDSTA.6">
+          <orgName ref="http://d-nb.info/gnd/10156282-2">The Morgan Library &amp; Museum</orgName>
+          <country>USA</country>
+          <settlement>New York City</settlement>
+        </org>
+        <org corresp="http://www.tma.ethz.ch/" xml:id="SZDSTA.7">
+          <orgName ref="http://d-nb.info/gnd/4302937-1">Thomas-Mann-Archiv der ETH</orgName>
+          <country>Schweiz</country>
+          <settlement>Zürich</settlement>
+        </org>
+        <org corresp="https://www.wienbibliothek.at/" xml:id="SZDSTA.8">
+          <orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im Rathaus</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+        </org>
+        <org corresp="http://www.ub.unibas.ch/ub-hauptbibliothek/" xml:id="SZDSTA.9">
+          <orgName ref="http://d-nb.info/gnd/2023655-4">Universitätsbibliothek Basel</orgName>
+          <country>Schweiz</country>
+          <settlement>Basel</settlement>
+        </org>
+        <org corresp="http://www.literaturhaus.at/index.php?id=6542" xml:id="SZDSTA.10">
+          <orgName ref="http://d-nb.info/gnd/2057272-4">Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+        </org>
+        <org corresp="http://www.stefan-zweig-centre-salzburg.at/" xml:id="SZDSTA.11">
+          <orgName ref="http://d-nb.info/gnd/10368864-X">Stefan Zweig Zentrum</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+        </org>
+        <org xml:id="SZDSTA.12">
+          <orgName>Privatbesitz, Deutschland</orgName>
+          <country>Deutschland</country>
+        </org>
+        <org xml:id="SZDSTA.13">
+          <orgName>Privatbesitz, Österreich</orgName>
+          <country>Österreich</country>
+        </org>
+        <org xml:id="SZDSTA.14">
+          <orgName>Privatbesitz, Frankreich</orgName>
+          <country>Frankreich</country>
+        </org>
+        <org xml:id="SZDSTA.15">
+          <orgName>Privatbesitz, Großbritannien</orgName>
+          <country>Großbritannien</country>
+        </org>
+        <org xml:id="SZDSTA.16">
+          <orgName>Privatbesitz, Schweiz</orgName>
+          <country>Schweiz</country>
+        </org>
+        <org corresp="http://ahl.sbg.ac.at/" xml:id="SZDSTA.17">
+          <orgName ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+        </org>
+        <org xml:id="SZDSTA.18">
+          <orgName>Erben Stefan Zweigs</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
+        </org>
+        <org corresp="https://www.londonlibrary.co.uk/" xml:id="SZDSTA.19">
+          <orgName ref="http://d-nb.info/gnd/35655-4">London Library</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
+        </org>
+        <org xml:id="SZDSTA.20">
+          <orgName>Biblioteca Central Municipal Gabriela Mistral</orgName>
+          <country>Brasilien</country>
+          <settlement>Petrópolis</settlement>
+        </org>
+        <org corresp="https://www.moz.ac.at/de/bibliothek/index.php" xml:id="SZDSTA.21">
+          <orgName ref="http://d-nb.info/gnd/5299663-3">Universitätsbibliothek Mozarteum</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+        </org>
+        <org corresp="https://www.zb.uzh.ch/" xml:id="SZDSTA.22">
+          <orgName ref="http://d-nb.info/gnd/1012546-2">Zentralbibliothek Zürich</orgName>
+          <country>Schweiz</country>
+          <settlement>Zürich</settlement>
+        </org>
+        <org corresp="https://www.zb.uzh.ch/" xml:id="SZDSTA.23">
+          <orgName ref="http://d-nb.info/gnd/1033329-0">Theatermuseum</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+        </org>
+      </listOrg>
+    </body>
+  </text>
+</TEI>

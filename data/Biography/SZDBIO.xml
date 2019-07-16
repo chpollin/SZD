@@ -1,0 +1,1632 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Biographie</title>
+        <author>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz
+                    </orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset
+                        Management System </orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
+                        Commons BY-NC-SA 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.lebenskalender</idno>
+        <date when="2017-12-15">15.12.2017</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
+      </editorialDecl>
+      <projectDesc>
+        <ab xml:lang="de">
+          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
+        </ab>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+                    Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich
+                    bzw. wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit
+                    mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem
+                    dort vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des
+                    Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen
+                    Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert wird,
+                    und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so
+                    konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des
+                    Quellenmaterials (z.B. digitalen Editionen) möglich werden. </p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listEvent>
+        <event xml:id="SZDBIO.1">
+          <head>
+            <span xml:lang="de">Wien <date when="1881-11-28">28. November 1881</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1881-11-28">28 November 1881</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name>Stefan Zweig</name> wird als zweiter Sohn von <name ref="#SZDPER.1558" type="person">Ida</name> und <name ref="#SZDPER.1559" type="person">Moriz Zweig</name> im Haus Schottenring 14 geboren.</ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> is born the second son of <name ref="#SZDPER.1558" type="person">Ida</name> and <name ref="#SZDPER.1559" type="person">Moriz Zweig</name> at 14, Schottenring.</ab>
+        </event>
+        <event xml:id="SZDBIO.2">
+          <head>
+            <span xml:lang="de">Wien, <date when="1892-04">April 1892</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1892-04">April 1892</date>
+            </span>
+          </head>
+          <ab xml:lang="de">Nach der Volksschule in der Werdertorgasse besucht
+                            <name>Stefan Zweig</name> für die nächsten Jahre das Maximiliangymnasium
+                        (heute Gymnasium Wasagasse).</ab>
+          <ab xml:lang="en">After completing elementary school at Werdertorgasse,
+                            <name>Stefan Zweig</name> attends the Maximilian-Gymnasium (now known as
+                        the Gymnasium Wasagasse) for the next eight years.</ab>
+        </event>
+        <event xml:id="SZDBIO.3">
+          <head>
+            <span xml:lang="de">Wien, <date when="1895-06">1895</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1895-06">1895</date>
+            </span>
+          </head>
+          <ab xml:lang="de">Umzug der Familie Zweig in eine Wohnung in der Rathausstraße
+                        17.</ab>
+          <ab xml:lang="en">The Zweig family moves to an apartment at 17,
+                        Rathausstrasse.</ab>
+        </event>
+        <event xml:id="SZDBIO.4">
+          <head>
+            <span xml:lang="de">Wien, <date when="1897-03-10">10. März 1897</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1897-03-10">10 March 1897</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der 15-jährige <name>Stefan Zweig</name> schreibt seinen
+                        ältesten noch erhaltenen Brief, der an den Schriftsteller <name ref="#SZDPER.334" type="person">Georg Ebers</name> gerichtet ist. </ab>
+          <ab xml:lang="en">The 15-year-old <name>Stefan Zweig</name> writes his earliest
+                        still extant letter, addressed to the novelist <name ref="#SZDPER.334" type="person">Georg Ebers</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.5">
+          <head>
+            <span xml:lang="de">Wien, Juli 1900 </span>
+            <span xml:lang="en">Vienna, <date when="1900-07">July 1900</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Matura am Maximiliangymnasium. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> passes his Matura (matriculation) exam at the
+                        Maximilian-Gymnasium.</ab>
+        </event>
+        <event xml:id="SZDBIO.6">
+          <head>
+            <span xml:lang="de">Wien, <date when="1900-10-03">3. Oktober 1900</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1900-10-03">3 October 1900</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name>Stefan Zweig</name> schreibt sich an der Universität Wien zum Studium
+                        der Fächer Philosophie und Literaturgeschichte ein.</ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> enrols at the University of Vienna to read
+                        philosophy and the history of literature.</ab>
+        </event>
+        <event xml:id="SZDBIO.7">
+          <head>
+            <span xml:lang="de">Berlin, <date when="1901-04">April 1901</date>
+            </span>
+            <span xml:lang="en">Berlin, <date when="1901-04">April 1901</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Band <hi style="italic">Silberne Saiten</hi> mit 61
+                        Gedichten Stefan Zweigs erscheint im Verlag Schuster &amp; Loeffler. </ab>
+          <ab xml:lang="en">
+            <hi style="italic">Silberne Saiten</hi> (Strings of Silver), a volume of
+                        poetry comprising 61 poems by <name>Stefan Zweig</name>, is published by
+                        Schuster &amp; Loeffler.</ab>
+        </event>
+        <event xml:id="SZDBIO.8">
+          <head>
+            <span xml:lang="de">Westerwede bei Bremen, <date when="1901-06">Juni
+                                1901</date>
+            </span>
+            <span xml:lang="en">Westerwede near Bremen, <date when="1901-06">June
+                                1901</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name ref="#SZDPER.1170" type="person">Rainer Maria Rilke</name> sendet
+                            <name>Stefan Zweig</name> als Dank für ein Exemplar von <hi style="italic">Silberne Saiten</hi> seine Gedichtsammlung <name ref="#SZDBIB.715" type="book">
+              <hi style="italic">Frühling</hi>
+            </name>mit einer persönlichen Widmung zu. </ab>
+          <ab xml:lang="en">In appreciation of having received a presentation copy of <hi style="italic">Silberne Saiten</hi>, <name ref="#SZDPER.1170" type="person">Rainer Maria Rilke</name> sends <name>Stefan Zweig</name>
+                        a personally inscribed copy of his own poetry collection, <name ref="#SZDBIB.715" type="book">
+              <hi style="italic">Frühling.</hi>
+            </name>
+          </ab>
+        </event>
+        <event xml:id="SZDBIO.9">
+          <head>
+            <span xml:lang="de">Berlin, <date when="1902-04-08">8. April 1902</date>
+            </span>
+            <span xml:lang="en">Berlin, <date when="1902-04-08">8 April 1902</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Für das vierte Semester seines Studiums schreibt sich
+                            <name>Stefan Zweig</name> an der Friedrich-Wilhelms-Universität (heute
+                        Humboldt-Universität) in Berlin ein.</ab>
+          <ab xml:lang="en">For his fourth semester, <name>Stefan Zweig</name> enrols at
+                        the Friedrich-Wilhelms University (now the Humboldt University) in
+                        Berlin.</ab>
+        </event>
+        <event xml:id="SZDBIO.10">
+          <head>
+            <span xml:lang="de">Brüssel, <date when="1902-08">August 1902</date>
+            </span>
+            <span xml:lang="en">Brussels, <date when="1902-08">August 1902</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Erstes Treffen mit dem belgischen Dichter <name ref="#SZDPER.1462" type="person">Émile Verhaeren</name>, anschließend
+                        Reise nach Paris.</ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> first meets the Belgian poet <name ref="#SZDPER.1462" type="person">Émile Verhaeren</name>, then makes a
+                        journey to Paris.</ab>
+        </event>
+        <event xml:id="SZDBIO.11">
+          <head>
+            <span xml:lang="de">Wien, <date when="1904-04-07">7. April 1904</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1904-04-07">7 April 1904</date>
+            </span>
+          </head>
+          <ab xml:lang="de">Abgabe der Dissertation zum Thema <name ref="#SZDBIB.641" type="book">
+              <hi style="italic">Die Philosophie des Hippolyte Taine</hi>
+            </name>. </ab>
+          <ab xml:lang="en">Zweig submits his doctoral thesis on <name ref="#SZDBIB.641" type="book">
+              <hi style="italic">The Philosophy of Hippolyte Taine.</hi>
+            </name>
+          </ab>
+        </event>
+        <event xml:id="SZDBIO.12">
+          <head>
+            <span xml:lang="de">Wien, <date when="1904-07-19">19. Juli 1904</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1904-07-19">19 April 1904</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Verleihung des Doktortitels.</ab>
+          <ab xml:lang="en">Zweig is awarded the degree of Doctor of Philosophy.</ab>
+        </event>
+        <event xml:id="SZDBIO.13">
+          <head>
+            <span xml:lang="de">Berlin, <date when="1904-10">Oktober 1904</date>
+            </span>
+            <span xml:lang="en">Berlin, <date when="1904-10">October 1904</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan Zweigs Buch <hi style="italic">Die Liebe der Erika
+                            Ewald</hi> erscheint im Verlag Egon Fleischel &amp; Co. Enthalten sind
+                        die Novellen <hi style="italic">Die Liebe der Erika Ewald</hi>, <hi style="italic">Der Stern über dem Walde</hi>, <hi style="italic">Die
+                            Wanderung</hi> und <hi style="italic">Die Wunder des Lebens</hi>. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name>’s book <hi style="italic">Die Liebe der Erika
+                            Ewald</hi> is published by Egon Fleischel &amp; Co. The volume contains
+                        the novellas <hi style="italic">Die Liebe der Erika Ewald</hi> (The Love of
+                        Erika Ewald), <hi style="italic">Der Stern über dem Walde</hi> (The Star
+                        Above the Forest), <hi style="italic">Die Wanderung</hi> (The Journey), and
+                            <hi style="italic">Die Wunder des Lebens</hi> (The Miracles of
+                        Life).</ab>
+        </event>
+        <event xml:id="SZDBIO.14">
+          <head>
+            <span xml:lang="de">
+              <date from="1906-04" to="1906-08">April bis August 1906</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1906-08">April through August 1906</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise nach London mit Ausflügen nach Oxford, York und Oban in
+                        Schottland. Auf der Hinfahrt Zwischenaufenthalte in Liège und Brüssel, auf
+                        dem Rückweg in Berlin. </ab>
+          <ab xml:lang="en">A visit to London, with excursions to Oxford, York, and Oban
+                        (Scotland). Zweig stops at Liège and Brussels on the journey out, and at
+                        Berlin on the return.</ab>
+        </event>
+        <event xml:id="SZDBIO.15">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1906-11">November 1906</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1906-11">November 1906</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Als erste Publikation Stefan Zweigs im Insel Verlag erscheint
+                        der Band <hi style="italic">Die frühen Kränze</hi>, der 49 Gedichte enthält. </ab>
+          <ab xml:lang="en">
+            <hi style="italic">Die frühen Kränze</hi> (Early Wreaths) appears, Zweig’s
+                        first book to be published by Insel Verlag, containing 49 poems.</ab>
+        </event>
+        <event xml:id="SZDBIO.16">
+          <head>
+            <span xml:lang="de">Wien, <date when="1906-11-17">17. November 1906</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1906-11-17">17 November 1906</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Für <hi style="italic">Die frühen Kränze</hi> erhält
+                            <name>Stefan Zweig</name> eine Ehrengabe des Bauernfeldpreises.</ab>
+          <ab xml:lang="en">For <hi style="italic">Die frühen Kränze</hi>, Zweig is
+                        awarded an honorary gift as one of several recipients of the Bauernfeld
+                        Prize.</ab>
+        </event>
+        <event xml:id="SZDBIO.17">
+          <head>
+            <span xml:lang="de">Wien, <date when="1907-02-01">1. Februar 1907</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1907-02-01">1 February 1907</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Einzug in die erste eigene Wohnung in der Kochgasse 8. </ab>
+          <ab xml:lang="en">Zweig moves into his first own apartment at 8, Kochgasse.</ab>
+        </event>
+        <event xml:id="SZDBIO.18">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1908-03">März 1908</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1908-03">March 1908</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Das bereits 1907 gedruckte Drama <hi style="italic">Tersites</hi> wird vom Insel Verlag ausgeliefert. </ab>
+          <ab xml:lang="en">The play <hi style="italic">Tersites</hi>, printed in 1907, is
+                        distributed to booksellers by Insel Verlag.</ab>
+        </event>
+        <event xml:id="SZDBIO.19">
+          <head>
+            <span xml:lang="de">
+              <date from="1908-12-01" to="1909-03-30">Anfang Dezember 1908 bis Ende
+                                März 1909</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1909-03-30">Early December 1908 through end of March
+                                1909</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Von Triest aus Seereise nach Indien, Burma (heute Myanmar)
+                        und Ceylon (heute Sri Lanka). Rückreise auf dem Dampfer Lützow über Italien
+                        nach Frankreich mit Aufenthalt in Paris. </ab>
+          <ab xml:lang="en"> Zweig sets out from Trieste on a voyage to India, Burma (now
+                        Myanmar), and Ceylon (now Sri Lanka). Return voyage on the steamer Lützow
+                        via Italy to France; stopping at Paris.</ab>
+        </event>
+        <event xml:id="SZDBIO.20">
+          <head>
+            <span xml:lang="de">Paris, <date from="1911-02-20" to="1911-02-21">20. bis
+                                21. Februar 1911</date>
+            </span>
+            <span xml:lang="en">Paris, <date from="1911-02-20" to="1911-02-21">20
+                                through 21 February 1911</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Erstes Treffen mit <name ref="#SZDPER.1192" type="person">Romain Rolland</name>.</ab>
+          <ab xml:lang="en">First meeting with <name ref="#SZDPER.1192" type="person">Romain Rolland</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.22">
+          <head>
+            <span xml:lang="de">
+              <date from="1911-02-22" to="1911-04-21">22. Februar bis 21. April
+                                1911</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1911-04-21">22 February through 21 April 1911</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Von Cherbourg auf dem Passagierdampfer S.S. St. Paul nach New
+                        York City. Anschließend Reisen nach Philadelphia, Boston, Baltimore und
+                        Chicago sowie nach Kanada, Bermuda, Kuba, Haiti, Jamaica, Puerto Rico, Costa
+                        Rica und Panama. </ab>
+          <ab xml:lang="en">Departs from Cherbourg for New York City on the passenger
+                        steamer S.S. St. Paul. Subsequent visits to Philadelphia, Boston, Baltimore
+                        and Chicago as well as to Canada, Bermuda, Cuba, Haiti, Jamaica, Puerto
+                        Rico, Costa Rica, and Panama.</ab>
+        </event>
+        <event xml:id="SZDBIO.23">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1911-11">November 1911</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1911-11">November 1911</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Novellenband: <hi style="italic">Erstes Erlebnis. Vier
+                            Geschichten aus Kinderland</hi> erscheint im Insel Verlag. Darin sind
+                        enthalten: <hi style="italic">Geschichte in der Dämmerung</hi>, <hi style="italic">Die Gouvernante</hi>, <hi style="italic">Brennendes
+                            Geheimnis</hi> und <hi style="italic">Sommernovellette</hi>. </ab>
+          <ab xml:lang="en">A volume of short stories, <hi style="italic">Erstes Erlebnis.
+                            Vier Geschichten aus Kinderland</hi> (First Experience: Four Stories
+                        from the Land of Childhood), is published by Insel Verlag. It contains: <hi style="italic">Geschichte in der Dämmerung</hi> (A Story Told in
+                        Twilight), <hi style="italic">Die Gouvernante</hi> (The Governess), <hi style="italic">Brennendes Geheimnis</hi> (Burning Secret), and <hi style="italic">Sommernovellette</hi> (A Summer Novella).</ab>
+        </event>
+        <event xml:id="SZDBIO.24">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1912-07-12">12. Juli 1912</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1912-07-12">12 July 1912</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Die ersten Bände der von <name>Stefan Zweig</name> mit
+                        angeregten <hi style="italic">Insel-Bücherei</hi> werden ausgeliefert. </ab>
+          <ab xml:lang="en">The first volumes of the <hi style="italic">Insel-Bücherei</hi> series, in the conception of which Zweig had a
+                        part, are distributed.</ab>
+        </event>
+        <event xml:id="SZDBIO.25">
+          <head>
+            <span xml:lang="de">Wien, <date when="1912-09-23">23. September 1912</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1912-09-23">23 September 1912</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Erstes Treffen Stefan Zweigs mit seiner späteren Ehefrau, der
+                        Schriftstellerin <name ref="#SZDPER.1556" type="person">Friderike von
+                            Winternitz</name>. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> first meets his future wife, the novelist <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.26">
+          <head>
+            <span xml:lang="de">Sarajevo, <date when="1914-06-28">28. Juni 1914</date>
+            </span>
+            <span xml:lang="en">Sarajevo, <date when="1914-06-28">28 June 1914</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Ermordung des österreich-ungarischen Thronfolgers <name ref="#SZDPER.425" type="person">Franz Ferdinand</name> und seiner <name ref="#SZDPER.241" type="person">Frau Sophie</name>. </ab>
+          <ab xml:lang="en">The Austro-Hungarian heir presumptive <name ref="#SZDPER.425" type="person">Franz Ferdinand</name> and his <name ref="#SZDPER.241" type="person">wife Sophie</name> are assassinated.</ab>
+        </event>
+        <event xml:id="SZDBIO.27">
+          <head>
+            <span xml:lang="de">
+              <date when="1914-07-14">14. Juli 1914</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1914-07-14">14 July 1914</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise nach Marienbad und von dort nach Le Coq bei Ostende in
+                        Belgien. </ab>
+          <ab xml:lang="en">Trip to Marienbad and then on to Le Coq near Ostend in
+                        Belgium.</ab>
+        </event>
+        <event xml:id="SZDBIO.28">
+          <head>
+            <span xml:lang="de">
+              <date when="1914-07-28">28. Juli 1914</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1914-07-28">28 July 1914</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Kriegserklärung Österreich-Ungarns an Serbien, in deren Folge
+                        es zum Ersten Weltkrieg kommt. </ab>
+          <ab xml:lang="en">Austria-Hungary declares war on Serbia; beginning of the First
+                        World War.</ab>
+        </event>
+        <event xml:id="SZDBIO.29">
+          <head>
+            <span xml:lang="de">
+              <date when="1914-07-30">30. Juli 1914</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1914-07-30">30 July 1914</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name>Stefan Zweig</name> reist mit dem Zug von Belgien zurück nach Wien. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> returns from Belgium to Vienna by train.</ab>
+        </event>
+        <event xml:id="SZDBIO.30">
+          <head>
+            <span xml:lang="de">Wien, <date when="1914-12-01">1. Dezember 1914</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1914-12-01">1 December 1914</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Beginn des Militärdienstes im Kriegsarchiv in der
+                        Stiftskaserne. </ab>
+          <ab xml:lang="en">Zweig commences his military service at the War Archives in
+                        the Stiftskaserne barracks.</ab>
+        </event>
+        <event xml:id="SZDBIO.31">
+          <head>
+            <span xml:lang="de">
+              <date from="1915-07-14" to="1915-07-26">14. bis 26. Juli 1915</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1915-07-14" to="1915-07-26">14 through 26 July 1915</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Dienstreise in das Kriegsgebiet in Galizien. </ab>
+          <ab xml:lang="en"> Mission to the Galician theatre of war. </ab>
+        </event>
+        <event xml:id="SZDBIO.32">
+          <head>
+            <span xml:lang="de">Kalksburg, <date when="1916-04">April 1916</date>
+            </span>
+            <span xml:lang="en">Kalksburg, <date when="1916-04">April 1916</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Wohnung in Kalksburg bei Rodaun am Stadtrand Wiens, wo <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name> mit
+                        ihren beiden Töchtern <name ref="#SZDPER.1571" type="person">Alix</name> und
+                            <name ref="#SZDPER.1562" type="person">Suse</name> lebt. </ab>
+          <ab xml:lang="en"> Zweig takes lodgings in Kalksburg near Rodaun, on the
+                        outskirts of Vienna, where <name ref="#SZDPER.1556" type="person">Friderike
+                            von Winternitz</name> lives with her two daughters, <name ref="#SZDPER.1571" type="person">Alix</name> and <name ref="#SZDPER.1562" type="person">Suse</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.33">
+          <head>
+            <span xml:lang="de">
+              <date when="1917-10-27">27. Oktober 1917</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1917-10-27">27 October 1917</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Kauf des Hauses Kapuzinerberg 5 in Salzburg. </ab>
+          <ab xml:lang="en"> Buys villa in Salzburg at 5, Kapuzinerberg.</ab>
+        </event>
+        <event xml:id="SZDBIO.34">
+          <head>
+            <span xml:lang="de">
+              <date when="1917-11-13">13. November 1917</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1917-11-13">13 November 1917</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Gemeinsam mit <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name> Reise nach Zürich. Zuvor Beurlaubung
+                        vom Militärdienst wegen zweier Vorträge. Anschließend Tätigkeit als
+                        Zeitungskorrespondent in der Schweiz. </ab>
+          <ab xml:lang="en"> Visits Zurich with <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name>. Previously given leave from military
+                        service for two lectures. Subsequent work as newspaper correspondent in
+                        Switzerland.</ab>
+        </event>
+        <event xml:id="SZDBIO.35">
+          <head>
+            <span xml:lang="de">Zürich, <date when="1918-02-27">27. Februar 1918</date>
+            </span>
+            <span xml:lang="en">Zurich, <date when="1918-02-27">27 February 1918</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Uraufführung des Dramas <hi style="italic">Jeremias</hi> in
+                        Anwesenheit Stefan Zweigs im Stadttheater Zürich. </ab>
+          <ab xml:lang="en">First performance of Zweig’s play <hi style="italic">Jeremias</hi> at the Zurich Municipal Theatre, in the presence of the
+                        author.</ab>
+        </event>
+        <event xml:id="SZDBIO.36">
+          <head>
+            <span xml:lang="de">
+              <date when="1918-11-11">11. November 1918</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1918-11-11">11 November 1918</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Waffenstillstand der kriegführenden Mächte tritt in
+                        Kraft. Die Friedensbedingungen werden in den kommenden Jahren in Versailles
+                        ausgehandelt. </ab>
+          <ab xml:lang="en"> Armistice between the belligerent powers. The conditions of
+                        peace will be negotiated at Versailles over the next years.</ab>
+        </event>
+        <event xml:id="SZDBIO.37">
+          <head>
+            <span xml:lang="de">
+              <date when="1919-03-24">24. März 1919</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1919-03-24">24 March 1919</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Rückkehr aus der Schweiz nach Österreich. </ab>
+          <ab xml:lang="en"> Zweig returns to Austria from Switzerland.</ab>
+        </event>
+        <event xml:id="SZDBIO.38">
+          <head>
+            <span xml:lang="de">Salzburg, <date when="1919-05">Mai 1919</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date when="1919-05">May 1919</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Einzug in das Haus Kapuzinerberg 5 mit <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name> und
+                        ihren beiden Töchtern <name ref="#SZDPER.1571" type="person">Alix</name> und
+                            <name ref="#SZDPER.1562" type="person">Suse</name> aus der geschiedenen
+                        Ehe mit <name ref="#SZDPER.1572" type="person">Felix von Winternitz</name>. </ab>
+          <ab xml:lang="en">Zweig moves into his villa at 5, Kapuzinerberg with <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name> and her
+                        two daughters <name ref="#SZDPER.1571" type="person">Alix</name> and <name ref="#SZDPER.1562" type="person">Suse</name> (by her divorced husband
+                            <name ref="#SZDPER.1572" type="person">Felix von
+                        Winternitz</name>).</ab>
+        </event>
+        <event xml:id="SZDBIO.39">
+          <head>
+            <span xml:lang="de">Wien, <date when="1920-01-28">28. Januar 1920</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1920-01-28">28 January 1920</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Trauung von <name>Stefan Zweig</name> und <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name>, die
+                        bei der Zeremonie im Rathaus nicht anwesend ist und sich durch den
+                        gemeinsamen Freund <name ref="#SZDPER.162" type="person">Felix Braun</name>
+                        vertreten lässt. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> marries <name ref="#SZDPER.1556" type="person">Friderike von Winternitz</name> by proxy: at the ceremony in the town
+                        hall, she is represented by the couple’s common friend, <name ref="#SZDPER.162" type="person">Felix Braun</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.40">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1920-02-17">17. Februar 1920</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1920-02-17">17 February 1920</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im <hi style="italic">Börsenblatt für den deutschen
+                            Buchhandel</hi> wird vom Insel Verlag die von <name>Stefan Zweig</name>
+                        redaktionell betreute Reihe <hi style="italic">Bibliotheca Mundi</hi>
+                        erstmals angekündigt. </ab>
+          <ab xml:lang="en">In the <hi style="italic">Börsenblatt für den deutschen
+                            Buchhandel</hi>, the journal of the German book trade, Insel Verlag
+                        announces the series <hi style="italic">Bibliotheca Mundi</hi>, to be edited
+                        by <name>Stefan Zweig</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.41">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1920-05">Mai 1920</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1920-05">May 1920</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Insel Verlag erscheint das Buch <hi style="italic">Drei
+                            Meister</hi>, das ab 1925 als erster Band der Reihe <hi style="italic">Die Baumeister der Welt</hi> bezeichnet wird. Enthalten sind die Essays
+                            <hi style="italic">Balzac</hi>, <hi style="italic">Dickens</hi> und <hi style="italic">Dostojewski</hi>. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Drei Meister</hi>
+                        (Three Masters), to be promoted as the first volume in the series <hi style="italic">Die Baumeister der Welt</hi> (Master Builders of the
+                        World) from 1925 onwards. It contains the essays <hi style="italic">Balzac</hi>, <hi style="italic">Dickens</hi>, and <hi style="italic">Dostojewski</hi>.</ab>
+        </event>
+        <event xml:id="SZDBIO.42">
+          <head>
+            <span xml:lang="de">
+              <date from="1921-03-22" to="1921-04-13">22. März bis 13. April
+                                1921</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1921-03-22" to="1921-04-13">22 March through 13 April
+                                1921</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Italien-Reise mit <name ref="#SZDPER.1556" type="person">Friderike</name>. </ab>
+          <ab xml:lang="en"> Journey through Italy with <name ref="#SZDPER.1556" type="person">Friderike</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.43">
+          <head>
+            <span xml:lang="de">
+              <date from="1922-03-20" to="1922-04-01">20. März bis 1. April
+                                1922</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1922-03-20" to="1922-04-01">20 March through 1 April
+                                1922</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise nach Paris. </ab>
+          <ab xml:lang="en"> Visit to Paris.</ab>
+        </event>
+        <event xml:id="SZDBIO.44">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1922-10">Oktober 1922</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1922-10">October 1922</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Band <hi style="italic">Amok: Novellen einer
+                            Leidenschaft</hi> erscheint im Insel Verlag. Darin enthalten sind <hi style="italic">Der Amokläufer</hi>, <hi style="italic">Die Frau und die
+                            Landschaft</hi>, <hi style="italic">Brief einer Unbekannten</hi>, <hi style="italic">Phantastische Nacht</hi> und <hi style="italic">Die
+                            Mondscheingasse</hi>. </ab>
+          <ab xml:lang="en">
+            <hi style="italic">Amok: Novellen einer Leidenschaft</hi> (Amok: Novellas of
+                        a Passion) is published by Insel Verlag. The volume contains <hi style="italic">Der Amokläufer</hi> (Amok), <hi style="italic">Die Frau
+                            und die Landschaft</hi> (The Woman and the Landscape), <hi style="italic">Brief einer Unbekannten</hi> (Letter from an Unknown
+                        Woman), <hi style="italic">Phantastische Nacht</hi> (Fantastic Night), and
+                            <hi style="italic">Die Mondscheingasse</hi> (Moonbeam Alley).</ab>
+        </event>
+        <event xml:id="SZDBIO.45">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1924-03">März 1924</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1924-03">March 1924</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Insel Verlag werden <hi style="italic">Die gesammelten
+                            Gedichte</hi> publiziert. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Die gesammelten
+                            Gedichte</hi> (Collected Poems).</ab>
+        </event>
+        <event xml:id="SZDBIO.46">
+          <head>
+            <span xml:lang="de">
+              <date from="1925-06-04" to="1925-06-14">4. bis 14. Juni 1925</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1925-06-04" to="1925-06-14">4 through 14 June 1925</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise über München nach Leipzig, dort mit <name ref="#SZDPER.1192" type="person">Romain Rolland</name> beim Deutschen
+                        Händelfest. Anschließend gemeinsame Fahrt nach Weimar mit Besuch des
+                        Nietzsche-Archivs und Treffen mit <name ref="#SZDPER.410" type="person">Elisabeth Förster-Nietzsche</name>. Über Dresden, Reichenberg und Wien
+                        zurück nach Salzburg. </ab>
+          <ab xml:lang="en"> Journey via Munich to Leipzig. Zweig meets <name ref="#SZDPER.1192" type="person">Romain Rolland</name> at the German
+                        Handel Festival, then together they travel onwards to Weimar, where they
+                        visit the Nietzsche Archive and <name ref="#SZDPER.410" type="person">Elisabeth Förster-Nietzsche</name>. Return to Salzburg via Dresden,
+                        Reichenberg, and Vienna.</ab>
+        </event>
+        <event xml:id="SZDBIO.47">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1925-04">April 1925</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1925-04">April 1925</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <hi style="italic">Der Kampf mit dem Dämon</hi>, erscheint als zweiter Band
+                        der Reihe <hi style="italic">Die Baumeister der Welt</hi> im Insel Verlag.
+                        Enthalten sind die Essays <hi style="italic">Hölderlin</hi>, <hi style="italic">Heinrich von Kleist</hi> und <hi style="italic">Friedrich
+                            Nietzsche</hi>. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Der Kampf mit dem
+                            Dämon</hi> (The Struggle With the Daemon) as the second volume of <hi style="italic">Die Baumeister der Welt</hi>, containing the essays <hi style="italic">Hölderlin</hi>, <hi style="italic">Heinrich von
+                            Kleist</hi>, and <hi style="italic">Friedrich Nietzsche</hi>.</ab>
+        </event>
+        <event xml:id="SZDBIO.48">
+          <head>
+            <span xml:lang="de">Wien, <date when="1926-03-02">2. März 1926</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1926-03-02">2 March 1926</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan Zweigs Vater <name ref="#SZDPER.1559" type="person">Moriz Zweig</name> stirbt im Alter von 80 Jahren. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name>’s father <name ref="#SZDPER.1559" type="person">Moriz Zweig</name> dies, aged 80.</ab>
+        </event>
+        <event xml:id="SZDBIO.49">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1926-09">September 1926</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1926-09">September 1926</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Band <hi style="italic">Verwirrung der Gefühle</hi> mit
+                        den Novellen <hi style="italic">Vierundzwanzig Stunden aus dem Leben einer
+                            Frau</hi>, <hi style="italic">Untergang eines Herzens</hi> und <hi style="italic">Verwirrung der Gefühle</hi> wird im Insel Verlag
+                        publiziert. Als eingedrucktes Erscheinungsjahr der Erstauflage ist 1927
+                        angegeben. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Verwirrung der
+                            Gefühle</hi>, containing the novellas <hi style="italic">Vierundzwanzig
+                            Stunden aus dem Leben einer Frau</hi> (Twenty-Four Hours in the Life of
+                        a Woman), <hi style="italic">Untergang eines Herzens</hi> (Downfall of a
+                        Heart), and <hi style="italic">Verwirrung der Gefühle</hi> (Confusion). The
+                        first printing is post-dated 1927.</ab>
+        </event>
+        <event xml:id="SZDBIO.50">
+          <head>
+            <span xml:lang="de">Wien, <date when="1926-11-06">6. November 1926</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1926-11-06">6 November 1926</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Burgtheater findet die Uraufführung von <hi style="italic">Volpone. Eine lieblose Komödie in drei Akten</hi> nach der Vorlage von
+                            <name ref="#SZDPER.684" type="person">Ben Jonson</name> statt.
+                            <name>Stefan Zweig</name> ist dabei nicht anwesend. </ab>
+          <ab xml:lang="en">First performance of <hi style="italic">Volpone. Eine lieblose
+                            Komödie in drei Akten</hi>, based on <name ref="#SZDPER.684" type="person">Ben Jonson</name>’s play, at the Burgtheater. <name>Stefan
+                            Zweig</name> does not attend.</ab>
+        </event>
+        <event xml:id="SZDBIO.51">
+          <head>
+            <span xml:lang="de">
+              <date from="1926-11-23" to="1926-12-14">23. November bis 14. Dezember
+                                1926</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1926-11-23" to="1926-12-14">23 November through 14 December
+                                1926</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise durch Deutschland. Lesungen aus Novellen und Vorträge
+                        über <name ref="#SZDPER.1192" type="person">Romain Rolland</name> in
+                        Dresden, Mainz, Wiesbaden, Essen, Köln, Aachen, Düsseldorf, Dortmund,
+                        Duisburg und Berlin. </ab>
+          <ab xml:lang="en">Tour of Germany. Reads from his novellas and gives lectures on
+                            <name ref="#SZDPER.1192" type="person">Romain Rolland</name> in Dresden,
+                        Mainz, Wiesbaden, Essen, Cologne, Aachen, Düsseldorf, Dortmund, Duisburg,
+                        and Berlin.</ab>
+        </event>
+        <event xml:id="SZDBIO.52">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1927-10">Oktober 1927</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1927-10">October 1927</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Als Band 165 der Insel-Bücherei erscheint <hi style="italic">Sternstunden der Menschheit. Fünf historische Miniaturen</hi>. In
+                        dieser ersten Ausgabe sind enthalten: <hi style="italic">Die Weltminute von
+                            Waterloo. Napoleon und Grouchy</hi>, <hi style="italic">Die Marienbader
+                            Elegie. Goethe zwischen Karlsbad und Weimar</hi>, <hi style="italic">Die
+                            Entdeckung Eldorados. J. A. Suter, Kalifornien</hi>, <hi style="italic">Heroischer Augenblick. Dostojewski, Petersburg Semenowskplatz</hi> und
+                            <hi style="italic">Der Kampf um den Südpol. Kapitän Scott, 90.
+                            Breitengrad</hi>. </ab>
+          <ab xml:lang="en">
+            <hi style="italic">Sternstunden der Menschheit. Fünf historische
+                            Miniaturen</hi> (Decisive Moments in History) is published as volume 165
+                        of the Insel Bücherei series. This first edition contains five historical
+                        miniatures: <hi style="italic">Die Weltminute von Waterloo. Napoleon und
+                            Grouchy</hi> (The World Minute of Waterloo), <hi style="italic">Die
+                            Marienbader Elegie. Goethe zwischen Karlsbad und Weimar</hi> (The Elegy
+                        of Marienbad), <hi style="italic">Die Entdeckung Eldorados. J. A. Suter,
+                            Kalifornien</hi> (The Discovery of Eldorado), <hi style="italic">Heroischer Augenblick. Dostojewski, Petersburg Semenowskplatz</hi>
+                        (Heroic Moment), and <hi style="italic">Der Kampf um den Südpol. Kapitän
+                            Scott, 90. Breitengrad</hi> (The Fight for the South Pole).</ab>
+        </event>
+        <event xml:id="SZDBIO.53">
+          <head>
+            <span xml:lang="de">
+              <date from="1928-09-07" to="1928-09-20">7. bis 20. September 1928</date>
+            </span>
+            <span xml:lang="en">
+              <date to="1928-09-20" when="1928-09-07">7 through 20 September
+                                1928</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise nach Russland anlässlich der Gedenkfeier zu <name ref="#SZDPER.1431" type="person">Lev Nikolaevič Tolstojs</name> 100.
+                        Geburtstag. <name>Stefan Zweig</name> hält seine Reiseeindrücke in einem
+                            <name ref="#SZDLEB.1" type="personaldocument">Notizbuch</name>
+                        fest.</ab>
+          <ab xml:lang="en">Visit to Russia on the occasion of the centenary of <name ref="#SZDPER.1431" type="person">Leo Tolstoy</name>’s birth.
+                            <name>Stefan Zweig</name> records his impressions of the journey in a
+                            <name ref="#SZDLEB.1" type="personaldocument">notebook</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.54">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1928-05">Mai 1928</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1928-05">May 1928</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Als dritter und letzter Band der Reihe <hi style="italic">Die
+                            Baumeister der Welt</hi> erscheint im Insel Verlag <hi style="italic">Drei Dichter ihres Lebens</hi> mit den biographischen Essays <hi style="italic">Casanova</hi>, <hi style="italic">Stendhal</hi> und <hi style="italic">Tolstoi</hi>. </ab>
+          <ab xml:lang="en">Insel Verlag publishes the third and final volume in the
+                        series <hi style="italic">Master Builders of the World: the collection Drei
+                            Dichter ihres Lebens</hi> (Three Poets of Their Life), containing the
+                        biographical essays <hi style="italic">Casanova</hi>, <hi style="italic">Stendhal</hi>, and <hi style="italic">Tolstoy</hi>.</ab>
+        </event>
+        <event xml:id="SZDBIO.55">
+          <head>
+            <span xml:lang="de">Salzburg, <date when="1929-05-13">13. Mai 1929</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date when="1929-05-13">13 May 1929</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Erstes Zusammentreffen mit <name ref="#SZDPER.1209" type="person">Joseph Roth</name>. </ab>
+          <ab xml:lang="en">First encounter with <name ref="#SZDPER.1209" type="person">Joseph Roth</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.56">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1929-09">September 1929</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1929-09">September 1929</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Insel Verlag veröffentlicht den Band <hi style="italic">Joseph Fouché. Bildnis eines politischen Menschen</hi>. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Joseph Fouché.
+                            Bildnis eines politischen Menschen</hi> (Joseph Fouché: Portrait of a
+                        Politician).</ab>
+        </event>
+        <event xml:id="SZDBIO.57">
+          <head>
+            <span xml:lang="de">Wien, <date when="1929-10-13">13. Oktober 1929</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1929-10-13">13 October 1929</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Burgtheater hält <name>Stefan Zweig</name> seine <name ref="#SZDMSK.223" type="work">Gedächtnisrede</name> für den am 15. Juli
+                        1929 verstorbenen <name ref="#SZDPER.630" type="person">Hugo von
+                            Hofmannsthal</name>. </ab>
+          <ab xml:lang="en">At the Burgtheater, <name>Stefan Zweig</name> delivers his
+                            <name ref="#SZDMSK.223" type="work">eulogy</name> in memory of <name ref="#SZDPER.630" type="person">Hugo von Hofmannsthal</name>, who died
+                        on 15 July 1929.</ab>
+        </event>
+        <event xml:id="SZDBIO.58">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1931-02">Februar 1931</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1931-02">February 1931</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Band <hi style="italic">Die Heilung durch den Geist</hi>
+                        mit den Essays <hi style="italic">Franz Anton Mesmer</hi>, <hi style="italic">Mary Baker-Eddy</hi> und <hi style="italic">Sigmund
+                            Freud</hi> erscheint im Insel Verlag. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Die Heilung durch
+                            den Geist</hi> (Healing Through the Spirit), containing the essays <hi style="italic">Franz Anton Mesmer</hi>, <hi style="italic">Mary Baker
+                            Eddy</hi>, and <hi style="italic">Sigmund Freud</hi>.</ab>
+        </event>
+        <event xml:id="SZDBIO.59">
+          <head>
+            <span xml:lang="de">München, <date when="1931-11-28">28. November
+                                1931</date>
+            </span>
+            <span xml:lang="en">Munich, <date when="1931-11-28">28 November 1931</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name>Stefan Zweig</name> feiert seinen 50. Geburtstag allein mit <name ref="#SZDPER.1552" type="person">Carl Zuckmayer</name> im Restaurant
+                        Schwarz. </ab>
+          <ab xml:lang="en">
+
+            <name>Stefan Zweig</name> celebrates his 50th birthday at the Restaurant
+                        Schwarz, with <name ref="#SZDPER.1552" type="person">Carl Zuckmayer</name>
+                        his only guest.</ab>
+        </event>
+        <event xml:id="SZDBIO.60">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1931-11-30">November 1931</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1931-11-30">November 1931</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Insel Verlag veröffentlicht die von <name ref="#SZDPER.657" type="person">Fritz Adolf Hünich</name> und <name ref="#SZDPER.1167" type="person">Erwin Rieger</name> zusammengestellte
+                            <hi style="italic">Bibliographie der Werke von <name>Stefan
+                            Zweig</name>. Dem Dichter zum 50. Geburtstag dargebracht</hi> mit
+                        mehreren hundert Einträgen zu Originalausgaben seiner Bücher, Übersetzungen
+                        und Essays. </ab>
+          <ab xml:lang="en">Insel Verlag publishes <hi style="italic">Bibliographie der
+                            Werke von <name>Stefan Zweig</name>. Dem Dichter zum 50. Geburtstag
+                            dargebracht</hi> (a Bibliography of the Works of <name>Stefan
+                            Zweig</name>, Presented to the Author on his 50th Birthday), compiled by
+                            <name ref="#SZDPER.657" type="person">Fritz Adolf Hünich</name> and
+                            <name ref="#SZDPER.1167" type="person">Erwin Rieger</name>. It contains
+                        several hundred entries of original editions of his books, translations, and
+                        essays.</ab>
+        </event>
+        <event xml:id="SZDBIO.61">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1932-10">Oktober 1932</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1932-10">October 1932</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Insel Verlag erscheint die Biographie <hi style="italic">Marie Antoinette: Bildnis eines mittleren Charakters</hi>. </ab>
+          <ab xml:lang="en">Insel Verlag publishes the biography <hi style="italic">Marie
+                            Antoinette: Bildnis eines mittleren Charakters</hi> (Marie Antoinette:
+                        The Portrait of an Average Woman).</ab>
+        </event>
+        <event xml:id="SZDBIO.62">
+          <head>
+            <span xml:lang="de">Bern, <date when="1933-03-12">12. März 1933</date>
+            </span>
+            <span xml:lang="en">Bern, <date when="1933-03-12">12 March 1933</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Bei der Lesung seiner Gedichte <hi style="italic">Der
+                            Bildner</hi> und <hi style="italic">Hymnus an die Reise</hi> entstehen
+                        während einer Übertragung im Schweizer Rundfunk <name ref="https://www.mediathek.at/atom/01027411-0F4-0004D-000006DC-0101D962" type="extern">die beiden einzigen heute bekannten Tonaufnahmen</name>
+                        Stefan Zweigs. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> reads his poems <hi style="italic">Der
+                            Bildner</hi> (The Sculptor) and <hi style="italic">Hymnus an die
+                            Reise</hi> (Hymn to Travel) for a Swiss radio broadcast, producing what
+                        are today <name ref="https://www.mediathek.at/atom/01027411-0F4-0004D-000006DC-0101D962" type="extern">the only extant recordings</name> of his voice.</ab>
+        </event>
+        <event xml:id="SZDBIO.63">
+          <head>
+            <span xml:lang="de">Leipzig, <date when="1933-10-14">14. Oktober 1933</date>
+            </span>
+            <span xml:lang="en">Leipzig, <date when="1933-10-14">14 October 1933</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im <hi style="italic">Börsenblatt für den deutschen
+                            Buchhandel</hi> wird ohne Erlaubnis ein Brief Stefan Zweigs an seinen
+                        Verleger <name ref="#SZDPER.730" type="person">Anton Kippenberg</name>
+                        veröffentlicht, in dem er sich von der von <name ref="#SZDPER.895" type="person">Klaus Mann</name> herausgegebenen Zeitschrift <hi style="italic">Die Sammlung</hi> distanziert. In der Folge kommt es zum
+                        Bruch mit dem Insel Verlag. </ab>
+          <ab xml:lang="en">The <hi style="italic">Börsenblatt für den deutschen
+                            Buchhandel</hi> publishes without authorization a letter by <name>Stefan
+                            Zweig</name> to his publisher <name ref="#SZDPER.730" type="person">Anton Kippenberg</name>, in which he distances himself from the journal
+                            <hi style="italic">Die Sammlung</hi>, edited by <name ref="#SZDPER.895" type="person">Klaus Mann</name>. Subsequently, Zweig breaks with Insel
+                        Verlag.</ab>
+        </event>
+        <event xml:id="SZDBIO.64">
+          <head>
+            <span xml:lang="de">
+              <date from="1933-10-20" to="1933-12-09">20. Oktober bis 9. Dezember
+                                1933</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1933-10-20" to="1933-12-09">20 October through 9 December
+                                1933</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise nach London, Beginn der Arbeit an <hi style="italic">Maria Stuart</hi>, Rückfahrt über Paris. </ab>
+          <ab xml:lang="en">Visit to London, begins work on <hi style="italic">Maria
+                            Stuart</hi>, returns via Paris.</ab>
+        </event>
+        <event xml:id="SZDBIO.65">
+          <head>
+            <span xml:lang="de">Salzburg, <date when="1934-02-17">um den 17. Februar
+                                1934</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date when="1934-02-17">around 17 February
+                                1934</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Polizeiliche Durchsuchung des Hauses auf dem Kapuzinerberg
+                        nach Waffen des verbotenen Republikanischen Schutzbundes. <name>Stefan
+                            Zweig</name> meldet sich daraufhin bei den Behörden ab, verlegt seinen
+                        Wohnsitz nach London und mietet ein Apartment im Haus 11 Portland Place. </ab>
+          <ab xml:lang="en">Police search Zweig’s Kapuzinerberg villa for stashed weapons
+                        of the illegal Republican Protection League. Incensed, Zweig deregisters
+                        with the Salzburg authorities and moves to London, renting a flat at 11
+                        Portland Place.</ab>
+        </event>
+        <event xml:id="SZDBIO.66">
+          <head>
+            <span xml:lang="de">London, <date from="1934-03" to="1934-04">März oder
+                                April 1934</date>
+            </span>
+            <span xml:lang="en">London, <date from="1934-03" to="1934-04">March or April
+                                1934</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Einstellung der aus Deutschland geflüchteten <name ref="#SZDPER.1555" type="person">Lotte Altmann</name> als
+                        Sekretärin.</ab>
+          <ab xml:lang="en">Zweig hires <name ref="#SZDPER.1555" type="person">Lotte
+                            Altmann</name>, a refugee from Germany, as his secretary.</ab>
+        </event>
+        <event xml:id="SZDBIO.67">
+          <head>
+            <span xml:lang="de">Wien, <date when="1934-10-30">Ende Oktober 1934</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1934-10-30">end of October                               
+ 1934</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <hi style="italic">Triumph und Tragik des Erasmus von Rotterdam</hi>
+                        erscheint zunächst als Privatdruck bei Herbert Reichner in Wien. Im Dezember
+                        folgt die Buchhandelsausgabe, die bereits auf 1935 vordatiert ist. </ab>
+          <ab xml:lang="en">
+            <hi style="italic">Triumph und Tragik des Erasmus von Rotterdam</hi>
+                        (Erasmus) is privately published by Herbert Reichner. The trade edition,
+                        post-dated to 1935, appears in December.</ab>
+        </event>
+        <event xml:id="SZDBIO.68">
+          <head>
+            <span xml:lang="de">
+              <date from="1935-01-10" to="1935-02-07">10. Januar bis 7. Februar
+                                1935</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1935-01-10" to="1935-02-07">10 January through 7 February
+                                1935</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Von Nizza aus mit dem Schiff Conte di Savoia nach New York
+                        City, dort mehrere Treffen mit dem amerikanischen Verleger <name ref="#SZDPER.648" type="person">Ben Huebsch</name>. Am 30. Januar
+                        Rückfahrt mit der S.S. Manhattan, um den 7. Februar zurück in London. </ab>
+          <ab xml:lang="en">Voyage to New York on the Conte di Savoia, sailing from Nice.
+                        In New York, Zweig repeatedly meets with the American publisher <name ref="#SZDPER.648" type="person">Ben Huebsch</name>. Returns 30 January
+                        on the S.S. Manhattan, docking at London around 7 February.</ab>
+        </event>
+        <event xml:id="SZDBIO.69">
+          <head>
+            <span xml:lang="de">Wien, <date when="1935-04">April 1935</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1935-04">April 1935</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Herbert Reichner Verlag erscheint die Biographie <hi style="italic">Maria Stuart</hi>. </ab>
+          <ab xml:lang="en">Herbert Reichner Verlag publishes the biography <hi style="italic">Maria Stuart</hi> (The Queen of Scots).</ab>
+        </event>
+        <event xml:id="SZDBIO.70">
+          <head>
+            <span xml:lang="de">Dresden, <date when="1935-06-24">24. Juni 1935</date>
+            </span>
+            <span xml:lang="en">Dresden, <date when="1935-06-24">24 June 1935</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> In der Sächsischen Staatsoper Uraufführung von <name ref="#SZDPER.1374" type="person">Richard Strauss‘</name>
+            <hi style="italic">Die schweigsame Frau</hi> mit dem von <name>Stefan
+                            Zweig</name> verfassten Libretto nach einer Vorlage von <name ref="#SZDPER.684" type="person">Ben Jonson</name>. Wegen der jüdischen
+                        Herkunft Stefan Zweigs, der nicht in Dresden anwesend ist, wird die Oper von
+                        der nationalsozialistischen Regierung nach vier Aufführungen verboten. </ab>
+          <ab xml:lang="en">First performance of <name ref="#SZDPER.1374" type="person">Richard Strauss‘</name>
+            <hi style="italic">Die schweigsame Frau</hi> (The Silent Woman) at the State
+                        Opera of Saxony. The libretto is by <name>Stefan Zweig</name>, based on a
+                        comedy by <name ref="#SZDPER.684" type="person">Ben Jonson</name>. Due to
+                        the Jewish descent of Zweig, who does not attend at Dresden, the opera is
+                        banned by the National Socialist government after four performances.</ab>
+        </event>
+        <event xml:id="SZDBIO.71">
+          <head>
+            <span xml:lang="de">London, <date when="1936-03-12">12. März 1936</date>
+            </span>
+            <span xml:lang="en">London, <date when="1936-03-12">12 March 1936</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Umzug in ein Apartment im Haus 49 Hallam Street. </ab>
+          <ab xml:lang="en">Zweig relocates to a flat in 49 Hallam Street.</ab>
+        </event>
+        <event xml:id="SZDBIO.72">
+          <head>
+            <span xml:lang="de">Wien, <date when="1936-05">Mai 1936</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1936-05">May 1936</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Herbert Reichner Verlag erscheint <hi style="italic">Castellio gegen Calvin oder Ein Gewissen gegen die Gewalt</hi>. </ab>
+          <ab xml:lang="en">Herbert Reichner Verlag publishes <hi style="italic">Castellio
+                            gegen Calvin oder Ein Gewissen gegen die Gewalt</hi> (The Right to
+                        Heresy).</ab>
+        </event>
+        <event xml:id="SZDBIO.73">
+          <head>
+            <span xml:lang="de">
+              <date from="1936-08-08" to="1936-10-06">8. August bis 6. Oktober
+                                1936</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1936-08-08" to="1936-10-06">8 August through 6 October
+                                1936</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Schiffsreise auf der RMS Alcantara von Southampton nach
+                        Brasilien und Argentinien mit Halten in Vigo und Lissabon. Ankunft in Rio de
+                        Janeiro am 21. August. Mehrere Ausflüge, darunter auch nach Petrópolis. Am
+                        26. August Lesung in der jüdischen Gemeinde aus <hi style="italic">Der
+                            begrabene Leuchter</hi> zugunsten der aus Europa geflüchteten
+                        Emigranten. Am 27. August Vortrag <name ref="#SZDMSK.193" type="work">
+              <hi style="italic">Die geistige Einheit der Welt</hi>
+            </name>. Am 28. August Weiterreise über São Paulo nach Santos. Von dort auf
+                        der Highland Brigade nach Buenos Aires. Teilnahme am Kongress des
+                        International PEN, der vom 4. bis 14. September stattfindet. Ab 16.
+                        September Rückreise auf der RMS Almanzora. Ankunft in Southampton am 6.
+                        Oktober. </ab>
+          <ab xml:lang="en">Voyage from Southampton to Brazil and Argentina on the RMS
+                        Alcantara, docking at Vigo and Lisbon. Arrives at Rio de Janeiro 21 August.
+                        Several excursions, including to Petrópolis. On 26 August he reads from <hi style="italic">Der begrabene Leuchter</hi> (The Buried Candelabrum)
+                        before the Jewish congregation, for the benefit of the European refugees. On
+                        27 August he gives a speech on <name ref="#SZDMSK.193" type="work">
+              <hi style="italic">Die geistige Einheit der Welt</hi>
+            </name> (The Spiritual Unity of the World). Continues his journey on 28
+                        August via São Paulo to Santos, from there to Buenos Aires on the Highland
+                        Brigade. Participates in the International PEN Congress, lasting from 4 to
+                        14 September. Returns on 16 September on the RMS Almanzora, docking at
+                        Southampton on 6 October.</ab>
+        </event>
+        <event xml:id="SZDBIO.74">
+          <head>
+            <span xml:lang="de">Salzburg, <date from="1937-05-05" to="1937-05-07">5. bis
+                                7. Mai 1937</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date from="1937-05-05" to="1937-05-07">5
+                                through 7 May 1937</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Räumung des Hauses auf dem Kapuzinerberg und Vorbereitung des
+                        Verkaufs. </ab>
+          <ab xml:lang="en">The Kapuzinerberg villa is cleared and prepared for sale.</ab>
+        </event>
+        <event xml:id="SZDBIO.75">
+          <head>
+            <span xml:lang="de">Wien, <date when="1937-11">November 1937</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1937-11">November 1937</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Als letztes Buch Stefan Zweigs im Herbert Reichner Verlag
+                        erscheint der Band <hi style="italic">Magellan</hi>, der im Druck bereits
+                        auf das Jahr 1938 vordatiert ist. </ab>
+          <ab xml:lang="en">Herbert Reichner Verlag publish their last book by
+                            <name>Stefan Zweig</name>, <hi style="italic">Magellan</hi>, post-dated
+                        to 1938.</ab>
+        </event>
+        <event xml:id="SZDBIO.76">
+          <head>
+            <span xml:lang="de">
+              <date from="1937-11-26" to="1937-12-02">26. November bis 2. Dezember
+                                1937</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1937-11-26" to="1937-12-02">26 November through 2 December
+                                1937</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Flugreise von London nach Prag und Weiterfahrt nach Wien.
+                        Letzter Besuch bei seiner Mutter <name ref="#SZDPER.1558" type="person">Ida
+                            Zweig</name> und gleichzeitig letzter Aufenthalt in Österreich.
+                        Rückreise nach London über Zürich. </ab>
+          <ab xml:lang="en">Flies from London to Prague, then travels onwards to Vienna.
+                        Last visit to his mother <name ref="#SZDPER.1558" type="person">Ida
+                            Zweig</name>, also his last visit to Austria. Returns to London via
+                        Zurich.</ab>
+        </event>
+        <event xml:id="SZDBIO.77">
+          <head>
+            <span xml:lang="de">
+              <date from="1938-03-11" to="1938-03-13">11. bis 13. März 1938</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1938-03-11" to="1938-03-13">11 through 13 March 1938</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> In der Nacht vom 11. auf den 12. März Einmarsch deutscher
+                        Truppen in Österreich, am 13. März wird der &quot;Anschluss&quot; an das Deutsche
+                        Reich verkündet. </ab>
+          <ab xml:lang="en">German troops march into Austria in the night of 11/12 March.
+                        The &quot;Anschluss&quot;, Austria’s annexation to the German Reich, is proclaimed on
+                        13 March.</ab>
+        </event>
+        <event xml:id="SZDBIO.78">
+          <head>
+            <span xml:lang="de">Salzburg, <date when="1938-04-30">30. April 1938</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date when="1938-04-30">30 April 1938</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Einzige öffentliche Bücherverbrennung in Österreich, bei der
+                        auch Werke Stefan Zweigs vernichtet werden. </ab>
+          <ab xml:lang="en">Only public book burning in Austria. Among the books destroyed
+                        are works by <name>Stefan Zweig</name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.79">
+          <head>
+            <span xml:lang="de">Wien, <date when="1938-08-23">23. August 1938</date>
+            </span>
+            <span xml:lang="en">Vienna, <date when="1938-08-23">23 August 1938</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Tod <name ref="#SZDPER.1558" type="person">Ida Zweigs</name>
+                        im Alter von 83 Jahren. </ab>
+          <ab xml:lang="en">
+            <name ref="#SZDPER.1558" type="person">Ida Zweig</name> dies, aged 83
+                        years.</ab>
+        </event>
+        <event xml:id="SZDBIO.80">
+          <head>
+            <span xml:lang="de">Stockholm und Amsterdam, <date when="1938-11-15">November 1938</date>
+            </span>
+            <span xml:lang="en">Stockholm and Amsterdam, <date when="1938-11-15">November 1938</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Die deutsche Ausgabe des Romans <hi style="italic">Ungeduld
+                            des Herzens</hi> erscheint in den Exilverlagen Bermann-Fischer und
+                        Allert de Lange. Der Band ist auf 1939 vordatiert. </ab>
+          <ab xml:lang="en">The exile publishers Bermann-Fischer and Allert de Lange
+                        publish the German edition of the novel <hi style="italic">Ungeduld des
+                            Herzens</hi> (The Impatient Heart), post-dated to 1939.</ab>
+        </event>
+        <event xml:id="SZDBIO.81">
+          <head>
+            <span xml:lang="de">Salzburg, <date when="1938-11-22">22. November
+                                1938</date>
+            </span>
+            <span xml:lang="en">Salzburg, <date when="1938-11-22">22 November
+                                1938</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Die Ehe von <name ref="#SZDPER.1556" type="person">Friderike</name> und <name>Stefan Zweig</name> wird vom Landgericht
+                        Salzburg geschieden. Beide Ehepartner lassen sich durch ihre Anwälte
+                        vertreten. </ab>
+          <ab xml:lang="en">
+            <name ref="#SZDPER.1556" type="person">Friderike</name> and <name>Stefan
+                            Zweig</name> are divorced at the District Court of Salzburg. Only their
+                        lawyers appear at court.</ab>
+        </event>
+        <event xml:id="SZDBIO.82">
+          <head>
+            <span xml:lang="de">
+              <date from="1938-12-17" to="1939-03-08">17. Dezember 1938 bis 8. März
+                                1939</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1938-12-17" to="1939-03-08">17 December 1938 through 8 March
+                                1939</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Gemeinsam mit <name ref="#SZDPER.1555" type="person">Lotte
+                            Altmann</name> Schiffsreise von Southampton nach New York City.
+                        Anschließend auf Vortragsreise durch die USA und Kanada mit Auftritten in
+                        Philadelphia, Boston, Indianapolis, Chicago, Minneapolis, Detroit,
+                        Cincinnati, Toledo, Kansas City, Houston, New Orleans, San Antonio, Dallas,
+                        Salt Lake City, San Francisco, Los Angeles und Toronto. <name>Stefan
+                            Zweig</name> hält abwechselnd die Vorträge <name ref="#SZDMSK.215" type="work">
+              <hi style="italic">History of tomorrow</hi>
+            </name> und <name ref="#SZDMSK.209" type="work">
+              <hi style="italic">The Secret of Artistic Creation</hi>
+            </name>. Rückfahrt nach Southampton auf der Normandie. </ab>
+          <ab xml:lang="en"> Voyage from Southampton to New York City, accompanied by
+                            <name ref="#SZDPER.1555" type="person">Lotte Altmann</name>. Lecture
+                        tour of the USA and Canada, with venues including Philadelphia, Boston,
+                        Indianapolis, Chicago, Minneapolis, Detroit, Cincinnati, Toledo, Kansas
+                        City, Houston, New Orleans, San Antonio, Dallas, Salt Lake City, San
+                        Francisco, Los Angeles, and Toronto. <name>Stefan Zweig</name> alternates
+                        between the lectures <name ref="#SZDMSK.215" type="work">
+              <hi style="italic">History of tomorrow</hi>
+            </name> and <name ref="#SZDMSK.209" type="work">
+              <hi style="italic">The Secret of Artistic Creation</hi>
+            </name>. Return to Southampton on the Normandie.</ab>
+        </event>
+        <event xml:id="SZDBIO.83">
+          <head>
+            <span xml:lang="de">London, <date when="1939-04-12">12. April 1939, 15:15
+                                Uhr</date>
+            </span>
+            <span xml:lang="en">London, <date when="1939-04-12">12 April 1939, 3:15
+                                p.m.</date>
+            </span>
+          </head>
+          <ab xml:lang="de">
+            <name>Stefan Zweig</name> hält einen <name ref="#SZDMSK.243" type="work">Radiovortrag für Schulkinder in den USA</name>, der aus England per
+                        Kurzwelle live übertragen wird. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> gives a <name ref="#SZDMSK.243" type="work">radio
+                            talk for school children in the U.S.</name>, broadcast live from England
+                        via shortwave.</ab>
+        </event>
+        <event xml:id="SZDBIO.84">
+          <head>
+            <span xml:lang="de">
+              <date when="1939-09-01">1. September 1939</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1939-09-01">1 September 1939</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Beginn des Zweiten Weltkriegs. </ab>
+          <ab xml:lang="en">Beginning of the Second World War.</ab>
+        </event>
+        <event xml:id="SZDBIO.85">
+          <head>
+            <span xml:lang="de">Bath, <date when="1939-09-06"> 6. September 1939</date>
+            </span>
+            <span xml:lang="en">Bath, <date when="1939-09-06">6 September 1939</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Heirat von <name>Stefan Zweig</name> und <name ref="#SZDPER.1555" type="person">Lotte Altmann</name>. </ab>
+          <ab xml:lang="en">
+            <name>Stefan Zweig</name> and <name ref="#SZDPER.1555" type="person">Lotte
+                            Altmann</name> are married.</ab>
+        </event>
+        <event xml:id="SZDBIO.86">
+          <head>
+            <span xml:lang="de">Bath, <date when="1939-09-13"> 13. September 1939</date>
+            </span>
+            <span xml:lang="en">Bath, <date when="1939-09-13">13 September 1939</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Kauf des Hauses Rosemount. </ab>
+          <ab xml:lang="en">The Zweigs buy Rosemount House.</ab>
+        </event>
+        <event xml:id="SZDBIO.87">
+          <head>
+            <span xml:lang="de">London, <date when="1939-09-26">26. September
+                                1939</date>
+            </span>
+            <span xml:lang="en">London, <date when="1939-09-26">26 September 1939</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Drei Tage nach dem Tod von <name ref="#SZDPER.431" type="person">Sigmund Freud</name> hält <name>Stefan Zweig</name> im
+                        Golders Green Crematorium seine Gedenkrede <name ref="#SZDMSK.201" type="work">
+              <hi style="italic">Worte am Sarge Sigmund Freuds</hi>
+            </name>. </ab>
+          <ab xml:lang="en">Three days after the death of <name ref="#SZDPER.431" type="person">Sigmund Freud</name>, <name>Stefan Zweig</name> delivers
+                        his eulogy <name ref="#SZDMSK.201" type="work">
+              <hi style="italic">Worte am Sarge Sigmund Freuds</hi>
+            </name> at Golders Green Crematorium.</ab>
+        </event>
+        <event xml:id="SZDBIO.88">
+          <head>
+            <span xml:lang="de">
+              <date when="1940-03-15">15. März 1940</date>
+            </span>
+            <span xml:lang="en">
+              <date when="1940-03-15">15 March 1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan und <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> werden offiziell Untertanen der Britischen Krone. </ab>
+          <ab xml:lang="en">Stefan and <name ref="#SZDPER.1555" type="person">Lotte                     
+       Zweig</name> officially become subjects of the British Crown.</ab>
+        </event>
+        <event xml:id="SZDBIO.89">
+          <head>
+            <span xml:lang="de">
+              <date from="1940-04-10" to="1940-04-29">10. bis 29. April 1940</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1940-04-10" to="1940-04-29">10 through 29 April 1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Recherche- und Vortragsreise nach Paris. </ab>
+          <ab xml:lang="en">Research and speaking trip to Paris.</ab>
+        </event>
+        <event xml:id="SZDBIO.90">
+          <head>
+            <span xml:lang="de">Paris, <date when="1940-04-24">24. April 1940</date>
+            </span>
+            <span xml:lang="en">Paris, <date when="1940-04-24">24 April 1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Rede in Radio Paris unter dem Titel <name ref="#SZDMSK.42" type="work">
+              <hi style="italic">Pour ceux qui ne peuvent pas parler</hi>
+            </name>. </ab>
+          <ab xml:lang="en">Zweig delivers a speech for Radio Paris, <name ref="#SZDMSK.42" type="work">
+              <hi style="italic">Pour ceux qui ne peuvent pas parler</hi>
+            </name>.</ab>
+        </event>
+        <event xml:id="SZDBIO.91">
+          <head>
+            <span xml:lang="de">Paris, <date when="1940-04-26">26. April 1940</date>
+            </span>
+            <span xml:lang="en">Paris, <date when="1940-04-26">26 April 1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Vortrag <name ref="#SZDMSK.276" type="work">
+              <hi style="italic">La Vienne d&apos;hier</hi>
+            </name> im Théâtre Marigny. </ab>
+          <ab xml:lang="en">Zweig delivers a lecture on <name ref="#SZDMSK.276" type="work">
+              <hi style="italic">La Vienne d&apos;hier</hi>
+            </name> at the Théâtre Marigny.</ab>
+        </event>
+        <event xml:id="SZDBIO.92">
+          <head>
+            <span xml:lang="de">
+              <date from="1940-06-25" to="1940-07-07">25. Juni bis 7. Juli 1940</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1940-06-25" to="1940-07-07">25 June through 7 July
+                                1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan und <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> verlassen Europa und reisen von Liverpool auf der Scythia
+                        nach New York City. </ab>
+          <ab xml:lang="en">Stefan and <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> leave Europe, sailing from Liverpool for New York on the
+                        Scythia.</ab>
+        </event>
+        <event xml:id="SZDBIO.93">
+          <head>
+            <span xml:lang="de">
+              <date from="1940-08-09" to="1940-08-21">9. bis 21. August 1940</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1940-08-09" to="1940-08-21">9 through 21 August 1940</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Fahrt von New York City nach Rio de Janeiro auf der S.S.
+                        Argentina. Anschließend Recherche für ein Buch über Brasilien. </ab>
+          <ab xml:lang="en">Onward journey from New York to Rio de Janeiro on the S.S.
+                        Argentina. Zweig begins research for a book on Brazil.</ab>
+        </event>
+        <event xml:id="SZDBIO.94">
+          <head>
+            <span xml:lang="de">
+              <date from="1941-01-15" to="1941-01-23">15. bis 23. Januar 1941</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1941-01-15" to="1941-01-23">15 through 23 January
+                                1941</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Flugreise von Rio de Janeiro nach New York City über Salvador
+                        de Bahia und durch mehrere brasilianische Bundesstaaten. </ab>
+          <ab xml:lang="en">Plane trip from Rio de Janeiro to New York City via Salvador
+                        de Bahia and several Brazilian states.</ab>
+        </event>
+        <event xml:id="SZDBIO.95">
+          <head>
+            <span xml:lang="de">Ossining, <date from="1941-07-01" to="1941-07-30">1. bis
+                                30 Juli 1941</date>
+            </span>
+            <span xml:lang="en">Ossining, NY, <date from="1941-07-01" to="1941-07-30">1
+                                through 30 July 1941</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Arbeit an dem autobiographischen Werk <hi style="italic">Die
+                            Welt von Gestern</hi> im angemieteten Haus 7 Ramapo Road in Ossining,
+                        nördlich von New York City. </ab>
+          <ab xml:lang="en">Zweig works on his autobiographical account <hi style="italic">Die Welt von Gestern</hi> (The World of Yesterday) at the rented house
+                        7 Ramapo Road in Ossining, north of New York City.</ab>
+        </event>
+        <event xml:id="SZDBIO.96">
+          <head>
+            <span xml:lang="de">
+              <date from="1941-08-15" to="1941-08-27">15. bis 27. August 1941</date>
+            </span>
+            <span xml:lang="en">
+              <date from="1941-08-15" to="1941-08-27">15 through 27 August 1941</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Reise von New York City nach Rio de Janeiro auf der S.S.
+                        Uruguay. </ab>
+          <ab xml:lang="en">Returns from New York to Rio de Janeiro on the S.S.
+                        Uruguay.</ab>
+        </event>
+        <event xml:id="SZDBIO.97">
+          <head>
+            <span xml:lang="de">Petrópolis, <date when="1941-09-17">17. September
+                                1941</date>
+            </span>
+            <span xml:lang="en">Petrópolis, <date when="1941-09-17">17 September
+                                1941</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Umzug in ein gemietetes Haus in der Rua Gonçalves Dias 34. </ab>
+          <ab xml:lang="en">The Zweigs move into a rented house at 34 Rua Gonçalves
+                        Dias.</ab>
+        </event>
+        <event xml:id="SZDBIO.98">
+          <head>
+            <span xml:lang="de">Stockholm, <date when="1941-11">November 1941</date>
+            </span>
+            <span xml:lang="en">Stockholm, <date when="1941-11">November 1941</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Im Bermann-Fischer Verlag erscheint der Band <hi style="italic">Brasilien. Ein Land der Zukunft</hi>. </ab>
+          <ab xml:lang="en">Bermann-Fischer Verlag publishes <hi style="italic">Brasilien.
+                            Ein Land der Zukunft</hi> (Brazil, Land of the Future).</ab>
+        </event>
+        <event xml:id="SZDBIO.99">
+          <head>
+            <span xml:lang="de">Petrópolis, <date when="1942-02-21">21. Februar
+                                1942</date>
+            </span>
+            <span xml:lang="en">Petrópolis, <date when="1942-02-21">21 February
+                                1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Absendung von drei korrigierten Typoskripten der <hi style="italic">Schachnovelle</hi> an den Verleger <name ref="#SZDPER.648" type="person">Ben Huebsch</name> von der Viking Press
+                        in New York City, den Übersetzer <name ref="#SZDPER.203" type="person">Alfredo Cahn</name> in Buenos Aires und an den Verleger <name ref="#SZDPER.1573" type="person">Gottfried Bermann Fischer</name> in New
+                        York City. <name ref="#SZDMSK.89" type="work">Ein weiteres Exemplar</name>
+                        behält <name>Stefan Zweig</name> zurück. </ab>
+          <ab xml:lang="en">Zweig sends three corrected typescripts of <hi style="italic">Schachnovelle</hi> (The Royal Game) to the publisher <name ref="#SZDPER.648" type="person">Ben Huebsch</name> at Viking Press, New
+                        York, to the translator <name ref="#SZDPER.203" type="person">Alfredo
+                            Cahn</name> in Buenos Aires, and to the publisher <name ref="#SZDPER.1573" type="person">Gottfried Bermann Fischer</name> in New
+                        York. <name ref="#SZDMSK.89" type="work">A further typescript copy</name> is
+                        retained by Zweig.</ab>
+        </event>
+        <event xml:id="SZDBIO.100">
+          <head>
+            <span xml:lang="de">Petrópolis, <date when="1942-02-22">22. Februar
+                                1942</date>
+            </span>
+            <span xml:lang="en">Petrópolis, <date when="1942-02-22">22 February
+                                1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan und <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> schreiben mehrere Abschiedsbriefe an Familienmitglieder und
+                        Freunde. </ab>
+          <ab xml:lang="en">Stefan and <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> write several farewell letters to family members and
+                        friends.</ab>
+        </event>
+        <event xml:id="SZDBIO.101">
+          <head>
+            <span xml:lang="de">Petrópolis, <date when="1942-02-23">23. Februar
+                                1942</date>
+            </span>
+            <span xml:lang="en">Petrópolis, <date when="1942-02-23">23 February
+                                1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Stefan und <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> nehmen sich in ihrem Haus gemeinsam das Leben. </ab>
+          <ab xml:lang="en">Stefan and <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> take their lives together in their home at Petrópolis.</ab>
+        </event>
+        <event xml:id="SZDBIO.102">
+          <head>
+            <span xml:lang="de">Petrópolis, <date when="1942-02-24">24. Februar
+                                1942</date>
+            </span>
+            <span xml:lang="en">Petrópolis, <date when="1942-02-24">24 February
+                                1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Beisetzung von Stefan und <name ref="#SZDPER.1555" type="person">Lotte Zweig</name> nach jüdischem Ritus auf dem
+                        katholischen Friedhof. </ab>
+          <ab xml:lang="en">Stefan and <name ref="#SZDPER.1555" type="person">Lotte
+                            Zweig</name> are given a Jewish-rite funeral at the Catholic
+                        cemetery.</ab>
+        </event>
+        <event xml:id="SZDBIO.103">
+          <head>
+            <span xml:lang="de">Stockholm, <date when="1942-10">Oktober 1942</date>
+            </span>
+            <span xml:lang="en">Stockholm, <date when="1942-10">October 1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Der Bermann-Fischer Verlag veröffentlicht <hi style="italic">Die Welt von Gestern. Erinnerungen eines Europäers</hi> in deutscher
+                        Sprache. </ab>
+          <ab xml:lang="en">Bermann-Fischer Verlag publishes <hi style="italic">Die Welt
+                            von Gestern. Erinnerungen eines Europäers</hi> (The World of Yesterday)
+                        in German.</ab>
+        </event>
+        <event xml:id="SZDBIO.104">
+          <head>
+            <span xml:lang="de">Buenos Aires, <date when="1942-12">Dezember 1942</date>
+            </span>
+            <span xml:lang="en">Buenos Aires, <date when="1942-12">December 1942</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Die erste deutschsprachige Ausgabe der <hi style="italic">Schachnovelle</hi> erscheint in einer limitierten Auflage im Pigmalión                 
+       Verlag. </ab>
+          <ab xml:lang="en">The first German-language edition of <hi style="italic">Schachnovelle</hi> (The Royal Game) is published in a limited edition
+                        by Pigmalión Verlag.</ab>
+        </event>
+        <event xml:id="SZDBIO.105">
+          <head>
+            <span xml:lang="de">Stockholm, <date when="1946-11">November 1946</date>
+            </span>
+            <span xml:lang="en">Stockholm, <date when="1946-11">November 1946</date>
+            </span>
+          </head>
+          <ab xml:lang="de"> Die deutsche Erstausgabe der von <name>Stefan Zweig</name>
+                        als Fragment hinterlassenen Biographie <hi style="italic">Balzac</hi>
+                        erscheint in der Bearbeitung <name ref="#SZDPER.435" type="person">Richard
+                            Friedenthals</name> im Bermann-Fischer Verlag. </ab>
+          <ab xml:lang="en">The German first edition of <name>Stefan Zweig</name>’s
+                        biography of <hi style="italic">Balzac</hi>, edited by <name ref="#SZDPER.435" type="person">Richard Friedenthal</name> from an
+                        unfinished manuscript in Zweig’s posthumous papers, appears at
+                        Bermann-Fischer Verlag.</ab>
+        </event>
+      </listEvent>
+    </body>
+  </text>
+</TEI>

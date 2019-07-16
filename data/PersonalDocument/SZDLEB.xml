@@ -1,0 +1,1370 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Lebensdokumente</title>
+        <title xml:lang="en">Personal Documents</title>
+        <author>
+          <persName>Stefan Zweig</persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+						Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für
+						Informationsmodellierung - Austrian Centre for Digital Humanities,
+						Karl-Franzens-Universität Graz</orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at">GAMS -
+						Geisteswissenschaftliches Asset Management System</orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc/4.0">Creative
+						Commons BY-NC 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.lebensdokumente</idno>
+        <date when="2019-03-21+01:00"></date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
+					Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Lina</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p> Jedes Werk im Nachlass von Stefan Zweig wid durch ein biblFull beschrieben.
+					Neben klassischen biographischen Merkmalen, die beschrieben werden, liegt der
+					Fokus auf physischen Merkmalen. Erschlossen wird nach den Prinzipien der RNA.
+				</p>
+      </editorialDecl>
+      <projectDesc>
+        <ab>
+          <ref target="/o:szd.lebensdokumente" type="object"></ref>
+        </ab>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+					im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+					wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+					dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+					vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+					generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+					Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+					orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+					einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+					(z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDLEB.1">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Notizbuch Russlandreise</title>
+              <title ana="assigned" xml:lang="en">Notebook: Russian journey</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Adolf
+								Haslinger</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>          
+  </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAH/L1</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: Notizen aus der Zeit des
+											Aufenthalts in Russland 1928</ab>
+                    <ab xml:lang="en">Notes
+											from 1928 sojourn in Russia</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes Papier, Label: ELASTIC No.
+												1610</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, label: ELASTIC No.
+												1610</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">38 Blatt, 18 Blatt
+												beschrieben, eingelegt Manuskript 2 Blatt,
+												Theaterkarte</measure>
+                          <span xml:lang="en">
+                            <term type="objecttyp">Notebook</term>
+                            <measure type="leaf"> 38 leaves,
+												writing on 18 leaves, inserted: manuscript, 2
+												leaves; theatre ticket</measure>
+                          </span>
+                          <measure type="format">20x13 cm</measure>
+                        </span>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">durchgehend nur recto
+												paginiert</ab>
+                        <ab xml:lang="en">Only rectos
+												counted throughout</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Metallrücken, Kunstlederumschlag</ab>
+                      <ab xml:lang="en">Metal spine, leatherette covers</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">eingelegtes Manuskript 1
+												Blatt mit Adresse eigenhändig in violetter
+												Tinte</desc>
+                        <desc xml:lang="en">inserted manuscript, 1 leaf, with address,
+												holograph in purple ink</desc>
+                        <measure>11x8 cm</measure>
+                      </item>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">eingelegtes Manuskript 1
+												Blatt mit Notiz „Bajaderka von M. Petipa Musik von
+												G. Minkus Semjenowa“ eigenhändig (?) in
+												Bleistift</desc>
+                        <desc xml:lang="en">inserted
+												manuscript, 1 leaf with note &quot;Bajaderka von M.
+												Petipa Musik von G. Minkus Semjenowa&quot;, holograph
+												(?) in pencil</desc>
+                        <measure>16x10 cm</measure> 
+                     </item>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">Theaterkarten des Moskauer Kunsttheaters, No 10 und No 11 auf einem Bogen, verso Datumsstempel 14. September 1928
+											</desc>
+                        <desc xml:lang="en">theatre tickets for
+													the Moscow Art Theatre, nos. 10 &amp; 11 on a
+													single sheet, stamped 14 Sept. 1928 on
+													reverse</desc>
+                        <measure>12x11 cm</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>[1928]</origDate>
+                  </origin>
+                  <provenance>Dr. Werner Wien</provenance>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.2">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original" ref="http://d-nb.info/gnd/1024274039">Tagebuch 1931</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L7</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.6813</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">„Tagebuch 1931 21. October begonnen“ in violetter Tinte
+											und „Richard Strauss darin“ in blauem Buntstift
+											eigenhändig</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">&quot;Tagebuch 1931 21. October begonnen&quot; in purple ink and
+											&quot;Richard Strauss darin&quot; in blue pencil,
+											holograph</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes, am Falz perforiertes
+												Papier</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, perforated at the
+												hinge</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift, blauer
+												Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ink, pencil, blue
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">76 Blatt, 25
+												Blatt beschrieben, eingelegt Manuskript 3 Blatt,
+												Telegrammaufgabeblatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf"> 76 leaves,
+												writing on 25 leaves, inserted: manuscript, 3
+												leaves; telegram form</measure>
+                        </span>
+                        <measure type="format">22x14 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">schwarz weiß karierte Broschur</ab>
+                      <ab xml:lang="en">Chequered wrappers</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">eingelegtes Manuskript 3
+												Blatt eigenhändig in Bleistift mit dem Titel
+												„Richard Strauss 1935 Juni Brieg“</desc>
+                        <desc xml:lang="en">inserted manuscript, 3
+												leaves, holograph in pencil, entitled &quot;Richard
+												Strauss 1935 Juni Brieg&quot;</desc>
+                        <measure>17x11 cm</measure>
+                      </item>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">Telegrammaufgabeblatt des Österreichischen Telegraph blanko</desc>
+                        <desc xml:lang="en">Austrian Telegraph telegram form, blank</desc>
+                        <measure>23x18 cm</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1931-10-21">1931 21. October
+											begonnen</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.3">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Hauptbuch</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">&quot;Hauptbuch&quot; (Principal
+								Ledger)</title>
+              <title type="Einheitssachtitel">Hauptbuch</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <editor role="contributor">Meingast, Anna; Zweig, Friderike</editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">letztes Blatt verso und Vorsatz hinten mit
+								Verzeichnis der „Übersetzer“ und „Ständigen Verleger“</note>
+              <note xml:lang="en">Last leaf verso and lower pastedown have a list of
+								&quot;Übersetzer&quot; (translators) and &quot;Ständige Verleger&quot; (permanent
+								publishers)</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>               
+   <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L1</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.6837</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titelblatt mit Aufschrift „Mit Gott!“ von Anna Meingast
+											[?] und „Begonnen August 1932“ eigenhändig sowie
+											Inhaltsverzeichnis</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Title-page inscribed &quot;Mit Gott!&quot; by Anna Meingast [?]
+											and &quot;Begonnen August 1932&quot; holograph; table of
+											contents</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Papier mit Tabellenvordruck, marmorierter
+												Schnitt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed form paper, marbled
+												edges</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze, rote, braune und blaue Tinte,
+												Bleistift, roter und blauer
+												Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, black, red, brown, and blue ink, pencil,
+												red and blue pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kontorbuch</term>
+                          <measure type="leaf">119 Blatt,
+												77 Blatt beschrieben, eingelegt 1 Brief, 1
+												Postkarte</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Ledger</term>
+                          <measure type="leaf"> 119 leaves, writing on 77 leaves, inserted: 1
+												letter, 1 postcard</measure>
+                        </span>
+                        <measure type="format">54x38
+												cm</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">bis 62 jeweils als
+												Doppelseite mittels Stempel paginiert, 63 bis 77
+												jeweils auf linker Seite handschriftlich
+												paginiert</ab>
+                        <ab xml:lang="en">Pages up to 62
+												counted as double-pages (stamp), 63 through 77
+												counted by hand on the left-hand
+												page</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Anna Meingast, Friderike Zweig, fremde
+											Hand</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Fadenheftung, schwarzer
+												Kunstledereinband, Ecken und Rücken aus schwarzem
+												Leder</ab>
+                      <ab xml:lang="en">Sewn, black leatherette binding, black
+												leather spine and corners</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">              
+          <desc xml:lang="de">Brief des Verlags Mizpah
+												Publishing Co. LTD. an Stefan Zweig, datiert
+												Tel-Aviv, 7th January 1934</desc>
+                        <desc xml:lang="en">letter from the Mizpah
+												Publishing Co. Ltd to Stefan Zweig, dated
+												Tel-Aviv, 7th January 1934</desc>
+                        <measure>28x22 cm</measure>
+                      </item>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">Postkarte des Verlags Curtis Brown LTD., datiert Berlin, d. 2.5.1933.</desc>
+                        <desc xml:lang="en">postcard
+													from Curtis Brown Ltd, publishers, dated Berlin, 2
+													May 1933.</desc>
+                        <measure>15x11 cm</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>Begonnen August 1932</origDate>
+                  </origin>
+                  <provenance>Anna Meingast</provenance>
+                  <acquisition>Schenkung Wilhelm Meingast 2000</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Hauptbuch</term>
+                <term type="classification" xml:lang="en">General Ledger</term>
+                <term ref="http://d-nb.info/gnd/1080163751" type="person">Meingast,
+									Anna</term>
+                <term ref="http://d-nb.info/gnd/118637460" type="person">Zweig,
+									Friderike Maria</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.4">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Verlagsvertrag Grasset [Marie
+								Antoinette]</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Grasset publishing contract
+								[Marie Antoinette]</title>
+              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">maschinschriftliche Eintragungen im Formular, recto
+								mit aufgeklebter Briefmarke und mehrfach gestempelt, verso mit
+								eigenhändiger Aufschrift „lu et approuvé“ und Unterschrift von
+								Stefan Zweig und unbekannt</note>
+              <note xml:lang="en">Form has typescript entries, postage stamp glued on
+								recto, variously stamped; verso has holograph note &quot;lu et approuvé&quot;
+								signed by Stefan Zweig and an unidentified party</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.1</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.6809</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>fre</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">vorgedrucktes Vertragsformular,
+												gelocht</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed contract form, hole
+												punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violettes Farbband, violette und schwarze
+												Tinte</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ribbon, purple and black
+												ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>
+                          <measure type="leaf">1</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>
+                          <measure type="leaf"> 1 leaf</measure>
+                        </span>
+                        <measure type="format">25x18
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, fremde Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Paris</origPlace>
+                    <origDate when="1932-02-01">le Premier Février, mil neuf cent trente
+											deux</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.5">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Verlagsvertrag Casa Editrice
+								A. Mondadori [Marie Antoinette]</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Casa Editrice A. Mondadori
+								publishing contract [Marie Antoinette]</title>
+              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">eigenhändige Aufschrift „Vertrag Marie Antoinette“
+								und Untschrift von fremder Hand</note>
+              <note xml:lang="en">Holograph note &quot;Vertrag Marie Antoinette&quot; signed by
+								an unidentified party</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.2</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.6810</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>ita</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Briefpapier Casa Editrice A. Mondadori,
+												gelocht</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Casa Editrice A. Mondadori stationery, hole
+												punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte, pinker
+												Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ribbon, purple ink, pink
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>
+                          <measure type="leaf">1</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>
+                          <measure type="leaf"> 1 leaf</measure>
+                        </span>
+                        <measure type="format">28x22
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, fremde Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Milano</origPlace>
+                    <origDate when="1932-07-26">26 Luglio 1932</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.6">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Verlagsvertrag Przeworski
+								[Marie Antoinette]</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Przeworski publishing contract
+								[Marie Antoinette]</title>
+              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <editor role="contributor">Przeworski, J.</editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufschrift „&apos;Alfa&apos; polnich“ von fremder Hand,
+								eigenhändige Unterschrift sowie Datierung und Unterschrift von J.
+								Przeworski</note>
+              <note xml:lang="en">Inscribed &quot;&apos;Alfa&apos; polnich&quot; by an unidentified hand,
+								holograph signature, signed and dated by J. Przeworski</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.3</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>                 
+   <idno type="PID">o:szd.6811</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Doppelbogen, gelocht</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Bifolium, hole punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, violette und grüne
+												Tinte, Bleistift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">black carbon paper, purple and green ink,
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>
+                          <measure type="leaf">1</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon
+												copy)</term>
+                          <measure type="leaf"> 1
+												leaf</measure>
+                        </span>
+                        <measure type="format">42x30
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, J. Przeworski</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Warschau, Salzburg</origPlace>
+                    <origDate when="1932-10-22">22 Oktober 1932</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.7">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Verlagsvertrag Forum Verlag
+								[Marie Antoinette]</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Forum Verlag publishing
+								contract [Marie Antoinette]</title>
+              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <editor role="contributor">Zweig, Lotte; Bermann Fischer,
+								Gottfried</editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufschrift „Anzahlg noch nicht geleistet“ von Lotte
+								Zweigs Hand, eigenhändige Unterschriften von Stefan Zweig, Gottfried
+								Bermann Fischer und Vertretern der Verlage Querido und Allert de
+								Lange</note>
+              <note xml:lang="en">Inscribed &quot;Anzahlg noch nicht geleistet&quot; by Lotte
+								Zweig, holograph signatures by Stefan Zweig, Gottfried Bermann
+								Fischer, and agents for the publishers Querido and Allert de
+								Lange</note>
+            </notesStmt>
+            <sourceDesc>    
+          <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.4</idno>
+                  <altIdentifier>
+                    <idno type="context">MA</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.6812</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Briefpapier Forum Verlag,
+												gelocht</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Forum Verlag stationery, hole
+												punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">schwarzes Farbband, violette und schwarze Tinte,
+												Bleistift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">black ribbon, purple and black ink,
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>
+                          <measure type="leaf">1</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>
+                          <measure type="leaf"> 1 leaf</measure>
+                        </span>
+                        <measure type="format">28x19
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Lotte Zweig, Gottfried Bermann Fischer,
+											fremde Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Amsterdam, London,
+											Stockholm</origPlace>
+                    <origDate when="1939-10-13">13.
+											Oktober 1939</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term ref="http://d-nb.info/gnd/116001151" type="person">Zweig,
+									Lotte</term>
+                <term ref="http://d-nb.info/gnd/118509683" type="person">Bermann
+									Fischer, Gottfried</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.8">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Notizbuch „Reise nach Brasilien und
+								Argentinien“</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Listen zur Reisevorbereitung und Erledigungen,
+								Zitate, Adressen u.a. Eduard Cassel &amp; Co Paris, Dr. Ernst
+								Polak</note>
+              <note xml:lang="en">Lists with travel preparations and chores,
+								quotations, addresses including Eduard Cassel &amp; Co Paris, Dr.
+								Ernst Polak</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L10</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: Tagebuchaufzeichnungen vom 8.
+											August bis 1. September 1936 der Reise nach Brasilien
+											und Argentinien</ab>
+                    <ab xml:lang="en">Diary 8 August to
+											1 September 1936 (visit to Brazil and
+										Argentina)</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">„Stefan Zweig 49, Hallam Street London W.“ in violetter
+											Tinte und „1936“ in grünem Buntstift
+											eigenhändig</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">&quot;Stefan Zweig 49, Hallam Street London W.&quot; in purple
+											ink and &quot;1936&quot; in green pencil, holograph</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke National NATTY MEMO
+												BOOK Patent No. 219547 REFILL No 6340. (British
+												Made.)</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;National NATTY
+												MEMO BOOK Patent No. 219547 REFILL No 6340.
+												(British Made.)&quot;</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze und rot Tinte, Bleistift,
+												grüner und blauer Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, black, and red ink, pencil, green and
+												blue pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">25 Blatt, 23
+												Blatt beschrieben</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf"> 25 leaves, writing on 23
+												leaves</measure>
+                        </span>
+                        <measure type="format">15x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, fremde Hand</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Ringbindung</ab>
+                      <ab xml:lang="en">Ring-bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1936-01-01">1936</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.9">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Notizbuch „1914 oder 15“</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">enthält Gedichtentwurf „An eine alte Stadt“,</note>
+              <note xml:lang="en">Contains sketch of a poem &quot;An eine alte
+								Stadt&quot;</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L4</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: Tagbucheinträge 14. bis 22.
+											Juli</ab>
+                    <ab xml:lang="en">Diary 14 through 22
+										July</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">„Creditbr 17011 [durchgestrichen] 5771“ ind Bleistift
+											und „1914 oder 15“ in grünem Buntstift
+											eigenhändig</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">&quot;Creditbr 17011 [stricken out] 5771“ in pencil and
+											&quot;1914 oder 15&quot; in green pencil, holograph</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Ringbuch mit Händlermarke Papierhandlung Huber
+												&amp; Lerner Wien, I. Kohlmarkt 9, karierte
+												Einlageblätter der Größe No. 6030 mit
+												dunkelgrünen, leinenkaschierten Deckeln und
+												Goldschnitt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Ring binder with stationer&apos;s label &quot;Huber &amp;
+												Lerner Wien, I. Kohlmarkt 9&quot;, squared loose leaves
+												size no. 6030, dark green cloth-covered boards,
+												edges gilt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, grüner
+												Buntstift,</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, pencil, green
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">30 Blatt, 29
+												Blatt beschrieben, 1
+												Ringbuchmappe</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>          
+                <measure type="leaf"> 30 leaves, writing on 29 leaves, 1
+												ring binder</measure>
+                        </span>
+                        <measure type="format">15x8
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Ringbuchmappe aus braunem Leder mit
+												Druckknopfverschluss der Marke WALKER&apos;S LOOSE-LEAF
+												BOOK PATENT. BRITISH MANUFACTURE No. 623. mit
+												Innentaschen</ab>
+                      <ab xml:lang="en">Ring binder, brown leather with snap
+												fastener, &quot;WALKER&apos;S LOOSE-LEAF BOOK PATENT. BRITISH
+												MANUFACTURE No. 623&quot; with inside pockets</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>1914 oder 15</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.10">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Notebook war 1940</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L9</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: Tagbuchaufzeichnungen von 22.
+											Mai bis 19. Juni 1940</ab>
+                    <ab xml:lang="en">Diary 22 May
+											through 19 June 1940</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titel eigenhändig in violetter Tinte</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Holograph title in purple ink</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">liniertes Papier</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Lined paper</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und blaue Tinte</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and blue ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">75 Blatt, 26
+												Blatt beschrieben</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf"> 75 leaves, writing on 26
+												leaves</measure>
+                        </span>
+                        <measure type="format">16x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Ringbindung, Deckel mit Aufdruck &quot;THE
+												SPIRAL NOTE BOOK MANUFACTURED UNDER PATENT
+												219547&quot;</ab>
+                      <ab xml:lang="en">Ring-bound, cover printed &quot;THE SPIRAL
+												NOTE BOOK MANUFACTURED UNDER PATENT 219547&quot;</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1940-01-01">1940</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.11">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Tagebuch in der Schweiz 1917</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L5</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: Tagbuchaufzeichnungen von 14.
+											November 1917 bis Februar 1918 bis 19. Juni 1940</ab>
+                    <ab xml:lang="en">Diary 14 November 1917 to February 1918 to
+											19 June 1940</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke LANDOLT-ARBENZ &amp;
+												Co BAHNHOFSTR. 66. ZÜRICH, liniertes Papier mit
+												rotem Buchschnitt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
+												&amp; Co BAHNHOFSTR. 66. ZÜRICH&quot;, lined paper,
+												edges red</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, blaue und schwarze
+												Tinte</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, blue, and black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">45 Blatt, 44
+												Blatt beschrieben</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf"> 45 leaves, writing on 44
+												leaves</measure>
+                        </span>
+                        <measure type="format">20x13 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Schwarz kaschierter Einband in
+												Lederoptik</ab>
+                      <ab xml:lang="en">Black faux-leather laminated
+												binding</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Schweiz</origPlace>
+                    <origDate when="1917-01-01">1917</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.12">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Notizbuch Paris 1936</title>
+              <title ana="assigned" xml:lang="en">Notebook: Paris 1936</title>
+              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">enthält notierte Adressen</note>
+              <note xml:lang="en">Contains jotted-down addresses</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L11</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhalt: kalenderartig erfasste
+											Termine in Paris, Salzburg, Wien, Mailand, Neapel, Rom
+											u.a. zwischen 16. Dezember 1936 und 17. Februar
+											1937</ab>
+                    <ab xml:lang="en">calendar of appointments in
+											Paris, Salzburg, Vienna, Milan, Naples, Rome and other
+											places between 16 December 1936 and 17 February 1937
+										</ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke FLEXOR NOTES No. F103
+												WALKER&apos;S FLEXOR REFILL, liniertes Papier mit
+												Goldschnitt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
+												F103 WALKER&apos;S FLEXOR REFILL&quot;, lined paper, edges
+												gilt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, roter und
+												blauer Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, pencil, red and blue
+												pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">28 Blatt, 24
+												Blatt beschrieben, eingelegt Typoskript 1
+												Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf"> 28 leaves, writing on 24 leaves,
+												inserted: typescript, 1
+												leaf</measure>
+                        </span>
+                        <measure type="format">13x9
+												cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">blauer Ledereinband</ab>
+                      <ab xml:lang="en">Blue leather binding</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Accurals">
+                        <desc xml:lang="de">eingelegtes Typoskript 1 Blatt mit diversen Adressen in Paris, schwarzes Farbband mit eigenhändiger Anmerkung in violetter Tinte</desc>
+                        <desc xml:lang="en">inserted typescript, 1 leaf with various Paris addresses, black ribbon with holograph annotation in purple ink</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Paris, Salzburg, Wien,
+											Italien</origPlace>
+                    <origDate>[1936-1937]</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
