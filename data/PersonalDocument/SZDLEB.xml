@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -92,7 +92,8 @@
             <titleStmt>
               <title ana="assigned" xml:lang="de">Notizbuch Russlandreise</title>
               <title ana="assigned" xml:lang="en">Notebook: Russian journey</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Adolf
 								Haslinger</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
@@ -138,6 +139,7 @@
 												Theaterkarte</measure>
                           <span xml:lang="en">
                             <term type="objecttyp">Notebook</term>
+                            
                             <measure type="leaf"> 38 leaves,
 												writing on 18 leaves, inserted: manuscript, 2
 												leaves; theatre ticket</measure>
@@ -146,9 +148,8 @@
                         </span>
                       </extent>
                       <foliation>
-                        <ab xml:lang="de">durchgehend nur recto
-												paginiert</ab>
-                        <ab xml:lang="en">Only rectos
+                        <ab xml:lang="de">durchgehend nur recto paginiert</ab>
+                        <ab xml:lang="en">only rectos
 												counted throughout</ab>
                       </foliation>
                     </supportDesc>
@@ -335,10 +336,18 @@
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de">Hauptbuch</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">&quot;Hauptbuch&quot; (Principal
 								Ledger)</title>
-              <title type="Einheitssachtitel">Hauptbuch</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
-              <editor role="contributor">Meingast, Anna; Zweig, Friderike</editor>
+              <author ref="http://d-nb.info/gnd/118637479">
+                <surname>Zweig</surname><forename>Stefan</forename>
+              </author>
+              <editor role="contributor" ref="http://d-nb.info/gnd/1080163751">
+                <surname>Meingast</surname>
+                <forename>Anna</forename>
+              </editor>
+              <editor role="contributor" ref="http://d-nb.info/gnd/118637460"> 
+                <surname>Zweig</surname>
+                <forename>Friderike</forename>
+              </editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -346,7 +355,7 @@
             <notesStmt>
               <note xml:lang="de">letztes Blatt verso und Vorsatz hinten mit
 								Verzeichnis der „Übersetzer“ und „Ständigen Verleger“</note>
-              <note xml:lang="en">Last leaf verso and lower pastedown have a list of
+              <note xml:lang="en">last leaf verso and lower pastedown have a list of
 								&quot;Übersetzer&quot; (translators) and &quot;Ständige Verleger&quot; (permanent
 								publishers)</note>
             </notesStmt>
@@ -383,7 +392,7 @@
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Papier mit Tabellenvordruck, marmorierter
 												Schnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed form paper, marbled
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">pre-printed form paper, marbled
 												edges</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze, rote, braune und blaue Tinte,
 												Bleistift, roter und blauer
@@ -482,7 +491,8 @@
 								Antoinette]</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Grasset publishing contract
 								[Marie Antoinette]</title>
-              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -576,7 +586,8 @@
 								A. Mondadori [Marie Antoinette]</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Casa Editrice A. Mondadori
 								publishing contract [Marie Antoinette]</title>
-              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -666,7 +677,8 @@
 								[Marie Antoinette]</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Przeworski publishing contract
 								[Marie Antoinette]</title>
-              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
               <editor role="contributor">Przeworski, J.</editor>
@@ -859,7 +871,8 @@
             <titleStmt>
               <title ana="original">Notizbuch „Reise nach Brasilien und
 								Argentinien“</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -965,7 +978,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Notizbuch „1914 oder 15“</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -1076,7 +1090,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Notebook war 1940</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -1166,7 +1181,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Tagebuch in der Schweiz 1917</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
@@ -1258,7 +1274,8 @@
             <titleStmt>
               <title ana="assigned" xml:lang="de">Notizbuch Paris 1936</title>
               <title ana="assigned" xml:lang="en">Notebook: Paris 1936</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
             </titleStmt>
