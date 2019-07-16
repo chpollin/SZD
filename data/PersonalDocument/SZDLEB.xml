@@ -44,8 +44,12 @@
         <respStmt>
           <resp>Datenerfassung</resp>
           <persName>
-            <forename>Lina</forename>
+            <forename>Lina Maria</forename>
             <surname>Zangerl</surname>
+          </persName>
+          <persName>
+            <forename>Verena Maria</forename>
+            <surname>Höller</surname>
           </persName>
         </respStmt>
         <respStmt>
@@ -62,7 +66,7 @@
     </fileDesc>
     <encodingDesc>
       <editorialDecl>
-        <p> Jedes Werk im Nachlass von Stefan Zweig wid durch ein biblFull beschrieben.
+        <p> Jedes Lebensdokument im Nachlass von Stefan Zweig wid durch ein biblFull beschrieben.
 					Neben klassischen biographischen Merkmalen, die beschrieben werden, liegt der
 					Fokus auf physischen Merkmalen. Erschlossen wird nach den Prinzipien der RNA.
 				</p>
@@ -126,7 +130,7 @@
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes Papier, Label: ELASTIC No.
 												1610</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, label: ELASTIC No.
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">squared paper, label: ELASTIC No.
 												1610</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ink, pencil</material>
@@ -160,7 +164,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">Metallrücken, Kunstlederumschlag</ab>
-                      <ab xml:lang="en">Metal spine, leatherette covers</ab>
+                      <ab xml:lang="en">metal spine, leatherette covers</ab>
                     </binding>
                   </bindingDesc>
                   <accMat>
@@ -258,7 +262,7 @@
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes, am Falz perforiertes
 												Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, perforated at the
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">squared paper, perforated at the
 												hinge</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift, blauer
 												Buntstift</material>
@@ -288,7 +292,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">schwarz weiß karierte Broschur</ab>
-                      <ab xml:lang="en">Chequered wrappers</ab>
+                      <ab xml:lang="en">chequered wrappers</ab>
                     </binding>
                   </bindingDesc>
                   <accMat>
@@ -381,7 +385,7 @@
                     <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titelblatt mit Aufschrift „Mit Gott!“ von Anna Meingast
 											[?] und „Begonnen August 1932“ eigenhändig sowie
 											Inhaltsverzeichnis</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Title-page inscribed &quot;Mit Gott!&quot; by Anna Meingast [?]
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">title-page inscribed &quot;Mit Gott!&quot; by Anna Meingast [?]
 											and &quot;Begonnen August 1932&quot; holograph; table of
 											contents</docEdition>
                   </msItem>
@@ -420,7 +424,7 @@
 												Doppelseite mittels Stempel paginiert, 63 bis 77
 												jeweils auf linker Seite handschriftlich
 												paginiert</ab>
-                        <ab xml:lang="en">Pages up to 62
+                        <ab xml:lang="en">pages up to 62
 												counted as double-pages (stamp), 63 through 77
 												counted by hand on the left-hand
 												page</ab>
@@ -436,7 +440,7 @@
                       <ab xml:lang="de">Fadenheftung, schwarzer
 												Kunstledereinband, Ecken und Rücken aus schwarzem
 												Leder</ab>
-                      <ab xml:lang="en">Sewn, black leatherette binding, black
+                      <ab xml:lang="en">sewn, black leatherette binding, black
 												leather spine and corners</ab>
                     </binding>
                   </bindingDesc>
@@ -504,7 +508,7 @@
 								mit aufgeklebter Briefmarke und mehrfach gestempelt, verso mit
 								eigenhändiger Aufschrift „lu et approuvé“ und Unterschrift von
 								Stefan Zweig und unbekannt</note>
-              <note xml:lang="en">Form has typescript entries, postage stamp glued on
+              <note xml:lang="en">form has typescript entries, postage stamp glued on
 								recto, variously stamped; verso has holograph note &quot;lu et approuvé&quot;
 								signed by Stefan Zweig and an unidentified party</note>
             </notesStmt>
@@ -533,7 +537,7 @@
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">vorgedrucktes Vertragsformular,
 												gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed contract form, hole
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">pre-printed contract form, hole
 												punched</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violettes Farbband, violette und schwarze
 												Tinte</material>
@@ -597,7 +601,7 @@
             <notesStmt>
               <note xml:lang="de">eigenhändige Aufschrift „Vertrag Marie Antoinette“
 								und Untschrift von fremder Hand</note>
-              <note xml:lang="en">Holograph note &quot;Vertrag Marie Antoinette&quot; signed by
+              <note xml:lang="en">holograph note &quot;Vertrag Marie Antoinette&quot; signed by
 								an unidentified party</note>
             </notesStmt>
             <sourceDesc>
@@ -690,7 +694,7 @@
               <note xml:lang="de">Aufschrift „&apos;Alfa&apos; polnich“ von fremder Hand,
 								eigenhändige Unterschrift sowie Datierung und Unterschrift von J.
 								Przeworski</note>
-              <note xml:lang="en">Inscribed &quot;&apos;Alfa&apos; polnich&quot; by an unidentified hand,
+              <note xml:lang="en">inscribed &quot;&apos;Alfa&apos; polnich&quot; by an unidentified hand,
 								holograph signature, signed and dated by J. Przeworski</note>
             </notesStmt>
             <sourceDesc>
@@ -717,7 +721,7 @@
                     <supportDesc>
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Doppelbogen, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Bifolium, hole punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">bifolium, hole punched</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, violette und grüne
 												Tinte, Bleistift</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">black carbon paper, purple and green ink,
@@ -784,7 +788,7 @@
 								Zweigs Hand, eigenhändige Unterschriften von Stefan Zweig, Gottfried
 								Bermann Fischer und Vertretern der Verlage Querido und Allert de
 								Lange</note>
-              <note xml:lang="en">Inscribed &quot;Anzahlg noch nicht geleistet&quot; by Lotte
+              <note xml:lang="en">inscribed &quot;Anzahlg noch nicht geleistet&quot; by Lotte
 								Zweig, holograph signatures by Stefan Zweig, Gottfried Bermann
 								Fischer, and agents for the publishers Querido and Allert de
 								Lange</note>
@@ -922,7 +926,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke National NATTY MEMO
 												BOOK Patent No. 219547 REFILL No 6340. (British
 												Made.)</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;National NATTY
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;National NATTY
 												MEMO BOOK Patent No. 219547 REFILL No 6340.
 												(British Made.)&quot;</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze und rot Tinte, Bleistift,
@@ -951,7 +955,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">Ringbindung</ab>
-                      <ab xml:lang="en">Ring-bound</ab>
+                      <ab xml:lang="en">ring-bound</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -988,7 +992,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">enthält Gedichtentwurf „An eine alte Stadt“,</note>
-              <note xml:lang="en">Contains sketch of a poem &quot;An eine alte
+              <note xml:lang="en">contains sketch of a poem &quot;An eine alte
 								Stadt&quot;</note>
             </notesStmt>
             <sourceDesc>
@@ -1010,7 +1014,7 @@
                     <lang>ger</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">„Creditbr 17011 [durchgestrichen] 5771“ ind Bleistift
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">„Creditbr 17011 [durchgestrichen] 5771“ in Bleistift
 											und „1914 oder 15“ in grünem Buntstift
 											eigenhändig</docEdition>
                     <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">&quot;Creditbr 17011 [stricken out] 5771“ in pencil and
@@ -1026,7 +1030,7 @@
 												Einlageblätter der Größe No. 6030 mit
 												dunkelgrünen, leinenkaschierten Deckeln und
 												Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Ring binder with stationer&apos;s label &quot;Huber &amp;
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">ring binder with stationer&apos;s label &quot;Huber &amp;
 												Lerner Wien, I. Kohlmarkt 9&quot;, squared loose leaves
 												size no. 6030, dark green cloth-covered boards,
 												edges gilt</material>
@@ -1061,7 +1065,7 @@
 												Druckknopfverschluss der Marke WALKER&apos;S LOOSE-LEAF
 												BOOK PATENT. BRITISH MANUFACTURE No. 623. mit
 												Innentaschen</ab>
-                      <ab xml:lang="en">Ring binder, brown leather with snap
+                      <ab xml:lang="en">ring binder, brown leather with snap
 												fastener, &quot;WALKER&apos;S LOOSE-LEAF BOOK PATENT. BRITISH
 												MANUFACTURE No. 623&quot; with inside pockets</ab>
                     </binding>
@@ -1118,7 +1122,7 @@
                   </textLang>
                   <msItem>
                     <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titel eigenhändig in violetter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Holograph title in purple ink</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">holograph title in purple ink</docEdition>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -1126,7 +1130,7 @@
                     <supportDesc>
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Lined paper</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">lined paper</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und blaue Tinte</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and blue ink</material>
                       </support>
@@ -1153,7 +1157,7 @@
                       <ab xml:lang="de">Ringbindung, Deckel mit Aufdruck &quot;THE
 												SPIRAL NOTE BOOK MANUFACTURED UNDER PATENT
 												219547&quot;</ab>
-                      <ab xml:lang="en">Ring-bound, cover printed &quot;THE SPIRAL
+                      <ab xml:lang="en">ring-bound, cover printed &quot;THE SPIRAL
 												NOTE BOOK MANUFACTURED UNDER PATENT 219547&quot;</ab>
                     </binding>
                   </bindingDesc>
@@ -1215,7 +1219,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke LANDOLT-ARBENZ &amp;
 												Co BAHNHOFSTR. 66. ZÜRICH, liniertes Papier mit
 												rotem Buchschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
 												&amp; Co BAHNHOFSTR. 66. ZÜRICH&quot;, lined paper,
 												edges red</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, blaue und schwarze
@@ -1244,7 +1248,7 @@
                     <binding>
                       <ab xml:lang="de">Schwarz kaschierter Einband in
 												Lederoptik</ab>
-                      <ab xml:lang="en">Black faux-leather laminated
+                      <ab xml:lang="en">black faux-leather laminated
 												binding</ab>
                     </binding>
                   </bindingDesc>
@@ -1284,7 +1288,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">enthält notierte Adressen</note>
-              <note xml:lang="en">Contains jotted-down addresses</note>
+              <note xml:lang="en">contains jotted-down addresses</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1316,7 +1320,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke FLEXOR NOTES No. F103
 												WALKER&apos;S FLEXOR REFILL, liniertes Papier mit
 												Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
 												F103 WALKER&apos;S FLEXOR REFILL&quot;, lined paper, edges
 												gilt</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, roter und
@@ -1348,7 +1352,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">blauer Ledereinband</ab>
-                      <ab xml:lang="en">Blue leather binding</ab>
+                      <ab xml:lang="en">blue leather binding</ab>
                     </binding>
                   </bindingDesc>
                   <accMat>
