@@ -100,7 +100,7 @@
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Adolf
 								Haslinger</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>          
@@ -145,7 +145,7 @@
                           <span xml:lang="en">
                             <term type="objecttyp">Notebook</term>
                             
-                            <measure type="leaf"> 38 leaves,
+                            <measure type="leaf">38 leaves,
 												writing on 18 leaves, inserted: manuscript, 2
 												leaves; theatre ticket</measure>
                           </span>
@@ -171,32 +171,32 @@
                   <accMat>
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
-                        <desc xml:lang="de">eingelegtes Manuskript 1
+                        <desc xml:lang="de">Eingelegtes Manuskript 1
 												Blatt mit Adresse eigenhändig in violetter
 												Tinte</desc>
-                        <desc xml:lang="en">inserted manuscript, 1 leaf, with address,
+                        <desc xml:lang="en">Inserted manuscript, 1 leaf, with address,
 												holograph in purple ink</desc>
-                        <measure>11x8 cm</measure>
+                        <measure type="format">11x8 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
-                        <desc xml:lang="de">eingelegtes Manuskript 1
+                        <desc xml:lang="de">Eingelegtes Manuskript 1
 												Blatt mit Notiz „Bajaderka von M. Petipa Musik von
 												G. Minkus Semjenowa“ eigenhändig (?) in
 												Bleistift</desc>
-                        <desc xml:lang="en">inserted
+                        <desc xml:lang="en">Inserted
 												manuscript, 1 leaf with note &quot;Bajaderka von M.
 												Petipa Musik von G. Minkus Semjenowa&quot;, holograph
 												(?) in pencil</desc>
-                        <measure>16x10 cm</measure> 
+                        <measure type="format">16x10 cm</measure> 
                      </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Theaterkarten des Moskauer Kunsttheaters, No 10 und No 11 auf einem Bogen, verso Datumsstempel 14. September 1928
 											</desc>
-                        <desc xml:lang="en">theatre tickets for
+                        <desc xml:lang="en">Theatre tickets for
 													the Moscow Art Theatre, nos. 10 &amp; 11 on a
 													single sheet, stamped 14 Sept. 1928 on
 													reverse</desc>
-                        <measure>12x11 cm</measure>
+                        <measure type="format">12x11 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -225,7 +225,7 @@
               <title ana="original" ref="http://d-nb.info/gnd/1024274039">Tagebuch 1931</title>
               <title type="Einheitssachtitel">Tagebücher</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -279,7 +279,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>
-                          <measure type="leaf"> 76 leaves,
+                          <measure type="leaf">76 leaves,
 												writing on 25 leaves, inserted: manuscript, 3
 												leaves; telegram form</measure>
                         </span>
@@ -299,18 +299,18 @@
                   <accMat>
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
-                        <desc xml:lang="de">eingelegtes Manuskript 3
+                        <desc xml:lang="de">Eingelegtes Manuskript 3
 												Blatt eigenhändig in Bleistift mit dem Titel
 												„Richard Strauss 1935 Juni Brieg“</desc>
-                        <desc xml:lang="en">inserted manuscript, 3
+                        <desc xml:lang="en">Inserted manuscript, 3
 												leaves, holograph in pencil, entitled &quot;Richard
 												Strauss 1935 Juni Brieg&quot;</desc>
-                        <measure>17x11 cm</measure>
+                        <measure type="format">17x11 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Telegrammaufgabeblatt des Österreichischen Telegraph blanko</desc>
                         <desc xml:lang="en">Austrian Telegraph telegram form, blank</desc>
-                        <measure>23x18 cm</measure>
+                        <measure type="format">23x18 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -360,9 +360,9 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">letztes Blatt verso und Vorsatz hinten mit
+              <note xml:lang="de">Letztes Blatt verso und Vorsatz hinten mit
 								Verzeichnis der „Übersetzer“ und „Ständigen Verleger“</note>
-              <note xml:lang="en">last leaf verso and lower pastedown have a list of
+              <note xml:lang="en">Last leaf verso and lower pastedown have a list of
 								&quot;Übersetzer&quot; (translators) and &quot;Ständige Verleger&quot; (permanent
 								publishers)</note>
             </notesStmt>
@@ -388,7 +388,7 @@
                     <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titelblatt mit Aufschrift „Mit Gott!“ von Anna Meingast
 											[?] und „Begonnen August 1932“ eigenhändig sowie
 											Inhaltsverzeichnis</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">title-page inscribed &quot;Mit Gott!&quot; by Anna Meingast [?]
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Title-page inscribed &quot;Mit Gott!&quot; by Anna Meingast [?]
 											and &quot;Begonnen August 1932&quot; holograph; table of
 											contents</docEdition>
                   </msItem>
@@ -416,7 +416,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Ledger</term>
-                          <measure type="leaf"> 119 leaves, writing on 77 leaves, inserted: 1
+                          <measure type="leaf">119 leaves, writing on 77 leaves, inserted: 1
 												letter, 1 postcard</measure>
                         </span>
                         <measure type="format">54x38
@@ -453,17 +453,17 @@
           <desc xml:lang="de">Brief des Verlags Mizpah
 												Publishing Co. LTD. an Stefan Zweig, datiert
 												Tel-Aviv, 7th January 1934</desc>
-                        <desc xml:lang="en">letter from the Mizpah
+                        <desc xml:lang="en">Letter from the Mizpah
 												Publishing Co. Ltd to Stefan Zweig, dated
 												Tel-Aviv, 7th January 1934</desc>
-                        <measure>28x22 cm</measure>
+                        <measure type="format">28x22 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Postkarte des Verlags Curtis Brown LTD., datiert Berlin, d. 2.5.1933.</desc>
-                        <desc xml:lang="en">postcard
+                        <desc xml:lang="en">Postcard
 													from Curtis Brown Ltd, publishers, dated Berlin, 2
 													May 1933.</desc>
-                        <measure>15x11 cm</measure>
+                        <measure type="format">15x11 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -501,17 +501,17 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">maschinschriftliche Eintragungen im Formular, recto
+              <note xml:lang="de">Maschinschriftliche Eintragungen im Formular, recto
 								mit aufgeklebter Briefmarke und mehrfach gestempelt, verso mit
 								eigenhändiger Aufschrift „lu et approuvé“ und Unterschrift von
 								Stefan Zweig und unbekannt</note>
-              <note xml:lang="en">form has typescript entries, postage stamp glued on
+              <note xml:lang="en">Form has typescript entries, postage stamp glued on
 								recto, variously stamped; verso has holograph note &quot;lu et approuvé&quot;
 								signed by Stefan Zweig and an unidentified party</note>
             </notesStmt>
@@ -550,11 +550,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>
-                          <measure type="leaf">1</measure>
+                          <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript</term>
-                          <measure type="leaf"> 1 leaf</measure>
+                          <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">25x18
 												cm</measure>
@@ -596,15 +596,15 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">eigenhändige Aufschrift „Vertrag Marie Antoinette“
+              <note xml:lang="de">Eigenhändige Aufschrift „Vertrag Marie Antoinette“
 								und Untschrift von fremder Hand</note>
-              <note xml:lang="en">holograph note &quot;Vertrag Marie Antoinette&quot; signed by
+              <note xml:lang="en">Holograph note &quot;Vertrag Marie Antoinette&quot; signed by
 								an unidentified party</note>
             </notesStmt>
             <sourceDesc>
@@ -642,11 +642,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>
-                          <measure type="leaf">1</measure>
+                          <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript</term>
-                          <measure type="leaf"> 1 leaf</measure>
+                          <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">28x22
 												cm</measure>
@@ -687,17 +687,19 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
-              <editor role="contributor">Przeworski, J.</editor>
-            </titleStmt>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
+              <editor role="contributor">
+                <surname>Przeworski</surname>
+                <forename>J.</forename>
+              </editor></titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Aufschrift „&apos;Alfa&apos; polnich“ von fremder Hand,
+              <note xml:lang="de">Aufschrift „&apos;Alfa&apos; polnisch“ von fremder Hand,
 								eigenhändige Unterschrift sowie Datierung und Unterschrift von J.
 								Przeworski</note>
-              <note xml:lang="en">inscribed &quot;&apos;Alfa&apos; polnich&quot; by an unidentified hand,
+              <note xml:lang="en">inscribed &quot;&apos;Alfa&apos; polnisch&quot; by an unidentified hand,
 								holograph signature, signed and dated by J. Przeworski</note>
             </notesStmt>
             <sourceDesc>
@@ -733,12 +735,12 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskriptdurchschlag</term>
-                          <measure type="leaf">1</measure>
+                          <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript (carbon
 												copy)</term>
-                          <measure type="leaf"> 1
+                          <measure type="leaf">1
 												leaf</measure>
                         </span>
                         <measure type="format">42x30
@@ -779,9 +781,15 @@
 								contract [Marie Antoinette]</title>
               <title type="Einheitssachtitel">Verlagsverträge</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
-              <editor role="contributor">Zweig, Lotte; Bermann Fischer,
-								Gottfried</editor>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
+              <editor role="contributor" ref="http://d-nb.info/gnd/116001151">
+                <surname>Zweig</surname>
+                <forename>Lotte</forename>
+              </editor>
+              <editor role="contributor" ref="http://d-nb.info/gnd/118509683">
+                <surname>Bermann Fischer</surname>
+                <forename>Gottfried</forename>
+              </editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -791,7 +799,7 @@
 								Zweigs Hand, eigenhändige Unterschriften von Stefan Zweig, Gottfried
 								Bermann Fischer und Vertretern der Verlage Querido und Allert de
 								Lange</note>
-              <note xml:lang="en">inscribed &quot;Anzahlg noch nicht geleistet&quot; by Lotte
+              <note xml:lang="en">Inscribed &quot;Anzahlg noch nicht geleistet&quot; by Lotte
 								Zweig, holograph signatures by Stefan Zweig, Gottfried Bermann
 								Fischer, and agents for the publishers Querido and Allert de
 								Lange</note>
@@ -831,11 +839,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>
-                          <measure type="leaf">1</measure>
+                          <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript</term>
-                          <measure type="leaf"> 1 leaf</measure>
+                          <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">28x19
 												cm</measure>
@@ -881,7 +889,7 @@
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -945,7 +953,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>
-                          <measure type="leaf"> 25 leaves, writing on 23
+                          <measure type="leaf">25 leaves, writing on 23
 												leaves</measure>
                         </span>
                         <measure type="format">15x9 cm</measure>
@@ -988,14 +996,14 @@
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">enthält Gedichtentwurf „An eine alte Stadt“,</note>
-              <note xml:lang="en">contains sketch of a poem &quot;An eine alte
+              <note xml:lang="de">Enthält Gedichtentwurf „An eine alte Stadt“,</note>
+              <note xml:lang="en">Contains sketch of a poem &quot;An eine alte
 								Stadt&quot;</note>
             </notesStmt>
             <sourceDesc>
@@ -1033,7 +1041,7 @@
 												Einlageblätter der Größe No. 6030 mit
 												dunkelgrünen, leinenkaschierten Deckeln und
 												Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">ring binder with stationer&apos;s label &quot;Huber &amp;
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Ring binder with stationer&apos;s label &quot;Huber &amp;
 												Lerner Wien, I. Kohlmarkt 9&quot;, squared loose leaves
 												size no. 6030, dark green cloth-covered boards,
 												edges gilt</material>
@@ -1051,7 +1059,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>          
-                <measure type="leaf"> 30 leaves, writing on 29 leaves, 1
+                <measure type="leaf">30 leaves, writing on 29 leaves, 1
 												ring binder</measure>
                         </span>
                         <measure type="format">15x8
@@ -1100,7 +1108,7 @@
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1115,7 +1123,7 @@
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Tagbuchaufzeichnungen von 22.
+                    <ab xml:lang="de">Inhalt: Tagebuchaufzeichnungen von 22.
 											Mai bis 19. Juni 1940</ab>
                     <ab xml:lang="en">Diary 22 May
 											through 19 June 1940</ab>
@@ -1125,7 +1133,7 @@
                   </textLang>
                   <msItem>
                     <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="de">Titel eigenhändig in violetter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">holograph title in purple ink</docEdition>
+                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription" xml:lang="en">Holograph title in purple ink</docEdition>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -1145,7 +1153,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>
-                          <measure type="leaf"> 75 leaves, writing on 26
+                          <measure type="leaf">75 leaves, writing on 26
 												leaves</measure>
                         </span>
                         <measure type="format">16x11 cm</measure>
@@ -1191,7 +1199,7 @@
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1222,7 +1230,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke LANDOLT-ARBENZ &amp;
 												Co BAHNHOFSTR. 66. ZÜRICH, liniertes Papier mit
 												rotem Buchschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
 												&amp; Co BAHNHOFSTR. 66. ZÜRICH&quot;, lined paper,
 												edges red</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, blaue und schwarze
@@ -1237,7 +1245,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>
-                          <measure type="leaf"> 45 leaves, writing on 44
+                          <measure type="leaf">45 leaves, writing on 44
 												leaves</measure>
                         </span>
                         <measure type="format">20x13 cm</measure>
@@ -1249,7 +1257,7 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Schwarz kaschierter Einband in
+                      <ab xml:lang="de">schwarz kaschierter Einband in
 												Lederoptik</ab>
                       <ab xml:lang="en">black faux-leather laminated
 												binding</ab>
@@ -1284,14 +1292,14 @@
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="http://d-nb.info/gnd/118637479">Zweig, Stefan</author>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">enthält notierte Adressen</note>
-              <note xml:lang="en">contains jotted-down addresses</note>
+              <note xml:lang="de">Enthält notierte Adressen</note>
+              <note xml:lang="en">Contains jotted-down addresses</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1307,7 +1315,7 @@
 											Termine in Paris, Salzburg, Wien, Mailand, Neapel, Rom
 											u.a. zwischen 16. Dezember 1936 und 17. Februar
 											1937</ab>
-                    <ab xml:lang="en">calendar of appointments in
+                    <ab xml:lang="en">Calendar of appointments in
 											Paris, Salzburg, Vienna, Milan, Naples, Rome and other
 											places between 16 December 1936 and 17 February 1937
 										</ab>
@@ -1323,7 +1331,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke FLEXOR NOTES No. F103
 												WALKER&apos;S FLEXOR REFILL, liniertes Papier mit
 												Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
 												F103 WALKER&apos;S FLEXOR REFILL&quot;, lined paper, edges
 												gilt</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, roter und
@@ -1340,7 +1348,7 @@
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>
-                          <measure type="leaf"> 28 leaves, writing on 24 leaves,
+                          <measure type="leaf">28 leaves, writing on 24 leaves,
 												inserted: typescript, 1
 												leaf</measure>
                         </span>
@@ -1361,8 +1369,8 @@
                   <accMat>
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
-                        <desc xml:lang="de">eingelegtes Typoskript 1 Blatt mit diversen Adressen in Paris, schwarzes Farbband mit eigenhändiger Anmerkung in violetter Tinte</desc>
-                        <desc xml:lang="en">inserted typescript, 1 leaf with various Paris addresses, black ribbon with holograph annotation in purple ink</desc>
+                        <desc xml:lang="de">Eingelegtes Typoskript 1 Blatt mit diversen Adressen in Paris, schwarzes Farbband mit eigenhändiger Anmerkung in violetter Tinte</desc>
+                        <desc xml:lang="en">Inserted typescript, 1 leaf with various Paris addresses, black ribbon with holograph annotation in purple ink</desc>
                       </item>
                     </list>
                   </accMat>
