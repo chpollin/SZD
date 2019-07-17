@@ -43,8 +43,12 @@
         <respStmt>
           <resp>Datenerfassung</resp>
           <persName>
-            <forename>Lina</forename>
+            <forename>Lina Maria</forename>
             <surname>Zangerl</surname>
+          </persName>
+          <persName>
+            <forename>Verena Maria</forename>
+            <surname>Höller</surname>
           </persName>
         </respStmt>
         <respStmt>
@@ -150,7 +154,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">Lederimitat mit schwarzem Leinenrücken</ab>
-                      <ab xml:lang="en">Faux leather with black cloth spine</ab>
+                      <ab xml:lang="en">faux leather with black cloth spine</ab>
                     </binding>
                   </bindingDesc>
                   <accMat>
@@ -159,10 +163,10 @@
                         <desc xml:lang="de">eingelegt ein Kuvert mit Aufschrift „Propriedade Stefan
                           Zweig dezasete contos“ eigenhändig in schwarzer Tinte und „Last unfinished
                           novel 1st sketch“ auf der Rückseite von Richard Friedenthals Hand</desc>
-                        <desc xml:lang="en">Enclosure 1: inserted envelope inscribed "Propriedade
+                        <desc xml:lang="en">inserted envelope inscribed "Propriedade
                           Stefan Zweig dezasete contos", holograph in black ink, and "Last
                           unfinished novel 1st sketch" on verso in Richard Friedenthal's hand</desc>
-                        <measure>23x15 cm</measure>
+                        <measure type="format">23x15 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -197,8 +201,8 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
-            </titleStmt>
+                ><surname>Zweig</surname><forename>Lotte</forename></editor>
+             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
@@ -252,9 +256,9 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift "Roman I Teil" von Lotte Zweigs
                           Hand in blauem Buntstift</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet inscribed "Roman I Teil" in
+                        <desc xml:lang="en">cover sheet inscribed "Roman I Teil" in
                           Lotte Zweig's hand in blue pencil</desc>
-                        <measure>31x19 cm</measure>
+                        <measure type="format">31x19 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -323,7 +327,7 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
                           xml:lang="de">überwiegend Doppelbögen</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
-                          xml:lang="en">Mainly bifolia</material>
+                          xml:lang="en">mainly bifolia</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
                           xml:lang="de">violettes Farbband, violette und schwarze Tinte, Bleistift,
                           blauer Kugelschreiber</material>
@@ -344,7 +348,7 @@
                       </extent>
                       <foliation>
                         <ab xml:lang="de">durchgehend paginiert</ab>
-                        <ab xml:lang="en">Paginated throughout</ab>
+                        <ab xml:lang="en">paginated throughout</ab>
                       </foliation>
                     </supportDesc>
                   </objectDesc>
@@ -466,7 +470,7 @@
             <notesStmt>
               <note xml:lang="de">Deckblattaufkleber mit nachträglicher Aufschrift „Stephan Zweig
                 Montaigne“ von Richard Friedenthals Hand</note>
-              <note xml:lang="en">Cover sheet with pasted label, later inscribed "Stephan Zweig
+              <note xml:lang="en">cover sheet with pasted label, later inscribed "Stephan Zweig
                 Montaigne" in Richard Friedenthal's hand</note>
             </notesStmt>
             <sourceDesc>
@@ -661,7 +665,7 @@
             <notesStmt>
               <note xml:lang="de">zumindest 1 Blatt vermutlich nachträglich hinzugefügt von Richard
                 Friedenthal</note>
-              <note xml:lang="en">At least 1 leaf is likely a later insertion by Richard
+              <note xml:lang="en">at least 1 leaf is likely a later insertion by Richard
                 Friedenthal</note>
             </notesStmt>
             <sourceDesc>
@@ -722,25 +726,19 @@
                         <desc xml:lang="de">Flügelmappe, Aufschrift „Montaigne I-V“ von Lotte Zweigs
                           Hand (?) in blauem Buntstift und „-IX cpl.“ von Richard Friedenthals Hand,
                           Händlermarke „BRASIL CONSUMO 100“</desc>
-                        <desc xml:lang="en">Enclosure 1: flap binder inscribed "Montaigne I-V" in
+                        <desc xml:lang="en">flap binder inscribed "Montaigne I-V" in
                           Lotte Zweig's hand (?) in blue pencil and "-IX cpl." in Richard
-                          Friedenthal's hand, stationer's label "BRASIL CONSUMO 100"; enclosure 2:
-                          wrapper leaf inscribed "Kap. 2 (1-6) 3 (7-16)" in an unidentified hand in
-                          blue pencil, inscribed "MONTAIGNE Original" in Richard Friedenthal's hand
-                          in red ballpoint</desc>
+                          Friedenthal's hand, stationer's label "BRASIL CONSUMO 100"</desc>
                         <measure type="format">37x26 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Kap. 2 (1-6) 3 (7-16)“ von
                           fremder Hand in blauem Buntstift und Aufschrift „MONTAIGNE Original“ von
                           Richard Friedenthals Hand in rotem Kugelschreiber</desc>
-                        <desc xml:lang="en">Enclosure 1: flap binder inscribed "Montaigne I-V" in
-                          Lotte Zweig's hand (?) in blue pencil and "-IX cpl." in Richard
-                          Friedenthal's hand, stationer's label "BRASIL CONSUMO 100"; enclosure 2:
-                          wrapper leaf inscribed "Kap. 2 (1-6) 3 (7-16)" in an unidentified hand in
+                        <desc xml:lang="en">wrapper leaf inscribed "Kap. 2 (1-6) 3 (7-16)" in an unidentified hand in
                           blue pencil, inscribed "MONTAIGNE Original" in Richard Friedenthal's hand
                           in red ballpoint</desc>
-                        <measure>37x26 cm</measure>
+                        <measure type="format">37x26 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -807,7 +805,7 @@
                           xml:lang="de">liniertes Papier, vermutlich ursprünglich aus einem
                           Notizblock</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
-                          xml:lang="en">Lined paper, likely from a notepad</material>
+                          xml:lang="en">lined paper, likely from a notepad</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
                           xml:lang="de">violette Tinte, Bleistift</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
@@ -992,7 +990,7 @@
                       </extent>
                       <foliation>
                         <ab xml:lang="de">durchgehend paginiert</ab>
-                        <ab xml:lang="en">Paginated throughout</ab>
+                        <ab xml:lang="en">paginated throughout</ab>
                       </foliation>
                     </supportDesc>
                   </objectDesc>
@@ -1029,7 +1027,9 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
+              <editor role="contributor" ref="http://d-nb.info/gnd/118637460"
+                ><surname>Zweig</surname><forename>Friderike</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1211,7 +1211,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1277,22 +1277,17 @@
                           Lotte Zweigs Hand in blauem Buntstift und „Unkorrigierte Doublette ‚Der
                           plombierte Zug‘ (Lenin)“ von Lotte Zweigs Hand (?) in schwarzer
                           Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: wrapper leaf inscribed "Handschriftl. MS"
+                        <desc xml:lang="en">wrapper leaf inscribed "Handschriftl. MS"
                           in Lotte Zweig's hand in blue pencil and "Unkorrigierte Doublette 'Der
-                          plombierte Zug' (Lenin)" in Lotte Zweig's hand (?) in black ink; enclosure
-                          2: fragment of stationery with letterhead "BANQUE DES PAYS DE L'EUROPE
-                          CENTRALE"</desc>
-                        <measure>32x20 cm, 7x21 cm</measure>
+                          plombierte Zug' (Lenin)" in Lotte Zweig's hand (?) in black ink</desc>
+                        <measure type="format">32x20 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Briefpapierfragment mit Briefkopf „BANQUE DES PAYS DE
                           L'EUROPE CENTRALE“</desc>
-                        <desc xml:lang="en">Enclosure 1: wrapper leaf inscribed "Handschriftl. MS"
-                          in Lotte Zweig's hand in blue pencil and "Unkorrigierte Doublette 'Der
-                          plombierte Zug' (Lenin)" in Lotte Zweig's hand (?) in black ink; enclosure
-                          2: fragment of stationery with letterhead "BANQUE DES PAYS DE L'EUROPE
+                        <desc xml:lang="en">fragment of stationery with letterhead "BANQUE DES PAYS DE L'EUROPE
                           CENTRALE"</desc>
-                        <measure>32x20 cm, 7x21 cm</measure>
+                        <measure type="format">7x21 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -1383,9 +1378,9 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Typoskript mit bibliographischen Notizen zu "Wilson
                           versagt" von fremder Hand</desc>
-                        <desc xml:lang="en">Enclosure 1: Typescript with bibliographical notes
+                        <desc xml:lang="en">Typescript with bibliographical notes
                           relating to "Wilson versagt" in an unidentified hand</desc>
-                        <measure>26x20 cm</measure>
+                        <measure type="format">26x20 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -1416,7 +1411,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1702,7 +1697,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1766,7 +1761,7 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Deckblatt XXX Typoskriptdurchschlag mit Aufschrift
                           „Deutsch nicht publiciert St Z.“ eigenhändig in schwarzer Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet - typescript (carbon copy)
+                        <desc xml:lang="en">cover sheet - typescript (carbon copy)
                           inscribed "Deutsch nicht publiciert St Z.", holograph in black ink</desc>
                         <measure>???</measure>
                       </item>
@@ -1885,7 +1880,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1975,7 +1970,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2271,16 +2266,15 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Deckblatt mit Titel eigenhändig in violetter
                           Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet with title in holograph purple
-                          ink; enclosure 2: inserted manuscript, holograph in purple ink</desc>
-                        <measure>25x20 cm, 18x14 cm</measure>
+                        <desc xml:lang="en">cover sheet with title in holograph purple
+                          ink</desc>
+                        <measure type="format">25x20 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript eigenhändig in violetter
                           Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet with title in holograph purple
-                          ink; enclosure 2: inserted manuscript, holograph in purple ink</desc>
-                        <measure>25x20 cm, 18x14 cm</measure>
+                        <desc xml:lang="en">inserted manuscript, holograph in purple ink</desc>
+                        <measure type="format">18x14 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -2374,24 +2368,19 @@
                           Chénier“ von Richard Friedenthals Hand in blauem Kugelschreiber,
                           Händlermarke THE EAST-LIGHT "OLD STYLE" DOCUMENT WALLET [...] H. J. RYMAN,
                           LTD., LONDON, W.</desc>
-                        <desc xml:lang="en">Enclosure 1: flap binder with title in Lotte Zweig's
+                        <desc xml:lang="en">flap binder with title in Lotte Zweig's
                           hand in blue pencil, further inscribed "(zu 3 Meister, Baumeister der
                           Welt) Chénier" in Richard Friedenthal's hand in blue ballpoint,
                           stationer's label "THE EAST-LIGHT 'OLD STYLE' DOCUMENT WALLET [...] H. J.
-                          RYMAN, LTD., LONDON, W."; enclosure 2: inserted handwritten offer by the
-                          bookseller Raymond Clavreuil, dated 9 March 1938, in black ink</desc>
-                        <measure>30x24 cm, 21x13 cm</measure>
+                          RYMAN, LTD., LONDON, W."</desc>
+                        <measure type="format">30x24 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">beigelegtes handschriftliches Angebot von Antiquar
                           Raymond Clavreuil vom 9.3.1938 in schwarzer Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: flap binder with title in Lotte Zweig's
-                          hand in blue pencil, further inscribed "(zu 3 Meister, Baumeister der
-                          Welt) Chénier" in Richard Friedenthal's hand in blue ballpoint,
-                          stationer's label "THE EAST-LIGHT 'OLD STYLE' DOCUMENT WALLET [...] H. J.
-                          RYMAN, LTD., LONDON, W."; enclosure 2: inserted handwritten offer by the
+                        <desc xml:lang="en">inserted handwritten offer by the
                           bookseller Raymond Clavreuil, dated 9 March 1938, in black ink</desc>
-                        <measure>30x24 cm, 21x13 cm</measure>
+                        <measure type="format">21x13 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -2482,11 +2471,11 @@
                           deutsch u. italienisch“ von Lotte Zweigs Hand in blauem Buntstift und
                           „Italienische Fassung an Mazucchetti Aug. 49“ von fremder Hand in
                           schwarzer Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet with title, inscribed "Mailand,
+                        <desc xml:lang="en">cover sheet with title, inscribed "Mailand,
                           5. VI. 1935 deutsch u. italienisch" in Lotte Zweig's hand in blue pencil
                           and "Italienische Fassung an Mazucchetti Aug. 49" in an unidentified hand
                           in black ink</desc>
-                        <measure>25x20 cm</measure>
+                        <measure type="format">25x20 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -2737,8 +2726,8 @@
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Kuvert mit Titel eigenhändig</desc>
-                        <desc xml:lang="en">Enclosure 1: envelope with holograph title</desc>
-                        <measure>17x11 cm</measure>
+                        <desc xml:lang="en">envelope with holograph title</desc>
+                        <measure type="format">17x11 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -2922,10 +2911,10 @@
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Unkorrigierte Dubletten“
                           von Friderike Zweigs Hand in Bleistift und Titel von Anna Meingasts Hand
                           in violetter Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: wrapper leaf inscribed "Unkorrigierte
+                        <desc xml:lang="en">wrapper leaf inscribed "Unkorrigierte
                           Dubletten" in Friderike Zweig's hand in pencil and title in Anna
                           Meingast's hand in purple ink</desc>
-                        <measure>28x45 cm</measure>
+                        <measure type="format">28x45 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -3019,9 +3008,9 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Titel von fremder Hand vermutlich
                           ursprünglich in violetter Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: wrapper leaf with title in an unidentified
+                        <desc xml:lang="en">wrapper leaf with title in an unidentified
                           hand, likely originally written in purple ink</desc>
-                        <measure>33x42 cm</measure>
+                        <measure type="format">33x42 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -3140,7 +3129,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3476,7 +3465,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3897,7 +3886,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4051,9 +4040,9 @@
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Kuvert mit Titel eigenhändig in blauem Buntstift</desc>
-                        <desc xml:lang="en">Enclosure 1: envelope with holograph title in blue
+                        <desc xml:lang="en">envelope with holograph title in blue
                           pencil</desc>
-                        <measure>27x16 cm</measure>
+                        <measure type="format">27x16 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -4087,7 +4076,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4388,9 +4377,9 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Zeitungsausschnitt „Eine Dostojewski-Feier“ gestempelt
                           „29 NOVEMBER 1921“ und „Berliner Tagblatt„</desc>
-                        <desc xml:lang="en">Enclosure 1: newspaper clipping "Eine Dostojewski-Feier"
+                        <desc xml:lang="en">newspaper clipping "Eine Dostojewski-Feier"
                           stamped "29 NOVEMBER 1921" and "Berliner Tagblatt"</desc>
-                        <measure>8x9 cm</measure>
+                        <measure type="format">8x9 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -4815,10 +4804,10 @@
                         <desc xml:lang="de">Mappendeckel mit Aufschrift „Marsyas und Apoll
                           (Pantomime für Musik ungedruckt) Skizzen zu Filmen (Panama) (unbrauchbar)“
                           eigenhändig in blauem Buntstift und Anmerkungen in Bleistift</desc>
-                        <desc xml:lang="en">Enclosure 1: folder cover inscribed "Marsyas und Apoll
+                        <desc xml:lang="en">folder cover inscribed "Marsyas und Apoll
                           (Pantomime für Musik ungedruckt) Skizzen zu Filmen (Panama)
                           (unbrauchbar)", holograph in blue pencil with pencil annotations</desc>
-                        <measure>25x20 cm</measure>
+                        <measure type="format">25x20 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -4905,9 +4894,9 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Deckblatt mit Titel eigenhändig in blauem
                           Buntstift</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet with holograph title in blue
+                        <desc xml:lang="en">cover sheet with holograph title in blue
                           pencil</desc>
-                        <measure>33x20 cm</measure>
+                        <measure type="format">33x20 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -5003,16 +4992,15 @@
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Trennblatt</desc>
-                        <desc xml:lang="en">Enclosure 1: separator leaf; enclosure 2: flap binder
-                          cover inscribed "Thersites", holograph</desc>
-                        <measure>29x23 cm, 34x42 cm</measure>
+                        <desc xml:lang="en">separator leaf</desc>
+                        <measure type="format">29x23 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Flügelmappendeckel mit Aufschrift „Thersites“
                           eigenhändig</desc>
-                        <desc xml:lang="en">Enclosure 1: separator leaf; enclosure 2: flap binder
+                        <desc xml:lang="en">flap binder
                           cover inscribed "Thersites", holograph</desc>
-                        <measure>29x23 cm, 34x42 cm</measure>
+                        <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -5046,7 +5034,7 @@
               <author ref="http://d-nb.info/gnd/1020621311">Edman, Irwin</author>
 
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
               <editor role="contributor" ref="http://d-nb.info/gnd/118535579"
                   ><surname>Friedenthal</surname><forename>Richard</forename></editor>
             </titleStmt>
@@ -5407,10 +5395,10 @@
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Erste Novelle noch nicht
                           gedruckt existiert andere Fassung / Begrabene Leuchter 1 Teil“ eigenhändig
                           in violetter Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet inscribed "Erste Novelle noch
+                        <desc xml:lang="en">cover sheet inscribed "Erste Novelle noch
                           nicht gedruckt existiert andere Fassung / Begrabene Leuchter 1 Teil",
                           holograph in purple ink</desc>
-                        <measure>18x14 cm</measure>
+                        <measure type="format">18x14 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -5696,20 +5684,17 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript 1 Blatt eigenhändig in Bleistift
                           aus einem Spiralbuch mit dem Incipit „Reihe von Errungenschaften…“</desc>
-                        <desc xml:lang="en">Enclosure 1: inserted manuscript, 1 leaf, holograph, in
+                        <desc xml:lang="en">inserted manuscript, 1 leaf, holograph, in
                           pencil, removed from a spiral notebook, incipit "Reihe von
-                          Errungenschaften…"; enclosure 2: 1 leaf imprinted "HÔTEL IMPÉRIAL WIEN
-                          RESTAURANT" and holograph pencil notes</desc>
-                        <measure>20x13 cm, 15x8 cm</measure>
+                          Errungenschaften…"</desc>
+                        <measure type="format">20x13 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">1 Blatt mit dem Aufdruck „HÔTEL IMPÉRIAL WIEN
                           RESTAURANT“ und eigenhändigen Notizen in Bleistift</desc>
-                        <desc xml:lang="en">Enclosure 1: inserted manuscript, 1 leaf, holograph, in
-                          pencil, removed from a spiral notebook, incipit "Reihe von
-                          Errungenschaften…"; enclosure 2: 1 leaf imprinted "HÔTEL IMPÉRIAL WIEN
+                        <desc xml:lang="en">1 leaf imprinted "HÔTEL IMPÉRIAL WIEN
                           RESTAURANT" and holograph pencil notes</desc>
-                        <measure>20x13 cm, 15x8 cm</measure>
+                        <measure type="format">15x8 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -5819,25 +5804,20 @@
                           eigenhändig in rotem Buntstift und „Anfang einer Novelle über 10 November
                           1939 Alles andere Vorarbeiten zu Bregrabenem Leuchter und Neuen
                           Sternstunden“ eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet inscribed "Nur teilweise
+                        <desc xml:lang="en">cover sheet inscribed "Nur teilweise
                           unbenutzt", holograph in red pencil, and "Anfang einer Novelle über 10
                           November 1939 Alles andere Vorarbeiten zu Bregrabenem Leuchter und Neuen
-                          Sternstunden", holograph in purple ink; enclosure 2: holograph inserted
-                          manuscript from "Das erste Wort über den Ozean" with holograph corrections
-                          in purple and red ink</desc>
-                        <measure>27x21 cm</measure>
+                          Sternstunden", holograph in purple ink</desc>
+                        <measure type="format">27x21 cm</measure>
                       </item>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">eingelegtes Manuskript eigenhändig zu „Das erste Wort
                           über den Ozean“ mit eigenhändigen Korrekturen in violetter und roter
                           Tinte</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet inscribed "Nur teilweise
-                          unbenutzt", holograph in red pencil, and "Anfang einer Novelle über 10
-                          November 1939 Alles andere Vorarbeiten zu Bregrabenem Leuchter und Neuen
-                          Sternstunden", holograph in purple ink; enclosure 2: holograph inserted
+                        <desc xml:lang="en">holograph inserted
                           manuscript from "Das erste Wort über den Ozean" with holograph corrections
                           in purple and red ink</desc>
-                        <measure>27x21 cm</measure>
+                        <measure type="format">27x21 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -7111,7 +7091,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7186,7 +7166,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7657,7 +7637,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7948,7 +7928,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8015,8 +7995,7 @@
                     <list>
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">schwarze Ringmappe</desc>
-                        <desc xml:lang="en">Enclosure 1: black ring binder; enclosure 2:
-                          envelope</desc>
+                        <desc xml:lang="en">black ring binder; envelope</desc>
                         <measure/>
                       </item>
                     </list>
@@ -8124,7 +8103,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8206,7 +8185,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8285,7 +8264,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8363,7 +8342,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8442,7 +8421,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8521,7 +8500,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8603,7 +8582,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8675,7 +8654,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8746,7 +8725,7 @@
                 <forename>Stefan</forename></author>
 
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
               <editor role="contributor" ref="http://d-nb.info/gnd/118535579"
                   ><surname>Friedenthal</surname><forename>Richard</forename></editor>
             </titleStmt>
@@ -8829,7 +8808,7 @@
                 <forename>Stefan</forename></author>
 
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
               <editor role="contributor" ref="http://d-nb.info/gnd/118535579"
                   ><surname>Friedenthal</surname><forename>Richard</forename></editor>
             </titleStmt>
@@ -10014,7 +9993,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10091,7 +10070,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10165,7 +10144,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10441,7 +10420,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10517,7 +10496,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10594,7 +10573,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10670,7 +10649,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10820,7 +10799,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -10966,7 +10945,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -11456,7 +11435,7 @@
                 <forename>Stefan</forename></author>
               <editor role="contributor">Mazzucchetti, Lavinia</editor>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -11526,7 +11505,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -11614,7 +11593,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -12098,7 +12077,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -12235,7 +12214,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -12374,7 +12353,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -12579,7 +12558,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -13044,7 +13023,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -13463,7 +13442,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -13617,7 +13596,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -13760,7 +13739,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -14052,7 +14031,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -14130,7 +14109,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -14418,7 +14397,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -14629,7 +14608,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -14913,7 +14892,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -15902,7 +15881,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -15983,7 +15962,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -16323,7 +16302,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -16927,7 +16906,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17080,7 +17059,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17227,7 +17206,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17376,7 +17355,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17451,7 +17430,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17740,7 +17719,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17817,7 +17796,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -17971,7 +17950,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18042,7 +18021,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18317,7 +18296,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18464,7 +18443,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18551,7 +18530,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18780,7 +18759,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18859,7 +18838,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -18938,7 +18917,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -19301,7 +19280,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -19733,7 +19712,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -19871,7 +19850,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -19951,7 +19930,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -20510,7 +20489,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -20839,7 +20818,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -20918,7 +20897,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
               <editor role="contributor" ref="http://d-nb.info/gnd/118535579"
                   ><surname>Friedenthal</surname><forename>Richard</forename></editor>
             </titleStmt>
@@ -20978,9 +20957,8 @@
                       <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Verhaeren-Vorlesung“ von Lotte
                           Zweig und Notiz „1912?“ von Richard Friedenthals Hand</desc>
-                        <desc xml:lang="en">Enclosure 1: cover sheet inscribed "Verhaeren-Vorlesung"
-                          by Lotte Zweig and note "1912?" in Richard Friedenthal's hand; enclosure
-                          2: 8 poems by Verhaeren in Stefan Zweig's translation</desc>
+                        <desc xml:lang="en">cover sheet inscribed "Verhaeren-Vorlesung"
+                          by Lotte Zweig and note "1912?" in Richard Friedenthal's hand</desc>
                         <measure/>
                       </item>
                     </list>
@@ -21078,7 +21056,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -21212,7 +21190,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -21409,7 +21387,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -21486,7 +21464,7 @@
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname>
                 <forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename>Friedenthal, Richard</editor>
+                  ><surname>Zweig</surname><forename>Lotte</forename></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
