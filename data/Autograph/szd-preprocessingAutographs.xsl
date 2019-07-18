@@ -52,8 +52,11 @@
                                     </term>
                                  </xsl:for-each>
                                  <xsl:if test="./*:titleStmt/*:title/@type = 'object_pers'">
-                                     <term type="person_affected" ref="{*:titleStmt/*:author/*:persName/@ref}">
-                                         <xsl:value-of select="*:titleStmt/*:author/*:persName"/>
+                                     <term type="person_affected">
+                                         <persName ref="{*:titleStmt/*:author/*:persName/@ref}">
+                                             <surname><xsl:value-of select="*:titleStmt/*:author/*:persName/*:surname"/></surname>
+                                             <forename><xsl:value-of select="*:titleStmt/*:author/*:persName/*:forename"/></forename>
+                                         </persName>
                                      </term>
                                  </xsl:if>
                                  <xsl:if test=".//*:sourceDesc/*:msDesc/*:msContents/*:msItem/*:ab">
