@@ -8,17 +8,21 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
-						Karl-Franzens-Universität Graz</orgName>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at"
+            ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+            for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
         </authority>
         <distributor>
-          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management
+            System</orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons
+            BY-NC-SA 4.0</licence>
         </availability>
         <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.standorte</idno>
@@ -66,13 +70,18 @@
       </editorialDecl>
       <projectDesc>
         <ab>
-          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"></ref>
+          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"/>
         </ab>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
-					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
-					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
-					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
-					(z.B. digitalen Editionen) möglich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem
+          Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig
+          zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt
+          Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
+          werden.</p>
       </projectDesc>
     </encodingDesc>
   </teiHeader>
@@ -85,7 +94,8 @@
           <settlement>Salzburg</settlement>
         </org>
         <org corresp="https://fredonia.libguides.com/archives/zweig" xml:id="SZDSTA.2">
-          <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</orgName>
+          <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
+            Collection</orgName>
           <country>USA</country>
           <settlement>Fredonia</settlement>
         </org>
@@ -110,10 +120,11 @@
           <settlement>New York City</settlement>
         </org>
         <org corresp="http://www.tma.ethz.ch/" xml:id="SZDSTA.7">
-          <orgName ref="http://d-nb.info/gnd/4302937-1">Thomas-Mann-Archiv der ETH</orgName>
+          <orgName ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der
+            ETH-Bibliothek</orgName>
           <country>Schweiz</country>
           <settlement>Zürich</settlement>
-        </org>
+        </org>      
         <org corresp="https://www.wienbibliothek.at/" xml:id="SZDSTA.8">
           <orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im Rathaus</orgName>
           <country>Österreich</country>
@@ -125,7 +136,8 @@
           <settlement>Basel</settlement>
         </org>
         <org corresp="http://www.literaturhaus.at/index.php?id=6542" xml:id="SZDSTA.10">
-          <orgName ref="http://d-nb.info/gnd/2057272-4">Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus</orgName>
+          <orgName ref="http://d-nb.info/gnd/2057272-4">Dokumentationsstelle für neuere
+            österreichische Literatur im Literaturhaus</orgName>
           <country>Österreich</country>
           <settlement>Wien</settlement>
         </org>
@@ -155,7 +167,8 @@
           <country>Schweiz</country>
         </org>
         <org corresp="http://ahl.sbg.ac.at/" xml:id="SZDSTA.17">
-          <orgName ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg</orgName>
+          <orgName ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger Literaturstiftung im
+            Literaturarchiv Salzburg</orgName>
           <country>Österreich</country>
           <settlement>Salzburg</settlement>
         </org>
@@ -184,10 +197,66 @@
           <country>Schweiz</country>
           <settlement>Zürich</settlement>
         </org>
-        <org corresp="https://www.zb.uzh.ch/" xml:id="SZDSTA.23">
+        <org corresp="https://www.theatermuseum.at/" xml:id="SZDSTA.23">
           <orgName ref="http://d-nb.info/gnd/1033329-0">Theatermuseum</orgName>
           <country>Österreich</country>
           <settlement>Wien</settlement>
+        </org>
+        <org xml:id="SZDSTA.24">
+          <orgName>Privatbesitz, USA</orgName>
+          <country>USA</country>
+        </org>
+        <org corresp="https://www.bn.gov.br/en" xml:id="SZDSTA.26">
+          <orgName ref="http://d-nb.info/gnd/1003296-4"> Biblioteca Nacional</orgName>
+          <country>Brasilien</country>
+          <settlement>Rio de Janeiro</settlement>
+        </org>
+        <org corresp="https://staatsbibliothek-berlin.de/" xml:id="SZDSTA.27">
+          <orgName ref="http://d-nb.info/gnd/5036103-X">Staatsbibliothek zu Berlin - Preußischer
+            Kulturbesitz</orgName>
+          <country>Deutschland</country>
+          <settlement>Berlin</settlement>
+        </org>
+        <org corresp="https://www.loc.gov/" xml:id="SZDSTA.28">
+          <orgName ref="http://d-nb.info/gnd/35626-8">Library of Congress</orgName>
+          <country>USA</country>
+          <settlement>Washington, DC</settlement>
+        </org>
+        <org corresp="https://www.saengermuseum.de/" xml:id="SZDSTA.29">
+          <orgName ref="http://d-nb.info/gnd/4646846-8">Dokumentations- und Forschungszentrum des
+            Deutschen Chorwesens</orgName>
+          <country>Deutschland</country>
+          <settlement>Feuchtwangen</settlement>
+        </org>
+        <org corresp="https://www.goethe-museum.de/de" xml:id="SZDSTA.30">
+          <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf,
+            Anton-und-Katharina-Kippenberg-Stiftung</orgName>
+          <country>Deutschland</country>
+          <settlement>Düsseldorf</settlement>
+        </org>
+        <org corresp="https://www.themorgan.org/" xml:id="SZDSTA.32">
+          <orgName ref="http://d-nb.info/gnd/1006048-0">The Pierpont Morgan Library</orgName>
+          <country>USA</country>
+          <settlement>New York, NY </settlement>
+        </org>
+        <org
+          corresp="http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/"
+          xml:id="SZDSTA.33">
+          <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire</orgName>
+          <country>Schweiz</country>
+          <settlement>Genf </settlement>
+        </org>
+        <org corresp="https://library.stanford.edu/collections/memorial-library-music"
+          xml:id="SZDSTA.34">
+          <orgName ref="http://d-nb.info/gnd/5069027-9"> Stanford University, Memorial Library of
+            Music</orgName>
+          <country>USA</country>
+          <settlement>Stanford, CA</settlement>
+        </org>
+        <org corresp="http://www.beethoven-haus-bonn.de" xml:id="SZDSTA.35">
+          <orgName ref="http://d-nb.info/gnd/2085343-9">Beethoven-Haus Bonn</orgName>
+          <country>Deutschland</country>
+          <settlement>Bonn</settlement>
         </org>
       </listOrg>
     </body>
