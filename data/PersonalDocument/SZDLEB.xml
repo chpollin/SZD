@@ -115,7 +115,7 @@
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Notizen aus der Zeit des
+                    <ab xml:lang="de">Notizen aus der Zeit des
 											Aufenthalts in Russland 1928</ab>
                     <ab xml:lang="en">Notes
 											from 1928 sojourn in Russia</ab>
@@ -908,11 +908,11 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/L10</idno>
+                  <idno type="signature">SZ-AAP/L10</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Tagebuchaufzeichnungen vom 8.
+                    <ab xml:lang="de">Tagebuchaufzeichnungen vom 8.
 											August bis 1. September 1936 der Reise nach Brasilien
 											und Argentinien</ab>
                     <ab xml:lang="en">Diary 8 August to
@@ -1012,11 +1012,11 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/L4</idno>
+                  <idno type="signature">SZ-AAP/L4</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Tagbucheinträge 14. bis 22.
+                    <ab xml:lang="de">Tagbucheinträge 14. bis 22.
 											Juli</ab>
                     <ab xml:lang="en">Diary 14 through 22
 										July</ab>
@@ -1119,11 +1119,11 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/L9</idno>
+                  <idno type="signature">SZ-AAP/L9</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Tagebuchaufzeichnungen von 22.
+                    <ab xml:lang="de">Tagebuchaufzeichnungen von 22.
 											Mai bis 19. Juni 1940</ab>
                     <ab xml:lang="en">Diary 22 May
 											through 19 June 1940</ab>
@@ -1210,11 +1210,11 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/L5</idno>
+                  <idno type="signature">SZ-AAP/L5</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: Tagbuchaufzeichnungen von 14.
+                    <ab xml:lang="de">Tagbuchaufzeichnungen von 14.
 											November 1917 bis Februar 1918 bis 19. Juni 1940</ab>
                     <ab xml:lang="en">Diary 14 November 1917 to February 1918 to
 											19 June 1940</ab>
@@ -1307,11 +1307,11 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/L11</idno>
+                  <idno type="signature">SZ-AAP/L11</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Inhalt: kalenderartig erfasste
+                    <ab xml:lang="de">kalenderartig erfasste
 											Termine in Paris, Salzburg, Wien, Mailand, Neapel, Rom
 											u.a. zwischen 16. Dezember 1936 und 17. Februar
 											1937</ab>
@@ -1380,6 +1380,96 @@
                     <origPlace>Paris, Salzburg, Wien,
 											Italien</origPlace>
                     <origDate>[1936-1937]</origDate>
+                  </origin>
+                  <provenance>Archiv Atrium Press</provenance>
+                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.13">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original" xml:lang="de">Tagebuch September 1912 und Frühjahr 1913 (Paris)</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/Lxx</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Tagebuchaufzeichnungen zwischen dem 10. September 1912 bis
+                      6. Mai 1913 sowie von 20. bis 28. März 1914
+                    </ab>
+                    <ab xml:lang="en">Diary 10 September 1912 to
+                      6 May 1913 and 20 to 28 March 1914
+                    </ab>
+                  </summary>
+                  <textLang>
+                    <lang>ger</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit gestempelter Seriennummer "1487", 
+                          liniertes Papier mit Kammmarmorschnitt</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stamped serial number &quot;1487
+                          &quot;, lined paper, edges combed marbled</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, blauer Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, blue pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">  
+                          <term type="objecttyp">Notizbuch</term>
+                          <measure type="leaf">68 Blatt, 47
+                            Blatt beschrieben</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>
+                          <measure type="leaf">68 leaves, writing on 47 leaves
+                           </measure>
+                        </span>
+                        <measure type="format">25x17cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">violetter Ledereinband</ab>
+                      <ab xml:lang="en">purple leather binding</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Paris, Wien
+                     </origPlace>
+                    <origDate>[10.09.1912-06.05.1913, 20.-28.03.1914]</origDate>
                   </origin>
                   <provenance>Archiv Atrium Press</provenance>
                   <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
