@@ -19588,8 +19588,7 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Mappe aus der Sammlung Zweig. Frels 1934, Nr. 61. Hinterberger IX, Nr.
-                  139</origin>
+                <origin>Mappe aus der Sammlung Zweig</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/5036103-X">Staatsbibliothek zu Berlin -
                     Preußischer Kulturbesitz</orgName>, <placeName
@@ -23363,7 +23362,7 @@
               >Eigenhändiger Brief mit Unterschrift und Siegel</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118577905">
-                <surname>Marie Antoinette, Königin von Frankreich</surname>
+                <name>Marie Antoinette, Königin von Frankreich</name>
               </persName>
             </author>
           </titleStmt>
@@ -26415,12 +26414,8 @@
                 <origin>Buchinger 1998</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf,
-                    Anton-und-Katharina-Kippenberg-Stiftung</orgName>, <placeName
-                    ref="http://www.geonames.org/2934246">Düsseldorf</placeName> (von Zweig mit
-                    <persName type="person">
-                    <surname>Kippenberg</surname>
-                  </persName> gegen ein unbekanntes Stück getauscht und <date>1930</date> vergeblich
-                  zum Rücktausch erbeten)</provenance>
+                    Anton-und-Katharina-Kippenberg-Stiftung, <placeName
+                    ref="http://www.geonames.org/2934246">Düsseldorf</placeName></orgName></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -26780,8 +26775,8 @@
                 <idno>SZDAUT.563</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date>1797</date>. Weitere Daten
-                  unbekannt.</summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1798-01-22">22. Januar 1798</date> (irrtümlich datiert 1797). 
+                  Weitere Daten unbekannt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26795,6 +26790,8 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 38a. Hinterberger IX, Nr. 175</origin>
+                <provenance>unbekannt; zuletzt <date when="2019-03-01">März 2019</date>, Auktion 707, 
+                  <orgName>Antiquariat J. A. Stargardt</orgName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>, Kat.-Nr. 177</provenance>
               </history>
             </msDesc>
           </sourceDesc>
@@ -29060,11 +29057,9 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 200</idno></provenance>
                 <acquisition>
-                  <date when="1931-03-01">März 1931</date>, <orgName>Antiquariat J.
-                  Stalle</orgName>, <placeName ref="http://www.geonames.org/2867714"
-                    >München</placeName>. Aus der Bibliothek der Grafen von <persName type="person">
-                    <surname>Stolberg-Wernigerode</surname>
-                  </persName>
+                  <date when="1931-03-01">März 1931</date>, <orgName>Antiquariat J. Halle</orgName>, 
+                  <placeName ref="http://www.geonames.org/2867714">München</placeName>. Aus der Bibliothek der Grafen von 
+                  <persName type="person"><surname>Stolberg-Wernigerode</surname></persName>
                 </acquisition>
               </history>
             </msDesc>
@@ -33291,10 +33286,8 @@
                 <origin>Karteikarte aus der Sammlung Zweig (Privatsammlung Schweiz). Frels 1934, Nr.
                   94. Hinterberger XX, Nr. 822. Moirandat/Stargardt 2003</origin>
                 <provenance>
-                  <persName type="person">
-                    <forename>Rudolf</forename>
-                    <surname>Elvers</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <orgName ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.12"
+                    >Privatbesitz, Deutschland</orgName>
                 </provenance>
                 <acquisition>
                   <date when="1909-11-15">15. November 1909</date>, <orgName>Antiquariat Emil
@@ -33423,7 +33416,9 @@
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
-                <acquisition>unbekannt</acquisition>
+                <acquisition><date when="1932-04-01">April 1932</date>, <orgName>Antiquariat Hellmut Meyer &amp;
+                  Ernst</orgName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>.
+                </acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -38977,7 +38972,7 @@
                 <idno>SZDAUT.821</idno>
               </msIdentifier>
               <msContents>
-                <summary>Op. 84 Nr. 1. Clärchens erstes Lied aus der Musik zum Trauerspiel
+                <summary>Op. 84 Nr. 1, Clärchens erstes Lied aus der Musik zum Trauerspiel
                     <hi style="italic">Egmont</hi> von <persName ref="http://d-nb.info/gnd/118540238"
                       ><forename>Johann Wolfgang von</forename>
                     <surname>Goethe</surname></persName>, <date>1809-1810</date>. Am Rand von
@@ -43421,7 +43416,7 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (Privatsammlung Schweiz). Zweig 1930.
                   Hinterberger XX, Nr. 370</origin>
-                <provenance>unbekannt</provenance>
+                <provenance>Internationale Stiftung Mozarteum</provenance>
                 <acquisition>
                   <date when="1929-12-20">20. Dezember 1929</date>, Auktion 55, <orgName>Antiquariat
                     Leo Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
@@ -43468,10 +43463,7 @@
               <history>
                 <origin>Zweig 1930. Hinterberger IX, Nr. 275. Hinterberger 18, Nr. 171. Bircher
                   2002, Seite 169, mit Abbildung nach Seite 168</origin>
-                <provenance>Privatbesitz, USA (zuvor versteigert am <date when="2004-05-21">21. Mai
-                    2004</date>, Auktion LO 4403, <orgName>Auktionshaus Sotheby’s</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743"
-                  >London</placeName>)</provenance>
+                <provenance>unbekannt</provenance>
                 <acquisition> wohl <date when="1929-10-12">12. Oktober 1929</date>, Auktion 55,
                     <orgName>Antiquariat Leo Liepmannssohn</orgName>, <placeName
                     ref="http://www.geonames.org/2950159">Berlin</placeName>
@@ -47503,6 +47495,52 @@
             </msDesc>
           </sourceDesc>
         </biblFull>
+        
+        <!-- Achtung: neuer Eintrag!! -->
+        <biblFull xml:id="SZDAUT.XXX">
+          <titleStmt>
+            <title>Buchbestellung (Fälschung!)</title>
+            <author>
+              <persName ref="http://d-nb.info/gnd/118607626">
+                <forename>Friedrich</forename>
+                <surname>Schiller</surname>
+              </persName>
+            </author>
+          </titleStmt>
+          <publicationStmt>
+            <ab>Autographen</ab>
+          </publicationStmt>
+          <sourceDesc>
+            <msDesc>
+              <msIdentifier>
+                <idno>SZDAUT.XXX</idno>
+              </msIdentifier>
+              <msContents>
+                <summary>Als Buchbestellung Friedrich Schillers gehandeltes Autograph, tatsächlich aber von der Hand des Fälschers <persName ref="http://d-nb.info/gnd/116593822" type="person"
+                    ><forename>Heinrich von</forename> <surname>Gerstenbergk</surname></persName>. Auf der Vorderseite von unbekannter Hand bezeichnet:
+                "Falsum!", auf der Rückseite von Stefan Zweig bezeichnet: "Gerstenbergische Fälschung! StZ." Beiliegend Typoskript mit Beschreibung des Objekts und Kuvert.</summary>
+              </msContents>
+              <physDesc>
+                <objectDesc>
+                  <supportDesc>
+                    <extent>
+                      <measure type="page">1</measure>
+                      <measure type="format">Quer-8°</measure><!-- Oliver - noch überprüfen! -->
+                    </extent>
+                  </supportDesc>
+                </objectDesc>
+              </physDesc>
+              <history>
+                <provenance><orgName ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.12"
+                  >Privatbesitz, Deutschland</orgName></provenance>
+                <acquisition><date when="1917-04-20">20. April 1917</date>, Auktion 39,
+                  <orgName>Antiquariat Karl Ernst Henrici</orgName>, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></acquisition><!-- Katalognummer von Oliver noch nachtragen -->
+              </history>
+            </msDesc>
+          </sourceDesc>
+        </biblFull>
+        
       </listBibl>
     </body>
   </text>
