@@ -3448,7 +3448,7 @@
                 <origin>Safran 1993, Seite 33</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1924-12-04">4. Dezember 1924</date>, Geschenk des Autors an
@@ -4530,7 +4530,7 @@
                 <origin>Safran 1993, Seite 34</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1937-10-01">Oktober 1937</date>, Geschenk des Autors an
@@ -4575,7 +4575,7 @@
                 <origin>Safran 1993, Seite 34</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>
                   <date when="1924-01-01">Jänner 1924</date>, Geschenk des Autors an
                   Zweig</acquisition>
@@ -4625,7 +4625,7 @@
                 <origin>Safran 1993, Seite 34</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>
                   <date when="1933-03-01">März 1933</date>, Geschenk des Autors an
                   Zweig</acquisition>
@@ -7598,7 +7598,7 @@
           <titleStmt>
             <title
               ref="http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&amp;docId=NNL_ARCHIVE_AL003435883"
-              >Eigenhändiger Brief mit Unterschrift, an <persName type="person"
+              >Eigenhändiger Brief mit Unterschrift, an <persName ref="http://d-nb.info/gnd/116222824" type="person"
                   ><forename>Helene</forename>
                 <surname>Klepetar</surname></persName>
             </title>
@@ -8016,7 +8016,7 @@
                 <origin>Safran 1993, Seite 38</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -8829,7 +8829,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.185">
           <titleStmt>
-            <title>Eigenhändiger Brief mit Unterschrift, an <persName type="person"
+            <title>Eigenhändiger Brief mit Unterschrift an <persName type="person"
                   ><forename>William</forename>
                 <surname>Strahan</surname></persName></title>
             <author>
@@ -8875,8 +8875,8 @@
                   <idno type="signature">Zweig MS. 149</idno></provenance>
                 <acquisition>
                   <date when="1941-08-26">26. August 1941</date>, <orgName>Antiquariat Heinrich
-                    Eisemann</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    Eisemann, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -8906,7 +8906,7 @@
                       Frankreich</name></persName> (1757-1836), <persName
                     ref="http://d-nb.info/gnd/118577905" type="person"><name>Marie Antoinette,
                       Königin von Frankreich</name></persName> (1755-1793) und weiteren Adligen,
-                    <date when="1774-01-01">Januar 1774</date></summary>
+                    <date when="1774-01-01">Januar 1774</date>.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -8925,18 +8925,17 @@
                 <origin>Mappe aus der Sammlung Zweig. Karteikarte aus der Sammlung Zweig (beide in
                   der Auktion mit dem Schriftstück verkauft). Zweig 1933, mit Abbildung</origin>
                 <provenance>unbekannt; zuletzt <date when="1992-03-01">März 1992</date>, Auktion
-                  651, <orgName>Antiquariat J. A. Stargardt</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>, Kat.-Nr.
+                  651, <orgName>Antiquariat J. A. Stargardt, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>, Kat.-Nr.
                   1353</provenance>
                 <acquisition>
-                  <date>1932</date>, <orgName>Antiquariat Charavay</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>. Aus der Sammlung L.-A.
+                  <date>1932</date>, <orgName>Antiquariat Charavay, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>. Aus der Sammlung L.-A.
                   Barbet</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
-        <!--author/kategorie: Frankreich - Königshaus fehlt-->
         <biblFull xml:id="SZDAUT.187">
           <titleStmt>
             <title
@@ -8958,7 +8957,7 @@
                 <idno>SZDAUT.187</idno>
               </msIdentifier>
               <msContents>
-                <summary>Brief vom <date when="1879-04-03">3. April 1879</date>, Wien</summary>
+                <summary><date when="1879-04-03">3. April 1879</date>, Wien</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Brief</ab>
                 </msItem>
@@ -9025,12 +9024,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1910-11-29">29. November 1910</date>, Auktion, <orgName>Antiquariat
-                    Martin Breslauer</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>, durch <persName ref="http://d-nb.info/gnd/116717904"
-                    type="person">
-                    <forename>Karl Ernst</forename>
-                    <surname>Henrici</surname>
-                  </persName>
+                    Martin Breslauer, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>, durch Karl Ernst Henrici
                 </acquisition>
               </history>
             </msDesc>
@@ -9111,7 +9106,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.191">
           <titleStmt>
-            <title>Eigenhändiges Gedicht in einem Brief mit Unterschrift, an <persName type="person"
+            <title>Eigenhändiges Gedicht in einem Brief mit Unterschrift, an <persName ref="http://d-nb.info/gnd/119086395" type="person"
                   ><forename>Francesco</forename>
                 <surname>Algarotti</surname></persName></title>
             <author>
@@ -9155,9 +9150,9 @@
                   Rauch Genf October 1953“</provenance>
                 <acquisition>
                   <date when="1930-07-01">1. Juli 1930</date>, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName>
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9183,7 +9178,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Gedicht, unterschrieben „Aug[ust] Kallson“, aus vier Teilen
-                  montiert</summary>
+                  montiert.</summary>
                 <textLang>
                   <lang>Schwedisch</lang>
                 </textLang>
@@ -9205,10 +9200,7 @@
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
-                <acquisition>Geschenk von <persName type="person">
-                    <forename>Erik</forename>
-                    <surname>Waller</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2694762"
+                <acquisition>Geschenk von Erik Waller, <placeName ref="http://www.geonames.org/2694762"
                     >Linköping</placeName>
                 </acquisition>
               </history>
@@ -9236,8 +9228,8 @@
                 <idno>SZDAUT.193</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date when="1818-09-19">19. September
-                  1818</date>. Echtheitsbestätigung auf der Rückseite</summary>
+                <summary>Eigenhändiges Manuskript mit Echtheitsbestätigung auf der Rückseite, <date when="1818-09-19">19. September
+                  1818</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -9349,9 +9341,9 @@
                   1944“, dagegen auf dem Notizblatt „Given to Mr. Ingram [.] Xmas 1942“</provenance>
                 <acquisition>
                   <date when="1939-06-13">13. Juni 1939</date>, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Eisemann, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9402,9 +9394,9 @@
                 </provenance>
                 <acquisition>
                   <date when="1930-08-01">1. August 1930</date>, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName>
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9453,8 +9445,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1912</date>, <orgName>Antiquariat Noël Charavay</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>
+                  <date>1912</date>, <orgName>Antiquariat Noël Charavay, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9581,7 +9573,7 @@
                 <origin>Safran 1993, Seite 39</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -9607,9 +9599,9 @@
                 <idno>SZDAUT.201</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Paris, <date when="1932-02-28">28. Februar
-                    1932</date>. Beiliegend eine maschinschriftliche Abschrift mit handschriftlichen
-                  Korrekturen</summary>
+                <summary>Eigenhändiges Gedicht, Paris, <date when="1932-02-28">28. Februar
+                    1932</date>, beiliegend eine maschinschriftliche Abschrift mit handschriftlichen
+                  Korrekturen.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -9625,7 +9617,7 @@
                 <origin>Safran 1993, Seite 39</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
             </msDesc>
@@ -9666,7 +9658,7 @@
                 <origin>Safran 1993, Seite 39</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
             </msDesc>
@@ -9707,7 +9699,7 @@
                 <origin>Safran 1993, Seite 39</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
             </msDesc>
@@ -9748,7 +9740,7 @@
                 <origin>nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName></provenance>
+                    Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>unbekannt; wohl Geschenk des Autors an Zweig</acquisition>
               </history>
             </msDesc>
@@ -9773,11 +9765,11 @@
                 <idno>SZDAUT.205</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Paris, <date when="1932-02-25">25. Februar
+                <summary>Eigenhändiges Gedicht, Paris, <date when="1932-02-25">25. Februar
                     1932</date>. Das Gedicht beginnt auf der Rückseite eines Widmungsbriefes an
                     <persName ref="http://d-nb.info/gnd/118637479" type="person">
                     <forename>Stefan</forename>
-                    <surname>Zweig</surname></persName></summary>
+                    <surname>Zweig</surname></persName>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -9793,7 +9785,7 @@
                 <origin>Safran 1993, Seite 39</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1932-02-01">Februar 1932</date>, Geschenk des Autors an
@@ -9843,8 +9835,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1922-09-19">19. September 1922</date>, Auktion 79,
-                    <orgName>Antiquariat Karl Ernst Henrici</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    <orgName>Antiquariat Karl Ernst Henrici, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9870,9 +9862,7 @@
                 <idno>SZDAUT.207</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Mit Echtheitsbestätigung des <persName
-                    type="person"><name>Marquis de Chateaugisor</name></persName></summary>
-                <!--Oliver: Marquis?-->
+                <summary>Eigenhändiges Manuskript mit Echtheitsbestätigung des Marquis de Chateaugisor</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -9896,8 +9886,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1922-06-01">Juni 1922</date>, Auktion 77, <orgName>Antiquariat Karl
-                    Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -9923,9 +9913,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Gedicht mit Unterschrift, abgeschrieben für die Tänzerin
-                    <persName type="person"><forename>Fanny</forename>
-                    <surname>Elßler</surname></persName>, <date when="1830-06-23"/>23. Juni
-                  1830</summary>
+                    Fanny Elßler, <date when="1830-06-23">23. Juni 1830</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -9965,10 +9953,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Fragment eines eigenhändigen Manuskripts mit Unterschrift, zusätzlich
-                  unterschrieben von <persName type="person"><forename>Pierre Arnold</forename>
-                    <surname>Latreille</surname></persName>, <date when="1830-02-05">5. Februar
-                    1830</date>. Erstes Blatt durch Mäusefraß beschädigt. In
-                  Papierumschlag</summary>
+                  unterschrieben von Pierre Arnold Latreille, <date when="1830-02-05">5. Februar
+                    1830</date>, erstes Blatt durch Mäusefraß beschädigt.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -9978,7 +9964,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">11</measure>
-                      <measure type="format">ca. 25,5 x 21,5 cm</measure>
+                      <measure type="format">ca. 25,5 x 21,5 cm, Papierumschlag</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -9993,8 +9979,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1929-10-12">12. Oktober 1929</date>, Katalog 972, <orgName>Antiquariat
-                    James Tregaskis</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    James Tregaskis, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10019,12 +10005,8 @@
                 <idno>SZDAUT.210</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges (?) Manuskript mit den Unterschriften von <persName
-                    type="person"><forename>George</forename>
-                    <surname>Lechter</surname></persName> und <persName type="person"
-                      ><forename>Melchior</forename>
-                    <surname>Lechter</surname></persName>. Ursprünglich dem Buch <hi style="italic">Der Teppich des
-                    Lebens</hi> vorangestellt</summary>
+                <summary>Eigenhändiges (?) Manuskript mit den Unterschriften von George Lechter und Melchior Lechter, 
+                  ursprünglich dem Buch <hi style="italic">Der Teppich des Lebens</hi> vorangestellt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10044,10 +10026,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1922</date>, Geschenk von <persName type="person">
-                    <forename>Oscar</forename>
-                    <surname>Schmitz</surname>
-                  </persName> an Zweig</acquisition>
+                  <date>1922</date>, Geschenk von Oscar Schmitz an Zweig
+                </acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -10092,19 +10072,9 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date when="1926-02-01">Februar 1926</date>, von <persName type="person">
-                    <forename>Curt</forename>
-                    <surname>Hirschfeld</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2940187"
-                    >Berlin-Charlottenburg</placeName>. Aus dem Besitz des Komponisten <persName
-                    type="person">
-                    <forename>Karl</forename>
-                    <surname>Hallwachs</surname>
-                  </persName>, der mehrere Gedichte von <persName
-                    ref="http://d-nb.info/gnd/11853856X" type="person">
-                    <forename>Stefan</forename>
-                    <surname>George</surname>
-                  </persName> vertonte.</acquisition>
+                  <date when="1926-02-01">Februar 1926</date>, von Curt Hirschfeld, <placeName ref="http://www.geonames.org/2940187"
+                    >Berlin-Charlottenburg</placeName>. Aus dem Besitz des Komponisten Karl Hallwachs, 
+                  der mehrere Gedichte von Stefan George vertonte.</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -10152,8 +10122,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1913-11-29">29. November 1913</date>, <orgName>Antiquariat G. de
-                    Marinis</orgName>, <placeName ref="http://www.geonames.org/3176959"
-                    >Florenz</placeName>
+                    Marinis, <placeName ref="http://www.geonames.org/3176959"
+                    >Florenz</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10178,10 +10148,8 @@
                 <idno>SZDAUT.213</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiger Entwurf zu einer Rede, <date>1903</date>. Teilweise aus
-                  schmalen Streifen montiert. Beiliegend ein Brief Gides an <persName
-                    ref="http://d-nb.info/gnd/118637479" type="person"><forename>Stefan</forename>
-                    <surname>Zweig</surname></persName></summary>
+                <summary>Eigenhändiger Entwurf zu einer Rede, <date>1903</date>, beiliegend ein Brief Gides an Stefan Zweig.
+                  Teilweise aus schmalen Streifen montiert.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -10248,10 +10216,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1913-11-03">3. November 1913</date>, Auktion, <orgName>Antiquariat
-                    List &amp; Franke</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Aus der Sammlung <persName type="person"><surname>Fischer
-                      von Röslerstamm</surname></persName>
-                  <!-- Oliver: Vorname? -->
+                    List &amp; Franke, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Aus der Sammlung Fischer von Röslerstamm
                 </acquisition>
               </history>
             </msDesc>
@@ -10305,15 +10271,14 @@
                 <idno>SZDAUT.216</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1907</date>. In verschnürter
-                  Mappe</summary>
+                <summary>Eigenhändiges Manuskript, <date>1907</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">193</measure>
-                      <measure type="format">34,0 x 21,0 cm</measure>
+                      <measure type="format">34,0 x 21,0 cm, verschnürte Mappe</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -10365,8 +10330,8 @@
                   Bodmer</orgName>)</origin>
                 <provenance>unbekannt</provenance>
                 <acquisition>
-                  <date>1912</date>, <orgName>Antiquariat Emil Hirsch</orgName>, <placeName
-                    ref="http://www.geonames.org/2867714">München</placeName>
+                  <date>1912</date>, <orgName>Antiquariat Emil Hirsch, <placeName
+                    ref="http://www.geonames.org/2867714">München</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10392,9 +10357,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Gedicht mit Unterschrift mit einer handschriftlichen Fußnote
-                  des Empfängers <persName type="person"><forename>Jean</forename>
-                    <surname>Paul</surname></persName>, <date when="1798-07-25">25. Juli
-                  1798</date></summary>
+                  des Empfängers Jean Paul, <date when="1798-07-25">25. Juli 1798</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10414,8 +10377,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1913</date>, <orgName>Antiquariat Joseph Baer &amp; Co.</orgName>,
-                    <placeName>Frankfurt</placeName>
+                  <date>1913</date>, <orgName>Antiquariat Joseph Baer &amp; Co.,
+                    <placeName>Frankfurt</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10461,12 +10424,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-02-22">22. Februar 1926</date>, Auktion 107, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>. Aus der Sammlung <persName
-                    ref="http://d-nb.info/gnd/116294671" type="person">
-                    <forename>Gustav</forename>
-                    <surname>Könnecke</surname>
-                  </persName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>. Aus der Sammlung Gustav Könnecke
                 </acquisition>
               </history>
             </msDesc>
@@ -10512,8 +10471,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1927-02-07">7. Februar 1927</date>, Auktion 3, <orgName>Friedrich
-                    Meyer’s Buchhandlung</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>
+                    Meyer’s Buchhandlung, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10538,25 +10497,20 @@
                 <idno>SZDAUT.221</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Von Goethe für seinen Sohn <persName type="person"
+                <summary>Eigenhändiges Gedicht, von Goethe für seinen Sohn <persName type="person"
                       ><forename>August von</forename>
-                    <surname>Goethe</surname></persName> und für <persName type="person"
+                  <surname>Goethe</surname></persName> und für <persName ref="http://d-nb.info/gnd/116543701" type="person"
                       ><forename>Caroline</forename>
-                    <surname>Ulrich</surname></persName> geschrieben und von ihm mit deren Initialen
+                    <surname>Ulrich</surname></persName><!-- eigentlich verh. Riemer! --> geschrieben und von ihm mit deren Initialen
                   versehen, <date when="1812-12-10">10. Dezember 1812</date>. Auf der Rückseite des
                   Blattes laut aufgeklebtem Zettel eine eigenhändige Bleistiftskizze Goethes. Über
                   dem Gedicht waren folgende Reliquien montiert, die nun lose beiliegen: ehemals auf
-                  das Blatt montiert je eine Locke von Goethe und <persName type="person"
-                      ><forename>Friedrich</forename>
-                    <surname>Schiller</surname></persName> mit Echtheitsbestätigung von <persName
-                    type="person"><forename>Friedrich Wilhelm</forename>
-                    <surname>Riemer</surname></persName> und ein Bibliotheksleihschein Schillers mit
-                  dessen Unterschrift. Außerdem beiliegend eine aus einem anderen Schriftstück
+                  das Blatt montiert je eine Locke von Goethe und <persName ref="http://d-nb.info/gnd/118607626" type="person"
+                      ><forename>Friedrich</forename> <surname>Schiller</surname></persName> mit Echtheitsbestätigung von Friedrich Wilhelm 
+                  Riemer und ein Bibliotheksleihschein Schillers mit dessen Unterschrift. Außerdem beiliegend eine aus einem anderen Schriftstück
                   ausgeschnittene Unterschrift Goethes und eine Locke sowie eine Schriftprobe von
-                    <persName type="person"><forename>Amalie</forename>
-                    <surname>Wolff</surname></persName> mit Beglaubigung von <persName type="person"
-                      ><forename>Charlotte</forename>
-                    <surname>Birch-Pfeiffer</surname></persName></summary>
+                  <persName ref="http://d-nb.info/gnd/117447102" type="person"><forename>Amalie</forename>
+                    <surname>Wolff</surname></persName> mit Beglaubigung von Charlotte Birch-Pfeiffer.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10579,8 +10533,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                     (<date>1963</date> erworben)</provenance>
                 <acquisition>
-                  <date>1923</date>, <orgName>Antiquariat Rudolf Geering</orgName>, <placeName
-                    ref="http://www.geonames.org/2661604">Basel</placeName>
+                  <date>1923</date>, <orgName>Antiquariat Rudolf Geering, <placeName
+                    ref="http://www.geonames.org/2661604">Basel</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10623,8 +10577,8 @@
                 <provenance>unbekannt; von Hinterberger an Eisemann verkauft (Brief Hinterbergers,
                     <date when="1936-03-25">25. März 1936</date>, BL, Loan 95.14); zuletzt <date
                     when="1988-03-09">9. März 1988</date> und <date when="1988-03-10">10. März
-                    1988</date>, Auktion 641, <orgName>Antiquariat J. A. Stargardt</orgName>,
-                    <placeName ref="http://www.geonames.org/2873759">Marburg</placeName>, Nr.
+                    1988</date>, Auktion 641, <orgName>Antiquariat J. A. Stargardt,
+                    <placeName ref="http://www.geonames.org/2873759">Marburg</placeName></orgName>, Nr.
                   107</provenance>
                 <acquisition>unbekannt; aus der Sammlung Ott-Usteri</acquisition>
               </history>
@@ -10648,13 +10602,10 @@
             <msDesc>
               <msIdentifier>
                 <idno>SZDAUT.223</idno>
-
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändige Abschrift eines Vierzeilers von <persName type="person"
-                      ><forename>François de</forename>
-                    <surname>Maucroix</surname></persName>, <date when="1828-05-01">Mai
-                  1828</date></summary>
+                <summary>Eigenhändige Abschrift eines Vierzeilers von <persName ref="http://d-nb.info/gnd/123537363" type="person"
+                      ><forename>François de</forename><surname>Maucroix</surname></persName>, <date when="1828-05-01">Mai 1828</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -10670,13 +10621,15 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Mappe aus der Sammlung Zweig</origin>
+                <origin>Mappe aus der Sammlung Zweig
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -10703,11 +10656,9 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript, <date>1830</date>. Auf der Rückseite eine
-                  Echtheitsbestätigung von Goethes Schwiegertochter <persName type="person"
-                      ><forename>Ottilie von</forename>
-                    <surname>Goethe</surname></persName>: „Handschrift des Vaters für <persName
-                    type="person"><forename>Franz</forename>
-                    <surname>Grillparzer</surname></persName>" </summary>
+                  Echtheitsbestätigung von Goethes Schwiegertochter Ottilie von Goethe: „Handschrift des Vaters für <persName
+                    ref="http://d-nb.info/gnd/118542192" type="person"><forename>Franz</forename>
+                    <surname>Grillparzer</surname></persName>".</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10728,13 +10679,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 152</idno></provenance>
                 <acquisition>
-                  <date>1919</date>, durch <persName type="person">
-                    <forename>Gustav</forename>
-                    <surname>Nebehay</surname>
-                  </persName> aus dem Nachlass von <persName type="person">
-                    <forename>Alexander von</forename>
-                    <surname>Weilen</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1919</date>, durch Gustav Nebehay aus dem Nachlass von Alexander von Weilen, 
+                  <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10773,17 +10719,18 @@
               </physDesc>
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>)</origin>
+                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>);
+                (<date>1948</date>von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
-                      ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>(
-                    <date>1948</date>von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                      ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName></provenance>
                 <acquisition>
                   <date when="1930-03-04">4. März 1930</date>, <orgName>Antiquariat Leo
-                    Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Liepmannssohn, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10818,7 +10765,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">21,5 x 16,5 cm</measure>
+                      <measure type="format">21,5 x 16,5 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -10828,21 +10775,15 @@
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). <placeName
                     ref="http://www.geonames.org/2761369">Wien</placeName>
                   <date>1932</date>, Nr. 351 (nur die Schreibfeder)</origin>
-                <provenance>Privatbesitz, Großbritannien. Schreibfeder. Ursprünglich in einem Kuvert
-                  mit einer eigenhändigen Echtheitsbestätigung der Gräfin <persName type="person">
-                    <forename>Josephine</forename>
-                    <surname>O’Donell</surname>
-                  </persName>, welcher Goethe die Feder zusammen mit dem damit geschriebenen Gedicht
+                <provenance>Privatbesitz, Großbritannien. Schreibfeder ursprünglich in einem Kuvert
+                  mit einer eigenhändigen Echtheitsbestätigung der Gräfin Josephine O’Donell, 
+                  welcher Goethe die Feder zusammen mit dem damit geschriebenen Gedicht
                   geschenkt hatte. <date when="1928-10-09">9. Oktober 1928</date>, von Graf
-                    <persName type="person">
-                    <forename>Douglas</forename>
-                    <surname>O’Donell</surname>
-                  </persName></provenance>
-                <acquisition>
-                  <date when="1932-06-15">15. Juni 1932</date>, Auktion, <orgName>Antiquariat
-                    Gilhofer &amp; Ranschburg</orgName>, <placeName
-                    ref="http://www.geonames.org/2659811">Luzern</placeName>
-                </acquisition>
+                   Douglas O’Donell
+                </provenance>
+               <acquisition><date when="1932-06-15">15. Juni 1932</date>, Auktion, <orgName>Antiquariat
+                    Gilhofer &amp; Ranschburg, <placeName
+                    ref="http://www.geonames.org/2659811">Luzern</placeName></orgName></acquisition> 
               </history>
             </msDesc>
           </sourceDesc>
@@ -10868,8 +10809,8 @@
                 <idno>SZDAUT.227</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1831-08-28">28. August
-                    1831</date>. Mit Widmung: an „Fräulein Kirchner“</summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift und Widmung: an „Fräulein Kirchner“, <date when="1831-08-28">28. August
+                    1831</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10883,17 +10824,19 @@
               </physDesc>
               <history>
                 <origin>Mappe und Karteikarte aus der Sammlung Zweig. Zweig 1930, mit Abbildung auf
-                  Seite 292. Frels 1934, Nr. 24g</origin>
+                  Seite 292. Frels 1934, Nr. 24g;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1912-11-30">30. November 1912</date>, <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10933,17 +10876,19 @@
               </physDesc>
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>)</origin>
+                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>);
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date>1929</date> oder <date>1930</date> durch <orgName>Antiquariat V. A.
-                    Heck</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>
+                    Heck, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -10953,7 +10898,6 @@
           <titleStmt>
             <title><hi style="italic">Ich weiß daß mir nichts angehört</hi> (veröffentlicht unter dem Titel
                 <hi style="italic">Eigenthum</hi>)</title>
-            <!--Titel markieren?-->
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
@@ -10986,17 +10930,19 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Frels 1934,
-                  Nr. 24d</origin>
+                  Nr. 24d;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1928-04-24">24. April 1928</date>, Auktion, <orgName>Antiquariat
-                    Victor Lemasle</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Victor Lemasle, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11040,19 +10986,14 @@
                   mit Abbildung auf Tafel I. Hinterberger XIII, Nr. 51, mit Abbildung auf dem
                   Hinterdeckel. Hinterberger 18, Nr. 70, mit Abbildung auf dem Hinterdeckel. Spiegel
                   der Welt I, Kat.-Nr. 83. Bircher 2002, Seite 184, mit Abbildung auf Seite
-                  185</origin>
+                  185;
+                (<date>1937</date> von Stefan Zweig an Friderike Zweig abgegeben und von ihr <date>1954</date> über
+                    Heinrich Hinterberger erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1937</date> von Stefan Zweig an <persName
-                    ref="http://d-nb.info/gnd/118637460" type="person">
-                    <forename>Friderike</forename>
-                    <surname>Zweig</surname>
-                  </persName> abgegeben und von ihr <date>1954</date> über <persName
-                    ref="http://d-nb.info/gnd/116898348" type="person">
-                    <forename>Heinrich</forename>
-                    <surname>Hinterberger</surname>
-                  </persName> erworben)</provenance>
+                    </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -11079,9 +11020,7 @@
                 <idno>SZDAUT.231</idno>
               </msIdentifier>
               <msContents>
-                <summary>Vom Sekretär <persName type="person"><forename>Johann August
-                      Friedrich</forename>
-                    <surname>John</surname></persName> niedergeschriebener Aufsatz mit Korrekturen
+                <summary>Vom Sekretär <persName ref="http://d-nb.info/gnd/1120622395" type="person"><forename>Johann August Friedrich</forename> <surname>John</surname></persName> niedergeschriebener Aufsatz mit Korrekturen
                   und Ergänzungen Goethes, <date>1832</date></summary>
               </msContents>
               <physDesc>
@@ -11097,17 +11036,19 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Frels 1934,
-                  Nr. 24c</origin>
+                  Nr. 24c;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1924-01-28">28. Januar 1924</date>/<date when="1924-01-29">29. Januar
-                    1924</date>, Auktion 85, <orgName>Antiquariat Karl Ernst Henrici</orgName>,
-                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    1924</date>, Auktion 85, <orgName>Antiquariat Karl Ernst Henrici,
+                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11115,9 +11056,9 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.232">
           <titleStmt>
-            <title><hi style="italic">Reicher Blumen goldne Rancken</hi> (Hochzeitsgedicht für <persName
+            <title><hi style="italic">Reicher Blumen goldne Rancken</hi> (Hochzeitsgedicht für <persName ref="http://d-nb.info/gnd/118633252"
                 type="person"><forename>Marianne von</forename>
-                <surname>Willemer</surname></persName> und <persName type="person"><forename>Johann
+              <surname>Willemer</surname></persName> und <persName ref="http://d-nb.info/gnd/118633244" type="person"><forename>Johann
                   Jacob von</forename>
                 <surname>Willemer</surname></persName>)</title>
             <author>
@@ -11152,17 +11093,19 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig 1930.
-                  Frels 1934, Nr. 24h</origin>
+                  Frels 1934, Nr. 24h;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1929-03-23">23. März 1929</date>, Auktion 149, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName> [?]</acquisition>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>[?]</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -11199,8 +11142,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">2</measure>
-                      <measure type="format">19,9 x 12,5 cm (Düsseldorf) und 2 Seiten ca. 18,8 x
-                        22,2 cm (Genf)</measure>
+                      <measure type="format">19,9 x 12,5 cm (Düsseldorf), 2 Seiten 18,8 x 22,2 cm (Genf)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11209,29 +11151,25 @@
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Katalog der
                   Sammlung Kippenberg, 2. Aufl, 1928, Kat.-Nr. 1. Zweig 1930. Frels 1934, Nr.
-                  24i</origin>
+                  24i;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann, <placeName
+                      ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                  erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf,
                     Anton-und-Katharina-Kippenberg-Stiftung, <placeName
                       ref="http://www.geonames.org/2934246">Düsseldorf</placeName></orgName> und <orgName
                         ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer,
                         <placeName ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann, <placeName
-                      ref="http://www.geonames.org/2643743">London</placeName></orgName>
-                  erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1913-12-04">4. Dezember 1913</date>, <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Ursprünglich zwei zusammengehörige Blätter. Eines davon im
-                  Tausch an <persName ref="http://d-nb.info/gnd/118723081" type="person">
-                    <forename>Anton</forename>
-                    <surname>Kippenberg</surname>
-                  </persName> gegen Entwürfe zu <hi style="italic">Leonce und Lena</hi> von <persName
-                    ref="http://d-nb.info/gnd/118516906" type="person">
-                    <forename>Georg</forename>
-                    <surname>Büchner</surname>
-                  </persName></acquisition>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Ursprünglich zwei zusammengehörige Blätter, eines davon im
+                  Tausch an Anton Kippenberg gegen Entwürfe zu <hi style="italic">Leonce und Lena</hi> von Georg Büchner.
+                  </acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -11257,11 +11195,10 @@
                 <idno>SZDAUT.234</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date when="1814-07-26">26. Juli 1814</date>. Von
-                  Goethe am <date when="1814-08-28">28. August 1814</date> an <persName
-                    type="person"><forename>Carl Friedrich</forename>
-                    <surname>Zelter</surname></persName> geschickt, der eine Komposition hinzufügte.
-                  Mit Echtheitsbestätigung</summary>
+                <summary>Eigenhändiges Manuskript, <date when="1814-07-26">26. Juli 1814</date>, mit Echtheitsbestätigung. Von
+                  Goethe am <date when="1814-08-28">28. August 1814</date> an <persName ref="http://d-nb.info/gnd/118636421"
+                    type="person"><forename>Carl Friedrich</forename> <surname>Zelter</surname></persName> geschickt, der eine Komposition hinzufügte.
+                  </summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -11282,8 +11219,8 @@
                   <idno type="signature">Zweig MS. 153</idno></provenance>
                 <acquisition>
                   <date when="1930-09-09">9. September 1930</date>, <orgName>Antiquariat J. A.
-                    Stargardt</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Stargardt, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11309,11 +11246,8 @@
                 <idno>SZDAUT.235</idno>
               </msIdentifier>
               <msContents>
-                <summary>Mit Echtheitsbestätigung von <persName type="person"><forename>Alexandre
-                      Comte</forename>
-                    <surname>d’Estourmel</surname></persName> für den ersten Besitzer Graf <persName
-                    type="person"><forename>Moritz von</forename>
-                    <surname>Dietrichstein</surname></persName></summary>
+                <summary>Mit Echtheitsbestätigung von Alexandre Comte d’Estourmel für den ersten Besitzer Graf 
+                  Moritz von Dietrichstein</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -11332,8 +11266,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1923</date>, <orgName>Antiquariat Maggs Bros.</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>
+                  <date>1923</date>, <orgName>Antiquariat Maggs Bros., <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11358,31 +11292,30 @@
                 <idno>SZDAUT.236</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Gerahmt</summary>
+                <summary>Eigenhändiges Gedicht</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">Rahmen außen: 10,4 x 13,2 cm</measure>
+                      <measure type="format">10,4 x 13,2 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 24f. <placeName ref="http://www.geonames.org/2657896"
-                    >Zürich</placeName> 1996, Nr. 73</origin>
-                <provenance>
-                  <orgName ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek</orgName>
-                  (von Stefan Zweig am <date when="1935-06-06">6. Juni 1935</date> an <persName
-                    ref="http://d-nb.info/gnd/118577166" type="person">
-                    <forename>Thomas</forename>
-                    <surname>Mann</surname>
-                  </persName> zum 60. Geburtstag geschenkt, dazu ein Begleitbrief im <orgName
+                    >Zürich</placeName> 1996, Nr. 73;
+               (von Stefan Zweig am <date when="1935-06-06">6. Juni 1935</date> an Thomas Mann zum 60. Geburtstag geschenkt, dazu ein Begleitbrief im <orgName
                     ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek,
                     <placeName ref="http://www.geonames.org/2657896">Zürich</placeName></orgName> 1996, Nr.
-                  72)</provenance>
+                  72) 
+                </origin>
+                <provenance>
+                  <orgName ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek,
+                    <placeName ref="http://www.geonames.org/2657896">Zürich</placeName></orgName>
+                  </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -11390,11 +11323,10 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.237">
           <titleStmt>
-            <title>Fragment der eigenhändigen Abschrift eines Briefes von <persName type="person"
-                  ><forename>Johann Gottfried</forename>
-                <surname>Herder</surname></persName> an <persName type="person"><forename>Friedrich
-                  Heinrich</forename>
-                <surname>Jacobi</surname></persName> über das System Spinozas</title>
+            <title>Fragment der eigenhändigen Abschrift eines Briefes von <persName ref="http://d-nb.info/gnd/118549553" type="person"
+                  ><forename>Johann Gottfried von</forename>
+              <surname>Herder</surname></persName> an <persName ref="http://d-nb.info/gnd/118556312" type="person"><forename>Friedrich
+                  Heinrich</forename> <surname>Jacobi</surname></persName> über das System Spinozas</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
@@ -11424,14 +11356,14 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Kippenberg 1928, Kat.-Nr. 161. Buchinger 1998</origin>
+                <origin>Kippenberg 1928, Kat.-Nr. 161. Buchinger 1998;
+               (von Zweig mit Anton Kippenberg getauscht) 
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf,
-                    Anton-und-Katharina-Kippenberg-Stiftung</orgName>, <placeName
-                    ref="http://www.geonames.org/2934246">Düsseldorf</placeName> (von Zweig mit
-                    <persName type="person"><forename>Anton</forename>
-                    <surname>Kippenberg</surname>
-                  </persName> getauscht)</provenance>
+                    Anton-und-Katharina-Kippenberg-Stiftung, <placeName
+                    ref="http://www.geonames.org/2934246">Düsseldorf</placeName></orgName>
+                </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -11476,8 +11408,8 @@
                 <provenance>unbekannt</provenance>
                 <acquisition>
                   <date when="1932-03-23">23. März 1932</date>, Katalog 54, <orgName>Antiquariat V.
-                    A. Heck</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>
+                    A. Heck, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11519,9 +11451,9 @@
               </physDesc>
               <history>
                 <origin>Corpus Goethezeichnungen VI b, Nr. 6</origin>
-                <provenance>letzter Nachweis (1971) Privatbesitz, Großbritannien</provenance>
-                <acquisition>Auktion 84, <orgName>Antiquariat Karl Ernst Henrici</orgName>,
-                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                <provenance>letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
+                <acquisition>Auktion 84, <orgName>Antiquariat Karl Ernst Henrici,
+                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11547,9 +11479,9 @@
                 <idno>SZDAUT.240</idno>
               </msIdentifier>
               <msContents>
-                <summary>Bleistift- und Kreidezeichnung mit Sepialavierung. Mit Provenienzangabe am
-                  Unterrand; eine aus einem anderen Dokument ausgeschnittene und ursprünglich dort
-                  angebrachte Unterschrift fehlt heute</summary>
+                <summary>Bleistift- und Kreidezeichnung mit Sepialavierung und mit Provenienzangabe am
+                  Unterrand, eine aus einem anderen Dokument ausgeschnittene und ursprünglich dort
+                  angebrachte Unterschrift fehlt heute.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11567,8 +11499,8 @@
                 <origin>Hinterberger XX, Nr. 676, mit Abbildung auf Tafel I. Corpus
                   Goethezeichnungen VI b, Nr. 43</origin>
                 <provenance>
-                  <date>2005</date>, <orgName>Antiquariat August Laube</orgName>, <placeName
-                    ref="http://www.geonames.org/2657896">Zürich</placeName>
+                  <date>2005</date>, <orgName>Antiquariat August Laube, <placeName
+                    ref="http://www.geonames.org/2657896">Zürich</placeName></orgName>
                 </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
@@ -11594,10 +11526,9 @@
                 <idno>SZDAUT.241</idno>
               </msIdentifier>
               <msContents>
-                <summary>Rötelzeichnung mit Sepialavierung, gerahmt. Von <persName type="person"
+                <summary>Rötelzeichnung mit Sepialavierung, von <persName ref="http://d-nb.info/gnd/118610473" type="person"
                       ><forename>Johanna</forename>
-                    <surname>Schopenhauer</surname></persName> unten rechts signiert: „Göthe.
-                  1807“</summary>
+                    <surname>Schopenhauer</surname></persName> unten rechts signiert: „Göthe. 1807“.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11606,7 +11537,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format"> 10,5 x 16,5 cm </measure>
+                      <measure type="format">10,5 x 16,5 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11614,11 +11545,8 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig. Hinterberger IX, Nr. 63, mit Abbildung
                   auf Tafel XII. Corpus Goethezeichnungen VI b 109</origin>
-                <provenance>Letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
-                <acquisition>unbekannt; aus dem Nachlass der Prinzessin <persName type="person">
-                    <forename>Marie</forename>
-                    <surname>Sayn-Wittgenstein</surname>
-                  </persName>
+                <provenance>letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
+                <acquisition>unbekannt; aus dem Nachlass der Prinzessin Marie Sayn-Wittgenstein
                 </acquisition>
               </history>
             </msDesc>
@@ -11643,11 +11571,11 @@
                 <idno>SZDAUT.242</idno>
               </msIdentifier>
               <msContents>
-                <summary>Bleistiftzeichnung mit Sepialavierung (?), gerahmt, auf ein Untersatzblatt
+                <summary>Bleistiftzeichnung mit Sepialavierung(?), auf ein Untersatzblatt
                   montiert. Auf der Rückseite eigenhändige Widmung: „Gräfin Julien zum neuen Jahre
                     <date>1824</date>. J. W. v. Goethe.“ Auf dem Untersatzblatt eine Notiz der
                   Empfängerin und am oberen Rand der Zeichnung eine Provinienzangabe von fremder
-                  Hand</summary>
+                  Hand.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11656,7 +11584,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format"> 10,5 x 13,0 cm </measure>
+                      <measure type="format">10,5 x 13,0 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11690,7 +11618,7 @@
                 <idno>SZDAUT.243</idno>
               </msIdentifier>
               <msContents>
-                <summary>Federzeichnung mit Sepialavierung, rückseitig Bleistiftskizze, gerahmt,
+                <summary>Federzeichnung mit Sepialavierung, rückseitig Bleistiftskizze,
                   beidseitig unter Glas. Wohl ein Blatt aus dem sogenannten „roten Reisebüchlein“.
                   Mit Echtheitsbestätigung am linken Oberrand der Bleistiftskizze: „Handzeichnung
                   von Joh. Wolfg. Göthe Empfangen von Hrn. Chrn. Schuchardt, Vorsteher d.
@@ -11704,7 +11632,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format"> 10,4 x 16,5 cm </measure>
+                      <measure type="format">10,4 x 16,5 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11716,9 +11644,9 @@
                   <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Loan 95.13</idno></provenance>
-                <acquisition> wohl <date>1933</date>, Auktion 337, <orgName>Antiquariat J. A.
-                    Stargardt</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                <acquisition>wohl <date>1933</date>, Auktion 337, <orgName>Antiquariat J. A.
+                    Stargardt, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11766,8 +11694,8 @@
                   geschenkt <date>1944</date>“</provenance>
                 <acquisition>
                   <date when="1929-08-24">24. August 1929</date>, Auktion 157, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -11794,10 +11722,8 @@
                 <idno>SZDAUT.245</idno>
               </msIdentifier>
               <msContents>
-                <summary>Bleistiftzeichnung mit Sepialavierung, <date>1808</date>. Vom Vorbesitzer
-                  bezeichnet: „Goethes Handzeichnung/Jena. <persName type="person"
-                      ><forename>Gustav</forename>
-                    <surname>Schueler</surname></persName>“</summary>
+                <summary>Bleistiftzeichnung mit Sepialavierung, <date>1808</date>, vom Vorbesitzer
+                  bezeichnet: „Goethes Handzeichnung/Jena. Gustav Schueler“.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11806,7 +11732,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format"> 19,1 x 32,7 cm </measure>
+                      <measure type="format">19,1 x 32,7 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11844,9 +11770,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Lose in einem modernen Umschlag, beiliegend der ursprünglich zur
-                  Aufbewahrung benutzte Umschlag mit Echtheitsbestätigung von <persName
-                    type="person"><forename>Ottilie von</forename>
-                    <surname>Goethe</surname></persName></summary>
+                  Aufbewahrung benutzte Umschlag mit Echtheitsbestätigung von Ottilie von Goethe.</summary>
               </msContents>
               <history>
                 <origin>BL 1987. BL 1993</origin>
@@ -11878,10 +11802,8 @@
                 <idno>SZDAUT.247</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift. Beiliegend ein Widmungsbrief
-                  Goldings an <persName type="person"><forename>Stefan</forename>
-                    <surname>Zweig</surname></persName> und der Briefumschlag der
-                  Übersendung</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift, beiliegend ein Widmungsbrief
+                  Goldings an Stefan Zweig und der Briefumschlag der Übersendung.</summary>
                 <textLang>
                   <lang>Englisch</lang>
                 </textLang>
@@ -11974,8 +11896,8 @@
                 <idno>SZDAUT.249</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript von acht Aufsätzen. Mit drei eingeklebten
-                  Zeitungsausschnitten</summary>
+                <summary>Eigenhändiges Manuskript von acht Aufsätzen, mit drei eingeklebten
+                  Zeitungsausschnitten.</summary>
                 <textLang>
                   <lang>Russisch</lang>
                 </textLang>
@@ -12075,8 +11997,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1927-11-24">24. November 1927</date>, Auktion 125,
-                    <orgName>Antiquariat Karl Ernst Henrici</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    <orgName>Antiquariat Karl Ernst Henrici, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12113,7 +12035,7 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Mappe aus der Sammlung Zweig (<orgName>Theatermuseum</orgName>).</origin>
+                <origin>Mappe aus der Sammlung Zweig (<orgName>Theatermuseum</orgName>)</origin>
                   <provenance>unbekannt</provenance>
               </history>
             </msDesc>
@@ -12164,15 +12086,15 @@
                 </provenance>
                 <acquisition>
                   <date when="1911-05-05">5. Mai 1911</date>, Auktion, <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Aus der Sammlung Geibel-Hertenried</acquisition>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Aus der Sammlung Geibel-Hertenried</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
         <biblFull xml:id="SZDAUT.254">
           <titleStmt>
-            <title><hi style="italic">Silhouettes, by Arthur Symons</hi> (Buchbesprechung)</title>
+            <title><hi style="italic">Silhouettes, by <persName ref="http://d-nb.info/gnd/11879955X" type="person"><forename>Arthur</forename> <surname>Symons</surname></persName></hi> (Buchbesprechung)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118718320">
                 <forename>Remy de</forename>
@@ -12213,8 +12135,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1925</date>, <orgName>Antiquariat Simon Kra</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>
+                  <date>1925</date>, <orgName>Antiquariat Simon Kra, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12263,8 +12185,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1913-11-03">3. November 1913</date>, <orgName>Antiquariat List &amp;
-                    Franke</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Aus der Sammlung Fischer von Röslerstamm</acquisition>
+                    Franke, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Aus der Sammlung Fischer von Röslerstamm</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -12334,8 +12256,8 @@
                 <idno>SZDAUT.257</idno>
               </msIdentifier>
               <msContents>
-                <summary>Zwei eigenhändige Fragmente aus einem Drama. Einige Seiten durch Mäusefraß
-                  beschädigt</summary>
+                <summary>Zwei eigenhändige Fragmente aus einem Drama, einige Seiten durch Mäusefraß
+                  beschädigt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -12355,14 +12277,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1923</date>, im Tausch mit <persName type="person">
-                    <forename>Alfred</forename>
-                    <surname>Meyer</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2809346"
-                    >Wiesbaden</placeName>. Aus der Sammlung <persName type="person">
-                    <forename>Adolf</forename>
-                    <surname>Böttger</surname>
-                  </persName>
+                  <date>1923</date>, im Tausch mit Alfred Meyer, <placeName ref="http://www.geonames.org/2809346"
+                    >Wiesbaden</placeName>. Aus der Sammlung Adolf Böttger
                 </acquisition>
               </history>
             </msDesc>
@@ -12437,15 +12353,15 @@
                 <idno>SZDAUT.259</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, <date>1899</date>.
-                  Pergamenteinband mit Bindebändern</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift, <date>1899</date>
+                  </summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">168</measure>
-                      <measure type="format">21,9 x 17,6 cm</measure>
+                      <measure type="format">21,9 x 17,6 cm, Pergamenteinband mit Bindebändern</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -12499,8 +12415,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1912</date>, Katalog 180, <orgName>Antiquariat Leo Liepmannssohn</orgName>,
-                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <date>1912</date>, Katalog 180, <orgName>Antiquariat Leo Liepmannssohn,
+                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12619,7 +12535,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">2</measure>
-                      <measure type="format">aus zwei Teilen montiert, 21,2 x 16,5 cm</measure>
+                      <measure type="format">21,2 x 16,5 cm, aus zwei Teilen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -12634,11 +12550,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-10-21">21. Oktober 1926</date>, Auktion 48, <orgName>Antiquariat
-                    Leo Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>, durch <persName type="person">
-                    <forename>Heinrich</forename>
-                    <surname>Rosenberg</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    Leo Liepmannssohn, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>, durch Heinrich Rosenberg, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12683,8 +12596,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1928</date>, <orgName>Antiquariat Karl Ernst Henrici</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <date>1928</date>, <orgName>Antiquariat Karl Ernst Henrici, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12709,9 +12622,8 @@
                 <idno>SZDAUT.265</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht, <date>1827</date>. Mit Echtheitsbestätigung von
-                      <persName><forename>Katharina</forename>
-                    <surname>Fröhlich</surname></persName></summary>
+                <summary>Eigenhändiges Gedicht, <date>1827</date>, mit Echtheitsbestätigung von 
+                  Katharina Fröhlich.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -12732,8 +12644,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1927-05-01">Mai 1927</date>, Auktion 120, <orgName>Antiquariat Karl
-                    Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12779,8 +12691,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1923-06-01">Juni 1923</date>, <orgName>Antiquariat V. A.
-                    Heck</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>
+                    Heck, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12825,8 +12737,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-09-07">7. September 1926</date>, Auktion 261,
-                    <orgName>Antiquariat J. A. Stargardt</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    <orgName>Antiquariat J. A. Stargardt, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12852,7 +12764,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Fragment eines eigenhändigen Manuskripts mit Unterschrift, <date
-                    when="1800-02-10">10. Februar 1800</date>. In Papierumschlag</summary>
+                    when="1800-02-10">10. Februar 1800</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -12862,7 +12774,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">8</measure>
-                      <measure type="format">ca. 24,6 x 18,8 cm</measure>
+                      <measure type="format">ca. 24,6 x 18,8 cm, Papierumschlag</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -12876,8 +12788,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-01-01">Januar 1926</date>, Bulletin 588, <orgName>Antiquariat
-                    Charavay</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Charavay, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -12903,14 +12815,14 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript von 105 Gedichten mit Unterschrift,
-                    <date>1856</date>. Weißer Ledereinband</summary>
+                    <date>1856</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">109</measure>
-                      <measure type="format">11,0 x 14,4 cm</measure>
+                      <measure type="format">11,0 x 14,4 cm, weißer Ledereinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -12970,8 +12882,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1913-04-09">9. April 1913</date>, Auktion, <orgName>Antiquariat Noël
-                    Charavay</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Charavay, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -13023,9 +12935,9 @@
                 <idno>SZDAUT.272</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht auf einem Albumblatt mit Unterschrift. Rückseitig ein
-                  zweites Gedicht von fremder Hand. <date when="1640-05-15">15. Mai
-                  1640</date></summary>
+                <summary>Eigenhändiges Gedicht auf einem Albumblatt mit Unterschrift, rückseitig ein
+                  zweites Gedicht von fremder Hand, <date when="1640-05-15">15. Mai
+                  1640</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -13046,8 +12958,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1925</date>, Antiquariat Jacob Levi, <placeName
-                    ref="http://www.geonames.org/2809346">Wiesbaden</placeName>
+                  <date>1925</date>, <orgName>Antiquariat Jacob Levi, <placeName
+                    ref="http://www.geonames.org/2809346">Wiesbaden</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -13096,10 +13008,7 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1912</date>, von <persName type="person">
-                    <forename>Paul</forename>
-                    <surname>Zifferer</surname>
-                  </persName> erhalten</acquisition>
+                  <date>1912</date>, von Paul Zifferer erhalten</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -13108,7 +13017,7 @@
           <titleStmt>
             <title
               ref="http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&amp;docId=NNL_ARCHIVE_AL003435901"
-              >Visitenkarte mit kurzer Mitteilung an <persName type="person"
+              >Visitenkarte mit kurzer Mitteilung an <persName ref="http://d-nb.info/gnd/116222824" type="person"
                   ><forename>Helene</forename>
                 <surname>Klepetar</surname></persName>
             </title>
@@ -13128,8 +13037,8 @@
                 <idno>SZDAUT.274</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Kopenhagen, <date when="1913-11-09">9. November
-                    1913</date>. Beiliegend ein Kuvert</summary>
+                <summary>Eigenhändiges Manuskript, Kopenhagen, <date when="1913-11-09">9. November
+                    1913</date>, beiliegend ein Kuvert.</summary>
                 <textLang>
                   <lang>Dänisch</lang>
                 </textLang>
@@ -14451,7 +14360,7 @@
                 <origin>Safran 1993, Seite 40</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -14495,7 +14404,7 @@
                 <origin>Safran 1993, Seite 40</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -15062,7 +14971,7 @@
               <history>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName ref="ToDo">Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1939-09-01">September 1939</date>, Geschenk des Autors an
@@ -15109,7 +15018,7 @@
                 <origin>Nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1939-01-01">Jänner 1939</date>, Geschenk des Autors an
@@ -15237,7 +15146,7 @@
               <history>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName ref="ToDo">Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1939-08-01">August 1939</date>, Geschenk des Autors an
@@ -15283,7 +15192,7 @@
               <history>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName ref="ToDo">Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1939-11-01">November 1939</date>, Geschenk des Autors an
@@ -15328,7 +15237,7 @@
                 <origin>Safran 1993, Seite 40</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1938-05-01">Mai 1938</date>, Geschenk des Autors an
@@ -15373,7 +15282,7 @@
               <history>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName ref="ToDo">Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1939-11-01">November 1939</date>, Geschenk des Autors an
@@ -19781,7 +19690,7 @@
                 <origin>Safran 1993, Seite 43</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1938-01-01">Januar 1938</date>, Geschenk des Autors an
@@ -19826,7 +19735,7 @@
                 <origin>nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1938-01-01">Januar 1938</date>, Geschenk des Autors an
@@ -19871,7 +19780,7 @@
                 <origin>Nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1924-04-01">April 1924</date>, Geschenk des Autors an
@@ -21815,7 +21724,7 @@
                 <origin>Nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -23410,7 +23319,7 @@
               <history>
                 <origin>Brief Martin du Gards vom <date when="1931-08-14">14. August 1931</date>
                   anläßlich der Übersendung des Manuskripts an Zweig (Reed Library, State University
-                  of New York, <placeName>Fredonia, USA</placeName>, Stefan Zweig
+                  of New York, <placeName>Fredonia</placeName>, Stefan Zweig
                   Collection)</origin>
                 <provenance>unbekannt</provenance>
                 <acquisition>
@@ -23456,7 +23365,7 @@
                 <origin>Safran 1993, Seite 45</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27322,7 +27231,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1917-01-01">Januar 1917</date>, Geschenk des Autors an
@@ -27414,7 +27323,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1914-05-01">Mai 1914</date>, Geschenk des Autors an
@@ -27458,7 +27367,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27500,7 +27409,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27542,7 +27451,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27584,7 +27493,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27626,7 +27535,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27714,7 +27623,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1913-11-01">November 1913</date>, Geschenk des Autors an
@@ -27760,7 +27669,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1914-05-01">Mai 1914</date>, Geschenk des Autors an
@@ -27801,7 +27710,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -27843,7 +27752,7 @@
                 <origin>Safran 1993, Seite 47</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -31658,7 +31567,7 @@
                 <origin>Safran 1993, Seite 50</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -31790,7 +31699,7 @@
                 <origin>Nicht bei Safran 1993</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -35687,7 +35596,7 @@
                 <origin>Safran 1993, Seite 54</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>Geschenk des Autors an Zweig</acquisition>
               </history>
@@ -38152,7 +38061,7 @@
                 <origin>Safran 1993, Seite 57</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1920-04-01">April 1920</date>, Geschenk des Autors an
@@ -38197,7 +38106,7 @@
                 <origin>Safran 1993, Seite 57</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
-                    Collection, <placeName>Fredonia, USA</placeName></orgName>
+                    Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
                   <date when="1936-12-01">Dezember 1936</date>, Geschenk des Autors an Zweig zum 55.
@@ -41052,15 +40961,15 @@
                 <idno>SZDAUT.866</idno>
               </msIdentifier>
               <msContents>
-                <summary>op. 9. Nach Texten u. a. von <persName ref="http://d-nb.info/gnd/118548018"
+                <summary>Op. 9, nach Texten u. a. von <persName ref="http://d-nb.info/gnd/118548018"
                     type="person"><forename>Heinrich</forename>
                     <surname>Heine</surname></persName>, <persName
-                    ref="http://d-nb.info/gnd/118540238"><forename>Johann Wolfgang von</forename>
+                    ref="http://d-nb.info/gnd/118540238" type="person"><forename>Johann Wolfgang von</forename>
                     <surname>Goethe</surname></persName>, <persName
                     ref="http://d-nb.info/gnd/118529390" type="person"><forename>Joseph
                       von</forename>
                     <surname>Eichendorff</surname></persName>, <date when="1844-04-07">7. April
-                    1844</date></summary>
+                    1844</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -41100,9 +41009,7 @@
                 <idno>SZDAUT.867</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1749</date>; Mit Echtheitsbestätigung von <persName
-                    ref="http://d-nb.info/gnd/119035111" type="person"><forename>Vincent</forename>
-                    <surname>Novello</surname></persName> auf der ersten Seite</summary>
+                <summary><date>1749</date>, mit Echtheitsbestätigung von Vincent Novello auf der ersten Seite</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -41147,7 +41054,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Kantate für Sopran und Streicher nach einer Arie aus der Oper
-                    <hi style="italic">Alceste</hi>, <date>1767</date> (?)</summary>
+                    <hi style="italic">Alceste</hi>, <date>1767</date>(?)</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -41168,12 +41075,9 @@
                   <idno type="signature">Zweig MS. 34</idno></provenance>
                 <acquisition>
                   <date when="1927-10-24">24. Oktober 1927</date>, außerhalb der Auktion, Katalog
-                  123, <orgName>Antiquariat Karl Ernst Henrici</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>. Aus der Sammlung
-                    <persName type="person">
-                    <forename>Josef</forename>
-                    <surname>Liebeskind</surname>
-                  </persName>
+                  123, <orgName>Antiquariat Karl Ernst Henrici, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>. 
+                  Aus der Sammlung Josef Liebeskind
                 </acquisition>
               </history>
             </msDesc>
@@ -41289,8 +41193,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändige Partitur eines Rezitativs in g-Moll und einer Arie in F-Dur,
-                  eventuell zur Oper <hi style="italic">Ulisse marito della Penelope</hi> gehörig. Mit Anmerkungen
-                  von fremder Hand</summary>
+                  eventuell zur Oper <hi style="italic">Ulisse marito della Penelope</hi> gehörig, mit Anmerkungen
+                  von fremder Hand.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -41309,10 +41213,7 @@
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
-                <acquisition>unbekannt; aus der Sammlung <persName type="person">
-                    <forename>Aloys</forename>
-                    <surname>Fuchs</surname>
-                  </persName>
+                <acquisition>unbekannt; aus der Sammlung Aloys Fuchs
                 </acquisition>
               </history>
             </msDesc>
@@ -41386,15 +41287,14 @@
                 <idno>SZDAUT.873</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1891–1892</date>. Neu gebunden; Der originale Halblederband liegt
-                  bei.</summary>
+                <summary><date>1891–1892</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">58</measure>
-                      <measure type="format">33,6 x 26,0 cm</measure>
+                      <measure type="format">33,6 x 26,0 cm, neu gebunden (beiliegend originaler Halblederband)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -41407,10 +41307,7 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 35</idno></provenance>
                 <acquisition>
-                  <date>1940</date> von <persName type="person">
-                    <forename>Max</forename>
-                    <surname>Hinrichsen</surname>
-                  </persName>, dem früheren Verleger Griegs</acquisition>
+                  <date>1940</date> von Max Hinrichsen, dem früheren Verleger Griegs</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
