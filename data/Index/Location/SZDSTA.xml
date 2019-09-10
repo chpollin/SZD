@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
   <teiHeader>
     <fileDesc>
@@ -102,7 +102,7 @@
         <org corresp="http://web.nli.org.il/sites/nlis/en" xml:id="SZDSTA.3">
           <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel</orgName>
           <country>Israel</country>
-          <settlement>Jerusalem</settlement>
+          <settlement>Jerusalem</settlement>US
         </org>
         <org corresp="http://fondationbodmer.ch/en/" xml:id="SZDSTA.4">
           <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer</orgName>
@@ -257,6 +257,16 @@
           <orgName ref="http://d-nb.info/gnd/2085343-9">Beethoven-Haus Bonn</orgName>
           <country>Deutschland</country>
           <settlement>Bonn</settlement>
+        </org>
+        <org corresp="  https://mozarteum.at/e" xml:id="SZDSTA.36">
+          <orgName ref="http://d-nb.info/gnd/37019-8">Internationale Stiftung Mozarteum</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+        </org>
+        <org corresp="https://www.britishmuseum.org/" xml:id="SZDSTA.37">
+          <orgName ref="http://d-nb.info/gnd/38379-X">The British Museum</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
         </org>
       </listOrg>
     </body>
