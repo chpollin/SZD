@@ -1356,7 +1356,7 @@
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
-                  <idno type="signature">Loan 95.12</idno></provenance>
+                  <idno type="signature">Zweig MS. 216</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -2632,6 +2632,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">25,4 x 19,9 cm</measure>
                     </extent>
                   </supportDesc>
@@ -4251,11 +4252,7 @@
                 <acquisition>
                   <date when="1926-10-21">21. Oktober 1926</date>, Auktion 48, <orgName>Antiquariat
                     Leo Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>, durch <persName ref="http://d-nb.info/gnd/117594806"
-                    type="person">
-                    <forename>Heinrich</forename>
-                    <surname>Rosenberg</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                    >Berlin</placeName>, durch Heinrich Rosenberg, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
                 </acquisition>
               </history>
             </msDesc>
@@ -4426,7 +4423,7 @@
                 <idno>SZDAUT.93</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift. In Papierumschlag mit Titel und
+                <summary>Eigenhändiges Manuskript mit Unterschrift, in Papierumschlag mit Titel und
                   Unterschrift Carossas.</summary>
               </msContents>
               <physDesc>
@@ -4434,7 +4431,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">12</measure>
-                      <measure type="format">21,4 x 16,8 cm</measure>
+                      <measure type="format">21,4 x 16,8 cm, Papierumschlag</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -4521,7 +4518,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">ca. 32,7 x 22,5 cm</measure>
+                      <measure type="format">32,7 x 22,5 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -4558,8 +4555,7 @@
                 <idno>SZDAUT.96</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift, <date when="1924-01-20">20. Januar
-                    1924</date></summary>
+                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift, <date when="1924-01-20">20. Januar 1924</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -4577,7 +4573,7 @@
                   <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
                     Collection, <placeName>Fredonia</placeName></orgName></provenance>
                 <acquisition>
-                  <date when="1924-01-01">Jänner 1924</date>, Geschenk des Autors an
+                  <date when="1924-01-01">Januar 1924</date>, Geschenk des Autors an
                   Zweig</acquisition>
               </history>
             </msDesc>
@@ -4602,21 +4598,15 @@
                 <idno>SZDAUT.97</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1933-03-06">6. März
-                    1933</date>. Mit Widmung für <persName ref="http://d-nb.info/gnd/118637460"
-                    type="person">
-                    <forename>Friderike</forename>
-                    <surname>Zweig</surname>
-                  </persName> und <persName ref="http://d-nb.info/gnd/118637479" type="person"
-                      ><forename>Stefan</forename>
-                    <surname>Zweig</surname></persName>.</summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift und Widmung für Friderike Zweig und Stefan Zweig, <date when="1933-03-06">6. März
+                    1933</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">2</measure>
-                      <measure type="format">ca. 29,4 x 22,0 cm</measure>
+                      <measure type="format">29,4 x 22,0 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -4652,7 +4642,7 @@
                 <idno>SZDAUT.98</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Auf der Rückseite sind (von fremder Hand?) einige
+                <summary>Eigenhändiges Gedicht, auf der Rückseite sind (von fremder Hand?) einige
                   Zahlen notiert.</summary>
                 <textLang>
                   <lang>Italienisch</lang>
@@ -4663,7 +4653,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">ca. 15,0 x 14,0 cm</measure>
+                      <measure type="format">15,0 x 14,0 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -4772,7 +4762,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">3</measure>
-                      <measure type="format">22,7 x ca. 18,6 cm</measure>
+                      <measure type="format">22,7 x 18,6 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -4991,7 +4981,7 @@
                 <idno>SZDAUT.105</idno>
               </msIdentifier>
               <msContents>
-                <summary>Fragment eines eigenhändigen Gedichtes</summary>
+                <summary>Fragment eines eigenhändigen Gedichts</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -5229,10 +5219,7 @@
                 <idno>SZDAUT.110</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Gedicht auf die Melodie zu <persName
-                    ref="http://d-nb.info/gnd/118584596" type="person"><forename>Wolfgang
-                      Amadeus</forename>
-                    <surname>Mozarts</surname></persName> Lied <hi style="italic">Das Veilchen</hi>, das sich
+                <summary>Eigenhändiges Gedicht auf die Melodie von Wolfgang Amadeus Mozarts Lied <hi style="italic">Das Veilchen</hi>, das sich
                   ebenfalls in der Sammlung Zweig befand.</summary>
               </msContents>
               <physDesc>
@@ -5281,7 +5268,7 @@
                 <idno>SZDAUT.111</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, aus 19 Teilen montiert.</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -5291,7 +5278,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">7</measure>
-                      <measure type="format">25,7 x 18,7 cm</measure>
+                      <measure type="format">25,7 x 18,7 cm, aus 19 Teilen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -5334,9 +5321,7 @@
                 <idno>SZDAUT.112</idno>
               </msIdentifier>
               <msContents>
-                <summary>Drei eigenhändige Gedichte und eine Nachschrift zu einem Brief an <persName
-                    type="person"><forename>William</forename>
-                    <surname>Worship</surname></persName>, <date when="1819-04-22">22. April
+                <summary>Drei eigenhändige Gedichte und eine Nachschrift zu einem Brief an William Worship, <date when="1819-04-22">22. April
                     1819</date>.</summary>
               </msContents>
               <physDesc>
@@ -5434,7 +5419,7 @@
               <msContents>
                 <summary>Eigenhändiges Gedicht mit Unterschrift, <date>1875</date></summary>
                 <textLang>
-                  <lang>Flämisch</lang>
+                  <lang>, Flämisch</lang>
                 </textLang>
               </msContents>
               <physDesc>
@@ -5478,7 +5463,7 @@
                 <idno>SZDAUT.115</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, aus 12 Teilen montiert.</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -5488,7 +5473,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">41,0 x 17,8 cm</measure>
+                      <measure type="format">41,0 x 17,8 cm, aus 12 Teilen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -5638,7 +5623,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">23</measure>
-                      <measure type="format">ca. 22,7 x 16,2 cm, geheftet</measure>
+                      <measure type="format">22,7 x 16,2 cm, geheftet</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -5726,9 +5711,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Stammbuchblatt mit Unterschrift, <date when="1642-08-14">14.
-                    August 1642</date>, für das Stammbuch des <persName type="person"
-                      ><forename>Michael</forename>
-                    <surname>Clüver</surname></persName>.</summary>
+                    August 1642</date>, für das Stammbuch des Michael Clüver.</summary>
                 <textLang>
                   <lang>Latein</lang>
                 </textLang>
@@ -5882,7 +5865,7 @@
                 <idno>SZDAUT.123</idno>
               </msIdentifier>
               <msContents>
-                <summary>Fragment eines eigenhändigen Manuskripts (obere Hälfte eines Blattes),
+                <summary>Fragment eines eigenhändigen Manuskripts,
                     <date>1875</date></summary>
                 <textLang>
                   <lang>Englisch</lang>
@@ -5893,7 +5876,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">2</measure>
-                      <measure type="format">20,0 x 16,5 cm</measure>
+                      <measure type="format">20,0 x 16,5 cm, obere Hälfte eines Blattes</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -6028,7 +6011,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">ca. 26,3 x 14,3 cm</measure>
+                      <measure type="format">26,3 x 14,3 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -6277,10 +6260,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändige Gedichte mit mehrfacher Unterschrift (zu letzterem nur Titel
-                  und verso vier gestrichene Verse), <date>1909</date>. Beiliegend ein Brief von
-                    <persName type="person"><forename>Léon</forename>
-                    <surname>Chatotan</surname></persName> an einen unbekannten Herrn (datiert <date
-                    when="1929-11-29"/>29. November 1929) zu diesem Manuskript.</summary>
+                  und verso vier gestrichene Verse), <date>1909</date>. Beiliegend ein Brief von Léon Chatotan an einen unbekannten Herrn (datiert <date
+                    when="1929-11-29">29. November 1929</date>) zu diesem Manuskript.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -6499,7 +6480,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.136">
           <titleStmt>
-            <title>Eden &amp; Lebnon</title>
+            <title>Eden &amp; Lebanon</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118526014">
                 <forename>Benjamin</forename>
@@ -6857,7 +6838,7 @@
                 <idno>SZDAUT.143</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift. Die Rückseiten der Blätter sind
+                <summary>Eigenhändiges Manuskript mit Unterschrift, die Rückseiten der Blätter sind
                   mit dem Namen „Stephan [!] Zweig“ bestempelt.</summary>
                 <textLang>
                   <lang>Französisch</lang>
@@ -6948,8 +6929,8 @@
                 <idno>SZDAUT.145</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift. Beiliegend Druck einer
-                  früheren Version des Gedichtes mit handschriftlichen Korrekturen Eberts.</summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift, beiliegend Druck einer
+                  früheren Version des Gedichts mit eigenhändigen Korrekturen.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -7034,9 +7015,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript mit
-                  Unterschrift, Rezension eines Buches von <persName ref="http://d-nb.info/gnd/130624578" type="person"
-                      ><forename>Eugène</forename>
-                    <surname>Demolder</surname></persName>.</summary>
+                  Unterschrift, Rezension eines Buches von Eugène Demolder.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -7046,7 +7025,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">7</measure>
-                      <measure type="format">ca. 28,7 x 10,8 cm, montiert auf größeres Papier in Halbleinenband</measure>
+                      <measure type="format">28,7 x 10,8 cm, montiert auf größeres Papier in Halbleinenband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -7126,8 +7105,7 @@
                 <idno>SZDAUT.149</idno>
               </msIdentifier>
               <msContents>
-                <summary>Zwei eigenhändige Gedichte, mit Bleistift kreuzweise
-                  durchstrichen</summary>
+                <summary>Zwei eigenhändige Gedichte, mit Bleistift kreuzweise durchgestrichen.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -7328,6 +7306,7 @@
               </physDesc>
               <history>
                 <origin>Hinterberger IX, Nr. 36. Hinterberger XIII, Nr. 193.</origin>
+                <provenance>unbekannt</provenance>
               </history>
             </msDesc>
           </sourceDesc>
@@ -7367,6 +7346,7 @@
               <history>
                 <origin>Hinterberger IX, Nr. 37. Hinterberger 18, Nr. 45. Hinterberger XX, Nr.
                   635</origin>
+                <provenance>unbekannt</provenance>
               </history>
             </msDesc>
           </sourceDesc>
@@ -7390,7 +7370,7 @@
                 <idno>SZDAUT.155</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht, beiliegend ein Faksimile</summary>
+                <summary>Eigenhändiges Gedicht, beiliegend ein Faksimile.</summary>
                 <textLang>
                   <lang>Englisch</lang>
                 </textLang>
@@ -7414,7 +7394,7 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date when="1912-11-01">November 1912</date>[?], <orgName>Antiquariat Maggs
+                  <date when="1912-11-01">November 1912</date>(?), <orgName>Antiquariat Maggs
                     Bros., <placeName ref="http://www.geonames.org/2643743"
                     >London</placeName></orgName>
                 </acquisition>
@@ -7442,8 +7422,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript, mehrfach signiert, <date>1914</date>, mit einem
-                  Widmungsgedicht für <persName type="person"><forename>Georg Friedrich</forename>
-                    <surname>Mayer</surname></persName>.</summary>
+                  Widmungsgedicht für Georg Friedrich Mayer.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -7550,18 +7529,20 @@
               </physDesc>
               <history>
                 <origin>Hinterberger IX, Nr. 39. Stargardt 557, Nr. 18, mit Abbildung auf Tafel
-                  76</origin>
-                <provenance>
-                  <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
-                      ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                </provenance>
-                <acquisition>unbekannt; Das Autograph gelangte aus der Sammlung Zweig zunächst
+                  76;
+                Das Autograph gelangte aus der Sammlung Zweig zunächst
                   (vermutlich über das <orgName>Antiquariat Hinterberger</orgName>) an 
                     Robert Ammann in <placeName ref="http://www.geonames.org/2661881 http://www.geonames.org/2661881"
                     >Aarau</placeName>, aus dessen Sammlung es am <date when="1962-06-05">5. Juni
                     1962</date> im <orgName>Antiquariat J. A. Stargardt, <placeName
                     ref="http://www.geonames.org/2873759">Marburg</placeName></orgName>, versteigert
-                  wurde.</acquisition>
+                  wurde.
+                </origin>
+                <provenance>
+                  <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
+                      ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
+                </provenance>
+                <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -7597,9 +7578,7 @@
           <titleStmt>
             <title
               ref="http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&amp;docId=NNL_ARCHIVE_AL003435883"
-              >Eigenhändiger Brief mit Unterschrift, an <persName ref="http://d-nb.info/gnd/116222824" type="person"
-                  ><forename>Helene</forename>
-                <surname>Klepetar</surname></persName>
+              >Eigenhändiger Brief mit Unterschrift, an Helene Klepetar
             </title>
             <author>
               <persName ref="http://d-nb.info/gnd/116635045">
@@ -7667,7 +7646,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript einer autobiographischen Skizze und Liste seiner
-                  Werke, <date>1826</date>[?]</summary>
+                  Werke, <date>1826</date>(?)</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -7868,7 +7847,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">ca. 30,9 x 18,1 cm</measure>
+                      <measure type="format">30,9 x 18,1 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -7951,7 +7930,7 @@
                 <idno>SZDAUT.167</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date when="1836-11-01"/>November 1836</summary>
+                <summary>Eigenhändiges Manuskript, <date when="1836-11-01">November 1836</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -8190,7 +8169,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript, beiliegend drei eigenhändige und signierte Briefe
-                  Fontanes an „Herrn von Puttkammer“ zur Druckgeschichte der Novelle, datiert <date
+                  Fontanes an einen Herrn von Puttkamer zur Druckgeschichte der Novelle, datiert <date
                     when="1886-01-20">20. Januar 1886</date>, <date when="1886-01-24">24. Januar
                     1886</date> und <date when="1886-02-19">19. Februar 1886</date>.</summary>
               </msContents>
@@ -8342,9 +8321,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändige Niederschrift eines Selbstportraits in Gedichtform, Abschrift
-                  eines Selbstportraits des Dichters <persName type="person"
-                      ><forename>Vittorio</forename>
-                    <surname>Alfieri</surname></persName>, deren Übertragung in Prosa und eine
+                  eines Selbstportraits des Dichters Vittorio Alfieri, deren Übertragung in Prosa und eine
                   Einleitung dazu.</summary>
                 <textLang>
                   <lang>Italienisch</lang>
@@ -8544,9 +8521,7 @@
                 <idno>SZDAUT.179</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändige Abschrift eines Gedichtes für das Stammbuch <persName
-                    type="person"><forename>Adalbert von</forename>
-                    <surname>Chamissos</surname></persName> mit Unterschrift, <date
+                <summary>Eigenhändige Abschrift eines Gedichtes für das Stammbuch Adalbert von Chamissos mit Unterschrift, <date
                     when="1814-01-01">1. Januar 1814</date></summary>
               </msContents>
               <physDesc>
@@ -8693,7 +8668,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript, <date when="1660-08-09">9. August 1660</date>, 
-                  Epistel an <persName ref="http://d-nb.info/gnd/118560042" type="person"><name>Charles II., König von England</name></persName>.</summary>
+                  Epistel an Charles II., König von England.</summary>
                 <textLang>
                   <lang>Englisch</lang>
                 </textLang>
@@ -8797,9 +8772,7 @@
                 <idno>SZDAUT.184</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1898</date>. Die Zettel mit den
-                  Anmerkungen sind am Rand des in mehrere Teile zerschnittenen Briefes
-                  aufgeklebt.</summary>
+                <summary>Eigenhändiges Manuskript, <date>1898</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -8827,9 +8800,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.185">
           <titleStmt>
-            <title>Eigenhändiger Brief mit Unterschrift an <persName type="person"
-                  ><forename>William</forename>
-                <surname>Strahan</surname></persName></title>
+            <title>Eigenhändiger Brief mit Unterschrift an William Strahan</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118534912">
                 <forename>Benjamin</forename>
@@ -9048,7 +9019,7 @@
                 <idno>SZDAUT.189</idno>
               </msIdentifier>
               <msContents>
-                <summary>Mindestens ein weiteres Gedicht. Weitere Daten unbekannt.</summary>
+                <summary>Gedicht. Weitere Daten unbekannt.</summary>
               </msContents>
               <history>
                 <origin>Frels 1934, Nr. 20.</origin>
@@ -9104,9 +9075,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.191">
           <titleStmt>
-            <title>Eigenhändiges Gedicht in einem Brief mit Unterschrift, an <persName ref="http://d-nb.info/gnd/119086395" type="person"
-                  ><forename>Francesco</forename>
-                <surname>Algarotti</surname></persName></title>
+            <title>Eigenhändiges Gedicht an Francesco Algarotti in einem Brief mit Unterschrift</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118535765">
                 <name>Friedrich II., König von Preußen</name>
@@ -9142,10 +9111,12 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Notizblatt
-                  aus der Sammlung Zweig (The British Library)</origin>
-                <provenance>unbekannt; letzter Nachweis: Notiz von unbekannter Hand (wohl
+                  aus der Sammlung Zweig (The British Library);
+                letzter Nachweis: Notiz von unbekannter Hand (wohl
                     <orgName>Erben Stefan Zweigs</orgName>) auf der Karteikarte: „verkauft Auktion
-                  Rauch Genf October 1953“</provenance>
+                  Rauch Genf October 1953“
+                </origin>
+                <provenance>unbekannt</provenance>
                 <acquisition>
                   <date when="1930-07-01">1. Juli 1930</date>, <orgName>Auktionshaus
                     Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
@@ -9175,8 +9146,7 @@
                 <idno>SZDAUT.192</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht, unterschrieben „Aug[ust] Kallson“, aus vier Teilen
-                  montiert.</summary>
+                <summary>Eigenhändiges Gedicht, unterschrieben „Aug[ust] Kallson“</summary>
                 <textLang>
                   <lang>Schwedisch</lang>
                 </textLang>
@@ -9186,7 +9156,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">32,0 x 19,6 cm</measure>
+                      <measure type="format">32,0 x 19,6 cm, aus vier Teilen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -9292,6 +9262,7 @@
               <history>
                 <origin>Hinterberger IX, Nr. 51</origin>
                   <provenance>unbekannt</provenance>
+                <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -9332,11 +9303,13 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Notizblatt
-                  aus der Sammlung Zweig (The British Library)</origin>
-                <provenance>unbekannt; letzter Nachweis: Notiz von unbekannter Hand (wohl
+                  aus der Sammlung Zweig (The British Library);
+                letzter Nachweis: Notiz von unbekannter Hand (wohl
                     <orgName>Erben Stefan Zweigs</orgName>) auf der Karteikarte: „an Mr. Ingram
                     <placeName ref="http://www.geonames.org/2656173">Bath</placeName> geschenkt
-                  1944“, dagegen auf dem Notizblatt „Given to Mr. Ingram [.] Xmas 1942“</provenance>
+                  1944“, dagegen auf dem Notizblatt „Given to Mr. Ingram [.] Xmas 1942“
+                </origin>
+                <provenance>unbekannt</provenance>
                 <acquisition>
                   <date when="1939-06-13">13. Juni 1939</date>, <orgName>Auktionshaus
                     Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
@@ -9606,7 +9579,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">5</measure>
-                      <measure type="format">ca. 26,7 x 20,7 cm</measure>
+                      <measure type="format">26,7 x 20,7 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -9623,7 +9596,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.202">
           <titleStmt>
-            <title><hi style="italic">Inhalt. Dichten ist ein vierdimensionales...</hi> (Lebenslauf)</title>
+            <title><hi style="italic">Inhalt. Dichten ist ein vierdimensionales ...</hi> (Lebenslauf)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/119368412">
                 <forename>Benno</forename>
@@ -9764,10 +9737,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Gedicht, Paris, <date when="1932-02-25">25. Februar
-                    1932</date>. Das Gedicht beginnt auf der Rückseite eines Widmungsbriefes an
-                    <persName ref="http://d-nb.info/gnd/118637479" type="person">
-                    <forename>Stefan</forename>
-                    <surname>Zweig</surname></persName>.</summary>
+                    1932</date>. Das Gedicht beginnt auf der Rückseite eines Widmungsbriefes an Stefan Zweig.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -9926,6 +9896,8 @@
               <history>
                 <origin>Hinterberger IX, Nr. 54. Hinterberger 18, Nr. 64. Hinterberger XX, Nr.
                   667</origin>
+                <provenance>unbekannt</provenance>
+                <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -9952,7 +9924,7 @@
               <msContents>
                 <summary>Fragment eines eigenhändigen Manuskripts mit Unterschrift, zusätzlich
                   unterschrieben von Pierre Arnold Latreille, <date when="1830-02-05">5. Februar
-                    1830</date>, erstes Blatt durch Mäusefraß beschädigt.</summary>
+                    1830</date>.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -9962,7 +9934,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">11</measure>
-                      <measure type="format">ca. 25,5 x 21,5 cm, Papierumschlag</measure>
+                      <measure type="format">25,5 x 21,5 cm, Papierumschlag, erstes Blatt durch Mäusefraß beschädigt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -10071,8 +10043,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-02-01">Februar 1926</date>, von Curt Hirschfeld, <placeName ref="http://www.geonames.org/2940187"
-                    >Berlin-Charlottenburg</placeName>. Aus dem Besitz des Komponisten Karl Hallwachs, 
-                  der mehrere Gedichte von Stefan George vertonte.</acquisition>
+                    >Berlin-Charlottenburg</placeName>. Aus dem Besitz des Komponisten Karl Hallwachs
+                </acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -10147,7 +10119,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiger Entwurf zu einer Rede, <date>1903</date>, beiliegend ein Brief Gides an Stefan Zweig.
-                  Teilweise aus schmalen Streifen montiert.</summary>
+                  </summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -10157,7 +10129,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">22</measure>
-                      <measure type="format">21,8 x 16,7 cm</measure>
+                      <measure type="format">21,8 x 16,7 cm, teilweise aus schmalen Streifen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -10478,11 +10450,17 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.221">
           <titleStmt>
-            <title><hi style="italic">An Madame Wolf („Erlaubt sey dir in mancherley Gestalten...")</hi></title>
+            <title><hi style="italic">An Madame Wolf („Erlaubt sey dir in mancherley Gestalten ...")</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
                 <surname>Goethe</surname>
+              </persName>
+            </author>
+            <author>
+              <persName ref="http://d-nb.info/gnd/118607626">
+                <forename>Friedrich</forename> 
+                <surname>Schiller</surname>
               </persName>
             </author>
           </titleStmt>
@@ -10495,27 +10473,19 @@
                 <idno>SZDAUT.221</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht, von Goethe für seinen Sohn <persName type="person"
-                      ><forename>August von</forename>
-                  <surname>Goethe</surname></persName> und für <persName ref="http://d-nb.info/gnd/116543701" type="person"
-                      ><forename>Caroline</forename>
-                    <surname>Ulrich</surname></persName><!-- eigentlich verh. Riemer! --> geschrieben und von ihm mit deren Initialen
-                  versehen, <date when="1812-12-10">10. Dezember 1812</date>. Auf der Rückseite des
-                  Blattes laut aufgeklebtem Zettel eine eigenhändige Bleistiftskizze Goethes. Über
-                  dem Gedicht waren folgende Reliquien montiert, die nun lose beiliegen: ehemals auf
-                  das Blatt montiert je eine Locke von Goethe und <persName ref="http://d-nb.info/gnd/118607626" type="person"
-                      ><forename>Friedrich</forename> <surname>Schiller</surname></persName> mit Echtheitsbestätigung von Friedrich Wilhelm 
-                  Riemer und ein Bibliotheksleihschein Schillers mit dessen Unterschrift. Außerdem beiliegend eine aus einem anderen Schriftstück
-                  ausgeschnittene Unterschrift Goethes und eine Locke sowie eine Schriftprobe von
-                  <persName ref="http://d-nb.info/gnd/117447102" type="person"><forename>Amalie</forename>
-                    <surname>Wolff</surname></persName> mit Beglaubigung von Charlotte Birch-Pfeiffer.</summary>
+                <summary>Eigenhändiges Gedicht, von Goethe für seinen Sohn August von Goethe und für Caroline Ulrich (später verheiratete Riemer) geschrieben und von 
+                  ihm mit deren Initialen versehen, <date when="1812-12-10">10. Dezember 1812</date>. Auf der Rückseite des Blattes laut aufgeklebtem Zettel eine 
+                  eigenhändige Bleistiftskizze Goethes. Über dem Gedicht waren folgende Reliquien montiert, die nun lose beiliegen: je eine Locke von Goethe und 
+                  Friedrich Schiller mit Echtheitsbestätigung von Friedrich Wilhelm Riemer und ein Bibliotheksleihschein Schillers mit dessen Unterschrift. 
+                  Außerdem beiliegend eine aus einem anderen Schriftstück ausgeschnittene Unterschrift Goethes und eine Locke sowie eine Schriftprobe von Amalie Wolff 
+                  mit Beglaubigung von Charlotte Birch-Pfeiffer.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
-                      <measure type="format">33,0 x 20,3 cm</measure>
+                      <measure type="page">3</measure>
+                      <measure type="format">33,0 x 20,3 cm, ehemals montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -10525,11 +10495,11 @@
                   <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
                   <date>1932</date>, Nr. 348. Frels 1934, Nr. 24d. Hinterberger XX, Nr. 671, mit
                   Abbildung auf dem Frontispiz. Bircher 2002, Seite 186, mit Abbildung auf Seite
-                  187</origin>
+                  187; (<date>1963</date> erworben)</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1963</date> erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date>1923</date>, <orgName>Antiquariat Rudolf Geering, <placeName
                     ref="http://www.geonames.org/2661604">Basel</placeName></orgName>
@@ -10571,13 +10541,15 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 24b. Hinterberger IX, Nr. 62, mit Abbildung auf Tafel XI.
-                  Stargardt 641, Nr. 107, mit Abbildung auf Seite 40</origin>
-                <provenance>unbekannt; von Hinterberger an Eisemann verkauft (Brief Hinterbergers,
+                  Stargardt 641, Nr. 107, mit Abbildung auf Seite 40;
+                von Hinterberger an Eisemann verkauft (Brief Hinterbergers,
                     <date when="1936-03-25">25. März 1936</date>, BL, Loan 95.14); zuletzt <date
                     when="1988-03-09">9. März 1988</date> und <date when="1988-03-10">10. März
                     1988</date>, Auktion 641, <orgName>Antiquariat J. A. Stargardt,
                     <placeName ref="http://www.geonames.org/2873759">Marburg</placeName></orgName>, Nr.
-                  107</provenance>
+                  107;
+                </origin>
+                <provenance>unbekannt</provenance>
                 <acquisition>unbekannt; aus der Sammlung Ott-Usteri</acquisition>
               </history>
             </msDesc>
@@ -10602,8 +10574,7 @@
                 <idno>SZDAUT.223</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändige Abschrift eines Vierzeilers von <persName ref="http://d-nb.info/gnd/123537363" type="person"
-                      ><forename>François de</forename><surname>Maucroix</surname></persName>, <date when="1828-05-01">Mai 1828</date></summary>
+                <summary>Eigenhändige Abschrift eines Vierzeilers von François de Maucroix, <date when="1828-05-01">Mai 1828</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -10653,10 +10624,8 @@
                 <idno>SZDAUT.224</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1830</date>. Auf der Rückseite eine
-                  Echtheitsbestätigung von Goethes Schwiegertochter Ottilie von Goethe: „Handschrift des Vaters für <persName
-                    ref="http://d-nb.info/gnd/118542192" type="person"><forename>Franz</forename>
-                    <surname>Grillparzer</surname></persName>".</summary>
+                <summary>Eigenhändiges Manuskript, <date>1830</date>, auf der Rückseite eine
+                  Echtheitsbestätigung von Goethes Schwiegertochter Ottilie von Goethe: „Handschrift des Vaters für Franz Grillparzer".</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10736,7 +10705,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.226">
           <titleStmt>
-            <title><hi style="italic">Der Gräfin... Odonell, die eine meiner Schreibfedern verlangte („Als der
+            <title><hi style="italic">Der Gräfin ... Odonell, die eine meiner Schreibfedern verlangte („Als der
                 Knabe nach der Schule“)</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
@@ -10754,9 +10723,11 @@
                 <idno>SZDAUT.226</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht und eine zugehörige Kielschreibfeder Goethes. Beide
-                  Stücke wurden getrennt erworben und anschließend in ein Passepartout eingefügt und
-                  gerahmt.</summary>
+                <summary>Eigenhändiges Gedicht und eine zugehörige Kielschreibfeder Goethes, beide
+                  Stücke wurden getrennt erworben. Schreibfeder ursprünglich in einem Kuvert
+                  mit einer eigenhändigen Echtheitsbestätigung der Gräfin Josephine O’Donell, 
+                  welcher Goethe die Feder zusammen mit dem damit geschriebenen Gedicht
+                  geschenkt hatte.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -10773,15 +10744,12 @@
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). <placeName
                     ref="http://www.geonames.org/2761369">Wien</placeName>
                   <date>1932</date>, Nr. 351 (nur die Schreibfeder)</origin>
-                <provenance>Privatbesitz, Großbritannien. Schreibfeder ursprünglich in einem Kuvert
-                  mit einer eigenhändigen Echtheitsbestätigung der Gräfin Josephine O’Donell, 
-                  welcher Goethe die Feder zusammen mit dem damit geschriebenen Gedicht
-                  geschenkt hatte. <date when="1928-10-09">9. Oktober 1928</date>, von Graf
-                   Douglas O’Donell
+                <provenance>Privatbesitz, Großbritannien. 
                 </provenance>
-               <acquisition><date when="1932-06-15">15. Juni 1932</date>, Auktion, <orgName>Antiquariat
+               <acquisition><date when="1928-10-09">9. Oktober 1928</date>, von Graf
+                   Douglas O’Donell (Schreibfeder); <date when="1932-06-15">15. Juni 1932</date>, Auktion, <orgName>Antiquariat
                     Gilhofer &amp; Ranschburg, <placeName
-                    ref="http://www.geonames.org/2659811">Luzern</placeName></orgName></acquisition> 
+                    ref="http://www.geonames.org/2659811">Luzern</placeName></orgName> (Gedicht)</acquisition> 
               </history>
             </msDesc>
           </sourceDesc>
@@ -10807,7 +10775,7 @@
                 <idno>SZDAUT.227</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift und Widmung: an „Fräulein Kirchner“, <date when="1831-08-28">28. August
+                <summary>Eigenhändiges Gedicht mit Unterschrift und Widmung an „Fräulein Kirchner“, <date when="1831-08-28">28. August
                     1831</date></summary>
               </msContents>
               <physDesc>
@@ -11000,8 +10968,7 @@
         <biblFull xml:id="SZDAUT.231">
           <titleStmt>
             <title>Fragment aus <hi style="italic">Principes de Philosophie Zoologique II</hi> (<hi style="italic">„der Natur
-                einen allerliebsten Verstand zu; habe sie doch alles so artig
-              eingerichtet..."</hi>)</title>
+                einen allerliebsten Verstand zu; habe sie doch alles so artig eingerichtet ..."</hi>)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
@@ -11019,7 +10986,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Vom Sekretär <persName ref="http://d-nb.info/gnd/1120622395" type="person"><forename>Johann August Friedrich</forename> <surname>John</surname></persName> niedergeschriebener Aufsatz mit Korrekturen
-                  und Ergänzungen Goethes, <date>1832</date></summary>
+                  und Ergänzungen Goethes, <date>1832</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -11044,8 +11011,7 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                     </provenance>
                 <acquisition>
-                  <date when="1924-01-28">28. Januar 1924</date>/<date when="1924-01-29">29. Januar
-                    1924</date>, Auktion 85, <orgName>Antiquariat Karl Ernst Henrici,
+                  <date when="1924-01-01">Januar 1924</date>, Auktion 85, <orgName>Antiquariat Karl Ernst Henrici,
                     <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
@@ -11054,11 +11020,8 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.232">
           <titleStmt>
-            <title><hi style="italic">Reicher Blumen goldne Rancken</hi> (Hochzeitsgedicht für <persName ref="http://d-nb.info/gnd/118633252"
-                type="person"><forename>Marianne von</forename>
-              <surname>Willemer</surname></persName> und <persName ref="http://d-nb.info/gnd/118633244" type="person"><forename>Johann
-                  Jacob von</forename>
-                <surname>Willemer</surname></persName>)</title>
+            <title><hi style="italic">Reicher Blumen goldne Rancken</hi> (Hochzeitsgedicht für Marianne von Willemer und Johann
+                  Jacob von Willemer)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
@@ -11103,14 +11066,14 @@
                 <acquisition>
                   <date when="1929-03-23">23. März 1929</date>, Auktion 149, <orgName>Antiquariat
                     Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName></orgName>[?]</acquisition>
+                    >Berlin</placeName></orgName>(?)</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
         <biblFull xml:id="SZDAUT.233">
           <titleStmt>
-            <title><hi style="italic">Thaten gar keinen Nutzen brächten...</hi> (Schularbeit aus den sogenannten
+            <title><hi style="italic">Thaten gar keinen Nutzen brächten ...</hi> (Schularbeit aus den sogenannten
                 <hi style="italic">Labores juveniles</hi>), außerdem drei Verse aus <hi style="italic">Faust</hi> und ein
               Briefentwurf</title>
             <author>
@@ -11129,7 +11092,8 @@
                 <idno>SZDAUT.233</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1757</date></summary>
+                <summary>Eigenhändiges Manuskript, <date>1757</date>, ursprünglich zusammengehörige Blätter, eines davon im
+                  Tausch an Anton Kippenberg gegen Entwürfe zu <hi style="italic">Leonce und Lena</hi> von Georg Büchner.</summary>
                 <textLang>
                   <lang>Deutsch</lang>
                   <lang>Latein</lang>
@@ -11139,8 +11103,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">2</measure>
-                      <measure type="format">19,9 x 12,5 cm (Düsseldorf), 2 Seiten 18,8 x 22,2 cm (Genf)</measure>
+                      <measure type="page">4</measure>
+                      <measure type="format">19,9 x 12,5 cm (2 Seiten Düsseldorf), 2 Seiten 18,8 x 22,2 cm (2 Seiten Cologny-Genève)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11158,15 +11122,15 @@
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf,
                     Anton-und-Katharina-Kippenberg-Stiftung, <placeName
-                      ref="http://www.geonames.org/2934246">Düsseldorf</placeName></orgName> und <orgName
+                      ref="http://www.geonames.org/2934246">Düsseldorf</placeName></orgName>
+                  <orgName
                         ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer,
                         <placeName ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                     </provenance>
                 <acquisition>
                   <date when="1913-12-04">4. Dezember 1913</date>, <orgName>Antiquariat C. G.
                     Boerner, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName></orgName>. Ursprünglich zwei zusammengehörige Blätter, eines davon im
-                  Tausch an Anton Kippenberg gegen Entwürfe zu <hi style="italic">Leonce und Lena</hi> von Georg Büchner.
+                    >Leipzig</placeName></orgName>
                   </acquisition>
               </history>
             </msDesc>
@@ -11290,7 +11254,7 @@
                 <idno>SZDAUT.236</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht</summary>
+                <summary>Eigenhändiges Gedicht, von Stefan Zweig am <date when="1935-06-06">6. Juni 1935</date> an Thomas Mann zum 60. Geburtstag geschenkt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -11304,11 +11268,9 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 24f. <placeName ref="http://www.geonames.org/2657896"
-                    >Zürich</placeName> 1996, Nr. 73;
-               (von Stefan Zweig am <date when="1935-06-06">6. Juni 1935</date> an Thomas Mann zum 60. Geburtstag geschenkt, dazu ein Begleitbrief im <orgName
+                    >Zürich</placeName> 1996, Nr. 73; dazu ein Begleitbrief im <orgName
                     ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek,
-                    <placeName ref="http://www.geonames.org/2657896">Zürich</placeName></orgName> 1996, Nr.
-                  72) 
+                    <placeName ref="http://www.geonames.org/2657896">Zürich</placeName></orgName> 1996, Nr. 72) 
                 </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek,
@@ -11321,10 +11283,8 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.237">
           <titleStmt>
-            <title>Fragment der eigenhändigen Abschrift eines Briefes von <persName ref="http://d-nb.info/gnd/118549553" type="person"
-                  ><forename>Johann Gottfried von</forename>
-              <surname>Herder</surname></persName> an <persName ref="http://d-nb.info/gnd/118556312" type="person"><forename>Friedrich
-                  Heinrich</forename> <surname>Jacobi</surname></persName> über das System Spinozas</title>
+            <title>Fragment der eigenhändigen Abschrift eines Briefes von Johann Gottfried von Herder an 
+              Friedrich Heinrich Jacobi über das System Spinozas</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
                 <forename>Johann Wolfgang von</forename>
@@ -11442,6 +11402,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">25,5 x 16,5 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11449,7 +11410,7 @@
               </physDesc>
               <history>
                 <origin>Corpus Goethezeichnungen VI b, Nr. 6</origin>
-                <provenance>letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
+                <provenance>unbekannt; letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
                 <acquisition>Auktion 84, <orgName>Antiquariat Karl Ernst Henrici,
                     <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
@@ -11488,6 +11449,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">21,6 x 27,6 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11497,7 +11459,7 @@
                 <origin>Hinterberger XX, Nr. 676, mit Abbildung auf Tafel I. Corpus
                   Goethezeichnungen VI b, Nr. 43</origin>
                 <provenance>
-                  <date>2005</date>, <orgName>Antiquariat August Laube, <placeName
+                  unbekannt; zuletzt <date>2005</date>, <orgName>Antiquariat August Laube, <placeName
                     ref="http://www.geonames.org/2657896">Zürich</placeName></orgName>
                 </provenance>
                 <acquisition>unbekannt</acquisition>
@@ -11524,9 +11486,7 @@
                 <idno>SZDAUT.241</idno>
               </msIdentifier>
               <msContents>
-                <summary>Rötelzeichnung mit Sepialavierung, von <persName ref="http://d-nb.info/gnd/118610473" type="person"
-                      ><forename>Johanna</forename>
-                    <surname>Schopenhauer</surname></persName> unten rechts signiert: „Göthe. 1807“.</summary>
+                <summary>Rötelzeichnung mit Sepialavierung, von Johanna Schopenhauer unten rechts bezeichnet: „Göthe. 1807“.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11535,6 +11495,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">10,5 x 16,5 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
@@ -11543,7 +11504,7 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig. Hinterberger IX, Nr. 63, mit Abbildung
                   auf Tafel XII. Corpus Goethezeichnungen VI b 109</origin>
-                <provenance>letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
+                <provenance>unbekannt; letzter Nachweis (1971): Privatbesitz, Großbritannien</provenance>
                 <acquisition>unbekannt; aus dem Nachlass der Prinzessin Marie Sayn-Wittgenstein
                 </acquisition>
               </history>
@@ -11569,11 +11530,9 @@
                 <idno>SZDAUT.242</idno>
               </msIdentifier>
               <msContents>
-                <summary>Bleistiftzeichnung mit Sepialavierung(?), auf ein Untersatzblatt
-                  montiert. Auf der Rückseite eigenhändige Widmung: „Gräfin Julien zum neuen Jahre
-                    <date>1824</date>. J. W. v. Goethe.“ Auf dem Untersatzblatt eine Notiz der
-                  Empfängerin und am oberen Rand der Zeichnung eine Provinienzangabe von fremder
-                  Hand.</summary>
+                <summary>Bleistiftzeichnung mit Sepialavierung(?), auf der Rückseite eigenhändige Widmung: „Gräfin Julien zum neuen Jahre
+                    <date>1824</date>. J. W. v. Goethe.“ Auf dem Untersatzblatt eine Notiz der Empfängerin und am oberen Rand der Zeichnung eine 
+                  Provenienzangabe von fremder Hand.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11582,7 +11541,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format">10,5 x 13,0 cm, gerahmt</measure>
+                      <measure type="page">1</measure>
+                      <measure type="format">10,5 x 13,0 cm, auf ein Untersatzblatt montiert und gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11616,12 +11576,12 @@
                 <idno>SZDAUT.243</idno>
               </msIdentifier>
               <msContents>
-                <summary>Federzeichnung mit Sepialavierung, rückseitig Bleistiftskizze,
-                  beidseitig unter Glas. Wohl ein Blatt aus dem sogenannten „roten Reisebüchlein“.
+                <summary>Federzeichnung mit Sepialavierung, rückseitig Bleistiftskizze, 
+                  wohl ein Blatt aus dem sogenannten „roten Reisebüchlein“.
                   Mit Echtheitsbestätigung am linken Oberrand der Bleistiftskizze: „Handzeichnung
                   von Joh. Wolfg. Göthe Empfangen von Hrn. Chrn. Schuchardt, Vorsteher d.
-                  Großherzogl. Museums zu Weimar, welcher die Aechtheit derselben
-                  verbürgt.“</summary>
+                  Großherzogl. Museums zu Weimar, welcher die Aechtheit derselben verbürgt.“
+                </summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Zeichnung</ab>
                 </msItem>
@@ -11630,7 +11590,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format">10,4 x 16,5 cm, gerahmt</measure>
+                      <measure type="page">1</measure>
+                      <measure type="format">10,4 x 16,5 cm, beidseitig unter Glas, gerahmt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -11641,7 +11602,7 @@
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
-                  <idno type="signature">Loan 95.13</idno></provenance>
+                  <idno type="signature">Zweig MS. 217</idno></provenance>
                 <acquisition>wohl <date>1933</date>, Auktion 337, <orgName>Antiquariat J. A.
                     Stargardt, <placeName ref="http://www.geonames.org/2950159"
                     >Berlin</placeName></orgName>
@@ -11678,6 +11639,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">8,8 x 10,8 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11686,10 +11648,12 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Corpus
-                  Goethezeichnungen VI b, Nr. 161 (vgl. IV b, Nr. 154)</origin>
-                <provenance>unbekannt; letzter Nachweis: Notiz von unbekannter Hand (wohl
+                  Goethezeichnungen VI b, Nr. 161 (vgl. IV b, Nr. 154);
+                letzter Nachweis: Notiz von unbekannter Hand (wohl
                     <orgName>Erben Stefan Zweigs</orgName>) auf der Karteikarte: „an S. Warburg
-                  geschenkt <date>1944</date>“</provenance>
+                  geschenkt <date>1944</date>“
+                </origin>
+                <provenance>unbekannt</provenance>
                 <acquisition>
                   <date when="1929-08-24">24. August 1929</date>, Auktion 157, <orgName>Antiquariat
                     Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
@@ -11702,7 +11666,7 @@
         <biblFull xml:id="SZDAUT.245">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_154"
-              type="object">Kammerbühl bei Eger (in Hinterberger IX als „Die Sternwarte Seeberg bei
+              type="object">Kammerbühl bei Eger (auch als „Die Sternwarte Seeberg bei
               Eger“ bezeichnet)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118540238">
@@ -11730,6 +11694,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">19,1 x 32,7 cm</measure>
                     </extent>
                   </supportDesc>
@@ -14989,7 +14954,7 @@
                     Collection, <placeName>Fredonia</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date when="1939-01-01">Jänner 1939</date>, Geschenk des Autors an
+                  <date when="1939-01-01">Januar 1939</date>, Geschenk des Autors an
                   Zweig</acquisition>
               </history>
             </msDesc>
@@ -19344,7 +19309,7 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 164</idno></provenance>
                 <acquisition>
-                  <date when="1914-01-01">Jänner 1914</date>, von <persName type="person">
+                  <date when="1914-01-01">Januar 1914</date>, von <persName type="person">
                     <forename>Victor</forename>
                     <surname>Mannheimer</surname>
                   </persName>, <placeName ref="http://www.geonames.org/2867714">München</placeName>.
@@ -22887,8 +22852,8 @@
                 <idno>SZDAUT.485</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript und Druckbögen mit eigenhändigen Korrekturen.
-                  Gebunden</summary>
+                <summary>Eigenhändiges Manuskript und Druckbögen mit eigenhändigen Korrekturen
+                  </summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -22897,8 +22862,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">Über 150</measure>
-                      <measure type="format"/>
+                      <measure type="page">190</measure>
+                      <measure type="format">27,1 x 20,6 cm, gebunden</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -22907,12 +22872,13 @@
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig
                   1930</origin>
-                <provenance>unbekannt</provenance>
+                <provenance>
+                  <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                  <idno type="signature">Zweig MS. 218</idno></provenance>
                 <acquisition>
-                  <date when="1914-05-29">29. Mai 1914</date>, Auktion, <persName type="person">
-                    <forename>Pierre</forename>
-                    <surname>Dauze</surname>
-                  </persName>, durch <orgName>Librairie Auguste Blaizot</orgName>
+                  <date when="1914-05-29">29. Mai 1914</date>, Auktion, Pierre Dauze, 
+                  durch <orgName>Librairie Auguste Blaizot</orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -23417,7 +23383,7 @@
                   663, <orgName>Antiquariat J. A. Stargardt</orgName>, <placeName
                     ref="http://www.geonames.org/2950159">Berlin</placeName>, Nr. 1395</provenance>
                 <acquisition>
-                  <date when="1933-01-01">Jänner 1933</date>, <orgName>Antiquariat Hermann
+                  <date when="1933-01-01">Januar 1933</date>, <orgName>Antiquariat Hermann
                     Lewy</orgName>, <placeName ref="http://www.geonames.org/2950159"
                     >Berlin</placeName>. Von Zweig an <persName ref="http://d-nb.info/gnd/118535579"
                     type="person">
@@ -33590,8 +33556,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">2</measure>
-                      <measure type="format">25,1 x 19,5 cm, aus schmalen Streifen
-                        montiert</measure>
+                      <measure type="format">25,1 x 19,5 cm, aus schmalen Streifen montiert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -39781,8 +39746,7 @@
                 <idno>SZDAUT.842</idno>
               </msIdentifier>
               <msContents>
-                <summary>Von der Hand des „bürgerlich-magistratischen Konducktsansagers“ <persName
-                    type="person"><forename>Andreas</forename> <surname>Zeller</surname></persName>, <date when="1827-03-21">31. März
+                <summary>Von der Hand des „bürgerlich-magistratischen Konducktsansagers“ Andreas Zeller, <date when="1827-03-21">31. März
                     1827</date>.</summary>
               </msContents>
               <physDesc>
@@ -39894,6 +39858,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="page">1</measure>
                       <measure type="format">22,7 x 18,0 cm</measure>
                     </extent>
                   </supportDesc>
@@ -39912,7 +39877,7 @@
                     &amp; Co., <placeName ref="http://www.geonames.org/2643743"
                     >London</placeName></orgName>, durch <orgName>Antiquariat Heinrich Eisemann,
                     <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>. Aus der
-                  Sammlung Otto Strakosch.
+                  Sammlung Otto Strakosch
                 </acquisition>
               </history>
             </msDesc>
@@ -40398,7 +40363,7 @@
                 <idno>SZDAUT.855</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied, <date>1839</date></summary>
+                <summary><date>1839</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40411,13 +40376,15 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Hinterberger IX, Nr. 244</origin>
-                <provenance>unbekannt; letzter Nachweis: Von Heinrich Hinterberger im <date
-                    when="1936-04-01">April 1936</date> an den Prinzen Torre e Tasso (Duino)
-                  verkauft (Abrechnung vom <date when="1936-04-17">17. April 1936</date>, <orgName
+                <origin>Hinterberger IX, Nr. 244;
+                (Abrechnung vom <date when="1936-04-17">17. April 1936</date>, <orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>, Loan
-                  95.14)</provenance>
+                  95.14)
+                </origin>
+                <provenance>unbekannt; letzter Nachweis: von Heinrich Hinterberger im <date
+                    when="1936-04-01">April 1936</date> an den Prinzen Torre e Tasso (Duino)
+                  verkauft</provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -40425,8 +40392,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.856">
           <titleStmt>
-            <title>Beginn der <hi style="italic">Großen Fantasie</hi> A-Dur für Klavier und Orchester op.
-              13</title>
+            <title>Beginn der <hi style="italic">Großen Fantasie</hi> A-Dur für Klavier und Orchester</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118520539">
                 <forename>Frédéric</forename>
@@ -40443,9 +40409,7 @@
                 <idno>SZDAUT.856</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Fragment. Mit zwei Echtheitsbestätigungen von <persName
-                    ref="http://d-nb.info/gnd/1056095172" type="person"><forename>Adam</forename>
-                    <surname>Münchheimer</surname></persName>.</summary>
+                <summary>Op. 13, eigenhändiges Fragment, mit zwei Echtheitsbestätigungen von Adam Münchheimer.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40494,15 +40458,8 @@
                 <idno>SZDAUT.857</idno>
               </msIdentifier>
               <msContents>
-                <summary>Op. 59 Nr. 3.1845, zugehörig ein eigenhändiger Brief mit Unterschrift von
-                    <persName ref="http://d-nb.info/gnd/118664638" type="person"><forename>Hans
-                      von</forename>
-                    <surname>Bülow</surname></persName> an <persName type="person"
-                      ><forename>C.</forename>
-                    <surname>Kerfack</surname></persName> vom <date when="1864-11-02">2. November
-                    1864</date>, zur Übergabe des Autographs (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>, Zweig MS.
-                  24, Searle 1999, Seite 27, mit Abbildung auf Tafel XXI)</summary>
+                <summary>Op. 59 Nr. 3, <date>1845</date>, zugehörig ein eigenhändiger Brief mit Unterschrift von
+                    Hans von Bülow an C. Kerfack vom <date when="1864-11-02">2. November 1864</date>, zur Übergabe des Autographs.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40516,12 +40473,15 @@
               </physDesc>
               <history>
                 <origin>Zweig 1930. Hinterberger XX, Nr. 90a, mit Abbildung auf Tafel V. BL 1987. BL
-                  1993. Searle 1999, Seite 30, mit Abbildung auf Tafel XXIII</origin>
+                  1993. Searle 1999, Seite 30, mit Abbildung auf Tafel XXIII;
+                 (<orgName ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>, Zweig MS.
+                  24, Searle 1999, Seite 27, mit Abbildung auf Tafel XXI)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 26</idno></provenance>
-                <acquisition>Wohl <date>1926</date> oder <date>1927</date>. 
+                <acquisition>wohl <date>1926</date> oder <date>1927</date>. 
                   Aus der Sammlung Wilhelm Heyer
                 </acquisition>
               </history>
@@ -40548,7 +40508,7 @@
                 <idno>SZDAUT.858</idno>
               </msIdentifier>
               <msContents>
-                <summary>op. 60, <date>1846</date></summary>
+                <summary>Op. 60, <date>1846</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40594,9 +40554,8 @@
                 <idno>SZDAUT.859</idno>
               </msIdentifier>
               <msContents>
-                <summary>Rondo für Sopran und Streicher. Mit Echtheitsbestätigung von Cimarosas Sohn
-                    <persName type="person"><forename>Paolo</forename>
-                    <surname>Cimarosa</surname></persName>.</summary>
+                <summary>Rondo für Sopran und Streicher, mit Echtheitsbestätigung von Cimarosas Sohn
+                   Paolo Cimarosa.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40646,9 +40605,7 @@
                 <idno>SZDAUT.860</idno>
               </msIdentifier>
               <msContents>
-                <summary>Mit Echtheitsbestätigung von Cimarosas Sohn <persName type="person"
-                      ><forename>Paolo</forename>
-                    <surname>Cimarosa</surname></persName></summary>
+                <summary>Mit Echtheitsbestätigung von Cimarosas Sohn Paolo Cimarosa</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40691,13 +40648,13 @@
                 <idno>SZDAUT.861</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied, Text dazu von <persName ref="http://d-nb.info/gnd/119080389" type="person"
+                <summary>Lied mit einem Text von <persName ref="http://d-nb.info/gnd/119080389" type="person"
                       ><forename>Théodore de</forename>
-                    <surname>Banville</surname></persName>. Mit eigenhändiger Widmung: „Les Baisers
+                    <surname>Banville</surname></persName>, mit eigenhändiger Widmung: „Les Baisers
                   poèsies de Th. Banville. Musique de tojours du même à Madame Vanier, La dernière
                   Melodie que je pourrais bien faire, L’auteur Claude Debussy“.</summary>
                 <textLang>
-                  <lang xml:lang="fra">Französisch</lang>
+                  <lang xml:lang="fre">Französisch</lang>
                 </textLang>
               </msContents>
               <physDesc>
@@ -40710,13 +40667,15 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Hinterberger IX, Nr. 246. Hinterberger 18, Nr. 37</origin>
-                <provenance>unbekannt; letzter Nachweis: Laut einem Brief von Heinrich Hinterberger
-                  an Stefan Zweig wurde das Manuskript eventuell nicht von Debussy
-                  selbst geschrieben (Brief vom <date when="1936-04-06">6. April 1936</date>,
+                <origin>Hinterberger IX, Nr. 246. Hinterberger 18, Nr. 37;
+                (Brief vom <date when="1936-04-06">6. April 1936</date>,
                   <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                     ref="http://www.geonames.org/2643743">London</placeName></orgName>,
                   <idno type="signature">Loan 95.14</idno>)
+                </origin>
+                <provenance>unbekannt; letzter Nachweis: Laut einem Brief von Heinrich Hinterberger
+                  an Stefan Zweig wurde das Manuskript eventuell nicht von Debussy
+                  selbst geschrieben.
                 </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
@@ -40929,15 +40888,8 @@
                 <idno>SZDAUT.866</idno>
               </msIdentifier>
               <msContents>
-                <summary>Op. 9, nach Texten u. a. von <persName ref="http://d-nb.info/gnd/118548018"
-                    type="person"><forename>Heinrich</forename>
-                    <surname>Heine</surname></persName>, <persName
-                    ref="http://d-nb.info/gnd/118540238" type="person"><forename>Johann Wolfgang von</forename>
-                    <surname>Goethe</surname></persName>, <persName
-                    ref="http://d-nb.info/gnd/118529390" type="person"><forename>Joseph
-                      von</forename>
-                    <surname>Eichendorff</surname></persName>, <date when="1844-04-07">7. April
-                    1844</date>.</summary>
+                <summary>Op. 9, unter anderem nach Texten von Heinrich Heine, Johann Wolfgang von Goethe, Joseph
+                      von Eichendorff, <date when="1844-04-07">7. April 1844</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40984,7 +40936,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">22</measure>
-                      <measure type="format">ca. 23,0 x 31,5 cm</measure>
+                      <measure type="format">23,0 x 31,5 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -41004,7 +40956,7 @@
         <biblFull xml:id="SZDAUT.868">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_34"><hi style="italic">I lamenti
-                d’amore [Misero! E che farò!]</hi></title>
+                d’amore (Misero! E che farò!)</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118539841">
                 <forename>Christoph Willibald</forename>
@@ -41042,9 +40994,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 34</idno></provenance>
                 <acquisition>
-                  <date when="1927-10-24">24. Oktober 1927</date>, außerhalb der Auktion, Katalog
-                  123, <orgName>Antiquariat Karl Ernst Henrici, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>. 
+                  <date when="1927-10-24">24. Oktober 1927</date>, außerhalb der Auktion 123, 
+                  <orgName>Antiquariat Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>. 
                   Aus der Sammlung Josef Liebeskind
                 </acquisition>
               </history>
@@ -41210,7 +41161,7 @@
               <msContents>
                 <summary>Eigenhändiges Manuskript</summary>
                 <textLang>
-                  <lang xml:lang="fra">Französisch</lang>
+                  <lang xml:lang="fre">Französisch</lang>
                 </textLang>
               </msContents>
               <physDesc>
@@ -41238,7 +41189,7 @@
         <biblFull xml:id="SZDAUT.873">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_35"><hi style="italic">Peer
-                Gynt</hi>. Suite Nr. 2 für Orchester op. 55</title>
+                Gynt</hi>. Suite Nr. 2 für Orchester</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118697641">
                 <forename>Edvard</forename>
@@ -41255,7 +41206,7 @@
                 <idno>SZDAUT.873</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1891–1892</date></summary>
+                <summary>Op. 55, <date>1891–1892</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -47013,7 +46964,7 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date when="1924-01-01">Jänner 1924</date>, Auktion 85, <orgName>Antiquariat Karl
+                  <date when="1924-01-01">Januar 1924</date>, Auktion 85, <orgName>Antiquariat Karl
                     Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
                     >Berlin</placeName>
                 </acquisition>
@@ -47119,7 +47070,7 @@
         </biblFull>
         
         <!-- Achtung: neuer Eintrag!! -->
-        <biblFull xml:id="SZDAUT.XXX">
+        <biblFull xml:id="SZDAUT.992">
           <titleStmt>
             <title>Buchbestellung (Fälschung!)</title>
             <author>
@@ -47135,7 +47086,7 @@
           <sourceDesc>
             <msDesc>
               <msIdentifier>
-                <idno>SZDAUT.XXX</idno>
+                <idno>SZDAUT.992</idno>
               </msIdentifier>
               <msContents>
                 <summary>Als Buchbestellung Friedrich Schillers gehandeltes Autograph, tatsächlich aber von der Hand des Fälschers <persName ref="http://d-nb.info/gnd/116593822" type="person"
@@ -47147,7 +47098,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">1</measure>
-                      <measure type="format">Quer-8°</measure><!-- Oliver - noch überprüfen! -->
+                      <measure type="format">9,8 x 15,1 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
