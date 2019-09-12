@@ -101,6 +101,12 @@
                <!-- <xsl:value-of select="$LANGUAGE//*:entry[*:language[@type='german'] ]"/>-->
                <!-- ToDo: add "Flämisch" to $LANGUAGE -->
                 <xsl:choose>
+                    <xsl:when test="contains(*:lang,  'Flämisch')">
+                        <xsl:attribute name="xml:lang">
+                            <xsl:value-of select="'dut'"/>
+                        </xsl:attribute>
+                        <xsl:text>Niederländisch, Flämisch</xsl:text>
+                    </xsl:when>
                     <xsl:when test="$LANGUAGE//*:entry[*:language[@type='german']/text() = $currentLang ]">
                         <xsl:attribute name="xml:lang">
                             <xsl:value-of select="$LANGUAGE//*:entry[*:language[@type='german']/text() = $currentLang ]/*:code[@type='ISO639-2'][1]"/>
