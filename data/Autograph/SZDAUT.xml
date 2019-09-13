@@ -2632,7 +2632,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">25,4 x 19,9 cm</measure>
                     </extent>
                   </supportDesc>
@@ -5417,7 +5417,7 @@
                 <idno>SZDAUT.114</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date>1875</date></summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift, Flämisch, <date>1875</date>.</summary>
                 <textLang>
                   <lang xml:lang="dut">Niederländisch</lang>
                 </textLang>
@@ -11402,7 +11402,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">25,5 x 16,5 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11451,7 +11451,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">21,6 x 27,6 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11497,7 +11497,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">10,5 x 16,5 cm, gerahmt</measure>
                     </extent>
                   </supportDesc>
@@ -11545,7 +11545,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">10,5 x 13,0 cm, auf ein Untersatzblatt montiert und gerahmt</measure>
                     </extent>
                   </supportDesc>
@@ -11594,7 +11594,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">10,4 x 16,5 cm, beidseitig unter Glas, gerahmt</measure>
                     </extent>
                   </supportDesc>
@@ -11643,7 +11643,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">8,8 x 10,8 cm</measure>
                     </extent>
                   </supportDesc>
@@ -11698,7 +11698,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">19,1 x 32,7 cm</measure>
                     </extent>
                   </supportDesc>
@@ -14114,7 +14114,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format">1 Blatt quer-8°</measure>
+                      <measure type="leaf">1</measure>
+                      <measure type="format">quer-8°</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -19847,7 +19848,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">16,5 x 10,5 cm</measure>
                     </extent>
                   </supportDesc>
@@ -21245,7 +21246,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">28,3 x 20,1 cm</measure>
                     </extent>
                   </supportDesc>
@@ -21254,18 +21255,15 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig
-                  1930</origin>
+                  1930; Geschenk von Otto Manley, <date>1986</date></origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1006048-0">The Pierpont Morgan
-                    Library</orgName>, <placeName ref="http://www.geonames.org/5128581">New
-                    York, NY</placeName>. Geschenk von <persName type="person">
-                    <forename>Otto</forename>
-                    <surname>Manley</surname>
-                  </persName>, <date>1986</date>. <idno type="signature">1986.50</idno></provenance>
+                    Library, <placeName ref="http://www.geonames.org/5128581">New
+                    York, NY</placeName></orgName> <idno type="signature">1986.50</idno></provenance>
                 <acquisition>
                   <date when="1923-09-10">10. September 1923</date>, <orgName>Antiquariat Simon
-                    Kra</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Kra, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -21296,9 +21294,6 @@
                 <textLang>
                   <lang>Italienisch</lang>
                 </textLang>
-                <msItem>
-                  <ab type="Ordnungskategorie">Zeichnung</ab>
-                </msItem>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -24390,7 +24385,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="format">ca. 7,8 x 21,0 cm</measure>
+                      <measure type="leaf">1</measure>
+                      <measure type="format">7,8 x 21,0 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -24400,8 +24396,7 @@
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig
                   1930</origin>
                 <provenance><orgName ref="http://d-nb.info/gnd/38379-X">The British Museum, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName></orgName> <idno type="signature"
-                    >1993,0403.10</idno></provenance>
+                    >London</placeName></orgName> <idno type="signature">1993,0403.10</idno></provenance>
                 <acquisition>
                   <date when="1923-05-07">7. Mai 1923</date>, Auktion 25, <orgName>Antiquariat Josef
                     Altmann</orgName>, <placeName ref="http://www.geonames.org/2950159"
@@ -24437,8 +24432,8 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
-                      <measure type="format">ca. 2,6 x 6,3 cm, mit Faden und
+                      <measure type="leaf">1</measure>
+                      <measure type="format">2,6 x 6,3 cm, mit Faden und
                   Siegel auf einem größeren Blatt befestigt</measure>
                     </extent>
                   </supportDesc>
@@ -34869,7 +34864,7 @@
                 <idno>SZDAUT.740</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift, Flämisch</summary>
                 <textLang>
                   <lang xml:lang="dut">Niederländisch</lang>
                 </textLang>
@@ -39806,7 +39801,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">1</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">22,7 x 18,0 cm</measure>
                     </extent>
                   </supportDesc>
@@ -39860,6 +39855,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="leaf">2</measure>
                       <measure type="format">18,1 x 22,0 cm, Pappband</measure>
                     </extent>
                   </supportDesc>
@@ -41700,6 +41696,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
+                      <measure type="leaf">2</measure>
                       <measure type="format">12,8 x 8,8 cm</measure>
                     </extent>
                   </supportDesc>
@@ -47068,7 +47065,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">2</measure>
+                      <measure type="leaf">1</measure>
                       <measure type="format">32,5 x 46,0 cm</measure>
                     </extent>
                   </supportDesc>
