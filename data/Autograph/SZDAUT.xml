@@ -25251,14 +25251,14 @@
                 <idno>SZDAUT.539</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Pergamenteinband mit Bindebändern</summary>
+                <summary>Eigenhändiges Manuskript</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">41</measure>
-                      <measure type="format">22,0 x 18,0 cm</measure>
+                      <measure type="format">22,0 x 18,0 cm, Pergamenteinband mit Bindebändern</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -25293,14 +25293,14 @@
                 <idno>SZDAUT.540</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift. In Aktenmappe</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">97</measure>
-                      <measure type="format">30,0 x 24,0 cm</measure>
+                      <measure type="format">30,0 x 24,0 cm, in Aktenmappe</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -25361,7 +25361,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.542">
           <titleStmt>
-            <title>Eigenhändiger Brief mit Unterschrift</title>
+            <title>Eigenhändiger Brief mit Unterschrift an Ludwig Tieck</title>
             <author>
               <persName>
                 <forename>Wilhelm</forename>
@@ -25378,9 +25378,7 @@
                 <idno>SZDAUT.542</idno>
               </msIdentifier>
               <msContents>
-                <summary>An <persName type="person"><forename>Ludwig</forename>
-                    <surname>Tieck</surname></persName>, <date when="1826-10-14">14. Oktober 1826.
-                    Weitere Daten unbekannt.</date></summary>
+                <summary><date when="1826-10-14">14. Oktober 1826. Weitere Daten unbekannt.</date></summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Brief</ab>
                 </msItem>
@@ -25485,8 +25483,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-01-30">30. Januar 1926</date>, Auktion, durch
-                    <orgName>Antiquariat Simon Kra</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>. Aus der Sammlung
+                    <orgName>Antiquariat Simon Kra, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>. Aus der Sammlung
                   Lang</acquisition>
               </history>
             </msDesc>
@@ -25529,11 +25527,11 @@
               <history>
                 <origin>Mappe aus der Sammlung Zweig. Zweig 1930. Hinterberger 18, Nr. 172.
                   Hinterberger XX, Nr. 774</origin>
-                <provenance>David H. Lowenherz, New York</provenance>
+                <provenance>David H. Lowenherz, New York</provenance><!-- als Standort auszeichnen? wahrscheinlich  noch nicht erfasst... -->
                 <acquisition>
                   <date when="1929-03-29">29. März 1929</date>, <orgName>Antiquariat Maggs
-                    Bros.</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    Bros., <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25583,8 +25581,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1910-02-01">Februar 1910</date>, <orgName>Antiquariat
-                    Charavay</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Charavay, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25633,8 +25631,8 @@
                   <idno type="signature">Zweig MS. 174</idno></provenance>
                 <acquisition>
                   <date when="1926-10-09">9. Oktober 1926</date>, <orgName>Antiquariat Rudolf
-                    Geering</orgName>, <placeName ref="http://www.geonames.org/2661604"
-                    >Basel</placeName>
+                    Geering, <placeName ref="http://www.geonames.org/2661604"
+                    >Basel</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25642,8 +25640,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.548">
           <titleStmt>
-            <title>Nachruf auf <persName type="person"><forename>Robert Edwin</forename>
-                <surname>Peary</surname></persName></title>
+            <title>Nachruf auf Robert Edwin Peary</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118586378">
                 <forename>Fridtjof</forename>
@@ -25685,8 +25682,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1929-04-25">25. April 1929</date>, <orgName>Antiquariat Henning
-                    Oppermann</orgName>, <placeName ref="http://www.geonames.org/2661604"
-                    >Basel</placeName>
+                    Oppermann, <placeName ref="http://www.geonames.org/2661604"
+                    >Basel</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25711,8 +25708,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Fragment eines eigenhändigen Manuskripts, wohl <date when="1797-01-18">18.
-                    Januar 1797</date>. Ursprünglich beiliegend Abschriften des schwer leserlichen
-                  Textes</summary>
+                    Januar 1797</date>, ursprünglich beiliegend Abschriften des schwer leserlichen
+                  Textes.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -25731,20 +25728,20 @@
                 <origin>Mappe und Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig 1930.
                   Gagnebin 1973, Seite 44. Spiegel der Welt II, Kat.-Nr. 136 und Abbildung 46.
-                  Bircher 2002, Seite 202</origin>
+                  Bircher 2002, Seite 202;
+                 (<date>1963</date> bei <orgName>Sotheby’s, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName> erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1963</date> bei <orgName>Sotheby’s</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                   </provenance>
                 <acquisition>
                   <date when="1925-04-27">27. April 1925</date>, Auktion, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName>. Aus der
-                  Sammlung des <persName type="person">
-                    <name>Earl of Crawford</name>
-                  </persName>
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>. Aus der
+                  Sammlung des Earl of Crawford
                 </acquisition>
               </history>
             </msDesc>
@@ -25768,7 +25765,7 @@
                 <idno>SZDAUT.550</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Auf Seite 10 zwei kleine Skizzen</summary>
+                <summary>Eigenhändiges Manuskript, auf Seite 10 zwei kleine Skizzen</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -25777,7 +25774,7 @@
                 <objectDesc>
                   <supportDesc>
                     <extent>
-                      <measure type="page">16 (?)</measure>
+                      <measure type="page">16(?)</measure>
                       <measure type="format">Folio</measure>
                     </extent>
                   </supportDesc>
@@ -25788,8 +25785,8 @@
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>)</origin>
                 <provenance>unbekannt</provenance>
                 <acquisition>
-                  <date>1929</date>, <orgName>Antiquariat Maggs Bros.</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>
+                  <date>1929</date>, <orgName>Antiquariat Maggs Bros., <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25839,9 +25836,9 @@
                 </provenance>
                 <acquisition>
                   <date when="1912-10-16">16. Oktober 1912</date>, <orgName>Antiquariat Paul
-                    Gottschalk</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>oder <orgName>Antiquariat C. G. Boerner</orgName>, <placeName
-                    ref="http://www.geonames.org/2879139">Leipzig</placeName>
+                    Gottschalk, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName> oder <orgName>Antiquariat C. G. Boerner, <placeName
+                    ref="http://www.geonames.org/2879139">Leipzig</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -25879,12 +25876,14 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Zweig 1930. Hinterberger 18, Nr. 175. Hinterberger XX, Nr. 775</origin>
+                <origin>Zweig 1930. Hinterberger 18, Nr. 175. Hinterberger XX, Nr. 775;
+                (<date>1972</date> als Geschenk erhalten)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im
-                  Rathaus</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName> (<date>1972</date> als Geschenk erhalten). <idno
-                    type="signature">H.I.N. 190.000</idno></provenance>
+                  Rathaus, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName> 
+                  <idno type="signature">H.I.N. 190.000</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -25952,7 +25951,7 @@
                 <idno>SZDAUT.554</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift. Mit Widmung</summary>
+                <summary>Eigenhändiges Manuskript mit Widmung und Unterschrift</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -43241,10 +43240,8 @@
                 <idno>SZDAUT.920</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lieder für Singstimme und Klavierbegleitung, Texte vom Komponisten und aus
-                    <hi style="italic">Aus meinen Tränen</hi> von <persName ref="http://d-nb.info/gnd/118548018"
-                    type="person"><forename>Heinrich</forename>
-                    <surname>Heine</surname></persName>, <date>1866</date></summary>
+                <summary>Lieder für Singstimme und Klavierbegleitung, <date>1866</date>, Texte vom Komponisten und aus
+                    <hi style="italic">Aus meinen Tränen</hi> von Heinrich Heine.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
