@@ -133,7 +133,8 @@
     </xsl:template>
     
     <!-- if no lang defined, add german-->
-    <xsl:template match="*:biblFull[*:titleStmt/*:title[not(@type)]]//*:msContents">  
+    <xsl:template match="*:biblFull[*:titleStmt/*:title[not(@type)]][not(number(substring-after(@xml:id, '.')) &gt; 812 and number(substring-after(@xml:id, '.')) &lt; 992)]//*:msContents">  
+        <xsl:text>HUHU</xsl:text>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
             <xsl:if test="not(*:textLang)">
