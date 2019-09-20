@@ -1801,7 +1801,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.37">
           <titleStmt>
-            <title>Notes des articles que je puis faire pour Mr. de Calonne</title>
+            <title><hi style="italic">Notes des articles que je puis faire pour Mr. de Calonne</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118507184">
                 <forename>Charles</forename>
@@ -25527,7 +25527,7 @@
               <history>
                 <origin>Mappe aus der Sammlung Zweig. Zweig 1930. Hinterberger 18, Nr. 172.
                   Hinterberger XX, Nr. 774</origin>
-                <provenance>David H. Lowenherz, New York</provenance><!-- als Standort auszeichnen? wahrscheinlich  noch nicht erfasst... -->
+                <provenance><orgName>David H. Lowenherz, <placeName>New York</placeName></orgName></provenance>
                 <acquisition>
                   <date when="1929-03-29">29. März 1929</date>, <orgName>Antiquariat Maggs
                     Bros., <placeName ref="http://www.geonames.org/2643743"
@@ -25994,10 +25994,8 @@
                 <idno>SZDAUT.555</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht, <hi style="italic">1884</hi>. Auf der Rückseite
-                  Echtheitsbestätigung und Datierung von <persName type="person"
-                      ><forename>Elisabeth</forename>
-                    <surname>Förster-Nietzsche</surname></persName></summary>
+                <summary>Eigenhändiges Gedicht, <hi style="italic">1884</hi>, auf der Rückseite
+                  Echtheitsbestätigung und Datierung von Elisabeth Förster-Nietzsche.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26083,19 +26081,15 @@
                 <idno>SZDAUT.557</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, Reinschrift für <persName
-                    type="person"><forename>Cosima</forename>
-                    <surname>Wagner</surname></persName>, <date when="1879-06-01">Juni 1879</date>.
-                  Brauner Leineneinband. Beiliegend Notizen <persName type="person"
-                      ><surname>Zweigs</surname></persName> zur Herkunft des Stückes aus der Familie
-                  Wagner</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift, Reinschrift für Cosima Wagner, <date when="1879-06-01">Juni 1879</date>, 
+                  beiliegend Notizen Stefan Zweigs zur Herkunft des Stückes aus der Familie Wagner.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">27</measure>
-                      <measure type="format">23,0 x 19,6 cm</measure>
+                      <measure type="format">23,0 x 19,6 cm, brauner Leineneinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -26108,10 +26102,7 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 175</idno></provenance>
                 <acquisition>
-                  <date>1931</date>, von <persName type="person">
-                    <forename>Hugo</forename>
-                    <surname>Helbing</surname>
-                  </persName>, getauscht</acquisition>
+                  <date>1931</date>, mit Hugo Helbing getauscht</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -26158,8 +26149,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1911-08-28">28. August 1911</date>, durch <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -26167,8 +26158,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.559">
           <titleStmt>
-            <title>Aus <hi style="italic">Lieder des Prinzen Vogelfrei: Rimus remedium.</hi> Oder: <hi style="italic">wie kranke
-                Dichter sich trösten. Verflogen. Dichters Berufung</hi></title>
+            <title><hi style="italic">Rimus remedium. Verflogen. Dichters Berufung</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118587943">
                 <forename>Friedrich</forename>
@@ -26185,9 +26175,8 @@
                 <idno>SZDAUT.559</idno>
               </msIdentifier>
               <msContents>
-                <summary>Drei eigenhändige Gedichte, <date>1884</date>. Mit Echtheitsbestätigung und
-                  Datierung von <persName type="person"><forename>Elisabeth</forename>
-                    <surname>Förster-Nietzsche</surname></persName></summary>
+                <summary>Drei eigenhändige Gedichte, aus <hi style="italic">Lieder des Prinzen Vogelfrei</hi>, <date>1884</date>, mit Echtheitsbestätigung und
+                  Datierung von Elisabeth Förster-Nietzsche.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26201,13 +26190,15 @@
               </physDesc>
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>)</origin>
+                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>);
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -26215,8 +26206,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.560">
           <titleStmt>
-            <title>Briefmanifest an <persName type="person"><forename>Ferdinand</forename>
-                <surname>Avenarius</surname></persName></title>
+            <title>Briefmanifest an Ferdinand Avenarius</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118587943">
                 <forename>Friedrich</forename>
@@ -26254,13 +26244,7 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1924</date>, durch <persName type="person">
-                    <forename>Wolfgang</forename>
-                    <surname>Schumann</surname>
-                  </persName> aus dem Nachlass des Briefadressaten <persName type="person">
-                    <forename>Ferdinand</forename>
-                    <surname>Avenarius</surname>
-                  </persName>
+                  <date>1924</date>, durch Wolfgang Schumann aus dem Nachlass des Briefadressaten Ferdinand Avenarius
                 </acquisition>
               </history>
             </msDesc>
@@ -26297,13 +26281,15 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Zweig 1914. Frels 1934, Nr. 38c [?]. Hinterberger XX, Nr. 784</origin>
+                <origin>Zweig 1914. Frels 1934, Nr. 38c [?]. Hinterberger XX, Nr. 784;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -26350,8 +26336,8 @@
                   <idno type="signature">Zweig MS. 176</idno></provenance>
                 <acquisition>
                   <date when="1911-05-05">5. Mai 1911</date>, Auktion, <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Aus der Sammlung Geibel-Hertenried</acquisition>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Aus der Sammlung Geibel-Hertenried</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -26390,14 +26376,14 @@
               <history>
                 <origin>Frels 1934, Nr. 38a. Hinterberger IX, Nr. 175</origin>
                 <provenance>unbekannt; zuletzt <date when="2019-03-01">März 2019</date>, Auktion 707, 
-                  <orgName>Antiquariat J. A. Stargardt</orgName>, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>, Kat.-Nr. 177</provenance>
+                  <orgName>Antiquariat J. A. Stargardt, <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>, Kat.-Nr. 177</provenance>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
         <biblFull xml:id="SZDAUT.564">
           <titleStmt>
-            <title>Fragment aus <hi style="italic">Heinrich von Ofterdingen</hi> (Ende des zweiten Teils)</title>
+            <title>Fragment aus <hi style="italic">Heinrich von Ofterdingen</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118588893">
                 <name>Novalis</name>
@@ -26413,10 +26399,8 @@
                 <idno>SZDAUT.564</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Echtheitsbestätigung von <persName type="person"
-                      ><forename>Ludwig</forename>
-                    <surname>Tieck</surname></persName> herausgeschnitten, aber im Wortlaut auf das
-                  Blatt übertragen</summary>
+                <summary>Eigenhändiges Manuskript, Ende des zweiten Teils, mit Echtheitsbestätigung von Ludwig Tieck herausgeschnitten, 
+                  aber im Wortlaut auf das Blatt übertragen.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26432,17 +26416,19 @@
                 <origin>Zweig 1914. Zweig 1930. Frels 1934, Nr. 38d [?]. Hinterberger IX, Nr. 177
                   mit Abbildung auf Tafel XXXIX. Hinterberger 18, Nr. 179. Hinterberger XX, Nr. 782.
                     <placeName ref="http://www.geonames.org/2657896">Zürich</placeName> 1996, Seite
-                  69, mit Abbildung auf Seite 72</origin>
+                  69, mit Abbildung auf Seite 72;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>
                   <date when="1911-05-05">5. Mai 1911</date>, Auktion, <orgName>Antiquariat C. G.
-                    Boerner</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>
+                    Boerner, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -26466,15 +26452,8 @@
                 <idno>SZDAUT.565</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht an seinen Bruder <persName
-                    ref="http://d-nb.info/gnd/109475860" type="person"><forename>Karl von</forename>
-                    <surname>Hardenberg</surname></persName> und ein Verzeichnis der Werke von
-                    <persName ref="http://d-nb.info/gnd/118512579" type="person"
-                      ><forename>Jacob</forename>
-                    <surname>Böhme</surname></persName>, <date>1791</date>. Mit Echtheitsbestätigung
-                  von <persName ref="http://d-nb.info/gnd/118733230" type="person"><forename>Karl
-                      Hartwig Gregor von</forename>
-                    <surname>Meusebach</surname></persName></summary>
+                <summary>Eigenhändiges Gedicht an seinen Bruder Karl von Hardenberg und ein Verzeichnis der Werke von
+                    Jacob Böhme, <date>1791</date>, mit Echtheitsbestätigung von Karl Hartwig Gregor von Meusebach.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26488,13 +26467,15 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 38b. Hinterberger IX, Nr. 176. Hinterberger 18, Nr. 178.
-                  Hinterberger XX, Nr. 781</origin>
+                  Hinterberger XX, Nr. 781;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                    </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -26502,8 +26483,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.566">
           <titleStmt>
-            <title><hi style="italic">Die Vermählung der Jahreszeiten</hi> (ursprünglich für <hi style="italic">Heinrich von
-                Ofterdingen vorgesehen</hi>)</title>
+            <title><hi style="italic">Die Vermählung der Jahreszeiten</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118588893">
                 <name>Novalis</name>
@@ -26519,7 +26499,8 @@
                 <idno>SZDAUT.566</idno>
               </msIdentifier>
               <msContents>
-                <summary>Fragment eines eigenhändigen Gedichtes</summary>
+                <summary>Fragment eines eigenhändigen Gedichts, ursprünglich für <hi style="italic">Heinrich von
+                Ofterdingen vorgesehen</hi></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26533,18 +26514,16 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 38f. Hinterberger IX, Nr. 178. Hinterberger 18, Nr. 180.
-                  Hinterberger XX, Nr. 783</origin>
+                  Hinterberger XX, Nr. 783;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
-                <acquisition>unbekannt; früher im Besitz von <persName
-                    ref="http://d-nb.info/gnd/12989432X" type="person">
-                    <forename>Ludwig</forename>
-                    <surname>Tieck</surname>
-                  </persName>
+                    </provenance>
+                <acquisition>unbekannt; früher im Besitz von Ludwig Tieck
                 </acquisition>
               </history>
             </msDesc>
@@ -26593,9 +26572,9 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1921</date>, Auktion 120 (?), <orgName>Antiquariat Karl Ernst
-                    Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>. Aus der Sammlung Künzel</acquisition>
+                  <date>1921</date>, Auktion 120(?), <orgName>Antiquariat Karl Ernst
+                    Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>. Aus der Sammlung Künzel</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -26647,9 +26626,7 @@
                 <idno>SZDAUT.569</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1930-08-02">2. August
-                    1930</date>. Ursprünglich in einem rosafarbenen Umschlag, auf dem sich eine
-                  Widmung befand</summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1930-08-02">2. August 1930</date></summary>
                 <textLang>
                   <lang>Italienisch</lang>
                 </textLang>
@@ -26659,7 +26636,8 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">16</measure>
-                      <measure type="format">21,0 x 15,5 cm</measure>
+                      <measure type="format">21,0 x 15,5 cm, ursprünglich in einem rosafarbenen Umschlag, auf dem sich eine
+                  Widmung befand</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -26696,8 +26674,7 @@
                 <idno>SZDAUT.570</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date>1912</date>. Mit
-                  Widmung</summary>
+                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift, <date>1912</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -26725,7 +26702,7 @@
           <titleStmt>
             <title
               ref="http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&amp;docId=NNL_ARCHIVE_AL003435965"
-              >Eigenhändige Postkarte mit Unterschrift</title>
+              >Eigenhändige Postkarte mit Unterschrift an Edoardo de Fonseca</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118591894">
                 <forename>Giovanni</forename>
@@ -26742,9 +26719,7 @@
                 <idno>SZDAUT.571</idno>
               </msIdentifier>
               <msContents>
-                <summary>An <persName type="person"><forename>Edoardo de</forename>
-                    <surname>Fonseca</surname></persName>. Mit einer Abbildung von Pascolis Haus.
-                  Barga, <date when="1908-07-23">23. Juli 1908</date></summary>
+                <summary>Ansichtspostkarte mit einer Abbildung von Pascolis Haus, Barga, <date when="1908-07-23">23. Juli 1908</date>.</summary>
                 <textLang>
                   <lang>Italienisch</lang>
                 </textLang>
@@ -26778,7 +26753,7 @@
           <titleStmt>
             <title><hi style="italic">Orchestrique</hi></title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/118790188">
                 <forename>Joséphin</forename>
                 <surname>Péladan</surname>
               </persName>
@@ -26818,8 +26793,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1924-02-01">Februar 1924</date>, <orgName>Antiquariat Simon
-                    Kra</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Kra, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -43225,7 +43200,7 @@
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_70"><hi style="italic">Svietik
                 Savishna</hi> und <hi style="italic">Iz slez moikh vyroslo mnogo</hi></title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/118641255">
                 <forename>Modest Petrovič</forename>
                 <surname>Mussorgskij</surname>
               </persName>
@@ -43289,15 +43264,14 @@
                 <idno>SZDAUT.921</idno>
               </msIdentifier>
               <msContents>
-                <summary>Stück für Klavierduett, <date when="1871-11-01">1. November 1871</date> –
-                    <date when="1871-11-07">7. November 1871</date>. Notizbuch</summary>
+                <summary>Stück für Klavierduett, 1. bis <date when="1871-11-07">7. November 1871</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">23</measure>
-                      <measure type="format">26,2 x 33,5 cm</measure>
+                      <measure type="format">26,2 x 33,5 cm, Notizbuch</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -43310,10 +43284,7 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 71</idno></provenance>
                 <acquisition>
-                  <date when="1925-12-01">Dezember 1925</date>, durch <persName type="person">
-                    <forename>Carl Albrecht</forename>
-                    <surname>Bernoulli</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2661604">Basel</placeName>
+                  <date when="1925-12-01">Dezember 1925</date>, durch Carl Albrecht Bernoulli, <placeName ref="http://www.geonames.org/2661604">Basel</placeName>
                 </acquisition>
               </history>
             </msDesc>
@@ -43321,8 +43292,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.922">
           <titleStmt>
-            <title><hi style="italic">Marcia Militare composta per il Regimento degli Esteri in (?) Napoli</hi>
-              [Fragment?] und kurze Skizzen zu Tanzstücken</title>
+            <title><hi style="italic">Marcia Militare composta per il Regimento degli Esteri in(?) Napoli</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/119010097">
                 <forename>Giovanni</forename>
@@ -43339,7 +43309,7 @@
                 <idno>SZDAUT.922</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1798</date></summary>
+                <summary>Fragment(?) und kurze Skizzen zu Tanzstücken, <date>1798</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -43352,17 +43322,13 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Hinterberger IX, Nr. 276</origin>
-                <provenance>unbekannt; letzter Nachweis: von <persName
-                    ref="http://d-nb.info/gnd/116898348" type="person">
-                    <forename>Heinrich</forename>
-                    <surname>Hinterberger</surname>
-                  </persName> im <date when="1936-04-01">April 1936</date> an den Prinzen <persName
-                    type="person">
-                    <name>Torre e Tasso</name>
-                  </persName> (Duino) verkauft (Abrechnung vom <date when="1936-04-17">17. April
-                    1936</date>, <orgName ref="http://d-nb.info/gnd/4472698-3">The British
-                    Library</orgName>, Loan 95.14)</provenance>
+                <origin>Hinterberger IX, Nr. 276;
+                (Abrechnung vom <date when="1936-04-17">17. April 1936</date>, <orgName ref="http://d-nb.info/gnd/4472698-3">The British
+                    Library</orgName>, Loan 95.14)
+                </origin>
+                <provenance>unbekannt; letzter Nachweis: von Heinrich Hinterberger im <date when="1936-04-01">April 1936</date> an den Prinzen Torre e Tasso (Duino) 
+                  verkauft
+                </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
