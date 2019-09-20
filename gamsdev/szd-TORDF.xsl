@@ -956,6 +956,13 @@
 			</xsl:call-template>
 		</xsl:for-each-group>
 		
+		<xsl:for-each-group select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/t:persName[@type='person']" group-by="@ref">
+			<xsl:call-template name="GetPersonlist">
+				<xsl:with-param name="Person" select="current-grouping-key()"/>
+				<xsl:with-param name="Typ" select="'szd:relationToPerson'"/>
+			</xsl:call-template>
+		</xsl:for-each-group>
+		
 		<!-- affected person -->
 		<xsl:for-each select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']/t:persName/@ref">
 			<xsl:call-template name="GetPersonlist">
@@ -984,7 +991,7 @@
 		<!-- languagecode -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
 			<szd:language>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang"/>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang)"/>
 			</szd:language>
 		</xsl:if>
 	</xsl:template>
@@ -1022,9 +1029,7 @@
 						</xsl:if>					
 				</xsl:for-each>
 			</xsl:when>
-			<xsl:otherwise>
-				<xsl:comment>error: $Person empty</xsl:comment>
-			</xsl:otherwise>
+			<xsl:otherwise/>
 		</xsl:choose>
 	</xsl:template>
 	

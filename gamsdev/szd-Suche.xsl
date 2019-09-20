@@ -387,6 +387,7 @@
             <xsl:sort select="s:sn" lang="ge"/>
             <xsl:sort select="s:sn_ed" lang="ge"/>
             <xsl:sort select="s:sn_co" lang="ge"/>
+            <xsl:sort select="s:ti" lang="ge"/>
             <!-- ////////////////////////////////// -->
             <!-- ENTRY -->
             <div class="list-group-item entry shadow-sm" id="{current-grouping-key()}">
