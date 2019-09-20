@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Project: Stefan zweig Digital
+    Company: ZIM-ACDH (Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities)
+    Author: Christopher Pollin
+    Last update: 2017
+ -->
+
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:s="http://www.w3.org/2001/sw/DataAccess/rf1/result" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    exclude-result-prefixes="#all">
+    
+    <xsl:include href="szd-static.xsl"/>
+    <xsl:include href="szd-Templates.xsl"/>
+	<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no"/>
+    
+    <!-- ///MANUSKRIPTE/// -->
+    <xsl:template name="content">
+            <section class="card">
+                <!--<script>
+                    window.onload = function () {
+                    var hash = window.location.hash.substr(1);
+                    if(hash)
+                    {
+                    location.hash = "#" + hash;
+                    window.scrollBy(0, -275);
+                    //collapse anchor selected element
+                    actual = document.getElementById(hash);
+                    var descendants = actual.querySelectorAll('.card-collapse');
+                    $(descendants).collapse() 
+                    }
+                    }
+                </script>
+                -->
+                    <!-- call getStickyNavbar in szd-Templates.xsl -->
+                    <xsl:call-template name="getStickyNavbar">
+                        <xsl:with-param name="Title">
+                            <xsl:choose>
+                                <xsl:when test="$PID = 'o:szd.werke'">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>Work</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Werke</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:when test="$PID = 'o:szd.lebensdokumente'">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>Personal Documents</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Lebensdokumente</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:when test="$PID = 'o:szd.nli'">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>NLI DATA</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>NLI DATA</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise><xsl:text>Error: check PID</xsl:text></xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:with-param>
+                        <xsl:with-param name="Category" select="//t:body/t:listBibl/t:biblFull/t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang=$locale]"/>
+                        <xsl:with-param name="PID" select="$PID"/>
+                        <xsl:with-param name="locale" select="$locale"/>
+                        <xsl:with-param name="GlossarRef" select="'Works'"/>
+                    </xsl:call-template>
+
+                    <!-- /// PAGE-CONTENT /// -->
+                    <article class="card-body" id="content">
+                        
+                        <!-- for each bibFull group by @type='Ordnungskategorie' (like 'Rede') -->
+                        <xsl:for-each-group select="//t:body/t:listBibl/t:biblFull" group-by="t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang=$locale]">
+                            <xsl:sort select="current-grouping-key()"/>
+                                <div class="col-12"  id="{translate(current-grouping-key(), ' ', '')}">
+                                <!-- ORDNUNGSKATEGORIE -->
+                                <h2 class="headerEntryList">
+                                    <xsl:value-of select="upper-case(normalize-space(current-grouping-key()))"/>
+                                </h2>
+                                    
+                                <!-- /////////////////////////////////////////// -->    
+                                <!-- for each bibFull group by @type='Einheitssachtitel' -->
+                                    <xsl:for-each-group select="current-group()"  group-by="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"> 
+                                    <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"/>
+                                    
+                                        <div class="list-group mt-5"> 
+                                            <h3 id="{concat('mt', generate-id())}">
+                                            <xsl:value-of select="current-grouping-key()"/>
+                                        </h3>
+                                        <xsl:for-each select="current-group()">
+                                            <xsl:sort select="@ana"/>   
+                                            <!-- /////////////////////////////////////////// -->
+                                            <!-- ENTRY -->
+                                            <div class="list-group-item entry db_entry shadow-sm" id="{@xml:id}">
+                                                <!-- /////////////////////////////////////////// -->
+                                                <xsl:call-template name="AddData-Databasket"/>
+                                                
+                                                <div class="card-heading bg-light row">
+                                                   <!-- creating collapse id -->
+                                                    <h4 class="card-title text-left col-9">
+                                                      	<!-- TITEL | Ordnungskategorie | Signatur  -->
+                                                      	<xsl:choose>
+                                                      	    <xsl:when test="not(t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de'] = 'Werknotizen')">
+                                                      			<a data-toggle="collapse" href="{concat('#c' , generate-id())}">
+                                                      			    <span class="arrow">
+                                                      			       <xsl:text>&#9660; </xsl:text>
+                                                      			    </span>
+                                                      			    <span class="font-italic">
+                                                      			        <!-- TITLE -->
+	                                                       			<xsl:choose>
+	                                                       			    <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale][not(@type)]) > 60">
+	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale][not(@type)], 1, 70)"/>
+	                                                       			        <xsl:text>... </xsl:text>
+	                                                       			    </xsl:when>
+	                                                       			    <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[1][not(@type)]) > 60">
+	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[1][not(@type)], 1, 70)"/>
+	                                                       			        <xsl:text>... </xsl:text>
+		                     											</xsl:when>
+	                                                       				<xsl:otherwise>
+	                                                       				    <!-- called in szd-Templates.xsl -->
+	                                                       				    <xsl:call-template name="printEnDe">
+	                                                       				        <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title[not(@type)]"/>
+	                                                       				        <xsl:with-param name="locale" select="$locale"/>
+	                                                       				    </xsl:call-template>
+		                     											</xsl:otherwise>
+	                                                       			</xsl:choose>
+                                                            	</span>
+                                                      			</a>
+                                                      	        <!-- Ordnungskategorie =  -->
+                                                      			<xsl:text> | </xsl:text>
+                                                      			<xsl:choose>
+                                                      			    <xsl:when test="t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de'] = 'Werknotizen'">
+                                                      			        <span class="font-italic">
+                                                      			            <!-- called in szd-Templates.xsl -->
+                                                      			            <xsl:call-template name="printEnDe">
+                                                      			                <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title"/>
+                                                      			                <xsl:with-param name="locale" select="$locale"/>
+                                                      			            </xsl:call-template>
+                                                      			            <xsl:text>check XSLT ;)</xsl:text>
+                                                            			</span>
+                                                            		</xsl:when>
+                                                            		<xsl:otherwise>
+                                                            			<span>
+                                                            			    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang = $locale]/t:term"/>
+                                                            			</span>
+                                                            		</xsl:otherwise>
+                                                            	</xsl:choose>
+                                                      			<!-- Signatur -->
+                                                      			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
+                                                       			  <xsl:text> | </xsl:text>
+                                                                  <span>
+                                                         				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
+                                                                  </span>
+                                                       		   </xsl:if>
+                                                      		</xsl:when>
+                                                      		<!-- WERKNOTIZEN -->
+                                                      		<xsl:otherwise>
+                                                      			<a data-toggle="collapse" href="{concat('#c' , generate-id())}">
+                                                      			    <span class="arrow">
+                                                      			        <xsl:text>&#9660; </xsl:text>
+                                                      			    </span>
+                                                          			<span class="font-italic">
+                                                                	  <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[not(@type)][@xml:lang = $locale]"/>
+                                                                	</span>
+	                                                      		</a>
+                                                      			<xsl:text> </xsl:text>
+                                                      			<!-- | Signatur -->
+	                                                       		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
+	                                                       			<xsl:text> | </xsl:text>
+	                                                       			<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
+	                                                       		</xsl:if>
+                                                      		</xsl:otherwise>
+                                                      	</xsl:choose>
+                                                    </h4>  
+                                                       	<!-- HREF SCAN -->
+                                                       	<!-- if a PID exists in the TEI make a @href to the viewer and a different col-md-alignment -->
+                                                        <xsl:variable name="currentPID" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='PID']"/>
+                                                       <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context']"/>
+                                                        <!-- scan, extern, thema button -->
+                                                        <span class="col-2">
+                                                            <xsl:if test="$currentPID">
+                                                                <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
+                                                                    <xsl:choose>
+                                                                        <xsl:when test="$locale = 'en'">
+                                                                            <xsl:attribute name="title" select="'Access digital facsimile / Access digital facsimile in Viewer'"/>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                            <xsl:attribute name="title" select="'Zum digitalen Faksimile / Zum digitalen Faksimile im Viewer'"/>
+                                                                        </xsl:otherwise>
+                                                                    </xsl:choose>
+                                                                    <!--<img src="{$Icon_manuskript}"  class="img-responsive icon_navbar" alt="Viewer" style="width:20px;"/>-->
+                                                                    <i class="far fa-images _icon"><xsl:text> </xsl:text></i>
+                                                                    <xsl:text> </xsl:text>
+                                                                </a>
+                                                            </xsl:if>
+                                                            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']">
+                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']}" target="_blank"  style="color: #631a34;">
+                                                                    <xsl:choose>
+                                                                        <xsl:when test="$locale = 'en'">
+                                                                            <xsl:attribute name="title" select="'Access external resource'"/>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                            <xsl:attribute name="title" select="'Zur externen Ressource'"/>
+                                                                        </xsl:otherwise>
+                                                                    </xsl:choose>
+                                                                    <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>
+                                                                </a>
+                                                                <xsl:text> </xsl:text>
+                                                            </xsl:if>
+                                                            <xsl:if test="$currentCollection">
+                                                                <a href="{concat('/', $currentCollection)}" target="_blank" style="color: #631a34;">
+                                                                    <xsl:choose>
+                                                                        <xsl:when test="$locale = 'en'">
+                                                                            <xsl:attribute name="title" select="'To Commentary'"/>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                            <xsl:attribute name="title" select="'Zum Thema'"/>
+                                                                        </xsl:otherwise>
+                                                                    </xsl:choose>
+                                                                    <i class="fas fa-book-reader _icon"><xsl:text> </xsl:text></i>
+                                                                </a>
+                                                                <xsl:text> </xsl:text>
+                                                            </xsl:if>
+                                                            <xsl:text> </xsl:text>
+                                                        </span>
+                                                        <!-- databasket -->
+                                                        <xsl:call-template name="getLabelDatabasket">
+                                                            <xsl:with-param name="locale" select="$locale"/>
+                                                        </xsl:call-template>
+                                                         
+                                               </div>
+                                               <!-- card which collapses -->
+                                                <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
+                                                   <!-- ///START CREATING TABLE FOR EACH BIBLFULL -->
+                                                   <!--   for each child: <titleStmt>,<seriesStmt>, <editionStmt>, <publicationStmt>, <publicationStmt>, <sourceDesc>
+   		                                                           structure the data in a table based on the TEI-structure.-->
+                                               		<!-- this template is also used for the metadata representation für Collections in szd-templates -->
+                                                   <xsl:call-template name="FillbiblFull_SZDMSK">
+                                                       <xsl:with-param name="locale" select="$locale"/>
+                                                   </xsl:call-template>
+                                           </div>
+                                       </div>
+                                    </xsl:for-each>
+                                
+                                </div>
+                            </xsl:for-each-group>
+                           </div>    
+                         </xsl:for-each-group>                  
+                     </article>
+        </section>
+    </xsl:template>
+    
+</xsl:stylesheet>
