@@ -72,6 +72,25 @@
             </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="*:title[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
+        <xsl:copy>
+            <xsl:attribute name="type">
+                <xsl:text>music</xsl:text>
+            </xsl:attribute>
+          <xsl:apply-templates/>  
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
+        <xsl:copy>
+            <xsl:attribute name="role">
+                <xsl:text>composer</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>  
+        </xsl:copy>
+    </xsl:template>
+    
+    
     <!-- adds msContents, where it does not exist, for all biblFull without type=object -->
     <xsl:template match="*:biblFull[*:titleStmt/*:title[not(@type)]]//*:msIdentifier">  
         <xsl:copy>
@@ -101,12 +120,6 @@
                <!-- <xsl:value-of select="$LANGUAGE//*:entry[*:language[@type='german'] ]"/>-->
                <!-- ToDo: add "Flämisch" to $LANGUAGE -->
                 <xsl:choose>
-                    <xsl:when test="contains(*:lang,  'Flämisch')">
-                        <xsl:attribute name="xml:lang">
-                            <xsl:value-of select="'dut'"/>
-                        </xsl:attribute>
-                        <xsl:text>Niederländisch, Flämisch</xsl:text>
-                    </xsl:when>
                     <xsl:when test="$LANGUAGE//*:entry[*:language[@type='german']/text() = $currentLang ]">
                         <xsl:attribute name="xml:lang">
                             <xsl:value-of select="$LANGUAGE//*:entry[*:language[@type='german']/text() = $currentLang ]/*:code[@type='ISO639-2'][1]"/>
