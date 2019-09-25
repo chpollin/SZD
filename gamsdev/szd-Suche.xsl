@@ -430,7 +430,7 @@
                     <!-- creating collapse id -->
                     <h4 class="card-title text-left col-12">
                         <xsl:variable name="PID" select="substring-before(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
-                        <a href="{concat('/', $PID, '/sdef:TEI/get?locale=', $locale, '#', current-grouping-key())}" target="_blank"  id="{substring-after(s:re/@uri, '#')}" onclick="scrolldown(this)">
+                    <button role="button" class="btn" href="{concat('/', $PID, '/sdef:TEI/get?locale=', $locale, '#', current-grouping-key())}" target="_blank"  id="{substring-after(s:re/@uri, '#')}" onclick="scrolldown(this)">
                          <xsl:attribute name="title">
                              <xsl:choose>
                                  <xsl:when test="$locale = 'en'">
@@ -548,7 +548,7 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:if>  
-                        </a>
+                        </button>
                         <xsl:variable name="currentPID" select="substring-after(s:pid/@uri, 'uni-graz.at/')"/>
                         <span class="col-1">
                             <xsl:if test="$currentPID">
