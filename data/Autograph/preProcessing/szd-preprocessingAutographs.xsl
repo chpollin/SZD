@@ -16,6 +16,12 @@
          * for every biblFull with an object_pers: delete <author> and copy it to the keyword/term (personensuchwort)
     -->
     
+    <!-- VARIABLES -->
+    <!-- /////////////////////////////////////////////////////////// -->    
+    <xsl:variable name="PersonList">
+        <xsl:copy-of select="document('http://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
+    </xsl:variable>
+    
     <xsl:variable name="LANGUAGE" select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
     
     <!-- copy all -->
@@ -48,7 +54,26 @@
                                                 </xsl:otherwise>
                                             </xsl:choose>
                                         </xsl:attribute>
-                                        <xsl:value-of select="normalize-space(.)"/>
+                                        <xsl:copy>
+                                            <xsl:apply-templates/>
+                                        </xsl:copy>
+                                        <!--<persName>
+                                            <xsl:choose>
+                                                <xsl:when test="contains(., ' ')">
+                                                    <surname>
+                                                        <xsl:value-of select="normalize-space(substring-after(., ' '))"/>
+                                                    </surname>
+                                                    <forename>
+                                                        <xsl:value-of select="normalize-space(substring-before(., ' '))"/>
+                                                    </forename>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <name>
+                                                        <xsl:value-of select="normalize-space(.)"/>
+                                                    </name>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </persName>-->
                                     </term>
                                  </xsl:for-each>
                                  <xsl:if test="./*:titleStmt/*:title/@type = 'object_pers'">
@@ -72,6 +97,29 @@
             </xsl:copy>
     </xsl:template>
     
+    
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- param: persName-->    
+    <xsl:template name="GetPersonList">
+        <xsl:param name="Person"/>
+        <xsl:for-each select="$Person">
+            <xsl:variable name="GND" select="string(@ref)"/>
+            <xsl:variable name="Forename" select="string(*:forename)"/>
+            <xsl:variable name="surname" select="string(*:surname)"/>
+            <xsl:choose>
+                <xsl:when test="contains(@ref, 'gnd')">
+                    <xsl:value-of select="$PersonList"/>
+                    <xsl:value-of select="$PersonList//*:person[*:persName[contains(@ref, $GND)]]/@xml:id"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$PersonList//*:person[*:persName/*:surname = $surname]/@xml:id"/>
+                    <xsl:text>aa</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+            
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template match="*:title[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
         <xsl:copy>
             <xsl:attribute name="type">
@@ -83,6 +131,11 @@
     
     <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
         <xsl:copy>
+            <xsl:attribute name="xml:id">
+                <xsl:call-template name="GetPersonList">
+                    <xsl:with-param name="Person" select="*:persName"/>
+                </xsl:call-template>
+            </xsl:attribute>
             <xsl:attribute name="role">
                 <xsl:text>composer</xsl:text>
             </xsl:attribute>
@@ -134,7 +187,6 @@
     
     <!-- if no lang defined, add german-->
     <xsl:template match="*:biblFull[*:titleStmt/*:title[not(@type)]][not(number(substring-after(@xml:id, '.')) &gt; 812 and number(substring-after(@xml:id, '.')) &lt; 992)]//*:msContents">  
-        <xsl:text>HUHU</xsl:text>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
             <xsl:if test="not(*:textLang)">
