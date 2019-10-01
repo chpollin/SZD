@@ -22,6 +22,10 @@
         <xsl:copy-of select="document('http://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
     </xsl:variable>
     
+    <xsl:variable name="StandorteList">
+        <xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
+    </xsl:variable>
+    
     <xsl:variable name="LANGUAGE" select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
     
     <!-- copy all -->
@@ -78,6 +82,16 @@
                                  </xsl:for-each>
                                  <xsl:if test="./*:titleStmt/*:title/@type = 'object_pers'">
                                      <term type="person_affected">
+                                         <xsl:if test="contains(*:titleStmt/*:author/*:persName/@ref, 'gnd')">
+                                             <xsl:attribute name="ref">
+                                                 <xsl:variable name="SZDPER">
+                                                     <xsl:call-template name="GetPersonList">
+                                                         <xsl:with-param name="Person" select="*:titleStmt/*:author/*:persName"/>
+                                                     </xsl:call-template>
+                                                 </xsl:variable>
+                                                 <xsl:value-of select="concat('#', $SZDPER)"/>
+                                             </xsl:attribute>
+                                         </xsl:if>
                                          <persName ref="{*:titleStmt/*:author/*:persName/@ref}">
                                              <surname><xsl:value-of select="*:titleStmt/*:author/*:persName/*:surname"/></surname>
                                              <forename><xsl:value-of select="*:titleStmt/*:author/*:persName/*:forename"/></forename>
@@ -97,29 +111,6 @@
             </xsl:copy>
     </xsl:template>
     
-    
-    <!-- /////////////////////////////////////////////////////////// -->
-    <!-- param: persName-->    
-    <xsl:template name="GetPersonList">
-        <xsl:param name="Person"/>
-        <xsl:for-each select="$Person">
-            <xsl:variable name="GND" select="string(@ref)"/>
-            <xsl:variable name="Forename" select="string(*:forename)"/>
-            <xsl:variable name="surname" select="string(*:surname)"/>
-            <xsl:choose>
-                <xsl:when test="contains(@ref, 'gnd')">
-                    <xsl:value-of select="$PersonList"/>
-                    <xsl:value-of select="$PersonList//*:person[*:persName[contains(@ref, $GND)]]/@xml:id"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="$PersonList//*:person[*:persName/*:surname = $surname]/@xml:id"/>
-                    <xsl:text>aa</xsl:text>
-                </xsl:otherwise>
-            </xsl:choose>
-            
-        </xsl:for-each>
-    </xsl:template>
-    
     <xsl:template match="*:title[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
         <xsl:copy>
             <xsl:attribute name="type">
@@ -129,15 +120,44 @@
         </xsl:copy>
     </xsl:template>
     
+    
+    <!-- in SZDAUT sollten ale orgName die GND-Ref bekommen. -->
+  <!--  <xsl:template match="*:orgName[contains(@ref, 'gnd')]">
+        <xsl:copy>
+            <xsl:attribute name="corresp">
+                <xsl:call-template name="GetStandortelist">
+                    <xsl:with-param name="Standort" select="@ref"/>
+                </xsl:call-template>
+            </xsl:attribute>
+        </xsl:copy>
+    </xsl:template>
+    -->
     <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 812][number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 992]">
         <xsl:copy>
-            <xsl:attribute name="xml:id">
-                <xsl:call-template name="GetPersonList">
-                    <xsl:with-param name="Person" select="*:persName"/>
-                </xsl:call-template>
+            <xsl:attribute name="ref">
+                <xsl:variable name="SZDPER_ID">
+                    <xsl:call-template name="GetPersonList">
+                        <xsl:with-param name="Person" select="*:persName"/>
+                    </xsl:call-template>
+                </xsl:variable>
+                <xsl:value-of select="concat('#', $SZDPER_ID)"/>
             </xsl:attribute>
             <xsl:attribute name="role">
                 <xsl:text>composer</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>  
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 812][not(number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 992)]">
+        <xsl:copy>
+            <xsl:attribute name="ref">
+                <xsl:variable name="SZDPER_ID">
+                    <xsl:call-template name="GetPersonList">
+                        <xsl:with-param name="Person" select="*:persName"/>
+                    </xsl:call-template>
+                </xsl:variable>
+                <xsl:value-of select="concat('#', $SZDPER_ID)"/>
             </xsl:attribute>
             <xsl:apply-templates/>  
         </xsl:copy>
@@ -200,6 +220,58 @@
     <!-- Ordnugnskategorie Brief oder Zeichnung hier nicht erlaubt -->
     <xsl:template match="*:msItem">
         
+    </xsl:template>
+    
+    
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- param: persName-->    
+    <xsl:template name="GetPersonList">
+        <xsl:param name="Person"/>
+        <xsl:for-each select="$Person">
+            <xsl:variable name="GND" select="string(@ref)"/>
+            <xsl:variable name="Forename" select="string(*:forename)"/>
+            <xsl:variable name="surname" select="string(*:surname)"/>
+            <xsl:choose>
+                <xsl:when test="contains(@ref, 'gnd')">
+                    <xsl:value-of select="$PersonList//*:person[*:persName[contains(@ref, $GND)]]/@xml:id"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$PersonList//*:person[*:persName/*:surname = $surname]/@xml:id"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- param: -->    
+    <xsl:template name="GetStandortelist">
+        <xsl:param name="Standort"/>
+        <xsl:choose>
+            <xsl:when test="$Standort = 'Privatbesitz'">
+                <xsl:if test="normalize-space($Standort/../*:settlement)">
+
+                        <xsl:variable name="String" select="concat(normalize-space($Standort),', ', normalize-space($Standort/../*:settlement))"/>
+
+                            <xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//*:org[*:orgName = $String]/@xml:id)"/>
+                        
+                    
+                </xsl:if>
+            </xsl:when>
+          <!--  <xsl:when test="$StandorteList//*:org[*:orgName = normalize-space($Standort)]/@xml:id">
+
+                        <xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//*:org[*:orgName = normalize-space($Standort)]/@xml:id)"/>
+            </xsl:when>
+            <xsl:when test="$StandorteList//*:org[*:orgName/@ref = $Standort]/@xml:id">
+
+                        <xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//*:org[*:orgName/@ref  = normalize-space($Standort)]/@xml:id)"/>
+            </xsl:when>
+            <xsl:when test="contains($Standort, '#SZDSTA')">
+
+                        <xsl:value-of select="$Standort"/>
+            </xsl:when>-->
+            <xsl:otherwise>
+                <xsl:value-of select="$Standort"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     
