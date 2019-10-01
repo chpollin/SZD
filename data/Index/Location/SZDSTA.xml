@@ -8,10 +8,12 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+          <orgName corresp="https://informationsmodellierung.uni-graz.at"
+            ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
             for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
         </authority>
         <distributor>
@@ -68,7 +70,7 @@
       </editorialDecl>
       <projectDesc>
         <ab>
-          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"></ref>
+          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"/>
         </ab>
         <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
           digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
@@ -151,6 +153,8 @@
           <orgName>Privatbesitz, Österreich</orgName>
         </org>
         <org xml:id="SZDSTA.14">
+          <orgName>Privatbesitz, Frankreich</orgName>
+          <country>Frankreich</country>
         </org>
         <org xml:id="SZDSTA.15">
           <orgName>Privatbesitz, Großbritannien</orgName>
@@ -217,7 +221,7 @@
         <org corresp="https://www.saengermuseum.de/" xml:id="SZDSTA.29">
           <orgName ref="http://d-nb.info/gnd/4646846-8">Dokumentations- und Forschungszentrum des
             Deutschen Chorwesens</orgName>
-          <country>Deutschland</country>        
+          <country>Deutschland</country>
           <settlement>Feuchtwangen</settlement>
         </org>
         <org corresp="https://www.goethe-museum.de/de" xml:id="SZDSTA.30">
@@ -231,12 +235,15 @@
           <country>USA</country>
           <settlement>New York, NY </settlement>
         </org>
-        <org corresp="http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/" xml:id="SZDSTA.33">
+        <org
+          corresp="http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/"
+          xml:id="SZDSTA.33">
           <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire</orgName>
           <country>Schweiz</country>
           <settlement>Genf </settlement>
         </org>
-        <org corresp="https://library.stanford.edu/collections/memorial-library-music" xml:id="SZDSTA.34">
+        <org corresp="https://library.stanford.edu/collections/memorial-library-music"
+          xml:id="SZDSTA.34">
           <orgName ref="http://d-nb.info/gnd/5069027-9"> Stanford University, Memorial Library of
             Music</orgName>
           <country>USA</country>
