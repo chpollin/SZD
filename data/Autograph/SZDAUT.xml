@@ -8886,7 +8886,12 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.186">
           <titleStmt>
-            <title>Heiratsvertrag mit der Unterschrift von vier französischen Königen</title>
+            <title>Heiratsvertrag mit Unterschriften aus dem französischen Königshaus</title>
+            <author>
+              <persName ref="http://d-nb.info/gnd/118662341">
+               <name>Frankreich, Königshaus</name>
+              </persName>
+            </author>
           </titleStmt>
           <publicationStmt>
             <ab>Autographen</ab>
@@ -8898,8 +8903,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Manuskript von unbekannter Schreiberhand mit Unterschriften folgender Angehöriger des 
-                  französischen Königshauses: <persName ref="http://d-nb.info/gnd/118729438" type="person"><name/>Ludwig XV., König von
-                    Frankreich</persName>, <persName ref="http://d-nb.info/gnd/118574949" type="person"><name>Ludwig XVI., König von
+                  französischen Königshauses: <persName ref="http://d-nb.info/gnd/118729438" type="person"><name>Ludwig XV., König von Frankreich</name></persName>, 
+                  <persName ref="http://d-nb.info/gnd/118574949" type="person"><name>Ludwig XVI., König von
                       Frankreich</name></persName>, <persName ref="http://d-nb.info/gnd/118780743" type="person"><name>Ludwig XVIII., König
                       von Frankreich</name></persName>, <persName ref="http://d-nb.info/gnd/118776770" type="person"><name>Karl X., König von
                       Frankreich</name></persName>, <persName ref="http://d-nb.info/gnd/118577905" type="person"><name>Marie Antoinette,
@@ -9622,8 +9627,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.202">
           <titleStmt>
-            <title><hi style="italic">Inhalt. Dichten ist ein vierdimensionales ...</hi>
-              (Lebenslauf)</title>
+            <title><hi style="italic">Inhalt. Dichten ist ein vierdimensionales ...</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/119368412">
                 <forename>Benno</forename>
@@ -9640,7 +9644,7 @@
                 <idno>SZDAUT.202</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1932</date></summary>
+                <summary>Eigenhändiges Manuskript eines Lebenslaufs, <date>1932</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -25466,7 +25470,7 @@
           <titleStmt>
             <title>Eigenhändiger Brief mit Unterschrift an Ludwig Tieck</title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/11858524X">
                 <forename>Wilhelm</forename>
                 <surname>Müller</surname>
               </persName>
@@ -25481,8 +25485,8 @@
                 <idno>SZDAUT.542</idno>
               </msIdentifier>
               <msContents>
-                <summary><date when="1826-10-14">14. Oktober 1826. Weitere Daten
-                  unbekannt.</date></summary>
+                <summary><date when="1826-10-14">14. Oktober 1826</date>. Weitere Daten
+                  unbekannt.</summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Brief</ab>
                 </msItem>
@@ -28652,9 +28656,7 @@
         <biblFull xml:id="SZDAUT.611">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_200">Stammbuch
-              des Wittenberger Studenten <persName ref="http://d-nb.info/gnd/11980123X"
-                type="person"><forename>Nicolaus</forename>
-                <surname>Reinhold</surname></persName></title>
+              des Wittenberger Studenten Nicolaus Reinhold</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118517287"><forename>Johannes</forename>
                 <surname>Bugenhagen</surname></persName>
@@ -28681,9 +28683,6 @@
               <persName ref="http://d-nb.info/gnd/118580485"><forename>Philipp</forename>
                 <surname>Melanchthon</surname></persName></author>
             <author>
-              <persName ref="http://d-nb.info/gnd/118580485"><forename>Philipp</forename>
-                <surname>Melanchthon</surname></persName></author>
-            <author>
               <persName ref="http://d-nb.info/gnd/104155582"><forename>Hieronymus</forename>
                 <surname>Noppus</surname></persName></author>
             <author>
@@ -28693,8 +28692,7 @@
               <persName ref="http://d-nb.info/gnd/10058747X"><forename>Paul von</forename>
                 <surname>Rode</surname></persName></author>
             <author>
-              <persName ref="http://d-nb.info/gnd/100256236" type="person"
-                  ><forename>Georg</forename>
+              <persName ref="http://d-nb.info/gnd/100256236"><forename>Georg</forename>
                 <surname>Rörer</surname></persName></author>
           </titleStmt>
           <publicationStmt>
@@ -28728,7 +28726,7 @@
                     <surname>Reiff</surname></persName>, <persName
                     ref="http://d-nb.info/gnd/10058747X"><forename>Paul von</forename>
                     <surname>Rode</surname></persName>, <persName
-                    ref="http://d-nb.info/gnd/100256236" type="person"><forename>Georg</forename>
+                    ref="http://d-nb.info/gnd/100256236"><forename>Georg</forename>
                     <surname>Rörer</surname></persName>. Später eingebunden ein zweiseitiger Brief
                   von Philipp Melanchthon an <persName ref="http://d-nb.info/gnd/133682668"
                       ><forename>Theodor</forename>
@@ -28763,7 +28761,7 @@
                   <date when="1931-03-01">März 1931</date>, <orgName>Antiquariat J. Halle,
                       <placeName ref="http://www.geonames.org/2867714"
                   >München</placeName></orgName>. Aus der Bibliothek der Grafen von
-                  Stolberg-Wernigerode </acquisition>
+                  Stolberg-Wernigerode</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -36088,9 +36086,9 @@
                 </provenance>
                 <acquisition>
                   <date when="1931-04-01">1. April 1931</date>, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName>
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36099,7 +36097,7 @@
         <biblFull xml:id="SZDAUT.769">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_197"
-              >Eigenhändiger Brief mit Unterschrift</title>
+              >Eigenhändiger Brief mit Unterschrift an Charles Carter</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118626620">
                 <forename>Jules</forename>
@@ -36116,8 +36114,7 @@
                 <idno>SZDAUT.769</idno>
               </msIdentifier>
               <msContents>
-                <summary>An <persName type="person"><forename>Charles</forename>
-                    <surname>Carter</surname></persName>, <date>24. April</date> o. J.</summary>
+                <summary><date>24. April</date> [ohne Jahr]</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -36148,8 +36145,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.770">
           <titleStmt>
-            <title><hi style="italic">Sous un portrait, photographié par <persName type="person"
-                    ><surname>Adam Salomon</surname></persName></hi></title>
+            <title><hi style="italic">Sous un portrait, photographié par Adam Salomon</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118768441">
                 <forename>Alfred de</forename>
@@ -36166,8 +36162,8 @@
                 <idno>SZDAUT.770</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht. Beiliegend die herausgetrennte Titelseite von Œuvres
-                  des Comte Alfred de Vigny mit dem eigenhändigen Namenszug des Autors</summary>
+                <summary>Eigenhändiges Gedicht, beiliegend die herausgetrennte Titelseite von <hi style="italic">Œuvres
+                  des Comte Alfred de Vigny</hi> mit dem eigenhändigen Namenszug des Autors.</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -36191,8 +36187,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1914</date>, durch <orgName>Antiquariat Simon Kra</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>
+                  <date>1914</date>, durch <orgName>Antiquariat Simon Kra, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36200,7 +36196,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.771">
           <titleStmt>
-            <title><hi style="italic">Le paquebot tenacit</hi> (2. Akt, 1. Szene)</title>
+            <title><hi style="italic">Le paquebot tenacit</hi></title>
             <author>
               <persName>
                 <forename>Charles</forename>
@@ -36217,8 +36213,7 @@
                 <idno>SZDAUT.771</idno>
               </msIdentifier>
               <msContents>
-                <summary>Fragment eines eigenhändigen Manuskripts mit Unterschrift. Schulheft. Mit
-                  Widmung</summary>
+                <summary>Fragment eines eigenhändigen Manuskripts mit Widmung und Unterschrift (2. Akt, 1. Szene)</summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -36228,7 +36223,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">19</measure>
-                      <measure type="format">22,0 x 17,2 cm</measure>
+                      <measure type="format">22,0 x 17,2 cm, Schulheft</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -36287,8 +36282,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1908</date>, <orgName>Antiquariat Charavay</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>
+                  <date>1908</date>, <orgName>Antiquariat Charavay, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36296,8 +36291,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.773">
           <titleStmt>
-            <title><hi style="italic">Ruf zur Fröhlichkeit. Annchen. An Seraphinens
-              Grab</hi></title>
+            <title><hi style="italic">Ruf zur Fröhlichkeit. Annchen. An Seraphinens Grab</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118768972">
                 <forename>Johann Nepomuk</forename>
@@ -36329,14 +36323,14 @@
               </physDesc>
               <history>
                 <origin>Frels 1934, Nr. 104. Hinterberger VIII, Nr. 123</origin>
+                <provenance>unbekannt</provenance>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
         <biblFull xml:id="SZDAUT.774">
           <titleStmt>
-            <title><hi style="italic">Des embellissements de la ville de Cachemire</hi> (Fragment
-              aus <hi style="italic">Le philosophie</hi>)</title>
+            <title><hi style="italic">Des embellissements de la ville de Cachemire</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118627813">
                 <name>Voltaire</name>
@@ -36352,7 +36346,7 @@
                 <idno>SZDAUT.774</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Ledereinband</summary>
+                <summary>Eigenhändiges Manuskript, Fragment aus <hi style="italic">Le philosophie</hi></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -36362,40 +36356,37 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">4</measure>
-                      <measure type="format">26,7 x 18,3 cm</measure>
+                      <measure type="format">26,7 x 18,3 cm, Ledereinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Karteikarte aus der Sammlung Zweig. Zweig 1930</origin>
-                <provenance>
-                  <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire </orgName>,
-                    <placeName ref="http://www.geonames.org/2660646">Genf</placeName>
-                </provenance>
-                <acquisition>
-                  <date when="1926-07-01">Juli 1926</date>, <orgName>Auktionshaus
-                    Sotheby’s</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName> (laut Notiz
-                  Zweigs zusammen mit einem weiteren, weitergegebenen Autograph). Beigebunden die
-                  Karteikarte aus der Sammlung Zweig. Von Stefan Zweig an <persName
-                    ref="http://d-nb.info/gnd/1052351212" type="person">
-                    <forename>Desmond</forename>
-                    <surname>Flower</surname>
-                  </persName> geschenkt, mit dessen Sammlung <date>1968</date> durch
+                <origin>Karteikarte aus der Sammlung Zweig. Zweig 1930;
+                 (laut Notiz Zweigs zusammen mit einem weiteren, weitergegebenen Autograph). Beigebunden die
+                  Karteikarte aus der Sammlung Zweig. Von Stefan Zweig an Desmond Flower geschenkt, mit dessen Sammlung <date>1968</date> durch
                     <orgName>Sotheby’s</orgName> versteigert und von <orgName>Dawson&apos;s of Pall
                     Mall</orgName> in mehreren Katalogen angeboten, dort <date>1975</date> vom
                     <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire
-                  </orgName> erworben</acquisition>
+                  </orgName> erworben.
+                </origin>
+                <provenance>
+                  <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire,
+                    <placeName ref="http://www.geonames.org/2660646">Genf</placeName></orgName>
+                </provenance>
+                <acquisition>
+                  <date when="1926-07-01">Juli 1926</date>, <orgName>Auktionshaus
+                    Sotheby’s, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                </acquisition>
               </history>
             </msDesc>
           </sourceDesc>
         </biblFull>
         <biblFull xml:id="SZDAUT.775">
           <titleStmt>
-            <title><hi style="italic">Morale</hi> (Vorarbeit für den entsprechenden Beitrag des <hi
-                style="italic">Dictionnaire philosophique portatif</hi>)</title>
+            <title><hi style="italic">Morale</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118627813">
                 <name>Voltaire</name>
@@ -36411,7 +36402,8 @@
                 <idno>SZDAUT.775</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript</summary>
+                <summary>Eigenhändiges Manuskript, Vorarbeit für den entsprechenden Beitrag des <hi
+                style="italic">Dictionnaire philosophique portatif</hi></summary>
                 <textLang>
                   <lang>Französisch</lang>
                 </textLang>
@@ -36436,8 +36428,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1921-10-01">1. Oktober 1921</date>, Bulletin 537, <orgName>Antiquariat
-                    Noël Charavay</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Noël Charavay, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36483,8 +36475,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-10-30">30. Oktober 1926</date>, Auktion 113, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36529,8 +36521,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1925</date>, Katalog, <orgName>Antiquariat Leo Liepmannssohn</orgName>,
-                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <date>1925</date>, Katalog, <orgName>Antiquariat Leo Liepmannssohn,
+                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36576,8 +36568,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1932-04-01">April 1932</date>, <orgName>Antiquariat David
-                    Salomon</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Salomon, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36623,8 +36615,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1913-11-03">3. November 1913</date>, Auktion, <orgName>Antiquariat
-                    List &amp; Franke</orgName>, <placeName ref="http://www.geonames.org/2879139"
-                    >Leipzig</placeName>. Aus der Sammlung Fischer von Röslerstamm</acquisition>
+                    List &amp; Franke, <placeName ref="http://www.geonames.org/2879139"
+                    >Leipzig</placeName></orgName>. Aus der Sammlung Fischer von Röslerstamm</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -36653,6 +36645,7 @@
               <history>
                 <origin>Frels 1934, Nr. 107.</origin>
                 <provenance>unbekannt</provenance>
+                <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
           </sourceDesc>
@@ -36676,15 +36669,15 @@
                 <idno>SZDAUT.781</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript und Karikaturzeichnung mit Unterschrift,
-                    <date>1928</date>. Halbledereinband. Mit Widmung</summary>
+                <summary>Eigenhändiges Manuskript und Karikaturzeichnung mit Widmung und Unterschrift,
+                    <date>1928</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">201</measure>
-                      <measure type="format">31,0 x 22,5 cm</measure>
+                      <measure type="format">31,0 x 22,5 cm, Halbledereinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -36783,8 +36776,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1926-10-30">30. Oktober 1926</date>, Auktion 113, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -36810,14 +36803,14 @@
                 <idno>SZDAUT.784</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Pergamenteinband mit Bindebändern</summary>
+                <summary>Eigenhändiges Manuskript</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">25</measure>
-                      <measure type="format">25,0 x 20,0 cm</measure>
+                      <measure type="format">25,0 x 20,0 cm, Pergamenteinband mit Bindebändern</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -36835,8 +36828,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.785">
           <titleStmt>
-            <title><hi style="italic">In der kleinen Stadt Rhodez</hi> (Entwürfe einer
-              Novelle)</title>
+            <title><hi style="italic">In der kleinen Stadt Rhodez</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118629387">
                 <forename>Jakob</forename>
@@ -36853,7 +36845,7 @@
                 <idno>SZDAUT.785</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript</summary>
+                <summary>Eigenhändiges Manuskript, Entwürfe zu einer Novelle</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -36895,15 +36887,15 @@
                 <idno>SZDAUT.786</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript. Ledereinband in Pappkassette
-                    (<orgName>Buchbinderei E. A. Enders</orgName>, Leipzig). Mit Widmung</summary>
+                <summary>Eigenhändiges Manuskript mit Widmung</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">114</measure>
-                      <measure type="format">27,2 x 21,4 cm</measure>
+                      <measure type="format">27,2 x 21,4 cm, Ledereinband in Pappkassette
+                    (<orgName>Buchbinderei E. A. Enders, <placeName>Leipzig</placeName></orgName>)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -36923,9 +36915,7 @@
         <biblFull xml:id="SZDAUT.787">
           <titleStmt>
             <title>Kritik an der Novelle <hi style="italic">Gregors Geheimnis. Die Geschichte einer
-                irren Seele</hi> von <persName type="person"><forename>Arthur</forename>
-                <surname>Gerber</surname></persName> (diese in Gerbers Handschrift
-              beiliegend)</title>
+                irren Seele</hi> von Arthur Gerber</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118766309">
                 <forename>Otto</forename>
@@ -36943,8 +36933,8 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript (Brief ) mit Unterschrift, <date when="1902-04-14"
-                    >14. April 1902</date>. Dazu ein von Weininger an Gerber adressierter
-                  Briefumschlag. Weitere Daten unbekannt.</summary>
+                    >14. April 1902</date>. Beiliegend ein von Weininger an Gerber adressierter
+                  Briefumschlag sowie Arthur Gerbers eigenhändiges Manuskript der Novelle, 36 Seiten Folio. Weitere Daten unbekannt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -36952,8 +36942,6 @@
                     <extent>
                       <measure type="page">7</measure>
                       <measure type="format">8°</measure>
-                      <measure type="page">36</measure>
-                      <measure type="format">2°</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37031,15 +37019,14 @@
                 <idno>SZDAUT.789</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, <date>1914</date>.
-                  Geheftet</summary>
+                <summary>Eigenhändiges Manuskript mit Unterschrift, <date>1914</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">40</measure>
-                      <measure type="format">20,5 x 16,2 cm</measure>
+                      <measure type="format">20,5 x 16,2 cm, geheftet</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37057,8 +37044,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.790">
           <titleStmt>
-            <title><hi style="italic">163. Gesang über Michael Angelo’s jüngstes
-              Gericht</hi></title>
+            <title><hi style="italic">163. Gesang über Michael Angelo’s jüngstes Gericht</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118767208">
                 <forename>Friedrich Ludwig Zacharias</forename>
@@ -37097,8 +37083,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1909-11-01">November 1909</date>, Katalog 66, <orgName>Antiquariat
-                    Richard Bertling</orgName>, <placeName ref="http://www.geonames.org/2935022"
-                    >Dresden</placeName>
+                    Richard Bertling, <placeName ref="http://www.geonames.org/2935022"
+                    >Dresden</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37123,8 +37109,7 @@
                 <idno>SZDAUT.791</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändige Gedichtenwürfe mit Unterschrift,
-                  <date>1878–1880</date></summary>
+                <summary>Eigenhändige Gedichtenwürfe mit Unterschrift, <date>1878–1880</date></summary>
                 <textLang>
                   <lang>Englisch</lang>
                 </textLang>
@@ -37134,7 +37119,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">6</measure>
-                      <measure type="format">20,2 x 13,3 cm in Kuvert</measure>
+                      <measure type="format">20,2 x 13,3 cm, in Kuvert</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37143,14 +37128,16 @@
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig 1930.
                   Crum 1977, Seite 84. <placeName ref="http://www.geonames.org/2657896"
-                    >Zürich</placeName> 1996, Seite 77, mit Abbildung auf Seite 112</origin>
+                    >Zürich</placeName> 1996, Seite 77, mit Abbildung auf Seite 112;
+                (<date>1963</date> erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1963</date> erworben)</provenance>
+                </provenance>
                 <acquisition>
-                  <date>1939</date>, <orgName>Antiquariat Gabriel Wells</orgName>, <placeName
-                    ref="http://www.geonames.org/5128581">New York</placeName>
+                  <date>1939</date>, <orgName>Antiquariat Gabriel Wells, <placeName
+                    ref="http://www.geonames.org/5128581">New York</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37199,8 +37186,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1912</date>, <orgName>Antiquariat Maggs Bros.</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>
+                  <date>1912</date>, <orgName>Antiquariat Maggs Bros., <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37285,8 +37272,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1915</date>(?), <orgName>Antiquariat Karl Ernst Henrici</orgName>,
-                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <date>1915</date>(?), <orgName>Antiquariat Karl Ernst Henrici,
+                    <placeName ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37312,8 +37299,7 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript mit Unterschrift, um <date>1890</date>, auf der
-                  gedruckten Titelseite: „Lucifer // Adolf Wilbrandt // Original-Manuscript //
-                  Sammlung Stephan [!] Zweig.“</summary>
+                  gedruckten Titelseite: „Lucifer | Adolf Wilbrandt | Original-Manuscript | Sammlung Stephan [!] Zweig.“</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -37340,7 +37326,7 @@
           <titleStmt>
             <title><hi style="italic">Impression du Soir</hi></title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/118632779">
                 <forename>Oscar</forename>
                 <surname>Wilde</surname>
               </persName>
@@ -37355,9 +37341,8 @@
                 <idno>SZDAUT.796</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift. Auf einem angeklebten Zettel eine
-                  Widmung Wildes für <persName type="person"><forename>Walter</forename>
-                    <surname>Mechay</surname></persName></summary>
+                <summary>Eigenhändiges Gedicht mit Unterschrift, auf einem angeklebten Zettel eine
+                  Widmung Wildes für Walter Mechay.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -37377,8 +37362,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>eventuell <date when="1928-12-01">Dezember 1928</date>,
-                    <orgName>Antiquariat Simon Kra</orgName>, <placeName
-                    ref="http://www.geonames.org/2988507">Paris</placeName>
+                    <orgName>Antiquariat Simon Kra, <placeName
+                    ref="http://www.geonames.org/2988507">Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37388,7 +37373,7 @@
           <titleStmt>
             <title>Fünf Aphorismen über Kunst aus <hi style="italic">Intentions</hi></title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/118632779">
                 <forename>Oscar</forename>
                 <surname>Wilde</surname>
               </persName>
@@ -37427,11 +37412,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1928-07-20">20. Juli 1928</date>, <orgName>Antiquariat Francis
-                    Edwards</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>. Aus dem Besitz von <persName type="person">
-                    <forename>Robert</forename>
-                    <surname>Ross</surname>
-                  </persName>
+                    Edwards, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>. Aus dem Besitz von Robert Ross
                 </acquisition>
               </history>
             </msDesc>
@@ -37441,7 +37423,7 @@
           <titleStmt>
             <title><hi style="italic">In the Gold Room. A Harmony</hi></title>
             <author>
-              <persName>
+              <persName ref="http://d-nb.info/gnd/118632779">
                 <forename>Oscar</forename>
                 <surname>Wilde</surname>
               </persName>
@@ -37456,8 +37438,8 @@
                 <idno>SZDAUT.798</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiger Gedichtentwurf, <date>1881</date>. Von Zweig am Rand mit
-                  Bleistift bezeichnet „Oscar Wilde“</summary>
+                <summary>Eigenhändiger Gedichtentwurf, <date>1881</date>, von Stefan Zweig am Rand mit
+                  Bleistift bezeichnet „Oscar Wilde“.</summary>
                 <textLang>
                   <lang>Englisch</lang>
                 </textLang>
@@ -37480,10 +37462,10 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 199</idno></provenance>
                 <acquisition>
-                  <date when="1931-01-07">7.1.1931</date>, <orgName>Antiquariat Puttick &amp;
-                    Simpson</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>, durch <orgName>Antiquariat Maggs Bros.</orgName>,
-                    <placeName ref="http://www.geonames.org/2643743">London</placeName>
+                  <date when="1931-01-07">7. Januar 1931</date>, <orgName>Antiquariat Puttick &amp;
+                    Simpson, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>, durch <orgName>Antiquariat Maggs Bros.,
+                    <placeName ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37508,15 +37490,14 @@
                 <idno>SZDAUT.799</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript und Typoskript mit Unterschrift. Leineneinband.
-                  Mit Widmung</summary>
+                <summary>Eigenhändiges Manuskript und Typoskript mit Widmung und Unterschrift</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">99</measure>
-                      <measure type="format">29,0 x 22,8 cm</measure>
+                      <measure type="format">29,0 x 22,8 cm, Leineneinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37553,15 +37534,15 @@
                 <idno>SZDAUT.800</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript und Typoskript, <date>1912</date>. In einem von
-                  Wildgans beschrifteten Umschlag mit Unterschrift und Widmung</summary>
+                <summary>Eigenhändiges Manuskript und Typoskript, <date>1912</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">24</measure>
-                      <measure type="format">29,0 x 22,6 cm</measure>
+                      <measure type="format">29,0 x 22,6 cm, in einem von
+                  Wildgans beschrifteten Umschlag mit Unterschrift und Widmung</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37620,8 +37601,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1924-06-17">17. Juni 1924</date>, Auktion 90, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37665,8 +37646,8 @@
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
                 </provenance>
                 <acquisition>
-                  <date>1927</date>, durch <orgName>Antiquariat David Salomon</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>
+                  <date>1927</date>, durch <orgName>Antiquariat David Salomon, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37717,8 +37698,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1929-07-17">17. Juli 1929</date>, Lagerkatalog, <orgName>Antiquariat
-                    Maggs Bros.</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    Maggs Bros., <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37743,15 +37724,14 @@
                 <idno>SZDAUT.804</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript mit Unterschrift, <date>1920</date>. Pappeinband.
-                  Von Zech bezeichnet: Exemplar 4/5. Mit Widmung</summary>
+                <summary>Eigenhändiges Manuskript mit Widmung und Unterschrift, <date>1920</date>, von Zech bezeichnet: Exemplar 4/5.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">16</measure>
-                      <measure type="format">28,5 x 20,7 cm</measure>
+                      <measure type="format">28,5 x 20,7 cm, Pappeinband</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -37788,8 +37768,8 @@
                 <idno>SZDAUT.805</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift auf Briefpapier Zechs, <date
-                    when="1920-04-30">30. April 1920</date>. Mit Widmung</summary>
+                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift auf Briefpapier Zechs, <date
+                    when="1920-04-30">30. April 1920</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -37833,8 +37813,8 @@
                 <idno>SZDAUT.806</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1936-12-29">29.
-                    Dezember 1936</date>. Mit Widmung</summary>
+                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift, <date when="1936-12-29">29.
+                    Dezember 1936</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -37879,6 +37859,9 @@
               </msIdentifier>
               <msContents>
                 <summary>Eigenhändiges Manuskript</summary>
+                <textLang>
+                  <lang xml:lang="fre">Französisch</lang>
+                </textLang>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -37900,8 +37883,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1910-10-22">22. Oktober 1910</date>, Auktion, <orgName>Antiquariat
-                    Charavay</orgName>, <placeName ref="http://www.geonames.org/2988507"
-                    >Paris</placeName>
+                    Charavay, <placeName ref="http://www.geonames.org/2988507"
+                    >Paris</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37948,8 +37931,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1914-12-01">Dezember 1914</date>, <orgName>Antiquariat Karl Ernst
-                    Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -37974,7 +37957,7 @@
                 <idno>SZDAUT.809</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Gedicht mit Unterschrift. Mit Widmung</summary>
+                <summary>Eigenhändiges Gedicht mit Widmung und Unterschrift</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -38043,8 +38026,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.811">
           <titleStmt>
-            <title><hi style="italic">Anschlag</hi> (Anweisung für die Einführung der Reformation in
-              der Stadt Bern)</title>
+            <title><hi style="italic">Anschlag</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118637533">
                 <forename>Ulrich</forename>
@@ -38061,7 +38043,8 @@
                 <idno>SZDAUT.811</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges (?) Manuskript</summary>
+                <summary>Eigenhändiges(?) Manuskript, Anweisung für die Einführung der Reformation in
+                  der Stadt Bern</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -38076,17 +38059,19 @@
               <history>
                 <origin>Karteikarte aus der Sammlung Zweig (<orgName
                     ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>). Zweig
-                  1930</origin>
+                  1930;
+                (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
+                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)
+                </origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer, <placeName
                       ref="http://www.geonames.org/6691492">Cologny-Genève</placeName></orgName>
-                    (<date>1948</date> von den <orgName>Erben Stefan Zweigs</orgName> über das
-                    <orgName>Antiquariat Heinrich Eisemann</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>, erworben)</provenance>
+                </provenance>
                 <acquisition>
                   <date when="1929-01-12">12. Januar 1929</date>, Auktion 146, <orgName>Antiquariat
-                    Karl Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Karl Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -38122,8 +38107,7 @@
               <history>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel,
-                      <placeName ref="http://www.geonames.org/281184"
-                    >Jerusalem</placeName></orgName>
+                      <placeName ref="http://www.geonames.org/281184">Jerusalem</placeName></orgName>
                   <idno type="signature">Arc. Ms. Var. 305 / 129</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
@@ -38332,13 +38316,9 @@
                 <idno>SZDAUT.817</idno>
               </msIdentifier>
               <msContents>
-                <summary>Choralvorspiele aus dem <hi style="italic">Orgelbüchlein</hi> (BWV 631a und
-                  632). Abschrift der Noten Johann Sebastian Bachs von <persName
-                    ref="http://d-nb.info/gnd/1155033477" type="person"><forename>Christian
-                      Gottlob</forename>
-                    <surname>Meißner</surname></persName>, um <date>1730</date>. Von <persName
-                    ref="http://d-nb.info/gnd/118611666" type="person"><forename>Robert</forename>
-                    <surname>Schumann</surname></persName> bezeichnet: „Handschrift von J. S. Bach.
+                <summary>BWV 631a und 632, Choralvorspiele aus dem <hi style="italic">Orgelbüchlein</hi>. Abschrift der Noten Johann Sebastian Bachs von <persName
+                    ref="http://d-nb.info/gnd/1155033477" type="person"><forename>Christian Gottlob</forename>
+                    <surname>Meißner</surname></persName>, um <date>1730</date>. Von Robert Schumann bezeichnet: „Handschrift von J. S. Bach.
                   (Von Mendelssohn’s Frau geschenkt)“.</summary>
               </msContents>
               <physDesc>
@@ -38411,8 +38391,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.819">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_4">Flötenstimme
-              aus dem <hi style="italic">Concerto</hi> in D-Dur für Flöte [und Streicher]</title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_4"><hi style="italic">Concerto</hi> in D-Dur für Flöte [und Streicher]</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118505548">
                 <forename>Wilhelm Friedemann</forename>
@@ -38429,13 +38408,8 @@
                 <idno>SZDAUT.819</idno>
               </msIdentifier>
               <msContents>
-                <summary>Zuschreibung an Wilhelm Friedemann Bach nicht gesichert, eventuell handelt
-                  es sich um eine Handschrift von <persName ref="http://d-nb.info/gnd/118541692"
-                    type="person"><forename>Johann Gottlieb</forename>
-                    <surname>Graun</surname></persName> oder <persName
-                    ref="http://d-nb.info/gnd/118541706" type="person"><forename>Carl
-                      Heinrich</forename>
-                    <surname>Graun</surname></persName>, um <date>1740</date>? Vom Vorbesitzer
+                <summary>Flötenstimme, Zuschreibung an Wilhelm Friedemann Bach nicht gesichert, eventuell handelt
+                  es sich um eine Handschrift von Johann Gottlieb Graun oder Carl Heinrich Graun, um <date>1740</date>(?). Vom Vorbesitzer
                   Friedrich Wilhelm Jähns bezeichnet: „Handschrift von Friedemann Bach, Sohn des
                   großen Joh. Sebastian Bach. Ächtheit nach Vergleichung von authentischen Originale
                   der Berliner Königl. Bibliothek von F. W. Jähns“.</summary>
@@ -39571,8 +39545,7 @@
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_212"
               type="object_pers"><hi style="italic">Quittung über die Beiträge zur Leichenbegängnies
-                des Wohlgebohrnen berühmten Tondichters sellig Herrn Ludwig von
-              Beethovens</hi></title>
+                des Wohlgebohrnen berühmten Tondichters sellig Herrn Ludwig von Beethovens</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118508288">
                 <forename>Ludwig van</forename>
@@ -40106,8 +40079,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.853">
           <titleStmt>
-            <title><hi style="italic">Il Maniatico. Sinfonia a Violini, Oboes, Corni, Viola,
-                Fagotto, Violoncello obligato e Basso</hi></title>
+            <title><hi style="italic">Il Maniatico</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/124624200">
                 <forename>Gaetano</forename>
@@ -40124,7 +40096,8 @@
                 <idno>SZDAUT.853</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1780. Weitere Daten unbekannt.</date></summary>
+                <summary><hi style="italic">Sinfonia a Violini, Oboes, Corni, Viola,
+                  Fagotto, Violoncello obligato e Basso</hi>, <date>1780</date>. Weitere Daten unbekannt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40594,7 +40567,7 @@
                 <idno>SZDAUT.863</idno>
               </msIdentifier>
               <msContents>
-                <summary>Duett (Szene 18 aus der Oper <hi style="italic">Lakmé</hi>), <date
+                <summary>Duett, Szene 18 aus der Oper <hi style="italic">Lakmé</hi>, <date
                     when="1883-08-25">25. August 1883</date></summary>
               </msContents>
               <physDesc>
@@ -40713,8 +40686,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.866">
           <titleStmt>
-            <title><hi style="italic">Neun Lieder (im Volkston)</hi> für zwei Sopranstimmen und
-              Klavierbegleitung</title>
+            <title><hi style="italic">Neun Lieder (im Volkston)</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/119057077">
                 <forename>Niels Wilhelm</forename>
@@ -40731,9 +40703,9 @@
                 <idno>SZDAUT.866</idno>
               </msIdentifier>
               <msContents>
-                <summary>Op. 9, unter anderem nach Texten von Heinrich Heine, Johann Wolfgang von
-                  Goethe, Joseph von Eichendorff, <date when="1844-04-07">7. April
-                  1844</date>.</summary>
+                <summary>Op. 9, für zwei Sopranstimmen und
+                  Klavierbegleitung, unter anderem nach Texten von Heinrich Heine, Johann Wolfgang von
+                  Goethe, Joseph von Eichendorff, <date when="1844-04-07">7. April 1844</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -40896,8 +40868,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.870">
           <titleStmt>
-            <title><hi style="italic">No. 5 „Prière“ Dieu de Miséricorde, D-Dur, für Klavier zu vier
-                Händen</hi></title>
+            <title><hi style="italic">No. 5 „Prière“ Dieu de Miséricorde</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118718312">
                 <forename>Charles</forename>
@@ -40913,6 +40884,9 @@
               <msIdentifier>
                 <idno>SZDAUT.870</idno>
               </msIdentifier>
+              <msContents>
+                <summary>Stück in D-Dur, für Klavier zu vier Händen</summary>
+              </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
@@ -40983,9 +40957,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.872">
           <titleStmt>
-            <title
-              ref="http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&amp;docId=NNL_ARCHIVE_AL003435897"
-              >Fragment eines Aufsatzes</title>
+            <title>Fragment eines Aufsatzes</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118542079">
                 <forename>André-Ernest-Modeste</forename>
@@ -41500,15 +41472,14 @@
                 <idno>SZDAUT.882</idno>
               </msIdentifier>
               <msContents>
-                <summary>Op. 36 Nr. 1, Konzert für Klavier und 12 Soloinstrumente, Notizbuch
-                  (letzter Satz unvollständig), <date>1924</date>. </summary>
+                <summary>Op. 36 Nr. 1, Konzert für Klavier und 12 Soloinstrumente, letzter Satz unvollständig, <date>1924</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">53</measure>
-                      <measure type="format">8,0 x 12,9 cm</measure>
+                      <measure type="format">8,0 x 12,9 cm, Notizbuch</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -41724,8 +41695,7 @@
         <biblFull xml:id="SZDAUT.887">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_46">Fragment
-              eines Stückes für Orchester nach <hi style="italic">Di tanti palpiti</hi> aus
-              Gioachino Rossinis Oper <hi style="italic">Tancredi</hi></title>
+              eines Stückes für Orchester nach <hi style="italic">Di tanti palpiti</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/11871600X">
                 <forename>Conradin</forename>
@@ -41741,6 +41711,9 @@
               <msIdentifier>
                 <idno>SZDAUT.887</idno>
               </msIdentifier>
+              <msContents>
+                <summary>Komposition nach Gioachino Rossinis Oper <hi style="italic">Tancredi</hi></summary>
+              </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
@@ -43810,7 +43783,7 @@
                 <idno>SZDAUT.931</idno>
               </msIdentifier>
               <msContents>
-                <summary> D 42, Arie in B-Dur für Sopranstimme und Klavierbegleitung, Text aus
+                <summary>D 42, Arie in B-Dur für Sopranstimme und Klavierbegleitung, Text aus
                   Pietro Metastasios <hi style="italic">Demofoonte</hi>, <date when="1813-09-01"
                     >September 1813</date>.</summary>
               </msContents>
@@ -44392,10 +44365,9 @@
                 <idno>SZDAUT.943</idno>
               </msIdentifier>
               <msContents>
-                <summary> SWV 482–494, Orgelbegleitung aus den Vertonungen der Psalmen 110 und 119
-                  sowie des <hi style="italic">Magnificats</hi>, Abschrift der Noten von fremder
-                  Hand, Widmung für <persName ref="http://d-nb.info/gnd/119100320"><name>Johann
-                      Georg II., Kurfürst von Sachsen</name></persName> und Anmerkungen vom
+                <summary>SWV 482–494, Orgelbegleitung aus den Vertonungen der Psalmen 110 und 119
+                  sowie des <hi style="italic">Magnificats</hi>. Abschrift der Noten von fremder
+                  Hand, Widmung für Johann Georg II., Kurfürst von Sachsen und Anmerkungen vom
                   Komponisten, <date>1671</date>.</summary>
               </msContents>
               <physDesc>
@@ -44722,7 +44694,7 @@
                   letzten Seite. Ein von Stefan Zweig erwähnter Brief der Witwe Adele Strauss an
                   Alexander Girardi befindet sich in der Handschriftensammlung der <orgName
                     ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im
-                  Rathaus</orgName>.</summary>
+                  Rathaus, <placeName>Wien</placeName></orgName>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45046,11 +45018,8 @@
                 <idno>SZDAUT.957</idno>
               </msIdentifier>
               <msContents>
-                <summary>Arie mit Bläserbegleitung, <date>1760</date>. Mit Widmung des Komponisten
-                  für <persName ref="http://d-nb.info/gnd/129826359" type="person"><name>Johanna
-                      Gabriela, Erzherzogin von Österreich</name></persName>, eine Tochter der
-                  Kaiserin <persName ref="http://d-nb.info/gnd/118577867" type="person"
-                      ><forename>Maria Theresia</forename></persName></summary>
+                <summary>Arie mit Bläserbegleitung, <date>1760</date>, mit Widmung des Komponisten
+                  für Johanna Gabriela, Erzherzogin von Österreich, eine Tochter Maria Theresias.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45065,8 +45034,8 @@
               <history>
                 <origin>Hinterberger IX, Nr. 298. Hinterberger 18, Nr. 244</origin>
                 <provenance><orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im
-                    Rathaus</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>. <idno type="signature">MH 6389/c
+                    Rathaus, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName> <idno type="signature">MH 6389/c
                   Wagenseil</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
@@ -45093,9 +45062,7 @@
                 <idno>SZDAUT.958</idno>
               </msIdentifier>
               <msContents>
-                <summary>Arie für Singstimme und Orchesterbegleitung, Text von <persName
-                    ref="http://d-nb.info/gnd/118733141" type="person"><forename>Pietro</forename>
-                    <surname>Metastasio</surname></persName>, <date>1761</date></summary>
+                <summary>Arie für Singstimme und Orchesterbegleitung, Text von Pietro Metastasio, <date>1761</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45122,11 +45089,8 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.959">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_99">Skizze einer
-              Klavierfassung der Ouvertüre in e-Moll zu <hi style="italic">König Enzio</hi> von
-                <persName ref="http://d-nb.info/gnd/100823548" type="person"
-                  ><forename>Ernst</forename>
-                <surname>Raupach</surname></persName></title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_99">Skizze der Ouvertüre zu <hi style="italic">König Enzio</hi> von
+                Ernst Raupach</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45143,7 +45107,7 @@
                 <idno>SZDAUT.959</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 24, um <date>1831</date></summary>
+                <summary>WWV 24, Klavierfassung in e-Moll, um <date>1831</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45163,8 +45127,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 99</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45190,7 +45154,7 @@
                 <idno>SZDAUT.960</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 25 Nr. 1. Partiturauszug, <date>1832</date></summary>
+                <summary>WWV 25 Nr. 1, Partiturauszug, <date>1832</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45210,8 +45174,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 100</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45257,8 +45221,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 101</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45284,7 +45248,7 @@
                 <idno>SZDAUT.962</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 29. Bearbeitung für Klavierduett, um <date>1832</date> (?)</summary>
+                <summary>WWV 29, Bearbeitung für Klavierduett, um <date>1832</date>(?)</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45304,8 +45268,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 102</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45314,9 +45278,7 @@
         <biblFull xml:id="SZDAUT.963">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_118">Entwurf
-              eines Dialogs zur Oper <hi style="italic">Die Feen</hi> WWV 32 nach Carlo
-              Goldoni</title>
-            <!-- Oliver: Wikipedia sagt: Carlo Gozzi...; Person noch auszeichnen! -->
+              eines Dialogs zur Oper <hi style="italic">Die Feen</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45333,7 +45295,7 @@
                 <idno>SZDAUT.963</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1834</date></summary>
+                <summary>WWV 32, eigenhändiges Manuskript, <date>1834</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45353,8 +45315,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 118</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45363,11 +45325,7 @@
         <biblFull xml:id="SZDAUT.964">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_103">Ouvertüre
-              und zwei Chorstücke (Nr. 3 <hi style="italic">Wir nahen mit frohen Gesängen</hi> und
-              Nr. 5 <hi style="italic">Heil! Heil!</hi>) für das Festspiel <hi style="italic">Bei
-                Antritt des neuen Jahres 1835</hi> WWV 36 von <persName type="person"
-                  ><forename>Wilhelm</forename>
-                <surname>Schmale</surname></persName></title>
+              und zwei Chorstücke zu <hi style="italic">Bei Antritt des neuen Jahres 1835</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45384,7 +45342,8 @@
                 <idno>SZDAUT.964</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1834</date></summary>
+                <summary>WWV 36, Ouvertüre, Nr. 3 <hi style="italic">Wir nahen mit frohen Gesängen</hi> und
+                  Nr. 5 <hi style="italic">Heil! Heil!</hi>, <date>1834</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45404,8 +45363,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 103</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45413,12 +45372,9 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.965">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_104">Entwürfe zur
-              Ouvertüre, den Nummern 6, 7 und 11 sowie weitere Skizzen zur komischen Oper <hi
-                style="italic">Das Liebesverbot</hi> oder <hi style="italic">Die Novize von
-                Palermo</hi> WWV 38 nach <hi style="italic">Measure for Measure</hi> von <persName
-                ref="http://d-nb.info/gnd/118613723" type="person"><forename>William</forename>
-                <surname>Shakespeare</surname></persName></title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_104">Entwürfe zur komischen Oper 
+              <hi style="italic">Das Liebesverbot</hi> oder <hi style="italic">Die Novize von Palermo</hi>
+              </title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45435,10 +45391,9 @@
                 <idno>SZDAUT.965</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1835</date>. Beiliegend eine wohlentstandene Transkription eines
-                  Teils der Texte von unbekannter Hand (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>, Zweig MS.
-                  105)</summary>
+                <summary>WWV 38, Ouvertüre, Nr. 6, 7 und 11 sowie weitere Skizzen nach <hi style="italic">Measure for Measure</hi> von William 
+                  Shakespeare, <date>1835</date>, beiliegend eine wohl um 1900 entstandene Transkription eines
+                  Teils der Texte von unbekannter Hand (<orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName>London</placeName></orgName>, Zweig MS. 105).</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45458,8 +45413,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 104</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45469,9 +45424,7 @@
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_119">Entwürfe des
               Librettos zur komischen Oper <hi style="italic">Das Liebesverbot oder Die Novize von
-                Palermo</hi> WWV 38 nach <hi style="italic">Measure for Measure</hi> von <persName
-                ref="http://d-nb.info/gnd/118613723" type="person"><forename>William</forename>
-                <surname>Shakespeare</surname></persName></title>
+                Palermo</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45488,8 +45441,8 @@
                 <idno>SZDAUT.966</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1834</date>. In Lederkassette mit
-                  Goldprägung (<orgName>Buchbinderei Bayntun</orgName>, Bath)</summary>
+                <summary>WWV 38, eigenhändiges Manuskript, <date>1834</date>, nach <hi style="italic">Measure for Measure</hi> von William 
+                  Shakespeare.</summary>
                 <textLang>
                   <lang>Deutsch</lang>
                   <lang>Französisch</lang>
@@ -45500,7 +45453,8 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">20</measure>
-                      <measure type="format">27,3 x 22,5 cm</measure>
+                      <measure type="format">27,3 x 22,5 cm, in Lederkassette mit
+                  Goldprägung (<orgName>Buchbinderei Bayntun, <placeName>Bath</placeName></orgName>)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -45513,8 +45467,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 119</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45522,12 +45476,8 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.967">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_120">Übersetzung
-              des Librettos zur komischen Oper <hi style="italic">Das Liebesverbot oder Die Novize
-                von Palermo</hi> WWV 38 nach <persName ref="http://d-nb.info/gnd/118613723"
-                type="person"><forename>William</forename>
-                <surname>Shakespeares</surname></persName>
-              <hi style="italic">Measure for Measure</hi> ins Französische</title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_120">Französische Übersetzung
+              des Librettos zur komischen Oper <hi style="italic">Das Liebesverbot oder Die Novize von Palermo</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45544,15 +45494,12 @@
                 <idno>SZDAUT.967</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1839–1840</date>. In Lederkassette mit
-                  Goldprägung (<orgName>Buchbinderei Bayntun</orgName>, Bath). Auf der letzten Seite
-                  beginnt der Deutschsprachige Entwurf eines Briefes an <persName
-                    ref="http://d-nb.info/gnd/118581945" type="person"><forename>Giacomo</forename>
-                    <surname>Meyerbeer</surname></persName>, datiert <date when="1840-01-18">18.
-                    Januar 1840</date>, der auf den ersten Seiten fortgesetzt ist</summary>
+                <summary>WWV 38, eigenhändiges Manuskript, <date>1839–1840</date>, nach William Shakespeares <hi style="italic">Measure for Measure</hi>. 
+                  Auf der letzten Seite beginnt der deutschsprachige Entwurf eines Briefes an Giacomo Meyerbeer, datiert <date when="1840-01-18">18.
+                    Januar 1840</date>, der auf den ersten Seiten fortgesetzt ist.</summary>
                 <textLang>
-                  <lang>Deutsch</lang>
                   <lang>Französisch</lang>
+                  <lang>Deutsch</lang>
                 </textLang>
               </msContents>
               <physDesc>
@@ -45560,7 +45507,8 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">60</measure>
-                      <measure type="format">34,0 x 20,5 cm</measure>
+                      <measure type="format">34,0 x 20,5 cm, in Lederkassette mit
+                        Goldprägung (<orgName>Buchbinderei Bayntun, <placeName>Bath</placeName></orgName>)</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -45573,8 +45521,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 120</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45583,9 +45531,7 @@
         <biblFull xml:id="SZDAUT.968">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_106"
-              >Klavierauszug der Ouvertüre zu <hi style="italic">Polonia</hi> WWV 39 und Skizze zum
-              Lied <hi style="italic">Les adieux de Marie Stuart</hi> WWV 61 für Singstimme und
-              Klavierbegleitung</title>
+              >Klavierauszug aus <hi style="italic">Polonia</hi> und Skizze zu <hi style="italic">Les adieux de Marie Stuart</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45602,16 +45548,13 @@
                 <idno>SZDAUT.968</idno>
               </msIdentifier>
               <msContents>
-                <summary>Text von <persName ref="http://d-nb.info/gnd/118655671" type="person"
-                      ><forename>Pierre-Jean de</forename>
-                    <surname>Béranger</surname></persName>, <date>1836</date> und <date>1840</date>.
+                <summary>WWV 39, Ouvertüre zu <hi style="italic">Polonia</hi>, <date>1836</date>. WWV 61, <hi style="italic">Les adieux de Marie Stuart</hi> für Singstimme und
+                  Klavierbegleitung, <date>1840</date>, Text von Pierre-Jean de Béranger. 
                   Beiliegend verschiedene zwischen <date>1889</date> und <date>1890</date>
                   entstandene Dokumente, darunter eine Echtheitsbestätigung des Wagner-Manuskripts
-                  von <persName ref="http://d-nb.info/gnd/117201731" type="person"
-                      ><forename>Wilhelm</forename>
-                    <surname>Tappert</surname></persName> und Abschriften eines Teils der Noten und
+                  von Wilhelm Tappert und Abschriften eines Teils der Noten und
                   Texte von unbekannter Hand (<orgName ref="http://d-nb.info/gnd/4472698-3">The
-                    British Library</orgName>, Zweig MS. 107)</summary>
+                    British Library, <placeName>London</placeName></orgName>, Zweig MS. 107).</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45631,8 +45574,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 106</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45640,10 +45583,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.969">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_121">Notizen und
-              Entwürfe für Texte und Übersetzungen der Opern <hi style="italic">Die hohe Braut</hi>
-              WWV 40, <hi style="italic">Der fliegende Holländer</hi> WWV 63 und die Übung <hi
-                style="italic">Cornet à 3 pistons</hi></title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_121">Notizen, Textentwürfe und Übersetzungen</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45660,7 +45600,8 @@
                 <idno>SZDAUT.969</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1840</date></summary>
+                <summary>Eigenhändiges Manuskript zu den Opern <hi style="italic">Die hohe Braut</hi> WWV40, 
+                  <hi style="italic">Der fliegende Holländer</hi> WWV 63 und zur Übung <hi style="italic">Cornet à 3 pistons</hi>, <date>1840</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45680,8 +45621,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 121</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45689,12 +45630,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.970">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_108">Entwurf der
-              Ouvertüre <hi style="italic">Rule Britannia</hi> in D-Dur WWV 42 und Skizzen zur
-              Bühnenmusik des Schauspiels <hi style="italic">Die letzte Heidenverschwörung</hi> in
-              Preußen WWV 41 von <persName type="person"><forename>J.</forename>
-                <surname>Singer</surname></persName></title>
-            <!--Oliver: Person J. Singer-->
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_108">Entwurf und Skizzen</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45711,7 +45647,8 @@
                 <idno>SZDAUT.970</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1836–1837</date></summary>
+                <summary>WWV 42, Entwurf der Ouvertüre <hi style="italic">Rule Britannia</hi> in D-Dur. WWV 41, Skizzen zur
+                  Bühnenmusik des Schauspiels <hi style="italic">Die letzte Heidenverschwörung in Preußen</hi> von J. Singer.<date>1836–1837</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45731,8 +45668,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 108</idno></provenance>
                 <acquisition>unbekannt; eventuell <date>1937</date>, <orgName>Antiquariat Heinrich
-                    Hinterberger</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>
+                    Hinterberger, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45778,8 +45715,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 109</idno></provenance>
                 <acquisition>
-                  <orgName>Antiquariat Bernard Quaritch</orgName>, <placeName
-                    ref="http://www.geonames.org/2643743">London</placeName>
+                  <orgName>Antiquariat Bernard Quaritch, <placeName
+                    ref="http://www.geonames.org/2643743">London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45805,7 +45742,7 @@
                 <idno>SZDAUT.972</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 49. Eigenhändiges Manuskript, <date>1841</date></summary>
+                <summary>WWV 49, eigenhändiges Manuskript, <date>1841</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45825,8 +45762,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 122</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45835,8 +45772,8 @@
         <biblFull xml:id="SZDAUT.973">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_110">Skizzen zu
-                <hi style="italic">La tombe dit à la rose</hi> WWV 56, <hi style="italic"
-                >Extase</hi> WWV 54 und <hi style="italic">Attente</hi> WWV 55</title>
+                <hi style="italic">La tombe dit à la rose</hi>, <hi style="italic"
+                >Extase</hi> und <hi style="italic">Attente</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45853,12 +45790,10 @@
                 <idno>SZDAUT.973</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lieder für Singstimme und Klavierbegleitung, Texte von <persName
-                    ref="http://d-nb.info/gnd/118554654" type="person"><forename>Victor</forename>
-                    <surname>Hugo</surname></persName>, <date>1839</date>. Beiliegend verschiedene
-                  wohlentstandene Abschriften eines Teils der Noten und Texte von unbekannter Hand
-                    (<orgName ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>,
-                  Zweig MS. 111)</summary>
+                <summary> WWV 54-56, Lieder für Singstimme und Klavierbegleitung, Texte von Victor Hugo, <date>1839</date>. Beiliegend verschiedene
+                  wohl um 1900 entstandene Abschriften eines Teils der Noten und Texte von unbekannter Hand
+                    (<orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName>London</placeName></orgName>,
+                  Zweig MS. 111).</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45878,8 +45813,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 110</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45888,10 +45823,7 @@
         <biblFull xml:id="SZDAUT.974">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_113">Arrangement
-              des Duetts <hi style="italic">Oui, dès ce moment</hi> aus <persName
-                ref="http://d-nb.info/gnd/118832433" type="person"><forename>Fromental</forename>
-                <surname>Halévys</surname></persName> Oper <hi style="italic">Le Guitarrero</hi> für
-              Flöte, zwei Violinstimmen, Viola und Violoncello</title>
+              des Duetts <hi style="italic">Oui, dès ce moment</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45908,7 +45840,8 @@
                 <idno>SZDAUT.974</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 62D, <date>1841</date></summary>
+                <summary>WWV 62D, <date>1841</date>, aus Fromental Halévys Oper <hi style="italic">Le Guitarrero</hi> für
+                  Flöte, zwei Violinstimmen, Viola und Violoncello.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45928,8 +45861,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 113</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45937,9 +45870,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.975">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_116">Umarbeitung
-              des Endes der Ouvertüre zur Oper <hi style="italic">Der fliegende Holländer</hi> WWV
-              63</title>
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_116">Ouvertüre zur Oper <hi style="italic">Der fliegende Holländer</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -45956,7 +45887,7 @@
                 <idno>SZDAUT.975</idno>
               </msIdentifier>
               <msContents>
-                <summary><date>1860</date></summary>
+                <summary>WWV 63, Umarbeitung des Endes, <date>1860</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -45977,8 +45908,8 @@
                   <idno type="signature">Zweig MS. 116</idno></provenance>
                 <acquisition>
                   <date when="1932-12-09">9. Dezember 1932</date>, Auktion 63, <orgName>Antiquariat
-                    Leo Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Leo Liepmannssohn, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -45986,8 +45917,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.976">
           <titleStmt>
-            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_117">Umarbeitung
-              des Endes des 3. Aktes der Oper <hi style="italic">Der fliegende
+            <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_117"><hi style="italic">Der fliegende
               Holländer</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
@@ -46005,7 +45935,7 @@
                 <idno>SZDAUT.976</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 63, <date>1860</date></summary>
+                <summary>WWV 63, Umarbeitung des Endes des 3. Aktes, <date>1860</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46026,8 +45956,8 @@
                   <idno type="signature">Zweig MS. 117</idno></provenance>
                 <acquisition>
                   <date when="1932-12-09">9. Dezember 1932</date>, Auktion 63, <orgName>Antiquariat
-                    Leo Liepmannssohn</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Leo Liepmannssohn, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46036,13 +45966,7 @@
         <biblFull xml:id="SZDAUT.977">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_112">Skizzen zu
-                <hi style="italic">Descendons gaiement la courtille</hi> als Einlage für das
-              Lustspiel <hi style="italic">La descente de la courtille</hi> von <persName
-                ref="http://d-nb.info/gnd/116244895" type="person"><forename>Théophile
-                  Marion</forename>
-                <surname>Dumersan</surname></persName> und <persName
-                ref="http://d-nb.info/gnd/128644982" type="person"><forename>Charles</forename>
-                <surname>Dupeuty</surname></persName></title>
+                <hi style="italic">Descendons gaiement la courtille</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -46059,15 +45983,11 @@
                 <idno>SZDAUT.977</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 65 (?). Beiliegend Korrespondenz des Buchhändlers <persName
-                    type="person"><forename>Albert</forename>
-                    <surname>Cohn</surname></persName> zu diesem Manuskript aus den Jahren
-                    <date>1886</date> und <date>1887</date>. Darunter eine Postkarte mit einer
-                  Echtheitsbestätigung des Wagner-Manuskripts von <persName
-                    ref="http://d-nb.info/gnd/117201731" type="person"><forename>Wilhelm</forename>
-                    <surname>Tappert</surname></persName> (<orgName
-                    ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>, Zweig MS.
-                  114)</summary>
+                <summary>WWV 65, Einlage zum Lustspiel <hi style="italic">La descente de la courtille</hi> von Théophile
+                  Marion Dumersan und Charles Dupeuty, <date>1841</date>(?). Beiliegend Korrespondenz des Buchhändlers Albert
+                   Cohn zu diesem Manuskript aus den Jahren <date>1886</date> und <date>1887</date>, darunter eine Postkarte mit einer
+                  Echtheitsbestätigung des Wagner-Manuskripts von Wilhelm Tappert (<orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName>London</placeName></orgName>, 
+                  Zweig MS. 114).</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46087,8 +46007,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 112</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46113,10 +46033,9 @@
                 <idno>SZDAUT.978</idno>
               </msIdentifier>
               <msContents>
-                <summary>WWV 86c. Zweiter Tag aus dem Bühnenfestspiel <hi style="italic">Der Ring
-                    des Nibelungen</hi>. Abschrift von Teilen des Textbuches, Szenen zwischen
-                  Siegfried und Mime aus dem 1. Akt. Eigenhändiges Manuskript, um
-                  <date>1855</date></summary>
+                <summary>WWV 86c, eigenhändiges Manuskript, zweiter Tag aus dem Bühnenfestspiel <hi style="italic">Der Ring
+                    des Nibelungen</hi>, Abschrift von Teilen des Textbuchs, Szenen zwischen
+                  Siegfried und Mime aus dem 1. Akt, um <date>1855</date>.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46139,7 +46058,7 @@
         <biblFull xml:id="SZDAUT.979">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_123"
-              >Eigenhändiger Brief mit Unterschrift</title>
+              >Eigenhändiger Brief mit Unterschrift an Carl Friedrich Peters (Bureau de Musique)</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -46156,10 +46075,7 @@
                 <idno>SZDAUT.979</idno>
               </msIdentifier>
               <msContents>
-                <summary>An <persName ref="http://d-nb.info/gnd/116108002" type="person"
-                      ><forename>Carl Friedrich</forename>
-                    <surname>Peters</surname></persName> (Bureau de Musique). Leipzig, <date
-                    when="1831-08-06">6. August 1831</date></summary>
+                <summary>Leipzig, <date when="1831-08-06">6. August 1831</date></summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Brief</ab>
                 </msItem>
@@ -46183,8 +46099,8 @@
                   <idno type="signature">Zweig MS. 123</idno></provenance>
                 <acquisition>
                   <date when="1939-10-01">Oktober 1939</date>, durch <orgName>Antiquariat Heinrich
-                    Eisemann</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    Eisemann, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46193,7 +46109,7 @@
         <biblFull xml:id="SZDAUT.980">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_124"
-              >Eigenhändiger Brief mit Unterschrift</title>
+              >Eigenhändiger Brief mit Unterschrift an Baron Ferdinand von Biedenfeld</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -46210,10 +46126,7 @@
                 <idno>SZDAUT.980</idno>
               </msIdentifier>
               <msContents>
-                <summary>An Baron <persName ref="http://d-nb.info/gnd/116163127" type="person"
-                      ><forename>Ferdinand von</forename>
-                    <surname>Biedenfeld</surname></persName>, <date when="1849-01-17">17. Januar
-                    1849</date></summary>
+                <summary><date when="1849-01-17">17. Januar 1849</date></summary>
                 <msItem>
                   <ab type="Ordnungskategorie">Brief</ab>
                 </msItem>
@@ -46236,8 +46149,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 124</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46246,7 +46159,7 @@
         <biblFull xml:id="SZDAUT.981">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_125">Eigenhändige
-              Entwürfe für 14 Briefe</title>
+              Entwürfe für 14 Briefe an verschiedene Empfänger</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -46263,7 +46176,7 @@
                 <idno>SZDAUT.981</idno>
               </msIdentifier>
               <msContents>
-                <summary>An verschiedene Empfänger, <date>1839–1842</date></summary>
+                <summary><date>1839–1842</date></summary>
                 <textLang>
                   <lang>Französisch</lang>
                   <lang>Deutsch</lang>
@@ -46274,8 +46187,7 @@
                   <supportDesc>
                     <extent>
                       <measure type="page">19</measure>
-                      <measure type="format">unterschiedliche Formate, größtes 27,1 x 21,0
-                        cm</measure>
+                      <measure type="format">unterschiedliche Formate, 27,1 x 21,0 cm</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -46288,8 +46200,8 @@
                       ref="http://www.geonames.org/2643743">London</placeName></orgName>
                   <idno type="signature">Zweig MS. 125</idno></provenance>
                 <acquisition>
-                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger</orgName>,
-                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName>
+                  <date>1937</date>, <orgName>Antiquariat Heinrich Hinterberger,
+                    <placeName ref="http://www.geonames.org/2761369">Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46297,9 +46209,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.982">
           <titleStmt>
-            <title>Festrede auf <persName ref="http://d-nb.info/gnd/11940818X" type="person"
-                  ><forename>Friedrich</forename>
-                <surname>Schneider</surname></persName></title>
+            <title>Festrede auf Friedrich Schneider</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118594117">
                 <forename>Richard</forename>
@@ -46316,14 +46226,13 @@
                 <idno>SZDAUT.982</idno>
               </msIdentifier>
               <msContents>
-                <summary>Eigenhändiges Manuskript, <date>1846</date></summary>
+                <summary>Eigenhändiges Manuskript, <date>1846</date>. Weitere Daten unbekannt.</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
                     <extent>
                       <measure type="page">3</measure>
-                      <measure type="format">Maße unbekannt</measure>
                     </extent>
                   </supportDesc>
                 </objectDesc>
@@ -46356,12 +46265,8 @@
                 <idno>SZDAUT.983</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied für Singstimme und Gitarrenbegleitung aus der Musik zu <persName
-                    ref="http://d-nb.info/gnd/117443018" type="person"><forename>Pius
-                      Alexander</forename>
-                    <surname>Wolffs</surname></persName> Schauspiel <hi style="italic">Preciosa</hi>
-                  und Teil eines unbekannten Liedes (<hi style="italic">Sängers Abendlied</hi>?).
-                  Abschriften von fremder Hand</summary>
+                <summary>Abschriften von fremder Hand des Liedes für Singstimme und Gitarrenbegleitung aus der Musik zu Pius Alexander Wolffs Schauspiel <hi style="italic">Preciosa</hi>
+                  und eines unbekannten Liedes (<hi style="italic">Sängers Abendlied</hi>?).</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46383,8 +46288,8 @@
                   <idno type="signature">Zweig MS. 126</idno></provenance>
                 <acquisition>
                   <date when="1939-05-31">31. Mai 1939</date>, <orgName>Antiquariat Heinrich
-                    Eisemann</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>
+                    Eisemann, <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46393,8 +46298,7 @@
         <biblFull xml:id="SZDAUT.984">
           <titleStmt>
             <title ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_127">Skizzen zu
-              Teilen der Ouvertüre und des dritten Aktes der Oper <hi style="italic"
-              >Oberon</hi></title>
+              Teilen der Ouvertüre und des dritten Aktes der Oper <hi style="italic">Oberon</hi></title>
             <author>
               <persName ref="http://d-nb.info/gnd/118629662">
                 <forename>Carl Maria von</forename>
@@ -46432,11 +46336,8 @@
                   <idno type="signature">Zweig MS. 127</idno></provenance>
                 <acquisition>
                   <date when="1924-04-01">April 1924</date>, <orgName>Antiquariat Maggs
-                    Bros.</orgName>, <placeName ref="http://www.geonames.org/2643743"
-                    >London</placeName>. Aus der Sammlung <persName type="person">
-                    <forename>Ignaz</forename>
-                    <surname>Moscheles</surname>
-                  </persName>
+                    Bros., <placeName ref="http://www.geonames.org/2643743"
+                    >London</placeName></orgName>. Aus der Sammlung Ignaz Moscheles
                 </acquisition>
               </history>
             </msDesc>
@@ -46462,9 +46363,7 @@
                 <idno>SZDAUT.985</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied für Sopran mit Klavierbegleitung, Text von <persName
-                    ref="http://d-nb.info/gnd/118583107" type="person"><forename>Eduard</forename>
-                    <surname>Mörike</surname></persName>, <date when="1888-10-08">8. Oktober
+                <summary>Lied für Sopran mit Klavierbegleitung, Text von Eduard Mörike, <date when="1888-10-08">8. Oktober
                     1888</date></summary>
               </msContents>
               <physDesc>
@@ -46481,8 +46380,8 @@
                 <origin>Hinterberger IX, Nr. 301. Hinterberger 18, Nr. 252</origin>
                 <provenance>
                   <orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im
-                  Rathaus</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>. <idno type="signature">MH 6391/c Wolf</idno></provenance>
+                  Rathaus, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName> <idno type="signature">MH 6391/c Wolf</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
@@ -46508,9 +46407,7 @@
                 <idno>SZDAUT.986</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied für Singstimme und Klavierbegleitung, Text von <persName
-                    ref="http://d-nb.info/gnd/118583107" type="person"><forename>Eduard</forename>
-                    <surname>Mörike</surname></persName>, <date>1888</date></summary>
+                <summary>Lied für Singstimme und Klavierbegleitung, Text von Eduard Mörike, <date>1888</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46531,8 +46428,8 @@
                   <idno type="signature">Zweig MS. 130</idno></provenance>
                 <acquisition>
                   <date when="1928-12-18">18. Dezember 1928</date>, Katalog 48, <orgName>Antiquariat
-                    V. A. Heck</orgName>, <placeName ref="http://www.geonames.org/2761369"
-                    >Wien</placeName>
+                    V. A. Heck, <placeName ref="http://www.geonames.org/2761369"
+                    >Wien</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46557,10 +46454,7 @@
                 <idno>SZDAUT.987</idno>
               </msIdentifier>
               <msContents>
-                <summary>Lied für Bass-Solo und Männerchor, Text von <persName type="person"
-                      ><surname>Pfund</surname></persName>, <date when="1809-12-27">27. Dezember
-                    1809</date></summary>
-                <!-- Oliver: Person Pfund -->
+                <summary>Lied für Bass-Solo und Männerchor, <date when="1809-12-27">27. Dezember 1809</date></summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46581,12 +46475,8 @@
                 </provenance>
                 <acquisition>eventuell <date when="1927-09-29">29. September 1927</date>, gemeinsame
                   Auktion, <orgName>Antiquariat Karl Ernst Henrici</orgName> und
-                    <orgName>Antiquariat Leo Liepmannssohn</orgName>, <placeName
-                    ref="http://www.geonames.org/2950159">Berlin</placeName>. Aus der Sammlung
-                    <persName type="person">
-                    <forename>Wilhelm</forename>
-                    <surname>Heyer</surname>
-                  </persName>
+                    <orgName>Antiquariat Leo Liepmannssohn, <placeName
+                    ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>. Aus der Sammlung Wilhelm Heyer
                 </acquisition>
               </history>
             </msDesc>
@@ -46594,8 +46484,8 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.988">
           <titleStmt>
-            <title><hi style="italic">Ps[alm] 180 nach Lobwasser („Lobet Gott im Himmelreich“)</hi>
-              für vierstimmigen Chor</title>
+            <title><hi style="italic">Ps[alm] 180 nach Lobwasser</hi>
+            </title>
             <author>
               <persName ref="http://d-nb.info/gnd/118636421">
                 <forename>Carl Friedrich</forename>
@@ -46611,6 +46501,9 @@
               <msIdentifier>
                 <idno>SZDAUT.988</idno>
               </msIdentifier>
+              <msContents>
+                <summary>Vierstimmiger Chor „Lobet Gott im Himmelreich“</summary>
+              </msContents>
               <physDesc>
                 <objectDesc>
                   <supportDesc>
@@ -46622,15 +46515,12 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Hinterberger IX, Nr. 303</origin>
-                <provenance>ab <date>1938</date> Sammlung <persName
-                    ref="http://d-nb.info/gnd/11649591X" type="person">
-                    <forename>Karl</forename>
-                    <surname>Geigy-Hagenbach</surname>
-                  </persName>, <placeName ref="http://www.geonames.org/2661604">Basel</placeName>.
-                  Seit <date>1960</date>
-                  <orgName ref="http://d-nb.info/gnd/2023655-4">Universitätsbibliothek Basel,
-                      <placeName>Basel</placeName></orgName>. <idno type="signature">Aut.-Slg.
+                <origin>Hinterberger IX, Nr. 303;
+                ab <date>1938</date> Sammlung Karl Geigy-Hagenbach, <placeName ref="http://www.geonames.org/2661604">Basel</placeName>.
+                  Seit <date>1960</date> Universitätsbibliothek Basel
+                </origin>
+                <provenance><orgName ref="http://d-nb.info/gnd/2023655-4">Universitätsbibliothek Basel,
+                      <placeName>Basel</placeName></orgName> <idno type="signature">Aut.-Slg.
                     Geigy-Hgb. 2643</idno></provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
@@ -46639,9 +46529,7 @@
         </biblFull>
         <biblFull xml:id="SZDAUT.989">
           <titleStmt>
-            <title>Entwurf zu einem Aufsatz über <persName ref="http://d-nb.info/gnd/118539841"
-                type="person"><forename>Christoph Willibald</forename>
-                <surname>Gluck</surname></persName></title>
+            <title>Entwurf zu einem Aufsatz über Christoph Willibald Gluck</title>
             <author>
               <persName ref="http://d-nb.info/gnd/118636421">
                 <forename>Carl Friedrich</forename>
@@ -46678,8 +46566,8 @@
                 </provenance>
                 <acquisition>
                   <date when="1924-01-01">Januar 1924</date>, Auktion 85, <orgName>Antiquariat Karl
-                    Ernst Henrici</orgName>, <placeName ref="http://www.geonames.org/2950159"
-                    >Berlin</placeName>
+                    Ernst Henrici, <placeName ref="http://www.geonames.org/2950159"
+                    >Berlin</placeName></orgName>
                 </acquisition>
               </history>
             </msDesc>
@@ -46748,11 +46636,8 @@
                 <idno>SZDAUT.991</idno>
               </msIdentifier>
               <msContents>
-                <summary> Ariette für Sopran und Streichinstrumente. Mit Echtheitsbestätigung von
-                    <persName ref="http://d-nb.info/gnd/115457356" type="person"
-                      ><forename>Stefano</forename>
-                    <surname>Ronchetti-Monteviti</surname></persName>, Direktor des Konservatoriums
-                  in Mailand</summary>
+                <summary>Ariette für Sopran und Streichinstrumente, mit Echtheitsbestätigung von
+                    Stefano Ronchetti-Monteviti, Direktor des Konservatoriums in Mailand</summary>
               </msContents>
               <physDesc>
                 <objectDesc>
@@ -46765,17 +46650,12 @@
                 </objectDesc>
               </physDesc>
               <history>
-                <origin>Hinterberger IX, Nr. 304</origin>
-                <provenance>unbekannt; letzter Nachweis: von <persName
-                    ref="http://d-nb.info/gnd/116898348" type="person">
-                    <forename>Heinrich</forename>
-                    <surname>Hinterberger</surname>
-                  </persName> im <date when="1936-04-01">April 1936</date> an den Prinzen <persName
-                    type="person">
-                    <surname>Torre e Tasso</surname>
-                  </persName> (Duino) verkauft (Abrechnung vom <date when="1936-04-17">17. April
-                    1936</date>, <orgName ref="http://d-nb.info/gnd/4472698-3">The British
-                    Library</orgName>, Loan 95.14)</provenance>
+                <origin>Hinterberger IX, Nr. 304;
+                (Abrechnung vom <date when="1936-04-17">17. April 1936</date>, <orgName ref="http://d-nb.info/gnd/4472698-3">The British
+                    Library</orgName>, Loan 95.14)
+                </origin>
+                <provenance>unbekannt; letzter Nachweis: von Heinrich Hinterberger im <date when="1936-04-01">April 1936</date> an den Prinzen Torre e Tasso (Duino) verkauft
+                </provenance>
                 <acquisition>unbekannt</acquisition>
               </history>
             </msDesc>
