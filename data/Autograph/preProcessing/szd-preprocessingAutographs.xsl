@@ -48,17 +48,15 @@
                              <keywords>
                                  <xsl:for-each select=".//*:persName[@type='person']">
                                     <term type="person">
-                                        <xsl:attribute name="ref">
-                                            <xsl:choose>
-                                                <xsl:when test="@ref">
-                                                    <xsl:value-of select="@ref"/>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text>ToDo</xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:attribute>
                                         <xsl:copy>
+                                            <xsl:attribute name="ref">
+                                                <xsl:choose>
+                                                    <xsl:when test="@ref">
+                                                        <xsl:value-of select="@ref"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise/>
+                                                </xsl:choose>
+                                            </xsl:attribute>
                                             <xsl:apply-templates/>
                                         </xsl:copy>
                                         <!--<persName>

@@ -56,23 +56,23 @@
         <article id="content">
             <div class="row">
                 <div class="col-3 d-none d-sm-block">
-                <!-- called in Templates.xsl -->
-                <xsl:choose>
-                    <xsl:when test="$RESULT_SET[1]">
-                        <xsl:variable name="Filter_search">
-                        <xsl:for-each-group select="//s:re/@uri" group-by="substring-before(., '#')">
-                            <xsl:value-of select="current-grouping-key()"/>
-                        </xsl:for-each-group>
-                        </xsl:variable>
-                        <xsl:call-template name="filter">
-                          <xsl:with-param name="Filter_search" select="$Filter_search"/>
-                        </xsl:call-template>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:text> </xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </div>
+                    <!-- called in Templates.xsl -->
+                    <xsl:choose>
+                        <xsl:when test="$RESULT_SET[1]">
+                            <xsl:variable name="Filter_search">
+                            <xsl:for-each-group select="//s:re/@uri" group-by="substring-before(., '#')">
+                                <xsl:value-of select="current-grouping-key()"/>
+                            </xsl:for-each-group>
+                            </xsl:variable>
+                            <xsl:call-template name="filter">
+                              <xsl:with-param name="Filter_search" select="$Filter_search"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text> </xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </div>
             <!-- CONTENT -->
             <!-- //////////////////////////////////////////////////////////////// -->
             <div class="col">
@@ -124,71 +124,9 @@
                                     </span>
                                 </xsl:otherwise>
                             </xsl:choose>
-                        
                         <span class="col-8">
                             <xsl:value-of select="$RESULT_SET[1]/s:query"/>
                         </span>
-                          <!--<xsl:choose>
-                              <!-\- if its glossar search -\->
-                              <xsl:when test="$RESULT_SET[1]/s:prefLabel">
-                                  <xsl:if test="$RESULT_SET[1]/s:prefLabel_broader">
-                                      <label cclass="font-weight-bold text-uppercase">
-                                          <xsl:value-of select="$RESULT_SET[1]/s:prefLabel_broader"/>
-                                      </label>
-                                      <span>
-                                          <xsl:text>: </xsl:text>
-                                      </span>
-                                  </xsl:if>
-                                  <span>
-                                    <xsl:value-of select="$RESULT_SET[1]/s:prefLabel"/>
-                                  </span>
-                              </xsl:when>
-                              <!-\- if its person search -\->
-                              <xsl:when test="contains($RESULT_SET[1]/s:query, 'SZDPER')">
-                                  <xsl:choose>
-                                      <xsl:when test="count($RESULT_SET/s:role) = 1">
-                                          <label class="font-weight-bold text-uppercase">
-                                            <xsl:value-of select="$RESULT_SET[1]/s:role"/><xsl:text>: </xsl:text>
-                                          </label>
-                                      </xsl:when>
-                                      <xsl:otherwise>
-                                          <span>
-                                            <i18n:text>persons</i18n:text>
-                                            <label><xsl:text>:</xsl:text></label>
-                                              <xsl:text> </xsl:text>
-                                              <xsl:value-of select="$RESULT_SET[1]/s:sn"/><xsl:if test="$RESULT_SET[1]/s:fn"><xsl:text>, </xsl:text><xsl:value-of select="$RESULT_SET[1]/s:fn"/></xsl:if>
-                                          </span>
-                                       </xsl:otherwise>
-                                       </xsl:choose>
-                                  <xsl:text> </xsl:text>
-                                  <xsl:value-of select="$RESULT_SET[1]/s:sn_query"/>
-                                  <xsl:if test="$RESULT_SET[1]/s:fn_query">
-                                      <span>
-                                        <xsl:text>, </xsl:text><xsl:value-of select="$RESULT_SET[1]/s:fn_query"/>
-                                      </span>
-                                  </xsl:if>
-                              </xsl:when>
-                              <!-\- if its location search -\->
-                              <xsl:when test="contains($RESULT_SET[1]/s:query, 'SZDSTA')">
-                                  <label class="font-weight-bold text-uppercase">
-                                      <i18n:text>locations</i18n:text></label>
-                                  <span>
-                                      <xsl:text> : </xsl:text>
-                                      <xsl:value-of select="$RESULT_SET[1]/s:query"/>
-                                  </span>
-                              </xsl:when>
-                              <xsl:otherwise>
-                                  <label class="font-weight-bold text-uppercase">
-                                      <i18n:text>searchquery_szd</i18n:text>
-                                  </label>
-                                  <span>
-                                    <xsl:text>: </xsl:text>
-                                  </span>
-                                  <span id="query">
-                                      <xsl:value-of select="$RESULT_SET[1]/s:query"/>
-                                  </span>
-                              </xsl:otherwise>
-                          </xsl:choose>-->
                     </div>
                     <!-- //////////////////////////////////////////////////////////////// -->
                     <!-- Results -->
@@ -218,7 +156,6 @@
                                     <xsl:for-each select="current-group()">
                                         
                                         <xsl:variable name="SZDPER" select="substring-after(s:re/@uri, '#')"/>
-                                        
                                         <!-- OUTPUT OF FOUND PERSON -->
                                         <h3>
                                             <i18n:text>subjects</i18n:text>
@@ -269,36 +206,38 @@
                                 <h3 class="text-uppercase">
                                     <i18n:text>biography</i18n:text>
                                 </h3>
-                                <ul class="list-group list-group-flush">
-                                    <xsl:for-each-group select="$RESULT_SET" group-by="s:re/@uri[contains(.,'o:szd.lebenskalender#SZDBIO')]">
+                                <ul>
+                                    <xsl:for-each-group select="$RESULT_SET[s:locale_h = $locale]" group-by="s:re/@uri[contains(.,'o:szd.lebenskalender#SZDBIO')]">
                                         <xsl:sort select="s:d"/>
-                                        <xsl:for-each select="current-group()">
+                                        <xsl:variable name="SZDBIO" select="substring-after(s:re/@uri, '#')"/>
                                             <!-- OUTPUT OF FOUND PERSON -->
-                                            <li class="list-group-item">
-                                                    <xsl:variable name="SZDBIO" select="substring-after(s:re/@uri, '#')"/>
-                                                    <a  href="{concat('/o:szd.lebenskalender/sdef:TEI/get?locale=', $locale, '#', $SZDBIO)}" target="_blank" onclick="scrolldown(this)">
+                                            <li>
+                                                <a class="small" href="{concat('/o:szd.lebenskalender/sdef:TEI/get?locale=', $locale, '#', $SZDBIO)}" target="_blank" onclick="scrolldown(this)">
+                                                    <xsl:attribute name="title">
                                                         <xsl:choose>
-                                                            <xsl:when test="$locale = 'en'">
-                                                                <xsl:attribute name="title"><xsl:text>Go to Biography</xsl:text></xsl:attribute>
+                                                            <xsl:when test="$locale='en'">
+                                                                <xsl:text>Go to Biography</xsl:text>
                                                             </xsl:when>
                                                             <xsl:otherwise>
-                                                                <xsl:attribute name="title"><xsl:text>Zur Biographie</xsl:text></xsl:attribute>
+                                                                <xsl:text>Zur Biographie</xsl:text>
                                                             </xsl:otherwise>
                                                         </xsl:choose>
-                                                        <xsl:choose>
-                                                            <xsl:when test="string-length(s:co)>50">
-                                                                <strong><xsl:value-of select="normalize-space(s:h[1])"/></strong><xsl:text>: </xsl:text>
-                                                                <xsl:value-of select="normalize-space(substring(s:co,1, 50))"/><xsl:text>... </xsl:text>
-                                                            </xsl:when>
-                                                            <xsl:otherwise>
-                                                                <strong><xsl:value-of select="normalize-space(s:h)"/></strong><xsl:text>: </xsl:text>
-                                                                <xsl:value-of select="normalize-space(s:co)"/>
-                                                            </xsl:otherwise>
-                                                        </xsl:choose>
-                                                    </a>
-                                                 
+                                                    </xsl:attribute>
+                                                    <span class="font-weight-bold">
+                                                        <xsl:value-of select="s:h"/>
+                                                    </span>
+                                                    <xsl:text>: </xsl:text>
+                                                    <xsl:choose>
+                                                        <xsl:when test="string-length(s:co)>50">
+                                                            <xsl:value-of select="substring(s:co,1,50)"/>
+                                                            <xsl:text>... </xsl:text>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="s:co"/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </a>
                                             </li>
-                                        </xsl:for-each>
                                     </xsl:for-each-group>
                                 </ul>
                             </div>
@@ -333,7 +272,7 @@
                                         <h3 class="text-uppercase"><i18n:text>library_szd</i18n:text></h3>
                                        <xsl:call-template name="SearchListGroup">
                                            <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
-                                           <xsl:with-param name="Current-Group" select="current-group()[s:lang]"/>
+                                           <xsl:with-param name="Current-Group" select="current-group()[s:locale]"/>
                                        </xsl:call-template>
                                     </div>
                                 </xsl:when>
@@ -382,67 +321,83 @@
         <xsl:param name="Current-Grouping-Key"/>
         <xsl:param name="Current-Group"/>
         <!-- to filter all entries with the same @uri, as SPARQL returns same URI's but with other variables: Titel, Originaltitel -->
-        <xsl:for-each-group select="$Current-Group" group-by="substring-after(s:re/@uri, '#')">  
+        <xsl:for-each-group select="$Current-Group[s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap]" group-by="substring-after(s:re/@uri, '#')">  
            <!-- <xsl:sort select="s:rank" data-type="number"/>-->
-            <xsl:sort select="s:sn" lang="ge"/>
-            <xsl:sort select="s:sn_ed" lang="ge"/>
-            <xsl:sort select="s:sn_co" lang="ge"/>
-            <xsl:sort select="s:ti" lang="ge"/>
+            <xsl:sort select="s:sn" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sn_ed" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sn_co" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sn_pi" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sn_ap" data-type="text" lang="ger"/>
+            <xsl:call-template name="createEntery"/>
             <!-- ////////////////////////////////// -->
             <!-- ENTRY -->
-            <div class="list-group-item entry shadow-sm" id="{current-grouping-key()}">
-                <div class="card-heading bg-light row">
-                    <!-- databasket -->
-                    <xsl:attribute name="data-check">
-                        <xsl:text>unchecked</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="data-uri">
-                        <xsl:value-of select="current-grouping-key()"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="data-author">
-                         <xsl:choose>
-                              <xsl:when test="s:sn">
-                                      <xsl:value-of select="concat(s:sn, ' ', s:fn)"/>
-                              </xsl:when>
-                              <xsl:otherwise>
-                                  <xsl:value-of select="'o.V.'"/>
-                              </xsl:otherwise>
-                         </xsl:choose>
-                    </xsl:attribute>
-                    <xsl:if test="s:ti">
-                        <xsl:attribute name="data-title">
-                            <xsl:value-of select="s:ti"/>
-                        </xsl:attribute>
-                    </xsl:if>
-                    <xsl:attribute name="data-date">
-                        <xsl:choose>
-                        <xsl:when test="s:d">
-                            <xsl:value-of select="s:d"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="'o.D.'"/>
-                        </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:attribute>
-                    
-                    <!--  -->
-                    <!-- ///PANEL-TITIEL/// -->
-                    <!-- creating collapse id -->
-                    <h4 class="card-title text-left col-12">
-                        <xsl:variable name="PID" select="substring-before(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
-                    <button role="button" class="btn" href="{concat('/', $PID, '/sdef:TEI/get?locale=', $locale, '#', current-grouping-key())}" target="_blank"  id="{substring-after(s:re/@uri, '#')}" onclick="scrolldown(this)">
-                         <xsl:attribute name="title">
-                             <xsl:choose>
-                                 <xsl:when test="$locale = 'en'">
-                                     <xsl:text>To the Resource</xsl:text>
-                                 </xsl:when>
-                                 <xsl:otherwise>
-                                     <xsl:text>Zur Ressource</xsl:text>
-                                 </xsl:otherwise>
-                             </xsl:choose> 
-                         </xsl:attribute>
-                         <!-- AUTOR -->
-                            <xsl:choose> 
+        </xsl:for-each-group>
+        <xsl:if test="$Current-Group[not(s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap)]">
+            <h3>
+                <i18n:text>without_author</i18n:text>
+            </h3>
+            <xsl:for-each-group select="$Current-Group[not(s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap)]" group-by="substring-after(s:re/@uri, '#')">  
+                <!-- <xsl:sort select="s:rank" data-type="number"/>-->
+                <xsl:sort select="s:ti" data-type="text" lang="ger"/>
+                <xsl:call-template name="createEntery"/>
+                <!-- ////////////////////////////////// -->
+                <!-- ENTRY -->
+            </xsl:for-each-group>
+        </xsl:if>
+        
+        
+    </xsl:template>
+    
+    <xsl:template name="AddData-Databasket_Search">
+        <xsl:attribute name="data-check">
+            <xsl:text>unchecked</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="data-uri">
+            <xsl:value-of select="current-grouping-key()"/>
+        </xsl:attribute>
+        <xsl:attribute name="data-author">
+            <xsl:choose>
+                <xsl:when test="s:sn">
+                    <xsl:value-of select="concat(s:sn, ' ', s:fn)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'o.V.'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>
+        <xsl:if test="s:ti">
+            <xsl:attribute name="data-title">
+                <xsl:value-of select="s:ti"/>
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:attribute name="data-date">
+            <xsl:choose>
+                <xsl:when test="s:d">
+                    <xsl:value-of select="s:d"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'o.D.'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>
+    </xsl:template>
+    
+    <xsl:template name="createEntery">
+        <div class="list-group-item entry db_entry shadow-sm">
+            <div class="bg-light row">
+                <!-- DATABASKET -->
+                <xsl:call-template name="AddData-Databasket_Search"/>
+                
+                <!-- ///PANEL-TITIEL/// -->
+                <!-- creating collapse id -->
+                <h4 class="card-title text-left col-10 small">
+                    <xsl:variable name="PID" select="substring-before(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
+                    <a data-toggle="collapse" href="{concat('#c' , generate-id())}">
+                        <span class="arrow">
+                            <xsl:text>&#9660; </xsl:text>
+                        </span>
+                        <!-- AUTOR -->
+                        <xsl:choose> 
                             <xsl:when test="s:sn">
                                 <strong>
                                     <xsl:value-of select="s:sn[1]"/>
@@ -453,135 +408,275 @@
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
-                                <xsl:when test="s:sn_ed">
-                                    <strong>
-                                        <xsl:value-of select="s:sn_ed"/>
-                                        <xsl:if test="s:fn_ed"><xsl:text>, </xsl:text>
-                                            <xsl:value-of select="s:fn_ed[1]"/>
-                                        </xsl:if>
-                                        <xsl:choose>
-                                            <xsl:when test="$locale = 'en'">
-                                                <xsl:text> (Editor) </xsl:text>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:text> (Herausgeber/in) </xsl:text>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
-                                    </strong>
-                                    <xsl:text>: </xsl:text>
-                                </xsl:when>
-                                <xsl:when test="s:sn_co">
-                                    <strong>
-                                        <xsl:value-of select="s:sn_co"/>
-                                        <xsl:if test="s:fn_co">
-                                            <xsl:text>, </xsl:text>
-                                            <xsl:value-of select="s:fn_co"/>
-                                        </xsl:if>
-                                        <xsl:text> (</xsl:text><i18n:text>composer</i18n:text><xsl:text>)</xsl:text>
-                                    </strong>
-                                    <xsl:text>: </xsl:text>
-                                </xsl:when>
-                                <!-- partie involved -->
-                                <xsl:when test="s:sn_pi">
-                                    <strong>
-                                        <xsl:value-of select="s:sn_pi"/>
-                                        <xsl:if test="s:fn_pi"><xsl:text>, </xsl:text>
-                                            <xsl:value-of select="s:fn_pi"/>
-                                        </xsl:if>
-                                        <xsl:text> (</xsl:text><i18n:text>partiesinvolved</i18n:text><xsl:text>)</xsl:text>
-                                    </strong>
-                                    <xsl:text>: </xsl:text>
-                                </xsl:when>
-                                <!-- affected person -->
-                                <xsl:when test="s:sn_ap">
-                                    <strong>
-                                        <xsl:value-of select="s:sn_ap"/>
-                                        <xsl:if test="s:fn_ap"><xsl:text>, </xsl:text>
-                                            <xsl:value-of select="s:fn_ap"/>
-                                        </xsl:if>
-                                        <xsl:text> (</xsl:text><i18n:text>person_affected</i18n:text><xsl:text>)</xsl:text>
-                                    </strong>
-                                    <xsl:text>: </xsl:text>
-                                </xsl:when>
-                                <xsl:otherwise><strong>o. V.:</strong><xsl:text> </xsl:text></xsl:otherwise>
-                            </xsl:choose>
-                            <!-- TITEL, OBJECTTYP, SIGNATURE,  -->
-                            <!-- current-group() because of multiple titles with langauge tag -->
-                            <xsl:for-each select="current-group()">
-                                <span class="font-italic">
+                            <xsl:when test="s:sn_ed">
+                                <strong>
+                                    <xsl:value-of select="s:sn_ed"/>
+                                    <xsl:if test="s:fn_ed"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fn_ed[1]"/>
+                                    </xsl:if>
                                     <xsl:choose>
                                         <xsl:when test="$locale = 'en'">
-                                            <xsl:choose>
-                                                <xsl:when test="s:ti[following-sibling::s:lang[text()='en']]">
-                                                    <xsl:value-of select="s:ti[following-sibling::s:lang[text()='en']]"/>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:value-of select="s:ti"/>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:when>
-                                        <xsl:when test="s:ti[following-sibling::s:lang[text()='de']]">
-                                            <xsl:value-of select="s:ti[following-sibling::s:lang[text()='de']]"/>
+                                            <xsl:text> (Editor) </xsl:text>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:value-of select="s:ti"/>
+                                            <xsl:text> (Herausgeber/in) </xsl:text>
                                         </xsl:otherwise>
                                     </xsl:choose>
-                                </span>
-                            </xsl:for-each>
-                            <xsl:if test="s:ot">
-                                <xsl:text> | </xsl:text>
-                                <xsl:value-of select="s:ot"/>
-                            </xsl:if>
-                              <xsl:if test="s:sig">
-                                 <xsl:text> | </xsl:text>
-                                <xsl:value-of select="s:sig"/> 
-                            </xsl:if>
-                            <xsl:if test="s:d">
-                                <xsl:text> | </xsl:text>
-                                <xsl:choose>
-                                    <xsl:when test="s:d castable as xs:date">
-                                        <xsl:value-of select="year-from-date(s:d)"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="s:d"/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>  
-                        </button>
-                        <xsl:variable name="currentPID" select="substring-after(s:pid/@uri, 'uni-graz.at/')"/>
-                        <span class="col-1">
-                            <xsl:if test="$currentPID">
-                            <a  href="{concat('/archive/objects/', $currentPID, '/methods/sdef:IIIF/getMirador')}">
-                               <img src="{$Icon_viewer}"  class="img-responsive icon_navbar" alt="Viewer"/>
-                            </a>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                        </span>
-                        <!--<label class="col-1 float-right">
-                            <input onClick="getData(this.id)" type="checkbox" id="{concat('cb', substring-after(s:re/@uri, '#'))}" class="checkbox"/>
-                        </label>-->
-                        <!--<label class="col-1 float-right">
-                            <input  onClick="getData(this.id)"  id="{concat('cb', @xml:id)}" type="checkbox" class="checkbox">
+                                </strong>
+                                <xsl:text>: </xsl:text>
+                            </xsl:when>
+                            <xsl:when test="s:sn_co">
+                                <strong>
+                                    <xsl:value-of select="s:sn_co"/>
+                                    <xsl:if test="s:fn_co">
+                                        <xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fn_co"/>
+                                    </xsl:if>
+                                    <xsl:text> (</xsl:text><i18n:text>composer</i18n:text><xsl:text>)</xsl:text>
+                                </strong>
+                                <xsl:text>: </xsl:text>
+                            </xsl:when>
+                            <!-- partie involved -->
+                            <xsl:when test="s:sn_pi">
+                                <strong>
+                                    <xsl:value-of select="s:sn_pi"/>
+                                    <xsl:if test="s:fn_pi"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fn_pi"/>
+                                    </xsl:if>
+                                    <xsl:text> (</xsl:text><i18n:text>partiesinvolved</i18n:text><xsl:text>)</xsl:text>
+                                </strong>
+                                <xsl:text>: </xsl:text>
+                            </xsl:when>
+                            <!-- affected person -->
+                            <xsl:when test="s:sn_ap">
+                                <strong>
+                                    <xsl:value-of select="s:sn_ap"/>
+                                    <xsl:if test="s:fn_ap"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fn_ap"/>
+                                    </xsl:if>
+                                    <xsl:text> (</xsl:text><i18n:text>person_affected</i18n:text><xsl:text>)</xsl:text>
+                                </strong>
+                                <xsl:text>: </xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <strong>o. V.:</strong><xsl:text> </xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <!-- TITEL, OBJECTTYP, SIGNATURE,  -->
+                        <!-- current-group() because of multiple titles with langauge tag -->
+                        <xsl:for-each select="current-group()">
+                            <span class="font-italic">
                                 <xsl:choose>
                                     <xsl:when test="$locale = 'en'">
-                                        <xsl:attribute name="title" select="'Save to data cart'"/>
+                                        <xsl:choose>
+                                            <xsl:when test="s:ti[following-sibling::s:locale[text()='en']]">
+                                                <xsl:value-of select="s:ti[following-sibling::s:locale[text()='en']]"/>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:value-of select="s:ti"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:when>
+                                    <xsl:when test="s:ti[following-sibling::s:locale[text()='de']]">
+                                        <xsl:value-of select="s:ti[following-sibling::s:locale[text()='de']]"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:attribute name="title" select="'Im Datenkorb ablegen'"/>
+                                        <xsl:value-of select="s:ti"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
-                            </input>
-                        </label> -->
-                    </h4>
-                    
-                   <!-- <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
-                        <xsl:text>hallo</xsl:text>
-                    </div>-->
+                            </span>
+                        </xsl:for-each>
+                        <xsl:if test="s:ot">
+                            <xsl:text> | </xsl:text>
+                            <xsl:value-of select="s:ot"/>
+                        </xsl:if>
+                        <xsl:if test="s:sig">
+                            <xsl:text> | </xsl:text>
+                            <xsl:value-of select="s:sig"/> 
+                        </xsl:if>
+                        <xsl:if test="s:d">
+                            <xsl:text> | </xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="s:d castable as xs:date">
+                                    <xsl:value-of select="year-from-date(s:d)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="s:d"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:if>  
+                    </a>
+                </h4>
+                    <xsl:variable name="currentPID" select="substring-after(s:pid/@uri, 'uni-graz.at/')"/>
+                    <span class="col-1">
+                        <xsl:if test="$currentPID">
+                            <a  href="{concat('/archive/objects/', $currentPID, '/methods/sdef:IIIF/getMirador')}">
+                                <img src="{$Icon_viewer}"  class="img-responsive icon_navbar" alt="Viewer"/>
+                            </a>
+                        </xsl:if>
+                        <xsl:text> </xsl:text>
+                    </span>
+                    <xsl:call-template name="getLabelDatabasket">
+                        <xsl:with-param name="locale" select="$locale"/>
+                    </xsl:call-template>
+            </div>
+            <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <tbody>
+                            <!-- ///Verfasser/// -->
+                            <xsl:if test="s:sn">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
+                                        <i18n:text>author_szd</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:call-template name="PersonSearch">
+                                            <xsl:with-param name="locale"/>
+                                        </xsl:call-template>
+                                        <xsl:text> </xsl:text>
+                                        <img src="{$Icon_suche_template}" class="img-responsive icon" alt="Person"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Composer/// -->
+                            <xsl:if test="s:sn_co">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
+                                        <i18n:text>composer</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:sn_co"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Betroffene Person/// -->
+                            <xsl:if test="s:sn_ap">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>person_affected</i18n:text>                            
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:sn_ap"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Beteilgite Person/// -->
+                            <xsl:if test="s:sn_pi">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>partiesinvolved</i18n:text>                            
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:sn_pi"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///TITEL/// -->
+                            <tr class="row">
+                                <td class="col-3">
+                                    <i18n:text>Titel</i18n:text>
+                                </td>
+                                <td class="col-9">
+                                    <a href="{substring-after(s:re/@uri, 'gams.uni-graz.at')}" target="_blank"  id="{substring-after(s:re/@uri, '#')}">
+                                        <xsl:attribute name="title">
+                                            <xsl:choose>
+                                                <xsl:when test="$locale = 'en'">
+                                                    <xsl:text>To the Resource</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>Zur Ressource</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose> 
+                                        </xsl:attribute>
+                                        <xsl:value-of select="s:ti"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <xsl:if test="s:co">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>description</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:co"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test="s:la">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>language</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:la"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///UMFANG/// -->
+                            <xsl:if test="s:ex">
+                                <tr class="group row">
+                                    <td class="col-3">
+                                        <i18n:text>physicaldescription</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:ex"/>
+                                    </td>
+                                </tr>	                                        	 		
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- //////Acquired = Ewerb -->
+                            <xsl:if test="s:ac">
+                                <tr class="group row">
+                                    <td class="col-3">
+                                        <i18n:text>acquired</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:ac"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Provenienz/// -->
+                            <xsl:if test="s:pr">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>provenance</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:pr"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Standort/// -->
+                            <xsl:if test="s:lo">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>currentlocation</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:lo/@uri"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </xsl:for-each-group>
+        </div>
+        
     </xsl:template>
+
+  
     
    
     

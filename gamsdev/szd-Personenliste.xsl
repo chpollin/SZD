@@ -50,7 +50,7 @@
                             <span id="{current-grouping-key()}"><xsl:text> </xsl:text></span>
                             <div class="list-group-item shadow-sm" id="{@xml:id}">
                                 <div class="row">
-                                    <h4 class="text-left col-md-8">
+                                    <h4 class="text-left col-8">
                                         <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
                                         <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;'))"/>
                                         <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
@@ -70,7 +70,7 @@
                                         </xsl:if>
                                     </a>
                                     </h4>
-                                    <span class="col-md">
+                                    <span class="col">
                                         <xsl:text> </xsl:text>
                                         <!-- if GND @ref -->
                                         <xsl:if test="contains(t:persName[not(@type)]/@ref, 'd-nb.info/gnd')">

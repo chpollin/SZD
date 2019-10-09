@@ -39,8 +39,9 @@
 		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
 	</xsl:variable>
 	
+	
 	<xsl:variable name="Languages">
-		<xsl:copy-of select="document('https://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
+		<xsl:copy-of select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
 	</xsl:variable>
     
     <!-- ///////////////////////////////// -->
@@ -125,14 +126,14 @@
 				<xsl:call-template name="FulltextSearchData"/>
 				<!-- DATE -->
 				<xsl:choose>
-					<xsl:when test="t:head/t:ab/t:date/@from">
+					<xsl:when test="t:head/t:span/t:date/@from">
 						<szd:when>
-							<xsl:value-of select="t:head/t:ab/t:date[1]/@from"/>
+							<xsl:value-of select="t:head/t:span[1]/t:date/@from"/>
 						</szd:when>
 					</xsl:when>
 					<xsl:otherwise>
 						<szd:when>
-							<xsl:value-of select="t:head/t:ab/t:date[1]/@when"/>
+							<xsl:value-of select="t:head/t:span[1]/t:date[1]/@when"/>
 						</szd:when>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -680,11 +681,22 @@
 			</szd:dateOfPublication>
 		</xsl:if>
 
-		<!-- ///OBJECT/// -->
+		<!-- ///language/// -->
 		<!-- gnd#languageCode -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
-			<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
-				<szd:language><xsl:value-of select="normalize-space(.)"/></szd:language>
+			<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang">
+				<szd:language>
+					<xsl:choose>
+						<xsl:when test="@xml:lang">
+							<xsl:call-template name="languageCode">
+								<xsl:with-param name="Current" select="@xml:lang"/>
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="normalize-space(.)"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</szd:language>
 			</xsl:for-each>
 		</xsl:if>
 		
@@ -916,11 +928,35 @@
 			<szd:term rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Date"/>
 		</xsl:if>
 		
+
+		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang">
+			<szd:langauge>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang)"/>
+			</szd:langauge>
+		</xsl:for-each>
 		
 		
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
+			<szd:extent>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent)"/>
+			</szd:extent>
+		</xsl:if>
 		
+		<!-- languagecode -->
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
+			<szd:provenance>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance)"/>
+			</szd:provenance>
+		</xsl:if>
 		
+		<!-- languagecode -->
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
+			<szd:acquired>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"/>
+			</szd:acquired>
+		</xsl:if>
 		
+
 	</xsl:template>
 	
 	
@@ -928,6 +964,7 @@
 	<!-- ///RDF_autograph/// -->
 	<xsl:template name="RDF_autograph">
 		
+		<!-- szd:title -->
 		<xsl:if test=".//t:title[1]">
 			<szd:title>	
 				<xsl:value-of select="normalize-space(.//t:title[1])"/>
@@ -935,13 +972,27 @@
 		</xsl:if>
 		
 		<!-- szd:author -->
-		<xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]/t:persName/@ref">
-			<xsl:call-template name="GetPersonlist">
-				<xsl:with-param name="Person" select="."/>
-				<xsl:with-param name="Typ" select="'szd:author'"/>
-			</xsl:call-template>
+		<xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]/t:persName">
+			<xsl:choose>
+				<xsl:when test="@ref">
+					<xsl:call-template name="GetPersonlist">
+						<xsl:with-param name="Person" select="@ref"/>
+						<xsl:with-param name="Typ" select="'szd:author'"/>
+					</xsl:call-template>
+				</xsl:when>
+				<!-- author has a @ref -->
+				<xsl:when test="../@ref">
+					<xsl:call-template name="GetPersonlist">
+						<xsl:with-param name="Person" select="../@ref"/>
+						<xsl:with-param name="Typ" select="'szd:author'"/>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:comment>Error: no GND or SZDPER found</xsl:comment>
+				</xsl:otherwise>
+			</xsl:choose>
+			
 		</xsl:for-each>
-		
 		
 		<!-- szd:composer -->
 		<xsl:call-template name="GetPersonlist">
@@ -952,7 +1003,7 @@
 		<xsl:for-each-group select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person']" group-by="@ref">
 			<xsl:call-template name="GetPersonlist">
 				<xsl:with-param name="Person" select="current-grouping-key()"/>
-				<xsl:with-param name="Typ" select="'szd:relationToPerson'"/>
+				<xsl:with-param name="Typ" select="'szd:partyInvolved'"/>
 			</xsl:call-template>
 		</xsl:for-each-group>
 		
@@ -963,6 +1014,8 @@
 			</xsl:call-template>
 		</xsl:for-each-group>
 		
+		
+		
 		<!-- affected person -->
 		<xsl:for-each select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']/t:persName/@ref">
 			<xsl:call-template name="GetPersonlist">
@@ -971,14 +1024,13 @@
 			</xsl:call-template>
 		</xsl:for-each>
 		
-		
 		<!-- summary -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary">
 			<szd:content>
 				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary)"/>
 			</szd:content>
 		</xsl:if>
-		
+
 		<!-- szd:location -->
 		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
 			<xsl:call-template name="GetStandortelist">
@@ -986,13 +1038,33 @@
 				<xsl:with-param name="Typ" select="'szd:location'"/>
 			</xsl:call-template>
 		</xsl:for-each>
-		
-					
+			
 		<!-- languagecode -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
 			<szd:language>
 				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang)"/>
 			</szd:language>
+		</xsl:if>
+		
+		<!-- extent -->
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
+			<szd:extent>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent)"/>
+			</szd:extent>
+		</xsl:if>
+		
+		<!-- languagecode -->
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
+			<szd:provenance>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance)"/>
+			</szd:provenance>
+		</xsl:if>
+		
+		<!-- languagecode -->
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
+			<szd:acquired>
+				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"/>
+			</szd:acquired>
 		</xsl:if>
 	</xsl:template>
 	
@@ -1018,7 +1090,9 @@
 					</xsl:variable>
 					<xsl:variable name="SZDPER" select="$Personlist//t:person[t:persName[contains(@ref, $String)]]/@xml:id"/>
 					<!-- check if there is a GND-Ref, otherwise all empty gnd would be listed -->
-						<xsl:if test="substring-after($String, 'd-nb.info/gnd/')">
+					<xsl:choose>
+						<!-- if @ref is a GND-ID -->
+						<xsl:when test="substring-after($String, 'd-nb.info/gnd/')">
 							<xsl:for-each select="$SZDPER">
 								<xsl:element name="{$Typ}">
 									<xsl:attribute name="rdf:resource">
@@ -1026,7 +1100,19 @@
 									</xsl:attribute>
 								</xsl:element>
 							</xsl:for-each>
-						</xsl:if>					
+						</xsl:when>
+						<!-- if @ef = SZDPER -->
+						<xsl:when test="contains($String, '#SZDPER.')">
+							<xsl:element name="{$Typ}">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.personen', $String)"/>
+								</xsl:attribute>
+							</xsl:element>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:comment>huhu</xsl:comment>
+						</xsl:otherwise>
+					</xsl:choose>			
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise/>
@@ -1094,7 +1180,7 @@
 					<xsl:when test="$StandorteList//t:org[t:orgName/@ref = $Standort]/@xml:id">
 						<xsl:element name="{$Typ}">
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//t:org[t:orgName/@ref  = normalize-space($Standort)]/@xml:id)"/>
+								<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//t:org[t:orgName/@ref  = normalize-space($Standort)][1]/@xml:id)"/>
 							</xsl:attribute>
 						</xsl:element>
 					</xsl:when>
@@ -1140,6 +1226,21 @@
 			</xsl:if>
 		</xsl:for-each>-->
 	</xsl:template>
+	
+	<!-- /////////////////////////////////////////////////////////// --> 
+	<!-- ///LANGUAGES/// -->
+	<!-- called when iso-lanuage is found in TEI, checks with $Languages, which is a simple .xml. datastream in context:szd -->
+	<xsl:template name="languageCode">
+		<xsl:param name="Current"/>
+		<xsl:for-each select="$Languages//*:entry">
+			<!-- comparing string, iso-code -->
+			<xsl:if test="*:code[@type = 'ISO639-2'] = $Current">
+				<xsl:value-of select="*:language[@type = 'german']"/>
+			</xsl:if>
+		</xsl:for-each>
+	</xsl:template>
+
+
 
 	
 </xsl:stylesheet>

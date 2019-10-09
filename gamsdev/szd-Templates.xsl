@@ -179,21 +179,21 @@
                         <div class="btn-group btn-group-sm">
                             <xsl:choose>
                                 <xsl:when test="//skos:Concept[skos:broader/@rdf:resource = $currentRDFABOUT]">
-                                    <button type="button" class="btn bg-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                    <button type="button" class="btn pl-1 bg-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
                                         <xsl:value-of select="current-grouping-key()"/> 
                                     </button>
                                     <div class="dropdown-menu scrollable-menu" role="menu">
                                         <xsl:for-each select="//skos:Concept[skos:broader/@rdf:resource = $currentRDFABOUT]">
-                                            <a class="dropdown-item small" href="{concat('#',substring-after(@rdf:about, '#'))}" onclick="scrolldown(this)">
+                                            <button class="btn dropdown-item small" href="{concat('#',substring-after(@rdf:about, '#'))}" onclick="scrolldown(this)">
                                                 <xsl:value-of select="skos:prefLabel[@xml:lang = $locale]"/>
-                                            </a>
+                                            </button>
                                         </xsl:for-each>
                                     </div> 
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <a  href="{concat('#',substring-after(../@rdf:about, '#'))}" class="btn" onclick="scrolldown(this)">
+                                    <button  href="{concat('#',substring-after(../@rdf:about, '#'))}" class="btn pl-1" onclick="scrolldown(this)">
                                         <xsl:value-of select="current-grouping-key()"/> 
-                                    </a>
+                                    </button>
                                 </xsl:otherwise>
                             </xsl:choose>  
                         </div>
@@ -481,7 +481,7 @@
         <xsl:param name="Filter_search"/>
         <div class="all_search">
             <h2>FILTER</h2>
-            <form id="SucheErweitert" class="form-horizontal" action="/archive/objects/query:szd.erweiterteSuche/methods/sdef:Query/get" method="get"  role="search">
+            <form id="SucheErweitert" class="form-check">
                 <!-- all Person-data is included -->
                 <xsl:variable name="Personen">
                     <xsl:copy-of select="document('/o:szd.personen/TEI_SOURCE')"></xsl:copy-of>
@@ -489,8 +489,8 @@
 
                 <div class="form-group" id="filterSelect">
                     <div class="radio">
-                        <label class="text-uppercase"><input type="radio" name="optradio"  id="all_radio" value="all_search" onchange="filter(this)"/>
-                            <xsl:text> </xsl:text>
+                        <label class="text-uppercase">
+                            <input type="radio" name="optradio"  id="all_radio" value="all_search" onchange="filter(this)"/>
                             <i18n:text>all</i18n:text>
                         </label>
                     </div>
@@ -498,7 +498,6 @@
                         <div class="radio">
                             <label class="text-uppercase">
                                 <input type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>autograph</i18n:text>
                             </label>
                         </div>
@@ -507,7 +506,6 @@
                         <div class="radio">
                             <label class="text-uppercase">
                                 <input type="radio" name="optradio" id="bibliothek_radio" value="bibliothek_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>library_szd</i18n:text>
                             </label>
                         </div>
@@ -515,7 +513,6 @@
                     <xsl:if test="contains($Filter_search, 'o:szd.biographie')">
                         <div class="radio">
                             <label class="text-uppercase"><input type="radio" name="optradio" id="biography_radio" value="biography_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>biography</i18n:text>
                             </label>
                         </div>
@@ -523,7 +520,6 @@
                     <xsl:if test="contains($Filter_search, 'o:szd.lebensdokumente')">
                         <div class="radio">
                             <label class="text-uppercase"><input type="radio" name="optradio" id="lebensdokumente_radio" value="lebensdokumente_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>personaldocument</i18n:text></label>
                         </div>
                     </xsl:if>
@@ -532,7 +528,6 @@
                         <div class="radio">
                             <label class="text-uppercase">
                                 <input type="radio" name="optradio" id="person_radio" value="person_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>Persons</i18n:text>
                             </label>
                         </div>
@@ -540,7 +535,6 @@
                     <xsl:if test="contains($Filter_search, 'o:szd.werke')">
                         <div class="radio">
                             <label class="text-uppercase"><input type="radio" name="optradio" id="werke_radio" value="werke_search" onchange="filter(this)"/>
-                                <xsl:text> </xsl:text>
                                 <i18n:text>work</i18n:text></label>
                         </div>
                     </xsl:if>
@@ -621,23 +615,28 @@
         <xsl:choose>
             <xsl:when test="t:fileDesc/t:titleStmt/t:author[1]">
                 <xsl:attribute name="data-author">
-                    <xsl:value-of select="normalize-space(.//t:titleStmt/t:author[1])"/>
+                    <xsl:call-template name="printAuthor">
+                        <xsl:with-param name="currentAuthor" select=".//t:titleStmt/t:author[1]"/>
+                    </xsl:call-template>
                 </xsl:attribute>
             </xsl:when>
-           <xsl:otherwise>
-               <xsl:attribute name="data-author">
-                   <xsl:text>o.V.</xsl:text>
-               </xsl:attribute>
-           </xsl:otherwise>
+           <xsl:otherwise/>
         </xsl:choose>
-        <!-- EDITOR -->
-        <xsl:if test="t:fileDesc/t:titleStmt/t:editor[not(@role)][1]">
-            <xsl:attribute name="data-editor">
-                <xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:editor[not(@role)][1])"/>
+        <!-- all other involved persons -->
+        <xsl:if test="t:fileDesc/t:titleStmt/t:editor[not(@role)][1] or t:fileDesc/t:titleStmt/t:author[@role] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+            <xsl:attribute name="data-involved">
+                <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor | t:fileDesc/t:titleStmt/t:author[@role] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+                    <xsl:call-template name="printAuthor">
+                        <xsl:with-param name="currentAuthor" select="."/>
+                    </xsl:call-template>
+                    <xsl:if test="not(position()=last())">
+                        <xsl:text> / </xsl:text>
+                    </xsl:if>
+                </xsl:for-each>
             </xsl:attribute>
         </xsl:if>
         <!-- TITEL -->
-        <xsl:if test="t:fileDesc/t:titleStmt/t:title[1]">
+        <xsl:if test="t:fileDesc/t:titleStmt/t:title">
             <xsl:attribute name="data-title">
                 <xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
             </xsl:attribute>
@@ -654,11 +653,7 @@
                     <xsl:value-of select="normalize-space(t:fileDesc/t:publicationStmt/t:date)"/>
                 </xsl:attribute>
             </xsl:when>
-            <xsl:otherwise>
-                <xsl:attribute name="data-date">
-                    <xsl:text>o.D.</xsl:text>
-                </xsl:attribute>
-            </xsl:otherwise>
+            <xsl:otherwise/>
         </xsl:choose>
     </xsl:template>
     
@@ -724,6 +719,7 @@
 	                <xsl:if test="$PID">
 	                    <div class="float-right">
 	                        <xsl:choose>
+	                            <!-- this skips TEI and RDF button -->
            	                    <xsl:when test="$PID = 'context:szd'"/>
            	                    <xsl:when test="contains($PID, 'o:szd.glossar') or contains($PID, 'o:szd.ontology')">
            	                        <a class="button" href="{concat('/', $PID,'/ONTOLOGY')}" role="button" target="_blank">
@@ -1001,9 +997,22 @@
                                 <xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
                                 <xsl:if test="$EXTENT/t:measure[@type='page']">
                                     <xsl:value-of select="$EXTENT/t:measure[@type='page']"/>
-                            		<!--<xsl:text> Seiten </xsl:text>-->
                                     <xsl:text> </xsl:text>
-                            	    <i18n:text>pages</i18n:text>
+                                    <xsl:choose>
+                                        <xsl:when test="$EXTENT/t:measure[@type='page'] = '1'">
+                                            <xsl:choose>
+                                                <xsl:when test="$locale = 'en'">
+                                                    <xsl:text>page</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>Seite</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <i18n:text>pages</i18n:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                             	    <xsl:choose>
                             	        <xsl:when test="$EXTENT/t:measure[@type='leaf']">
                             				<xsl:text>, </xsl:text>
@@ -1018,16 +1027,22 @@
                             	</xsl:if>
                                 <xsl:if test="$EXTENT/t:measure[@type='leaf']">
                                     <xsl:value-of select="$EXTENT/t:measure[@type='leaf']"/>
-    	                        	<!--<xsl:text> Blatt </xsl:text>-->
-                                    <i18n:text>leaf</i18n:text>
-                            	    <xsl:choose>
-                            	        <xsl:when test="$locale = 'en'">
-                            	            <xsl:text>pages</xsl:text>
-                            	        </xsl:when>
-                            	        <xsl:otherwise>
-                            	            <xsl:text>Blatt</xsl:text>
-                            	        </xsl:otherwise>
-                            	    </xsl:choose>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:choose>
+                                        <xsl:when test="$EXTENT/t:measure[@type='leaf'] = '1'">
+                                            <i18n:text>leaf</i18n:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:choose>
+                                                <xsl:when test="$locale = 'en'">
+                                                    <xsl:text>Leaves</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>Blatt</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                             		<xsl:choose>
                             			<!--<xsl:when test="t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='leaf']">
                             				<xsl:text>, </xsl:text>
@@ -1092,7 +1107,7 @@
                                       <xsl:attribute name="class" select="'group row'"/>
                                   </xsl:if>
                                <td class="col-3">
-                                   <a href="{t:ref/@target}">
+                                   <a href="{t:ref/@target}" target="_blank">
                                         <xsl:choose>
                                             <xsl:when test="$locale = 'en'">
                                                 <xsl:value-of select="t:term[@xml:lang = 'en']"/>
@@ -1114,7 +1129,7 @@
     				     <xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item[t:stamp]">
     				         <tr class="row">
     				             <td class="col-3">
-    				                 <a href="{t:stamp/t:ref/@target}">
+    				                 <a href="{t:stamp/t:ref/@target}" target="_blank">
     				                     <xsl:choose>
     				                         <xsl:when test="$locale = 'en'">
     				                             <xsl:value-of select="t:stamp/t:term[@xml:lang = 'en']"/>
@@ -1376,6 +1391,24 @@
 				</a>
 				<xsl:text> </xsl:text>
 			</xsl:when>
+		    <xsl:when test="s:sn">
+		        <xsl:variable name="SZDPER" select="s:author/@uri"/>
+		        <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;'), encode-for-uri($SZDPER), '&gt;', '&amp;locale=', $locale)}" target="_blank">
+		            <xsl:choose>
+		                <xsl:when test="$locale = 'en'">
+		                    <xsl:attribute name="title" select="'Suchanfrage'"/>
+		                </xsl:when>
+		                <xsl:otherwise>
+		                    <xsl:attribute name="title" select="'Search query'"/>
+		                </xsl:otherwise>
+		            </xsl:choose>
+       		        <xsl:value-of select="s:sn"/>
+       		        <xsl:if test="s:fn">
+       		            <xsl:text>, </xsl:text>
+       		            <xsl:value-of select="s:fn"/>
+       		        </xsl:if>
+		        </a>
+		    </xsl:when>
 			<xsl:otherwise>
 			    <xsl:call-template name="printAuthor"/>
 			    <!--<xsl:choose>
@@ -1468,7 +1501,9 @@
                         <i18n:text>author_szd</i18n:text>
                      </td>
                      <td class="col-9">
-                         <xsl:value-of select="t:fileDesc/t:titleStmt/t:author[1]"/>
+                         <xsl:call-template name="printAuthor">
+                             <xsl:with-param name="currentAuthor" select="t:fileDesc/t:titleStmt/t:author[1]"/>
+                         </xsl:call-template>
                      </td>
                    </tr>
                    <!-- //////////////////////////////////////////////////////////// -->
@@ -2024,7 +2059,7 @@
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- ///UMFANG/// -->
                 <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc">
-                    <tr class="row">
+                    <tr class="group row">
                         <td class="col-3">
                             <!-- SZDAUT -->
                             <i18n:text>physicaldescription</i18n:text>
@@ -2072,9 +2107,7 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:text>ERROR: no pages of leaf</xsl:text>
-                                </xsl:otherwise>
+                                <xsl:otherwise/>
                             </xsl:choose>
                             <xsl:text> </xsl:text>
                             <!-- for szd:o.bibliothek -->
@@ -2101,7 +2134,7 @@
                 </xsl:if>
 
                 <!-- //////////////////////////////////////////////////////////// -->
-                <!-- ///Provenienz/// -->
+                <!-- ////// -->
                 <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
                     <tr class="group row">
                         <td class="col-3">
@@ -2115,7 +2148,7 @@
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- ///Provenienz/// -->
                 <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
-                    <tr class="group row">
+                    <tr class="row">
                         <td class="col-3">
                             <i18n:text>currentlocation</i18n:text>
                         </td>
@@ -2147,10 +2180,10 @@
         <xsl:param name="locale"/>
         <xsl:choose>
             <xsl:when test="$path/@xml:lang">
-                <xsl:value-of select="$path[@xml:lang = $locale]"/>
+                <xsl:value-of select="normalize-space($path[@xml:lang = $locale])"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="$path[1]"/>
+                <xsl:value-of select="normalize-space($path[1])"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -2217,11 +2250,10 @@
     
     <xsl:template name="getEntry_SZDBIB_SZDAUT">
         <xsl:param name="locale"/>
-        <!-- ENTRY -->
             <!-- data-basket -->
-            <!--<xsl:call-template name="AddData-Databasket"/>-->
+            <xsl:call-template name="AddData-Databasket"/>
             <div class="bg-light row">
-                <h4 class="card-title text-left col-11">
+                <h4 class="card-title text-left col-11 small">
                     <a data-toggle="collapse" href="{concat('#c' , generate-id())}">
                         <span class="arrow">
                             <xsl:text>&#9660; </xsl:text>
@@ -2265,19 +2297,52 @@
     </xsl:template>
     
     <!-- /////////////////////// -->
-    <!-- this templat prints different types of <author> (composer, name, etc.) an prints them in the way SURNAME, FIRSTNAME -->
+    <!-- this template prints different types of <author> (role="composer"; <persName> or <name>) and prints them in the way: SURNAME, FIRSTNAME
+         you can also use $currentAuthor as a input next to the current selected node -->
     <xsl:template name="printAuthor">
         <xsl:param name="currentAuthor"/>
         <xsl:choose>
             <xsl:when test="t:persName/t:surname">
-                <xsl:value-of select="normalize-space(t:persName/t:surname)"/>
-                <xsl:if test="t:persName/t:forename">
-                    <xsl:text>, </xsl:text>
-                    <xsl:value-of select="normalize-space(t:persName/t:forename)"/>
-                </xsl:if>
+                <xsl:for-each select="t:persName">
+                    <xsl:value-of select="normalize-space(t:surname)"/>
+                    <xsl:if test="t:forename">
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="normalize-space(t:forename)"/>
+                    </xsl:if>
+                </xsl:for-each>
             </xsl:when>
             <xsl:when test="t:persName/t:name">
-                <xsl:value-of select="normalize-space(t:persName/t:name)"/>
+                <xsl:for-each select="t:persName">
+                    <xsl:value-of select="normalize-space(t:name)"/>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="$currentAuthor">
+                <xsl:choose>
+                    <xsl:when test="$currentAuthor/t:persName/t:surname">
+                        <xsl:for-each select="$currentAuthor/t:persName">
+                            <xsl:value-of select="normalize-space(t:surname)"/>
+                            <xsl:if test="t:forename">
+                                <xsl:text>, </xsl:text>
+                                <xsl:value-of select="normalize-space(t:forename)"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="$currentAuthor/t:persName/t:name">
+                        <xsl:for-each select="$currentAuthor/t:persName">
+                            <xsl:value-of select="normalize-space(.)"/>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="$currentAuthor/t:surname">
+                        <xsl:value-of select="normalize-space($currentAuthor/t:surname)"/>
+                        <xsl:if test="$currentAuthor/t:forename">
+                            <xsl:text>, </xsl:text>
+                            <xsl:value-of select="normalize-space($currentAuthor/t:forename)"/>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space($currentAuthor)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="normalize-space(.)"/>

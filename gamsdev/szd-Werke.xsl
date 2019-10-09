@@ -96,7 +96,7 @@
                                     <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"/>
                                     
                                         <div class="list-group mt-5"> 
-                                            <h3 id="{concat('mt', generate-id())}">
+                                        <h3 id="{concat('mt', generate-id())}">
                                             <xsl:value-of select="current-grouping-key()"/>
                                         </h3>
                                         <xsl:for-each select="current-group()">
@@ -109,7 +109,7 @@
                                                 
                                                 <div class="card-heading bg-light row">
                                                    <!-- creating collapse id -->
-                                                    <h4 class="card-title text-left col-9">
+                                                    <h4 class="card-title text-left col-9 small">
                                                       	<!-- TITEL | Ordnungskategorie | Signatur  -->
                                                       	<xsl:choose>
                                                       	    <xsl:when test="not(t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de'] = 'Werknotizen')">

@@ -72,9 +72,10 @@
                               <xsl:value-of select="normalize-space(current-grouping-key())"/>
                           </h3>
                            <xsl:for-each select="current-group()">
-                               <xsl:sort select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"></xsl:sort>
-                               <!-- GETENTRY -->
-                               <div class="list-group-item entry shadow-sm" id="{@xml:id}">
+                               <xsl:sort select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
+                               <!-- /////////////////////////////////////////// -->
+                               <!-- ENTRY -->
+                               <div class="list-group-item entry db_entry shadow-sm" id="{@xml:id}">
                                    <!-- //// -->
                                    <!-- getEntry_SZDBIB_SZDAUT -->
                                     <xsl:call-template name="getEntry_SZDBIB_SZDAUT">

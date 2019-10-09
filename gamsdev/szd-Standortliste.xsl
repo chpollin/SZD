@@ -42,15 +42,21 @@
                 <article id="content">
                     <div class="list-group entryGroup">
                     <xsl:for-each-group select="//t:listOrg/t:org" group-by="@xml:id">
-                        <xsl:sort select="t:orgName"/>
+                        <xsl:sort data-type="text" lang="ger" select="t:orgName"/>
                         <xsl:variable name="SZDORG" select="current-grouping-key()"/>
-                            <xsl:variable name="QueryUrl" select="concat('/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params=$1|&lt;https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.standorte%23', $SZDORG , '&gt;')"/>
+                        <!-- build query URL -->
+                        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params='"/>
+                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', @xml:id, '&gt;'))"/>
+                        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+                        
                         <div class="list-group-item shadow-sm" id="{@xml:id}">
                             <div class="row">
                                 <h4 class="text-left col-9">
                                 <a href="{$QueryUrl}" class="font-weight-bold">
                                     <xsl:value-of select="t:orgName"/>
-                                    <xsl:if test="t:settelment"><xsl:text>, </xsl:text><xsl:value-of select="t:settelment"/></xsl:if>
+                                    <xsl:if test="t:settlement">
+                                        <xsl:text>, </xsl:text><xsl:value-of select="t:settlement"/>
+                                    </xsl:if>
                                 </a>
                                 <xsl:text> </xsl:text>
                             </h4>

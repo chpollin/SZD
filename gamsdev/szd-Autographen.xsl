@@ -50,15 +50,13 @@
                 <article class="card-body" id="content">
                     <!-- select every biblFull and group through t:author -->
 
-                    <xsl:for-each-group select="$biblFull" group-by="t:fileDesc/t:titleStmt/t:author[1] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">  
-                        <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:author[1]/t:persName/t:surname|
+                    <xsl:for-each-group select="$biblFull" group-by="t:fileDesc/t:titleStmt/t:author[1]/@ref | t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]/@ref">  
+                        <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:author[1]/t:persName[1]/t:surname[1] |
                             t:fileDesc/t:titleStmt/t:author[1]/t:persName/t:name|
-                            t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]/t:persName/t:surname"/>
+                            t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]/t:persName/t:surname "/>
                         
                         <xsl:variable name="person_affected" select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]"/>
                         <xsl:variable name="author" select="t:fileDesc/t:titleStmt/t:author[1]"/>
-
-
                         <xsl:call-template name="getfirstforABC">
                             <xsl:with-param name="Persons" select="$biblFull/t:fileDesc/t:titleStmt/t:author[1]/t:persName/t:surname | $biblFull/t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]/t:persName/t:surname"/>
                             <xsl:with-param name="CurrentNodes" select="t:fileDesc/t:titleStmt/t:author[1]/t:persName/t:surname"/>
@@ -82,18 +80,9 @@
                             <h3>
                                 <xsl:choose>
                                     <xsl:when test="$person_affected">
-                                        <xsl:choose>
-                                            <xsl:when test="$person_affected/t:persName/t:name">
-                                                <xsl:value-of select="$person_affected/t:persName/t:name"/>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:value-of select="$person_affected/t:persName/t:surname"/>
-                                                <xsl:if test="$person_affected/t:persName/t:forename">
-                                                    <xsl:text>, </xsl:text>
-                                                    <xsl:value-of select="$person_affected/t:persName/t:forename"/>
-                                                </xsl:if>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
+                                        <xsl:call-template name="printAuthor">
+                                            <xsl:with-param name="currentAuthor" select="$person_affected"/>
+                                        </xsl:call-template>
                                         <xsl:text> (</xsl:text>
                                         <xsl:choose>
                                             <xsl:when test="$locale = 'en'">
@@ -106,18 +95,9 @@
                                         <xsl:text>)</xsl:text>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:choose>
-                                            <xsl:when test="$author/t:persName/t:name">
-                                                <xsl:value-of select="$author/t:persName/t:name"/>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:value-of select="$author/t:persName/t:surname"/>
-                                                <xsl:if test="$author/t:persName/t:forename">
-                                                    <xsl:text>, </xsl:text>
-                                                    <xsl:value-of select="$author/t:persName/t:forename"/>
-                                                </xsl:if>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
+                                        <xsl:call-template name="printAuthor">
+                                            <xsl:with-param name="currentAuthor" select="$author"/>
+                                        </xsl:call-template>
                                     </xsl:otherwise>
                                 </xsl:choose>
                                
@@ -126,7 +106,7 @@
                         <!-- list ccontent -->
                         <xsl:for-each select="current-group()">
                             <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:title[1]"/>
-                            <div class="list-group-item entry shadow-sm" id="{@xml:id}">
+                            <div class="list-group-item entry db_entry shadow-sm" id="{@xml:id}">
                                 <!-- //// -->
                                 <!-- getEntry_SZDBIB_SZDAUT -->
                                 <xsl:call-template name="getEntry_SZDBIB_SZDAUT">

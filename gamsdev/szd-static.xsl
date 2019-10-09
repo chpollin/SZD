@@ -74,13 +74,14 @@
 		<xsl:value-of select="concat($server, $gamsdev, '/css/navbar.css')"/>
 	</xsl:variable>
 	<!-- print .css-->
-	<xsl:variable name="printcss">
+	<!--<xsl:variable name="printcss">
 		<xsl:value-of select="concat($server, $gamsdev, '/css/print.css')"/>
-	</xsl:variable>
+	</xsl:variable>-->
 	<!-- timeline, lebenskalender .css -->
 	<xsl:variable name="timelineCss">
 		<xsl:value-of select="concat($server, $gamsdev, '/css/lebenskalender.css')"/>
 	</xsl:variable>
+
 
 	<!-- ICONS: path to .png's  ================================================== -->
 	<xsl:variable name="Icon_Path" select="concat($server, $gamsdev, '/icons/')"/>
@@ -132,15 +133,16 @@
 				<!--<link href="{concat($server, $gamsdev, '/css/navbar-fixed-side.css')}" rel="stylesheet"/>-->
 
 				<!-- Custom styles for this template  ================================================== -->
-				<link href="{$printcss}" rel="stylesheet" type="text/css" media="print"/>
-				<link href="{$projectCss}" rel="stylesheet" type="text/css"/>
-				<link href="{$projectNav}" rel="stylesheet" type="text/css"/>
+				<!--<link href="{$printcss}" rel="stylesheet" type="text/css" media="print"/>-->
+				<link href="{$projectCss}" rel="stylesheet"/>
+				<link href="{$projectNav}" rel="stylesheet"/>
 				
 				<!-- Timeline: Lebenskalender -->
 				<link href="{$timelineCss}" rel="stylesheet" type="text/css"/>
 				<link type="text/css" rel="stylesheet" href="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.css?v=2.1.5"/>
 				<link rel="stylesheet" href="/lib/2.0/fa/css/all.css"/>
 				
+				<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
 				<!-- jQuery core JavaScript ================================================== -->
 				<script src="/lib/2.0/jquery-3.4.0.min.js"><xsl:text> </xsl:text></script>
 
@@ -152,17 +154,6 @@
 				<!-- projectspecific .js ================================================== -->
 				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
 				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
-				<!--<script>
-					$(document).ready(function(e){
-					$('.search-panel .dropdown-menu').find('a').click(function(e) {
-					e.preventDefault();
-					var param = $(this).attr("href").replace("#","");
-					var concept = $(this).text();
-					$('.search-panel span#search_concept').text(concept);
-					$('.input-group #search_param').val(param);
-					});
-					});
-				</script>-->
 				<!-- SCROLLDOWN -->
 				<!-- for fancybox in o:szd.glossar -->
 				<script>
@@ -172,6 +163,12 @@
 				</script>
 				<!-- datatables.js -->
 				<script src="{concat($gamsdev,'/js/datatable.js')}"><xsl:text> </xsl:text></script>
+				<!-- needed for datatale excel export -->
+				<script src="{concat($gamsdev,'/js/jszip.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($gamsdev,'/js/dataTables.buttons.min.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($gamsdev,'/js/pdfmake.min.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($gamsdev,'/js//vfs_fonts.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($gamsdev,'/js/buttons.html5.min.js')}"><xsl:text> </xsl:text></script>
 				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
 			</head>
 
@@ -185,7 +182,7 @@
 				<!-- ///HEADER/// -->
 				<header>
 				<!-- ///NAVBAR/// -->
-					<nav class="navbar navbar-expand-lg fixed-top navbar-dark"><!-- fixed/sticky nav benötigt; muss noch nach rechts angepasst werden (margin) -->
+					<nav class="navbar navbar-expand-md fixed-top navbar-dark"><!-- fixed/sticky nav benötigt; muss noch nach rechts angepasst werden (margin) -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"><xsl:text> </xsl:text></span>
 						</button>
@@ -277,7 +274,6 @@
 										</div>
 									</li>
 									<li class="nav-item">
-										
 										<form class="navbar-form navtext" id="fulltext_search" method="get">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
@@ -313,8 +309,8 @@
 									</li>
 									<!-- ////////// -->
 									<!-- DATABASKET -->
-									<li class="nav-item d-none d-sm-block">
-										<a class="navtext" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket">
+									<li class="nav-item">
+										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}">
 											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb"/>
 											<xsl:text> </xsl:text>
 										</a>
@@ -362,49 +358,50 @@
 
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///FOOTER/// -->
-				<footer class="footer hidden-print" >
+				<footer class="footer" >
 				<div class="container">
 					<div class="card">
 						<div class="card-body">
-						<div class="row"><div class="col-md-6">
+						<div class="row">
+							<div class="col-6">
 							<h6><i18n:text>more information</i18n:text></h6>
 							<div class="row">
-								<a class="col-4" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank">
+								<a class="col-sm" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank">
 									<i18n:text>imprint</i18n:text>
 								</a>
-								<a class="col-4" href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank">
+								<a class="col-sm" href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank">
 									<i18n:text>privacy</i18n:text>
 								</a>
-								<a class="col-4" href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
+								<a class="col-sm" href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
 									target="_blank">
-									<img class="img-fluid" 
-										src="/templates/img/by-nc.png" alt="Lizenz" style="height: 25px;"/>
+									<img class="img-fluid" src="/templates/img/by-nc.png" alt="Lizenz"/>
 								</a>
 							</div>
 							<div class="row">
-								<a class="col-4"  href="https://www.uni-salzburg.at/index.php?id=72" target="_blank">
+								<a class="col-sm"  href="https://www.uni-salzburg.at/index.php?id=72" target="_blank">
 									<img class="img-fluid"  
 										src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
 									 alt="Logo LAS"/>
 									<xsl:text> </xsl:text></a>
-								<a class="col-4"  href="https://www.uni-salzburg.at" target="_blank">
+								<a class="col-sm"  href="https://www.uni-salzburg.at" target="_blank">
 									<img class="img-fluid" 
 										src="https://www.uni-salzburg.at/fileadmin/oracle_file_imports/553397.JPG"
 										 alt="Logo Universität Salzburg"/>
 									<xsl:text> </xsl:text></a>
-								<a class="col-4" href="https://web.nli.org.il" target="_blank">
+								<a class="col-sm" href="https://web.nli.org.il" target="_blank">
 									<img class="img-fluid" 
 										src="{concat($server, $gamsdev, '/img/logo_NLI.png')}"
 										height="58"  alt="The National Library of Israel"/>
 								</a>
 							</div>
 							<div class="row">
-								<a class="col-4" href="http://gams.uni-graz.at" target="_blank">
+								<a class="col-sm" href="http://gams.uni-graz.at" target="_blank">
 									<img class="img-fluid"  style="height: 35px;"
 										src="/templates/img/gamslogo_schwarz.gif"
 										  alt="{$gams}"/>
 								</a>
-								<span class="col-4"><a  href="https://informationsmodellierung.uni-graz.at"
+								<span class="col-sm">
+									<a  href="https://informationsmodellierung.uni-graz.at"
 								target="_blank">
 									<img class="img-fluid" style="height: 35px;"
 									src="/templates/img/ZIM_blau.png"
@@ -416,7 +413,7 @@
 									title="Universität Graz" alt="Logo Uni Graz"/>
 								<xsl:text> </xsl:text>
 								</a></span>
-								<a class="col-4" href="http://www.fotohof.at" target="_blank">
+								<a class="col-sm" href="http://www.fotohof.at" target="_blank">
 									<img class="img-fluid" 
 										src="{concat($server, $gamsdev, '/img/Fotohof.jpg')}"
 										height="58"  alt="Fotohof"/>
@@ -424,15 +421,27 @@
 							</div>
 							<br/>
 						</div> 
-						
-						<div class="col-md-6">
-							<h6><i18n:text>contact</i18n:text></h6>
-								<p>STEFAN ZWEIG DIGITAL<br/>
-									Eine Initiative des Literaturarchivs Salzburg<br/>
-									Residenzplatz 9/2<br/>
-									5020 Salzburg  |  Austria<br/>
-								</p>
-								<p>+43 (0) 662 / 8044-4910 | <a href="mailto:info@stefanzweig.digital">info@stefanzweig.digital</a></p>
+						<div class="col-6">
+							<div class="col-sm"><h6><i18n:text>contact</i18n:text></h6>
+							<xsl:choose>
+								<xsl:when test="$locale='en'">
+									<p>
+										<xsl:text>STEFAN ZWEIG DIGITAL</xsl:text><br/>
+										<xsl:text>An initiative of the Literaturarchiv Salzburg</xsl:text><br/>
+										<xsl:text>Residenzplatz 9/2</xsl:text><br/>
+										<xsl:text>S5020 Salzburg  |  Austria</xsl:text><br/>
+									</p>
+								</xsl:when>
+								<xsl:otherwise>
+									<p>
+										<xsl:text>STEFAN ZWEIG DIGITAL</xsl:text><br/>
+										<xsl:text>Eine Initiative des Literaturarchivs Salzburg</xsl:text><br/>
+										<xsl:text>Residenzplatz 9/2</xsl:text><br/>
+										<xsl:text>5020 Salzburg  |  Austria</xsl:text><br/>
+									</p>
+								</xsl:otherwise>
+							</xsl:choose>	
+						    <p>+43 (0) 662 / 8044-4910 | <a href="mailto:info@stefanzweig.digital">info@stefanzweig.digital</a></p></div>
 						</div>
 						</div>
 						</div>
@@ -448,24 +457,20 @@
 					});
 					}); 
 				</script>
-				<!--<script>
+				<script>
 					window.onload = function () {
-					var hash = window.location.hash.substr(1);
-					var substring1 = 'MSK';
-					var substring2 = "BIB";
-					var substring3 = "LEB";
-					console.log(hash);
-					if(hash.includes(substring1) || hash.includes(substring2) || hash.includes(substring3))
-					{
-					location.hash = "#" + hash;
-					window.scrollBy(0, -275);
-					//collapse anchor selected element
-					actual = document.getElementById(hash);
-					var descendants = actual.querySelectorAll('.panel-collapse');
-					$(descendants).collapse() 
+						var hash = window.location.hash.substr(1);
+						<!--var substring1 = 'SZDMSK';
+						var substring2 = "SZDBIB";
+						var substring3 = "SZDLEB";
+						var substring3 = "SZDAUT";
+						if(hash.includes(substring1) || hash.includes(substring2) || hash.includes(substring3))
+						{-->
+						location.hash = "#" + hash;
+						window.scrollBy(0, -250);
+						$(document.getElementById(hash).getElementsByClassName("collapse")).collapse() ;
 					}
-					}
-				</script>-->
+				</script>
 			</body>
 		</html>
 	</xsl:template>
@@ -542,34 +547,34 @@
 	<xsl:template name="languageButton">
 		<xsl:param name="PID"/>
 		<xsl:param name="mode"/>
-		<div class="language">
+		<span class="language navtext">
 			<xsl:choose>
 				<!-- for contex objects -->
 				<xsl:when test="$PID = 'context:szd'">
-					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Context/get?locale=de&amp;mode=', $mode)}">DE</a><xsl:text> </xsl:text>
-					<span class="text-dark">|</span><xsl:text> </xsl:text>
+					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Context/get?locale=de&amp;mode=', $mode)}">DE</a>
+					<span class="text-dark">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Context/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for ontology objects -->
 				<xsl:when test="$PID = 'o:szd.ontology'">
-					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Ontology/get?locale=de&amp;mode=', $mode)}">DE</a><xsl:text> </xsl:text>
-					<span class="text-dark">|</span><xsl:text> </xsl:text>
+					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Ontology/get?locale=de&amp;mode=', $mode)}">DE</a>
+					<span class="text-dark">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Ontology/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for skos objetcs -->
 				<xsl:when test="$PID = 'o:szd.glossar'">
-					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:SKOS/get?locale=de&amp;mode=', $mode)}">DE</a><xsl:text> </xsl:text>
-					<span class="text-dark">|</span><xsl:text> </xsl:text>
+					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:SKOS/get?locale=de&amp;mode=', $mode)}">DE</a>
+					<span class="text-dark">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:SKOS/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for TEI objects -->
 				<xsl:otherwise>
 					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=de')}">DE</a><xsl:text> </xsl:text>
-					<span class="text-dark">|</span><xsl:text> </xsl:text>
+					<span class="text-dark">|</span>
 					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=en')}">EN</a>
 				</xsl:otherwise>
 			</xsl:choose>
-		</div>
+		</span>
 	</xsl:template>
 	
 

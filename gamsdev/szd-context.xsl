@@ -105,92 +105,98 @@
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:with-param>
-                <xsl:with-param name="PID" select="$PID"/>
+                <xsl:with-param name="PID" select="'context:szd'"/>
                 <xsl:with-param name="mode" select="$mode"/>
             </xsl:call-template>
             
             <article class="card-body" id="content">
-                <div>
-                    <p>
-                        <xsl:text>Data entries can be added to the data basket.</xsl:text><br/>
-                    </p>
-                    <div class="btn-group" role="group" aria-label="Sortieren">
-                        <button type="button" class="btn hidden-print" style="font-size:18px; background: none"  onclick="window.print()"><xsl:text>PRINT</xsl:text><span class="glyphicon glyphicon-print" aria-hidden="true"><xsl:text> </xsl:text></span></button>
-                        <button class="btn disabled" href="#" role="button" style="margin: 10px;">
-                            <img alt="Excel" height="25" id="rdf" src="{concat($gamsdev, '/img/TABELLENSYMBOL.png')}" title="HSSF"/>
-                        </button>
-                        
-                        <button type="button" class="btn" style="font-size:18px; background: none;"  onclick="clearData()"><xsl:text>CLEAR</xsl:text><span class="glyphicon glyphicon-remove"><xsl:text> </xsl:text></span></button>
+                    <xsl:choose>
+                        <xsl:when test="$locale='en'">
+                            <p class="card-text">
+                                 <xsl:text> This virtual document displays the information that you have currently stored in the data basket on this computer and browser (local storage).
+                                 To transfer data to your data basket, select a check box in the catalog views. 
+                                 You can delete individual entries (x) or empty (CLEAR) the entire data basket. In addition, several export options are offered.
+                                 </xsl:text>
+                                <br/>
+                                <button type="button" class="btn" onclick="clearData()"><xsl:text>CLEAR DATA </xsl:text><i class="fas fa-trash"><xsl:text> </xsl:text></i></button>
+                            </p>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <p class="card-text">
+                                <xsl:text>
+                                Dieses virtuelle Dokument zeigt die Informationen an, die Sie aktuell im Datenkorb auf diesem Computer und diesem Browser (local storage) abgelegt haben.
+                                Um Daten in Ihren Datenkorb zu übernehmen, wählen Sie ein Auswahlkästchen in den Katalogansichten. 
+                                Sie können einzelne Einträge (x) löschen oder den ganzen Datenkorb leeren. Weiters werden mehrer Exportmöglichkeiten angeboten.
+                                </xsl:text>
+                               <br/>
+                               <button type="button" class="btn" onclick="clearData()"><xsl:text>DATENKORB LEEREN </xsl:text><i class="fas fa-trash"><xsl:text> </xsl:text></i></button>
+                           </p>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                <xsl:variable name="Table-ID" select="concat('table_id', position())"/>
+                <!-- call DataTable -->
+               <!-- <script>
+                    $(document).ready(function() {
+                    $('#databasket_table').DataTable();
+                    } );
+                </script>-->
+                <script>
+                    $(document).ready(function(){
+                    $('#databasket_table').DataTable({
+                    columnDefs: [
+                    { type: 'formatted-num', targets: 0 }
+                    ],
+                    dom: 'Bfrtip',
+                    buttons: [ 'copy', 'csv', 'excel', 'pdf'],
+                    "pageLength": 50,
+                    <!-- ordering -->
+                    "order": [[ 0, "asc" ]]  
+                    }
+                    );
+                    } );
+                </script>
+                <table id="databasket_table" class="table table-bordered dt-responsive nowra">
+                    <thead>
+                        <tr>
+                            <th class="text-uppercase">
+                                <i18n:text>Titel</i18n:text>
+                            </th>
+                            <th class="text-uppercase">
+                                <i18n:text>author_szd</i18n:text>
+                            </th>
+                            <th class="text-uppercase">
+                                <i18n:text>partiesinvolved</i18n:text>
+                            </th>
+                            <th class="text-uppercase">
+                                <xsl:choose>
+                                    <xsl:when test="$locale">
+                                        <xsl:text>Date</xsl:text>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text>Datum</xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </th>
+                            <th><xsl:text> </xsl:text>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="databasekt_tbody">
+                        <xsl:text> </xsl:text>
+                    </tbody>
+                </table>
+            
+            <div class="card-body">
+                <div class="row">
+                    <div id="databasekt_content">
+                        <xsl:text> </xsl:text>
                     </div>
-                    <xsl:variable name="Table-ID" select="concat('table_id', position())"/>
-                    <!-- call DataTable -->
                     <script>
-                        $(document).ready(function() {
-                        $('#databasket_table').DataTable();
-                        } );
+                        showData();
                     </script>
-                    <table id="databasket_table" class="table table-bordered" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th><xsl:text>TITLE</xsl:text></th>
-                                <th><xsl:text>AUTHOR</xsl:text></th>
-                                <th><xsl:text>WHEN</xsl:text></th>
-                                <th><xsl:text></xsl:text></th>
-                            </tr>
-                        </thead>
-                        <tbody id="databasekt_tbody">
-                            <xsl:text> </xsl:text>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div id="databasekt_content">
-                            <xsl:text> </xsl:text>
-                        </div>
-                        <script>
-                            showData();
-                        </script>
-                    </div>    
-                </div>
-            </article>
-	            	<!-- in datenkorb.js fibt im localStorage befindliche Einträge aus -->
-	                <!--<div class="col-md-12 row hidden-print center-block">
-	                    <div class="btn-group" role="group" aria-label="Sortieren">
-	                        <xsl:choose>
-	                            <xsl:when test="$locale = 'en'">
-	                                <p>Objects can be saved to the data cart and displayed as a list</p>
-	                                <button type="button" class="btn" onclick="sortPersonDatabasket()"><xsl:text>Sort person</xsl:text></button>
-	                                <button type="button" class="btn" onclick="sortTitleDatabasket()"><xsl:text>Sort Title</xsl:text></button>
-	                                <button type="button" class="btn" onclick="sortDateDatabasket()"><xsl:text>Sort Date</xsl:text></button>
-	                                <button type="button" class="btn hidden-print"  onclick="window.print()"><xsl:text>Print</xsl:text><span class="glyphicon glyphicon-print" aria-hidden="true"><xsl:text> </xsl:text></span></button>
-	                                <button type="button" class="btn" onclick="clearData()"><xsl:text>Clear</xsl:text><span class="glyphicon glyphicon-remove"><xsl:text> </xsl:text></span></button>
-	                                <!-\-<button type="button" class="btn szdbutton hidden-print" onclick="printDatabasket()">Datenkorb Drucken <span class="glyphicon glyphicon-print" aria-hidden="true"><xsl:text> </xsl:text></span></button>-\->
-	                                <!-\-<button type="button" class="btn szdbutton" onclick="exportData()" id="DownloadExcel">Excel erzeugen<span><img src="/archive/objects/context:ufbas/datastreams/TABELLENSYMBOL/content" alt="Tabellensymbol" height="15px"/><xsl:text> </xsl:text></span></button>-\->
-	                                <span type="button" class="btn btn-success hidden" id="results"><xsl:text> </xsl:text></span>
-	                            </xsl:when>
-	                            <xsl:otherwise>
-	                                <p> Im Datenkorb können Objekte gespeichert und als Liste ausgegeben werden</p>
-	                                <button type="button" class="btn"  onclick="sortPersonDatabasket()"><xsl:text>Nach Personen sortieren </xsl:text></button>
-	                                <button type="button" class="btn" onclick="sortTitleDatabasket()"><xsl:text>Nach Titel sortieren </xsl:text></button>
-	                                <button type="button" class="btn" onclick="sortDateDatabasket()"><xsl:text>Nach Datum sortieren </xsl:text></button>
-	                                <button type="button" class="btn hidden-print" onclick="window.print()"><xsl:text>Datenkorb drucken </xsl:text><span class="glyphicon glyphicon-print" aria-hidden="true"><xsl:text> </xsl:text></span></button>
-	                                <button type="button" class="btn" onclick="clearData()"><xsl:text>Datenkorb leeren </xsl:text><span class="glyphicon glyphicon-remove"><xsl:text> </xsl:text></span></button>
-	                                <!-\-<button type="button" class="btn szdbutton hidden-print" onclick="printDatabasket()">Datenkorb Drucken <span class="glyphicon glyphicon-print" aria-hidden="true"><xsl:text> </xsl:text></span></button>-\->
-	                                <!-\-<button type="button" class="btn szdbutton" onclick="exportData()" id="DownloadExcel">Excel erzeugen<span><img src="/archive/objects/context:ufbas/datastreams/TABELLENSYMBOL/content" alt="Tabellensymbol" height="15px"/><xsl:text> </xsl:text></span></button>-\->
-	                                <span type="button" class="btn btn-success hidden" id="results"><xsl:text> </xsl:text></span>
-	                            </xsl:otherwise>
-	                        </xsl:choose>
-	                    </div>      
-	                </div>
-	                <div class="col-md-12 row">
-	                     <div id="datenkorbInhalt">
-	                         <xsl:text> </xsl:text>
-	                     </div>
-	                     <script>
-	                         showData();
-	                     </script>
-	                </div>  -->     
+                </div>    
+            </div>
+        </article>
         </section>
     </xsl:template>                    
     
