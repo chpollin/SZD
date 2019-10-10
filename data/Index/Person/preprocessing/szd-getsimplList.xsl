@@ -2,6 +2,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
 
+
+    <xsl:output encoding="UTF-8"/>
+
     <xsl:template match="/">
         <TEI xmlns="http://www.tei-c.org/ns/1.0">
             <teiHeader>
@@ -67,8 +70,18 @@
                     <listPerson>
                         <xsl:for-each select="//*:person">
                             <person xml:id="{@xml:id}">
-                                <!--<persName ref="{*:persName/@ref}">-->
+                                <xsl:choose>
+                                    <xsl:when test="*:persName[@type='Ausgabename']">
+                                        <xsl:apply-templates select="*:persName[@type='Ausgabename']"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
                                         <xsl:apply-templates select="*:persName"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                                
+                                
+                                <!--<persName ref="{*:persName/@ref}">-->
+                                       
                                 <!--</persName>-->
                             </person>
                         </xsl:for-each>
@@ -78,7 +91,7 @@
         </TEI>
     </xsl:template>
 
-    <xsl:template match="*:persName[@type]"></xsl:template>
+    <xsl:template match="*:persName[@type='variant']"></xsl:template>
 
     <xsl:template match="@* | node()">
         <xsl:copy>
