@@ -43,7 +43,7 @@
                     <xsl:apply-templates select="node()"/>
                 </fileDesc>
                 <profileDesc>
-                    <xsl:if test=".//*:persName[@type='person'] or .//*:sourceDesc/*:msDesc/*:msContents/*:msItem/*:ab">
+                    <xsl:if test=".//*:persName[@type='person'] or .//*:sourceDesc/*:msDesc/*:msContents/*:msItem/*:ab or .//*:title/@type='object_pers'">
                          <textClass>
                              <keywords>
                                  <xsl:for-each select=".//*:persName[@type='person']">
@@ -79,22 +79,24 @@
                                     </term>
                                  </xsl:for-each>
                                  <xsl:if test="./*:titleStmt/*:title/@type = 'object_pers'">
-                                     <term type="person_affected">
-                                         <xsl:if test="contains(*:titleStmt/*:author/*:persName/@ref, 'gnd')">
-                                             <xsl:attribute name="ref">
-                                                 <xsl:variable name="SZDPER">
-                                                     <xsl:call-template name="GetPersonList">
-                                                         <xsl:with-param name="Person" select="*:titleStmt/*:author/*:persName"/>
-                                                     </xsl:call-template>
-                                                 </xsl:variable>
-                                                 <xsl:value-of select="concat('#', $SZDPER)"/>
-                                             </xsl:attribute>
-                                         </xsl:if>
-                                         <persName ref="{*:titleStmt/*:author/*:persName/@ref}">
-                                             <surname><xsl:value-of select="*:titleStmt/*:author/*:persName/*:surname"/></surname>
-                                             <forename><xsl:value-of select="*:titleStmt/*:author/*:persName/*:forename"/></forename>
-                                         </persName>
-                                     </term>
+                                     <xsl:for-each select="*:titleStmt/*:author/*:persName">
+                                         <term type="person_affected">
+                                            <xsl:if test="contains(@ref, 'gnd')">
+                                                <xsl:attribute name="ref">
+                                                    <xsl:variable name="SZDPER">
+                                                        <xsl:call-template name="GetPersonList">
+                                                            <xsl:with-param name="Person" select="."/>
+                                                        </xsl:call-template>
+                                                    </xsl:variable>
+                                                    <xsl:value-of select="concat('#', $SZDPER)"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
+                                            <persName ref="{@ref}">
+                                                <surname><xsl:value-of select="*:surname"/></surname>
+                                                <forename><xsl:value-of select="*:forename"/></forename>
+                                            </persName>
+                                        </term>
+                                     </xsl:for-each>
                                  </xsl:if>
                                  <xsl:if test=".//*:sourceDesc/*:msDesc/*:msContents/*:msItem/*:ab">
                                      <term type="classification">
