@@ -348,7 +348,7 @@
                     <!-- <xsl:if test="">-->
                      <!--</xsl:if>-->
                  </xsl:for-each>
-                 <xsl:if test="not($PID = 'o:szd.personen')">
+                 <xsl:if test="not($PID = 'o:szd.personen') and not($PID = 'o:szd.autographen')">
                     <button type="button" class="btn btn-sm list-inline-item" href="#withoutAuthor" onclick="scrolldown(this)">
                         <xsl:text>o.V.</xsl:text>
                     </button>
@@ -482,60 +482,66 @@
         <div class="all_search">
             <h2>FILTER</h2>
             <form id="SucheErweitert" class="form-check">
-                <!-- all Person-data is included -->
-                <xsl:variable name="Personen">
+                <!-- all Person-data is included
+                 CP: 12.10: check if this is needed-->
+                <!-- <xsl:variable name="Personen">
                     <xsl:copy-of select="document('/o:szd.personen/TEI_SOURCE')"></xsl:copy-of>
-                </xsl:variable>
+                </xsl:variable>-->
 
                 <div class="form-group" id="filterSelect">
                     <div class="radio">
-                        <label class="text-uppercase">
-                            <input type="radio" name="optradio"  id="all_radio" value="all_search" onchange="filter(this)"/>
+                        <label class="text-uppercase small">
+                            <input class="mr-1" type="radio" name="optradio"  id="all_radio" value="all_search" onchange="filter(this)"/>
                             <i18n:text>all</i18n:text>
                         </label>
                     </div>
                     <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
                         <div class="radio">
-                            <label class="text-uppercase">
-                                <input type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
                                 <i18n:text>autograph</i18n:text>
                             </label>
                         </div>
                     </xsl:if>
                     <xsl:if test="contains($Filter_search, 'o:szd.bibliothek')">
                         <div class="radio">
-                            <label class="text-uppercase">
-                                <input type="radio" name="optradio" id="bibliothek_radio" value="bibliothek_search" onchange="filter(this)"/>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="bibliothek_radio" value="bibliothek_search" onchange="filter(this)"/>
                                 <i18n:text>library_szd</i18n:text>
                             </label>
                         </div>
                     </xsl:if>
-                    <xsl:if test="contains($Filter_search, 'o:szd.biographie')">
+                    <xsl:if test="contains($Filter_search, 'o:szd.lebenskalender')">
                         <div class="radio">
-                            <label class="text-uppercase"><input type="radio" name="optradio" id="biography_radio" value="biography_search" onchange="filter(this)"/>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="biography_radio" value="biography_search" onchange="filter(this)"/>
                                 <i18n:text>biography</i18n:text>
                             </label>
                         </div>
                     </xsl:if>
                     <xsl:if test="contains($Filter_search, 'o:szd.lebensdokumente')">
                         <div class="radio">
-                            <label class="text-uppercase"><input type="radio" name="optradio" id="lebensdokumente_radio" value="lebensdokumente_search" onchange="filter(this)"/>
-                                <i18n:text>personaldocument</i18n:text></label>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="lebensdokumente_radio" value="lebensdokumente_search" onchange="filter(this)"/>
+                                <i18n:text>personaldocument</i18n:text>
+                            </label>
                         </div>
                     </xsl:if>
                     
                     <xsl:if test="contains($Filter_search, 'o:szd.personen')">
                         <div class="radio">
-                            <label class="text-uppercase">
-                                <input type="radio" name="optradio" id="person_radio" value="person_search" onchange="filter(this)"/>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="person_radio" value="person_search" onchange="filter(this)"/>
                                 <i18n:text>Persons</i18n:text>
                             </label>
                         </div>
                     </xsl:if>
                     <xsl:if test="contains($Filter_search, 'o:szd.werke')">
                         <div class="radio">
-                            <label class="text-uppercase"><input type="radio" name="optradio" id="werke_radio" value="werke_search" onchange="filter(this)"/>
-                                <i18n:text>work</i18n:text></label>
+                            <label class="text-uppercase small">
+                                <input class="mr-1" type="radio" name="optradio" id="werke_radio" value="werke_search" onchange="filter(this)"/>
+                                <i18n:text>work</i18n:text>
+                            </label>
                         </div>
                     </xsl:if>
 
@@ -662,23 +668,53 @@
     <xsl:template name="GetPersonList">
         <xsl:param name="Person"/>
         <xsl:for-each select="$Person">
-            <xsl:variable name="Personlist_ref" select="string(.)"/>
-            <xsl:value-of select="$PersonList//t:person[t:persName[contains(@ref, $Personlist_ref)]]/@xml:id"/>
+         <xsl:choose>
+             <xsl:when test="contains(., 'SZDPER.')">
+                     <xsl:variable name="String" select="string(.)"/>
+                     <xsl:variable name="SZDPER" select="$PersonList//t:person[@xml:id = $String]/t:persName"/>
+                     <xsl:value-of select="$SZDPER/t:surname|$SZDPER/t:name"/>
+                     <xsl:if test="$SZDPER/t:forename">
+                         <xsl:text>, </xsl:text>
+                         <xsl:value-of select="$SZDPER/t:forename"/>
+                     </xsl:if>
+             </xsl:when>
+             <xsl:otherwise>
+                     <xsl:variable name="SZDPER" select="string(.)"/>
+                     <xsl:value-of select="$PersonList//t:person[t:persName[contains(@ref, $SZDPER)]]/@xml:id"/>
+             </xsl:otherwise>
+         </xsl:choose>
         </xsl:for-each>
     </xsl:template>
 	
 	<!-- /////////////////////////////////////////////////////////// -->
-    <!-- ///GetStandorteList/// -->  
+    <!-- ///GetStandorteList/// --> 
+    <!-- if input is a GND-ID it returns a SZDPER, and if input a SZDPER is a GND-ID -->
 	<xsl:template name="GetStandortList">
 		<xsl:param name="Standort"/>
-		<xsl:for-each select="$Standort">
-			<xsl:variable name="String" select="string(.)"/>
-			<xsl:variable name="SZDSTA" select="$StandorteList//t:org[t:orgName[@ref = $String]]/@xml:id"/>
-			<!-- check if there is a GND-Ref, otherwise all empty gnd would be listed -->
-			<xsl:if test="substring-after($String, 'http://d-nb.info/gnd/')">
-				<xsl:value-of select="$SZDSTA"/>
-			</xsl:if>
-		</xsl:for-each>
+	    <xsl:choose>
+	        <xsl:when test="contains($Standort, 'SZDSTA.')">
+	            <xsl:for-each select="$Standort">
+	                <xsl:variable name="String" select="string(.)"/>
+	                <xsl:variable name="SZDSTA" select="$StandorteList//t:org[@xml:id = $String]"/>
+	                <xsl:value-of select="$SZDSTA/t:orgName"/>
+	                <xsl:if test="$SZDSTA/t:settlement">
+	                    <xsl:text>, </xsl:text>
+	                    <xsl:value-of select="$SZDSTA/t:settlement"/>
+	                </xsl:if>
+	            </xsl:for-each>
+	        </xsl:when>
+	        <xsl:otherwise>
+	            <xsl:for-each select="$Standort">
+	                <xsl:variable name="String" select="string(.)"/>
+	                <xsl:variable name="SZDSTA" select="$StandorteList//t:org[t:orgName[@ref = $String]]/@xml:id"/>
+	                <!-- check if there is a GND-Ref, otherwise all empty gnd would be listed -->
+	                <xsl:if test="substring-after($String, 'http://d-nb.info/gnd/')">
+	                    <xsl:value-of select="$SZDSTA"/>
+	                </xsl:if>
+	            </xsl:for-each>
+	        </xsl:otherwise>
+	    </xsl:choose>
+	    
 	</xsl:template>
 	
 	
@@ -811,7 +847,9 @@
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[not(@role)]">
-                            	<xsl:call-template name="PersonSearch"/>
+                            	<xsl:call-template name="PersonSearch">
+                            	    <xsl:with-param name="locale"/>
+                            	</xsl:call-template>
                             </xsl:for-each>
                         </td>
                     </tr>
@@ -825,7 +863,9 @@
                          </td>
                          <td class="col-9">
                              <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[@role='illustrator']">
-                                 <xsl:call-template name="PersonSearch"/>
+                                 <xsl:call-template name="PersonSearch">
+                                     <xsl:with-param name="locale"/>
+                                 </xsl:call-template>
                              </xsl:for-each>
                          </td>
                      </tr>
@@ -839,7 +879,9 @@
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[@role='translator']">
-                            	<xsl:call-template name="PersonSearch"/>
+                                <xsl:call-template name="PersonSearch">
+                                    <xsl:with-param name="locale"/>
+                                </xsl:call-template>
                             </xsl:for-each>
                         </td>
                     </tr>
@@ -853,7 +895,9 @@
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='preface']">
-                                <xsl:call-template name="PersonSearch"/>
+                                <xsl:call-template name="PersonSearch">
+                                    <xsl:with-param name="locale"/>
+                                </xsl:call-template>
                             </xsl:for-each>
                         </td>
                     </tr>
@@ -867,7 +911,9 @@
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='afterword']">
-                            	<xsl:call-template name="PersonSearch"/>
+                                <xsl:call-template name="PersonSearch">
+                                    <xsl:with-param name="locale"/>
+                                </xsl:call-template>
                             </xsl:for-each>
                         </td>
                     </tr>
@@ -978,7 +1024,7 @@
                                			<xsl:call-template name="languageCode">
                                			    <xsl:with-param name="Current" select="@xml:lang"/>
                                			    <xsl:with-param name="locale" select="$locale"/>
-                               			</xsl:call-template>,
+                               			</xsl:call-template>
                                		</xsl:otherwise>
                                	</xsl:choose>
                            </xsl:for-each>
@@ -1366,6 +1412,7 @@
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template name="PersonSearch">
 	    <xsl:param name="locale"/>
+	    <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
 		<xsl:choose>
 			<xsl:when test="@ref or t:persName/@ref">
 			    <xsl:variable name="REF" select="@ref | t:persName/@ref"/>
@@ -1374,7 +1421,12 @@
 					    <xsl:with-param name="Person" select="$REF"/>
 					</xsl:call-template>
 				</xsl:variable>
-			    <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;https://gams.uni-graz.at/o:szd.personen#'), encode-for-uri($SZDPER), '&gt;', '&amp;locale=', $locale)}" target="_blank">
+			    
+			    <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
+			    <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+			    
+			    <!-- {concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;https://gams.uni-graz.at/o:szd.personen#'), encode-for-uri($SZDPER), '&gt;', encode-for-uri(';$2|'), encode-for-uri($locale), '&amp;locale=', $locale)} -->
+			    <a href="{$QueryUrl}" target="_blank">
 				    <xsl:choose>
 				        <xsl:when test="$locale = 'en'">
 				            <xsl:attribute name="title" select="'Suchanfrage'"/>
@@ -1393,7 +1445,10 @@
 			</xsl:when>
 		    <xsl:when test="s:sn">
 		        <xsl:variable name="SZDPER" select="s:author/@uri"/>
-		        <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;'), encode-for-uri($SZDPER), '&gt;', '&amp;locale=', $locale)}" target="_blank">
+		        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
+		        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+		        
+		        <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;'), encode-for-uri($SZDPER), '&gt;', encode-for-uri(';$2|'), encode-for-uri($locale), '&amp;locale=', $locale)}" target="_blank">
 		            <xsl:choose>
 		                <xsl:when test="$locale = 'en'">
 		                    <xsl:attribute name="title" select="'Suchanfrage'"/>
@@ -1434,8 +1489,13 @@
         <xsl:param name="locale"/>
         <xsl:param name="SZDSTA"/>
         <xsl:param name="location_string"/>
+        
+        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params='"/>
+        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', $SZDSTA, '&gt;', ';$2|', $locale))"/>
+        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+        
         <!-- Standortsuche -->
-        <a href="{concat('/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#'), encode-for-uri($SZDSTA), '&gt;', '&amp;locale=', $locale)}" target="_blank">
+        <a href="{$QueryUrl}" target="_blank">
             <xsl:attribute name="title">
                 <xsl:choose>
                     <xsl:when test="$locale = 'en'">
@@ -1652,7 +1712,7 @@
                               <i18n:text>language</i18n:text>
                            </td>
                            <td class="col-9">
-                               <xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang">
+                               <xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang/@xml:lang">
                                    <xsl:choose>
                                        <xsl:when test="position() = last()">
                                            <!-- tempalte in szd-genericTempaltes.xsl -->
@@ -1936,8 +1996,22 @@
                 <xsl:if test="t:fileDesc/t:titleStmt/t:author[1][not(@role)]">
                     <tr class="row">
                         <td class="col-3">
-                            <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
-                            <i18n:text>author_szd</i18n:text>
+                            <xsl:choose>
+                                <xsl:when test="t:fileDesc/t:titleStmt/t:title[@type='object']">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale='en'">
+                                            <xsl:text>Creator</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Schöper/in</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <i18n:text>author_szd</i18n:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author">
@@ -1953,7 +2027,6 @@
                 <xsl:if test="t:fileDesc/t:titleStmt/t:author[1][@role = 'composer']">
                     <tr class="row">
                         <td class="col-3">
-                            <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
                             <i18n:text>composer</i18n:text>
                         </td>
                         <td class="col-9">
@@ -2180,7 +2253,7 @@
         <xsl:param name="locale"/>
         <xsl:choose>
             <xsl:when test="$path/@xml:lang">
-                <xsl:value-of select="normalize-space($path[@xml:lang = $locale])"/>
+                <xsl:value-of select="normalize-space($path[@xml:lang = $locale][1])"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="normalize-space($path[1])"/>

@@ -46,9 +46,9 @@
                         <xsl:variable name="SZDORG" select="current-grouping-key()"/>
                         <!-- build query URL -->
                         <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params='"/>
-                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', @xml:id, '&gt;'))"/>
+                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', @xml:id, '&gt;', ';$2|', $locale))"/>
                         <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
-                        
+
                         <div class="list-group-item shadow-sm" id="{@xml:id}">
                             <div class="row">
                                 <h4 class="text-left col-9">

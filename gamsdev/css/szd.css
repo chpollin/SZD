@@ -1,0 +1,1204 @@
+/* Style the Image Used to Trigger the Modal */
+
+.small, small {
+    font-size: 90%;
+    font-weight: 400;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+     margin-top: 0;
+}
+
+.form-row {
+    margin-top: 10px;
+}
+
+/*  disable border for .card*/     
+.card{
+    border:none;
+}
+.card-header
+{
+    border:none;
+}
+
+/* collapse entry SZDMSK, SZDBIB etc.  */
+div.entry{
+    margin-bottom:25px;
+    padding: 0px;
+    text-align:left;    
+}
+
+
+._icon{
+        color: #C2A360;
+}
+
+.info_icon_header{
+    color: #C2A360;
+    font-size: 50%;
+}
+
+.info_icon{
+    color: #C2A360;
+    font-size: 80%;
+    margin-left: 5px;
+}
+
+.grey{
+    background-color: #f5f5f5
+}
+
+
+/* ORDNUNGDKATEGORIE */
+.entryGroup{
+    padding-top:20px; 
+}
+
+.headerEntryList {
+    margin-top: 45px;
+    font-size:20px; 
+    text-align: left;
+}
+.header-card-nav {
+  background-color: white;
+  opacity: 1;
+  top: 2em;
+  padding-top: 45px;
+}
+
+.modal_Img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal_Img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+}
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type="text"], textarea {
+outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
+}
+
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+
+
+input.checkbox{
+	  font-weight: bold;
+	}
+
+/* Tooltip container */
+.tooltip {
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #f2f2f2;
+    color: #5d1337;
+    text-align: center;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip > .tooltip-inner {background-color: #f2f2f2;
+color: #5d1337;}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c3a461;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #c3a461;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #c3a461;
+}
+
+
+
+.img_font{
+background: rgba(255, 255, 255, 0.75);
+  color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+
+}
+
+/* .bgimg-1{*/
+/*background-image: url("http://glossa.uni-graz.at/gamsdev/pollin/szd/trunk/www/img/SZdigi_B.jpg");*/
+/*  padding:600px;*/
+/*  position: relative;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
+/*height: 100px;*/
+/*    width: 200px;*/
+
+/*}*/
+
+.nav > li > a
+{
+ padding: 0px 12px;
+}
+
+.just-padding {
+  padding: 15px;
+}
+
+.list-group.list-group-root {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+  margin-bottom: 0;
+}
+
+.list-group.list-group-root .list-group-item {
+  border-radius: 0;
+  border-width: 1px 0 0 0;
+}
+
+.list-group.list-group-root > .list-group-item:first-child {
+  border-top-width: 0;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+  padding-left: 30px;
+  font-size: 26px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 75px;
+}
+
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail {
+	border: 0;
+    	box-shadow: none;
+	height: 100%;
+}
+
+/* extra positioning */
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+}
+
+
+/*
+ * Globals
+ */
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+.container {
+  max-width: 60rem;
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  margin-bottom: 3rem;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.nav-link {
+  position: relative;
+  padding: 1rem;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Active state gets a caret at the bottom */
+.nav-link.active {
+  color: #fff;
+}
+.nav-link.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -.3rem;
+  vertical-align: middle;
+  content: "";
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid;
+  border-left: .3rem solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    margin: 40px;
+    font-size: 3.5rem;
+  }
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 1rem;
+  /*margin: 0 -1rem 1rem;*/
+}
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: .25rem;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+#autocomplete_szd {
+    position: relative;
+    z-index: 10000;
+}
+.ui-autocomplete {
+     z-index: 9999 !important;
+}
+
+
+.databasket_item{
+    font-size: 14px;
+}
+
+
+
+button.ABCButton{
+    width: 18px;
+}
+
+
+.home_li{    
+  color:#631a34;
+  font-size: 18px;
+  line-height: 19px;
+  font-family:"Bauer", Arial, Helvetica;
+  text-align: left;
+}
+
+.caption {
+    font-size: 15px;
+}
+
+.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    font-size: 12pt;
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
+
+.GNDButton{
+  border:1px solid #dcdcdc;
+  height: 47px
+}
+
+.panel-group {
+    margin-left: 15px;
+
+}
+
+h4.list-group-item-heading {
+    text-align: left;
+    font-size: medium;  
+}
+
+.row {
+    margin-top:10px;
+}
+
+.sidebar-outer {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+}
+/*/// ///*/
+/*Navigationsleiste links*/
+
+div.navigation{  
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 5%;
+  max-height: 80%;  
+}
+
+.ABCButton{
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:14px;
+	font-weight:bold;
+	padding:1px 1px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+.ABCButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+
+.ABCButton:active {
+	position:relative;
+	top:1px;
+}
+/*end Navigationsleiste links*/
+/*/// ///*/
+
+/*/// ///*/
+/*Gesamtkatalog*/
+
+input#query {
+    width: 350px;
+}
+
+.SZDBIB_heading{
+  text-align: left;
+  margin-left: 20px;
+}
+ 
+.panel-title {
+  text-align: left;
+  font-size: 16px;
+
+}
+/* Gruppierung Tabelle*/
+tr.group{
+ border-top: solid #545353!important;
+ border-width: 2px!important;
+}
+/*end Gesamtkatalog*/
+/*/// ///*/
+
+/*autocomplete Toolbar*/
+
+input#author_tags {
+    border: 0;
+}
+
+  .ui-autocomplete {
+    max-height: 70%;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 500;
+    float: left;
+    display: none;
+    min-width: 160px;   
+    padding: 4px 0;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    #FBFCF6-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+/*end autocomplete Toolbar*/
+
+
+.szdbutton:hover
+{
+  color:#c3a461;
+}
+
+a.szdbutton
+{
+  color:#c3a461;
+  border: 1px solid #c3a461;
+  font-family:"Bauer", Arial, Helvetica;
+  font-size: 12pt;
+  text-align: center;
+  background-color: transparent;
+}
+
+/*///////////////////////*/
+/*ICONS*/
+button.icon_suche
+{
+  display: inline-block;
+  height: auto;
+  width: 48px;
+}
+
+img.icon_navbar
+{
+  display: inline-block;
+  height: auto;
+  width: 30px;
+}
+
+img.icon
+{ 
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 7px;
+    display: inline-block;
+    width: 28px;
+}
+/*///////////////////////*/
+
+/*Einbindung Font*/
+@font-face 
+{
+  font-family: 'Bauer';
+    /* here change when migrat to gams */
+  src: url('/gamsdev/pollin/szd/trunk/www/fonts/BauerBodoniStd-BoldCond.otf');
+}
+@font-face 
+{
+  font-family: 'SansPro';
+  /* here change when migrat to gams */
+  src: url('/gamsdev/pollin/szd/trunk/www/fonts/SourceSansPro-Light.otf');
+}
+
+ul.dropdown-menu > li > a
+{
+  font-size: 12pt;
+  line-height: 20pt;
+  font-family:"'SansPro'", Arial, Helvetica;
+  text-align: center;
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+
+span.glyphicon
+{
+  color: #631a34;
+}
+
+.hinweis {
+  background-color: #FDFDEF;
+  border: 1px solid #EBE9C5;
+  border-radius: 4px ;
+}
+
+.jumbotron {
+  background: rgb(200, 54, 54); /* This is for ie8 and below */
+  background: rgba(200, 54, 54, 0); 
+}
+
+.imageOverflow {
+  position: relative;
+}
+
+.figure-caption 
+{
+  top: 5%;
+  left: 50%;
+  position: absolute;	
+	color:#FBFCF6;
+}
+
+blockquote {	
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/*
+###### Typography
+*/
+html{
+    background-color:#D3D3D3;
+}
+
+body{
+  font-family:"SansPro", Arial, Helvetica;
+  background-color:#FBFCF6;
+  color:#131313;
+  font-size: 14pt;
+  line-height: 20pt;
+  text-align: justify;
+  
+  
+  background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ffffff, #f2f2f2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	
+    
+}
+/*farben im main bereich sollen fÃ¼r alle projekte gleichbleiben wg. kontrast und einheitlichkeit*/
+
+
+/* h1 on home image Stefan Zweig Digital */
+h1.homeimg
+{
+  color: #c3a461;
+  font-size: 60pt;
+  text-align: center;
+  line-height: 54pt;
+  font-family:"SansPro", Arial, Helvetica;
+   font-weight: 300;
+}
+
+h1{
+color: #c3a461;
+font-size: 60px;
+line-height: 54px;
+text-align: center;
+font-family:"SansPro", Arial, Helvetica;
+font-weight: bold;
+}
+
+h2{
+color: #c3a461;
+font-size: 30px;
+line-height: 27px;
+text-align: center;
+font-family:"SansPro", Arial, Helvetica;
+font-weight: bold;
+}
+
+h3{    
+color:#631a34;
+font-size: 18px;
+line-height: 18px;
+font-family:"SansPro", Arial, Helvetica;
+text-align: left;
+font-weight: bold;
+}
+
+h3.objekt{
+    margin-top:5px;
+}
+
+h4
+{
+  color:#631a34;
+  font-size: 14pt;
+  line-height: 18pt;
+  font-family:"SansPro", Arial, Helvetica;
+  text-align: center;
+}
+
+blockquote,
+cite,
+q
+{
+  font-size: 18px;
+  line-height: 24px;
+  font-family:"SansPro", Arial, Helvetica;
+  text-align: center;
+}
+
+blockquote > span
+{
+  color: #631a34;
+  font-size: 20px;
+  line-height: 19px;
+  font-family:"SansPro", Arial, Helvetica;
+  text-align: center;
+}
+
+a
+{
+    color:#631a34; /*projektfarbe!*/
+    font-family:"SansPro", Arial, Helvetica;
+}
+
+a:hover,
+a:focus{
+    background-color:transparent;
+    color:inherit;
+}
+
+
+/*#631a34*/
+.color{
+    color:#631a34; /*projektfarbe!*/
+}
+
+/*
+###### Header
+*/
+@media (max-width: 768px)
+{
+    header h1
+	{
+        font-size: 160%; 
+    }
+    header h2
+	{
+		font-size: 130%; 
+    }
+    .logoUni
+	{
+		height: 45px;
+	}
+	
+}
+@media (max-width: 568px){
+    header h1{
+        font-size: 140%; 
+    }
+      header h2{
+        font-size: 100%; 
+    }
+}
+
+div.unilogo {
+    float: right;
+    margin-top:20px;
+}
+
+div a.unilogo {
+    width: 73px; 
+    height: 62px; 
+    text-decoration: none; 
+    background: none;
+}
+
+header {
+    background-color: #fbfcf6;/*projektfarbe!*/
+    height: 60px;
+   
+}
+
+/* h3 in glossar */
+.glossarHead{
+font-size:20px;
+}
+
+.glossarEntry{
+margin-top:80px;
+}
+
+header h1, header h2, div.language  {
+    color: #ffffff;
+}
+header h1{
+    margin-top:37px;
+}
+div.language {
+	margin-top: 18px;
+    margin-left: 10px;
+}
+div.language a, div.language a:hover, div.language a:focus {
+    color:#631a34;
+    background:transparent;
+    
+}
+
+/*
+###### Navigation
+siehe navbar.css
+
+
+###### Main
+
+*/
+main a:hover, main a:focus {
+    background-color:transparent;
+    color:#631a34; /*projektfarbe!*/
+}
+
+
+
+main p {
+line-height:1.5;
+margin-bottom:15px;
+
+}
+
+/*
+###### Footer
+
+*/
+
+footer {
+    background-color:  #f2f2f2; 
+    padding-bottom: 30px;
+    margin-top: 0;
+    color: #631a34;
+}
+
+footer h6 {
+     color: inherit;
+     background-color: inherit;
+     border-bottom: 1px solid #631a34;
+     margin-bottom: 1em;
+}
+
+footer a {
+    color: inherit;
+}
+
+
+img.footer_icons{
+    padding-right:10px;
+    padding-bottom:10px;
+}
+
+.icons a:hover, .icons a:focus {text-decoration:none;}
+/*
+###### Boxen
+*/
+
+
+.panel{
+    box-shadow:none; 
+    border-radius:0;
+    padding-right:20px;
+    padding-left:20px;
+    margin-bottom:30px;
+}
+
+/*
+###### Bilder
+*/
+
+.thumbnail{
+    border-radius:0;
+}
+
+.panel-with-image{
+    padding-right:0;
+    padding-left:0;
+    background-color:#fbfcf6; /*projektfarbe*/
+    border:none;
+}
+
+.panel-with-image .panel-body h4{
+    color:#FBFCF6;
+    margin:0;
+}
+.panel-with-image .panel-body a{
+    color:#FBFCF6;
+    float:right;
+}
+.panel-image img.panel-image-preview {
+    width: 100%;
+}
+
+.panel-heading ~ .panel-image img.panel-image-preview {
+	border-radius: 0px;
+}
+
+.panel-image ~ .panel-body, .panel-image.hide-panel-body ~ .panel-body {
+	overflow: hidden;
+}
+.panel-image ~ .panel-footer a {
+	padding: 0px 10px;
+	font-size: 1.3em;
+}
+
+.panel-image.hide-panel-body ~ .panel-body {
+	height: 0px;
+	padding: 0px;
+}
+
+
+/*
+###### Suche und Kontextliste
+*/
+
+.list-group-submenu {
+  margin-left:20px;
+}
+.chevron-down-context{
+    font-size:10px; 
+    padding-right:5px;
+}
+.context-item-number{
+    float:right;
+    color:#631a34; /*projektfarbe*/
+}
+
+p.results{
+    float:right; bottom: 0; right: 0; font-size:12px;
+}
+
+li.results{
+    position:relative;overflow:hidden;border-bottom:dotted 1px;padding:5px 0 5px 0;margin:5px 0 5px 0;
+}
+
+img.results{
+    float: left; padding-right: 10px; padding-bottom:5px;
+}
+
+span.results{
+    vertical-align: top; padding-right: 10px;
+}
+span.permalink{
+    font-size:12px;
+}
+.icons{
+    margin-left:5px;
+}
+span.icon-span{
+    position: absolute; bottom: 0; right: 0; padding:5px;
+}
+.form-control, .input-group-addon, .btn{
+    border-radius:0;
+}
+
+#search a, #search a:hover, #search a:focus, #results a, #results a:hover, #results a:focus {
+    color:#333333;
+    text-decoration:none;
+}
+
+
+#search p, #results p {margin-bottom:5px;}
+
+#search-navi a, #search-navi a:hover, #search-navi a:focus {
+color:#631a34;/*projektfarbe!*/
+}
+
+
+.result {
+list-style:none; 
+padding:0;
+margin:0;
+}
+
+
+/*Accordion*/
+
+.accordion{
+    padding:0;
+}
+.sublinks{
+    max-height: 270px;
+    overflow-y: scroll;
+}
+.accordion .list-group-item{
+    border-radius:0;
+}

@@ -1,0 +1,13 @@
+@media print {
+	
+  a[href]:after {
+
+    content: '*';
+  }
+
+
+    body {width:1200px;}
+    div[class|=col-]{float:left;}
+    .col-sm-6{width:50%}
+
+}

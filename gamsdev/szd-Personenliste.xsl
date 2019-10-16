@@ -34,7 +34,7 @@
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:with-param>
-                <xsl:with-param name="Content" select="//t:listPerson/t:person/t:persName[not(@type)]/t:surname"/>
+                <xsl:with-param name="Content" select="//t:listPerson/t:person/t:persName/t:surname"/>
                 <xsl:with-param name="PID" select="'o:szd.personen'"/>
                 <xsl:with-param name="locale" select="$locale"/>
             </xsl:call-template>
@@ -42,7 +42,7 @@
             <!-- creates for every person an entry, including reference to GND and alphabetically sorted and linked -->
             <article id="content">
                 <div class="list-group entryGroup">       
-                    <xsl:for-each-group select="//t:listPerson/t:person" group-by="substring(t:persName[not(@type)]/t:surname|t:persName[not(@type)]/t:name, 1, 1)">
+                    <xsl:for-each-group select="//t:listPerson/t:person" group-by="substring(t:persName/t:surname|t:persName/t:name, 1, 1)">
                         <xsl:sort select="current-grouping-key()"></xsl:sort>
                         <!-- ////////////////////////////// -->
                         <xsl:for-each select="current-group()">
@@ -52,44 +52,49 @@
                                 <div class="row">
                                     <h4 class="text-left col-8">
                                         <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
-                                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;'))"/>
+                                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
                                         <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
                                         
                                         <a href="{$QueryUrl}" class="font-weight-bold">
                                         <xsl:choose>
-                                            <xsl:when test="t:persName[not(@type)]/t:surname">
-                                                <xsl:value-of select="t:persName[not(@type)]/t:surname"/>
+                                            <xsl:when test="t:persName/t:surname">
+                                                <xsl:value-of select="t:persName/t:surname"/>
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                <xsl:value-of select="t:persName[not(@type)]/t:name"/>
+                                                <xsl:value-of select="t:persName/t:name"/>
                                             </xsl:otherwise>
                                         </xsl:choose>
-                                        <xsl:if test="t:persName[not(@type)]/t:forename">
+                                        <xsl:if test="t:persName/t:forename">
                                             <xsl:text>, </xsl:text>
-                                            <xsl:value-of select="t:persName[not(@type)]/t:forename"/>
+                                            <xsl:value-of select="t:persName/t:forename"/>
                                         </xsl:if>
                                     </a>
                                     </h4>
                                     <span class="col">
                                         <xsl:text> </xsl:text>
                                         <!-- if GND @ref -->
-                                        <xsl:if test="contains(t:persName[not(@type)]/@ref, 'd-nb.info/gnd')">
+                                        <xsl:if test="contains(t:persName/@ref, 'd-nb.info/gnd')">
                                             <a target="_blank" title="GND">
                                                 <xsl:attribute name="href">
                                                     <xsl:choose>
-                                                        <xsl:when test="contains(t:persName[not(@type)]/@ref, ' ')">
-                                                            <xsl:value-of select="substring-before(t:persName[not(@type)]/@ref, ' ')"/>
+                                                        <xsl:when test="contains(t:persName/@ref, ' ')">
+                                                            <xsl:value-of select="substring-before(t:persName/@ref, ' ')"/>
                                                         </xsl:when>
                                                         <xsl:otherwise>
-                                                            <xsl:value-of select="t:persName[not(@type)]/@ref"/>
+                                                            <xsl:value-of select="t:persName/@ref"/>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                                 </xsl:attribute>
                                                 <img src="{$Icon_person}" class="img-responsive icon" alt="Person" />
                                             </a>
                                          </xsl:if>
-                                        <xsl:if test="contains(t:persName[not(@type)]/@ref, 'wikidata.org')">
-                                            <a href="{substring-after(t:persName[not(@type)]/@ref, ' ')}" target="_blank" title="Wikidata">
+                                        <!--<xsl:if test="contains(t:persName/@ref, 'wikidata.org')">
+                                            <a href="{substring-after(t:persName/@ref, ' ')}" target="_blank" title="Wikidata">
+                                                <img src="{$Icon_wikidata}" class="img-responsive icon" alt="Person" width="50"/>
+                                            </a>
+                                        </xsl:if>-->
+                                        <xsl:if test="t:idno[@type='wikidata']">
+                                            <a href="{t:idno[@type='wikidata']}" target="_blank" title="Wikidata">
                                                 <img src="{$Icon_wikidata}" class="img-responsive icon" alt="Person" width="50"/>
                                             </a>
                                         </xsl:if>

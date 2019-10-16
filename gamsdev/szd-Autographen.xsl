@@ -126,31 +126,33 @@
                     
                     <!-- /////////////////////////////////////////////////// -->
                     <!-- All biblFull without an author[@role = "Verfasser"] -->
-                    <div class="list-group mt-5" id="withoutAuthor">  
-                        <h3>
-                            <i18n:text>without_author</i18n:text>
-                        </h3>
-                        
-                        <!-- select all biblFull without @Verfasser/@Herausgeber -->
-                        <xsl:for-each select="$biblFull[not(t:fileDesc/t:titleStmt/t:author)][not(t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'])]">
-                            <xsl:sort select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
-                            <!-- GETENTRY -->
-                            <div class="list-group-item entry shadow-sm">
-                                <!-- //// -->
-                                <!-- getEntry_SZDBIB_SZDAUT -->
-                                <xsl:call-template name="getEntry_SZDBIB_SZDAUT">
-                                    <xsl:with-param name="locale" select="$locale"/>
-                                </xsl:call-template>
-                                <!-- //// -->
-                                <!-- FillbiblFull_SZDBIB -->
-                                <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
-                                    <xsl:call-template name="FillbiblFull_SZDAUT">
-                                        <xsl:with-param name="locale" select="$locale"/>
-                                    </xsl:call-template>
-                                </div> 
-                            </div>
-                        </xsl:for-each>
-                    </div>
+                    <xsl:if test="$biblFull[not(t:fileDesc/t:titleStmt/t:author)][not(t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'])]">
+                         <div class="list-group mt-5" id="withoutAuthor">  
+                             <h3>
+                                 <i18n:text>without_author</i18n:text>
+                             </h3>
+                             
+                             <!-- select all biblFull without @Verfasser/@Herausgeber -->
+                             <xsl:for-each select="$biblFull[not(t:fileDesc/t:titleStmt/t:author)][not(t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'])]">
+                                 <xsl:sort select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
+                                 <!-- GETENTRY -->
+                                 <div class="list-group-item entry shadow-sm">
+                                     <!-- //// -->
+                                     <!-- getEntry_SZDBIB_SZDAUT -->
+                                     <xsl:call-template name="getEntry_SZDBIB_SZDAUT">
+                                         <xsl:with-param name="locale" select="$locale"/>
+                                     </xsl:call-template>
+                                     <!-- //// -->
+                                     <!-- FillbiblFull_SZDBIB -->
+                                     <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
+                                         <xsl:call-template name="FillbiblFull_SZDAUT">
+                                             <xsl:with-param name="locale" select="$locale"/>
+                                         </xsl:call-template>
+                                     </div> 
+                                 </div>
+                             </xsl:for-each>
+                         </div>
+                    </xsl:if>
                 </article>
         </section>        
     </xsl:template>

@@ -285,7 +285,7 @@
 											</xsl:choose>
 											<div class="form-row">
 												<div class="input-group">
-													<input class="form-control border" id="n$1" name="$1" type="text">
+													<input class="form-control border" id="n$1" name="$1" type="text" lang="{$locale}">
 														<xsl:attribute name="placeholder">
 															<xsl:choose>
 																<xsl:when test="$locale = 'en'">

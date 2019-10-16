@@ -112,7 +112,11 @@
     <!-- ///PERSON/// -->
     <xsl:template match="t:name[@type='person']">
         <xsl:variable name="SZDPER" select="substring-after(@ref, '#')"/>
-        <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=$1|&lt;https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.personen%23', $SZDPER, '&gt;', '&amp;locale=', $locale)}" target="_blank">
+        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
+        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
+        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+        
+        <a href="{$QueryUrl}" target="_blank">
           <xsl:choose>
               <xsl:when test="$locale = 'en'">
                   <xsl:attribute name="title" select="'Search query'"/>

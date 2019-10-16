@@ -87,7 +87,8 @@
                                         <xsl:text>: </xsl:text>
                                     </span>
                                     <span class="col-8">
-                                        <xsl:value-of select="$RESULT_SET[1]/s:q_sn"/><xsl:if test="$RESULT_SET[1]/s:q_fn"><xsl:text>, </xsl:text><xsl:value-of select="$RESULT_SET[1]/s:q_fn"/></xsl:if>
+                                        <xsl:value-of select="$RESULT_SET[1]/s:qs"/>
+                                        <xsl:if test="$RESULT_SET[1]/s:qf"><xsl:text>, </xsl:text><xsl:value-of select="$RESULT_SET[1]/s:qf"/></xsl:if>
                                     </span>
                                 </xsl:when>
                                 <xsl:when test="contains($RESULT_SET[1]/s:query/@uri, 'SZDSTA')">
@@ -96,7 +97,7 @@
                                         <xsl:text>: </xsl:text>
                                     </span>
                                     <span class="col-8">
-                                        <xsl:value-of select="$RESULT_SET[1]/s:q_n"/>
+                                        <xsl:value-of select="$RESULT_SET[1]/s:qs"/>
                                     </span>
                                 </xsl:when>
                                 <xsl:when test="contains($RESULT_SET[1]/s:query/@uri, 'SZDPUB')">
@@ -114,7 +115,7 @@
                                       <xsl:text>: </xsl:text>
                                     </span>
                                     <span class="col-8">
-                                        <xsl:value-of select="$RESULT_SET[1]/s:prefLabel"/>
+                                        <xsl:value-of select="$RESULT_SET[1]/s:qs"/>
                                     </span>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -143,7 +144,7 @@
                 
                 <!-- //////////////////////////////////////////////////////////////// -->
                 <!-- results -->
-                <div class="row" id="all_search" >
+                <div class="row mt-3" id="all_search" >
                 <xsl:choose>
                     <!-- ///SEARCHRESULT/// -->
                     <!-- check if search result exists -->
@@ -153,7 +154,8 @@
                         <xsl:if test="$RESULT_SET/s:re/@uri[contains(.,'/o:szd.collection')]">
                             <div class="row" id="thema_search">
                                 <xsl:for-each-group select="$RESULT_SET" group-by="s:re/@uri[contains(.,'/o:szd.collection')]">
-                                    <xsl:for-each select="current-group()">
+                                    <xsl:sort select="current-grouping-key()"></xsl:sort>
+                                    <!--<xsl:for-each select="current-group()">-->
                                         
                                         <xsl:variable name="SZDPER" select="substring-after(s:re/@uri, '#')"/>
                                         <!-- OUTPUT OF FOUND PERSON -->
@@ -163,7 +165,7 @@
                                                 <xsl:value-of select="s:t"/>
                                             </a>
                                         </h3> 
-                                    </xsl:for-each>
+                                    <!--</xsl:for-each>-->
                                 </xsl:for-each-group>
                             </div>
                         </xsl:if>
@@ -172,23 +174,23 @@
                         <!-- checks if a person was found and offers a list of names with href to person_search -->
                         <xsl:if test="$RESULT_SET/s:re/@uri[contains(.,'/o:szd.personen')]">
                             <!-- /////////////////////////////////////////// -->
-                            <div class="col-12 mt-5" id="person_search">
+                            <div class="col-12 mt-3" id="person_search">
                                 <h3 class="text-uppercase">
                                     <i18n:text>persons</i18n:text>
                                 </h3>
                                 <xsl:for-each-group select="$RESULT_SET" group-by="s:re/@uri[contains(.,'SZDPER.')]">
-                                    <xsl:sort select="s:sn"/>
+                                    <xsl:sort select="s:s"/>
                                     <xsl:for-each select="current-group()">
                                         <!-- OUTPUT OF FOUND PERSON -->
-                                        <xsl:if test="s:sn">
+                                        <xsl:if test="s:s">
                                         <h4 class="col-12 text-left">
                                             <xsl:variable name="SZDPER" select="substring-after(s:re/@uri, '#')"/>
                                             <img src="{$Icon_person}" class="img-responsive icon" alt="Person"/>
                                             <xsl:text> </xsl:text>
                                             <a href="{concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=$1|&lt;https%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.personen%23', $SZDPER , '&gt;', '&amp;locale=', $locale)}" target="_blank">
-                                                <xsl:value-of select="s:sn"/>
-                                                <xsl:if test="s:fn">
-                                                    <xsl:text>, </xsl:text><xsl:value-of select="s:fn"/>
+                                                <xsl:value-of select="s:s"/>
+                                                <xsl:if test="s:f">
+                                                    <xsl:text>, </xsl:text><xsl:value-of select="s:f"/>
                                                 </xsl:if>
                                                 <xsl:text> </xsl:text>  
                                             </a>
@@ -198,21 +200,21 @@
                                 </xsl:for-each-group>
                             </div>
                         </xsl:if>
-                        
-                        
-                        <!-- if BiographicalEvent aka Lebenskalender found -->
+                        <!-- ///////// -->
+                        <!-- BIOGRAPHY -->
                         <xsl:if test="$RESULT_SET/s:re/@uri[contains(.,'o:szd.lebenskalender#SZDBIO')]">
-                            <div class="col-12 mt-5" id="biography_search">
+                            <div class="col-12 mt-3" id="biography_search">
                                 <h3 class="text-uppercase">
                                     <i18n:text>biography</i18n:text>
                                 </h3>
                                 <ul>
-                                    <xsl:for-each-group select="$RESULT_SET[s:locale_h = $locale]" group-by="s:re/@uri[contains(.,'o:szd.lebenskalender#SZDBIO')]">
+                                    <!-- locale:h contains 'enÄ or 'de' for the language -->
+                                    <xsl:for-each-group select="$RESULT_SET" group-by="s:re/@uri[contains(.,'o:szd.lebenskalender#SZDBIO')]">
                                         <xsl:sort select="s:d"/>
                                         <xsl:variable name="SZDBIO" select="substring-after(s:re/@uri, '#')"/>
                                             <!-- OUTPUT OF FOUND PERSON -->
                                             <li>
-                                                <a class="small" href="{concat('/o:szd.lebenskalender/sdef:TEI/get?locale=', $locale, '#', $SZDBIO)}" target="_blank" onclick="scrolldown(this)">
+                                                <a class="small" href="{concat('/o:szd.lebenskalender/sdef:TEI/get?locale=', $locale, '#', $SZDBIO)}" target="_blank">
                                                     <xsl:attribute name="title">
                                                         <xsl:choose>
                                                             <xsl:when test="$locale='en'">
@@ -250,7 +252,7 @@
                                    <!-- do nothing -->
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.werke')">
-                                    <div class="col-12 list-group entryGroup mt-5" id="werke_search"> 
+                                    <div class="col-12 list-group mt-3" id="werke_search"> 
                                         <h3 class="text-uppercase"><i18n:text>work</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                              <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -259,7 +261,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.lebensdokumente')">
-                                    <div class="col-12 list-group entryGroup mt-5" id="lebensdokumente_search"> 
+                                    <div class="col-12 list-group mt-3" id="lebensdokumente_search"> 
                                         <h3 class="text-uppercase"><i18n:text>personaldocument</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -268,16 +270,16 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.bibliothek')">
-                                    <div class="col-12 list-group entryGroup mt-5" id="bibliothek_search">
+                                    <div class="col-12 list-group mt-2" id="bibliothek_search">
                                         <h3 class="text-uppercase"><i18n:text>library_szd</i18n:text></h3>
                                        <xsl:call-template name="SearchListGroup">
                                            <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
-                                           <xsl:with-param name="Current-Group" select="current-group()[s:locale]"/>
+                                           <xsl:with-param name="Current-Group" select="current-group()"/>
                                        </xsl:call-template>
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.autographen')">
-                                    <div class="col-12 list-group entryGroup mt-5" id="autographen_search">
+                                    <div class="col-12 list-group mt-3" id="autographen_search">
                                         <h3 class="text-uppercase"><i18n:text>autograph</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -286,7 +288,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.publikation')">
-                                    <div class="col-12 list-group entryGroup mt-5" id="autographen_search">
+                                    <div class="col-12 list-group mt-3" id="autographen_search">
                                         <h3 class="text-uppercase"><i18n:text>publication</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -316,30 +318,32 @@
         </section>
     </xsl:template>
     
-    <!-- ///SEARCHRESULTS: LIST-GROUP with SPARQL s:results /// -->
+    <!-- SearchListGroup -->
     <xsl:template name="SearchListGroup">
         <xsl:param name="Current-Grouping-Key"/>
         <xsl:param name="Current-Group"/>
         <!-- to filter all entries with the same @uri, as SPARQL returns same URI's but with other variables: Titel, Originaltitel -->
-        <xsl:for-each-group select="$Current-Group[s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap]" group-by="substring-after(s:re/@uri, '#')">  
+        <xsl:for-each-group select="$Current-Group[s:a='T']" group-by="substring-after(s:re/@uri, '#')">  
            <!-- <xsl:sort select="s:rank" data-type="number"/>-->
-            <xsl:sort select="s:sn" data-type="text" lang="ger"/>
-            <xsl:sort select="s:sn_ed" data-type="text" lang="ger"/>
-            <xsl:sort select="s:sn_co" data-type="text" lang="ger"/>
-            <xsl:sort select="s:sn_pi" data-type="text" lang="ger"/>
-            <xsl:sort select="s:sn_ap" data-type="text" lang="ger"/>
-            <xsl:call-template name="createEntery"/>
+            <xsl:sort select="s:s" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sed" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sco" data-type="text" lang="ger"/>
+            <xsl:sort select="s:spi" data-type="text" lang="ger"/>
+            <xsl:sort select="s:sap" data-type="text" lang="ger"/>
+            <xsl:sort select="s:t" data-type="text" lang="ger"/>
+            <!--  -->
+            <xsl:call-template name="createEntry"/>
             <!-- ////////////////////////////////// -->
             <!-- ENTRY -->
         </xsl:for-each-group>
-        <xsl:if test="$Current-Group[not(s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap)]">
+        <xsl:if test="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)][s:a='T']">
             <h3>
                 <i18n:text>without_author</i18n:text>
             </h3>
-            <xsl:for-each-group select="$Current-Group[not(s:sn | s:sn_ed | s:sn_co | s:sn_pi| s:sn_ap)]" group-by="substring-after(s:re/@uri, '#')">  
+            <xsl:for-each-group select="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)]" group-by="substring-after(s:re/@uri, '#')">  
                 <!-- <xsl:sort select="s:rank" data-type="number"/>-->
-                <xsl:sort select="s:ti" data-type="text" lang="ger"/>
-                <xsl:call-template name="createEntery"/>
+                <xsl:sort select="s:t" data-type="text" lang="ger"/>
+                <xsl:call-template name="createEntry"/>
                 <!-- ////////////////////////////////// -->
                 <!-- ENTRY -->
             </xsl:for-each-group>
@@ -357,17 +361,17 @@
         </xsl:attribute>
         <xsl:attribute name="data-author">
             <xsl:choose>
-                <xsl:when test="s:sn">
-                    <xsl:value-of select="concat(s:sn, ' ', s:fn)"/>
+                <xsl:when test="s:s">
+                    <xsl:value-of select="concat(s:s, ' ', s:f)"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="'o.V.'"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
-        <xsl:if test="s:ti">
+        <xsl:if test="s:t">
             <xsl:attribute name="data-title">
-                <xsl:value-of select="s:ti"/>
+                <xsl:value-of select="s:t"/>
             </xsl:attribute>
         </xsl:if>
         <xsl:attribute name="data-date">
@@ -382,11 +386,11 @@
         </xsl:attribute>
     </xsl:template>
     
-    <xsl:template name="createEntery">
+    <xsl:template name="createEntry">
         <div class="list-group-item entry db_entry shadow-sm">
             <div class="bg-light row">
                 <!-- DATABASKET -->
-                <xsl:call-template name="AddData-Databasket_Search"/>
+                <!--<xsl:call-template name="AddData-Databasket_Search"/>-->
                 
                 <!-- ///PANEL-TITIEL/// -->
                 <!-- creating collapse id -->
@@ -398,21 +402,21 @@
                         </span>
                         <!-- AUTOR -->
                         <xsl:choose> 
-                            <xsl:when test="s:sn">
+                            <xsl:when test="s:s">
                                 <strong>
-                                    <xsl:value-of select="s:sn[1]"/>
-                                    <xsl:if test="s:fn">
+                                    <xsl:value-of select="s:s[1]"/>
+                                    <xsl:if test="s:f">
                                         <xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:fn"/>
+                                        <xsl:value-of select="s:f"/>
                                     </xsl:if>
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
-                            <xsl:when test="s:sn_ed">
+                            <xsl:when test="s:sed">
                                 <strong>
-                                    <xsl:value-of select="s:sn_ed"/>
-                                    <xsl:if test="s:fn_ed"><xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:fn_ed[1]"/>
+                                    <xsl:value-of select="s:sed"/>
+                                    <xsl:if test="s:fed"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fed[1]"/>
                                     </xsl:if>
                                     <xsl:choose>
                                         <xsl:when test="$locale = 'en'">
@@ -425,34 +429,34 @@
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
-                            <xsl:when test="s:sn_co">
+                            <xsl:when test="s:sco">
                                 <strong>
-                                    <xsl:value-of select="s:sn_co"/>
-                                    <xsl:if test="s:fn_co">
+                                    <xsl:value-of select="s:sco"/>
+                                    <xsl:if test="s:fco">
                                         <xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:fn_co"/>
+                                        <xsl:value-of select="s:fco"/>
                                     </xsl:if>
                                     <xsl:text> (</xsl:text><i18n:text>composer</i18n:text><xsl:text>)</xsl:text>
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
                             <!-- partie involved -->
-                            <xsl:when test="s:sn_pi">
+                            <xsl:when test="s:spi">
                                 <strong>
-                                    <xsl:value-of select="s:sn_pi"/>
-                                    <xsl:if test="s:fn_pi"><xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:fn_pi"/>
+                                    <xsl:value-of select="s:spi"/>
+                                    <xsl:if test="s:fpi"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fpi"/>
                                     </xsl:if>
                                     <xsl:text> (</xsl:text><i18n:text>partiesinvolved</i18n:text><xsl:text>)</xsl:text>
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
                             <!-- affected person -->
-                            <xsl:when test="s:sn_ap">
+                            <xsl:when test="s:sap">
                                 <strong>
-                                    <xsl:value-of select="s:sn_ap"/>
-                                    <xsl:if test="s:fn_ap"><xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:fn_ap"/>
+                                    <xsl:value-of select="s:sap"/>
+                                    <xsl:if test="s:fap"><xsl:text>, </xsl:text>
+                                        <xsl:value-of select="s:fap"/>
                                     </xsl:if>
                                     <xsl:text> (</xsl:text><i18n:text>person_affected</i18n:text><xsl:text>)</xsl:text>
                                 </strong>
@@ -463,10 +467,9 @@
                             </xsl:otherwise>
                         </xsl:choose>
                         <!-- TITEL, OBJECTTYP, SIGNATURE,  -->
-                        <!-- current-group() because of multiple titles with langauge tag -->
-                        <xsl:for-each select="current-group()">
                             <span class="font-italic">
-                                <xsl:choose>
+                                <xsl:value-of select="s:t"/>
+                                <!--<xsl:choose>
                                     <xsl:when test="$locale = 'en'">
                                         <xsl:choose>
                                             <xsl:when test="s:ti[following-sibling::s:locale[text()='en']]">
@@ -483,16 +486,15 @@
                                     <xsl:otherwise>
                                         <xsl:value-of select="s:ti"/>
                                     </xsl:otherwise>
-                                </xsl:choose>
+                                </xsl:choose>-->
                             </span>
-                        </xsl:for-each>
                         <xsl:if test="s:ot">
                             <xsl:text> | </xsl:text>
                             <xsl:value-of select="s:ot"/>
                         </xsl:if>
-                        <xsl:if test="s:sig">
+                        <xsl:if test="s:si">
                             <xsl:text> | </xsl:text>
-                            <xsl:value-of select="s:sig"/> 
+                            <xsl:value-of select="s:si"/> 
                         </xsl:if>
                         <xsl:if test="s:d">
                             <xsl:text> | </xsl:text>
@@ -525,55 +527,98 @@
                     <table class="table table-sm">
                         <tbody>
                             <!-- ///Verfasser/// -->
-                            <xsl:if test="s:sn">
+                            <xsl:if test="s:s">
                                 <tr class="row">
                                     <td class="col-3">
-                                        <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
                                         <i18n:text>author_szd</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:call-template name="PersonSearch">
-                                            <xsl:with-param name="locale"/>
-                                        </xsl:call-template>
-                                        <xsl:text> </xsl:text>
-                                        <img src="{$Icon_suche_template}" class="img-responsive icon" alt="Person"/>
+                                        <xsl:for-each-group select="current-group()" group-by="s:s">
+                                            <xsl:call-template name="printAuthor_Search">
+                                                <xsl:with-param name="surname" select="current-grouping-key()"/>
+                                                <xsl:with-param name="forename" select="s:f"/>
+                                            </xsl:call-template>
+                                        </xsl:for-each-group>
                                     </td>
                                 </tr>
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///Composer/// -->
-                            <xsl:if test="s:sn_co">
+                            <xsl:if test="s:sco">
                                 <tr class="row">
                                     <td class="col-3">
                                         <!-- if object like "Haarlocke Goethes" than ... otherwise author-->
                                         <i18n:text>composer</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:sn_co"/>
+                                        <xsl:for-each-group select="current-group()" group-by="s:sco">
+                                            <xsl:call-template name="printAuthor_Search">
+                                                <xsl:with-param name="surname" select="current-grouping-key()"/>
+                                                <xsl:with-param name="forename" select="s:fco"/>
+                                            </xsl:call-template>
+                                        </xsl:for-each-group>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///Herausgeber/// -->
+                            <xsl:if test="s:sed">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <!-- keeping language check because of the <br> -->
+                                        <xsl:choose>
+                                            <xsl:when test="$locale = 'en'">
+                                                <xsl:text>Editor or Compiler</xsl:text>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:text>Herausgeber/in</xsl:text><br></br><xsl:text>oder Bearbeiter/in</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:for-each-group select="current-group()" group-by="s:sed">
+                                             <xsl:call-template name="printAuthor_Search">
+                                                 <xsl:with-param name="surname" select="current-grouping-key()"/>
+                                                 <xsl:with-param name="forename" select="s:fed"/>
+                                             </xsl:call-template>
+                                        </xsl:for-each-group>
                                     </td>
                                 </tr>
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///Betroffene Person/// -->
-                            <xsl:if test="s:sn_ap">
+                            <xsl:if test="s:sap">
                                 <tr class="row">
                                     <td class="col-3">
                                         <i18n:text>person_affected</i18n:text>                            
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:sn_ap"/>
+                                        <xsl:for-each-group select="current-group()" group-by="s:sap">
+                                            <xsl:call-template name="printAuthor_Search">
+                                                <xsl:with-param name="surname" select="current-grouping-key()"/>
+                                                <xsl:with-param name="forename" select="s:fap"/>
+                                            </xsl:call-template>
+                                        </xsl:for-each-group>
                                     </td>
                                 </tr>
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///Beteilgite Person/// -->
-                            <xsl:if test="s:sn_pi">
+                            <xsl:if test="s:pi">
                                 <tr class="row">
                                     <td class="col-3">
                                         <i18n:text>partiesinvolved</i18n:text>                            
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:sn_pi"/>
+                                        <!-- here its just the uri and names are extracted from SZDPER -->
+                                        <xsl:for-each-group select="current-group()" group-by="s:pi/@uri">
+                                            <xsl:call-template name="GetPersonList">
+                                                <xsl:with-param name="Person" select="substring-after(current-grouping-key(), '#')"/>
+                                            </xsl:call-template>
+                                            <xsl:if test="not(position()=last())">
+                                                <xsl:text> / </xsl:text>
+                                            </xsl:if>
+                                        </xsl:for-each-group>
                                     </td>
                                 </tr>
                             </xsl:if>
@@ -588,18 +633,19 @@
                                         <xsl:attribute name="title">
                                             <xsl:choose>
                                                 <xsl:when test="$locale = 'en'">
-                                                    <xsl:text>To the Resource</xsl:text>
+                                                    <xsl:text>To the general view in the catalogue</xsl:text>
                                                 </xsl:when>
                                                 <xsl:otherwise>
-                                                    <xsl:text>Zur Ressource</xsl:text>
+                                                    <xsl:text>Zur Gesamtansicht in den Katalog</xsl:text>
                                                 </xsl:otherwise>
                                             </xsl:choose> 
                                         </xsl:attribute>
-                                        <xsl:value-of select="s:ti"/>
+                                        <xsl:value-of select="s:t"/>
                                     </a>
                                 </td>
                             </tr>
-                            
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- /// /// -->
                             <xsl:if test="s:co">
                                 <tr class="row">
                                     <td class="col-3">
@@ -610,20 +656,64 @@
                                     </td>
                                 </tr>
                             </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///SPRACHE/// -->
+                            <xsl:if test="s:i">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <xsl:text>Incipit</xsl:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:i"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- ///Veröffentlichung/// -->
+                            <xsl:if test="s:ps">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>publicationdetails</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:ps"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //REIHE/// -->	                                                                             
+                            <xsl:if test="s:se">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>series</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:se"/>
+                                        <!-- //UNTERREIHE// -->
+                                        <!--<xsl:if test="t:fileDesc/t:seriesStmt/t:title[@type='Unterreihe']">
+                                            <xsl:text> / </xsl:text>
+                                            <xsl:value-of select="t:fileDesc/t:seriesStmt/t:title[@type='Unterreihe']"/>
+                                        </xsl:if>-->
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- ///SPRACHE/// -->
                             <xsl:if test="s:la">
                                 <tr class="row">
                                     <td class="col-3">
                                         <i18n:text>language</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:la"/>
+                                        <xsl:call-template name="languageCode">
+                                            <xsl:with-param name="Current" select="substring-after(s:la/@uri, 'iso639-2/')"/>
+                                            <xsl:with-param name="locale" select="$locale"/>
+                                        </xsl:call-template>
                                     </td>
                                 </tr>
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///UMFANG/// -->
                             <xsl:if test="s:ex">
-                                <tr class="group row">
+                                <tr class="row">
                                     <td class="col-3">
                                         <i18n:text>physicaldescription</i18n:text>
                                     </td>
@@ -633,17 +723,77 @@
                                 </tr>	                                        	 		
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
-                            <!-- //////Acquired = Ewerb -->
-                            <xsl:if test="s:ac">
-                                <tr class="group row">
+                            <!-- //Originaltitel/// -->
+                            <xsl:if test="s:oti">
+                                <tr class="row">
                                     <td class="col-3">
-                                        <i18n:text>acquired</i18n:text>
+                                        <i18n:text>originaltitle</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:ac"/>
+                                        <span class="font-italic">
+                                            <xsl:value-of select="s:oti"/>
+                                        </span>
                                     </td>
                                 </tr>
                             </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// --> 
+                            <!-- ///Provenienzkriterien/// -->
+                            <xsl:if test="s:pc">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <xsl:choose>
+                                            <xsl:when test="$locale = 'en'">
+                                                Provenance Criteria
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:text>Provenienzkriterien</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </td>
+                                    <!-- ///TABLE-LEFT/// -->
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:pc"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- Hinweise -->
+                            <xsl:if test="s:n">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>notes</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:n"/>                                        
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- Beilagen, bold -->
+                            <!--<xsl:if test="s:en">
+                                <tr class="group row">
+                                    <td class="col-3">
+                                        <i18n:text>enclosures</i18n:text> 
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:en"/>                                            
+                                    </td>
+                                </tr>
+                            </xsl:if>-->
+                            <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- Zusatzmaterial -->
+                            <!--<xsl:if test="s:am">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <a>
+                                            <i18n:text>additionalmaterial</i18n:text>
+                                        </a>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:am"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>-->
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///Provenienz/// -->
                             <xsl:if test="s:pr">
@@ -657,6 +807,18 @@
                                 </tr>
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
+                            <!-- //////Acquired = Ewerb -->
+                            <xsl:if test="s:ac">
+                                <tr class="row">
+                                    <td class="col-3">
+                                        <i18n:text>acquired</i18n:text>
+                                    </td>
+                                    <td class="col-9">
+                                        <xsl:value-of select="s:ac"/>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///Standort/// -->
                             <xsl:if test="s:lo">
                                 <tr class="row">
@@ -664,7 +826,13 @@
                                         <i18n:text>currentlocation</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:value-of select="s:lo/@uri"/>
+                                        <xsl:call-template name="GetStandortList">
+                                            <xsl:with-param name="Standort" select="substring-after(s:lo/@uri, '#')"/>
+                                        </xsl:call-template>
+                                        <xsl:if test="s:si">
+                                            <br/>
+                                            <xsl:value-of select="s:si"/>
+                                        </xsl:if>
                                     </td>
                                 </tr>
                             </xsl:if>
@@ -675,10 +843,19 @@
         </div>
         
     </xsl:template>
+    
+    <xsl:template name="printAuthor_Search">
+        <xsl:param name="surname"/>
+        <xsl:param name="forename"/>
+            <xsl:value-of select="current-grouping-key()"/>
+            <xsl:if test="$forename">
+                <xsl:text>, </xsl:text>
+                <xsl:value-of select="$forename"/>
+            </xsl:if>
+            <xsl:if test="not(position()=last())">
+                <xsl:text> / </xsl:text>
+            </xsl:if>
+    </xsl:template>
 
-  
-    
-   
-    
-    
+
 </xsl:stylesheet>

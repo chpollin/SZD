@@ -82,8 +82,10 @@
                                         <div class="row row-eq-height mt-60 glossarEntry">
                                             <div class="col-7" id="{substring-after(@rdf:about, '#')}">
                                                 <xsl:variable name="SZDID" select="substring-after(@rdf:about, '#')"/>
-                                                <xsl:variable name="QueryUrl" 
-                                                    select=" concat('/archive/objects/query:szd.category_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;https://gams.uni-graz.at/o:szd.glossar#'), encode-for-uri($SZDID), '&gt;', '&amp;locale=', $locale)"/>
+                                                <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.category_search/methods/sdef:Query/get?params='"/>
+                                                <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.glossar#', $SZDID, '&gt;', ';$2|', $locale))"/>
+                                                <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+                                                
                                                 <xsl:choose>
                                                     <xsl:when test="contains(@rdf:about, '/o:szd.glossar#OriginalShelfmark')">
                                                         <h3 class="glossarHead">
