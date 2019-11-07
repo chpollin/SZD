@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Stefan Zweig digital</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>ZIM-ACDH, Universität Graz</publisher>
+                <date>2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl></bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p></p>
+            </projectDesc>
+            <classDecl>
+                <taxonomy xml:id="kws">
+                    <desc>Default keyword scheme</desc>
+                </taxonomy>
+                <taxonomy xml:lang="de">
+                    <category>
+                        <catDesc>Impressum</catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date when="2018">2018</date>
+                <name type="place">Graz, Austria</name>
+            </creation>
+            <langUsage>
+                <language ident="de">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="main">
+                <div xml:lang="de">
+                    <head xml:lang="de">Herausgeber</head>
+                    <p>Literaturarchiv Salzburg</p>
+                </div>
+                <div xml:lang="en">
+                    <head xml:lang="en">Publisher</head>
+                    <p>Literaturarchiv Salzburg</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Projektleitung</head>
+                    <p>Manfred Mittermayer</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Project direction</head>
+                    <p>Manfred Mittermayer</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Wissenschaftliches Konzept und Erschließung</head>
+                    <p>Lina Maria Zangerl und Oliver Matuschek</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Academic conception and development</head>
+                    <p>Lina Maria Zangerl und Oliver Matuschek</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Projektmitarbeit</head>
+                    <p>Julia Glunk (Index), Verena Maria Höller (Nachlass), Stephan Matthias (Bibliothek) und Kim Taylor (Nachlass, Fredonia)</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Project assistants</head>
+                    <p>Julia Glunk (index), Verena Maria Höller (estate), Stephan Matthias (library), and Kim Taylor (estate, Fredonia)</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Mit ihren privaten Forschungsarbeiten haben zu diesem Projekt wesentlich beigetragen</head>
+                    <p>Frank Geuenich (Aachen), Michèle Schilling (Aesch) und Rainer-Joachim Siegel (Leipzig)</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Significant assistance was provided by the following private researchers:</head>
+                    <p>Frank Geuenich (Aachen), Michèle Schilling (Aesch) und Rainer-Joachim Siegel (Leipzig)</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Übersetzungen</head>
+                    <p>Nina Frey</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Translations</head>
+                    <p>Nina Frey</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Webentwicklung, Datenmodellierung</head>
+                    <p>Christopher Pollin</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Web development, data modeling</head>
+                    <p>Christopher Pollin</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Technische Infrastruktur</head>
+                    <p>
+                        <ref target="http://gams.uni-graz.at">GAMS – Geisteswissenschaftliches Asset
+                            Management System</ref>
+                    </p>
+                </div>
+                <div xml:lang="en">
+                    <head>Technical infrastructure</head>
+                    <p>
+                        <ref target="http://gams.uni-graz.at">GAMS – Geisteswissenschaftliches Asset
+                            Management System</ref>
+                    </p>
+                </div>
+                <div xml:lang="de">
+                    <head>Umsetzung und Publikation</head>
+                    <p>
+                        <ref target="http://informationsmodellierung.uni-graz.at">Zentrum für Informationsmodellierung – Austrian Centre for Digital Humanities (Leitung: Johannes Stigler)</ref>
+                    </p>
+                </div>
+                <div xml:lang="en">
+                    <head>Implementation and publication</head>
+                    <p>
+                        <ref target="http://informationsmodellierung.uni-graz.at">Centre for Information Modeling – Austrian Centre for Digital Humanities (director: Johannes Stigler)</ref>
+                    </p>
+                </div>
+                <div xml:lang="de">
+                    <head>Design</head>
+                    <p>Lisa Lamprecht, Christina Lienbacher, Maria Pöllmann</p>
+                    <p>Layout based on <ref target="http://getbootstrap.com/">Bootstrap</ref>
+                    </p>
+                </div>
+                <div xml:lang="en">
+                    <head>Design</head>
+                    <p>Lisa Lamprecht, Christina Lienbacher, Maria Pöllmann</p>
+                    <p>Layout based on <ref target="http://getbootstrap.com/">Bootstrap</ref>
+                    </p>
+                </div>
+                <div xml:lang="de">
+                    <head>Digitalisate</head>
+                    <p>Die digitalen Faksimiles der Salzburger Bestände wurden in Kooperation mit dem Fotohof Salzburg produziert.</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Digital facsimiles</head>
+                    <p>The digital facsimiles of the Salzburg holdings were produced in collaboration with Fotohof Salzburg.</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Für Rat und Unterstützung danken wir</head>
+                    <p>Sebastian Albert (Sebastian Albert Photography), Verena Braschel (Stadt Salzburg Magistrat, Kultur, Bildung und Wissen), Agnes Brunnauer (Universitätsbibliothek Salzburg), Pardaad Chamsaz (The British Library), Richard Hörmann (Universitätsbibliothek Salzburg), Marcel Illetschko (Salzburg), Kurt Kaindl (Fotohof Salzburg), Manfred Kammerer (Universitätsbibliothek Mozarteum), Stefan Litt (The National Library of Israel), Holger Naujoks (Bonn), Helen O&apos;Neil (London Library), Linda Ohrtmann (Universitätsbibliothek Salzburg), Evelyne Polt-Heinzl (Dokumentationsstelle für neuere österreichische Literatur), 
+                        Lindi Preuss (Zürich), Doris Rakar-Weidinger (Universitätsbibliothek Salzburg), Klemens Renoldner (Stefan Zweig Zentrum Salzburg), Georg Schrattenecker (Universitätsbibliothek Salzburg), Sascha Selke (HTL Salzburg), Gerhard Spring (Wien) und den Erben Stefan Zweigs.</p>
+                </div>
+                <div xml:lang="en">
+                    <head>For their advice and support we are indebted to:</head>
+                    <p>Sebastian Albert (Sebastian Albert Photography), Verena Braschel (Stadt Salzburg Magistrat, Kultur, Bildung und Wissen), Agnes Brunnauer (Universitätsbibliothek Salzburg), Pardaad Chamsaz (The British Library), Richard Hörmann (Universitätsbibliothek Salzburg), Marcel Illetschko (Salzburg), Kurt Kaindl (Fotohof Salzburg), Manfred Kammerer (Universitätsbibliothek Mozarteum), Stefan Litt (The National Library of Israel), Holger Naujoks (Bonn), Helen O'Neil (London Library), Linda Ohrtmann (Universitätsbibliothek Salzburg), Evelyne Polt-Heinzl (Dokumentationsstelle für neuere österreichische Literatur), Lindi Preuss (Zürich), Doris Rakar-Weidinger (Universitätsbibliothek Salzburg), Klemens Renoldner (Stefan Zweig Zentrum Salzburg), Georg Schrattenecker (Universitätsbibliothek Salzburg), Sascha Selke (HTL Salzburg), Gerhard Spring (Vienna), and the heirs of Stefan Zweig.</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Lizenzierung und Musterzitat</head>
+                    <p>Alle Inhalte lizenziert unter Creative Commons BY-NC-SA 4.0</p>
+                    <p>Zweig, Stefan: Die Welt von Gestern, Notizbuch, SZ-AAP/W10. stefanzweig.digital/o:szd.werke#SZDMSK.17 (abgerufen am 09.06.2018)</p>
+                </div>
+                <div xml:lang="en">
+                    <head>Licence and sample citation</head>
+                    <p>All content licensed under Creative Commons BY-NC-SA 4.0</p>
+                    <p>Zweig, Stefan: The World of Yesterday, Notebook [Die Welt von Gestern]. Literaturarchiv Salzburg, SZ-AAP/W10. In: stefanzweig.digital, Ed. Literaturarchiv Salzburg, Last Update 21.3.2019, URL: stefanzweig.digital/o:szd.werke#SZDMSK.17 (retrieved on 07.11.2019).</p>
+                </div>
+                <div xml:lang="de">
+                    <head>Information gemäß § 5 (E-Commerce Gesetz)</head>
+                    <p>
+                        Wissenschaftlicher Herausgeber<lb></lb>
+                        Literaturarchiv Salzburg, Universität Salzburg<lb></lb>          
+                        Residenzplatz 9/2 <lb></lb>
+                        5020 Salzburg | Austria<lb></lb>
+                        info@stefanzweig.digital<lb></lb>  
+                        +43 (0) 662 / 8044-4910
+                    </p>
+                    <p>
+                        Die Informationen und Dienste auf dieser Seite werden zur Verfügung gestellt von<lb></lb> 
+                        Karl-Franzens-Universität Graz<lb></lb>
+                        Universitätsplatz 3<lb></lb>
+                        8010 Graz | Austria<lb></lb>
+                        zim@uni-graz.at<lb></lb>
+                        +43-(0)316 380 2292
+                    </p>
+                </div>
+                <div xml:lang="en">
+                    <head>Information pursuant to § 5 of the Austrian ECG (E-Commerce Act)</head>
+                    <p>
+                        Academic publisher <lb></lb>
+                        Literaturarchiv Salzburg, Universität Salzburg<lb></lb>          
+                        Residenzplatz 9/2 <lb></lb>
+                        5020 Salzburg | Austria<lb></lb>
+                        info@stefanzweig.digital<lb></lb>
+                        +43 (0) 662 / 8044-4910
+                    </p>
+                    <p>
+                        The information and services on this page are made available by<lb></lb> 
+                        Karl-Franzens-Universität Graz<lb></lb>
+                        Universitätsplatz 3<lb></lb>
+                        8010 Graz | Austria<lb></lb>
+                        zim@uni-graz.at<lb></lb>
+                        +43-(0)316 380 2292
+                    </p>
+                </div>
+            </div>
+        </body>
+        <back></back>
+    </text>
+</TEI>
+
