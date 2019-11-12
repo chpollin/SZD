@@ -145,10 +145,27 @@
             <xsl:attribute name="role">
                 <xsl:text>composer</xsl:text>
             </xsl:attribute>
-            <xsl:apply-templates/>  
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 991]">
+        <xsl:copy>
+            <xsl:attribute name="ref">
+                <xsl:variable name="SZDPER_ID">
+                    <xsl:call-template name="GetPersonList">
+                        <xsl:with-param name="Person" select="*:persName"/>
+                    </xsl:call-template>
+                </xsl:variable>
+                <xsl:value-of select="concat('#', $SZDPER_ID)"/>
+            </xsl:attribute>
+            <xsl:attribute name="role">
+                <xsl:text>composer</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
     
+ 
     <xsl:template match="*:author[number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &lt; 812][not(number(substring-after(ancestor::*:biblFull/@xml:id, '.')) &gt; 992)]">
         <xsl:copy>
             <xsl:attribute name="ref">
@@ -159,7 +176,7 @@
                 </xsl:variable>
                 <xsl:value-of select="concat('#', $SZDPER_ID)"/>
             </xsl:attribute>
-            <xsl:apply-templates/>  
+            <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
     

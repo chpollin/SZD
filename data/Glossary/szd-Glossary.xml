@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:cei="http://www.cei.lmu.de/ns/1.0" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fedora-rels-ext="info:fedora/fedora-system:def/relations-external#" xmlns:gams="http://gams.uni-graz.at/o:gams-ontology/" xmlns:gl="http://www.xbrl.org/GLthesaurus/" xmlns:oa="http://www.w3.org/ns/oa#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
   <skos:Schema rdf:about="https://gams.uni-graz.at/o:szd.glossar">
     <skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"></skos:hasTopConcept>
@@ -16,7 +16,7 @@
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Works">
     <dc:identifier rdf:resource="https://gams.uni-graz.at/o:szd.werke"></dc:identifier>
     <skos:prefLabel xml:lang="de">Werke</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Work</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Works</skos:prefLabel>
     <skos:definition xml:lang="de">Der Bereich der Werke umfasst alle Originalmaterialien zu Stefan Zweigs literarischem Schaffen, also Manuskripte, Typoskripte, Korrekturfahnen, Notizbücher und ähnliche Dokumente. Entsprechende Stücke befinden sich in zahlreichen öffentlichen und privaten Sammlungen in aller Welt. Der Schwerpunkt der Verzeichnung liegt jedoch zunächst auf den im Literaturarchiv Salzburg und in der Daniel Reed Library in Fredonia/New York vorhandenen Dokumenten. Damit ist der auf diese beiden Institutionen aufgeteilte schriftliche Nachlass Stefan Zweigs, der all jene Dokumente umfasst, die sich bis zu seinem Tod in seinem Besitz befanden, erstmals in seiner Gesamtheit katalogisiert und erschlossen.
             In diesem Rahmen konnten einige Manuskripte, deren Seiten bei der Teilung des Materials nach Stefan Zweigs Tod versehentlich getrennt worden sind, in den Katalogeinträgen und in digitalen Faksimiles virtuell wieder zusammengeführt werden. Ein Beispiel hierfür ist Stefan Zweigs Rede „Worte am Sarge Sigmund Freuds“, deren erstes Blatt in Fredonia und deren übrige Seiten in Salzburg aufbewahrt werden.
             Die Verzeichnung der Werke wird regelmäßig um wichtige und umfangreiche Bestände aus weiteren Sammlungen und Archiven erweitert und orientiert sich an den Regeln zur Erschließung von Nachlässen und Autographen (RNA).
@@ -177,7 +177,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature">
     <skos:prefLabel xml:lang="de">Provenienzmerkmal</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Provenance Feature</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Provenance Features</skos:prefLabel>
     <rdfs:seeAlso rdf:resource="http://d-nb.info/standards/elementset/gnd#ProvenanceCharacteristic"></rdfs:seeAlso>
     <skos:definition xml:lang="de">Bücher aus der Bibliothek Stefan Zweigs weisen unterschiedliche Provenienzmerkmale auf, durch die auf ihn als Vorbesitzer rückgeschlossen werden kann. Die einzelnen Merkmale wurden größtenteils in Anlehnung an den 
             T-PRO Thesaurus der Provenienzbegriffe kategorisiert und im Katalog der Bibliothek verzeichnet. Zu beachten ist, dass Provenienzmerkmale auch mehrfach oder nebeneinander in einem Band vorkommen können.  
@@ -211,6 +211,7 @@
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/EINBAND_2"></skos:example>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"></skos:broader>
     <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q193955"></rdfs:seeAlso>
+    <rdfs:seeAlso rdf:resource="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"></rdfs:seeAlso>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Insertion">
     <skos:prefLabel xml:lang="de">Einlage</skos:prefLabel>
@@ -282,7 +283,7 @@
     <skos:definition xml:lang="en">An overpasted slip of paper covering the original printed text</skos:definition>
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/TEKTUR"></skos:example>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"></skos:broader>
-    <rdfs:seeAlso rdf:resource="provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"></rdfs:seeAlso>
+    <rdfs:seeAlso rdf:resource="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"></rdfs:seeAlso>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#RemovedPage">
     <skos:prefLabel xml:lang="de">Tilgung</skos:prefLabel>
@@ -291,7 +292,7 @@
     <skos:definition xml:lang="en">A removed page or part of a page (leaf). In the catalogue this most frequently applies to copies from which, according to Stefan Zweig’s instructions, presentation inscriptions and ownerships were removed as he dissolved portions of his library. Without additional provenance features in the same volume, such books cannot be attributed to Zweig’s library with any certainty.</skos:definition>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"></skos:broader>
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/TILGUNG"></skos:example>
-    <rdfs:seeAlso rdf:resource="provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"></rdfs:seeAlso>
+    <rdfs:seeAlso rdf:resource="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#PresentationInscription">
     <skos:prefLabel xml:lang="de">Widmung</skos:prefLabel>
@@ -305,7 +306,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#OriginalShelfmark">
     <skos:prefLabel xml:lang="de">Originalsignatur</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Original Shelfmark</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Original Shelfmarks</skos:prefLabel>
     <skos:definition xml:lang="de">Grundsätzlich sind hier nur jene Signaturen berücksichtigt, die auf den Vorbesitz Stefan Zweigs zurückzuführen sind.
             Im Buchbestand der Bibliothek Stefan Zweigs existieren unterschiedliche Arten von Zahlenangaben oder Buchstaben-Zahlen-Kombinationen, die vermutlich Standorte oder Themengebiete und – wie im Fall der Hausexemplare – Zugangsnummern der einzelnen Bände bezeichnen. Die Signatursysteme wurden nach Ortswechseln und Umsortierungen mehrfach verändert, sodass auch mehrere Angaben in einem Band enthalten sein können. Die jeweils ältere Version der Signatur wurde in einigen Fällen getilgt. Es gibt jedoch auch Hinweise darauf, dass mehrere Signatursysteme gleichzeitig in Gebrauch waren.
             Da die Originalverzeichnisse der Bibliothek Stefan Zweigs nicht überliefert sind, können keine präziseren Angaben zur Verwendung der Signatursysteme gemacht werden. Auch die ursprüngliche Aufstellung der Bände innerhalb der Bibliothek ist trotz vorhandener Standortangaben bisher nicht endgültig geklärt.
@@ -328,7 +329,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Hausexemplar">
     <skos:prefLabel xml:lang="de">Hausexemplar mit Nummernangabe</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Numberd Voucher Copy (&quot;Hausexemplar&quot;)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Numbered Voucher Copy (&quot;Hausexemplar&quot;)</skos:prefLabel>
     <skos:definition xml:lang="de">Für die Belegexemplare der Bücher Stefan Zweigs in Originalausgaben und Übersetzungen sowie für solche Werke, an deren Veröffentlichung er als Herausgeber, Übersetzer oder in anderer Funktion beteiligt war, wurden fortlaufende Inventarnummern vergeben.
             Der größte Teil dieser Bände ist mit einem runden Stempel mit dem Schriftzug „Hausexemplar“ versehen, in den die Nummer handschriftlich zumeist mit rotem Buntstift eingetragen ist. In anderen Fällen erfolgte die Kennzeichnung ohne Stempel nur handschriftlich mit dem Wort „Hausexemplar“ und der Angabe der Nummer mit Bleistift.</skos:definition>
     <skos:definition xml:lang="en">Consecutive numbers were assigned to the voucher copies of the original editions and translations of Stefan Zweig’s works, as well as to works in the production of which he had a part as editor, translator, or in some other capacity.
