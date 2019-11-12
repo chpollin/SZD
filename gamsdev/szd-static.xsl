@@ -203,7 +203,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="/o:szd.werke/sdef:TEI/get?locale={$locale}">
-												<i18n:text>work</i18n:text>
+												<i18n:text>works</i18n:text>
 											</a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.lebensdokumente/sdef:TEI/get?locale={$locale}">
 												<i18n:text>personaldocument</i18n:text>
@@ -260,7 +260,12 @@
 											<i18n:text>glossary</i18n:text>
 										</a>
 									</li>
-									<li class="nav-item dropdown">
+									<li class="nav-item">
+										<a class="navtext text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
+											<i18n:text>about</i18n:text>
+										</a>
+									</li>
+									<!--<li class="nav-item dropdown">
 										<a class="dropdown-toggle navtext text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i18n:text>project</i18n:text>
 										</a>
@@ -268,11 +273,11 @@
 											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
 												<i18n:text>description</i18n:text>
 											</a>
-											<!--<a class="dropdown-item text-uppercase" href="/archive/objects/o:szd.ontology/methods/sdef:Ontology/get?locale=en">
+											<!-\-<a class="dropdown-item text-uppercase" href="/archive/objects/o:szd.ontology/methods/sdef:Ontology/get?locale=en">
 												<i18n:text>ontology_szd</i18n:text>
-											</a>-->
+											</a>-\->
 										</div>
-									</li>
+									</li>-->
 									<li class="nav-item">
 										<form class="navbar-form navtext" id="fulltext_search" method="get">
 											<xsl:choose>
@@ -289,7 +294,7 @@
 														<xsl:attribute name="placeholder">
 															<xsl:choose>
 																<xsl:when test="$locale = 'en'">
-																	<xsl:text>FULLTEXT SEARCH</xsl:text>
+																	<xsl:text>FULL-TEXT SEARCH</xsl:text>
 																</xsl:when>
 																<xsl:otherwise>
 																	<xsl:text>VOLLTEXTSUCHE</xsl:text>
@@ -298,8 +303,7 @@
 														</xsl:attribute>
 													</input>
 													<div class="input-group-prepend">
-														<button type="submit"
-															class="btn icon_suche">
+														<button type="submit" class="btn icon_suche">
 															<img src="{$Icon_suche}" alt="Search" height="20"/>
 														</button>
 													</div>
@@ -311,6 +315,14 @@
 									<!-- DATABASKET -->
 									<li class="nav-item">
 										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}">
+											<xsl:choose>
+												<xsl:when test="$locale = 'en'">
+													<xsl:attribute name="title"><xsl:text>You can save and export objects in the data basket.</xsl:text></xsl:attribute>
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:attribute name="title"><xsl:text>Im Datenkorb können Objekte gespeichert werden und exporteirt werden.</xsl:text></xsl:attribute>
+												</xsl:otherwise>
+											</xsl:choose>
 											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb"/>
 											<xsl:text> </xsl:text>
 										</a>
@@ -367,7 +379,12 @@
 							<h6><i18n:text>more information</i18n:text></h6>
 							<div class="row">
 								<a class="col-sm" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank">
-									<i18n:text>imprint</i18n:text>
+									<xsl:choose>
+										<xsl:when test="$locale = 'en'">
+											<xsl:text>SITE NOTICE</xsl:text>
+										</xsl:when>
+										<xsl:otherwise>Impressum</xsl:otherwise>
+									</xsl:choose>
 								</a>
 								<a class="col-sm" href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank">
 									<i18n:text>privacy</i18n:text>
@@ -427,9 +444,9 @@
 								<xsl:when test="$locale='en'">
 									<p>
 										<xsl:text>STEFAN ZWEIG DIGITAL</xsl:text><br/>
-										<xsl:text>An initiative of the Literaturarchiv Salzburg</xsl:text><br/>
+										<xsl:text>A project developed on the initiative of the Literature Archive Salzburg</xsl:text><br/>
 										<xsl:text>Residenzplatz 9/2</xsl:text><br/>
-										<xsl:text>S5020 Salzburg  |  Austria</xsl:text><br/>
+										<xsl:text>5020 Salzburg  |  Austria</xsl:text><br/>
 									</p>
 								</xsl:when>
 								<xsl:otherwise>
@@ -466,9 +483,10 @@
 						var substring3 = "SZDAUT";
 						if(hash.includes(substring1) || hash.includes(substring2) || hash.includes(substring3))
 						{-->
-						location.hash = "#" + hash;
-						window.scrollBy(0, -250);
-						$(document.getElementById(hash).getElementsByClassName("collapse")).collapse() ;
+					    if(location.hash){
+							location.hash = "#" + hash;
+							window.scrollBy(0, -250);
+							$(document.getElementById(hash).getElementsByClassName("collapse")).collapse() ;}
 					}
 				</script>
 			</body>
@@ -547,30 +565,30 @@
 	<xsl:template name="languageButton">
 		<xsl:param name="PID"/>
 		<xsl:param name="mode"/>
-		<span class="language navtext">
+		<span class="language navtext text-right">
 			<xsl:choose>
 				<!-- for contex objects -->
 				<xsl:when test="$PID = 'context:szd'">
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Context/get?locale=de&amp;mode=', $mode)}">DE</a>
-					<span class="text-dark">|</span>
+					<span class="text-dark pl-1 pr-1">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Context/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for ontology objects -->
 				<xsl:when test="$PID = 'o:szd.ontology'">
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Ontology/get?locale=de&amp;mode=', $mode)}">DE</a>
-					<span class="text-dark">|</span>
+					<span class="text-dark pl-1 pr-1">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:Ontology/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for skos objetcs -->
 				<xsl:when test="$PID = 'o:szd.glossar'">
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:SKOS/get?locale=de&amp;mode=', $mode)}">DE</a>
-					<span class="text-dark">|</span>
+					<span class="text-dark pl-1 pr-1">|</span>
 					<a href="{concat('/archive/objects/', $PID, '/methods/sdef:SKOS/get?locale=en&amp;mode=', $mode)}">EN</a>
 				</xsl:when>
 				<!-- for TEI objects -->
 				<xsl:otherwise>
-					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=de')}">DE</a><xsl:text> </xsl:text>
-					<span class="text-dark">|</span>
+					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=de')}">DE</a>
+					<span class="text-dark pl-1 pr-1">|</span>
 					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=en')}">EN</a>
 				</xsl:otherwise>
 			</xsl:choose>

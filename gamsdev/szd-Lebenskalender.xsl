@@ -37,6 +37,7 @@
                 <xsl:with-param name="Content" select="//t:listEvent/t:event"/>
                 <xsl:with-param name="PID" select="$PID"/>
                 <xsl:with-param name="locale" select="$locale"/>
+                <xsl:with-param name="GlossarRef" select="'Biography'"/>
             </xsl:call-template>   
              <!-- CONTENT -->
                 <div class="row" id="content">		

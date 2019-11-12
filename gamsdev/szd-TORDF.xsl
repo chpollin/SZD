@@ -1235,6 +1235,13 @@
 			</szd:incipit>
 		</xsl:if>
 		
+		<xsl:for-each-group select="t:fileDesc/t:titleStmt/t:editor[@role='contributor']" group-by="@ref">
+			<xsl:call-template name="GetPersonlist">
+				<xsl:with-param name="Person" select="current-grouping-key()"/>
+				<xsl:with-param name="Typ" select="'szd:partyInvolved'"/>
+			</xsl:call-template>
+		</xsl:for-each-group>
+		
 	</xsl:template>
 
 	

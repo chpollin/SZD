@@ -252,7 +252,7 @@
                                    <!-- do nothing -->
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.werke')">
-                                    <div class="col-12 list-group mt-3" id="werke_search"> 
+                                    <div class="col-12 list-group mt-5" id="werke_search"> 
                                         <h3 class="text-uppercase"><i18n:text>work</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                              <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -261,7 +261,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.lebensdokumente')">
-                                    <div class="col-12 list-group mt-3" id="lebensdokumente_search"> 
+                                    <div class="col-12 list-group mt-5" id="lebensdokumente_search"> 
                                         <h3 class="text-uppercase"><i18n:text>personaldocument</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -270,7 +270,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.bibliothek')">
-                                    <div class="col-12 list-group mt-2" id="bibliothek_search">
+                                    <div class="col-12 list-group mt-5" id="bibliothek_search">
                                         <h3 class="text-uppercase"><i18n:text>library_szd</i18n:text></h3>
                                        <xsl:call-template name="SearchListGroup">
                                            <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -279,7 +279,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.autographen')">
-                                    <div class="col-12 list-group mt-3" id="autographen_search">
+                                    <div class="col-12 list-group mt-5" id="autographen_search">
                                         <h3 class="text-uppercase"><i18n:text>autograph</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -288,7 +288,7 @@
                                     </div>
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.publikation')">
-                                    <div class="col-12 list-group mt-3" id="autographen_search">
+                                    <div class="col-12 list-group mt-5" id="autographen_search">
                                         <h3 class="text-uppercase"><i18n:text>publication</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                             <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
@@ -306,6 +306,19 @@
                     <xsl:otherwise>
                         <div class="card-body col-12">
                             <div class="card-text">
+                                <p class="lead">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale='en'">
+                                            <xsl:text>No results were found for this search query because no person, work or event is associated with it. However, the person has already been registered and is somehow related to Zweigs estate.
+                                             SZD is constantly being expanded.</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Zu dieser Suchanfrage wurden keine Treffer gefunden, da noch keine Person, Werk oder Ereignis damit verbunden ist. Die Person wurde jedoch bereits erfasst und steht in einer Beziehung zum Nachlass.
+                                            SZD wird laufend erweitert.</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                   
+                                </p>
                                 <xsl:apply-templates select="document(concat('/context:szd/', 'SEARCH_HELP'))/t:TEI/t:text/t:body/t:div"/>
                             </div>
                         </div>
@@ -323,7 +336,7 @@
         <xsl:param name="Current-Grouping-Key"/>
         <xsl:param name="Current-Group"/>
         <!-- to filter all entries with the same @uri, as SPARQL returns same URI's but with other variables: Titel, Originaltitel -->
-        <xsl:for-each-group select="$Current-Group[s:a='T']" group-by="substring-after(s:re/@uri, '#')">  
+        <xsl:for-each-group select="$Current-Group[s:a='T'][s:s | s:sed | s:sco | s:spi| s:sap]" group-by="substring-after(s:re/@uri, '#')">  
            <!-- <xsl:sort select="s:rank" data-type="number"/>-->
             <xsl:sort select="s:s" data-type="text" lang="ger"/>
             <xsl:sort select="s:sed" data-type="text" lang="ger"/>
@@ -337,22 +350,24 @@
             <!-- ENTRY -->
         </xsl:for-each-group>
         <xsl:if test="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)][s:a='T']">
-            <h3>
-                <i18n:text>without_author</i18n:text>
-            </h3>
-            <xsl:for-each-group select="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)]" group-by="substring-after(s:re/@uri, '#')">  
-                <!-- <xsl:sort select="s:rank" data-type="number"/>-->
-                <xsl:sort select="s:t" data-type="text" lang="ger"/>
-                <xsl:call-template name="createEntry"/>
-                <!-- ////////////////////////////////// -->
-                <!-- ENTRY -->
-            </xsl:for-each-group>
+            <div class="mt-2 mb-2">
+                <h3>
+                    <i18n:text>without_author</i18n:text>
+                </h3>
+                <xsl:for-each-group select="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)]" group-by="substring-after(s:re/@uri, '#')">  
+                    <!-- <xsl:sort select="s:rank" data-type="number"/>-->
+                    <xsl:sort select="s:t" data-type="text" lang="ger"/>
+                    <xsl:call-template name="createEntry"/>
+                    <!-- ////////////////////////////////// -->
+                    <!-- ENTRY -->
+                </xsl:for-each-group>
+            </div>
         </xsl:if>
         
         
     </xsl:template>
     
-    <xsl:template name="AddData-Databasket_Search">
+    <!--<xsl:template name="AddData-Databasket_Search">
         <xsl:attribute name="data-check">
             <xsl:text>unchecked</xsl:text>
         </xsl:attribute>
@@ -384,18 +399,20 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template name="createEntry">
-        <div class="list-group-item entry db_entry shadow-sm">
+        <xsl:variable name="SZDID" select="substring-after(s:re/@uri, '#')"/>
+        <div id="{$SZDID}" class="list-group-item entry db_entry shadow-sm" >
+            <!-- DATABASKET -->
+            <xsl:call-template name="AddData-Databasket">
+                <xsl:with-param name="locale" select="$locale"/>
+            </xsl:call-template>
             <div class="bg-light row">
-                <!-- DATABASKET -->
-                <!--<xsl:call-template name="AddData-Databasket_Search"/>-->
-                
                 <!-- ///PANEL-TITIEL/// -->
                 <!-- creating collapse id -->
                 <h4 class="card-title text-left col-10 small">
-                    <xsl:variable name="PID" select="substring-before(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
+                    <xsl:variable name="PID" select="(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
                     <a data-toggle="collapse" href="{concat('#c' , generate-id())}">
                         <span class="arrow">
                             <xsl:text>&#9660; </xsl:text>
@@ -520,6 +537,7 @@
                     </span>
                     <xsl:call-template name="getLabelDatabasket">
                         <xsl:with-param name="locale" select="$locale"/>
+                        <xsl:with-param name="SZDID" select="$SZDID"/>
                     </xsl:call-template>
             </div>
             <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
@@ -629,7 +647,8 @@
                                     <i18n:text>Titel</i18n:text>
                                 </td>
                                 <td class="col-9">
-                                    <a href="{substring-after(s:re/@uri, 'gams.uni-graz.at')}" target="_blank"  id="{substring-after(s:re/@uri, '#')}">
+                                    <!-- id="{substring-after(s:re/@uri, '#')} -->
+                                    <a href="{substring-after(s:re/@uri, 'gams.uni-graz.at')}" target="_blank">
                                         <xsl:attribute name="title">
                                             <xsl:choose>
                                                 <xsl:when test="$locale = 'en'">

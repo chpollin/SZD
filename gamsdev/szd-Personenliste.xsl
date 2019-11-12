@@ -37,39 +37,70 @@
                 <xsl:with-param name="Content" select="//t:listPerson/t:person/t:persName/t:surname"/>
                 <xsl:with-param name="PID" select="'o:szd.personen'"/>
                 <xsl:with-param name="locale" select="$locale"/>
+                <xsl:with-param name="GlossarRef" select="'Person'"/>
             </xsl:call-template>
             <!-- /// PAGE-CONTENT /// -->
             <!-- creates for every person an entry, including reference to GND and alphabetically sorted and linked -->
             <article id="content">
                 <div class="list-group entryGroup">       
                     <xsl:for-each-group select="//t:listPerson/t:person" group-by="substring(t:persName/t:surname|t:persName/t:name, 1, 1)">
-                        <xsl:sort select="current-grouping-key()"></xsl:sort>
+                        <xsl:sort select="current-grouping-key()"/>
                         <!-- ////////////////////////////// -->
+                        <h2 id="{current-grouping-key()}">
+                            <xsl:value-of select="current-grouping-key()"/>
+                        </h2>
                         <xsl:for-each select="current-group()">
-                            
-                            <span id="{current-grouping-key()}"><xsl:text> </xsl:text></span>
-                            <div class="list-group-item shadow-sm" id="{@xml:id}">
+                            <div class="list-group-item mb-1" id="{@xml:id}">
                                 <div class="row">
-                                    <h4 class="text-left col-8">
-                                        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
-                                        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
-                                        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
-                                        
-                                        <a href="{$QueryUrl}" class="font-weight-bold">
-                                        <xsl:choose>
-                                            <xsl:when test="t:persName/t:surname">
-                                                <xsl:value-of select="t:persName/t:surname"/>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:value-of select="t:persName/t:name"/>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
-                                        <xsl:if test="t:persName/t:forename">
-                                            <xsl:text>, </xsl:text>
-                                            <xsl:value-of select="t:persName/t:forename"/>
-                                        </xsl:if>
-                                    </a>
-                                    </h4>
+                                    <span class="col-8 row">
+                                        <h4 class="text-left">
+                                            <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
+                                            <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
+                                            <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+                                            
+                                            <a href="{$QueryUrl}" class="font-weight-bold">
+                                            <xsl:choose>
+                                                <xsl:when test="t:persName/t:surname">
+                                                    <xsl:value-of select="t:persName/t:surname"/>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:value-of select="t:persName/t:name"/>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                            <xsl:if test="t:persName/t:forename">
+                                                <xsl:text>, </xsl:text>
+                                                <xsl:value-of select="t:persName/t:forename"/>
+                                            </xsl:if>
+                                        </a>
+                                        </h4>
+                                        <xsl:text> </xsl:text>
+                                        <span class="col">
+                                            <!-- birth -->
+                                            <xsl:variable name="Birth">
+                                                <xsl:choose>
+                                                    <xsl:when test="t:birth/@when castable as xs:date">
+                                                        <xsl:value-of select="year-from-date(t:birth/@when )"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise></xsl:otherwise>
+                                                </xsl:choose>
+                                            </xsl:variable>
+                                            <!-- death -->
+                                            <xsl:variable name="Death">
+                                                <xsl:choose>
+                                                    <xsl:when test="t:death/@when castable as xs:date">
+                                                        <xsl:value-of select="year-from-date(t:death/@when )"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise></xsl:otherwise>
+                                                </xsl:choose>
+                                            </xsl:variable>
+                                            <xsl:if test="not($Birth = '') and not($Death = '')">
+                                                <span style="color: #631a34;"><xsl:text>(</xsl:text>
+                                                    <xsl:value-of select="$Birth"/><xsl:text>–</xsl:text><xsl:value-of select="$Death"/>
+                                                    <xsl:text>)</xsl:text></span>
+                                            </xsl:if>
+                                            <xsl:text> </xsl:text>
+                                        </span>
+                                    </span>
                                     <span class="col">
                                         <xsl:text> </xsl:text>
                                         <!-- if GND @ref -->
@@ -85,7 +116,7 @@
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                                 </xsl:attribute>
-                                                <img src="{$Icon_person}" class="img-responsive icon" alt="Person" />
+                                                <img src="{$Icon_gnd}" class="img-responsive icon" alt="Person" />
                                             </a>
                                          </xsl:if>
                                         <!--<xsl:if test="contains(t:persName/@ref, 'wikidata.org')">
@@ -105,31 +136,6 @@
                                             </a>
                                           </xsl:if>
                                     </span>
-                                 <span class="col-md">
-                                     <!-- birth -->
-                                     <xsl:variable name="Birth">
-                                         <xsl:choose>
-                                             <xsl:when test="t:birth/@when castable as xs:date">
-                                                 <xsl:value-of select="year-from-date(t:birth/@when )"/>
-                                             </xsl:when>
-                                             <xsl:otherwise></xsl:otherwise>
-                                          </xsl:choose>
-                                     </xsl:variable>
-                                     <!-- death -->
-                                     <xsl:variable name="Death">
-                                         <xsl:choose>
-                                             <xsl:when test="t:death/@when castable as xs:date">
-                                                 <xsl:value-of select="year-from-date(t:death/@when )"/>
-                                             </xsl:when>
-                                             <xsl:otherwise></xsl:otherwise>
-                                         </xsl:choose>
-                                     </xsl:variable>
-                                     <xsl:if test="not($Birth = '') and not($Death = '')">
-                                      <span style="color: #631a34;"><xsl:text>(</xsl:text>
-                                          <xsl:value-of select="$Birth"/><xsl:text>–</xsl:text><xsl:value-of select="$Death"/>
-                                          <xsl:text>)</xsl:text></span>
-                                     </xsl:if>
-                                 </span>
                             </div>
                             </div>
                         </xsl:for-each>

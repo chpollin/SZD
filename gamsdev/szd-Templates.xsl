@@ -63,6 +63,7 @@
 	<xsl:variable name="Icon_telefon_template" select="concat($Icon_Path_template, 'telefon.png')"/>
 	<xsl:variable name="Icon_x_template" select="concat($Icon_Path_template, 'x.png')"/>
 	<xsl:variable name="Icon_wiki_template" select="concat($Icon_Path_template, 'wiki.jpg')"/>
+    <xsl:variable name="Icon_gnd" select="concat($Icon_Path_template, 'gnd.png')"/>
     
     
     <!-- ///TEI/// -->
@@ -136,32 +137,34 @@
                         <xsl:value-of select="$Title"/>
                         <xsl:text> </xsl:text>
                        <!--  substring-after($PID, '.')) -->
-                       <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#', $GlossarRef)}" class="button" title="Glossary">
-                           <xsl:choose>
-                                <xsl:when test="$locale = 'en'">
-                                    <xsl:attribute name="title" select="'About this collection'"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:attribute name="title" select="'Informationen zum Sammlungsbereich'"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                            <i class="fa fa-info-circle info_icon_header" aria-hidden="true"><xsl:text> </xsl:text></i>
-                        </a>
+                       <xsl:if test="not(contains($PID, 'szd.glossar'))">
+                         <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#', $GlossarRef)}">
+                             <xsl:choose>
+                                  <xsl:when test="$locale = 'en'">
+                                      <xsl:attribute name="title" select="'About this collection'"/>
+                                  </xsl:when>
+                                  <xsl:otherwise>
+                                      <xsl:attribute name="title" select="'Informationen zum Sammlungsbereich'"/>
+                                  </xsl:otherwise>
+                              </xsl:choose>
+                              <i class="fa fa-info-circle info_icon_header" aria-hidden="true"><xsl:text> </xsl:text></i>
+                          </a>
+                       </xsl:if>
                     </h2>  
                 </div>
                <div class="col-2 text-right">
                    <xsl:choose>
                        <xsl:when test="contains($PID, 'szd.glossar')">
-                           <a href="{concat('/',$PID,'/ONTOLOGY')}" role="button" target="_blank">
+                           <a href="{concat('/',$PID,'/ONTOLOGY')}" target="_blank">
                                <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
                            </a>
                        </xsl:when>
                        <xsl:otherwise>
-                           <a href="{concat('/',$PID,'/TEI_SOURCE')}" role="button" target="_blank">
+                           <a href="{concat('/',$PID,'/TEI_SOURCE')}" target="_blank">
                                <img alt="TEI" height="25" id="tei" src="/templates/img/tei_icon.jpg" title="TEI"/>
                            </a>
                            <xsl:text> </xsl:text>
-                           <a href="{concat('/',$PID,'/RDF')}" role="button" target="_blank">
+                           <a href="{concat('/',$PID,'/RDF')}"  target="_blank">
                                <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
                            </a>
                        </xsl:otherwise>
@@ -179,20 +182,21 @@
                         <div class="btn-group btn-group-sm">
                             <xsl:choose>
                                 <xsl:when test="//skos:Concept[skos:broader/@rdf:resource = $currentRDFABOUT]">
-                                    <button type="button" class="btn pl-1 bg-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                    <button type="button" class="btn pl-1 bg-white dropdown-toggle dropdown-toggle-split text-uppercase" data-toggle="dropdown">
                                         <xsl:value-of select="current-grouping-key()"/> 
                                     </button>
                                     <div class="dropdown-menu scrollable-menu" role="menu">
                                         <xsl:for-each select="//skos:Concept[skos:broader/@rdf:resource = $currentRDFABOUT]">
-                                            <button class="btn dropdown-item small" href="{concat('#',substring-after(@rdf:about, '#'))}" onclick="scrolldown(this)">
+                                            <xsl:sort select="skos:prefLabel[@xml:lang = $locale]"/>
+                                            <button class="btn dropdown-item small text-uppercase" href="{concat('#',substring-after(@rdf:about, '#'))}" onclick="scrolldown(this)">
                                                 <xsl:value-of select="skos:prefLabel[@xml:lang = $locale]"/>
                                             </button>
                                         </xsl:for-each>
                                     </div> 
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <button  href="{concat('#',substring-after(../@rdf:about, '#'))}" class="btn pl-1" onclick="scrolldown(this)">
-                                        <xsl:value-of select="current-grouping-key()"/> 
+                                    <button  href="{concat('#',substring-after(../@rdf:about, '#'))}" class="btn pl-1 text-uppercase" onclick="scrolldown(this)">
+                                        <xsl:value-of select="current-grouping-key()"/>
                                     </button>
                                 </xsl:otherwise>
                             </xsl:choose>  
@@ -205,7 +209,7 @@
                     <xsl:sort select="."/>
                     <div class="btn-group btn-group-sm">
                         <!-- dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="{concat('#mt',generate-id())}"-->
-                        <button type="button" class="btn btn-sm bg-white" href="{concat('#',current-grouping-key())}" onclick="scrolldown(this)">
+                        <button type="button" class="btn btn-sm bg-white text-uppercase" href="{concat('#', translate(current-grouping-key(),' ',''))}" onclick="scrolldown(this)">
                             <xsl:value-of select="current-grouping-key()"/>
                            <!-- <span class="caret"><xsl:text> </xsl:text></span>-->
                         </button>
@@ -611,44 +615,86 @@
     <!-- ///ADDDATA-DATABASKET -->
     <!-- Add the data- attributs, used for the databasket: Author or Editor, title and date -->
     <xsl:template name="AddData-Databasket">
-        <xsl:attribute name="data-check">
+        <xsl:param name="locale"/>
+        <!--<xsl:attribute name="data-check">
             <xsl:text>unchecked</xsl:text>
-        </xsl:attribute>
+        </xsl:attribute>-->
+        <!-- URI -->
         <xsl:attribute name="data-uri">
-            <xsl:value-of select="normalize-space(concat('/', //t:publicationStmt/t:idno[@type='PID'], '#', @xml:id))"/>
+            <xsl:choose>
+                <xsl:when test="s:re/@uri">
+                    <xsl:value-of select="s:re/@uri"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="normalize-space(concat('https://gams.uni-graz.at/', //t:publicationStmt/t:idno[@type='PID'], '#', @xml:id))"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:attribute>
         <!-- AUTHOR -->
         <xsl:choose>
+            <xsl:when test="s:s">
+                <xsl:attribute name="data-author">
+                    <xsl:value-of select="normalize-space(s:s)"/>
+                    <xsl:if test="s:f">
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="normalize-space(s:f)"/>
+                    </xsl:if>
+                </xsl:attribute>
+            </xsl:when>
             <xsl:when test="t:fileDesc/t:titleStmt/t:author[1]">
                 <xsl:attribute name="data-author">
                     <xsl:call-template name="printAuthor">
-                        <xsl:with-param name="currentAuthor" select=".//t:titleStmt/t:author[1]"/>
+                        <xsl:with-param name="currentAuthor" select="t:fileDesc/t:titleStmt/t:author[1]"/>
                     </xsl:call-template>
                 </xsl:attribute>
             </xsl:when>
            <xsl:otherwise/>
         </xsl:choose>
         <!-- all other involved persons -->
-        <xsl:if test="t:fileDesc/t:titleStmt/t:editor[not(@role)][1] or t:fileDesc/t:titleStmt/t:author[@role] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
-            <xsl:attribute name="data-involved">
-                <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor | t:fileDesc/t:titleStmt/t:author[@role] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
-                    <xsl:call-template name="printAuthor">
-                        <xsl:with-param name="currentAuthor" select="."/>
+        <xsl:choose>
+            <xsl:when test="s:pi">
+                <xsl:attribute name="data-involved">
+                    <xsl:call-template name="GetPersonList">
+                        <xsl:with-param name="Person" select="substring-after(s:pi/@uri, '#')"/>
                     </xsl:call-template>
-                    <xsl:if test="not(position()=last())">
-                        <xsl:text> / </xsl:text>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:attribute>
-        </xsl:if>
+                </xsl:attribute>
+            </xsl:when>
+            <xsl:when test="t:fileDesc/t:titleStmt/t:editor[not(@role)][1] or t:fileDesc/t:titleStmt/t:author[@role] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] or t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+                <xsl:attribute name="data-involved">
+                    <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor | t:fileDesc/t:titleStmt/t:author[@role] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person'] | t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+                        <xsl:call-template name="printAuthor">
+                            <xsl:with-param name="currentAuthor" select="."/>
+                        </xsl:call-template>
+                        <xsl:if test="not(position()=last())">
+                            <xsl:text> / </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise/>
+        </xsl:choose>
         <!-- TITEL -->
-        <xsl:if test="t:fileDesc/t:titleStmt/t:title">
-            <xsl:attribute name="data-title">
-                <xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
-            </xsl:attribute>
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="s:t">
+                <xsl:attribute name="data-title">
+                    <xsl:value-of select="normalize-space(s:t)"/>
+                </xsl:attribute>
+            </xsl:when>
+            <xsl:when test="t:fileDesc/t:titleStmt/t:title[1]">
+                <xsl:attribute name="data-title">
+                    <xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/>
+                </xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise/>
+        </xsl:choose>
+                
         <!-- DATUM -->
         <xsl:choose>
+            <xsl:when test="s:d">
+                <xsl:attribute name="data-date">
+                    <xsl:value-of select="normalize-space(s:d)"/>
+                </xsl:attribute>
+            </xsl:when>
             <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:origin/t:origDate">
                 <xsl:attribute name="data-date">
                     <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:origin/t:origDate)"/>
@@ -720,7 +766,7 @@
 	
 	<!-- /////////////////////////////////////////////////////////// -->
     <!-- ///getNavbar/// -->
-	<!-- Creates header of Collection, Biographie, Glossar, etc. -->
+	<!-- creates header of collection (o:szd.thema) -->
 	<xsl:template name="getNavbar">
 		<xsl:param name="Title"/>
 		<xsl:param name="PID"/>
@@ -734,52 +780,43 @@
 	            <div class="col-8">
 	            	<xsl:choose>
 	            	    <xsl:when test="contains($PID, 'o:szd.thema')">
-	            	        <img src="{concat('/', $PID, '/TITELBILD')}" class="img-responsive center-block" alt="Titelbild" width="400" height="400"/> 
+	            	        <img src="{concat('/', $PID, '/TITELBILD')}" class="img-fluid" alt="Titelbild"/> 
 	            	    </xsl:when>
 	            		<xsl:otherwise>
-	            		<h2>
-	                		<xsl:value-of select="upper-case($Title)"/>
-	            		    <xsl:if test="not(contains($PID, 'o:szd.glossar'))">
-      	            		    <xsl:text> </xsl:text>
-	            		        <a href="{concat('/o:szd.glossar#', lower-case($Title))}" class="button" title="Hier erhalten Sie mehr Information zum Sammlungsbereich">
-	            		            <!-- style="color:#C2A360; font-size: 50%;" -->
-	            		            <span class="glyphicon glyphicon-info-sign" ><xsl:text> </xsl:text></span>
-      	            		    </a>
-	            		    </xsl:if>
-	                	</h2>
+     	            		<h2>
+     	                		<xsl:value-of select="upper-case($Title)"/>
+     	                	</h2>
 	            		</xsl:otherwise>
 	            	</xsl:choose>
 	            </div>
 	            <!-- creates TEI and/or RDF BUtton on the right side in the header -->
-	            <div class="btn-group col-2">
-	                <xsl:if test="$PID">
-	                    <div class="float-right">
-	                        <xsl:choose>
-	                            <!-- this skips TEI and RDF button -->
-           	                    <xsl:when test="$PID = 'context:szd'"/>
-           	                    <xsl:when test="contains($PID, 'o:szd.glossar') or contains($PID, 'o:szd.ontology')">
-           	                        <a class="button" href="{concat('/', $PID,'/ONTOLOGY')}" role="button" target="_blank">
-           	                            <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
-           	                        </a>
-           	                    </xsl:when>
-	                            <!-- TEI RDF Button in Search Result -->
-	                            <xsl:when test="$PID ='search'">
-	                               <xsl:text> </xsl:text>
-	                            </xsl:when>
-           	                    <xsl:otherwise>
-           	                        <a class="button" href="{concat('/',$PID,'/TEI_SOURCE')}" role="button" target="_blank">
-           	                            <img alt="TEI" height="25" id="tei" src="/templates/img/tei_icon.jpg" title="TEI"/>
-           	                        </a>
-           	                        <xsl:text> </xsl:text>
-           	                        <a class="button" href="{concat('/',$PID,'/RDF')}" role="button" target="_blank">
-           	                            <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
-           	                        </a>
-           	                    </xsl:otherwise>
-    	                   </xsl:choose>
-	                    </div>
-	                </xsl:if>
-	                <xsl:text> </xsl:text>
-	            </div>
+     	        <div class="col-2 text-right">
+     	                <xsl:if test="$PID">
+     	                        <xsl:choose>
+     	                            <!-- this skips TEI and RDF button -->
+                	                    <xsl:when test="$PID = 'context:szd'"/>
+                	                    <xsl:when test="contains($PID, 'o:szd.glossar') or contains($PID, 'o:szd.ontology')">
+                	                        <a href="{concat('/', $PID,'/ONTOLOGY')}" role="button" target="_blank">
+                	                            <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
+                	                        </a>
+                	                    </xsl:when>
+     	                            <!-- TEI RDF Button in Search Result -->
+     	                            <xsl:when test="$PID ='search'">
+     	                               <xsl:text> </xsl:text>
+     	                            </xsl:when>
+                	                    <xsl:otherwise>
+                	                        <a  href="{concat('/',$PID,'/TEI_SOURCE')}" role="button" target="_blank">
+                	                            <img alt="TEI" height="25" id="tei" src="/templates/img/tei_icon.jpg" title="TEI"/>
+                	                        </a>
+                	                        <xsl:text> </xsl:text>
+                	                        <a href="{concat('/',$PID,'/RDF')}" role="button" target="_blank">
+                	                            <img alt="RDF" height="25" id="rdf" src="/templates/img/RDF_icon.png" title="RDF"/>
+                	                        </a>
+                	                    </xsl:otherwise>
+         	                   </xsl:choose>
+     	                </xsl:if>
+     	                <xsl:text> </xsl:text>
+     	            </div>
 	        </div>    	
 	</xsl:template>
 	
@@ -799,13 +836,13 @@
                  <!-- //////////////////////////////////////////////////////////// -->
                  <!-- PERSON -->
     			 <!-- ///Verfasser/// -->
-                 <xsl:if test="t:fileDesc/t:titleStmt/t:author[1]">
+                 <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]">
                  <tr class="row">
                        <td class="col-3">
                            <i18n:text>author_szd</i18n:text>
                         </td>
                         <td class="col-9">
-                            <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@type)]">
+                            <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]">
                                 <xsl:call-template name="PersonSearch">
                                     <xsl:with-param name="locale" select="$locale"/>
                                 </xsl:call-template>
@@ -825,7 +862,9 @@
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='composer']">
-                            	<xsl:call-template name="PersonSearch"/>
+                            	<xsl:call-template name="PersonSearch">
+                            	    <xsl:with-param name="locale" select="$locale"/>
+                            	</xsl:call-template>
                             </xsl:for-each>
                         </td>
                     </tr>
@@ -848,7 +887,7 @@
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[not(@role)]">
                             	<xsl:call-template name="PersonSearch">
-                            	    <xsl:with-param name="locale"/>
+                            	    <xsl:with-param name="locale" select="$locale"/>
                             	</xsl:call-template>
                             </xsl:for-each>
                         </td>
@@ -864,7 +903,7 @@
                          <td class="col-9">
                              <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[@role='illustrator']">
                                  <xsl:call-template name="PersonSearch">
-                                     <xsl:with-param name="locale"/>
+                                     <xsl:with-param name="locale" select="$locale"/>
                                  </xsl:call-template>
                              </xsl:for-each>
                          </td>
@@ -880,7 +919,7 @@
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[@role='translator']">
                                 <xsl:call-template name="PersonSearch">
-                                    <xsl:with-param name="locale"/>
+                                    <xsl:with-param name="locale" select="$locale"/>
                                 </xsl:call-template>
                             </xsl:for-each>
                         </td>
@@ -896,7 +935,7 @@
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='preface']">
                                 <xsl:call-template name="PersonSearch">
-                                    <xsl:with-param name="locale"/>
+                                    <xsl:with-param name="locale" select="$locale"/>
                                 </xsl:call-template>
                             </xsl:for-each>
                         </td>
@@ -912,7 +951,7 @@
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='afterword']">
                                 <xsl:call-template name="PersonSearch">
-                                    <xsl:with-param name="locale"/>
+                                    <xsl:with-param name="locale" select="$locale"/>
                                 </xsl:call-template>
                             </xsl:for-each>
                         </td>
@@ -1206,34 +1245,63 @@
     	                        </td>
                                    <td class="col-9">
                                        <!--<xsl:call-template name="Originalsignaturen"/>-->
-                                       <div class="originalsignatur row">
+                                           <div>
                                            <xsl:for-each-group select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier" group-by="@corresp">
                                                <xsl:for-each select="current-group()">
-                                                   <div class="col-3">
-                                               	        <span><xsl:value-of select="normalize-space(.)"/></span></div>
+                                                   <xsl:if test="@n=1 and not(position()=1)">
+                                                       <br/>
+                                                   </xsl:if>
+                                                   <span class="col" style="padding-left: 0">
+                                                       <xsl:if test="@n and position()=1">
+                                                           <xsl:attribute name="style" select="'padding-right: 2rem; padding-left: 0'"/>
+                                                       </xsl:if>
+                                                      <xsl:value-of select="normalize-space(.)"/>
+                                                   </span>
+                                                   
                                                </xsl:for-each>
+                                               <br/>
+                                               
+                                                  <!-- <xsl:for-each select="current-group()">
+                                                   
+                                                       <div class="col-3">
+                                                           <span><xsl:value-of select="normalize-space(.)"/></span>
+                                                       </div>
+                                                       
+                                                   </xsl:for-each>-->
+                                               
+                                               <!--<xsl:for-each select="current-group()">
+                                                   <div class="col-3">
+                                               	        <span><xsl:value-of select="normalize-space(.)"/></span>
+                                                   </div>
+                                                   <xsl:if test="@n=1">
+                                                      <p><xsl:text>a</xsl:text></p>
+                                                   </xsl:if>
+                                               </xsl:for-each>-->
                                            </xsl:for-each-group>
-                                       </div>
+                                           </div>
                                   </td>
                               </tr>
                           </xsl:if>
-    				 	  <!-- //////////////////////////////////////////////////////////// -->
-                          <!-- ///Provenienz/// -->
-    				     <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
-                              <tr class="group row">
-    	                       <td class="col-3">
-    	                           <i18n:text>laterowner</i18n:text>
-    	                        </td>
-                                  <td class="col-9">
-                                      <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance"/>
-                                  </td>
-                              </tr>
-                          </xsl:if>
+                        <!-- //////////////////////////////////////////////////////////// -->
+                        <!-- ///Provenienz/// -->
+                        <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
+                            <tr class="row group">
+                                <td class="col-3">
+                                    <i18n:text>laterowner</i18n:text>
+                                </td>
+                                <td class="col-9">
+                                    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance"/>
+                                </td>
+                            </tr>
+                        </xsl:if>
     				 	 <!-- //////////////////////////////////////////////////////////// -->
                          <!-- ///Aktueller Ort/// -->
     				     <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement">
-    				         <tr class="group row">
-                                 <!-- <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance)">
+    				         <tr class="row"> 
+    				             <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance)">
+    				                 <xsl:attribute name="class"><xsl:text>group row</xsl:text></xsl:attribute>
+    				             </xsl:if>
+    				             <!-- <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance)">
                                       <xsl:attribute name="class" select="'group'"/>
                                   </xsl:if> -->
                                  <td class="col-3">
@@ -1263,6 +1331,7 @@
                                   </td>
                               </tr>
                           </xsl:if>
+                        
                </tbody>
             </table>
              
@@ -1329,8 +1398,8 @@
                 <i18n:text>suggestedcitation</i18n:text>
             </button>
             <div id="{concat('quote_', substring-after(@xml:id, '.'))}" class="collapse font-weight-light">
-              <xsl:if test=".//t:titleStmt/t:author[not(@role)]">
-                  <xsl:for-each select=".//t:titleStmt/t:author[not(@role)]">
+              <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]">
+                  <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]">
                       <xsl:call-template name="printAuthor">
                           <xsl:with-param name="currentAuthor" select="."/>
                       </xsl:call-template>
@@ -1340,8 +1409,8 @@
                   </xsl:for-each>
               	 <xsl:text>: </xsl:text>
               </xsl:if>	
-              <xsl:if test=".//t:titleStmt/t:author[@role='composer']">
-                  <xsl:for-each select=".//t:titleStmt/t:author[@role='composer']">
+              <xsl:if test="t:fileDesc/t:titleStmt/t:author[@role='composer']">
+                  <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[@role='composer']">
                       <xsl:call-template name="printAuthor">
                           <xsl:with-param name="currentAuthor" select="."/>
                       </xsl:call-template>
@@ -1351,42 +1420,58 @@
                   </xsl:for-each>  
               	 <xsl:text>: </xsl:text>
               </xsl:if>
-              <xsl:if test=".//t:titleStmt/t:editor[@role='editor']">
-               	<xsl:text> (</xsl:text>
-                   <i18n:text>Hrsg.</i18n:text>
-                   <xsl:text> </xsl:text>
-                    <xsl:value-of select=".//t:titleStmt/t:editor[@role='editor']"/>
-               	<xsl:text>)</xsl:text>
-              </xsl:if>	
                 <!-- e.g. Geheimnis des Alcovens -->
                <span class="font-italic">
                     <xsl:call-template name="printEnDe">
                         <xsl:with-param name="locale" select="$locale"/>
                         <!-- bibliothek, werke, autograph immer erster titel? -->
-                        <xsl:with-param name="path" select=".//t:titleStmt/t:title[1]"/>
+                        <xsl:with-param name="path">
+                            <xsl:choose>
+                                <xsl:when test="t:fileDesc/t:titleStmt/t:title/@xml:lang">
+                                    <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:with-param>
                     </xsl:call-template>
+                   <xsl:text> </xsl:text>
                </span>
+                <!-- Herausgeber -->
+                <xsl:if test="t:fileDesc/t:titleStmt/t:editor[not(@role)]">
+                    <xsl:text> (</xsl:text>
+                    <i18n:text>Hrsg.</i18n:text>
+                    <xsl:text> </xsl:text>
+                    <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="not(last()=position())">
+                            <xsl:text> / </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                    <xsl:text>)</xsl:text>
+                </xsl:if>	
                 <!-- Ordnugnskategorie -->
-                <xsl:if test=".//t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang = $locale]/t:term[@type='objecttyp']">
+                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang = $locale]/t:term[@type='objecttyp']">
                     <xsl:text>, </xsl:text>
-                    <xsl:value-of select=".//t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang = $locale]/t:term[@type='objecttyp']"/>
+                    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang = $locale]/t:term[@type='objecttyp']"/>
                 </xsl:if>
                <!-- e.g. [Marie Antoinette] -->
-                <xsl:if test=".//t:titleStmt/t:title[@type='Einheitssachtitel'][1]">
+                <xsl:if test="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]">
 	              <xsl:text> [</xsl:text>
                     <xsl:call-template name="printEnDe">
                         <xsl:with-param name="locale" select="$locale"/>
-                        <xsl:with-param name="path" select=".//t:titleStmt/t:title[@type='Einheitssachtitel']"/>
+                        <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel']"/>
                     </xsl:call-template>
 	              <xsl:text>]</xsl:text>
                </xsl:if>
                <xsl:text>. </xsl:text>
-                <xsl:if test=".//t:sourceDesc/t:msDesc/t:msIdentifier/t:repository">
-                    <xsl:value-of select=".//t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
+                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository">
+                    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
                     <xsl:text>, </xsl:text>
                 </xsl:if>
-                <xsl:if test=".//t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
-                    <xsl:value-of select=".//t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
+                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
+                    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
                </xsl:if>		
               <xsl:text>. In: stefanzweig.digital, </xsl:text>
               <i18n:text>Hrsg.</i18n:text>
@@ -1509,9 +1594,9 @@
             <xsl:if test="$location_string">
                 <xsl:value-of select="normalize-space($location_string)"/>
             </xsl:if>
-            <xsl:if test=".//t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement">
+            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement">
                 <xsl:text>, </xsl:text>
-                <xsl:value-of select="normalize-space(.//t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement)"/>
+                <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement)"/>
             </xsl:if>
             <img src="{$Icon_suche_template}" class="img-responsive icon" alt="Standort"/>
         </a>
@@ -1740,7 +1825,10 @@
                        <tr class="group row">
                           <td class="col-3">
                               <!-- SZDMSK -->
-                              <i18n:text>physicaldescription</i18n:text>
+                              <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#PhysicalDescription')}" target="_blank">
+                                  <i18n:text>physicaldescription</i18n:text>
+                                  <i class="fa fa-info-circle info_icon" aria-hidden="true"><xsl:text> </xsl:text></i>
+                              </a>
                            </td>
                            <td class="col-9">
                                <xsl:value-of select="$EXTENT/t:span[@xml:lang = $locale]"/>
@@ -1986,7 +2074,7 @@
     <!-- /////////////////////////////////////////////////////////// -->
     <!-- SZDAUT -->
     <!-- /////////////////////////////////////////////////////////// -->
-    <!-- autohraphs biblFull Entry on o:szd.autographs -->
+    <!-- autohraph collection biblFull Entry: o:szd.autographen -->
     <xsl:template name="FillbiblFull_SZDAUT">
         <xsl:param name="locale"/>
         <div class="table-responsive">
@@ -2011,7 +2099,6 @@
                                     <i18n:text>author_szd</i18n:text>
                                 </xsl:otherwise>
                             </xsl:choose>
-                            
                         </td>
                         <td class="col-9">
                             <xsl:for-each select="t:fileDesc/t:titleStmt/t:author">
@@ -2274,13 +2361,15 @@
             </xsl:with-param>
             <xsl:with-param name="location_string" select="."/>
         </xsl:call-template>
+        <br/>
+        <xsl:text> </xsl:text>
     </xsl:template>
     
     
     <!-- //////////////////////////////////////////////////////////// -->
     <!-- for o:szd.autographs-->
     <xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:idno[@type='signature']">
-        <br/><xsl:apply-templates/>
+        <xsl:apply-templates/>
     </xsl:template>
 
     <!-- /////////////////////////////////////////////////////////// --> 
@@ -2306,8 +2395,20 @@
     
     <xsl:template name="getLabelDatabasket">
         <xsl:param name="locale"/>
+        <xsl:param name="SZDID"/>
+        <xsl:variable name="databasketParam">
+            <xsl:choose>
+                <xsl:when test="$SZDID">
+                    <xsl:value-of select="concat('&quot;',$SZDID, '&quot;')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>this</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+            
         <label class="d-none d-sm-block col-1 text-right">
-            <input  onClick="add_DB(this)" type="checkbox" class="form-check-input">
+            <input  onClick="add_DB({$databasketParam})" type="checkbox" class="form-check-input">
                 <xsl:choose>
                     <xsl:when test="$locale = 'en'">
                         <xsl:attribute name="title" select="'Save to data cart'"/>
@@ -2323,6 +2424,7 @@
     
     <xsl:template name="getEntry_SZDBIB_SZDAUT">
         <xsl:param name="locale"/>
+        <xsl:param name="PID"/>
             <!-- data-basket -->
             <xsl:call-template name="AddData-Databasket"/>
             <div class="bg-light row">
@@ -2331,18 +2433,23 @@
                         <span class="arrow">
                             <xsl:text>&#9660; </xsl:text>
                         </span>
-                        
-                        <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[1]"/>
-                        <!--<xsl:choose>
-                            <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[1]) > 70">
-                                
-                                <!-\-<span class="font-italic"><xsl:value-of select="normalize-space(substring(t:fileDesc/t:titleStmt/t:title[1], 1, 70))"/><xsl:text>... </xsl:text></span>-\->
+                        <xsl:choose>
+                            <!-- every title in o:szd.bibliothek is italic-->
+                            <xsl:when test="$PID = 'o:szd.bibliothek'">
+                                <xsl:choose>
+                                    <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[1]) > 70">
+                                        <i><xsl:value-of select="normalize-space(substring(t:fileDesc/t:titleStmt/t:title[1], 1, 70))"/><xsl:text>... </xsl:text></i>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <i><xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/></i>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </xsl:when>
+                            <!-- for mixed content with <hi class="italic"> -->
                             <xsl:otherwise>
                                 <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[1]"/>
-                                <!-\-<span class="font-italic"><xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[1])"/></span>-\->
                             </xsl:otherwise>
-                        </xsl:choose>--> 
+                        </xsl:choose>
                     </a>
                     <xsl:if test="t:fileDesc/t:publicationStmt/t:date">
                         <xsl:text> | </xsl:text><xsl:value-of select="t:fileDesc/t:publicationStmt/t:date"/>
@@ -2351,6 +2458,7 @@
                     <!-- checkbox databasket -->
                     <xsl:call-template name="getLabelDatabasket">
                         <xsl:with-param name="locale" select="$locale"/>
+                        <xsl:with-param name="SZDID" select="@xml:id"/>
                     </xsl:call-template>
                     
                    <!-- <label class="col-md-1 float-right">

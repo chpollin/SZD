@@ -45,7 +45,7 @@
                 <xsl:for-each select="//skos:Concept[not(skos:broader)]">
                     <xsl:sort select="skos:prefLabel[@xml:lang = $locale]"/>
                             <xsl:variable name="hasTopConcept" select="@rdf:about"/>
-                            <div class="card-body" id="{substring-after(@rdf:about, '#')}">
+                            <div class="card-body col-11" id="{substring-after(@rdf:about, '#')}">
                                      <xsl:choose>
                                          <xsl:when test="dc:identifier">
                                             <a href="{dc:identifier/@rdf:resource}" target="_blank">
@@ -80,7 +80,7 @@
                                     <xsl:for-each select="//skos:Concept[contains(skos:broader/@rdf:resource, $hasTopConcept)]">
                                         <xsl:sort select="skos:prefLabel[@xml:lang = $locale]"/>
                                         <div class="row row-eq-height mt-60 glossarEntry">
-                                            <div class="col-7" id="{substring-after(@rdf:about, '#')}">
+                                            <div class="col-9" id="{substring-after(@rdf:about, '#')}">
                                                 <xsl:variable name="SZDID" select="substring-after(@rdf:about, '#')"/>
                                                 <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.category_search/methods/sdef:Query/get?params='"/>
                                                 <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.glossar#', $SZDID, '&gt;', ';$2|', $locale))"/>
@@ -119,31 +119,23 @@
                                                     </xsl:otherwise>
                                                 </xsl:choose>
                                                 <p class="small">
-                                                    <xsl:if test="contains($hasTopConcept, '/o:szd.glossar#ProvenanceFeature')">
-                                                        <xsl:text>(Provenienzmerkmal in der Bibliothek</xsl:text>
-                                                        <xsl:for-each select="rdfs:seeAlso/@rdf:resource">
+                                                    <xsl:if test="contains($hasTopConcept, '/o:szd.glossar#ProvenanceFeature') and rdfs:seeAlso[contains(@rdf:resource,'T-PRO_Thesaurus_der_Provenienzbegriffe')]">
                                                         <xsl:choose>
-                                                            <xsl:when test=". ='https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe'">
-                                                                <xsl:text> nach </xsl:text>
-                                                                <a href="{.}" target="_blank">
-                                                                   <xsl:text>T-PRO</xsl:text>
+                                                            <xsl:when test="$locale = 'en'">
+                                                                <a href="{rdfs:seeAlso[contains(@rdf:resource,'T-PRO_Thesaurus_der_Provenienzbegriffe')]/@rdf:resource}" target="_blank" title="T-PRO Thesaurus der Provenienzbegriffe">
+                                                                    <xsl:text>(T-PRO library provenance feature)</xsl:text>
                                                                 </a>
                                                             </xsl:when>
-                                                            <!--<xsl:when test="contains(., 'https://www.wikidata.org/wiki/')">
-                                                                <a href="{.}"><xsl:text>Wikidata</xsl:text></a>
-                                                            </xsl:when>-->
-                                                            <xsl:otherwise></xsl:otherwise>
+                                                            <xsl:otherwise>
+                                                                <a href="{rdfs:seeAlso[contains(@rdf:resource,'T-PRO_Thesaurus_der_Provenienzbegriffe')]/@rdf:resource}" target="_blank" title="T-PRO Thesaurus der Provenienzbegriffe">
+                                                                    <xsl:text>(Provenienzmerkmal in der Bibliothek nach T-PRO)</xsl:text>
+                                                                </a>
+                                                            </xsl:otherwise>
                                                         </xsl:choose>
-                                                    </xsl:for-each>
-                                                    <xsl:text>)</xsl:text>
                                                     </xsl:if>
-                                                    <!--<xsl:value-of select="./rdfs:seeAlso/@rdf:resource"/>
-                                                    <xsl:for-each select="rdfs:seeAlso/@rdf:resource">
-                                                        <a href="{.}">test</a><xsl:text> </xsl:text>
-                                                    </xsl:for-each>-->
                                                 </p>
                                                  <p>
-                                                     <xsl:value-of select="skos:definition[@xml:lang = $locale]"/>
+                                                     <!--<xsl:value-of select="skos:definition[@xml:lang = $locale]"/>-->
                                                      <xsl:analyze-string select="skos:definition[@xml:lang = $locale]" regex="\n">
                                                          <xsl:matching-substring>
                                                              <br/>
@@ -157,14 +149,13 @@
                                                 <!-- extern R -->
                                                <!-- <xsl:call-template name="ExternRessources"/>-->
                                             </div>
-                                             <div class="col-5"> 
+                                             <div class="col-3"> 
                                                  <xsl:for-each select="skos:example/@rdf:resource">
-                                                     <div class="row text-center">
+                                                     <div class="row">
          											 <div class="column">
          											     <a class="fancybox" data-fancybox-group="group" href="{.}" title="{normalize-space(../../skos:prefLabel[@xml:lang = $locale])}">
-                                                            <img src="{.}" class="img-responsive img-thumbnail"  alt="GlossarBild" width="40%"/>
+                                                            <img src="{.}" class="img-responsive img-thumbnail"  alt="GlossarBild"/>
                                                          </a>
-                                                 	      <span><xsl:text> </xsl:text></span>
           											</div>
                                                  	</div>
                                                  </xsl:for-each>

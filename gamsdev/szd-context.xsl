@@ -54,7 +54,7 @@
                         <xsl:with-param name="Title">
                             <xsl:choose>
                                 <xsl:when test="$locale = 'en'">
-                                    <xsl:text>Imprint</xsl:text>
+                                    <xsl:text>Site Notice</xsl:text>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:text>Imprerssum</xsl:text>
@@ -147,7 +147,7 @@
                     { type: 'formatted-num', targets: 0 }
                     ],
                     dom: 'Bfrtip',
-                    buttons: [ 'copy', 'csv', 'excel', 'pdf'],
+                    buttons: ['csv', 'excel', 'pdf'],
                     "pageLength": 50,
                     <!-- ordering -->
                     "order": [[ 0, "asc" ]]  
@@ -155,9 +155,9 @@
                     );
                     } );
                 </script>
-                <table id="databasket_table" class="table table-bordered dt-responsive nowra">
+                <table id="databasket_table" class="table table-bordered dt-responsive nowra text-left">
                     <thead>
-                        <tr>
+                        <tr class="card-header">
                             <th class="text-uppercase">
                                 <i18n:text>Titel</i18n:text>
                             </th>
@@ -169,7 +169,7 @@
                             </th>
                             <th class="text-uppercase">
                                 <xsl:choose>
-                                    <xsl:when test="$locale">
+                                    <xsl:when test="$locale = 'en'">
                                         <xsl:text>Date</xsl:text>
                                     </xsl:when>
                                     <xsl:otherwise>
@@ -177,8 +177,8 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </th>
-                            <th><xsl:text> </xsl:text>
-                            </th>
+                            <th class="text-uppercase">URL</th>
+                            <th><xsl:text> </xsl:text> </th>
                         </tr>
                     </thead>
                     <tbody id="databasekt_tbody">

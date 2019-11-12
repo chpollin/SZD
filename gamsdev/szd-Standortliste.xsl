@@ -37,6 +37,7 @@
                     </xsl:with-param>
                     <xsl:with-param name="PID" select="$PID"/>
                     <xsl:with-param name="mode" select="$mode"/>
+                    
                 </xsl:call-template>
                 <!-- /// PAGE-CONTENT /// -->
                 <article id="content">
@@ -49,7 +50,7 @@
                         <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', @xml:id, '&gt;', ';$2|', $locale))"/>
                         <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
 
-                        <div class="list-group-item shadow-sm" id="{@xml:id}">
+                        <div class="list-group-item mb-1" id="{@xml:id}">
                             <div class="row">
                                 <h4 class="text-left col-9">
                                 <a href="{$QueryUrl}" class="font-weight-bold">
@@ -61,6 +62,21 @@
                                 <xsl:text> </xsl:text>
                             </h4>
                             <div class="col-2">
+                                <xsl:if test="contains(t:orgName/@ref, 'd-nb.info/gnd')">
+                                    <a target="_blank" title="GND">
+                                        <xsl:attribute name="href">
+                                            <xsl:choose>
+                                                <xsl:when test="contains(t:orgName/@ref, ' ')">
+                                                    <xsl:value-of select="substring-before(t:orgName/@ref, ' ')"/>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:value-of select="t:orgName/@ref"/>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:attribute>
+                                        <img src="{$Icon_gnd}" class="img-responsive icon" alt="Person" />
+                                    </a>
+                                </xsl:if>
                                 <xsl:if test="@corresp">
                                     <a href="{@corresp}" target="_blank">
                                         <xsl:attribute name="title">
@@ -76,7 +92,7 @@
                                                 <xsl:attribute name="title" select="'Zur externen Ressource'"/>
                                             </xsl:otherwise>
                                         </xsl:choose>-->
-                                        <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>
+                                        <i class="fas fa-link"><xsl:text> </xsl:text></i>
                                     </a>
                                 </xsl:if>
                             <!-- <a href="{s:gnd/@uri}" target="_blank">

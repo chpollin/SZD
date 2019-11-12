@@ -42,7 +42,7 @@
                                 <xsl:when test="$PID = 'o:szd.werke'">
                                     <xsl:choose>
                                         <xsl:when test="$locale = 'en'">
-                                            <xsl:text>Work</xsl:text>
+                                            <xsl:text>Works</xsl:text>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:text>Werke</xsl:text>
@@ -75,7 +75,23 @@
                         <xsl:with-param name="Category" select="//t:body/t:listBibl/t:biblFull/t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang=$locale]"/>
                         <xsl:with-param name="PID" select="$PID"/>
                         <xsl:with-param name="locale" select="$locale"/>
-                        <xsl:with-param name="GlossarRef" select="'Works'"/>
+                        <xsl:with-param name="GlossarRef">
+                            <xsl:choose>
+                                <xsl:when test="$PID = 'o:szd.lebensdokumente'">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>PersonalDocuments</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Lebensdokumente</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>Works</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:with-param>
                     </xsl:call-template>
 
                     <!-- /// PAGE-CONTENT /// -->
@@ -86,16 +102,22 @@
                             <xsl:sort select="current-grouping-key()"/>
                                 <div class="col-12"  id="{translate(current-grouping-key(), ' ', '')}">
                                 <!-- ORDNUNGSKATEGORIE -->
-                                <h2 class="headerEntryList">
+                                <h2>
+                                    <xsl:choose>
+                                        <xsl:when test="position() = 1 ">
+                                            <xsl:attribute name="class"><xsl:text>headerEntryList</xsl:text></xsl:attribute>
+                                        </xsl:when>
+                                        <xsl:otherwise><xsl:attribute name="class"><xsl:text>headerEntryList mt-5</xsl:text></xsl:attribute></xsl:otherwise>
+                                    </xsl:choose>
                                     <xsl:value-of select="upper-case(normalize-space(current-grouping-key()))"/>
                                 </h2>
-                                    
+ 
                                 <!-- /////////////////////////////////////////// -->    
                                 <!-- for each bibFull group by @type='Einheitssachtitel' -->
                                     <xsl:for-each-group select="current-group()"  group-by="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"> 
                                     <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"/>
                                     
-                                        <div class="list-group mt-5"> 
+                                        <div class="list-group mt-4">
                                         <h3 id="{concat('mt', generate-id())}">
                                             <xsl:value-of select="current-grouping-key()"/>
                                         </h3>
@@ -201,7 +223,7 @@
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
                                                                     <!--<img src="{$Icon_manuskript}"  class="img-responsive icon_navbar" alt="Viewer" style="width:20px;"/>-->
-                                                                    <i class="far fa-images _icon"><xsl:text> </xsl:text></i>
+                                                                    <i class="fas fa-camera _icon"><xsl:text> </xsl:text></i>
                                                                     <xsl:text> </xsl:text>
                                                                 </a>
                                                             </xsl:if>
@@ -238,6 +260,7 @@
                                                         <!-- databasket -->
                                                         <xsl:call-template name="getLabelDatabasket">
                                                             <xsl:with-param name="locale" select="$locale"/>
+                                                            <xsl:with-param name="SZDID" select="@xml:id"/>
                                                         </xsl:call-template>
                                                          
                                                </div>

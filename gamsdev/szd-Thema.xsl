@@ -95,7 +95,7 @@
                 <xsl:when test="contains(t:head/t:title/@ref, 'SZD')">
                     <xsl:value-of select="substring-after(t:head/t:title/@ref, '#')"/>
                 </xsl:when>
-                <xsl:otherwise></xsl:otherwise>
+                <xsl:otherwise/>
             </xsl:choose>
         </xsl:variable>
 

@@ -44,6 +44,7 @@
         	    <xsl:with-param name="Content" select="$AuthorsEditorsComposer"/>
         		<xsl:with-param name="PID" select="$PID"/>
         	    <xsl:with-param name="locale" select="$locale"/>
+        	    <xsl:with-param name="GlossarRef" select="'Library'"/>
         	</xsl:call-template>
             
            
@@ -65,7 +66,7 @@
                           <div class="list-group">
                               <xsl:if test="not(position()=1)">
                                   <xsl:attribute name="class">
-                                      <xsl:text>list-group mt-5</xsl:text>
+                                      <xsl:text>list-group mt-4</xsl:text>
                                   </xsl:attribute>
                               </xsl:if>
                            <h3>
@@ -79,6 +80,7 @@
                                    <!-- //// -->
                                    <!-- getEntry_SZDBIB_SZDAUT -->
                                     <xsl:call-template name="getEntry_SZDBIB_SZDAUT">
+                                        <xsl:with-param name="PID" select="$PID"/>
                                         <xsl:with-param name="locale" select="$locale"/>
                                     </xsl:call-template>
                                    <!-- //// -->
