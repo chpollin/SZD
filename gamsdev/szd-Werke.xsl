@@ -216,10 +216,10 @@
                                                                 <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
-                                                                            <xsl:attribute name="title" select="'Access digital facsimile / Access digital facsimile in Viewer'"/>
+                                                                            <xsl:attribute name="title" select="'Access digital facsimile'"/>
                                                                         </xsl:when>
                                                                         <xsl:otherwise>
-                                                                            <xsl:attribute name="title" select="'Zum digitalen Faksimile / Zum digitalen Faksimile im Viewer'"/>
+                                                                            <xsl:attribute name="title" select="'Zum digitalen Faksimile'"/>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
                                                                     <!--<img src="{$Icon_manuskript}"  class="img-responsive icon_navbar" alt="Viewer" style="width:20px;"/>-->
@@ -245,10 +245,10 @@
                                                                 <a href="{concat('/', $currentCollection)}" target="_blank" style="color: #631a34;">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
-                                                                            <xsl:attribute name="title" select="'To Commentary'"/>
+                                                                            <xsl:attribute name="title" select="'Access subject page'"/>
                                                                         </xsl:when>
                                                                         <xsl:otherwise>
-                                                                            <xsl:attribute name="title" select="'Zum Thema'"/>
+                                                                            <xsl:attribute name="title" select="'Zur Themenseite'"/>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
                                                                     <i class="fas fa-book-reader _icon"><xsl:text> </xsl:text></i>

@@ -112,27 +112,42 @@
             <article class="card-body" id="content">
                     <xsl:choose>
                         <xsl:when test="$locale='en'">
-                            <p class="card-text">
-                                 <xsl:text> This virtual document displays the information that you have currently stored in the data basket on this computer and browser (local storage).
-                                 To transfer data to your data basket, select a check box in the catalog views. 
-                                 You can delete individual entries (x) or empty (CLEAR) the entire data basket. In addition, several export options are offered.
+                            <p class="card-text row">
+                                 <xsl:text> 
+                                     TODO
                                  </xsl:text>
-                                <br/>
-                                <button type="button" class="btn" onclick="clearData()"><xsl:text>CLEAR DATA </xsl:text><i class="fas fa-trash"><xsl:text> </xsl:text></i></button>
                             </p>
+                            <p>
+                                ToDon<br/>
+                                (W) Works (L) Personal documents (A) Autograph collection (B) Library
+                            </p>
+                            <div class="row mb-3 float-right" >
+                                <button type="button"  onclick="clearData()">
+                                    <xsl:text>CLEAR DATA </xsl:text>
+                                    <i class="fas fa-trash" style="color:#631a34"><xsl:text> </xsl:text></i>
+                                </button>
+                            </div>
                         </xsl:when>
                         <xsl:otherwise>
-                           <p class="card-text">
+                            <p class="card-text row">
                                 <xsl:text>
-                                Dieses virtuelle Dokument zeigt die Informationen an, die Sie aktuell im Datenkorb auf diesem Computer und diesem Browser (local storage) abgelegt haben.
-                                Um Daten in Ihren Datenkorb zu übernehmen, wählen Sie ein Auswahlkästchen in den Katalogansichten. 
-                                Sie können einzelne Einträge (x) löschen oder den ganzen Datenkorb leeren. Weiters werden mehrer Exportmöglichkeiten angeboten.
+                                    Im Datenkorb können Datensätze durch ankreuzen des Auswahlkastens in den Kataloglisten und Suchergebnissen abgelegt werden. 
+                                    Die Einträge bleiben im Local storage des Browsers für weitere Arbeitssitzungen erhalten.
                                 </xsl:text>
-                               <br/>
-                               <button type="button" class="btn" onclick="clearData()"><xsl:text>DATENKORB LEEREN </xsl:text><i class="fas fa-trash"><xsl:text> </xsl:text></i></button>
-                           </p>
+                            </p>
+                            <p>
+                                Siglen der Objektkategorien<br/>
+                                (W) Werke (L) Lebensdokumente (A) Autographensammlung (B) Bibliothek
+                            </p>
+                            <div class="row mb-3 float-right" >
+                                <button type="button" onclick="clearData()">
+                                <xsl:text>DATENKORB LEEREN  </xsl:text>
+                                    <i class="fas fa-trash"  style="color:#631a34"><xsl:text> </xsl:text></i>
+                                </button>
+                            </div>
                         </xsl:otherwise>
                     </xsl:choose>
+                
                 <xsl:variable name="Table-ID" select="concat('table_id', position())"/>
                 <!-- call DataTable -->
                <!-- <script>
@@ -146,11 +161,30 @@
                     columnDefs: [
                     { type: 'formatted-num', targets: 0 }
                     ],
+                    
+                    "columns": [
+                    { "width": "5%" },
+                    { "width": "25%" },
+                    { "width": "20%" },
+                    null,
+                    null
+                    ],
+                    
+                    
                     dom: 'Bfrtip',
-                    buttons: ['csv', 'excel', 'pdf'],
+              <!--      buttons: ['pdf', 'excel', 'csv'],-->
+                    
+                    buttons: [
+                    {
+                    extend: 'pdfHtml5',
+                    messageTop: "(W) Werke/Work (L) Lebensdokumente/Personal document (A) Autographen/Autograph collection (B) Bibliothek/Library",
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                    }
+                    , 'excel', 'csv'
+                    ],
                     "pageLength": 50,
-                    <!-- ordering -->
-                    "order": [[ 0, "asc" ]]  
+                    "order": [[ 0, "desc" ]]  
                     }
                     );
                     } );
@@ -158,33 +192,42 @@
                 <table id="databasket_table" class="table table-bordered dt-responsive nowra text-left">
                     <thead>
                         <tr class="card-header">
+                            <th>
+                                <xsl:text> </xsl:text>
+                            </th>
                             <th class="text-uppercase">
-                                <i18n:text>Titel</i18n:text>
+                                <xsl:choose>
+                                    <xsl:when test="$locale = 'en'">
+                                        <xsl:text>Title</xsl:text>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text>Titel</xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </th>
                             <th class="text-uppercase">
                                 <i18n:text>author_szd</i18n:text>
                             </th>
                             <th class="text-uppercase">
-                                <i18n:text>partiesinvolved</i18n:text>
-                            </th>
-                            <th class="text-uppercase">
                                 <xsl:choose>
                                     <xsl:when test="$locale = 'en'">
-                                        <xsl:text>Date</xsl:text>
+                                        <xsl:text>Location, Signature, URL</xsl:text>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:text>Datum</xsl:text>
+                                        <xsl:text>Standort, Signatur, URL</xsl:text>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </th>
-                            <th class="text-uppercase">URL</th>
-                            <th><xsl:text> </xsl:text> </th>
+                            <th>
+                                <xsl:text> </xsl:text>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="databasekt_tbody">
                         <xsl:text> </xsl:text>
                     </tbody>
                 </table>
+                
             
             <div class="card-body">
                 <div class="row">

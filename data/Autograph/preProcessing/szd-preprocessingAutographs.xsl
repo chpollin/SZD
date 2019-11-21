@@ -180,6 +180,22 @@
         </xsl:copy>
     </xsl:template>
     
+    <!--<xsl:template match="*:msIdentifier"> 
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+           
+        </xsl:copy>
+    </xsl:template>-->
+    
+    <xsl:template match="*:acquisition">
+        <provenance type="provenance">
+            <xsl:text> </xsl:text>
+        </provenance>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+    
     
     <!-- adds msContents, where it does not exist, for all biblFull without type=object -->
     <xsl:template match="*:biblFull[*:titleStmt/*:title[not(@type)]]//*:msIdentifier">  

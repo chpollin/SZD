@@ -41,16 +41,16 @@
             </xsl:call-template>
             <!-- /// PAGE-CONTENT /// -->
             <!-- creates for every person an entry, including reference to GND and alphabetically sorted and linked -->
-            <article id="content">
+        <article id="content" class="card">
                 <div class="list-group entryGroup">       
                     <xsl:for-each-group select="//t:listPerson/t:person" group-by="substring(t:persName/t:surname|t:persName/t:name, 1, 1)">
                         <xsl:sort select="current-grouping-key()"/>
                         <!-- ////////////////////////////// -->
-                        <h2 id="{current-grouping-key()}">
+                        <h2 id="{current-grouping-key()}" class="mt-5">
                             <xsl:value-of select="current-grouping-key()"/>
                         </h2>
                         <xsl:for-each select="current-group()">
-                            <div class="list-group-item mb-1" id="{@xml:id}">
+                            <div class="list-group-item mb-1 py-0" id="{@xml:id}">
                                 <div class="row">
                                     <span class="col-8 row">
                                         <h4 class="text-left">
@@ -72,9 +72,7 @@
                                                 <xsl:value-of select="t:persName/t:forename"/>
                                             </xsl:if>
                                         </a>
-                                        </h4>
-                                        <xsl:text> </xsl:text>
-                                        <span class="col">
+                                            <!-- /////// -->
                                             <!-- birth -->
                                             <xsl:variable name="Birth">
                                                 <xsl:choose>
@@ -94,12 +92,15 @@
                                                 </xsl:choose>
                                             </xsl:variable>
                                             <xsl:if test="not($Birth = '') and not($Death = '')">
-                                                <span style="color: #631a34;"><xsl:text>(</xsl:text>
+                                                <xsl:text> </xsl:text>
+                                                <span style="color: #631a34;">
+                                                    <xsl:text>(</xsl:text>
                                                     <xsl:value-of select="$Birth"/><xsl:text>–</xsl:text><xsl:value-of select="$Death"/>
-                                                    <xsl:text>)</xsl:text></span>
+                                                    <xsl:text>)</xsl:text>
+                                                </span>
                                             </xsl:if>
-                                            <xsl:text> </xsl:text>
-                                        </span>
+                                        </h4>
+                                        <xsl:text> </xsl:text>
                                     </span>
                                     <span class="col">
                                         <xsl:text> </xsl:text>

@@ -40,7 +40,7 @@
                     
                 </xsl:call-template>
                 <!-- /// PAGE-CONTENT /// -->
-                <article id="content">
+        <article id="content" class="card">
                     <div class="list-group entryGroup">
                     <xsl:for-each-group select="//t:listOrg/t:org" group-by="@xml:id">
                         <xsl:sort data-type="text" lang="ger" select="t:orgName"/>
@@ -50,7 +50,7 @@
                         <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.standorte#', @xml:id, '&gt;', ';$2|', $locale))"/>
                         <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
 
-                        <div class="list-group-item mb-1" id="{@xml:id}">
+                        <div class="list-group-item mb-1 py-0" id="{@xml:id}">
                             <div class="row">
                                 <h4 class="text-left col-9">
                                 <a href="{$QueryUrl}" class="font-weight-bold">
@@ -80,19 +80,15 @@
                                 <xsl:if test="@corresp">
                                     <a href="{@corresp}" target="_blank">
                                         <xsl:attribute name="title">
-                                            <i18n:text>toexternresource</i18n:text>
+                                            <xsl:choose>
+                                                <xsl:when test="$locale ='en'">
+                                                    <xsl:text>External Resource</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>Externe Ressource</xsl:otherwise>
+                                            </xsl:choose>
                                         </xsl:attribute>
-                                        <!--<xsl:choose>
-                                            <xsl:when test="$locale = 'en'">
-                                                <xsl:attribute name="title">
-                                                    <i18n:text>toexternresource</i18n:text>
-                                                </xsl:attribute>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:attribute name="title" select="'Zur externen Ressource'"/>
-                                            </xsl:otherwise>
-                                        </xsl:choose>-->
-                                        <i class="fas fa-link"><xsl:text> </xsl:text></i>
+                                        <xsl:text> </xsl:text>
+                                        <i class="fas fa-external-link-alt _icon small pl-1"><xsl:text> </xsl:text></i>
                                     </a>
                                 </xsl:if>
                             <!-- <a href="{s:gnd/@uri}" target="_blank">

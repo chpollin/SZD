@@ -146,7 +146,7 @@
                     <xsl:attribute name="id" select="substring-after(t:head/t:title/@ref, '#')"/>
                 </xsl:otherwise>
             </xsl:choose>
-            <div class="col-6">
+            <div class="col-sm-6">
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- Über das Original -->
                 <h3 class="text-uppercase">
@@ -213,7 +213,7 @@
                 </xsl:if>
             </div>
             <!-- //////////////////////////////////////////////////////////// -->
-            <div class="col-6">
+            <div class="col-sm-6">
                 <h3 class="text-uppercase">
                     <i18n:text>metadata</i18n:text>
                 </h3>        	            	    
@@ -236,18 +236,18 @@
                              <xsl:when test="contains(., 'SZDMSK')">
                                  <xsl:for-each select="$MANUSKRIPTE//t:listBibl/t:biblFull[@xml:id= $helpSZDID]">
                              		<!-- this template is also used for the metadata representation für Collections in szd-templates -->
-                             		<xsl:call-template name="FillbiblFull_SZDMSK">
+                             		<div class="small"><xsl:call-template name="FillbiblFull_SZDMSK">
                              		    <xsl:with-param name="locale" select="$locale"/>
-                             		</xsl:call-template>
+                             		</xsl:call-template></div>
                              	</xsl:for-each>
                              </xsl:when>
                              <xsl:when test="contains(., 'SZDLEB')">
-                                 <xsl:for-each select="$LEBENSDOKUMENTE//t:listBibl/t:biblFull[@xml:id = $helpSZDID]">
+                                 <div class="small"><xsl:for-each select="$LEBENSDOKUMENTE//t:listBibl/t:biblFull[@xml:id = $helpSZDID]">
                              		<!-- this template is also used for the metadata representation für Collections in szd-templates -->
                                      <xsl:call-template name="FillbiblFull_SZDMSK">
                                          <xsl:with-param name="locale" select="$locale"/>
                                      </xsl:call-template>
-                             	</xsl:for-each>
+                             	</xsl:for-each></div>
                              </xsl:when>
                              <xsl:otherwise>
                              	<xsl:comment>Resource not found:</xsl:comment>

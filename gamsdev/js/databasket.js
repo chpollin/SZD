@@ -4,7 +4,7 @@
 // author: Pollin Christopher 
 
 // GLOBAL VARIABLES
-// project = project shortcut like 'szd' or 'depcha'
+// project = project shortcut like 'szd'
 var project = "szd";
 
 ////////////////////////////
@@ -15,12 +15,14 @@ var project = "szd";
 function add_DB(input_id) 
 {
     var databasket = JSON.parse(localStorage.getItem(project)) || [];
-    const dataset = document.getElementById(input_id.closest(".db_entry").id).dataset;    
+    //const dataset = document.getElementById(input_id.closest(".db_entry").id).dataset;  
+    const dataset = document.getElementById(input_id).dataset;
     var dbentry = {};
-
+    
     for(var attr in dataset){
         dbentry[attr] = dataset[attr];
     }
+    
     databasket.push(dbentry);
     localStorage.setItem(project, JSON.stringify(databasket));
  }
@@ -60,16 +62,16 @@ function clearData()
 //	countEntrys()
 // 	called by onLoad();
 //	and Datenkorb(n), where n is number of objects in the localStorage
-function countEntrys() 
+/*function countEntrys() 
 {
-	var datenkorbArray = JSON.parse(localStorage.getItem('szd'));
+	var databasketArray = JSON.parse(localStorage.getItem('szd'));
 	
-	if(typeof datenkorbArray !== 'undefined' && datenkorbArray.length > 0)
+	if(typeof databasketArray !== 'undefined' && databasketArray.length > 0)
 	//databasket is empty
 	{
-		document.getElementById('databasket_static').innerHTML = ' ('+ datenkorbArray.length +')';
+		document.getElementById('databasket_static').innerHTML = ' ('+ databasketArray.length +')';
 	}
-}
+}*/
 
 ////////////////////////////
 //	clear()
@@ -84,14 +86,14 @@ function clear()
 //	Goes through the databasket and checks all objects in localStorage if they are in the databasket
 function keepCheckboxes() 
 {	
-	var datenkorbArray = JSON.parse(localStorage.getItem('szd'));
+	var databasketArray = JSON.parse(localStorage.getItem('szd'));
 	var url = window.location.href;
 
 	if(JSON.parse(localStorage.getItem('szd')) != null)
 	{
-		for (var count = 0; count < datenkorbArray.length; count++) 
+		for (var count = 0; count < databasketArray.length; count++) 
 		{
-		    var parts = datenkorbArray[count].uri.split('#');
+		    var parts = databasketArray[count].uri.split('#');
             var id = parts[parts.length - 1];  //SZDBIB.1249
             var collection = parts[parts.length - 2]; //glossa.uni-graz.at/o:szd.bibliothekskatalog
 		   
@@ -109,23 +111,24 @@ function keepCheckboxes()
 ////////////////////////////
 // addItem()
 //adds the data from the data property attributs to the entry
-function addItem(uri, title, author, date, involved, check) 
+function addItem(collection, uri, title, author, signature, location, check) 
 {
-  var datenkorbArray = JSON.parse(localStorage.getItem('szd')) || []; 
+  var databasketArray = JSON.parse(localStorage.getItem('szd')) || []; 
   var newItem = 
   { 
+    "collection" : collection,
 	"uri" : uri,
 	"title": title,  
 	"author": author, 	
-	"date": date,
-	"involved": involved,
+	"signature": signature,
+	"location": location,
 	"check" : check
   } 
   
   //pushs item on a array
-  datenkorbArray.push(newItem);
+  databasketArray.push(newItem);
   //saves entry in the localStorage
-  localStorage.setItem('szd', JSON.stringify(datenkorbArray));
+  localStorage.setItem('szd', JSON.stringify(databasketArray));
 };
 ////////////////////////////
 //	showData()
@@ -134,54 +137,54 @@ function showData()
 {	
   
 	//initalize the localStorage-Array
-	var datenkorbArray = JSON.parse(localStorage['szd']);
-	var datenkorbArrayLength = datenkorbArray.length;	
+	var databasketArray = JSON.parse(localStorage['szd']);
+	var databasketArrayLength = databasketArray.length;	
     var databasekt_tbody = document.getElementById("databasekt_tbody");
 
     
 
 	
-	//for every object in the array create a ul = datenkorbArrayLength 
-	for (var outerCount = 0; outerCount < datenkorbArrayLength; outerCount++) 
+	//for every object in the array create a ul = databasketArrayLength 
+	for (var outerCount = 0; outerCount < databasketArrayLength; outerCount++) 
 	{
 		var tr = document.createElement('tr');
 		databasekt_tbody.appendChild(tr);
 		
+		var td_collection = document.createElement('td');
+		tr.appendChild(td_collection);
+		td_collection.appendChild(document.createTextNode(databasketArray[outerCount].collection));
+		
 		var td_title = document.createElement('td');
 		tr.appendChild(td_title);
+		td_title.appendChild(document.createTextNode(databasketArray[outerCount].title));
+       
+		var td_author = document.createElement('td');
+		tr.appendChild(td_author);
+		if(databasketArray[outerCount].author)
+		  td_author.appendChild(document.createTextNode(databasketArray[outerCount].author));
 		
+        var uri = databasketArray[outerCount].uri;
+		var td_location = document.createElement('td');
+		tr.appendChild(td_location);
+		//
+		td_location.setAttribute("class", 'small');
+		td_location.appendChild(document.createTextNode(databasketArray[outerCount].location + ', ' + databasketArray[outerCount].signature));
+		var br = document.createElement('br');
+		td_location.appendChild(br);
 		var a = document.createElement('a');
-        var uri = datenkorbArray[outerCount].uri;
-        
+		td_location.appendChild(a);
 		a.setAttribute("style", "color:#631a34");
 		a.setAttribute("title", "Access Object");
 		a.setAttribute("href", uri);
-		a.setAttribute("onclick", "scrolldown(this)");
-	    td_title.appendChild(a)
-		a.appendChild(document.createTextNode(datenkorbArray[outerCount].title));
-
-      	
-		var td_author = document.createElement('td');
-		tr.appendChild(td_author);
-		if(datenkorbArray[outerCount].author)
-		  td_author.appendChild(document.createTextNode(datenkorbArray[outerCount].author));
+		a.appendChild(document.createTextNode(databasketArray[outerCount].uri));
 		
-		var td_involved = document.createElement('td');
-		tr.appendChild(td_involved);
-		if(datenkorbArray[outerCount].involved)
-		  td_involved.appendChild(document.createTextNode(datenkorbArray[outerCount].involved));
-
-		var td_date = document.createElement('td');
-		tr.appendChild(td_date);
-		if(datenkorbArray[outerCount].date)
-		  td_date.appendChild(document.createTextNode(datenkorbArray[outerCount].date));
-		
-
 		var td_delete = document.createElement('td');
 		tr.appendChild(td_delete);
 		var button_delet = document.createElement('button');
 		button_delet.setAttribute("type", "button");
-		button_delet.setAttribute("class", "fas fa-ban");
+		button_delet.setAttribute("class", "fas fa-trash btn");
+		button_delet.setAttribute("style", "color:#631a34");
+		
 		button_delet.setAttribute("onclick", "delet_DB('" + uri +"')");
 		td_delete.appendChild(button_delet);
     }	

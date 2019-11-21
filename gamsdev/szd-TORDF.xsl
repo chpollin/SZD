@@ -1462,6 +1462,13 @@
 							</xsl:attribute>
 						</xsl:element>
 					</xsl:when>
+					<xsl:when test="$StandorteList//t:org[t:orgName/@ref = $Standort/@ref]/@xml:id">
+						<xsl:element name="{$Typ}">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.standorte#', $StandorteList//t:org[t:orgName/@ref = $Standort/@ref]/@xml:id)"/>
+							</xsl:attribute>
+						</xsl:element>
+					</xsl:when>
 					<xsl:otherwise/>
 				</xsl:choose>
 	</xsl:template>
@@ -1569,7 +1576,7 @@
 	
 	<xsl:template name="getExtent_SZDBIB_SZDAUT">
 		<xsl:param name="locale"/>
-		<xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+		<xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
 		<xsl:if test="$EXTENT">
 		<szd:text>
 			<xsl:attribute name="xml:lang">
@@ -1615,7 +1622,7 @@
 						<xsl:text> : </xsl:text>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:text>. </xsl:text>
+						<xsl:text> </xsl:text>
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:if>
@@ -1624,7 +1631,7 @@
 				<xsl:text> </xsl:text>
 				<xsl:choose>
 					<xsl:when test="$EXTENT/t:measure[@type='leaf'] = '1'">
-						<xsl:text>Blatt</xsl:text>
+						<xsl:text> Blatt</xsl:text>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>

@@ -250,9 +250,12 @@
 											<a class="dropdown-item text-uppercase" href="/o:szd.standorte/sdef:TEI/get?locale={$locale}">
 												<i18n:text>locations</i18n:text>
 											</a>
-											<a class="dropdown-item text-uppercase" href="/o:szd.publikation">
+											<a class="dropdown-item text-uppercase" href="https://de.wikisource.org/wiki/Stefan_Zweig/Erstausgaben" target="_blank">
 												<i18n:text>firstedition</i18n:text>
 											</a>
+											<!--<a class="dropdown-item text-uppercase" href="/o:szd.publikation">
+												<i18n:text>firstedition</i18n:text>
+											</a>-->
 										</div>
 									</li>
 									<li class="nav-item">
@@ -317,10 +320,10 @@
 										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
-													<xsl:attribute name="title"><xsl:text>You can save and export objects in the data basket.</xsl:text></xsl:attribute>
+													<xsl:attribute name="title"><xsl:text>Objects can be saved to the data cart and exported</xsl:text></xsl:attribute>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:attribute name="title"><xsl:text>Im Datenkorb können Objekte gespeichert werden und exporteirt werden.</xsl:text></xsl:attribute>
+													<xsl:attribute name="title"><xsl:text>Im Datenkorb können Objekte gespeichert und exportiert werden</xsl:text></xsl:attribute>
 												</xsl:otherwise>
 											</xsl:choose>
 											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb"/>
@@ -374,93 +377,161 @@
 				<div class="container">
 					<div class="card">
 						<div class="card-body">
-						<div class="row">
-							<div class="col-6">
-							<h6><i18n:text>more information</i18n:text></h6>
-							<div class="row">
-								<a class="col-sm" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank">
-									<xsl:choose>
-										<xsl:when test="$locale = 'en'">
-											<xsl:text>SITE NOTICE</xsl:text>
-										</xsl:when>
-										<xsl:otherwise>Impressum</xsl:otherwise>
-									</xsl:choose>
-								</a>
-								<a class="col-sm" href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank">
-									<i18n:text>privacy</i18n:text>
-								</a>
-								<a class="col-sm" href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
-									target="_blank">
-									<img class="img-fluid" src="/templates/img/by-nc.png" alt="Lizenz"/>
-								</a>
-							</div>
-							<div class="row">
-								<a class="col-sm"  href="https://www.uni-salzburg.at/index.php?id=72" target="_blank">
-									<img class="img-fluid"  
-										src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
-									 alt="Logo LAS"/>
-									<xsl:text> </xsl:text></a>
-								<a class="col-sm"  href="https://www.uni-salzburg.at" target="_blank">
-									<img class="img-fluid" 
-										src="https://www.uni-salzburg.at/fileadmin/oracle_file_imports/553397.JPG"
-										 alt="Logo Universität Salzburg"/>
-									<xsl:text> </xsl:text></a>
-								<a class="col-sm" href="https://web.nli.org.il" target="_blank">
-									<img class="img-fluid" 
-										src="{concat($server, $gamsdev, '/img/logo_NLI.png')}"
-										height="58"  alt="The National Library of Israel"/>
-								</a>
-							</div>
-							<div class="row">
-								<a class="col-sm" href="http://gams.uni-graz.at" target="_blank">
-									<img class="img-fluid"  style="height: 35px;"
-										src="/templates/img/gamslogo_schwarz.gif"
-										  alt="{$gams}"/>
-								</a>
-								<span class="col-sm">
-									<a  href="https://informationsmodellierung.uni-graz.at"
-								target="_blank">
-									<img class="img-fluid" style="height: 35px;"
-									src="/templates/img/ZIM_blau.png"
-									  alt="{$zim-acdh}"/>
-								</a>
-									<xsl:text> </xsl:text>
-									<a class="float-right"  href="https://www.uni-graz.at" target="_blank">
-									<img class="img-fluid" src="/templates/img/logo_uni_graz_4c.jpg"  style="height: 35px;"
-									title="Universität Graz" alt="Logo Uni Graz"/>
-								<xsl:text> </xsl:text>
-								</a></span>
-								<a class="col-sm" href="http://www.fotohof.at" target="_blank">
-									<img class="img-fluid" 
-										src="{concat($server, $gamsdev, '/img/Fotohof.jpg')}"
-										height="58"  alt="Fotohof"/>
-								</a>
-							</div>
-							<br/>
-						</div> 
-						<div class="col-6">
-							<div class="col-sm"><h6><i18n:text>contact</i18n:text></h6>
-							<xsl:choose>
-								<xsl:when test="$locale='en'">
+							
+							<div class="col-12 text-center">
+								<xsl:choose>
+									<xsl:when test="$locale='en'">
 									<p>
-										<xsl:text>STEFAN ZWEIG DIGITAL</xsl:text><br/>
-										<xsl:text>A project developed on the initiative of the Literature Archive Salzburg</xsl:text><br/>
-										<xsl:text>Residenzplatz 9/2</xsl:text><br/>
-										<xsl:text>5020 Salzburg  |  Austria</xsl:text><br/>
+										<xsl:text>STEFAN ZWEIG DIGITAL | A project developed on the initiative of the Literature Archive Salzburg</xsl:text>
+										<br/>
+										<xsl:text>Residenzplatz 9/2 | 5020 Salzburg  |  Austria | +43 (0) 662 / 8044-4910 | </xsl:text> <a href="mailto:info@stefanzweig.digital">info@stefanzweig.digital</a>
 									</p>
-								</xsl:when>
-								<xsl:otherwise>
-									<p>
-										<xsl:text>STEFAN ZWEIG DIGITAL</xsl:text><br/>
-										<xsl:text>Eine Initiative des Literaturarchivs Salzburg</xsl:text><br/>
-										<xsl:text>Residenzplatz 9/2</xsl:text><br/>
-										<xsl:text>5020 Salzburg  |  Austria</xsl:text><br/>
-									</p>
-								</xsl:otherwise>
-							</xsl:choose>	
-						    <p>+43 (0) 662 / 8044-4910 | <a href="mailto:info@stefanzweig.digital">info@stefanzweig.digital</a></p></div>
-						</div>
-						</div>
+									</xsl:when>
+									<xsl:otherwise>
+										<p>
+											<xsl:text>STEFAN ZWEIG DIGITAL | Eine Initiative des Literaturarchivs Salzburg</xsl:text>
+											<br/>
+											<xsl:text>Residenzplatz 9/2 | 5020 Salzburg  |  Austria | +43 (0) 662 / 8044-4910 | </xsl:text> <a href="mailto:info@stefanzweig.digital">info@stefanzweig.digital</a>
+										</p>
+									</xsl:otherwise>
+								</xsl:choose>
+							</div>
+							<hr/>
+							
+
+							<div class="col-12 text-center">
+								<div class="row">
+									<div class="col-sm-3">
+										<a href="https://www.uni-salzburg.at/index.php?id=72" target="_blank">
+											<img class="footer_img"   style="max-width: 60%;"
+												src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
+												alt="Logo LAS"/></a>
+									</div>
+									<div class="col-sm-3">
+										<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
+											target="_blank">
+											<img class="footer_img" src="/templates/img/by-nc.png" alt="Lizenz" style="max-width: 40%;margin-top: 3%;"/>
+										</a>
+									</div>
+									<div class="col-sm-3">
+										<a class="text-center text-uppercase" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale={$locale}" target="_blank">
+											<xsl:choose>
+												<xsl:when test="$locale = 'en'">
+													<xsl:text>Project partner</xsl:text>
+												</xsl:when>
+												<xsl:otherwise>Projektpartner</xsl:otherwise>
+											</xsl:choose>
+										</a>
+										
+									</div>
+									<div class="col-sm-3">
+										<a href="http://www.fotohof.at" target="_blank" >
+											<img class="footer_img"
+												src="{concat($server, $gamsdev, '/img/Fotohof.jpg')}"
+												alt="Fotohof"/>
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-3">
+										<xsl:text> </xsl:text>
+									</div>
+									<div class="col-sm-3">
+										<xsl:text></xsl:text>
+										<a href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank" class="text-uppercase text-center mt-5">
+											<xsl:choose>
+												<xsl:when test="$locale = 'en'">
+													<xsl:text>Site notice</xsl:text>
+												</xsl:when>
+												<xsl:otherwise>Impressum</xsl:otherwise>
+											</xsl:choose>
+										</a>
+										
+									</div>
+									<div class="col-sm-3">
+										<a href="http://gams.uni-graz.at" target="_blank">
+											<img class="footer_img"   
+												src="/templates/img/gamslogo_schwarz.gif"
+												alt="{$gams}"/>
+										</a>
+										
+									</div>
+									<div class="col-sm-3">
+										
+										<a href="https://web.nli.org.il" target="_blank">
+											<img class="footer_img"
+												src="{concat($server, $gamsdev, '/img/logo_NLI.png')}"
+												alt="The National Library of Israel"/>
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-3">
+										<a href="https://www.uni-salzburg.at" target="_blank" class="align-self-end">
+											<img class="footer_img"   style="max-width: 60%;"
+												src="https://www.uni-salzburg.at/fileadmin/oracle_file_imports/553397.JPG"
+												alt="Logo Universität Salzburg"/></a>
+									</div>
+									<div class="col-sm-3">
+										<a href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank" class="text-uppercase text-center mt-5">
+											<i18n:text>privacy</i18n:text>
+										</a>
+									</div>
+									<div class="col-sm-3">
+										
+										<a href="https://informationsmodellierung.uni-graz.at" 
+											target="_blank">
+											<img class="footer_img"  style="max-width: 20%;margin-top:3%"
+												src="/templates/img/ZIM_blau.png"
+												alt="{$zim-acdh}"/>
+										</a>
+										<xsl:text> </xsl:text>
+										<a href="https://www.uni-graz.at" target="_blank" >
+											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 20%;margin-top:3%" 
+												title="Universität Graz" alt="Logo Uni Graz"/>
+											<xsl:text> </xsl:text>
+										</a>
+										
+									</div>
+									<div class="col-sm-3">
+										<a href="http://fredonia.libguides.com/archives/zweig" target="_blank">
+											<img class="footer_img"
+												src="{concat($server, $gamsdev, '/img/fredonia.png')}"
+												alt="Reed Library – Stefan Zweig Collection, Fredonia"/>
+										</a>
+										
+									</div>
+								</div>
+								
+							
+							<!--	<div class="col-sm-3 text-center">
+									
+										
+										<br/>
+								
+								</div>
+								<div class="col-sm-3">
+									
+									<span class="row">
+									
+									</span>
+									<span class="row">
+										<span class="col-sm-6">
+											
+										</span>
+										<xsl:text> </xsl:text>
+										<span class="col-sm-6">
+											
+										</span>
+									</span>
+									
+								</div>
+								<div class="col-sm-3">
+									
+									
+								</div>-->
+							</div>
+						
 						</div>
 					</div>
 						
