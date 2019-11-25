@@ -34,10 +34,10 @@
         </xsl:copy>
     </xsl:variable>
 
-    <xsl:variable name="Empty" select="' '"/>
+    <xsl:variable name="Empty" select="'NOx'"/>
 
     <xsl:variable name="Personenliste">
-        <xsl:copy-of select="document('http://gams.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
+        <xsl:copy-of select="document('http://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
     </xsl:variable>
     
     <!--<xsl:variable name="PlacesList">
@@ -45,7 +45,7 @@
     </xsl:variable>-->
     
     <xsl:variable name="Standortliste">
-        <xsl:copy-of select="document('http://gams.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
+        <xsl:copy-of select="document('http://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
     </xsl:variable>
 
 
@@ -124,7 +124,7 @@
                 <body>
                     <listBibl>
                         <xsl:for-each select="//*:Row">
-                            <xsl:variable name="Row">
+                            <!--<xsl:variable name="Row">
                                 <xsl:copy>
                                     <row id="{generate-id()}">
                                         <xsl:for-each select="*:Cell">
@@ -134,9 +134,9 @@
                                         </xsl:for-each>
                                     </row>
                                 </xsl:copy>
-                            </xsl:variable>
+                            </xsl:variable>-->
                             <xsl:call-template name="getData">
-                                <xsl:with-param name="Row" select="$Row"/>
+                                <xsl:with-param name="Row" select="."/>
                             </xsl:call-template>
                         </xsl:for-each>
                     </listBibl>
@@ -149,126 +149,112 @@
         <!-- defining parameter and variables -->
         <xsl:param name="Row"/>
         <!-- data entry with running id -->
-        <xsl:variable name="SZDBIB_ID" select="concat('SZDBIB.', $Row//*:Cell[79])"/>
+        <xsl:variable name="SZDBIB_ID" select="concat('SZDBIB.', $Row/*:Cell[79])"/>
         <biblFull xml:id="{$SZDBIB_ID}">
             <!-- ///TITLE/// -->
             <fileDesc>
             <titleStmt>
                 <!-- Spalte 1; ///Titel/// -->
                 <title>
-                    <xsl:value-of select="$Row//*:Cell[1]"/>
+                    <xsl:value-of select="$Row/*:Cell[1]"/>
                 </title>
                 <!-- Spalte 7; ///Gesamttitel/// -->
-                <xsl:if test="not($Row//*:Cell[7] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[7] = $Empty)">
                     <title type="series">
-                        <xsl:value-of select="$Row//*:Cell[7]"/>
+                        <xsl:value-of select="$Row/*:Cell[7]"/>
                     </title>
                 </xsl:if>
                 <!-- Spalte 28; ///Originaltitel/// -->
-                <xsl:if test="not($Row//*:Cell[28] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[28] = $Empty)">
                     <title type="original">
-                        <xsl:value-of select="$Row//*:Cell[28]"/>
+                        <xsl:value-of select="$Row/*:Cell[28]"/>
                     </title>
                 </xsl:if>
                 <!-- Spalte 2 - 5; ///Autor/// -->
                 <xsl:for-each select="2 to 5">
                     <xsl:variable name="Count" select="."/>
-                    <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
                         <!-- -1 because first column is title, but beginning with 'Verfasser 1'   -->
                         <author>
                             <xsl:call-template name="getGND">
                                 <xsl:with-param name="Row" select="$Row"/>
                                 <xsl:with-param name="Count" select="$Count"/>
                             </xsl:call-template>
-                            <!-- content -->
-                            <xsl:value-of select="normalize-space($Row//*:Cell[$Count])"/>
                         </author>
                     </xsl:if>
                 </xsl:for-each>
                 <!-- Spalte 8-10; ///Bearbeiter | Herausgeber/// -->
                 <xsl:for-each select="8 to 10">
                     <xsl:variable name="Count" select="."/>
-                    <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
                         <editor>
                             <xsl:call-template name="getGND">
                                 <xsl:with-param name="Row" select="$Row"/>
                                 <xsl:with-param name="Count" select="$Count"/>
                             </xsl:call-template>
-                            <!-- content -->
-                            <xsl:value-of select="normalize-space($Row//*:Cell[$Count])"/>
                         </editor>
                     </xsl:if>
                 </xsl:for-each>
                 <!-- Spalte 6; Komponist -->
-                <xsl:if test="not($Row//*:Cell[6] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[6] = $Empty)">
                     <author role="composer">
                         <xsl:call-template name="getGND">
                             <xsl:with-param name="Row" select="$Row"/>
                             <xsl:with-param name="Count" select="6"/>
                         </xsl:call-template>
-                        <!-- content -->
-                        <xsl:value-of select="normalize-space($Row//*:Cell[6])"/>
                     </author>
                 </xsl:if>
                 <!-- Spalte 11-12; Illustrator -->
                 <xsl:for-each select="11 to 12">
                     <xsl:variable name="Count" select="."/>
-                    <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
                         <editor role="illustrator">
                             <xsl:call-template name="getGND">
                                 <xsl:with-param name="Row" select="$Row"/>
                                 <xsl:with-param name="Count" select="$Count"/>
                             </xsl:call-template>
-                            <!-- content -->
-                            <xsl:value-of select="normalize-space($Row//*:Cell[$Count])"/>
                         </editor>
                     </xsl:if>
                 </xsl:for-each>
                 <!-- Spalte 13-14; Übersetzer -->
                 <xsl:for-each select="13 to 14">
                     <xsl:variable name="Count" select="."/>
-                    <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
                         <editor role="translator">
                             <xsl:call-template name="getGND">
                                 <xsl:with-param name="Row" select="$Row"/>
                                 <xsl:with-param name="Count" select="$Count"/>
                             </xsl:call-template>
-                            <!-- content -->
-                            <xsl:value-of select="normalize-space($Row//*:Cell[$Count])"/>
                         </editor>
                     </xsl:if>
                 </xsl:for-each>
                 <!-- Spalte 15; Verfasser Vorwort -->
-                <xsl:if test="not($Row//*:Cell[15] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[15] = $Empty)">
                     <author role="preface">
                         <xsl:call-template name="getGND">
                             <xsl:with-param name="Row" select="$Row"/>
                             <xsl:with-param name="Count" select="15"/>
                         </xsl:call-template>
-                        <!-- content -->
-                        <xsl:value-of select="normalize-space($Row//*:Cell[15])"/>
                     </author>
                 </xsl:if>
                 <!-- Spalte 16; Verfasser Nachwort -->
-                <xsl:if test="not($Row//*:Cell[16] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[16] = $Empty)">
                     <author role="afterword">
                         <xsl:call-template name="getGND">
                             <xsl:with-param name="Row" select="$Row"/>
                             <xsl:with-param name="Count" select="16"/>
                         </xsl:call-template>
-                        <!-- content -->
-                        <xsl:value-of select="normalize-space($Row//*:Cell[16])"/>
                     </author>
                 </xsl:if>
             </titleStmt>
 
 
             <!-- ///EDITION/// -->
-            <xsl:if test="not($Row//*:Cell[17] = $Empty)">
+            <xsl:if test="not($Row/*:Cell[17] = $Empty)">
                 <editionStmt>
                     <!-- Spalte 17; Ausgabevermerk -->
                     <edition>
-                        <xsl:value-of select="normalize-space($Row//*:Cell[17])"/>
+                        <xsl:value-of select="normalize-space($Row/*:Cell[17])"/>
                     </edition>
                 </editionStmt>
             </xsl:if>
@@ -276,14 +262,14 @@
             <!-- ///PUBLICATION/// -->
             <xsl:choose>
                 <xsl:when
-                    test="not($Row//*:Cell[19] = $Empty and $Row//*:Cell[20] = $Empty and $Row//*:Cell[18] = $Empty)">
+                    test="not($Row/*:Cell[19] = $Empty and $Row/*:Cell[20] = $Empty and $Row/*:Cell[18] = $Empty)">
                     <publicationStmt>
                         <!-- Spalte 19; Verlag -->
-                        <!--<xsl:if test="$Row//*:Cell[19]">-->
+                        <!--<xsl:if test="$Row/*:Cell[19]">-->
                         <publisher>
                             <xsl:choose>
-                                <xsl:when test="not($Row//*:Cell[19] = $Empty)">
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[19])"/>
+                                <xsl:when test="not($Row/*:Cell[19] = $Empty)">
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[19])"/>
                                 </xsl:when>
                                 <xsl:otherwise>Keine Information zum Veröffentlicher</xsl:otherwise>
                             </xsl:choose>
@@ -291,24 +277,24 @@
                         <!--</xsl:if>-->
                         <!-- Spalte 20; Erscheinungsjahr -->
                         <date>
-                            <xsl:if test="not($Row//*:Cell[20] = $Empty)">
+                            <xsl:if test="not($Row/*:Cell[20] = $Empty)">
                                 <xsl:choose>
-                                    <xsl:when test="contains(normalize-space($Row//*:Cell[20]), '[')">
-                                        <xsl:value-of select="substring-before(substring-after(normalize-space($Row//*:Cell[20]), '['), ']')"/>
+                                    <xsl:when test="contains(normalize-space($Row/*:Cell[20]), '[')">
+                                        <xsl:value-of select="substring-before(substring-after(normalize-space($Row/*:Cell[20]), '['), ']')"/>
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:attribute name="precision" select="'low'"/>                                        
-                                        <xsl:value-of select="normalize-space($Row//*:Cell[20])"/>
+                                        <xsl:value-of select="normalize-space($Row/*:Cell[20])"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                                
                             </xsl:if>
                         </date>
                         <!-- Spalte 18; Verlagsort -->
-                        <xsl:if test="not($Row//*:Cell[18] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[18] = $Empty)">
                         <pubPlace>
                             <!-- get GeoNames   -->
-                            <!--<xsl:variable name="CurrentPlace" select="normalize-space($Row//*:Cell[18])"/>
+                           <!-- <xsl:variable name="CurrentPlace" select="normalize-space($Row/*:Cell[18])"/>
                             <xsl:for-each select="$PlacesList//*:place">
                                 <xsl:if test="$CurrentPlace = *:placeName">
                                         <xsl:attribute name="ref">
@@ -317,7 +303,7 @@
                                 </xsl:if>
                             </xsl:for-each>-->
                             
-                            <xsl:value-of select="normalize-space($Row//*:Cell[18])"/>
+                            <xsl:value-of select="normalize-space($Row/*:Cell[18])"/>
                             
                             
                         </pubPlace>
@@ -333,7 +319,7 @@
 
 
             <!-- ///SERIES/// -->
-            <xsl:variable name="Reihe" select="$Row//*:Cell[26]"/>
+            <xsl:variable name="Reihe" select="$Row/*:Cell[26]"/>
             <xsl:if test="not($Reihe = $Empty)">
                 <seriesStmt>
                     <!-- Spalte 26; Reihe -->
@@ -349,10 +335,10 @@
                             </title>
                         </xsl:otherwise>
                     </xsl:choose>
-                    <xsl:if test="not($Row//*:Cell[27] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[27] = $Empty)">
                         <!-- Spalte 27; Unterreihe -->
                         <title type="Unterreihe">
-                            <xsl:value-of select="$Row//*:Cell[27]"/>
+                            <xsl:value-of select="$Row/*:Cell[27]"/>
                         </title>
                     </xsl:if>
                 </seriesStmt>
@@ -365,20 +351,20 @@
                     <msIdentifier>
                         <!-- Spalte 75; aktueller Standort ; GeoOrt vor Beistrich-->
                         <settlement>
-                            <xsl:value-of select="normalize-space(substring-after($Row//*:Cell[74], ','))"/>
+                            <xsl:value-of select="normalize-space(substring-after($Row/*:Cell[74], ','))"/>
                         </settlement>
                         <!-- Spalte 75; aktueller Standort ; Person oder Institution ,nach Beistrich-->
                         <repository>
                             <xsl:call-template name="getGND_Standort">
-                                <xsl:with-param name="Repository" select="normalize-space(substring-before($Row//*:Cell[74], ','))"/>
-                                <xsl:with-param name="Settelment" select="normalize-space(substring-after($Row//*:Cell[74], ','))"/>
+                                <xsl:with-param name="Repository" select="normalize-space(substring-before($Row/*:Cell[74], ','))"/>
+                                <xsl:with-param name="Settelment" select="normalize-space(substring-after($Row/*:Cell[74], ','))"/>
                             </xsl:call-template>
-                            <xsl:value-of select="normalize-space(substring-before($Row//*:Cell[74], ','))"/>
+                            <xsl:value-of select="normalize-space(substring-before($Row/*:Cell[74], ','))"/>
                         </repository>
                         <!-- Spalte 75; aktueller Standort -->
-                        <xsl:if test="not($Row//*:Cell[75] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[75] = $Empty)">
                             <idno>
-                                <xsl:value-of select="$Row//*:Cell[75]"/>
+                                <xsl:value-of select="$Row/*:Cell[75]"/>
                             </idno>
                         </xsl:if>
 
@@ -386,173 +372,173 @@
                         <!-- +9 X Signatur ignorieren 41 -->
                         
                         <!-- INalt01 -->
-                        <xsl:if test="not($Row//*:Cell[35] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[35] = $Empty)">
                             <altIdentifier n="1" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                               <idno>
-                                  <xsl:value-of select="normalize-space($Row//*:Cell[35])"/>
+                                  <xsl:value-of select="normalize-space($Row/*:Cell[35])"/>
                               </idno>
                           </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[36] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[36] = $Empty)">
                             <altIdentifier n="2" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[36])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[36])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[37] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[37] = $Empty)">
                             <altIdentifier n="3" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[37])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[37])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         <!-- INalt02 -->
-                        <xsl:if test="not($Row//*:Cell[38] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[38] = $Empty)">
                             <altIdentifier n="1" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[38])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[38])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[39] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[39] = $Empty)">
                             <altIdentifier n="2" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[39])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[39])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[40] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[40] = $Empty)">
                             <altIdentifier n="3" corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberOld">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[40])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[40])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         <!--  -->
-                        <xsl:if test="not($Row//*:Cell[41] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[41] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#InventoryNumberNew">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[41])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[41])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         <!-- IN fortlaufend -->
-                        <xsl:if test="not($Row//*:Cell[42] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[42] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#Nummerfortlaufend">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[42])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[42])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         
-                        <xsl:if test="not($Row//*:Cell[43] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[43] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#NumberCollection">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[43])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[43])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         
-                        <xsl:if test="not($Row//*:Cell[44] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[44] = $Empty)">
                             <altIdentifier n="1" type="lowercase" corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[44])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[44])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[45] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[45] = $Empty)">
                             <altIdentifier n="2" type="lowercase" corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[45])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[45])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[46] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[46] = $Empty)">
                             <altIdentifier n="3" type="lowercase" corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[46])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[46])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[47] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[47] = $Empty)">
                             <altIdentifier n="4" type="lowercase" corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[47])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[47])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[48] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[48] = $Empty)">
                             <altIdentifier n="1" type="capital" corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[48])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[48])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[49] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[49] = $Empty)">
                             <altIdentifier n="2" type="capital"  corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[49])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[49])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[50] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[50] = $Empty)">
                             <altIdentifier n="3" type="capital"  corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[50])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[50])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
-                        <xsl:if test="not($Row//*:Cell[51] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[51] = $Empty)">
                             <altIdentifier n="4" type="capital"  corresp="https://gams.uni-graz.at/o:szd.glossar#SingleLetter">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[51])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[51])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         
-                        <xsl:if test="not($Row//*:Cell[52] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[52] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#FurnitureLocation">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[52])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[52])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         
-                        <xsl:if test="not($Row//*:Cell[53] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[53] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#RoomLocation">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[53])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[53])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                         
-                        <xsl:if test="not($Row//*:Cell[54] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[54] = $Empty)">
                             <altIdentifier corresp="https://gams.uni-graz.at/o:szd.glossar#Hausexemplar">
                                 <idno>
-                                    <xsl:value-of select="normalize-space($Row//*:Cell[54])"/>
+                                    <xsl:value-of select="normalize-space($Row/*:Cell[54])"/>
                                 </idno>
                             </altIdentifier>
                         </xsl:if>
                     </msIdentifier>
 
                     <!-- Sprachen 29, 30, 31 -->
-                    <xsl:if test="not($Row//*:Cell[29] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[29] = $Empty)">
                         <msContents>
                             <textLang>
                                 <xsl:for-each select="29 to 31">
                                     <xsl:variable name="Count" select="."/>
-                                    <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
-                                        <lang xml:lang="{$Row//*:Cell[$Count]}"/>
+                                    <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
+                                        <lang xml:lang="{$Row/*:Cell[$Count]}"/>
                                     </xsl:if>
                                 </xsl:for-each>
                             </textLang>
                         	
                         	 <!-- Hinweis 1 -->
-                        	<xsl:if test="not($Row//*:Cell[66] = $Empty)">
+                        	<xsl:if test="not($Row/*:Cell[66] = $Empty)">
                         		<msItem>
                                     <note>
-                                        <xsl:value-of select="$Row//*:Cell[66]"/>
+                                        <xsl:value-of select="$Row/*:Cell[66]"/>
                                     </note>
                         		</msItem>
                             </xsl:if>
@@ -560,7 +546,7 @@
                     </xsl:if>
 
                     <!-- physische Beschreibung -->
-                    <xsl:variable name="Extent" select="$Row//*:Cell[21]"/>
+                    <xsl:variable name="Extent" select="$Row/*:Cell[21]"/>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
@@ -568,21 +554,21 @@
                                     <!-- ///EXTENT Seitenanzahl/// -->
                                     <!-- Spalte 21; Seiten  -->
                                     <!-- Fälle: ; #;  -->
-                                    <xsl:if test="not($Row//*:Cell[21] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[21] = $Empty)">
                                         <measure type="page">
-                                            <xsl:value-of select="$Row//*:Cell[21]"/>
+                                            <xsl:value-of select="$Row/*:Cell[21]"/>
                                         </measure>
                                     </xsl:if>
                                     <!-- Spalte 22; Blatt  -->
-                                    <xsl:if test="not($Row//*:Cell[22] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[22] = $Empty)">
                                         <measure type="leaf">
-                                            <xsl:value-of select="$Row//*:Cell[22]"/>
+                                            <xsl:value-of select="$Row/*:Cell[22]"/>
                                         </measure>
                                     </xsl:if>
                                     <!-- Spalte 32; Format -->
-                                    <xsl:if test="not($Row//*:Cell[32] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[32] = $Empty)">
                                         <measure type="format">
-                                            <xsl:value-of select="$Row//*:Cell[32]"/>
+                                            <xsl:value-of select="$Row/*:Cell[32]"/>
                                         </measure>
                                     </xsl:if>
                                 </extent>
@@ -590,10 +576,10 @@
                             </supportDesc>
                         </objectDesc>
                             
-                        <xsl:variable name="Umfangexist" select="not($Row//*:Cell[23] = $Empty) or not($Row//*:Cell[24] = $Empty) or not($Row//*:Cell[25] = $Empty)"/>   
+                        <xsl:variable name="Umfangexist" select="not($Row/*:Cell[23] = $Empty) or not($Row/*:Cell[24] = $Empty) or not($Row/*:Cell[25] = $Empty)"/>   
                         <xsl:variable name="Widmungexist" select="
-                            not($Row//*:Cell[55] = $Empty) or not($Row//*:Cell[56] = $Empty) or not($Row//*:Cell[57] = $Empty) or not($Row//*:Cell[58] = $Empty) or not($Row//*:Cell[59] = $Empty)
-                            or not($Row//*:Cell[60] = $Empty) or not($Row//*:Cell[63] = $Empty) or not($Row//*:Cell[65] = $Empty) or not($Row//*:Cell[64] = $Empty) or not($Row//*:Cell[61] = $Empty) or not($Row//*:Cell[62] = $Empty)"/>  
+                            not($Row/*:Cell[55] = $Empty) or not($Row/*:Cell[56] = $Empty) or not($Row/*:Cell[57] = $Empty) or not($Row/*:Cell[58] = $Empty) or not($Row/*:Cell[59] = $Empty)
+                            or not($Row/*:Cell[60] = $Empty) or not($Row/*:Cell[63] = $Empty) or not($Row/*:Cell[65] = $Empty) or not($Row/*:Cell[64] = $Empty) or not($Row/*:Cell[61] = $Empty) or not($Row/*:Cell[62] = $Empty)"/>  
            
                         <xsl:if test="$Umfangexist = true() or $Widmungexist = true()" >
    
@@ -603,21 +589,21 @@
                             <xsl:if test="$Umfangexist = true()">
                                 <list type="extent">
                                     <!-- illustriert; 23 -->
-                                    <xsl:if test="not($Row//*:Cell[23] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[23] = $Empty)">
                                         <item ana="illustrated">
-                                            <xsl:value-of select="$Row//*:Cell[23]"/>
+                                            <xsl:value-of select="$Row/*:Cell[23]"/>
                                         </item>
                                     </xsl:if>
                                     <!-- Karten; 24 -->
-                                    <xsl:if test="not($Row//*:Cell[24] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[24] = $Empty)">
                                         <item ana="map">
-                                            <xsl:value-of select="$Row//*:Cell[24]"/>
+                                            <xsl:value-of select="$Row/*:Cell[24]"/>
                                         </item>
                                     </xsl:if>
                                     <!-- Noten; 25 -->
-                                    <xsl:if test="not($Row//*:Cell[25] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[25] = $Empty)">
                                         <item ana="note">
-                                            <xsl:value-of select="$Row//*:Cell[25]"/>
+                                            <xsl:value-of select="$Row/*:Cell[25]"/>
                                         </item>
                                     </xsl:if>
                                 </list>
@@ -626,98 +612,98 @@
                             <xsl:if test="$Widmungexist = true()">
                                 <list type="provenance">
                                     <!-- Spalte 65; Widmung -->
-                                    <xsl:if test="not($Row//*:Cell[65] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[65] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#PresentationInscription"/>
                                             <term xml:lang="de">Widmung</term>
                                             <term xml:lang="en">Presentation Inscription</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[65]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[65]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 55; Autogramm -->
-                                    <xsl:if test="not($Row//*:Cell[55] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[55] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Autograph"/>
                                             <term xml:lang="de">Autogramm</term>
                                             <term xml:lang="en">Autograph</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[55]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[55]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 56; Einlage-->
-                                    <xsl:if test="not($Row//*:Cell[56] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[56] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Autograph"/>
                                             <term xml:lang="de">Einlage</term>
                                             <term xml:lang="en">Insertion</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[56]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[56]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 57; Exlibris -->
-                                    <xsl:if test="not($Row//*:Cell[57] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[57] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Bookplate"/>
                                             <term xml:lang="de">Exlibris</term>
                                             <term xml:lang="en">Bookplate</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[57]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[57]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 58; Marginalie -->
-                                    <xsl:if test="not($Row//*:Cell[58] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[58] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Marginalia"/>
                                             <term xml:lang="de">Marginalie</term>
                                             <term xml:lang="en">Marginalia</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[58]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[58]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 59; Merkzeichen -->
-                                    <xsl:if test="not($Row//*:Cell[59] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[59] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Marker"/>
                                             <term xml:lang="de">Merkzeichen</term>
                                             <term xml:lang="en">Underlining / Marker</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[59]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[59]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 60; Notiz -->
-                                    <xsl:if test="not($Row//*:Cell[60] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[60] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Note"/>
                                             <term xml:lang="de">Notiz</term>
                                             <term xml:lang="en">Note</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[60]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[60]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 61 - 62; ///Stempel 01 - Stempel 02/// -->
                                     <xsl:for-each select="61 to 62">
                                         <xsl:variable name="Count" select="."/>
-                                        <xsl:if test="not($Row//*:Cell[$Count] = $Empty)">
+                                        <xsl:if test="not($Row/*:Cell[$Count] = $Empty)">
                                             <item>
                                                 <stamp>
                                                     <ref target="https://gams.uni-graz.at/o:szd.glossar#Stamp"/>
                                                     <term xml:lang="de">Stempel</term>
                                                     <term xml:lang="en">Stamp</term>
                                                 </stamp>
-                                                <desc><xsl:value-of select="$Row//*:Cell[$Count]"/></desc>
+                                                <desc><xsl:value-of select="$Row/*:Cell[$Count]"/></desc>
                                             </item>
                                         </xsl:if>
                                     </xsl:for-each>
                                     <!-- Spalte 63; Tektur -->
-                                    <xsl:if test="not($Row//*:Cell[63] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[63] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#Overpasting"/>
                                             <term xml:lang="de">Tektur</term>
                                             <term xml:lang="en">Overpasting</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[63]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[63]"/></desc>
                                         </item>
                                     </xsl:if>
                                     <!-- Spalte 64; Tilgung -->
-                                    <xsl:if test="not($Row//*:Cell[64] = $Empty)">
+                                    <xsl:if test="not($Row/*:Cell[64] = $Empty)">
                                         <item>
                                             <ref target="https://gams.uni-graz.at/o:szd.glossar#RemovedPage"/>
                                             <term xml:lang="de">Tektur</term>
                                             <term xml:lang="en">Removed Page</term>
-                                            <desc><xsl:value-of select="$Row//*:Cell[64]"/></desc>
+                                            <desc><xsl:value-of select="$Row/*:Cell[64]"/></desc>
                                         </item>
                                     </xsl:if>
                                 </list>
@@ -725,34 +711,34 @@
                         </additions>
                         </xsl:if>
                         <!-- Spalte 33; Einband -->
-                        <xsl:if test="not($Row//*:Cell[33] = $Empty)">
+                        <xsl:if test="not($Row/*:Cell[33] = $Empty)">
                             <bindingDesc>
                                 <binding>
                                     <ab>
                                         <xsl:choose>
-                                            <xsl:when test="$Row//*:Cell[33] = 'Pappe [weiß lackiert mit rotem Rückenschild]'">
+                                            <xsl:when test="$Row/*:Cell[33] = 'Pappe [weiß lackiert mit rotem Rückenschild]'">
                                                 <ref target="https://gams.uni-graz.at/o:szd.glossar#Binding"/>
                                              </xsl:when>
-                                             <xsl:when test="$Row//*:Cell[33] = 'Pappe [farbig lackiert mit Rückenschild]'">
+                                             <xsl:when test="$Row/*:Cell[33] = 'Pappe [farbig lackiert mit Rückenschild]'">
                                                  <ref target="https://gams.uni-graz.at/o:szd.glossar#Binding"/>
                                              </xsl:when>
                                              <xsl:otherwise/>
                                         </xsl:choose>
-                                        <xsl:value-of select="$Row//*:Cell[33]"/>
+                                        <xsl:value-of select="$Row/*:Cell[33]"/>
                                     </ab>
                                 </binding>
                             </bindingDesc>
                         </xsl:if>
                     </physDesc>
 
-                    <xsl:if test="not($Row//*:Cell[76] = $Empty)">
+                    <xsl:if test="not($Row/*:Cell[76] = $Empty)">
                         <history>
                             <!-- Spalte 75///Provenienz/// -->
-                            <xsl:if test="not($Row//*:Cell[76] = $Empty)">
+                            <xsl:if test="not($Row/*:Cell[76] = $Empty)">
                                 <provenance>
                                     <!-- Spalte 76; Provenienz-->
                                     <ab>
-                                        <xsl:value-of select="$Row//*:Cell[76]"/>
+                                        <xsl:value-of select="$Row/*:Cell[76]"/>
                                         <ref target="https://gams.uni-graz.at/o:szd.glossar#LaterOwner"/>
                                     </ab>
                                 </provenance>
@@ -766,18 +752,17 @@
             </fileDesc>
             <!-- SCHLAGWORT 01,02,03  68-71 -->
             <profileDesc>
-                <xsl:if test="not($Row//*:Cell[68] = $Empty) or not($Row//*:Cell[69] = $Empty) or not($Row//*:Cell[70] = $Empty)">
+                <xsl:if test="not($Row/*:Cell[68] = $Empty) or not($Row/*:Cell[69] = $Empty) or not($Row/*:Cell[70] = $Empty)">
                  <textClass>
                      <keywords>
                      <xsl:for-each select="68 to 70">
                          <xsl:variable name="Count" select="."/>
-                         <xsl:if test="not($Row//*:Cell[$Count]= $Empty)">
-                         <term type="Personensuchwort">
+                         <xsl:if test="not($Row/*:Cell[$Count]= $Empty)">
+                         <term type="person">
                              <xsl:call-template name="getGND">
                                  <xsl:with-param name="Row" select="$Row"/>
                                  <xsl:with-param name="Count" select="$Count"/>
                              </xsl:call-template>
-                             <xsl:value-of select="$Row//*:Cell[$Count]"/>
                          </term>
                          </xsl:if>
                      </xsl:for-each>
@@ -795,23 +780,65 @@
     <xsl:template name="getGND">
         <xsl:param name="Row"/>
         <xsl:param name="Count"/>
-        <xsl:for-each select="$Personenliste//*:persName">
-            <xsl:if test="normalize-space(concat(*:surname, ', ', *:forename)) = $Row//*:Cell[$Count]">
+        
+        <!-- Zweig, Stefan in Excel -->
+        <xsl:variable name="currentName" select="$Row/*:Cell[$Count]"/>
+        <xsl:variable name="Person">
+           
+            <xsl:choose>
+                <xsl:when test="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]">
+                    <xsl:value-of select="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]/@xml:id"/>
+                </xsl:when>
+                <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]">
+                    <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/@xml:id"/>
+                </xsl:when>
+                <xsl:when test="$Personenliste//*:person[contains(*:note[@type='variants'], $Row/*:Cell[$Count])]">
+                    <xsl:value-of select="$Personenliste//*:person[contains(*:note[@type='variants'], $Row/*:Cell[$Count])]/@xml:id"/>
+                </xsl:when>
+                <xsl:otherwise/>
+            </xsl:choose>
+            
+        </xsl:variable>
+        
+        <xsl:choose>
+            <xsl:when test="$Person">
                 <xsl:attribute name="ref">
                     <xsl:choose>
-                     <xsl:when test="@ref">
-                         <xsl:value-of select="@ref"/>
-                     </xsl:when>
-                    <xsl:when test="..//@ref">
-                        <xsl:value-of select="..//@ref"/>
-                    </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="'http://d-nb.info/gnd/ToDo'"/>
-                     </xsl:otherwise>
+                        <xsl:when test="concat('#', $Person)">
+                            <xsl:value-of select="concat('#', $Person)"/>
+                        </xsl:when>
+                        <xsl:otherwise/>
                     </xsl:choose>
                 </xsl:attribute>
-            </xsl:if>
-        </xsl:for-each>
+                <persName>
+                   <xsl:choose>
+                       <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/*:persName/@ref">
+                            <xsl:attribute name="ref">
+                                <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/*:persName/@ref"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise/>
+                    </xsl:choose>
+                    <!-- name -->
+                    <xsl:choose>
+                        <xsl:when test="contains($currentName, ',')">
+                            <forename>
+                                <xsl:value-of select="substring-after($currentName, ', ')"/>
+                            </forename>
+                            <surname>
+                                <xsl:value-of select="substring-before($currentName, ',')"/>
+                            </surname>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <name>
+                                <xsl:value-of select="$currentName"/>
+                            </name>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </persName>
+            </xsl:when>
+        </xsl:choose>
+        
     </xsl:template>
     
     
