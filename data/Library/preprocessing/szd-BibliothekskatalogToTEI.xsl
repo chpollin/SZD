@@ -44,6 +44,10 @@
         <xsl:copy-of select="document('http://gams.uni-graz.at/o:szd.orte/TEI_SOURCE')"/>
     </xsl:variable>-->
     
+    <xsl:variable name="PersonenlisteALT">
+        <xsl:copy-of select="document('http://www.stefanzweig.digital/o:szd.personen/TEI_SOURCE')"/>
+    </xsl:variable>
+    
     <xsl:variable name="Standortliste">
         <xsl:copy-of select="document('http://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
     </xsl:variable>
@@ -786,14 +790,20 @@
         <xsl:variable name="Person">
            
             <xsl:choose>
+                <xsl:when test="$Personenliste//*:person[*:persName[*:name = $currentName]]">
+                    <xsl:value-of select="$Personenliste//*:person[*:persName[*:name = $currentName]]/@xml:id"/>
+                </xsl:when>
                 <xsl:when test="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]">
                     <xsl:value-of select="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]/@xml:id"/>
                 </xsl:when>
-                <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]">
-                    <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/@xml:id"/>
+                <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($currentName, ',')]">
+                    <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($currentName, ',')]/@xml:id"/>
                 </xsl:when>
-                <xsl:when test="$Personenliste//*:person[contains(*:note[@type='variants'], $Row/*:Cell[$Count])]">
-                    <xsl:value-of select="$Personenliste//*:person[contains(*:note[@type='variants'], $Row/*:Cell[$Count])]/@xml:id"/>
+               <!-- <xsl:when test="$Personenliste//*:person[contains(*:note[@type='variants'], $currentName)]">
+                    <xsl:value-of select="$Personenliste//*:person[contains(*:note[@type='variants'], $currentName)]/@xml:id"/>
+                </xsl:when>-->
+                <xsl:when test="$PersonenlisteALT//*:person[*:persName[@type='Ansetzungsname'][concat(*:surname, ', ', *:forename) = $currentName]]">
+                    <xsl:value-of select="$PersonenlisteALT//*:person[*:persName[@type='Ansetzungsname'][concat(*:surname, ', ', *:forename) = $currentName]]/@xml:id"/>
                 </xsl:when>
                 <xsl:otherwise/>
             </xsl:choose>
@@ -812,11 +822,21 @@
                 </xsl:attribute>
                 <persName>
                    <xsl:choose>
-                       <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/*:persName/@ref">
+                       <xsl:when test="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]/*:persName/@ref">
+                           <xsl:attribute name="ref">
+                               <xsl:value-of select="$Personenliste//*:person[*:persName[concat(*:surname, ', ', *:forename) = $currentName]]/*:persName/@ref"/>
+                           </xsl:attribute>
+                       </xsl:when>
+                       <xsl:when test="$Personenliste//*:person[*:persName/*:surname = substring-before($currentName, ',')]/*:persName/@ref">
                             <xsl:attribute name="ref">
-                                <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($Row/*:Cell[$Count], ',')]/*:persName/@ref"/>
+                                <xsl:value-of select="$Personenliste//*:person[*:persName/*:surname = substring-before($currentName, ',')]/*:persName/@ref"/>
                             </xsl:attribute>
                         </xsl:when>
+                       <xsl:when test="$PersonenlisteALT//*:person[*:persName[@type='Ansetzungsname'][concat(*:surname, ', ', *:forename) = $currentName]]">
+                           <xsl:attribute name="ref">
+                               <xsl:value-of select="$PersonenlisteALT//*:person[*:persName[@type='Ansetzungsname'][concat(*:surname, ', ', *:forename) = $currentName]]/*:persName/@ref"/>
+                           </xsl:attribute>
+                       </xsl:when>
                         <xsl:otherwise/>
                     </xsl:choose>
                     <!-- name -->
