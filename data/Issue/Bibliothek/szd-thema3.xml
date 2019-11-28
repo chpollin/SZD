@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Stefan Zweigs Bibliotheken</title>
+        <author>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
+						Karl-Franzens-Universität Graz </orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.thema.3</idno>
+        <date when="2017-12-15">28.11.2019</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
+      </editorialDecl>
+      <projectDesc>
+        <ab>
+          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
+        </ab>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
+					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
+					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
+					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+					(z.B. digitalen Editionen) möglich werden. </p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="Einleitung" xml:lang="de">
+        <p xml:lang="de">Über mehrere Jahre arbeitete <name>Stefan Zweig</name> an vier umfangreichen Werken, die thematisch in der Epoche der Französischen Revolution oder in deren Umfeld angesiedelt sind.
+					Zunächst entstand 1929 <hi style="italic">Joseph Fouché. Bildnis eines politischen Menschen</hi>, darauf folgten 1931 die Tragikomödie <hi style="italic">Das Lamm des Armen</hi>
+					und 1932 die Biographie <hi style="italic">Marie Antoinette – Bildnis eines mittleren Charakters</hi>. Der vierte Text ist ein Drama um den aus Mainz stammenden Revolutionär <name ref="#SZDPER.1569" type="person">Adam Lux</name>, an dem <name>Zweig</name> schon im Sommer 1928 geschrieben hatte. Es blieb jedoch unvollendet und wurde erst im Jahr 1984 aus
+					dem Nachlass veröffentlicht.</p>
+      
+      </div>
+      <div xml:lang="de">
+        <head>
+          <title>ENTWICKLUNG DER BIBLIOTHEKEN</title>
+        </head>
+        <figure>
+          <graphic url="IMG.2"/>
+          <figDesc>Stefan Zweigs Salzburger Bibliothek nach 1929</figDesc>
+        </figure>
+        <p>Bereits als Schüler und junger Autor hatte <name>Zweig</name> eine ganze Reihe von Büchern erworben und den Bestand in den folgenden Jahrzehnten kontinuierlich ausgebaut. Um 1930 war mit über 10.000 Bänden in seinem Salzburger Haus der größte Buchbestand in seinem Besitz erreicht. Neben gezielten Ankäufen waren zahlreiche Werke als Rezensionsexemplare und Geschenke von Verlagen und Autorinnen und Autoren hinzugekommen. Eine eigene, sehr umfassende Abteilung bildete die Sammlung der Auktions- und Verkaufskataloge für Autographen, die <name>Zweig</name> als Dokumentationsmaterial für seine Handschriftensammlung zusammentrug. Mit seinem Weggang aus Österreich und der Auflösung des Haushalts auf dem Salzburger Kapuzinerberg in den Jahren 1936 und 1937 wurde der allergrößte Teil der Bücher verkauft und verschenkt. Für seine neue Wohnung in London stellte sich <name>Zweig</name> aus ausgewählten Resten der in Salzburg vorhandenen Bestände und Neuerwerbungen eine kleinere Arbeitsbibliothek zusammen. Über den eigenen Besitz hinaus nutzte er – vor allem in den Jahren des Exils – auch Bücher aus öffentlichen Sammlungen, sodass in chronologischer wie auch in räumlicher Hinsicht nicht nur von einer Bibliothek, sondern vielmehr von <hi style = "italic">den</hi> Bibliotheken <name>Stefan Zweigs</name> gesprochen werden kann. </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>KATALOGE UND PROVENIENZMERKMALE</title>
+        </head>
+        <p>
+          Da die meisten Bücher aus <name>Zweigs</name> Bibliotheken noch zu seinen Lebzeiten verteilt wurden und in zumeist unbekannten Besitz übergingen, 
+          ist heute nur noch ein Bruchteil davon sicher nachzuweisen. Ursprünglich waren alle Bestände auf Kateikarten und in Bandkatalogen verzeichnet,
+          von denen jedoch nur noch diejenigen der Autographenkatalogsammlung und der sogenannten <span type="hyperlink">Hausexemplare ZUM GLOSSAR: HAUSEXEMPLAR MIT NUMMERNANGABE</span>
+            erhalten geblieben sind. Rund 1.300 der ursprünglich über 10.000 Bände können <name>Stefan Zweig</name> heute anhand von <span type="hyperlink">Provenienzmerkmalen ZUM GLOSSAR: PROVENIENZMERKMAL</span>
+              zugeordnet werden, die mehr oder weniger leicht zu identifizieren sind. Es handelt sich bei diesen Spuren um so eindeutige Zeichen wie Adressstempel oder handschriftliche Randbemerkungen, aber auch um
+              Signaturen der früheren Aufstellungen in <name>Zweigs</name> Wohnungen, die oft nur aus dem Zusammenhang zu erschließen waren. 
+        </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>DIE BIBLIOTHEKEN BEI STEFAN ZWEIG DIGITAL</title>
+        </head>
+        <p>
+          In den vergangenen Jahren konnten im Rahmen von privaten Initiativen und von STEFAN ZWEIG DIGITAL bisher unzugängliche oder unbekannte Teile von <name>Zweigs</name> Bibliotheken in privaten und öffentlichen Sammlungen ermittelt und <span type="hyperlink">ausführlich katalogisiert ZU SZDBIB</span> werden. 
+          Eine Ausnahme bilden die über 4.000 Autographenkataloge, von denen sich heute rund 3.000 im Deutschen Literaturarchiv Marbach befinden. Sie sind als Sonderbestand bislang noch nicht einzeln digital erfasst worden, es liegen jedoch Listen der 
+          <span type="hyperlink">gebundenen http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525433</span> und als 
+          <span type="hyperlink">Einzelhefte http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525432</span> erhaltenen Exemplare vor.
+            Neben der Katalogaufnahme nach bibliothekarischen Standards wurden bei der Verzeichnung der Bücher auch alle individuellen Provenienzmerkmale aufgenommen. Die Definition und Erfassung der einzelnen Spuren erfolgt auf Grundlage des <span type="hyperlink">T-PRO Thesaurus https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe </span>, der standardisierte Bezeichnungen und Beschreibungen enthält.
+              
+        </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>ORIGINALSIGNATUREN</title>
+        </head>
+        <p>
+          In den einzelnen Katalogeinträgen wurden im Feld <span type="hyperlink">Originalsignaturen ZUM GLOSSAR: ORIGINALSIGNATUR</span> auch die zahlreichen Standortangaben und Aufstellungssysteme festgehalten, deren Bedeutung noch nicht vollständig entschlüsselt werden konnte. Signaturreihen, wechselnde Nummernsysteme und wiederkehrende Kombinationen in thematisch ähnlichen Büchern lassen jedoch Rückschlüsse auf frühere Aufstellungen und auf Fehlstellen in den vorhandenen Beständen zu. 
+        </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>DER BESONDERE BESTAND DER HAUSEXEMPLARE</title>
+        </head>
+        <p>
+          Mit über 600 Bänden bilden die als „Hausexemplare“ bezeichneten und zumeist mit einem entsprechenden Stempelabdruck gekennzeichneten Belegexemplare von <name>Zweigs</name> eigenen Werken einen bedeutenden Anteil des heute bekannten Buchbestands. Es handelt sich dabei um Originalausgaben sowie um verschiedene Folgeauflagen und Übersetzungen. Die Hausexemplare dienten vorrangig zur Verwaltung der Werke und zur Beantwortung der zahlreichen Anfragen für Übersetzungen und Abdrucke einzelner Texte. Einige der Bücher wurden auch als Textquellen und als Arbeitsexemplare genutzt und enthalten Streichungen, Änderungen und Korrekturen, die <name>Stefan Zweig</name> selbst vorgenommen hat.
+        </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>AUSSAGEKRAFT DER BISLANG BEKANNTEN BESTÄNDE</title>
+        </head>
+        <p>
+          Die übrigen heute noch bekannten Bände aus <name>Zweigs</name> Bibliotheken fallen in unterschiedliche Themenbereiche und literarische Gattungen. Nicht wenige der Bücher sind mit persönlichen <span type="hyperlink">Widmungen ZUM GLOSSAR: WIDMUNG</span> für <name>Stefan Zweig</name> versehen, die einen regen Austausch von Neuerscheinungen in seinem Umfeld dokumentieren.
+            Rückschlüsse auf literarische Vorlieben oder thematische Schwerpunkte sollten anhand der verzeichneten Bücher bislang jedoch nur mit Vorsicht gezogen werden. Dass im bekannten Bestand beispielsweise kein einziges Werk von <name ref="#SZDPER.896" type="person">Thomas Mann</name> enthalten ist, bedeutet keineswegs, dass <name>Zweig</name> keines besessen hat, sondern nur, dass bislang kein entsprechender Band aus seinem früheren Besitz nachgewiesen werden konnte. Denn durch Briefe und sonstige Bemerkungen ist in diesem Fall zweifelsfrei dokumentiert, dass <name>Zweig</name> und <name ref="#SZDPER.896" type="person">Mann</name> sich ihre jeweils neuesten Werke, oft sogar mit persönlichen Widmungen versehen, gegenseitig zugesandt haben.
+            Bei der Betrachtung der heute bekannten Bestände ist zudem zu berücksichtigen, dass die Bücher auf unterschiedlichen Wegen an verschiedene Orte gelangten. So bilden die heute im Besitz von <name>Stefan Zweigs</name> Erben in London verbliebenen Bände – abgesehen von den Autographenkatalogen – den umfangreichsten Einzelbestand. In seinem Kern geht dieser auf Zweigs eigene Auswahl aus der Salzburger Bibliothek infolge der Haushaltsauflösung zurück. In den folgenden Jahren wurde dieser Bestand beinahe ausschließlich durch gezielte Neuerwerbungen ergänzt und dürfte somit deutliche Hinweise auf <name>Zweigs</name> literarische Interessen in den späten 1930er-Jahren geben. Dagegen sind im Nachlass des Salzburger Schriftstellers <name ref="#SZDPER." type="person">Georg Rendl</name> und in verschiedenem Privatbesitz gerade jene Bücher überliefert, die <name>Zweig</name> beim Gang ins Exil aussortiert hatte und denen er in dieser Phase seines Lebens vermutlich weniger Bedeutung beimaß. 
+            
+        </p>
+      </div>
+      <div  xml:lang="de">
+        <head>
+          <title>CHANCEN UND PERSPEKTIVEN</title>
+        </head>
+        <p>
+          Trotz aller Verluste und Einschränkungen lassen sich auf Grundlage des inzwischen bekannten früheren Buchbestands aus <name>Stefan Zweigs</name> 
+          Bibliotheken schon heute wichtige neue Erkenntnisse zu seiner literarischen Arbeit, zu seinen Lektüregewohnheiten und seiner Nutzung von Quellenmaterial 
+          sowie zu seinen persönlichen Interessen gewinnen. Durch die Verzeichnung der Bestände bei STEFAN ZWEIG DIGITAL können die ermittelten Informationen in Verbindung mit
+          zahlreichen Archivalien und Dokumenten aus <name>Zweigs</name> sehr umfangreichem Nachlass betrachtet werden. So besteht in vielen Fällen die Möglichkeit, weitere
+          und bisher oft unsichtbar gebliebene Bezüge der Materialien zueinander zu erkennen.
+          Der Katalog soll auch zukünftig um Einträge neu aufgefundener Bände aus <name>Stefan Zweigs</name> Bibliotheken ergänzt werden.
+          Dabei bietet sich mit den im Rahmen des Projekts ermittelten Provenienzmerkmalen erstmals die Möglichkeit, auch solche Bücher zu identifizieren,
+          deren Herkunft bislang unbemerkt geblieben war. Für Hinweise auf weitere Bände ist das Team von STEFAN ZWEIG DIGITAL sehr dankbar. 
+        </p>
+        <figure>
+          <graphic url="IMG.3"/>
+          <figDesc>Stefan Zweigs Salzburger Bibliothek nach 1929</figDesc>
+        </figure>
+        <p>
+          Ausführliche Informationen zur Bibliotheksgeschichte, zu den Beständen, den Provenienzmerkmalen und zu einzelnen Büchern finden sich in der im Rahmen von STEFAN ZWEIG DIGITAL entstandenen Publikation:
+        </p>
+        <p>Stephan Matthias, Oliver Matuschek</p>
+      </div>
+      <div  xml:lang="en">
+        <head>
+          <title>ToDo
+          </title>
+          <idno>ToD</idno>
+        </head>
+        <p>ToDo</p>
+      </div>
+    </body>
+  </text>
+  <facsimile>
+    <graphic mimeType="image/jpeg" url="file:///img1.jpg" xml:id="IMG.1"/>
+    <graphic mimeType="image/jpeg" url="file:///img2.jpg" xml:id="IMG.2"/>
+    <graphic mimeType="image/jpeg" url="file:///img3.jpg" xml:id="IMG.3"/>
+  </facsimile>
+</TEI>
