@@ -41,8 +41,11 @@
 			<xsl:when test="//skos:Schema[1]/@rdf:about">
 				<xsl:value-of select="substring-after(//skos:Schema[1]/@rdf:about, 'gams.uni-graz.at/')"/>
 			</xsl:when>
-			<xsl:otherwise>
+			<xsl:when test="//t:teiHeader//t:idno[@type = 'PID']">
 				<xsl:value-of select="//t:teiHeader//t:idno[@type = 'PID']"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:comment>error in szd-static.xsl: no PID found</xsl:comment>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -74,9 +77,9 @@
 		<xsl:value-of select="concat($server, $gamsdev, '/css/navbar.css')"/>
 	</xsl:variable>
 	<!-- print .css-->
-	<!--<xsl:variable name="printcss">
+	<xsl:variable name="printcss">
 		<xsl:value-of select="concat($server, $gamsdev, '/css/print.css')"/>
-	</xsl:variable>-->
+	</xsl:variable>
 	<!-- timeline, lebenskalender .css -->
 	<xsl:variable name="timelineCss">
 		<xsl:value-of select="concat($server, $gamsdev, '/css/lebenskalender.css')"/>
@@ -182,7 +185,7 @@
 				<!-- ///HEADER/// -->
 				<header>
 				<!-- ///NAVBAR/// -->
-					<nav class="navbar navbar-expand-md fixed-top navbar-dark"><!-- fixed/sticky nav benötigt; muss noch nach rechts angepasst werden (margin) -->
+					<nav class="navbar navbar-expand-md fixed-top navbar-dark pt-sm-2 border-bottom"><!-- fixed/sticky nav benötigt; muss noch nach rechts angepasst werden (margin) -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"><xsl:text> </xsl:text></span>
 						</button>
@@ -213,12 +216,12 @@
 									</li>
 									<li class="nav-item dropdown">
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i18n:text>collection</i18n:text>
+											<i18n:text>collections</i18n:text>
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item text-uppercase" href="/o:szd.autographen/sdef:TEI/get?locale={$locale}">
+											<!--<a class="dropdown-item text-uppercase" href="/o:szd.autographen/sdef:TEI/get?locale={$locale}">
 												<i18n:text>autograph</i18n:text>
-											</a>
+											</a>-->
 											<a class="dropdown-item text-uppercase" href="/o:szd.bibliothek/sdef:TEI/get?locale={$locale}">
 												<i18n:text>library_szd</i18n:text>
 											</a>
@@ -230,6 +233,9 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="/o:szd.thema.1/sdef:TEI/get?locale={$locale}"><xsl:text>Marie Antoinette</xsl:text></a>
+											<a class="dropdown-item text-uppercase" href="/o:szd.thema.3/sdef:TEI/get?locale={$locale}">
+												<xsl:text>Stefan Zweigs Bibliotheken</xsl:text>
+											</a>
 										</div>
 									</li>
 									<li class="nav-item">
@@ -317,7 +323,7 @@
 									<!-- ////////// -->
 									<!-- DATABASKET -->
 									<li class="nav-item">
-										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}">
+										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}" style="text-decoration:none;">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:attribute name="title"><xsl:text>Objects can be saved to the data cart and exported</xsl:text></xsl:attribute>
@@ -326,8 +332,12 @@
 													<xsl:attribute name="title"><xsl:text>Im Datenkorb können Objekte gespeichert und exportiert werden</xsl:text></xsl:attribute>
 												</xsl:otherwise>
 											</xsl:choose>
-											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb"/>
-											<xsl:text> </xsl:text>
+											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb">
+												<xsl:text> </xsl:text>
+											</img>
+											<span class="small" id="db_static">
+												<xsl:text> </xsl:text>
+											</span>
 										</a>
 									</li>
 									<li class="nav-item">
@@ -373,11 +383,11 @@
 
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///FOOTER/// -->
-				<footer class="footer" >
+				<footer class="footer d-print-none">
 				<div class="container">
 					<div class="card">
 						<div class="card-body">
-							
+							<hr/>
 							<div class="col-12 text-center">
 								<xsl:choose>
 									<xsl:when test="$locale='en'">
@@ -397,24 +407,30 @@
 								</xsl:choose>
 							</div>
 							<hr/>
-							
-
 							<div class="col-12 text-center">
 								<div class="row">
 									<div class="col-sm-3">
-										<a href="https://www.uni-salzburg.at/index.php?id=72" target="_blank">
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=72&amp;L=1'"/>
+												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at/index.php?id=72'"/>
+											</xsl:call-template>
 											<img class="footer_img"   style="max-width: 60%;"
 												src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
 												alt="Logo LAS"/></a>
 									</div>
 									<div class="col-sm-3">
-										<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
+										<a href=""
 											target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.en'"/>
+												<xsl:with-param name="URL_DE" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.de'"/>
+											</xsl:call-template>
 											<img class="footer_img" src="/templates/img/by-nc.png" alt="Lizenz" style="max-width: 40%;margin-top: 3%;"/>
 										</a>
 									</div>
 									<div class="col-sm-3">
-										<a class="text-center text-uppercase" href="/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale={$locale}" target="_blank">
+										<a class="text-center text-uppercase" target="_blank">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:text>Project partner</xsl:text>
@@ -449,16 +465,18 @@
 										
 									</div>
 									<div class="col-sm-3">
-										<a href="http://gams.uni-graz.at" target="_blank">
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=&amp;locale=en'"/>
+												<xsl:with-param name="URL_DE" select="'http://gams.uni-graz.at'"/>
+											</xsl:call-template>
 											<img class="footer_img"   
 												src="/templates/img/gamslogo_schwarz.gif"
 												alt="{$gams}"/>
 										</a>
-										
 									</div>
 									<div class="col-sm-3">
-										
-										<a href="https://web.nli.org.il" target="_blank">
+										<a href="https://web.nli.org.il/sites/NLI/english" target="_blank">
 											<img class="footer_img"
 												src="{concat($server, $gamsdev, '/img/logo_NLI.png')}"
 												alt="The National Library of Israel"/>
@@ -467,7 +485,11 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<a href="https://www.uni-salzburg.at" target="_blank" class="align-self-end">
+										<a target="_blank" class="align-self-end">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=52&amp;L=1'"/>
+												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at'"/>
+											</xsl:call-template>
 											<img class="footer_img"   style="max-width: 60%;"
 												src="https://www.uni-salzburg.at/fileadmin/oracle_file_imports/553397.JPG"
 												alt="Logo Universität Salzburg"/></a>
@@ -478,15 +500,21 @@
 										</a>
 									</div>
 									<div class="col-sm-3">
-										
-										<a href="https://informationsmodellierung.uni-graz.at" 
-											target="_blank">
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://informationsmodellierung.uni-graz.at/en/'"/>
+												<xsl:with-param name="URL_DE" select="'https://informationsmodellierung.uni-graz.at'"/>
+											</xsl:call-template>
 											<img class="footer_img"  style="max-width: 20%;margin-top:3%"
 												src="/templates/img/ZIM_blau.png"
 												alt="{$zim-acdh}"/>
 										</a>
 										<xsl:text> </xsl:text>
-										<a href="https://www.uni-graz.at" target="_blank" >
+										<a target="_blank" >
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://www.uni-graz.at/en/'"/>
+												<xsl:with-param name="URL_DE" select="'https://www.uni-graz.at'"/>
+											</xsl:call-template>
 											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 20%;margin-top:3%" 
 												title="Universität Graz" alt="Logo Uni Graz"/>
 											<xsl:text> </xsl:text>
@@ -499,7 +527,6 @@
 												src="{concat($server, $gamsdev, '/img/fredonia.png')}"
 												alt="Reed Library – Stefan Zweig Collection, Fredonia"/>
 										</a>
-										
 									</div>
 								</div>
 								
@@ -565,6 +592,23 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
+	<!-- @href with url for en and de landing page -->
+	<xsl:template name="getURL_EN_DE">
+		<xsl:param name="URL_DE"/>
+		<xsl:param name="URL_EN"/>
+		<xsl:attribute name="href">
+			<xsl:choose>
+				<xsl:when test="$locale='en'">
+					<xsl:value-of select="$URL_EN"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$URL_DE"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:attribute>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- en | de text for ABOUT, IMPRINT etc. -->
 	<xsl:template match="t:div[@type='main']">
 			<xsl:choose>
@@ -578,12 +622,12 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
-	<xsl:template match="t:div[@xml:lang='de']">
+	<xsl:template match="t:div[@xml:lang='de'][not(@type)]">
 		<xsl:apply-templates/>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
-	<xsl:template match="t:div[@xml:lang='en']">
+	<xsl:template match="t:div[@xml:lang='en'][not(@type)]">
 		<xsl:apply-templates/>
 	</xsl:template>
 	
@@ -606,7 +650,7 @@
 	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:ref[@target]">
-		<a href="{@target}"><xsl:apply-templates></xsl:apply-templates></a>
+		<a href="{@target}" target="_blank"><xsl:apply-templates></xsl:apply-templates></a>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->

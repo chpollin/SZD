@@ -37,7 +37,8 @@
                     </xsl:with-param>
                     <xsl:with-param name="PID" select="$PID"/>
                     <xsl:with-param name="mode" select="$mode"/>
-                    
+                    <xsl:with-param name="locale" select="$locale"/>
+                    <xsl:with-param name="GlossarRef" select="'CurrentLocation'"/>
                 </xsl:call-template>
                 <!-- /// PAGE-CONTENT /// -->
         <article id="content" class="card">
@@ -80,15 +81,19 @@
                                 <xsl:if test="@corresp">
                                     <a href="{@corresp}" target="_blank">
                                         <xsl:attribute name="title">
-                                            <xsl:choose>
-                                                <xsl:when test="$locale ='en'">
-                                                    <xsl:text>External Resource</xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>Externe Ressource</xsl:otherwise>
-                                            </xsl:choose>
+                                            <i18n:text>toexternresource</i18n:text>
                                         </xsl:attribute>
-                                        <xsl:text> </xsl:text>
-                                        <i class="fas fa-external-link-alt _icon small pl-1"><xsl:text> </xsl:text></i>
+                                        <!--<xsl:choose>
+                                            <xsl:when test="$locale = 'en'">
+                                                <xsl:attribute name="title">
+                                                    <i18n:text>toexternresource</i18n:text>
+                                                </xsl:attribute>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:attribute name="title" select="'Zur externen Ressource'"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>-->
+                                        <i class="fas fa-link"><xsl:text> </xsl:text></i>
                                     </a>
                                 </xsl:if>
                             <!-- <a href="{s:gnd/@uri}" target="_blank">

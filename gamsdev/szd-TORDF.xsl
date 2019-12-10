@@ -72,7 +72,7 @@
             	<xsl:when test="//t:fileDesc/t:publicationStmt/t:idno[@type='PID'] = 'o:szd.publikation'">
             		<xsl:call-template name="Publikation"/>
             	</xsl:when>
-            	<xsl:when test="contains(//t:fileDesc/t:publicationStmt/t:idno[@type='PID'], 'o:szd.thema.1')">
+            	<xsl:when test="contains(//t:fileDesc/t:publicationStmt/t:idno[@type='PID'], 'o:szd.thema')">
             		<xsl:call-template name="Collection"/>
             	</xsl:when>
             	<xsl:otherwise>
@@ -174,9 +174,12 @@
 				</szd:PublicationStmt>
 			</xsl:if>
 			<!-- ProvenanceCharacteristic -->
-			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']">
+			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or 
+				t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier or
+				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref or
+				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
 				<szd:ProvenanceCharacteristic rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'PS')}">
-					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item/t:ref">
+					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:ref">
 						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, '#')))}">
 							<xsl:value-of select="normalize-space(../t:desc)"/>
 						</xsl:element>
@@ -207,42 +210,47 @@
 					<xsl:for-each select="t:fileDesc//t:ref/@target">
 						<szd:glossar rdf:resource="{.}"/>	
 					</xsl:for-each>
+				
+					
+					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier/@corresp">
+						<szd:glossar rdf:resource="{.}"/>	
+					</xsl:for-each>
 					
 					<szd:text xml:lang='en'>
-						<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item/t:term[@xml:lang='en'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term[@xml:lang='en']">
+						<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:term[@xml:lang='en'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term[@xml:lang='en']">
 							<xsl:value-of select="."/>
 							<xsl:if test="not(position()=last())">
 								<xsl:text>,</xsl:text>
 							</xsl:if>
 						</xsl:for-each>
 						<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier">
-							<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term">
+							<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
 							<xsl:text>Original Shelfmark</xsl:text>
 						</xsl:if>
 						<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:ab/t:ref">
-							<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item/t:term">
+							<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:term">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
 							<xsl:text>Later Owner</xsl:text>
 						</xsl:if>
 					</szd:text>
 					<szd:text xml:lang='de'>
-						<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item/t:term[@xml:lang='de'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term[@xml:lang='de']">
+						<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:term[@xml:lang='de'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term[@xml:lang='de']">
 							<xsl:value-of select="."/>
 							<xsl:if test="not(position()=last())">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
 						</xsl:for-each>
 						<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier">
-							<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term">
+							<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
 							<xsl:text>Originalsignatur</xsl:text>
 						</xsl:if>
 						<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:ab/t:ref">
-							<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']/t:item/t:term">
+							<xsl:if test=".//t:msDesc/t:msIdentifier/t:altIdentifier | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:term">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
 							<xsl:text>Nachbesitzer</xsl:text>
@@ -948,7 +956,10 @@
 		<!-- illustriert -->
 
 		<!-- szd:provenanceCharacteristic -->
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenancefeature']">
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or 
+			t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier or
+			t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref or
+			t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
 			<szd:provenanceCharacteristic rdf:resource="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'PS')}"/>
 		</xsl:if>
 
@@ -1631,19 +1642,20 @@
 				<xsl:text> </xsl:text>
 				<xsl:choose>
 					<xsl:when test="$EXTENT/t:measure[@type='leaf'] = '1'">
-						<xsl:text> Blatt</xsl:text>
+						<xsl:text> Blatt </xsl:text>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
 							<xsl:when test="$locale = 'en'">
-								<xsl:text>Leaves</xsl:text>
+								<xsl:text> Leaves </xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:text>Blatt</xsl:text>
+								<xsl:text> Blatt </xsl:text>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:otherwise>
-				</xsl:choose>				
+				</xsl:choose>
+				<xsl:text> </xsl:text>				
 			</xsl:if>
 			<!-- illustriert, Karte, Noten -->
 			<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='extent']/t:item">
@@ -1652,9 +1664,12 @@
 						<xsl:value-of select="."/>
 						<xsl:text>. </xsl:text>
 					</xsl:when>
-					<xsl:otherwise><xsl:value-of select="."/><xsl:text>, </xsl:text></xsl:otherwise>
+					<xsl:otherwise>
+						<xsl:value-of select="."/><xsl:text>, </xsl:text>
+					</xsl:otherwise>
 				</xsl:choose> 	
 			</xsl:for-each>
+			<xsl:text> </xsl:text>
 			<xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
 			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding">
 				<xsl:text>, </xsl:text>

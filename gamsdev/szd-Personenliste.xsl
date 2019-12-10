@@ -52,7 +52,7 @@
                         <xsl:for-each select="current-group()">
                             <div class="list-group-item mb-1 py-0" id="{@xml:id}">
                                 <div class="row">
-                                    <span class="col-8 row">
+                                    <span class="col-8">
                                         <h4 class="text-left">
                                             <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
                                             <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
@@ -76,17 +76,24 @@
                                             <!-- birth -->
                                             <xsl:variable name="Birth">
                                                 <xsl:choose>
+                                                    <!-- YYYY-MM-DD -->
                                                     <xsl:when test="t:birth/@when castable as xs:date">
-                                                        <xsl:value-of select="year-from-date(t:birth/@when )"/>
+                                                        <xsl:value-of select="year-from-date(t:birth/@when)"/>
                                                     </xsl:when>
-                                                    <xsl:otherwise></xsl:otherwise>
+                                                    <xsl:when test="string-length(t:birth/@when) = 4">
+                                                        <xsl:value-of select="t:birth/@when"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise/>
                                                 </xsl:choose>
                                             </xsl:variable>
                                             <!-- death -->
                                             <xsl:variable name="Death">
                                                 <xsl:choose>
                                                     <xsl:when test="t:death/@when castable as xs:date">
-                                                        <xsl:value-of select="year-from-date(t:death/@when )"/>
+                                                        <xsl:value-of select="year-from-date(t:death/@when)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="string-length(t:death/@when) = 4">
+                                                        <xsl:value-of select="t:death/@when"/>
                                                     </xsl:when>
                                                     <xsl:otherwise></xsl:otherwise>
                                                 </xsl:choose>

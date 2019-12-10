@@ -211,7 +211,7 @@
                                                         <xsl:variable name="currentPID" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='PID']"/>
                                                        <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context']"/>
                                                         <!-- scan, extern, thema button -->
-                                                        <span class="col-2">
+                                                        <span class="col-1">
                                                             <xsl:if test="$currentPID">
                                                                 <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
                                                                     <xsl:choose>

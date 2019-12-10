@@ -113,15 +113,13 @@
                     <xsl:choose>
                         <xsl:when test="$locale='en'">
                             <p class="card-text row">
-                                 <xsl:text> 
-                                     TODO
-                                 </xsl:text>
+                                 <xsl:text>Records can be saved to the data cart by ticking the checkbox in the catalogue lists and search results. Entries will be stored in the browser for future sessions.</xsl:text>
                             </p>
                             <p>
-                                ToDon<br/>
-                                (W) Works (L) Personal documents (A) Autograph collection (B) Library
+                                <xsl:text>Abbreviations used for object categories:</xsl:text><br/>
+                                <xsl:text>(W) Works (L) Personal Documents ("Lebensdokumente") (A) Autograph Collection(B) Library ("Bibliothek")</xsl:text>
                             </p>
-                            <div class="row mb-3 float-right" >
+                            <div class="row mb-3 float-right">
                                 <button type="button"  onclick="clearData()">
                                     <xsl:text>CLEAR DATA </xsl:text>
                                     <i class="fas fa-trash" style="color:#631a34"><xsl:text> </xsl:text></i>
@@ -130,16 +128,14 @@
                         </xsl:when>
                         <xsl:otherwise>
                             <p class="card-text row">
-                                <xsl:text>
-                                    Im Datenkorb können Datensätze durch ankreuzen des Auswahlkastens in den Kataloglisten und Suchergebnissen abgelegt werden. 
-                                    Die Einträge bleiben im Local storage des Browsers für weitere Arbeitssitzungen erhalten.
-                                </xsl:text>
+                                <xsl:text>Im Datenkorb können Datensätze durch Ankreuzen des Auswahlkastens in den Kataloglisten und Suchergebnissen abgelegt werden. Die Einträge bleiben im Browser für weitere Arbeitssitzungen erhalten. </xsl:text>
                             </p>
                             <p>
-                                Siglen der Objektkategorien<br/>
-                                (W) Werke (L) Lebensdokumente (A) Autographensammlung (B) Bibliothek
+                                <xsl:text>Siglen der Objektkategorien</xsl:text>
+                                <br/>
+                                <xsl:text>(W) Werke	(L) Lebensdokumente	(A) Autographensammlung	(B) Bibliothek</xsl:text>
                             </p>
-                            <div class="row mb-3 float-right" >
+                            <div class="row mb-3 float-right small">
                                 <button type="button" onclick="clearData()">
                                 <xsl:text>DATENKORB LEEREN  </xsl:text>
                                     <i class="fas fa-trash"  style="color:#631a34"><xsl:text> </xsl:text></i>
@@ -189,44 +185,46 @@
                     );
                     } );
                 </script>
-                <table id="databasket_table" class="table table-bordered dt-responsive nowra text-left">
-                    <thead>
-                        <tr class="card-header">
-                            <th>
-                                <xsl:text> </xsl:text>
-                            </th>
-                            <th class="text-uppercase">
-                                <xsl:choose>
-                                    <xsl:when test="$locale = 'en'">
-                                        <xsl:text>Title</xsl:text>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text>Titel</xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </th>
-                            <th class="text-uppercase">
-                                <i18n:text>author_szd</i18n:text>
-                            </th>
-                            <th class="text-uppercase">
-                                <xsl:choose>
-                                    <xsl:when test="$locale = 'en'">
-                                        <xsl:text>Location, Signature, URL</xsl:text>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text>Standort, Signatur, URL</xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </th>
-                            <th>
-                                <xsl:text> </xsl:text>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody id="databasekt_tbody">
-                        <xsl:text> </xsl:text>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table id="databasket_table" class="table table-bordered dt-responsive nowra text-left">
+                        <thead>
+                            <tr class="card-header">
+                                <th>
+                                    <xsl:text> </xsl:text>
+                                </th>
+                                <th class="text-uppercase">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>Title</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Titel</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </th>
+                                <th class="text-uppercase">
+                                    <i18n:text>author_szd</i18n:text>
+                                </th>
+                                <th class="text-uppercase">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>Location, Signature, URL</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Standort, Signatur, URL</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </th>
+                                <th>
+                                    <xsl:text> </xsl:text>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="databasekt_tbody">
+                            <xsl:text> </xsl:text>
+                        </tbody>
+                    </table>
+                </div>
                 
             
             <div class="card-body">

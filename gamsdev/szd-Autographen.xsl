@@ -74,7 +74,7 @@
                         <div class="list-group">
                             <xsl:if test="not(position()=1)">
                                 <xsl:attribute name="class">
-                                    <xsl:text>list-group mt-5</xsl:text>
+                                    <xsl:text>list-group mt-4</xsl:text>
                                 </xsl:attribute>
                             </xsl:if>
                             <h3>
@@ -127,7 +127,7 @@
                     <!-- /////////////////////////////////////////////////// -->
                     <!-- All biblFull without an author[@role = "Verfasser"] -->
                     <xsl:if test="$biblFull[not(t:fileDesc/t:titleStmt/t:author)][not(t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'])]">
-                         <div class="list-group mt-5" id="withoutAuthor">  
+                         <div class="list-group mt-4" id="withoutAuthor">  
                              <h3>
                                  <i18n:text>without_author</i18n:text>
                              </h3>
