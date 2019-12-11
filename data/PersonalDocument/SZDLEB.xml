@@ -223,7 +223,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original" ref="http://d-nb.info/gnd/1024274039">Tagebuch 1931</title>
-              <title type="Einheitssachtitel">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
             </titleStmt>
@@ -779,7 +780,8 @@
 								[Marie Antoinette]</title>
               <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="en">Forum Verlag publishing
 								contract [Marie Antoinette]</title>
-              <title type="Einheitssachtitel">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></author>
               <editor role="contributor" ref="http://d-nb.info/gnd/116001151">
@@ -1414,7 +1416,7 @@
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-AAP/Lxx</idno>
+                  <idno type="signature">SZ-AAP/L1</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
