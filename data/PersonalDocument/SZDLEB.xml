@@ -128,12 +128,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes Papier, Label: ELASTIC No.
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Kariertes Papier, Label: ELASTIC No.
 												1610</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">squared paper, label: ELASTIC No.
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, label: ELASTIC No.
 												1610</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ink, pencil</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette Tinte, Bleistift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -205,7 +205,10 @@
                   <origin>
                     <origDate>[1928]</origDate>
                   </origin>
-                  <provenance>Dr. Werner Wien</provenance>
+                  <provenance>
+                    <ab xml:lang="de">Dr. werner, Wien</ab>
+                    <ab xml:lang="en">Dr. Werner, Wien</ab>
+                  </provenance>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -262,13 +265,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">kariertes, am Falz perforiertes
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Kariertes, am Falz perforiertes
 												Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">squared paper, perforated at the
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Squared paper, perforated at the
 												hinge</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette Tinte, Bleistift, blauer
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette Tinte, Bleistift, blauer
 												Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ink, pencil, blue
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple ink, pencil, blue
 												pencil</material>
                       </support>
                       <extent>
@@ -321,8 +324,12 @@
                     <origDate when="1931-10-21">1931 21. October
 											begonnen</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                  <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -400,12 +407,12 @@
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Papier mit Tabellenvordruck, marmorierter
 												Schnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">pre-printed form paper, marbled
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed form paper, marbled
 												edges</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze, rote, braune und blaue Tinte,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette, schwarze, rote, braune und blaue Tinte,
 												Bleistift, roter und blauer
 												Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, black, red, brown, and blue ink, pencil,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple, black, red, brown, and blue ink, pencil,
 												red and blue pencil</material>
                       </support>
                       <extent>
@@ -473,8 +480,12 @@
                   <origin>
                     <origDate>Begonnen August 1932</origDate>
                   </origin>
-                  <provenance>Anna Meingast</provenance>
-                  <acquisition>Schenkung Wilhelm Meingast 2000</acquisition>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                  <ab xml:lang="en">Ann Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                  <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -539,13 +550,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">vorgedrucktes Vertragsformular,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Vorgedrucktes Vertragsformular,
 												gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">pre-printed contract form, hole
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Pre-printed contract form, hole
 												punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violettes Farbband, violette und schwarze
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violettes Farbband, violette und schwarze
 												Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ribbon, purple and black
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple ribbon, purple and black
 												ink</material>
                       </support>
                       <extent>
@@ -563,7 +574,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab>Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -572,8 +584,14 @@
                     <origDate when="1932-02-01">le Premier Février, mil neuf cent trente
 											deux</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -635,9 +653,9 @@
 												gelocht</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Casa Editrice A. Mondadori stationery, hole
 												punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte, pinker
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violettes Farbband, violette Tinte, pinker
 												Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple ribbon, purple ink, pink
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple ribbon, purple ink, pink
 												pencil</material>
                       </support>
                       <extent>
@@ -655,7 +673,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab>Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -663,8 +682,10 @@
                     <origPlace>Milano</origPlace>
                     <origDate when="1932-07-26">26 Luglio 1932</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -727,10 +748,10 @@
                     <supportDesc>
                       <support>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Doppelbogen, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">bifolium, hole punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, violette und grüne
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Bifolium, hole punched</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Schwarzes Durchschlagpapier, violette und grüne
 												Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">black carbon paper, purple and green ink,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Black carbon paper, purple and green ink,
 												pencil</material>
                       </support>
                       <extent>
@@ -758,8 +779,10 @@
                     <origPlace>Warschau, Salzburg</origPlace>
                     <origDate when="1932-10-22">22 Oktober 1932</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -833,9 +856,9 @@
 												gelocht</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Forum Verlag stationery, hole
 												punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">schwarzes Farbband, violette und schwarze Tinte,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte,
 												Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">black ribbon, purple and black ink,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Black ribbon, purple and black ink,
 												pencil</material>
                       </support>
                       <extent>
@@ -853,8 +876,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab>Stefan Zweig, Lotte Zweig, Gottfried Bermann Fischer,
-											fremde Hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, Gottfried Bermann Fischer, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, Gottfried Bermann Fischer, unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -864,8 +887,10 @@
                     <origDate when="1939-10-13">13.
 											Oktober 1939</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -939,12 +964,12 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Notizbuch mit Händlermarke National NATTY MEMO
 												BOOK Patent No. 219547 REFILL No 6340. (British
 												Made.)</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">notebook with stationer&apos;s label &quot;National NATTY
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;National NATTY
 												MEMO BOOK Patent No. 219547 REFILL No 6340.
 												(British Made.)&quot;</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, schwarze und rot Tinte, Bleistift,
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette, schwarze und rot Tinte, Bleistift,
 												grüner und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, black, and red ink, pencil, green and
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple, black, and red ink, pencil, green and
 												blue pencil</material>
                       </support>
                       <extent>
@@ -963,7 +988,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab>Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                   </handDesc>
                   <bindingDesc>
                     <binding>
@@ -976,8 +1002,10 @@
                   <origin>
                     <origDate when="1936-01-01">1936</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -1047,9 +1075,9 @@
 												Lerner Wien, I. Kohlmarkt 9&quot;, squared loose leaves
 												size no. 6030, dark green cloth-covered boards,
 												edges gilt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, grüner
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette und schwarze Tinte, Bleistift, grüner
 												Buntstift,</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, pencil, green
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple and black ink, pencil, green
 												pencil</material>
                       </support>
                       <extent>
@@ -1088,8 +1116,10 @@
                   <origin>
                     <origDate>1914 oder 15</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -1142,10 +1172,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und blaue Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and blue ink</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="de">Liniertes Papier</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Lined paper</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette und blaue Tinte</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple and blue ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -1179,8 +1209,10 @@
                   <origin>
                     <origDate when="1940-01-01">1940</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -1235,9 +1267,9 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;LANDOLT-ARBENZ
 												&amp; Co BAHNHOFSTR. 66. ZÜRICH&quot;, lined paper,
 												edges red</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette, blaue und schwarze
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette, blaue und schwarze
 												Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple, blue, and black ink</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple, blue, and black ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -1271,8 +1303,10 @@
                     <origPlace>Schweiz</origPlace>
                     <origDate when="1917-01-01">1917</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -1336,9 +1370,9 @@
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stationer&apos;s label &quot;FLEXOR NOTES No.
 												F103 WALKER&apos;S FLEXOR REFILL&quot;, lined paper, edges
 												gilt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, Bleistift, roter und
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette und schwarze Tinte, Bleistift, roter und
 												blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, pencil, red and blue
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple and black ink, pencil, red and blue
 												pencil</material>
                       </support>
                       <extent>
@@ -1383,8 +1417,10 @@
 											Italien</origPlace>
                     <origDate>[1936-1937]</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -1439,8 +1475,8 @@
                           liniertes Papier mit Kammmarmorschnitt</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial" xml:lang="en">Notebook with stamped serial number &quot;1487
                           &quot;, lined paper, edges combed marbled</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">violette und schwarze Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">purple and black ink, blue pencil</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="de">Violette und schwarze Tinte, blauer Buntstift</material>
+                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument" xml:lang="en">Purple and black ink, blue pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">  
@@ -1473,8 +1509,10 @@
                      </origPlace>
                     <origDate>[10.09.1912-06.05.1913, 20.-28.03.1914]</origDate>
                   </origin>
-                  <provenance>Archiv Atrium Press</provenance>
-                  <acquisition>Ankauf Christie&apos;s London 2014</acquisition>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition> <ab xml:lang="de"></ab>Ankauf Christie&apos;s London 2014
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
