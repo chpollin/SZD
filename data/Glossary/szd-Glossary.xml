@@ -132,7 +132,7 @@
     <rdfs:seeAlso rdf:resource="http://kalliope-verbund.info/_Resources/Persistent/5bf5cd96ea4448bfec20caf2e3d3063344d76b58/rna-berlin-wien-mastercopy-08-02-2010.pdf"></rdfs:seeAlso>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#CurrentLocation">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/archive/objects/query:szd.getstandorte/methods/sdef:Query/get"></dc:identifier>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.standorte"/>
     <skos:prefLabel xml:lang="de">Standorte</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Current Location</skos:prefLabel>
     <skos:definition xml:lang="de">Die Liste der Standorte zeigt deutlich den Grad der Zerstreuung der von Stefan Zweig hinterlassenen Manuskripte, Dokumente und Bücher in öffentlichen und privaten Sammlungen in aller Welt.
@@ -142,7 +142,7 @@
     </skos:definition>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Biography">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.biography"></dc:identifier>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.lebenskalender"/>
     <skos:prefLabel xml:lang="de">Biographie</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Biography</skos:prefLabel>
     <skos:definition xml:lang="de">Die hier an einem Zeitstrahl aufgeführten Einträge sollen eine Orientierung zu Leben und Werk Stefan Zweigs bieten. Verzeichnet sind wichtige Lebensereignisse, aber auch Bezüge zu Personen und zum Archivmaterial, das von hier direkt aufgerufen werden kann. 
@@ -160,7 +160,7 @@
       It is based on the bibliography compiled by Rainer-Joachim Siegel, who has variously assisted STEFAN ZWEIG DIGITAL with other helpful information.</skos:definition>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Person">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/archive/objects/query:szd.getperson/methods/sdef:Query/get"></dc:identifier>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.personen"/>
     <skos:prefLabel xml:lang="de">Personen</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Persons</skos:prefLabel>
     <skos:definition xml:lang="de">Der Index verzeichnet alle Namen von Personen, die in den Datensätzen erscheinen. Durch Anklicken eines Namens wird eine Suche im Gesamtbestand gestartet.
