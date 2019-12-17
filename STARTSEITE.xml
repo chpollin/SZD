@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Startseite SZD</title>
+                <author>
+                    <persName>
+                        <forename>Oliver</forename>
+                        <surname>Matuschek</surname>
+                    </persName>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                </publisher>
+                <authority>
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität
+                        Graz</orgName>
+                </authority>
+                <distributor>
+                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
+                        Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
+                        Commons BY-NC-SA 4.0</licence>
+                </availability>
+                <publisher>Literaturarchiv Salzburg</publisher>
+                <idno type="PID">o:szd.werke</idno>
+                <date when="2017-12-15">15.12.2017</date>
+            </publicationStmt>
+            <seriesStmt>
+                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+                <respStmt>
+                    <resp>Projektleitung</resp>
+                    <persName>
+                        <forename>Manfred</forename>
+                        <surname>Mittermayer</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenerfassung</resp>
+                    <persName>
+                        <forename>Lina</forename>
+                        <surname>Zangerl</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenmodellierung</resp>
+                    <persName>
+                        <forename>Christopher</forename>
+                        <surname>Pollin</surname>
+                    </persName>
+                </respStmt>
+            </seriesStmt>
+            <sourceDesc>
+                <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
+            </editorialDecl>
+            <projectDesc>
+                <ab>
+                    <ref target="/o:szd.werke" type="object"></ref>
+                </ab>
+                <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+                    dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+                    orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) möglich werden.</p>
+            </projectDesc>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="main">
+                <div xml:lang="de">
+                    <head>Willkommen bei STEFAN ZWEIG DIGITAL,</head>
+                    <p>dem Informations- und Forschungsportal zu Leben und Werk des österreichischen
+                        Schriftstellers Stefan Zweig. </p>
+                    
+                    <p>Im Zentrum des Projekts steht die Rekonstruktion von Stefan Zweigs weltweit
+                        verstreutem Nachlass. Hierzu sind bereits die umfangreichen <span target="https://gams.uni-graz.at/o:szd.werke" type="href">Manuskriptbestände</span> aus dem Literaturarchiv Salzburg und der     
+                        Daniel Reed Library in Fredonia/New York verzeichnet und teilweise mit
+                        digitalen Faksimiles ergänzt worden. Hinzu kommt das <span target="https://gams.uni-graz.at/o:szd.bibliothek" type="href">Verzeichnis von Zweigs Bibliothek</span>, das all jene heute noch
+                        nachweisbaren Buchbestände enthält, die er im Lauf seines Lebens an
+                        verschiedenen Orten zusammengetragen hat.</p>
+                    
+                    <p>STEFAN ZWEIG DIGITAL bietet umfangreiche Recherchemöglichkeiten, die durch
+                        besondere Themenseiten ergänzt werden. Eine Präsentation zu Stefan Zweigs
+                        Werk <span target="https://gams.uni-graz.at/o:szd.thema.1" type="href">
+                            <hi style="italic">Marie Antoinette</hi>
+                        </span> bildet den Auftakt dieser Reihe.</p>
+                    <p>Das internationale Projekt STEFAN ZWEIG DIGITAL ist eine Initiative des
+                        Literaturarchivs Salzburg und lädt alle Institutionen und privaten
+                        Sammlungen herzlich ein, ihre Bestände zum Thema einzubringen und zur
+                        Erweiterung des Informations- und Forschungsnetzwerks beizutragen.</p>
+                    <p>Kontakt: <span target="mailto:info@stefanzweig.digital" type="href">info@stefanzweig.digital</span>
+                    </p>
+                </div>
+                <div xml:lang="en">
+                    <head>Welcome to STEFAN ZWEIG DIGITAL,</head>
+                    <p>the information and research portal dedicated to the life and work of the
+                        Austrian writer Stefan Zweig.</p>
+                    
+                    <p>At the heart of the project is the reconstruction of Stefan Zweig’s
+                        posthumous papers, dispersed over the globe. To this end, the copious
+                        holdings of  <span target="https://gams.uni-graz.at/o:szd.werke" type="href">Zweig’s manuscripts</span> in the Literature Archive Salzburg and the
+                        Daniel A. Reed Library, State University of New York at Fredonia, have been
+                        indexed throughout, in many cases including digital facsimiles. This growing
+                        database is complemented by the catalogue of <span target="https://gams.uni-graz.at/o:szd.bibliothek" type="href">Zweig’s library</span>, comprising all
+                        traceable books that Zweig collected at various locations during the course
+                        of his life. </p>
+                    
+                    <p> STEFAN ZWEIG DIGITAL boasts not only extensive search facilities, but also
+                        special feature pages that concentrate on single topics. This series is
+                        launched with a presentation of Stefan Zweig’s biography of <span target="https://gams.uni-graz.at/o:szd.thema.1" type="href">
+                            <hi style="italic">Marie Antoinette</hi>
+                        </span>. </p>
+                    <p> The international project STEFAN ZWEIG DIGITAL is developed on the
+                        initiative of the Literature Archive Salzburg. All other institutions as
+                        well as private collections are invited to contribute records and images of
+                        their own holdings and so to help expand this information and research
+                        network. </p>
+                    <p>Contact: <span target="mailto:info@stefanzweig.digital" type="href">info@stefanzweig.digital</span>
+                    </p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
+
