@@ -514,7 +514,7 @@
                           xml:lang="de">Notizbuch mit Händlermarke N.° 4 - PAUTADO […] Industria
                           Brasileira und Stempel PAPELARIA ESTEVES PETROPOLIS</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
-                          xml:lang="en">Notebook with stationer's label"N.° 4 - PAUTADO […]
+                          xml:lang="en">Notebook with stationer's label "N.° 4 - PAUTADO […]
                           Industria Brasileira" and stamp "PAPELARIA ESTEVES PETROPOLIS"</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
                           xml:lang="de">Blaue und rote Tinte, Bleistift</material>
@@ -1626,7 +1626,7 @@
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                     ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
               <editor role="contributor"
-                    ><persName><surname>Sobotka</surname><forename>Osca</forename></persName></editor>
+                    ><persName><surname>Sobotka</surname><forename>Oscar</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -5350,7 +5350,7 @@
                           xml:lang="de">Notizbuch mit Händlermarke GEBRÜDER SCHOLL Poststrasse 3,
                           Zürich A4/90 4.25</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
-                          xml:lang="en">Notebook with stationer's label"GEBRÜDER SCHOLL Poststrasse
+                          xml:lang="en">Notebook with stationer's label "GEBRÜDER SCHOLL Poststrasse
                           3, Zürich A4/90 4.25"</material>
                         <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift, roter Buntstift</material>
@@ -8357,7 +8357,7 @@
                       Bibliotheks-Leihscheine des British Museums in London, Typoskripte und
                       Durchschläge von Abschriften diverser Texte von Balzac und anderen</ab>
                     <ab xml:lang="en">Various research material, holograph working notes, library
-                      tickets from the British Museum, typescripts and carbons of copies of various
+                      tickets from the British Museum, typescripts and carbon copies of various
                       texts by Balzac and others</ab>
                   </summary>
                   <textLang>
@@ -15993,9 +15993,10 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country/>
-                  <settlement/>
-                  <repository ref="http://d-nb.info/gnd/2156743-9"/>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig
+                    Collection</repository>
                   <idno type="signature">SZ-AP2/W-H172.3</idno>
                 </msIdentifier>
                 <msContents>
@@ -22238,7 +22239,7 @@
         <biblFull ana="Otto" xml:id="SZDMSK.280">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Otto Zarek</title>
+              <title ana="assigned">Otto Zarek</title>
               <title type="Einheitssachtitel">Otto Zarek</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
