@@ -1736,6 +1736,7 @@
                 <term ref="http://d-nb.info/gnd/118735691" type="person">Nüll, Eduard van der</term>
                 <term ref="http://d-nb.info/gnd/118765108" type="person">Siccard von Siccardsburg,
                   August</term>
+                <term ref="http://d-nb.info/gnd/116001151" type="person">Zweig, Lotte</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -1912,7 +1913,8 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origDate>35 [Datumsangabe mit Überstrich]</origDate>
+                    <origDate xml:lang="de"> 35 [Datumsangabe mit Überstrich]</origDate>
+                    <origDate xml:lang="en"> 35 [Overlined date]</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -3995,7 +3997,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab>[keine Schreiberhände]</ab>
+                    <ab xml:lang="de">[Keine Schreiberhände]</ab>
+                    <ab xml:lang="en">[No writer's hand]</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -6276,10 +6279,10 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Konvolut</term>: , unterschiedliche Formate,
+                          <term type="objecttyp">Konvolut</term>, 17 Blatt, unterschiedliche Formate,
                           zugeschnittene Fragmente </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Collection</term>: </span>
+                          <term type="objecttyp">Collection</term> of 17 leaves, various sizes, fragments cut to size</span>
                         <measure type="format">6x2 cm bis 16x6 cm</measure>
                       </extent>
                     </supportDesc>
@@ -11900,9 +11903,11 @@
                       <support/>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Konvolut</term>: </span>
+                          <term type="objecttyp">Konvolut</term>: Manuskript, Typoskript, Brief und Umschlag, 5
+                          Blatt</span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Collection</term>: </span>
+                          <term type="objecttyp">Collection</term>: manuscript, 
+                          typescript, letter and envelope, 5 leaves</span>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -13596,6 +13601,7 @@
             <notesStmt>
               <note xml:lang="de">Typoskriptdurchschläge in doppelter Ausführung mit identischen
                 Korrekturen von fremder Hand</note>
+              <note xml:lang="en">Carbon copies in duplicate with identical corrections in an unidentified hand</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
