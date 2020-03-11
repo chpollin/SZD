@@ -1,156 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Projekt</title>
-        <author>
-          <persName>
-            <forename>Oliver</forename>
-            <surname>Matuschek</surname>
-          </persName>
-        </author>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
-        </publisher>
-        <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Projekt</title>
+                <author>
+                    <persName>
+                        <forename>Oliver</forename>
+                        <surname>Matuschek</surname>
+                    </persName>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                </publisher>
+                <authority>
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
                         Karl-Franzens-Universität Graz</orgName>
-        </authority>
-        <distributor>
-          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
-        </distributor>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
-        </availability>
-        <publisher>Literaturarchiv Salzburg</publisher>
-        <idno type="PID">o:szd.werke</idno>
-        <date when="2017-12-15">15.12.2017</date>
-      </publicationStmt>
-      <seriesStmt>
-        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
-        <respStmt>
-          <resp>Projektleitung</resp>
-          <persName>
-            <forename>Manfred</forename>
-            <surname>Mittermayer</surname>
-          </persName>
-        </respStmt>
-        <respStmt>
-          <resp>Datenerfassung</resp>
-          <persName>
-            <forename>Lina</forename>
-            <surname>Zangerl</surname>
-          </persName>
-        </respStmt>
-        <respStmt>
-          <resp>Datenmodellierung</resp>
-          <persName>
-            <forename>Christopher</forename>
-            <surname>Pollin</surname>
-          </persName>
-        </respStmt>
-      </seriesStmt>
-      <sourceDesc>
-        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <editorialDecl>
-        <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
-      </editorialDecl>
-      <projectDesc>
-        <ab>
-          <ref target="/o:szd.werke" type="object"></ref>
-        </ab>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
+                </authority>
+                <distributor>
+                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
+                </availability>
+                <publisher>Literaturarchiv Salzburg</publisher>
+                <idno type="PID">o:szd.werke</idno>
+                <date when="2017-12-15">15.12.2017</date>
+            </publicationStmt>
+            <seriesStmt>
+                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+                <respStmt>
+                    <resp>Projektleitung</resp>
+                    <persName>
+                        <forename>Manfred</forename>
+                        <surname>Mittermayer</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenerfassung</resp>
+                    <persName>
+                        <forename>Lina</forename>
+                        <surname>Zangerl</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenmodellierung</resp>
+                    <persName>
+                        <forename>Christopher</forename>
+                        <surname>Pollin</surname>
+                    </persName>
+                </respStmt>
+            </seriesStmt>
+            <sourceDesc>
+                <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
+            </editorialDecl>
+            <projectDesc>
+                <ab>
+                    <ref target="/o:szd.werke" type="object"></ref>
+                </ab>
+                <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
                     interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
                     digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
                     wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
                     (z.B. digitalen Editionen) möglich werden.</p>
-      </projectDesc>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="main">
-        <div xml:lang="de">
-          <div>
-            <head>Der Nachlass Stegan Zweigs und seine Überlieferung</head>
-            <p>Der österreichische Schriftsteller Stefan Zweig (1881–1942) erlangte insbesondere mit seinen Novellen und Biographien Weltruhm. Nicht zuletzt durch seinen Gang ins Exil ergab
-                        sich für seinen schriftlichen Nachlass eine Verteilung auf zahlreiche öffentliche und private Sammlungen und somit eine komplizierte und teilweise unübersichtliche
-                        Überlieferungslage. Aufgrund dessen standen Originalmanuskripte und weitere Materialien eines der auflagenstärksten und meistübersetzten deutschsprachigen Autoren des 20.
-                        Jahrhunderts trotz anhaltendem Interesse an seinem Werk bisher nur eingeschränkt zur Verfügung.</p>
-            <p>Das Literaturarchiv Salzburg bewahrt seit 2014 eine der größten Sammlungen von Materialien aus dem Nachlass Stefan Zweigs auf, darunter über 50 Manuskripte und Typoskripte sowie
-                        mehr als ein Dutzend Werknotizbücher und seine sämtlichen bekannten Tagebücher. Dieser wertvolle Bestand wird nun im Rahmen des Projekts STEFAN ZWEIG DIGITAL einer weltweiten
-                        Öffentlichkeit zugänglich gemacht. Mit der Einrichtung dieser erweiterbaren digitalen Präsentation ist zugleich die Basis für zukünftige Transkriptionen und wissenschaftliche
-                        Bearbeitungen des Quellenmaterials geschaffen. Gleichzeitig sind auch Werkmanuskripte und Typoskripte Stefan Zweigs aus der umfangreichen Sammlung der Daniel A. Reed Library
-                        der State University of New York in Fredonia in das System aufgenommen worden. Damit ist der auf diese beiden Institutionen aufgeteilte literarische Nachlass Zweigs, der all
-                        jene Dokumente umfasst, die sich bis zu seinem Tod in seinem Besitz befanden, erstmals in seiner Gesamtheit katalogisiert und erschlossen worden.</p>
-          </div>
-          <div>
-            <head>Inhalte und Zugänge</head>
-            <p>Das in STEFAN ZWEIG DIGITAL unter Verwendung etablierter Katalogisierungsstandards für Archive und Bibliotheken erfasste Material ist mit weitreichenden Beschreibungen und
-                        Verknüpfungen versehen, die ganz unterschiedliche Zugänge zur Beantwortung wissenschaftlicher Fachfragen wie auch für die interessierte Öffentlichkeit bieten. So stehen für die
-                        Recherche neben den Katalogen eine biographische Übersicht sowie ein Index der Personen und Standorte mit über 700 Einträgen zur Verfügung. Hinzu kommt das Verzeichnis der
-                        erhaltenen Bücher aus Zweigs Bibliothek, das einen wichtigen Einblick in die von ihm wahrgenommene, gelesene und als Quelle für seine Werke genutzte Literatur bietet.
-                        Zusätzlich werden hochwertige digitale Faksimiles der Werke und Lebensdokumente zur Verfügung gestellt, die online durchblättert werden können. </p>
-            <p>Während klassische archivarische und bibliothekarische Erschließungsmaßnahmen im Hinblick auf die Komplexität von Schriftstellernachlässen oftmals an Grenzen stoßen, sind die
-                        Kontextualisierung und Semantisierung der Objekte in STEFAN ZWEIG DIGITAL potentiell immer weiter ausbaubar und flexibel verknüpfbar. Das Einbinden der Daten und Metadaten aus
-                        verschiedenen Sammlungen wird schließlich eine weitreichendere virtuelle Rekonstruktion des Gesamtnachlasses ermöglichen, welche die Originalquellen und ihren ursprünglichen
-                        Entstehungszusammenhang in einzigartiger Breite und Tiefe erfahrbar macht.</p>
-          </div>
-          <div>
-            <head>Technische Infrastruktur und Metadaten</head>
-            <p>Die um Metadaten angereicherten Scans und anderen digitalen Objekte werden im Geisteswissenschaftliches Asset Management System (GAMS) verwaltet und publiziert, das am Zentrum
-                        für Informationsmodellierung (ZIM) der Universität Graz kontinuierlich weiterentwickelt wird. Als Trusted Digital Repository ermöglicht GAMS die für STEFAN ZWEIG DIGITAL
-                        wesentliche verlässliche digitale Archivierung und Wiederverwendbarkeit der Ressourcen und durch permanente Identifikatoren (PID) eine eindeutige Zitierbarkeit der digitalen
-                        Objekte. Durch das OAIS-konformen System ist zudem die Langzeitverfügbarkeit der Daten gesichert. GAMS setzt auf einer webservice-basierten (SOAP, REST), plattformunabhängigen
-                        und verteilten Systemarchitektur auf. Es kommen eine weitgehend XML-basierte Content-Strategie sowie standardisierte (Meta-)Daten-formate (TEI, Dublin Core, RDF) zum Einsatz.
-                        Die für Nachlassmaterialien zentralen Kategorien Personen, Titel und Entstehungsort sind unter Verwendung der Gemeinsamen Normdatei (GND) sowie von GeoNames für topographische
-                        Angaben ausgezeichnet worden. Die Digitalisate entsprechen dem IIIF-Standard und werden im Mirador-Viewer zur Verfügung gestellt.</p>
-            <p>Sämtliche aktuelle Retrieval-Funktionalitäten von STEFAN ZWEIG DIGITAL basieren auf RDF Daten und erlauben es, nach semantischen Konzepten und deren Verknüpfungen, wie Personen,
-                        Standorten, RNA-Kategorien oder Provenienzkriterien zu suchen. Um dies zu erreichen, werden beim Ingest der Daten in die GAMS-Infrastruktur bestimmte Metadaten und Relationen
-                        als RDF abgebildet. Das System verwendet als Triplestore die Open Source Software Blazegraph, die über eine integrierte Volltextsuche verfügt. Über ein Content-Model für
-                        Query-Objekte können RDF-Daten mittels SPARQL abgefragt werden. Die Formalisierung der Daten auf Basis eines domänenspezifischen RDFs, das auf Wissensbasen (wikidata)
-                        beziehungsweise auf Top-Level Ontologien (CIDOC) referenziert, wird zum einen der Komplexität des Nachlassmaterials und zum anderen den Ansprüchen an interoperable Daten im
-                        Sinne von Linked Open Data gerecht.</p>
-          </div>
-          <div>
-            <head>TrägerInnen, KooperationspartnerInnen und BeiträgerInnen</head>
-            <p>Das Projekt STEFAN ZWEIG DIGITAL ist eine Initiative des Literaturarchivs Salzburg an der Universität Salzburg. 
-              Es ist in Zusammenarbeit mit dem Zentrum für Informationsmodellierung der Universität Graz und zahlreichen freiwilligen BeiträgerInnen realisiert worden.
-              Seit der Veröffentlichung von STEFAN ZWEIG DIGITAL im Juni 2018 konnten die National Library of Israel in Jerusalem und die Reed Library der State University 
-              of New York in Fredonia mit ihren herausragenden Sammlungsbeständen zu Stefan Zweig als Kooperationspartnerinnen gewonnen werden. Weiterhin sind Institutionen
-              sowie Privatsammlungen ausdrücklich eingeladen, ihre Bestände zu Stefan Zweig und seinem Umfeld virtuell in das Projekt einzubringen und durch die Erweiterung
-              des Datenbestands den Wert des entstehenden Netzwerks noch erheblich zu steigern.</p>
-          </div>
-        </div>
-        <div xml:lang="en">
-          <div>
-            <head>The Estate of Stefan Zweig: History and Holdings</head>
-            <p>It is his novellas and biographies in particular through which the Austrian writer Stefan Zweig (1881–1942) achieved his worldwide fame. Owing to a number of factors, not least among which is his escape into exile, Zweig’s posthumous papers are today dispersed among several public and private collections, creating a complex and sometimes confusing archival situation. In spite of undiminished interest in his works, access to the original manuscripts of one of the most widely circulated and translated German-language writers of the 20th century, as well as to much additional material from his estate, has hitherto been fraught with obstacles.</p>
-            <p>Since 2014 the Literature Archive Salzburg has been host to one of the largest collections of material from Stefan Zweig’s literary estate, including more than 50 manuscripts and typescripts, more than a dozen notebooks, and all his known diaries. These valuable holdings have now been made available to the public worldwide through the STEFAN ZWEIG DIGITAL project, an expandable digital presentation that provides the basis for future transcriptions and a scholarly study of the source material. Additionally, the system incorporates manuscripts and typescripts held by the copious Stefan Zweig Collection at the Daniel A. Reed Library, State University of New York at Fredonia. Thus, Zweig&apos;s literary estate, comprising all documents in his possession at the time of his death and now dispersed among both repositories, has been fully catalogued and made accessible to scholarship for the first time.</p>
-          </div>
-          <div>
-            <head>Scope and Approaches</head>
-            <p>All material in STEFAN ZWEIG DIGITAL is catalogued according to established archival and library standards and provided with in-depth descriptions and links that open up a large range of
-             approaches both to scholars as well as to interested non-specialists. Apart from the catalogues proper, researchers are provided with a biographical outline as well as with an index of names and locations encompassing more than 700 entries. Moreover, the site offers a catalogue of all extant books from Zweig’s personal library, facilitating important insights into the works which Zweig took note of, read, and used as sources for his own writings. High-resolution digital facsimiles of Zweig’s works and personal records can be browsed online.</p>
-            <p>While the complexity of a writer’s literary estate often stretches to the limit traditional archival and library management approaches, the contextualization and semanticization of objects in STEFAN ZWEIG DIGITAL remain potentially ever-expandable and flexibly linkable. Ultimately, incorporating data and metadata from a variety of collections will enable a more extensive virtual reconstruction of Zweig’s entire estate, allowing users to experience the original sources and the context of their genesis in unique depth and scope.</p>
-          </div>
-          <div>
-            <head>Technical Infrastructure and Metadata</head>
-            <p>The scans and other digital objects, enriched with metadata, are administrated and published within the “GAMS” Asset Management System for the Humanities, developed and continuously improved by the Centre for Information Modelling (ZIM) at the University of Graz. A Trusted Digital Repository, GAMS provides STEFAN ZWEIG DIGITAL with essential and reliable digital archiving facilities, providing reusability of resources and, through persistent identifiers (PIDs), unambiguous references to the digital objects. In addition, the OAIS-compliant system ensures long-term data availability. GAMS builds on a webservice-based (SOAP, REST), platform-independent, distributed system architecture using a largely XML-based content strategy and standardized data and metadata formats (TEI, Dublin Core, RDF). The categories “author”, “title”, and “place of origin” crucial to the management of posthumous papers have been tagged using the the Integrated Authority File (GND) and GeoNames for place designations. Digital representations meet the IIIF standard and are displayed in the Mirador Viewer.</p>
-            <p>All current retrieval functionalities in STEFAN ZWEIG DIGITAL are based on RDF data which enable users to search for semantic concepts individually and in combination, such as persons, places, RNA categories, or provenance criteria. To this end, certain metadata and relations are imaged in RDF terms during the process of data ingestion into the GAMS infrastructure. The triplestore database system utilizes the open-source platform Blazegraph, which offers integrated full-text query capabilities; RDF data can be retrieved via SPARQL queries and a content model for query objects. The formalization of data on the basis of a domain-specific RDF referencing knowledge bases (wikidata) and top-level ontologies (CIDOC) both satisfies the requirements of the archival material and meets the standards of data interoperability and Linked Open Data.</p>
-          </div>
-          <div>
-            <head>Hosts, Cooperation Partners, and Contributors</head>
-            <p>The STEFAN ZWEIG DIGITAL project is an initiative of the Literature Archive Salzburg based at the University of Salzburg and was realized in collaboration with the Centre for Information Modelling at the University of Graz and a large number of volunteers. Since its launch in June 2018, two major repositories of Zweigian collections, the National Library of Israel in Jerusalem and the Reed Library, State University of New York at Fredonia, have joined the project as cooperation partners. Other institutions as well as private collections remain invited to contribute records and images of their own holdings relating to Stefan Zweig and his sphere: by expanding the project database, they will be significantly increasing the burgeoning network’s usefulness.</p>
-          </div>
-        </div>
-      </div>
-    </body>
-  </text>
+            </projectDesc>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="main">
+                <div xml:lang="de">
+                    <div>
+                        <head>Der Nachlass Stefan Zweigs und seine Überlieferung</head>
+                        <p>Der österreichische Schriftsteller Stefan Zweig (1881–1942) erlangte insbesondere mit seinen Novellen und Biographien Weltruhm. Nicht zuletzt durch seinen Gang ins Exil ergab
+                            sich für seinen schriftlichen Nachlass eine Verteilung auf zahlreiche öffentliche und private Sammlungen und somit eine komplizierte und teilweise unübersichtliche
+                            Überlieferungslage. Aufgrund dessen standen Originalmanuskripte und weitere Materialien eines der auflagenstärksten und meistübersetzten deutschsprachigen Autoren des 20.
+                            Jahrhunderts trotz anhaltendem Interesse an seinem Werk bisher nur eingeschränkt zur Verfügung.</p>
+                        <p>Das Literaturarchiv Salzburg bewahrt seit 2014 eine der größten Sammlungen von Materialien aus dem Nachlass Stefan Zweigs auf, darunter über 50 Manuskripte und Typoskripte sowie
+                            mehr als ein Dutzend Werknotizbücher und seine sämtlichen bekannten Tagebücher. Dieser wertvolle Bestand wird nun im Rahmen des Projekts STEFAN ZWEIG DIGITAL einer weltweiten
+                            Öffentlichkeit zugänglich gemacht. Mit der Einrichtung dieser erweiterbaren digitalen Präsentation ist zugleich die Basis für zukünftige Transkriptionen und wissenschaftliche
+                            Bearbeitungen des Quellenmaterials geschaffen. Gleichzeitig sind auch Werkmanuskripte und Typoskripte Stefan Zweigs aus der umfangreichen Sammlung der Daniel A. Reed Library
+                            der State University of New York in Fredonia in das System aufgenommen worden. Damit ist der auf diese beiden Institutionen aufgeteilte literarische Nachlass Zweigs, der all
+                            jene Dokumente umfasst, die sich bis zu seinem Tod in seinem Besitz befanden, erstmals in seiner Gesamtheit katalogisiert und erschlossen worden.</p>
+                    </div>
+                    <div>
+                        <head>Inhalte und Zugänge</head>
+                        <p>Das in STEFAN ZWEIG DIGITAL unter Verwendung etablierter Katalogisierungsstandards für Archive und Bibliotheken erfasste Material ist mit weitreichenden Beschreibungen und
+                            Verknüpfungen versehen, die ganz unterschiedliche Zugänge zur Beantwortung wissenschaftlicher Fachfragen wie auch für die interessierte Öffentlichkeit bieten. So stehen für die
+                            Recherche neben den Katalogen eine biographische Übersicht sowie ein Index der Personen und Standorte mit über 700 Einträgen zur Verfügung. Hinzu kommt das Verzeichnis der
+                            erhaltenen Bücher aus Zweigs Bibliothek, das einen wichtigen Einblick in die von ihm wahrgenommene, gelesene und als Quelle für seine Werke genutzte Literatur bietet.
+                            Zusätzlich werden hochwertige digitale Faksimiles der Werke und Lebensdokumente zur Verfügung gestellt, die online durchblättert werden können. </p>
+                        <p>Während klassische archivarische und bibliothekarische Erschließungsmaßnahmen im Hinblick auf die Komplexität von Schriftstellernachlässen oftmals an Grenzen stoßen, sind die
+                            Kontextualisierung und Semantisierung der Objekte in STEFAN ZWEIG DIGITAL potentiell immer weiter ausbaubar und flexibel verknüpfbar. Das Einbinden der Daten und Metadaten aus
+                            verschiedenen Sammlungen wird schließlich eine weitreichendere virtuelle Rekonstruktion des Gesamtnachlasses ermöglichen, welche die Originalquellen und ihren ursprünglichen
+                            Entstehungszusammenhang in einzigartiger Breite und Tiefe erfahrbar macht.</p>
+                    </div>
+                    <div>
+                        <head>Technische Infrastruktur und Metadaten</head>
+                        <p>Die um Metadaten angereicherten Scans und anderen digitalen Objekte werden im Geisteswissenschaftliches Asset Management System (GAMS) verwaltet und publiziert, das am Zentrum
+                            für Informationsmodellierung (ZIM) der Universität Graz kontinuierlich weiterentwickelt wird. Als Trusted Digital Repository ermöglicht GAMS die für STEFAN ZWEIG DIGITAL
+                            wesentliche verlässliche digitale Archivierung und Wiederverwendbarkeit der Ressourcen und durch permanente Identifikatoren (PID) eine eindeutige Zitierbarkeit der digitalen
+                            Objekte. Durch das OAIS-konformen System ist zudem die Langzeitverfügbarkeit der Daten gesichert. GAMS setzt auf einer webservice-basierten (SOAP, REST), plattformunabhängigen
+                            und verteilten Systemarchitektur auf. Es kommen eine weitgehend XML-basierte Content-Strategie sowie standardisierte (Meta-)Daten-formate (TEI, Dublin Core, RDF) zum Einsatz.
+                            Die für Nachlassmaterialien zentralen Kategorien Personen, Titel und Entstehungsort sind unter Verwendung der Gemeinsamen Normdatei (GND) sowie von GeoNames für topographische
+                            Angaben ausgezeichnet worden. Die Digitalisate entsprechen dem IIIF-Standard und werden im Mirador-Viewer zur Verfügung gestellt.</p>
+                        <p>Sämtliche aktuelle Retrieval-Funktionalitäten von STEFAN ZWEIG DIGITAL basieren auf RDF Daten und erlauben es, nach semantischen Konzepten und deren Verknüpfungen, wie Personen,
+                            Standorten, RNA-Kategorien oder Provenienzkriterien zu suchen. Um dies zu erreichen, werden beim Ingest der Daten in die GAMS-Infrastruktur bestimmte Metadaten und Relationen
+                            als RDF abgebildet. Das System verwendet als Triplestore die Open Source Software Blazegraph, die über eine integrierte Volltextsuche verfügt. Über ein Content-Model für
+                            Query-Objekte können RDF-Daten mittels SPARQL abgefragt werden. Die Formalisierung der Daten auf Basis eines domänenspezifischen RDFs, das auf Wissensbasen (wikidata)
+                            beziehungsweise auf Top-Level Ontologien (CIDOC) referenziert, wird zum einen der Komplexität des Nachlassmaterials und zum anderen den Ansprüchen an interoperable Daten im
+                            Sinne von Linked Open Data gerecht.</p>
+                    </div>
+                    <div>
+                        <head>TrägerInnen, KooperationspartnerInnen und BeiträgerInnen</head>
+                        <p>Das Projekt STEFAN ZWEIG DIGITAL ist eine Initiative des Literaturarchivs Salzburg an der Universität Salzburg. 
+                            Es ist in Zusammenarbeit mit dem Zentrum für Informationsmodellierung der Universität Graz und zahlreichen freiwilligen BeiträgerInnen realisiert worden.
+                            Seit der Veröffentlichung von STEFAN ZWEIG DIGITAL im Juni 2018 konnten die National Library of Israel in Jerusalem und die Reed Library der State University 
+                            of New York in Fredonia mit ihren herausragenden Sammlungsbeständen zu Stefan Zweig als Kooperationspartnerinnen gewonnen werden. Weiterhin sind Institutionen
+                            sowie Privatsammlungen ausdrücklich eingeladen, ihre Bestände zu Stefan Zweig und seinem Umfeld virtuell in das Projekt einzubringen und durch die Erweiterung
+                            des Datenbestands den Wert des entstehenden Netzwerks noch erheblich zu steigern.</p>
+                    </div>
+                    <div>
+                        <head>Versionen</head>
+                         <p>* Version 1: Launch, Juni 2018</p>
+                         <p>* Version 2: Erweiterung um englische Version, Dezember 2019</p>
+                        <p>
+                            Das letzte Update der Daten wird im Zitiervorschlag des jeweiligen Eintrags angegeben. 
+                        </p>
+                    </div>
+                    <div>
+                        <head>Zitiervorschlag</head>
+                        <p>Zweig, Stefan: Die Welt von Gestern, Notizbuch [Die Welt von Gestern]. Literaturarchiv Salzburg, SZ-AAP/W10. In: Stefan Zweig digital, Hrsg. Literaturarchiv Salzburg, Letztes Update 20.01.2020, URL: stefanzweig.digital/o:szd.werke#SZDMSK.17</p></div>
+                </div>
+                <div xml:lang="en">
+                    <div>
+                        <head>The Estate of Stefan Zweig: History and Holdings</head>
+                        <p>It is his novellas and biographies in particular through which the Austrian writer Stefan Zweig (1881–1942) achieved his worldwide fame. Owing to a number of factors, not least among which is his escape into exile, Zweig’s posthumous papers are today dispersed among several public and private collections, creating a complex and sometimes confusing archival situation. In spite of undiminished interest in his works, access to the original manuscripts of one of the most widely circulated and translated German-language writers of the 20th century, as well as to much additional material from his estate, has hitherto been fraught with obstacles.</p>
+                        <p>Since 2014 the Literature Archive Salzburg has been host to one of the largest collections of material from Stefan Zweig’s literary estate, including more than 50 manuscripts and typescripts, more than a dozen notebooks, and all his known diaries. These valuable holdings have now been made available to the public worldwide through the STEFAN ZWEIG DIGITAL project, an expandable digital presentation that provides the basis for future transcriptions and a scholarly study of the source material. Additionally, the system incorporates manuscripts and typescripts held by the copious Stefan Zweig Collection at the Daniel A. Reed Library, State University of New York at Fredonia. Thus, Zweig&apos;s literary estate, comprising all documents in his possession at the time of his death and now dispersed among both repositories, has been fully catalogued and made accessible to scholarship for the first time.</p>     
+                    </div>
+                    <div>
+                        <head>Scope and Approaches</head>
+                        <p>All material in STEFAN ZWEIG DIGITAL is catalogued according to established archival and library standards and provided with in-depth descriptions and links that open up a large range of
+                            approaches both to scholars as well as to interested non-specialists. Apart from the catalogues proper, researchers are provided with a biographical outline as well as with an index of names and locations encompassing more than 700 entries. Moreover, the site offers a catalogue of all extant books from Zweig’s personal library, facilitating important insights into the works which Zweig took note of, read, and used as sources for his own writings. High-resolution digital facsimiles of Zweig’s works and personal records can be browsed online.</p>
+                        <p>While the complexity of a writer’s literary estate often stretches to the limit traditional archival and library management approaches, the contextualization and semanticization of objects in STEFAN ZWEIG DIGITAL remain potentially ever-expandable and flexibly linkable. Ultimately, incorporating data and metadata from a variety of collections will enable a more extensive virtual reconstruction of Zweig’s entire estate, allowing users to experience the original sources and the context of their genesis in unique depth and scope.</p>
+                    </div>
+                    <div>
+                        <head>Technical Infrastructure and Metadata</head>
+                        <p>The scans and other digital objects, enriched with metadata, are administrated and published within the “GAMS” Asset Management System for the Humanities, developed and continuously improved by the Centre for Information Modelling (ZIM) at the University of Graz. A Trusted Digital Repository, GAMS provides STEFAN ZWEIG DIGITAL with essential and reliable digital archiving facilities, providing reusability of resources and, through persistent identifiers (PIDs), unambiguous references to the digital objects. In addition, the OAIS-compliant system ensures long-term data availability. GAMS builds on a webservice-based (SOAP, REST), platform-independent, distributed system architecture using a largely XML-based content strategy and standardized data and metadata formats (TEI, Dublin Core, RDF). The categories “author”, “title”, and “place of origin” crucial to the management of posthumous papers have been tagged using the the Integrated Authority File (GND) and GeoNames for place designations. Digital representations meet the IIIF standard and are displayed in the Mirador Viewer.</p>
+                        <p>All current retrieval functionalities in STEFAN ZWEIG DIGITAL are based on RDF data which enable users to search for semantic concepts individually and in combination, such as persons, places, RNA categories, or provenance criteria. To this end, certain metadata and relations are imaged in RDF terms during the process of data ingestion into the GAMS infrastructure. The triplestore database system utilizes the open-source platform Blazegraph, which offers integrated full-text query capabilities; RDF data can be retrieved via SPARQL queries and a content model for query objects. The formalization of data on the basis of a domain-specific RDF referencing knowledge bases (wikidata) and top-level ontologies (CIDOC) both satisfies the requirements of the archival material and meets the standards of data interoperability and Linked Open Data.</p>
+                    </div>
+                    <div>
+                        <head>Hosts, Cooperation Partners, and Contributors</head>
+                        <p>The STEFAN ZWEIG DIGITAL project is an initiative of the Literature Archive Salzburg based at the University of Salzburg and was realized in collaboration with the Centre for Information Modelling at the University of Graz and a large number of volunteers. Since its launch in June 2018, two major repositories of Zweigian collections, the National Library of Israel in Jerusalem and the Reed Library, State University of New York at Fredonia, have joined the project as cooperation partners. Other institutions as well as private collections remain invited to contribute records and images of their own holdings relating to Stefan Zweig and his sphere: by expanding the project database, they will be significantly increasing the burgeoning network’s usefulness.</p>
+                    </div>
+                    <div>
+                        <head>Versions</head>
+                        <p>* Version 1: Launch, June 2018</p>
+                        <p>* Version 2: Extension English version, December 2019</p>
+                        <p>
+                            The last update of the data is stated in the suggested citation of the respective entry.
+                        </p>
+                    </div>
+                    <div>
+                        <div>
+                            <head>Suggested citation</head>
+                            <p>Zweig, Stefan: Die Welt von Gestern, Notebook [Die Welt von Gestern]. Literaturarchiv Salzburg, SZ-AAP/W10. In: Stefan Zweig digital, Ed. Literaturarchiv Salzburg, Last Update 20.01.2020, URL: stefanzweig.digital/o:szd.werke#SZDMSK.17</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
 </TEI>
+
