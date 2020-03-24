@@ -84,6 +84,13 @@
           Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
           werden.</p>
       </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>
+            Namespace für den Glossar in Stefan Zweig Digital.
+          </p>
+        </prefixDef>
+      </listPrefixDef>
     </encodingDesc>
   </teiHeader>
   <text>
@@ -125,13 +132,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Kariertes Papier, Label „ELASTIC No. 1610“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Squared paper, label "ELASTIC No. 1610"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -163,14 +170,14 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript, 1 Blatt, mit Adresse eigenhändig
                           in violetter Tinte</desc>
                         <desc xml:lang="en">Inserted manuscript, 1 leaf, with address, holograph in
                           purple ink</desc>
                         <measure type="format">11x8 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript, 1 Blatt, mit Notiz „Bajaderka von
                           M. Petipa Musik von G. Minkus Semjenowa“ eigenhändig (?) in
                           Bleistift</desc>
@@ -178,7 +185,7 @@
                           Petipa Musik von G. Minkus Semjenowa", holograph (?) in pencil</desc>
                         <measure type="format">16x10 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Theaterkarten des Moskauer Kunsttheaters, No 10 und No
                           11 auf einem Bogen, verso Datumsstempel 14. September 1928</desc>
                         <desc xml:lang="en">Theatre tickets for the Moscow Art Theatre, nos. 10
@@ -242,10 +249,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Tagebuch 1931 21. October begonnen“ in violetter Tinte und
                       „Richard Strauss darin“ in blauem Buntstift eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Tagebuch 1931 21. October begonnen" in purple ink and "Richard
                       Strauss darin" in blue pencil, holograph</docEdition>
                   </msItem>
@@ -254,13 +261,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Kariertes, am Falz perforiertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Squared paper, perforated at the hinge</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil, blue pencil</material>
                       </support>
                       <extent>
@@ -289,14 +296,14 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript, 3 Blatt, eigenhändig in Bleistift
                           mit dem Titel „Richard Strauss 1935 Juni Brieg“</desc>
                         <desc xml:lang="en">Inserted manuscript, 3 leaves, holograph in pencil,
                           entitled "Richard Strauss 1935 Juni Brieg"</desc>
                         <measure type="format">17x11 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Telegrammaufgabeblatt des Österreichischen Telegraph
                           blanko</desc>
                         <desc xml:lang="en">Austrian Telegraph telegram form, blank</desc>
@@ -376,10 +383,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titelblatt mit Aufschrift „Mit Gott!“ von Anna Meingast (?) und
                       „Begonnen August 1932“ eigenhändig sowie Inhaltsverzeichnis</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title-page inscribed "Mit Gott!" by Anna Meingast (?) and
                       "Begonnen August 1932" holograph; table of contents</docEdition>
                   </msItem>
@@ -388,14 +395,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Papier mit Tabellenvordruck, marmorierter Schnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Pre-printed form paper, marbled edges</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette, schwarze, rote, braune und blaue Tinte, Bleistift,
                           roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple, black, red, brown, and blue ink, pencil, red and
                           blue pencil</material>
                       </support>
@@ -431,14 +438,14 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Brief des Verlags Mizpah Publishing Co. LTD. an Stefan
                           Zweig, datiert Tel-Aviv, 7th January 1934</desc>
                         <desc xml:lang="en">Letter from the Mizpah Publishing Co. Ltd to Stefan
                           Zweig, dated Tel-Aviv, 7th January 1934</desc>
                         <measure type="format">28x22 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Postkarte des Verlags Curtis Brown LTD., datiert Berlin,
                           d. 2.5.1933.</desc>
                         <desc xml:lang="en">Postcard from Curtis Brown Ltd, publishers, dated
@@ -521,13 +528,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Vorgedrucktes Vertragsformular, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Pre-printed contract form, hole punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette und schwarze Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple and black ink</material>
                       </support>
                       <extent>
@@ -623,15 +630,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier Casa Editrice A. Mondadori, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Casa Editrice A. Mondadori stationery, hole
                           punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette Tinte, pinker
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple ink, pink pencil</material>
                       </support>
                       <extent>
@@ -723,14 +730,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Doppelbogen, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Bifolium, hole punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und grüne Tinte,
                           Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and green ink, pencil</material>
                       </support>
                       <extent>
@@ -827,14 +834,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier Forum Verlag, gelocht</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Forum Verlag stationery, hole punched</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte,
                           Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple and black ink, pencil</material>
                       </support>
                       <extent>
@@ -922,10 +929,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig 49, Hallam Street London W.“ in violetter Tinte
                       und „1936“ in grünem Buntstift eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig 49, Hallam Street London W." in purple ink and
                       "1936" in green pencil, holograph</docEdition>
                   </msItem>
@@ -934,16 +941,16 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke „National NATTY MEMO BOOK Patent
                           No. 219547 REFILL No 6340. (British Made.)“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "National NATTY MEMO BOOK
                           Patent No. 219547 REFILL No 6340. (British Made.)"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette, schwarze und rot Tinte, Bleistift, grüner und
                           blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple, black, and red ink, pencil, green and blue
                           pencil</material>
                       </support>
@@ -1028,10 +1035,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Creditbr 17011 [durchgestrichen] 5771“ in Bleistift und „1914
                       oder 15“ in grünem Buntstift eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Creditbr 17011 [stricken out] 5771“ in pencil and "1914 oder
                       15" in green pencil, holograph</docEdition>
                   </msItem>
@@ -1040,18 +1047,18 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Ringbuch mit Händlermarke Papierhandlung „Huber &amp; Lerner
                           Wien, I. Kohlmarkt 9“, karierte Einlageblätter der Größe No. 6030 mit
                           dunkelgrünen, leinenkaschierten Deckeln und Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Ring binder with stationer's label "Huber &amp; Lerner Wien,
                           I. Kohlmarkt 9", squared loose leaves size no. 6030, dark green
                           cloth-covered boards, edges gilt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, Bleistift, grüner
                           Buntstift,</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, pencil, green pencil</material>
                       </support>
                       <extent>
@@ -1134,9 +1141,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel eigenhändig in violetter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Holograph title in purple ink</docEdition>
                   </msItem>
                 </msContents>
@@ -1144,13 +1151,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und blaue Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and blue ink</material>
                       </support>
                       <extent>
@@ -1236,15 +1243,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke „LANDOLT-ARBENZ &amp; Co
                           BAHNHOFSTR. 66. ZÜRICH“, liniertes Papier mit rotem Buchschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "LANDOLT-ARBENZ &amp; Co
                           BAHNHOFSTR. 66. ZÜRICH", lined paper, edges red</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette, blaue und schwarze Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple, blue, and black ink</material>
                       </support>
                       <extent>
@@ -1336,16 +1343,16 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke „FLEXOR NOTES No. F103 WALKER'S
                           FLEXOR REFILL“, liniertes Papier mit Goldschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "FLEXOR NOTES No. F103
                           WALKER'S FLEXOR REFILL", lined paper, edges gilt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, Bleistift, roter und blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, pencil, red and blue pencil</material>
                       </support>
                       <extent>
@@ -1372,7 +1379,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Typoskript, 1 Blatt, mit diversen Adressen in
                           Paris, schwarzes Farbband mit eigenhändiger Anmerkung in violetter
                           Tinte</desc>
@@ -1442,15 +1449,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit gestempelter Seriennummer „1487“, liniertes
                           Papier mit Kammmarmorschnitt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stamped serial number "1487", lined paper,
                           edges combed marbled</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, blue pencil</material>
                       </support>
                       <extent>
