@@ -60,10 +60,11 @@
         </respStmt>
       </seriesStmt>
       <sourceDesc>
-        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+        <p>Manuskripte von Stefan Zweig in progress</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
+      
       <editorialDecl>
         <p> Jedes Werk im Nachlass von Stefan Zweig wid durch ein biblFull beschrieben. Neben
           klassischen biographischen Merkmalen, die beschrieben werden, liegt der Fokus auf
@@ -84,6 +85,13 @@
           Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
           werden.</p>
       </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>
+            Namespace für den Glossar in Stefan Zweig Digital.
+          </p>
+        </prefixDef>
+      </listPrefixDef>
     </encodingDesc>
   </teiHeader>
   <text>
@@ -122,15 +130,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke PAPELARIA DO POVO [...] A. M.
                           GEOFFROY Petropolis;</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "PAPELARIA DO POVO [...] A.
                           M. GEOFFROY Petropolis"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Dunkelblaue, rote und schwarze Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Navy, red, and black ink, pencil</material>
                       </support>
                       <extent>
@@ -160,7 +168,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegt ein Kuvert mit Aufschrift „Propriedade Stefan
                           Zweig dezasete contos“ eigenhändig in schwarzer Tinte und „Last unfinished
                           novel 1st sketch“ auf der Rückseite von Richard Friedenthals Hand</desc>
@@ -232,9 +240,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarze Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ink, blue pencil</material>
                       </support>
                       <extent>
@@ -257,7 +265,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Roman I Teil“ von Lotte Zweigs
                           Hand in blauem Buntstift</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Roman I Teil" in Lotte Zweig's
@@ -320,9 +328,9 @@
                   <msItem>
                     <incipit>„Vier Wochen lang erträgt Christine diesen grausamen, krankhaft
                       überreizten Zustand gewaltsamer Einsamkeit…“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„II Teil noch nicht copiert“ eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"II Teil noch nicht copiert" holograph</docEdition>
                   </msItem>
                 </msContents>
@@ -330,14 +338,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Überwiegend Doppelbögen</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Mainly bifolia</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette und schwarze Tinte, Bleistift,
                           blauer Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple and black ink, pencil, blue
                           ballpoint</material>
                       </support>
@@ -418,10 +426,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, Bleistift, roter und blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, pencil, red and blue pencil</material>
                       </support>
                       <extent>
@@ -510,15 +518,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke „N.° 4 - PAUTADO […] Industria
                           Brasileira“ und Stempel „PAPELARIA ESTEVES PETROPOLIS“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "N.° 4 - PAUTADO […]
                           Industria Brasileira" and stamp "PAPELARIA ESTEVES PETROPOLIS"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Blaue und rote Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Blue and red ink, pencil</material>
                       </support>
                       <extent>
@@ -546,7 +554,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 Einlageblatt mit Aufschrift von Richard Friedenthal
                           und fremder Hand</desc>
                         <desc xml:lang="en">1 inserted leaf inscribed by Richard Friedenthal and an
@@ -602,10 +610,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„Es gibt einige wenige Schriftsteller, die…“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Montaigne Kap. I“ von Richard Friedenthals Hand in
                       Bleistift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Montaigne Kap. I" in Richard Friedenthal's hand in
                       pencil</docEdition>
                   </msItem>
@@ -614,10 +622,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarze und blaue Tinte, Bleistift, roter
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black and blue ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -639,7 +647,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 Einlageblatt von Richard Friedenthal und 1
                           Einlageblatt von fremder Hand</desc>
                         <desc xml:lang="en">1 inserted leaf by Richard Friedenthal and 1 inserted
@@ -707,10 +715,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Blaue und schwarze Tinte, Bleistift, blauer Buntstift, roter
                           Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Blue and black ink, pencil, blue pencil, red
                           ballpoint</material>
                       </support>
@@ -732,13 +740,13 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">6 Blatt Typoskript von Richard Friedenthal (Nachwort,
                           Brief an Fischer)</desc>
                         <desc xml:lang="en">6 leaves of typescript by Richard Friedenthal
                           (afterword, letter to S. Fischer Verlag)</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Flügelmappe, Aufschrift „Montaigne I-V“ von Lotte Zweigs
                           Hand (?) in blauem Buntstift und „-IX cpl.“ von Richard Friedenthals Hand,
                           Händlermarke „BRASIL CONSUMO 100“</desc>
@@ -747,7 +755,7 @@
                           stationer's label "BRASIL CONSUMO 100"</desc>
                         <measure type="format">37x26 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Kap. 2 (1-6) 3 (7-16)“ von
                           fremder Hand in blauem Buntstift und Aufschrift „MONTAIGNE Original“ von
                           Richard Friedenthals Hand in rotem Kugelschreiber</desc>
@@ -819,14 +827,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier, vermutlich ursprünglich aus einem
                           Notizblock</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper, likely from a notepad</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -895,10 +903,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„Das Weiseste, was ein besonnener Mann tun kann, wenn …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig Ciceros Tod Das Haupt auf der Rostra Mcpt (Schluss
                       nur scizziert) Sommer 1939“ eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig Ciceros Tod Das Haupt auf der Rostra Mcpt (Schluss
                       nur scizziert) Sommer 1939" holograph</docEdition>
                   </msItem>
@@ -907,9 +915,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, pencil</material>
                       </support>
                       <extent>
@@ -982,10 +990,10 @@
                   <msItem>
                     <incipit>„Das Weiseste, was ein kluger und nicht sehr tapferer Mann tun
                       kann, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Cicero: I. Fassung handschriftl. korrigiert“ von Lotte Zweigs
                       Hand in blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Cicero: I. Fassung handschriftl. korrigiert" in Lotte Zweig's
                       hand in blue pencil</docEdition>
                   </msItem>
@@ -994,10 +1002,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und rote Tinte,
                           Bleistift, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and red ink, pencil, blue
                           pencil</material>
                       </support>
@@ -1084,10 +1092,10 @@
                   <msItem>
                     <incipit>„Erkenntnis der Gefahr. Am 5. Februar 1451 bringt ein geheimer Bote dem
                       ältesten Sohn des Sultan Murad, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„handschriftl. Korrigiert und Einschalte“ von Lotte Zweigs Hand
                       und Titel eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"handschriftl. korrigiert und Einschalte" in Lotte Zweig's hand
                       and holograph title</docEdition>
                   </msItem>
@@ -1096,16 +1104,16 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">2 mit Bindfaden angeheftete Blattfragmente, 1. Blatt mit 2.
                           verklebt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">2 fragments of leaves, affixed with string, 1st leaf glued
                           to 2nd</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte, Bleistift,
                           roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple and black ink, pencil, red and blue
                           pencil</material>
                       </support>
@@ -1179,10 +1187,10 @@
                   <msItem>
                     <incipit>„Der neue Rhythmus Während all der tausende und vielleicht
                       hunderttausende von Jahren, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand in blauem Buntstift, Blatt doppelt
                       durchgestrichen</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand in blue pencil, page crossed out
                       twice</docEdition>
                   </msItem>
@@ -1191,10 +1199,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, Bleistift, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, pencil, blue pencil</material>
                       </support>
                       <extent>
@@ -1275,15 +1283,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier, vermutlich ursprünglich aus einem
                           Notizblock</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper, likely from a notepad</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, Bleistift, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, pencil, blue pencil</material>
                       </support>
                       <extent>
@@ -1307,7 +1315,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Handschriftl. MS“ von
                           Lotte Zweigs Hand in blauem Buntstift und „Unkorrigierte Doublette ‚Der
                           plombierte Zug‘ (Lenin)“ von Lotte Zweigs Hand (?) in schwarzer
@@ -1317,7 +1325,7 @@
                           Zug' (Lenin)" in Lotte Zweig's hand (?) in black ink</desc>
                         <measure type="format">32x20 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Briefpapierfragment mit Briefkopf „BANQUE DES PAYS DE
                           L'EUROPE CENTRALE“</desc>
                         <desc xml:lang="en">Fragment of stationery with letterhead "BANQUE DES PAYS
@@ -1375,10 +1383,10 @@
                   <msItem>
                     <incipit>„Am 13. Dezember 1918 steuert der mächtige Dampfer 'George Washington'
                       mit dem Präsidenten …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„I. Fassung“ von Lotte Zweigs Hand in blauem Buntstift und Titel
                       eigenhändig in violetter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"I. Fassung" in Lotte Zweig's hand in blue pencil, holograph
                       title in purple ink</docEdition>
                   </msItem>
@@ -1387,10 +1395,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, blue pencil</material>
                       </support>
                       <extent>
@@ -1413,7 +1421,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Typoskript mit bibliographischen Notizen zu "Wilson
                           versagt" von fremder Hand</desc>
                         <desc xml:lang="en">Typescript with bibliographical notes relating to
@@ -1479,10 +1487,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, blaue Tinte, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, blue ink, blue pencil</material>
                       </support>
                       <extent>
@@ -1560,15 +1568,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke „LA RELIURE SPIRALE FABRICATION
                           FRANÇAISE PARIS 1233“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "LA RELIURE SPIRALE
                           FABRICATION FRANÇAISE PARIS 1233"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, pencil</material>
                       </support>
                       <extent>
@@ -1667,20 +1675,20 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Deckblatt blaues Papier aus Notizblock, Briefpapier „HOTEL
                           REGINA BRÜDER KREMSLEHNER“, Briefpapier „J. &amp; R. GRANT.“,
                           Briefpapier „Der Anlagebote“, Blattfragmente und Zeitungsausschnitte zum
                           Teil verklebt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Cover sheet of blue paper from a notepad, stationery "HOTEL
                           REGINA BRÜDER KREMSLEHNER", stationery "J. &amp; R. GRANT.", stationery
                           "Der Anlagebote", fragments of leaves and newspaper clippings, some of
                           which glued together</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette, blaue und schwarze Tinte,
                           Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple, blue, and black ink, pencil, red and
                           blue pencil</material>
                       </support>
@@ -1704,7 +1712,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 beschrifteter Aktendeckel „Bundesbahndirektion
                           Wien-Nordost“ mit Aufschrift „Stefan Zweig Skizzen zu Die Wiener Oper (van
                           der Nüll)“ vmtl. von Richard Friedenthals Hand; 1 beschriftete
@@ -1713,7 +1721,7 @@
                           inscribed "Stefan Zweig Skizzen zu Die Wiener Oper (van der Nüll)", likely
                           by Richard Friedenthal; 1 fee invoice (inscribed)</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Materialien für eine Novelle über Bau der Wiener Oper“ eigenhändig in violetter Tinte</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Materialien für eine Novelle über Bau der Wiener Oper", holograph in purple ink</desc>
                         <measure type="format">18x14 cm</measure>
@@ -1793,10 +1801,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarzes Durchschlagpapier, schwarze
                           Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, black carbon paper, black ink,
                           pencil</material>
                       </support>
@@ -1819,7 +1827,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt XXX Typoskriptdurchschlag mit Aufschrift
                           „Deutsch nicht publiciert St Z.“ eigenhändig in schwarzer Tinte</desc>
                         <desc xml:lang="en">Cover sheet - typescript (carbon copy) inscribed
@@ -1877,10 +1885,10 @@
                   <msItem>
                     <incipit>„Du wirst Dich wundern, Helene, von mir plötzlich einen so überlangen
                       und vielleicht törichten Brief zu bekommen…“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Erste Scizze zu einer Novelle, in dieser Form völlig ungiltig
                       St. Z 35“ eigenhändig in violetter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Erste Scizze zu einer Novelle, in dieser Form völlig ungiltig
                       St. Z 35" holograph in purple ink</docEdition>
                   </msItem>
@@ -1889,9 +1897,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, pencil</material>
                       </support>
                       <extent>
@@ -1969,11 +1977,11 @@
                   <msItem>
                     <incipit>„Persönlich bin ich so viel wie gewiss, dass er der Mörder gewesen ist,
                       aber mir fehlt …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig: Wyndham Hôtel, 42 West 58 st. New York City“
                       eigenhändig in violetter Tinte und Bleistift und Aufschrift „8I3“ in rotem
                       Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig: Wyndham Hôtel, 42 West 58 st. New York City"
                       holograph in purple ink and pencil, further inscribed "8I3" in red
                       pencil</docEdition>
@@ -1983,10 +1991,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und rote Tinte,
                           Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and red ink, pencil, red and blue
                           pencil</material>
                       </support>
@@ -2064,9 +2072,9 @@
                   <msItem>
                     <incipit>„Persönlich bin ich so viel wie gewiss, dass er der Mörder gewesen ist,
                       aber mir fehlt …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand (?) in schwarzer Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand (?) in black ink</docEdition>
                   </msItem>
                 </msContents>
@@ -2074,10 +2082,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und schwarze Tinte,
                           Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and black ink, pencil, red and
                           blue pencil</material>
                       </support>
@@ -2155,9 +2163,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Durchschlagpapier, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple carbon paper, pencil</material>
                       </support>
                       <extent>
@@ -2234,9 +2242,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -2313,15 +2321,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Deckblatt blaues Papier aus Notizblock, Notizbuch mit
                           Händlermarke „BEAUVAIS PAPETIER 14, Rue du Bac (7e)“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Cover sheet of blue paper from a notepad, notebook with
                           stationer's label "BEAUVAIS PAPETIER 14, Rue du Bac (7e)"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -2350,13 +2358,13 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Titel eigenhändig in violetter
                           Tinte</desc>
                         <desc xml:lang="en">Cover sheet with title in holograph purple ink</desc>
                         <measure type="format">25x20 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript eigenhändig in violetter
                           Tinte</desc>
                         <desc xml:lang="en">Inserted manuscript, holograph in purple ink</desc>
@@ -2424,10 +2432,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarzes Durchschlagpapier, schwarze
                           Tinte, blauer Buntstift, blauer Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, black carbon paper, black ink, blue pencil,
                           blue ballpoint</material>
                       </support>
@@ -2449,7 +2457,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Flügelmappe mit Titel von Lotte Zweigs Hand in blauem
                           Buntstift und weiterer Aufschrift „(zu 3 Meister, Baumeister der Welt)
                           Chénier“ von Richard Friedenthals Hand in blauem Kugelschreiber,
@@ -2462,7 +2470,7 @@
                           W."</desc>
                         <measure type="format">30x24 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Beigelegtes handschriftliches Angebot von Antiquar
                           Raymond Clavreuil vom 9.3.1938 in schwarzer Tinte</desc>
                         <desc xml:lang="en">Inserted handwritten offer by the bookseller Raymond
@@ -2530,10 +2538,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und schwarze Tinte,
                           blauer Buntstift, blauer Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and black ink, blue pencil, blue
                           ballpoint</material>
                       </support>
@@ -2556,7 +2564,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Titel und Aufschrift „Mailand, 5. VI. 1935
                           deutsch u. italienisch“ von Lotte Zweigs Hand in blauem Buntstift und
                           „Italienische Fassung an Mazucchetti Aug. 49“ von fremder Hand in
@@ -2623,9 +2631,9 @@
                   <msItem>
                     <incipit>„To a certain extent the method of the artist resembles the custom of
                       the ancient Persians …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„überholt“ und „Art“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"überholt" and "Art" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -2633,10 +2641,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und blaue Tinte, Bleistift, oranger
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and blue ink, pencil, orange pencil</material>
                       </support>
                       <extent>
@@ -2709,10 +2717,10 @@
                   <msItem>
                     <incipit>„verschiedenste Künstler betrachten. Erst aus der Summe all dieser
                       Varianten ergibt sich eine Ahnung …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Secret of Artistic Creation ungeschriebene Seiten der 3.
                       Fassung“ von Lotte Zweigs Hand in blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Secret of Artistic Creation ungeschriebene Seiten der 3.
                       Fassung" in Lotte Zweig's hand in blue pencil</docEdition>
                   </msItem>
@@ -2721,10 +2729,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, blue pencil</material>
                       </support>
                       <extent>
@@ -2802,9 +2810,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarze Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ink</material>
                       </support>
                       <extent>
@@ -2826,7 +2834,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Kuvert mit Titel eigenhändig</desc>
                         <desc xml:lang="en">Envelope with holograph title</desc>
                         <measure type="format">17x11 cm</measure>
@@ -2894,10 +2902,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette Tinte, Bleistift, roter
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -2981,14 +2989,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Unterschiedliches Durchschlagspapier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Copy paper varies</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Durchschlagpapier, violette Tinte,
                           Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple carbon paper, purple ink, pencil</material>
                       </support>
                       <extent>
@@ -3016,7 +3024,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Unkorrigierte Dubletten“
                           von Friderike Zweigs Hand in Bleistift und Titel von Anna Meingasts Hand
                           in violetter Tinte</desc>
@@ -3086,13 +3094,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Unterschiedliches Durchschlagspapier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Copy paper varies</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Durchschlagpapier, violette Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple carbon paper, purple ink</material>
                       </support>
                       <extent>
@@ -3116,7 +3124,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Titel von fremder Hand vermutlich
                           ursprünglich in violetter Tinte</desc>
                         <desc xml:lang="en">Wrapper leaf with title in an unidentified hand, likely
@@ -3180,10 +3188,10 @@
                   <msItem>
                     <incipit>„Eigentlich sollte Jeder Mensch sollte einmal in seinem Leben eine
                       gelegentliche freie Stunde …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Rodin“ von Richard Friedenthals Hand in blauem
                       Kugelschreiber</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Rodin" in Richard Friedenthal's hand in blue
                       ballpoint</docEdition>
                   </msItem>
@@ -3192,9 +3200,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, blauer Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, blue ballpoint</material>
                       </support>
                       <extent>
@@ -3274,9 +3282,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, blaue Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, blue ink</material>
                       </support>
                       <extent>
@@ -3348,9 +3356,9 @@
                   <msItem>
                     <incipit>„However opinions may differ, there is one fact which no one will feel
                       inclined to dispute …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand in blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand in blue pencil</docEdition>
                   </msItem>
                 </msContents>
@@ -3358,14 +3366,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Manuskript, 3 Blatt, auf blauem, linierten Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">3 leaves of manuscript on blue, lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette, schwarze und rote Tinte,
                           Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple, black, and red ink, pencil, red and
                           blue pencil</material>
                       </support>
@@ -3438,10 +3446,10 @@
                   <msItem>
                     <incipit>„so entscheidend seine politische, seine individuelle, seine sittliche
                       Einstellung …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„History of to-morrow 2. Fassung 1-5 in 3. Fassung übernommen“
                       von Lotte Zweigs Hand in blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"History of to-morrow 2. Fassung 1-5 in 3. Fassung übernommen"
                       in Lotte Zweig's hand in blue pencil</docEdition>
                   </msItem>
@@ -3450,10 +3458,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, Bleistift, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, pencil, blue pencil</material>
                       </support>
                       <extent>
@@ -3526,10 +3534,10 @@
                   <msItem>
                     <incipit>„which are poisoning the world to-day. That was our
                       education …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„überholt (History) letzte Fassung“ von Lotte Zweigs Hand in
                       blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"überholt (History) letzte Fassung" in Lotte Zweig's hand in
                       blue pencil</docEdition>
                   </msItem>
@@ -3538,14 +3546,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Manuskript auf blauem, linierten Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Manuscript on blue, lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette, rote und blaue Tinte,
                           Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple, red, and blue ink, pencil, red and
                           blue pencil</material>
                       </support>
@@ -3615,13 +3623,13 @@
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Mappe beschriftet „handschriftliche MSS / History of to-morrow
                       (unvollst) / Tolstoi Vorrede (unvollst.) / Secret of Artistic Creation / Die
                       Kunst, ohne Sorgen zu leben / Das erste Wort über den Ozean / Worte am Sarge
                       Freuds / Cicero (I. Fassung)“ und auf der Innenseite „Magellan 3. Fassung X“
                       von Lotte Zweigs Hand in blauem Buntstift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Folder inscribed "handschriftliche MSS / History of to-morrow
                       (unvollst) / Tolstoi Vorrede (unvollst.) / Secret of Artistic Creation / Die
                       Kunst, ohne Sorgen zu leben / Das erste Wort über den Ozean / Worte am Sarge
@@ -3633,13 +3641,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Blaue Umschlagmappe</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Blue folder</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Blue pencil</material>
                       </support>
                       <extent>
@@ -3705,10 +3713,10 @@
                   <msItem>
                     <incipit>„Schriftsteller russischer Sprache. Sein Familienleben ist glücklich,
                       …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Tolstoi-Aufsatz für Longman u Green New York 1938“ von Lotte
                       Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Tolstoi-Aufsatz für Longman u Green New York 1938" in Lotte
                       Zweig's hand</docEdition>
                   </msItem>
@@ -3717,14 +3725,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Manuskript auf blauem, linierten Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Manuscript on blue, lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette Tinte, Bleistift, roter und
                           blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple ink, pencil, red and blue
                           pencil</material>
                       </support>
@@ -3801,10 +3809,10 @@
                   <msItem>
                     <incipit>„Schon dies, wie er einem entgegenkommt, - Lichtfunken in dunklen Auge,
                       Anmut …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Unverwertbarer Entwurf“ und Titel eigenhändig in violetter
                       Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Unverwertbarer Entwurf" and holograph title in purple
                       ink</docEdition>
                   </msItem>
@@ -3813,13 +3821,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Papier mehrfach mit Klebeband verstärkt</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Paper reinforced multiply with adhesive tape</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple ink, pencil</material>
                       </support>
                       <extent>
@@ -3891,9 +3899,9 @@
                   <msItem>
                     <incipit>„Ayant le précieux privilège de m'adresser aux auditeurs de la Radio
                       française, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„([Radio] Paris 24.4.40)“ und Titel eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"(Radio Paris 24.4.40)" and holograph title</docEdition>
                   </msItem>
                 </msContents>
@@ -3901,9 +3909,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes und rotes Farbband, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black and red ribbon, pencil</material>
                       </support>
                       <extent>
@@ -3983,9 +3991,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, pencil</material>
                       </support>
                       <extent>
@@ -4064,10 +4072,10 @@
                   <msItem>
                     <incipit>„Liebe junge Freunde, Ich spreche jetzt von einem anderen Erdteil zu
                       Euch,…“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Aufschrift „April 1939“ und Titel von fremder Hand in Bleistift,
                       violetter Datumsstempel „1939 FEB 9 AM 9:28“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Inscribed "April 1939" and title in an unidentified hand in
                       pencil, purple date stamp "1939 FEB 9 AM 9:28"</docEdition>
                   </msItem>
@@ -4076,13 +4084,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier „Hotel Utah, Salt Lake City, Utah“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Stationery "Hotel Utah, Salt Lake City, Utah"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarze Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ink, pencil</material>
                       </support>
                       <extent>
@@ -4162,10 +4170,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violetter Tinte, Bleistift, roter und blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil, red and blue pencil</material>
                       </support>
                       <extent>
@@ -4191,7 +4199,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Kuvert mit Titel eigenhändig in blauem Buntstift</desc>
                         <desc xml:lang="en">Envelope with holograph title in blue pencil</desc>
                         <measure type="format">27x16 cm</measure>
@@ -4252,9 +4260,9 @@
                   <msItem>
                     <incipit>„Meine Damen und meine Herren! Sie werden an dem heutigen Tage und in
                       den folgenden Wochen in den Lectures …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand in blauer Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand in blue ink</docEdition>
                   </msItem>
                 </msContents>
@@ -4262,9 +4270,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, blaue Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, blue ink</material>
                       </support>
                       <extent>
@@ -4342,10 +4350,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze Tinte, Bleistift, roter
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, black ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -4436,10 +4444,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette
                           Stempelfarbe</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple stamp ink</material>
                       </support>
                       <extent>
@@ -4502,11 +4510,11 @@
                   <msItem>
                     <incipit>„Als Anwalt des Leidens, als Fürsprecher eines Elends ist heute hier
                       Fjodor Dostojewski angerufen …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Vortrag über Dostojewski II Staatstheater“ eigenhändig in rotem
                       Buntstift und Aufschrift „29.11.1929 Berlin“ von Richard Friedenthals Hand in
                       rotem Kugelschreiber</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Vortrag über Dostojewski II Staatstheater" holograph in red
                       pencil and inscribed "29.11.1929 Berlin" in Richard Friedenthal's hand in red
                       ballpoint</docEdition>
@@ -4516,10 +4524,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette, dunkelblaue und schwarze
                           Tinte, Bleistift, roter Buntstift, roter Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon, purple, navy, and black ink, pencil, red
                           pencil, red ballpoint</material>
                       </support>
@@ -4542,7 +4550,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Zeitungsausschnitt „Eine Dostojewski-Feier“ gestempelt
                           „29 NOVEMBER 1921“ und „Berliner Tagblatt“</desc>
                         <desc xml:lang="en">Newspaper clipping "Eine Dostojewski-Feier" stamped "29
@@ -4610,15 +4618,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Vermutlich ursprünglich aus einem gebundenen
                           Notizbuch</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Likely removed from a bound notebook</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette Tinte, Bleistift, blauer und
                           roter Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple ink, pencil, blue and red
                           pencil</material>
                       </support>
@@ -4644,7 +4652,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Aufschrift „Walther Rathenau Gedächtnisbild“ von fremder Hand</desc>
                         <desc xml:lang="en">Wrapper leaf inscribed "Walther Rathenau Gedächtnisbild" in an unidentified hand</desc>
                         <measure type="format">34x42 cm</measure>
@@ -4715,10 +4723,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, Bleistift, blauer
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, pencil, blue pencil</material>
                       </support>
                       <extent>
@@ -4799,9 +4807,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black ribbon</material>
                       </support>
                       <extent>
@@ -4877,14 +4885,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Unterschiedliches Durchschlagspapier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Copy paper varies</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Durschlagpapier, schwarze Tinte,
                           Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple carbon paper, black ink, pencil</material>
                       </support>
                       <extent>
@@ -4962,10 +4970,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette und schwarze Tinte, Bleistift,
                           blauer und roter Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple and black ink, pencil, blue and red
                           pencil</material>
                       </support>
@@ -4986,7 +4994,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Mappendeckel mit Aufschrift „Marsyas und Apoll
                           (Pantomime für Musik ungedruckt) Skizzen zu Filmen (Panama) (unbrauchbar)“
                           eigenhändig in blauem Buntstift und Anmerkungen in Bleistift</desc>
@@ -5052,10 +5060,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Durchschlagpapier, violette Tinte, Bleistift,
                           blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple carbon paper, purple ink, pencil, blue
                           pencil</material>
                       </support>
@@ -5078,7 +5086,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Titel eigenhändig in blauem
                           Buntstift</desc>
                         <desc xml:lang="en">Cover sheet with holograph title in blue pencil</desc>
@@ -5143,15 +5151,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Linierte Seiten, vermutlich ursprünglich aus einem
                           gebundenen Notizbuch; Beilage 1: rosa Löschpapier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper, likely removed from a bound notebook; enclosure
                           1: pink blotting paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -5179,12 +5187,12 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Trennblatt</desc>
                         <desc xml:lang="en">Separator leaf</desc>
                         <measure type="format">29x23 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Flügelmappendeckel mit Aufschrift „Thersites“
                           eigenhändig</desc>
                         <desc xml:lang="en">Flap binder cover inscribed "Thersites",
@@ -5256,9 +5264,9 @@
                   <msItem>
                     <incipit>„Unabänderlicherweise bekommt im Augenblicke da der Kampf beginnt auch
                       die offenbare Chaotik der Geschehnisse …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Richard Friedenthals Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Richard Friedenthal's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -5266,10 +5274,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette und schwarze Tinte,
                           Bleistift, grüner Buntstift, blauer Kugelschreiber</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple and black ink, pencil, green
                           pencil, blue ballpoint</material>
                       </support>
@@ -5362,15 +5370,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke GEBRÜDER SCHOLL Poststrasse 3,
                           Zürich A4/90 4.25</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "GEBRÜDER SCHOLL Poststrasse
                           3, Zürich A4/90 4.25"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift, roter Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -5398,7 +5406,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 Einlageblatt mit Aufschrift von Richard
                           Friedenthal</desc>
                         <desc xml:lang="en">1 inserted leaf inscribed by Richard Friedenthal</desc>
@@ -5465,15 +5473,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke National NATTY MEMO BOOK Patent
                           No. 219547 REFILL No 6340. (British Made.)</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "National NATTY MEMO BOOK
                           Patent No. 219547 REFILL No 6340. (British Made.)"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und schwarze Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and black ink, pencil</material>
                       </support>
                       <extent>
@@ -5562,15 +5570,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Deckblatt blaues Papier aus Notizblock, Notizbuch mit
                           Händlermarke MARQUE RS DEPOSÉE 1209</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Cover sheet of blue paper from notepad, notebook has
                           stationer's label "MARQUE RS DEPOSÉE 1209"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift, roter Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -5598,7 +5606,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Erste Novelle noch nicht
                           gedruckt existiert andere Fassung / Begrabene Leuchter 1 Teil“ eigenhändig
                           in violetter Tinte</desc>
@@ -5672,15 +5680,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch mit Händlermarke LA RELIURE SPIRALE FABRICATION
                           FRANÇAISE PARIS 1208</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook with stationer's label "LA RELIURE SPIRALE
                           FABRICATION FRANÇAISE PARIS 1208"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -5773,15 +5781,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Deckblatt blaues Papier, Notizbuch mit Händlermarke
                           PAPETERIE L. RONTANI 5, Rue ALEXANDRE MARI NICE</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Cover sheet of blue paper, notebook has stationer's label
                           "PAPETERIE L. RONTANI 5, Rue ALEXANDRE MARI NICE"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -5809,7 +5817,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „1940 Spätere Einfalle dazu …“ eigenhändig in violetter Tinte</desc>
                         <desc xml:lang="en">Cover sheet inscribed "1940 Spätere Einfalle dazu …", holograph in purple ink</desc>
                         <measure type="format">25x20 cm</measure>
@@ -5874,13 +5882,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Kariertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Squared paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -5908,7 +5916,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript, 1 Blatt, eigenhändig in Bleistift
                           aus einem Spiralbuch mit dem Incipit „Reihe von Errungenschaften …“</desc>
                         <desc xml:lang="en">Inserted manuscript, 1 leaf, holograph, in pencil,
@@ -5916,7 +5924,7 @@
                           Errungenschaften …"</desc>
                         <measure type="format">20x13 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">1 Blatt mit dem Aufdruck „HÔTEL IMPÉRIAL WIEN
                           RESTAURANT“ und eigenhändigen Notizen in Bleistift</desc>
                         <desc xml:lang="en">1 leaf imprinted "HÔTEL IMPÉRIAL WIEN RESTAURANT" and
@@ -5985,16 +5993,16 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Deckblatt blaues Papier, Notizbuch mit Händlermarke BEAUVAIS
                           PAPETIER 14, Rue du Bac (7e) 1072</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Cover sheet of blue paper, notebook has stationer's label
                           "BEAUVAIS PAPETIER 14, Rue du Bac (7e) 1072"</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, Bleistift, roter
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -6023,13 +6031,13 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">3 Einlageblatt mit Aufschrift von Richard
                           Friedenthal</desc>
                         <desc xml:lang="en">3 inserted leaves inscribed by Richard
                           Friedenthal</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Nur teilweise unbenutzt“
                           eigenhändig in rotem Buntstift und „Anfang einer Novelle über 10 November
                           1939 Alles andere Vorarbeiten zu Bregrabenem Leuchter und Neuen
@@ -6040,13 +6048,17 @@
                           holograph in purple ink</desc>
                         <measure type="format">18x14 cm</measure>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <!--<item ana="szdg:Enclosures">
                         <desc xml:lang="de">Eingelegtes Manuskript eigenhändig zu „Das erste Wort
                           über den Ozean“ mit eigenhändigen Korrekturen in violetter und roter
                           Tinte</desc>
                         <desc xml:lang="en">Holograph inserted manuscript from "Das erste Wort über
                           den Ozean" with holograph corrections in purple and red ink</desc>
                         <measure type="format">27x21 cm</measure>
+                      </item>-->
+                      <item>
+                        <!-- Referenz des Objekts auf seine Beialge -->
+                        <term ref="#SZDMSK.TEST" type="szd:hasEnclosures" ana="szdg:Enclosures"/>
                       </item>
                     </list>
                   </accMat>
@@ -6108,15 +6120,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizblock blaues Papier, Notizbuch mit Händlermarke GRESHAM
                           AZURE, Umschlag mit Portrait Thomas Greshams</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notepad of blue paper, notebook has stationer's label
                           "GRESHAM AZURE", cover shows a portrait of Thomas Gresham</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
                       <extent>
@@ -6202,9 +6214,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violettes Farbband, violette Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ribbon, purple ink</material>
                       </support>
                       <extent>
@@ -6293,13 +6305,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefkuverts, Formularvordruck, Buchseiten</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Envelopes, pre-printed forms, book pages</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Bleistift, roter und blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Pencil, red and blue pencil</material>
                       </support>
                       <extent>
@@ -6370,9 +6382,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel eigenhändig in roter Tinte</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title holograph in red ink</docEdition>
                   </msItem>
                 </msContents>
@@ -6380,14 +6392,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette und rote Tinte, Bleistift, roter
                           Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple and red ink, pencil, red pencil</material>
                       </support>
                       <extent>
@@ -6413,7 +6425,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">Fassungsvergleich, 20 Blatt Buchseiten, Kopien und
                           Typoskripte von einem späteren Besitzer des Kapitels "Geheimnis des
                           Alcovens"</desc>
@@ -6488,13 +6500,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, blue pencil</material>
                       </support>
                       <extent>
@@ -6578,13 +6590,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, blue pencil</material>
                       </support>
                       <extent>
@@ -6672,13 +6684,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, blauer Buntstift</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, blue pencil</material>
                       </support>
                       <extent>
@@ -6762,13 +6774,13 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Liniertes Papier</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined paper</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink</material>
                       </support>
                       <extent>
@@ -7270,10 +7282,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Linierte Seiten, vermutlich aus einem gebundenen
                           Notizbuch</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined pages, likely from a bound notebook</material>
                       </support>
                       <extent>
@@ -7367,7 +7379,7 @@
                   </objectDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Fahnen zu Begegnungen verschiedene Korrekturen“ und „Liste inliegend“ von Lotte Zweig in blauem und rotem Buntstift</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Fahnen zu Begegnungen verschiedene Korrekturen" and "Liste inliegend" by Lotte Zweig in blue and red pencil</desc>
                         <measure/>
@@ -7715,10 +7727,10 @@
                     <lang xml:lang="yid">Jiddisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Der begrabene Leuchter | Übersetzer Ch. Brancarz | Castelli 383
                       2cp | Buenos Aires“ eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Der begrabene Leuchter | Übersetzer Ch. Brancarz | Castelli 383
                       2cp | Buenos Aires" holograph</docEdition>
                   </msItem>
@@ -7988,10 +8000,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Endgültige Fassung, aber noch nicht nachkorrigiert! Vergl. Mit
                       den andern Exemplaren“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Endgültige Fassung, aber noch nicht nachkorrigiert! Vergl. mit
                       den andern Exemplaren" in Lotte Zweig's hand</docEdition>
                   </msItem>
@@ -8169,7 +8181,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Allgemeines zu Magg.“ eigenhändig</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Allgemeines zu Magg.", holograph</desc>
                         <measure/>
@@ -8315,10 +8327,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Linierte Einlageblätter mit beigen Deckeln und
                           alphabetischem Register</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Lined inserted leaves within fawn covers and alphabetical
                           index</material>
                       </support>
@@ -8346,11 +8358,11 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Schwarze Ringmappe</desc>
                         <desc xml:lang="en">Black ring binder</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">1 Kuvert</desc>
                         <desc xml:lang="en">1 Envelope</desc>
                       </item>
@@ -8484,10 +8496,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Erste complette Fassung“ eigenhändig und „Anfangskapitel 2.
                       Fassung von Balzac“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Erste complette Fassung" holograph and "Anfangskapitel 2.
                       Fassung von Balzac" in Lotte Zweig's hand</docEdition>
                   </msItem>
@@ -8570,10 +8582,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Balzac | I. Fassung | Anfangskapitel“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Balzac | I. Fassung | Anfangskapitel" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -8652,10 +8664,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Balzac | I. Fassung | 1799-1833“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Balzac | I. Fassung | 1799-1833" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -8735,9 +8747,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Band II | 1833-1842“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Band II | 1833-1842" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -8815,10 +8827,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Band III | 1842-1851 | sowie Nachträge“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Band III | 1842-1851 | sowie Nachträge" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -8897,10 +8909,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Kopien | I. Fassung | Balzac“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Kopien | I. Fassung | Balzac" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -9137,10 +9149,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig | BALZAC | Erstes Buch | Wege und Umwege | Kapitel
                       1-5 | Aus dem Nachlass herausgegeben von Richard Friedenthal“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig | BALZAC | Erstes Buch | Wege und Umwege | Kapitel
                       1-5 | Aus dem Nachlass herausgegeben von Richard Friedenthal"</docEdition>
                   </msItem>
@@ -9223,9 +9235,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig | Balzac | II. Buch“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig | Balzac | II. Buch"</docEdition>
                   </msItem>
                 </msContents>
@@ -9302,9 +9314,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„STEFAN ZWEIG | BALZAC | vol. III“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"STEFAN ZWEIG | BALZAC | vol. III"</docEdition>
                   </msItem>
                 </msContents>
@@ -9383,9 +9395,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„BALZAC IV | Kap. 12-20“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"BALZAC IV | Kap. 12-20"</docEdition>
                   </msItem>
                 </msContents>
@@ -9467,9 +9479,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Stefan Zweig | BALZAC | Erstes Buch“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Stefan Zweig | BALZAC | Erstes Buch"</docEdition>
                   </msItem>
                 </msContents>
@@ -9497,11 +9509,11 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">1 Kuvert</desc>
                         <desc xml:lang="en">1 envelope</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Ausschnitte von ins Deutsche übersetzten französischen Zitaten</desc>
                         <desc xml:lang="en">Excerpts of German translations of French quotations</desc>
                       </item>
@@ -10244,7 +10256,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">1 Kuvert</desc>
                         <desc xml:lang="en">1 envelope</desc>
                       </item>
@@ -10470,7 +10482,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Kuvert mit Aufschrift „Notizen zu Castellio“ von Lotte Zweig</desc>
                         <desc xml:lang="en">Envelope inscribed "Notizen zu Castellio" by Lotte Zweig</desc>
                         <measure/>
@@ -10631,7 +10643,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Abänderungen und Berichtigungen“ von Lotte Zweig</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Abänderungen und Berichtigungen" by Lotte Zweig</desc>
                       </item>
@@ -10907,9 +10919,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„3. Fassung“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"3. Fassung" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -10988,9 +11000,9 @@
                   </textLang>
                   <msItem>
                     <incipit>„Dass eine solche endgiltige Auseinandersetzung…“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„S. 2, Kap IX, end. Fassung“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"S. 2, Kap IX, end. Fassung" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -11068,9 +11080,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„3. Fassung 1-6“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"3. Fassung 1-6" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -11148,9 +11160,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„unkorrigiert“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"unkorrigiert" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -11305,10 +11317,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Dritte Fassung“ und „unkorrigiert“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Dritte Fassung" and "unkorrigiert" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -11462,9 +11474,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„unkorrigiert“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"unkorrigiert" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -11991,11 +12003,11 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Kuvert mit Aufschrift „Notizen zu Magellan“ von Lotte Zweigs Hand</desc>
                         <desc xml:lang="en">Envelope inscribed "Notizen zu Magellan" in Lotte Zweig's hand</desc>
                       </item>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Brief von Lavinia Mazzucchetti</desc>
                         <desc xml:lang="en">Letter from Lavinia Mazzucchetti</desc>
                       </item>
@@ -12057,10 +12069,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„auch Leopard[i]“ und „Bibliographie und Bilder“ eigenhändig auf
                       Aufkleber am Deckel</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"auch Leopard[i]" and "Bibliographie und Bilder" holograph on
                       label pasted on cover</docEdition>
                   </msItem>
@@ -12143,13 +12155,13 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Teil des MS von | Magellan | teils handschriftl., teils
                       korrigiert“ und „Magellan | korrigierte Exemplare | der 3. Fassung. | notfalls
                       verwendbar, | wenn nachkorrigiert. | u. Teile einer | früheren Fassung |
                       aufbewahren | weil handschriftlich | von S.Z. korrigiert!“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Teil des MS von | Magellan | teils handschriftl., teils
                       korrigiert" and "Magellan | korrigierte Exemplare | der 3. Fassung. | notfalls
                       verwendbar, | wenn nachkorrigiert. | u. Teile einer | früheren Fassung |
@@ -12793,10 +12805,10 @@
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Eldorado | Insertions and new end | for 2 more copies“ von
                       Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Eldorado | Insertions and new end | for 2 more copies" in Lotte
                       Zweig's hand</docEdition>
                   </msItem>
@@ -12940,9 +12952,9 @@
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Übersetzung von Leftwich“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Übersetzung von Leftwich" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -13155,10 +13167,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Aufschrift „Manuskript | (korr. v. StZ) | Flucht i. d.
                       Unsterblichkeit | (Nunez de Balboa)“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Manuskript | (korr. v. StZ) | Flucht i. d. Unsterblichkeit |
                       (Nunez de Balboa)" in Lotte Zweig's hand</docEdition>
                   </msItem>
@@ -13849,9 +13861,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Drei Leben Nachträge“ eigenhändig</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Drei Leben Nachträge" holograph</docEdition>
                   </msItem>
                 </msContents>
@@ -13859,9 +13871,9 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Notizbuch der Marke „THE Spirollo NOTE BOOK“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Notebook "THE Spirollo NOTE BOOK"</material>
                       </support>
                       <extent>
@@ -14168,10 +14180,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette
                           Stempelfarbe</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                        <material ana="szdg:WritingInstrument"
                           xml:lang="en">Black carbon paper, purple stamp ink</material>
                       </support>
                       <extent>
@@ -14388,10 +14400,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„As an Austrian …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Memorandum für Beverly Baxter 4.1.40“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Memorandum für Beverly Baxter 4.1.40" in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -15074,9 +15086,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„zum 60. Geburtstag“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"zum 60. Geburtstag" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -15516,9 +15528,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Manifest (Luzern)“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Manifest (Luzern)"</docEdition>
                   </msItem>
                 </msContents>
@@ -15592,10 +15604,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„Die wir uns hier um einen Gedanken zusammengefunden haben, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Einigung Europas (Vortrag f. Paris, nicht gehalten)“ von Lotte
                       Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Einigung Europas (Vortrag f. Paris, nicht gehalten)" in Lotte
                       Zweig's hand</docEdition>
                   </msItem>
@@ -15675,10 +15687,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„Il me semblerait superflu que nous recherchions encore …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Einigung Europas. Vortrag (Paris, nicht gehalten)“ von Richard
                       Friedenthals Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Einigung Europas. Vortrag (Paris, nicht gehalten)" in Richard
                       Friedenthal's hand</docEdition>
                   </msItem>
@@ -16172,9 +16184,9 @@
                     <lang xml:lang="ita">Italienisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Vortrag Florenz, 4. Mai 1932“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Vortrag Florenz, 4. Mai 1932"</docEdition>
                   </msItem>
                 </msContents>
@@ -16620,9 +16632,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -16704,9 +16716,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„3. Fassung“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"3. Fassung"</docEdition>
                   </msItem>
                 </msContents>
@@ -17069,9 +17081,9 @@
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„allerletzte gültige Fassung“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"allerletzte gültige Fassung"</docEdition>
                   </msItem>
                 </msContents>
@@ -17411,9 +17423,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„III. Fassung“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"III. Fassung"</docEdition>
                   </msItem>
                 </msContents>
@@ -17485,9 +17497,9 @@
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„allerletzte gültige Fassung“</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"allerletzte gültige Fassung"</docEdition>
                   </msItem>
                 </msContents>
@@ -17700,9 +17712,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„28. Nov. 34“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"28. Nov. 34" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -17861,11 +17873,11 @@
                   </textLang>
                   <msItem>
                     <incipit>„In dem Roman 'Die Brüder Karamasow' von Dostojewski …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„deutsche Fassung, Ansprache im Hause Rothschild zu Gunsten der
                       deutschen jüdischen Frauen u. Kinder, London, 30. XI. 33“ von Lotte Zweigs
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"deutsche Fassung, Ansprache im Hause Rothschild zu Gunsten der
                       deutschen jüdischen Frauen u. Kinder, London, 30. XI. 33" in Lotte Zweig's
                       hand</docEdition>
@@ -18165,9 +18177,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Methuen &amp; Co Juli 38“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Methuen &amp; Co Juli 38" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -18250,9 +18262,9 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„für Sunday Times Okt. 38“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"für Sunday Times Okt. 38" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -18638,10 +18650,10 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Nicht im Essayband“ von Lotte Zweigs Hand auf 2
                       Exemplaren</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Nicht im Essayband" on 2 copies in Lotte Zweig's
                       hand</docEdition>
                   </msItem>
@@ -19312,10 +19324,10 @@
                   </textLang>
                   <msItem>
                     <incipit>„Von meinen Novellen kann ich nichts anderes sagen, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Für ‚Wiener Literarische Signale‘ Buchhandlung Perles, Wien I,
                       30. X. 36“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Für 'Wiener Literarische Signale' Buchhandlung Perles, Wien I,
                       30. X. 36" in Lotte Zweig's hand</docEdition>
                   </msItem>
@@ -19398,10 +19410,10 @@
                   <msItem>
                     <incipit>„Palästina ist innerhalb unserer Zeit das sichtbarste Denkmal des
                       jüdischen Idealismus …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„für American Committee for Jewish Palestine Participation at
                       the New York World's Fair 1939“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"für American Committee for Jewish Palestine Participation at
                       the New York World's Fair 1939" in Lotte Zweig's hand</docEdition>
                   </msItem>
@@ -19410,10 +19422,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier „Canadian Pacific Hotels, Royal York Hotel,
                           Toronto“</material>
-                        <material ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                        <material ana="szdg:WritingMaterial"
                           xml:lang="en">Stationery "Canadian Pacific Hotels, Royal York Hotel,
                           Toronto"</material>
                       </support>
@@ -19486,9 +19498,9 @@
                   </textLang>
                   <msItem>
                     <incipit>„Es gäbe eine überraschende Statistik, …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">Titel von Lotte Zweigs Hand in Bleistift</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">Title in Lotte Zweig's hand in pencil</docEdition>
                   </msItem>
                 </msContents>
@@ -20028,10 +20040,10 @@
                     <incipit>„In wie weit der Fünfjahreplan der russischen Sowjetrepubliken gelungen
                       ist, vermag ich ohne genaue Kenntnis der Situation nicht zu beurteilen
                       …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Für die Rundfrage der Revue Belge Aug. 32“ von fremder
                       Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Für die Rundfrage der Revue Belge Aug. 32" in an unidentified
                       hand</docEdition>
                   </msItem>
@@ -20777,9 +20789,9 @@
                   <msItem>
                     <incipit>„… Nicht genug deutlich und nicht genug triumphierend ist sich die
                       heutige Generation …“</incipit>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="de">„Rundfrage 1936“ von Lotte Zweigs Hand</docEdition>
-                    <docEdition ana="https://gams.uni-graz.at/o:szd.glossar#IdentifyingInscription"
+                    <docEdition ana="szdg:IdentifyingInscription"
                       xml:lang="en">"Rundfrage 1936" in Lotte Zweig's hand</docEdition>
                   </msItem>
                 </msContents>
@@ -21894,7 +21906,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Verhaeren-Vorlesung“ von Lotte
                           Zweig und Notiz „1912?“ von Richard Friedenthals Hand</desc>
                         <desc xml:lang="en">Cover sheet inscribed "Verhaeren-Vorlesung" by Lotte
@@ -22647,6 +22659,100 @@
                 <term type="classification" xml:lang="en">Working Notes</term>
                 <term ref="http://d-nb.info/gnd/118577905" type="person">Marie Antoinette,
                   Frankreich, Königin</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <!--  -->
+        <!-- //////// Beilage als eigenes Objekt -->
+        <biblFull xml:id="SZDMSK.TEST">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Das erste Wort über den Ozean</title>
+              <author ref="SZDPER.1560">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287"
+                    >Literaturarchiv Salzburg</repository>
+                  <!-- beilage hat eigene signatur -->
+                  <idno type="signature">SZ-AAP/W45.1</idno>
+                  <!-- scans extra? -->
+                  <!--<altIdentifier>
+                    <idno type="PID">o:szd.6829</idno>
+                  </altIdentifier>-->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>"Unvermuter Fund, erfährt, entdeckung | Elektricität und vor ihrem ersten Grosstat: dem Telegrafen."</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette und rote Tinte</material>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple and red ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure
+                            type="leaf" ana="corrected">4 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manusript</term>, <measure
+                            type="leaf" ana="corrected">4 leaves</measure>
+                        </span>
+                        <measure type="format">27x21 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London
+                      2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <!-- Referenz auf Grundobjekt -->
+                <term ref="#SZDMSK.64" type="szd:isEnclosuresOf"/>
+                <!-- Referenz auf Werkindex -->
+                <term ref="#SZD???" type="hatInhaltlicheBeziehung"/>
+                <term type="classification" xml:lang="de">Werknotizen</term>
+                <term type="classification" xml:lang="en">Working Notes</term>
               </keywords>
             </textClass>
           </profileDesc>
