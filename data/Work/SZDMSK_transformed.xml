@@ -6056,9 +6056,10 @@
                           den Ozean" with holograph corrections in purple and red ink</desc>
                         <measure type="format">27x21 cm</measure>
                       </item>-->
-                      <item>
+                      <item ana="szdg:Enclosures">
+                        <!-- mit @ana definieren ob physische oder inhaltliche Relation -->
+                        <ref target="#SZDMSK.TEST" ana="szd:hasPhysicalRelation"/>
                         <!-- Referenz des Objekts auf seine Beialge -->
-                        <term ref="#SZDMSK.TEST" type="szd:hasEnclosures" ana="szdg:Enclosures"/>
                       </item>
                     </list>
                   </accMat>
@@ -22669,6 +22670,7 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de">Das erste Wort über den Ozean</title>
+              <title type="Einheitssachtitel">Sternstunden der Menschheit: Das erste Wort über den Ozean</title>
               <author ref="SZDPER.1560">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -22748,11 +22750,11 @@
             <textClass>
               <keywords>
                 <!-- Referenz auf Grundobjekt -->
-                <term ref="#SZDMSK.64" type="szd:isEnclosuresOf"/>
+                <term ref="#SZDMSK.64" ana="szdg:Enclosures"/>
                 <!-- Referenz auf Werkindex -->
-                <term ref="#SZD???" type="hatInhaltlicheBeziehung"/>
-                <term type="classification" xml:lang="de">Werknotizen</term>
-                <term type="classification" xml:lang="en">Working Notes</term>
+                <!--<term ref="#SZD???" type="hatInhaltlicheBeziehung"/>-->
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
               </keywords>
             </textClass>
           </profileDesc>
