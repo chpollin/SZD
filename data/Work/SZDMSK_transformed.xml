@@ -6058,7 +6058,7 @@
                       </item>-->
                       <item ana="szdg:Enclosures">
                         <!-- mit @ana definieren ob physische oder inhaltliche Relation -->
-                        <ref target="#SZDMSK.TEST" ana="szd:hasPhysicalRelation"/>
+                        <ref target="#SZDMSK.TEST" ana="szd:hasPhysicalRelation">Das erste Wort über den Ozean</ref>
                         <!-- Referenz des Objekts auf seine Beialge -->
                       </item>
                     </list>
@@ -22750,7 +22750,7 @@
             <textClass>
               <keywords>
                 <!-- Referenz auf Grundobjekt -->
-                <term ref="#SZDMSK.64" ana="szdg:Enclosures"/>
+                <term ref="#SZDMSK.64" ana="szdg:Enclosures">Werknotizen 7</term>
                 <!-- Referenz auf Werkindex -->
                 <!--<term ref="#SZD???" type="hatInhaltlicheBeziehung"/>-->
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
