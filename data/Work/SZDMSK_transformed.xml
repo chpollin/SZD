@@ -1404,11 +1404,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>, <measure ana="corrected"
-                            type="leaf">23 Blatt, korrigiert, beigelegt Typoskript 5 Blatt</measure>
+                            type="leaf">23 Blatt, korrigiert; beigelegt: Typoskript, 5 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript</term>, <measure ana="corrected"
-                            type="leaf">23 leaves, corrected, includes typescript, 5
+                            type="leaf">23 leaves, corrected; includes: typescript, 5
                             leaves</measure>
                         </span>
                         <measure type="format">32x20 cm</measure>
@@ -1422,11 +1422,7 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Typoskript mit bibliographischen Notizen zu "Wilson
-                          versagt" von fremder Hand</desc>
-                        <desc xml:lang="en">Typescript with bibliographical notes relating to
-                          "Wilson versagt" in an unidentified hand</desc>
-                        <measure type="format">26x20 cm</measure>
+                        <ref target="#SZDMSK.284" ana="szd:hasContentRelation">Typoskript Wilson versagt</ref>
                       </item>
                     </list>
                   </accMat>
@@ -2365,10 +2361,7 @@
                         <measure type="format">25x20 cm</measure>
                       </item>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Eingelegtes Manuskript eigenhändig in violetter
-                          Tinte</desc>
-                        <desc xml:lang="en">Inserted manuscript, holograph in purple ink</desc>
-                        <measure type="format">18x14 cm</measure>
+                        <ref target="#SZDMSK.285" ana="szd:hasContentRelation">Manuskript Chenier</ref>
                       </item>
                     </list>
                   </accMat>
@@ -8338,11 +8331,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Notizbuch</term>, <measure type="leaf">154 Blatt;
-                            Konvolut 19 Blatt; 1 Ringbuchmappe; 1 Kuvert</measure>
+                            Konvolut 19 Blatt; 1 Kuvert</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>, <measure type="leaf">154 leaves;
-                            collection of 19 leaves; 1 ring binder; 1 envelope</measure>
+                            collection of 19 leaves; 1 envelope</measure>
                         </span>
                       </extent>
                     </supportDesc>
@@ -8357,18 +8350,6 @@
                       <ab xml:lang="en">Ring binder</ab>
                     </binding>
                   </bindingDesc>
-                  <accMat>
-                    <list>
-                      <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Schwarze Ringmappe</desc>
-                        <desc xml:lang="en">Black ring binder</desc>
-                      </item>
-                      <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">1 Kuvert</desc>
-                        <desc xml:lang="en">1 Envelope</desc>
-                      </item>
-                    </list>
-                  </accMat>
                 </physDesc>
                 <history>
                   <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
@@ -22666,6 +22647,193 @@
         </biblFull>
         <!--  -->
         <!-- //////// Beilage als eigenes Objekt -->
+        <biblFull xml:id="SZDMSK.284">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Typoskript Wilson versagt</title>
+              <title type="Einheitssachtitel">Sternstunden der Menschheit: Wilson versagt</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="SZDPER.1560">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287"
+                    >Literaturarchiv Salzburg</repository>
+                  <!-- Signatur originaleintrag: <idno type="signature">SZ-AAP/W9.1</idno>; wie komme ich zu Signatur Beilage? W9.1.1? -->
+                  <idno type="signature"></idno><!-- noch ergänzen! -->
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <desc xml:lang="de">Typoskript mit bibliographischen Notizen zu "Wilson
+                      versagt" von fremder Hand</desc>
+                    <desc xml:lang="en">Typescript with bibliographical notes relating to
+                      "Wilson versagt" in an unidentified hand</desc>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit></incipit><!-- noch nachtragen! -->
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="de"></material><!-- noch ergänzen! -->
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="en"></material><!-- noch ergänzen! -->
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure
+                            type="leaf" ana="corrected">5 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure
+                            type="leaf" ana="corrected">5 leaves</measure>
+                        </span>
+                        <measure type="format">26x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London
+                      2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term ref="#SZDMSK.15" ana="szdg:Enclosures">Wilson versagt</term>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term ref="http://d-nb.info/gnd/118643401" type="person">Wilson, Woodrow</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.285">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Manuskript Chenier</title>
+              <title type="Einheitssachtitel">Chenier</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="SZDPER.1560">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287"
+                    >Literaturarchiv Salzburg</repository>
+                  <!-- Signatur originaleintrag: <idno type="signature">SZ-AAP/W16.1</idno> -->
+                  <idno type="signature"></idno><!-- noch ergänzen! -->
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <desc xml:lang="de">Eingelegtes eigenhändiges Manuskript</desc>
+                    <desc xml:lang="en">Inserted manuscript, holograph</desc>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit></incipit><!-- noch nachtragen! -->
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure
+                            type="leaf" ana="corrected">3 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure
+                            type="leaf" ana="corrected">3 leaves</measure>
+                        </span>
+                        <measure type="format">18x14 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London
+                      2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term ref="#SZDMSK.25" ana="szdg:Enclosures">Erste Vorarbeiten für eine Studie über André Chenier
+                  1938</term>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term ref="http://d-nb.info/gnd/118520326" type="person">Chénier, André</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
         <biblFull xml:id="SZDMSK.TEST">
           <fileDesc>
             <titleStmt>
