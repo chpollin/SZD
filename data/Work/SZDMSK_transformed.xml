@@ -4544,11 +4544,7 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Zeitungsausschnitt „Eine Dostojewski-Feier“ gestempelt
-                          „29 NOVEMBER 1921“ und „Berliner Tagblatt“</desc>
-                        <desc xml:lang="en">Newspaper clipping "Eine Dostojewski-Feier" stamped "29
-                          NOVEMBER 1921" and "Berliner Tagblatt"</desc>
-                        <measure type="format">8x9 cm</measure>
+                        <ref target="#SZDMSK.286" ana="szd:hasContentRelation">Eine Dostojewski-Feier</ref>
                       </item>
                     </list>
                   </accMat>
@@ -5887,11 +5883,11 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Notizbuch</term>, <measure type="leaf">10 Blatt, 5
-                            Blatt beschrieben, eingelegt: Manuskript, 2 Blatt</measure>
+                            Blatt beschrieben; eingelegt: Manuskript, 2 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Notebook</term>, <measure type="leaf">10 leaves,
-                            writing on 5 leaves, inserted: manuscript, 2 leaves</measure>
+                            writing on 5 leaves; inserted: manuscript, 2 leaves</measure>
                         </span>
                         <measure type="format">16x10 cm</measure>
                       </extent>
@@ -6041,18 +6037,8 @@
                           holograph in purple ink</desc>
                         <measure type="format">18x14 cm</measure>
                       </item>
-                      <!--<item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Eingelegtes Manuskript eigenhändig zu „Das erste Wort
-                          über den Ozean“ mit eigenhändigen Korrekturen in violetter und roter
-                          Tinte</desc>
-                        <desc xml:lang="en">Holograph inserted manuscript from "Das erste Wort über
-                          den Ozean" with holograph corrections in purple and red ink</desc>
-                        <measure type="format">27x21 cm</measure>
-                      </item>-->
                       <item ana="szdg:Enclosures">
-                        <!-- mit @ana definieren ob physische oder inhaltliche Relation -->
-                        <ref target="#SZDMSK.TEST" ana="szd:hasPhysicalRelation">Das erste Wort über den Ozean</ref>
-                        <!-- Referenz des Objekts auf seine Beialge -->
+                        <ref target="#SZDMSK.287" ana="szd:hasPhysicalRelation">Das erste Wort über den Ozean</ref>
                       </item>
                     </list>
                   </accMat>
@@ -22670,8 +22656,7 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287"
                     >Literaturarchiv Salzburg</repository>
-                  <!-- Signatur originaleintrag: <idno type="signature">SZ-AAP/W9.1</idno>; wie komme ich zu Signatur Beilage? W9.1.1? -->
-                  <idno type="signature"></idno><!-- noch ergänzen! -->
+                  <idno type="signature">SZ-AAP/W9.1</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
@@ -22764,8 +22749,7 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287"
                     >Literaturarchiv Salzburg</repository>
-                  <!-- Signatur originaleintrag: <idno type="signature">SZ-AAP/W16.1</idno> -->
-                  <idno type="signature"></idno><!-- noch ergänzen! -->
+                  <idno type="signature">SZ-AAP/W16.1</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
@@ -22834,7 +22818,105 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.TEST">
+        <biblFull xml:id="SZDMSK.286">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Eine Dostojewski-Feier</title>
+              <title type="Einheitssachtitel">Vortrag über Dostojewski</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="SZDPER.1560">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287"
+                    >Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/W31</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <desc xml:lang="de">Zeitungsausschnitt „Eine Dostojewski-Feier“ gestempelt
+                      „29 NOVEMBER 1921“ und „Berliner Tagblatt“</desc>
+                    <desc xml:lang="en">Newspaper clipping "Eine Dostojewski-Feier" stamped "29
+                      NOVEMBER 1921" and "Berliner Tagblatt"</desc>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit></incipit><!-- noch ergänzen! -->
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="de"></material><!-- noch ergänzen! schwarzes Farbband? -->
+                        <material
+                          ana="szdg:WritingInstrument"
+                          xml:lang="en"></material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Zeitungsausschnitt</term>, <measure
+                            type="leaf" ana="corrected">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Newspaper clipping</term>, <measure
+                            type="leaf" ana="corrected">1 leaf</measure>
+                        </span>
+                        <measure type="format">8x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Berlin</origPlace>
+                    <origDate when="1921-11-28">29. NOVEMBER 1921</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London
+                      2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term ref="#SZDMSK.49" ana="szdg:Enclosures">Vortrag über Dostojewski II</term>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term ref="http://d-nb.info/gnd/118527053" type="person">Dostoevskij, Fëdor
+                  Michajlovič</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.287">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de">Das erste Wort über den Ozean</title>
@@ -22856,12 +22938,7 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287"
                     >Literaturarchiv Salzburg</repository>
-                  <!-- beilage hat eigene signatur -->
-                  <idno type="signature">SZ-AAP/W45.1</idno>
-                  <!-- scans extra? -->
-                  <!--<altIdentifier>
-                    <idno type="PID">o:szd.6829</idno>
-                  </altIdentifier>-->
+                  <idno type="signature">SZ-AAP/W45</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -22917,12 +22994,258 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <!-- Referenz auf Grundobjekt -->
                 <term ref="#SZDMSK.64" ana="szdg:Enclosures">Werknotizen 7</term>
-                <!-- Referenz auf Werkindex -->
-                <!--<term ref="#SZD???" type="hatInhaltlicheBeziehung"/>-->
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull ana="01_Sternstunden" xml:id="SZDMSK.288">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original" ref="http://d-nb.info/gnd/1124490469">Der versiegelte Zug.</title>
+              <title type="Einheitssachtitel">Sternstunden der Menschheit: Der versiegelte
+                Zug</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Seite 4 fehlt</note>
+              <note xml:lang="en">Page 4 missing</note><!-- so korrekt? -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 3 82</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Der Mann, der bei dem Flickschuster wohnt.“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript/Typoskriptdurchschlag</term>, <measure ana="corrected"
+                            type="leaf">12 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript/carbon copy</term>, <measure ana="corrected"
+                            type="leaf">12 leaves</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                      <ab xml:lang="de">Paginiert 2 bis 3, 5 bis 12</ab>
+                      <ab xml:lang="en">Paginated: 2-3, 5-12</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:AdditionalMaterial"><!-- Aufschrift auf Blatt nochmal überprüfen, konnte nicht alles entziffern -->
+                        <desc xml:lang="de">1 Einlageblatt mit Aufschrift "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
+                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." von fremder Hand</desc>
+                        <desc xml:lang="en">1 inserted leaf inscribed "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
+                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." by an unidentified hand</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>[1927]</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term ref="http://d-nb.info/gnd/118640402" type="person">Lenin, Vladimir
+                  Ilʹič</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.289">
+          <!-- Aufsätze handeln lt. Vorwort wohl von Tolstoi und Dostojewski - diese beiden bei den Keywords vermerken? -->
+          <!-- Verweis auf früheren Standort irgendwie einbauen: "The letters were previously stored in the Schwadron autographs collection." -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/1124490469">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de"></note>
+              <note xml:lang="en"></note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 4 181</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Es ist mir eine unverhoffte Freude, dass ich, zu der Gedächtnisfeier Leo 
+                      Tolstois eingeladen, diese Worte in Moskau...“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Papier beschädigt</material><!-- noch spezifizieren? -->
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Paper damaged</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Blaue oder violette Tinte</material><!-- noch überprüfen, bin mir unsicher -->
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Blue/purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected"
+                            type="leaf">2 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected"
+                            type="leaf">2 leaves</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Moskau</origPlace>
+                    <origDate when="1928-09-14">14. September 1928</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+         <biblFull ana="01_Sternstunden" xml:id="SZDMSK.290">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Flucht in die Unsterblichkeit</title>
+              <title type="Einheitssachtitel">Sternstunden der Menschheit: Flucht in die
+              Unsterblichkeit</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">1. Blatt mit Adressstempel „Stefan Zweig 49, Hallam Street, London W.
+                1.“</note>
+              <note xml:lang="en">1 leaf with address stamp "Stefan Zweig 49, Hallam Street, London W.
+                1."</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 3 83</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Ein Schiff wird ausgerüstet.“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte (und Bleistift - S. 27/28??)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink (and pencil??)</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript (?)</term>, <measure ana="corrected"
+                            type="leaf">34 Blatt, korrigiert</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (?)</term>, <measure ana="corrected"
+                            type="leaf">34 leaves, corrected</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Durchgehend paginiert</ab>
+                        <ab xml:lang="en">Paginated throughout</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>49. Hallam Street London</origPlace><!-- hier vermerken oder besser nicht? -->
+                    <origDate>[1935]</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term ref="http://d-nb.info/gnd/118652052" type="person">Balboa, Vasco Núñez de</term>
               </keywords>
             </textClass>
           </profileDesc>
