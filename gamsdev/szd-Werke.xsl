@@ -114,7 +114,7 @@
  
                                 <!-- /////////////////////////////////////////// -->    
                                 <!-- for each bibFull group by @type='Einheitssachtitel' -->
-                                    <xsl:for-each-group select="current-group()"  group-by="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"> 
+                                    <xsl:for-each-group select="current-group()"  group-by="normalize-space(t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1])"> 
                                     <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"/>
                                     
                                         <div class="list-group mt-4">
@@ -182,10 +182,12 @@
                                                       			<!-- Signatur -->
                                                       			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
                                                        			  <xsl:text> | </xsl:text>
-                                                                  <span>
-                                                         				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
-                                                                  </span>
+                                                         		    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>                                                                     
                                                        		   </xsl:if>
+                                                      	        <!-- if the object is an enclosures -->
+                                                      	        <xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@ana='szdg:Enclosures']">
+                                                      	            <xsl:text> [Beilage]</xsl:text>
+                                                      	        </xsl:if>
                                                       		</xsl:when>
                                                       		<!-- WERKNOTIZEN -->
                                                       		<xsl:otherwise>
@@ -203,30 +205,53 @@
 	                                                       			<xsl:text> | </xsl:text>
 	                                                       			<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
 	                                                       		</xsl:if>
+                                                      		    <!-- if the object is an enclosures -->
+                                                      		    <xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@ana='szdg:Enclosures']">
+                                                      		        <xsl:text> [Beilage]</xsl:text>
+                                                      		    </xsl:if>
                                                       		</xsl:otherwise>
                                                       	</xsl:choose>
                                                     </h4>  
                                                        	<!-- HREF SCAN -->
                                                        	<!-- if a PID exists in the TEI make a @href to the viewer and a different col-md-alignment -->
                                                         <xsl:variable name="currentPID" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='PID']"/>
-                                                       <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context']"/>
+                                                        <xsl:variable name="externIIIFManifest" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[@type='extern_iiif']/t:idno[@type='manifest']"/>
+                                                        <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='subject']"/>
                                                         <!-- scan, extern, thema button -->
                                                         <span class="col-1">
-                                                            <xsl:if test="$currentPID">
-                                                                <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
-                                                                    <xsl:choose>
-                                                                        <xsl:when test="$locale = 'en'">
-                                                                            <xsl:attribute name="title" select="'Access digital facsimile'"/>
-                                                                        </xsl:when>
-                                                                        <xsl:otherwise>
-                                                                            <xsl:attribute name="title" select="'Zum digitalen Faksimile'"/>
-                                                                        </xsl:otherwise>
-                                                                    </xsl:choose>
-                                                                    <!--<img src="{$Icon_manuskript}"  class="img-responsive icon_navbar" alt="Viewer" style="width:20px;"/>-->
-                                                                    <i class="fas fa-camera _icon"><xsl:text> </xsl:text></i>
+                                                            <xsl:choose>
+                                                                <xsl:when test="$externIIIFManifest">
+                                                                    <!-- http://gams.uni-graz.at/o:szd.externiiif/sdef:IIIF/getMirador?manifest=https://iiif.nli.org.il/IIIFv21/DOCID/NNL_ARCHIVE_AL21256393780005171/manifest  -->
+                                                                    <xsl:variable name="externIIIFObject" select="concat('/', $PID, '/sdef:IIIF/getMirador?manifest=', $externIIIFManifest)"/>
+                                                                    <a href="{$externIIIFObject}" target="_blank">
+                                                                        <xsl:choose>
+                                                                            <xsl:when test="$locale = 'en'">
+                                                                                <xsl:attribute name="title" select="'Access extern digital facsimile'"/>
+                                                                            </xsl:when>
+                                                                            <xsl:otherwise>
+                                                                                <xsl:attribute name="title" select="'Zum externen digitalen Faksimile'"/>
+                                                                            </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                        <i class="fas fa-camera _icon" style="color: #631a34;"><xsl:text> </xsl:text></i>
+                                                                    </a>
                                                                     <xsl:text> </xsl:text>
-                                                                </a>
-                                                            </xsl:if>
+                                                                </xsl:when>
+                                                                <xsl:when test="$currentPID">
+                                                                    <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
+                                                                        <xsl:choose>
+                                                                            <xsl:when test="$locale = 'en'">
+                                                                                <xsl:attribute name="title" select="'Access digital facsimile'"/>
+                                                                            </xsl:when>
+                                                                            <xsl:otherwise>
+                                                                                <xsl:attribute name="title" select="'Zum digitalen Faksimile'"/>
+                                                                            </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                        <i class="fas fa-camera _icon"><xsl:text> </xsl:text></i>
+                                                                    </a>
+                                                                    <xsl:text> </xsl:text>
+                                                                </xsl:when>
+                                                                <xsl:otherwise/>
+                                                            </xsl:choose>
                                                             <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']">
                                                                 <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']}" target="_blank"  style="color: #631a34;">
                                                                     <xsl:choose>
@@ -242,7 +267,7 @@
                                                                 <xsl:text> </xsl:text>
                                                             </xsl:if>
                                                             <xsl:if test="$currentCollection">
-                                                                <a href="{concat('/', $currentCollection)}" target="_blank" style="color: #631a34;">
+                                                                <a href="{concat('/', $currentCollection, '/sdef:TEI/get?locale=', $locale)}" target="_blank" style="color: #631a34;">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
                                                                             <xsl:attribute name="title" select="'Access subject page'"/>
@@ -272,6 +297,7 @@
                                                		<!-- this template is also used for the metadata representation für Collections in szd-templates -->
                                                    <xsl:call-template name="FillbiblFull_SZDMSK">
                                                        <xsl:with-param name="locale" select="$locale"/>
+                                                       <xsl:with-param name="PID" select="$PID"/>
                                                    </xsl:call-template>
                                            </div>
                                        </div>

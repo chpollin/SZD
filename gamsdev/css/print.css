@@ -1,13 +1,8 @@
+/* print styles */
 @media print {
-	
-  a[href]:after {
-
-    content: '*';
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
   }
-
-
-    body {width:1200px;}
-    div[class|=col-]{float:left;}
-    .col-sm-6{width:50%}
-
 }

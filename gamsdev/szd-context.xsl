@@ -32,6 +32,9 @@
             <xsl:when test="$mode = 'databasket'">
                 <xsl:call-template name="databasket"/>
             </xsl:when>
+            <xsl:when test="$mode = 'memory'">
+                <xsl:call-template name="memory"/>
+            </xsl:when>
             <!-- //////////////////////////////////////////////////////////// -->
             <!--  ABOUT static datastream in context:szd -->
             <xsl:when test="$mode = 'about'">
@@ -77,7 +80,7 @@
                         <!-- start img and text -->
                         <div class="card">
                             <div class="card-body">
-                                <img class="img-fluid mx-auto d-block" src="https://gams.uni-graz.at/archive/objects/context:szd/datastreams/STARTBILD/content" alt="Titelbild"/>
+                                <img class="img-fluid mx-auto d-block" src="/archive/objects/context:szd/datastreams/STARTBILD/content" alt="Titelbild"/>
                                  <div class="mt-5">
                                        <xsl:apply-templates select="document(concat('/context:szd/', 'STARTSEITE'))/t:TEI/t:text/t:body/t:div"/> 
                                  </div>
@@ -110,6 +113,15 @@
             </xsl:call-template>
             
             <article class="card-body" id="content">
+                <!-- datatables.js -->
+                <script src="{concat($gamsdev,'/js/datatable.js')}"><xsl:text> </xsl:text></script>
+                <!-- needed for datatale excel export -->
+                <script src="{concat($gamsdev,'/js/jszip.js')}"><xsl:text> </xsl:text></script>
+                <script src="{concat($gamsdev,'/js/dataTables.buttons.min.js')}"><xsl:text> </xsl:text></script>
+                <script src="{concat($gamsdev,'/js/pdfmake.min.js')}"><xsl:text> </xsl:text></script>
+                <script src="{concat($gamsdev,'/js/vfs_fonts.js')}"><xsl:text> </xsl:text></script>
+                <script src="{concat($gamsdev,'/js/buttons.html5.min.js')}"><xsl:text> </xsl:text></script>
+                
                     <xsl:choose>
                         <xsl:when test="$locale='en'">
                             <p class="card-text row">
@@ -165,11 +177,8 @@
                     null,
                     null
                     ],
-                    
-                    
-                    dom: 'Bfrtip',
-              <!--      buttons: ['pdf', 'excel', 'csv'],-->
-                    
+                     dom: 'Bfrtip',
+                    <!--      buttons: ['pdf', 'excel', 'csv'],-->
                     buttons: [
                     {
                     extend: 'pdfHtml5',
@@ -225,8 +234,6 @@
                         </tbody>
                     </table>
                 </div>
-                
-            
             <div class="card-body">
                 <div class="row">
                     <div id="databasekt_content">
@@ -239,7 +246,118 @@
             </div>
         </article>
         </section>
-    </xsl:template>                    
+    </xsl:template>     
+    
+    <xsl:template name="memory">
+        <!-- insert memopry.css and memory.js only when "get?mode=memory" -->
+        <link href="{concat($server, $gamsdev, '/css/memory.css')}" rel="stylesheet" type="text/css"/>
+       
+        
+        <xsl:variable name="pathIMG" select="concat($server, $gamsdev,'/img/memory')"/>
+        
+        <div class="card">
+            <div class="card-body">
+                <h1>Sternstunden des Memorys</h1>
+            </div>
+        
+        <section class="memory_game mt-4 mb-4">
+                
+                     <div class="memory_card" data-framework="1">
+                         <img class="front-face" src="{concat($pathIMG,'/1.jpg')}" alt="React"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="1">
+                         <img class="front-face" src="{concat($pathIMG,'/1.jpg')}" alt="React"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="2">
+                         <img class="front-face" src="{concat($pathIMG,'/2.jpg')}" alt="Angular"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="2">
+                         <img class="front-face" src="{concat($pathIMG,'/2.jpg')}" alt="Angular"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="3">
+                         <img class="front-face" src="{concat($pathIMG,'/3.jpg')}" alt="Ember"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="3">
+                         <img class="front-face" src="{concat($pathIMG,'/3.jpg')}" alt="Ember"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="4">
+                         <img class="front-face" src="{concat($pathIMG,'/4.jpg')}" alt="Vue"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="4">
+                         <img class="front-face" src="{concat($pathIMG,'/4.jpg')}" alt="Vue"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="5">
+                         <img class="front-face" src="{concat($pathIMG,'/5.jpg')}" alt="Backbone"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="5">
+                         <img class="front-face" src="{concat($pathIMG,'/5.jpg')}" alt="Backbone"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="6">
+                         <img class="front-face" src="{concat($pathIMG,'/6.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="6">
+                         <img class="front-face" src="{concat($pathIMG,'/6.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     <div class="memory_card" data-framework="7">
+                         <img class="front-face" src="{concat($pathIMG,'/7.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="7">
+                         <img class="front-face" src="{concat($pathIMG,'/7.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="8">
+                         <img class="front-face" src="{concat($pathIMG,'/8.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>
+                     
+                     <div class="memory_card" data-framework="8">
+                         <img class="front-face" src="{concat($pathIMG,'/8.jpg')}" alt="Aurelia"/>
+                         <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
+                     </div>      
+                
+            
+            
+            
+            <!--<div class="memory_card" data-framework="aurelia">
+                <img class="front-face" src="img/memory/9.jpg" alt="Aurelia"/>
+                <img class="back-face" src="img/memory/back.jpg" alt="Memory Card"/>
+            </div>
+            
+            <div class="memory_card" data-framework="aurelia">
+                <img class="front-face" src="img/memory/9.jpg" alt="Aurelia"/>
+                <img class="back-face" src="img/memory/back.jpg" alt="Memory Card"/>
+            </div>-->
+        </section>
+        </div>
+        <!-- JS -->
+        <script src="{concat($server, $gamsdev,'/js/memory.js')}"><xsl:text> </xsl:text></script>
+    </xsl:template>
     
 
 </xsl:stylesheet>

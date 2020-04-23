@@ -185,14 +185,14 @@
                                                 <i18n:text>all</i18n:text>
                                             </label>
                                         </div>               
-                                        <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
+                                       <!-- <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
                                             <div class="form-group mr-5">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
                                                     <i18n:text>autograph</i18n:text>
                                                 </label>
                                             </div>
-                                        </xsl:if>
+                                        </xsl:if>-->
                                         <xsl:if test="contains($Filter_search, 'o:szd.bibliothek')">
                                             <div class="form-group mr-5">
                                                 <label class="text-uppercase small">
@@ -417,7 +417,7 @@
                                 </xsl:when>
                                 <xsl:when test="contains(current-grouping-key(), '/o:szd.werke')">
                                     <div class="col-12 list-group mt-5" id="werke_search"> 
-                                        <h3 class="text-uppercase"><i18n:text>work</i18n:text></h3>
+                                        <h3 class="text-uppercase"><i18n:text>works</i18n:text></h3>
                                         <xsl:call-template name="SearchListGroup">
                                              <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
                                              <xsl:with-param name="Current-Group" select="current-group()"/>
@@ -585,7 +585,7 @@
     <xsl:template name="createEntry">
         <xsl:variable name="PID" select="substring-before(substring-after(s:re/@uri, 'gams.uni-graz.at/'), '#')"/>
         <xsl:variable name="SZDID" select="substring-after(s:re/@uri, '#')"/>
-      
+        <xsl:variable name="currentPID" select="substring-after(s:pid/@uri, 'uni-graz.at/')"/>
         <div id="{$SZDID}" class="list-group-item entry db_entry shadow-sm" >
             <!-- DATABASKET -->
             <xsl:call-template name="AddData-Databasket">
@@ -670,11 +670,17 @@
                             <span class="font-italic">
                                 <xsl:value-of select="s:t"/>
                             </span>
+                        <xsl:value-of select="$currentPID"/>
+                        <!-- for SZDMSK and SZDLEB add: TITEL | SIGNATURE | SZDID -->
+                        <xsl:if test="s:si and (contains($SZDID, 'SZDMSK') or (contains($SZDID, 'SZDLEB')))">
+                            <xsl:text> | </xsl:text>
+                            <xsl:value-of select="s:si"/>
+                        </xsl:if>
                         <xsl:text> | </xsl:text>
                         <xsl:value-of select="$SZDID"/>
                     </a>
                 </h4>
-                    <xsl:variable name="currentPID" select="substring-after(s:pid/@uri, 'uni-graz.at/')"/>
+                    
                     <span class="col-1">
                         <xsl:if test="$currentPID">
                             <a  href="{concat('/archive/objects/', $currentPID, '/methods/sdef:IIIF/getMirador')}">

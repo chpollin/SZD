@@ -87,7 +87,7 @@
 	<xsl:template name="Bibliothek">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
 			<xsl:variable name="Book-ID" select="@xml:id"/>
-	        <szd:Book rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#',  @xml:id)}">
+			<szd:Book rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#',  $Book-ID)}">
 	        	<xsl:call-template name="Bibliothek_RDF">
 	            	<xsl:with-param name="Book-ID" select="@xml:id"/>
 	            </xsl:call-template>
@@ -125,9 +125,11 @@
 				
 					<xsl:call-template name="getExtent_SZDBIB_SZDAUT">
 						<xsl:with-param name="locale" select="'en'"/>
+						<xsl:with-param name="SZD_ID"/>
 					</xsl:call-template>
 					<xsl:call-template name="getExtent_SZDBIB_SZDAUT">
 						<xsl:with-param name="locale" select="'de'"/>
+						<xsl:with-param name="SZD_ID"/>
 					</xsl:call-template>
 					
 				</szd:Extent>
@@ -379,22 +381,13 @@
 			<xsl:variable name="url" select="string(concat(t:persName/@ref, '/about/lds.rdf'))"/>
 			
 			<szd:Agent rdf:about="{concat('https://gams.uni-graz.at/o:szd.personen#', @xml:id)}">
-				<xsl:choose>
-					<xsl:when test="contains(t:persName/@ref, ' ')">
-						<xsl:for-each select="tokenize(t:persName/@ref, ' ')">
-							<xsl:choose>
-								<xsl:when test="contains(., 'wikidata.org')">
-									<szd:wikidata rdf:resource="{.}"/>
-								</xsl:when>
-								<xsl:when test="contains(., 'd-nb.info/gnd')">
-									<szd:gnd rdf:resource="{.}"/>
-								</xsl:when>
-								<xsl:otherwise/>
-							</xsl:choose>
-						</xsl:for-each>
-					</xsl:when>
-					<xsl:otherwise/>
-				</xsl:choose>
+				<xsl:if test="t:idno[@type='wikidata']">
+					<szd:wikidata rdf:resource="{t:idno[@type='wikidata']}"/>
+				</xsl:if>
+				<xsl:if test="t:persName/@ref">
+					<szd:gnd rdf:resource="{t:persName/@ref}"/>
+				</xsl:if>
+		
 				<!-- gnd identifier -->
 				
 				<!-- viaf identifier -->
@@ -1587,6 +1580,7 @@
 	
 	<xsl:template name="getExtent_SZDBIB_SZDAUT">
 		<xsl:param name="locale"/>
+		<xsl:param name="SZD_ID"/>
 		<xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
 		<xsl:if test="$EXTENT">
 		<szd:text>
@@ -1633,6 +1627,9 @@
 						<xsl:text> : </xsl:text>
 					</xsl:when>
 					<xsl:otherwise>
+						<xsl:if test="contains($SZD_ID,  'SZDBIB')">
+							<xsl:text>. </xsl:text>
+						</xsl:if>
 						<xsl:text> </xsl:text>
 					</xsl:otherwise>
 				</xsl:choose>

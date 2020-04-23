@@ -40,6 +40,7 @@
 		        <xsl:call-template name="getNavbar">
 		        	<xsl:with-param name="Title" select="upper-case(//t:titleStmt/t:title)"/>
 		        	<xsl:with-param name="PID" select="$PID"/>
+		            <xsl:with-param name="locale" select="$locale"/>
 		        </xsl:call-template>
         	    <!-- //////////////////////////////////////////////////////////// -->
         		<!-- EINTRAG -->
@@ -77,11 +78,11 @@
 	    <!-- //////////////////////////////////////////////////////////// -->
 	    <!-- EINLEITUNG -->
         <div class="col-12 mt-5">
-            <xsl:apply-templates select="//t:body/t:div[@type = 'Einleitung'][@xml:lang = $local]/t:p[1]"/>
-            <div class="collapse" id="{concat('viewdetails', generate-id(//t:body/t:div[@type = 'Einleitung'][@xml:lang = $local]/t:p[2]))}">
-                <xsl:apply-templates select="//t:body/t:div[@type = 'Einleitung'][@xml:lang = $local]/t:p[not(position() = 1)]"/>
+            <xsl:apply-templates select="//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[1]"/>
+            <div class="collapse" id="{concat('viewdetails', generate-id(//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[2]))}">
+                <xsl:apply-templates select="//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[not(position() = 1)]"/>
             </div>
-            <a type="button" data-toggle="collapse" data-target="{concat('#viewdetails', generate-id(//t:body/t:div[@type = 'Einleitung'][@xml:lang = $local]/t:p[2]))}" style="color:#C2A360; font-size: 30px;">
+            <a type="button" data-toggle="collapse" data-target="{concat('#viewdetails', generate-id(//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[2]))}" style="color:#C2A360; font-size: 30px;">
                 <xsl:text>&#9660;</xsl:text>
             </a>
         </div>

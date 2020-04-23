@@ -25,6 +25,7 @@ function add_DB(input_id)
     
     databasket.push(dbentry);
     localStorage.setItem(project, JSON.stringify(databasket));
+    countEntrys();
  }
  
 ////////////////////////////
@@ -46,8 +47,15 @@ function delet_DB(id)
 	//Restoring object left into databasket again
 	databasket = JSON.stringify(databasket);
 	localStorage.setItem(project, databasket);
-    location.reload(); 	
+    location.reload();
 }	
+
+////////////////////////////
+// calls countEntrys() onload (switching pages etc.)
+$(window).on('load', function() {
+  countEntrys();
+});
+
 
 ////////////////////////////
 //	clearData()
@@ -62,24 +70,17 @@ function clearData()
 //	countEntrys()
 // 	called by onLoad();
 //	and Datenkorb(n), where n is number of objects in the localStorage
-/*function countEntrys() 
+function countEntrys() 
 {
 	var databasketArray = JSON.parse(localStorage.getItem('szd'));
-	
 	if(typeof databasketArray !== 'undefined' && databasketArray.length > 0)
 	//databasket is empty
 	{
-		document.getElementById('databasket_static').innerHTML = ' ('+ databasketArray.length +')';
+		document.getElementById('db_static').innerHTML = ' ('+ databasketArray.length +')';
 	}
-}*/
+}
 
-////////////////////////////
-//	clear()
-// 	called by onLoad();
-function clear() 
-		{
-          document.getElementById("datenkorb_static").innerHTML = "";
-        }	
+        
 ////////////////////////////
 //	checkDatabasketStart()
 // 	called by onLoad()
@@ -97,13 +98,13 @@ function keepCheckboxes()
             var id = parts[parts.length - 1];  //SZDBIB.1249
             var collection = parts[parts.length - 2]; //glossa.uni-graz.at/o:szd.bibliothekskatalog
 		   
-		    //keepCheckboxes just for all entries at the actual site/collection. 
+		    //keepCheckboxes just for all entries at the current site/collection. 
 		    if(url.indexOf(collection) !== -1)
 		    {
-              var actualBox =  document.getElementById('cb'+id);
-              actualBox.setAttribute("checked", "true");
-              var actualEntry = document.getElementById(id);
-              actualEntry.setAttribute("data-check", "checked");
+              var currentBox =  document.getElementById('cb'+id);
+              currentBox.setAttribute("checked", "true");
+              var currentEntry = document.getElementById(id);
+              currentEntry.setAttribute("data-check", "checked");
             }
 		}	
 	}	
@@ -141,8 +142,6 @@ function showData()
 	var databasketArrayLength = databasketArray.length;	
     var databasekt_tbody = document.getElementById("databasekt_tbody");
 
-    
-
 	
 	//for every object in the array create a ul = databasketArrayLength 
 	for (var outerCount = 0; outerCount < databasketArrayLength; outerCount++) 
@@ -168,7 +167,15 @@ function showData()
 		tr.appendChild(td_location);
 		//
 		td_location.setAttribute("class", 'small');
-		td_location.appendChild(document.createTextNode(databasketArray[outerCount].location + ', ' + databasketArray[outerCount].signature));
+		if(databasketArray[outerCount].location != ' ')
+		{
+		  td_location.appendChild(document.createTextNode(databasketArray[outerCount].location + ', ' + databasketArray[outerCount].signature));
+		}
+		else
+		{
+		  td_location.appendChild(document.createTextNode(databasketArray[outerCount].signature));
+		}
+		
 		var br = document.createElement('br');
 		td_location.appendChild(br);
 		var a = document.createElement('a');
@@ -176,7 +183,7 @@ function showData()
 		a.setAttribute("style", "color:#631a34");
 		a.setAttribute("title", "Access Object");
 		a.setAttribute("href", uri);
-		a.appendChild(document.createTextNode(databasketArray[outerCount].uri));
+		a.appendChild(document.createTextNode(" " + databasketArray[outerCount].uri));
 		
 		var td_delete = document.createElement('td');
 		tr.appendChild(td_delete);
@@ -191,29 +198,5 @@ function showData()
 }
 
 
-////////////////////////////
-////////////////////////////
-//
-function printDatabasket() 
-{
-    var doc = new jsPDF();
-    var specialElementHandlers = {
-    '#editor': function (element, renderer) 
-    {
-        return true;
-    }
-};
 
-$('#cmd').click(function () {
-    doc.fromHTML($('#content').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-    });
-    doc.save('sample-file.pdf');
-});
-}
-
-/*$(window).on('load', function() {
-  countEntrys();
-});*/
 

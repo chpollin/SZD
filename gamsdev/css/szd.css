@@ -1,5 +1,28 @@
 /* Style the Image Used to Trigger the Modal */
 
+
+
+.dropdown-item
+{
+    color: #631a34;
+}
+
+.card{
+word-wrap: normal;
+
+}
+
+img.footer_img {
+  max-width: 50%;
+  height: auto;
+}
+
+
+div.dt-buttons{
+position:relative;
+float:left;
+}
+
 .small, small {
     font-size: 90%;
     font-weight: 400;
@@ -765,13 +788,13 @@ img.icon
 {
   font-family: 'Bauer';
     /* here change when migrat to gams */
-  src: url('/gamsdev/pollin/szd/trunk/www/fonts/BauerBodoniStd-BoldCond.otf');
+  src: url('/szd/fonts/BauerBodoniStd-BoldCond.otf');
 }
 @font-face 
 {
   font-family: 'SansPro';
   /* here change when migrat to gams */
-  src: url('/gamsdev/pollin/szd/trunk/www/fonts/SourceSansPro-Light.otf');
+  src: url('/szd/fonts/SourceSansPro-Light.otf');
 }
 
 ul.dropdown-menu > li > a
