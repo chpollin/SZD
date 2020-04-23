@@ -110,12 +110,14 @@
                                 <!-- //// -->
                                 <!-- getEntry_SZDBIB_SZDAUT -->
                                 <xsl:call-template name="getEntry_SZDBIB_SZDAUT">
+                                    <xsl:with-param name="PID" select="$PID"/>
                                     <xsl:with-param name="locale" select="$locale"/>
                                 </xsl:call-template>
                                 <!-- //// -->
                                 <!-- FillbiblFull_SZDAUT -->
                                 <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                                     <xsl:call-template name="FillbiblFull_SZDAUT">
+                                        <xsl:with-param name="PID" select="$PID"/>
                                         <xsl:with-param name="locale" select="$locale"/>
                                     </xsl:call-template>
                                 </div>
@@ -140,12 +142,14 @@
                                      <!-- //// -->
                                      <!-- getEntry_SZDBIB_SZDAUT -->
                                      <xsl:call-template name="getEntry_SZDBIB_SZDAUT">
+                                         <xsl:with-param name="PID" select="$PID"/>
                                          <xsl:with-param name="locale" select="$locale"/>
                                      </xsl:call-template>
                                      <!-- //// -->
                                      <!-- FillbiblFull_SZDBIB -->
                                      <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                                          <xsl:call-template name="FillbiblFull_SZDAUT">
+                                             <xsl:with-param name="PID" select="$PID"/>
                                              <xsl:with-param name="locale" select="$locale"/>
                                          </xsl:call-template>
                                      </div> 

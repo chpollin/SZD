@@ -59,7 +59,8 @@
 
 	<!-- project-specific variables -->
 	<xsl:variable name="server"></xsl:variable>
-	<xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable>
+	<!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
+	<xsl:variable name="gamsdev">/szd</xsl:variable>
 
 	<xsl:variable name="projectTitle">
 		<xsl:text>Stefan Zweig digital</xsl:text>
@@ -122,6 +123,8 @@
 				<meta name="publisher" content="Literaturarchiv Salzburg"/>
 				<meta name="author" content="Christopher Pollin"/>
 				<meta name="content-language" content="de"/>
+				<meta name="content-language" content="en"/>
+				
 			
 				<!--Projekttitel-->
 				<title>
@@ -146,14 +149,16 @@
 				<link rel="stylesheet" href="/lib/2.0/fa/css/all.css"/>
 				
 				<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
+				
+				
+				
 				<!-- jQuery core JavaScript ================================================== -->
-				<script src="/lib/2.0/jquery-3.4.0.min.js"><xsl:text> </xsl:text></script>
+				<script src="/lib/2.0/jquery-3.4.1.min.js"><xsl:text> </xsl:text></script>
 
 				<!-- Bootstrap core JavaScript ================================================== -->
 				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
-				<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>
+				<!--<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>-->
 				<script src="/lib/2.0/bootstrap-4.3.1-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
-				
 				<!-- projectspecific .js ================================================== -->
 				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
 				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
@@ -164,15 +169,8 @@
 					$('a.fancybox').fancybox({'type' : 'image'});
 					});
 				</script>
-				<!-- datatables.js -->
-				<script src="{concat($gamsdev,'/js/datatable.js')}"><xsl:text> </xsl:text></script>
-				<!-- needed for datatale excel export -->
-				<script src="{concat($gamsdev,'/js/jszip.js')}"><xsl:text> </xsl:text></script>
-				<script src="{concat($gamsdev,'/js/dataTables.buttons.min.js')}"><xsl:text> </xsl:text></script>
-				<script src="{concat($gamsdev,'/js/pdfmake.min.js')}"><xsl:text> </xsl:text></script>
-				<script src="{concat($gamsdev,'/js//vfs_fonts.js')}"><xsl:text> </xsl:text></script>
-				<script src="{concat($gamsdev,'/js/buttons.html5.min.js')}"><xsl:text> </xsl:text></script>
 				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
+				
 			</head>
 
 			<!-- //////////////////////////////////////////////////////////// -->
@@ -185,7 +183,7 @@
 				<!-- ///HEADER/// -->
 				<header>
 				<!-- ///NAVBAR/// -->
-					<nav class="navbar navbar-expand-md fixed-top navbar-dark pt-sm-2 border-bottom"><!-- fixed/sticky nav benötigt; muss noch nach rechts angepasst werden (margin) -->
+					<nav class="navbar navbar-expand-md fixed-top navbar-dark pt-sm-2 border-bottom">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"><xsl:text> </xsl:text></span>
 						</button>
@@ -206,7 +204,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="/o:szd.werke/sdef:TEI/get?locale={$locale}">
-												<i18n:text>works</i18n:text>
+												<i18n:text>works</i18n:text> 
 											</a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.lebensdokumente/sdef:TEI/get?locale={$locale}">
 												<i18n:text>personaldocument</i18n:text>
@@ -271,7 +269,15 @@
 									</li>
 									<li class="nav-item">
 										<a class="navtext text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
-											<i18n:text>about</i18n:text>
+											<!--<i18n:text>about</i18n:text>-->
+											<xsl:choose>
+												<xsl:when test="$locale='en'">
+													<xsl:text>About</xsl:text>
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:text>Projekt</xsl:text>
+												</xsl:otherwise>
+											</xsl:choose>
 										</a>
 									</li>
 									<!--<li class="nav-item dropdown">
@@ -299,7 +305,7 @@
 											</xsl:choose>
 											<div class="form-row">
 												<div class="input-group">
-													<input class="form-control border" id="n$1" name="$1" type="text" lang="{$locale}">
+													<input class="form-control border small" id="n$1" name="$1" type="text" lang="{$locale}">
 														<xsl:attribute name="placeholder">
 															<xsl:choose>
 																<xsl:when test="$locale = 'en'">
@@ -311,8 +317,8 @@
 															</xsl:choose>
 														</xsl:attribute>
 													</input>
-													<div class="input-group-prepend">
-														<button type="submit" class="btn icon_suche">
+													<div class="input-group-prepend small">
+														<button type="submit" class="btn small icon_suche">
 															<img src="{$Icon_suche}" alt="Search" height="20"/>
 														</button>
 													</div>
@@ -646,6 +652,11 @@
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@style='italic']">
 		<i><xsl:apply-templates></xsl:apply-templates></i>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style='uppercase']">
+		<span class="text-uppercase"><xsl:apply-templates></xsl:apply-templates></span>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->

@@ -46,7 +46,6 @@
                             <xsl:for-each-group select="//t:listEvent/t:event" group-by="t:head/t:span[1]/t:date/substring(@when | @from, 1, 4)">
                                 <xsl:variable name="actualYear" select="current-grouping-key()"/>
                                 <xsl:variable name="Position" select="position()"/>
-                                
                                 <!-- heading YEAR -->
                                 <h2 class="text-left">
                                     <xsl:choose>
@@ -83,6 +82,17 @@
                                                         <xsl:apply-templates select="t:ab[@xml:lang = 'de']"/>
                                                     </xsl:otherwise>
                                                 </xsl:choose>
+                                                <div class="row">
+                                                    <xsl:variable name="currentID" select="concat('u', substring-after(@xml:id, '.'))"/>
+                                                    <i class="fas fas fa-link small" data-toggle="collapse" data-target="{concat('#u', substring-after(@xml:id, '.'))}" style="color: #631a34">
+                                                        <xsl:attribute name="title" select="'Link'"/>
+                                                        <xsl:text> </xsl:text>
+                                                    </i>
+                                                    <span id="{$currentID}" class="collapse font-weight-light pl-2 small">
+                                                        <xsl:value-of select="concat('stefanzweig.digital/o:szd.lebenskalender#', @xml:id)"/>
+                                                    </span>
+                                                </div>
+                                             
                                             </div>
                                         </li>
                                     </xsl:for-each>

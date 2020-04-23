@@ -102,6 +102,7 @@
                                     <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                                         <xsl:call-template name="FillbiblFull_SZDBIB">
                                             <xsl:with-param name="locale" select="$locale"/>
+                                            <xsl:with-param name="PID" select="$PID"/>
                                         </xsl:call-template>
                                     </div>
                                </div>
@@ -131,6 +132,7 @@
                 			        <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                 			            <xsl:call-template name="FillbiblFull_SZDBIB">
                 			                <xsl:with-param name="locale" select="$locale"/>
+                			                <xsl:with-param name="PID" select="$PID"/>
                 			            </xsl:call-template>
                 			        </div> 
         			        </div>
