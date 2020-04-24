@@ -23062,11 +23062,11 @@
                   </objectDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:AdditionalMaterial"><!-- Aufschrift auf Blatt nochmal überprüfen, konnte nicht alles entziffern -->
+                      <item ana="szdg:AdditionalMaterial"><!-- Blattbeschreibung so beibehalten? -->
                         <desc xml:lang="de">1 Einlageblatt mit Aufschrift "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
-                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." von fremder Hand</desc>
+                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." vermutlich von Dora Mitzky</desc>
                         <desc xml:lang="en">1 inserted leaf inscribed "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
-                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." by an unidentified hand</desc>
+                          Wohl für die Neuauflage der 'Sternstunden' bestimmt." probably written by Dora Mitzky</desc><!-- Übersetzung so korrekt? -->
                       </item>
                     </list>
                   </accMat>
@@ -23102,10 +23102,6 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
-            <notesStmt>
-              <note xml:lang="de"></note>
-              <note xml:lang="en"></note>
-            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -23230,6 +23226,16 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
+                  <accMat>
+                  <list>
+                    <item ana="szdg:AdditionalMaterial"><!-- Blattbeschreibung so detailliert beibehalten? -->
+                      <desc xml:lang="de">1 Einlageblatt mit Aufschrift "Ms. von 'Flucht in die Unsterblichkeit',
+                        von Zweig durchgesehen &amp; Lavinia aus London geschickt. (Ich habe es in diesem Zustand gefunden)." vermutlich von Dora Mitzky</desc>
+                      <desc xml:lang="en">1 inserted leaf inscribed "Ms. von 'Flucht in die Unsterblichkeit',
+                        von Zweig durchgesehen &amp; Lavinia aus London geschickt. (Ich habe es in diesem Zustand gefunden)." probably written by Dora Mitzky</desc><!-- Übersetzung so korrekt? -->
+                    </item>
+                  </list>
+                </accMat>
                 </physDesc>
                 <history>
                   <origin>
@@ -23246,6 +23252,286 @@
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
                 <term ref="http://d-nb.info/gnd/118652052" type="person">Balboa, Vasco Núñez de</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull ana="L'Unité" xml:id="SZDMSK.291">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">La unidad espiritual del mundo.</title>
+              <title type="Einheitssachtitel">L'Unité spirituelle du Monde</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Seite 7 fehlt</note>
+              <note xml:lang="en">Page 7 missing</note><!-- so korrekt? -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 4 90</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="spa">Spanisch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Señoras, señores, Cuando me llegó la invitación para realizar una nueva serie de 
+                      conferencias en la América Latina,...“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Blaues Farbband, violette und schwarze Tinte und Bleistift (blauer Buntstift S. 9/14?)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Blue ribbon, purple and black ink and pencil (blue pencil?)</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag (?)</term>, <measure type="leaf">22
+                            Blatt, korrigiert</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy) (?)</term>, <measure type="leaf">22
+                            leaves, corrected</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Paginiert 2 bis 6, 8 bis 23</ab>
+                        <ab xml:lang="en">Paginated: 2-6, 8-23</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc><!-- Korrekturen eigenhändig? -->
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+               <history>
+                 <origin>
+                 <origDate>[1940]</origDate>
+                 </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull ana="01_Die" xml:id="SZDMSK.292">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Autobiographie</title><!-- Titel so belassen oder nur in summary oder notes vermerken? -->
+              <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436762-4 ">Die Welt von
+                Gestern</title>
+              <title type="Einheitssachtitel">Die Welt von Gestern</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor><!-- Lotte als contributor belassen? -->
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 4 89</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Inhaltsverzeichnis, Vorwort, Kapitel I-VII</ab>
+                    <ab xml:lang="en">Table of contents, preface and chapters I-VII</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Ich habe meiner Person niemals soviel Wichtigkeit beigemessen, dass es mich verlockt hätte,...“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, blauer und roter Buntstift, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink, blue and red pencil, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><!-- Blattzahl ohne Mappe (2 Bl.) und Einlageblatt (1 Bl.) -->
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">250 Blatt, korrigiert; 1 Flügelmappe</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">250 leaves,
+                            corrected; 1 flap binder</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Durchgehend paginiert</ab>
+                        <ab xml:lang="en">Paginated throughout</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc><!-- Korrekturen von Zweig? -->
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:AdditionalMaterial">
+                        <desc xml:lang="de">1 Einlageblatt mit Aufschrift von fremder Hand</desc>
+                        <desc xml:lang="en">1 inserted leaf inscribed by an unidentified hand</desc>
+                      </item>
+                      <item ana="szdg:Enclosures"><!-- Aufschriften nochmal kontrollieren! -->
+                        <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie Kap. Anfang bis VII inkl.“ und "Kultur korrigiert" (??) von Lotte Zweigs
+                          Hand (?) in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
+                        <desc xml:lang="en">Flap binder inscribed "Autobiographie Kap. Anfang bis VII inkl.“ and "Kultur korrigiert" (??) in Lotte Zweig's
+                          hand (?) in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
+                        <measure type="format"></measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Petropolis</origPlace><!-- Ort ergänzen? -->
+                    <origDate>[1940]</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Autobiographisches</term>
+                <term type="classification" xml:lang="en">Autobiographical</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull ana="01_Die" xml:id="SZDMSK.293">
+          <fileDesc>
+            <titleStmt>
+             <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436762-4 ">Die Welt von
+                Gestern</title>
+              <title type="Einheitssachtitel">Die Welt von Gestern</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor><!-- Lotte als contributor belassen? -->
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Kapitel nicht chronologisch geordnet</note><!-- tatsächlich so oder nur Fehler beim Scannen?! -->
+              <note xml:lang="en"></note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 4 89.1</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Kapitel VIII-XV</ab>
+                    <ab xml:lang="en">Chapters VIII-XV</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Als zu Beginn/Ostern 1917 meine Tragödie 'Jeremias' in Buchform erschien, erlebte ich...“</incipit><!-- Achtung: Incipit Kapitel X, weil nicht chronologisch! -->
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, blauer und roter Buntstift, Bleistift, roter Kugelschreiber(? - etwa VIII, 8)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink, blue and red pencil, pencil, red ball pen(?)</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">264 Blatt, korrigiert; 1 Flügelmappe</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">264 leaves,
+                            corrected; 1 flap binder</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Durchgehend paginiert</ab>
+                        <ab xml:lang="en">Paginated throughout</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc><!-- Korrekturen von Zweig? -->
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                     <item ana="szdg:Enclosures"><!-- Aufschriften nochmal kontrollieren! -->
+                        <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie VIII-Ende inkl.“ von Lotte Zweigs
+                          Hand (?) in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
+                       <desc xml:lang="en">Flap binder inscribed "Autobiographie VIII-Ende inkl.“ in Lotte Zweig's
+                          hand (?) in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
+                        <measure type="format"></measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Petropolis</origPlace><!-- Ort ergänzen? -->
+                    <origDate>[1940]</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Autobiographisches</term>
+                <term type="classification" xml:lang="en">Autobiographical</term>
               </keywords>
             </textClass>
           </profileDesc>
