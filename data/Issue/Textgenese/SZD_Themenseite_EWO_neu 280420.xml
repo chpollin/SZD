@@ -4,42 +4,29 @@
       <fileDesc>
          <titleStmt>
             <title>ToDo</title>
-
-
             <author>
                <persName>
-                  <forename>ToDo</forename>
+                  <forename>Simone</forename>
                   <surname>ToDo</surname>
                </persName>
             </author>
-
          </titleStmt>
-
-
          <publicationStmt>
-
-
             <publisher>
                <orgName ref="d-nb.info/gnd/1047605287"
                   corresp="https://www.uni-salzburg.at/index.php?id=72">Literaturarchiv
                   Salzburg</orgName>
             </publisher>
-
-
             <authority>
                <orgName ref="d-nb.info/gnd/1137284463"
                   corresp="https://informationsmodellierung.uni-graz.at"> Zentrum für
                   Informationsmodellierung - Austrian Centrefor Digital Humanities,
                   Karl-Franzens-Universität Graz </orgName>
             </authority>
-
-
             <distributor>
                <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset
                   ManagementSystem </orgName>
             </distributor>
-
-
             <availability>
 
                <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
@@ -54,63 +41,31 @@
             <date when="2017-12-15">15.12.2017</date>
 
          </publicationStmt>
-
-
          <seriesStmt>
-
             <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
-
-
             <respStmt>
-
                <resp>Projektleitung</resp>
-
-
                <persName>
                   <forename>Manfred</forename>
                   <surname>Mittermayer</surname>
                </persName>
-
             </respStmt>
-
-
-            <respStmt>
-
-               <resp>Datenmodellierung</resp>
-
-
+            <respStmt><resp>Datenmodellierung</resp>
                <persName>
                   <forename>Christopher</forename>
                   <surname>Pollin</surname>
                </persName>
-
             </respStmt>
-
          </seriesStmt>
-
-
          <sourceDesc>
-
             <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
-
          </sourceDesc>
-
       </fileDesc>
-
-
       <encodingDesc>
-
-
          <editorialDecl>
-
             <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
-
          </editorialDecl>
-
-
          <projectDesc>
-
-
             <ab>
                <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"/>
             </ab>
@@ -125,52 +80,24 @@
                zeitunabhängigzugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren
                ZeitpunktErschließung und Anreicherung des Quellenmaterials (z.B. digitalen
                Editionen) möglichwerden. </p>
-
          </projectDesc>
-
       </encodingDesc>
-
    </teiHeader>
-
-
    <text>
-
-
       <body>
-
          <!-- EINLEITUNG -->
-
-
-
-         <div xml:lang="de" type="introduction">
-
-
-            <p xml:lang="de"> Ich bin der erste Paragraph. Man kann Namen markieren <name
-                  ref="#SZDPER.1569" type="person">AdamLux</name> . Mit dem Attribut ref wird auf
-               die eindeutige ID jeder Person verlinkt.Die SZDPER-IDs findet man in der
-               Personenliste (http://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE).Man kann etwas
-               kursiv setzen. <hi style="italic">Jich bin kursiver text</hi>
-            </p>
-
-            <p>Zweite aragraph</p>
-
-         </div>
-
-         <!-- hier beginnt der Inhalt-->
-
-
-
-         <div xml:lang="de" type="col-2">
-
-
+         <div type="introduction" xml:lang="de">
             <head>
-               <!-- mit dem facs wird die Referenz zu einem Digitalisat hergestellt, mit dem ref die Verbindung zu einem Objekt in einem Katalog-->
-               <title> Die Entstehungsgeschichte von Stefan Zweigs <hi style="italic">Das erste Wort
+               Überschrift
+            </head>
+            <p>...</p>
+         </div>
+         <div xml:lang="de" type="col-2-img">
+            <head>
+               <title>Die Entstehungsgeschichte von Stefan Zweigs <hi style="italic">Das erste Wort
                      über den Ozean</hi>
                </title>
-               <idno>Hier kommt die Signatur eines Objektes hin, optional</idno>
             </head>
-
             <p>
                <name ref="#SZDPER.1560">Stefan Zweigs</name>
                <hi style="italic">Das erste Wort über den Ozean</hi> erschien erstmals im Jahr 1939
@@ -194,81 +121,77 @@
                Salzburger Ausgabe der <hi style="italic">Sternstunden der Menschheit</hi>, dass die
                zahlreichen Seitenangaben in den Aufzeichnungen zu <hi style="italic">Das erste Wort
                   über den Ozean</hi> innerhalb der Werknotizen 7 stets auf diese Quelle
-               zurückzuführen sind. <note type="footnote"><bibl>Vgl. Werner Michler/Martina Wörgötter: Anhang. In: Stefan
-                  Zweig: Sternstunden der Menschheit. Historische Miniaturen. Hg. v. Werner Michler
-                  u. Martina Wörgötter. Wien: Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk.
-                  Salzburger Ausgabe), S. 391.</bibl></note> Einmal ist in den Notizen selbst ein Hinweis
-               auf diesen Umstand zu finden, da an einer Stelle neben einer Seitenzahl „Field“ zu
-               lesen ist. Eine weitere Quelle notiert sich <name ref="#SZDPER.1560">Zweig</name> in
-               seinem Ringnotizbuch: John Joseph Fahie: <hi style="italic">A History of [Electric]
-                  Telegraphy to the year 1837</hi>. London: E. &amp; F.N. Spon 1884. <note type="footnote"><bibl>Die
-                  gesamte bibliographische Angabe findet sich nicht bei <name ref="#SZDPER.1560"
-                     >Zweig</name>, der nur eine verkürzte Version davon notiert, sondern wiederum
-                  bei Michler/Wörgötter.</bibl></note> Es ist davon auszugehen, dass er zuerst mit der
-               Quelle von Field arbeitete und auf das Werk von Fahie im Zuge seiner Arbeit an der
-               Erzählung gestoßen ist. Das legt zumindest die Tatsache nahe, dass er sich die Quelle
-               von Fahie am selben Ort notiert, an dem er bereits Informationen aus Fields Werk
-               exzerpiert. <lb/> Die Handlung von <hi style="italic">Das erste Wort über den
-                  Ozean</hi> bringt die Erzählung mit weiteren Pionier- und Entdeckergeschichten
-               innerhalb von <name ref="#SZDPER.1560">Zweigs</name> Œuvre, die von der Überfahrt
-               über den Atlantischen Ozean berichten, in Verbindung; dazu sind auch die Biographie
-               über Fernando Magellan (1937, mit 1938 als angegebenem Erscheinungsjahr) sowie von
-               den anderen <hi style="italic">Sternstunden</hi>-Texten insbesondere <hi
-                  style="italic">Flucht in die Unsterblichkeit</hi>, eine zeitlich nahe an <hi
-                  style="italic">Das erste Wort über den Ozean</hi> liegende Erzählung (Entstehung
-               um 1937, auf Deutsch erstmals 1943 erschienen) zu zählen. <name ref="#SZDPER.1560"
-                  >Zweig</name> reist 1936, bereits seit zwei Jahren im Exil in England lebend, zum
-               Kongress des P.E.N.-Clubs in Buenos Aires und hält an verschiedenen Orten in
-               Brasilien Lesungen ab. Seine in diese Zeit fallende verstärkte Zuwendung zum
-               Themenfeld der Entdeckung und Vereinnahmung Amerikas durch die europäischen Seefahrer
-               und Kolonialisten ist augenfällig. <hi style="italic">Das erste Wort über den
-                  Ozean</hi> rückt aufgrund der Thematik der Überfahrt über den Atlantik und der
-               technischen Pionierleistung der Verlegung des Transatlantikkabels inhaltlich in die
-               Nähe dieses Schwerpunktes, wenn sich auch die Handlung in diesem Fall im 19.
-               Jahrhundert abspielt. Zentral und klar erkennbar ist der pazifistische Impetus: Schon
-               zu Beginn der Erzählung heißt es, dass völkerverbindende Neuerungen wie die
-               Telegrafenkabellegung anstatt entzweiender Ereignisse wie Kriege in der
-               Geschichtsschreibung bzw. -vermittlung den obersten Stellenwert einnehmen sollten.
-               Anhand der frühen Notizen, die diesen Gedanken bereits enthalten, zeigt sich, dass
-                  <name ref="#SZDPER.1560">Zweig</name> dieser Aspekt von Beginn an wichtig war.
-               Darüber hinaus wird die Erzählung mit einer klaren pazifistischen Stellungnahme
-               abgeschlossen: <hi style="speech">„Und herrlich wäre sie [die Menschheit] dank ihren
-                  Siegen über Raum und Zeit nun für alle Zeiten vereint, verwirrte sie nicht immer
-                  wieder von neuem der verhängnisvolle Wahn, unablässig diese grandiose Einheit zu
-                  zerstören und mit denselben Mitteln, die ihr Macht über die Elemente gegeben, sich
-                  selbst zu vernichten.“</hi>
-               <note type="footnote"><bibl>Stefan Zweig: Das erste Wort über den Ozean. In: Ders.: Sternstunden der
-                  Menschheit. Historische Miniaturen. Hg. v. Werner Michler u. Martina Wörgötter.
-                  Wien: Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk. Salzburger Ausgabe),
-                  S.211–235, hier S. 235.</bibl></note>
+               zurückzuführen sind. <note type="footnote"><bibl>Vgl. Werner Michler/Martina
+                     Wörgötter: Anhang. In: Stefan Zweig: Sternstunden der Menschheit. Historische
+                     Miniaturen. Hg. v. Werner Michler u. Martina Wörgötter. Wien: Zsolnay 2017
+                     (Stefan Zweig: Das erzählerische Werk. Salzburger Ausgabe), S.
+                  391.</bibl></note> Einmal ist in den Notizen selbst ein Hinweis auf diesen Umstand
+               zu finden, da an einer Stelle neben einer Seitenzahl „Field“ zu lesen ist. Eine
+               weitere Quelle notiert sich <name ref="#SZDPER.1560">Zweig</name> in seinem
+               Ringnotizbuch: John Joseph Fahie: <hi style="italic">A History of [Electric]
+                  Telegraphy to the year 1837</hi>. London: E. &amp; F.N. Spon 1884. <note
+                  type="footnote"><bibl>Die gesamte bibliographische Angabe findet sich nicht bei
+                        <name ref="#SZDPER.1560">Zweig</name>, der nur eine verkürzte Version davon
+                     notiert, sondern wiederum bei Michler/Wörgötter.</bibl></note> Es ist davon
+               auszugehen, dass er zuerst mit der Quelle von Field arbeitete und auf das Werk von
+               Fahie im Zuge seiner Arbeit an der Erzählung gestoßen ist. Das legt zumindest die
+               Tatsache nahe, dass er sich die Quelle von Fahie am selben Ort notiert, an dem er
+               bereits Informationen aus Fields Werk exzerpiert. <lb/> Die Handlung von <hi
+                  style="italic">Das erste Wort über den Ozean</hi> bringt die Erzählung mit
+               weiteren Pionier- und Entdeckergeschichten innerhalb von <name ref="#SZDPER.1560"
+                  >Zweigs</name> Œuvre, die von der Überfahrt über den Atlantischen Ozean berichten,
+               in Verbindung; dazu sind auch die Biographie über Fernando Magellan (1937, mit 1938
+               als angegebenem Erscheinungsjahr) sowie von den anderen <hi style="italic"
+                  >Sternstunden</hi>-Texten insbesondere <hi style="italic">Flucht in die
+                  Unsterblichkeit</hi>, eine zeitlich nahe an <hi style="italic">Das erste Wort über
+                  den Ozean</hi> liegende Erzählung (Entstehung um 1937, auf Deutsch erstmals 1943
+               erschienen) zu zählen. <name ref="#SZDPER.1560">Zweig</name> reist 1936, bereits seit
+               zwei Jahren im Exil in England lebend, zum Kongress des P.E.N.-Clubs in Buenos Aires
+               und hält an verschiedenen Orten in Brasilien Lesungen ab. Seine in diese Zeit
+               fallende verstärkte Zuwendung zum Themenfeld der Entdeckung und Vereinnahmung
+               Amerikas durch die europäischen Seefahrer und Kolonialisten ist augenfällig. <hi
+                  style="italic">Das erste Wort über den Ozean</hi> rückt aufgrund der Thematik der
+               Überfahrt über den Atlantik und der technischen Pionierleistung der Verlegung des
+               Transatlantikkabels inhaltlich in die Nähe dieses Schwerpunktes, wenn sich auch die
+               Handlung in diesem Fall im 19. Jahrhundert abspielt. Zentral und klar erkennbar ist
+               der pazifistische Impetus: Schon zu Beginn der Erzählung heißt es, dass
+               völkerverbindende Neuerungen wie die Telegrafenkabellegung anstatt entzweiender
+               Ereignisse wie Kriege in der Geschichtsschreibung bzw. -vermittlung den obersten
+               Stellenwert einnehmen sollten. Anhand der frühen Notizen, die diesen Gedanken bereits
+               enthalten, zeigt sich, dass <name ref="#SZDPER.1560">Zweig</name> dieser Aspekt von
+               Beginn an wichtig war. Darüber hinaus wird die Erzählung mit einer klaren
+               pazifistischen Stellungnahme abgeschlossen: <hi style="speech">„Und herrlich wäre sie
+                  [die Menschheit] dank ihren Siegen über Raum und Zeit nun für alle Zeiten vereint,
+                  verwirrte sie nicht immer wieder von neuem der verhängnisvolle Wahn, unablässig
+                  diese grandiose Einheit zu zerstören und mit denselben Mitteln, die ihr Macht über
+                  die Elemente gegeben, sich selbst zu vernichten.“</hi>
+               <note type="footnote"><bibl>Stefan Zweig: Das erste Wort über den Ozean. In: Ders.:
+                     Sternstunden der Menschheit. Historische Miniaturen. Hg. v. Werner Michler u.
+                     Martina Wörgötter. Wien: Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk.
+                     Salzburger Ausgabe), S.211–235, hier S. 235.</bibl></note>
             </p>
          </div>
-
-
-         <div xml:lang="de" type="col-2">
-
-
+         <div xml:lang="de" type="col-2-img">
             <head>
-               <title> Werknotizen 7</title>
+               <title>Werknotizen 7</title>
             </head>
-
             <p>Bei den bereits erwähnten 'Werknotizen 7' handelt sich um ein Ringnotizheft mit
                Skizzen zu verschiedenen schriftstellerischen Projekten <name ref="#SZDPER.1560"
                   >Zweigs</name>. Viel Raum nehmen Aufzeichnungen für die Legende <hi style="italic"
                   >Der begrabene Leuchter</hi> ein. Zudem finden sich Notizen zu <hi style="italic"
                   >Magellan</hi>, aus denen hervorgeht, dass daraus ursprünglich ein <hi
                   style="italic">Sternstunden</hi>-Text hätte werden sollen und nicht eine
-               eigenständige Biographie <note type="footnote"><bibl>Stefan Zweig: <hi style="italic">Magellan. Der Mann
-                     und seine Tat</hi>. Wien: Reichner 1938.</bibl></note>, und Notizen zu einer
-               unbekannten Novelle mit einem Geheimrat A.R. als Protagonisten. Vierzehn Blätter sind
-               schließlich dem Text <hi style="italic">Das erste Wort über den Ozean</hi> gewidmet.
-               <lb/> Ziemlich genau in der Mitte dieser Einheit, nach den ersten sieben Blättern,
-               befindet sich eine frei gelassene Doppelseite, die als Trennmarker für zwei
-               voneinander zu unterscheidende Ausarbeitungsphasen fungiert. Das zeigt sich unter
-               anderem daran, dass die zweite Hälfte thematisch Notizen der ersten sieben Blätter
-               aufgreift, weiterentwickelt und mit neuen Inhalten kombiniert. Beide Hälften
-               manifestieren sich im Ringnotizbuch als sehr schemenhafte, skizzenartige und von
-               Substantiva dominierte Aufzeichnungen. Konjunktionen und Adverbien sind in diesem
+               eigenständige Biographie <note type="footnote"><bibl>Stefan Zweig: <hi style="italic"
+                        >Magellan. Der Mann und seine Tat</hi>. Wien: Reichner 1938.</bibl></note>,
+               und Notizen zu einer unbekannten Novelle mit einem Geheimrat A.R. als Protagonisten.
+               Vierzehn Blätter sind schließlich dem Text <hi style="italic">Das erste Wort über den
+                  Ozean</hi> gewidmet. <lb/> Ziemlich genau in der Mitte dieser Einheit, nach den
+               ersten sieben Blättern, befindet sich eine frei gelassene Doppelseite, die als
+               Trennmarker für zwei voneinander zu unterscheidende Ausarbeitungsphasen fungiert. Das
+               zeigt sich unter anderem daran, dass die zweite Hälfte thematisch Notizen der ersten
+               sieben Blätter aufgreift, weiterentwickelt und mit neuen Inhalten kombiniert. Beide
+               Hälften manifestieren sich im Ringnotizbuch als sehr schemenhafte, skizzenartige und
+               von Substantiva dominierte Aufzeichnungen. Konjunktionen und Adverbien sind in diesem
                frühen Stadium noch selten, während Verben häufig als Partizipien auftreten. Auf den
                ersten Seiten sind einige englische Ausdrücke enthalten, denen teilweise eine mit
                Bleistift in unmittelbarer Nähe notierte deutsche Übersetzung entspricht. Das ist ein
@@ -303,18 +226,12 @@
                anfallende Notizen freizuhalten, lässt sich im gesamten Notizheft gut nachvollziehen. </p>
 
          </div>
-
-
-         <div xml:lang="de" type="col-2">
-
-
+         <div xml:lang="de" type="col-2-img">
             <head>
                <title> Beilage zu Werknotizen 7: Vier lose Blätter mit Aufzeichnungen zu <hi
                      style="italic">Das erste Wort über den Ozean</hi>
                </title>
             </head>
-
-
             <p> Ursprünglich waren in das Ringnotizheft vier lose Blätter eingelegt, die einseitig
                mit weiteren Skizzen zu <hi style="italic">Das erste Wort über den Ozean</hi>
                beschrieben sind. Ein Vergleich mit den Aufzeichnungen im Notizheft zeigt, dass es
@@ -333,12 +250,11 @@
                kann darüber keine Aussage getroffen werden. Einige der Notizen, die <name
                   ref="#SZDPER.1560">Zweig</name> innerhalb der Werknotizen 7 als (spätere)
                Ergänzungen vermerkte, finden sich in dieser Arbeitsphase wiederaufgenommen. </p>
-            <div>
+            <div xml:lang="de" type="col-2-img">
                <head>
                   <title>Typoskript <hi style="italic">Das erste Wort über den Ozean</hi>
                   </title>
                </head>
-
                <p>Auf 29 einseitig bedruckten und beschriebenen Blättern ist eine gegenüber den
                   handschriftlichen Notizen der anderen beiden vorgestellten Textträger weit
                   fortgeschrittenere Arbeitsphase nachzuverfolgen. Als ‚Grundschicht‘ ist der
@@ -379,7 +295,7 @@
 
    <!-- hier dann alle statischen Bilder -->
 
-<!--
+   <!--
 
    <facsimile>
 
