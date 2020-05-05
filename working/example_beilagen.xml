@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="de">Werke</title>
+                <title xml:lang="en">Works</title>
+                <author>
+                    <persName>Stefan Zweig</persName>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+                        ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                </publisher>
+                <authority>
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at"
+                        ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität
+                        Graz</orgName>
+                </authority>
+                <distributor>
+                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
+                        Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0">Creative
+                        Commons BY-NC 4.0</licence>
+                </availability>
+                <publisher>Literaturarchiv Salzburg</publisher>
+                <idno type="PID">o:szd.werke</idno>
+                <date when="2019-03-21+01:00"/>
+            </publicationStmt>
+            <seriesStmt>
+                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+                <respStmt>
+                    <resp>Projektleitung</resp>
+                    <persName>
+                        <forename>Manfred</forename>
+                        <surname>Mittermayer</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenerfassung</resp>
+                    <persName>
+                        <forename>Lina Maria</forename>
+                        <surname>Zangerl</surname>
+                    </persName>
+                    <persName>
+                        <forename>Verena Maria</forename>
+                        <surname>Höller</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenmodellierung</resp>
+                    <persName>
+                        <forename>Christopher</forename>
+                        <surname>Pollin</surname>
+                    </persName>
+                </respStmt>
+            </seriesStmt>
+            <sourceDesc>
+                <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p> Jedes Werk im Nachlass von Stefan Zweig wid durch ein biblFull beschrieben.
+                    Neben klassischen biographischen Merkmalen, die beschrieben werden, liegt der
+                    Fokus auf physischen Merkmalen. Erschlossen wird nach den Prinzipien der RNA.
+                </p>
+            </editorialDecl>
+            <projectDesc>
+                <ab>
+                    <ref target="/o:szd.werke" type="object"/>
+                </ab>
+                <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+                    dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+                    orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) möglich werden.</p>
+            </projectDesc>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <biblFull ana="07_Notizbücher" xml:id="SZDMSK.64">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Werknotizen 7</title>
+                            <title ana="assigned" xml:lang="en">Working notes 7</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Notizbücher</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Notebooks</title>
+                            <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+                            <author ref="SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-AAP/W45</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.6829</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>
+                                        <ab xml:lang="de">Entwürfe zu „Der begrabene Leuchter“ und
+                                            „Das erste Wort über den Ozean“</ab>
+                                        <ab xml:lang="en">Drafts for &quot;Der begrabene
+                                            Leuchter&quot; and &quot;Das erste Wort über den
+                                            Ozean&quot;</ab>
+                                    </summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                                                    xml:lang="de">Deckblatt blaues Papier, Notizbuch
+                                                    mit Händlermarke BEAUVAIS PAPETIER 14, Rue du Bac
+                                                    (7e) 1072</material>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"
+                                                    xml:lang="en">Cover sheet of blue paper, notebook
+                                                    has stationer&apos;s label &quot;BEAUVAIS PAPETIER
+                                                    14, Rue du Bac (7e) 1072&quot;</material>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                                                    xml:lang="de">Violette und rote Tinte, Bleistift,
+                                                    roter Buntstift</material>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                                                    xml:lang="en">Purple and red ink, pencil, red
+                                                    pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Notizbuch</term>, <measure
+                                                        type="leaf">92 Blatt, 67 Blatt beschrieben; 1
+                                                        Deckblatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Notebook</term>, <measure
+                                                        type="leaf">92 leaves, writing on 67 leaves; 1
+                                                        cover sheet</measure>
+                                                </span>
+                                                <measure type="format">22x18 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig</ab>
+                                        <ab xml:lang="en">Stefan Zweig</ab>
+                                    </handDesc>
+                                    <bindingDesc>
+                                        <binding>
+                                            <ab xml:lang="de">Ringbindung</ab>
+                                            <ab xml:lang="en">Ring-bound</ab>
+                                        </binding>
+                                    </bindingDesc>
+                                    <accMat>
+                                        <list>
+                                            <item
+                                                ana="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
+                                                <desc xml:lang="de">3 Einlageblatt mit Aufschrift
+                                                    von Richard Friedenthal</desc>
+                                                <desc xml:lang="en">3 inserted leaves inscribed by
+                                                    Richard Friedenthal</desc>
+                                            </item>
+                                            <item
+                                                ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures">
+                                                <desc xml:lang="de">Deckblatt mit Aufschrift „Nur
+                                                    teilweise unbenutzt“ eigenhändig in rotem
+                                                    Buntstift und „Anfang einer Novelle über 10
+                                                    November 1939 Alles andere Vorarbeiten zu
+                                                    Bregrabenem Leuchter und Neuen Sternstunden“
+                                                    eigenhändig in violetter Tinte</desc>
+                                                <desc xml:lang="en">Cover sheet inscribed &quot;Nur
+                                                    teilweise unbenutzt&quot;, holograph in red
+                                                    pencil, and &quot;Anfang einer Novelle über 10
+                                                    November 1939 Alles andere Vorarbeiten zu
+                                                    Bregrabenem Leuchter und Neuen Sternstunden&quot;,
+                                                    holograph in purple ink</desc>
+                                                <measure type="format">27x21 cm</measure>
+                                            </item>
+                                            <item>
+                                                <!-- Referenz des Objekts auf seine Beialge -->
+                                                <term ref="#SZDMSK.TEST" type="hasBeilage" ana="https://gams.uni-graz.at/o:szd.glossar#Enclosures"/>
+                                            </item>
+                                        </list>
+                                    </accMat>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">Archiv Atrium Press</ab>
+                                        <ab xml:lang="en">Atrium Press</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                                        <ab xml:lang="en">Acquisition from Christie&apos;s London
+                                            2014</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords> 
+                                <term type="classification" xml:lang="de">Werknotizen</term>
+                                <term type="classification" xml:lang="en">Working Notes</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                
+                <!-- //////// Beilage als eigenes Objekt -->
+                <biblFull xml:id="SZDMSK.TEST">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Das erste Wort über den Ozean</title>
+                            <author ref="SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <!-- beilage hat eigene signatur -->
+                                    <idno type="signature">SZ-AAP/W45.1</idno>
+                                    <!-- scans extra? -->
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.6829</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <incipit>"Unvermuter Fund, erfährt, entdeckung | Elektricität und vor ihrem ersten Grosstat: dem Telegrafen."</incipit>
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                                                    xml:lang="de">Violette und rote Tinte</material>
+                                                <material
+                                                    ana="https://gams.uni-graz.at/o:szd.glossar#WritingInstrument"
+                                                    xml:lang="en">Purple and red ink</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Manuskript</term>, <measure
+                                                        type="leaf" ana="corrected">4 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Manusript</term>, <measure
+                                                        type="leaf" ana="corrected">4 leaves</measure>
+                                                </span>
+                                                <measure type="format">27x21 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig</ab>
+                                        <ab xml:lang="en">Stefan Zweig</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">Archiv Atrium Press</ab>
+                                        <ab xml:lang="en">Atrium Press</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                                        <ab xml:lang="en">Acquisition from Christie&apos;s London
+                                            2014</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <!-- Referenz auf Grundobjekt -->
+                                <term ref="#SZDMSK.64" type="istBeilage"/>
+                                <!-- Referenz auf Werkindex -->
+                                <term ref="#SZD???" type="hatInhaltlicheBeziehung"/>
+                                <term type="classification" xml:lang="de">Werknotizen</term>
+                                <term type="classification" xml:lang="en">Working Notes</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+            </listBibl>
+        </body>
+    </text>
+</TEI>
