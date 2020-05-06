@@ -23014,8 +23014,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Seite 4 fehlt</note>
-              <note xml:lang="en">Page 4 missing</note><!-- so korrekt? -->
+              <note xml:lang="de">Fragment, Seite 4 fehlt</note>
+              <note xml:lang="en">Fragment, missing page 4</note><!-- so korrekt? -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23062,7 +23062,7 @@
                   </objectDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:AdditionalMaterial"><!-- Blattbeschreibung so beibehalten? -->
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 Einlageblatt mit Aufschrift "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
                           Wohl für die Neuauflage der 'Sternstunden' bestimmt." vermutlich von Dora Mitzky</desc>
                         <desc xml:lang="en">1 inserted leaf inscribed "Ms. von 'Der versiegelte Zug' (unvollständig, es fehlt Seite 4 &amp; der Schluß).
@@ -23073,8 +23073,14 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origDate>[1927]</origDate>
+                    <origDate>[ca. 1927]</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">Lavinia Mazzuchetti</ab>
+                    <ab xml:lang="en">Lavinia Mazzuchetti</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Dora Mitzky 1968</ab>
+                    <ab xml:lang="en">Gift of Dora Mitzky 1968</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -23091,8 +23097,8 @@
           </profileDesc>
         </biblFull>
         <biblFull xml:id="SZDMSK.289">
-          <!-- Aufsätze handeln lt. Vorwort wohl von Tolstoi und Dostojewski - diese beiden bei den Keywords vermerken? -->
-          <!-- Verweis auf früheren Standort irgendwie einbauen: "The letters were previously stored in the Schwadron autographs collection." -->
+          <!-- Tolstoi und Dostojewski noch in keywords vermerken! -->
+          <!-- Oliver: Verweis auf früheren Standort "The letters were previously stored in the Schwadron autographs collection."; relevant? -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" ref="http://d-nb.info/gnd/1124490469">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title>
@@ -23102,6 +23108,10 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Fragment</note>
+              <note xml:lang="en">Fragment</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -23117,7 +23127,7 @@
                   </textLang>
                   <msItem>
                     <incipit>„Es ist mir eine unverhoffte Freude, dass ich, zu der Gedächtnisfeier Leo 
-                      Tolstois eingeladen, diese Worte in Moskau...“</incipit>
+                      Tolstois eingeladen, diese Worte in Moskau ...“</incipit>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23125,13 +23135,13 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="de">Papier beschädigt</material><!-- noch spezifizieren? -->
+                          xml:lang="de">Papier beschädigt, restauriert</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Paper damaged</material>
+                          xml:lang="en">Paper damaged, restored</material><!-- Übersetzung korrekt?! -->
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Blaue oder violette Tinte</material><!-- noch überprüfen, bin mir unsicher -->
+                          xml:lang="de">Violette Tinte</material><!-- noch überprüfen! -->
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Blue/purple ink</material>
+                          xml:lang="en">Purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -23205,17 +23215,17 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze Tinte (und Bleistift - S. 27/28??)</material>
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black ink (and pencil??)</material>
+                          xml:lang="en">Black ribbon, black ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript (?)</term>, <measure ana="corrected"
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure ana="corrected"
                             type="leaf">34 Blatt, korrigiert</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript (?)</term>, <measure ana="corrected"
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure ana="corrected"
                             type="leaf">34 leaves, corrected</measure>
                         </span>
                         <measure type="format"></measure>
@@ -23226,9 +23236,13 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Lotte Zweig</ab>
+                    <ab xml:lang="en">Lotte Zweig</ab>
+                  </handDesc>
                   <accMat>
                   <list>
-                    <item ana="szdg:AdditionalMaterial"><!-- Blattbeschreibung so detailliert beibehalten? -->
+                    <item ana="szdg:AdditionalMaterial">
                       <desc xml:lang="de">1 Einlageblatt mit Aufschrift "Ms. von 'Flucht in die Unsterblichkeit',
                         von Zweig durchgesehen &amp; Lavinia aus London geschickt. (Ich habe es in diesem Zustand gefunden)." vermutlich von Dora Mitzky</desc>
                       <desc xml:lang="en">1 inserted leaf inscribed "Ms. von 'Flucht in die Unsterblichkeit',
@@ -23239,9 +23253,15 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>49. Hallam Street London</origPlace><!-- hier vermerken oder besser nicht? -->
-                    <origDate>[1935]</origDate>
+                    <origPlace>London</origPlace>
+                    <origDate>[ca. 1935]</origDate><!-- Korrespondenz mit Lavinia darauf durchsehen (1935-1937), wann dieser Text übersandt wurde -->
                   </origin>
+                  <provenance><ab xml:lang="de">Lavinia Mazzuchetti</ab>
+                    <ab xml:lang="en">Lavinia Mazzuchetti</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Dora Mitzky 1968</ab>
+                    <ab xml:lang="en">Gift of Dora Mitzky 1968</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -23268,8 +23288,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Seite 7 fehlt</note>
-              <note xml:lang="en">Page 7 missing</note><!-- so korrekt? -->
+              <note xml:lang="de">Fragment, Seite 7 fehlt</note>
+              <note xml:lang="en">Fragment, missing page 7</note><!-- so korrekt oder 1 Blatt zu wenig gescant? -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23286,7 +23306,7 @@
                   </textLang>
                   <msItem>
                     <incipit>„Señoras, señores, Cuando me llegó la invitación para realizar una nueva serie de 
-                      conferencias en la América Latina,...“</incipit>
+                      conferencias en la América Latina, ...“</incipit>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23294,17 +23314,17 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Blaues Farbband, violette und schwarze Tinte und Bleistift (blauer Buntstift S. 9/14?)</material>
+                          xml:lang="de">Blaues Farbband, violette und schwarze Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Blue ribbon, purple and black ink and pencil (blue pencil?)</material>
+                          xml:lang="en">Blue ribbon, purple and black ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskriptdurchschlag (?)</term>, <measure type="leaf">22
-                            Blatt, korrigiert</measure>
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">22
+                            Blatt, korrigiert</measure><!-- INL vermerkt 23 Blatt, Fehler? -->
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript (carbon copy) (?)</term>, <measure type="leaf">22
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">22
                             leaves, corrected</measure>
                         </span>
                         <measure type="format"></measure>
@@ -23315,9 +23335,9 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
-                  <handDesc><!-- Korrekturen eigenhändig? -->
-                    <ab xml:lang="de">Stefan Zweig</ab>
-                    <ab xml:lang="en">Stefan Zweig</ab>
+                  <handDesc><!-- Korrekturen von? -->
+                    <ab xml:lang="de">Fremde Hand</ab>
+                    <ab xml:lang="en">Unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                <history>
@@ -23340,7 +23360,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.292">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Autobiographie</title><!-- Titel so belassen oder nur in summary oder notes vermerken? -->
+              <title ana="original">Autobiographie</title>
               <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436762-4 ">Die Welt von
                 Gestern</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
@@ -23353,6 +23373,10 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Gekennzeichnet als viertes Exemplar</note>
+              <note xml:lang="en">Labeled as fourth copy</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -23371,7 +23395,7 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <incipit>„Ich habe meiner Person niemals soviel Wichtigkeit beigemessen, dass es mich verlockt hätte,...“</incipit>
+                    <incipit>„Ich habe meiner Person niemals soviel Wichtigkeit beigemessen, dass es mich verlockt hätte, ...“</incipit>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23384,7 +23408,7 @@
                           xml:lang="en">Black ribbon, black ink, blue and red pencil, pencil</material>
                       </support>
                       <extent>
-                        <span xml:lang="de"><!-- Blattzahl ohne Mappe (2 Bl.) und Einlageblatt (1 Bl.) -->
+                        <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>, <measure type="leaf">250 Blatt, korrigiert; 1 Flügelmappe</measure>
                         </span>
                         <span xml:lang="en">
@@ -23399,9 +23423,9 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
-                  <handDesc><!-- Korrekturen von Zweig? -->
-                    <ab xml:lang="de">Stefan Zweig</ab>
-                    <ab xml:lang="en">Stefan Zweig</ab>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig</ab>
                   </handDesc>
                   <accMat>
                     <list>
@@ -23409,11 +23433,11 @@
                         <desc xml:lang="de">1 Einlageblatt mit Aufschrift von fremder Hand</desc>
                         <desc xml:lang="en">1 inserted leaf inscribed by an unidentified hand</desc>
                       </item>
-                      <item ana="szdg:Enclosures"><!-- Aufschriften nochmal kontrollieren! -->
-                        <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie Kap. Anfang bis VII inkl.“ und "Kultur korrigiert" (??) von Lotte Zweigs
-                          Hand (?) in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
-                        <desc xml:lang="en">Flap binder inscribed "Autobiographie Kap. Anfang bis VII inkl.“ and "Kultur korrigiert" (??) in Lotte Zweig's
-                          hand (?) in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Flügelmappe, Aufschrift mit Titel und „Anfang bis VII inkl.“ und "Kultur korrigiert" von Lotte Zweigs
+                          Hand in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
+                        <desc xml:lang="en">Flap binder with title, further inscribed "Kap. Anfang bis VII inkl.“ and "Kultur korrigiert" in Lotte Zweig's
+                          hand in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
                         <measure type="format"></measure>
                       </item>
                     </list>
@@ -23421,9 +23445,11 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>Petropolis</origPlace><!-- Ort ergänzen? -->
+                    <origPlace>Petropolis</origPlace>
                     <origDate>[1940]</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">Alfredo Cahn</ab>
+                    <ab xml:lang="en">Alfredo Cahn</ab></provenance>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -23440,8 +23466,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.293">
           <fileDesc>
             <titleStmt>
-             <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436762-4 ">Die Welt von
-                Gestern</title>
+             <title ana="original" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -23474,7 +23499,7 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <incipit>„Als zu Beginn/Ostern 1917 meine Tragödie 'Jeremias' in Buchform erschien, erlebte ich...“</incipit><!-- Achtung: Incipit Kapitel X, weil nicht chronologisch! -->
+                    <incipit>„Als zu Beginn/Ostern 1917 meine Tragödie 'Jeremias' in Buchform erschien, erlebte ich ...“</incipit><!-- Achtung: Incipit Kapitel X, weil nicht chronologisch! -->
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23482,9 +23507,9 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, blauer und roter Buntstift, Bleistift, roter Kugelschreiber(? - etwa VIII, 8)</material>
+                          xml:lang="de">Schwarzes Farbband, schwarze und rote Tinte, blauer und roter Buntstift, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black ink, blue and red pencil, pencil, red ball pen(?)</material>
+                          xml:lang="en">Black ribbon, black and red ink, blue and red pencil, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -23502,17 +23527,17 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
-                  <handDesc><!-- Korrekturen von Zweig? -->
-                    <ab xml:lang="de">Stefan Zweig</ab>
-                    <ab xml:lang="en">Stefan Zweig</ab>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig</ab>
                   </handDesc>
                   <accMat>
                     <list>
-                     <item ana="szdg:Enclosures"><!-- Aufschriften nochmal kontrollieren! -->
-                        <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie VIII-Ende inkl.“ von Lotte Zweigs
-                          Hand (?) in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
-                       <desc xml:lang="en">Flap binder inscribed "Autobiographie VIII-Ende inkl.“ in Lotte Zweig's
-                          hand (?) in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
+                     <item ana="szdg:Enclosures">
+                       <desc xml:lang="de">Flügelmappe, Aufschrift mit Titel und „VIII-Ende inkl.“ von Lotte Zweigs
+                          Hand in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
+                       <desc xml:lang="en">Flap binder with title, further inscribed "VIII-Ende inkl.“ in Lotte Zweig's
+                          hand in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
                         <measure type="format"></measure>
                       </item>
                     </list>
@@ -23520,7 +23545,7 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>Petropolis</origPlace><!-- Ort ergänzen? -->
+                    <origPlace>Petropolis</origPlace>
                     <origDate>[1940]</origDate>
                   </origin>
                 </history>
@@ -23536,7 +23561,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull ana="06_Marie" xml:id="SZDMSK.294">
+        <biblFull ana="06_Marie" xml:id="SZDMSK.294"><!-- besteht bereits - mit Nr. 73 zusammenführen, Infos ergänzen! -->
           <fileDesc>
             <titleStmt>
               <title ana="supplied/verified" ref="http://d-nb.info/gnd/1024274039">Marie
@@ -23549,7 +23574,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de"></note>
+              <note xml:lang="de">Vermutlich 3. Fahnenlauf (paginiert 33 bis 60) und 4. Fahnenlauf (paginiert 65 bis 80)</note><!-- zweiter Teil 65-80 andere Korrekturstufe, schwer leserlich?! -->
               <note xml:lang="en"></note>
             </notesStmt>
             <sourceDesc>
@@ -23563,7 +23588,7 @@
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">3. Korrektur von "Marie Antoinette"</ab><!-- zweiter Teil 65-80 andere Korrekturstufe, schwer leserlich?! -->
+                    <ab xml:lang="de">3. Korrektur von "Marie Antoinette"</ab>
                     <ab xml:lang="en"></ab>
                   </summary>
                   <textLang>
@@ -23578,9 +23603,9 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte, Bleistift, roter Buntstift</material>
+                          xml:lang="de">Schwarzes Farbband, violette, schwarze und rote Tinte, Bleistift, roter Buntstift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, purple and black ink, pencil, red pencil</material>
+                          xml:lang="en">Black ribbon, purple, black and red ink, pencil, red pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -23594,7 +23619,7 @@
                         <measure type="format"></measure>
                       </extent>
                       <foliation>
-                        <ab xml:lang="de">Paginiert 33 bis 80, 65 bis 80</ab><!-- Seiten aber nicht doppelt, andere Fassungen? -->
+                        <ab xml:lang="de">Paginiert 33 bis 80, 65 bis 80</ab>
                         <ab xml:lang="en">Paginated: 33-80, 65-80</ab>
                       </foliation>
                     </supportDesc>
