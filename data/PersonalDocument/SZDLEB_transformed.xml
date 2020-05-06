@@ -1506,6 +1506,89 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDLEB.14">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Declaracão</title>
+              <title type="Einheitssachtitel" xml:lang="de"></title>
+              <title type="Einheitssachtitel" xml:lang="en"></title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de"></note>
+              <note xml:lang="en"></note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 4 182</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1
+                            Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1
+                            leaf</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:AdditionalMaterial">
+                        <desc xml:lang="de">8 Blatt, moderne Transkriptionen und eine moderne Übersetzung ins Hebräische</desc><!-- "modern" ersetzen durch... -->
+                        <desc xml:lang="en">8 inserted leaves, modern transcripts and a modern translation into Hebrew</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Petropolis</origPlace>
+                    <origDate when="1942-02-22">22. II 1942</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de"></term>
+                <term type="classification" xml:lang="en"></term>
+                </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
