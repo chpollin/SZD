@@ -23536,6 +23536,101 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull ana="06_Marie" xml:id="SZDMSK.294">
+          <fileDesc>
+            <titleStmt>
+              <title ana="supplied/verified" ref="http://d-nb.info/gnd/1024274039">Marie
+                Antoinette</title>
+              <title type="Einheitssachtitel">Marie Antoinette</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de"></note>
+              <note xml:lang="en"></note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Israel</country>
+                  <settlement>Jerusalem</settlement>
+                  <repository ref="http://d-nb.info/gnd/1004728-1">The
+                    National Library of Israel</repository>
+                  <idno type="signature">ARC. Ms. Var. 305 3 81</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">3. Korrektur von "Marie Antoinette"</ab><!-- zweiter Teil 65-80 andere Korrekturstufe, schwer leserlich?! -->
+                    <ab xml:lang="en"></ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„man frei und ehrlich von der langjährigen ehelichen Unfähigkeit Ludwigs XVI. spricht? ...“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte, Bleistift, roter Buntstift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, purple and black ink, pencil, red pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Korrekturfahne</term>, <measure ana="corrected"
+                            type="leaf">64 Blatt, korrigiert</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Galley proofs</term>, <measure ana="corrected"
+                            type="leaf">64 leaves, corrected</measure>
+                        </span>
+                        <measure type="format"></measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Paginiert 33 bis 80, 65 bis 80</ab><!-- Seiten aber nicht doppelt, andere Fassungen? -->
+                        <ab xml:lang="en">Paginated: 33-80, 65-80</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab><!-- nur er?! -->
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:AdditionalMaterial">
+                        <desc xml:lang="de">2 Blatt mit Werbetext des Insel-Verlag zu "Marie Antoinette" und einem Roman von Ricarda Huch</desc><!-- so belassen? Übersetzung! -->
+                        <desc xml:lang="en">2 inserted leaves</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>[ca. 1932]</origDate>
+                  </origin>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Biographien</term>
+                <term type="classification" xml:lang="en">Biographies</term>
+                <term ref="http://d-nb.info/gnd/118577905" type="person">Marie Antoinette,
+                  Frankreich, Königin</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
