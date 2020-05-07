@@ -3768,8 +3768,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
-                <term ref="http://d-nb.info/gnd/11864291X" type="person">Tolstoj, Lev
-                  Nikolaevič</term>
+                <term ref="http://d-nb.info/gnd/11864291X" type="person">Tolstoj, Lev Nikolaevič</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6819,7 +6818,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Vermutlich 3. Fahnenlauf (paginiert 33 bis 60) und 4. Fahnenlauf (paginiert 65 bis 80)</note><!-- zweiter Teil 65-80 andere Korrekturstufe?!  -->
+              <note xml:lang="de">Gekennzeichnet als 3. Korrektur (paginiert 33 bis 80) und vermutlich spätere Korrektur von Anna Meingasts Hand (paginiert 65 bis 80)</note>
               <note xml:lang="en"></note><!-- Übersetzung fehlt noch! -->
             </notesStmt>
             <sourceDesc>
@@ -6838,10 +6837,6 @@
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
-                  <summary>
-                    <ab xml:lang="de">3. Korrektur von "Marie Antoinette"</ab>
-                    <ab xml:lang="en"></ab><!-- Übersetzung fehlt noch! -->
-                  </summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -6876,14 +6871,14 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de">Stefan Zweig</ab><!-- nur er?! -->
-                    <ab xml:lang="en">Stefan Zweig</ab>
+                    <ab xml:lang="de">Stefan Zweig, Anna Meingast</ab>
+                    <ab xml:lang="en">Stefan Zweig, Anna Meingast</ab>
                   </handDesc>
                   <accMat>
                     <list>
                       <item ana="szdg:AdditionalMaterial">
-                        <desc xml:lang="de">2 Blatt mit Werbetext des Insel-Verlag zu "Marie Antoinette" und einem Roman von Ricarda Huch</desc><!-- so belassen? Übersetzung! -->
-                        <desc xml:lang="en">2 inserted leaves</desc>
+                        <desc xml:lang="de">1 Blatt, Zeitungsfragment</desc><!-- eventuell noch weitere Infos ergänzen! -->
+                        <desc xml:lang="en">1 leaf, fragment of an newspaper clipping</desc><!-- Übersetzung korrekt?! -->
                       </item>
                     </list>
                   </accMat>
@@ -23045,7 +23040,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Fragment, Seite 4 fehlt</note>
-              <note xml:lang="en">Fragment, missing page 4</note><!-- so korrekt? -->
+              <note xml:lang="en">Fragment, missing page 4</note><!-- Übersetzung so korrekt? -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23127,8 +23122,6 @@
           </profileDesc>
         </biblFull>
         <biblFull xml:id="SZDMSK.289">
-          <!-- Tolstoi und Dostojewski noch in keywords vermerken! -->
-          <!-- Oliver: Verweis auf früheren Standort "The letters were previously stored in the Schwadron autographs collection."; relevant? -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" ref="http://d-nb.info/gnd/1124490469">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title>
@@ -23170,7 +23163,7 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">Paper damaged, restored</material><!-- Übersetzung korrekt?! -->
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Violette Tinte</material><!-- noch überprüfen! -->
+                          xml:lang="de">Violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink</material>
                       </support>
@@ -23193,6 +23186,8 @@
                     <origPlace>Moskau</origPlace>
                     <origDate when="1928-09-14">14. September 1928</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">Abraham Schwadron Autographensammlung</ab>
+                    <ab xml:lang="en">Abraham Schwadron autographs collection</ab></provenance>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -23202,6 +23197,9 @@
               <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term ref="http://d-nb.info/gnd/11864291X" type="person">Tolstoj, Lev Nikolaevič</term>
+                <term ref="http://d-nb.info/gnd/118527053" type="person">Dostoevskij, Fëdor
+                  Michajlovič</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -23286,7 +23284,7 @@
                 <history>
                   <origin>
                     <origPlace>London</origPlace>
-                    <origDate>[ca. 1935]</origDate><!-- Korrespondenz mit Lavinia darauf durchsehen (1935-1937), wann dieser Text übersandt wurde -->
+                    <origDate>[1936]</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Lavinia Mazzuchetti</ab>
                     <ab xml:lang="en">Lavinia Mazzuchetti</ab></provenance>
@@ -23322,7 +23320,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Fragment, Seite 7 fehlt</note>
-              <note xml:lang="en">Fragment, missing page 7</note><!-- so korrekt oder 1 Blatt zu wenig gescant? -->
+              <note xml:lang="en">Fragment, missing page 7</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23354,7 +23352,7 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskript</term>, <measure type="leaf">22
-                            Blatt, korrigiert</measure><!-- INL vermerkt 23 Blatt, Fehler? -->
+                            Blatt, korrigiert</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript</term>, <measure type="leaf">22
@@ -23368,9 +23366,9 @@
                       </foliation>
                     </supportDesc>
                   </objectDesc>
-                  <handDesc><!-- Korrekturen von? -->
-                    <ab xml:lang="de">Fremde Hand</ab>
-                    <ab xml:lang="en">Unidentified hand</ab>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                <history>
@@ -23393,9 +23391,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.292">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Autobiographie</title>
-              <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436762-4 ">Die Welt von
-                Gestern</title>
+             <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie [Teil 1]</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
               <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -23408,8 +23404,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Gekennzeichnet als viertes Exemplar</note>
-              <note xml:lang="en">Labeled as fourth copy</note>
+              <note xml:lang="de">Gekennzeichnet als viertes Exemplar; Kapitel der Zählung nach vollständig, es fehlt aber das später in der deutschen Druckfassung enthaltene Kapitel "Eros Matutinus"</note>
+              <note xml:lang="en">Labeled as fourth copy</note><!-- weitere Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23468,7 +23464,7 @@
                         <desc xml:lang="en">1 inserted leaf inscribed by an unidentified hand</desc>
                       </item>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Flügelmappe, Aufschrift mit Titel und „Anfang bis VII inkl.“ und "Kultur korrigiert" von Lotte Zweigs
+                        <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie Anfang bis VII inkl.“ und "Kultur korrigiert" von Lotte Zweigs
                           Hand in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
                         <desc xml:lang="en">Flap binder with title, further inscribed "Kap. Anfang bis VII inkl.“ and "Kultur korrigiert" in Lotte Zweig's
                           hand in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
@@ -23500,7 +23496,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.293">
           <fileDesc>
             <titleStmt>
-             <title ana="original" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie [Teil 2]</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
               <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -23513,7 +23509,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Kapitel nicht chronologisch geordnet</note><!-- tatsächlich so oder nur Fehler beim Scannen?! -->
+              <note xml:lang="de">Kapitel nicht nach der Zählung geordnet</note>
               <note xml:lang="en"></note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
@@ -23534,7 +23530,7 @@
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                   <msItem>
-                    <incipit>„Als zu Beginn/Ostern 1917 meine Tragödie 'Jeremias' in Buchform erschien, erlebte ich ...“</incipit><!-- Achtung: Incipit Kapitel X, weil nicht chronologisch! -->
+                    <incipit>„Als zu Beginn/Ostern 1917 meine Tragödie 'Jeremias' in Buchform erschien, erlebte ich ...“</incipit>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23569,7 +23565,7 @@
                   <accMat>
                     <list>
                      <item ana="szdg:Enclosures">
-                       <desc xml:lang="de">Flügelmappe, Aufschrift mit Titel und „VIII-Ende inkl.“ von Lotte Zweigs
+                       <desc xml:lang="de">Flügelmappe, Aufschrift „Autobiographie VIII-Ende inkl.“ von Lotte Zweigs
                           Hand in blauem Buntstift und „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“ eigenhändig in schwarzer Tinte</desc>
                        <desc xml:lang="en">Flap binder with title, further inscribed "VIII-Ende inkl.“ in Lotte Zweig's
                           hand in blue pencil and „Zweig Petropolis (Brasil) 34 Rua Goncalves Dias“, holograph in black ink</desc>
@@ -23583,6 +23579,8 @@
                     <origPlace>Petropolis</origPlace>
                     <origDate>[1940]</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">Alfredo Cahn</ab>
+                    <ab xml:lang="en">Alfredo Cahn</ab></provenance>
                 </history>
               </msDesc>
             </sourceDesc>
