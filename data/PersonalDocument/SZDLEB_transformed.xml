@@ -1512,16 +1512,13 @@
               <title ana="original">Declaracão</title>
               <title type="Einheitssachtitel" xml:lang="de">Abschiedsbrief</title>
               <title type="Einheitssachtitel" xml:lang="en">Suicide note</title>
+              <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
-            <notesStmt>
-              <note xml:lang="de">Mehrere Fassungen</note><!-- noch mit Oliver besprechen! -->
-              <note xml:lang="en">Several versions</note>
-            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -1576,6 +1573,8 @@
                     <origPlace>Petropolis</origPlace>
                     <origDate when="1942-02-22">22. II 1942</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">Friedrich Weil</ab>
+                    <ab xml:lang="en">Friedrich Weil</ab></provenance>
                 </history>
               </msDesc>
             </sourceDesc>
