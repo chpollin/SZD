@@ -23124,7 +23124,8 @@
         <biblFull xml:id="SZDMSK.289">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" ref="http://d-nb.info/gnd/1124490469">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title>
+              <title ana="assigned" xml:lang="de">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title>
+              <title type="Einheitssachtitel" xml:lang="de">Fragment eines Vorworts für die russische Ausgabe zweier Aufsätze von Zweig</title><!-- Englische Übersetzung des zugewiesenen Titels ergänzen! -->
               <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -23320,7 +23321,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Fragment, Seite 7 fehlt</note>
-              <note xml:lang="en">Fragment, missing page 7</note>
+              <note xml:lang="en">Fragment, missing page 7</note><!-- Übersetzung so korrekt? -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23391,7 +23392,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.292">
           <fileDesc>
             <titleStmt>
-             <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie [Teil 1]</title>
+             <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4">Autobiographie [Teil 1]</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
               <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -23496,7 +23497,7 @@
         <biblFull ana="01_Die" xml:id="SZDMSK.293">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4 ">Autobiographie [Teil 2]</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/4436762-4">Autobiographie [Teil 2]</title>
               <title type="Einheitssachtitel">Die Welt von Gestern</title>
               <title type="Gesamttitel">Stefan Zweig Collection NLI - Series 4: Addenda</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
