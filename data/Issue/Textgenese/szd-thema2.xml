@@ -3,11 +3,12 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>ToDo</title>
+            <title>Die Entstehungsgeschichte von Stefan Zweigs "Das erste Wort über
+               den Ozean"</title>
             <author>
                <persName>
                   <forename>Simone</forename>
-                  <surname>ToDo</surname>
+                  <surname>Lettner</surname>
                </persName>
             </author>
          </titleStmt>
@@ -18,7 +19,7 @@
             </publisher>
             <authority>
                <orgName corresp="https://informationsmodellierung.uni-graz.at"
-                  ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung - Austrian
+                  ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian
                   Centrefor Digital Humanities, Karl-Franzens-Universität Graz </orgName>
             </authority>
             <distributor>
@@ -147,7 +148,7 @@
                der frühen Notizen, die diesen Gedanken bereits enthalten, zeigt sich, dass <name
                   ref="#SZDPER.1560">Zweig</name> dieser Aspekt von Beginn an wichtig war. Darüber hinaus
                wird die Erzählung mit einer klaren pazifistischen Stellungnahme abgeschlossen: <hi
-                  style="speech">„Und herrlich wäre sie [die Menschheit] dank ihren Siegen über Raum und
+                  style="italic">„Und herrlich wäre sie [die Menschheit] dank ihren Siegen über Raum und
                   Zeit nun für alle Zeiten vereint, verwirrte sie nicht immer wieder von neuem der
                   verhängnisvolle Wahn, unablässig diese grandiose Einheit zu zerstören und mit denselben
                   Mitteln, die ihr Macht über die Elemente gegeben, sich selbst zu vernichten.“</hi>
@@ -308,7 +309,7 @@
                   <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_082_LI</ref></caption></figDesc>
                </figure>
             </p>
-            <p>H2: Dieses Jahr 1837, Menschheit, fast nie in die Schulbücher geschrieben, die es noch immer für wichtiger halten, Kriegen und Siegen erzählen, statt von ihre[n] wahrhaften gemeinsamen Triumpfen.</p>
+            <p>H2: Dieses Jahr 1837, Menschheit, fast nie in die Schulbücher geschrieben, die es noch immer für wichtiger halten, Kriegen und Siegen erzählen, statt von ihrem wahrhaften gemeinsamen Triumpfen.</p>
             <p>
                <figure>
                   <graphic url="IMG.1" style=" "/>
@@ -316,15 +317,16 @@
                </figure>
             </p>
             <p>T: Dieses Jahr 1837, da zum erstenmal der Telegraph in einer Sekunde Botschaft von Stadt
-               zu Stadt, von Land zu Ländern trägt, die gestern noch dutzende von Reisetagen voneinander 
-               entfernt waren, ist fast niemals in unseren Schulbüchern vermerkt, die es noch immer für 
-               wichtiger halten, von Kriegen und Siegen einzelner Feldherren und Nationen zu erzählen statt
+               zu Stadt, von Land zu Ländern trägt, die gestern noch dutzende von Reisetagen <hi style="bold">voneinander</hi> 
+               entfernt waren, ist fast niemals in unseren Schulbüchern vermerkt, die es noch immer <hi style="bold">für</hi> 
+               wichtiger halten, von Kriegen und Siegen einzelner Feldherren <hi style="bold">und Nationen</hi> zu erzählen statt
                von den wahrhaften, weil gemeinsamen Triumphen der Menschheit.</p> 
-            <p>Th: Dieses [entscheidende] Schicksalsjahr 1837, da zum erstenmal der Telegraph innerhalb 
+            <p>Th: Dieses <del rend="strikethrough">entscheidende</del> Schicksaljahr 1837, da zum erstenmal der Telegraph innerhalb 
                einer Sekunde Botschaft von Stadt zu Stadt, von Land zu Ländern trägt, die gestern noch 
-               dutzende von Reisetagen entfernt waren, ist selten [oder überhaupt nicht] in unseren
+               dutzende von Reisetagen entfernt waren, ist selten <del rend="strikethrough">oder überhaupt nicht</del> in unseren
                Schulbüchern auch nur vermerkt, die es noch immer wichtiger halten, von Kriegen und 
-               Siegen einzelner Feldherren zu erzählen statt von den wahrhaften, weil gemeinsamen Triumphen der Menschheit.</p>
+               Siegen einzelner Feldherren zu erzählen statt von den wahrhaften, weil gemeinsamen 
+               Triumphen der Menschheit.</p>
             <p>
                <figure>
                   <graphic url="IMG.4" style=" "/>
@@ -371,7 +373,8 @@
             <head>
                <title>Beispiel 3</title>
             </head>
-            <p>Erstdruck: Glücklicherweise reicht nun in den Zeiten des Fortschritts eine Erfindung der andern hilfreich die Hand. Wenige Jahre nach der Einführung des Landtelegraphen wird das Guttapercha entdeckt als der geeignete Stoff, elektrische Leitungen im Wasser zu isolieren. Nun kann man beginnen, das wichtigste Land jenseits des Kontinents, England, an das europäische Telegraphennetz anzuschließen. </p> 
+            <p>Erstdruck: Glücklicherweise reicht nun in den Zeiten des Fortschritts eine Erfindung der andern hilfreich die Hand. Wenige Jahre nach der Einführung des Landtelegraphen wird das 
+               <hi style="underline">Guttapercha</hi> entdeckt als der geeignete Stoff, elektrische Leitungen im Wasser zu isolieren. Nun kann man beginnen, das wichtigste Land jenseits des Kontinents, England, an das europäische Telegraphennetz anzuschließen. </p> 
             <p>H1/1: Gummi „india rubber“ Guttapercha (Art Macaronimaschine)</p>
             <p>
                <figure>
@@ -400,15 +403,19 @@
                   <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI2</ref></caption></figDesc>
                </figure>
             </p>
-            <p>H2: Zeiten des Fortschritt eine Erfindung ander[n] die Hand reicht, Guttapercha, Isolier[u]ng. </p> 
+            <p>H2: Zeiten des Fortschritt<hi style="bold">[s]</hi> eine Erfindung ander[n] die Hand reicht, Guttapercha, Isolier[u]ng. </p> 
             <p>
                <figure>
                   <graphic url="IMG.3" style=" "/>
                   <figDesc><caption>InkedSZ_AAP_W7.1_003_LI2</caption></figDesc>
                </figure>
             </p>
-            <p>T: Nun reicht in den Zeiten des Fortschritts immer eine Erfindung der andern die Hand; fast gleichzeitig mit dem Telegraphen wird auch das Guttapercha entdeckt als ein Stoff, der die elektrische Ladung sichert, und nun kann man versuchen, das wichtigste Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p> 
-            <p>Glücklicherweise reicht aber immer in den Zeiten des Fortschritts eine Erfindung der andern die Hand; fast gleichzeitig mit dem Telegraphen wird auch das Guttapercha entdeckt als der geeignete Stoff, um elektrische Leitungen vor jedem Contacte storenden Contacte zu sichern; nun erst kann man unternehmen, das wichtigste Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p><p>
+            <p>T: Nun reicht in den Zeiten des Fortschritts immer eine Erfindung der andern die Hand; fast gleichzeitig mit dem Telegraphen 
+               wird auch das Guttapercha entdeckt als ein Stoff, der die elektrische Ladung sichert, und nun kann man versuchen, das wichtigste 
+               Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p> 
+            <p>Th: Glücklicherweise reicht aber immer in den Zeiten des Fortschritts eine Erfindung der andern die Hand; fast gleichzeitig mit 
+               dem Telegraphen wird auch das Guttapercha entdeckt als der geeignete Stoff, um elektrische Leitungen vor jedem 
+               <del rend="strikethrough">Contacte</del> storenden Contacte zu sichern; nun erst kann man unternehmen, das wichtigste Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p><p>
                <figure>
                   <graphic url="IMG.13" style=" "/>
                   <figDesc><caption>InkedSZ_AAP_W7_004_LI2</caption></figDesc>
