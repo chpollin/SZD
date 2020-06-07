@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
     Project: Stefan Zweig Digital
@@ -168,6 +168,7 @@
                     $('#databasket_table').DataTable();
                     } );
                 </script>-->
+/lib/2.0/leaflet/leaflet.css
                 <script>
                     $(document).ready(function(){
                     $('#databasket_table').DataTable({
@@ -256,57 +257,105 @@
 
     <!--static memory game -->
     <xsl:template name="map">
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="/>
-      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==">
-      <xsl:text> </xsl:text></script>
-      <div class="card">
+      <link rel="stylesheet" href="/lib/2.0/leaflet/leaflet.css"/>
+      <script src="/lib/2.0/leaflet/leaflet.js"><xsl:text> </xsl:text></script>
+
+      <xsl:variable name="LocationTypes" select="document('/archive/objects/query:szd.getlocationtypes/methods/sdef:Query/getXML')"/>
+      <xsl:variable name="RESULTS" select="$LocationTypes//s:results/s:result"/>
+      <xsl:variable name="AllResources" select="sum($RESULTS/s:resources)"/>
+      <div class="card mt-5">
           <div class="card-body">
-              <h1>Map</h1>
+            <h1>
+                <xsl:text>Übersicht</xsl:text>
+            </h1>
+            <ul>
+               <li><xsl:text>Gesamt: </xsl:text><xsl:value-of select="$AllResources"/></li>
+               <xsl:for-each-group select="$RESULTS" group-by="s:type/@uri">
+                   <li>
+                     <xsl:value-of select="substring-after(current-grouping-key(), '#')"/><xsl:text>: </xsl:text>
+                     <xsl:value-of select="sum(current-group()/s:resources)"/>
+                   </li>
+               </xsl:for-each-group>
+            </ul>
+            <xsl:for-each-group select="$RESULTS" group-by="s:name">
+            <h3>
+                <xsl:value-of select="current-grouping-key()"/>
+            </h3>
+                <ul>
+                    <xsl:for-each-group select="current-group()" group-by="s:type/@uri">
+                        <li>
+                            <xsl:value-of select="substring-after(current-grouping-key(), '#')"/>:<xsl:value-of select="s:resources"/>
+                        </li>
+                    </xsl:for-each-group>
+                </ul>
+            </xsl:for-each-group>
+            <h3>
+                <xsl:text>Map</xsl:text>
+            </h3>
+            <div class="table-responsive">
+              <div class="mt-4 mb-4" id="mapid" style="width: 85em; height: 40em;">
+                <xsl:text> </xsl:text>
+              </div>
           </div>
-          <div class="mt-4 mb-4" id="mapid" style="width: 600px; height: 400px;">
-            <xsl:text> </xsl:text>
           </div>
       </div>
  <script>
+   var map = L.map('mapid', {
+		minZoom: 2,
+		maxZoom: 15,
+		zoomSnap: 0,
+		zoomDelta: 0.25
+	});
 
- 	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	var cartodbAttribution = '&amp;copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &amp;copy; <a href="https://carto.com/attribution">CARTO</a>';
 
- 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
- 		maxZoom: 18,
- 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
- 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
- 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
- 		id: 'mapbox/streets-v11',
- 		tileSize: 512,
- 		zoomOffset: -1
- 	}).addTo(mymap);
+	var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+		attribution: cartodbAttribution
+	}).addTo(map);
 
- 	L.marker([51.5, -0.09]).addTo(mymap)
- 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+	var ZoomViewer = L.Control.extend({
+		onAdd: function(){
 
- 	L.circle([51.508, -0.11], 500, {
- 		color: 'red',
- 		fillColor: '#f03',
- 		fillOpacity: 0.5
- 	}).addTo(mymap).bindPopup("I am a circle.");
+			var container= L.DomUtil.create('div');
+			var gauge = L.DomUtil.create('div');
+			container.style.width = '200px';
+			container.style.background = 'rgba(255,255,255,0.5)';
+			container.style.textAlign = 'left';
+			map.on('zoomstart zoom zoomend', function(ev){
+				gauge.innerHTML = 'Zoom level: ' + map.getZoom();
+			})
+			container.appendChild(gauge);
 
- 	L.polygon([
- 		[51.509, -0.08],
- 		[51.503, -0.06],
- 		[51.51, -0.047]
- 	]).addTo(mymap).bindPopup("I am a polygon.");
+			return container;
+		}
+	});
+
+	(new ZoomViewer).addTo(map);
+
+	map.setView([0, 0], 0);
+
+  // add a circle
+  //load JSON result with location, sum of resources for each location and type (book, work etc.)
+  $.getJSON('/archive/objects/query:szd.getlocationoverview/methods/sdef:Query/getJSON?params=', function(json) {
+    //create a circle for every location
+    Object.keys(json).forEach(function(key){
+        let SZDSTA = json[key].lo;
+        let baseURL = "/archive/objects/query:szd.standort_search/methods/sdef:Query/get?params=";
+
+        let QueryURL = baseURL + '$1|%3C' + encodeURIComponent(SZDSTA) + '%3E' + ';$2|de&amp;locale=de';
+        console.log(QueryURL);
+        L.circleMarker([json[key].lat, json[key].long],{
+          radius: json[key].resources / 10,
+          color: '#917a47',
+          fillColor: '#c2a360',
+          fillOpacity: 0.5
+        }).addTo(map).bindPopup('<a href="' + QueryURL +'">' + json[key].name + "</a><br></br>" + json[key].resources);
 
 
- 	var popup = L.popup();
+     });
+   });
 
- 	function onMapClick(e) {
- 		popup
- 			.setLatLng(e.latlng)
- 			.setContent("You clicked the map at " + e.latlng.toString())
- 			.openOn(mymap);
- 	}
 
- 	mymap.on('click', onMapClick);
 
  </script>
 

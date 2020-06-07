@@ -1,5 +1,7 @@
+
+
 /*Funktion fuer scrolldown oder auch scrollup (zb. von Fussnoten) unter die sticky Navigationsleiste
-Die Anchor Tags die zum Sprungpunk verlinken mĆ¼ssen ein onlclick="scrolldown(this)" Attribut bekommen! */
+Die Anchor Tags die zum Sprungpunk verlinken müssen ein onlclick="scrolldown(this)" Attribut bekommen! */
 
 function scrolldown (src) {
     if (src !== '') {
@@ -9,11 +11,11 @@ function scrolldown (src) {
         //src ist onclick(this) also #CH1 etc.;
         window.setTimeout(function () {
             window.location.href = src;
-            window.scrollBy(0, -260);
+            //mit der 2. zahl kann man definieren wie weit nach unten (oder nach oben, positive zahl) man gehen möchte
+            window.scrollBy(0, -0);
         },
         100);
     };
 
-//window.onload = scrolldown(window.location.hash);
 };
 

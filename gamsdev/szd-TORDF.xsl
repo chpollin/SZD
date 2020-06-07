@@ -3,12 +3,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
     version="2.0"
-	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-	 xmlns:dc="http://purl.org/dc/elements/1.1/" 
-	 xmlns:functx="http://www.functx.com" 
-	 xmlns:gn="http://www.geonames.org/ontology#" 
-	 xmlns:szd="https://gams.uni-graz.at/o:szd.ontology#" 
-     xmlns:skos="https://gams.uni-graz.at/skos/scheme/o:oth/#" 
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:functx="http://www.functx.com"
+	 xmlns:gn="http://www.geonames.org/ontology#"
+	 xmlns:szd="https://gams.uni-graz.at/o:szd.ontology#"
+     xmlns:skos="https://gams.uni-graz.at/skos/scheme/o:oth/#"
      xmlns:t="http://www.tei-c.org/ns/1.0"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:wiki="https://www.wikidata.org/wiki/Property:"
@@ -16,16 +16,17 @@
 	 xmlns:owl="http://www.w3.org/2002/07/owl#"
 	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	 xmlns:gams="https://gams.uni-graz.at/o:gams-ontology#">
-	
+	 xmlns:gams="https://gams.uni-graz.at/o:gams-ontology#"
+   xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+
 	<!-- author: Christopher Pollin
 		date: 2019
-		
+
 		this XSL-T transforms TEI/XML data to RDF/Data. Different TEI-Datasets in SZD are processed.
 		every concept, property etc. bases on gams.uni-graz.at/o:szd.ontology
 	-->
-	
-    
+
+
 	<!-- DEFINE global variables -->
 	<xsl:variable name="Personlist">
 		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
@@ -34,16 +35,16 @@
 	<xsl:variable name="OrganisationList">
 		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.organisation/TEI_SOURCE')"/>
 	</xsl:variable>
-	
+
 	<xsl:variable name="StandorteList">
 		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
 	</xsl:variable>
-	
-	
+
+
 	<xsl:variable name="Languages">
 		<xsl:copy-of select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
 	</xsl:variable>
-    
+
     <!-- ///////////////////////////////// -->
     <xsl:template match="/">
         <rdf:RDF>
@@ -78,12 +79,12 @@
             	<xsl:otherwise>
             		<xsl:text>No data source define! (like o:szd.bibliothek, o:szd.autographen, o:sud.werke...)</xsl:text>
             	</xsl:otherwise>
-            </xsl:choose>   
+            </xsl:choose>
         </rdf:RDF>
     </xsl:template>
-	
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- szd:Book -->	
+	<!-- szd:Book -->
 	<xsl:template name="Bibliothek">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
 			<xsl:variable name="Book-ID" select="@xml:id"/>
@@ -96,7 +97,7 @@
 	        	<!-- FULLTEXT -->
 	        	<xsl:call-template name="FulltextSearchData"/>
 	        </szd:Book>
-			
+
 			<!-- /////////////////////////////////// -->
 			<!-- rdf:about for szd:Book -->
 			<!-- Extent -->
@@ -122,7 +123,7 @@
 					</xsl:call-template>
 					<!-- //////// -->
 					<!-- szd:text -->
-				
+
 					<xsl:call-template name="getExtent_SZDBIB_SZDAUT">
 						<xsl:with-param name="locale" select="'en'"/>
 						<xsl:with-param name="SZD_ID"/>
@@ -131,7 +132,7 @@
 						<xsl:with-param name="locale" select="'de'"/>
 						<xsl:with-param name="SZD_ID"/>
 					</xsl:call-template>
-					
+
 				</szd:Extent>
 			</xsl:if>
 			<!-- Publication Statment -->
@@ -176,7 +177,7 @@
 				</szd:PublicationStmt>
 			</xsl:if>
 			<!-- ProvenanceCharacteristic -->
-			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or 
+			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or
 				t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier or
 				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref or
 				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
@@ -208,16 +209,16 @@
 							<xsl:value-of select="normalize-space(../t:desc)"/>
 						</szd:stamp>
 					</xsl:for-each>
-					
+
 					<xsl:for-each select="t:fileDesc//t:ref/@target">
-						<szd:glossar rdf:resource="{.}"/>	
+						<szd:glossar rdf:resource="{.}"/>
 					</xsl:for-each>
-				
-					
+
+
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier/@corresp">
-						<szd:glossar rdf:resource="{.}"/>	
+						<szd:glossar rdf:resource="{.}"/>
 					</xsl:for-each>
-					
+
 					<szd:text xml:lang='en'>
 						<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:term[@xml:lang='en'] | t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp/t:term[@xml:lang='en']">
 							<xsl:value-of select="."/>
@@ -273,12 +274,12 @@
 			</xsl:if>
 	    </xsl:for-each>
 	</xsl:template>
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///AUTOGRAPHEN/// -->
 	<xsl:template name="Autographen">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
-			
+
                 <szd:Autograph rdf:about="{concat('https://gams.uni-graz.at/o:szd.autographen#',  @xml:id)}">
                 	<!-- AUTOGRAPHEN DATA -->
                 	<xsl:call-template name="RDF_autograph"/>
@@ -303,12 +304,12 @@
 			    </szd:Extent>
             </xsl:for-each>
 	</xsl:template>
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///LEBENSKALENDAR/// -->
 	<xsl:template name="Lebenskalender">
 		<xsl:for-each select="//t:listEvent/t:event">
-			
+
 			<szd:BiographicalEvent rdf:about="{concat('https://gams.uni-graz.at/o:szd.lebenskalender#',  @xml:id)}">
 				<!-- FULLTEXT -->
 				<xsl:call-template name="FulltextSearchData"/>
@@ -365,21 +366,21 @@
 						<xsl:otherwise/>
 					</xsl:choose>
 				</xsl:for-each>
-			
+
 				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.lebenskalender"/>
 			</szd:BiographicalEvent>
-			
+
 		</xsl:for-each>
 	</xsl:template>
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///PERSONEN szd:Agent/// -->
 		<xsl:template name="Personen">
 		<xsl:for-each select="//t:listPerson/t:person">
 
 			<!-- get the RDF resource behind the GND -->
 			<xsl:variable name="url" select="string(concat(t:persName/@ref, '/about/lds.rdf'))"/>
-			
+
 			<szd:Agent rdf:about="{concat('https://gams.uni-graz.at/o:szd.personen#', @xml:id)}">
 				<xsl:if test="t:idno[@type='wikidata']">
 					<szd:wikidata rdf:resource="{t:idno[@type='wikidata']}"/>
@@ -387,13 +388,13 @@
 				<xsl:if test="t:persName/@ref">
 					<szd:gnd rdf:resource="{t:persName/@ref}"/>
 				</xsl:if>
-		
+
 				<!-- gnd identifier -->
-				
+
 				<!-- viaf identifier -->
 				<!-- https://www.wikidata.org/wiki/Property:P214 -->
-				
-				<!-- wiki:P734 forename | t:surname 
+
+				<!-- wiki:P734 forename | t:surname
 					 gnd:forename surname | t:forename
 					 wiki:P2561 foaf:name (alternative name) | t:name
 				-->
@@ -455,14 +456,14 @@
 					</xsl:if>
 				</gams:textualContent>
 				<!-- COLLECTION -->
-				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.personen"/>	
+				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.personen"/>
 			</szd:Agent>
-			
+
         </xsl:for-each>
 	</xsl:template>
-	
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///Orte szd:Place/// -->
 	<!--<xsl:template name="Orte">
 		<xsl:for-each select="//t:listPlace/t:place">
@@ -476,45 +477,45 @@
 				<!-\- FULLTEXT -\->
 				<xsl:call-template name="FulltextSearchData"/>
 				<!-\- COLLECTION -\->
-				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.orte"/>	
+				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.orte"/>
 			</szd:Place>
-			
+
 		</xsl:for-each>
 	</xsl:template>-->
-	
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///Organisation/// -->
 	<!--<xsl:template name="Organisation">
 		<xsl:for-each select="//t:listOrg/t:org">
-			
+
 			<szd:Org rdf:about="{concat('https://gams.uni-graz.at/o:szd.organisation#', @xml:id)}">
 				<!-\- PERSON DATA -\->
 				<szd:name>
 					<xsl:value-of select="t:orgName"/>
 				</szd:name>
 				<gnd:gndIdentifier rdf:resource="{t:orgName/@ref}"/>
-				
+
 				<!-\- FULLTEXT -\->
 				<xsl:call-template name="FulltextSearchData"/>
 				<!-\- COLLECTION -\->
-				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.organisation"/>	
+				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.organisation"/>
 			</szd:Org>
-			
+
 		</xsl:for-each>
 	</xsl:template>-->
-	
-		<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+		<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///STANDORTE szd:Location/// -->
 		<xsl:template name="Standorte">
 			<xsl:for-each select="//t:listOrg/t:org">
 				<szd:Location rdf:about="{concat('https://gams.uni-graz.at/o:szd.standorte#', @xml:id)}">
 					<szd:name>
-						<xsl:value-of select="t:orgName"/>
+						<xsl:value-of select="normalize-space(t:orgName)"/>
 					</szd:name>
 					<xsl:if test="t:settlement">
 						<szd:settlement>
-							<xsl:value-of select="t:settlement"/>
+							<xsl:value-of select="normalize-space(t:settlement)"/>
 						</szd:settlement>
 					</xsl:if>
 					<xsl:if test="t:orgName/@ref">
@@ -523,18 +524,26 @@
 					<xsl:if test="@corresp">
 						<rdfs:seeAlso rdf:resource="{@corresp}"/>
 					</xsl:if>
-					
+          <xsl:if test="t:location/t:geo">
+						<wgs84_pos:lat>
+							<xsl:value-of select="normalize-space(substring-before(t:location/t:geo, ','))"/>
+						</wgs84_pos:lat>
+            <wgs84_pos:long>
+							<xsl:value-of select="normalize-space(substring-after(t:location/t:geo, ','))"/>
+						</wgs84_pos:long>
+					</xsl:if>
+
 					<!-- FULLTEXT -->
 					<xsl:call-template name="FulltextSearchData"/>
 					<!-- COLLECTION -->
-					<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.standorte"/>	
+					<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.standorte"/>
 			</szd:Location>
-			
+
 		</xsl:for-each>
 		</xsl:template>
-	
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///PUBLIKATION WORK biblFull (like Silberne Saiten. Gedichte : Schuster & Loeffler, Berlin / Leipzig | 1901) /// -->
 	<xsl:template name="Publikation">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
@@ -558,7 +567,7 @@
 						<xsl:call-template name="GetPersonlist">
 							<xsl:with-param name="Person" select="t:fileDesc/t:titleStmt/t:author[not(@role)]/t:persname/@ref"/>
 							<xsl:with-param name="Typ" select="'szd:author'"></xsl:with-param>
-						</xsl:call-template>	
+						</xsl:call-template>
 					</xsl:when>
 					<xsl:when test="t:fileDesc/t:titleStmt/t:author[not(@role)]/t:persName">
 						<szd:author>
@@ -590,13 +599,13 @@
 				<!-- FULLTEXT -->
 				<xsl:call-template name="FulltextSearchData"/>
 				<!-- COLLECTION -->
-				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>	
+				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>
 				<xsl:if test="t:fileDesc/t:titleStmt/t:title/@ref">
 					<owl:sameAs rdf:resource="{t:fileDesc/t:titleStmt/t:title/@ref}"/>
 				</xsl:if>
 			</szd:Publication>
 		</xsl:for-each>
-		<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+		<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 		<!-- ///PUBLIKATION Chapter, bibl (like Zur Einleitung: Was ins Weite einst geflogen…, S.9)/// -->
 			<xsl:for-each select="//t:listBibl/t:bibl">
 				<szd:Publication rdf:about="{concat('https://gams.uni-graz.at/o:szd.publikation#', @xml:id)}">
@@ -612,11 +621,11 @@
 						</szd:title>
 					</xsl:if>
 					<!-- szd:author = Stefan Zweig -->
-					
+
 					<!-- FULLTEXT -->
 					<xsl:call-template name="FulltextSearchData"/>
 					<!-- COLLECTION -->
-					<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>	
+					<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>
 					<owl:sameAs rdf:resource="{t:title/@ref}"/>
 				</szd:Publication>
 				<xsl:for-each select="t:bibl">
@@ -628,17 +637,17 @@
 						<!-- FULLTEXT -->
 						<xsl:call-template name="FulltextSearchData"/>
 						<!-- COLLECTION -->
-						<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>	
+						<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.publikation"/>
 						<dcterms:partOf rdf:resource="{../@xml:id}"/>
 						<owl:sameAs rdf:resource="{t:title/@ref}"/>
 					</szd:Publication>
 				</xsl:for-each>
-				
+
 			</xsl:for-each>
-		
-		
+
+
 	</xsl:template>
-	
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///Werk - szd:WORK/// -->
 	<xsl:template name="Manuskripte">
@@ -673,26 +682,26 @@
 				</xsl:call-template>-->
 				<!-- //////// -->
 				<!-- szd:text -->
-				
+
 				<xsl:call-template name="getExtentMSK">
 					<xsl:with-param name="locale" select="'en'"/>
 				</xsl:call-template>
 				<xsl:call-template name="getExtentMSK">
 					<xsl:with-param name="locale" select="'de'"/>
 				</xsl:call-template>
-				
+
 			</szd:Extent>
 		</xsl:for-each>
 	</xsl:template>
-	
-	
+
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///Lebensdokumente - szd:PersonalDocument/// -->
 	<xsl:template name="Lebensdokumente">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
 			<!-- sameAs bibo:Manuscript -->
 			<szd:PersonalDocument rdf:about="{concat('https://gams.uni-graz.at/o:szd.lebensdokumente#',  @xml:id)}">
-				
+
 				<!-- GET BASIC DATA: author, title, date, place -->
 				<xsl:call-template name="Work_RDF"/>
 				<!-- FULLTEXT -->
@@ -730,14 +739,14 @@
 			</szd:Extent>
 		</xsl:for-each>
 	</xsl:template>
-	
-	<!-- //////////////////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///COLLECTION/// -->
 	<xsl:template name="Collection">
 		<szd:Collection rdf:about="{concat('https://gams.uni-graz.at/', //t:publicationStmt/t:idno[@type='PID'])}">
 			<!-- szd:title -->
 			<szd:title><xsl:value-of select="//t:teiHeader//t:titleStmt/t:title"/></szd:title>
-			
+
 			<xsl:for-each-group select="//t:div/t:head/t:title" group-by="@ref">
 				<xsl:choose>
 					<xsl:when test="contains(@ref, ' ')">
@@ -749,7 +758,7 @@
 						<szd:connectedWithDocument rdf:resource="{current-grouping-key()}"/>
 					</xsl:otherwise>
 				</xsl:choose>
-				
+
 			</xsl:for-each-group>
 			<!--<xsl:for-each-group select="//t:body//t:div//t:name[@type='work']" group-by="@ref">
 				<szd:connectedWithDocument rdf:resource="{concat('https://gams.uni-graz.at/', current-grouping-key())}"/>
@@ -764,21 +773,21 @@
 					<xsl:value-of select="normalize-space(.)"/>
 					<xsl:text> </xsl:text>
 				</xsl:for-each>
-			
+
 			</gams:textualContent>
 			<!-- COLLECTION -->
 			<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/context:szd"/>
 		</szd:Collection>
 	</xsl:template>
-	
-	
-	
-	
+
+
+
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- TEMPLATES -->
-	
-	
+
+
 	<!-- ///CREATE DATA FOR FULLTEXTSEARCH/// -->
 	<!-- get the fulltext of every data entry and normalizes the text (unicode and whitespaces) -->
 	<xsl:template name="FulltextSearchData">
@@ -825,21 +834,21 @@
 			</xsl:for-each>
 		</gams:textualContent>
 	</xsl:template>
-	
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///RDF_bibliothek/// -->
 	<xsl:template name="Bibliothek_RDF">
 		<xsl:param name="Book-ID"/>
-		
+
 		<!-- szd:title -->
 		<xsl:call-template name="getTitle"/>
-		
+
 		<xsl:if test="t:fileDesc/t:titleStmt/t:title[@type ='original']">
 			<szd:originaltitle>
 				<xsl:value-of select="normalize-space(t:fileDesc/t:titleStmt/t:title[@type ='original'])"/>
 			</szd:originaltitle>
 		</xsl:if>
-		
+
 		<!-- szd:author  -->
 		<xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]/@ref">
 			<xsl:call-template name="GetPersonlist">
@@ -895,11 +904,11 @@
 			<xsl:with-param name="Person" select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person']/@ref"/>
 			<xsl:with-param name="Typ" select="'szd:relationToPerson'"/>
 		</xsl:call-template>
-		
+
 		<xsl:for-each select="t:profileDesc/t:textClass/t:keywords/t:term[@type='work']/@ref">
 			<szd:realtionToWork rdf:resource="{.}"/>
 		</xsl:for-each>
-		
+
 		<!--Publication Details-->
 		<xsl:if test="t:fileDesc/t:publicationStmt">
 			<szd:publicationStmt rdf:resource="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'PUS')}"/>
@@ -912,7 +921,7 @@
 				<xsl:value-of select="t:fileDesc/t:seriesStmt/t:title"/>
 			</szd:series>
 		</xsl:if>
-		
+
 		<!-- Language -->
 		<xsl:call-template name="getLanguage"/>
 
@@ -929,27 +938,27 @@
 			</xsl:when>
 			<xsl:otherwise/>
 		</xsl:choose>
-		
+
 		<!-- szd:signature -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
 			<szd:signature>
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
 			</szd:signature>
 		</xsl:if>
-		
+
 		<!-- ////////////// -->
 		<!-- Extent -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
 			<szd:extent rdf:resource="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'EX')}"/>
 		</xsl:if>
-		
+
 		<xsl:call-template name="getProvenance"/>
-		
-		
+
+
 		<!-- illustriert -->
 
 		<!-- szd:provenanceCharacteristic -->
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or 
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance'] or
 			t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier or
 			t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref or
 			t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
@@ -967,27 +976,27 @@
 				<xsl:with-param name="PropertyTyp" select="'data'"/>
 			</xsl:call-template>
 		</xsl:for-each>
-		
+
 	</xsl:template>
-	
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///szd:Work/// -->
 	<xsl:template name="Work_RDF">
-		
+
 		<!-- szd:title -->
 		<xsl:call-template name="getTitle"/>
-		
+
 		<!-- person -->
 		<xsl:call-template name="GetPersonlist">
 			<xsl:with-param name="Person" select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person']/@ref"/>
 			<xsl:with-param name="Typ" select="'szd:relationToPerson'"/>
 		</xsl:call-template>
-		
-		<!--	
+
+		<!--
 		<xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@type='person']">
 			<szd:relationToPerson rdf:resource="{t:profileDesc/t:textClass/t:keywords/t:term[@type='person']/@ref}"/>
 		</xsl:if>-->
-		
+
 		<!-- Ordnungskateroire = GND-Sachgruppe -->
 		<xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de']">
 			<xsl:variable name="CurrentCategory" select="t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de']"/>
@@ -1061,22 +1070,22 @@
 				</xsl:attribute>
 			</szd:category>
 		</xsl:if>
-		
+
 		<!-- szd:author = Stefan Zweig -->
 		<szd:author rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
-		
+
 		<!-- Collection -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context']">
 			<szd:collection rdf:resource="{concat('https://gams.uni-graz.at/', t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context'])}"/>
 		</xsl:if>
-		
+
 		<!-- Datum -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:origin/t:origDate/@when">
 			<szd:dateOfPublication>
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:origin/t:origDate/@when"/>
 			</szd:dateOfPublication>
 		</xsl:if>
-		
+
 		<!-- Signatur -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
 			<szd:signature><xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/></szd:signature>
@@ -1093,7 +1102,7 @@
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:span[@xml:lang='en']/t:term[@type='objecttyp']"/>
 			</szd:objecttyp>
 		</xsl:if>
-		
+
 		<!-- szd:location  -->
 		<xsl:choose>
 			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana">
@@ -1107,28 +1116,28 @@
 			</xsl:when>
 			<xsl:otherwise></xsl:otherwise>
 		</xsl:choose>
-		
-		<xsl:for-each select=".//*[contains(@ana, 'o:szd.glossar')]">
-			<szd:term rdf:resource="{@ana}"/>
+
+		<xsl:for-each select=".//*[contains(@ana, 'szdg:')]">
+			<szd:term rdf:resource="{concat('https://gams.uni-graz.at/o:szd.glossar#', substring-after(@ana, 'szdg:'))}"/>
 		</xsl:for-each>
-		
+
 		<xsl:if test=".//t:incipit[1]">
 			<szd:term rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Incipit"/>
 		</xsl:if>
-		
+
 		<xsl:if test=".//t:origDate[1]">
 			<szd:term rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Date"/>
 		</xsl:if>
-		
+
 		<!-- szd:lang -->
 		<xsl:call-template name="getLanguage"/>
-		
+
 		<!-- Extent -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
 			<szd:extent rdf:resource="{concat('https://gams.uni-graz.at/o:szd.werke#', @xml:id, 'EX')}"/>
 		</xsl:if>
-		
-		
+
+
 		<!-- provenance -->
 		<xsl:call-template name="getProvenance">
 			<xsl:with-param name="locale" select="'en'"/>
@@ -1136,14 +1145,14 @@
 		<xsl:call-template name="getProvenance">
 			<xsl:with-param name="locale" select="'de'"/>
 		</xsl:call-template>
-		
+
 		<!-- acquisition -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
 			<szd:acquired>
 				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"/>
 			</szd:acquired>
 		</xsl:if>
-		
+
 		<!-- Identifying Inscription -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:msItem/t:docEdition[@xml:lang='de']">
 			<szd:identifyingInscription xml:lang='de'>
@@ -1155,32 +1164,32 @@
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:msItem/t:docEdition[@xml:lang='en']"/>
 			</szd:identifyingInscription>
 		</xsl:if>
-		
+
 		<!-- Schreibmaterial -->
 		<!-- ana="https://gams.uni-graz.at/o:szd.glossar#WritingMaterial"  -->
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingMaterial')][@xml:lang='de']">
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingMaterial')][@xml:lang='de']">
 			<szd:writingMaterial xml:lang='de'>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingMaterial')][@xml:lang='de']"/>
+				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingMaterial')][@xml:lang='de']"/>
 		    </szd:writingMaterial>
 		</xsl:if>
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingMaterial')][@xml:lang='en']">
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingMaterial')][@xml:lang='en']">
 			<szd:writingMaterial xml:lang='en'>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingMaterial')][@xml:lang='en']"/>
+				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingMaterial')][@xml:lang='en']"/>
 			</szd:writingMaterial>
 		</xsl:if>
-		
+
 		<!-- Beschreibmaterial -->
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingInstrument')][@xml:lang='de']">
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingInstrument')][@xml:lang='de']">
 			<szd:writingInstrument xml:lang='de'>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingInstrument')][@xml:lang='de']"/>
+				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingInstrument')][@xml:lang='de']"/>
 			</szd:writingInstrument>
 		</xsl:if>
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingInstrument')][@xml:lang='en']">
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingInstrument')][@xml:lang='en']">
 			<szd:writingInstrument xml:lang='en'>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'o:szd.glossar#WritingInstrument')][@xml:lang='en']"/>
+				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material[contains(@ana, 'szdg:WritingInstrument')][@xml:lang='en']"/>
 			</szd:writingInstrument>
 		</xsl:if>
-		
+
 		<!-- Schreiberhand -->
 		<!-- this should be a reference to a SZDPER-ID -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:handDesc/t:ab">
@@ -1188,7 +1197,7 @@
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:handDesc/t:ab"/>
 			</szd:secretarialHand>
 		</xsl:if>
-		
+
 		<!-- Einband -->
 		<!-- this should be a reference to a SZDPER-ID -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab[@xml:lang='de']">
@@ -1201,25 +1210,25 @@
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab[@xml:lang='en']"/>
 			</szd:binding>
 		</xsl:if>
-		
+
 		<!-- Beilagen -->
-		<!-- o:szd.glossar#Enclosures -->
+		<!-- szdg:Enclosures -->
 		<!-- this should be a reference to a SZDPER-ID -->
-		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:accMat/t:list/t:item[contains(@ana, 'o:szd.glossar#Enclosures')]">
+		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:accMat/t:list/t:item[contains(@ana, 'szdg:Enclosures')]">
 			<szd:enclosures>
 				<xsl:value-of select="."/>
 			</szd:enclosures>
 		</xsl:for-each>
-		
+
 		<!-- Zusatzmaterial -->
-		<!-- o:szd.glossar#Enclosures -->
+		<!-- szdg:Enclosures -->
 		<!-- this should be a reference to a SZDPER-ID -->
-		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:accMat/t:list/t:item[contains(@ana, 'o:szd.glossar#AdditionalMaterial')]">
+		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:accMat/t:list/t:item[contains(@ana, 'szdg:AdditionalMaterial')]">
 			<szd:additionalMaterial>
 				<xsl:value-of select="."/>
 			</szd:additionalMaterial>
 		</xsl:for-each>
-				
+
 		<!-- Note, Hinweis -->
 		<xsl:if test="t:fileDesc/t:notesStmt/t:note[@xml:lang='de']">
 			<szd:note xml:lang='de'>
@@ -1231,28 +1240,28 @@
 				<xsl:value-of select="t:fileDesc/t:notesStmt/t:note[@xml:lang='en']"/>
 			</szd:note>
 		</xsl:if>
-		
+
 		<!-- Incipit -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:msItem/t:incipit">
 			<szd:incipit>
 				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:msItem/t:incipit"/>
 			</szd:incipit>
 		</xsl:if>
-		
+
 		<xsl:for-each-group select="t:fileDesc/t:titleStmt/t:editor[@role='contributor']" group-by="@ref">
 			<xsl:call-template name="GetPersonlist">
 				<xsl:with-param name="Person" select="current-grouping-key()"/>
 				<xsl:with-param name="Typ" select="'szd:partyInvolved'"/>
 			</xsl:call-template>
 		</xsl:for-each-group>
-		
+
 	</xsl:template>
 
-	
+
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///RDF_autograph/// -->
 	<xsl:template name="RDF_autograph">
-		
+
 		<xsl:call-template name="getTitle"/>
 		<!-- szd:author -->
 		<xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]/t:persName">
@@ -1275,27 +1284,27 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
-		
+
 		<!-- szd:composer -->
 		<xsl:call-template name="GetPersonlist">
 			<xsl:with-param name="Person" select="t:fileDesc/t:titleStmt/t:author[@role = 'composer']/t:persName/@ref"/>
 			<xsl:with-param name="Typ" select="'szd:composer'"/>
 		</xsl:call-template>
-		
+
 		<xsl:for-each-group select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person']" group-by="@ref">
 			<xsl:call-template name="GetPersonlist">
 				<xsl:with-param name="Person" select="current-grouping-key()"/>
 				<xsl:with-param name="Typ" select="'szd:partyInvolved'"/>
 			</xsl:call-template>
 		</xsl:for-each-group>
-		
+
 		<xsl:for-each-group select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/t:persName[@type='person']" group-by="@ref">
 			<xsl:call-template name="GetPersonlist">
 				<xsl:with-param name="Person" select="current-grouping-key()"/>
 				<xsl:with-param name="Typ" select="'szd:relationToPerson'"/>
 			</xsl:call-template>
 		</xsl:for-each-group>
-		
+
 		<!-- affected person -->
 		<xsl:for-each select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']/t:persName/@ref">
 			<xsl:call-template name="GetPersonlist">
@@ -1303,7 +1312,7 @@
 				<xsl:with-param name="Typ" select="'szd:affectedPerson'"/>
 			</xsl:call-template>
 		</xsl:for-each>
-		
+
 		<!-- summary -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary">
 			<szd:content>
@@ -1318,14 +1327,14 @@
 				<xsl:with-param name="Typ" select="'szd:location'"/>
 			</xsl:call-template>
 		</xsl:for-each>
-			
+
 		<!-- languagecode -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
 			<szd:lang>
 				<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang)"/>
 			</szd:lang>
 		</xsl:if>
-		
+
 		<!-- extent -->
 		<szd:extent rdf:resource="{concat('https://gams.uni-graz.at/o:szd.autographen#', @xml:id, 'EX')}"/>
 
@@ -1336,8 +1345,8 @@
 		<xsl:call-template name="getProvenance">
 			<xsl:with-param name="locale" select="'de'"/>
 		</xsl:call-template>
-		
-		
+
+
 		<!-- acquired -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
 			<szd:acquired>
@@ -1345,7 +1354,7 @@
 			</szd:acquired>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<!-- Template taking @ref = GND and goes through o:szd.personen for getting the intern #SZDPER
 	all #SZDPER.n are in the triplestore when o:szd.personen is ingested. -->
 	<xsl:template name="GetPersonlist">
@@ -1388,13 +1397,13 @@
 						<xsl:otherwise>
 							<xsl:comment>huhu</xsl:comment>
 						</xsl:otherwise>
-					</xsl:choose>			
+					</xsl:choose>
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise/>
 		</xsl:choose>
 	</xsl:template>
-	
+
 	<!-- ///////////////////////////////// -->
 	<!-- creates valid dates, only valid dates get a @rdf:datatype = date -->
 	<xsl:template name="getDate">
@@ -1409,7 +1418,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
 	<!-- Template taking @ref = GND and goues through o:szd.organisation for getting the intern #SZDORG
 	all #SZDPER.n are in the triplestore when o:szd.personen is ingested. -->
 	<xsl:template name="GetOrglist">
@@ -1476,7 +1485,7 @@
 					<xsl:otherwise/>
 				</xsl:choose>
 	</xsl:template>
-	
+
 	<xsl:template name="GetPlace">
 		<xsl:param name="Place"/>
 		<xsl:param name="Type"/>
@@ -1488,8 +1497,8 @@
 				<xsl:value-of select="'https://gams.uni-graz.at/o:szd.orte#'"/>
 			</xsl:attribute>
 		</xsl:element>-->
-		
-		
+
+
 		<!--<xsl:for-each select="$Place">
 			<xsl:variable name="String" select="string(.)"/>
 			<xsl:variable name="SZDORT" select="$PlacesList//t:place[t:placeName[@ref = $String]]/@xml:id"/>
@@ -1506,8 +1515,8 @@
 			</xsl:if>
 		</xsl:for-each>-->
 	</xsl:template>
-	
-	<!-- /////////////////////////////////////////////////////////// --> 
+
+	<!-- /////////////////////////////////////////////////////////// -->
 	<!-- ///LANGUAGES/// -->
 	<!-- called when iso-lanuage is found in TEI, checks with $Languages, which is a simple .xml. datastream in context:szd -->
 	<xsl:template name="languageCode">
@@ -1519,7 +1528,7 @@
 			</xsl:if>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<xsl:template  name="getLanguage">
 		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang">
 			<xsl:choose>
@@ -1536,15 +1545,15 @@
 			</xsl:choose>
 		</xsl:for-each>
 	</xsl:template>
-	
-	
-	
+
+
+
 	<!-- /////////////////////////////////////////// -->
 	<xsl:template name="createTriple">
 		<xsl:param name="Property"/>
 		<xsl:param name="PropertyTyp"/>
 		<xsl:param name="XPpath"/>
-		
+
 		<xsl:choose>
 			<!-- data property with literal -->
 			<xsl:when test="$PropertyTyp = 'data'">
@@ -1575,9 +1584,9 @@
 				<xsl:comment>Error: $PropertyTyp in createTriple is wrong</xsl:comment>
 			</xsl:otherwise>
 		</xsl:choose>
-		
+
 	</xsl:template>
-	
+
 	<xsl:template name="getExtent_SZDBIB_SZDAUT">
 		<xsl:param name="locale"/>
 		<xsl:param name="SZD_ID"/>
@@ -1652,7 +1661,7 @@
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-				<xsl:text> </xsl:text>				
+				<xsl:text> </xsl:text>
 			</xsl:if>
 			<!-- illustriert, Karte, Noten -->
 			<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='extent']/t:item">
@@ -1664,7 +1673,7 @@
 					<xsl:otherwise>
 						<xsl:value-of select="."/><xsl:text>, </xsl:text>
 					</xsl:otherwise>
-				</xsl:choose> 	
+				</xsl:choose>
 			</xsl:for-each>
 			<xsl:text> </xsl:text>
 			<xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
@@ -1675,7 +1684,7 @@
 		</szd:text>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template name="getExtentMSK">
 		<xsl:param name="locale"/>
 		<xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
@@ -1691,8 +1700,8 @@
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:value-of select="$EXTENT/t:span[@xml:lang = $locale]"/>
-			
-	
+
+
 			<xsl:if test="$EXTENT/t:measure[@type='format']">
 				<xsl:text>, </xsl:text>
 				<xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
@@ -1707,7 +1716,7 @@
 			</xsl:if>
 		</szd:text>
 	</xsl:template>
-	
+
 	<!-- //////// -->
 	<!-- getTitle -->
 	<xsl:template name="getTitle">
@@ -1732,12 +1741,12 @@
 			</xsl:choose>
 		</szd:title>
 	</xsl:template>
-	
+
 	<!-- //////// -->
 	<!-- getTitle -->
 	<xsl:template name="getProvenance">
 		<xsl:param name="locale"/>
-		
+
 		<xsl:choose>
 			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:ab[@xml:lang='en']">
 				<xsl:choose>

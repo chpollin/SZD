@@ -1,6 +1,11 @@
 /* Style the Image Used to Trigger the Modal */
 
-
+span.footnote:before {
+  counter-increment: footnotecounter;
+  content: counter(footnotecounter);
+  position: relative;
+  top: -0.4em;
+}
 
 .dropdown-item
 {
@@ -868,11 +873,10 @@ body{
   font-size: 14pt;
   line-height: 20pt;
   text-align: justify;
-  
-  
-  background: #abbaab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #ffffff, #f2f2f2);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  counter-reset: footnotecounter;
+  bckground: #abbaab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #f2f2f2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 	
     

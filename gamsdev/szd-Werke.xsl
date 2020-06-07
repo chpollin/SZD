@@ -237,18 +237,10 @@
                                                                     <xsl:text> </xsl:text>
                                                                 </xsl:when>
                                                                 <xsl:when test="$currentPID">
-                                                                    <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
-                                                                        <xsl:choose>
-                                                                            <xsl:when test="$locale = 'en'">
-                                                                                <xsl:attribute name="title" select="'Access digital facsimile'"/>
-                                                                            </xsl:when>
-                                                                            <xsl:otherwise>
-                                                                                <xsl:attribute name="title" select="'Zum digitalen Faksimile'"/>
-                                                                            </xsl:otherwise>
-                                                                        </xsl:choose>
-                                                                        <i class="fas fa-camera _icon"><xsl:text> </xsl:text></i>
-                                                                    </a>
-                                                                    <xsl:text> </xsl:text>
+                                                                    <xsl:call-template name="createViewerHref">
+                                                                        <xsl:with-param name="currentPID" select="$currentPID"/>
+                                                                        <xsl:with-param name="locale" select="$locale"/>
+                                                                    </xsl:call-template>
                                                                 </xsl:when>
                                                                 <xsl:otherwise/>
                                                             </xsl:choose>

@@ -3,7 +3,7 @@
     Project: Stefan zweig Digital
     Company: ZIM-ACDH (Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities)
     Author: Christopher Pollin
-    Last update: 2018
+    Last update: 2020
  -->
 
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -36,7 +36,7 @@
     	
     	<!-- //////////////////////////////////////////////////////////// -->
         <!-- ///SUBJECTS/// -->
-        	<article class="card-body">
+        	<div class="card-body">
 		        <xsl:call-template name="getNavbar">
 		        	<xsl:with-param name="Title" select="upper-case(//t:titleStmt/t:title)"/>
 		        	<xsl:with-param name="PID" select="$PID"/>
@@ -49,18 +49,30 @@
         	    	 	<!-- [@xml:lang = 'en'] -->
 		                    <xsl:when test="$locale = 'en'">
 		                    	<!-- had problems with matching template as div[@xml:lang] is already defined in static.xsl-->
-		                    	<xsl:call-template name="getThema">
+		                    	<xsl:call-template name="getIssue">
 		                    		<xsl:with-param name="local" select="'en'"/>
 		                    	</xsl:call-template>
 		                    </xsl:when>
 		                    <xsl:otherwise>
-		                    	<xsl:call-template name="getThema">
+		                    	<xsl:call-template name="getIssue">
 		                    		<xsl:with-param name="local" select="'de'"/>
 		                    	</xsl:call-template>
 		                    </xsl:otherwise>
 				      </xsl:choose>
         	    </div>
-        	</article>
+        	</div>
+            <xsl:if test="//t:note[@type='footnote'][1]">
+                <div class="card-footer small">
+                    <h3 class="m-4">Referenzen</h3>
+                    <ol>
+                        <xsl:for-each select="//t:note[@type='footnote']">
+                            <li id="{generate-id()}">
+                                <xsl:apply-templates select="t:bibl"/>
+                            </li>
+                        </xsl:for-each>
+                    </ol>
+                </div>
+            </xsl:if>
         	<!-- weniger - mehr Button -->
             <script>
                 $('a[data-toggle="collapse"]').click(function(){
@@ -73,7 +85,7 @@
 
     <!-- //////////////////////////////////////////////////////////// -->
     <!--  -->
-	<xsl:template name="getThema">
+	<xsl:template name="getIssue">
 		<xsl:param name="local"/>
 	    <!-- //////////////////////////////////////////////////////////// -->
 	    <!-- EINLEITUNG -->
@@ -88,9 +100,18 @@
         </div>
 	    
 	    <xsl:choose>
+	        <!-- with metadata view rigth -->
 	        <xsl:when test="//t:body/t:div[@type = 'col-2']">
-	            <xsl:call-template name="getSubject2Columns">
+	            <xsl:call-template name="getIssue2Columns">
 	                <xsl:with-param name="local" select="$local"/>
+	                <xsl:with-param name="view" select="'col-2'"/>
+	            </xsl:call-template>
+	        </xsl:when>
+	        <!-- with img view right -->
+	        <xsl:when test="//t:body/t:div[@type = 'col-2-img']">
+	            <xsl:call-template name="getIssue2Columns">
+	                <xsl:with-param name="local" select="$local"/>
+	                <xsl:with-param name="view" select="'col-2-img'"/>
 	            </xsl:call-template>
 	        </xsl:when>
 	        <xsl:otherwise>
@@ -99,9 +120,10 @@
 	    </xsl:choose>
 	</xsl:template>
     
-    <xsl:template name="getSubject2Columns">
+    <xsl:template name="getIssue2Columns">
         <xsl:param name="local"/>
-        <xsl:for-each select="//t:body/t:div[@type = 'col-2'][@xml:lang = $local]">
+        <xsl:param name="view"/>
+        <xsl:for-each select="//t:body/t:div[@type = $view][@xml:lang = $local]">
         <xsl:variable name="SZDID">
             <xsl:choose>
                 <xsl:when test="contains(t:head/t:title/@ref, ' ')">
@@ -164,9 +186,11 @@
             <div class="col-sm-6">
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- Über das Original -->
-                <h3 class="text-uppercase">
-                    <i18n:text>aboutoriginal</i18n:text>
-                </h3>
+                <xsl:if test="$view = 'col-2'">
+                    <h3 class="text-uppercase">
+                        <i18n:text>aboutoriginal</i18n:text>
+                    </h3>
+                </xsl:if>
                 <div>
                     <xsl:apply-templates select="t:p"/>
                 </div>
@@ -229,9 +253,11 @@
             </div>
             <!-- //////////////////////////////////////////////////////////// -->
             <div class="col-sm-6">
-                <h3 class="text-uppercase">
-                    <i18n:text>metadata</i18n:text>
-                </h3>        	            	    
+                <xsl:if test="$view = 'col-2'">
+                    <h3 class="text-uppercase">
+                        <i18n:text>metadata</i18n:text>
+                    </h3>    
+                </xsl:if>
                 <xsl:choose>
                     <!-- for all resources with a SZD. - ID -->
                     <xsl:when test="contains($SZDID, 'SZD')">
@@ -251,9 +277,11 @@
                                     <xsl:when test="contains(., 'SZDMSK')">
                                         <xsl:for-each select="$MANUSKRIPTE//t:listBibl/t:biblFull[@xml:id= $helpSZDID]">
                                             <!-- this template is also used for the metadata representation für Collections in szd-templates -->
-                                            <div class="small"><xsl:call-template name="FillbiblFull_SZDMSK">
-                                                <xsl:with-param name="locale" select="$locale"/>
-                                            </xsl:call-template></div>
+                                            <div class="small">
+                                                <xsl:call-template name="FillbiblFull_SZDMSK">
+                                                    <xsl:with-param name="locale" select="$locale"/>
+                                                    <xsl:with-param name="PID" select="'o:szd.werke'"/>
+                                                </xsl:call-template></div>
                                         </xsl:for-each>
                                     </xsl:when>
                                     <xsl:when test="contains(., 'SZDLEB')">
@@ -261,6 +289,7 @@
                                             <!-- this template is also used for the metadata representation für Collections in szd-templates -->
                                             <xsl:call-template name="FillbiblFull_SZDMSK">
                                                 <xsl:with-param name="locale" select="$locale"/>
+                                                <xsl:with-param name="PID" select="'o:szd.lebensdokumente'"/>
                                             </xsl:call-template>
                                         </xsl:for-each></div>
                                     </xsl:when>
@@ -331,7 +360,7 @@
             <xsl:choose>
                 <xsl:when test="t:figDesc/t:ref">
                     <a href="{t:figDesc/t:ref/@target}" title="{t:figDesc/t:ref}" target="_blank">
-                        <img src="{concat('/', $PID, '/', t:graphic/@url)}" class="figure-img img-fluid w-50 mx-auto">
+                        <img src="{concat('/', $PID, '/', t:graphic/@url)}" class="figure-img img-fluid w-50 mx-auto shadow-sm">
                             <xsl:if test="t:figDesc">
                                 <xsl:attribute name="alt"><xsl:value-of select="t:figDesc"/></xsl:attribute>
                             </xsl:if>
@@ -340,7 +369,19 @@
                     </a>
                 </xsl:when>
                 <xsl:otherwise>
-                    <img src="{concat('/', $PID, '/', t:graphic/@url)}" class="figure-img img-fluid w-50 mx-auto">
+                    <img src="{concat('/', $PID, '/', t:graphic/@url)}">
+                        <xsl:choose>
+                            <xsl:when test="t:graphic/@style">
+                                <xsl:attribute name="class">
+                                    <xsl:value-of select="concat('figure-img img-fluid shadow-sm', @style)"/>
+                                </xsl:attribute>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:attribute name="class">
+                                    <xsl:value-of select="'figure-img img-fluid w-50 mx-auto shadow-sm'"/>
+                                </xsl:attribute>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <xsl:if test="t:figDesc">
                             <xsl:attribute name="alt"><xsl:value-of select="t:figDesc"/></xsl:attribute>
                         </xsl:if>
@@ -350,11 +391,28 @@
             </xsl:choose>
             <xsl:if test="t:figDesc/t:caption">
                 <figcaption>
-                    <xsl:value-of select="t:figDesc/t:caption"/>
+                    <xsl:apply-templates select="t:figDesc/t:caption"/>
                 </figcaption>
             </xsl:if>
         </figure>
        
     </xsl:template>
+    
+    <xsl:template match="t:caption">
+        <xsl:choose>
+            <!-- @target contains the PID -->
+            <xsl:when test="t:ref/@target">
+                <xsl:call-template name="createViewerHref">
+                    <xsl:with-param name="currentPID" select="t:ref/@target"/>
+                    <xsl:with-param name="locale" select="$locale"/>
+                    <xsl:with-param name="content" select="."/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     
 </xsl:stylesheet>

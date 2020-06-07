@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<!--
+<!-- 
     Project: Stefan Zweig Digital
     Company: ZIM-ACDH (Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities)
-    		 Literaturarchiv Salzburg
+    		 Literaturarchiv Salzburg	
     Author: Christopher Pollin
     Last update: 2017
  -->
@@ -23,18 +23,18 @@
 	<xsl:param name="mode"/>
 	<xsl:param name="search"/>
 	<xsl:param name="locale"/>
-
+	
 	<xsl:variable name="lang">
 		<xsl:value-of select="substring-before(concat($locale, '_'), '_')"/>
 	</xsl:variable>
-
+	
 	<xsl:variable name="model"
 		select="substring-after(/s:sparql/s:results/s:result/s:model/@uri, '/')"/>
-
+	
 	<xsl:variable name="cid">
 		<xsl:value-of select="/s:sparql/s:results/s:result[1]/s:cid"/>
 	</xsl:variable>
-
+	
 	<xsl:variable name="PID">
 		<xsl:choose>
 			<!-- if its not a TEI file get the PID -->
@@ -60,8 +60,9 @@
 	<!-- project-specific variables -->
 	<xsl:variable name="server"></xsl:variable>
 	<!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
-	<xsl:variable name="gamsdev">/szd</xsl:variable>
-
+     <xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
+	<!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
+	
 	<xsl:variable name="projectTitle">
 		<xsl:text>Stefan Zweig digital</xsl:text>
 	</xsl:variable>
@@ -124,17 +125,17 @@
 				<meta name="author" content="Christopher Pollin"/>
 				<meta name="content-language" content="de"/>
 				<meta name="content-language" content="en"/>
-
-
+				
+			
 				<!--Projekttitel-->
 				<title>
 					<xsl:value-of select="$projectTitle"/>
 				</title>
-
+				
 				<!-- Bootstrap core CSS  ================================================== -->
 				<!-- Bootstrap 4 core CSS -->
 				<link href="/lib/2.0/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
-
+				
 				<!-- fixed navbar-side -->
 				<!--<link href="{concat($server, $gamsdev, '/css/navbar-fixed-side.css')}" rel="stylesheet"/>-->
 
@@ -142,17 +143,35 @@
 				<!--<link href="{$printcss}" rel="stylesheet" type="text/css" media="print"/>-->
 				<link href="{$projectCss}" rel="stylesheet"/>
 				<link href="{$projectNav}" rel="stylesheet"/>
-
+				
 				<!-- Timeline: Lebenskalender -->
 				<link href="{$timelineCss}" rel="stylesheet" type="text/css"/>
 				<link type="text/css" rel="stylesheet" href="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.css?v=2.1.5"/>
 				<link rel="stylesheet" href="/lib/2.0/fa/css/all.css"/>
-
+				
 				<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
+				
+				
+				
+				<!-- jQuery core JavaScript ================================================== -->
+				<script src="/lib/2.0/jquery-3.4.1.min.js"><xsl:text> </xsl:text></script>
 
-
-
-
+				<!-- Bootstrap core JavaScript ================================================== -->
+				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
+				<!--<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>-->
+				<script src="/lib/2.0/bootstrap-4.3.1-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
+				<!-- projectspecific .js ================================================== -->
+				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
+				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
+				<!-- SCROLLDOWN -->
+				<!-- for fancybox in o:szd.glossar -->
+				<script>
+					$(document).ready(function(){
+					$('a.fancybox').fancybox({'type' : 'image'});
+					});
+				</script>
+				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
+				
 			</head>
 
 			<!-- //////////////////////////////////////////////////////////// -->
@@ -174,7 +193,7 @@
 								<ul class="navbar-nav">
 									<li class="nav-item">
 										<a href="/context:szd/sdef:Context/get?locale={$locale}">
-											<img
+											<img 
 												src="{concat($server, $gamsdev, '/img/SZlogo.png')}"
 												title="Home" alt="SZ Logo" height="60"/>
 											<xsl:text> </xsl:text>
@@ -186,7 +205,7 @@
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="/o:szd.werke/sdef:TEI/get?locale={$locale}">
-												<i18n:text>works</i18n:text>
+												<i18n:text>works</i18n:text> 
 											</a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.lebensdokumente/sdef:TEI/get?locale={$locale}">
 												<i18n:text>personaldocument</i18n:text>
@@ -199,9 +218,9 @@
 											<i18n:text>collections</i18n:text>
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<!--<a class="dropdown-item text-uppercase" href="/o:szd.autographen/sdef:TEI/get?locale={$locale}">
+											<a class="dropdown-item text-uppercase" href="/o:szd.autographen/sdef:TEI/get?locale={$locale}">
 												<i18n:text>autograph</i18n:text>
-											</a>-->
+											</a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.bibliothek/sdef:TEI/get?locale={$locale}">
 												<i18n:text>library_szd</i18n:text>
 											</a>
@@ -214,7 +233,10 @@
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="/o:szd.thema.1/sdef:TEI/get?locale={$locale}"><xsl:text>Marie Antoinette</xsl:text></a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.thema.3/sdef:TEI/get?locale={$locale}">
-												<xsl:text>Stefan Zweigs Bibliotheken</xsl:text>
+												<xsl:value-of select="if ($locale = 'en') then ('Stefan Zweigs Libraries') else ('Stefan Zweigs Bibliotheken')"/>
+											</a>
+											<a class="dropdown-item text-uppercase" href="/o:szd.thema.2/sdef:TEI/get?locale={$locale}">
+												<xsl:text>Textgenese: </xsl:text><i><xsl:text>Das erste Wort über den Ozean</xsl:text></i>
 											</a>
 										</div>
 									</li>
@@ -351,7 +373,7 @@
 					<script src="{concat($server, $gamsdev,'/js/scrolldown.js')}"><xsl:text> </xsl:text></script>
 					<script src="{concat($server, $gamsdev,'/js/scrolldown_search.js')}"><xsl:text> </xsl:text></script>
 				</header>
-
+				
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///CONTENT/// -->
 				<main class="container">
@@ -426,7 +448,7 @@
 												<xsl:otherwise>Projektpartner</xsl:otherwise>
 											</xsl:choose>
 										</a>
-
+										
 									</div>
 									<div class="col-sm-3">
 										<a href="http://www.fotohof.at" target="_blank" >
@@ -450,7 +472,7 @@
 												<xsl:otherwise>Impressum</xsl:otherwise>
 											</xsl:choose>
 										</a>
-
+										
 									</div>
 									<div class="col-sm-3">
 										<a target="_blank">
@@ -458,7 +480,7 @@
 												<xsl:with-param name="URL_EN" select="'http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=&amp;locale=en'"/>
 												<xsl:with-param name="URL_DE" select="'http://gams.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img"
+											<img class="footer_img"   
 												src="/templates/img/gamslogo_schwarz.gif"
 												alt="{$gams}"/>
 										</a>
@@ -503,11 +525,11 @@
 												<xsl:with-param name="URL_EN" select="'https://www.uni-graz.at/en/'"/>
 												<xsl:with-param name="URL_DE" select="'https://www.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 20%;margin-top:3%"
+											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 20%;margin-top:3%" 
 												title="Universität Graz" alt="Logo Uni Graz"/>
 											<xsl:text> </xsl:text>
 										</a>
-
+										
 									</div>
 									<div class="col-sm-3">
 										<a href="http://fredonia.libguides.com/archives/zweig" target="_blank">
@@ -517,67 +539,48 @@
 										</a>
 									</div>
 								</div>
-
-
+								
+							
 							<!--	<div class="col-sm-3 text-center">
-
-
+									
+										
 										<br/>
-
+								
 								</div>
 								<div class="col-sm-3">
-
+									
 									<span class="row">
-
+									
 									</span>
 									<span class="row">
 										<span class="col-sm-6">
-
+											
 										</span>
 										<xsl:text> </xsl:text>
 										<span class="col-sm-6">
-
+											
 										</span>
 									</span>
-
+									
 								</div>
 								<div class="col-sm-3">
-
-
+									
+									
 								</div>-->
 							</div>
-
+						
 						</div>
 					</div>
-
+						
 					</div>
 				</footer>
-				<!-- jQuery core JavaScript ================================================== -->
-				<script src="/lib/2.0/jquery-3.4.1.min.js"><xsl:text> </xsl:text></script>
-
-				<!-- Bootstrap core JavaScript ================================================== -->
-				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
-				<!--<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>-->
-				<script src="/lib/2.0/bootstrap-4.3.1-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
-				<!-- projectspecific .js ================================================== -->
-				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
-				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
-				<!-- SCROLLDOWN -->
-				<!-- for fancybox in o:szd.glossar -->
-				<script>
-					$(document).ready(function(){
-					$('a.fancybox').fancybox({'type' : 'image'});
-					});
-				</script>
-				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
-				
 				<!-- switches <arrow ▲ down to up on collapse -->
 				<script>
 					$('a[data-toggle="collapse"]').click(function(){
 					$(this).find("span.arrow").text(function(i,old){
 					return old=='&#9660; ' ?  '&#9650; ' : '&#9660; ';
 					});
-					});
+					}); 
 				</script>
 				<script>
 					window.onload = function () {
@@ -597,7 +600,7 @@
 			</body>
 		</html>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- @href with url for en and de landing page -->
 	<xsl:template name="getURL_EN_DE">
@@ -614,7 +617,7 @@
 			</xsl:choose>
 		</xsl:attribute>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- en | de text for ABOUT, IMPRINT etc. -->
 	<xsl:template match="t:div[@type='main']">
@@ -627,44 +630,82 @@
 	            </xsl:otherwise>
       		</xsl:choose>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:div[@xml:lang='de'][not(@type)]">
 		<xsl:apply-templates/>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:div[@xml:lang='en'][not(@type)]">
 		<xsl:apply-templates/>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:head">
 		<h3>
 			<xsl:apply-templates></xsl:apply-templates>
 		</h3>
 	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:note[@type='footnote']">
+		<!-- numbering done by css -->
+		<a href="#{generate-id()}">
+			<xsl:if test="t:bibl">
+				<xsl:attribute name="title">
+					<xsl:value-of select="normalize-space(t:bibl)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<span class="footnote small"/>
+		</a>
+	</xsl:template>
 
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:p">
 		<p class="card-text"><xsl:apply-templates></xsl:apply-templates></p>
 	</xsl:template>
-
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:list">
+		<ul><xsl:apply-templates/></ul>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:item">
+		<li><xsl:apply-templates/></li>
+	</xsl:template>
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@style='italic']">
 		<i><xsl:apply-templates></xsl:apply-templates></i>
 	</xsl:template>
-
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style='bold']">
+		<strong><xsl:apply-templates></xsl:apply-templates></strong>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style='underline']">
+		<u><xsl:apply-templates></xsl:apply-templates></u>
+	</xsl:template>
+		
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@style='uppercase']">
 		<span class="text-uppercase"><xsl:apply-templates></xsl:apply-templates></span>
 	</xsl:template>
-
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:del[@rend='strikethrough']">
+		<strike><xsl:apply-templates></xsl:apply-templates></strike>
+	</xsl:template>
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:ref[@target]">
 		<a href="{@target}" target="_blank"><xsl:apply-templates></xsl:apply-templates></a>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- @href starttext -->
 	<xsl:template match="t:span[@type='href']">
@@ -681,12 +722,12 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:lb">
 		<br/>
 	</xsl:template>
-
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- creates EN | DE button for languages, locale=en|de mode=about -->
 	<xsl:template name="languageButton">
@@ -721,8 +762,8 @@
 			</xsl:choose>
 		</span>
 	</xsl:template>
+	
 
-
-
-
+	
+	
 </xsl:stylesheet>

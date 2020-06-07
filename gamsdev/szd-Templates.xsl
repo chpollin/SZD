@@ -1288,13 +1288,12 @@
                 <xsl:text> </xsl:text>
             </i>
             <xsl:text> </xsl:text>
-            <i class="fas fas fa-link small" data-toggle="collapse" data-target="{concat('#u', substring-after(@xml:id, '.'))}" style="color: #631a34">
-                <xsl:attribute name="title" select="'Link'"/>
+            <i class="fas fas fa-link small ml-3" data-toggle="collapse" data-target="{concat('#u', substring-after(@xml:id, '.'))}" style="color: #631a34" title="Permalink">
                 <xsl:text> </xsl:text>
             </i>
-            <span id="{concat('u', substring-after(@xml:id, '.'))}" class="collapse font-weight-light pl-5 small">
+            <u id="{concat('u', substring-after(@xml:id, '.'))}" class="collapse font-weight-light pl-5" style="color: #631a34">
                 <xsl:value-of select="$URL"/>
-            </span>
+            </u>
             <!--<button data-toggle="collapse" data-target="{concat('#q', substring-after(@xml:id, '.'))}" style="color: #631a34">
                 <!-\-<i18n:text>suggestedcitation</i18n:text>-\->
             </button>-->
@@ -1377,12 +1376,22 @@
               <i18n:text>Hrsg.</i18n:text>
               <xsl:text> Literaturarchiv Salzburg, </xsl:text>
               <!-- date -->
-              <i18n:text>lastupdate</i18n:text>
+              <xsl:value-of select="if ($locale = 'en') then 'last update' else 'letztes Update'"/>
               <xsl:text> </xsl:text>
                 <!-- Date of TEI ingest -->
-              <xsl:variable name="DateTime" select="document(concat('/archive/objects/', $PID,'/methods/sdef:Object/getMetadata'))//*:result/*:lastModifiedDate"/>  
-                <xsl:value-of select="$DateTime"/>
-                <!--<xsl:value-of select="format-dateTime($DateTime, '[D01].[M01].[Y0001]')"/>-->
+                <xsl:variable name="DateTime" select="document(concat('/archive/objects/', $PID,'/methods/sdef:Object/getMetadata'))//*:result[1]/*:lastModifiedDate"/>  
+                <xsl:choose>
+                    <xsl:when test="$DateTime castable as xs:date">
+                        <xsl:value-of select="format-dateTime($DateTime, '[D01].[M01].[Y0001]')"/>
+                    </xsl:when>
+                    <xsl:when test="contains($DateTime[1], 'T')">
+                        <xsl:value-of select="format-dateTime($DateTime[1], '[D01].[M01].[Y0001]')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$DateTime"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <!---->
               <!-- url -->
               <xsl:text>, URL: </xsl:text>
               <xsl:value-of select="$URL"/>
@@ -1953,13 +1962,15 @@
                        </tr>
                    </xsl:if>
 	           </tbody>
+	          
 	    </table>
 	    <!-- //////////////////////////////////////////////////////////// -->
 	    <!-- card FOOTER -->
-	    <xsl:call-template name="getFooter">
-	        <xsl:with-param name="PID" select="$PID"/>
-	        <xsl:with-param name="locale" select="$locale"/>
-	    </xsl:call-template>
+         <xsl:call-template name="getFooter">
+             <xsl:with-param name="PID" select="$PID"/>
+             <xsl:with-param name="locale" select="$locale"/>
+         </xsl:call-template>
+        
 	    <!--<div class="card-footer small"><xsl:text>Permalink: </xsl:text><strong><xsl:value-of select="concat('stefanzweig.digital/', //t:publicationStmt//t:idno[@type='PID'], '#', @xml:id)"/></strong></div>-->
 	    </div>
 	</xsl:template>
@@ -2483,6 +2494,27 @@
                 <xsl:text>Error in call-template "printAuthor"!</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="createViewerHref">
+        <xsl:param name="currentPID"/>
+        <xsl:param name="locale"/>
+        <xsl:param name="content"/>
+        <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
+            <xsl:choose>
+                <xsl:when test="$locale = 'en'">
+                    <xsl:attribute name="title" select="'Access digital facsimile'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="title" select="'Zum digitalen Faksimile'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            <i class="fas fa-camera _icon"><xsl:text> </xsl:text></i>
+            <xsl:if test="$content">
+                <xsl:value-of select="$content"/>
+            </xsl:if>
+        </a>
+        <xsl:text> </xsl:text>
     </xsl:template>
     
     <!-- /////////////////////// -->

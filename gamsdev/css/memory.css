@@ -1,5 +1,6 @@
 /* styles.css */
 
+
 .memory_game {
   width: 640px;
   height: 640px;
@@ -7,15 +8,7 @@
   display: flex;
   flex-wrap: wrap;
    perspective: 1000px;
-   display: grid;  
 }
-
-.container_memory {  
-    
-    grid-template-columns: 1fr 1fr 1fr;  
-    grid-template-rows: 50px 50px;  
-}
-
 
 /* styles.css */
 
