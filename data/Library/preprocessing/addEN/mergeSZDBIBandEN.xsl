@@ -25,13 +25,13 @@
     <!-- Ausgabevermerk -->
     <xsl:template match="t:editionStmt/t:edition">
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
-        <xsl:variable name="SZDBIB_ID_EN_RAW" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[17]"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[17]"/>
         <xsl:copy>
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
             <span xml:lang="en">
-               <xsl:value-of select="normalize-space($SZDBIB_ID_EN_RAW)"/>
+                <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
             </span>
         </xsl:copy>
     </xsl:template>
@@ -45,14 +45,14 @@
     -->
     <xsl:template match="t:bindingDesc/t:binding/t:ab">
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
-        <xsl:variable name="SZDBIB_ID_EN_RAW" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[33]"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[33]"/>
         
         <xsl:copy>
             <xsl:attribute name="xml:lang" select="'de'"/>
             <xsl:apply-templates/>
         </xsl:copy>
         <ab xml:lang="en">
-            <xsl:value-of select="normalize-space($SZDBIB_ID_EN_RAW)"/>
+            <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
         </ab>
     </xsl:template>
     
@@ -65,11 +65,14 @@
           <span xml:lang="en">[handwritten]</span>
           </note>
       </altIdentifier> -->
-    <!--<xsl:template match="t:msIdentifier/t:altIdentifier[@corresp='szdg:Hausexemplar']/t:idno">
+    <xsl:template match="t:msIdentifier/t:altIdentifier[@corresp='szdg:Hausexemplar']/t:idno">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[54]"/>
+        
         <xsl:copy>
             <xsl:choose>
                 <xsl:when test="contains(., '[')">
-                    <xsl:value-of select="substring-before(., ' [')"/>
+                    <xsl:value-of select="normalize-space(substring-before(., '['))"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:apply-templates/>
@@ -77,34 +80,97 @@
             </xsl:choose>
         </xsl:copy>
         <note>
-            <span xml:lang="de">ToDo</span>
-            <span xml:lang="en">[handwritten]</span>
+            <span xml:lang="de">
+                <xsl:value-of select="normalize-space(substring-before(substring-after(., ' ['), ']'))"/>
+            </span>
+            <span xml:lang="en">
+                <xsl:choose>
+                    <xsl:when test="contains($SZDBIB_EN_CONTENT, '[')">
+                        <xsl:value-of select="normalize-space(substring-before($SZDBIB_EN_CONTENT, '['))"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </span>
         </note>
+    </xsl:template>
+    
+    
+    <xsl:template match="t:item[t:ref/@target = ('szdg:Insertion', 'szdg:Bookplate', 'szdg:Marginalia',
+        'szdg:Marker', 'szdg:Note', 'szdg:Overpasting','szdg:RemovedPage')]/t:desc">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]"/>
+        <xsl:variable name="target" select="../t:ref/@target"/>
+        
+        <xsl:copy>
+            <xsl:attribute name="xml:lang" select="'de'"/>
+            <xsl:apply-templates/>
+        </xsl:copy>
+        <desc xml:lang="en">
+            <xsl:choose>
+                <xsl:when test="$target = 'szdg:Autograph'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[55])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Insertion'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[56])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Bookplate'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[57])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Marginalia'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[58])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Marker'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[59])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Note'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[60])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Note'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[63])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:Note'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[64])"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>nope: </xsl:text><xsl:value-of select="$target"/>
+                </xsl:otherwise>
+            </xsl:choose>
+           
+        </desc>
+    </xsl:template>
+    
+    <!-- Nachbesitzer; later owner -->
+    <xsl:template match="t:msDesc/t:history/t:provenance/t:ab">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[76]"/>
+        
+        <orgName ref="szdg:LaterOwner" xml:lang="de">
+            <xsl:value-of select="normalize-space(.)"/>
+        </orgName>
+        <orgName ref="szdg:LaterOwner" xml:lang="en">
+            <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
+        </orgName>
+        
+    </xsl:template>
+    
+    <!-- Heutiger Standort -->
+   
+   <!-- stamp ; column 61 und 62 -->
+    <!--<xsl:template match="t:item[t:stamp[t:ref/@target = 'szdg:Stamp']]/t:desc">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[61]"/>
+        
+        
+        <xsl:copy>
+            <xsl:attribute name="xml:lang" select="'de'"/>
+            <xsl:apply-templates/>
+        </xsl:copy>
+        <desc xml:lang="en">
+            <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
+        </desc>
     </xsl:template>-->
-    
-    
-    <!--<xsl:template match=""></xsl:template>-->
-    
-    <!-- illustriert	Karten	Noten -->
-    
-    <!-- Einband -->
-    
-    <!-- Nr. Hausexemplar -->	
-    
-    <!--Autogramm-->	
-    
-    <!--Einlage-->	
-    
-    <!--Exlibris-->	
-    
-    <!--Marginalie-->	
-    
-    <!--Merkzeichen-->	
-    
-    <!--Notiz-->	
-    
-    <!--Stempel 01-->
-    
-    
+   
 
 </xsl:stylesheet>
