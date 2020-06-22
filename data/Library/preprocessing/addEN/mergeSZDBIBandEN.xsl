@@ -188,6 +188,22 @@
         
     </xsl:template>
     
+    
+    <xsl:template match="t:msDesc/t:msContents/t:msItem/t:note">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[66]"/>
+        
+        <xsl:copy>
+            <xsl:attribute name="xml:lang">
+                <xsl:text>de</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:copy>
+        <note xml:lang="en">
+            <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
+        </note>
+    </xsl:template>
+    
     <!-- Heutiger Standort -->
    
    <!-- stamp ; column 61 und 62 -->

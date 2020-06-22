@@ -131,8 +131,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Kuro Masu ist vermutlich das Pseudonym des Verfassers Karl Michael von
-                      Levetzow.</note>
+                    <note xml:lang="de">Kuro Masu ist vermutlich das Pseudonym des Verfassers Karl Michael von
+                      Levetzow.</note><note xml:lang="en">Kuro Masu is probably a pseudonym for the author Karl Michael von Levetzow.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -4153,7 +4153,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Druckbogen nur einseitig bedruckt und anschließend gefaltet</note>
+                    <note xml:lang="de">Druckbogen nur einseitig bedruckt und anschließend gefaltet</note><note xml:lang="en">sheet printed on one side only and then folded</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -5417,7 +5417,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält Faksimiles von Autographen aus der Sammlung Stefan Zweig</note>
+                    <note xml:lang="de">Enthält Faksimiles von Autographen aus der Sammlung Stefan Zweig</note><note xml:lang="en">contains facsimiles of manuscripts in Stefan Zweig's collection</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -6387,8 +6387,8 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Drei Exemplare: davon ein Exemplar mit allen Beilagen, ein Exemplar mit
-                      der Beilage "Call for Donations", ein Exemplar ohne Beilagen</note>
+                    <note xml:lang="de">Drei Exemplare: davon ein Exemplar mit allen Beilagen, ein Exemplar mit
+                      der Beilage "Call for Donations", ein Exemplar ohne Beilagen</note><note xml:lang="en">3 copies: one with all supplements, one with the supplement "Call for Donations", one without supplements</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -8652,7 +8652,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Druckbogen nur einseitig bedruckt und anschließend gefaltet</note>
+                    <note xml:lang="de">Druckbogen nur einseitig bedruckt und anschließend gefaltet</note><note xml:lang="en">sheet printed on one side only and then folded</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -9832,10 +9832,10 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Die Ausgabe des Werkes erschien in den USA mit der Verfasserangabe
+                    <note xml:lang="de">Die Ausgabe des Werkes erschien in den USA mit der Verfasserangabe
                       "Stephen Branch", der direkten Übersetzung des Namens Stefan Zweig.
                       Die Übersetzung war nicht autorisiert und die Veröffentlichung nicht
-                      genehmigt.</note>
+                      genehmigt.</note><note xml:lang="en">Published in the USA under the name "Stephen Branch", a literal translation of Stefan Zweig's name. The translation and publication were not authorized.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -10528,7 +10528,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: The tower of Babel</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: The tower of Babel</note><note xml:lang="en">Contains: Zweig, Stefan: The tower of Babel</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -11159,7 +11159,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Amok, S. 234-288</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Amok, S. 234-288</note><note xml:lang="en">Contains: Zweig, Stefan: Amok, pp. 234-288</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -11370,7 +11370,7 @@
                     <lang xml:lang="eng"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: The invisible collection, S. 425-443</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: The invisible collection, S. 425-443</note><note xml:lang="en">Contains: Zweig, Stefan: The invisible collection, pp. 425-443</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -12973,7 +12973,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note>Zweites Exemplar</note>
+                    <note xml:lang="de">Zweites Exemplar</note><note xml:lang="en">Second copy</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -13138,7 +13138,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält einen Beitrag von Stefan Zweig</note>
+                    <note xml:lang="de">Enthält einen Beitrag von Stefan Zweig</note><note xml:lang="en">Contains a contribution by Stefan Zweig</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -14564,7 +14564,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1094" type="person">
+                <term ref="#SZDPER.1094" type="person">
                   <persName ref="http://d-nb.info/gnd/118593862">
                     <name>Philipp II.</name>
                   </persName>
@@ -15315,7 +15315,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält zwei Beiträge von Stefan Zweig (S. 90-91 und S. 113-115)</note>
+                    <note xml:lang="de">Enthält zwei Beiträge von Stefan Zweig (S. 90-91 und S. 113-115)</note><note xml:lang="en">Contains two contributions by Stefan Zweig (pp. 90-91 and pp. 113-115)</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -21687,7 +21687,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note/>
+                    <note xml:lang="de"/><note xml:lang="en"/>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -22531,7 +22531,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note/>
+                    <note xml:lang="de"/><note xml:lang="en"/>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -23457,7 +23457,7 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note/>
+                    <note xml:lang="de"/><note xml:lang="en"/>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -27980,7 +27980,7 @@
                   <surname>Goethe</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1304">
+              <editor ref="#SZDPER.1304">
                 <persName ref="http://d-nb.info/gnd/1171748825">
                   <name>Selbsthilfevereinigung der jüdischen Blinden in Deutschland</name>
                 </persName>
@@ -28926,7 +28926,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Die Legende der dritten Taube, S. 77-82</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Die Legende der dritten Taube, S. 77-82</note><note xml:lang="en">Contains: Zweig, Stefan: Die Legende der dritten Taube, pp. 77-82</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -29989,7 +29989,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Beilage in: Philobiblon, 9 (1936), 1, S. 1-13</note>
+                    <note xml:lang="de">Beilage in: Philobiblon, 9 (1936), 1, S. 1-13</note><note xml:lang="en">Supplement in: Philobiblon, 9 (1936), 1, pp. 1-13</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -33873,8 +33873,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Herausgeber-Komitee: Thomas Mann, René Schickele, Franz Werfel, Stefan
-                      Zweig</note>
+                    <note xml:lang="de">Herausgeber-Komitee: Thomas Mann, René Schickele, Franz Werfel, Stefan
+                      Zweig</note><note xml:lang="en">Editors' committee: Thomas Mann, René Schickele, Franz Werfel, Stefan Zweig</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -34329,8 +34329,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Brief an einen französischen Freund, S.
-                      186-192</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Brief an einen französischen Freund, S.
+                      186-192</note><note xml:lang="en">Contains: Zweig, Stefan: Brief an einen französischen Freund, pp. 186-192</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -34803,7 +34803,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält einen Beitrag von Stefan Zweig</note>
+                    <note xml:lang="de">Enthält einen Beitrag von Stefan Zweig</note><note xml:lang="en">Contains a contribution by Stefan Zweig</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -34879,7 +34879,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält einen Beitrag von Stefan Zweig</note>
+                    <note xml:lang="de">Enthält einen Beitrag von Stefan Zweig</note><note xml:lang="en">Contains a contribution by Stefan Zweig</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -35418,7 +35418,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Vorwort von Stefan Zweig aus: Das Buch des Jahres 1931, S. I-VIII</note>
+                    <note xml:lang="de">Vorwort von Stefan Zweig aus: Das Buch des Jahres 1931, S. I-VIII</note><note xml:lang="en">Preface by Stefan Zweig from: Das Buch des Jahres 1931, pp. I-VIII</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -35613,7 +35613,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Wien</settlement>
-                  <repository>Dokumentationsstelle für neuere österreichische Literatur im
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.10">Dokumentationsstelle für neuere österreichische Literatur im
                     Literaturhaus</repository>
                   <idno>XB2:Roth,J:02 </idno>
                 </msIdentifier>
@@ -36139,9 +36139,9 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Das 1938 erschienene Buch wurde nach Salzburg geschickt, wo es Stefan
+                    <note xml:lang="de">Das 1938 erschienene Buch wurde nach Salzburg geschickt, wo es Stefan
                       Zweig nicht mehr erreichen konnte. Es verblieb bei seiner Sekretärin Anna
-                      Meingast.</note>
+                      Meingast.</note><note xml:lang="en">Published in 1938, the book was sent to Salzburg, where it failed to reach Stefan Zweig. It was kept by his secretary, Anna Meingast.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -36917,7 +36917,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Die Flucht zu Gott, S. 34-55</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Die Flucht zu Gott, S. 34-55</note><note xml:lang="en">Contains: Zweig, Stefan: Die Flucht zu Gott, pp. 34-55</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -37192,7 +37192,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält eine Antwort von Stefan Zweig auf die Umfrage, S. 14-15</note>
+                    <note xml:lang="de">Enthält eine Antwort von Stefan Zweig auf die Umfrage, S. 14-15</note><note xml:lang="en">Contains an answer by Stefan Zweig to the survey, pp. 14-15</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -37910,7 +37910,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Salzburg</settlement>
-                  <repository>Adolf Haslinger Literaturstiftung im Literaturarchiv
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.17">Adolf Haslinger Literaturstiftung im Literaturarchiv
                     Salzburg</repository>
                   <idno>SZ-BIB.GIN/DOPP1920</idno>
                 </msIdentifier>
@@ -37919,8 +37919,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Nur Schmutztitelblatt mit Widmung erhalten, Rückschluss auf den Titel
-                      durch das Verlagssignet</note>
+                    <note xml:lang="de">Nur Schmutztitelblatt mit Widmung erhalten, Rückschluss auf den Titel
+                      durch das Verlagssignet</note><note xml:lang="en">Only the half-title with the presentation inscription is preserved; title inferred from publisher's device</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -38616,7 +38616,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.94" type="person">
+                <term ref="#SZDPER.94" type="person">
                   <persName ref="http://d-nb.info/gnd/118655450">
                     <forename>Edvard</forename>
                     <surname>Beneš</surname>
@@ -40817,7 +40817,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält einen Beitrag von Stefan Zweig</note>
+                    <note xml:lang="de">Enthält einen Beitrag von Stefan Zweig</note><note xml:lang="en">Contains a contribution by Stefan Zweig</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -40881,7 +40881,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält Faksimiles von Autographen aus der Sammlung Stefan Zweig</note>
+                    <note xml:lang="de">Enthält Faksimiles von Autographen aus der Sammlung Stefan Zweig</note><note xml:lang="en">Contains facsimiles of manuscripts in Stefan Zweig's collection</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -41629,7 +41629,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Gedächtnis eines deutschen Menschen, S. 5-8</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Gedächtnis eines deutschen Menschen, S. 5-8</note><note xml:lang="en">Contains: Zweig, Stefan: Gedächtnis eines deutschen Menschen, pp. 5-8</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -43877,7 +43877,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Erstes Erlebnis, Amok, Verwirrung der Gefühle</note>
+                    <note xml:lang="de">Enthält: Erstes Erlebnis, Amok, Verwirrung der Gefühle</note><note xml:lang="en">Contains: Erstes Erlebnis, Amok, Verwirrung der Gefühle</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -45023,8 +45023,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Handexemplar der Dissertation Stefan Zweigs, die zu seinen Lebzeiten nicht
-                      im Druck erschienen ist.</note>
+                    <note xml:lang="de">Handexemplar der Dissertation Stefan Zweigs, die zu seinen Lebzeiten nicht
+                      im Druck erschienen ist.</note><note xml:lang="en">Stefan Zweig's personal copy of his doctoral dissertation, not published during his lifetime</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -45614,7 +45614,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Zwei Exemplare</note>
+                    <note xml:lang="de">Zwei Exemplare</note><note xml:lang="en">2 copies</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -46164,7 +46164,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1327" type="person">
+                <term ref="#SZDPER.1327" type="person">
                   <persName ref="http://d-nb.info/gnd/118615270">
                     <name>Socrates</name>
                   </persName>
@@ -47158,7 +47158,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Wien</settlement>
-                  <repository>Dokumentationsstelle für neuere österreichische Literatur im
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.10">Dokumentationsstelle für neuere österreichische Literatur im
                     Literaturhaus</repository>
                   <idno>XB2:Zweig,S:19</idno>
                 </msIdentifier>
@@ -47344,7 +47344,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.313" type="person">
+                <term ref="#SZDPER.313" type="person">
                   <persName ref="http://d-nb.info/gnd/118527053">
                     <forename>Fëdor Michajlovič</forename>
                     <surname>Dostoevskij</surname>
@@ -47460,7 +47460,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Special cover by dbc</note>
+                    <note xml:lang="de">Special cover by dbc</note><note xml:lang="en">Special cover by dbc</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -48470,11 +48470,11 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>[Gedruckter Vermerk:] Die Kunstgewerbeschule Erfurt fertigte diesen
+                    <note xml:lang="de">[Gedruckter Vermerk:] Die Kunstgewerbeschule Erfurt fertigte diesen
                       Sonderdruck im Frühjahr 1933 für den Verlag Herbert Reichner in Wien. Stefan
                       Zweigs Novelle wurde zuerst im „Insel-Almanach auf das Jahr 1922“
                       veröffentlicht und ist hier mit Erlaubnis des Verfassers und des Insel-Verlags
-                      wiedergegeben.</note>
+                      wiedergegeben.</note><note xml:lang="en">[Printed note:] Die Kunstgewerbeschule Erfurt fertigte diesen Sonderdruck im Frühjahr 1933 für den Verlag Herbert Reichner in Wien. Stefan Zweigs Novelle wurde zuerst im "Insel-Almanach auf das Jahr 1922" veröffentlicht und ist hier mit Erlaubnis des Verfassers und des Insel-Verlags wiedergegeben.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -48600,7 +48600,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.364" type="person">
+                <term ref="#SZDPER.364" type="person">
                   <persName ref="http://d-nb.info/gnd/118530666">
                     <name>Erasmus von Rotterdam</name>
                   </persName>
@@ -54041,13 +54041,13 @@
                     <surname>Heine</surname>
                   </persName>
                 </term>
-                <term ref="SZDPER.313" type="person">
+                <term ref="#SZDPER.313" type="person">
                   <persName ref="http://d-nb.info/gnd/118527053">
                     <forename>Fëdor Michajlovič</forename>
                     <surname>Dostoevskij</surname>
                   </persName>
                 </term>
-                <term ref="SZDPER.500" type="person">
+                <term ref="#SZDPER.500" type="person">
                   <persName ref="http://d-nb.info/gnd/118639293">
                     <forename>Maksim</forename>
                     <surname>Gorʹkij</surname>
@@ -56757,7 +56757,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Nachwort und zweites Vorwort als Typoskript angefügt</note>
+                    <note xml:lang="de">Nachwort und zweites Vorwort als Typoskript angefügt</note><note xml:lang="en">Epilogue and second preface added in typescript</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -56812,7 +56812,7 @@
           <fileDesc>
             <titleStmt>
               <title>Jüdisches Blindenjahrbuch 5696 (1935/1936)</title>
-              <editor ref="SZDPER.1304">
+              <editor ref="#SZDPER.1304">
                 <persName ref="http://d-nb.info/gnd/1171748825">
                   <name>Selbsthilfevereinigung der jüdischen Blinden in Deutschland</name>
                 </persName>
@@ -56840,7 +56840,7 @@
                     <lang xml:lang="yid"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Die unsichtbare Sammlung</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Die unsichtbare Sammlung</note><note xml:lang="en">Contains: Zweig, Stefan: Die unsichtbare Sammlung</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -56982,7 +56982,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Erzählungen, Legenden, Sternstunden der Menschheit</note>
+                    <note xml:lang="de">Enthält: Erzählungen, Legenden, Sternstunden der Menschheit</note><note xml:lang="en">Contains: Erzählungen, Legenden, Sternstunden der Menschheit</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -57090,7 +57090,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Beitrag in: Philobiblon, 9 (1936), 4, S. 125-129</note>
+                    <note xml:lang="de">Beitrag in: Philobiblon, 9 (1936), 4, S. 125-129</note><note xml:lang="en">Contribution in: Philobiblon, 9 (1936), 4, pp. 125-129</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -57870,7 +57870,7 @@
           <fileDesc>
             <titleStmt>
               <title>Kopf oder Schrift : Roman</title>
-              <author ref="SZDPER.683">
+              <author ref="#SZDPER.683">
                 <persName ref="http://d-nb.info/gnd/143148745">
                   <forename>Jolán</forename>
                   <surname>Földes </surname>
@@ -60961,7 +60961,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Über Sprach- und Stillehre, S. 137-138</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Über Sprach- und Stillehre, S. 137-138</note><note xml:lang="en">Contains: Zweig, Stefan: Über Sprach- und Stillehre, pp. 137-138</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -61239,7 +61239,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Moissi im Gespräch, S. 56-57</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Moissi im Gespräch, S. 56-57</note><note xml:lang="en">Contains: Zweig, Stefan: Moissi im Gespräch, pp. 56-57</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -61593,7 +61593,7 @@
           <fileDesc>
             <titleStmt>
               <title>Novellen</title>
-              <author ref="SZDPER.783">
+              <author ref="#SZDPER.783">
                 <persName ref="http://d-nb.info/gnd/105511579X">
                   <name>Larin-Kyösti</name>
                 </persName>
@@ -62227,9 +62227,9 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Werbeblatt für den Verkauf des Autographs „Das Lied der Deutschen“ von
+                    <note xml:lang="de">Werbeblatt für den Verkauf des Autographs „Das Lied der Deutschen“ von
                       August Heinrich Hoffmann von Fallersleben aus der Sammlung Stefan Zweig. –
-                      Zwei Exemplare</note>
+                      Zwei Exemplare</note><note xml:lang="en">Advertisement for the sale of the autograph of "Das Lied der Deutschen" by August Heinrich Hoffmann von Fallersleben from Stefan Zweig's collection. – 2 copies</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -62806,8 +62806,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Clemens Neydisser ist das gemeinsame Pseudonym der Verfasser Stefan Zweig
-                      und Alexander Lernet-Holenia.</note>
+                    <note xml:lang="de">Clemens Neydisser ist das gemeinsame Pseudonym der Verfasser Stefan Zweig
+                      und Alexander Lernet-Holenia.</note><note xml:lang="en">Clemens Neydisser is the joint pseudonym of the authors Stefan Zweig and Alexander Lernet-Holenia.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -64813,7 +64813,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Die Stadt als Rahmen, S. 14-16</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Die Stadt als Rahmen, S. 14-16</note><note xml:lang="en">Contains: Zweig, Stefan: Die Stadt als Rahmen, pp. 14-16</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -64886,9 +64886,9 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Separatabdruck aus: Österreichische Rundschau, Jg. 15/5 vom 1. Juni 1908,
+                    <note xml:lang="de">Separatabdruck aus: Österreichische Rundschau, Jg. 15/5 vom 1. Juni 1908,
                       S. 336-356, [und] Österreichischische Rundschau, Jg. 15/6 vom 15. Juni 1908,
-                      S. 415-432</note>
+                      S. 415-432</note><note xml:lang="en">Offprint from: Österreichische Rundschau 15/5, 1 June 1908, pp. 336-356, [and] Österreichischische Rundschau 15/6, 15 June 1908, p. 415-432</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -65450,7 +65450,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält: Zweig, Stefan: Neue Fülle, Lied Nr. 1</note>
+                    <note xml:lang="de">Enthält: Zweig, Stefan: Neue Fülle, Lied Nr. 1</note><note xml:lang="en">Contains: Zweig, Stefan: Neue Fülle, Lied Nr. 1</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -65612,7 +65612,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1315" type="person">
+                <term ref="#SZDPER.1315" type="person">
                   <persName ref="http://d-nb.info/gnd/118664417">
                     <name>Buddha</name>
                   </persName>
@@ -66430,7 +66430,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Faksimile eines Autographs aus der Sammlung Stefan Zweig</note>
+                    <note xml:lang="de">Faksimile eines Autographs aus der Sammlung Stefan Zweig</note><note xml:lang="en">Facsimile of an autograph from Stefan Zweig's collection</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -66878,8 +66878,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note> Die Eintragung der Originalsignatur wurde vermutlich nach Stefan Zweigs
-                      Tod vorgenommen.</note>
+                    <note xml:lang="de"> Die Eintragung der Originalsignatur wurde vermutlich nach Stefan Zweigs
+                      Tod vorgenommen.</note><note xml:lang="en">The original shelfmark was probably entered after the death of Stefan Zweig.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -66945,8 +66945,8 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Beitrag über Stefan Zweig in: Philosophia, 3:1/4 (1938), S. 347-358. –
-                      Zwei Exemplare</note>
+                    <note xml:lang="de">Beitrag über Stefan Zweig in: Philosophia, 3:1/4 (1938), S. 347-358. –
+                      Zwei Exemplare</note><note xml:lang="en">Article about Stefan Zweig in: Philosophia, 3:1/4 (1938), pp. 347-358. – 2 copies</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -67501,7 +67501,7 @@
                     <lang xml:lang="ger"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält einen Beitrag von Stefan Zweig (S. 55)</note>
+                    <note xml:lang="de">Enthält einen Beitrag von Stefan Zweig (S. 55)</note><note xml:lang="en">Contains a contribution by Stefan Zweig (p. 55)</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -67610,7 +67610,7 @@
                   <surname>Gogol</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1206" role="illustrator">
+              <editor ref="#SZDPER.1206" role="illustrator">
                 <persName ref="http://d-nb.info/gnd/118602047">
                   <forename>Karl</forename>
                   <surname>Rössing</surname>
@@ -67674,7 +67674,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1400" type="person">
+                <term ref="#SZDPER.1400" type="person">
                   <persName ref="http://d-nb.info/gnd/119302349">
                     <forename>Taras</forename>
                     <surname>Bulʹba-Borovecʹ</surname>
@@ -68145,7 +68145,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1431" type="person">
+                <term ref="#SZDPER.1431" type="person">
                   <persName ref="http://d-nb.info/gnd/11864291X">
                     <forename>Lev Nikolaevič</forename>
                     <surname>Tolstoj</surname>
@@ -68798,7 +68798,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.749" type="person">
+                <term ref="#SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
                     <name>Ludwig II, König von Bayern</name>rname&gt;</persName>
                 </term>
@@ -69499,7 +69499,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1028" type="person">
+                <term ref="#SZDPER.1028" type="person">
                   <persName ref="http://d-nb.info/gnd/118587943">
                     <forename>Friedrich</forename>
                     <surname>Nietzsche</surname>
@@ -72373,7 +72373,7 @@
                     <lang xml:lang="hun"/>
                   </textLang>
                   <msItem>
-                    <note>Zwei Exemplare: davon ein Exemplar ohne Stempel</note>
+                    <note xml:lang="de">Zwei Exemplare: davon ein Exemplar ohne Stempel</note><note xml:lang="en">2 copies, one without stamp</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -73913,7 +73913,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.749" type="person">
+                <term ref="#SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
                     <forename/>
                     <surname>Ludwig II.</surname>
@@ -77686,8 +77686,8 @@
                     <lang xml:lang="fre"/>
                   </textLang>
                   <msItem>
-                    <note>Enthält das Faksimile eines Autographs aus der Sammlung Stefan
-                      Zweig</note>
+                    <note xml:lang="de">Enthält das Faksimile eines Autographs aus der Sammlung Stefan
+                      Zweig</note><note xml:lang="en">Contains the facsimile of an autograph from Stefan Zweig's collection</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -77717,7 +77717,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1017" type="person">
+                <term ref="#SZDPER.1017" type="person">
                   <persName ref="http://d-nb.info/gnd/118586408">
                     <name>Napoleon I.</name>
                   </persName>
@@ -79962,7 +79962,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1086" type="person">
+                <term ref="#SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
                     <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
@@ -81401,7 +81401,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1086" type="person">
+                <term ref="#SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
                     <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
@@ -84150,7 +84150,7 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1550" role="translator">
+              <editor ref="#SZDPER.1550" role="translator">
                 <persName ref="http://d-nb.info/gnd/1033603929">
                   <forename>V. A.</forename>
                   <surname>Zorgenfrei</surname>
@@ -86297,7 +86297,7 @@
           <fileDesc>
             <titleStmt>
               <title>El Ingenioso Hidalgo Don Quixote de la Mancha</title>
-              <author ref="SZDPER.960">
+              <author ref="#SZDPER.960">
                 <persName ref="http://d-nb.info/gnd/11851993X">
                   <forename>Miguel de</forename>
                   <surname>Cervantes Saavedra</surname>
@@ -91439,7 +91439,7 @@
           <fileDesc>
             <titleStmt>
               <title>Ferdinand Magellan</title>
-              <author ref="SZDPER.1576">
+              <author ref="#SZDPER.1576">
                 <persName ref="http://d-nb.info/gnd/11885349X">
                   <forename>E. F.</forename>
                   <surname>Benson</surname>
@@ -91532,7 +91532,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Halle/Saale</settlement>
-                  <repository>Stiftung Händel-Haus Halle</repository>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.41">Stiftung Händel-Haus Halle</repository>
                   <idno>IIb 102 -S</idno>
                 </msIdentifier>
                 <msContents>
@@ -91603,7 +91603,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Berlin</settlement>
-                  <repository>Autographenhandlung J. A. Stargardt</repository>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.40">Autographenhandlung J. A. Stargardt</repository>
                   <altIdentifier corresp="szdg:NumberCollection">
                     <idno>4165</idno>
                   </altIdentifier>
@@ -91657,7 +91657,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.905" type="person">
+                <term ref="#SZDPER.905" type="person">
                   <persName ref="http://d-nb.info/gnd/118577808">
                     <name>Maria Stuart</name>
                   </persName>
@@ -91670,7 +91670,7 @@
           <fileDesc>
             <titleStmt>
               <title>Jacques Casanova, vénitien : une vie d'aventurier au XVIIIe siècle</title>
-              <author ref="SZDPER.1580">
+              <author ref="#SZDPER.1640">
                 <persName ref="http://d-nb.info/gnd/124509665">
                   <forename>Charles</forename>
                   <surname>Samaran</surname>
@@ -91685,8 +91685,8 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <settlement/>
-                  <repository/>
+                  <settlement>Berlin</settlement>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.40">J. A. Stargardt Autographs</repository>
                   <altIdentifier corresp="szdg:SingleLetter" n="1" type="capital">
                     <idno>I/6</idno>
                   </altIdentifier>
@@ -91763,7 +91763,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Marbach am Neckar</settlement>
-                  <repository>Deutsches Literaturarchiv Marbach</repository>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.42">Deutsches Literaturarchiv Marbach</repository>
                   <idno>G:Zweig, Stefan (Teilbibliothek des Autors)</idno>
                   <altIdentifier corresp="szdg:NumberCollection">
                     <idno>330</idno>
@@ -91839,7 +91839,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Marbach am Neckar</settlement>
-                  <repository>Deutsches Literaturarchiv Marbach</repository>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.42">Deutsches Literaturarchiv Marbach</repository>
                   <idno>G:Zweig, Stefan (Teilbibliothek des Autors)</idno>
                   <altIdentifier corresp="szdg:NumberCollection">
                     <idno>4304</idno>
@@ -91900,7 +91900,7 @@
               <msDesc>
                 <msIdentifier>
                   <settlement>Berlin</settlement>
-                  <repository>Autographenhandlung J. A. Stargardt</repository>
+                  <repository ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.40">Autographenhandlung J. A. Stargardt</repository>
                   <altIdentifier corresp="szdg:NumberCollection">
                     <idno>1832</idno>
                   </altIdentifier>
@@ -91946,7 +91946,7 @@
             <titleStmt>
               <title>Auflösung. Blondel zu Marien : für eine Singstimme mit Begleitung des Piano
                 Forte ; Nachlass N° 34</title>
-              <author ref="SZDPER.1578">
+              <author ref="#SZDPER.1641">
                 <persName ref="http://d-nb.info/gnd/119045451">
                   <forename>J.</forename>
                   <surname>Mayrhofer</surname>
@@ -92074,13 +92074,13 @@
           <fileDesc>
             <titleStmt>
               <title>Rose Mirliton : zwanzig Zeichnungen</title>
-              <author ref="SZDPER.1582">
+              <author ref="#SZDPER.1582">
                 <persName ref="http://d-nb.info/gnd/117452297">
                   <forename>J. J.</forename>
                   <surname>Vrieslander</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1582" role="illustrator">
+              <editor ref="#SZDPER.1582" role="illustrator">
                 <persName ref="http://d-nb.info/gnd/117452297">
                   <forename>J. J.</forename>
                   <surname>Vrieslander</surname>
