@@ -11,3 +11,4 @@
 * stamp column 61 und 62: checken ob es auch für stamp2 passt
 
 * <ref target="szdg:LaterOwner"/> zu <orgName @ref @xml:id>
+

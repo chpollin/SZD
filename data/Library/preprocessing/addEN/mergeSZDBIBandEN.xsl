@@ -56,6 +56,34 @@
         </ab>
     </xsl:template>
     
+    <!-- illustriert, karten noten -->
+    <xsl:template match="t:additions/t:list[@type='extent']/t:item[@ana]">
+        <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]"/>
+
+        <xsl:copy>
+            <span xml:lang="de">
+                <xsl:apply-templates/>
+            </span>
+            <span xml:lang="en">
+                <xsl:choose>
+                    <xsl:when test="@ana='illustrated'">
+                        <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[23])"/>
+                    </xsl:when>
+                    <xsl:when test="@ana='map'">
+                        <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[24])"/>
+                    </xsl:when>
+                    <xsl:when test="@ana='note'">
+                        <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[25])"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:comment>ERROR: t:additions/t:list[@type='extent']/t:item[@ana]</xsl:comment>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </span>
+        </xsl:copy>
+    </xsl:template>
+    
     
     <!-- Nr. Hausexemplar  
         <altIdentifier corresp="szdg:Hausexemplar">
@@ -65,7 +93,7 @@
           <span xml:lang="en">[handwritten]</span>
           </note>
       </altIdentifier> -->
-    <xsl:template match="t:msIdentifier/t:altIdentifier[@corresp='szdg:Hausexemplar']/t:idno">
+    <xsl:template match="t:msIdentifier/t:altIdentifier[@corresp]/t:idno">
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[54]"/>
         
@@ -86,7 +114,7 @@
             <span xml:lang="en">
                 <xsl:choose>
                     <xsl:when test="contains($SZDBIB_EN_CONTENT, '[')">
-                        <xsl:value-of select="normalize-space(substring-before($SZDBIB_EN_CONTENT, '['))"/>
+                        <xsl:value-of select="normalize-space(substring-before(substring-after($SZDBIB_EN_CONTENT, '['), ']'))"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
@@ -98,7 +126,7 @@
     
     
     <xsl:template match="t:item[t:ref/@target = ('szdg:Insertion', 'szdg:Bookplate', 'szdg:Marginalia',
-        'szdg:Marker', 'szdg:Note', 'szdg:Overpasting','szdg:RemovedPage')]/t:desc">
+        'szdg:Marker', 'szdg:Note', 'szdg:Overpasting','szdg:RemovedPage', 'szdg:Autograph', 'szdg:PresentationInscription')]/t:desc">
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]"/>
         <xsl:variable name="target" select="../t:ref/@target"/>
@@ -127,11 +155,14 @@
                 <xsl:when test="$target = 'szdg:Note'">
                     <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[60])"/>
                 </xsl:when>
-                <xsl:when test="$target = 'szdg:Note'">
+                <xsl:when test="$target = 'szdg:Overpasting'">
                     <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[63])"/>
                 </xsl:when>
-                <xsl:when test="$target = 'szdg:Note'">
+                <xsl:when test="$target = 'szdg:RemovedPage'">
                     <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[64])"/>
+                </xsl:when>
+                <xsl:when test="$target = 'szdg:PresentationInscription'">
+                    <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT/*:Cell[65])"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>nope: </xsl:text><xsl:value-of select="$target"/>

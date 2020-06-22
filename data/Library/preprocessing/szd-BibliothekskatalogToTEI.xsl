@@ -636,7 +636,7 @@
                                     <!-- Spalte 56; Einlage-->
                                     <xsl:if test="not($Row/*:Cell[56] = $Empty)">
                                         <item>
-                                            <ref target="https://gams.uni-graz.at/o:szd.glossar#Autograph"/>
+                                            <ref target="https://gams.uni-graz.at/o:szd.glossar#Insertion"/>
                                             <term xml:lang="de">Einlage</term>
                                             <term xml:lang="en">Insertion</term>
                                             <desc><xsl:value-of select="$Row/*:Cell[56]"/></desc>
