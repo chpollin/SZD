@@ -107,21 +107,23 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:copy>
-        <note>
-            <span xml:lang="de">
-                <xsl:value-of select="normalize-space(substring-before(substring-after(., ' ['), ']'))"/>
-            </span>
-            <span xml:lang="en">
-                <xsl:choose>
-                    <xsl:when test="contains($SZDBIB_EN_CONTENT, '[')">
-                        <xsl:value-of select="normalize-space(substring-before(substring-after($SZDBIB_EN_CONTENT, '['), ']'))"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </span>
-        </note>
+        <xsl:if test="contains(., '[')">
+            <note>
+                <span xml:lang="de">
+                    <xsl:value-of select="normalize-space(substring-before(substring-after(., ' ['), ']'))"/>
+                </span>
+                <span xml:lang="en">
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDBIB_EN_CONTENT, '[')">
+                            <xsl:value-of select="normalize-space(substring-before(substring-after($SZDBIB_EN_CONTENT, '['), ']'))"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </span>
+            </note>
+        </xsl:if>
     </xsl:template>
     
     
