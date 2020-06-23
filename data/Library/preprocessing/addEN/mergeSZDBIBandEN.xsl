@@ -207,11 +207,10 @@
     <!-- Heutiger Standort -->
    
    <!-- stamp ; column 61 und 62 -->
-    <!--<xsl:template match="t:item[t:stamp[t:ref/@target = 'szdg:Stamp']]/t:desc">
+    <xsl:template match="t:item[t:stamp[t:ref/@target = 'szdg:Stamp']]/t:desc">
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDBIB_EN_CONTENT" select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[61]"/>
-        
-        
+ 
         <xsl:copy>
             <xsl:attribute name="xml:lang" select="'de'"/>
             <xsl:apply-templates/>
@@ -219,7 +218,7 @@
         <desc xml:lang="en">
             <xsl:value-of select="normalize-space($SZDBIB_EN_CONTENT)"/>
         </desc>
-    </xsl:template>-->
+    </xsl:template>
    
 
 </xsl:stylesheet>
