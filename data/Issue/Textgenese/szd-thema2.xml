@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+<TEI xmlns:t="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Die Entstehungsgeschichte von Stefan Zweigs "Das erste Wort über
-               den Ozean"</title>
+            <title>Wie Stefan Zweig arbeitete</title>
             <author>
                <persName>
                   <forename>Simone</forename>
@@ -14,21 +13,23 @@
          </titleStmt>
          <publicationStmt>
             <publisher>
-               <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-                  ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+               <orgName ref="d-nb.info/gnd/1047605287"
+                  corresp="https://www.uni-salzburg.at/index.php?id=72">Literaturarchiv
+                  Salzburg</orgName>
             </publisher>
             <authority>
-               <orgName corresp="https://informationsmodellierung.uni-graz.at"
-                  ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian
-                  Centrefor Digital Humanities, Karl-Franzens-Universität Graz </orgName>
+               <orgName ref="d-nb.info/gnd/1137284463"
+                  corresp="https://informationsmodellierung.uni-graz.at">Zentrum für
+                  Informationsmodellierung - AustrianCentrefor Digital Humanities,
+                  Karl-Franzens-Universität Graz </orgName>
             </authority>
             <distributor>
-               <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset
-                  ManagementSystem </orgName>
+               <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches
+                  AssetManagementSystem </orgName>
             </distributor>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
-                  CommonsBY-NC-SA 4.0</licence>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0"
+                  >CreativeCommonsBY-NC-SA 4.0</licence>
             </availability>
             <publisher>Literaturarchiv Salzburg</publisher>
             <idno type="PID">o:szd.thema.2</idno>
@@ -54,6 +55,7 @@
          <sourceDesc>
             <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
          </sourceDesc>
+
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
@@ -63,407 +65,530 @@
             <ab>
                <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"/>
             </ab>
-            <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
-               imdigitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich
-               bzw.wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
-               demLiteraturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
-               vorhandenenQuellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert.
-               So entstehtein strukturierter Bestand an digitalen Objekten, der im Sinne der
-               digitalenLangzeitarchivierung repräsentiert wird, und NutzerInnen orts- und
-               zeitunabhängigzugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren
-               ZeitpunktErschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen)
-               möglichwerden. </p>
+            <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+               Zweigimdigitalen Raum zusammenzuführen und ihn einem
+               literaturwissenschaftlichbzw.wissenschaftlich interessierten Publikum zu erschließen.
+               In Zusammenarbeit mitdemLiteraturarchiv der Universität Salzburg wird dabei,
+               basierend auf dem dortvorhandenenQuellenmaterial, eine digitale
+               Nachlassrekonstruktion des Bestandes generiert.So entstehtein strukturierter Bestand
+               an digitalen Objekten, der im Sinne derdigitalenLangzeitarchivierung repräsentiert
+               wird, und NutzerInnen orts- undzeitunabhängigzugänglich ist. Das Projekt ist so
+               konzipiert, dass zu einem späterenZeitpunktErschließung und Anreicherung des
+               Quellenmaterials (z.B. digitalen Editionen)möglichwerden. </p>
          </projectDesc>
       </encodingDesc>
    </teiHeader>
    <text>
       <body>
-         
-         <div type="introduction" xml:lang="de">
+         <div xml:lang="de" type="introduction">
             <head> Überschrift </head>
             <p>...</p>
          </div>
-         <div type="col-1" xml:lang="de">
+         <div xml:lang="de" type="col-1">
             <head>
-               <title>Die Entstehungsgeschichte von Stefan Zweigs <hi style="italic">Das erste Wort über
-                  den Ozean</hi>
-               </title>
+               <title>WIE STEFAN ZWEIG ARBEITETE</title>
             </head>
-            <p>
-               <name ref="#SZDPER.1560">Stefan Zweigs</name>
-               <hi style="italic">Das erste Wort über den Ozean</hi> erschien erstmals im Jahr 1939 in
-               der deutschsprachigen Exilzeitschrift <hi style="italic">Internationale Literatur</hi> in
-               Moskau. <name ref="#SZDPER.1560">Zweig</name> hatte die Erzählung von Anfang an als
-               ‚Sternstunde‘ konzipiert, also als Beitrag zu seinen <hi style="italic">Sternstunden der
-                  Menschheit</hi> verstanden, wie Notizen im Umfeld seines im Literaturarchiv Salzburg
-               erhaltenen Ringnotizheftes Werknotizen 7 aufzeigen. Die <hi style="italic">Sternstunden
-                  der Menschheit</hi> waren 1927 erstmals als Band erschienen und versammelten zu diesem
-               Zeitpunkt fünf Erzählungen. Im Laufe der Zeit schrieb <name ref="#SZDPER.1560"
-                  >Zweig</name> weitere <hi style="italic">Sternstunden</hi>-Texte, sodass heute insgesamt
-               vierzehn Erzählungen unter diesem Gattungsneologismus geläufig sind. </p>
-            <p>Wie auch für seine historischen Biographien arbeitete <name ref="#SZDPER.1560"
-               >Zweig</name> für die <hi style="italic">Sternstunden</hi> sehr quellenorientiert, was
-               sich deutlich in den frühen Notizen zu <hi style="italic">Das erste Wort über den
-                  Ozean</hi> widerspiegelt. Die zentrale Quelle ist Henry M. Field: <hi style="italic">The
-                     Story of the Atlantic Telegraph</hi>. New York: Charles Scribner’s Sons 1892. Werner
-               Michler und Martina Wörgötter konstatieren in der Salzburger Ausgabe der <hi
-                  style="italic">Sternstunden der Menschheit</hi>, dass die zahlreichen Seitenangaben in
-               den Aufzeichnungen zu <hi style="italic">Das erste Wort über den Ozean</hi> innerhalb der
-               Werknotizen 7 stets auf diese Quelle zurückzuführen sind. <note type="footnote">
-                  <bibl>Vgl. Werner Michler/Martina Wörgötter: Anhang. In: Stefan Zweig: Sternstunden der
-                     Menschheit. Historische Miniaturen. Hg. v. Werner Michler u. Martina Wörgötter. Wien:
-                     Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk. Salzburger Ausgabe), S.
-                     391.</bibl>
-               </note> Einmal ist in den Notizen selbst ein Hinweis auf diesen Umstand zu finden, da an
-               einer Stelle neben einer Seitenzahl „Field“ zu lesen ist. Eine weitere Quelle notiert sich
-               <name ref="#SZDPER.1560">Zweig</name> in seinem Ringnotizbuch: John Joseph Fahie: <hi
-                  style="italic">A History of [Electric] Telegraphy to the year 1837</hi>. London: E.
-               &amp; F.N. Spon 1884. <note type="footnote">
-                  <bibl>Die gesamte bibliographische Angabe findet sich nicht bei <name ref="#SZDPER.1560"
-                     >Zweig</name>, der nur eine verkürzte Version davon notiert, sondern wiederum bei
-                     Michler/Wörgötter.</bibl>
-               </note> Es ist davon auszugehen, dass er zuerst mit der Quelle von Field arbeitete und auf
-               das Werk von Fahie im Zuge seiner Arbeit an der Erzählung gestoßen ist. Das legt zumindest
-               die Tatsache nahe, dass er sich die Quelle von Fahie am selben Ort notiert, an dem er
-               bereits Informationen aus Fields Werk exzerpiert. <lb/> Die Handlung von <hi
-                  style="italic">Das erste Wort über den Ozean</hi> bringt die Erzählung mit weiteren
-               Pionier- und Entdeckergeschichten innerhalb von <name ref="#SZDPER.1560">Zweigs</name>
-               Œuvre, die von der Überfahrt über den Atlantischen Ozean berichten, in Verbindung; dazu
-               sind auch die Biographie über Fernando Magellan (1937, mit 1938 als angegebenem
-               Erscheinungsjahr) sowie von den anderen <hi style="italic">Sternstunden</hi>-Texten
-               insbesondere <hi style="italic">Flucht in die Unsterblichkeit</hi>, eine zeitlich nahe an
-               <hi style="italic">Das erste Wort über den Ozean</hi> liegende Erzählung (Entstehung um
-               1937, auf Deutsch erstmals 1943 erschienen) zu zählen. <name ref="#SZDPER.1560"
-                  >Zweig</name> reist 1936, bereits seit zwei Jahren im Exil in England lebend, zum
-               Kongress des P.E.N.-Clubs in Buenos Aires und hält an verschiedenen Orten in Brasilien
-               Lesungen ab. Seine in diese Zeit fallende verstärkte Zuwendung zum Themenfeld der
-               Entdeckung und Vereinnahmung Amerikas durch die europäischen Seefahrer und Kolonialisten
-               ist augenfällig. <hi style="italic">Das erste Wort über den Ozean</hi> rückt aufgrund der
-               Thematik der Überfahrt über den Atlantik und der technischen Pionierleistung der Verlegung
-               des Transatlantikkabels inhaltlich in die Nähe dieses Schwerpunktes, wenn sich auch die
-               Handlung in diesem Fall im 19. Jahrhundert abspielt. Zentral und klar erkennbar ist der
-               pazifistische Impetus: Schon zu Beginn der Erzählung heißt es, dass völkerverbindende
-               Neuerungen wie die Telegrafenkabellegung anstatt entzweiender Ereignisse wie Kriege in der
-               Geschichtsschreibung bzw. -vermittlung den obersten Stellenwert einnehmen sollten. Anhand
-               der frühen Notizen, die diesen Gedanken bereits enthalten, zeigt sich, dass <name
-                  ref="#SZDPER.1560">Zweig</name> dieser Aspekt von Beginn an wichtig war. Darüber hinaus
-               wird die Erzählung mit einer klaren pazifistischen Stellungnahme abgeschlossen: <hi
-                  style="italic">„Und herrlich wäre sie [die Menschheit] dank ihren Siegen über Raum und
-                  Zeit nun für alle Zeiten vereint, verwirrte sie nicht immer wieder von neuem der
-                  verhängnisvolle Wahn, unablässig diese grandiose Einheit zu zerstören und mit denselben
-                  Mitteln, die ihr Macht über die Elemente gegeben, sich selbst zu vernichten.“</hi>
-               <note type="footnote">
-                  <bibl>Stefan Zweig: Das erste Wort über den Ozean. In: Ders.: Sternstunden der
-                     Menschheit. Historische Miniaturen. Hg. v. Werner Michler u. Martina Wörgötter. Wien:
-                     Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk. Salzburger Ausgabe), S.211–235,
-                     hier S. 235.</bibl>
+            <p> Auf welche Weise lässt sich feststellen, wie ein Schriftsteller in seiner kreativen
+               Arbeit vorgeht? <name ref="#SZDPER.1560">Stefan Zweig</name>, selbst sehr
+               interessiert am schöpferischen Prozess anderer Künstler, hat im Vergleich mit
+               polizeilicher Spurensicherung eine Antwort parat: „So wie die Objekte, die der Mörder
+               in seiner Hast am Tatort hinterläßt, so wie die Fingerabdrücke, die von ihm
+               zurückbleiben, das verläßlichste Beweismaterial in der Kriminologie bilden, so bieten
+               die Vorstudien und Entwürfe, die der Künstler vom Produktionsprozeß hinterläßt, die
+               einzigen Möglichkeiten, den inneren Vorgang zu rekonstruieren. Sie sind der
+               Ariadnefaden, an dem wir uns zurücktasten können in das sonst unergründliche
+               Labyrinth.“ <note type="footnote">
+                  <bibl> Stefan Zweig: Das Geheimnis des künstlerischen Schaffens. In: Ders.: Das
+                     Geheimnis des künstlerischen Schaffens. Essays. Hg. und mit einer Nachbemerkung
+                     versehen von Knut Beck. Frankfurt am Main: Fischer 2007, 2. Aufl. (Gesammelte
+                     Werke in Einzelbänden), S. 348–371, hier S. 358.</bibl>
                </note>
-            </p>
-         </div>
-         <div type="col-1" xml:lang="de">
-            <head>
-               <title>Werknotizen 7</title>
-            </head>
-
-            <p>Bei den bereits erwähnten &apos;Werknotizen 7&apos; handelt sich um ein Ringnotizheft mit
-               Skizzen zu verschiedenen schriftstellerischen Projekten <name ref="#SZDPER.1560"
-                  >Zweigs</name>. Viel Raum nehmen Aufzeichnungen für die Legende <hi style="italic">Der
-                     begrabene Leuchter</hi> ein. Zudem finden sich Notizen zu <hi style="italic"
-                        >Magellan</hi>, aus denen hervorgeht, dass daraus ursprünglich ein <hi style="italic"
-                           >Sternstunden</hi>-Text hätte werden sollen und nicht eine eigenständige Biographie
-               <note type="footnote">
-                  <bibl>Stefan Zweig: <hi style="italic">Magellan. Der Mann und seine Tat</hi>. Wien:
-                     Reichner 1938.</bibl>
-               </note>, und Notizen zu einer unbekannten Novelle mit einem Geheimrat A.R. als
-               Protagonisten. Vierzehn Blätter sind schließlich dem Text <hi style="italic">Das erste
-                  Wort über den Ozean</hi> gewidmet. <lb/> Ziemlich genau in der Mitte dieser Einheit,
-               nach den ersten sieben Blättern, befindet sich eine frei gelassene Doppelseite, die als
-               Trennmarker für zwei voneinander zu unterscheidende Ausarbeitungsphasen fungiert. Das
-               zeigt sich unter anderem daran, dass die zweite Hälfte thematisch Notizen der ersten
-               sieben Blätter aufgreift, weiterentwickelt und mit neuen Inhalten kombiniert. Beide
-               Hälften manifestieren sich im Ringnotizbuch als sehr schemenhafte, skizzenartige und von
-               Substantiva dominierte Aufzeichnungen. Konjunktionen und Adverbien sind in diesem frühen
-               Stadium noch selten, während Verben häufig als Partizipien auftreten. Auf den ersten
-               Seiten sind einige englische Ausdrücke enthalten, denen teilweise eine mit Bleistift in
-               unmittelbarer Nähe notierte deutsche Übersetzung entspricht. Das ist ein Hinweis darauf,
-               dass diese sehr quellenbasierten Notizen als Exzerpt von <name ref="#SZDPER.1560"
-                  >Zweigs</name> englischer Hauptquelle (<hi style="italic">The Story of the Atlantic
-                     Telegraph</hi> von Field) zu verstehen sind, das bereits mit einem groben Grundgerüst
-               für die Erzählung angereichert ist. <lb/> Als Schreibmaterial verwendete <name
-                  ref="#SZDPER.1560">Zweig</name> für die Notizen zu <hi style="italic">Das erste Wort
-                     über den Ozean</hi> violette Tinte und Bleistift. Der Schriftduktus ändert sich mehrmals
-               deutlich, woraus zu schließen ist, dass die Notizen mit zeitlichen Pausen festgehalten
-               wurden. Es entsteht bei der Betrachtung des Geschriebenen der Eindruck, als sei es rasch
-               hingeworfen worden und eventuell zum Teil auf Reisen bzw. jedenfalls nicht direkt am
-               Schreibtisch entstanden. Klar ersichtlich ist aus den manchmal schwer lesbaren Worten,
-               dass <name ref="#SZDPER.1560">Zweig</name> sie nicht mit Rücksicht auf potenzielle andere
-               Leserinnen und Leser, sondern ausschließlich für seinen persönlichen Gebrauch anfertigte.
-               <lb/> Der Abschnitt zu <hi style="italic">Das erste Wort über den Ozean</hi> ist an einem
-               der beiden Enden des Ringnotizbuches situiert; die ersten drei Seiten davor gehören
-               allerdings zu <hi style="italic">Der begrabene Leuchter</hi>. Das Notizbuch wurde von
-               beiden Enden her beschrieben und dabei einmal umgedreht. Der Abschnitt, der die
-               ausführlicheren Notizen zum <hi style="italic">Begrabenen Leuchter</hi> und jene zu <hi
-                  style="italic">Magellan</hi> enthält und auf der anderen Seite des Heftes begonnen
-               wurde, steht also aus der Perspektive der Aufzeichnungen zu <hi style="italic">Das erste
-                  Wort über den Ozean</hi> auf dem Kopf. Dazwischen befinden sich in der Mitte des Hefts
-               22 leere Doppelseiten, sodass die Schreibbewegungen von den beiden Enden her nicht
-               aufeinandertreffen. Die drei Seiten vor dem Komplex zu <hi style="italic">Das erste Wort
-                  über den Ozean</hi>, die sich dem Text <hi style="italic">Der begrabene Leuchter</hi>
-               zuordnen lassen, sind ebenfalls auf den Kopf gestellt. <name ref="#SZDPER.1560"
-                  >Zweigs</name> Gewohnheit, die rechte Seite als primär beschriebene Seite zu nutzen und
-               die gegenüberliegende linke Seite für eventuell anfallende Notizen freizuhalten, lässt
-               sich im gesamten Notizheft gut nachvollziehen. </p>
-         </div>
-         <div type="col-1" xml:lang="de">
-            <head>
-               <title> Beilage zu Werknotizen 7: Vier lose Blätter mit Aufzeichnungen zu <hi
-                  style="italic">Das erste Wort über den Ozean</hi>
-               </title>
-            </head>
-            
-            <p> Ursprünglich waren in das Ringnotizheft vier lose Blätter eingelegt, die einseitig mit
-               weiteren Skizzen zu <hi style="italic">Das erste Wort über den Ozean</hi> beschrieben
-               sind. Ein Vergleich mit den Aufzeichnungen im Notizheft zeigt, dass es sich um eine etwas
-               fortgeschrittenere Arbeitsphase handelt. Auch auf den losen Blättern sind noch keine
-               vollständigen Sätze zu finden, die Notizen sind nach wie vor in Stichworten strukturiert.
-               Doch das Stichwortgefüge hat bereits einen anderen Charakter angenommen, manche Sätze
-               streben schon verstärkt einem geordneten syntaktischen Aufbau entgegen. Primäres
-               Schreibmaterial ist erneut die für <name ref="#SZDPER.1560">Stefan Zweig</name>
-               charakteristische violette Tinte, vereinzelte später ergänzte Stichworte sind mit roter
-               Tinte geschrieben. Inhaltlich werden mit diesen vier erhaltenen Blättern nicht alle
-               Handlungselemente der Erzählung abgedeckt. Die Notizen setzen nicht ganz zu Beginn ein,
-               sondern erst mit der Erfindung des Telegrafen, und reichen lediglich bis zu Beginn des
-               zweiten Versuchs der Kabellegung, nachdem der erste misslungen ist. Es ist zu vermuten,
-               dass es für diese Arbeitsphase noch weitere lose Zettel gegeben haben könnte, doch mit
-               Gewissheit kann darüber keine Aussage getroffen werden. Einige der Notizen, die <name
-                  ref="#SZDPER.1560">Zweig</name> innerhalb der Werknotizen 7 als (spätere) Ergänzungen
-               vermerkte, finden sich in dieser Arbeitsphase wiederaufgenommen. </p>
-         </div>
-         <div type="col-1" xml:lang="de">
-            <head>
-               <title>Typoskript <hi style="italic">Das erste Wort über den Ozean</hi>
-               </title>
-            </head>
-            
-            <p>Auf 29 einseitig bedruckten und beschriebenen Blättern ist eine gegenüber den
-               handschriftlichen Notizen der anderen beiden vorgestellten Textträger weit
-               fortgeschrittenere Arbeitsphase nachzuverfolgen. Als ‚Grundschicht‘ ist der
-               maschinengeschriebene Text die erste Arbeitsstufe des Textträgers. Es ist davon
-               auszugehen, dass nicht <name ref="#SZDPER.1560">Zweig</name> selbst, sondern vermutlich
-               seine spätere zweite Ehefrau <name ref="#SZDPER.1555">Lotte</name> die Abschrift auf der
-               Schreibmaschine getätigt hat. Zahlreiche von <name ref="#SZDPER.1560">Zweig</name>
-               vorgenommene handschriftliche Umarbeitungen mit violetter Tinte finden sich zwischen den
-               Zeilen, die eigens dafür in großem Abstand gesetzt sind, oder auch an den breiten
-               Seitenrändern. Diese handschriftlichen Notizen sind im Unterschied zu jenen der bereits
-               vorgestellten zwei Manuskripte feinsäuberlich und offenbar auf Leserlichkeit bedacht.
-               <lb/> Das erste Blatt des Typoskripts ist mit blauem Buntstift von <name
-                  ref="#SZDPER.1555">Lotte</name> mit „Das erste Wort über den Ozean“ überschrieben worden
-               – der Titel steht hier also schon in der Form fest, in der er bestehen bleiben wird. Mit
-               demselben Buntstift sind zwei quer über das Blatt verlaufende Linien zu einem
-               durchstreichenden Andreaskreuz gezogen. Ein Vergleich des Erstdrucks mit dem Typoskript
-               zeigt, dass es sich bei Letzterem auch unter Berücksichtigung der handschriftlichen
-               Umarbeitungen noch nicht um den Wortlaut des publizierten Textes handelt. Es wird also
-               noch mindestens eine weitere, nicht erhaltene Typoskriptstufe mit handschriftlichen
-               Anmerkungen gegeben haben. Es zeigt sich aber auch, dass die handschriftlichen Notizen des
-               Typoskripts in die Weiterbearbeitung einflossen, da viele von ihnen im Erstdruck in den
-               Textfluss integriert sind. <lb/> Besonders auffällig ist, dass von den 29 Blättern nur in
-               etwa die erste Hälfte dicht mit handschriftlichen Anmerkungen versehen ist, während in der
-               zweiten Hälfte keine handschriftliche Bearbeitung erfolgt ist. Auf insgesamt fünf Blättern
-               der zweiten Hälfte sind auf der Rückseite unterschiedlich ausführliche Bleistiftnotizen zu
-               finden. Die Rückseite erfüllt in diesen Fällen eine den linken Seiten im Ringnotizheft
-               vergleichbare Funktion, indem die hier in Stichworten angebrachten inhaltlichen
-               Ergänzungen für die Weiterbearbeitung vorgemerkt werden. </p>
-         </div>
-         <div type="col-1" xml:lang="de">
-            <head>
-               <title>Drei Beispiele der genetischen Entwicklung der Erzählung 
-                  <hi style="italic">Das erste Wort über den Ozean</hi>:</title>
-            </head>
-            <p>Anhand von drei Beispielsätzen wird hier exemplarisch aufgezeigt, wie sich die Gestaltung über die verschiedenen bekannten Textträger hin entwickeln kann. Zu diesem Zweck wurden Beispiele gewählt, die sich in allen erhaltenen Textträgern, 
-               vom inhaltlichen Kerngedanken in den frühen Notizen über die Umgestaltung im Typoskript bis in den Erstdruck, nachweisen lassen. Als Referenz dient der Wortlaut im Erstdruck, von dem ausgehend inhaltliche Entsprechungen in den Arbeitsdokumenten
-               präsentiert werden. Diese können in den frühen Skizzen noch in größerer räumlicher Distanz auftreten, während die betreffenden Stellen im Typoskript durch den textuellen Zusammenhang deutlich klarer begrenzt sind.</p>
-            <list>
-               <item>H1/1 = Ringnotizbuch, erste Hälfte (Skizzen bis zur leeren Doppelseite)</item>
-               <item>H1/2 = Ringnotizbuch, zweite Hälfte (Skizzen nach der leeren Doppelseite)</item>
-               <item>H2 = lose in Ringnotizbuch eingelegte Blatt</item>
-               <item>T = Typoskript ohne Einbezug der handschriftlichen Ergänzungen</item>
-               <item>Th = Typoskript unter Einbezug der handschriftlichen Ergänzungen</item>
-            </list>
-            <list>
-               <head>diakritische Zeichen:</head>
-               <item>[x] = In den handschriftlichen Notizen ausgelassene/r Buchstabe/n, der/die ergänzt wurde/n.</item>
-               <item>*x* = Ein solcherart umrahmtes Wort markiert eine unsichere Lesart.</item>
-            </list>
-         </div>
-         <div type="col-1" xml:lang="de">
-            <head>
-               <title>Beispiel 1</title>
-            </head>
-            <p>Erstdruck: Dieses weltbedeutsame Jahr 1837, da zum erstenmal der Telegraph das bisher isolierte menschliche Leben gleichzeitig macht, 
-               wird selten in unseren Schulbüchern auch nur vermerkt, die es leider noch immer für wichtiger halten, von Kriegen und Siegen einzelner 
-               Feldherren und Nationen zu erzählen, statt von den wahrhaften, weil gemeinsamen Triumphen der Menschheit.</p> 
+               <name ref="#SZDPER.1560">Zweigs</name> Aufforderung der ‚Spurensuche‘ folgend wollen
+               wir hier versuchen, anhand seiner eigenen Arbeitszeugnisse zu eruieren, wie sich die
+               Gestaltung seiner Werke allmählich vollzieht. Nehmen wir uns zu diesem Zweck einen
+               bestimmten Text vor: Zu <hi style="italic">Das erste Wort über den Ozean</hi>, einer
+               der unter dem Titel <hi style="italic">Sternstunden der Menschheit</hi> subsumierten
+               historischen Miniaturen, befinden sich verschiedene Dokumente im Literaturarchiv
+               Salzburg, deren Betrachtung es ermöglicht, die textuelle Entstehung über mehrere
+               Stufen nachzuzeichnen. Einen Vorgeschmack, wie das aussehen kann, bietet das folgende
+               Beispiel, das die Entwicklung eines ausgewählten Satzes von den frühen
+               stichwortartigen Entwürfen bis hin zu den handschriftlichen Überarbeitungen eines
+               Typoskripts nachvollzieht. </p>
+            <p>Im Erstdruck (ED) lautet der von <name ref="#SZDPER.1560">Zweig</name> am Ende des
+               Arbeitsprozesses zur Veröffentlichung freigegebene Satz:</p>
+            <p> Dieses weltbedeutsame Jahr 1837, da zum erstenmal der Telegraph das bisher isolierte
+               menschliche Leben gleichzeitig macht, wird selten in unseren Schulbüchern auch nur
+               vermerkt, die es leider noch immer für wichtiger halten, von Kriegen und Siegen
+               einzelner Feldherren und Nationen zu erzählen, statt von den wahrhaften, weil
+               gemeinsamen Triumphen der Menschheit.</p>
+            <p>Ein Ringnotizbuch mit handschriftlichen Stichworten zu dem Text dokumentiert die
+               früheste bekannte Arbeitsphase. Darin lassen sich zwei Ausarbeitungsschritte
+               voneinander unterscheiden (H1/1 und H1/2, Näheres dazu weiter unten). In H1/2 finden
+               sich erste Notizen, die eindeutig auf den Beispielsatz zu beziehen sind: </p>
             <p>H1/2: Jahr 1837 (und nicht in die Schulbücher geschrieben)</p>
             <p>
                <figure>
-                  <graphic url="IMG.9" style=""/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_082_LI</ref></caption></figDesc>
+                  <graphic style="" url="IMG.9"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_082_LI</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H2: Dieses Jahr 1837, Menschheit, fast nie in die Schulbücher geschrieben, die es noch immer für wichtiger halten, Kriegen und Siegen erzählen, statt von ihrem wahrhaften gemeinsamen Triumpfen.</p>
+            <p>Lose Blätter, die ursprünglich in das Ringnotizbuch eingelegt gewesen waren, werden
+               hier als H2 bezeichnet. Darin ist bereits eine deutliche inhaltliche Anreicherung zu
+               erkennen:</p>
+            <p>H2: Dieses Jahr 1837, Menschheit, fast nie in die Schulbücher geschrieben, die es
+               noch immer für wichtiger halten, Kriegen und Siegen erzählen, statt von ihrem
+               wahrhaften gemeinsamen Triumphe.</p>
             <p>
                <figure>
-                  <graphic url="IMG.1" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7.1_002_LI</caption></figDesc>
+                  <graphic style=" " url="IMG.1"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7.1_002_LI</caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>T: Dieses Jahr 1837, da zum erstenmal der Telegraph in einer Sekunde Botschaft von Stadt
-               zu Stadt, von Land zu Ländern trägt, die gestern noch dutzende von Reisetagen <hi style="bold">voneinander</hi> 
-               entfernt waren, ist fast niemals in unseren Schulbüchern vermerkt, die es noch immer <hi style="bold">für</hi> 
-               wichtiger halten, von Kriegen und Siegen einzelner Feldherren <hi style="bold">und Nationen</hi> zu erzählen statt
-               von den wahrhaften, weil gemeinsamen Triumphen der Menschheit.</p> 
-            <p>Th: Dieses <del rend="strikethrough">entscheidende</del> Schicksaljahr 1837, da zum erstenmal der Telegraph innerhalb 
-               einer Sekunde Botschaft von Stadt zu Stadt, von Land zu Ländern trägt, die gestern noch 
-               dutzende von Reisetagen entfernt waren, ist selten <del rend="strikethrough">oder überhaupt nicht</del> in unseren
-               Schulbüchern auch nur vermerkt, die es noch immer wichtiger halten, von Kriegen und 
-               Siegen einzelner Feldherren zu erzählen statt von den wahrhaften, weil gemeinsamen 
-               Triumphen der Menschheit.</p>
+            <p>Sehr fortgeschritten ist der Arbeitsprozess in einem erhaltenen Typoskript (T), das
+               handschriftliche Korrekturen aufweist. Bezieht man die Korrekturen nicht ein, sondern
+               liest nur die maschinenschriftliche ‚Grundschicht‘, so ergibt sich für den Satz
+               folgender Wortlaut:</p>
+            <p> T: Dieses Jahr 1837, da zum erstenmal der Telegraph in einer Sekunde Botschaft von
+               Stadt zu Stadt, von Land zu Ländern trägt, die gestern noch dutzende von Reisetagen
+               voneinander entfernt waren, ist fast niemals in unseren Schulbüchern vermerkt, die es
+               noch immer für wichtiger halten, von Kriegen und Siegen einzelner Feldherren und
+               Nationen zu erzählen statt von den wahrhaften, weil gemeinsamen Triumphen der
+               Menschheit. </p>
+            <p>Der Einbezug der handschriftlichen Korrekturen zeigt schließlich, wie Zweig an den
+               Details der Gestaltung feilt:</p>
+            <p> Th: Dieses <del rend="strikethrough">entscheidende</del> Schicksaljahr 1837, da zum
+               erstenmal der Telegraph innerhalb einer Sekunde Botschaft von Stadt zu Stadt, von
+               Land zu Ländern trägt, die gestern noch dutzende von Reisetagen voneinander entfernt
+               waren, ist selten <del rend="strikethrough">oder überhaupt nicht</del> in unseren
+               Schulbüchern auch nur vermerkt, die es noch immer für wichtiger halten, von Kriegen
+               und Siegen einzelner Feldherren und Nationen zu erzählen statt von den wahrhaften,
+               weil gemeinsamen Triumphen der Menschheit. </p>
             <p>
                <figure>
-                  <graphic url="IMG.4" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7_003_LI</caption></figDesc>
+                  <graphic style=" " url="IMG.4"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7_003_LI</caption>
+                  </figDesc>
                </figure>
             </p>
          </div>
-         <div type="col-1" xml:lang="de">
+         <div xml:lang="de" type="col-1">
+            <p>Im Folgenden werden nach einer allgemeinen Einführung zu <hi style="italic">Das erste
+                  Wort über den Ozean</hi> das Notizbuch, die losen Blätter mit handschriftlichen
+               Notizen und das Typoskript, kurzum die Textträger, welchen die zitierten Stellen
+               entnommen sind, näher vorgestellt. Im Anschluss daran befinden sich zwei weitere,
+               analog zum ersten Beispiel konstruierte Vergleiche der Ausarbeitungsphasen von <name
+                  ref="#SZDPER.1560">Stefan Zweigs</name> Text. <title><hi style="italic">DAS ERSTE
+                     WORT ÜBER DEN OZEAN</hi></title>
+            </p>
+            <p> Die historische Miniatur erschien erstmals im Jahr 1939 in der deutschsprachigen
+               Exilzeitschrift <hi style="italic">Internationale Literatur</hi> in Moskau (Erstdruck
+               ED). <name ref="#SZDPER.1560">Zweig</name> hatte die Erzählung von Anfang an als
+               ‚Sternstunde‘ konzipiert, also als Beitrag zu seinen <hi style="italic">Sternstunden
+                  der Menschheit</hi> verstanden, wie Notizen im Umfeld seines im Literaturarchiv
+               Salzburg erhaltenen Ringnotizheftes Werknotizen 7 aufzeigen. Die <hi style="italic"
+                  >Sternstunden der Menschheit</hi> waren 1927 erstmals als Band erschienen und
+               versammelten zu diesem Zeitpunkt fünf Erzählungen. Im Laufe der Zeit schrieb <name
+                  ref="#SZDPER.1560">Zweig</name> weitere <hi style="italic">Sternstunden</hi>
+               -Texte, sodass heute insgesamt vierzehn Erzählungen unter diesem Gattungsneologismus
+               geläufig sind. </p>
+            <p> Wie auch für seine historischen Biographien arbeitete <name ref="#SZDPER.1560"
+                  >Zweig</name> für die <hi style="italic">Sternstunden</hi> sehr quellenorientiert,
+               was sich deutlich in den frühen Notizen zu <hi style="italic">Das erste Wort über den
+                  Ozean</hi> widerspiegelt. Die zentrale Quelle ist Henry M. Field: <hi
+                  style="italic">The Story of the Atlantic Telegraph</hi> . New York: Charles
+               Scribner’s Sons 1892. Werner Michler und Martina Wörgötter konstatieren in der
+               Salzburger Ausgabe der <hi style="italic">Sternstunden der Menschheit</hi> , dass die
+               zahlreichen Seitenangaben in den Aufzeichnungen zu <hi style="italic">Das erste Wort
+                  über den Ozean</hi> innerhalb der Werknotizen 7 stets auf diese Quelle
+               zurückzuführen sind. <note type="footnote">
+                  <bibl>Vgl. Werner Michler/Martina Wörgötter: Anhang. In: Stefan Zweig:
+                     Sternstunden der Menschheit. Historische Miniaturen. Hg. v. Werner Michler u.
+                     Martina Wörgötter. Wien: Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk.
+                     Salzburger Ausgabe), S.391.</bibl>
+               </note> Einmal ist in den Notizen selbst ein Hinweis auf diesen Umstand zu finden, da
+               an einer Stelle neben einer Seitenzahl „Field“ zu lesen ist. Eine weitere Quelle
+               notiert sich <name ref="#SZDPER.1560">Zweig</name> in seinem Ringnotizbuch: John
+               Joseph Fahie: <hi style="italic">A History of [Electric] Telegraphy to the year
+                  1837</hi> . London: E. &amp; F.N. Spon 1884. <note type="footnote">
+                  <bibl> Die gesamte bibliographische Angabe findet sich nicht bei <name
+                        ref="#SZDPER.1560">Zweig</name> , der nur eine verkürzte Version davon
+                     notiert, sondern wiederum bei Michler/Wörgötter. </bibl>
+               </note> Es ist davon auszugehen, dass er zuerst mit der Quelle von Field arbeitete
+               und auf das Werk von Fahie im Zuge seiner Arbeit an der Erzählung gestoßen ist. Das
+               legt zumindest die Tatsache nahe, dass er sich die Quelle von Fahie am selben Ort
+               notiert, an dem er bereits Informationen aus Fields Werk exzerpiert. <lb/> Die
+               Handlung von <hi style="italic">Das erste Wort über den Ozean</hi> bringt die
+               Erzählung mit weiteren Pionier- und Entdeckergeschichten innerhalb von <name
+                  ref="#SZDPER.1560">Zweigs</name> Œuvre, die von der Überfahrt über den
+               Atlantischen Ozean berichten, in Verbindung; dazu sind auch die Biographie über
+               Fernando Magellan (1937, mit 1938 als angegebenem Erscheinungsjahr) sowie von den
+               anderen <hi style="italic">Sternstunden</hi> -Texten insbesondere <hi style="italic"
+                  >Flucht in die Unsterblichkeit</hi> , eine zeitlich nahe an <hi style="italic">Das
+                  erste Wort über den Ozean</hi> liegende Erzählung (Entstehung um 1937, auf Deutsch
+               erstmals 1943 erschienen) zu zählen. <name ref="#SZDPER.1560">Zweig</name> reist
+               1936, bereits seit zwei Jahren im Exil in England lebend, zum Kongress des
+               P.E.N.-Clubs in Buenos Aires und hält an verschiedenen Orten in Brasilien Lesungen
+               ab. Seine in diese Zeit fallende verstärkte Zuwendung zum Themenfeld der Entdeckung
+               und Vereinnahmung Amerikas durch die europäischen Seefahrer und Kolonialisten ist
+               augenfällig. <hi style="italic">Das erste Wort über den Ozean</hi> rückt aufgrund der
+               Thematik der Überfahrt über den Atlantik und der technischen Pionierleistung der
+               Verlegung des Transatlantikkabels inhaltlich in die Nähe dieses Schwerpunktes, wenn
+               sich auch die Handlung in diesem Fall im 19. Jahrhundert abspielt. Zentral und klar
+               erkennbar ist der pazifistische Impetus: Schon zu Beginn der Erzählung heißt es, dass
+               völkerverbindende Neuerungen wie die Telegrafenkabellegung anstatt entzweiender
+               Ereignisse wie Kriege in der Geschichtsschreibung bzw. -vermittlung den obersten
+               Stellenwert einnehmen sollten. Anhand der frühen Notizen, die diesen Gedanken bereits
+               enthalten, zeigt sich, dass <name ref="#SZDPER.1560">Zweig</name> dieser Aspekt von
+               Beginn an wichtig war. Darüber hinaus wird die Erzählung mit einer klaren
+               pazifistischen Stellungnahme abgeschlossen: <hi style="italic">„Und herrlich wäre sie
+                  [die Menschheit] dank ihren Siegen über Raum und Zeit nun für alle Zeiten vereint,
+                  verwirrte sie nicht immer wieder von neuem der verhängnisvolle Wahn, unablässig
+                  diese grandiose Einheit zu zerstören und mit denselben Mitteln, die ihr Macht über
+                  die Elemente gegeben, sich selbst zu vernichten.“</hi>
+               <note type="footnote">
+                  <bibl>Stefan Zweig: Das erste Wort über den Ozean. In: Ders.: Sternstunden der
+                     Menschheit. Historische Miniaturen. Hg. v. Werner Michler u. Martina Wörgötter.
+                     Wien: Zsolnay 2017 (Stefan Zweig: Das erzählerische Werk. Salzburger Ausgabe),
+                     S. 211–235, hier S. 235.</bibl>
+               </note>
+            </p>
+         </div>
+         <div xml:lang="de" type="col-1">
             <head>
-               <title>Beispiel 2</title>
+               <title>WERKNOTIZEN 7 (H1/1 UND H1/2)</title>
             </head>
-            <p>Erstdruck: Aber noch widerstrebt die Natur dieser letzten Vereinigung, noch stemmt sie ein Hemmnis entgegen, noch bleiben zwei Jahrzehnte lang all jene Länder abgeschaltet, die durch das Meer voneinander geschieden sind.</p>
+            <p> Bei den bereits erwähnten Werknotizen 7 handelt sich um ein Ringnotizheft mit
+               Skizzen zu verschiedenen schriftstellerischen Projekten <name ref="#SZDPER.1560"
+                  >Zweigs</name> . Viel Raum nehmen Aufzeichnungen für die Legende <hi
+                  style="italic">Der begrabene Leuchter</hi> ein. Zudem finden sich Notizen zu <hi
+                  style="italic">Magellan</hi> , aus denen hervorgeht, dass daraus ursprünglich ein
+                  <hi style="italic">Sternstunden</hi> -Text hätte werden sollen und nicht eine
+               eigenständige Biographie, <note type="footnote">
+                  <bibl> Stefan Zweig: <hi style="italic">Magellan. Der Mann und seine Tat</hi>.
+                     Wien: Reichner 1938. </bibl>
+               </note> und Notizen zu einer unbekannten Novelle mit einem Geheimrat A. R. als
+               Protagonisten. Vierzehn Blätter sind schließlich dem Text <hi style="italic">Das
+                  erste Wort über den Ozean</hi> gewidmet. <lb/> Ziemlich genau in der Mitte dieser
+               Einheit, nach den ersten sieben Blättern, befindet sich eine frei gelassene
+               Doppelseite, die als Trennmarker für zwei voneinander zu unterscheidende
+               Ausarbeitungsphasen (H1/1, H1/2) fungiert. Das zeigt sich unter anderem daran, dass
+               die zweite Hälfte thematisch Notizen der ersten sieben Blätter aufgreift,
+               weiterentwickelt und mit neuen Inhalten kombiniert. Beide Hälften manifestieren sich
+               im Ringnotizbuch als sehr schemenhafte, skizzenartige und von Substantiva dominierte
+               Aufzeichnungen. Konjunktionen und Adverbien sind in diesem frühen Stadium noch
+               selten, während Verben häufig als Partizipien auftreten. Auf den ersten Seiten sind
+               einige englische Ausdrücke enthalten, denen teilweise eine mit Bleistift in
+               unmittelbarer Nähe notierte deutsche Übersetzung entspricht. Das ist ein Hinweis
+               darauf, dass diese sehr quellenbasierten Notizen als Exzerpt von <name
+                  ref="#SZDPER.1560">Zweigs</name> englischer Hauptquelle (<hi style="italic">The
+                  Story of the AtlanticTelegraph</hi> von Field) zu verstehen sind, das bereits mit
+               einem groben Grundgerüst für die Erzählung angereichert ist. <lb/> Als
+               Schreibmaterial verwendete <name ref="#SZDPER.1560">Zweig</name> für die Notizen zu
+                  <hi style="italic">Das erste Wort über den Ozean</hi> violette Tinte und
+               Bleistift. Der Schriftduktus ändert sich mehrmals deutlich, woraus zu schließen ist,
+               dass die Notizen mit zeitlichen Pausen festgehalten wurden. Es entsteht bei der
+               Betrachtung des Geschriebenen der Eindruck, als sei es rasch hingeworfen worden und
+               eventuell zum Teil auf Reisen bzw. jedenfalls nicht direkt am Schreibtisch
+               entstanden. Klar ersichtlich ist aus den manchmal schwer lesbaren Worten, dass <name
+                  ref="#SZDPER.1560">Zweig</name> sie nicht mit Rücksicht auf potenzielle andere
+               Leserinnen und Leser, sondern ausschließlich für seinen persönlichen Gebrauch
+               anfertigte. <lb/> Der Abschnitt zu <hi style="italic">Das erste Wort über den
+                  Ozean</hi> ist an einem der beiden Enden des Ringnotizbuches situiert; die ersten
+               drei Seiten davor gehören allerdings zu <hi style="italic">Der begrabene
+                  Leuchter</hi> . Das Notizbuch wurde von beiden Enden her beschrieben und dabei
+               einmal umgedreht. Der Abschnitt, der die ausführlicheren Notizen zum <hi
+                  style="italic">Begrabenen Leuchter</hi> und jene zu <hi style="italic"
+                  >Magellan</hi> enthält und auf der anderen Seite des Heftes begonnen wurde, steht
+               also aus der Perspektive der Aufzeichnungen zu <hi style="italic">Das erste Wort über
+                  den Ozean</hi> auf dem Kopf. Dazwischen befinden sich in der Mitte des Hefts 22
+               leere Doppelseiten, sodass die Schreibbewegungen von den beiden Enden her nicht
+               aufeinandertreffen. Die drei Seiten vor dem Komplex zu <hi style="italic">Das erste
+                  Wortüber den Ozean</hi> , die sich dem Text <hi style="italic">Der begrabene
+                  Leuchter</hi> zuordnen lassen, sind ebenfalls auf den Kopf gestellt. <name
+                  ref="#SZDPER.1560">Zweigs</name> Gewohnheit, die rechte Seite als primär
+               beschriebene Seite zu nutzen und die gegenüberliegende linke Seite für eventuell
+               anfallende Notizen freizuhalten, lässt sich im gesamten Notizheft gut nachvollziehen.
+            </p>
+         </div>
+         <div xml:lang="de" type="col-1">
+            <head>
+               <title>VIER LOSE BLÄTTER (H2)</title>
+            </head>
+            <p> Ursprünglich waren in das Ringnotizheft vier lose Blätter eingelegt, die einseitig
+               mit weiteren Skizzen zu <hi style="italic">Das erste Wort über den Ozean</hi>
+               beschrieben sind. Ein Vergleich mit den Aufzeichnungen im Notizheft zeigt, dass es
+               sich um eine etwas fortgeschrittenere Arbeitsphase handelt. Auch auf den losen
+               Blättern sind noch keine vollständigen Sätze zu finden, die Notizen sind nach wie vor
+               in Stichworten strukturiert. Doch das Stichwortgefüge hat bereits einen anderen
+               Charakter angenommen, manche Sätze streben schon verstärkt einem geordneten
+               syntaktischen Aufbau entgegen. Primäres Schreibmaterial ist erneut die für <name
+                  ref="#SZDPER.1560">Stefan Zweig</name> charakteristische violette Tinte,
+               vereinzelte später ergänzte Stichworte sind mit roter Tinte geschrieben. Inhaltlich
+               werden mit diesen vier erhaltenen Blättern nicht alle Handlungselemente der Erzählung
+               abgedeckt. Die Notizen setzen nicht ganz zu Beginn ein,sondern erst mit der Erfindung
+               des Telegrafen, und reichen lediglich bis zu Beginn des zweiten Versuchs der
+               Kabellegung, nachdem der erste misslungen ist. Es ist zu vermuten, dass es für diese
+               Arbeitsphase noch weitere lose Zettel gegeben haben könnte, doch mit Gewissheit kann
+               darüber keine Aussage getroffen werden. Einige der Notizen, die <name
+                  ref="#SZDPER.1560">Zweig</name> innerhalb der Werknotizen 7 als (spätere)
+               Ergänzungen vermerkte, finden sich in dieser Arbeitsphase wiederaufgenommen. </p>
+         </div>
+         <div xml:lang="de" type="col-1">
+            <head>
+               <title>TYPOSKRIPT (T UND TH)</title>
+            </head>
+            <p> Auf 29 einseitig bedruckten und beschriebenen Blättern ist eine gegenüber den
+               handschriftlichen Notizen der anderen beiden vorgestellten Textträger weit
+               fortgeschrittenere Arbeitsphase nachzuverfolgen. Als ‚Grundschicht‘ ist der
+               maschinengeschriebene Text die erste Arbeitsstufe des Textträgers (T). Es ist davon
+               auszugehen, dass nicht <name ref="#SZDPER.1560">Zweig</name> selbst, sondern
+               vermutlich seine spätere zweite Ehefrau <name ref="#SZDPER.1555">Lotte</name> die
+               Abschrift auf der Schreibmaschine getätigt hat. Zahlreiche von <name
+                  ref="#SZDPER.1560">Zweig</name> vorgenommene handschriftliche Umarbeitungen mit
+               violetter Tinte finden sich zwischen den Zeilen, die eigens dafür in großem Abstand
+               gesetzt sind, oder auch an den breiten Seitenrändern (Th). Diese handschriftlichen
+               Notizen sind im Unterschied zu jenen der bereits vorgestellten zwei Manuskripte
+               feinsäuberlich und offenbar auf Leserlichkeit bedacht. <lb/> Das erste Blatt des
+               Typoskripts ist mit blauem Buntstift von <name ref="#SZDPER.1555">Lotte</name> mit
+               „Das erste Wort über den Ozean“ überschrieben worden – der Titel steht hier also
+               schon in der Form fest, in der er bestehen bleiben wird. Mit demselben Buntstift sind
+               zwei quer über das Blatt verlaufende Linien zu einem durchstreichenden Andreaskreuz
+               gezogen. Ein Vergleich des Erstdrucks mit dem Typoskript zeigt, dass es sich bei
+               Letzterem auch unter Berücksichtigung der handschriftlichen Umarbeitungen noch nicht
+               um den Wortlaut des publizierten Textes handelt. Es wird also noch mindestens eine
+               weitere, nicht erhaltene Typoskriptstufe mit handschriftlichen Anmerkungen gegeben
+               haben. Es zeigt sich aber auch, dass die handschriftlichen Notizen des Typoskripts in
+               die Weiterbearbeitung einflossen, da viele von ihnen im Erstdruck in den Textfluss
+               integriert sind. <lb/> Besonders auffällig ist, dass von den 29 Blättern nur in etwa
+               die erste Hälfte dicht mit handschriftlichen Anmerkungen versehen ist, während in der
+               zweiten Hälfte keine handschriftliche Bearbeitung erfolgt ist. Auf insgesamt fünf
+               Blättern der zweiten Hälfte sind auf der Rückseite unterschiedlich ausführliche
+               Bleistiftnotizen zu finden. Die Rückseite erfüllt in diesen Fällen eine den linken
+               Seiten im Ringnotizheft vergleichbare Funktion, indem die hier in Stichworten
+               angebrachten inhaltlichen Ergänzungen für die Weiterbearbeitung vorgemerkt werden.
+            </p>
+         </div>
+         <div xml:lang="de" type="col-1">
+            <head>
+               <title>ZWEI WEITERE BEISPIELSÄTZE</title>
+            </head>
+            <list>
+               <head>diakritische Zeichen:</head>
+               <item>[x] = In den handschriftlichen Notizen ausgelassene/r Buchstabe/n, der/die
+                  ergänzt wurde/n.</item>
+               <item>*x* = Ein solcherart umrahmtes Wort markiert eine unsichere Lesart.</item>
+            </list>
+         </div>
+         <div xml:lang="de" type="col-1">
+            <head>
+               <title>Beispiel 1</title>
+            </head>
+            <p>ED: Aber noch widerstrebt die Natur dieser letzten Vereinigung, noch stemmt sie ein
+               Hemmnis entgegen, noch bleiben zwei Jahrzehnte lang all jene Länder abgeschaltet, die
+               durch das Meer voneinander geschieden sind.</p>
             <p>H1/1: Feuchtigkeit nicht hemmt</p>
             <p>
                <figure>
-                  <graphic url="IMG.12" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_090_LI2</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.12"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_090_LI2</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H1/2: Ein Hemmnis. Das Wasser. Das Meer. Nicht überbrücken. Nicht Porzelanisolierung. Nicht Eisen Elektricität. In Wasser Halt.</p>
+            <p  style="horizontal">H1/2: Ein Hemmnis. Das Wasser. Das Meer. Nicht überbrücken. Nicht Porzelanisolierung.
+               Nicht Eisen Elektricität. In Wasser Halt.</p>
             <p>
                <figure>
-                  <graphic url="IMG.6" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.6"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H2: Aber noch ein Hemmnis. Ström weiter, Länder *der* Grenze. Halt machen am Meer. Noch alle Länder abgeschaltet vo[n] der grossen künftigen E[i]nheit.</p>
+            <p  style="horizontal">H2: Aber noch ein Hemmnis. Ström weiter, Länder *der* Grenze. Halt machen am Meer.
+               Noch alle Länder abgeschaltet vo[n] der grossen künftigen E[i]nheit.</p>
             <p>
                <figure>
-                  <graphic url="IMG.3" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7.1_003_LI</caption></figDesc>
+                  <graphic style=" " url="IMG.3"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7.1_003_LI</caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>T: Aber noch widerstrebt die Natur dieser letzten Vereinigung, noch stemmt sie ein Hemmnis entgegen, noch bleiben von dem elektrischen Strom, der das Wort über die Erde trägt, alle jene Länder ausgeschaltet, die durch das Meer vom Festland getrennt sind.</p>
-            <p>Th: Aber noch widerstrebt die Natur dieser letzten Vereinigung. Noch stemmt sie ein Hemmnis entgegen, noch bleiben ein Jahrzehnt lang alle jene Länder abgeschaltet, die durch das Meer vom Festland getrennt sind.</p>
+            <p  style="horizontal">T: Aber noch widerstrebt die Natur dieser letzten Vereinigung, noch stemmt sie ein
+               Hemmnis entgegen, noch bleiben von dem elektrischen Strom, der das Wort über die Erde
+               trägt, alle jene Länder ausgeschaltet, die durch das Meer vom Festland getrennt
+               sind.</p>
+            <p  style="horizontal">Th: Aber noch widerstrebt die Natur dieser letzten Vereinigung. Noch stemmt sie ein
+               Hemmnis entgegen, noch bleiben ein Jahrzehnt lang alle jene Länder abgeschaltet, die
+               durch das Meer vom Festland getrennt sind.</p>
             <p>
                <figure>
-                  <graphic url="IMG.5" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7_004_LI</caption></figDesc>
+                  <graphic style=" " url="IMG.5"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7_004_LI</caption>
+                  </figDesc>
                </figure>
             </p>
          </div>
-         <div type="col-1" xml:lang="de">
+         <div xml:lang="de" type="col-1">
             <head>
-               <title>Beispiel 3</title>
+               <title>Beispiel 2</title>
             </head>
-            <p>Erstdruck: Glücklicherweise reicht nun in den Zeiten des Fortschritts eine Erfindung der andern hilfreich die Hand. Wenige Jahre nach der Einführung des Landtelegraphen wird das 
-               <hi style="underline">Guttapercha</hi> entdeckt als der geeignete Stoff, elektrische Leitungen im Wasser zu isolieren. Nun kann man beginnen, das wichtigste Land jenseits des Kontinents, England, an das europäische Telegraphennetz anzuschließen. </p> 
-            <p>H1/1: Gummi „india rubber“ Guttapercha (Art Macaronimaschine)</p>
+            <p> ED: Glücklicherweise reicht nun in den Zeiten des Fortschritts eine Erfindung der
+               andern hilfreich die Hand. Wenige Jahre nach der Einführung des Landtelegraphen wird
+               das Guttapercha entdeckt als der geeignete Stoff, elektrische Leitungen im Wasser zu
+               isolieren. Nun kann man beginnen, das wichtigste Land jenseits des Kontinents,
+               England, an das europäische Telegraphennetz anzuschließen. </p>
+            <p>H1/1: Gummi „india rubber“ <hi style="underline">Guttapercha</hi> (Art
+               Macaronimaschine)</p>
             <p>
                <figure>
-                  <graphic url="IMG.11" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_090_LI</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.11"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_090_LI</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H1/1: Isolierungsmittel. Erfindungen Hand in Hand</p>
+            <p  style="horizontal">H1/1: Isolierungsmittel. Erfindungen Hand in Hand</p>
             <p>
                <figure>
-                  <graphic url="IMG.10" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_089_LI</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.10"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_089_LI</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H1/2 (links): Hilft neues Isolierungsmittel (immer Erfind[ungen] Hand in Hand)</p>
+            <p  style="horizontal">H1/2 (links): Hilft neues Isolierungsmittel (immer Erfind[ungen] Hand in Hand)</p>
             <p>
                <figure>
-                  <graphic url="IMG.8" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI3</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.8"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI3</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H1/2 (rechts): Gefunden gesucht. In Kabel. Glücklicherweise Coordinierung. Guttapercha gefunden.</p>
+            <p  style="horizontal">H1/2 (rechts): Gefunden gesucht. In Kabel. Glücklicherweise Coordinierung.
+               Guttapercha gefunden.</p>
             <p>
                <figure>
-                  <graphic url="IMG.7" style=" "/>
-                  <figDesc><caption><ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI2</ref></caption></figDesc>
+                  <graphic style=" " url="IMG.7"/>
+                  <figDesc>
+                     <caption>
+                        <ref target="o:szd.6829">InkedSZ_AAP_W45_081_LI2</ref>
+                     </caption>
+                  </figDesc>
                </figure>
             </p>
-            <p>H2: Zeiten des Fortschritt<hi style="bold">[s]</hi> eine Erfindung ander[n] die Hand reicht, Guttapercha, Isolier[u]ng. </p> 
+            <p> H2: Zeiten des Fortschritt[s] eine Erfindung ander[n] die Hand reicht, Guttapercha,
+               Isolier[u]ng. </p>
+            <p  style="horizontal">
+               <figure>
+                  <graphic style=" " url="IMG.3"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7.1_003_LI2</caption>
+                  </figDesc>
+               </figure>
+            </p>
+            <p  style="horizontal">T: Nun reicht in den Zeiten des Fortschritts immer eine Erfindung der andern die
+               Hand; fast gleichzeitig mit dem Telegraphenwird auch das Guttapercha entdeckt als ein
+               Stoff, der die elektrische Ladung sichert, und nun kann man versuchen, das
+               wichtigsteLand Europas jenseits des Festlands, England, an den Kontinent
+               anzuschliessen.</p>
+            <p  style="horizontal"> Th: Glücklicherweise reicht aber immer in den Zeiten des Fortschritts eine Erfindung
+               der andern die Hand; fast gleichzeitig mit dem Telegraphen wird auch das Guttapercha
+               entdeckt als der geeignete Stoff, um elektrische Leitungen vor jedem <del
+                  rend="strikethrough">Contacte</del> storenden Contacte zu sichern; nun erst kann
+               man unternehmen, das wichtigste Land Europas jenseits des Festlands, England, an den
+               Kontinent anzuschliessen. </p>
             <p>
                <figure>
-                  <graphic url="IMG.3" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7.1_003_LI2</caption></figDesc>
-               </figure>
-            </p>
-            <p>T: Nun reicht in den Zeiten des Fortschritts immer eine Erfindung der andern die Hand; fast gleichzeitig mit dem Telegraphen 
-               wird auch das Guttapercha entdeckt als ein Stoff, der die elektrische Ladung sichert, und nun kann man versuchen, das wichtigste 
-               Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p> 
-            <p>Th: Glücklicherweise reicht aber immer in den Zeiten des Fortschritts eine Erfindung der andern die Hand; fast gleichzeitig mit 
-               dem Telegraphen wird auch das Guttapercha entdeckt als der geeignete Stoff, um elektrische Leitungen vor jedem 
-               <del rend="strikethrough">Contacte</del> storenden Contacte zu sichern; nun erst kann man unternehmen, das wichtigste Land Europas jenseits des Festlands, England, an den Kontinent anzuschliessen.</p><p>
-               <figure>
-                  <graphic url="IMG.13" style=" "/>
-                  <figDesc><caption>InkedSZ_AAP_W7_004_LI2</caption></figDesc>
+                  <graphic style=" " url="IMG.13"/>
+                  <figDesc>
+                     <caption>InkedSZ_AAP_W7_004_LI2</caption>
+                  </figDesc>
                </figure>
             </p>
          </div>
+
       </body>
+
    </text>
+
+
    <facsimile>
       <surface>
-         <graphic mimeType="image/jpeg" url="file:///img/InkedSZ_AAP_W7.1_002_LI.jpg" xml:id="IMG.1"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7.1_002_LI.jpg" xml:id="IMG.1" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W7.1_003_LI.jpg" xml:id="IMG.2"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7.1_003_LI.jpg" xml:id="IMG.2" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg" url="file:///img/InkedSZ_AAP_W7.1_003_LI2.jpg" xml:id="IMG.3"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7.1_003_LI2.jpg" xml:id="IMG.3"
+            mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W7_003_LI.jpg" xml:id="IMG.4"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7_003_LI.jpg" xml:id="IMG.4" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W7_004_LI.jpg" xml:id="IMG.5"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7_004_LI.jpg" xml:id="IMG.5" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_081_LI.PNG" xml:id="IMG.6"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_081_LI.PNG" xml:id="IMG.6" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_081_LI2.jpg" xml:id="IMG.7"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_081_LI2.jpg" xml:id="IMG.7" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_081_LI3.jpg" xml:id="IMG.8"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_081_LI3.jpg" xml:id="IMG.8" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_082_LI.jpg" xml:id="IMG.9"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_082_LI.jpg" xml:id="IMG.9" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_089_LI.jpg" xml:id="IMG.10"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_089_LI.jpg" xml:id="IMG.10" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_090_LI.jpg" xml:id="IMG.11"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_090_LI.jpg" xml:id="IMG.11" mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W45_090_LI2.jpg" xml:id="IMG.12"/>
+         <graphic url="file:///img/InkedSZ_AAP_W45_090_LI2.jpg" xml:id="IMG.12"
+            mimeType="image/jpeg"/>
+
       </surface>
       <surface>
-         <graphic mimeType="image/jpeg"  url="file:///img/InkedSZ_AAP_W7_004_LI2.jpg" xml:id="IMG.13"/>
+         <graphic url="file:///img/InkedSZ_AAP_W7_004_LI2.jpg" xml:id="IMG.13" mimeType="image/jpeg"/>
+
       </surface>
+
    </facsimile>
-   
+
 </TEI>
