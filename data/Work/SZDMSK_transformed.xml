@@ -24086,6 +24086,86 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDMSK.300">
+          <fileDesc>
+            <titleStmt>
+            <title ana="original">"Aus einer Studie über Autografensammeln."</title>
+              <title type="Einheitssachtitel">"Aus einer Studie über Autografensammeln."</title>
+            <title type="Gesamttitel">Stefan Zweig - Sammlung Harald Böck</title>
+            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+              ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+          </titleStmt>
+          <publicationStmt>
+            <ab>Archivmaterial</ab>
+          </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Zitat in Reinschrift mit Unterschrift</note>
+              <note xml:lang="en">Quote in fair copy with signature</note>
+            </notesStmt>
+          <sourceDesc>
+            <msDesc>
+              <msIdentifier>
+                <country>Österreich</country>
+                <settlement>Salzburg</settlement>
+                <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                  Salzburg</repository>
+                <idno type="signature">SZ-SHB/W.4</idno>
+              </msIdentifier>
+              <msContents>
+                <textLang>
+                  <lang xml:lang="ger">Deutsch</lang>
+                </textLang>
+                <msItem>
+                  <incipit>„Nur Ernst und Verständnis steigern den blossen Käufer zum wirklichen Sammler, …“</incipit>
+                </msItem>
+              </msContents>
+              <physDesc>
+                <objectDesc>
+                  <supportDesc>
+                    <support>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="de">Violette Tinte, Bleistift</material>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="en">Purple ink, pencil</material>
+                    </support>
+                    <extent>
+                      <span xml:lang="de">
+                        <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure>
+                      </span>
+                      <span xml:lang="en">
+                        <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure>
+                      </span>
+                      <measure type="format">21x17 cm</measure>
+                    </extent>
+                  </supportDesc>
+                </objectDesc>
+                <handDesc>
+                  <ab xml:lang="de">Stefan Zweig</ab>
+                  <ab xml:lang="en">Stefan Zweig</ab>
+                </handDesc>
+              </physDesc>
+              <history>
+                <origin>
+                  <origPlace>Salzburg</origPlace>
+                  <origDate when="1930-11-01">Anfang November 1930</origDate>
+                </origin>
+                <provenance><ab xml:lang="de">Harald Böck</ab>
+                  <ab xml:lang="en">Harald Böck</ab></provenance>
+                <acquisition><ab xml:lang="de">Ankauf 2013</ab>
+                  <ab xml:lang="en">Acquisition 2013</ab></acquisition>
+              </history>
+            </msDesc>
+          </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
