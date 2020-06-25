@@ -2959,7 +2959,7 @@
                       >Cologny-Genève</placeName></orgName>
                   </provenance>
                   <provenance type="provenance">Sammlung H. Fatio</provenance>
-                  <acquisition>Erwerbung aus der Sammlung</acquisition>
+                  <acquisition>unbekannt</acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -11338,7 +11338,6 @@
                   <textLang>
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
-
                 </msContents>
                 <physDesc>
                   <objectDesc>
@@ -14890,7 +14889,7 @@
                 <history>
                   <origin>Hinterberger IX, Nr. 65, mit Abbildung auf Tafel XIV. Hinterberger 18, Nr.
                     71. Corpus Goethezeichnungen VI b, Nr. 126</origin>
-                  <provenance><orgName ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.14">Privatbesitz,
+                  <provenance><orgName ref="https://gams.uni-graz.at/o:szd.standorte#SZDSTA.24">Privatbesitz,
                     <placeName>USA</placeName></orgName></provenance>
                   <acquisition>unbekannt</acquisition>
                 </history>
@@ -23772,8 +23771,7 @@
         <biblFull xml:id="SZDAUT.391">
           <fileDesc>
             <titleStmt>
-              <title ref="https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003436190/NLI"
-                >Naturphilosophischer Aufsatz</title>
+              <title>Naturphilosophischer Aufsatz [Handschrift]</title>
               <author ref="#SZDPER.700">
                 <persName ref="http://d-nb.info/gnd/118559796">
                   <forename>Immanuel</forename>
@@ -23801,9 +23799,7 @@
                 <msContents>
                   <summary>Eigenhändiges Manuskriptfragment mit Skizzen im Text, an einem roten Band
                     angehängt eine Haarlocke Kants, mit Echtheitsbetätigung und Siegel von Kants
-                    Testamentsvollstrecker, dem Pfarrer Ehregott Wasianski. Ein neunseitiges
-                    Typoskript mit einer Abschrift des Textes und Korrekturen von fremder Hand
-                    befindet sich in der National Library of Israel, Jerusalem.</summary>
+                    Testamentsvollstrecker, dem Pfarrer Ehregott Wasianski.</summary>
                   <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
                 </msContents>
                 <physDesc>
@@ -23826,10 +23822,6 @@
                     <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer,
                         <placeName ref="http://www.geonames.org/6691492"
                       >Cologny-Genève</placeName></orgName>
-                    <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel,
-                        <placeName ref="http://www.geonames.org/281184"
-                      >Jerusalem</placeName></orgName>
-                    <idno type="signature">Arc. Ms. Var. 305 / 129</idno>
                   </provenance>
                   <acquisition>
                     <date when="1921-01-21">21. Januar 1921</date>, durch Kurt Oerthel, <placeName
@@ -49113,6 +49105,61 @@
                       <orgName>Antiquariat Karl Ernst Henrici, <placeName
                         ref="http://www.geonames.org/2950159">Berlin</placeName></orgName>
                   </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc/>
+        </biblFull>
+        <biblFull xml:id="SZDAUT.812">
+          <fileDesc>
+            <titleStmt>
+              <title ref="https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003436190/NLI">Naturphilosophischer Aufsatz [Typoskript-Abschrift]</title>
+              <author ref="#SZDPER.700">
+                <persName ref="http://d-nb.info/gnd/118559796">
+                  <forename>Immanuel</forename>
+                  <surname>Kant</surname>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Autographen</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <idno>SZDAUT.812</idno>
+                  <altIdentifier>
+                    <idno>391</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <summary>Typoskript-Abschrift des Textes von SZDAUT.391 mit Korrekturen von unbekannter Hand.</summary>
+                  <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <measure type="page">9</measure>
+                        <measure type="format">27,5 x 19,5 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel,
+                      <placeName ref="http://www.geonames.org/281184"
+                        >Jerusalem</placeName></orgName>
+                    <idno type="signature">Arc. Ms. Var. 305 / 129</idno></provenance>
+                  <acquisition>unbekannt</acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
