@@ -25,7 +25,7 @@
             </authority>
             <distributor>
                <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches
-                  AssetManagementSystem </orgName>
+                  Asset ManagementSystem </orgName>
             </distributor>
             <availability>
                <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -53,7 +53,7 @@
             </respStmt>
          </seriesStmt>
          <sourceDesc>
-            <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+            <p>SZD Themenseite</p>
          </sourceDesc>
 
       </fileDesc>
@@ -81,11 +81,11 @@
    <text>
       <body>
          <div xml:lang="de" type="introduction">
-            <head> Überschrift </head>
             <p>Ein Beitrag von Simone Lettner</p>
          </div>
          <div xml:lang="en" type="introduction">
             <p>Examining "The first word about the ocean" from the series "Great moments of mankind", Simone Lettner gives an insight into the creation of this work on the basis of Zweig’s handwritings. Coming soon in English!</p>
+         </div>
          <div xml:lang="de" type="col-1">
             <head>
                <title>WIE STEFAN ZWEIG ARBEITETE</title>
@@ -524,7 +524,6 @@
                      <caption>Zum Faksimile</caption>
                   </figDesc>
                </figure>
-            
             <p  style="horizontal">T: Nun reicht in den Zeiten des 
                <lb/>Fortschritts immer eine Erfindung der andern die
                <lb/>Hand; fast gleichzeitig mit dem Telegraphen wird 
@@ -553,6 +552,12 @@
       </body>
    </text>
    <facsimile>
+      <surface>
+         <graphic url="file:///img/TITELBILD.jpg" xml:id="TITELBILD" mimeType="image/jpeg"/>
+      </surface>
+      <surface>
+         <graphic url="file:///img/TITELBILD_EN.jpg" xml:id="TITELBILD_EN" mimeType="image/jpeg"/>
+      </surface>
       <surface>
          <graphic url="file:///img/InkedSZ_AAP_W7.1_002_LI.jpg" xml:id="IMG.1" mimeType="image/jpeg"/>
       </surface>

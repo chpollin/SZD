@@ -3,16 +3,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Personenliste</title>
-        <author>
-          <forename>Christopher</forename>
-          <surname>Pollin</surname>
-        </author>
+        <title xml:lang="de">Personen</title>
+        <title xml:lang="en">Persons</title>
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
           <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung -
@@ -24,15 +20,14 @@
                         Geisteswissenschaftliches Asset Management System </orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0"> Creative
-                        Commons BY-NC-SA 4.0 </licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
         </availability>
         <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.personen</idno>
-        <date when="2017-12-15">15.12.2017</date>
+        <date when="2020-07-01">01.07.2020</date>
       </publicationStmt>
       <seriesStmt>
-        <title ref="gams.uni-graz.at/szd"> Stefan Zweig Digitale Nachlassrekonstruktion </title>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
         <respStmt>
           <resp>Projektleitung</resp>
           <persName>
@@ -40,20 +35,47 @@
             <surname>Mittermayer</surname>
           </persName>
         </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Stefan</forename>
+            <surname>Matthias</surname>
+          </persName>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+          <persName>
+            <forename>Lina</forename>
+            <surname>Zangerl</surname>
+          </persName>
+          <persName>
+            <forename>Verena</forename>
+            <surname>Höller</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
       </seriesStmt>
       <sourceDesc>
-        <p>ToDo: Ortsliste von Stefan Zweig in progress</p>
+        <p>Standortliste Stefan Zweig Digital.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <editorialDecl>
-        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
-      </editorialDecl>
       <projectDesc>
         <ab>
-          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"></ref>
+          <ref target="https://gams.uni-graz.at/o:szd.personen" type="object"/>
         </ab>
-        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
                     Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich
                     bzw. wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit
                     mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem
@@ -62,7 +84,7 @@
                     Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert wird,
                     und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so
                     konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des
-                    Quellenmaterials (z.B. digitalen Editionen) möglich werden. </p>
+                    Quellenmaterials (z.B. digitalen Editionen) möglich werden.</p>
       </projectDesc>
     </encodingDesc>
   </teiHeader>
@@ -15061,6 +15083,12 @@
           <persName ref="http://d-nb.info/gnd/118768247">
             <forename>Amerigo</forename>
             <surname>Vespucci</surname>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1643">
+          <persName>
+            <forename>Jakub</forename>
+            <surname>Przeworski</surname>
           </persName>
         </person>
       </listPerson>

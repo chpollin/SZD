@@ -21,15 +21,14 @@
             System</orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons
-            BY-NC-SA 4.0</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
         </availability>
         <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.standorte</idno>
-        <date when="2017-12-15">15.12.2017</date>
+        <date when="2020-07-01">01.07.2020</date>
       </publicationStmt>
       <seriesStmt>
-        <title ref="gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
         <respStmt>
           <resp>Projektleitung</resp>
           <persName>
@@ -51,6 +50,14 @@
             <forename>Julia</forename>
             <surname>Glunk</surname>
           </persName>
+          <persName>
+            <forename>Lina</forename>
+            <surname>Zangerl</surname>
+          </persName>
+          <persName>
+            <forename>Verena</forename>
+            <surname>Höller</surname>
+          </persName>
         </respStmt>
         <respStmt>
           <resp>Datenmodellierung</resp>
@@ -61,16 +68,13 @@
         </respStmt>
       </seriesStmt>
       <sourceDesc>
-        <p>ToDo: Organisationen und Sammlungen von Stefan Zweig in progress</p>
+        <p>Standorte von Objekten im Nachlass von Stefan Zweig</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <editorialDecl>
-        <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
-      </editorialDecl>
       <projectDesc>
         <ab>
-          <ref target="glossa.uni-graz.at/o:szd.orte" type="object"/>
+          <ref target="https://gams.uni-graz.at/o:szd.standorte" type="object"/>
         </ab>
         <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
           digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
