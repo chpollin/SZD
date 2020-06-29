@@ -6833,8 +6833,8 @@
                   <altIdentifier>
                     <idno type="subject">o:szd.thema.1</idno>
                   </altIdentifier>
-                  <altIdentifier type="extern_iiif">
-                    <idno type="manifest">https://iiif.nli.org.il/IIIFv21/DOCID/NNL_ARCHIVE_AL21256393780005171/manifest</idno>
+                  <altIdentifier>
+                    <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003432560/NLI</idno>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -23045,6 +23045,9 @@
                   <repository ref="http://d-nb.info/gnd/1004728-1">The
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 3 82</idno>
+                  <altIdentifier>
+                    <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003432561/NLI</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -23141,6 +23144,9 @@
                   <repository ref="http://d-nb.info/gnd/1004728-1">The
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 4 181</idno>
+                  <altIdentifier>
+                    <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003520666/NLI</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -23229,6 +23235,9 @@
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 3 83</idno>
                 </msIdentifier>
+                <altIdentifier>
+                  <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003432562/NLI</idno>
+                </altIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
@@ -23327,6 +23336,9 @@
                   <repository ref="http://d-nb.info/gnd/1004728-1">The
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 4 90</idno>
+                  <altIdentifier>
+                    <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003436241/NLI</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -23413,6 +23425,9 @@
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 4 89</idno>
                 </msIdentifier>
+                <altIdentifier>
+                  <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003436236/NLI</idno>
+                </altIdentifier>
                 <msContents>
                   <summary>
                     <ab xml:lang="de">Inhaltsverzeichnis, Vorwort, Kapitel I-VII</ab>
@@ -23507,7 +23522,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Kapitel nicht nach der Zählung geordnet</note>
-              <note xml:lang="en"></note><!-- Übersetzung! -->
+              <note xml:lang="en">Chapter not sorted by number of pages</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -23517,6 +23532,9 @@
                   <repository ref="http://d-nb.info/gnd/1004728-1">The
                     National Library of Israel</repository>
                   <idno type="signature">ARC. Ms. Var. 305 4 89.1</idno>
+                  <altIdentifier>
+                    <idno type="extern">https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL003532394/NLI</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <summary>
