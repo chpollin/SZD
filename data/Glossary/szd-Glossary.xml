@@ -58,7 +58,7 @@
     <skos:prefLabel xml:lang="en">Writing Material</skos:prefLabel>
     <skos:definition xml:lang="de">Im Nachlass zeigt sich, dass Stefan Zweig seine Beschreibstoffe mit Bedacht wählte. Seine Tage- und Notizbücher weisen oftmals Händlermarken und Herstellerangaben auf. Die Papiere mit Zweigs Manuskripten und Typoskripten liegen in unterschiedlichsten Formaten vor und lassen meist Wasserzeichen erkennen. Briefpapier aus Hotels wurde ebenfalls genutzt, mitunter auch längere Zeit nach einem Aufenthalt dort. Auch Makulaturpapier (Briefkuverts, Formularvordruck, Buchseiten) nutzte Zweig für Notizen.</skos:definition>
     <skos:definition xml:lang="en">The posthumous papers show that Stefan Zweig chose his writing material with care. Many of his diaries and notebooks exhibit sellers’ labels and manufacturer details. Zweig’s manuscripts and typescripts are on paper of a wide range of sizes, usually bearing a watermark. Zweig also used hotel stationery, sometimes a long time after his stay at the hotel. He also used waste paper (old envelopes, printed forms, pages from books) for his notes.</skos:definition>
-    <rdfs:seeAlso rdf:resource="https://d-nb.info/1186104252/34"/>
+    <rdfs:seeAlso rdf:resource="https://d-nb.info/1186104252/34"></rdfs:seeAlso>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Works"></skos:broader>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#PartiesInvolved">
@@ -87,8 +87,8 @@
     <skos:prefLabel xml:lang="de">Umfang / Einband</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Physical Description / Binding</skos:prefLabel>
     <skos:definition xml:lang="de">Form des Objekts, wie beispielsweise Manuskript, Typoskript, Korrekturfahne etc. und Angabe „korrigiert“ wenn Korrekturen von Stefan Zweig oder anderen Beteiligten vorliegen. Die angegebene Blattanzahl bezieht sich jeweils auf das ganze Original inklusive möglicher Leerseiten, aber ohne Beilagen und Zusatzmaterial. Zusätzlich werden das Format in cm, gegebenenfalls der Einband des Objekts und die vorhandene Paginierung angeführt.</skos:definition>
-    <skos:definition xml:lang="en">The nature and physical description of the object, such as manuscript, typescript, galley proof, etc., stating “corrected” if it contains corrections by Stefan Zweig or other parties. The number of leaves refers to the entire document inclusive of blanks, but omitting additional material and accruals. The dimensions are given in centimetres. If applicable, the binding is described and numbered pages are noted.</skos:definition>
-    <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Works"></skos:broader>
+    <skos:definition xml:lang="en">The nature and physical description of the object, such as manuscript, typescript, galley proof, etc., stating “corrected” if it contains corrections by Stefan Zweig or other parties. The number of leaves refers to the entire document inclusive of blanks, but omitting additional material and accruals. The dimensions are given in centimetres. If applicable, the binding is described and numbered pages are noted.</skos:definition>  
+  <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Works"></skos:broader>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#AdditionalMaterial">
     <skos:prefLabel xml:lang="de">Zusatzmaterial</skos:prefLabel>
@@ -132,9 +132,9 @@
     <rdfs:seeAlso rdf:resource="http://kalliope-verbund.info/_Resources/Persistent/5bf5cd96ea4448bfec20caf2e3d3063344d76b58/rna-berlin-wien-mastercopy-08-02-2010.pdf"></rdfs:seeAlso>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#CurrentLocation">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.standorte"/>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.standorte"></dc:identifier>
     <skos:prefLabel xml:lang="de">Standorte</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Current Location</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Repositories</skos:prefLabel>
     <skos:definition xml:lang="de">Die Liste der Standorte zeigt deutlich den Grad der Zerstreuung der von Stefan Zweig hinterlassenen Manuskripte, Dokumente und Bücher in öffentlichen und privaten Sammlungen in aller Welt.
             Durch Anklicken der Ortsangaben wird eine gezielte Abfrage der jeweiligen Bestände durchgeführt.</skos:definition>
     <skos:definition xml:lang="en">The list of locations illustrates plainly the degree to which Stefan Zweig’s posthumous manuscripts, documents, and books are today dispersed among public and private collections worldwide.
@@ -142,7 +142,7 @@
     </skos:definition>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Biography">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.lebenskalender"/>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.lebenskalender"></dc:identifier>
     <skos:prefLabel xml:lang="de">Biographie</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Biography</skos:prefLabel>
     <skos:definition xml:lang="de">Die hier an einem Zeitstrahl aufgeführten Einträge sollen eine Orientierung zu Leben und Werk Stefan Zweigs bieten. Verzeichnet sind wichtige Lebensereignisse, aber auch Bezüge zu Personen und zum Archivmaterial, das von hier direkt aufgerufen werden kann. 
@@ -160,7 +160,7 @@
       It is based on the bibliography compiled by Rainer-Joachim Siegel, who has variously assisted STEFAN ZWEIG DIGITAL with other helpful information.</skos:definition>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Person">
-    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.personen"/>
+    <dc:identifier rdf:resource="http://gams.uni-graz.at/o:szd.personen"></dc:identifier>
     <skos:prefLabel xml:lang="de">Personen</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Persons</skos:prefLabel>
     <skos:definition xml:lang="de">Der Index verzeichnet alle Namen von Personen, die in den Datensätzen erscheinen. Durch Anklicken eines Namens wird eine Suche im Gesamtbestand gestartet.
@@ -293,7 +293,7 @@
     <skos:definition xml:lang="en">A removed page or part of a page (leaf). In the catalogue this most frequently applies to copies from which, according to Stefan Zweig’s instructions, presentation inscriptions and ownerships were removed as he dissolved portions of his library. Without additional provenance features in the same volume, such books cannot be attributed to Zweig’s library with any certainty.</skos:definition>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"></skos:broader>
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/TILGUNG"></skos:example>
-    <rdfs:seeAlso rdf:resource="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"/>
+    <rdfs:seeAlso rdf:resource="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"></rdfs:seeAlso>
   </skos:Concept>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#PresentationInscription">
     <skos:prefLabel xml:lang="de">Widmung</skos:prefLabel>
@@ -382,8 +382,8 @@
     <skos:prefLabel xml:lang="de">Raum als Standortangabe</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Room Location Information</skos:prefLabel>
     <skos:definition xml:lang="de">Bezeichnung für Räume außerhalb der Bibliothek in Stefan Zweigs Salzburger Haus, in denen Bücher aufbewahrt wurden. Bekannt sind folgende Angaben und Abkürzungen:
-            Rg.: Im Korridor nahe der Bibliothek untergebrachte Registratur
-            Vorr/Vorraum: Zugangsraum der Bibliothek.</skos:definition>
+            Rg.: Im Korridor nahe der Bibliothek untergebrachte Registratur           
+ Vorr/Vorraum: Zugangsraum der Bibliothek.</skos:definition>
     <skos:definition xml:lang="en">
       Indicates rooms in Stefan Zweig’s Salzburg villa where books were stored outside the library. The following designations and abbreviations are known:
       Rg.: a filing registry in the hallway near the library
@@ -404,3 +404,4 @@
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/SAMMLUNGZWEIG"></skos:example>
   </skos:Concept>
 </rdf:RDF>
+
