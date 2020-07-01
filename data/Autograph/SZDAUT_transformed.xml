@@ -55609,9 +55609,9 @@
           <fileDesc>
             <titleStmt>
               <title
-                ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_64 http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_65 http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_66 http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_67"
-                > Vier eigenhändige Briefe mit Unterschrift an seine Cousine Maria Anna Thekla
-                Mozart („Bäsle-Briefe“)</title>
+                ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_64"
+                >Eigenhändiger Brief mit Unterschrift an seine Cousine Maria Anna Thekla
+                Mozart („Bäsle-Brief“) [I]</title>
               <author ref="#SZDPER.1000">
                 <persName ref="http://d-nb.info/gnd/118584596">
                   <forename>Wolfgang Amadeus</forename>
@@ -55637,19 +55637,15 @@
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
-                  <summary>I: <date when="1777-10-05">5. Oktober (November) 1777</date>; II: <date
-                      when="1778-02-28">28. Februar 1778</date>; III: <date when="1778-12-23">23.
-                      Dezember 1778</date> (Unterschrift teilweise ausgerissen); IV: <date
-                      when="1779-05-10">10. Mai 1779</date> (mit einer Portraitskizze im
-                    Text)</summary>
+                  <summary><date when="1777-10-05">5. Oktober (November) 1777</date></summary>
                   <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
                 </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <extent>
-                        <measure type="page">14</measure>
-                        <measure type="format">24,1 x 19,3 cm</measure>
+                        <measure type="page">4</measure>
+                        <measure type="format">22,6 x 18,2 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -55661,7 +55657,7 @@
                   <provenance>
                     <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
                         ref="http://www.geonames.org/2643743">London</placeName></orgName>
-                    <idno type="signature">Zweig MS. 64–67</idno></provenance>
+                    <idno type="signature">Zweig MS. 64</idno></provenance>
                   <acquisition><date when="1931-05-01">Mai 1931</date>, von Robert F. Petri,
                       <placeName ref="http://www.geonames.org/2950159"
                     >Berlin</placeName></acquisition>
@@ -60228,6 +60224,15 @@
               <msDesc>
                 <msIdentifier>
                   <idno>SZDAUT.992</idno>
+                  <altIdentifier>
+                    <idno>992</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <summary>Ursprünglich als Buchbestellung Friedrich Schillers angesehenes
@@ -60289,6 +60294,15 @@
               <msDesc>
                 <msIdentifier>
                   <idno>SZDAUT.993</idno>
+                  <altIdentifier>
+                    <idno>993</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <summary>Tuschfederzeichnung als Vorarbeit zu Blakes Illustrationen des Buches
@@ -60319,6 +60333,210 @@
             </sourceDesc>
           </fileDesc>
           <profileDesc/>
+        </biblFull>
+        <biblFull xml:id="SZDAUT.994">
+          <fileDesc>
+            <titleStmt>
+              <title
+                ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_65"
+                >Eigenhändiger Brief mit Unterschrift an seine Cousine Maria Anna Thekla
+                Mozart („Bäsle-Brief“) [II]</title>
+              <author ref="#SZDPER.1000">
+                <persName ref="http://d-nb.info/gnd/118584596">
+                  <forename>Wolfgang Amadeus</forename>
+                  <surname>Mozart</surname>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Autographen</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <idno>SZDAUT.994</idno>
+                  <altIdentifier>
+                    <idno>994</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <summary><date when="1778-02-28">28. Februar 1778</date></summary>
+                  <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <measure type="page">4</measure>
+                        <measure type="format">22,6 x 18,2 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>Karteikarte aus der Sammlung Zweig. Faksimile 1931 (nur Zweig MS. 64). BL
+                    1987. BL 1993. Searle 1999, Seite 82ff, mit Abbildung von Zweig MS. 67 auf Tafel
+                    LXIX</origin>
+                  <provenance>
+                    <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
+                      ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                    <idno type="signature">Zweig MS. 65</idno></provenance>
+                  <acquisition><date when="1931-05-01">Mai 1931</date>, von Robert F. Petri,
+                    <placeName ref="http://www.geonames.org/2950159"
+                      >Berlin</placeName></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification">Brief</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDAUT.995">
+          <fileDesc>
+            <titleStmt>
+              <title
+                ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_66"
+                >Eigenhändiger Brief mit Unterschrift an seine Cousine Maria Anna Thekla
+                Mozart („Bäsle-Brief“) [III]</title>
+              <author ref="#SZDPER.1000">
+                <persName ref="http://d-nb.info/gnd/118584596">
+                  <forename>Wolfgang Amadeus</forename>
+                  <surname>Mozart</surname>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Autographen</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <idno>SZDAUT.995</idno>
+                  <altIdentifier>
+                    <idno>995</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <summary><date when="1778-12-23">23. Dezember 1778</date>, Unterschrift teilweise ausgerissen</summary>
+                  <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <measure type="page">2</measure>
+                        <measure type="format">22,6 x 18,2 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>Karteikarte aus der Sammlung Zweig. Faksimile 1931 (nur Zweig MS. 64). BL
+                    1987. BL 1993. Searle 1999, Seite 82ff, mit Abbildung von Zweig MS. 67 auf Tafel
+                    LXIX</origin>
+                  <provenance>
+                    <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
+                      ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                    <idno type="signature">Zweig MS. 66</idno></provenance>
+                  <acquisition><date when="1931-05-01">Mai 1931</date>, von Robert F. Petri,
+                    <placeName ref="http://www.geonames.org/2950159"
+                      >Berlin</placeName></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification">Brief</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDAUT.996">
+          <fileDesc>
+            <titleStmt>
+              <title
+                ref="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Zweig_MS_67"
+                >Eigenhändiger Brief mit Unterschrift an seine Cousine Maria Anna Thekla
+                Mozart („Bäsle-Brief“) [IV]</title>
+              <author ref="#SZDPER.1000">
+                <persName ref="http://d-nb.info/gnd/118584596">
+                  <forename>Wolfgang Amadeus</forename>
+                  <surname>Mozart</surname>
+                </persName>
+              </author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Autographen</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <idno>SZDAUT.996</idno>
+                  <altIdentifier>
+                    <idno>996</idno>
+                    <note>
+                      <bibl>
+                        <title>Katalog der Sammlung Zweig</title>
+                        <ref target="http://d-nb.info/977275620"/>
+                      </bibl>
+                    </note>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <summary><date when="1779-05-10">10. Mai 1779</date>, mit einer Portraitskizze im Text</summary>
+                  <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <measure type="page">4</measure>
+                        <measure type="format">24,1 x 19,3 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>Karteikarte aus der Sammlung Zweig. Faksimile 1931 (nur Zweig MS. 64). BL
+                    1987. BL 1993. Searle 1999, Seite 82ff, mit Abbildung von Zweig MS. 67 auf Tafel
+                    LXIX</origin>
+                  <provenance>
+                    <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library, <placeName
+                      ref="http://www.geonames.org/2643743">London</placeName></orgName>
+                    <idno type="signature">Zweig MS. 67</idno></provenance>
+                  <acquisition><date when="1931-05-01">Mai 1931</date>, von Robert F. Petri,
+                    <placeName ref="http://www.geonames.org/2950159"
+                      >Berlin</placeName></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification">Brief</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
         </biblFull>
       </listBibl>
     </body>
