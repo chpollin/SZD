@@ -1649,8 +1649,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de"></ab>
-                    <ab xml:lang="en"></ab>
+                    <ab xml:lang="de">Fremde Hand</ab>
+                    <ab xml:lang="en">Unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -1669,6 +1669,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
