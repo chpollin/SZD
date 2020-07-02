@@ -1690,7 +1690,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Enthält eingeklebte von Stefan Zweig verfasste Zeitungsartikel</note>
-              <note xml:lang="en"></note><!-- Übersetzung! -->
+              <note xml:lang="en">Contains pasted newspaper articles written by Stefan Zweig</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1725,18 +1725,18 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en"></material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de"></material>
+                          xml:lang="de">Violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en"></material>
+                          xml:lang="en">Purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf"> Blatt, 
-                            Blatt beschrieben;</measure>
+                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf"> 86 Blatt, 
+                            50 Blatt beschrieben;</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Notebook</term>, <measure type="leaf"> leaves,
-                            writing on leaves;</measure>
+                          <term type="objecttyp">Notebook</term>, <measure type="leaf"> 86 leaves,
+                            writing on 50 leaves;</measure>
                         </span>
                         <measure type="format">21x13 cm</measure>
                       </extent>
@@ -1751,10 +1751,18 @@
                       <ab xml:lang="en"></ab>
                     </binding>
                   </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:AdditionalMaterial">
+                        <desc xml:lang="de">1 Einlageblatt mit Notizen zum Inhalt des Tagebuchs von Richard Friedenthal</desc>
+                        <desc xml:lang="en">1 inserted leaf with notes on the contents of the diary by Richard Friedenthal</desc><!-- Übersetzung überprüfen! -->
+                      </item>
+                    </list>
+                  </accMat>
                 </physDesc>
                 <history>
                   <origin>
-                    <origDate>1 Mai 1915-</origDate>
+                    <origDate when="1915-05-01">1 Mai 1915-</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
