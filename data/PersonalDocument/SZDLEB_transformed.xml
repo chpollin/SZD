@@ -115,8 +115,8 @@
                 <msIdentifier>
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger
+                    Literaturstiftung im Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-SAH/L1</idno>
                 </msIdentifier>
                 <msContents>
@@ -1547,11 +1547,11 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected" type="leaf">1
                             Blatt, korrigiert</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">1
                             leaf, corrected</measure>
                         </span>
                         <measure type="format"></measure>
@@ -1588,6 +1588,88 @@
                 <term type="classification" xml:lang="de">Abschiedsbrief</term>
                 <term type="classification" xml:lang="en">Suicide note</term>
                 </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.15">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Certified Copy of an Entry of Marriage</title>
+              <title type="Einheitssachtitel" xml:lang="de">Heiratszertifikat</title>
+              <title type="Einheitssachtitel" xml:lang="en">Marriage certificate</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Donald Prater</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Beglaubigte Kopie der Eheeintragung vom 3. September 1980</note>
+              <note xml:lang="en">Certified copy of an entry of marriage, 3rd September 1980</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SDP/L1</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                         <material ana="szdg:WritingMaterial"
+                            xml:lang="de">Vorgedrucktes Vertragsformular</material>
+                          <material ana="szdg:WritingMaterial"
+                            xml:lang="en">Pre-printed contract form</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">35x17 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de"></ab>
+                    <ab xml:lang="en"></ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Bath</origPlace>
+                    <origDate when="1939-09-06">Sixth September 1939</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Donald Prater</ab>
+                    <ab xml:lang="en">Donald Prater</ab></provenance>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+              </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
