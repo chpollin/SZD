@@ -1678,7 +1678,7 @@
         <biblFull xml:id="SZDLEB.16">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Tagebuch aus dem Kriegsjahr 1915</title>
+              <title ana="original">Tagebuch aus dem Kriegsjahr 1915. Zweiter Band</title>
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -1689,8 +1689,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Enthält eingeklebte von Stefan Zweig verfasste Zeitungsartikel</note>
-              <note xml:lang="en">Contains pasted newspaper articles written by Stefan Zweig</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Enthält eingeklebte Zeitungsausschnitte von Artikeln Zweigs</note>
+              <note xml:lang="en">Contains pasted newspaper articles by Zweig</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1703,7 +1703,7 @@
                 </msIdentifier>
                 <msContents>
                   <summary>
-                    <ab xml:lang="de">Tagebucheinträge 1. Mai 1915 bis 24. Februar 1916</ab>
+                    <ab xml:lang="de">Tagebuchaufzeichnungen 1. Mai 1915 bis 24. Februar 1916</ab>
                     <ab xml:lang="en">Diary 1st May 1915 through 24th February 1916</ab>
                   </summary>
                   <textLang>
@@ -1711,9 +1711,9 @@
                   </textLang>
                   <msItem>
                     <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="de">„Zweiter Band 1 Mai 1915-" in violetter Tinte eigenhändig</docEdition>
+                      xml:lang="de">Titel und Aufschrift „1 Mai 1915-" in violetter Tinte eigenhändig</docEdition>
                     <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="en">„Zweiter Band 1 Mai 1915-" in purple ink, holograph</docEdition>
+                      xml:lang="en">Title and inscription „1 Mai 1915-" in purple ink, holograph</docEdition>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -1721,9 +1721,9 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="de"></material>
+                          xml:lang="de">Liniertes Papier mit Goldschnitt</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en"></material>
+                          xml:lang="en">Lined paper, edges gilt</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -1731,12 +1731,12 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf"> 86 Blatt, 
-                            50 Blatt beschrieben;</measure>
+                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf">86 Blatt, 
+                            50 Blatt beschrieben; beigelegt: 4 Zeitungsausschnitte</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Notebook</term>, <measure type="leaf"> 86 leaves,
-                            writing on 50 leaves;</measure>
+                          <term type="objecttyp">Notebook</term>, <measure type="leaf">86 leaves,
+                            writing on 50 leaves; includes: 4 newspaper clippings</measure>
                         </span>
                         <measure type="format">21x13 cm</measure>
                       </extent>
@@ -1747,8 +1747,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de"></ab>
-                      <ab xml:lang="en"></ab>
+                      <ab xml:lang="de">Blauer Ledereinband</ab>
+                      <ab xml:lang="en">Blue leather binding</ab>
                     </binding>
                   </bindingDesc>
                   <accMat>
@@ -1756,6 +1756,11 @@
                       <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">1 Einlageblatt mit Notizen zum Inhalt des Tagebuchs von Richard Friedenthal</desc>
                         <desc xml:lang="en">1 inserted leaf with notes on the contents of the diary by Richard Friedenthal</desc><!-- Übersetzung überprüfen! -->
+                      </item>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">4 Zeitungsausschnitte von Feuilleton-Artikeln Stefan Zweigs</desc>
+                        <desc xml:lang="en">4 newspaper clippings from articles in the feuilleton by Stefan Zweig</desc><!-- Übersetzung überprüfen! -->
+                        <measure type="format">17x32 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -1778,6 +1783,363 @@
               <keywords>
                 <term type="classification" xml:lang="de">Tagebücher</term>
                 <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.17">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Tagebuch 1918</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L6</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Tagebuchaufzeichnungen 20. September bis 13. November [1918]</ab>
+                    <ab xml:lang="en">Diary 20th September through 13th November [1918]</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier mit rotem Buchschnitt, ursprünglich aus einem
+                          Notizbuch</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper, edges red, originally from a notebook</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf">19 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>, <measure type="leaf">19 leaves</measure>
+                        </span>
+                        <measure type="format">21x14 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>[1918]</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.18">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Diary of the second war</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L8</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Tagebuchaufzeichnungen 1. September bis 16. Oktober 1939</ab>
+                    <ab xml:lang="en">Diary 1st September through 16th October 1939</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier, ursprünglich aus einem
+                          Notizblock</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper, originally from a notepad</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf">22 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>, <measure type="leaf">22 leaves</measure>
+                        </span>
+                        <measure type="format">16x10 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>1939</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.19">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Tagebuch im Kriegsjahr 1914</title>
+              <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Enthält 9 eingeklebte Zeitungsausschnitte von Feuilletonbeiträgen Zweigs sowie 1 losen Zeitungsausschnitt</note>
+              <note xml:lang="en">Contains 9 newspaper clippings from articles in the feuilleton by Zweig and 1 loose newspaper clipping</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L3</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Tagebuchaufzeichnungen 30. Juli 1914 bis 1. April 1915</ab>
+                    <ab xml:lang="en">Diary 30th July 1914 through 1st April 1915</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de">Titel und Aufschrift „vom Tage der deutschen Kriegserklärung an Russland" in violetter Tinte eigenhändig</docEdition>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en">Title and inscription „vom Tage der deutschen Kriegserklärung an Russland" in purple ink, holograph</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier mit Goldschnitt</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper, edges gilt</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Notizbuch</term>, <measure type="leaf">86 Blatt, 
+                            79 Blatt beschrieben; beigelegt: 1 "Offene Order", 2 Zeitungsausschnitte</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Notebook</term>, <measure type="leaf">86 leaves,
+                            writing on 79 leaves; includes: 1 "Offene Order", 2 newspaper clippings</measure>
+                        </span>
+                        <measure type="format">18x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Roter Ledereinband</ab>
+                      <ab xml:lang="en">Red leather binding</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">1 "Offene Order" des k. u. k. Kriegsarchivs zur Durchführung einer Studienreise Zweigs durch Galizien</desc>
+                        <desc xml:lang="en">1 "Offene Order" by the k. u. k. War Archive to carry out a study tour through Galicia</desc><!-- Übersetzung überprüfen! -->
+                        <measure type="format">34x21 cm</measure>
+                      </item>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">2 Zeitungsausschnitte von Feuilleton-Artikeln Stefan Zweigs, unterschiedliche Formate</desc>
+                        <desc xml:lang="en">2 newspaper clippings from articles in the feuilleton by Stefan Zweig, various sizes</desc><!-- Übersetzung überprüfen! -->
+                        <measure type="format">33x18 cm</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>1914</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Tagebücher</term>
+                <term type="classification" xml:lang="en">Diaries</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.20">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Theaterkarte zur Uraufführung von Jeremias 1918</title>
+              <title type="Einheitssachtitel" xml:lang="de">Theaterkarte</title>
+              <title type="Einheitssachtitel" xml:lang="en">Theatre ticket</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Donald Prater</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"
+                ><surname>Zweig</surname><forename>Friderike</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SDP/L2</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de">"Jerem. Uraufführung" von Friderike Zweigs Hand auf der Rückseite</docEdition>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en">"Jerem. Uraufführung" in Friderike Zweig's hand on the back side</docEdition><!-- Übersetzung korrekt? -->
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Beistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">9x5 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Friderike Zweig</ab>
+                    <ab xml:lang="en">Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Zürich</origPlace>
+                    <origDate when="1918-02-27">27. Febr. 1918</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Donald Prater</ab>
+                    <ab xml:lang="en">Donald Prater</ab></provenance>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
               </keywords>
             </textClass>
           </profileDesc>
