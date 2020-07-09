@@ -320,7 +320,7 @@
         <xsl:variable name="SZDBIB_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDBIB_EN_CONTENT">
             <xsl:choose>
-                <xsl:when test="preceding::t:item[1]/t:stamp[1]/t:ref[@target = 'szdg:Stamp']">
+                <xsl:when test="../following-sibling::t:item[t:stamp]"> 
                     <xsl:value-of select="$SZDBIB//*:Row[*:Cell[79]/*:Data = substring-after($SZDBIB_ID, 'SZDBIB.')]/*:Cell[62]"/>
                 </xsl:when>
                 <xsl:otherwise>
