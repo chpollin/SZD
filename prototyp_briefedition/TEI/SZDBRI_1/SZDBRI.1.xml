@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>FZ_19141230 SDZBRI.1</title>
+                <author>Simone Lettner</author>
+            </titleStmt>
+            <editionStmt>
+                <edition><date>2020-05-25</date></edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>ZIM</publisher>
+                <idno type="PID">o:szd.SZDBRI.1</idno></publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Fredonia</settlement>
+                        <institution>State University of New York</institution>
+                        <repository>Reed Library</repository>
+                        <collection>Stefan Zweig Collection</collection>
+                        <idno>FRED) (?)</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="szd:SZDPER.1556">
+                        <forename>Friderike</forename>
+                        <surname>von Winternitz</surname>
+                    </persName>
+                    <settlement>Baden bei Wien</settlement>
+                    <date when="1914-12-30">30.12.1914</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="szd:SZDPER.1550">
+                        <forename>Stefan</forename>
+                        <surname>Zweig</surname>
+                    </persName>
+                </correspAction>
+                <!-- prev and next letter -->
+                <!--<correspContext>
+                    <ref type="prev" target="http://www.weber-gesamtausgabe.de/A041209">Previous
+                        letter of <persName>Carl Maria von Weber</persName> to <persName>Caroline
+                            Brandt</persName>: <date from="1817-06-19" to="1817-06-20">June 19/20,
+                            1817</date>
+                    </ref>
+                    <ref type="next" target="http://www.weber-gesamtausgabe.de/A041217">Next letter
+                        of <persName>Carl Maria von Weber</persName> to <persName>Caroline
+                            Brandt</persName>: <date when="1817-06-27">June 27, 1817</date>
+                    </ref>
+                </correspContext>-->
+            </correspDesc>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="szd" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="https://gams.uni-graz.at/o:szd.ontology#$1">
+                    <p>SZD Ontology</p>
+                </prefixDef>
+                <prefixDef ident="wd" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="http://www.wikidata.org/wiki/$1">
+                    <p>
+                        <ref target="https://www.wikidata.org/wiki/Help:Namespaces" />
+                    </p>
+                </prefixDef>
+            </listPrefixDef>
+            <appInfo>
+                <application xml:id="docxtotei" ident="TEI_fromDOCX" version="2.15.0">
+                    <label>DOCX to TEI</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <revisionDesc>
+            <listChange>
+                <change><date>2020-07-20T13:37:28Z</date><name>Simone Lettner</name></change>
+            </listChange>
+        </revisionDesc>
+
+    </teiHeader>
+    <text>
+        <body>
+            <pb facs="IMG.1" n="1" xml:id="DIV.1"/>
+            <opener>
+                <dateline>
+                    <!-- mit @cert den Grad der Sicherheit abbilden -->
+                    <date when="1914-12-30" cert="medium">
+                        30. Dec. 14
+                        <note place="comment">[Datumsangabe auf den Kopien leider unleserlich]</note>
+                    </date>
+                </dateline>
+                <salute>Lieber ,</salute>
+            </opener>
+            <p>zum letzten Tag im Jahr einen Gruß. Ich muß <lb />
+            mit Gewalt wegdenken von jedem sentimentalen <lb />
+            Rückblick. Ich will Dir jetzt in Gedanken einen Kuss geben und Dir 
+            <!-- einfügung darüber -->
+                <add place="above">
+                    <span>dar</span>
+                    <span>in</span>
+                <note place="comment">Einfügung über der Zeile</note>
+            </add>
+            <del rend="strikethrough">ihn</del> einen heißen <lb />
+            Wunsch einschließen: Dir mögen nicht versorgte <lb />
+            Stunden, Kränkungen um Freunde im kom<lb />
+            menden Jahr Deinen Frohmut verdüstern. <lb />
+            Mein guter Liebling, ich wünsch Dir alles <lb />
+            Glück, das Du ehrlich genießen kannst. <lb />
+            Und vor vielen anderen Wünschen noch: gute <lb />
+            Arbeit. Du verstandest 
+                <!-- sic heißt hier, dass "da wirklich ein beistrich ist ? -->
+                <sic>,</sic> es nicht, als ich <lb />
+            sagte, das könne mir auch helfen. Du <lb />
+            bist manchmal so weit – in Deiner Arbeit halte <lb />
+            ich Dich immer an meinem Herzen – Du wälzt <lb />
+                so oft fremde Welten <sic>unerbitterlich</sic> zwischen <lb />
+            mich und Dich, Deine Arbeit wölbt mir <lb />
+            goldene Brücken in mein Heim zu Dir. <lb />
+            Es ist ein Heim in den Wolken und doch <lb />
+                in Deinem Herzen <del rend="strikethrough">xxxxxxx</del>
+                <hi rend="mark">[,]</hi> in Deinem <lb />
+            ungetreuen getreuen Herzen. Es ist nicht <lb />
+            jene litterarische Anbetung, die Du nicht 
+                <pb facs="IMG.2" n="2" xml:id="DIV.2"/>
+            <lb />
+            magst (ich bin weniger kritiklos als <lb />
+                <!-- der Krüppel mit referenz? -->
+                Du glaubst: Dein Gedicht <hi style="bold"><sic>der Krüppel</sic></hi> fand <lb />
+            ich beinahe schlecht, und ich glaube, daß <lb />
+            man es Dir überall zurückschicken würde, <lb />
+            wenn Du es anonym einsenden würdest – <lb />
+            man soll sich aber auf Deiner Höhe – nie seine <lb />
+                Höhe zu Nutze machen, selbst 
+                <add place="above">
+                    <span>nicht</span>
+                    <span>[,]</span>
+                    <note place="comment">Einfügung über der Zeile</note>
+                 </add>
+                 um einer Zeitung<lb />
+            eine Gefälligkeit zu erweisen – und ein <hi style="bold">Stefan Zw.</hi>
+            <lb />
+                <!-- was passiert damit? -->
+            <hi rend="underline">lässt</hi> sich eben nichts streichen.) Nein es
+                ist <lb />
+            nicht das, daß ich auch (trotzdem) in Dir meinen <lb />
+            Meister sehe, es ist etwas von einer gemeinsamen <lb />
+            Heimat, in der wir uns Treue halten wollen für <lb />
+                alle Zeiten. Der Krieg hat 
+                <add place="above">sie 
+                    <note place="comment">Einfügung über der Zeile</note>
+                </add>
+                uns nicht verändert. Wir <lb />
+            haben immer gleich gefühlt in unserer Menschenliebe und <lb />
+            Gerechtigkeit. – Ich wünschte mir manchmal mehr <lb />
+            Herzlichkeit, weniger Spott von Dir; (aber er ist <lb />
+                üblich in Deinem Kreise) <del rend="strikethrough">aber</del>
+                <add place="inline">
+                    <span>ich</span>
+                    <note place="comment" n="5">Innerhalb der Zeile</note>
+                </add>
+                weiß
+                    indessen<hi rend="mark">[,]</hi> aus <lb />
+            welchen Gefühlen Du oft spottest. Aber es wird <lb />
+                schöner sein 
+                <add place="inline">
+                    zwischen uns
+                    <note place="comment" n="6">Einfügung über der Zeile</note>
+                </add>
+                    <hi rend="mark">[,]</hi> wenn Du ihn fahren lässt,
+                weil er <lb />
+            mich oft innerlich Schutzlose zu sehr erschreckt.<lb />
+            Ich bin zu Sylvester allein höchstwahrscheinlich <lb />
+            – weder das <hi style="bold">Mädchen</hi>, das die Nacht in <hi style="bold">Floridsdorf</hi>
+            <lb />
+            verbringt, noch <hi style="bold">der alte Herr</hi> werden bei mir sein! <lb />
+            Doch werd ich es mit voller Sicherheit erst Donnerstag <lb />
+            Nachmittag wissen. Du hast mein Bett gekränkt <lb />
+            letzthin – dies wirklich unschuldige Bett. Deshalb <lb />
+            ist auch mein Entschluß<hi rend="mark">[,]</hi> anders zu werden
+                <hi rend="mark">[,]</hi> reifer <lb />
+                geworden, denn Du <del rend="strikethrough">has</del>
+                    <add>
+                        beurteilst 
+                        <note place="comment" n="7">Innerhalb der Zeile</note>
+                    </add>
+                mich jetzt unrichtig. <lb />
+                Der Schein ist gegen mich, das gebe ich zu.  
+                <pb facs="IMG.3" n="3" xml:id="DIV.3"/>
+            Etwas ganz Neues <sic>,</sic> muß ich Dir erzählen: <lb />
+            Ich habe gestern von 9 Uhr Früh bis 
+                <note type="author">Anm. der Autorin am rechten
+                        Seitenrand: eingekreister Punkt mit Pfeil nach rechts unten
+                    zeigend]</note> <lb />
+            10 Uhr abends ununterbrochen geschrieben <hi rend="mark">[.]</hi>
+            <lb />
+            2 Akte eines neuen <hi style="bold">Theaterstückes</hi>
+            <lb />
+            sind fast ausgeführt, alles weitere <lb />
+            durchdacht. Heute ist herrlichste <lb />
+            Luft, die man trinkt wie etwa <lb />
+            Mosel, so leicht und kühl duftend <lb />
+            – eine gute deutsche Luft. Ich <lb />
+            mußte an den Bahnhof denken, auf <lb />
+            dem wir am Rückweg von <hi style="bold">Lübeck</hi>
+            <lb />
+            Aufenthalt hatten und so heiter <lb />
+            waren. Die Luft rieselte mir <lb />
+            diese Erinnerung durch die <lb />
+            Kehle.</p>
+            <p>
+            Noch etwas: Ich habe schon <lb />
+            wieder 3 Riesenthiere bekommen, <lb />
+            eine gigantische Gans darunter, <lb />
+            dann californisches Compot <lb />
+                und viele andere kleine Delicatessen.   
+            <pb facs="IMG.4" n="4" xml:id="DIV.4"/>
+            Darf ich bei Dir ein kleines gutes <lb />
+            kaltes Nachtmahl geben – Sonntag <lb />
+            – oder nächste Woche, für Dich <lb />
+            und <hi style="bold">Victor</hi>, und wenn Du willst <lb />
+            – eine Dame <add place="above">noch
+                <note place="comment" n="9">Einfügung über der Zeile</note>
+               </add>
+            vielleicht – am liebsten <lb />
+            ein Mädel – oder auch Frau <hi rend="mark">D</hi><hi rend="superscript underline background(cyan)">r</hi>
+            <lb />
+            <hi style="bold">Viertel</hi>. Nur wenn Du Lust dazu <lb />
+            hast! Jemand<hi rend="mark">[,]</hi> der geigt, wäre auch <lb />
+            hübsch dazu. Du brauchtest nur <lb />
+            von <hi style="bold">Josef</hi> ein bisschen Getränk u. Butter <lb />
+            besorgen lassen und Gebäck. Dein <lb />
+            <hi style="bold">Bruder</hi> wäre auch nett dabei, weil <lb />
+            er lustig ist. Es soll ja <del>nich</del>
+                <add place="inline">
+                    kein
+                    <note place="comment" n="10">Innerhalb der Zeile</note>
+                </add>
+                <lb />
+            Fest sein, aber heiter, damit das <lb />
+            neue Jahr 
+                <add place="above">
+                    ein<del rend="strikethrough">en</del>
+                    <note place="comment" n="11">Einfügung über der Zeile</note>
+                </add>
+                <hi rend="mark">
+                    helle<del rend="strikethrough">n</del>
+                    <note place="comment" n="12">Über den ursprünglichen Text geschrieben</note>
+                </hi>
+                Anfangspünktchen<lb />
+            bekommt. Aber nur<hi rend="mark">[,]</hi> wenn es Dich „gfreut“.</p>
+            <p>Ich küss Dich,</p>
+            <p>Dein</p>
+            <p>Lamm</p>
+        </body>
+    </text>
+    <facsimile>
+        <surface start="#DIV.1">
+            <graphic url="file:///img/IMG_1.jpg" xml:id="IMG.1" mimeType="image/jpeg" />
+        </surface>
+        <surface start="#DIV.2">
+            <graphic url="file:///img/IMG_2.jpg" xml:id="IMG.2" mimeType="image/jpeg" />
+        </surface>
+        <surface start="#DIV.3">
+            <graphic url="file:///img/IMG_3.jpg" xml:id="IMG.3" mimeType="image/jpeg" />
+        </surface>
+        <surface start="#DIV.4">
+            <graphic url="file:///img/IMG_4.jpg" xml:id="IMG.4" mimeType="image/jpeg" />
+        </surface>
+    </facsimile>
+</TEI>
