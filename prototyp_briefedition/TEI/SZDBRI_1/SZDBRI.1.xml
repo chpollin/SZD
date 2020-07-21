@@ -203,7 +203,7 @@
             – eine Dame <add place="above">noch
                </add>
             vielleicht – am liebsten<lb/>
-            ein Mädel – oder auch Frau <hi rend="mark">D</hi><hi rend="superscript underline background(cyan)">r</hi>
+                ein Mädel – oder auch Frau <hi rend="mark">D<hi style="superscript">r</hi></hi>
            <lb/>
             <hi style="bold">Viertel</hi>. Nur wenn Du Lust dazu<lb/>
                 hast! <hi style="underline">Jemand</hi><hi rend="mark">[,]</hi> der geigt, wäre auch<lb/>
@@ -211,7 +211,8 @@
             von <hi style="bold">Josef</hi> ein bisschen Getränk u. Butter<lb/>
             besorgen lassen und Gebäck. Dein<lb/>
             <hi style="bold">Bruder</hi> wäre auch nett dabei, weil<lb/>
-            er lustig ist. Es soll ja <del>nich</del>
+            er lustig ist. Es soll ja 
+                <del rend="strikethrough">nich</del>
                 <add place="inline">
                     kein
                 </add>
