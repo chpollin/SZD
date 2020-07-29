@@ -1598,10 +1598,6 @@
               <title type="Einheitssachtitel" xml:lang="de">Heiratszertifikat</title>
               <title type="Einheitssachtitel" xml:lang="en">Marriage certificate</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Donald Prater</title>
-              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
-              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1671,6 +1667,8 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -1975,7 +1973,7 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L3</idno>
+                  <idno type="signature">SZ-AAP/L2</idno>
                 </msIdentifier>
                 <msContents>
                   <summary>
@@ -2071,8 +2069,6 @@
               <title type="Einheitssachtitel" xml:lang="de">Theaterkarte</title>
               <title type="Einheitssachtitel" xml:lang="en">Theatre ticket</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Donald Prater</title>
-              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"
                 ><surname>Zweig</surname><forename>Friderike</forename></persName></editor>
             </titleStmt>
@@ -2140,6 +2136,229 @@
               <keywords>
                 <term type="classification" xml:lang="de">Diverses</term>
                 <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.21">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Einladungskarte "At Home"</title>
+              <title ana="assigned" xml:lang="en">Invitation card "At Home"</title>
+              <title type="Einheitssachtitel" xml:lang="de">Einladungskarte</title>
+              <title type="Einheitssachtitel" xml:lang="en">Invitation card</title>
+              <title type="Gesamttitel"></title><!-- ergänzen! -->
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository><!-- überprüfen! -->
+                  <idno type="signature"></idno><!-- ergänzen! -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="en">Englisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de"></docEdition><!-- Aufschrift ergänzen? -->
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en"></docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">11x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>49, Hallam Street, London, W. 1</origPlace>
+                  </origin>
+                  <provenance></provenance><!-- ergänzen! -->
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.22">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Bestellzettel Bücherausgabe</title>
+              <title type="Einheitssachtitel" xml:lang="de">Bestellzettel</title>
+              <title type="Einheitssachtitel" xml:lang="en">Order form</title>
+              <title type="Gesamttitel"></title><!-- ergänzen -->
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository><!-- überprüfen -->
+                  <idno type="signature"></idno><!-- ergänzen -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de">"Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" eigenhändig in violetter Tinte und 
+                    "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" eigenhändig in Bleistift</docEdition>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en">"Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" holograph in
+                      purple ink and 
+                      "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" holograph in pencil</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                          <material ana="szdg:WritingMaterial"
+                            xml:lang="de">Vorgedrucktes Bestellformular der Zentralbibliothek Zürich</material>
+                          <material ana="szdg:WritingMaterial"
+                            xml:lang="en">Pre-printed order form of the Zurich Central Library</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte, Beistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">2 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">2 leaves</measure>
+                        </span>
+                        <measure type="format">11x7 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Zürich</origPlace>
+                    <origDate when="1935-05-01">Mai 1935</origDate>
+                  </origin>
+                  <provenance></provenance><!-- ergänzen -->
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.23">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Vermählungskarte von Herrmann Hesse 1904</title>
+              <title type="Einheitssachtitel" xml:lang="de">Einladung</title>
+              <title type="Einheitssachtitel" xml:lang="en">Invitation</title>
+              <title type="Gesamttitel"></title><!-- ergänzen -->
+              <author xml:id="SZDPER.608"><persName ref="http://d-nb.info/gnd/11855042X">
+                <surname>Hesse</surname><forename>Hermann</forename></persName></author>
+              <author xml:id="SZDPER.1644"><persName ref="http://d-nb.info/gnd/116770511"><forename>Maria</forename><surname>Hesse</surname></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository><!-- überprüfen -->
+                  <idno type="signature"></idno><!-- ergänzen -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de">"Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</docEdition>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en">"Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">13x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Basel, Calw</origPlace>
+                    <origDate>Pfingsten 1904</origDate>
+                  </origin>
+                  <provenance></provenance><!-- ergänzen -->
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
