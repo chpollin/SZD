@@ -2075,6 +2075,10 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">"Jerem. Uraufführung" von Friderike Zweigs Hand auf der Rückseite</note>
+              <note xml:lang="en">"Jerem. Uraufführung" in Friderike Zweig's hand on the back side</note><!-- Übersetzung korrekt? -->
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -2088,28 +2092,22 @@
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
-                  <msItem>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="de">"Jerem. Uraufführung" von Friderike Zweigs Hand auf der Rückseite</docEdition>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="en">"Jerem. Uraufführung" in Friderike Zweig's hand on the back side</docEdition><!-- Übersetzung korrekt? -->
-                  </msItem>
                 </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Beistift</material>
+                          xml:lang="de">Bleistift</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="en">Pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Eintrittskarte</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Ticket</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">9x5 cm</measure>
                       </extent>
@@ -2149,40 +2147,40 @@
               <title ana="assigned" xml:lang="en">Invitation card "At Home"</title>
               <title type="Einheitssachtitel" xml:lang="de">Einladungskarte</title>
               <title type="Einheitssachtitel" xml:lang="en">Invitation card</title>
-              <title type="Gesamttitel"></title><!-- ergänzen! -->
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufdruck "Stefan Zweig | At Home | R. S. V. P, | 49, Hallam Street, | London, W.1"</note>
+              <note xml:lang="en">Imprint "Stefan Zweig | At Home | R. S. V. P, | 49, Hallam Street, | London, W.1"</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</repository><!-- überprüfen! -->
-                  <idno type="signature"></idno><!-- ergänzen! -->
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L14</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="en">Englisch</lang>
                   </textLang>
-                  <msItem>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="de"></docEdition><!-- Aufschrift ergänzen? -->
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="en"></docEdition>
-                  </msItem>
                 </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">11x9 cm</measure>
                       </extent>
@@ -2191,9 +2189,17 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>49, Hallam Street, London, W. 1</origPlace>
+                    <origPlace>London</origPlace>
                   </origin>
-                  <provenance></provenance><!-- ergänzen! -->
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -2203,8 +2209,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Diverses</term>
                 <term type="classification" xml:lang="en">Various</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2215,35 +2219,32 @@
               <title ana="original">Bestellzettel Bücherausgabe</title>
               <title type="Einheitssachtitel" xml:lang="de">Bestellzettel</title>
               <title type="Einheitssachtitel" xml:lang="en">Order form</title>
-              <title type="Gesamttitel"></title><!-- ergänzen -->
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eintragung "Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" eigenhändig in violetter Tinte und 
+                "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" eigenhändig in Bleistift</note>
+              <note xml:lang="en">Entry "Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" holograph in
+                purple ink and "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" holograph in pencil</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</repository><!-- überprüfen -->
-                  <idno type="signature"></idno><!-- ergänzen -->
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L16</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
-                  <msItem>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="de">"Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" eigenhändig in violetter Tinte und 
-                    "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" eigenhändig in Bleistift</docEdition>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="en">"Stefan Zweig | Hotel Bellerive | TN 604 ah | Berlepsch Haus. Kämpfe" holograph in
-                      purple ink and 
-                      "Stefan Zweig | Hotel Bellerive | St. Z. B. 488-491 | Merle d'Aubigné Geschichte" holograph in pencil</docEdition>
-                  </msItem>
                 </msContents>
                 <physDesc>
                   <objectDesc>
@@ -2254,7 +2255,7 @@
                           <material ana="szdg:WritingMaterial"
                             xml:lang="en">Pre-printed order form of the Zurich Central Library</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Violette Tinte, Beistift</material>
+                          xml:lang="de">Violette Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="en">Purple ink, pencil</material>
                       </support>
@@ -2277,9 +2278,17 @@
                 <history>
                   <origin>
                     <origPlace>Zürich</origPlace>
-                    <origDate when="1935-05-01">Mai 1935</origDate>
+                    <origDate when="1935-05-01">[Mai 1935]</origDate>
                   </origin>
-                  <provenance></provenance><!-- ergänzen -->
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -2297,9 +2306,9 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned">Vermählungskarte von Herrmann Hesse 1904</title>
-              <title type="Einheitssachtitel" xml:lang="de">Einladung</title>
-              <title type="Einheitssachtitel" xml:lang="en">Invitation</title>
-              <title type="Gesamttitel"></title><!-- ergänzen -->
+              <title type="Einheitssachtitel" xml:lang="de">Vermählungsankündigung</title>
+              <title type="Einheitssachtitel" xml:lang="en">Marriage announcement</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author xml:id="SZDPER.608"><persName ref="http://d-nb.info/gnd/11855042X">
                 <surname>Hesse</surname><forename>Hermann</forename></persName></author>
               <author xml:id="SZDPER.1644"><persName ref="http://d-nb.info/gnd/116770511"><forename>Maria</forename><surname>Hesse</surname></persName></author>
@@ -2307,35 +2316,33 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufdruck "Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</note>
+              <note xml:lang="en">Imprint "Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</repository><!-- überprüfen -->
-                  <idno type="signature"></idno><!-- ergänzen -->
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L15</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
-                  <msItem>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="de">"Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</docEdition>
-                    <docEdition ana="szdg:IdentifyingInscription"
-                      xml:lang="en">"Maria Bernoulli | Hermann Hesse beehren sich, Ihnen ihre bevorstehende Vermählung anzuzeigen."</docEdition>
-                  </msItem>
                 </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">13x11 cm</measure>
                       </extent>
@@ -2347,7 +2354,15 @@
                     <origPlace>Basel, Calw</origPlace>
                     <origDate>Pfingsten 1904</origDate>
                   </origin>
-                  <provenance></provenance><!-- ergänzen -->
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
