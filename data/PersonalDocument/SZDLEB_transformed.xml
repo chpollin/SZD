@@ -219,7 +219,7 @@
         <biblFull xml:id="SZDLEB.2">
           <fileDesc>
             <titleStmt>
-              <title ana="original" ref="http://d-nb.info/gnd/1024274039">Tagebuch 1931</title>
+              <title ana="original" >Tagebuch 1931</title>
               <title type="Einheitssachtitel" xml:lang="de">Tagebücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Diaries</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -340,7 +340,7 @@
         <biblFull xml:id="SZDLEB.3">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" ref="http://d-nb.info/gnd/1024274039" xml:lang="de"
+              <title ana="assigned" xml:lang="de"
                 >Hauptbuch</title>
               <title type="Einheitssachtitel" xml:lang="de">Hauptbuch</title>
               <title type="Einheitssachtitel" xml:lang="en">Principal Ledger</title>
@@ -368,8 +368,8 @@
                 <msIdentifier>
                   <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger
+                    Literaturstiftung im Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-SAM/L1</idno>
                   <altIdentifier>
                     <idno type="subject">o:szd.thema.1</idno>
