@@ -74,7 +74,6 @@
             <pb facs="IMG.1" n="1" xml:id="DIV.1"/>
             <opener>
                 <dateline>
-                    <!-- mit @cert den Grad der Sicherheit abbilden -->
                     <date when="1914-12-30" cert="medium">
                         30. Dec. 14
                         <note place="comment">[Datumsangabe auf den Kopien leider unleserlich]</note>
@@ -207,6 +206,8 @@
             <p>Ich küss Dich,</p>
             <p>Dein</p>
             <p>Lamm</p>
+           <!-- <pb facs="IMG.1" n="5" xml:id="DIV.5"/>
+            <pb facs="IMG.1" n="6" xml:id="DIV.6"/>-->
         </body>
     </text>
     <facsimile>
@@ -221,6 +222,12 @@
         </surface>
         <surface start="#DIV.4">
             <graphic url="file:///img/IMG_4.jpg" xml:id="IMG.4" mimeType="image/jpeg" />
+        </surface>
+        <surface start="#DIV.5">
+            <graphic url="file:///img/IMG_5.jpg" xml:id="IMG.5" mimeType="image/jpeg" />
+        </surface>
+        <surface start="#DIV.6">
+            <graphic url="file:///img/IMG_6.jpg" xml:id="IMG.6" mimeType="image/jpeg" />
         </surface>
     </facsimile>
 </TEI>
