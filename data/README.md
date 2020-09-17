@@ -456,6 +456,9 @@
 
 ## [Biography](https://github.com/chpollin/SZD/tree/master/data/Biography), SZDBIO
 
+- <name ref="#SZDPER.1559" type="person"> - person search query
+- <name ref="#SZDLEB.1" type="personaldocument|work|book">notebook</name> - URL to object
+
 ````XML
 <event xml:id="SZDBIO.1">
     <head>
@@ -477,6 +480,8 @@
 
 ### [Person](https://github.com/chpollin/SZD/tree/master/data/Index/Person), SZDPER
 
+- @corresp - URL to wikipedia
+
 ``` xml
 <person corresp="https://de.wikipedia.org/wiki/Pierre_Abraham" xml:id="SZDPER.1">
     <persName ref="http://d-nb.info/gnd/12490310X">
@@ -490,9 +495,10 @@
 </person>
 ```
 
-
-
 ### [Location](https://github.com/chpollin/SZD/tree/master/data/Index/Location), SZDSTA
+
+- @corresp - URL to institution web page
+- t:location/t:geo - coordination for maps visualisation
 
 ```xml
 <org corresp="https://www.uni-salzburg.at/index.php?id=72" xml:id="SZDSTA.1">
@@ -504,8 +510,6 @@
     </location>
 </org>
 ```
-
-
 
 ## [Issue](https://github.com/chpollin/SZD/tree/master/data/Issue)
 
