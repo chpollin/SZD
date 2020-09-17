@@ -82,17 +82,53 @@
                                                         <xsl:apply-templates select="t:ab[@xml:lang = 'de']"/>
                                                     </xsl:otherwise>
                                                 </xsl:choose>
-                                                <div class="row">
-                                                    <xsl:variable name="currentID" select="concat('u', substring-after(@xml:id, '.'))"/>
-                                                    <i class="fas fas fa-link small" data-toggle="collapse" data-target="{concat('#u', substring-after(@xml:id, '.'))}" style="color: #631a34">
+                                                <div class="row card-footer small p-1 d-none d-sm-block" id="{concat('a_fo', substring-after(@xml:id, '.'))}">
+                                                   <!-- <i class="fas fas fa-link small" data-toggle="collapse" data-target="{concat('#u', substring-after(@xml:id, '.'))}" style="color: #631a34">
                                                         <xsl:attribute name="title" select="'Link'"/>
                                                         <xsl:text> </xsl:text>
                                                     </i>
                                                     <span id="{$currentID}" class="collapse font-weight-light pl-2 small">
                                                         <xsl:value-of select="concat('stefanzweig.digital/o:szd.lebenskalender#', @xml:id)"/>
+                                                    </span>-->
+                                                    <xsl:variable name="permalink_id" select="concat('u', substring-after(@xml:id, '.'))"/>
+                                                      <!--<xsl:call-template name="printPERMALINK">
+                                                          <xsl:with-param name="locale" select="$locale"/>
+                                                          <xsl:with-param name="id" select="$permalink_id"/>
+                                                      </xsl:call-template>-->
+                                                    <span class="text-center" data-toggle="collapse" data-target="#{$permalink_id}">
+                                                        <i class="fas fa-link small" style="color: #631a34" title="Permalink">
+                                                            <xsl:text> </xsl:text>
+                                                        </i>
+                                                        <span class="footer_icon_text display_block ml-2">
+                                                            <xsl:choose>
+                                                                <xsl:when test="$locale = 'en'">
+                                                                    <xsl:text>Permalink</xsl:text>
+                                                                </xsl:when>
+                                                                <xsl:otherwise>
+                                                                    <xsl:text>Permalink</xsl:text>
+                                                                </xsl:otherwise>
+                                                            </xsl:choose>
+                                                            <xsl:text> </xsl:text>
+                                                        </span>
                                                     </span>
+                                                    <u id="{$permalink_id}" class="collapse font-weight-lightcard-body" style="color: #631a34" data-parent="{concat('#a_fo', substring-after(@xml:id, '.'))}">
+                                                        <xsl:value-of select="concat('stefanzweig.digital/o:szd.lebenskalender#', @xml:id)"/>
+                                                        <xsl:text> </xsl:text>
+                                                        <i class="far fa-copy ml-2"  style="color: #631a34" onclick="copy({$permalink_id})">
+                                                            <xsl:attribute name="title">
+                                                                <xsl:choose>
+                                                                    <xsl:when test="$locale = 'en'">
+                                                                        <xsl:text>Copy Permalink</xsl:text>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:text>Permalink kopieren</xsl:text>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:attribute>
+                                                            <xsl:text> </xsl:text>
+                                                        </i>
+                                                    </u>
                                                 </div>
-                                             
                                             </div>
                                         </li>
                                     </xsl:for-each>

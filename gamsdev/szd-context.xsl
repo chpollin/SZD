@@ -28,6 +28,10 @@
 
         <!-- CHOOSE MODE, param in URL-->
         <xsl:choose>
+            <!-- ///MEMORY/// -->
+            <xsl:when test="$mode = 'objectbasket'">
+                <xsl:call-template name="objectbasket"/>
+            </xsl:when>
             <!-- ///DATENKORB/// -->
             <xsl:when test="$mode = 'databasket'">
                 <xsl:call-template name="databasket"/>
@@ -65,7 +69,7 @@
                                     <xsl:text>Site Notice</xsl:text>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:text>Imprerssum</xsl:text>
+                                    <xsl:text>Impressum</xsl:text>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:with-param>
@@ -168,7 +172,6 @@
                     $('#databasket_table').DataTable();
                     } );
                 </script>-->
-/lib/2.0/leaflet/leaflet.css
                 <script>
                     $(document).ready(function(){
                     $('#databasket_table').DataTable({
@@ -254,8 +257,8 @@
         </section>
     </xsl:template>
 
-
-    <!--static memory game -->
+    <!-- ////////////////////////////// -->
+    <!-- map InfoVis -->
     <xsl:template name="map">
       <link rel="stylesheet" href="/lib/2.0/leaflet/leaflet.css"/>
       <script src="/lib/2.0/leaflet/leaflet.js"><xsl:text> </xsl:text></script>
@@ -277,18 +280,21 @@
                    </li>
                </xsl:for-each-group>
             </ul>
-            <xsl:for-each-group select="$RESULTS" group-by="s:name">
+            <!--<xsl:for-each-group select="$RESULTS" group-by="s:name">
             <h3>
                 <xsl:value-of select="current-grouping-key()"/>
+                <xsl:text> </xsl:text>
             </h3>
                 <ul>
                     <xsl:for-each-group select="current-group()" group-by="s:type/@uri">
                         <li>
                             <xsl:value-of select="substring-after(current-grouping-key(), '#')"/>:<xsl:value-of select="s:resources"/>
+                            <xsl:text> </xsl:text>
                         </li>
                     </xsl:for-each-group>
+                    <xsl:text> </xsl:text>
                 </ul>
-            </xsl:for-each-group>
+            </xsl:for-each-group>-->
             <h3>
                 <xsl:text>Map</xsl:text>
             </h3>
@@ -461,5 +467,55 @@
         <script src="{concat($server, $gamsdev,'/js/memory.js')}"><xsl:text> </xsl:text></script>
     </xsl:template>
 
+
+    <xsl:template name="objectbasket">
+        <div class="mt-5">
+            <h1 class="mt-5">Object Basket</h1>
+            <p id="o:iiw.interpreters">o:iiw.interpreters (TEI) 
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input>
+            </p>
+            <p id="o:szd.werke">o:szd.werke (TEI)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+            <p id="o:roth.601129">o:roth.601129 (LIDO)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+            <p id="o:depcha.schlitz.1">o:depcha.schlitz.1 (TEI)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+            <p id="o:htx.WR1">o:htx.WR1 (TEI)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+            <p id="o:szd.2087">o:szd.2087 (METS)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+            <p id="context:depcha.schlitz">context:depcha.schlitz (not working)
+                <input type="checkbox" onclick="addObject(this)"><xsl:text> </xsl:text></input></p>
+         <div>
+             <p>Enter PID here</p>
+             <input id="input1" type="text" value=""/>
+             <button onclick="addObject()">Add</button>
+             <button type="button" onclick="clearData()">Clear Objectbasket</button>
+             <button type="button" onclick="showData()">Show Objectbasket</button>
+             <button type="button" onclick="zipAndDownload()">ZIP and Download</button>
+             <table id="objectbasket_table" class="table table-bordered dt-responsive text-left">
+                 <thead>
+                     <tr class="card-header">
+                         <th>pid</th>
+                         <th>title</th>
+                         <th>model</th>
+                         <th>ownerId</th>
+                         <th>lastModifiedDate</th>
+                         <th><xsl:text> </xsl:text></th>
+                     </tr>
+                 </thead>
+                 <tbody id="objectbasket_tbody" onload="console.log('test');"/>
+                 
+             </table>
+             
+         </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"><xsl:text> </xsl:text></script>       
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"><xsl:text> </xsl:text></script>
+            <script src="https://glossa.uni-graz.at/gamsdev/pollin/szd/trunk/www/js/objectbasket.js"><xsl:text> </xsl:text></script>
+            <script type="text/javascript">
+                checkCheckBoxes();
+            </script>
+        </div>
+    </xsl:template>
 
 </xsl:stylesheet>

@@ -17,6 +17,7 @@
 	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	 xmlns:gams="https://gams.uni-graz.at/o:gams-ontology#"
+	 xmlns:szdg="https://gams.uni-graz.at/o:szd.glossar#"
    xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
 
 	<!-- author: Christopher Pollin
@@ -76,8 +77,13 @@
             	<xsl:when test="contains(//t:fileDesc/t:publicationStmt/t:idno[@type='PID'], 'o:szd.thema')">
             		<xsl:call-template name="Collection"/>
             	</xsl:when>
+            	<xsl:when test="contains(//t:fileDesc/t:publicationStmt/t:idno[@type='PID'], 'o:szd.SZDBRI')">
+            		<szd:Letter>
+            			<rdf:comment>Prototype</rdf:comment>
+            		</szd:Letter>
+            	</xsl:when>
             	<xsl:otherwise>
-            		<xsl:text>No data source define! (like o:szd.bibliothek, o:szd.autographen, o:sud.werke...)</xsl:text>
+            		<xsl:text>No data source define! (like o:szd.bibliothek, o:szd.autographen, o:szd.werke...)</xsl:text>
             	</xsl:otherwise>
             </xsl:choose>
         </rdf:RDF>
@@ -158,21 +164,57 @@
 					</xsl:if>
 					<!-- szd:pubDate -->
 					<xsl:if test="t:fileDesc/t:editionStmt/t:edition">
-						<szd:pubDate>
-							<xsl:value-of select="t:fileDesc/t:editionStmt/t:edition"/>
+						<szd:pubDate xml:lang="en">
+							<xsl:call-template name="printEnDe">
+								<xsl:with-param name="path" select="t:fileDesc/t:editionStmt/t:edition/t:span"/>
+								<xsl:with-param name="locale" select="'en'"></xsl:with-param>
+							</xsl:call-template>
+						</szd:pubDate>
+						<szd:pubDate xml:lang="de">
+							<xsl:call-template name="printEnDe">
+								<xsl:with-param name="path" select="t:fileDesc/t:editionStmt/t:edition/t:span"/>
+								<xsl:with-param name="locale" select="'de'"></xsl:with-param>
+							</xsl:call-template>
 						</szd:pubDate>
 					</xsl:if>
 					<!-- //////// -->
 					<!-- szd:text -->
 					<szd:text>
 						<xsl:if test="t:fileDesc/t:editionStmt/t:edition">
-							<xsl:value-of select="t:fileDesc/t:editionStmt/t:edition"/>
-							<xsl:text> . – </xsl:text>
+							<xsl:choose>
+								<xsl:when test="t:fileDesc/t:editionStmt/t:edition/t:span[@xml:lang ='en']">
+									<xsl:value-of select="t:fileDesc/t:editionStmt/t:edition/t:span[@xml:lang ='en']"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="t:fileDesc/t:editionStmt/t:edition"/>
+								</xsl:otherwise>
+							</xsl:choose>
+							<!-- auf wunsch im juli 2020 geändert -->
+							<xsl:text>. – </xsl:text>
 						</xsl:if>
+						<!-- pubPlace -->
 						<xsl:value-of select="t:fileDesc/t:publicationStmt/t:pubPlace"/><xsl:text> : </xsl:text>
-						<xsl:value-of select="t:fileDesc/t:publicationStmt/t:publisher"/>
+						<!-- publisher -->
+						<xsl:if test="t:fileDesc/t:publicationStmt/t:publisher">
+							<xsl:choose>
+								<xsl:when test="t:fileDesc/t:publicationStmt/t:publisher/t:span">
+									<xsl:value-of select="t:fileDesc/t:publicationStmt/t:publisher/t:span[@xml:lang ='en']"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="t:fileDesc/t:publicationStmt/t:publisher"/>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:if>
 						<xsl:text>, </xsl:text>
-						<xsl:value-of select="t:fileDesc/t:publicationStmt/t:date"/>
+						<!-- date -->
+						<xsl:choose>
+							<xsl:when test="t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang ='en']">
+								<xsl:value-of select="t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang ='en']"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="t:fileDesc/t:publicationStmt/t:date"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</szd:text>
 				</szd:PublicationStmt>
 			</xsl:if>
@@ -183,8 +225,14 @@
 				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
 				<szd:ProvenanceCharacteristic rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'PS')}">
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:ref">
-						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, '#')))}">
-							<xsl:value-of select="normalize-space(../t:desc)"/>
+						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, ':')))}">
+							<xsl:text>todo EN/DE</xsl:text>
+							
+							<!--<xsl:call-template name="printEnDe">
+								<xsl:with-param name="locale" select="../t:desc/@xml:lang"/>
+								<xsl:with-param name="path" select="../t:desc"/>
+							</xsl:call-template>-->
+							<!--<xsl:value-of select="normalize-space(../t:desc)"/>-->
 						</xsl:element>
 					</xsl:for-each>
 					<!--<!-\- Nachbesitzer -\->
@@ -195,7 +243,7 @@
 					</xsl:for-each>-->
 					<!-- Einband -->
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref">
-						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, '#')))}">
+						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, ':')))}">
 							<xsl:value-of select="normalize-space(..)"/>
 						</xsl:element>
 					</xsl:for-each>
@@ -206,17 +254,20 @@
 					<!-- stamp -->
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
 						<szd:stamp>
-							<xsl:value-of select="normalize-space(../t:desc)"/>
+							<xsl:call-template name="printEnDe">
+								<xsl:with-param name="locale"/>
+								<xsl:with-param name="path" select="../t:desc"/>
+							</xsl:call-template>
 						</szd:stamp>
 					</xsl:for-each>
 
 					<xsl:for-each select="t:fileDesc//t:ref/@target">
-						<szd:glossar rdf:resource="{.}"/>
+						<szd:glossar rdf:resource="{concat('https://gams.uni-graz.at/o:szd.glossar#', substring-after(., ':'))}"/>
 					</xsl:for-each>
 
 
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier/@corresp">
-						<szd:glossar rdf:resource="{.}"/>
+						<szd:glossar rdf:resource="{concat('https://gams.uni-graz.at/o:szd.glossar#', substring-after(., ':'))}"/>
 					</xsl:for-each>
 
 					<szd:text xml:lang='en'>
@@ -266,7 +317,7 @@
 				<szd:OriginalShelfmark rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'OS')}">
 					<!-- Originalsiganturen und Hausexemplar -->
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier//t:altIdentifier">
-						<xsl:element name="{concat('szd:',lower-case(substring-after(@corresp, '#')))}">
+						<xsl:element name="{concat('szd:',lower-case(substring-after(@corresp, ':')))}">
 							<xsl:value-of select="normalize-space(.)"/>
 						</xsl:element>
 					</xsl:for-each>
@@ -510,9 +561,31 @@
 		<xsl:template name="Standorte">
 			<xsl:for-each select="//t:listOrg/t:org">
 				<szd:Location rdf:about="{concat('https://gams.uni-graz.at/o:szd.standorte#', @xml:id)}">
-					<szd:name>
-						<xsl:value-of select="normalize-space(t:orgName)"/>
-					</szd:name>
+					<xsl:choose>
+						<xsl:when test="t:orgName/@xml:lang  = 'en'">
+							<szd:name xml:lang="en">
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'en'"/>
+									<xsl:with-param name="path" select="t:orgName"/>
+								</xsl:call-template>
+								<!---->
+							</szd:name>
+						</xsl:when>
+						<xsl:when test="t:orgName/@xml:lang  = 'de'">
+							<szd:name xml:lang="en">
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'de'"/>
+									<xsl:with-param name="path" select="t:orgName"/>
+								</xsl:call-template>
+							</szd:name>
+						</xsl:when>
+						<xsl:otherwise>
+							<szd:name>
+								<xsl:value-of select="normalize-space(t:orgName)"/>
+							</szd:name>
+						</xsl:otherwise>
+					</xsl:choose>
+
 					<xsl:if test="t:settlement">
 						<szd:settlement>
 							<xsl:value-of select="normalize-space(t:settlement)"/>
@@ -930,13 +1003,30 @@
 			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana">
 				<szd:location rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana}"/>
 			</xsl:when>
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref">
+				<xsl:choose>
+					<xsl:when test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref, 'SZDSTA')">
+						<szd:location rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref}"/>
+					</xsl:when>
+					<!-- it is a gnd @ref -->
+					<xsl:otherwise>
+						<xsl:call-template name="GetStandortelist">
+							<xsl:with-param name="Standort" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
+							<xsl:with-param name="Typ" select="'szd:location'"/>
+						</xsl:call-template>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+			</xsl:when>
 			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository">
 				<xsl:call-template name="GetStandortelist">
 					<xsl:with-param name="Standort" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
 					<xsl:with-param name="Typ" select="'szd:location'"/>
 				</xsl:call-template>
 			</xsl:when>
-			<xsl:otherwise/>
+			<xsl:otherwise>
+				<xsl:text>Error: in XPath: "t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"</xsl:text>
+			</xsl:otherwise>
 		</xsl:choose>
 
 		<!-- szd:signature -->
@@ -1320,13 +1410,24 @@
 			</szd:content>
 		</xsl:if>
 
-		<!-- szd:location -->
-		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
-			<xsl:call-template name="GetStandortelist">
-				<xsl:with-param name="Standort" select="."/>
-				<xsl:with-param name="Typ" select="'szd:location'"/>
-			</xsl:call-template>
-		</xsl:for-each>
+		<!-- szd:location  -->
+		<xsl:choose>
+			<xsl:when test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[1], 'unbekannt')">
+				<szd:location rdf:resource="https://gams.uni-graz.at/context:szd#unknown"/>
+			</xsl:when>
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
+				<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
+					<xsl:call-template name="GetStandortelist">
+						<xsl:with-param name="Standort" select="."/>
+						<xsl:with-param name="Typ" select="'szd:location'"/>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<szd:location rdf:resource="https://gams.uni-graz.at/context:szd#unknown"/>
+			</xsl:otherwise>
+		</xsl:choose>
+		
 
 		<!-- languagecode -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang">
@@ -1395,7 +1496,7 @@
 							</xsl:element>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:comment>huhu</xsl:comment>
+							<xsl:comment>Error: GetPersonlist</xsl:comment>
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
@@ -1559,10 +1660,26 @@
 			<xsl:when test="$PropertyTyp = 'data'">
 				<xsl:choose>
 					<!-- check xml:lang -->
-					<xsl:when test="$XPpath/@xml:lang">
+					<!-- ToDo: EN DE Binding -->
+					
+					<xsl:when test="$XPpath/@xml:lang = 'en'">
 						<xsl:element name="{$Property}">
-							<xsl:attribute name="xml:lang" select="$XPpath/@xml:lang"/>
-							<xsl:value-of select="normalize-space($XPpath)"/>
+							<xsl:attribute name="xml:lang" select="'en'"/>
+							<xsl:call-template name="printEnDe">
+								<xsl:with-param name="locale" select="$XPpath/@xml:lang"/>
+								<xsl:with-param name="path" select="$XPpath[@xml:lang = 'en']"/>
+							</xsl:call-template>
+							<!--<xsl:value-of select="normalize-space($XPpath)"/>-->
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="$XPpath/@xml:lang = 'de'">
+						<xsl:element name="{$Property}">
+							<xsl:attribute name="xml:lang" select="'de'"/>
+							<xsl:call-template name="printEnDe">
+								<xsl:with-param name="locale" select="$XPpath/@xml:lang"/>
+								<xsl:with-param name="path" select="$XPpath[@xml:lang = 'de']"/>
+							</xsl:call-template>
+							<!--<xsl:value-of select="normalize-space($XPpath)"/>-->
 						</xsl:element>
 					</xsl:when>
 					<xsl:otherwise>
@@ -1604,13 +1721,20 @@
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:if test="$EXTENT/t:measure[@type='page']">
-				<xsl:value-of select="$EXTENT/t:measure[@type='page']"/>
+				<xsl:choose>
+					<xsl:when test="$EXTENT/t:measure[@type='page']/t:span">
+						<xsl:value-of select="$EXTENT/t:measure[@type='page']/t:span[@xml:lang = $locale]"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$EXTENT/t:measure[@type='page']"/>
+					</xsl:otherwise>
+				</xsl:choose>
 				<xsl:text> </xsl:text>
 				<xsl:choose>
 					<xsl:when test="$EXTENT/t:measure[@type='page'] = '1'">
 						<xsl:choose>
 							<xsl:when test="$locale = 'en'">
-								<xsl:text>Page</xsl:text>
+								<xsl:text>page</xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:text>Seite</xsl:text>
@@ -1620,7 +1744,7 @@
 					<xsl:otherwise>
 						<xsl:choose>
 							<xsl:when test="$locale = 'en'">
-								<xsl:text>Pages</xsl:text>
+								<xsl:text>pages</xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:text>Seiten</xsl:text>
@@ -1653,7 +1777,7 @@
 					<xsl:otherwise>
 						<xsl:choose>
 							<xsl:when test="$locale = 'en'">
-								<xsl:text> Leaves </xsl:text>
+								<xsl:text> leaves </xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:text> Blatt </xsl:text>
@@ -1664,23 +1788,48 @@
 				<xsl:text> </xsl:text>
 			</xsl:if>
 			<!-- illustriert, Karte, Noten -->
+			<!-- <item><span xml:lang="de">illustriert</span><span xml:lang="en">illustrated</span></item>
+                      <item><span xml:lang="de">Karten</span><span xml:lang="en">maps</span></item> -->
 			<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='extent']/t:item">
 				<xsl:choose>
 					<xsl:when test="position() = last()">
-						<xsl:value-of select="."/>
+						<xsl:choose>
+							<xsl:when test="$locale = 'en'">
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'en'"/>
+									<xsl:with-param name="path" select="t:span"/>
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'de'"/>
+									<xsl:with-param name="path" select="t:span"/>
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
 						<xsl:text>. </xsl:text>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="."/><xsl:text>, </xsl:text>
+						<xsl:choose>
+							<xsl:when test="$locale = 'en'">
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'en'"/>
+									<xsl:with-param name="path" select="t:span"/>
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="printEnDe">
+									<xsl:with-param name="locale" select="'de'"/>
+									<xsl:with-param name="path" select="t:span"/>
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:text>, </xsl:text>
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
 			<xsl:text> </xsl:text>
 			<xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
-			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding">
-				<xsl:text>, </xsl:text>
-				<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding"/>
-			</xsl:if>
 		</szd:text>
 		</xsl:if>
 	</xsl:template>
@@ -1803,6 +1952,22 @@
 						</szd:provenance>
 					</xsl:otherwise>
 				</xsl:choose>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<!-- /////////////////////////////////////////////////////////// --> 
+	<!-- ///EN|DE/// -->
+	<!-- this template gets an xpath-selection as input and check if there is a xml:lang, than $locale, otherwise print without @xml:lang -->
+	<xsl:template name="printEnDe">
+		<xsl:param name="path"/>
+		<xsl:param name="locale"/>
+		<xsl:choose>
+			<xsl:when test="$path/@xml:lang">
+				<xsl:value-of select="normalize-space($path[@xml:lang = $locale][1])"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="normalize-space($path[1])"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>

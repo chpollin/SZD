@@ -18,6 +18,17 @@
     <xsl:include href="szd-static.xsl"/>
 	<xsl:include href="szd-Templates.xsl"/>
     <xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no"/>
+    
+    <!-- /// -->
+    <xsl:variable name="BIBLIOTHEK">
+        <xsl:copy-of select="document('/o:szd.bibliothek')"/>
+    </xsl:variable>
+    <xsl:variable name="MANUSKRIPTE">
+        <xsl:copy-of select="document('/o:szd.werke/TEI_SOURCE')"/>
+    </xsl:variable>
+    <xsl:variable name="LEBENSDOKUMENTE">
+        <xsl:copy-of select="document('/o:szd.lebensdokumente/TEI_SOURCE')"/>
+    </xsl:variable>
 
     <xsl:template name="content">
         <section class="card">
@@ -61,25 +72,12 @@
 				      </xsl:choose>
         	    </div>
         	</div>
+            <!-- //////////////////////////////////////////////////////////// -->
             <xsl:if test="//t:note[@type='footnote'][1]">
-                <div class="card-footer small">
-                    <h3 class="m-4">Referenzen</h3>
-                    <ol>
-                        <xsl:for-each select="//t:note[@type='footnote']">
-                            <li id="{generate-id()}">
-                                <xsl:apply-templates select="t:bibl"/>
-                            </li>
-                        </xsl:for-each>
-                    </ol>
-                </div>
+                <xsl:call-template name="createFootnote">
+                    <xsl:with-param name="locale" select="$locale"/>
+                </xsl:call-template>
             </xsl:if>
-        	<!-- weniger - mehr Button -->
-            <script>
-                $('a[data-toggle="collapse"]').click(function(){
-                $(this).text(function(i,old){
-                return old=='&#9650;' ?  '&#9660;' : '&#9650;';});
-                }); 
-            </script>
         </section>
     </xsl:template>
 
@@ -94,9 +92,12 @@
             <div class="collapse" id="{concat('viewdetails', generate-id(//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[2]))}">
                 <xsl:apply-templates select="//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[not(position() = 1)]"/>
             </div>
-            <a type="button" data-toggle="collapse" data-target="{concat('#viewdetails', generate-id(//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[2]))}" style="color:#C2A360; font-size: 30px;">
-                <xsl:text>&#9660;</xsl:text>
-            </a>
+            <xsl:if test="$PID = 'o:szd.thema.1'">
+                <a data-toggle="collapse" data-target="{concat('#viewdetails', generate-id(//t:body/t:div[@type = 'introduction'][@xml:lang = $local]/t:p[2]))}" style="color:#C2A360; font-size: 30px;">
+                    <span class="arrow"> <xsl:text>▼ </xsl:text></span>
+                 </a>
+            </xsl:if>
+            
         </div>
 	    
 	    <xsl:choose>
@@ -153,10 +154,17 @@
                     <xsl:when test="t:head/t:ref">
                         <a href="{t:head/t:ref}" target="_blank" title="To extern resource" class="text-uppercase">
                             <h3>
-                                <i18n:text>toexternresource</i18n:text>
                                 <!--ZUR EXTERNEN RESSOURCE--> 
+                                <xsl:choose>
+                                    <xsl:when test="$local = 'en'">
+                                        <xsl:text>FACSIMILE</xsl:text>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text>ZUM FAKSIMILE</xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                                 <xsl:text> </xsl:text>
-                                <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>
+                                <i class="fas fa-camera _icon ml-1"><xsl:text> </xsl:text></i>
                             </h3>
                         </a>
                     </xsl:when>
@@ -335,8 +343,15 @@
         <xsl:choose>
             <xsl:when test="@type = 'person'">
                 <!--<a href="{@ref}" target="_blank">-->
-                    <xsl:apply-templates></xsl:apply-templates>
+                    <xsl:apply-templates/>
                 <!--</a>-->
+            </xsl:when>
+            <xsl:when test="@type = 'location'">
+               <xsl:call-template name="LocationSearch">
+                   <xsl:with-param name="SZDSTA" select="substring-after(@ref, '#')"/>
+                   <xsl:with-param name="locale" select="$locale"/>
+                   <xsl:with-param name="text" select="."/>
+               </xsl:call-template>
             </xsl:when>
             <xsl:when test="@type = 'work'">
                 <a href="{@ref}" target="_blank">
@@ -356,7 +371,7 @@
     
     <!-- //////////////////////////////////////////////////////////// -->
     <xsl:template match="t:figure">
-        <figure class="text-center">
+        <figure class="text-center pt-4 pb-3">
             <xsl:choose>
                 <xsl:when test="t:figDesc/t:ref">
                     <a href="{t:figDesc/t:ref/@target}" title="{t:figDesc/t:ref}" target="_blank">
@@ -373,12 +388,12 @@
                         <xsl:choose>
                             <xsl:when test="t:graphic/@style">
                                 <xsl:attribute name="class">
-                                    <xsl:value-of select="concat('figure-img img-fluid shadow-sm', @style)"/>
+                                    <xsl:value-of select="concat('figure-img img-fluid', @style)"/>
                                 </xsl:attribute>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:attribute name="class">
-                                    <xsl:value-of select="'figure-img img-fluid w-50 mx-auto shadow-sm'"/>
+                                    <xsl:value-of select="'figure-img img-fluid w-50 mx-auto'"/>
                                 </xsl:attribute>
                             </xsl:otherwise>
                         </xsl:choose>

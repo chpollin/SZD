@@ -52,7 +52,7 @@
                         <xsl:for-each select="current-group()">
                             <div class="list-group-item mb-1 py-0" id="{@xml:id}">
                                 <div class="row">
-                                    <span class="col-8">
+                                    <span class="col-10">
                                         <h4 class="text-left">
                                             <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
                                             <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
@@ -109,7 +109,7 @@
                                         </h4>
                                         <xsl:text> </xsl:text>
                                     </span>
-                                    <span class="col">
+                                    <span class="col-2 text-center">
                                         <xsl:text> </xsl:text>
                                         <!-- if GND @ref -->
                                         <xsl:if test="contains(t:persName/@ref, 'd-nb.info/gnd')">

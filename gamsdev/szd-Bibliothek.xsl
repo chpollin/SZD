@@ -49,7 +49,7 @@
         	</xsl:call-template>
             
             <!-- /// PAGE-CONTENT /// -->
-            <article class="card-body" id="content">	
+            <div class="card-body" id="content">	
                 <!-- select every biblFull and group all SZDPER-IDs of all authors, first editors (if no author), first composer (if no author)-->
                 <xsl:for-each-group select="$biblFull" group-by="t:fileDesc/t:titleStmt/t:author[not(@role)][1]/@ref | 
                     t:fileDesc/t:titleStmt/t:author[@role = 'composer'][not(preceding-sibling::t:author[not(@role)])][1]/@ref |
@@ -138,7 +138,7 @@
         			        </div>
             		    </xsl:for-each>
         			 </div>
-            </article>
+            </div>
         </section>
 
     </xsl:template>

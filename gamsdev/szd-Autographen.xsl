@@ -32,10 +32,10 @@
                     <xsl:with-param name="Title">
                         <xsl:choose>
                             <xsl:when test="$locale = 'en'">
-                                <xsl:text>Autographs</xsl:text>
+                                <xsl:text>Autograph Collection</xsl:text>
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:text>Autographen</xsl:text>
+                                <xsl:text>Autographensammlung</xsl:text>
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:with-param>
@@ -43,7 +43,6 @@
                     <xsl:with-param name="Content" select="$biblFull/t:fileDesc/t:titleStmt/t:author[1]/t:persName/t:surname | $biblFull/t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]/t:persName/t:surname"/>
                     <xsl:with-param name="PID" select="$PID"/>
                     <xsl:with-param name="locale" select="$locale"/>
-                    <xsl:with-param name="GlossarRef" select="'AutographCollection'"/>
                 </xsl:call-template>
                 
                 <!-- /// PAGE-CONTENT /// -->

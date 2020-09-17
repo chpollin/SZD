@@ -78,14 +78,15 @@
                         <xsl:with-param name="GlossarRef">
                             <xsl:choose>
                                 <xsl:when test="$PID = 'o:szd.lebensdokumente'">
-                                    <xsl:choose>
+                                    <xsl:text>PersonalDocuments</xsl:text>
+                                    <!--<xsl:choose>
                                         <xsl:when test="$locale = 'en'">
                                             <xsl:text>PersonalDocuments</xsl:text>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:text>Lebensdokumente</xsl:text>
                                         </xsl:otherwise>
-                                    </xsl:choose>
+                                    </xsl:choose>-->
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:text>Works</xsl:text>
@@ -95,7 +96,7 @@
                     </xsl:call-template>
 
                     <!-- /// PAGE-CONTENT /// -->
-                    <article class="card-body" id="content">
+                    <div id="content">
                         
                         <!-- for each bibFull group by @type='Ordnungskategorie' (like 'Rede') -->
                         <xsl:for-each-group select="//t:body/t:listBibl/t:biblFull" group-by="t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang=$locale]">
@@ -137,7 +138,7 @@
                                                       	    <xsl:when test="not(t:profileDesc/t:textClass/t:keywords/t:term[@type='classification'][@xml:lang='de'] = 'Werknotizen')">
                                                       			<a data-toggle="collapse" href="{concat('#c' , generate-id())}">
                                                       			    <span class="arrow">
-                                                      			       <xsl:text>&#9660; </xsl:text>
+                                                      			       <xsl:text>▼ </xsl:text>
                                                       			    </span>
                                                       			    <span class="font-italic">
                                                       			        <!-- TITLE -->
@@ -186,14 +187,21 @@
                                                        		   </xsl:if>
                                                       	        <!-- if the object is an enclosures -->
                                                       	        <xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@ana='szdg:Enclosures']">
-                                                      	            <xsl:text> [Beilage]</xsl:text>
+                                                      	            <xsl:choose>
+                                                      	                <xsl:when test="$locale  = 'en'">
+                                                      	                    <xsl:text> [Enclosures]</xsl:text>
+                                                      	                </xsl:when>
+                                                      	                <xsl:otherwise>
+                                                      	                    <xsl:text> [Beilage]</xsl:text>
+                                                      	                </xsl:otherwise>
+                                                      	            </xsl:choose>
                                                       	        </xsl:if>
                                                       		</xsl:when>
                                                       		<!-- WERKNOTIZEN -->
                                                       		<xsl:otherwise>
                                                       			<a data-toggle="collapse" href="{concat('#c' , generate-id())}">
                                                       			    <span class="arrow">
-                                                      			        <xsl:text>&#9660; </xsl:text>
+                                                      			        <xsl:text>▼ </xsl:text>
                                                       			    </span>
                                                           			<span class="font-italic">
                                                                 	  <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[not(@type)][@xml:lang = $locale]"/>
@@ -218,23 +226,24 @@
                                                         <xsl:variable name="externIIIFManifest" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[@type='extern_iiif']/t:idno[@type='manifest']"/>
                                                         <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='subject']"/>
                                                         <!-- scan, extern, thema button -->
-                                                        <span class="col-1">
+                                                    <span class="col-2 text-center">
                                                             <xsl:choose>
                                                                 <xsl:when test="$externIIIFManifest">
                                                                     <!-- http://gams.uni-graz.at/o:szd.externiiif/sdef:IIIF/getMirador?manifest=https://iiif.nli.org.il/IIIFv21/DOCID/NNL_ARCHIVE_AL21256393780005171/manifest  -->
                                                                     <xsl:variable name="externIIIFObject" select="concat('/', $PID, '/sdef:IIIF/getMirador?manifest=', $externIIIFManifest)"/>
-                                                                    <a href="{$externIIIFObject}" target="_blank">
-                                                                        <xsl:choose>
-                                                                            <xsl:when test="$locale = 'en'">
-                                                                                <xsl:attribute name="title" select="'Access extern digital facsimile'"/>
-                                                                            </xsl:when>
-                                                                            <xsl:otherwise>
-                                                                                <xsl:attribute name="title" select="'Zum externen digitalen Faksimile'"/>
-                                                                            </xsl:otherwise>
-                                                                        </xsl:choose>
-                                                                        <i class="fas fa-camera _icon" style="color: #631a34;"><xsl:text> </xsl:text></i>
-                                                                    </a>
-                                                                    <xsl:text> </xsl:text>
+                                                                     <a href="{$externIIIFObject}" target="_blank">
+                                                                         <xsl:choose>
+                                                                             <xsl:when test="$locale = 'en'">
+                                                                                 <xsl:attribute name="title" select="'Access extern digital facsimile'"/>
+                                                                             </xsl:when>
+                                                                             <xsl:otherwise>
+                                                                                 <xsl:attribute name="title" select="'Zum externen digitalen Faksimile'"/>
+                                                                             </xsl:otherwise>
+                                                                         </xsl:choose>
+                                                                         <xsl:call-template name="printCameraIcon">
+                                                                             <xsl:with-param name="locale" select="$locale"/>
+                                                                         </xsl:call-template>
+                                                                     </a>                                                                    
                                                                 </xsl:when>
                                                                 <xsl:when test="$currentPID">
                                                                     <xsl:call-template name="createViewerHref">
@@ -245,7 +254,7 @@
                                                                 <xsl:otherwise/>
                                                             </xsl:choose>
                                                             <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']">
-                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']}" target="_blank"  style="color: #631a34;">
+                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']}" target="_blank"  style="color: #631a34;" class="ml-1">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
                                                                             <xsl:attribute name="title" select="'Access external resource'"/>
@@ -254,12 +263,15 @@
                                                                             <xsl:attribute name="title" select="'Zur externen Ressource'"/>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
-                                                                    <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>
+                                                                   <!-- <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>-->
+                                                                    <xsl:call-template name="printCameraIcon">
+                                                                        <xsl:with-param name="locale" select="$locale"/>
+                                                                    </xsl:call-template>
                                                                 </a>
                                                                 <xsl:text> </xsl:text>
                                                             </xsl:if>
                                                             <xsl:if test="$currentCollection">
-                                                                <a href="{concat('/', $currentCollection, '/sdef:TEI/get?locale=', $locale)}" target="_blank" style="color: #631a34;">
+                                                                <a href="{concat('/', $currentCollection, '/sdef:TEI/get?locale=', $locale)}" target="_blank" style="color: #631a34;" class="ml-1">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
                                                                             <xsl:attribute name="title" select="'Access subject page'"/>
@@ -299,7 +311,7 @@
                             </xsl:for-each-group>
                            </div>    
                          </xsl:for-each-group>                  
-                     </article>
+                     </div>
         </section>
     </xsl:template>
     

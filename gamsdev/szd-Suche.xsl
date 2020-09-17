@@ -88,7 +88,11 @@
                                             <xsl:text>: </xsl:text>
                                         </span>
                                         <span class="col-6">
-                                            <xsl:value-of select="$RESULT_SET[1]/s:qs"/>
+                                            <!-- extracts SZDSTA from URI; gets orgName from $StandorteList and prints EN|DE -->
+                                            <xsl:call-template name="printEnDe">
+                                                <xsl:with-param name="locale" select="$locale"/>
+                                                <xsl:with-param name="path" select="$StandorteList//t:org[@xml:id = substring-after($RESULT_SET[1]/s:lo/@uri, '#')]/t:orgName"/>
+                                            </xsl:call-template>
                                         </span>
                                     </xsl:when>
                                     <!--<xsl:when test="contains($RESULT_SET[1]/s:query/@uri, 'SZDPUB')">
@@ -101,12 +105,20 @@
                                         </span>
                                     </xsl:when>-->
                                     <xsl:when test="contains($RESULT_SET[1]/s:query/@uri, 'o:szd.glossar')">
+                                        <!-- -->
+                                        <xsl:variable name="GLOSSAR">
+                                            <xsl:copy-of select="document('/o:szd.glossar/ONTOLOGY')"/>
+                                        </xsl:variable>
+                                        <xsl:variable name="Query_URI" select="$RESULT_SET[1]/s:query/@uri"/>
                                         <span class="font-weight-bold text-uppercase col-6">
                                           <i18n:text>searchquery_glossary</i18n:text>
                                           <xsl:text>: </xsl:text>
                                         </span>
                                         <span class="col-6">
-                                            <xsl:value-of select="$RESULT_SET[1]/s:qs"/>
+                                            <xsl:call-template name="printEnDe">
+                                                <xsl:with-param name="locale" select="$locale"/>
+                                                <xsl:with-param name="path" select="$GLOSSAR//*:Concept[@*:about = string($Query_URI)]/*:prefLabel"/>
+                                            </xsl:call-template>
                                         </span>
                                     </xsl:when>
                                     <xsl:otherwise>
@@ -185,14 +197,14 @@
                                                 <i18n:text>all</i18n:text>
                                             </label>
                                         </div>               
-                                       <!-- <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
+                                        <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
                                             <div class="form-group mr-5">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
                                                     <i18n:text>autograph</i18n:text>
                                                 </label>
                                             </div>
-                                        </xsl:if>-->
+                                        </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.bibliothek')">
                                             <div class="form-group mr-5">
                                                 <label class="text-uppercase small">
@@ -929,14 +941,17 @@
                                         <i18n:text>currentlocation</i18n:text>
                                     </td>
                                     <td class="col-9">
-                                        <xsl:call-template name="GetStandortList">
-                                            <xsl:with-param name="Standort" select="substring-after(s:lo/@uri, '#')"/>
-                                        </xsl:call-template>
-                                        <xsl:if test="s:si">
+                                        <xsl:if test="s:lo">
+                                            <xsl:call-template name="LocationSearch">
+                                                <xsl:with-param name="locale" select="$locale"/>
+                                                <xsl:with-param name="SZDSTA" select="substring-after(s:lo/@uri, '#')"/>
+                                            </xsl:call-template>
+                                            <xsl:if test="s:si">
+                                                <br/>
+                                                <xsl:value-of select="s:si"/>
+                                            </xsl:if>
                                             <br/>
-                                            <xsl:value-of select="s:si"/>
                                         </xsl:if>
-                                        <br/>
                                         <a href="{s:re/@uri}">
                                             <xsl:value-of select="s:re/@uri"/>
                                         </a>

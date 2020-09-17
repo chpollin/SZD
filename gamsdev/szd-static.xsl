@@ -60,14 +60,12 @@
 	<!-- project-specific variables -->
 	<xsl:variable name="server"></xsl:variable>
 	<!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
-     <xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
+    <xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
+	<!-- GAMS -->
 	<!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
 	
 	<xsl:variable name="projectTitle">
 		<xsl:text>Stefan Zweig digital</xsl:text>
-	</xsl:variable>
-	<xsl:variable name="subTitle">
-		<xsl:text>Alpha-Version</xsl:text>
 	</xsl:variable>
 
 	<!-- whole project .css -->
@@ -154,16 +152,15 @@
 				
 				
 				<!-- jQuery core JavaScript ================================================== -->
-				<script src="/lib/2.0/jquery-3.4.1.min.js"><xsl:text> </xsl:text></script>
+				<script src="/lib/2.0/jquery-3.5.1.min.js"><xsl:text> </xsl:text></script>
 
 				<!-- Bootstrap core JavaScript ================================================== -->
 				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
-				<!--<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>-->
+				<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>
 				<script src="/lib/2.0/bootstrap-4.3.1-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
 				<!-- projectspecific .js ================================================== -->
 				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
 				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
-				<!-- SCROLLDOWN -->
 				<!-- for fancybox in o:szd.glossar -->
 				<script>
 					$(document).ready(function(){
@@ -210,7 +207,6 @@
 											<a class="dropdown-item text-uppercase" href="/o:szd.lebensdokumente/sdef:TEI/get?locale={$locale}">
 												<i18n:text>personaldocument</i18n:text>
 											</a>
-											<!--<a class="dropdown-item" href="/o:szd.korrespodenzen"><xsl:text>KORRESPONDENZEN</xsl:text></a>-->
 										</div>
 									</li>
 									<li class="nav-item dropdown">
@@ -231,13 +227,16 @@
 											<i18n:text>subjects</i18n:text>
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item text-uppercase" href="/o:szd.thema.1/sdef:TEI/get?locale={$locale}"><xsl:text>Marie Antoinette</xsl:text></a>
+											<a class="dropdown-item text-uppercase" href="/o:szd.thema.4/sdef:TEI/get?locale={$locale}">
+												<xsl:value-of select="if ($locale = 'en') then ('Stefan Zweigs Autograph Collection') else ('Stefan Zweigs Autographensammlung')"/>
+											</a>
+											<a class="dropdown-item text-uppercase" href="/o:szd.thema.2/sdef:TEI/get?locale={$locale}">
+												<xsl:value-of select="if ($locale = 'en') then ('Stefan Zweig at work') else ('Wie Stefan Zweig schreibt')"/>
+											</a>
 											<a class="dropdown-item text-uppercase" href="/o:szd.thema.3/sdef:TEI/get?locale={$locale}">
 												<xsl:value-of select="if ($locale = 'en') then ('Stefan Zweigs Libraries') else ('Stefan Zweigs Bibliotheken')"/>
 											</a>
-											<a class="dropdown-item text-uppercase" href="/o:szd.thema.2/sdef:TEI/get?locale={$locale}">
-												<xsl:text>Textgenese: </xsl:text><i><xsl:text>Das erste Wort über den Ozean</xsl:text></i>
-											</a>
+											<a class="dropdown-item text-uppercase" href="/o:szd.thema.1/sdef:TEI/get?locale={$locale}"><xsl:text>Marie Antoinette</xsl:text></a>
 										</div>
 									</li>
 									<li class="nav-item">
@@ -267,7 +266,7 @@
 										</div>
 									</li>
 									<li class="nav-item">
-										<a class="navtext text-uppercase" href="/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en">
+										<a class="navtext text-uppercase" href="{concat($server, '/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=',$locale)}">
 											<i18n:text>glossary</i18n:text>
 										</a>
 									</li>
@@ -332,8 +331,8 @@
 									</li>
 									<!-- ////////// -->
 									<!-- DATABASKET -->
-									<li class="nav-item">
-										<a class="navtext" href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}" style="text-decoration:none;">
+									<li class="nav-item d-none d-sm-block pt-3 pl-4">
+										<a href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=databasket&amp;locale=', $locale)}" style="text-decoration:none;">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:attribute name="title"><xsl:text>Objects can be saved to the data cart and exported</xsl:text></xsl:attribute>
@@ -370,17 +369,18 @@
 						</div>
 					</nav>
 					<!--  -->
-					<script src="{concat($server, $gamsdev,'/js/scrolldown.js')}"><xsl:text> </xsl:text></script>
-					<script src="{concat($server, $gamsdev,'/js/scrolldown_search.js')}"><xsl:text> </xsl:text></script>
+					<!--<script src="{concat($server, $gamsdev,'/js/scrolldown.js')}"><xsl:text> </xsl:text></script>
+					<script src="{concat($server, $gamsdev,'/js/scrolldown_search.js')}"><xsl:text> </xsl:text></script>-->
+					
 				</header>
 				
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///CONTENT/// -->
 				<main class="container">
-					<!-- <choose> checks actual 'position' on the page -->
+					<!-- <choose> checks current 'position' on the page -->
 					<xsl:choose>
 						<xsl:when test="$mode = '' and $cid = 'context:szd'">
-						<xsl:text>exception szd-static.xsl</xsl:text>
+							<!--<xsl:text>exception szd-static.xsl</xsl:text>-->
 						</xsl:when>
 						<!-- //////////////////////////////////////////////////////////// -->
 						<!-- /// /// -->
@@ -420,23 +420,23 @@
 							<div class="col-12 text-center">
 								<div class="row">
 									<div class="col-sm-3">
-										<a target="_blank">
-											<xsl:call-template name="getURL_EN_DE">
-												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=72&amp;L=1'"/>
-												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at/index.php?id=72'"/>
-											</xsl:call-template>
-											<img class="footer_img"   style="max-width: 60%;"
-												src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
-												alt="Logo LAS"/></a>
+										<a class="text-center text-uppercase" target="_blank">
+											<xsl:choose>
+												<xsl:when test="$locale = 'en'">
+													<xsl:text>PROJECT MANAGEMENT</xsl:text>
+												</xsl:when>
+												<xsl:otherwise>PROJEKTTRÄGER</xsl:otherwise>
+											</xsl:choose>
+										</a>
 									</div>
 									<div class="col-sm-3">
-										<a href=""
-											target="_blank">
-											<xsl:call-template name="getURL_EN_DE">
-												<xsl:with-param name="URL_EN" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.en'"/>
-												<xsl:with-param name="URL_DE" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.de'"/>
-											</xsl:call-template>
-											<img class="footer_img" src="/templates/img/by-nc.png" alt="Lizenz" style="max-width: 40%;margin-top: 3%;"/>
+										<a href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank" class="text-uppercase text-center mt-5">
+											<xsl:choose>
+												<xsl:when test="$locale = 'en'">
+													<xsl:text>Site notice</xsl:text>
+												</xsl:when>
+												<xsl:otherwise>Impressum</xsl:otherwise>
+											</xsl:choose>
 										</a>
 									</div>
 									<div class="col-sm-3">
@@ -448,7 +448,6 @@
 												<xsl:otherwise>Projektpartner</xsl:otherwise>
 											</xsl:choose>
 										</a>
-										
 									</div>
 									<div class="col-sm-3">
 										<a href="http://www.fotohof.at" target="_blank" >
@@ -460,19 +459,19 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<xsl:text> </xsl:text>
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=72&amp;L=1'"/>
+												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at/index.php?id=72'"/>
+											</xsl:call-template>
+											<img class="footer_img"   style="max-width: 65%;"
+												src="{concat($server, $gamsdev, '/img/LAS_Logo.gif')}"
+												alt="Logo LAS"/></a>
 									</div>
 									<div class="col-sm-3">
-										<xsl:text></xsl:text>
-										<a href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank" class="text-uppercase text-center mt-5">
-											<xsl:choose>
-												<xsl:when test="$locale = 'en'">
-													<xsl:text>Site notice</xsl:text>
-												</xsl:when>
-												<xsl:otherwise>Impressum</xsl:otherwise>
-											</xsl:choose>
+										<a href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank" class="text-uppercase text-center mt-5">
+											<i18n:text>privacy</i18n:text>
 										</a>
-										
 									</div>
 									<div class="col-sm-3">
 										<a target="_blank">
@@ -500,13 +499,18 @@
 												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=52&amp;L=1'"/>
 												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at'"/>
 											</xsl:call-template>
-											<img class="footer_img"   style="max-width: 60%;"
-												src="https://www.uni-salzburg.at/fileadmin/oracle_file_imports/553397.JPG"
-												alt="Logo Universität Salzburg"/></a>
+											<img class="footer_img"   style="max-width: 65%;"
+												src="{concat($server, $gamsdev, '/img/uni_salzburg.jpg')}"
+												alt="Logo Universität Salzburg"/>
+										</a>
 									</div>
 									<div class="col-sm-3">
-										<a href="http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale={$locale}"  target="_blank" class="text-uppercase text-center mt-5">
-											<i18n:text>privacy</i18n:text>
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.en'"/>
+												<xsl:with-param name="URL_DE" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.de'"/>
+											</xsl:call-template>
+											<img class="footer_img" src="/templates/img/by.png" alt="Lizenz" style="max-width: 40%;margin-top: 3%;"/>
 										</a>
 									</div>
 									<div class="col-sm-3">
@@ -515,7 +519,7 @@
 												<xsl:with-param name="URL_EN" select="'https://informationsmodellierung.uni-graz.at/en/'"/>
 												<xsl:with-param name="URL_DE" select="'https://informationsmodellierung.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img"  style="max-width: 20%;margin-top:3%"
+											<img class="footer_img"  style="max-width: 22%;margin-top:6%"
 												src="/templates/img/ZIM_blau.png"
 												alt="{$zim-acdh}"/>
 										</a>
@@ -525,7 +529,7 @@
 												<xsl:with-param name="URL_EN" select="'https://www.uni-graz.at/en/'"/>
 												<xsl:with-param name="URL_DE" select="'https://www.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 20%;margin-top:3%" 
+											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 22%;margin-top:6%" 
 												title="Universität Graz" alt="Logo Uni Graz"/>
 											<xsl:text> </xsl:text>
 										</a>
@@ -539,34 +543,6 @@
 										</a>
 									</div>
 								</div>
-								
-							
-							<!--	<div class="col-sm-3 text-center">
-									
-										
-										<br/>
-								
-								</div>
-								<div class="col-sm-3">
-									
-									<span class="row">
-									
-									</span>
-									<span class="row">
-										<span class="col-sm-6">
-											
-										</span>
-										<xsl:text> </xsl:text>
-										<span class="col-sm-6">
-											
-										</span>
-									</span>
-									
-								</div>
-								<div class="col-sm-3">
-									
-									
-								</div>-->
 							</div>
 						
 						</div>
@@ -574,29 +550,28 @@
 						
 					</div>
 				</footer>
-				<!-- switches <arrow ▲ down to up on collapse -->
-				<script>
-					$('a[data-toggle="collapse"]').click(function(){
-					$(this).find("span.arrow").text(function(i,old){
-					return old=='&#9660; ' ?  '&#9650; ' : '&#9660; ';
-					});
-					}); 
-				</script>
-				<script>
+				<!--<script>
 					window.onload = function () {
 						var hash = window.location.hash.substr(1);
-						<!--var substring1 = 'SZDMSK';
+						<!-\-var substring1 = 'SZDMSK';
 						var substring2 = "SZDBIB";
 						var substring3 = "SZDLEB";
 						var substring3 = "SZDAUT";
 						if(hash.includes(substring1) || hash.includes(substring2) || hash.includes(substring3))
-						{-->
+						{-\->
 					    if(location.hash){
 							location.hash = "#" + hash;
 							window.scrollBy(0, -250);
 							$(document.getElementById(hash).getElementsByClassName("collapse")).collapse() ;}
 					}
-				</script>
+				</script>-->
+				<!--<script src="{concat($server, $gamsdev,'/js/gamsTemplate.js')}"><xsl:text> </xsl:text></script>-->
+				<!--<script src="https://glossa.uni-graz.at/gamsdev/stoffse/test/gams.js"><xsl:text> </xsl:text></script>
+				
+				<script>
+					gamsJs.url.alignHashNavAwareOnLoad();
+				</script>-->
+				<script src="{concat($server, $gamsdev,'/js/szd.js')}"><xsl:text> </xsl:text></script>
 			</body>
 		</html>
 	</xsl:template>
@@ -663,7 +638,15 @@
 
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:p">
-		<p class="card-text"><xsl:apply-templates></xsl:apply-templates></p>
+		<xsl:if test="@style = 'horizontal'">
+			<hr/>
+		</xsl:if>
+		<p class="card-text">
+			<xsl:if test="@style = 'center'">
+				<xsl:attribute name="class" select="'text-center'"/>
+			</xsl:if>
+			<xsl:apply-templates/>
+		</p>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
@@ -682,6 +665,11 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style='superscript']">
+		<sup><xsl:apply-templates></xsl:apply-templates></sup>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@style='bold']">
 		<strong><xsl:apply-templates></xsl:apply-templates></strong>
 	</xsl:template>
@@ -689,6 +677,16 @@
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@style='underline']">
 		<u><xsl:apply-templates></xsl:apply-templates></u>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style='preprint']">
+		<span style="font-family: 'Courier', monospace;">
+			<xsl:if test="t:note">
+				<xsl:attribute name="title" select="normalize-space(t:note)"/>
+			</xsl:if>
+			<xsl:apply-templates/>
+		</span>
 	</xsl:template>
 		
 	<!-- //////////////////////////////////////////////////////////// -->
@@ -698,12 +696,81 @@
 	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:del[@rend='strikethrough']">
-		<strike><xsl:apply-templates></xsl:apply-templates></strike>
+		<strike>
+			<xsl:if test="t:note">
+				<xsl:attribute name="title" select="'Streichung'"/>
+			</xsl:if>
+			<xsl:apply-templates/></strike>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:add">
+		<span class="text-secondary">
+			<xsl:if test="@place">
+					<xsl:choose>
+						<xsl:when test="@place = 'above'">
+							<xsl:attribute name="title">
+								<xsl:text>Einfügung über der Zeile</xsl:text>
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="@place = 'below'">
+							<xsl:attribute name="title">
+								<xsl:text>Einfügung unter der Zeile</xsl:text>
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="@place = 'pasteover'">
+							<xsl:attribute name="title">
+								<xsl:text>Über den ursprünglichen Text geschrieben</xsl:text>
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise/>
+					</xsl:choose>		
+			</xsl:if>
+			<xsl:apply-templates/>
+			<xsl:if test="@place = 'inline'">
+				<i class="fa fa-info-circle info_icon" title="Einfügung innerhalb der Zeile">
+					<xsl:text> </xsl:text>
+				</i>
+			</xsl:if>
+		</span>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:sic">
+		<span><xsl:apply-templates/><xsl:text> [sic] </xsl:text></span>
+	</xsl:template>
+	
+	<!--<xsl:template match="t:hi[@style='text-secondary']">
+		<xsl:apply-templates/>
+	</xsl:template>-->
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@rend = 'mark']">
+		<mark><xsl:apply-templates></xsl:apply-templates></mark>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:hi[@style = 'color']">
+		<span class="color"><xsl:apply-templates></xsl:apply-templates></span>
+	</xsl:template>
+	
+	
+	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:ref[@target]">
-		<a href="{@target}" target="_blank"><xsl:apply-templates></xsl:apply-templates></a>
+		<a target="_blank">
+			<xsl:choose>
+				<xsl:when test="@type ='issue'">
+					<xsl:attribute name="href" select="concat(@target, '/sdef:TEI/get?locale=', $locale)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="href" select="@target"/>
+				</xsl:otherwise>
+			</xsl:choose>
+			<xsl:if test="@style='italic'">
+				<xsl:attribute name="class" select="'font-italic'"/>
+			</xsl:if>
+			<xsl:apply-templates></xsl:apply-templates>
+		</a>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
@@ -711,7 +778,7 @@
 	<xsl:template match="t:span[@type='href']">
 		<xsl:choose>
 			<xsl:when test="contains(@target, 'mailto:')">
-				<a href="{concat('/',@target)}">
+				<a href="{@target}">
 					<xsl:apply-templates/>
 				</a>
 			</xsl:when>
@@ -762,8 +829,5 @@
 			</xsl:choose>
 		</span>
 	</xsl:template>
-	
 
-	
-	
 </xsl:stylesheet>
