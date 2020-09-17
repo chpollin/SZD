@@ -76,6 +76,8 @@
 
 ## [Library](https://github.com/chpollin/SZD/tree/master/data/Library), SZDBIB
 
+ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
+
 ```xml
 <biblFull xml:id="SZDBIB.721">
     <fileDesc>
@@ -186,6 +188,8 @@
 
 
 ## [PersonalDocument](https://github.com/chpollin/SZD/tree/master/data/PersonalDocument), SZDLEB
+
+- ana="szdg:WritingMaterial" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
 
 ```xml
 <biblFull xml:id="SZDLEB.1">
@@ -319,11 +323,6 @@
                 <term type="classification" xml:lang="en">Diaries</term>
             </keywords>
         </textClass>
-        <textClass>
-            <keywords scheme="cirilo:normalizedPlaceNames">
-                <list/>
-            </keywords>
-        </textClass>
     </profileDesc>
 </biblFull>
 ```
@@ -331,6 +330,8 @@
 
 
 ## [Work](https://github.com/chpollin/SZD/tree/master/data/Work), SZDMSK
+
+- ana="szdg:WritingMaterial" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
 
 ```xml
 <biblFull xml:id="SZDMSK.2">
@@ -443,11 +444,6 @@
             <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
-            </keywords>
-        </textClass>
-        <textClass>
-            <keywords scheme="cirilo:normalizedPlaceNames">
-                <list/>
             </keywords>
         </textClass>
     </profileDesc>
