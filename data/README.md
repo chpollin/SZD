@@ -1,11 +1,5 @@
-# SZD - Datasets
-
-
+# SZD - Data
 ## [Autograph](https://github.com/chpollin/SZD/tree/master/data/Autograph), SZDAUT
-
-Autograph Collection
-
-XML/TEI - example encoding
 
 ```xml
 <biblFull xml:id="SZDAUT.1">
