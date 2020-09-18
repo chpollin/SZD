@@ -1,7 +1,7 @@
 # gamsdev
 
 ### szd-static
-* defines header, body and footer. is included in all xslt, which create html
+* defines header, body and footer. is included in all xslt for webdev
 * JS and CSS
 * icons - img
 * meta tags
@@ -12,10 +12,10 @@
 
 ### szd-Templates
 * contains templates that are reused in different xslt (like print EN/DE)
+* is inclued in most of the xslt
 
 ### szd-TORDF
 * extracts semantic structures from TEI-Files and transforms it to RDF
-* 
 
 ### szd-
 
@@ -37,5 +37,5 @@ this templates have a primary data stream (https://github.com/chpollin/SZD/tree/
 * szd-Collection
 * szd-tei-hssf (Excel export for TEI data)
 * szd-TOTEI
-* szd-Personenliste  (SZDPUB)
+* szd-Publikationenliste  (SZDPUB)
 

@@ -185,8 +185,6 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 </biblFull>
 ```
 
-
-
 ## [PersonalDocument](https://github.com/chpollin/SZD/tree/master/data/PersonalDocument), SZDLEB, https://stefanzweig.digital/o:szd.werke
 
 - ana="szdg:WritingMaterial" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
@@ -326,8 +324,6 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
     </profileDesc>
 </biblFull>
 ```
-
-
 
 ## [Work](https://github.com/chpollin/SZD/tree/master/data/Work), SZDMSK, https://stefanzweig.digital/o:szd.lebensdokumente
 
@@ -509,12 +505,14 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 
 ## [Issue](https://github.com/chpollin/SZD/tree/master/data/Issue)
 
-+ http://gams.uni-graz.at/o:szd.thema.1
-+ http://gams.uni-graz.at/o:szd.thema.2
-+ http://gams.uni-graz.at/o:szd.thema.3
-+ http://gams.uni-graz.at/o:szd.thema.4
++ http://gams.uni-graz.at/o:szd.thema.1, [MarieAntoinette](https://github.com/chpollin/SZD/tree/master/data/Issue/MarieAntoinette)
++ http://gams.uni-graz.at/o:szd.thema.2, [Textgenese](https://github.com/chpollin/SZD/tree/master/data/Issue/Textgenese)
++ http://gams.uni-graz.at/o:szd.thema.3, [Bibliothek](https://github.com/chpollin/SZD/tree/master/data/Issue/Bibliothek)
++ http://gams.uni-graz.at/o:szd.thema.4, [Autographen](https://github.com/chpollin/SZD/tree/master/data/Issue/Autographen)
 
-```xml
-
-```
+- @type = col-1 | col-2 - defines grid of page
+- <name ref="#SZDPER.1273" type="person">Schnitzler</name> - person search
+- facs="o:szd.6835" reference to digital facsimile
+- ref="#SZDMSK.67" reference to szd:Work 
+- <note type="footnote"> - references at bottom of page
 
