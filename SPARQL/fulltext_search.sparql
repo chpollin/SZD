@@ -3,12 +3,14 @@ PREFIX bds:<http://www.bigdata.com/rdf/search#>
 PREFIX gams:<https://gams.uni-graz.at/o:gams-ontology#>
 
 #author: Christopher Pollin
-#selects 
-#param: 
+#selects: all resources containing the sting (param) in gams:textualContent data property
+#param: string
 #return: 
 
-SELECT ?re  ?f ?si ?t ?d ?s ?ot ?fed ?sed ?fco ?sco ?oti ?se ?pi ?fap ?sap
-       ?h ?co ?la ?ex ?ac ?pr ?lo ?en ?bi ?ii ?am ?n ?i ?pp ?pc ?oc ?ps
+#  ?pi ?se ?ac ?ot ?i ?ii ?n
+
+SELECT ?re  ?f ?si ?t ?d ?s  ?fed ?sed ?fco ?sco ?oti ?fap ?sap
+       ?h ?co ?la ?ex  ?pr ?lo ?en ?bi  ?am  ?pp ?oc ?ps ?pc
        ("$1" as ?query) ?a
 
 #datasources
@@ -18,8 +20,6 @@ FROM <o:szd.werke>
 FROM <o:szd.personen>
 FROM <o:szd.lebenskalender>
 FROM <o:szd.lebensdokumente>
-FROM <o:szd.thema.1>
-#FROM <o:szd.publikation>
 
 WHERE
 {
@@ -47,42 +47,22 @@ WHERE
     {?re szd:affectedPerson ?affected_person.
       ?affected_person szd:surname|szd:name  ?sap.
       OPTIONAL{?affected_person szd:forename ?fap.}}
-	OPTIONAL{?re szd:partyInvolved|szd:illustrator|szd:translator|szd:writerForeword|szd:writerAfterword ?pi.}
     OPTIONAL{?re szd:title ?t.}
     OPTIONAL{?re szd:when|szd:publicationStmt/szd:pubDate ?d.}
     OPTIONAL{?re szd:publicationStmt/szd:text ?ps.}
-    OPTIONAL{?re szd:series ?se.}
     OPTIONAL{?re szd:signature ?si.}
-    OPTIONAL{?re szd:objecttyp ?ot.}
     OPTIONAL{?re szd:language ?la.}
     OPTIONAL{?re szd:extent/szd:text ?ex.}
-    OPTIONAL{?re szd:acquired ?ac.}
-	OPTIONAL{?re szd:provenance ?pr.}
 	OPTIONAL{?re szd:location ?lo.}
-    OPTIONAL{?re szd:identifyingInscription ?ii.}
-    OPTIONAL{?re szd:note ?n.}
-    OPTIONAL{?re szd:incipit ?i.}
-    OPTIONAL{?re szd:originaltitle ?oti.}
-    OPTIONAL{?re szd:provenanceCharacteristic/szd:text ?pc.}
+    OPTIONAL{?re szd:provenanceCharacteristic ?pc.}
     
-    
-    #this marks the result in which the following language-statments are true
+   #this marks the result in which the following language-statments are true
    BIND (
           COALESCE(
-			  #IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?ot)='$2' && lang(?n)='$2' && lang(?pr)='$2' && lang(?pc)='$2', "T", ""),
-			  #IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?ot)='$2' && lang(?n)='$2' && lang(?pr)='$2', "T", ""),
-			  #IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?ot)='$2' && lang(?n)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc) && lang(?n)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr), "T", ""),
-              #all results contain title and extent and provenance
 			  IF(lang(?t)='$2' && lang(?ex)='$2', "T", ""),
 			  IF(lang(?t)='$2', "T", "")
 		  ,"") AS ?a
 		)
-		
     FILTER(lang(?h) = '$2'  && lang(?co) = '$2' || ?t || ?s)
 }
-#based on the query for "Zweig"
-#LIMIT 21000
+

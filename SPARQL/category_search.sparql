@@ -2,16 +2,17 @@ PREFIX szd:<https://gams.uni-graz.at/o:szd.ontology#>
 PREFIX bds:<http://www.bigdata.com/rdf/search#>
 PREFIX gams:<https://gams.uni-graz.at/o:gams-ontology#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+PREFIX szdg:<https://gams.uni-graz.at/o:szd.glossar#>
 
+# glossary_search
 #author: Christopher Pollin
-#selects all resources connected to the person, person = param
+#selects 
 #param: 
 #return: 
 
-
-SELECT ?re ?qs ?qf ?f ?si ?t ?d ?s ?ot ?fed ?sed ?fco ?sco ?oti ?se ?pi ?fap ?sap
-       ?h ?co ?la ?ex ?ac ?pr ?lo ?en ?bi ?ii ?am ?n ?i ?pp ?pc ?oc ?ps
-       ($1 as ?query) ?a
+SELECT ?re ?s ?si ?t ?d ?fed ?sed ?fco ?sco ?oti ?fap ?sap
+       ?la ?ex ?pr ?lo ?en ?bi ?am ?pp ?oc ?ps ?qs
+       ?a ($1 as ?query)
 
 #datasources
 FROM <o:szd.bibliothek>
@@ -23,14 +24,12 @@ FROM <o:szd.lebensdokumente>
 
 WHERE
 {
-
-    ?re ?a $1.
-    $1 skos:prefLabel ?prefLabel.
-
-    OPTIONAL{?re szd:forename  ?f.}
-    OPTIONAL{?re szd:surname|szd:name ?s.}
-    OPTIONAL{?re szd:head  ?h.}
-    OPTIONAL{?re szd:content  ?co.}
+    #SZDBIB
+    {?re szd:provenanceCharacteristic ?pc.
+    ?pc szd:glossar $1.}
+    #SZDMSK
+    UNION{?re szd:term $1}
+  
     OPTIONAL
     {?re szd:author ?au.
       ?au szd:surname|szd:name  ?s.
@@ -47,32 +46,18 @@ WHERE
     {?re szd:affectedPerson ?affected_person.
       ?affected_person szd:surname|szd:name  ?sap.
       OPTIONAL{?affected_person szd:forename ?fap.}}
-	OPTIONAL{?re szd:partyInvolved|szd:illustrator|szd:translator|szd:writerForeword|szd:writerAfterword ?pi.}
     OPTIONAL{?re szd:title ?t.}
     OPTIONAL{?re szd:when|szd:publicationStmt/szd:pubDate ?d.}
     OPTIONAL{?re szd:publicationStmt/szd:text ?ps.}
-    OPTIONAL{?re szd:series ?se.}
     OPTIONAL{?re szd:signature ?si.}
-    OPTIONAL{?re szd:objecttyp ?ot.}
     OPTIONAL{?re szd:language ?la.}
     OPTIONAL{?re szd:extent/szd:text ?ex.}
-    OPTIONAL{?re szd:acquired ?ac.}
-	OPTIONAL{?re szd:provenance ?pr.}
 	OPTIONAL{?re szd:location ?lo.}
-    OPTIONAL{?re szd:identifyingInscription ?ii.}
-    OPTIONAL{?re szd:note ?n.}
-    OPTIONAL{?re szd:incipit ?i.}
-    OPTIONAL{?re szd:originaltitle ?oti.}
     OPTIONAL{?re szd:provenanceCharacteristic/szd:text ?pc.}
-    
-    #this marks the result in which the following language-statments are true
-    BIND (
+
+  #this marks the result in which the following language-statments are true
+   BIND (
           COALESCE(
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc) && lang(?n)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2', "T", ""),
-			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr), "T", ""),
-              #all results contain title and extent and provenance
 			  IF(lang(?t)='$2' && lang(?ex)='$2', "T", ""),
 			  IF(lang(?t)='$2', "T", "")
 		  ,"") AS ?a
