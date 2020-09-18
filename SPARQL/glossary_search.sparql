@@ -1,0 +1,80 @@
+PREFIX szd:<https://gams.uni-graz.at/o:szd.ontology#>
+PREFIX bds:<http://www.bigdata.com/rdf/search#>
+PREFIX gams:<https://gams.uni-graz.at/o:gams-ontology#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+#author: Christopher Pollin
+#selects all resources connected to the person, person = param
+#param: 
+#return: 
+
+
+SELECT ?re ?qs ?qf ?f ?si ?t ?d ?s ?ot ?fed ?sed ?fco ?sco ?oti ?se ?pi ?fap ?sap
+       ?h ?co ?la ?ex ?ac ?pr ?lo ?en ?bi ?ii ?am ?n ?i ?pp ?pc ?oc ?ps
+       ($1 as ?query) ?a
+
+#datasources
+FROM <o:szd.bibliothek>
+FROM <o:szd.autographen>
+FROM <o:szd.werke>
+FROM <o:szd.personen>
+FROM <o:szd.lebenskalender>
+FROM <o:szd.lebensdokumente>
+
+WHERE
+{
+
+    ?re ?a $1.
+    $1 skos:prefLabel ?prefLabel.
+
+    OPTIONAL{?re szd:forename  ?f.}
+    OPTIONAL{?re szd:surname|szd:name ?s.}
+    OPTIONAL{?re szd:head  ?h.}
+    OPTIONAL{?re szd:content  ?co.}
+    OPTIONAL
+    {?re szd:author ?au.
+      ?au szd:surname|szd:name  ?s.
+      OPTIONAL{?au szd:forename ?f.}}
+    OPTIONAL
+    {?re szd:editor ?editor.
+       ?editor szd:surname|szd:name  ?sed.
+       OPTIONAL{?editor szd:forename ?fed.}}
+    OPTIONAL
+    {?re szd:composer ?composer.
+     ?composer szd:surname|szd:name  ?sco.
+     OPTIONAL{?composer szd:forename  ?fco}}
+     OPTIONAL
+    {?re szd:affectedPerson ?affected_person.
+      ?affected_person szd:surname|szd:name  ?sap.
+      OPTIONAL{?affected_person szd:forename ?fap.}}
+	OPTIONAL{?re szd:partyInvolved|szd:illustrator|szd:translator|szd:writerForeword|szd:writerAfterword ?pi.}
+    OPTIONAL{?re szd:title ?t.}
+    OPTIONAL{?re szd:when|szd:publicationStmt/szd:pubDate ?d.}
+    OPTIONAL{?re szd:publicationStmt/szd:text ?ps.}
+    OPTIONAL{?re szd:series ?se.}
+    OPTIONAL{?re szd:signature ?si.}
+    OPTIONAL{?re szd:objecttyp ?ot.}
+    OPTIONAL{?re szd:language ?la.}
+    OPTIONAL{?re szd:extent/szd:text ?ex.}
+    OPTIONAL{?re szd:acquired ?ac.}
+	OPTIONAL{?re szd:provenance ?pr.}
+	OPTIONAL{?re szd:location ?lo.}
+    OPTIONAL{?re szd:identifyingInscription ?ii.}
+    OPTIONAL{?re szd:note ?n.}
+    OPTIONAL{?re szd:incipit ?i.}
+    OPTIONAL{?re szd:originaltitle ?oti.}
+    OPTIONAL{?re szd:provenanceCharacteristic/szd:text ?pc.}
+    
+    #this marks the result in which the following language-statments are true
+    BIND (
+          COALESCE(
+			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc) && lang(?n)='$2', "T", ""),
+			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2' && lang(?pc)='$2', "T", ""),
+			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr) && lang(?ot)='$2', "T", ""),
+			  IF(lang(?t)='$2' && lang(?ex)='$2' && lang(?pr), "T", ""),
+              #all results contain title and extent and provenance
+			  IF(lang(?t)='$2' && lang(?ex)='$2', "T", ""),
+			  IF(lang(?t)='$2', "T", "")
+		  ,"") AS ?a
+		)
+}

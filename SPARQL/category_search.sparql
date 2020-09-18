@@ -1,0 +1,65 @@
+PREFIX szd:<https://gams.uni-graz.at/o:szd.ontology#>
+PREFIX bds:<http://www.bigdata.com/rdf/search#>
+PREFIX gams:<https://gams.uni-graz.at/o:gams-ontology#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+PREFIX szdg:<https://gams.uni-graz.at/o:szd.glossar#>
+
+# glossary_search
+#author: Christopher Pollin
+#selects 
+#param: 
+#return: 
+
+SELECT ?re ?s ?si ?t ?d ?fed ?sed ?fco ?sco ?oti ?fap ?sap
+       ?la ?ex ?pr ?lo ?en ?bi ?am ?pp ?oc ?ps ?qs
+       ?a ($1 as ?query)
+
+#datasources
+FROM <o:szd.bibliothek>
+FROM <o:szd.autographen>
+FROM <o:szd.werke>
+FROM <o:szd.personen>
+FROM <o:szd.lebenskalender>
+FROM <o:szd.lebensdokumente>
+
+WHERE
+{
+    #SZDBIB
+    {?re szd:provenanceCharacteristic ?pc.
+    ?pc szd:glossar $1.}
+    #SZDMSK
+    UNION{?re szd:term $1}
+  
+    OPTIONAL
+    {?re szd:author ?au.
+      ?au szd:surname|szd:name  ?s.
+      OPTIONAL{?au szd:forename ?f.}}
+    OPTIONAL
+    {?re szd:editor ?editor.
+       ?editor szd:surname|szd:name  ?sed.
+       OPTIONAL{?editor szd:forename ?fed.}}
+    OPTIONAL
+    {?re szd:composer ?composer.
+     ?composer szd:surname|szd:name  ?sco.
+     OPTIONAL{?composer szd:forename  ?fco}}
+     OPTIONAL
+    {?re szd:affectedPerson ?affected_person.
+      ?affected_person szd:surname|szd:name  ?sap.
+      OPTIONAL{?affected_person szd:forename ?fap.}}
+    OPTIONAL{?re szd:title ?t.}
+    OPTIONAL{?re szd:when|szd:publicationStmt/szd:pubDate ?d.}
+    OPTIONAL{?re szd:publicationStmt/szd:text ?ps.}
+    OPTIONAL{?re szd:signature ?si.}
+    OPTIONAL{?re szd:language ?la.}
+    OPTIONAL{?re szd:extent/szd:text ?ex.}
+	OPTIONAL{?re szd:location ?lo.}
+    OPTIONAL{?re szd:provenanceCharacteristic/szd:text ?pc.}
+
+  #this marks the result in which the following language-statments are true
+   BIND (
+          COALESCE(
+			  IF(lang(?t)='$2' && lang(?ex)='$2', "T", ""),
+			  IF(lang(?t)='$2', "T", "")
+		  ,"") AS ?a
+		)
+}

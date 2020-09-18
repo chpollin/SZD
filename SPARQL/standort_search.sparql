@@ -1,0 +1,69 @@
+PREFIX szd:<https://gams.uni-graz.at/o:szd.ontology#>
+PREFIX bds:<http://www.bigdata.com/rdf/search#>
+PREFIX gams:<https://gams.uni-graz.at/o:gams-ontology#>
+
+#author: Christopher Pollin
+#selects all resources connected to the location, location = param
+#param: <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.2>
+#return: ?re (resource like a Work or Book), ?ti (title of resource; obligatory), ?fn and ?sn (surname, forename of author),
+#        ?sig (signature of the resource, like SZ-AAP/L13.3), ?ot (objecttyp, like Notebook)
+
+
+
+SELECT ?re  ?f ?si ?t ?d ?s  ?fed ?sed ?fco ?sco ?oti ?fap ?sap
+       ?h ?co ?la ?ex  ?pr ?lo ?en ?bi  ?am  ?pp ?oc ?ps ?pc
+       ($1 as ?query) ?a
+
+
+#datasources
+FROM <o:szd.bibliothek>
+FROM <o:szd.autographen>
+FROM <o:szd.werke>
+FROM <o:szd.personen>
+FROM <o:szd.standorte>
+FROM <o:szd.lebenskalender>
+FROM <o:szd.lebensdokumente>
+FROM <o:szd.thema.1>
+
+WHERE
+{
+  	?re szd:location $1.
+  	
+    OPTIONAL{?re szd:forename  ?f.}
+    OPTIONAL{?re szd:surname|szd:name ?s.}
+    OPTIONAL{?re szd:head  ?h.}
+    OPTIONAL{?re szd:content  ?co.}
+    OPTIONAL
+    {?re szd:author ?au.
+      ?au szd:surname|szd:name  ?s.
+      OPTIONAL{?au szd:forename ?f.}}
+    OPTIONAL
+    {?re szd:editor ?editor.
+       ?editor szd:surname|szd:name  ?sed.
+       OPTIONAL{?editor szd:forename ?fed.}}
+    OPTIONAL
+    {?re szd:composer ?composer.
+     ?composer szd:surname|szd:name  ?sco.
+     OPTIONAL{?composer szd:forename  ?fco}}
+     OPTIONAL
+    {?re szd:affectedPerson ?affected_person.
+      ?affected_person szd:surname|szd:name  ?sap.
+      OPTIONAL{?affected_person szd:forename ?fap.}}
+    OPTIONAL{?re szd:title ?t.}
+    OPTIONAL{?re szd:when|szd:publicationStmt/szd:pubDate ?d.}
+    OPTIONAL{?re szd:publicationStmt/szd:text ?ps.}
+    OPTIONAL{?re szd:signature ?si.}
+    OPTIONAL{?re szd:language ?la.}
+    OPTIONAL{?re szd:extent/szd:text ?ex.}
+	OPTIONAL{?re szd:location ?lo.}
+    OPTIONAL{?re szd:provenanceCharacteristic/szd:text ?pc.}
+
+    #this marks the result in which the following language-statments are true
+   BIND (
+          COALESCE(
+			  IF(lang(?t)='$2' && lang(?ex)='$2', "T", ""),
+			  IF(lang(?t)='$2', "T", "")
+		  ,"") AS ?a
+		)
+    FILTER(lang(?h) = '$2'  && lang(?co) = '$2' || ?t || ?s)
+}
