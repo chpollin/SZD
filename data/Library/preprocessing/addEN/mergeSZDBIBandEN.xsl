@@ -77,6 +77,18 @@
         </xsl:copy>
     </xsl:template>
     
+    
+    <xsl:template match="t:publicationStmt/t:pubPlace[contains(text(),'[u.a.]')]">
+    <xsl:copy>
+        <span xml:lang="de">
+            <xsl:text>[u.a.]</xsl:text>
+        </span>
+        <span xml:lang="en">
+            <xsl:text>[et al.]</xsl:text>
+        </span>
+    </xsl:copy>
+    </xsl:template>
+    
     <!-- Einband
      <bindingDesc>
         <binding>
