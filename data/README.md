@@ -1,5 +1,5 @@
 # SZD - Data
-## [Autograph](https://github.com/chpollin/SZD/tree/master/data/Autograph), SZDAUT
+## [Autograph](https://github.com/chpollin/SZD/tree/master/data/Autograph), SZDAUT,  https://stefanzweig.digital/o:szd.autographen 
 
 ```xml
 <biblFull xml:id="SZDAUT.1">
@@ -74,7 +74,7 @@
 </biblFull>
 ```
 
-## [Library](https://github.com/chpollin/SZD/tree/master/data/Library), SZDBIB
+## [Library](https://github.com/chpollin/SZD/tree/master/data/Library), SZDBIB, https://stefanzweig.digital/o:szd.bibliothek
 
 ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
 
@@ -187,7 +187,7 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 
 
 
-## [PersonalDocument](https://github.com/chpollin/SZD/tree/master/data/PersonalDocument), SZDLEB
+## [PersonalDocument](https://github.com/chpollin/SZD/tree/master/data/PersonalDocument), SZDLEB, https://stefanzweig.digital/o:szd.werke
 
 - ana="szdg:WritingMaterial" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
 
@@ -329,7 +329,7 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 
 
 
-## [Work](https://github.com/chpollin/SZD/tree/master/data/Work), SZDMSK
+## [Work](https://github.com/chpollin/SZD/tree/master/data/Work), SZDMSK, https://stefanzweig.digital/o:szd.lebensdokumente
 
 - ana="szdg:WritingMaterial" - reference to http://stefanzweig.digital/o:szd.glossar/ONTOLOGY
 
@@ -450,7 +450,7 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 </biblFull>
 ```
 
-## [Biography](https://github.com/chpollin/SZD/tree/master/data/Biography), SZDBIO
+## [Biography](https://github.com/chpollin/SZD/tree/master/data/Biography), SZDBIO, https://stefanzweig.digital/o:szd.lebenskalender
 
 - <name ref="#SZDPER.1559" type="person"> - person search query
 - <name ref="#SZDLEB.1" type="personaldocument|work|book">notebook</name> - URL to object
@@ -470,11 +470,11 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 </event>
 ````
 
-## [Glossary](https://github.com/chpollin/SZD/tree/master/data/Glossary) 
+## [Glossary](https://github.com/chpollin/SZD/tree/master/data/Glossary) , https://stefanzweig.digital/o:szd.glossar
 
 ## [Index](https://github.com/chpollin/SZD/tree/master/data/Index)
 
-### [Person](https://github.com/chpollin/SZD/tree/master/data/Index/Person), SZDPER
+### [Person](https://github.com/chpollin/SZD/tree/master/data/Index/Person), SZDPER, https://stefanzweig.digital/o:szd.personen
 
 - @corresp - URL to wikipedia
 
@@ -491,7 +491,7 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 </person>
 ```
 
-### [Location](https://github.com/chpollin/SZD/tree/master/data/Index/Location), SZDSTA
+### [Location](https://github.com/chpollin/SZD/tree/master/data/Index/Location), SZDSTA, https://stefanzweig.digital/o:szd.standorte
 
 - @corresp - URL to institution web page
 - t:location/t:geo - coordination for maps visualisation
@@ -508,6 +508,11 @@ ana="szdg:InventoryNumberOld" - reference to http://stefanzweig.digital/o:szd.gl
 ```
 
 ## [Issue](https://github.com/chpollin/SZD/tree/master/data/Issue)
+
++ http://gams.uni-graz.at/o:szd.thema.1
++ http://gams.uni-graz.at/o:szd.thema.2
++ http://gams.uni-graz.at/o:szd.thema.3
++ http://gams.uni-graz.at/o:szd.thema.4
 
 ```xml
 
