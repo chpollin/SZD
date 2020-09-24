@@ -7,6 +7,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:s="http://www.w3.org/2001/sw/DataAccess/rf1/result" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:lido="http://www.lido-schema.org" xmlns:oai="http://www.openarchives.org/OAI/2.0/" exclude-result-prefixes="#all">
 
     <xsl:include href="szd-static.xsl"/>
@@ -28,76 +29,6 @@
             <!-- /// PAGE-CONTENT /// -->
             <div class="card">
                 <div class="card-body" id="content">	
-                <!--<div class="card-body">-->
-                    <!--
-                        <a rel="nofollow" href="{concat('/', $PID, '/TEI_SOURCE')}" target="_blank">
-                            <xsl:text>TEI Source </xsl:text>
-                            <img alt="TEI" height="25" src="/templates/img/tei_icon.jpg"
-                                title="TEI"/>
-                        </a>
-                        <br/>
-                        <a href="{concat('/archive/objects/', $PID, '/TEI_SOURCE/methods/sdef:dfgMETS/vget')}" target="_blank">
-                            <xsl:text>Viewer </xsl:text>
-                            <span class="oi oi-external-link"><xsl:text> </xsl:text></span>
-                        </a>
-                        <br/>
-                       
-                        <a>
-                            <xsl:attribute name="href">
-                                <xsl:value-of
-                                    select="substring-after(//t:keywords[@ana = 'correspondence']/t:list/t:item[1]/t:ref/@target, 'info:fedora')"
-                                />
-                            </xsl:attribute>
-                            
-                            <xsl:text> Gesamtkorrespondenz </xsl:text>
-                            <span class="oi oi-envelope-closed">
-                                <xsl:text> </xsl:text>
-                            </span>
-                        </a>
-                        <div id="csLink" data-correspondent-2-name="" data-end-date=""
-                            data-range="30000" data-selection-when="before-after"
-                            data-selection-span="median-before-after"
-                            data-result-max="4" data-exclude-edition="">
-                            
-                            <xsl:attribute name="data-correspondent-1-id">
-                                <xsl:value-of
-                                    select="$SENT/t:persName/@ref"
-                                />
-                            </xsl:attribute>
-                            
-                            <xsl:attribute name="data-correspondent-1-name">
-                                <xsl:value-of
-                                    select="concat($SENT/t:persName/t:forename, ' ', $SENT/t:persName/t:surname)"
-                                />
-                            </xsl:attribute>
-                            
-                            <xsl:attribute name="data-correspondent-2-id">
-                                <xsl:value-of
-                                    select="$RECIEVED/t:persName/@ref"
-                                />
-                            </xsl:attribute>
-                            
-                            <xsl:attribute name="data-correspondent-2-name">
-                                <xsl:value-of
-                                    select="concat($RECIEVED/t:persName/t:forename, ' ', $RECIEVED/t:persName/t:surname)"
-                                />
-                            </xsl:attribute>
-                            
-                            <xsl:attribute name="data-start-date">
-                                <xsl:value-of
-                                    select="$SENT/t:date/@when"
-                                />
-                            </xsl:attribute>
-                            
-                            
-                            
-                            <xsl:text> </xsl:text>
-                        </div>
-                        
-                        
-                        <script type="text/javascript" src="//glossa.uni-graz.at/gamsdev/steineel/hsa/js/cslink.js"><xsl:text> </xsl:text>
-                        </script>-->
-                        
                         <!-- ////////////////////////////////////////////// -->
                         <!-- t:correspAction -->
                         <!-- //////////////////////////////////////////////////////////// -->
@@ -111,7 +42,12 @@
                                 <div class="bg-light row">
                                     <h4 class="card-title text-left col-8">
                                          <a data-toggle="collapse" href="{concat('#c' , generate-id())}">
+                                             <span class="arrow">
+                                                 <xsl:text>▼ </xsl:text>
+                                             </span>
                                              <xsl:apply-templates select="//t:fileDesc/t:titleStmt/t:title"/>
+                                             <xsl:text> | </xsl:text>
+                                             <xsl:value-of select="$SENT/t:date"/>
                                          </a>
                                     </h4>
                                     <span class="col-2 text-center">
@@ -139,7 +75,7 @@
                                         <xsl:with-param name="SZDID" select="@xml:id"/>
                                     </xsl:call-template>
                                 </div>
-                                <div class="card-body small">
+                                <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                                     <div class="table-responsive">	    
                                         <table class="table table-sm">
                                             <tbody>
@@ -148,12 +84,17 @@
                                                 <xsl:if test="$SENT">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
-                                                            <xsl:text>Sender</xsl:text>
+                                                            <xsl:text>Verfasser/in</xsl:text>
                                                         </td>
                                                         <td class="col-9">
-                                                           <xsl:value-of select="$SENT/t:persName/t:surname"/>
+                                                            <xsl:for-each select="$SENT/t:persName">
+                                                                <xsl:call-template name="PersonSearch">
+                                                                    <xsl:with-param name="locale" select="$locale"/>
+                                                                </xsl:call-template>
+                                                            </xsl:for-each>
+                                                           <!--<xsl:value-of select="$SENT/t:persName/t:surname"/>
                                                            <xsl:text>, </xsl:text>
-                                                           <xsl:value-of select="$SENT/t:persName/t:forename"/>
+                                                           <xsl:value-of select="$SENT/t:persName/t:forename"/>-->
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
@@ -162,21 +103,25 @@
                                                 <xsl:if test="$RECIEVED">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
-                                                            <xsl:text>Empfänger</xsl:text>
+                                                            <xsl:text>Adressat/in</xsl:text>
                                                         </td>
                                                         <td class="col-9">
-                                                            <xsl:value-of select="$RECIEVED/t:persName/t:surname"/>
+                                                            <xsl:for-each select="$RECIEVED/t:persName">
+                                                                <xsl:call-template name="PersonSearch">
+                                                                    <xsl:with-param name="locale" select="$locale"/>
+                                                                </xsl:call-template>
+                                                            </xsl:for-each>
+                                                           <!-- <xsl:value-of select="$RECIEVED/t:persName/t:surname"/>
                                                             <xsl:text>, </xsl:text>
-                                                            <xsl:value-of select="$RECIEVED/t:persName/t:forename"/>
+                                                            <xsl:value-of select="$RECIEVED/t:persName/t:forename"/>-->
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
                                                 <!-- //////////////////////////////////////////////////////////// -->
-                                                <!-- send-date -->
                                                 <xsl:if test="$SENT/t:date">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
-                                                            <xsl:text>Sendedatum</xsl:text>
+                                                            <xsl:text>Datierung</xsl:text>
                                                         </td>
                                                         <td class="col-9">
                                                             <xsl:value-of select="$SENT/t:date"/>
@@ -184,53 +129,130 @@
                                                     </tr>
                                                 </xsl:if>
                                                 <!-- //////////////////////////////////////////////////////////// -->
-                                                <!-- send-date -->
-                                                <xsl:if test="$RECIEVED/t:date">
+                                                <xsl:if test="//t:correspDesc/t:note/t:stamp">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
-                                                            <xsl:text>Empfangsdatum</xsl:text>
+                                                            <xsl:text>Poststempel</xsl:text>
                                                         </td>
                                                         <td class="col-9">
-                                                            <xsl:value-of select="$RECIEVED/t:date"/>
+                                                            <xsl:value-of select="//t:correspDesc/t:note/t:stamp"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
                                                 <!-- //////////////////////////////////////////////////////////// -->
-                                                <!-- send-place -->
-                                                <xsl:if test="$SENT/t:settlement">
+                                                <xsl:if test="$SENT/t:placeName">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
-                                                            <xsl:text>Sendeort</xsl:text>
+                                                            <xsl:text>Entstehungsort</xsl:text>
                                                         </td>
                                                         <td class="col-9">
-                                                            <xsl:value-of select="$SENT/t:settlement"/>
+                                                            <xsl:value-of select="$SENT/t:placeName"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
                                                 <!-- //////////////////////////////////////////////////////////// -->
-                                                <!-- send-date -->
-                                                <xsl:if test="$RECIEVED/t:settlement">
+                                                <xsl:if test="$RECIEVED/t:placeName">
                                                     <tr class="row">
                                                         <td class="col-3 text-truncate">
                                                             <xsl:text>Empfangsort</xsl:text>
                                                         </td>
                                                         <td class="col-9">
-                                                            <xsl:value-of select="$RECIEVED/t:settlement"/>
+                                                            <xsl:value-of select="$RECIEVED/t:placeName"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <xsl:if test="//t:physDesc/t:objectDesc/t:supportDesc/t:extent">
+                                                    <tr class="row">
+                                                        <td class="col-3 text-truncate">
+                                                            <xsl:text>Art/Umfang</xsl:text>
+                                                        </td>
+                                                        <td class="col-9">
+                                                            <xsl:value-of select="//t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <xsl:if test="//t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material">
+                                                    <tr class="row">
+                                                        <td class="col-3 text-truncate">
+                                                            <xsl:text>Schreibstoff</xsl:text>
+                                                        </td>
+                                                        <td class="col-9">
+                                                            <xsl:value-of select="//t:physDesc/t:objectDesc/t:supportDesc/t:support/t:material"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <xsl:if test="//t:physDesc/t:handDesc">
+                                                    <tr class="row">
+                                                        <td class="col-3 text-truncate">
+                                                            <xsl:text>Schreiberhand</xsl:text>
+                                                        </td>
+                                                        <td class="col-9">
+                                                            <xsl:value-of select="//t:physDesc/t:handDesc"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <xsl:if test="//t:history/t:provenance">
+                                                    <tr class="group row">
+                                                        <td class="col-3 text-truncate">
+                                                            <xsl:text>Provenienz</xsl:text>
+                                                        </td>
+                                                        <td class="col-9">
+                                                            <xsl:value-of select="//t:history/t:provenance"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <xsl:if test="//t:history/t:acquisition">
+                                                    <tr class="row">
+                                                        <td class="col-3 text-truncate">
+                                                            <xsl:text>Erwerbung</xsl:text>
+                                                        </td>
+                                                        <td class="col-9">
+                                                            <xsl:value-of select="//t:history/t:acquisition"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <!-- //////////////////////////////////////////////////////////// -->
+                                                <tr class="row">
+                                                    <td class="col-3 text-truncate">
+                                                        <i18n:text>currentlocation</i18n:text>
+                                                    </td>
+                                                    <td class="col-9">
+                                                        <xsl:call-template name="LocationSearch">
+                                                            <xsl:with-param name="locale" select="$locale"/>
+                                                            <xsl:with-param name="SZDSTA">
+                                                                <xsl:call-template name="GetStandortList">
+                                                                    <xsl:with-param name="Standort">
+                                                                        <xsl:value-of select="//t:msDesc/t:msIdentifier/t:repository/@ref"/>
+                                                                    </xsl:with-param>
+                                                                </xsl:call-template>
+                                                            </xsl:with-param>
+                                                        </xsl:call-template>
+                                                      <!--  <xsl:call-template name="printEnDe">
+                                                            <xsl:with-param name="locale" select="$locale"/>
+                                                            <xsl:with-param name="path" select="//t:msDesc/t:msIdentifier/t:repository"/>
+                                                        </xsl:call-template>-->
+                                                        <br/>
+                                                        <xsl:value-of select="//t:msDesc/t:msIdentifier/t:idno"/>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                    <!-- FOOTER -->
+                                    <xsl:call-template name="getFooter">
+                                        <xsl:with-param name="locale" select="$locale"/>
+                                        <xsl:with-param name="PID" select="$PID"/>
+                                        <xsl:with-param name="Type" select="'SZDBRI'"/>
+                                        <xsl:with-param name="SENT" select="$SENT"/>
+                                        <xsl:with-param name="RECIEVED" select="$RECIEVED"/>
+                                        <xsl:with-param name="TITLE" select="//t:fileDesc/t:titleStmt/t:title"/>
+                                    </xsl:call-template>
                                 </div>
-                                <!-- FOOTER -->
-                                <xsl:call-template name="getFooter">
-                                    <xsl:with-param name="locale" select="$locale"/>
-                                    <xsl:with-param name="PID" select="$PID"/>
-                                    <xsl:with-param name="Type" select="'SZDBRI'"/>
-                                    <xsl:with-param name="SENT" select="$SENT"/>
-                                    <xsl:with-param name="RECIEVED" select="$RECIEVED"/>
-                                </xsl:call-template> 
                             </div>
                         </div>
                 <!--</div>-->
@@ -250,7 +272,7 @@
                             <xsl:text> </xsl:text>    
                         </div>
                         <xsl:variable name="Desc" select="t:TEI/t:teiHeader/t:fileDesc/t:sourceDesc/t:msDesc"/>
-                        <div class="card-footer">
+                       <!-- <div class="card-footer">
                             <xsl:apply-templates select="$Desc/t:msIdentifier/t:settlement"/>
                             <xsl:text>, </xsl:text>
                             <xsl:value-of select="$Desc/t:msIdentifier/t:institution"/>
@@ -259,7 +281,7 @@
                                 <xsl:value-of select="$Desc/t:msIdentifier/t:repository"/>
                             </xsl:if><xsl:text>, </xsl:text>
                             <xsl:value-of select="$Desc/t:msIdentifier/t:idno"/>
-                        </div>
+                        </div>-->
                     </div>
                     
                     <!-- SCRIPTS - VIEWER -->
@@ -295,16 +317,23 @@
         </xsl:if>
     </xsl:template>
     
+    <!-- prototyp -->
+    <xsl:template match="t:fw">
+        <p class="text-center">
+            <xsl:apply-templates/>
+        </p>
+    </xsl:template>
+    
     
     <xsl:template match="t:opener/t:dateline">
         <h3>
-            <xsl:apply-templates></xsl:apply-templates>
+            <xsl:apply-templates/>
         </h3>
     </xsl:template>
     
     <xsl:template match="t:salute">
         <p>
-            <xsl:apply-templates></xsl:apply-templates>
+            <xsl:apply-templates/>
         </p>
     </xsl:template>
     

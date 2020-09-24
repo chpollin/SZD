@@ -1380,6 +1380,7 @@
         <xsl:param name="Type"/>
         <xsl:param name="SENT"/>
         <xsl:param name="RECIEVED"/>
+        <xsl:param name="TITLE"/>
         <xsl:variable name="URL" select="concat('stefanzweig.digital/', //t:publicationStmt//t:idno[@type='PID'], '#', @xml:id)"/>
         <xsl:variable name="id" select="substring-after(@xml:id, '.')"/>
         <xsl:variable name="accordion_id" select="concat('a', $id)"/>
@@ -1527,8 +1528,8 @@
                     </i>
                 </u>
                 <div id="{$citation_id}" class="collapse font-weight-light card-body" data-parent="{concat('#',$accordion_id)}">
-                  <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]">
-                      <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]">
+                  <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]|$SENT">
+                      <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]|$SENT">
                           <xsl:call-template name="printAuthor">
                               <xsl:with-param name="currentAuthor" select="."/>
                           </xsl:call-template>
@@ -1549,6 +1550,7 @@
                       </xsl:for-each>  
                   	 <xsl:text>: </xsl:text>
                   </xsl:if>
+                    <!-- TITLE -->
                    <!-- e.g. Geheimnis des Alcovens -->
                    <span class="font-italic">
                         <xsl:call-template name="printEnDe">
@@ -1560,7 +1562,7 @@
                                         <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]"/>
+                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]|$TITLE"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:with-param>
