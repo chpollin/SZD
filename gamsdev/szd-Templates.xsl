@@ -403,16 +403,7 @@
             </button>  
         </form>
     </xsl:template>-->
-    
-    
-    <!-- /////////////////////////////////////////////////////////// -->
-    <!-- ///FILTER INTERFACE/// -->
-    <!-- called from szd-Suche, when search results are shown and when get?mode=advancedSearch is called -->
-   <!-- <xsl:template name="filter">
-        <xsl:param name="Filter_search"/>
-        
-    </xsl:template>-->
-    
+
     <!-- /////////////////////////////////////////////////////////// -->
     <!-- ///ADDDATA-DATABASKET -->
     <!-- Add the data- attributs, used for the databasket: Author or Editor, title and date -->
@@ -1650,38 +1641,41 @@
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template name="PersonSearch">
 	    <xsl:param name="locale"/>
-	    <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
 		<xsl:choose>
+		    <!-- ////////////////////// -->
+		    <!-- SZDPER-ID is in the author or editor element -->
+		    <xsl:when test="contains(@ref, 'SZDPER')">
+		        <xsl:call-template name="createPersonSearchHREF">
+		            <xsl:with-param name="locale" select="$locale"/>
+		            <xsl:with-param name="SZDPER">
+		                <xsl:choose>
+		                    <xsl:when test="substring-after(@ref, '#')">
+		                        <xsl:value-of select="substring-after(@ref, '#')"/>
+		                    </xsl:when>
+		                    <xsl:otherwise>
+		                        <xsl:value-of select="@ref"/>
+		                    </xsl:otherwise>
+		                </xsl:choose>
+		            </xsl:with-param>
+		        </xsl:call-template>
+		    </xsl:when>
+		    <!-- ////////////////////// -->
+		    <!-- get SZPER-ID via GND-ID-->
 			<xsl:when test="t:persName/@ref">
 			    <xsl:variable name="REF" select="t:persName/@ref"/>
-				<xsl:variable name="SZDPER">
-					<xsl:call-template name="GetPersonList">
-					    <xsl:with-param name="Person" select="$REF"/>
-					</xsl:call-template>
-				</xsl:variable>
-			    
-			    <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
-			    <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
-			    
-			    <!-- {concat('/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=', encode-for-uri('$1|&lt;https://gams.uni-graz.at/o:szd.personen#'), encode-for-uri($SZDPER), '&gt;', encode-for-uri(';$2|'), encode-for-uri($locale), '&amp;locale=', $locale)} -->
-			    <a href="{$QueryUrl}" target="_blank">
-				    <xsl:choose>
-				        <xsl:when test="$locale = 'en'">
-				            <xsl:attribute name="title" select="'Suchanfrage'"/>
-				        </xsl:when>
-				        <xsl:otherwise>
-				            <xsl:attribute name="title" select="'Search query'"/>
-				        </xsl:otherwise>
-				    </xsl:choose>
-			        <xsl:call-template name="printAuthor">
-			            <xsl:with-param name="currentAuthor" select="."/>
-			        </xsl:call-template>
-					<xsl:text> </xsl:text>
-					<img src="{$Icon_suche_template}" class="img-responsive icon" alt="Person"/>
-				</a>
-				<xsl:text> </xsl:text>
+			    <!-- get SZDPER - ID from o:szd.personen -->
+			    <xsl:call-template name="createPersonSearchHREF">
+			        <xsl:with-param name="locale" select="$locale"/>
+			        <xsl:with-param name="SZDPER">
+			                <xsl:call-template name="GetPersonList">
+			                    <xsl:with-param name="Person" select="$REF"/>
+			                </xsl:call-template>
+			        </xsl:with-param>
+			    </xsl:call-template>
 			</xsl:when>
+		    <!-- get SZDPER-ID from query result -->
 		    <xsl:when test="s:sn">
+		        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
 		        <xsl:variable name="SZDPER" select="s:author/@uri"/>
 		        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', @xml:id, '&gt;', ';$2|', $locale))"/>
 		        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
@@ -1695,28 +1689,17 @@
 		                    <xsl:attribute name="title" select="'Search query'"/>
 		                </xsl:otherwise>
 		            </xsl:choose>
-       		        <xsl:value-of select="s:sn"/>
-       		        <xsl:if test="s:fn">
-       		            <xsl:text>, </xsl:text>
-       		            <xsl:value-of select="s:fn"/>
-       		        </xsl:if>
+		           <xsl:value-of select="s:sn"/>
+       	        <xsl:if test="s:fn">
+       	            <xsl:text>, </xsl:text>
+       	            <xsl:value-of select="s:fn"/>
+       	        </xsl:if>
 		        </a>
 		    </xsl:when>
+		    <!-- just print the name -->
 			<xsl:otherwise>
 			    <xsl:call-template name="printAuthor"/>
-			    <!--<xsl:choose>
-			        <xsl:when test="t:persName/t:surname">
-			            <xsl:value-of select="normalize-space(t:persName/t:surname)"/>
-			            <xsl:if test="t:persName/t:forename">
-			                <xsl:value-of select="normalize-space(t:persName/t:forename)"/>
-			            </xsl:if>
-			        </xsl:when>
-			        <xsl:otherwise>
-			            <xsl:value-of select="normalize-space(.)"/>
-			        </xsl:otherwise>
-			    </xsl:choose>-->
-			   
-			    <xsl:text> </xsl:text>
+			    <!--<xsl:text> </xsl:text>-->
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -1829,9 +1812,14 @@
                              <i18n:text>author_szd</i18n:text>
                         </td>
                         <td class="col-9">
-                             <xsl:call-template name="printAuthor">
+                            <!-- <xsl:call-template name="printAuthor">
                                  <xsl:with-param name="currentAuthor" select="t:fileDesc/t:titleStmt/t:author[1]"/>
-                             </xsl:call-template>
+                             </xsl:call-template>-->
+                            <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@type)]">
+                                <xsl:call-template name="PersonSearch">
+                                    <xsl:with-param name="locale" select="$locale"/>
+                                </xsl:call-template>
+                            </xsl:for-each>
                          </td>
                        </tr>
                     </xsl:if>
@@ -2912,5 +2900,32 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>    
+    
+    <!-- //////////////////////////////////////////////////////////// --> 
+    <!-- creates <a> with a Query-Url for person search -->
+    <xsl:template name="createPersonSearchHREF">
+        <xsl:param name="locale"/>
+        <xsl:param name="SZDPER"/>
+       
+        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
+        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
+        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+        
+        <a href="{$QueryUrl}" target="_blank">
+            <xsl:choose>
+                <xsl:when test="$locale = 'en'">
+                    <xsl:attribute name="title" select="'Suchanfrage'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="title" select="'Search query'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:call-template name="printAuthor">
+                <xsl:with-param name="currentAuthor" select="."/>
+            </xsl:call-template>
+            <xsl:text> </xsl:text>
+            <img src="{$Icon_suche_template}" class="img-responsive icon" alt="Person"/>
+        </a>
+    </xsl:template>
         
 </xsl:stylesheet>
