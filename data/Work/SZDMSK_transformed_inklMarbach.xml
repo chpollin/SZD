@@ -25671,7 +25671,7 @@
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, violette Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black carbon copy, purple ink, pencil</material>
+                          xml:lang="en">Black carbon paper, purple ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -26557,7 +26557,7 @@
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Durchschlagpapier, schwares Farbband, violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black carbon copy, black ribbon, purple ink</material>
+                          xml:lang="en">Black carbon paper, black ribbon, purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -26601,6 +26601,651 @@
           <profileDesc>
             <textClass>
               <keywords><!-- Kategorie richtig? -->
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.329">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Ist nicht Alles, was wir spenden …</title>
+              <title type="Einheitssachtitel">?</title><!-- fehlt im Excel-Sheet -->
+              <title type="Gesamttitel">A:Kressner</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">02.43.21</idno>
+                  <idno type="mediaid">HS001029863</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Vermutlich Vorsatzblatt</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Probably endpaper</material><!-- Übersetzung prüfen! -->
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure></span>
+                        <measure type="format">19x12 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>1926</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Stiftung Dr. Marlis Kressner</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Foundation Dr. Marlis Kressner</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Gedichte</term>
+                <term type="classification" xml:lang="en">Poetry</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.330">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Wille zur Universalität</title>
+              <title type="Einheitssachtitel">Wille zur Universalität</title>
+              <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse est</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note><!-- Anton Kippenberg bei Keywords? -->
+              <note xml:lang="en">Published under the same title in „Navigare necesse est“, Festschrift for Anton Kippenberg 1924</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">64.1993/37</idno>
+                  <idno type="mediaid">HS009527067</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected" type="leaf">10 Blatt, korrigiert</measure></span><!-- Deckblatt nicht extra angeführt! -->
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">10 leaves, corrected</measure></span>
+                        <measure type="format">29x23 cm</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Paginiert: 2 bis 9</ab>
+                        <ab xml:lang="en">Paginated: 2-9</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Deckblatt (Titelblatt) mit Aufschrift „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“ eigenhändig in schwarzer Tinte</desc>
+                        <desc xml:lang="en">Cover sheet (title page) inscribed „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“, holograph in black ink</desc>
+                        <measure></measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.331">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Wille zur Universalität</title>
+              <title type="Einheitssachtitel">Wille zur Universalität</title>
+              <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse est</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note><!-- Anton Kippenberg bei Keywords? -->
+              <note xml:lang="en">Published under the same title in „Navigare necesse est“, Festschrift for Anton Kippenberg 1924</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">64.1993/37</idno>
+                  <idno type="mediaid">HS009527067</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">11 Blatt, korrigiert</measure></span><!-- Deckblatt nicht extra angeführt! -->
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected" type="leaf">11 leaves, corrected</measure></span>
+                        <measure type="format">29x23 cm</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Paginiert: II bis X</ab>
+                        <ab xml:lang="en">Paginated: II-X</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures"><!-- Deckblatt bei Objekttyp nicht extra angeführt -->
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“ maschinenschriftlich,
+                          Aufschrift auf Deckblatt und erster Seite „Schiersand“ von fremder Hand in violettem Buntstift, vermutlich der Schriftsetzer Rudolf Schiersand</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“, typed, 
+                          Inscription on the cover sheet and first page „Schiersand“ in an unidentified hand, probably by the typesetter Rudolf Schiersand</desc><!-- Übersetzung prüfen! -->
+                        <measure></measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.332">
+          <fileDesc>
+            <titleStmt>
+              <title ana="supplied/verified">Der Sechzigjährige dankt</title>
+              <title type="Einheitssachtitel">Der Sechzigjährige dankt</title>
+              <title type="Gesamttitel">A:Wittkowski</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Mit eigenhändiger Unterschrift, vermutlich Beilage zu Brief von Stefan Zweig an Viktor Wittkowski vom 20.10.1941 (Signatur: 64.417/3)</note><!-- Wittkowski in Keywords? -->
+              <note xml:lang="en">With holograph signature, probably enclosure of a letter from Stefan Zweig to Viktor Wittkowski from 20.10.1941 (signature: 64.417/3)</note><!-- Übersetzung prüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">64.416</idno>
+                  <idno type="mediaid">HS009526865</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Linder schwebt der Stunden Reigen …“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure></span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Viktor Wittkowski</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Viktor Wittkowski</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Gedichte</term>
+                <term type="classification" xml:lang="en">Poetry</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.333">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Ist nicht Alles, was wir spenden …</title>
+              <title type="Einheitssachtitel">?</title><!-- fehlt im Excel-Sheet -->
+              <title type="Gesamttitel">A:Wiedemann, Gisela und Hans-Rudolf</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Postkarte Dresden mit umseitig Abbildung von Daniel Chodowieckis  „Am Schreibtisch“ aus „Sophiens Reise“ aus dem königlichen Kupferstichkabinett Dresden</note>
+              <note xml:lang="en">Postcard Dresden with overleaf illustration from Daniel Chodowiecki's „Am Schreibtisch“ from „Sophiens Reise“ from the royal collection of prints, drawings and photographs Dresden</note><!-- Übersetzung prüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">92.51.794</idno>
+                  <idno type="mediaid">HS009526829</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Postkarte</term> (Manuskript), <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Postcard</term> (manuscript), <measure type="leaf">1 leaf</measure></span>
+                        <measure type="format">9x14 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- so belassen? Wiedemanns in keywords aufnehmen?-->
+                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Gedichte</term>
+                <term type="classification" xml:lang="en">Poetry</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.334">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Prolog zum „Ersten Erlebnis“</title>
+              <title type="Einheitssachtitel">Erstes Erlebnis</title>
+              <title type="Gesamttitel">A:Wiedemann, Gisela und Hans-Rudolf</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Gewidmet Johannes Reichelt, Titel und Widmung „Johannes Reichelt mit vielen Grüssen Stefan Zweig“ eigenhändig in violetter Tinte</note><!-- Reichelt in Keywords? -->
+              <note xml:lang="en">Dedicated to Johannes Reichelt, title and dedication „Johannes Reichelt mit vielen Grüssen Stefan Zweig“ holograph in purple ink</note><!-- Übersetzung prüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">92.51.795</idno>
+                  <idno type="mediaid">HS009526847</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Oh Kindheit, wie ich hinter Deinen Gittern …“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure></span>
+                        <measure type="format">22x18 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- so belassen? Wiedemanns in keywords aufnehmen?-->
+                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords><!-- Kategorie passend, eigentlich Gedicht?? -->
+              <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+              <term type="classification" xml:lang="en">Novels/Stories</term>
+            </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.335">
+          <fileDesc>
+            <titleStmt>
+              <title ana="supplied/verified">Die Insel</title>
+              <title type="Einheitssachtitel">Die Insel</title>
+              <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse est</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Vorgesehen für „Navigare necesse est“, Festschrift für Anton Kippenberg 1924, aber dort nicht gedruckt</note><!-- Anton Kippenberg in Keywords? -->
+              <note xml:lang="en">Intended for „Navigare necesse est“, Festschrift for Anton Kippenberg 1924, but not printed there</note><!-- Übersetzung prüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">64.1893</idno>
+                  <idno type="mediaid">HS009527076</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Die Insel, die etwa vor fünfundzwanzig Jahren mitten in Centraldeutschland …“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure ana="korrigiert" type="leaf">2 Blatt, korrigiert</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">2 leaves, corrected</measure></span>
+                        <measure type="format">27x21 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords><!-- Kategorie passend? -->
+                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.336">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Hermann Brochs „Death of Vergil“</title>
+              <title type="Einheitssachtitel">?</title><!-- kein Eintrag im Excel-Sheet -->
+              <title type="Gesamttitel">A:Broch, Hermann/Norden Lowe</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Empfehlungsschreiben zu Hermann Brochs „Der Tod des Vergil“ mit eigenhändiger Unterschrift</note><!-- Broch in keywords? -->
+              <note xml:lang="en">Letter of recommendation for Hermann Broch's „Der Tod des Vergil“ with holograph signature</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">76.265</idno>
+                  <idno type="mediaid">HS009527085</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <incipit>„Hermann Brochs „Death of Vergil“ ist ein einmaliges Buch …“</incipit>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Liniertes Papier</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Lined paper</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure ana="korrigiert" type="leaf">1 Blatt, korrigiert</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">1 leaf, corrected</measure></span>
+                        <measure type="format">27x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Ruth Norden Lowe</ab><!-- so belassen? -->
+                    <ab xml:lang="en">Ruth Norden Lowe</ab><!-- so belassen? -->
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords><!-- Kategorie passend? -->
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
               </keywords>
