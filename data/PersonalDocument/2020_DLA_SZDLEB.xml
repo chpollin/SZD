@@ -244,7 +244,7 @@
                                     <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
                                     <idno type="signature">SU.2010.0001</idno>
-                                    <!-- Mediennummer: HS010940949 -->
+                                    <idno type="mediaid">HS010940949</idno>
                                     <altIdentifier>
                                         <idno type="subject">o:szd.thema.1</idno>
                                     </altIdentifier>
@@ -354,7 +354,7 @@
                                     <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
                                     <idno type="signature"> 79.21</idno>
-                                    <!-- Mediennummer: HS00952746X -->
+                                    <idno type="mediaid">HS00952746X</idno>
                                     <idno type="subject">o:szd.thema.1</idno>
                                     <!-- Verlinkung zu Autograph und anderherum  -->
                                 </msIdentifier>
@@ -444,7 +444,7 @@
                                     <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
                                     <idno type="signature">76.1487 </idno>
-                                    <!-- Mediennummer: HS009527497 -->
+                                    <idno type="mediaid">HS009527497</idno>
                                 </msIdentifier>
                                 <msContents>
                                     <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
@@ -496,8 +496,8 @@
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Verzeichnis meiner Lagerkataloge von Autographen nach Firmen geordnet</title>
-                            <title type="Einheitssachtitel" xml:lang="de">Adressbuch</title>
-                            <title type="Einheitssachtitel" xml:lang="en">Address book</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Registerbuch</title><!-- Passt das so? Excel-Sheet hier nur ? -->
+                            <title type="Einheitssachtitel" xml:lang="en">Register book</title>
                             <title type="Gesamttitel">A: Zweig, Stefan</title>
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
@@ -506,6 +506,16 @@
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
                         </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Aufkleber am Deckel mit Aufschrift „Autografen-Kataloge | Lagerverzeichnisse | (nach Firmen geordnet)“ eigenhändig in violetter Tinte, 
+                                Titel auf dem Vorsatz eigenhändig in violetter Tinte, 
+                                Registerbuch, Buchstaben aufgeklebt abwechselnd rot und schwarz, Umschlag aus Stoff mit schwarz-rot-beigem großflächigem Blumenmuster, 
+                                außen Aufkleber „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ von fremder Hand (Lotte?) in roter Tinte; mit überklebten Seiten</note>
+                            <note xml:lang="en">Label on the cover inscribed „Autografen-Kataloge | Lagerverzeichnisse | (nach Firmen geordnet)“, holograph in purple ink, 
+                                title on the endpapers holograph in purple ink, 
+                                register book, letters glued alternately red and blue, book cover made of fabric with black-red-beige large flower pattern, 
+                                outside label inscribed „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ in an unidentified hand (Lotte?) in red ink; pasted over pages</note><!-- Übersetzung prüfen! -->
+                        </notesStmt>
                         <sourceDesc>
                             <msDesc>
                                 <msIdentifier>
@@ -520,25 +530,21 @@
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
-                                    <msItem>
-                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
-                                            ></docEdition>
-                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
-                                            ></docEdition>
-                                    </msItem>
                                 </msContents>
                                 <physDesc>
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  ></material>
+                                                    >Adressbuch mit Hänldermarke auf Innenseite des Deckels „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    Registerbuch mit Tabellenvordruck blau und rot, marmorierter Schnitt</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  ></material>
+                                                    >Adress book with stationer's label on the inside of the cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    register book with table form blue and red, marbled edges</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  ></material>
+                                                    >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  ></material>
+                                                  >Purple, black, and blue ink, pencil, red and blue pencil</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">
@@ -549,45 +555,141 @@
                                                   <term type="objecttyp"></term>, <measure
                                                   type="leaf">117 leaves, inserted: 10 leaves</measure>
                                                 </span>
-                                                <measure type="format"> cm</measure>
+                                                <measure type="format">22x16 cm</measure>
                                             </extent>
                                         </supportDesc>
                                     </objectDesc>
                                     <handDesc>
-                                        <ab>Stefan Zweig</ab>
+                                        <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                                     </handDesc>
                                     <bindingDesc>
                                         <binding>
-                                            <ab xml:lang="de"></ab>
-                                            <ab xml:lang="en"></ab>
+                                            <ab xml:lang="de">Dunkelgrüner Einband</ab>
+                                            <ab xml:lang="en">Dark green binding</ab>
                                         </binding>
                                     </bindingDesc>
                                     <accMat>
                                         <list>
                                             <item ana="szdg:Enclosures">
-                                                <desc xml:lang="de"></desc>
-                                                <desc xml:lang="en"></desc>
-                                                <measure type="format"></measure>
-                                            </item>
-                                            <item ana="szdg:Enclosures">
-                                                <desc xml:lang="de"></desc>
-                                                <desc xml:lang="en"></desc>
-                                                <measure type="format"></measure>
+                                                <desc xml:lang="de">Eingelegt 10 lose Blatt unterschiedlicher Formate</desc>
+                                                <desc xml:lang="en">Includes 10 loose leaves in various sizes</desc>
                                             </item>
                                         </list>
                                     </accMat>
                                 </physDesc>
                                 <history>
-                                    <origin>
-                                        <origDate when="1931-10-21"></origDate>
-                                    </origin>
                                     <provenance>
-                                        <ab xml:lang="de"></ab>
-                                        <ab xml:lang="en"></ab>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
                                     </provenance>
                                     <acquisition>
-                                        <ab xml:lang="de"></ab>
-                                        <ab xml:lang="en"></ab>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Registerbücher</term>
+                                <term type="classification" xml:lang="en">Register books</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.31">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Verzeichnis meiner Kataloge von Autografenversteigerungen nach Jahren geordnet</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Registerbuch</title><!-- Passt das so? Excel-Sheet hier nur ? -->
+                            <title type="Einheitssachtitel" xml:lang="en">Register book</title>
+                            <title type="Gesamttitel">A: Zweig, Stefan</title>
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Aufkleber am Deckel mit Aufschrift „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“ eigenhändig in violetter (oder schwarzer?) Tinte, 
+                                kleine blau eingefasste Marken mit Nummern eingeklebt, Aufkleberfragment am Rücken; mit überklebten Seiten</note>
+                            <note xml:lang="en">Label on the cover inscribed „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“, holograph in purple (or black?) ink, 
+                                small blue framed stamps with numbers glued in, label fragment on spine, pasted over pages</note><!-- Übersetzung prüfen! -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
+                                        Literaturarchiv Marbach. Handschriftenabteilung</repository>
+                                    <idno type="signature">82.83</idno>
+                                    <idno type="mediaid">HS009527399</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                    >Adressbuch mit Hänldermarke auf Innenseite des Deckels „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    Registerbuch mit Tabellenvordruck blau und rot, marmorierter Schnitt</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                    >Adress book with stationer's label on the inside of the cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    register book with table form blue and red, marbled edges</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                    >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                    >Purple, black, and blue ink, pencil, red and blue pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Adressbuch</term>, <measure
+                                                        type="leaf">147 Blatt, eingelegt: 6 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp"></term>, <measure
+                                                        type="leaf">147 leaves, inserted: 6 leaves</measure>
+                                                </span>
+                                                <measure type="format">22x16 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                                    </handDesc>
+                                    <bindingDesc>
+                                        <binding>
+                                            <ab xml:lang="de">Schwarz marmorierter Einband mit gebrochenem Leinenrücken (Rücken teils lose) und Buchecken</ab>
+                                            <ab xml:lang="en">Black marbled binding with broken cloth spine (spine partly loose) and book corners</ab><!-- Übersetzung "Buchecken"! -->
+                                        </binding>
+                                    </bindingDesc>
+                                    <accMat>
+                                        <list>
+                                            <item ana="szdg:Enclosures">
+                                                <desc xml:lang="de">Eingelegt 6 lose Blatt unterschiedlicher Formate</desc>
+                                                <desc xml:lang="en">Includes 6 loose leaves in various sizes</desc>
+                                            </item>
+                                        </list>
+                                    </accMat>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
                                     </acquisition>
                                 </history>
                             </msDesc>
