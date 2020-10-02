@@ -583,8 +583,8 @@
                         <measure type="format">34x42 cm</measure>
                       </item>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Dostojewski“ und Motto „Dass du nicht enden kannst, das macht dich gross (Goethe 'Westöstlicher Divan')“ maschinenschriftlich und „Mit ihm das Tribunal des Gewissens“ eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Dostojewski“ and motto „Dass du nicht enden kannst, das macht dich gross (Goethe 'Westöstlicher Divan')“, typed, and „Mit ihm das Tribunal des Lebens“, holograph in purple ink</desc>
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Dostojewski“ und Motto „Dass du nicht enden kannst, das macht dich gross | (Goethe 'Westöstlicher Divan')“ maschinenschriftlich und „Mit ihm das Tribunal des Gewissens“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Dostojewski“ and motto „Dass du nicht enden kannst, das macht dich gross | (Goethe 'Westöstlicher Divan')“, typed, and „Mit ihm das Tribunal des Lebens“, holograph in purple ink</desc>
                         <measure type="format">34x21 cm</measure>
                       </item>
                     </list>
@@ -936,8 +936,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Dass Du nicht enden kannst, das macht Dich gross. Goethe Westost. Divan“ eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink and motto „Dass Du nicht enden kannst, das macht Dich gross. Goethe Westost. Divan“, holograph in purple ink</desc>
+                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Dass Du nicht enden kannst, das | macht Dich gross. | Goethe Westost. Divan“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink and motto „Dass Du nicht enden kannst, das | macht Dich gross. | Goethe Westost. Divan“, holograph in purple ink</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
                       <item ana="szdg:Enclosures">
@@ -1114,8 +1114,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Que celui aime peu qui aime la mesure! Boétie“ eigenhändig in violetter Tinte sowie Notizen eigenhändig in Bleistift</desc>
-                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, and motto „Que celui aime peu qui aime la mesure! Boétie“, holograph in purple ink, and notes, holograph in pencil</desc>
+                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Que celui aime peu qui aime | la mesure! | Boétie“ eigenhändig in violetter Tinte sowie Notizen eigenhändig in Bleistift</desc>
+                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, and motto „Que celui aime peu qui aime | la mesure! | Boétie“, holograph in purple ink, and notes, holograph in pencil</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
@@ -1156,6 +1156,12 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
+            <notesStmt><!-- Achtung: Eintrag in Spalte "Besonderheiten" insgesamt unklar, handelt es sich bei Umschlagblatt 1 auch um ehemaliges Manuskriptblatt, wenn nein, dann in Objekttyp-Beschreibung "1 Umschlagblatt" ergänzen und bei Enclusures als neues item aufnehmen! oder wird hier insgesamt nur 1 Umschlagblatt beschrieben? -->
+              <note xml:lang="de">Umschlagblatt mit Aufschrift „Gott hat mich mein ganzes Leben | lang gequält / D.“ eigenhändig in violetter Tinte, 
+                ein Manuskriptblatt ehemals Umschlagblatt, recto mit Aufschrift „Dostojewsky Der Mensch und der Zeitlose“ und „Was ist Gott? Gott ist Qual für D.“ eigenhändig in violetter Tinte</note>
+              <note xml:lang="en">Wrapper leaf inscribed „Gott hat mich mein ganzes Leben | lang gequält / D.“, holograph in purple ink, 
+                1 manuscript leaf formerly wrapper leaf, recto inscribed „Dostojewsky Der Mensch und der Zeitlose“ and „Was ist Gott? Gott ist Qual für D.“, holograph in purple ink</note>
+            </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -1180,7 +1186,7 @@
                           xml:lang="en">Purple carbon paper, purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">
+                        <span xml:lang="de"><!-- Unklarheit bzgl. Umschlagblatt, siehe Anmerkung zu Hinweisfeld! -->
                           <term type="objecttyp">Konvolut</term>: Manuskript, 14 Blatt, korrigiert;
                           Typoskriptdurchschlag, 9 Blatt, korrigiert; beigelegt: Manuskript, 3 Blatt</span><!-- Manuskript an letzter Stelle belassen bzw. "beigelegt" so ok? -->
                         <span xml:lang="en">
@@ -1201,8 +1207,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar! -->
-                        <desc xml:lang="de">Manuskript mit eigenhändigen Notizen, 1 Blatt halbes Deckblatt mit Aufschrift „Dostojewsky Der Zeitmensch und der Zeitlose“</desc>
-                        <desc xml:lang="en">Manuscript with notes, holograph, 1 leaf half cover sheet inscribed „Dostojewsky Der Zeitmensch und der Zeitlose“</desc><!-- Übersetzung überprüfen -->
+                        <desc xml:lang="de">Manuskript mit eigenhändigen Notizen, 1 Blatt halbes Deckblatt mit Aufschrift „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc>
+                        <desc xml:lang="en">Manuscript with notes, holograph, 1 leaf half cover sheet inscribed „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc><!-- Übersetzung überprüfen -->
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
@@ -1289,9 +1295,9 @@
                     <list>
                       <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte, Aufschrift „Die Selbstverbrennung zum Ideal“ eigenhändig in Bleistift und 
-                          „Oh ich habe immer das Leid und die Trauer geliebt, aber nur für mich, nur für mich! Da sie es aber hatten, weinte ich vor Mitleid für sie.“ eigenhändig in violetter Tinte</desc>
+                          „Oh ich habe immer das Leid und die | Trauer geliebt, aber nur für mich, nur für | mich! Da sie es aber hatten, weinte ich | vor Mitleid für sie.“ eigenhändig in violetter Tinte</desc>
                         <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, inscribed „Die Selbstverbrennung zum Ideal“, holograph in pencil, and 
-                          „Oh ich habe immer das Leid und die Trauer geliebt, aber nur für mich, nur für mich! Da sie es aber hatten, weinte ich vor Mitleid für sie.“, holograph in purple ink</desc>
+                          „Oh ich habe immer das Leid und die | Trauer geliebt, aber nur für mich, nur für | mich! Da sie es aber hatten, weinte ich | vor Mitleid für sie.“, holograph in purple ink</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
@@ -1377,8 +1383,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Aufschrift „'Von Osten her wird die Erde erstrahlen'“ (in Anführungszeichen) eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, inscribed „'Von Osten her wird die Erde erstrahlen'“ (in quotation marks), holograph in purple ink</desc>
+                        <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Aufschrift „‚Von Osten her wird die Erde erstrahlen‘“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, inscribed „‚Von Osten her wird die Erde erstrahlen‘“, holograph in purple ink</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
@@ -1496,7 +1502,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Erschienen in: Neue freie Presse, 25. Februar 1923, S. (1)-6; auf letztem Blatt verso Aufschrift „Sonntag feuil 25. März [korrigiert zu] Februar“, vermutlich vom Zeitungssetzer in Bleistift und blauem Bunststift</note>
-              <note xml:lang="en">Published in: (1923, 25. February), Neue freie Presse, pp. (1)-6; on the last leaf verso inscribed „Sonntag feuil 25. März [korrigiert zu] Februar“, probably from the newspaper setter in pencil and blue pencil</note>
+              <note xml:lang="en">Published in: (1923, 25. February), Neue freie Presse, pp. (1)-6; on the last leaf verso inscribed „Sonntag feuil 25. März [korrigiert zu] Februar“, probably by the newspaper setter in pencil and blue pencil</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1545,8 +1551,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig Ernest Renan wichtige Anmerkungen!!!“ eigenhändig in blauer Tinte; Anweisungen zu Druck und Korrekturfahnen</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig Ernest Renan wichtige Anmerkungen!!!“, holograph in blue ink; instructions for printing and galley proofs</desc><!-- Übersetzung prüfen! -->
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“ eigenhändig in blauer Tinte; Anweisungen zu Druck und Korrekturfahnen</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“, holograph in blue ink; instructions for printing and galley proofs</desc><!-- Übersetzung prüfen! -->
                         <measure/><!-- Abmessung fehlt oder gleich wie Manuskript? -->
                       </item>
                     </list>
@@ -1637,8 +1643,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Umschlagblatt mit Aufschrift „Stefan Zweig Leporella Geschrieben 1924. In Buchform noch nicht veröffentlicht. Vorläufige Fassung St. Z. 1929“ eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Wrapper leaf inscribed „Stefan Zweig Leporella Geschrieben 1924. In Buchform noch nicht veröffentlicht. Vorläufige Fassung St. Z. 1929“, holograph in purple ink</desc>
+                        <desc xml:lang="de">Umschlagblatt mit Aufschrift „Stefan Zweig | Leporella | Geschrieben 1924. In Buchform | noch nicht veröffentlicht. Vorläufige Fassung | St. Z. 1929“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Wrapper leaf inscribed „Stefan Zweig | Leporella | Geschrieben 1924. In Buchform | noch nicht veröffentlicht. Vorläufige Fassung | St. Z. 1929“, holograph in purple ink</desc>
                         <measure>34x42 cm</measure>>
                       </item>
                     </list>
@@ -1824,8 +1830,8 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig Der Refractär Diese Handschrift ist meinem Freunde Carl Seelig für seine werdende Sammlung herzlicht gegeben Stefan Zweig Sommer 1918, Rüschlikon“ eigenhändig in violetter Tinte</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig Der Refractär Diese Handschrift ist meinem Freunde Carl Seelig für seine werdende Sammlung herzlicht gegeben Stefan Zweig Sommer 1918, Rüschlikon“, holograph in purple ink</desc>
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Der Refractär | Diese Handschrift ist meinem Freunde | Carl Seelig | für seine werdende Sammlung herzlicht gegeben | Stefan Zweig | Sommer 1918, Rüschlikon“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Der Refractär | Diese Handschrift ist meinem Freunde | Carl Seelig | für seine werdende Sammlung herzlicht gegeben | Stefan Zweig | Sommer 1918, Rüschlikon“, holograph in purple ink</desc>
                         <measure></measure><!-- Abmessung fehlt!-->
                       </item>
                     </list>
@@ -2427,9 +2433,9 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt (Titelblatt) mit Aufschrift „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“ eigenhändig in schwarzer Tinte</desc>
-                        <desc xml:lang="en">Cover sheet (title page) inscribed „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“, holograph in black ink</desc>
-                        <measure></measure>
+                        <desc xml:lang="de">Deckblatt (Titelblatt) mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ eigenhändig in schwarzer Tinte</desc>
+                        <desc xml:lang="en">Cover sheet (title page) inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, holograph in black ink</desc>
+                        <measure></measure><!--  wie Manuskript? -->
                       </item>
                     </list>
                   </accMat>
@@ -2518,10 +2524,10 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures"><!-- Deckblatt bei Objekttyp nicht extra angeführt -->
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“ maschinenschriftlich,
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ maschinenschriftlich,
                           Aufschrift auf Deckblatt und erster Seite „Schiersand“ von fremder Hand in violettem Buntstift, vermutlich der Schriftsetzer Rudolf Schiersand</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig Wille zur Universalität für die Anton Kippenberg Festschrift Frau Katharina Kippenberg in getreuer Ergebenheit St. Z.“, typed, 
-                          Inscription on the cover sheet and first page „Schiersand“ in an unidentified hand, probably by the typesetter Rudolf Schiersand</desc><!-- Übersetzung prüfen! -->
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, typed, 
+                          inscription on the cover sheet and first page „Schiersand“ in an unidentified hand, probably by the typesetter Rudolf Schiersand</desc><!-- Übersetzung prüfen! -->
                         <measure></measure>
                       </item>
                     </list>
@@ -2639,7 +2645,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Postkarte Dresden mit umseitig Abbildung von Daniel Chodowieckis  „Am Schreibtisch“ aus „Sophiens Reise“ aus dem königlichen Kupferstichkabinett Dresden</note>
-              <note xml:lang="en">Postcard Dresden with overleaf illustration from Daniel Chodowiecki's „Am Schreibtisch“ from „Sophiens Reise“ from the royal collection of prints, drawings and photographs Dresden</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="en">Postcard Dresden with overleaf illustration from Daniel Chodowiecki's „Am Schreibtisch“ from „Sophiens Reise“ from the royal Kupferstichkabinett Dresden (collection of prints, drawings and photographs Dresden)</note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2712,8 +2718,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Gewidmet Johannes Reichelt, Titel und Widmung „Johannes Reichelt mit vielen Grüssen Stefan Zweig“ eigenhändig in violetter Tinte</note><!-- Reichelt in Keywords? -->
-              <note xml:lang="en">Dedicated to Johannes Reichelt, title and dedication „Johannes Reichelt mit vielen Grüssen Stefan Zweig“ holograph in purple ink</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="de">Gewidmet Johannes Reichelt, Titel und Widmung „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“ eigenhändig in violetter Tinte</note><!-- Reichelt in Keywords? -->
+              <note xml:lang="en">Dedicated to Johannes Reichelt, title and dedication „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“ holograph in purple ink</note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
