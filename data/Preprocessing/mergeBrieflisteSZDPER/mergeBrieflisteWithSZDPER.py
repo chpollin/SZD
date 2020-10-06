@@ -6,6 +6,9 @@ import os
 import pickle
 import xml.etree.ElementTree as ET
 import urllib.request
+from SPARQLWrapper import SPARQLWrapper, JSON
+
+sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 
 # https://docs.google.com/spreadsheets/d/1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo/edit?usp=sharing
 
@@ -51,16 +54,18 @@ tree = ET.fromstring(response)
 tei = "{http://www.tei-c.org/ns/1.0}"
 
 
+# DataFrame = Google Spreadsheet
 df=pd.DataFrame(values_input[1:], columns=values_input[0])
 
+# define two sets with "SURNAME, FORENAME" from spreadsheet and from SZDPER
 set_excelNames = set()
 set_SZDPER  = set()
 
-for name in df["Correspondent(s)"]:
+# save all "SURNAME, FORENAME" from the spreadsheet 
+for name in df["Correspondent"]:
     set_excelNames.add(name)
 
-#print(tree)
-
+# extract SURNAME, FORENAME from https://gams.uni-graz.at/o:szd.personen/TEI_SOURCE
 for person in tree.findall('.//'+tei+'listPerson//'+tei+'persName'):
     if(person.find(tei+'name') is not None):
         name = person.find(tei+'name').text
@@ -69,17 +74,47 @@ for person in tree.findall('.//'+tei+'listPerson//'+tei+'persName'):
         if (person.find(tei+'forename') is not None):
             forename = person.find(tei+'forename').text
         else:
-            forename = "x"
+            pass
         if (person.find(tei+'surname') is not None):
             surname = person.find(tei+'surname').text
         else:
-            surname = "x"
+            pass
         set_SZDPER.add(surname + ", " + forename)
 
-#print("#### Exist in Google SpreadSheet and in SZDPER")    
-#print(set_SZDPER & set_excelNames)     
-print("#### Exist only in Google SpreadSheet")
-print(set_excelNames - set_SZDPER)                
-    ## ToDo: alle namen heraus bekommen NACHNAME, Vorname und mit df["Correspondent(s)"] abgleichen; 
-    # wenn es matchts --> ignorieren; wenn nicht eine neue Person hinzufügen
-    # gleich immer SZDPER von szd direkt herholen; weiter anreichern über Wikidata und wieder ingestieren? 
+# difference of the two sets
+newPerson = set_excelNames - set_SZDPER
+
+# creates XML/TEI person/persName
+SZDPER_ID = 1645
+#print(df["Correspondent"])
+
+for person in newPerson:
+    # select the row in which google spreadsheet "Correspondent" has same name
+    df.loc[df["Correspondent"] == person]
+    if(df.loc[df["Correspondent"] == person]["GND"].item()):
+        row = df.loc[df["Correspondent"] == person]["GND"].item()
+    else:
+        row = ""    
+    #for c in df["Correspondent"]:
+    #    if(person == c):
+    #        print(c.names) 
+    
+    # t:person
+    tei_person = ET.Element('person')
+    tei_person.set('xml:id', str(SZDPER_ID) )
+    # t:persName
+    tei_persName = ET.SubElement(tei_person, 'persName')
+    if(row):
+        tei_persName.set('ref', row)
+    # t:forename|t:surname|t:name
+    if(', ' in person):
+        tei_surname = ET.SubElement(tei_persName, 'surname')
+        tei_surname.text = person.split(', ')[0]
+        tei_forename = ET.SubElement(tei_persName, 'forename')
+        tei_forename.text = person.split(', ')[1]
+    else:
+        tei_name = ET.SubElement(tei_persName, 'name')
+        tei_name.text = person
+        
+    SZDPER_ID += 1
+    ET.dump(tei_person)   
