@@ -48,16 +48,38 @@ main()
 URL = "https://gams.uni-graz.at/o:szd.personen/TEI_SOURCE"
 response = urllib.request.urlopen(URL).read()
 tree = ET.fromstring(response)
-TEI_NAMESPACE = "http://www.tei-c.org/ns/1.0"
+tei = "{http://www.tei-c.org/ns/1.0}"
 
 
 df=pd.DataFrame(values_input[1:], columns=values_input[0])
 
-#print(df["Correspondent(s)"])
+set_excelNames = set()
+set_SZDPER  = set()
+
+for name in df["Correspondent(s)"]:
+    set_excelNames.add(name)
+
 #print(tree)
 
-for person in tree.findall('.//{http://www.tei-c.org/ns/1.0}persName'):
-    print(person)
+for person in tree.findall('.//'+tei+'listPerson//'+tei+'persName'):
+    if(person.find(tei+'name') is not None):
+        name = person.find(tei+'name').text
+        set_SZDPER.add(name)
+    else:
+        if (person.find(tei+'forename') is not None):
+            forename = person.find(tei+'forename').text
+        else:
+            forename = "x"
+        if (person.find(tei+'surname') is not None):
+            surname = person.find(tei+'surname').text
+        else:
+            surname = "x"
+        set_SZDPER.add(surname + ", " + forename)
+
+#print("#### Exist in Google SpreadSheet and in SZDPER")    
+#print(set_SZDPER & set_excelNames)     
+print("#### Exist only in Google SpreadSheet")
+print(set_excelNames - set_SZDPER)                
     ## ToDo: alle namen heraus bekommen NACHNAME, Vorname und mit df["Correspondent(s)"] abgleichen; 
     # wenn es matchts --> ignorieren; wenn nicht eine neue Person hinzufügen
     # gleich immer SZDPER von szd direkt herholen; weiter anreichern über Wikidata und wieder ingestieren? 
