@@ -84,21 +84,23 @@ for person in tree.findall('.//'+tei+'listPerson//'+tei+'persName'):
 # difference of the two sets
 newPerson = set_excelNames - set_SZDPER
 
+#print(newPerson)
+
 # creates XML/TEI person/persName
 SZDPER_ID = 1645
 #print(df["Correspondent"])
 
 for person in newPerson:
+    
+    
     # select the row in which google spreadsheet "Correspondent" has same name
     df.loc[df["Correspondent"] == person]
-    if(df.loc[df["Correspondent"] == person]["GND"].item()):
+    #print(type(df.loc[df["Correspondent"] == person]["GND"].item()))
+    if(df.loc[df["Correspondent"] == person]["GND"].item() is not None):
         row = df.loc[df["Correspondent"] == person]["GND"].item()
     else:
-        row = ""    
-    #for c in df["Correspondent"]:
-    #    if(person == c):
-    #        print(c.names) 
-    
+        row = "TESTerrich"
+
     # t:person
     tei_person = ET.Element('person')
     tei_person.set('xml:id', str(SZDPER_ID) )
