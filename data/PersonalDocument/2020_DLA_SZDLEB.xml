@@ -17,24 +17,20 @@
                 <authority>
                     <orgName corresp="https://informationsmodellierung.uni-graz.at"
                         ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
-                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität
-                        Graz</orgName>
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
                 </authority>
                 <distributor>
-                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
-                        Management System</orgName>
+                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
                 </distributor>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by-nc/4.0">Creative
-                        Commons BY-NC 4.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0">Creative Commons BY-NC 4.0</licence>
                 </availability>
                 <publisher>Literaturarchiv Salzburg</publisher>
                 <idno type="PID">o:szd.lebensdokumente</idno>
                 <date when="2019-03-21+01:00"/>
             </publicationStmt>
             <seriesStmt>
-                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
-                    Nachlassrekonstruktion</title>
+                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
                 <respStmt>
                     <resp>Projektleitung</resp>
                     <persName>
@@ -100,14 +96,10 @@
                 <biblFull xml:id="SZDLEB.26">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/1024274039"
-                                xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren]</title>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/1024274039"
-                                xml:lang="en">Insel-Verlag publishing contract [Emile
-                                Verhaeren]</title>
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren]</title>
+                            <title ana="assigned" xml:lang="en">Insel-Verlag publishing contract [Emile Verhaeren]</title>
                             <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
-                            <title type="Einheitssachtitel" xml:lang="en">Publishing
-                                Contracts</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
                             <title type="Gesamttitel">SUA: Insel-Verlag/Zentrale Verträge</title>
                             <author ref="#SZDPER.1560">
                                 <persName ref="http://d-nb.info/gnd/118637479">
@@ -123,7 +115,8 @@
                             <note xml:lang="de">Recto mit aufgeklebter Stempelmarke, Stempel und
                                 dazu handschriftliche Anmerkung von unbekannt, verso mit
                                 Unterschrift von Stefan Zweig und Anton Kippenberg</note>
-                            <note xml:lang="en">XXX</note>
+                            <note xml:lang="en">Recto with pasted stamp mark, stamp and handwritten annotations in an unidentified hand, verso 
+                            holograph signature and signature by Anton Kippenberg</note><!-- Übersetzung überprüfen! -->
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -133,13 +126,7 @@
                                     <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
                                     <idno type="signature">SU.2010.0001</idno>
-                                    <!-- Mediennummer: HS010940949 -->
-                                    <altIdentifier>
-                                        <idno type="subject">o:szd.thema.1</idno>
-                                    </altIdentifier>
-                                    <altIdentifier>
-                                        <idno type="PID">o:szd.6809</idno>
-                                    </altIdentifier>
+                                    <idno type="mediaid">HS010940949</idno>
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
@@ -153,7 +140,7 @@
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
                                                   >Doppelbogen, gelocht</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >XXX, hole punched</material>
+                                                  >Bifolio, hole punched</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                   >Schwarzes Farbband, violette und schwarze
                                                   Tinte</material>
@@ -162,12 +149,10 @@
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">
-                                                  <term type="objecttyp">Typoskript</term> ,
-                                                  <measure type="leaf">1 Blatt</measure>
+                                                  <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                                                 </span>
                                                 <span xml:lang="en">
-                                                  <term type="objecttyp">Typescript</term> ,
-                                                  <measure type="leaf">1 leaf</measure>
+                                                  <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                                                 </span>
                                                 <measure type="format">32x41 cm</measure>
                                             </extent>
@@ -180,11 +165,10 @@
                                 </physDesc>
                                 <history>
                                     <origin>
-                                        <origPlace>Wien und Leipzig</origPlace>
-                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909.|
-                                            Leipzig, den 12. Oktober 1909.</origDate>
+                                        <origPlace>Wien, Leipzig</origPlace>
+                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909. | Leipzig, den 12. Oktober 1909.</origDate>
                                     </origin>
-                                    <provenance>
+                                    <provenance><!-- Stimmen die folgenden Angaben zu Erwerbung/Provenienz wirklich oder wurden sie versehentlich aus Vorlage übernommen? -->
                                         <ab xml:lang="de">Insel Verlag</ab>
                                         <ab xml:lang="en">Insel Verlag</ab>
                                     </provenance>
@@ -210,15 +194,12 @@
                 <biblFull xml:id="SZDLEB.27">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/1024274039"
-                                xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren: Drei
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren: Drei
                                 Dramen und Emil Verhaeren: Ausgewählte Gedichte]</title>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/1024274039"
-                                xml:lang="en">Insel-Verlag publishing contract [Emile Verhaeren:
+                            <title ana="assigned" xml:lang="en">Insel-Verlag publishing contract [Emile Verhaeren:
                                 Drei Dramen and Emil Verhaeren: Ausgewählte Gedichte]</title>
                             <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
-                            <title type="Einheitssachtitel" xml:lang="en">Publishing
-                                Contracts</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
                             <title type="Gesamttitel">SUA: Insel-Verlag/Zentrale Verträge</title>
                             <author ref="#SZDPER.1560">
                                 <persName ref="http://d-nb.info/gnd/118637479">
@@ -232,9 +213,10 @@
                         </publicationStmt>
                         <notesStmt>
                             <note xml:lang="de">Mit drei aufgeklebten Stempelmarke, Stempeln und
-                                dazu handschriftliche Anmerkung von unbekannt; mit Unterschrift von
+                                dazu handschriftliche Anmerkung von unbekannt, mit Unterschrift von
                                 Stefan Zweig und Anton Kippenberg</note>
-                            <note xml:lang="en">XXX</note>
+                            <note xml:lang="en">With three pasted stamp marks, stamps and handwritten annotations in an unidentified hand, 
+                            with holograph signature and signature by Anton Kippenberg</note><!-- Übersetzung überprüfen! -->
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -245,12 +227,6 @@
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
                                     <idno type="signature">SU.2010.0001</idno>
                                     <idno type="mediaid">HS010940949</idno>
-                                    <altIdentifier>
-                                        <idno type="subject">o:szd.thema.1</idno>
-                                    </altIdentifier>
-                                    <altIdentifier>
-                                        <idno type="PID">o:szd.6809</idno>
-                                    </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
@@ -264,21 +240,18 @@
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
                                                   >Doppelbogen, gelocht</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >XXX, hole punched</material>
+                                                  >Bifolio, hole punched</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >Schwarzes Farbband, violette und schwarze
-                                                  Tinte</material>
+                                                  >Schwarzes Farbband, violette und schwarze Tinte</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
                                                   >Black ribbon, purple and black ink</material>
                                             </support>
-                                            <extent>
+                                            <extent><!-- im Deutschen "3 Seiten", im Englischen nicht; warum 3 Seiten? -->
                                                 <span xml:lang="de">
-                                                  <term type="objecttyp">Typoskript</term> ,
-                                                  <measure type="leaf">1 Blatt, 3 Seiten</measure>
+                                                  <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt, 3 Seiten</measure>
                                                 </span>
                                                 <span xml:lang="en">
-                                                  <term type="objecttyp">Typescript</term> ,
-                                                  <measure type="leaf">1 leaf</measure>
+                                                  <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                                                 </span>
                                                 <measure type="format">32x41 cm</measure>
                                             </extent>
@@ -291,11 +264,10 @@
                                 </physDesc>
                                 <history>
                                     <origin>
-                                        <origPlace>Wien und Leipzig</origPlace>
-                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909.|
-                                            Leipzig, den 12. Oktober 1909.</origDate>
+                                        <origPlace>Wien, Leipzig</origPlace>
+                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909. | Leipzig, den 12. Oktober 1909.</origDate>
                                     </origin>
-                                    <provenance>
+                                    <provenance><!-- Stimmen die folgenden Angaben zu Erwerbung/Provenienz wirklich oder wurden sie versehentlich aus Vorlage übernommen? -->
                                         <ab xml:lang="de">Insel Verlag</ab>
                                         <ab xml:lang="en">Insel Verlag</ab>
                                     </provenance>
@@ -321,13 +293,11 @@
                 <biblFull xml:id="SZDLEB.28">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" xml:lang="de">Notiz auf einem Umschlag seiner
-                                Autographensammlung zu einem Manuskript Augustin de
+                            <title ana="assigned" xml:lang="de">Notiz auf einem Umschlag seiner Autographensammlung zu einem Manuskript Augustin de
                                 Robespierres</title>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/1024274039"
-                                xml:lang="en">XXX</title>
+                            <title ana="assigned" xml:lang="en">Note on an envelope of his autograph collection on a manuscript of Augustin de Robespierre</title><!-- Übersetzung überprüfen! -->
                             <title type="Einheitssachtitel" xml:lang="de">Diverses</title>
-                            <title type="Einheitssachtitel" xml:lang="en">XXX</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Various</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
                             <author ref="#SZDPER.1560">
                                 <persName ref="http://d-nb.info/gnd/118637479">
@@ -340,11 +310,11 @@
                             <ab>Archivmaterial</ab>
                         </publicationStmt>
                         <notesStmt>
-                            <note xml:lang="de">Angaben Stefan Zweigs zu Inhalt und Erwerbung einem
+                            <note xml:lang="de">Angaben Stefan Zweigs zu Inhalt und Erwerbung eines
                                 Manuskripts Augustin Robespierres aus seiner Sammlung eingenhändig
-                                in violetter Tinte
-                                (https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625)</note>
-                            <note xml:lang="en">XXX</note>
+                                in violetter Tinte (https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625)</note>
+                            <note xml:lang="en">Holograph notes in purple ink concerning content and acquisition of a manuscript by Augustin Robespierre (https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625)</note>
+                            <!-- Übersetzung ürberpüfen! -->
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -353,10 +323,10 @@
                                     <settlement>Marbach</settlement>
                                     <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches
                                         Literaturarchiv Marbach. Handschriftenabteilung</repository>
-                                    <idno type="signature"> 79.21</idno>
+                                    <idno type="signature">79.21</idno>
                                     <idno type="mediaid">HS00952746X</idno>
                                     <idno type="subject">o:szd.thema.1</idno>
-                                    <!-- Verlinkung zu Autograph und anderherum  -->
+                                    <!-- Verlinkung zu Autograph und anderherum  --><!-- warum hier "thema.1. - wär das nicht "thema.4"? -->
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
@@ -368,24 +338,19 @@
                                         <supportDesc>
                                             <support>
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Mit Kategorien bedruckte Autographenmappe für
-                                                  Stücke aus der Autographensammlung Stefan
-                                                  Zweigs</material>
+                                                  >Mit Kategorien bedruckte Autographenmappe für Stücke aus der Autographensammlung Stefan Zweigs</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >XXX</material>
+                                                    >Autograph folder printed with categories for pieces from the autograph collection of Stefan Zweig</material><!-- Übersetzung überprüfen! -->
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                   >Violette Tinte</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
                                                   >Purple ink</material>
                                             </support>
-                                            <extent>
+                                            <extent><!-- ansonsten auch bei Doppelbögen auch mit Blatt angegeben! -->
                                                 <span xml:lang="de">
-                                                  <term type="objecttyp">Manuskript</term> ,
-                                                  <measure type="leaf">1 Doppelbogen</measure>
-                                                </span>
+                                                  <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Doppelbogen</measure></span>
                                                 <span xml:lang="en">
-                                                  <term type="objecttyp">Manuscript</term> ,
-                                                  <measure type="leaf">1 XX</measure>
+                                                  <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 bifolio</measure>
                                                 </span>
                                                 <measure type="format">37x53 cm</measure>
                                             </extent>
@@ -393,11 +358,10 @@
                                     </objectDesc>
                                     <handDesc>
                                         <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
-                                        <ab xml:lang="en">Stefan Zweig, XX</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                                     </handDesc>
                                 </physDesc>
                                 <history>
-
                                     <provenance>
                                         <ab xml:lang="de">?</ab>
                                         <ab xml:lang="en">?</ab>
@@ -415,8 +379,7 @@
                             <keywords>
                                 <term type="classification" xml:lang="de">Diverses</term>
                                 <term type="classification" xml:lang="en">Various</term>
-                                <term ref="http://d-nb.info/gnd/10227939X" type="person">
-                                    Robespierre, Augustin</term>
+                                <term ref="http://d-nb.info/gnd/10227939X" type="person">Robespierre, Augustin</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -447,7 +410,9 @@
                                     <idno type="mediaid">HS009527497</idno>
                                 </msIdentifier>
                                 <msContents>
-                                    <textLang><lang xml:lang="ger">Deutsch</lang></textLang>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
                                     <!-- Portugiesisch zusätzlich angeben, auch bei anderem Dokument? -->
                                 </msContents>
                                 <physDesc>
@@ -460,12 +425,10 @@
                                             </support>
                                             <extent><span xml:lang="de">
                                                   <term type="objecttyp">Manuskript</term>, <measure
-                                                  ana="corrected" type="leaf">1 Blatt,
-                                                  korrigiert</measure></span><span xml:lang="en"
-                                                  ><term type="objecttyp">Manuscript</term>,
-                                                  <measure ana="corrected" type="leaf">1 leaf,
-                                                  corrected</measure></span><measure type="format"
-                                                  >33x22 cm</measure></extent>
+                                                  ana="corrected" type="leaf">1 Blatt, korrigiert</measure></span>
+                                                <span xml:lang="en"><term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">
+                                                    1 leaf, corrected</measure></span>
+                                                <measure type="format">33x22 cm</measure></extent>
                                         </supportDesc>
                                     </objectDesc>
                                     <handDesc>
@@ -474,11 +437,18 @@
                                     </handDesc>
                                 </physDesc>
                                 <history>
-                                    <origin><origPlace>Petropolis</origPlace>
+                                    <origin>
+                                        <origPlace>Petropolis</origPlace>
                                         <origDate when="1942-02-22">22. II 1942</origDate>
                                     </origin>
-                                    <provenance><ab xml:lang="de">?</ab><ab xml:lang="en"
-                                        >?</ab></provenance>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </acquisition>
                                 </history>
                             </msDesc>
                         </sourceDesc>
@@ -536,17 +506,17 @@
                                         <supportDesc>
                                             <support>
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                    >Adressbuch mit Hänldermarke auf Innenseite des Deckels „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    >Adressbuch mit Hänldermarke auf Innenseite des Deckels „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, 
                                                     Registerbuch mit Tabellenvordruck blau und rot, marmorierter Schnitt</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                    >Adress book with stationer's label on the inside of the cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    >Adress book with stationer's label on the inside of the cover „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, 
                                                     register book with table form blue and red, marbled edges</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                     >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
                                                   >Purple, black, and blue ink, pencil, red and blue pencil</material>
                                             </support>
-                                            <extent>
+                                            <extent><!-- Blattzahl mit Vorsatz ohne Deckel -->
                                                 <span xml:lang="de">
                                                   <term type="objecttyp">Adressbuch</term>, <measure
                                                   type="leaf">117 Blatt, eingelegt: 10 Blatt</measure>
@@ -650,7 +620,7 @@
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
                                                     >Purple, black, and blue ink, pencil, red and blue pencil</material>
                                             </support>
-                                            <extent>
+                                            <extent><!-- Blattzahl mit Vorsatz ohne Deckel -->
                                                 <span xml:lang="de">
                                                     <term type="objecttyp">Adressbuch</term>, <measure
                                                         type="leaf">147 Blatt, eingelegt: 6 Blatt</measure>
@@ -709,7 +679,6 @@ Personenschlagwort: Oppeln-Bronikowski, Friedrich von; http://d-nb.info/gnd/1171
 zweiter Verfasser: Kippenberg, Anton
 Inhalt: Vertrag zum Ankauf der Restexemplare von Emile Verhaeren: Ausgewählte Gedichte. Berlin: Schuster & Loeffler (350 num. Ex., dav. 25 sign.) 1904 und zur Übersetzung der Dramen „Philippe II“ und „Helenas Heimkehr“ durch Stefan Zweig und „Das Kloster“ durch Friedrich von Oppeln-Bronikowski
  -->
-
             </listBibl>
         </body>
     </text>
