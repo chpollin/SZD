@@ -520,7 +520,7 @@
         <biblFull xml:id="SZDMSK.6">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewski I Vorrede</title>
+              <title ana="original">Dostojewski | I | Vorrede</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -616,7 +616,7 @@
         <biblFull xml:id="SZDMSK.7">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewski II Sein Antlitz</title>
+              <title ana="original">Dostojewski | II | Sein Antlitz</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -882,7 +882,7 @@
         <biblFull xml:id="SZDMSK.10">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojeswki Der Uberschreiter der Grenzen</title>
+              <title ana="original">Dostojeswki | Der Uberschreiter der Grenzen</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -1008,15 +1008,15 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Konvolut</term>: Manuskript, 10 Blatt, korrigiert;
-                          Manuskript, 30 Blatt; [Notizen] 1 Umschlagblatt</span><!-- Eintrag Notizen noch klären! -->
+                          Manuskript, 30 Blatt; [Notizen], 1 Umschlagblatt</span><!-- Eintrag Notizen noch klären: Gesamtblattzahl 41, also Notizen gehört vermutlich Beschreibung eines der Manuskripte im Sinne von "mit eigenhändigen Notizen"? -->
                         <span xml:lang="en">
                           <term type="objecttyp">Collection</term>: manuscript, 10 leaves,
-                          corrected; manuscript, 30 leaves; [Notes] 1 wrapper leaf</span>
+                          corrected; manuscript, 30 leaves; [Notes], 1 wrapper leaf</span>
                         <measure type="format">16x10 cm bis 34x21 cm</measure>
                       </extent>
                       <foliation>
                         <ab xml:lang="de">1 Manuskript paginiert: 2 bis 10, 1 Manuskript paginiert: 1 bis 12, 14 und 15</ab>
-                        <ab xml:lang="en">1 manuscript paginated: 2-10, 1 manuscript paginated: 1-12, 14, 15</ab>
+                        <ab xml:lang="en">1 manuscript paginated: 2-10, 1 manuscript paginated: 1-12, 14, and 15</ab>
                       </foliation>
                     </supportDesc>
                   </objectDesc>
@@ -1027,7 +1027,7 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Unbeschriftetes Umschlagblatt</desc><!-- extra aufnehmen? -->
+                        <desc xml:lang="de">Unbeschriftetes Umschlagblatt</desc><!-- wirklich extra aufnehmen? -->
                         <desc xml:lang="en">Uninscribed wrapper leaf</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
@@ -1060,7 +1060,7 @@
         <biblFull xml:id="SZDMSK.12">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewsky Architektur und Leidenschaft</title>
+              <title ana="original">Dostojewsky | Architektur und Leidenschaft</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -1095,7 +1095,7 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Konvolut</term>: Manuskript, 10 Blatt, korrigiert;
-                          Manuskript, 14 Blatt, korrigiert; Typoskript, 12 Blatt, korrigiert; 1 Umschlagblatt; beigelegt: Manuskript, 2 Blatt</span><!-- Eintrag Notizen noch klären! -->
+                          Manuskript, 14 Blatt, korrigiert; Typoskript, 12 Blatt, korrigiert; 1 Umschlagblatt; eingelegt: Manuskript, 2 Blatt</span>
                         <span xml:lang="en">
                           <term type="objecttyp">Collection</term>: manuscript, 10 leaves,
                           corrected; manuscript, 14 leaves, corrected; typescript, 12 leaves, corrected; 1 wrapper leaf; includes: manuscript, 2 leaves</span>
@@ -1113,7 +1113,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures">
+                      <item ana="szdg:Enclosures"><!-- eingelegtes Manuskript als zweites Enclosure aufnehmen?! -->
                         <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Que celui aime peu qui aime | la mesure! | Boétie“ eigenhändig in violetter Tinte sowie Notizen eigenhändig in Bleistift</desc>
                         <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, and motto „Que celui aime peu qui aime | la mesure! | Boétie“, holograph in purple ink, and notes, holograph in pencil</desc>
                         <measure type="format">34x42 cm</measure>
@@ -1147,7 +1147,7 @@
         <biblFull xml:id="SZDMSK.13"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar! -->
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewsky Die Gottesqual</title>
+              <title ana="original">Dostojewsky | Die Gottesqual</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -1156,10 +1156,11 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
-            <notesStmt><!-- Achtung: Eintrag in Spalte "Besonderheiten" insgesamt unklar, handelt es sich bei Umschlagblatt 1 auch um ehemaliges Manuskriptblatt, wenn nein, dann in Objekttyp-Beschreibung "1 Umschlagblatt" ergänzen und bei Enclusures als neues item aufnehmen! oder wird hier insgesamt nur 1 Umschlagblatt beschrieben? -->
-              <note xml:lang="de">Umschlagblatt mit Aufschrift „Gott hat mich mein ganzes Leben | lang gequält / D.“ eigenhändig in violetter Tinte, 
+            <notesStmt><!-- Achtung: Eintrag in Spalte "Besonderheiten" insgesamt unklar, handelt es sich bei Umschlagblatt 1 gleichzeitig um ehemaliges Manuskriptblatt, wenn nein, dann in Objekttyp-Beschreibung "1 Umschlagblatt" ergänzen und bei Enclusures als neues item aufnehmen! 
+              oder wird hier insgesamt nur 1 Umschlagblatt beschrieben und wenn ja Umschlagblatt oder Deckblatt? -->
+              <note xml:lang="de">Umschlagblatt mit Aufschrift „Gott hat mich mein ganzes Leben | lang gequält | D.“ eigenhändig in violetter Tinte, 
                 ein Manuskriptblatt ehemals Umschlagblatt, recto mit Aufschrift „Dostojewsky Der Mensch und der Zeitlose“ und „Was ist Gott? Gott ist Qual für D.“ eigenhändig in violetter Tinte</note>
-              <note xml:lang="en">Wrapper leaf inscribed „Gott hat mich mein ganzes Leben | lang gequält / D.“, holograph in purple ink, 
+              <note xml:lang="en">Wrapper leaf inscribed „Gott hat mich mein ganzes Leben | lang gequält | D.“, holograph in purple ink, 
                 1 manuscript leaf formerly wrapper leaf, recto inscribed „Dostojewsky Der Mensch und der Zeitlose“ and „Was ist Gott? Gott ist Qual für D.“, holograph in purple ink</note>
             </notesStmt>
             <sourceDesc>
@@ -1206,9 +1207,9 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar! -->
-                        <desc xml:lang="de">Manuskript mit eigenhändigen Notizen, 1 Blatt halbes Deckblatt mit Aufschrift „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc>
-                        <desc xml:lang="en">Manuscript with notes, holograph, 1 leaf half cover sheet inscribed „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc><!-- Übersetzung überprüfen -->
+                      <item ana="szdg:Enclosures"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar, siehe Eintrag im Feld "notes"! -->
+                        <desc xml:lang="de">Beigelegtes Manuskript mit eigenhändigen Notizen, 1 Blatt halbes Deckblatt mit Aufschrift „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc>
+                        <desc xml:lang="en">Inserted manuscript with notes, holograph, 1 leaf half cover sheet inscribed „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc><!-- Übersetzung überprüfen -->
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
@@ -1237,10 +1238,10 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.14">
+        <biblFull xml:id="SZDMSK.14"><!-- "Auch aus die Gottesqual" im Feld AN noch nicht eingebaut, wenn ja, wo? -->
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewski Die Moral der Selbstvernichtung</title>
+              <title ana="original">Dostojewski | Die Moral der Selbstvernichtung</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -1329,7 +1330,7 @@
         <biblFull xml:id="SZDMSK.15">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Dostojewsky Der russische Christus</title>
+              <title ana="original">Dostojewsky | Der russische Christus</title>
               <title type="Einheitssachtitel">Drei Meister</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -1364,10 +1365,10 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskriptdurchschlag</term>, <measure ana="corrected"
-                            type="leaf">6 Blatt, korrigiert; 1 Umschlagblatt</measure></span><!-- "mit eigenhändigen Notizen" hier mit "korrigiert" eingetragen, löschen und nur in Hinweisfeld notieren? -->
+                            type="leaf">8 Blatt, korrigiert; 1 Umschlagblatt</measure></span><!-- Angabe "mit eigenhändigen Notizen" hier mit "korrigiert" eingetragen, Anmerkung im Hinweisfeld notieren? -->
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript (carbon copy)</term>, <measure ana="corrected"
-                            type="leaf">6 leaves, corrected; 1 wrapper leaf</measure></span>
+                            type="leaf">8 leaves, corrected; 1 wrapper leaf</measure></span>
                         <measure type="format">34x21 cm</measure>
                       </extent>
                       <foliation>
@@ -2940,11 +2941,12 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.34">
+        <biblFull xml:id="SZDMSK.34"><!-- ab hier Ungeduld des Herzens, Informationen überprüfen!!! -->
           <fileDesc>
             <titleStmt>
-              <title ana="original">First notes for ‚Ungeduld des Herzens‘ (Beware of pity) Stefan Zweig</title><!-- ? -->
-              <title type="Einheitssachtitel">Ungeduld des Herzens</title>
+              <title ana="original">„First notes for ‚Ungeduld des Herzens‘ (Beware of pity) Stefan Zweig“</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2990,7 +2992,7 @@
                           xml:lang="en">Green ink, pencil and ?</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">
+                        <span xml:lang="de"><!-- Gesamtblattzahl?! -->
                           <term type="objecttyp">Manuskript</term>, <measure ana="corrected"
                             type="leaf">56 Blatt, korrigiert; eingelegt: Manuskript, 1 Blatt</measure></span>
                         <span xml:lang="en">
@@ -3017,7 +3019,7 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Eingelegeter Notizzettel auf Seite 40 mit der Aufschrift „DOPPELSEITE AUS ERSTER FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
+                        <desc xml:lang="de">Eingelegter Notizzettel auf Seite 40 mit der Aufschrift „DOPPELSEITE AUS ERSTER FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
                         <desc xml:lang="en">Inserted note at page 40 inscribed „DOPPELSEITE AUS ERSTER FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
                         <measure>?</measure>
                       </item>
@@ -3048,8 +3050,9 @@
         <biblFull xml:id="SZDMSK.35">
           <fileDesc>
             <titleStmt>
-              <title ana="original">M. durch M. Zweite Fassung (erster Absatz getippt) … Stephan Zweig 49, Hellam Street ‚London. 20/23 Mai 1937‘</title><!-- ? Adresse falsch! Hallam -->
-              <title type="Einheitssachtitel">Ungeduld des Herzens</title>
+              <title ana="original">„M. durch M. Zweite Fassung (erster Absatz getippt) … Stephan Zweig 49, Hellam Street ‚London. 20/23 Mai 1937‘“</title><!-- ? Adresse falsch! Hallam -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -3089,7 +3092,7 @@
                           xml:lang="en">Green and blue ink, and ?</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">
+                        <span xml:lang="de"><!-- Gesamtblattzahl?! -->
                           <term type="objecttyp">Manuskript</term>, <measure ana="corrected"
                             type="leaf">89 Blatt, korrigiert; eingelegt: Manuskript, 2 Blatt</measure></span>
                         <span xml:lang="en">
@@ -3116,10 +3119,10 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Eingelegeter Notizzettel mit der Aufschrift „TITELBLATT ZWEITE FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
+                        <desc xml:lang="de">Eingelegter Notizzettel mit der Aufschrift „TITELBLATT ZWEITE FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
                         <desc xml:lang="en">Inserted note inscribed „TITELBLATT ZWEITE FASSUNG ‚UNGEDULD DES HERZENS‘“</desc>
                         <measure>?</measure>
-                        <desc xml:lang="de">Eingelegeter Notizzettel auf Seite 18 mit der Aufschrift „DOPPELSEITE AUS ZWEITER FASSUNG ‚UNGEDULD DES HERZENS‘ 1. HEFT“</desc>
+                        <desc xml:lang="de">Eingelegter Notizzettel auf Seite 18 mit der Aufschrift „DOPPELSEITE AUS ZWEITER FASSUNG ‚UNGEDULD DES HERZENS‘ 1. HEFT“</desc>
                         <desc xml:lang="en">Inserted note at page 18 inscribed „DOPPELSEITE AUS ZWEITER FASSUNG ‚UNGEDULD DES HERZENS‘ 1. HEFT“</desc>
                         <measure>?</measure>
                       </item>
@@ -3131,6 +3134,842 @@
                     <origPlace>49, Hallam Street London</origPlace>
                     <origDate when="1937-05-20">20/23 Mai 1937</origDate>
                   </origin>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.36">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">„M. d. M. Zweite Fassung. Zweites Heft. London 19. Juni 1937“</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Titel und Adresse „Stefan Zweig 49 Hallam Street W1“ in blauer Tinte; 79 Seiten rechts beschrieben, links meist annotiert, Seite 45 leer, Seite 85 rückseitig Notiz „Fragen an Dr. P.“, Seite 86-87 (3 Seiten) Änderungsnotizen; 
+                in grüner Tinte „‚To Lord Carlow‘ | Stefan Zweig: Beware of pity | Second autograph version Volume II“</note>
+              <note xml:lang="en">Title and adress „Stefan Zweig 49 Hallam Street W1“ in blue ink; 79 leaves inscribed on the right, left mostly annotated, page 45 blank, page 85 note on the back „Fragen an Dr. P.“, page 86-87 (3 pages) notes on changes; 
+                in green ink „‚To Lord Carlow‘ | Stefan Zweig: Beware of pity | Second autograph version Volume II“</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Grün-grau marmoriertes Ringheft</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Green-grey marbled ring binder</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Grüne und blaue Tinte und ?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Green and blue ink, and ?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><!-- Gesamtblattzahl?! -->
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected"
+                            type="leaf">79 Blatt, korrigiert</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected"
+                            type="leaf">79 leaves, corrected</measure></span>
+                        <measure type="format">27x21 cm</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">sporadisch paginiert</ab>
+                        <ab xml:lang="en">sporadically paginated</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Ringbindung</ab>
+                      <ab xml:lang="en">Ring-bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>49 Hallam Street W1 London</origPlace>
+                    <origDate when="1937-06-19">19. Juni 1937</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.37">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Stefan Zweig Beware of Pity (Ungeduld des Herzens)</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Titel und Zusatz „First drafts in much shorter form | and additional changements 1937 and 1938“; Seite 1-28 immer rechts beschrieben, weitere 66 Seiten separat rechts beschrieben und auf verschiedenen Papieren; 
+                Seite 1 und 23 Additionen zu 17 (?????); kleineres Manuskript eingebunden</note>
+              <note xml:lang="en">Title and addition „First drafts in much shorter form | and additional changements 1937 and 1938“; page 1-28 inscribed on the right, another 66 pages described separately on the right and on different papers; 
+                page 1 and 23 additions to 17 (????); smaller manuscript bound</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Blaues Briefpapier</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Blue stationery</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Grüne und blaue Tinte und ?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Green and blue ink, and ?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><!-- Gesamtblattzahl inkl. oder exkl. Notizzettel -->
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected"
+                            type="leaf">119 Blatt, korrigiert; eingelegt: Manuskript, 1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected"
+                            type="leaf">119 leaves, corrected; includes: manuscript, 1 leaf</measure></span>
+                        <measure type="format">30x21 cm</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">paginiert: 1 bis 28, in Folge teils durchpaginiert</ab>
+                        <ab xml:lang="en">paginated: 1-28, further partly paginated</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Eingelegter Notizzettel mit der Aufschrift „STEFAN ZWEIG | BEWARE OF PITY | (UNGEDULD DES HERZENS) | FIRST DRAFT IN MUCH | SHORTER FORM | and additional changements | 1937 and 1938“</desc>
+                        <desc xml:lang="en">Inserted note inscribed „STEFAN ZWEIG | BEWARE OF PITY | (UNGEDULD DES HERZENS) | FIRST DRAFT IN MUCH | SHORTER FORM | and additional changements | 1937 and 1938“</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate>1937 and 1938</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.38">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Typescript first version</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">434 Blatt, korrigiert; eingelegt: Manuskript, 10 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected"
+                            type="leaf">434 leaves, corrected; includes: manuscript, 10 leaves</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Eingelegtes Manuskript</desc>
+                        <desc xml:lang="en">Inserted manuscript</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.39">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Corrected Typescript 2nd version</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Blaues Papier (7 Blatt)</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Blue paper (7 leaves)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">584 Blatt, korrigiert; eingelegt: Manuskript, 7 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected"
+                            type="leaf">584 leaves, corrected; includes: manuscript, 7 leaves</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">7 Blatt eingelegtes Manuskript auf blauem Papier</desc>
+                        <desc xml:lang="en">7 leaves inserted manuscript on blue paper</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.40">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Typescript of re-written pages of 3rd version in 2 parts</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Blaues Papier (35 Blatt)</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Blue paper (35 leaves)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">458 Blatt, korrigiert; eingelegt: Manuskript, 35 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected"
+                            type="leaf">458 leaves, corrected; includes: manuscript, 35 leaves</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">35 Blatt eingelegtes Manuskript auf blauem Papier, einseitig beschrieben, eingefügt sind 14 Blatt vor der Einleitung und 21 Blatt vor Seite 12</desc>
+                        <desc xml:lang="en">35 leaves inserted manuscript on blue paper, inscribed one-sided, 14 leaves inserted before the introduction and 21 leaves before page 12</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.41">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Typescript of re-written pages final version</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Blaues Papier (19 Blatt)</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Blue paper (19 leaves)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">?</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">?</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">64 Blatt, korrigiert; eingelegt: Manuskript, 19 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected"
+                            type="leaf">64 leaves, corrected; includes: manuscript, 19 leaves</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">Seitenzahlen nicht zusammenhängend</ab>
+                        <ab xml:lang="en">page numbers not coherent</ab><!-- Übersetzung überprüfen! -->
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">19 Blatt eingelegtes Manuskript auf blauem Papier, einseitig beschrieben</desc>
+                        <desc xml:lang="en">19 leaves inserted manuscript on blue paper, inscribed one-sided</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.42">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Typescript final version</title><!-- ? -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt><notesStmt>
+              <note xml:lang="de">Notizen und Korrekturem in blauem Buntstift (?)</note>
+              <note xml:lang="en">Notes and corrections in blue pencil (?)</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Blauer Buntstift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Blue pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">601 Blatt, korrigiert</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected"
+                            type="leaf">601 leaves, corrected</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.43">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Author's corrected gallery proofs</title><!-- ? ändern zu galley proof - haben wir sonst immer! -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt><notesStmt>
+              <note xml:lang="de">Korrekturem in blauer Tinte und Bleistift</note>
+              <note xml:lang="en">Corrections in blue ink and pencil</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Blaue Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Blue ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Druckfahne</term>, <measure ana="corrected" type="leaf">219 Blatt, korrigiert</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Galley proof</term>, <measure ana="corrected"
+                            type="leaf">219 leaves, corrected</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">?</ab>
+                      <ab xml:lang="en">?</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                <term type="classification" xml:lang="en">Novels/Stories</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDMSK.44">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Author's corrected page proofs</title><!-- ?  -->
+              <title type="Einheitssachtitel" xml:lang="de">Ungeduld des Herzens</title>
+              <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
+              <title type="Gesamttitel">A:Zweig</title>
+              <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt><notesStmt>
+              <note xml:lang="de">Fertiger Roman in gedruckter und ungebrochener Version, ungeschnitten und ungebunden; Korrekturen in blau (Tinte, Stift?)</note>
+              <note xml:lang="en">Finished novel in printed and unbroken version, uncut and unbound; corrections in blue (ink, pencil?)</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Deutschland</country>
+                  <settlement>Marbach</settlement>
+                  <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
+                  <idno type="signature">HS.2007.0124.00001</idno><!-- ?? -->
+                  <idno type="mediaid">HS004786404</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang><!-- ? -->
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Blaue Tinte/Buntstift (?)</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Blue ink/pencil (?)</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Druckfahne</term>, <measure ana="corrected" type="leaf">443 Blatt, korrigiert; eingelegt: Manuskript, 1 Blatt</measure></span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Galley proof</term>, <measure ana="corrected"
+                            type="leaf">443 leaves, corrected; inserted: manuscript, 1 leaf</measure></span>
+                        <measure type="format">?</measure>
+                      </extent>
+                      <foliation>
+                        <ab xml:lang="de">?</ab>
+                        <ab xml:lang="en">?</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">?</ab>
+                    <ab xml:lang="en">?</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Eingelegter Notizzettel mit der Aufschrift „UNGEDULD DES HERZENS | UMBRUCH | KORRIEGIERT“</desc>
+                        <desc xml:lang="en">Inserted note inscribed „UNGEDULD DES HERZENS | UMBRUCH | KORRIEGIERT“</desc>
+                        <measure>?</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
                   <provenance><ab xml:lang="de">?</ab>
                     <ab xml:lang="en">?</ab>
                   </provenance>
