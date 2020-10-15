@@ -970,7 +970,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.11"><!-- ab hier allein aufgenommen -->
+        <biblFull xml:id="SZDMSK.11">
           <fileDesc>
             <titleStmt>
               <title ana="supplied/verified">Der Überschreiter der Grenzen</title>
@@ -1008,10 +1008,10 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Konvolut</term>: Manuskript, 10 Blatt, korrigiert;
-                          Manuskript, 30 Blatt; [Notizen], 1 Umschlagblatt</span><!-- Eintrag Notizen noch klären: Gesamtblattzahl 41, also Notizen gehört vermutlich Beschreibung eines der Manuskripte im Sinne von "mit eigenhändigen Notizen"? -->
+                          Manuskript, 30 Blatt; 1 Umschlagblatt</span>
                         <span xml:lang="en">
                           <term type="objecttyp">Collection</term>: manuscript, 10 leaves,
-                          corrected; manuscript, 30 leaves; [Notes], 1 wrapper leaf</span>
+                          corrected; manuscript, 30 leaves; 1 wrapper leaf</span>
                         <measure type="format">16x10 cm bis 34x21 cm</measure>
                       </extent>
                       <foliation>
@@ -1027,7 +1027,7 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Unbeschriftetes Umschlagblatt</desc><!-- wirklich extra aufnehmen? -->
+                        <desc xml:lang="de">Unbeschriftetes Umschlagblatt</desc>
                         <desc xml:lang="en">Uninscribed wrapper leaf</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
@@ -1102,8 +1102,8 @@
                         <measure type="format">26x21 cm bis 34x21 cm</measure>
                       </extent>
                       <foliation>
-                        <ab xml:lang="de">1 Manuskript paginiert: 1 bis 10, 1 Manuskript paginiert: 1 bis 9, 1 Typoskript paginiert: 2 bis 13, Manuskripteinschübe: 9a und 13a</ab>
-                        <ab xml:lang="en">1 manuscript paginated: 1-10, 1 manuscript paginated: 1-9, 1 typescript paginated: 2-13, manuscript inserts: 9a, 13a</ab>
+                        <ab xml:lang="de">Manuskripte paginiert: 1 bis 10 und 1 bis 9, Typoskript paginiert: 2 bis 13 mit Manuskripteinschüben 9a und 13a</ab>
+                        <ab xml:lang="en">Manuscripts paginated: 1-10 and 1-9, typescript paginated: 2-13 with manuscript inserts 9a and 13a</ab>
                       </foliation>
                     </supportDesc>
                   </objectDesc>
@@ -1113,7 +1113,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures"><!-- eingelegtes Manuskript als zweites Enclosure aufnehmen?! -->
+                      <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Umschlagblatt mit Titel eigenhändig in violetter Tinte und Motto „Que celui aime peu qui aime | la mesure! | Boétie“ eigenhändig in violetter Tinte sowie Notizen eigenhändig in Bleistift</desc>
                         <desc xml:lang="en">Wrapper leaf with title, holograph in purple ink, and motto „Que celui aime peu qui aime | la mesure! | Boétie“, holograph in purple ink, and notes, holograph in pencil</desc>
                         <measure type="format">34x42 cm</measure>
@@ -1144,7 +1144,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.13"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar! -->
+        <biblFull xml:id="SZDMSK.13">
           <fileDesc>
             <titleStmt>
               <title ana="original">Dostojewsky | Die Gottesqual</title>
@@ -1156,12 +1156,11 @@
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
-            <notesStmt><!-- Achtung: Eintrag in Spalte "Besonderheiten" insgesamt unklar, handelt es sich bei Umschlagblatt 1 gleichzeitig um ehemaliges Manuskriptblatt, wenn nein, dann in Objekttyp-Beschreibung "1 Umschlagblatt" ergänzen und bei Enclusures als neues item aufnehmen! 
-              oder wird hier insgesamt nur 1 Umschlagblatt beschrieben und wenn ja Umschlagblatt oder Deckblatt? -->
-              <note xml:lang="de">Umschlagblatt mit Aufschrift „Gott hat mich mein ganzes Leben | lang gequält | D.“ eigenhändig in violetter Tinte, 
-                ein Manuskriptblatt ehemals Umschlagblatt, recto mit Aufschrift „Dostojewsky Der Mensch und der Zeitlose“ und „Was ist Gott? Gott ist Qual für D.“ eigenhändig in violetter Tinte</note>
-              <note xml:lang="en">Wrapper leaf inscribed „Gott hat mich mein ganzes Leben | lang gequält | D.“, holograph in purple ink, 
-                1 manuscript leaf formerly wrapper leaf, recto inscribed „Dostojewsky Der Mensch und der Zeitlose“ and „Was ist Gott? Gott ist Qual für D.“, holograph in purple ink</note>
+            <notesStmt>
+              <note xml:lang="de"> 
+                Manuskript, 2 Blatt, davon 1 Blatt Notizen und 1 ehemaliges Umschlagblatt recto mit Aufschrift „Dostojewsky | Der Mensch und der Zeitlose“ und „Was ist Gott? Gott ist Qual für D.“ eigenhändig in violetter Tinte</note>
+              <note xml:lang="en"> 
+                Manuscript, 2 leaves, thereof 1 leaf notes and 1 former wrapper leaf recto inscribed „Dostojewsky Der Mensch und der Zeitlose“ and „Was ist Gott? Gott ist Qual für D.“, holograph in purple ink</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1187,12 +1186,12 @@
                           xml:lang="en">Purple carbon paper, purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
-                        <span xml:lang="de"><!-- Unklarheit bzgl. Umschlagblatt, siehe Anmerkung zu Hinweisfeld! -->
+                        <span xml:lang="de">
                           <term type="objecttyp">Konvolut</term>: Manuskript, 14 Blatt, korrigiert;
-                          Typoskriptdurchschlag, 9 Blatt, korrigiert; beigelegt: Manuskript, 3 Blatt</span><!-- Manuskript an letzter Stelle belassen bzw. "beigelegt" so ok? -->
+                          Typoskriptdurchschlag, 9 Blatt, korrigiert; Manuskript, 2 Blatt; 1 Umschlagblatt</span>
                         <span xml:lang="en">
                           <term type="objecttyp">Collection</term>: manuscript, 14 leaves,
-                          corrected; typescript, 9 leaves, corrected; includes: manuscript, 3 leaves</span>
+                          corrected; typescript, 9 leaves, corrected; manuscript, 2 leaves; 1 Wrapper leaf</span>
                         <measure type="format">27x21 cm bis 34x21 cm</measure>
                       </extent>
                       <foliation>
@@ -1207,15 +1206,18 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures"><!-- Achtung: Feld AM der Excel-Tabelle noch nicht eingebaut, unklar, siehe Eintrag im Feld "notes"! -->
-                        <desc xml:lang="de">Beigelegtes Manuskript mit eigenhändigen Notizen, 1 Blatt halbes Deckblatt mit Aufschrift „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc>
-                        <desc xml:lang="en">Inserted manuscript with notes, holograph, 1 leaf half cover sheet inscribed „Dostojewsky | Der Zeitmensch und der Zeitlose“</desc><!-- Übersetzung überprüfen -->
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Umschlagblatt mit Aufschrift „Gott hat mich mein ganzes Leben | lang gequält | D.“ eigenhändig in violetter Tinte</desc>
+                        <desc xml:lang="en">Wrapper leaf inscribed „Gott hat mich mein ganzes Leben | lang gequält | D.“, holograph in purple ink</desc>
                         <measure type="format">34x42 cm</measure>
                       </item>
                     </list>
                   </accMat>
                 </physDesc>
                 <history>
+                  <origin>
+                    <origPlace>Wien | VIII. Kochgasse 8</origPlace>
+                  </origin>
                   <provenance><ab xml:lang="de">?</ab>
                     <ab xml:lang="en">?</ab>
                   </provenance>
@@ -1238,7 +1240,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.14"><!-- "Auch aus die Gottesqual" im Feld AN noch nicht eingebaut, wenn ja, wo? -->
+        <biblFull xml:id="SZDMSK.14">
           <fileDesc>
             <titleStmt>
               <title ana="original">Dostojewski | Die Moral der Selbstvernichtung</title>
@@ -1260,6 +1262,14 @@
                   <idno type="mediaid">HS009526945</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>
+                    <ab xml:lang="de">
+                      Später eingegangen in das Kapitel „Die Gottesqual“
+                    </ab>
+                    <ab xml:lang="en">
+                      Later part of the chapter „Die Gottesqual“
+                    </ab>
+                  </summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -1269,9 +1279,9 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Violette Tinte, Bleistift, roter Buntstift</material><!-- Typoskriptdurchschlag - fehlt Schreibstoff dazu! -->
+                          xml:lang="de">Schwarzes Durchschlagpapier, violette Tinte, Bleistift, roter Buntstift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Purple ink, pencil, red pencil</material>
+                          xml:lang="en">Black carbon paper, purple ink, pencil, red pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -1352,6 +1362,12 @@
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="de">„Dostojewski: der russische Christus“ eigenhändig in violetter Tinte</docEdition>
+                    <docEdition ana="szdg:IdentifyingInscription"
+                      xml:lang="en">„Dostojewski: der russische Christus“, holograph in purple ink</docEdition>
+                  </msItem>
                 </msContents>
                 <physDesc>
                   <objectDesc>
@@ -1365,7 +1381,7 @@
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Typoskriptdurchschlag</term>, <measure ana="corrected"
-                            type="leaf">8 Blatt, korrigiert; 1 Umschlagblatt</measure></span><!-- Angabe "mit eigenhändigen Notizen" hier mit "korrigiert" eingetragen, Anmerkung im Hinweisfeld notieren? -->
+                            type="leaf">8 Blatt, korrigiert; 1 Umschlagblatt</measure></span>
                         <span xml:lang="en">
                           <term type="objecttyp">Typescript (carbon copy)</term>, <measure ana="corrected"
                             type="leaf">8 leaves, corrected; 1 wrapper leaf</measure></span>
@@ -1432,7 +1448,8 @@
                   <country>Deutschland</country>
                   <settlement>Marbach</settlement>
                   <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
-                  <idno type="signature">83.1041</idno><!-- keine Mediennummer angegeben -->
+                  <idno type="signature">83.1041</idno>
+                  <idno type="mediaid">HS009526981</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -1489,7 +1506,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.17"><!-- meint Beilage hier Deckblatt? siehe Feld AN; RENAN im Personenfeld rot, warum? -->
+        <biblFull xml:id="SZDMSK.17">
           <fileDesc>
             <titleStmt>
               <title ana="original">Ernest Renan zum Jahrhundertage seiner Geburt 28. II 1823</title>
@@ -1512,7 +1529,8 @@
                   <settlement>Marbach</settlement>
                   <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
                   <idno type="signature">57.1139</idno>
-                  <idno type="mediaid">HS00952703X</idno><!-- Mediennummer der Beilage/Deckblatt: HS009527049; einfach als weitere Signatur eintragen? -->
+                  <idno type="mediaid">HS00952703X</idno>
+                  <idno type="mediaid">HS009527049</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -1523,8 +1541,8 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Rautiertes Papier</material><!-- "Rautiert" im Excel-Sheet rot markiert! -->
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Brushed paper</material><!-- Eintrag korrekt, siehe de-Version! Übersetzung überprüfen! -->
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Rautiertes Papier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Squared paper</material><!-- Übersetzung überprüfen! -->
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Blaue Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -1552,9 +1570,9 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“ eigenhändig in blauer Tinte; Anweisungen zu Druck und Korrekturfahnen</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“, holograph in blue ink; instructions for printing and galley proofs</desc><!-- Übersetzung prüfen! -->
-                        <measure/><!-- Abmessung fehlt oder gleich wie Manuskript? -->
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“ eigenhändig in blauer Tinte und Anweisungen zu Druck und Korrekturfahnen</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Ernest Renan | wichtige Anmerkungen!!!“, holograph in blue ink and instructions for printing and galley proofs</desc><!-- Übersetzung prüfen! -->
+                        <measure type="format">24x19 cm</measure><!-- Prüfen lassen, ob Abmessung tatsächlich gleich wie Manuskript ist -->
                       </item>
                     </list>
                   </accMat>
@@ -1672,7 +1690,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.19"><!-- Betrifft zweite Abmessung Brief oder Manuskript? noch ergänzen! wo Feld AN eintragen? -->
+        <biblFull xml:id="SZDMSK.19">
           <fileDesc>
             <titleStmt>
               <title ana="original">Maria Stuart</title>
@@ -1680,6 +1698,9 @@
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor"><persName
+                ref="http://d-nb.info/gnd/116402873"
+                ><surname>Reichner</surname><forename>Herbert</forename></persName></editor><!-- Reichner im Personenregister ergänzen -->
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1694,7 +1715,8 @@
                   <country>Deutschland</country>
                   <settlement>Marbach</settlement>
                   <repository ref="http://d-nb.info/gnd/10155900-8">Deutsches Literaturarchiv Marbach</repository>
-                  <idno type="signature">63.328</idno><!-- keine Mediennummer angegeben -->
+                  <idno type="signature">63.328</idno>
+                  <idno type="mediaid">HS008332052</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -1727,8 +1749,8 @@
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de">Stefan Zweig, Herbert Reichner, fremde Hand(?)</ab><!-- Herbert Reichner bei keywords ergänzen? Personen-Index ergänzen? -->
-                    <ab xml:lang="en">Stefan Zweig, Herbert Reichner, unidentified hand(?)</ab>
+                    <ab xml:lang="de">Stefan Zweig, Herbert Reichner, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Herbert Reichner, unidentified hand</ab>
                   </handDesc>
                   <accMat>
                     <list>
@@ -1739,7 +1761,7 @@
                       <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Manuskript mit Aufschrift „Einschalt 1“ und „Einschub 2“ eigenhändig in violetter Tinte und rotem Buntstift, Korrekturen von fremder Hand in schwarzer Tinte</desc>
                         <desc xml:lang="en">Manuscript inscribed „Einschalt 1“ and „Einschub 2“, holograph in purple ink and red pencil, corrections in an unidentified hand in black ink</desc><!-- Übersetzung überprüfen! -->
-                      <measure>14x21 cm</measure><!-- bei Beilagen-Abmessung steht 16x21 cm, im Feld zur Beilagenbeschreibung 14x21 cm -->
+                      <measure>14x21 cm bis 16x21 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -1761,8 +1783,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
-                <term ref="http://d-nb.info/gnd/133817768" type="person">Müller-Cohen, Anitta</term><!-- bei keywords belassen? in Personen-Index ergänzen! -->
-                <term ref="http://d-nb.info/gnd/120217767" type="person">Färber, Meir</term><!-- bei keywords belassen? in Personen-Index ergänzen! -->
+                <term ref="http://d-nb.info/gnd/133817768" type="person">Müller-Cohen, Anitta</term><!-- in Personen-Index ergänzen! -->
+                <term ref="http://d-nb.info/gnd/120217767" type="person">Färber, Meir</term><!-- in Personen-Index ergänzen! -->
                 <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
               </keywords>
             </textClass>
@@ -1803,7 +1825,7 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial" xml:lang="de">Rautiertes Papier</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Brushed paper</material><!-- Übersetzung prüfen! -->
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Squared paper</material><!-- Übersetzung prüfen! -->
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Violette Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
@@ -1833,7 +1855,7 @@
                       <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Der Refractär | Diese Handschrift ist meinem Freunde | Carl Seelig | für seine werdende Sammlung herzlicht gegeben | Stefan Zweig | Sommer 1918, Rüschlikon“ eigenhändig in violetter Tinte</desc>
                         <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Der Refractär | Diese Handschrift ist meinem Freunde | Carl Seelig | für seine werdende Sammlung herzlicht gegeben | Stefan Zweig | Sommer 1918, Rüschlikon“, holograph in purple ink</desc>
-                        <measure></measure><!-- Abmessung fehlt!-->
+                        <measure type="format">27x21 cm</measure><!-- Prüfen lassen, ob Deckblatt die gleiche Abmessung hat wie Manuskript-->
                       </item>
                     </list>
                   </accMat>
@@ -1855,11 +1877,12 @@
               <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term ref="http://d-nb.info/gnd/118612670" type="person">Seelig, Carl</term><!-- in Personen-Index ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.21">
+        <biblFull xml:id="SZDMSK.21"><!-- STAND 15.10. -->
           <fileDesc>
             <titleStmt>
               <title ana="original">Abänderungen in der Tragödie „Tersites und Achill“</title>
