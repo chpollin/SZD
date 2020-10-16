@@ -1882,7 +1882,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.21"><!-- STAND 15.10. -->
+        <biblFull xml:id="SZDMSK.21">
           <fileDesc>
             <titleStmt>
               <title ana="original">Abänderungen in der Tragödie „Tersites und Achill“</title>
@@ -2067,7 +2067,7 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned">Aufruf an die Jugend Amerikas</title><!-- ins Englische übersetzen? -->
-              <title type="Einheitssachtitel">Aufruf an die Jugend Amerikas</title><!-- Im Excel-Sheet rot markiert - nicht Einheitstitel? -->
+              <title type="Einheitssachtitel">Aufruf an die Jugend Amerikas</title><!-- Klären, ob dieser Text erschienen ist! -->
               <title type="Gesamttitel">A:Gregor-Dellin</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2149,8 +2149,10 @@
         <biblFull xml:id="SZDMSK.24">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned">Skizze für ein Interview der Zeitung „Jornal do Brasil“</title><!-- Im Excel-Sheet rot markiert; ins Englische übersetzen? -->
-              <title type="Einheitssachtitel">?</title><!-- fehlt im Excel-Sheet -->
+              <title ana="assigned" xml:lang="de">Skizze für ein Interview der Zeitung „Jornal do Brasil“</title>
+              <title ana="assigned" xml:lang="en">Notes for an interview with the newspaper "Jornal do Brasil</title>
+              <title type="Einheitssachtitel" xml:lang="de">Skizze für ein Interview der Zeitung „Jornal do Brasil“</title>
+              <title type="Einheitssachtitel" xml:lang="en">Notes for an interview with the newspaper "Jornal do Brasil</title><!-- prüdfen, woe dieser Text erschienen ist! -->
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2234,11 +2236,13 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDMSK.25"><!-- Zusatzmaterial "Kopien, 3 Blatt" nicht aufgenommen --><!-- Typoskriptdurchschlag fehlte in der Objektbeschreibung; noch einmal mit Oliver klären! -->
+        <biblFull xml:id="SZDMSK.25">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned">Gutachten Balzac</title><!-- ins Englische übersetzen? -->
-              <title type="Einheitssachtitel">?</title><!-- fehlt im Excel-Sheet -->
+              <title ana="assigned" xml:lang="de">Gutachten zu Balzac</title>
+              <title ana="assigned" xml:lang="en">Report on Balzac</title>
+              <title type="Einheitssachtitel" xml:lang="de">Gutachten zu Balzac</title><!-- Prüfen ob und unter welchem Titel veröffentlicht! -->
+              <title type="Einheitssachtitel" xml:lang="en">Report on Balzac</title>
               <title type="Gesamttitel">B:Balzac, Honoré de/Prozess um "Contes drolatiques"</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2247,8 +2251,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Typoskriptdurchschläge in doppelter Ausführung, aber nicht ident</note>
-              <note xml:lang="en">Typoscripts (carbon copies) in duplicate, but not identical</note>
+              <note xml:lang="de">2 unterschiedliche Typoskriptdurchschläge des gleichen Textes, beigelegt einem Brief von Stefan Zweig an Richard Otto Frankfurter vom 15. Juni 1914</note>
+              <note xml:lang="en">2 different Typoscripts (carbon copies) of the same text, enclosed to a letter from Stefan Zweig to Richard Otto Frankfurter from 15. June 1914</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2275,9 +2279,9 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure ana="corrected" type="leaf">4 Blatt, korrigiert; 1 Brief</measure></span>
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure ana="corrected" type="leaf">4 Blatt, korrigiert</measure></span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure ana="corrected" type="leaf">4 leaves, corrected; 1 letter</measure></span>
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure ana="corrected" type="leaf">4 leaves, corrected</measure></span>
                         <measure type="format">34x21 cm</measure>
                       </extent>
                       <foliation>
@@ -2290,15 +2294,7 @@
                     <ab xml:lang="de">Stefan Zweig</ab>
                     <ab xml:lang="en">Stefan Zweig</ab>
                   </handDesc>
-                  <accMat>
-                    <list>
-                      <item ana="szdg:Enclosures"><!-- umstellen: Signet "E.M. Lilien"? -->
-                        <desc xml:lang="de">Brief, Typoskript, 1 Blatt, an Richard Otto Frankfurter, datiert 15. Juni 1914, auf Briefpapier mit E.M. Lilien Signet und Adresse „Kochgasse 8 Wien“, gestempelt „Eingegangen 16. Juni 1914“, mit eigenhändiger Unterschrift in violetter Tinte</desc>
-                        <desc xml:lang="en">Letter, typescript, 1 leaf,  to Richard Otto Frankfurter, dated 15. June 1914, on stationery with E.M. Lilien Signet and adress „Kochgasse 8 Wien“, stamped „Eingegangen 16. Juni 1914“, with holograph signature in purple ink</desc><!-- Übersetzung prüfen! -->
-                        <measure>27x19 cm</measure>
-                      </item>
-                    </list>
-                  </accMat>
+                 
                 </physDesc>
                 <history>
                   <provenance><ab xml:lang="de">?</ab>
@@ -2314,9 +2310,10 @@
           </fileDesc>
           <profileDesc>
             <textClass>
-              <keywords><!-- Kategorie richtig? -->
+              <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term type="person" ref="http://d-nb.info/gnd/123553873">Frankfurter, Richard Otto</term><!-- in Personenindex aufnehmen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2376,8 +2373,8 @@
                   <origin>
                     <origDate>1926</origDate>
                   </origin>
-                  <provenance><ab xml:lang="de">Stiftung Dr. Marlis Kressner</ab><!-- so belassen? -->
-                    <ab xml:lang="en">Foundation Dr. Marlis Kressner</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Stiftung Dr. Marlis Kressner</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
+                    <ab xml:lang="en">Foundation Dr. Marlis Kressner</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2392,6 +2389,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Gedichte</term>
                 <term type="classification" xml:lang="en">Poetry</term>
+                <term type="person" ref="http://d-nb.info/gnd/1104949210">Kressner, Marlies</term><!-- in Personenindex aufnehmen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2409,7 +2407,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note><!-- Anton Kippenberg bei Keywords? -->
+              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note>
               <note xml:lang="en">Published under the same title in „Navigare necesse est“, Festschrift for Anton Kippenberg 1924</note>
             </notesStmt>
             <sourceDesc>
@@ -2441,9 +2439,9 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected" type="leaf">10 Blatt, korrigiert</measure></span><!-- Deckblatt nicht extra angeführt! -->
+                          <term type="objecttyp">Manuskript</term>, <measure ana="corrected" type="leaf">9 Blatt, korrigiert; 1 Deckblatt</measure></span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">10 leaves, corrected</measure></span>
+                          <term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">9 leaves, corrected; 1 cover sheet</measure></span>
                         <measure type="format">29x23 cm</measure>
                       </extent>
                       <foliation>
@@ -2459,15 +2457,15 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">Deckblatt (Titelblatt) mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ eigenhändig in schwarzer Tinte</desc>
-                        <desc xml:lang="en">Cover sheet (title page) inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, holograph in black ink</desc>
-                        <measure></measure><!--  wie Manuskript? -->
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ eigenhändig in schwarzer Tinte</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, holograph in black ink</desc>
+                        <measure type="format">29x23 cm</measure>
                       </item>
                     </list>
                   </accMat>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
                     <ab xml:lang="en">Kippenberg-Archiv</ab>
                   </provenance>
                   <acquisition>
@@ -2483,6 +2481,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term type="person" ref="http://d-nb.info/gnd/118723081">Kippenberg, Anton</term>
+                <term type="person" ref="http://d-nb.info/gnd/11872309X">Kippenberg, Katharina</term><!-- Im Personenindex ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2500,7 +2500,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note><!-- Anton Kippenberg bei Keywords? -->
+              <note xml:lang="de">Erschienen unter gleichem Titel in „Navigare necesse est“, Festschrift für Anton Kippenberg 1924</note>
               <note xml:lang="en">Published under the same title in „Navigare necesse est“, Festschrift for Anton Kippenberg 1924</note>
             </notesStmt>
             <sourceDesc>
@@ -2532,9 +2532,9 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">11 Blatt, korrigiert</measure></span><!-- Deckblatt nicht extra angeführt! -->
+                          <term type="objecttyp">Typoskript</term>, <measure ana="corrected" type="leaf">10 Blatt, korrigiert; 1 Deckblatt</measure></span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure ana="corrected" type="leaf">11 leaves, corrected</measure></span>
+                          <term type="objecttyp">Typescript</term>, <measure ana="corrected" type="leaf">10 leaves, corrected; 1 cover sheet</measure></span>
                         <measure type="format">29x23 cm</measure>
                       </extent>
                       <foliation>
@@ -2549,19 +2549,19 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures"><!-- Deckblatt bei Objekttyp nicht extra angeführt -->
-                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ maschinenschriftlich,
-                          Aufschrift auf Deckblatt und erster Seite „Schiersand“ von fremder Hand in violettem Buntstift, vermutlich der Schriftsetzer Rudolf Schiersand</desc>
-                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, typed, 
-                          inscription on the cover sheet and first page „Schiersand“ in an unidentified hand, probably by the typesetter Rudolf Schiersand</desc><!-- Übersetzung prüfen! -->
-                        <measure></measure>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Deckblatt mit Aufschrift „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“ maschinenschriftlich;
+                          Aufschrift auf Deckblatt und erster Seite „Schiersand“ vermutlich vom Schriftsetzer Rudolf Schiersand in violettem Buntstift</desc>
+                        <desc xml:lang="en">Cover sheet inscribed „Stefan Zweig | Wille zur Universalität | für die Anton Kippenberg Festschrift | Frau Katharina Kippenberg | in getreuer Ergebenheit | St. Z.“, typed; 
+                          inscription on the cover sheet and first page „Schiersand“ probably by the typesetter Rudolf Schiersand in purple pencil</desc><!-- Übersetzung prüfen! -->
+                        <measure type="format">29x23 cm</measure>
                       </item>
                     </list>
                   </accMat>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
-                    <ab xml:lang="en">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
+                    <ab xml:lang="en">Kippenberg-Archiv</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2576,6 +2576,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term type="person" ref="http://d-nb.info/gnd/118723081">Kippenberg, Anton</term>
+                <term type="person" ref="http://d-nb.info/gnd/11872309X">Kippenberg, Katharina</term><!-- Im Personenindex ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2593,8 +2595,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Mit eigenhändiger Unterschrift, vermutlich Beilage zu Brief von Stefan Zweig an Viktor Wittkowski vom 20.10.1941 (Signatur: 64.417/3)</note><!-- Wittkowski in Keywords? -->
-              <note xml:lang="en">With holograph signature, probably enclosure of a letter from Stefan Zweig to Viktor Wittkowski from 20.10.1941 (signature: 64.417/3)</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="de">Mit eigenhändiger Unterschrift, vermutlich beigelegt einem Brief von Stefan Zweig an Viktor Wittkowski vom 20.10.1941</note><!-- Brief: (Signatur: 64.417/3) -->
+              <note xml:lang="en">With holograph signature, probably enclosed to a letter from Stefan Zweig to Viktor Wittkowski from 20.10.1941</note><!-- Übersetzung prüfen! (signature: 64.417/3) -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2637,8 +2639,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Viktor Wittkowski</ab><!-- so belassen? -->
-                    <ab xml:lang="en">Viktor Wittkowski</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Viktor Wittkowski</ab>
+                    <ab xml:lang="en">Viktor Wittkowski</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2653,6 +2655,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Gedichte</term>
                 <term type="classification" xml:lang="en">Poetry</term>
+                <term type="person" ref="http://d-nb.info/gnd/1030059489">Wittkowski, Viktor</term><!-- In Personenindex aufnehmen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2661,7 +2664,7 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned">Ist nicht Alles, was wir spenden …</title>
-              <title type="Einheitssachtitel">?</title><!-- fehlt im Excel-Sheet -->
+              <title type="Einheitssachtitel">Ist nicht Alles, was wir spenden …</title>
               <title type="Gesamttitel">A:Wiedemann, Gisela und Hans-Rudolf</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2670,8 +2673,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Postkarte Dresden mit umseitig Abbildung von Daniel Chodowieckis  „Am Schreibtisch“ aus „Sophiens Reise“ aus dem königlichen Kupferstichkabinett Dresden</note>
-              <note xml:lang="en">Postcard Dresden with overleaf illustration from Daniel Chodowiecki's „Am Schreibtisch“ from „Sophiens Reise“ from the royal Kupferstichkabinett Dresden (collection of prints, drawings and photographs Dresden)</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="de">Postkarte Dresden mit umseitig Abbildung aus dem königlichen Kupferstichkabinett Dresden von Daniel Chodowieckis „Am Schreibtisch“ aus „Sophiens Reise“ </note>
+              <note xml:lang="en">Postcard Dresden with illustration from the royal Kupferstichkabinett Dresden (collection of prints, drawings and photographs Dresden): Daniel Chodowiecki's „Am Schreibtisch“ from „Sophiens Reise“ </note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2711,8 +2714,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- so belassen? Wiedemanns in keywords aufnehmen?-->
-                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
+                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2727,6 +2730,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Gedichte</term>
                 <term type="classification" xml:lang="en">Poetry</term>
+                <term type="persom" ref="http://d-nb.info/gnd/119264269">Wiedemann, Gisela</term><!-- Im Personenindex ergänzen! -->
+                <term type="persom" ref="http://d-nb.info/gnd/118851160">Wiedemann, Hans-Rudolf</term><!-- Im Personenindex ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2744,8 +2749,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Gewidmet Johannes Reichelt, Titel und Widmung „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“ eigenhändig in violetter Tinte</note><!-- Reichelt in Keywords? -->
-              <note xml:lang="en">Dedicated to Johannes Reichelt, title and dedication „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“ holograph in purple ink</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="de">Titel und Widmung „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“ eigenhändig in violetter Tinte</note>
+              <note xml:lang="en">Title and dedication „Johannes Reichelt | mit vielen Grüssen | Stefan Zweig“, holograph in purple ink</note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2788,8 +2793,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- so belassen? Wiedemanns in keywords aufnehmen?-->
-                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Gisela und Hans-Rudolf Wiedemann</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
+                    <ab xml:lang="en">Gisela and Hans-Rudolf Wiedemann</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2801,9 +2806,12 @@
           </fileDesc>
           <profileDesc>
             <textClass>
-              <keywords><!-- Kategorie passend, eigentlich Gedicht?? -->
+              <keywords><!-- Kategorie müsste eigentlich doppelt zuordenbar sein, weil es sich um ein Gedicht handelt, das als Prolog einer Erzählung abgedruckt ist -->
               <term type="classification" xml:lang="de">Romane/Erzählungen</term>
               <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term type="person" ref="http://d-nb.info/gnd/1046412078">Reichelt, Johannes</term><!-- Im Personenindex ergänzen! -->
+                <term type="persom" ref="http://d-nb.info/gnd/119264269">Wiedemann, Gisela</term><!-- Im Personenindex ergänzen! -->
+                <term type="persom" ref="http://d-nb.info/gnd/118851160">Wiedemann, Hans-Rudolf</term><!-- Im Personenindex ergänzen! -->
             </keywords>
             </textClass>
           </profileDesc>
@@ -2821,7 +2829,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Vorgesehen für „Navigare necesse est“, Festschrift für Anton Kippenberg 1924, aber dort nicht gedruckt</note><!-- Anton Kippenberg in Keywords? -->
+              <note xml:lang="de">Vorgesehen für „Navigare necesse est“, Festschrift für Anton Kippenberg 1924, aber dort nicht gedruckt</note>
               <note xml:lang="en">Intended for „Navigare necesse est“, Festschrift for Anton Kippenberg 1924, but not printed there</note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
@@ -2865,8 +2873,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- so belassen? -->
-                    <ab xml:lang="en">Kippenberg-Archiv</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Kippenberg-Archiv</ab><!-- Wie erfassen? Wir haben dazu noch kein Register? Überhaupt erfassen?-->
+                    <ab xml:lang="en">Kippenberg-Archiv</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2878,9 +2886,11 @@
           </fileDesc>
           <profileDesc>
             <textClass>
-              <keywords><!-- Kategorie passend? -->
+              <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term type="person" ref="http://d-nb.info/gnd/118723081">Kippenberg, Anton</term>
+                <term type="person" ref="http://d-nb.info/gnd/11872309X">Kippenberg, Katharina</term><!-- Im Personenindex ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
@@ -2889,7 +2899,7 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned">Hermann Brochs „Death of Vergil“</title>
-              <title type="Einheitssachtitel">?</title><!-- kein Eintrag im Excel-Sheet -->
+              <title type="Einheitssachtitel">Gutachten zu Hermann Brochs „Der Tod des Vergil“</title>
               <title type="Gesamttitel">A:Broch, Hermann/Norden Lowe</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2898,8 +2908,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Empfehlungsschreiben zu Hermann Brochs „Der Tod des Vergil“ mit eigenhändiger Unterschrift</note><!-- Broch in keywords? -->
-              <note xml:lang="en">Letter of recommendation for: Hermann Broch, „Der Tod des Vergil“, with holograph signature</note>
+              <note xml:lang="de">Gutachten zu Hermann Brochs „Der Tod des Vergil“ mit eigenhändiger Unterschrift</note>
+              <note xml:lang="en">Report on Hermann Broch's „Der Tod des Vergil“, with holograph signature</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -2946,8 +2956,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <provenance><ab xml:lang="de">Ruth Norden Lowe</ab><!-- so belassen? -->
-                    <ab xml:lang="en">Ruth Norden Lowe</ab><!-- so belassen? -->
+                  <provenance><ab xml:lang="de">Ruth Norden Lowe</ab>
+                    <ab xml:lang="en">Ruth Norden Lowe</ab>
                   </provenance>
                   <acquisition>
                     <ab xml:lang="de">?</ab>
@@ -2959,9 +2969,11 @@
           </fileDesc>
           <profileDesc>
             <textClass>
-              <keywords><!-- Kategorie passend? -->
+              <keywords>
                 <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
                 <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                <term type="person" ref="http://d-nb.info/gnd/118515551"> Broch, Hermann</term><!-- Im Personenindex ergänzen! -->
+                <term type="person" ref="http://d-nb.info/gnd/12987468X">Norden Lowe, Ruth</term><!-- Im Personenindex ergänzen! -->
               </keywords>
             </textClass>
           </profileDesc>
