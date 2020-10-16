@@ -1698,9 +1698,9 @@
               <title type="Gesamttitel">A:Zweig</title>
               <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
-              <editor role="contributor"><persName
+              <editor ref="SZDPER.1645" role="contributor"><persName
                 ref="http://d-nb.info/gnd/116402873"
-                ><surname>Reichner</surname><forename>Herbert</forename></persName></editor><!-- Reichner im Personenregister ergänzen -->
+                ><surname>Reichner</surname><forename>Herbert</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -1783,8 +1783,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
-                <term ref="http://d-nb.info/gnd/133817768" type="person">Müller-Cohen, Anitta</term><!-- in Personen-Index ergänzen! -->
-                <term ref="http://d-nb.info/gnd/120217767" type="person">Färber, Meir</term><!-- in Personen-Index ergänzen! -->
+                <term ref="http://d-nb.info/gnd/133817768" type="person">Müller-Cohen, Anitta</term>
+                <term ref="http://d-nb.info/gnd/120217767" type="person">Faerber, Meir</term>
                 <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
               </keywords>
             </textClass>
@@ -1877,7 +1877,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
-                <term ref="http://d-nb.info/gnd/118612670" type="person">Seelig, Carl</term><!-- in Personen-Index ergänzen! -->
+                <term ref="http://d-nb.info/gnd/118612670" type="person">Seelig, Carl</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -1895,8 +1895,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Beigelegt ein Brief von Stefan Zweig an Ludwig Barnay vom 22.03.1907</note><!-- Im Hinweisfeld belassen; Barnay bei keywords aufnehmen? -->
-              <note xml:lang="en">Includes a letter from Stefan Zweig to Ludwig Barnay from 22.03.1907</note><!-- Übersetzung prüfen! -->
+              <note xml:lang="de">Beigelegt einem Brief von Stefan Zweig an Ludwig Barnay vom 22.03.1907</note>
+              <note xml:lang="en">Enclosed to a letter from Stefan Zweig to Ludwig Barnay from 22.03.1907</note><!-- Übersetzung prüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -1959,6 +1959,7 @@
                 <term type="classification" xml:lang="de">Bühnenwerke/Filme</term>
                 <term type="classification" xml:lang="en">Stage works/Films</term>
                 <term ref="http://d-nb.info/gnd/118998749" type="person">Thersites</term>
+                <term ref="http://d-nb.info/gnd/118652575" type="person">Barnay, Ludwig</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -1976,10 +1977,10 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">In grünen Einband (Gewebe) gebundenes Manuskript mit Prägung „Stefan Zweig“ am unteren Rücken und „Die Wunder des Lebens“ unterstrichen auf dem Deckel, 
+              <note xml:lang="de">In grünen textilen Einband gebundenes Manuskript mit Prägung „Stefan Zweig“ am unteren Rücken und „Die Wunder des Lebens“ unterstrichen auf dem Deckel, 
                 „Deckblatt“ mit Titel und Aufschrift „Geschrieben auf Ile Bréhat (Bretagne) August 1903“, eingebunden „Ein kleines Vorwort für meinen lieben E. M. Lilien.“, datiert „Wien, im September 1904“; 
-                Manuskript in Kurrentschrift (Brief nicht)</note><!-- Lilien, Ephraim Moses in keywords aufnehmen? -->
-              <note xml:lang="en">Manuscript bound in green cover (fabric) with stamping „Stefan Zweig“ on the lower spine and „Die Wunder des Lebens“ underlined on the cover, 
+                Manuskript in Kurrentschrift (Brief nicht)</note>
+              <note xml:lang="en">Manuscript bound in green fabric cover with stamping „Stefan Zweig“ on the lower book spine and „Die Wunder des Lebens“ underlined on the cover, 
                 „cover sheet“ with title and inscribed „Geschrieben auf Ile Bréhat (Bretagne) August 1903“, including „Ein kleines Vorwort für meinen lieben E. M. Lilien.“, dated „Wien, im September 1904“; 
               manuscript in Kurrent (letters not)</note><!-- Übersetzung prüfen! -->
             </notesStmt>
@@ -2057,6 +2058,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                 <term type="classification" xml:lang="en">Novels/Stories</term>
+                <term ref="http://d-nb.info/gnd/118572938" type="person">Lilien, Ephraim Mose</term>
               </keywords>
             </textClass>
           </profileDesc>
