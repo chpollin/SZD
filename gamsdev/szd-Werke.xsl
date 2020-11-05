@@ -69,6 +69,16 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:when>
+                                <xsl:when test="$PID = 'o:szd.marbach'">
+                                    <xsl:choose>
+                                        <xsl:when test="$locale = 'en'">
+                                            <xsl:text>Marbach Werke</xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>Marbach Werke</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
                                 <xsl:otherwise><xsl:text>Error: check PID</xsl:text></xsl:otherwise>
                             </xsl:choose>
                         </xsl:with-param>
@@ -181,9 +191,9 @@
                                                             		</xsl:otherwise>
                                                             	</xsl:choose>
                                                       			<!-- Signatur -->
-                                                      			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
+                                                      	        <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='signature']">
                                                        			  <xsl:text> | </xsl:text>
-                                                         		    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>                                                                     
+                                                      	            <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='signature']"/>                                                                     
                                                        		   </xsl:if>
                                                       	        <!-- if the object is an enclosures -->
                                                       	        <xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@ana='szdg:Enclosures']">

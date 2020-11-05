@@ -723,15 +723,15 @@
 								<xsl:text>Über den ursprünglichen Text geschrieben</xsl:text>
 							</xsl:attribute>
 						</xsl:when>
+						<xsl:when test="@place = 'inline'">
+							<xsl:attribute name="title">
+								<xsl:text>Einfügung innerhalb der Zeile</xsl:text>
+							</xsl:attribute>
+						</xsl:when>
 						<xsl:otherwise/>
 					</xsl:choose>		
 			</xsl:if>
 			<xsl:apply-templates/>
-			<xsl:if test="@place = 'inline'">
-				<i class="fa fa-info-circle info_icon" title="Einfügung innerhalb der Zeile">
-					<xsl:text> </xsl:text>
-				</i>
-			</xsl:if>
 		</span>
 	</xsl:template>
 	

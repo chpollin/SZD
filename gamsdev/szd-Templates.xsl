@@ -199,7 +199,7 @@
                     </xsl:for-each-group>
                  </xsl:when>
             <!-- ORDNUNGSKATEGORIEN for SZDMSK and SZDLEB -->
-            <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente'">    
+                <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente' or $PID = 'o:szd.marbach'">    
                 <xsl:for-each-group select="$Category" group-by=".">
                     <xsl:sort select="."/>
                     <div class="btn-group btn-group-sm szd_red">
@@ -495,8 +495,9 @@
                 <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:idno">
                     <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:idno)"/>
                 </xsl:when>
-                <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
-                    <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno)"/>
+                <!-- todo: in SZDBIB ist kein idno @type signature, aber immer die erste idno ist die sig -->
+                <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[1]">
+                    <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[1])"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
@@ -1381,7 +1382,7 @@
         <xsl:param name="SENT"/>
         <xsl:param name="RECIEVED"/>
         <xsl:param name="TITLE"/>
-        <xsl:variable name="URL" select="concat('stefanzweig.digital/', //t:publicationStmt//t:idno[@type='PID'], '#', @xml:id)"/>
+        <xsl:variable name="URL" select="concat('https://stefanzweig.digital/', //t:publicationStmt//t:idno[@type='PID'], '#', @xml:id)"/>
         <xsl:variable name="id" select="substring-after(@xml:id, '.')"/>
         <xsl:variable name="accordion_id" select="concat('a', $id)"/>
         <xsl:variable name="permalink_id" select="concat('u', $id)"/>
@@ -1528,8 +1529,8 @@
                     </i>
                 </u>
                 <div id="{$citation_id}" class="collapse font-weight-light card-body" data-parent="{concat('#',$accordion_id)}">
-                  <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]|$SENT">
-                      <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]|$SENT">
+                  <xsl:if test="t:fileDesc/t:titleStmt/t:author[not(@role)]">
+                      <xsl:for-each select="t:fileDesc/t:titleStmt/t:author[not(@role)]">
                           <xsl:call-template name="printAuthor">
                               <xsl:with-param name="currentAuthor" select="."/>
                           </xsl:call-template>
@@ -1562,7 +1563,7 @@
                                         <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]|$TITLE"/>
+                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:with-param>
@@ -2033,11 +2034,11 @@
                                <xsl:if test="$EXTENT/t:measure[@type='format']">
                                    <xsl:text>, </xsl:text>
                                         <xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
-                                   </xsl:if>
-                               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab">
+                               </xsl:if>
+                               <!--<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab">
                                    <xsl:text>, </xsl:text>
                                    <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab[@xml:lang = $locale]"/>
-                                  </xsl:if>
+                               </xsl:if>-->
                                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab">
                                    <xsl:text>, </xsl:text>
                                    <xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab[@xml:lang = $locale])"/>
@@ -2090,7 +2091,29 @@
                        </tr>
                    </xsl:if>
                   <!-- //////////////////////////////////////////////////////////// -->
-                  <!-- Hinweise -->
+	               <!-- Paginierung -->
+	               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab">
+	                   <tr class="row">
+	                       <td class="col-3 text-truncate">
+	                           <xsl:choose>
+	                               <xsl:when test="$locale = 'en'">
+	                                   <xsl:text>Pagination</xsl:text>
+	                               </xsl:when>
+	                               <xsl:otherwise>
+	                                   <xsl:text>Paginierung</xsl:text>
+	                               </xsl:otherwise>
+	                           </xsl:choose>
+	                       </td>
+	                       <td class="col-9">
+	                           <xsl:call-template name="printEnDe">
+	                               <xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab"/>
+	                               <xsl:with-param name="locale" select="$locale"/>
+	                           </xsl:call-template>
+	                       </td>
+	                   </tr>
+	               </xsl:if>
+	               <!-- //////////////////////////////////////////////////////////// -->
+	               <!-- Hinweise -->
 	              <xsl:if test="t:fileDesc/t:notesStmt/t:note">
                     <tr class="row">
                       <td class="col-3 text-truncate">
@@ -2247,7 +2270,12 @@
                                    <xsl:otherwise/>
                                </xsl:choose>
                                <br/>
-                               <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
+                               <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='signature']"/>
+                               <!-- media id is part of all SZDMSK and SZDLEB in Marbach -->
+                               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']">
+                                   <xsl:text>, Mediennummer: </xsl:text>
+                                   <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']"/>
+                               </xsl:if>
                            </td>
                        </tr>
                    </xsl:if>
@@ -2824,7 +2852,7 @@
         <xsl:text> </xsl:text>
     </xsl:template>
     
-    <!-- /////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////// --> 
     <!-- gets the position of the first person of each char; ABC - Navigation in getstickyNav -->
     <xsl:template name="getfirstforABC">
         <xsl:param name="Persons"/>
@@ -2844,20 +2872,25 @@
         </xsl:if>
     </xsl:template>
     
+    <!-- //////////////////////////////////////////////////////////// --> 
     <!-- ToDo: making an URL-Query in a e.g. t:summary (Beschreibung; Heinrich von Gerstenbergk)-->
     <xsl:template match="t:persName[@ref][@type='person']">
         <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
     
+    <!-- //////////////////////////////////////////////////////////// --> 
     <!-- following two templates are needed to get rid of the space before the <orgName> -->
     <xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
         <xsl:apply-templates/>
     </xsl:template>
     
+    <!-- //////////////////////////////////////////////////////////// --> 
     <xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition/t:orgName">
         <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
     
+    <!-- //////////////////////////////////////////////////////////// --> 
+    <!-- print PERMALINK -->
     <xsl:template name="printPERMALINK">
         <xsl:param name="locale"/>
         <xsl:param name="id"/>

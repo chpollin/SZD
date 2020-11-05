@@ -50,6 +50,7 @@
                             <xsl:value-of select="current-grouping-key()"/>
                         </h2>
                         <xsl:for-each select="current-group()">
+                            <xsl:sort select="t:persName/t:surname|t:persName/t:name" data-type="text"/>
                             <div class="list-group-item mb-1 py-0" id="{@xml:id}">
                                 <div class="row">
                                     <span class="col-10">
