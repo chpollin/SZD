@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Startseite SZD</title>
+                <title>Startseite</title>
                 <author>
                     <persName>
                         <forename>Oliver</forename>
@@ -29,8 +29,7 @@
                         Commons BY-NC-SA 4.0</licence>
                 </availability>
                 <publisher>Literaturarchiv Salzburg</publisher>
-                <idno type="PID">o:szd.werke</idno>
-                <date when="2017-12-15">15.12.2017</date>
+                <date when="2020">2020</date>
             </publicationStmt>
             <seriesStmt>
                 <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
@@ -58,17 +57,11 @@
                 </respStmt>
             </seriesStmt>
             <sourceDesc>
-                <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+                <p>Born digital</p>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <editorialDecl>
-                <p>ToDo: was über die editionsregeln und kodierungsrichtlinien</p>
-            </editorialDecl>
             <projectDesc>
-                <ab>
-                    <ref target="/o:szd.werke" type="object"></ref>
-                </ab>
                 <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
                     im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
                     wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
@@ -83,6 +76,10 @@
         </encodingDesc>
     </teiHeader>
     <text>
+        <figure type="home">
+            <graphic url="/archive/objects/context:szd/datastreams/STARTBILD/content"/>
+            <caption><ref target="https://stefanzweig.digital">Stefan Zweig digital</ref></caption>
+        </figure>
         <body>
             <div type="main">
                 <div xml:lang="de">
