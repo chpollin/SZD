@@ -1,3 +1,0 @@
-* SZDPER.xml ist eine angereicherte (GND, wikidata) mit den Ansetzungsnamen aus SZDBIB, die für den Abgleich notwendig sind. 
-* SZDPER_simplList. xml ist eine daraus extrahierte einfache Liste aus persName, GND-Ref, name, forename, surname. Zu dieser Liste können neue Personen hinzugefügt werden.
-  Diese wird dann neu ingestiert mit Cirilo: da wird dann ein TOTEI.xsl aktiv, dass die einfache List mit der GND und Wikidata anreichert (Variantnamen, Death, Birth etc.)
