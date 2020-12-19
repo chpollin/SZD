@@ -79,36 +79,57 @@
     <text>
         <body>
             <div type="main">
-                <div type="news_entry" n="2">
-                    <div xml:lang="de">
-                        <head><title><hi style="uppercase">Das ist der zweite NEWS-Eintrag</hi></title>, <date when="2020-12-20">20 Dezember 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. 
-                            <span target="https://www.google.com/" type="href">Ein Link</span>. 
-                            Lorem  Ipsum dolore.</p>
+                <!-- DEUTSCH -->
+                <div xml:lang="de">
+                    <div type="news" n="2">
+                        <head><hi style="uppercase">Das ist der zweite NEWS-Eintrag</hi>, <date
+                                when="2020-12-20">20 Dezember 2020</date></head>
+                        <p>DE Lorem Ipsum dolore. Lorem Ipsum dolore. <ref
+                                target="https://www.google.com/" type="href">Ein Link</ref>. Lorem
+                            Ipsum dolore.</p>
+                        <p>TESt test testeriii</p>
                     </div>
-                    <div xml:lang="en">
-                        <head><title><hi style="uppercase">This is the first news-entry</hi></title>, <date when="2020-12-20">20th of December 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.</p>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
+                    <div type="news" n="1">
+                        <head><hi style="uppercase">Das ist der erste NEWS-Eintrag</hi>, <date
+                                when="2020-12-19">19 Dezember 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. <ref
+                                target="https://www.google.com/" type="href">Ein Link</ref>. Lorem
+                            Ipsum dolore.</p>
+                        <figure>
+                            <graphic
+                                url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
+                            <caption><ref target="https://stefanzweig.digital">Text zum
+                                Bild</ref></caption>
+                        </figure>
+                        <p> DE Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem
+                            Ipsum dolore.</p>
                     </div>
                 </div>
-                <div type="news_entry" n="1">
-                    <div xml:lang="de">
-                        <head><title><hi style="uppercase">Das ist der erste NEWS-Eintrag</hi></title>, <date when="2020-12-19">19 Dezember 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. 
-                            <span target="https://www.google.com/" type="href">Ein Link</span>. 
-                            Lorem  Ipsum dolore.</p>
+                <!-- /////// -->
+                <!-- ENGLISCH -->
+                <div xml:lang="en">
+                    <div type="news" n="2">
+                        <head><hi style="uppercase">This is the first news-entry</hi>, <date
+                                when="2020-12-20">20th of December 2020</date></head>
+                        <p>EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem
+                            Ipsum dolore.</p>
+                        <p>EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum
+                            dolore.</p>
+                    </div>
+                    <div type="news" n="1">
+                        <head><hi style="uppercase">This is the first news-entry</hi>, <date
+                                when="2020-12-19">19th of December 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. <span
+                                target="https://www.google.com/" type="href">Ein Link</span>. Lorem
+                            Ipsum dolore.</p>
                         <figure type="home">
                             <graphic
                                 url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
-                            <caption><ref target="https://stefanzweig.digital">Text zum Bild</ref></caption>
+                            <caption><ref target="https://stefanzweig.digital">Text for the
+                                    Image</ref></caption>
                         </figure>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
-                    </div>
-                    <div xml:lang="en">
-                        <head><title><hi style="uppercase">This is the first news-entry</hi></title>, <date when="2020-12-19">19th of December 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.</p>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
+                        <p> EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem
+                            Ipsum dolore.</p>
                     </div>
                 </div>
             </div>
