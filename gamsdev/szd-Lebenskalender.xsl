@@ -61,8 +61,8 @@
                                 <!-- ///////////////////// -->
                                 <!-- every Entry in a year -->
                                 <xsl:for-each-group select="current-group()" group-by="substring(t:head/t:span[1]/t:date/@when | t:head/t:span[1]/t:date/@from, 1,7)">
+                                    <xsl:sort data-type="number" select="substring-after(current-grouping-key(), '-')"/>
                                     <xsl:variable name="currentMonth" select="substring-after(current-grouping-key(), '-')"/>
-                                    
                                     <xsl:for-each select="current-group()">
                                         <li id="{@xml:id}">
                                             <xsl:attribute name="class">
@@ -76,7 +76,7 @@
                                                 <xsl:apply-templates select="t:head"/>
                                                 <xsl:choose>
                                                     <xsl:when test="$locale = 'en'">
-                                                        <xsl:apply-templates select="t:ab[@xml:lang = 'en']"/>
+                                                        <xsl:apply-templates select="t:ab[@xml:lang = 'en']"/> 
                                                     </xsl:when>
                                                     <xsl:otherwise>
                                                         <xsl:apply-templates select="t:ab[@xml:lang = 'de']"/>

@@ -132,7 +132,7 @@
 				
 				<!-- Bootstrap core CSS  ================================================== -->
 				<!-- Bootstrap 4 core CSS -->
-				<link href="/lib/2.0/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
+				<link href="/lib/2.0/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
 				
 				<!-- fixed navbar-side -->
 				<!--<link href="{concat($server, $gamsdev, '/css/navbar-fixed-side.css')}" rel="stylesheet"/>-->
@@ -157,7 +157,7 @@
 				<!-- Bootstrap core JavaScript ================================================== -->
 				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
 				<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>
-				<script src="/lib/2.0/bootstrap-4.3.1-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
+				<script src="/lib/2.0/bootstrap-4.5.0-dist/js/bootstrap.min.js"><xsl:text> </xsl:text></script>
 				<!-- projectspecific .js ================================================== -->
 				<script src="{concat($server, $gamsdev,'/js/databasket.js')}"><xsl:text> </xsl:text></script>
 				<script src="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.js?v=2.1.5"><xsl:text> </xsl:text></script>
@@ -270,32 +270,19 @@
 											<i18n:text>glossary</i18n:text>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a class="navtext text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
-											<!--<i18n:text>about</i18n:text>-->
-											<xsl:choose>
-												<xsl:when test="$locale='en'">
-													<xsl:text>About</xsl:text>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:text>Projekt</xsl:text>
-												</xsl:otherwise>
-											</xsl:choose>
-										</a>
-									</li>
-									<!--<li class="nav-item dropdown">
-										<a class="dropdown-toggle navtext text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i18n:text>project</i18n:text>
+									<li class="nav-item dropdown">
+										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<xsl:value-of select="if ($locale = 'en') then ('About') else ('Projekt')"/>
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
-												<i18n:text>description</i18n:text>
+												<xsl:value-of select="if ($locale = 'en') then ('About') else ('Projekt')"/>
 											</a>
-											<!-\-<a class="dropdown-item text-uppercase" href="/archive/objects/o:szd.ontology/methods/sdef:Ontology/get?locale=en">
-												<i18n:text>ontology_szd</i18n:text>
-											</a>-\->
+											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=news&amp;locale=',$locale)}">
+												<xsl:value-of select="if ($locale = 'en') then ('News') else ('Neues')"/>
+											</a>
 										</div>
-									</li>-->
+									</li>
 									<li class="nav-item">
 										<form class="navbar-form navtext" id="fulltext_search" method="get">
 											<xsl:choose>
@@ -593,17 +580,45 @@
 		</xsl:attribute>
 	</xsl:template>
 	
+	
+	<xsl:template match="t:figure[t:graphic/@url]">
+		<xsl:choose>
+			<xsl:when test="t:caption/t:ref/@target">
+				<figure class="text-center pt-4 pb-3">
+					<a href="{t:caption/t:ref/@target}" title="">
+						<img class="img-fluid mx-auto d-block w-50" src="{t:graphic/@url}" alt="Image"/>
+					</a>
+					<figcaption>
+						<xsl:apply-templates select="t:caption"/>
+					</figcaption>
+				</figure>
+				
+			</xsl:when>
+			<xsl:otherwise>
+				<img class="img-fluid mx-auto d-block" src="{t:graphic/@url}" alt="Image"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<!-- NEWS datastream in context:szd -->
+	<xsl:template match="t:div[@type='news']">
+		<div class="card-body border-bottom">
+			<xsl:apply-templates/>
+		</div>
+	</xsl:template>
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- en | de text for ABOUT, IMPRINT etc. -->
 	<xsl:template match="t:div[@type='main']">
-			<xsl:choose>
-	            <xsl:when test="$locale = 'en'">
-	                <xsl:apply-templates select="t:div[@xml:lang = 'en']"/>
-	            </xsl:when>
-	            <xsl:otherwise>
-	                <xsl:apply-templates select="t:div[@xml:lang = 'de']"/>
-	            </xsl:otherwise>
-      		</xsl:choose>
+		<xsl:choose>
+		    <xsl:when test="$locale = 'en'">
+		        <xsl:apply-templates select="t:div[@xml:lang = 'en']"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+		        <xsl:apply-templates select="t:div[@xml:lang = 'de']"/>
+		    </xsl:otherwise>
+    	</xsl:choose>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
@@ -619,7 +634,7 @@
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:head">
 		<h3>
-			<xsl:apply-templates></xsl:apply-templates>
+			<xsl:apply-templates/>
 		</h3>
 	</xsl:template>
 	

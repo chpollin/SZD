@@ -224,17 +224,17 @@
 				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc//t:ab/t:ref or
 				t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list/t:item/t:stamp">
 				<szd:ProvenanceCharacteristic rdf:about="{concat('https://gams.uni-graz.at/o:szd.bibliothek#', $Book-ID, 'PS')}">
-					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:ref">
+					<!--<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:additions/t:list[@type='provenance']/t:item/t:ref">
 						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, ':')))}">
 							<xsl:text>todo EN/DE</xsl:text>
 							
-							<!--<xsl:call-template name="printEnDe">
+							<xsl:call-template name="printEnDe">
 								<xsl:with-param name="locale" select="../t:desc/@xml:lang"/>
 								<xsl:with-param name="path" select="../t:desc"/>
 							</xsl:call-template>-->
-							<!--<xsl:value-of select="normalize-space(../t:desc)"/>-->
+							<!--<xsl:value-of select="normalisze-space(../t:desc)"/>
 						</xsl:element>
-					</xsl:for-each>
+					</xsl:for-each>-->
 					<!--<!-\- Nachbesitzer -\->
 					<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:ab/t:ref">
 						<xsl:element name="{concat('szd:',lower-case(substring-after(@target, '#')))}">
@@ -774,33 +774,15 @@
 		<xsl:for-each select="//t:listBibl/t:biblFull">
 			<!-- sameAs bibo:Manuscript -->
 			<szd:PersonalDocument rdf:about="{concat('https://gams.uni-graz.at/o:szd.lebensdokumente#',  @xml:id)}">
-
-				<!-- GET BASIC DATA: author, title, date, place -->
+			<!-- GET BASIC DATA: author, title, date, place -->
 				<xsl:call-template name="Work_RDF"/>
 				<!-- FULLTEXT -->
 				<xsl:call-template name="FulltextSearchData"/>
 				<!-- COLLECTION -->
 				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.lebensdokumente"/>
 			</szd:PersonalDocument>
+			<!-- szd:Extent -->
 			<szd:Extent rdf:about="{concat('https://gams.uni-graz.at/o:szd.lebensdokumente#', @xml:id, 'EX')}">
-				<!-- page -->
-				<!--<xsl:call-template name="createTriple">
-					<xsl:with-param name="PropertyTyp" select="'data'"/>
-					<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='page']"/>
-					<xsl:with-param name="Property" select="'szd:page'"/>
-				</xsl:call-template>
-				<!-\- format -\->
-				<xsl:call-template name="createTriple">
-					<xsl:with-param name="PropertyTyp" select="'data'"/>
-					<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='format']"/>
-					<xsl:with-param name="Property" select="'szd:format'"/>
-				</xsl:call-template>
-				<!-\- binding -\->
-				<xsl:call-template name="createTriple">
-					<xsl:with-param name="PropertyTyp" select="'data'"/>
-					<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab"/>
-					<xsl:with-param name="Property" select="'szd:binding'"/>
-				</xsl:call-template>-->
 				<!-- //////// -->
 				<!-- szd:text -->
 				<xsl:call-template name="getExtentMSK">
@@ -1160,10 +1142,25 @@
 				</xsl:attribute>
 			</szd:category>
 		</xsl:if>
-
-		<!-- szd:author = Stefan Zweig -->
-		<szd:author rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
-
+	
+		<!-- /// -->
+		<!-- szd:author: define Stefan zweig as szd:author if not an explicitly other author is mentioned, as Zweig is always author of his works and personal documents  -->
+		<xsl:if test="t:fileDesc/t:titleStmt/t:author">
+			<xsl:choose>
+				<xsl:when test="not(t:fileDesc/t:titleStmt/t:author[@ref = '#SZDPER.1560'])">
+					<xsl:for-each select="t:fileDesc/t:titleStmt/t:author/@ref">
+						<szd:author rdf:resource="{concat('https://gams.uni-graz.at/o:szd.personen', .)}"/>
+					</xsl:for-each>
+					
+				</xsl:when>
+				<!-- szd:author = Stefan Zweig -->
+				<xsl:otherwise>
+					<szd:author rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+		
+		<!-- /// -->
 		<!-- Collection -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context']">
 			<szd:collection rdf:resource="{concat('https://gams.uni-graz.at/', t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='Context'])}"/>

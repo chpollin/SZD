@@ -6,6 +6,30 @@
     <xsl:template match="/">
         <xsl:variable name="PID" select="//t:idno[@type='PID']"/>
         
+        
+                <xsl:choose>
+                    <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente'">
+                        <xsl:call-template name="getRowsSZDBIO">
+                            <xsl:with-param name="PID" select="$PID"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:when test="$PID = 'o:szd.bibliothek' or $PID = 'o:szd.autographen'">
+                        <xsl:call-template name="getRowsSZD_BIB_AUT">
+                            <xsl:with-param name="PID" select="$PID"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                   <!-- <xsl:when test="$PID = 'o:szd.lebenskalender'">
+                        <xsl:call-template name="getRows"/>
+                    </xsl:when>-->
+                    <xsl:otherwise/>
+                </xsl:choose>
+    </xsl:template>
+    
+    
+    <!-- ////////////////////////////////// -->
+    <!-- ////////////////////////////////// -->
+    <xsl:template name="getRowsSZDBIO">
+        <xsl:param name="PID"/>
         <gmr:Workbook>
             <gmr:Sheets>
                 <gmr:Sheet>
@@ -51,29 +75,6 @@
                             <gmr:Content>Datum</gmr:Content>
                         </gmr:Cell>
                     </gmr:Cells> 
-                <xsl:choose>
-                    <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente'">
-                        <xsl:call-template name="getRows">
-                            <xsl:with-param name="PID" select="$PID"/>
-                        </xsl:call-template>
-                    </xsl:when>
-                    <xsl:when test="$PID = 'o:szd.bibliothek' or $PID = 'o:szd.autographen'">
-                        <xsl:call-template name="getRows">
-                            <xsl:with-param name="PID" select="$PID"/>
-                        </xsl:call-template>
-                    </xsl:when>
-                   <!-- <xsl:when test="$PID = 'o:szd.lebenskalender'">
-                        <xsl:call-template name="getRows"/>
-                    </xsl:when>-->
-                    <xsl:otherwise/>
-                </xsl:choose>
-                </gmr:Sheet>
-            </gmr:Sheets>
-        </gmr:Workbook>
-    </xsl:template>
-    
-    <xsl:template name="getRows">
-        <xsl:param name="PID"/>
         <xsl:for-each select="//t:listBibl/t:biblFull|t:listEvent/t:event">
             <xsl:variable name="row" select="position()"/>
             <!-- COLLECTION -->
@@ -202,59 +203,66 @@
             </gmr:Cell>
             
         </xsl:for-each>
+                </gmr:Sheet>
+            </gmr:Sheets>
+        </gmr:Workbook>
     </xsl:template>
-        
-        
-        <!--<gmr:Workbook>
+     
+     
+    <!-- ////////////////////////////////// -->
+    <!-- ////////////////////////////////// -->
+    <xsl:template name="getRowsSZD_BIB_AUT">    
+        <xsl:param name="PID"/>
+        <gmr:Workbook>
             <gmr:Sheets>
                 <gmr:Sheet>
                     <gmr:Name>SZD Excel Export</gmr:Name>
                     <gmr:MaxCol>22</gmr:MaxCol>
-                    <!-\- HEADER -\->
+                    <!-- HEADER -->
                     <gmr:Cells>
-                        <!-\- SZDID -\->
+                        <!-- SZDID -->
                         <gmr:Cell Col="0" Row="0" ValueType="60">
                             <gmr:Content>SZDID</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Verfasser/in -\->
+                        <!-- Verfasser/in -->
                         <gmr:Cell Col="1" Row="0" ValueType="60">
                             <gmr:Content>Verfasser/in</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Titel -\->
+                        <!-- Titel -->
                         <gmr:Cell Col="2" Row="0" ValueType="60">
-                            <gmr:Content>Titel</gmr:Content>
+                            <gmr:Content>Titel [nur was kursiv ist, hi]</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Beschreibung -\->
+                        <!-- Beschreibung -->
                         <gmr:Cell Col="3" Row="0" ValueType="60">
                             <gmr:Content>Beschreibung</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Sprache -\->
+                        <!-- Sprache -->
                         <gmr:Cell Col="4" Row="0" ValueType="60">
-                            <gmr:Content>Umfang/Einband</gmr:Content>
+                            <gmr:Content>Umfang/Einband [ohne Seitenanzahl und nach ", "]</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Umfang/Einband -\->
+                        <!-- Umfang/Einband -->
                         <gmr:Cell Col="5" Row="0" ValueType="60">
                             <gmr:Content>Erwerbung</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Erwerbung -\->
+                        <!-- Erwerbung -->
                         <gmr:Cell Col="6" Row="0" ValueType="60">
                             <gmr:Content>Heutiger Standort</gmr:Content>
                         </gmr:Cell>
-                        <!-\- Heutiger Standort -\->
-                       <!-\- <gmr:Cell Col="7" Row="0" ValueType="60">
+                        <!-- Heutiger Standort -->
+                       <!-- <gmr:Cell Col="7" Row="0" ValueType="60">
                             <gmr:Content></gmr:Content>
-                        </gmr:Cell>-\->
+                        </gmr:Cell>-->
                     </gmr:Cells>
-                    <!-\- ROWS -\->
+                    <!-- ROWS -->
                     <xsl:for-each select="//t:listBibl/t:biblFull">
                         <xsl:variable name="row" select="position()"/>
-                        <!-\- SZDID -\->
+                        <!-- SZDID -->
                         <gmr:Cell Col="0" Row="{$row}" ValueType="60">
                             <gmr:Content>
                                 <xsl:value-of select="@xml:id"/>
                             </gmr:Content>
                         </gmr:Cell>
-                        <!-\- Verfasser/in -\->
+                        <!-- Verfasser/in -->
                         <gmr:Cell Col="1" Row="{$row}" ValueType="60">
                             <gmr:Content>
                                 <xsl:choose>
@@ -268,13 +276,13 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                            
-                                <!-\-<xsl:value-of select="normalize-space(.//t:author[1])"/>-\->
-                               <!-\- <xsl:call-template name="print">
+                                <!--<xsl:value-of select="normalize-space(.//t:author[1])"/>-->
+                               <!-- <xsl:call-template name="print">
                                     <xsl:with-param name="path" select=".//t:author"/>
-                                </xsl:call-template>-\->
+                                </xsl:call-template>-->
                             </gmr:Content>
                         </gmr:Cell>
-                        <!-\- Titel -\->
+                        <!-- Titel -->
                         <gmr:Cell Col="2" Row="{$row}" ValueType="60">
                             <gmr:Content>
                                 <xsl:choose>
@@ -289,83 +297,91 @@
                                         </xsl:call-template>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:text>nope</xsl:text>
+                                        <xsl:text>xxx</xsl:text>
                                     </xsl:otherwise>
                                 </xsl:choose>
                                
-                               <!-\- <xsl:apply-templates select=".//t:titleStmt/t:title[1]"/>-\->
-                                <!-\-<xsl:value-of select="normalize-space(.//t:titleStmt/t:title[1])"/>-\->
+                               <!-- <xsl:apply-templates select=".//t:titleStmt/t:title[1]"/>-->
+                                <!--<xsl:value-of select="normalize-space(.//t:titleStmt/t:title[1])"/>-->
                             </gmr:Content>
                         </gmr:Cell>
-                        <!-\- Beschreibung -\->
+                        <!-- Beschreibung -->
                         <gmr:Cell Col="3" Row="{$row}" ValueType="60">
                             <gmr:Content>
-                                <!-\-<xsl:call-template name="print">
-                                    <xsl:with-param name="path" select=".//t:msContents/t:summary[1]"/>
-                                </xsl:call-template>-\->
-                                <xsl:apply-templates select=".//t:msContents/t:summary[1]"/>
-                                <!-\-<xsl:value-of select="normalize-space(.//t:msContents/t:summary[1])"/>-\->
+                                <xsl:choose>
+                                    <xsl:when test=".//t:msContents/t:summary[1]">
+                                        <xsl:apply-templates select=".//t:msContents/t:summary[1]"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text>xxx</xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </gmr:Content>
                         </gmr:Cell>
-                        <!-\- Sprache -\->
-                       <!-\- <gmr:Cell Col="4" Row="{$row}" ValueType="60">
+                        <!-- Sprache -->
+                       <!-- <gmr:Cell Col="4" Row="{$row}" ValueType="60">
                             <gmr:Content>
                                 <xsl:call-template name="print">
                                     <xsl:with-param name="path" select=".//t:lang"/>
                                 </xsl:call-template>
-                               <!-\\- <xsl:apply-templates select=".//t:lang"/>-\\->
+                               <!-\- <xsl:apply-templates select=".//t:lang"/>-\->
                             </gmr:Content>
-                        </gmr:Cell>-\->
-                        <!-\- Umfang/Einband -\->
+                        </gmr:Cell>-->
+                        <!-- Umfang/Einband -->
                         <gmr:Cell Col="4" Row="{$row}" ValueType="60">
                             <gmr:Content>
-                                <!-\-<xsl:call-template name="print">
-                                    <xsl:with-param name="path" select=".//t:physDesc//t:measure[@type='format']"/>
-                                </xsl:call-template>-\->
-                                <xsl:apply-templates select=".//t:physDesc//t:measure[@type='format']"/>
-                            </gmr:Content>
-                        </gmr:Cell>
-                         <!-\-Erwerbung-\-> 
-                        <gmr:Cell Col="5" Row="{$row}" ValueType="60">
-                            <gmr:Content>
-                                <!-\-<xsl:call-template name="print">
-                                    <xsl:with-param name="path" select=".//t:history/t:acquisition[1]"/>
-                                </xsl:call-template>-\->
-                               <!-\- <xsl:choose>
-                                    <xsl:when test=".//t:history/t:acquisition[1]">
-                                        <xsl:apply-templates select=".//t:history/t:acquisition[1]"/>
+                                <xsl:choose>
+                                    <xsl:when test=".//t:physDesc//t:measure[@type='format']">
+                                        <xsl:choose>
+                                            <xsl:when test="contains(.//t:physDesc//t:measure[@type='format'], ', ')">
+                                                <xsl:value-of select="normalize-space(substring-after(.//t:physDesc//t:measure[@type='format'], ', '))"/>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:text>xxx</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:text>nope</xsl:text>
+                                        <xsl:text>xxx</xsl:text>
                                     </xsl:otherwise>
-                                </xsl:choose>-\->
-                                <xsl:apply-templates select=".//t:history/t:acquisition[1]"/>
-                                <!-\-<xsl:value-of select="normalize-space(.//t:history/t:acquisition[1])"/>-\->
+                                </xsl:choose>
                             </gmr:Content>
                         </gmr:Cell>
-                        <!-\- Heutiger Standort -\->
+                         <!--Erwerbung--> 
+                        <gmr:Cell Col="5" Row="{$row}" ValueType="60">
+                            <gmr:Content>
+                                <gmr:Content>
+                                    <xsl:choose>
+                                        <xsl:when test=".//t:history/t:acquisition[1]">
+                                            <xsl:apply-templates select=".//t:history/t:acquisition[1]"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text>xxx</xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </gmr:Content>
+                                <!--<xsl:value-of select="normalize-space(.//t:history/t:acquisition[1])"/>-->
+                            </gmr:Content>
+                        </gmr:Cell>
+                        <!-- Heutiger Standort -->
                         <gmr:Cell Col="6" Row="{$row}" ValueType="60">
                             <gmr:Content>
-                                <!-\-<xsl:call-template name="print">
-                                    <xsl:with-param name="path" select=".//t:history/t:provenance[1]"/>
-                                </xsl:call-template>-\->
                                 <xsl:choose>
                                     <xsl:when test=".//t:history/t:provenance[1]">
                                         <xsl:apply-templates select=".//t:history/t:provenance[1]"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:text>nope</xsl:text>
+                                        <xsl:text>xxx</xsl:text>
                                     </xsl:otherwise>
                                 </xsl:choose>
-                               
-                                <!-\-<xsl:value-of select="normalize-space(.//t:history/t:provenance[1])"/>-\->
                             </gmr:Content>
                         </gmr:Cell>
                     </xsl:for-each>
                 </gmr:Sheet>
             </gmr:Sheets>
         </gmr:Workbook>
-    </xsl:template>-->
+    </xsl:template>
+
     
     <xsl:template match="t:idno">
         <xsl:text> </xsl:text>
@@ -375,6 +391,7 @@
     <xsl:template match="t:date">
         <xsl:text> </xsl:text>
         <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
     </xsl:template>
 
     <xsl:template match="t:placeName">
@@ -387,6 +404,25 @@
         <xsl:apply-templates/>
     </xsl:template>
     
+    <xsl:template match="t:surename">
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="t:forename">
+        <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
+    </xsl:template>
+    
+    
+    
+    <xsl:template match="t:persName">
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
+    </xsl:template>
+    
 
     <xsl:template name="print">
         <xsl:param name="path"/>
@@ -397,7 +433,7 @@
                 <xsl:text> </xsl:text>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:text>nope</xsl:text>
+                <xsl:text>xxx</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -450,11 +486,11 @@
         <xsl:text><![CDATA[</i>]]></xsl:text>
     </xsl:template>-->
     
-   <!-- <xsl:template match="t:hi">
+    <xsl:template match="t:hi">
         <xsl:text> <![CDATA[<hi>]]></xsl:text>
             <xsl:apply-templates/>
-        <xsl:text><![CDATA[</hi>]]></xsl:text>
-    </xsl:template>-->
+        <xsl:text><![CDATA[</hi>]]> </xsl:text>
+    </xsl:template>
     
     <xsl:template match="text()">
         <xsl:value-of select="normalize-space(.)"/>

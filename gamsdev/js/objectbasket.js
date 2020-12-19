@@ -45,9 +45,9 @@ function addObject(checkBox) {
   if(pattern.test(input_value) || checkBox.checked == true)
   {
   // URL
-    let BaseURL = "https://glossa.uni-graz.at/";
-    let URL = BaseURL + input_value;
-    let URL_Metadata = BaseURL + input_value + "/METADATA";
+    const BaseURL = "https://glossa.uni-graz.at/";
+    const URL = BaseURL + input_value;
+    const URL_Metadata = BaseURL + input_value + "/METADATA";
     
     // call the fetch function passing the url of the API as a parameter
     fetch(URL_Metadata, {method: 'get'})
@@ -56,22 +56,22 @@ function addObject(checkBox) {
       .then(function(data)
       {
         // parse the response.text as xml
-        let parser = new DOMParser();
-        let xmlDoc = parser.parseFromString(data, "text/xml");
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, "text/xml");
        
         // check via model which content model (tei, lido etc.)
         // as there can be multiple <result> in METADATA, select the result with the child <model @uri>
-        let result = xmlDoc.querySelector("result > model[uri]").parentElement;
-        let model = xmlDoc.querySelector("model[uri]").getAttribute("uri")
+        const result = xmlDoc.querySelector("result > model[uri]").parentElement;
+        const model = xmlDoc.querySelector("model[uri]").getAttribute("uri")
 
-        var URL_Source = "";
+        let URL_Source = "";
         switch(model) 
         {
           case 'info:fedora/cm:TEI':
           URL_Source = URL + "/TEI_SOURCE";
           break;
           
-          case 'info:fedora/cm:MEI':                  // --> kein Metadata
+          case 'info:fedora/cm:MEI':                  // --> keine Metadata
           URL_Source = URL + "/MEI_SOURCE";
           break;
           
@@ -98,7 +98,7 @@ function addObject(checkBox) {
          
         // get title, model (info:fedora/cm:TEI), ownerId, lastModifiedDate and identifier from /METADATA
         // write it into an object
-        var objectbasketItem = { 
+        let objectbasketItem = { 
              "title": result.getElementsByTagName("title")[0].childNodes[0].nodeValue, 
              "model" : model,
              "ownerId" : result.getElementsByTagName("ownerId")[0].childNodes[0].nodeValue,
@@ -112,7 +112,7 @@ function addObject(checkBox) {
          // the "|| []" replaces possible null from localStorage with empty array
          let objectbasket = JSON.parse(localStorage.getItem(project)) || [];
 
-         var exists = false;
+         let exists = false;
          // check if objectbasket is not empty
          if(typeof objectbasket !== 'undefined' && objectbasket.length > 0)
          {
@@ -170,9 +170,9 @@ function zipAndDownload()
 	let objectbasket = JSON.parse(localStorage.getItem(project)) || [];
 
 	// see jszip.min.js
-	var zip = new JSZip();
-	var zipFilename = "gamsExport.zip";
-	var count = 0;
+	const zip = new JSZip();
+	const zipFilename = "gamsExport.zip";
+	let count = 0;
    
 	objectbasket.forEach(item => fetch(item.source_url, {method: 'get',mode: 'cors'})
       .then((response) => response.text())
@@ -247,7 +247,7 @@ function showData()
 // createTD()
 function createTD(content) 
 {
-  var td = document.createElement('td');
+  const td = document.createElement('td');
   td.appendChild(document.createTextNode(content));
   return td;
 }
@@ -263,7 +263,7 @@ function downloadItem(content)
 // delets item in objectbasket using splice() to remove it from the array, than creates a new array and put it into the localStorage
 function deletItem(id) 
 {
-	let objectbasket = JSON.parse(localStorage.getItem(project)) || [];	
+	const objectbasket = JSON.parse(localStorage.getItem(project)) || [];	
 
 	for (let count=0; count < objectbasket.length; count++){
 	  // delets selected item from array

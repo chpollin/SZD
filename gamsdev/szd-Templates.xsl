@@ -1631,7 +1631,7 @@
                   <xsl:text>, URL: </xsl:text>
                     <!--  stefanzweig.digital/o:szd.bibliothek#SZDBIB.1006 -->
                     <!-- http://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=en#SZDBIB.1006 -->
-                    <xsl:variable name="CITATION_URL" select="concat('https://', substring-before($URL, '#'),'/sdef:TEI/get?locale=', $locale, '#', substring-after($URL, '#'))"/>
+                    <xsl:variable name="CITATION_URL" select="concat(substring-before($URL, '#'),'/sdef:TEI/get?locale=', $locale, '#', substring-after($URL, '#'))"/>
                     <a href="{$CITATION_URL}" target="_blank">
                         <xsl:value-of select="$CITATION_URL"/>
                     </a>
@@ -2601,9 +2601,15 @@
         <xsl:param name="path"/>
         <xsl:param name="locale"/>
         <xsl:choose>
+            <!-- path = t:date/t:span[@xml:lang="de"] -->
             <xsl:when test="$path/@xml:lang">
                 <xsl:value-of select="normalize-space($path[@xml:lang = $locale][1])"/>
             </xsl:when>
+            <!-- path = t:date and there is a child with a lang tag--> 
+            <xsl:when test="$path/*/@xml:lang">
+                <xsl:value-of select="normalize-space($path/*[@xml:lang = $locale][1])"/>
+            </xsl:when>
+            <!-- path = t:date and no lang tag was found, just print it [no lang tag needed, maybe just numbers]--> 
             <xsl:otherwise>
                 <xsl:value-of select="normalize-space($path[1])"/>
             </xsl:otherwise>
@@ -2719,7 +2725,7 @@
                             <xsl:text>▼ </xsl:text>
                         </span>
                         <xsl:choose>
-                            <!-- every title in o:szd.bibliothek is italic-->
+                            <!-- every title in o:szd.bibliothek is italic -->
                             <xsl:when test="$PID = 'o:szd.bibliothek'">
                                 <xsl:choose>
                                     <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[1]) > 70">
@@ -2737,7 +2743,11 @@
                         </xsl:choose>
                     </a>
                     <xsl:if test="t:fileDesc/t:publicationStmt/t:date">
-                        <xsl:text> | </xsl:text><xsl:value-of select="t:fileDesc/t:publicationStmt/t:date"/>
+                        <xsl:text> | </xsl:text>
+                        <xsl:call-template name="printEnDe">
+                            <xsl:with-param name="locale" select="$locale"/>
+                            <xsl:with-param name="path" select="t:fileDesc/t:publicationStmt/t:date"/>
+                        </xsl:call-template>
                     </xsl:if>
                 </h4>
                 
