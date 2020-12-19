@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>News</title>
+                <author>
+                    <persName>
+                        <forename>Oliver</forename>
+                        <surname>Matuschek</surname>
+                    </persName>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+                        ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                </publisher>
+                <authority>
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at"
+                        ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität
+                        Graz</orgName>
+                </authority>
+                <distributor>
+                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
+                        Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
+                        Commons BY-NC-SA 4.0</licence>
+                </availability>
+                <publisher>Literaturarchiv Salzburg</publisher>
+                <date when="2020">2020</date>
+            </publicationStmt>
+            <seriesStmt>
+                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale</title>
+                <respStmt>
+                    <resp>Projektleitung</resp>
+                    <persName>
+                        <forename>Manfred</forename>
+                        <surname>Mittermayer</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenerfassung</resp>
+                    <persName>
+                        <forename>Lina</forename>
+                        <surname>Zangerl</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Datenmodellierung</resp>
+                    <persName>
+                        <forename>Christopher</forename>
+                        <surname>Pollin</surname>
+                    </persName>
+                </respStmt>
+            </seriesStmt>
+            <sourceDesc>
+                <p>Digital Born</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+                    dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+                    orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) möglich werden.</p>
+            </projectDesc>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="main">
+                <div type="news_entry" n="2">
+                    <div xml:lang="de">
+                        <head><title><hi style="uppercase">Das ist der zweite NEWS-Eintrag</hi></title>, <date when="2020-12-20">20 Dezember 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. 
+                            <span target="https://www.google.com/" type="href">Ein Link</span>. 
+                            Lorem  Ipsum dolore.</p>
+                    </div>
+                    <div xml:lang="en">
+                        <head><title><hi style="uppercase">This is the first news-entry</hi></title>, <date when="2020-12-20">20th of December 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.</p>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
+                    </div>
+                </div>
+                <div type="news_entry" n="1">
+                    <div xml:lang="de">
+                        <head><title><hi style="uppercase">Das ist der erste NEWS-Eintrag</hi></title>, <date when="2020-12-19">19 Dezember 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. 
+                            <span target="https://www.google.com/" type="href">Ein Link</span>. 
+                            Lorem  Ipsum dolore.</p>
+                        <figure type="home">
+                            <graphic
+                                url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
+                            <caption><ref target="https://stefanzweig.digital">Text zum Bild</ref></caption>
+                        </figure>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
+                    </div>
+                    <div xml:lang="en">
+                        <head><title><hi style="uppercase">This is the first news-entry</hi></title>, <date when="2020-12-19">19th of December 2020</date></head>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.</p>
+                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum dolore.</p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
