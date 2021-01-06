@@ -81,55 +81,106 @@
             <div type="main">
                 <!-- DEUTSCH -->
                 <div xml:lang="de">
-                    <div type="news" n="2">
-                        <head><hi style="uppercase">Das ist der zweite NEWS-Eintrag</hi>, <date
-                                when="2020-12-20">20 Dezember 2020</date></head>
-                        <p>DE Lorem Ipsum dolore. Lorem Ipsum dolore. <ref
-                                target="https://www.google.com/" type="href">Ein Link</ref>. Lorem
-                            Ipsum dolore.</p>
-                        <p>TESt test testeriii</p>
-                    </div>
                     <div type="news" n="1">
-                        <head><hi style="uppercase">Das ist der erste NEWS-Eintrag</hi>, <date
-                                when="2020-12-19">19 Dezember 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. <ref
-                                target="https://www.google.com/" type="href">Ein Link</ref>. Lorem
-                            Ipsum dolore.</p>
-                        <figure>
-                            <graphic
-                                url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
-                            <caption><ref target="https://stefanzweig.digital">Text zum
-                                Bild</ref></caption>
-                        </figure>
-                        <p> DE Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem
-                            Ipsum dolore.</p>
+                        <head>
+                            <hi style="uppercase">Friderike Maria Zweig zum 50. Todestag am 
+                            <date when="2021-01-18">18. Januar 2021</date></hi>
+                        </head>
+                        <p>
+                            Am 18. Januar 1971 verstarb Friderike Maria Zweig in ihrem Wohnort im US-amerikanischen Exil in Stamford, CT.
+                            Sie hatte Stefan Zweig im Jahr 1912 kennengelernt und war von 1920 bis 1938 mit ihm verheiratet.
+                            Anlässlich ihres 50. Todestages am 18. Januar 2021 möchten wir drei kaum bekannte Tondokumente vorstellen,
+                            die zwischen 1955 und 1962 entstanden sind.
+                        </p>
+                        <div>
+                            <head>1955</head>
+                            <p>
+                                Die erste Aufnahme ist ein Radiobeitrag des aus Prag stammenden Schriftstellers und 
+                                Journalisten <ref target="http://d-nb.info/gnd/118763938">Johannes Urzidil</ref>, 
+                                der 1939 zunächst über Italien nach England und 1941 weiter in die USA geflohen war. 
+                                Er besuchte Friderike Zweig in ihrem Haus in Stamford und berichtet ausführlich über
+                                ihre Werke und von ihrem Leben im Exil.  
+                            </p>
+                        </div>
+                        <div>
+                            <head>
+                                <ref target="https://www.mediathek.at/atom/1BC4BDCB-319-001C2-00000F98-1BC41845">
+                                    <hi style="uppercase">Zur Aufnahme</hi>
+                                </ref>
+                            </head>
+                            <p>
+                                Dauer 14:24<lb/>
+                                Bei einigen Browsern muss die Starttaste auf der externen Seite doppelt geklickt werden.
+                            </p>
+                        </div>
+                        <div>
+                            <head>1957</head>
+                            <p>
+                                In einer Radioreportage des ORF berichtet der als Symson Weinberg in Kolomea in Galizien geborene 
+                                Komponist und Journalist <ref target="http://d-nb.info/gnd/116129611">Jimmy Berg</ref> von der 
+                                offiziellen Feier zu Friderike Zweigs 75. Geburtstag. 
+                                Der Empfang fand am 16. Dezember 1957 in New York City im heutigen 
+                                Sara Delano Roosevelt Memorial House in der 65. Straße statt. 
+                                Nach kurzen Gesprächen mit Wilhelm Schlag vom österreichischen Generalkonsulat und dem Präsidenten des 
+                                Hunter College <ref target="http://d-nb.info/gnd/119187698">George N. Shuster</ref> kommt schließlich Friderike Zweig selbst zu Wort. 
+                                In ihrem Gruß kündigt sie eine Reise nach Österreich an, das sie seit dem Beginn ihres Exils im Jahr 1938 nicht mehr gesehen hatte.
+                            </p>
+                        </div>
+                        <div>
+                            <head>
+                                <ref target="https://www.mediathek.at/atom/08F8E9A8-02F-00232-00000EFC-08F80863">
+                                    <hi style="uppercase">Zur Aufnahme</hi>
+                                </ref>
+                            </head>
+                            <p>
+                                Dauer 5:11<lb/>
+                                Bei einigen Browsern muss die Starttaste auf der externen Seite doppelt geklickt werden.
+                            </p>
+                        </div>
+                        <div>
+                            <head>1962</head>
+                            <p>
+                                Die dritte Aufnahme wurde bei einem Besuch Friderike Zweigs in ihrer Geburtsstadt Wien aufgezeichnet.
+                                Sie berichtet von Stefan Zweig und über die 1957 von <ref target="http://d-nb.info/gnd/119137186">Erich Fitzbauer</ref>
+                                gegründete Internationale Stefan Zweig-Gesellschaft,
+                                deren Ehrenpräsidentin sie war. Weitere Details zu der Aufnahme, die leider nur in sehr mangelhafter Qualität vorliegt,
+                                sind nicht bekannt. 
+                            </p>
+                            <p>
+                                <media url="/archive/objects/context:szd/datastreams/AUDIO_1962_Ueber_Stefan_Zweig/content" mimeType="audio/mp3">
+                                    <desc>Die dritte Aufnahme wurde bei einem Besuch Friderike Zweigs in ihrer Geburtsstadt Wien aufgezeichnet. 
+                                        Sie berichtet von Stefan Zweig und über die 1957 von Erich Fitzbauer gegründete Internationale Stefan Zweig-Gesellschaft, 
+                                        deren Ehrenpräsidentin sie war. Weitere Details zu der Aufnahme, die leider nur in sehr mangelhafter Qualität vorliegt, 
+                                        sind nicht bekannt. </desc>
+                                </media>
+                            </p>
+                            <p>
+                                Dauer 4:56
+                            </p>
+                        </div>
+                        <div>
+                            <head>
+                                <hi style="uppercase">Beispielbild</hi>  
+                            </head>
+                            <figure>
+                                <graphic
+                                    url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
+                                <caption><ref target="https://stefanzweig.digital">Text zum Bild</ref></caption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
                 <!-- /////// -->
                 <!-- ENGLISCH -->
                 <div xml:lang="en">
-                    <div type="news" n="2">
-                        <head><hi style="uppercase">This is the first news-entry</hi>, <date
-                                when="2020-12-20">20th of December 2020</date></head>
-                        <p>EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem
-                            Ipsum dolore.</p>
-                        <p>EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem Ipsum
-                            dolore.</p>
-                    </div>
                     <div type="news" n="1">
-                        <head><hi style="uppercase">This is the first news-entry</hi>, <date
-                                when="2020-12-19">19th of December 2020</date></head>
-                        <p>Lorem Ipsum dolore. Lorem Ipsum dolore. <span
-                                target="https://www.google.com/" type="href">Ein Link</span>. Lorem
-                            Ipsum dolore.</p>
-                        <figure type="home">
-                            <graphic
-                                url="https://www.filmtourismus.de/wp-content/uploads/2016/06/vor-der-morgenroete-drehorte.jpg"/>
-                            <caption><ref target="https://stefanzweig.digital">Text for the
-                                    Image</ref></caption>
-                        </figure>
-                        <p> EN Lorem Ipsum dolore. Lorem Ipsum dolore. Lorem Ipsum dolore.Lorem
-                            Ipsum dolore.</p>
+                        <head>
+                            <hi style="uppercase">Friderike Maria Zweig zum 50. Todestag am 
+                                <date when="2021-01-18">18. Januar 2021</date></hi>
+                        </head>
+                        <p>
+                            lorem ipsum
+                        </p>
                     </div>
                 </div>
             </div>
