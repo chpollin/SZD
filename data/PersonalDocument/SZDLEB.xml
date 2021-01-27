@@ -2655,6 +2655,92 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDLEB.27">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Wremja </title>
+              <title ana="assigned" xml:lang="en">Contract Wremja</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Vertrag mit eigenhändiger Unterschrift und Ergänzungen in schwarzer Tinte, Unterschriften von fremder Hand, violette Stempel</note>
+              <note xml:lang="en">Contract with holograph signature and amendments in black ink, signatures by an unidentified hand, purple stamps</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.8</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">2 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">2 leaves</measure>
+                        </span>
+                        <measure type="format">27x21 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Leningrad</origPlace>
+                    <origDate when="1928-09-16">16. September 1928</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
