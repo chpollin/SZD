@@ -200,7 +200,7 @@
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i18n:text>estate</i18n:text>
 										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<div class="dropdown-menu">
 											<a class="dropdown-item text-uppercase" href="/o:szd.werke/sdef:TEI/get?locale={$locale}">
 												<i18n:text>works</i18n:text> 
 											</a>
@@ -213,7 +213,7 @@
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i18n:text>collections</i18n:text>
 										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<div class="dropdown-menu">
 											<a class="dropdown-item text-uppercase" href="/o:szd.autographen/sdef:TEI/get?locale={$locale}">
 												<i18n:text>autograph</i18n:text>
 											</a>
@@ -226,7 +226,7 @@
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i18n:text>subjects</i18n:text>
 										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<div class="dropdown-menu">
 											<a class="dropdown-item text-uppercase" href="/o:szd.thema.4/sdef:TEI/get?locale={$locale}">
 												<xsl:value-of select="if ($locale = 'en') then ('Stefan Zweigs Autograph Collection') else ('Stefan Zweigs Autographensammlung')"/>
 											</a>
@@ -249,7 +249,7 @@
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<xsl:text>Index</xsl:text>
 										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<div class="dropdown-menu">
 											<a class="dropdown-item text-uppercase" href="/o:szd.personen/sdef:TEI/get?locale={$locale}">
 												<i18n:text>persons</i18n:text>
 											</a>
@@ -274,12 +274,12 @@
 										<a class="navtext dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<xsl:value-of select="if ($locale = 'en') then ('About') else ('Projekt')"/>
 										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<div class="dropdown-menu">
 											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=about&amp;locale=',$locale)}">
 												<xsl:value-of select="if ($locale = 'en') then ('About') else ('Projekt')"/>
 											</a>
-											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=news&amp;locale=',$locale)}">
-												<xsl:value-of select="if ($locale = 'en') then ('News') else ('Neues')"/>
+											<a class="dropdown-item text-uppercase" href="{concat($server, '/archive/objects/context:szd/methods/sdef:Context/get?mode=miscellaneous&amp;locale=',$locale)}">
+												<xsl:value-of select="if ($locale = 'en') then ('Miscellaneous') else ('Verschiedenes')"/>
 											</a>
 										</div>
 									</li>
@@ -328,9 +328,7 @@
 													<xsl:attribute name="title"><xsl:text>Im Datenkorb können Objekte gespeichert und exportiert werden</xsl:text></xsl:attribute>
 												</xsl:otherwise>
 											</xsl:choose>
-											<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb">
-												<xsl:text> </xsl:text>
-											</img>
+												<img src="{$Icon_datenkorb}" class="img-fluid icon_navbar" alt="Datenkorb"/>
 											<span class="small" id="db_static">
 												<xsl:text> </xsl:text>
 											</span>
@@ -407,14 +405,14 @@
 							<div class="col-12 text-center">
 								<div class="row">
 									<div class="col-sm-3">
-										<a class="text-center text-uppercase" target="_blank">
+										<span class="text-center text-uppercase" target="_blank">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:text>PROJECT MANAGEMENT</xsl:text>
 												</xsl:when>
 												<xsl:otherwise>PROJEKTTRÄGER</xsl:otherwise>
 											</xsl:choose>
-										</a>
+										</span>
 									</div>
 									<div class="col-sm-3">
 										<a href="/archive/objects/context:szd/methods/sdef:Context/get?mode=imprint&amp;locale={$locale}" target="_blank" class="text-uppercase text-center mt-5">
@@ -427,14 +425,14 @@
 										</a>
 									</div>
 									<div class="col-sm-3">
-										<a class="text-center text-uppercase" target="_blank">
+										<span class="text-center text-uppercase" target="_blank">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:text>Project partner</xsl:text>
 												</xsl:when>
 												<xsl:otherwise>Projektpartner</xsl:otherwise>
 											</xsl:choose>
-										</a>
+										</span>
 									</div>
 									<div class="col-sm-3">
 										<a href="http://www.fotohof.at" target="_blank" >
@@ -585,14 +583,23 @@
 		<xsl:choose>
 			<xsl:when test="t:caption/t:ref/@target">
 				<figure class="text-center pt-4 pb-3">
-					<a href="{t:caption/t:ref/@target}" title="">
+					<a href="{t:caption/t:ref/@target}">
 						<img class="img-fluid mx-auto d-block w-50" src="{t:graphic/@url}" alt="Image"/>
 					</a>
 					<figcaption>
 						<xsl:apply-templates select="t:caption"/>
 					</figcaption>
 				</figure>
-				
+			</xsl:when>
+			<xsl:when test="t:caption|t:figDesc/t:caption">
+				<figure class="text-center pt-4 pb-3">
+					<a class="fancybox" data-fancybox-group="group" href="{concat('https://gams.uni-graz.at/', $PID, '/', t:graphic/@url)}">	
+						<img class="img-fluid mx-auto d-block w-50" src="{concat('https://gams.uni-graz.at/', $PID, '/', t:graphic/@url)}" alt="Image"/>
+					</a>
+					<figcaption>
+						<xsl:apply-templates select="t:caption"/>
+					</figcaption>					
+				</figure>
 			</xsl:when>
 			<xsl:otherwise>
 				<img class="img-fluid mx-auto d-block" src="{t:graphic/@url}" alt="Image"/>
@@ -600,12 +607,50 @@
 		</xsl:choose>
 	</xsl:template>
 	
+	<!-- /////////////////////////////////////////////////////////// -->
+	<!-- ///PERSON/// -->
+	<xsl:template match="t:name[@type='person']">
+		<xsl:variable name="SZDPER" select="substring-after(@ref, '#')"/>
+		<xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
+		<xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
+		<xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
+
+		<a href="{$QueryUrl}" target="_blank">
+			<xsl:choose>
+				<xsl:when test="$locale = 'en'">
+					<xsl:attribute name="title" select="'Search query'"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="title" select="'Suchanfrage'"/>
+				</xsl:otherwise>
+			</xsl:choose>
+			
+			<xsl:apply-templates/>
+		</a>
+	</xsl:template>
+	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- NEWS datastream in context:szd -->
-	<xsl:template match="t:div[@type='news']">
+	<xsl:template match="t:div[@type='miscellaneous']">
 		<div class="card-body border-bottom">
 			<xsl:apply-templates/>
 		</div>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<!-- NEWS datastream in context:szd -->
+	<xsl:template match="t:div[parent::t:div[@type='miscellaneous']]">
+		<div class="mt-5">
+			<xsl:apply-templates/>
+		</div>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<!-- NEWS datastream in context:szd -->
+	<xsl:template match="t:head[parent::t:div[@type='miscellaneous']]">
+		<h2 class="color">
+			<xsl:apply-templates/>
+		</h2>
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
@@ -769,6 +814,13 @@
 		<span class="color"><xsl:apply-templates></xsl:apply-templates></span>
 	</xsl:template>
 	
+	<!-- //////////////////////////////////////////////////////////// -->
+	<xsl:template match="t:media[@mimeType = 'audio/mp3']">
+		<audio controls="true">
+			<source src="{@url}" type="audio/mpeg"/>
+			Your browser does not support the audio element.
+		</audio>
+	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:ref[@target]">
@@ -784,7 +836,10 @@
 			<xsl:if test="@style='italic'">
 				<xsl:attribute name="class" select="'font-italic'"/>
 			</xsl:if>
-			<xsl:apply-templates></xsl:apply-templates>
+			<xsl:if test="@style = 'button'">
+				<xsl:attribute name="class"><xsl:value-of select="'btn btn-secondary btn-sm'"/></xsl:attribute>
+			</xsl:if>
+			<xsl:apply-templates/>
 		</a>
 	</xsl:template>
 	

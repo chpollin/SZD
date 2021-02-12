@@ -156,29 +156,6 @@
     </xsl:template>
     
     <!-- /////////////////////////////////////////////////////////// -->
-    <!-- ///PERSON/// -->
-    <xsl:template match="t:name[@type='person']">
-        <xsl:variable name="SZDPER" select="substring-after(@ref, '#')"/>
-        <xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
-        <xsl:variable name="Param" select="encode-for-uri(concat('$1|&lt;https://gams.uni-graz.at/o:szd.personen#', $SZDPER, '&gt;', ';$2|', $locale))"/>
-        <xsl:variable name="QueryUrl" select="concat($BaseURL, $Param, '&amp;locale=', $locale)"/>
-        
-        <a href="{$QueryUrl}" target="_blank">
-          <xsl:choose>
-              <xsl:when test="$locale = 'en'">
-                  <xsl:attribute name="title" select="'Search query'"/>
-              </xsl:when>
-              <xsl:otherwise>
-                  <xsl:attribute name="title" select="'Suchanfrage'"/>
-              </xsl:otherwise>
-          </xsl:choose>
-          <u>
-            <xsl:apply-templates/>
-          </u>
-        </a>
-    </xsl:template>
-    
-    <!-- /////////////////////////////////////////////////////////// -->
     <!-- ///BIBLIOTHEK/// -->
     <xsl:template match="t:name[@type='book']">
         <xsl:variable name="SZDBIB" select="@ref"/>
