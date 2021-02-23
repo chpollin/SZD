@@ -13,17 +13,21 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
-						Karl-Franzens-Universität Graz </orgName>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at"
+            ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+            for Digital Humanities, Karl-Franzens-Universität Graz </orgName>
         </authority>
         <distributor>
-          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management
+            System</orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons
+            BY</licence>
         </availability>
         <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.thema.4</idno>
@@ -56,185 +60,476 @@
       </editorialDecl>
       <projectDesc>
         <ab>
-          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
+          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"/>
         </ab>
-        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
-					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
-					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
-					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
-					(z.B. digitalen Editionen) möglich werden. </p>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem
+          Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig
+          zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt
+          Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
+          werden. </p>
       </projectDesc>
     </encodingDesc>
   </teiHeader>
   <text>
     <body>
       <div type="col-1" xml:lang="de">
-        <p xml:lang="de">
-          Parallel zu seinem schriftstellerischen Werk baute <name>Stefan Zweig</name> eine umfassende Sammlung von Handschriften aus den Bereichen Literatur, Geschichte, Kunst und Musik auf, die zu den bedeutendsten seiner Epoche zählte.
-          Bereits als Gymnasiast hatte er mit dem Sammeln von Autographen begonnen, wobei es sich zunächst vor allem um Unterschriften von Schauspielern und Opernsängern aus seiner Heimatstadt Wien handelte. 
-          Nach seinem Schulabschluss weitete Zweig die Sammlung kontinuierlich und mit wesentlich höheren Ansprüchen aus. Inzwischen hatte er seine Laufbahn als Schriftsteller begonnen und längst erkannt, 
-          was ihn an Manuskripten besonders reizte, nämlich das Unfertige, die Spuren der künstlerischen Arbeit und damit die Möglichkeit, den Entstehungsprozess eines literarischen oder musikalischen Werkes nachverfolgen zu können. 
-        </p>
-        <p>
-          In den kommenden Jahrzehnten investierte <name>Zweig</name> erhebliche Summen in den Ausbau seiner Sammlung, die für ihn wesentlich mehr als nur ein Hobby war. Sie begleitete ihn von der Schulzeit bis in die letzten Monate
-          seines Lebens und bot oft genug Anregungen, sich mit neuen Themen zu beschäftigen. Entsprechend deutlich spiegelt sich <name>Zweigs</name> Biographie in der Sammlung wider: Die Anfänge als junger Dichter, die kommerziellen Erfolge
-          seiner Bücher, die bedeutende Ankäufe zulassen, und schließlich die Zeit als Exilant, der seinen materiellen Besitz verkleinert und sich auf das Wesentliche beschränkt.
-          <figure>
+        <p xml:lang="de">Parallel zu seinem schriftstellerischen Werk baute <name>Stefan
+            Zweig</name> eine umfassende Sammlung von Handschriften aus den Bereichen Literatur,
+          Geschichte, Kunst und Musik auf, die zu den bedeutendsten seiner Epoche zählte. Bereits
+          als Gymnasiast hatte er mit dem Sammeln von Autographen begonnen, wobei es sich zunächst
+          vor allem um Unterschriften von Schauspielern und Opernsängern aus seiner Heimatstadt Wien
+          handelte. Nach seinem Schulabschluss weitete Zweig die Sammlung kontinuierlich und mit
+          wesentlich höheren Ansprüchen aus. Inzwischen hatte er seine Laufbahn als Schriftsteller
+          begonnen und längst erkannt, was ihn an Manuskripten besonders reizte, nämlich das
+          Unfertige, die Spuren der künstlerischen Arbeit und damit die Möglichkeit, den
+          Entstehungsprozess eines literarischen oder musikalischen Werkes nachverfolgen zu können. </p>
+        <p>In den kommenden Jahrzehnten investierte <name>Zweig</name> erhebliche Summen in den
+          Ausbau seiner Sammlung, die für ihn wesentlich mehr als nur ein Hobby war. Sie begleitete
+          ihn von der Schulzeit bis in die letzten Monate seines Lebens und bot oft genug
+          Anregungen, sich mit neuen Themen zu beschäftigen. Entsprechend deutlich spiegelt sich
+            <name>Zweigs</name> Biographie in der Sammlung wider: Die Anfänge als junger Dichter,
+          die kommerziellen Erfolge seiner Bücher, die bedeutende Ankäufe zulassen, und schließlich
+          die Zeit als Exilant, der seinen materiellen Besitz verkleinert und sich auf das
+          Wesentliche beschränkt. <figure>
             <graphic url="IMG.1"/>
             <figDesc>
-              <caption  xml:lang="de">Der Titel eines der wichtigsten Beiträge <name>Stefan Zweigs</name> zum Autographensammeln in seiner Handschrift</caption>
+              <caption xml:lang="de">Der Titel eines der wichtigsten Beiträge <name>Stefan
+                  Zweigs</name> zum Autographensammeln in seiner Handschrift</caption>
             </figDesc>
           </figure>
         </p>
       </div>
       <div type="col-1" xml:lang="en">
-        <p>English version coming soon!</p>
+        <p>All the time while Stefan Zweig was working on his literary productions, he was equally
+          busy building a wide-ranging personal collection of manuscripts from the fields of
+          literature, history, art, and music, which soon counted among the most important of its
+          age. He had begun collecting autographs at grammar school, mainly by chasing signatures of
+          the actors and operatic singers of his native Vienna. After he had completed school, he
+          continued to expand his collection, now aiming for a considerably higher standard.
+          Meanwhile he had embarked on his career as a writer and had long discovered the special
+          allure that manuscripts held for him: unfinished productions, they afforded a rare window
+          into a literary or musical work in progress, allowing the reader to follow the artist’s
+          trail and observe him at the very moment of creation.</p>
+        <p>Over the next decades Zweig spent considerable sums on developing his collection, which
+          was much more to him than a mere hobby: it was a companion to him from his school days up
+          until the final months of his life, often providing the stimulus for investigating a new
+          subject. Zweig’s collection, therefore, plainly mirrors his biography: first his
+          beginnings as a young poet, then the commercial success of his books which allowed him to
+          pursue costly acquisitions, and finally his last years in exile, when he shed most of his
+          material belongings and confined himself to essentials.
+          <figure>
+            <graphic url="IMG.1"/>
+            <figDesc>
+              <caption xml:lang="de">Der Titel eines der wichtigsten Beiträge <name>Stefan
+                Zweigs</name> zum Autographensammeln in seiner Handschrift</caption>
+            </figDesc>
+          </figure></p>
       </div>
+      <!--  -->
       <div type="col-1" xml:lang="de">
         <head>
           <title style="uppercase">„SINN UND SCHÖNHEIT DER AUTOGRAPHEN“</title>
         </head>
-        <p>
-          Beim Aufbau seiner Sammlung legte Stefan Zweig einen deutlichen Schwerpunkt auf zeitgenössische Werke und Manuskripte von Schriftstellern des 19. 
-          Jahrhunderts. Es handelt sich dabei vor allem um deutschsprachige Texte, darunter die seinerzeit durch Vertonungen sehr bekannten Gedichte <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.749" style = "italic">Der gute Kamerad</ref> von <name>Ludwig Uhland</name> oder 
-          <name>Joseph von Eichendorffs</name> <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.150" style = "italic">In einem kühlen Grunde</ref>. Aber auch <name>Zweigs</name> Interesse an französischer Literatur und Geschichte ist bereits in der Frühzeit seiner Sammlung deutlich abzulesen. 
-          Das herausragendste Beispiel dieser Abteilung dürfte <name>Honoré de Balzacs</name> Roman <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.26" style = "italic">Une ténébreuse affaire</ref> sein,
-          dessen Korrekturfahnen <name>Zweig</name> bereits 1914 erwarb. Sie umfassen über 700 Seiten und enthalten zahllose handschriftliche Anmerkungen des Autors.
-        </p>
-        <p>
-          In den 1920er-Jahren äußerte sich <name>Zweig</name> in Feuilletons und Fachzeitschriften häufiger zum Handschriftensammeln. Unter anderem schrieb er über <hi style = "italic">Die Autographensammlung als Kunstwerk</hi> und die
-          <hi style = "italic">Psychologie des Autographensammelns</hi>. Im Beitrag <hi style = "italic">Sinn und Schönheit der Autographen</hi> schildert er ausführlich, welche Bedeutung Manuskripte als „Schöpfungsdokumente“ für ihn hatten.
-          Darüber hinaus spielte der Aspekt, besondere Zeugnisse des kulturellen Erbes bewahren zu wollen bei der Anlage der Sammlung ebenso eine Rolle, wie eine gewisse Reliquienverehrung. So ist es wenig verwunderlich, dass Zweig bei entsprechender Gelegenheit 
-          <name>Ludwig van Beethovens</name> <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.832">Schreibtisch</ref>, eine seiner <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.839">Violinen</ref> und weitere Gegenstände aus dem Besitz des Komponisten als Erinnerungsstücke von besonderem Rang erwarb. Sie können zum Umkreis der Autographensammlung gezählt werden,
-          ebenso wie einige Handzeichnungen, darunter Blätter von <name>Leonardo da Vinci</name>, <name>William Blake</name> oder <name>Johann Wolfgang von Goethe</name>. 
-          <figure>
+        <p> Beim Aufbau seiner Sammlung legte Stefan Zweig einen deutlichen Schwerpunkt auf
+          zeitgenössische Werke und Manuskripte von Schriftstellern des 19. Jahrhunderts. Es handelt
+          sich dabei vor allem um deutschsprachige Texte, darunter die seinerzeit durch Vertonungen
+          sehr bekannten Gedichte <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.749" style="italic">Der gute
+            Kamerad</ref> von <name>Ludwig Uhland</name> oder <name>Joseph von Eichendorffs</name>
+          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.150" style="italic">In
+            einem kühlen Grunde</ref>. Aber auch <name>Zweigs</name> Interesse an französischer
+          Literatur und Geschichte ist bereits in der Frühzeit seiner Sammlung deutlich abzulesen.
+          Das herausragendste Beispiel dieser Abteilung dürfte <name>Honoré de Balzacs</name> Roman
+            <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.26" style="italic">Une
+            ténébreuse affaire</ref> sein, dessen Korrekturfahnen <name>Zweig</name> bereits 1914
+          erwarb. Sie umfassen über 700 Seiten und enthalten zahllose handschriftliche Anmerkungen
+          des Autors. </p>
+        <p> In den 1920er-Jahren äußerte sich <name>Zweig</name> in Feuilletons und
+          Fachzeitschriften häufiger zum Handschriftensammeln. Unter anderem schrieb er über <hi
+            style="italic">Die Autographensammlung als Kunstwerk</hi> und die <hi style="italic"
+            >Psychologie des Autographensammelns</hi>. Im Beitrag <hi style="italic">Sinn und
+            Schönheit der Autographen</hi> schildert er ausführlich, welche Bedeutung Manuskripte
+          als „Schöpfungsdokumente“ für ihn hatten. Darüber hinaus spielte der Aspekt, besondere
+          Zeugnisse des kulturellen Erbes bewahren zu wollen, bei der Anlage der Sammlung ebenso
+          eine Rolle wie eine gewisse Reliquienverehrung. So ist es wenig verwunderlich, dass Zweig
+          bei entsprechender Gelegenheit <name>Ludwig van Beethovens</name>
+          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.832">Schreibtisch</ref>,
+          eine seiner <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.839"
+            >Violinen</ref> und weitere Gegenstände aus dem Besitz des Komponisten als
+          Erinnerungsstücke von besonderem Rang erwarb. Sie können zum Umkreis der
+          Autographensammlung gezählt werden, ebenso wie einige Handzeichnungen, darunter Blätter
+          von <name>Leonardo da Vinci</name>, <name>William Blake</name> oder <name>Johann Wolfgang
+            von Goethe</name>. <figure>
             <graphic url="IMG.2"/>
             <figDesc>
-              <caption  xml:lang="de">Der 1929 erworbene Schreibtisch <name>Ludwig van Beethovens</name> in <name>Zweigs</name> Salzburger Haus</caption>
+              <caption xml:lang="de">Der 1929 erworbene Schreibtisch <name>Ludwig van
+                  Beethovens</name> in <name>Zweigs</name> Salzburger Haus</caption>
             </figDesc>
           </figure>
         </p>
       </div>
+      <div type="col-1" xml:lang="en">
+        <head>
+          <title style="uppercase">“The Meaning and Beauty of Autographs”</title>
+        </head>
+        <p>In building his collection, Stefan Zweig placed a clear emphasis on contemporary works
+          and manuscripts by 19th century writers. The texts were mainly in German and included <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.749" style="italic">Der gute
+            Kamerad</ref> by Ludwig Uhland and Joseph von Eichendorffs <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.150" style="italic">In einem
+            kühlen Grunde</ref>, poems which were particularly well known for having been set to
+          music. But Zweig’s interest in French literature and history is similarly in evidence from
+          the very beginning: the pre-eminent item in this department is probably Honoré de Balzac’s
+          novel <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.26" style="italic"
+            >Une ténébreuse affaire</ref>, the galley proofs of which Zweig acquired as early as
+          1914. Comprising more than 700 pages, they contain innumberable handwritten annotations by
+          the author.</p>
+        <p>Throughout the 1920s, Zweig repeatedly published features on manuscript collecting in
+          newspapers and specialist journals, including such pieces as Die Autographensammlung als
+          Kunstwerk (“The Autograph Collection as a Work of Art”) and Die Psychologie des
+          Autographensammelns (“The Psychology of Collecting Autographs”). In his article Sinn und
+          Schönheit der Autographen (“The Meaning and Beauty of Autographs”) Zweig gives an
+          extensive account of the meaning that manuscripts had for him as “documents of creation”.
+          Other aspects that informed the design of his collection were his wish to preserve
+          outstanding documents of cultural heritage, and apparently also something akin to relic
+          veneration. It is therefore little surprise that Zweig, when the opportunity presented
+          itself, bought as distinguished mementoes Ludwig van Beethoven’s <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.832">writing desk</ref>, one
+          of his <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.839"
+          >violins</ref>, and other objects formerly owned by the composer. These items may be
+          counted among the addenda to his manuscript collection, as is true of several original
+          drawings by such artists as Leonardo da Vinci, William Blake, or Johann Wolfgang von
+          Goethe. <figure>
+            <graphic url="IMG.2"/>
+            <figDesc>
+              <caption xml:lang="en">Ludwig van Beethoven's desk in Zweig's Salzburg house, acquired
+                in 1929</caption>
+            </figDesc>
+          </figure>
+        </p>
+      </div>
+      <!--  -->
       <div type="col-1" xml:lang="de">
         <head>
           <title style="uppercase">AUKTIONEN UND GESCHENKE</title>
         </head>
-        <p>
-          Neuerwerbungen für die Sammlung fanden zum Großteil in Antiquariaten statt, die sich auf Autographen spezialisiert hatten. Wichtige Händler waren <name>Karl Ernst Henrici</name> und <name>Leo Liepmannssohn</name> in Berlin sowie <name>Charavay</name>
-          in Paris. In späteren Jahren spielte auch das Auktionshaus Sotheby's in London eine bedeutende Rolle. Durch seine zahlreichen Reisen konnte Stefan Zweig den persönlichen Kontakt zu Händlern und anderen Sammlern pflegen und behielt die Übersicht auf dem Markt. 
-          Außerdem enthält seine Korrespondenz eine Vielzahl von Briefen, in denen er sich um Neuerwerbungen kümmert oder auch als Gutachter äußert. Bei den großen Auktionen war <name>Zweig</name> fast immer durch Agenten oder mit schriftlichen Angeboten vertreten und
-          trat persönlich nur selten in Erscheinung, um die Preise durch seine Anwesenheit nicht unnötig in die Höhe zu treiben.
-        </p>
-        <p>
-          Darüber hinaus war <name>Stefan Zweig</name> beim Ausbau seiner Sammlung auch mit direkten Anfragen bei zeitgenössischen Schriftstellern und Komponisten sehr erfolgreich. Unter anderem folgten <name>Hermann Hesse</name>, <name>Heinrich Mann</name>, 
-          <name>Hugo von Hofmannsthal</name> oder <name>Richard Strauss</name> seiner Bitte um Werkmanuskripte. Ab einem gewissen Zeitpunkt war Zweigs Sammlung in Schriftstellerkreisen so bekannt, dass ihm neue Autographen sogar unaufgefordert zugeschickt wurden, wie es 
-          <name>Thomas Mann</name> 1920 tat, als er ihm das Manuskript seiner Novelle <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.489"><hi style = "italic">Die Hungernden</hi></ref> schenkte.
-        </p>
-        <p>
-          Zwar blieben die von <name>Zweig</name> meist als „Werkschriften“ bezeichneten Vorarbeiten von Texten stets im Mittelpunkt seines Interesses, doch waren selbstverständlich nicht von allen Autoren entsprechende Beispiele auf dem Markt verfügbar. 
-          Immer häufiger erwarb <name>Zweig</name> daher auch Reinschriften, um eine möglichst breite Übersicht über die Literatur zusammenzutragen. Und auch bei Briefen, die er ansonsten strikt aus seiner Sammlung auszuschließen versuchte, 
-          wurden Ausnahmen gemacht – vor allem dann, wenn es sich um Verfasser wie <name>Wolfgang Amadeus Mozart</name> oder <name>Ludwig van Beethoven</name> handelte. 
-        </p>
-        <p>
-          Ab dem Ende der 1920er-Jahre baute <name>Zweig</name> den Bereich der Musikhandschriften, der bis dahin eine eher untergeordnete Rolle gespielt hatte, erheblich aus. Auch auf diesem Gebiet gelangen ihm einige spektakuläre Ankäufe, darunter das Lied 
-          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.936" style = "italic">An die Musik</ref> von <name>Franz Schubert</name>, von <name>Ludwig van Beethoven</name> Fragmente aus der Musik zu <name>Goethes</name> 
-          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.821"  style = "italic">Egmont</ref> sowie das Lied 
-          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.824" style = "italic">Der Kuß</ref>. Von <name>Mozart</name> erwarb 
-          er unter anderem das Lied <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.907" style = "italic">Das Veilchen</ref>, eine Arie des Cherubino aus 
-          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.908" style = "italic">Le nozze di Figaro</ref> und ein <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.916" style = "italic">handschriftliches Verzeichnis seiner Werke</ref>. 
-        </p>
-        <p>
-          Bei dieser breiten Anlage der Sammlung und <name>Zweigs</name> Bereitschaft, immer größere Summen zu investieren, war es nur konsequent, dass er auch von den meisten Persönlichkeiten, mit denen er sich in seinen literarischen und biographischen Studien beschäftigte,
-          mindestens ein Autograph zu besitzen versuchte.
-          <figure>
+        <p>Neuerwerbungen für die Sammlung fanden zum Großteil in Antiquariaten statt, die sich auf
+          Autographen spezialisiert hatten. Wichtige Händler waren <name>Karl Ernst Henrici</name>
+          und <name>Leo Liepmannssohn</name> in Berlin sowie <name>Charavay</name> in Paris. In
+          späteren Jahren spielte auch das Auktionshaus Sotheby's in London eine bedeutende Rolle.
+          Durch seine zahlreichen Reisen konnte Stefan Zweig den persönlichen Kontakt zu Händlern
+          und anderen Sammlern pflegen und behielt die Übersicht auf dem Markt. Außerdem enthält
+          seine Korrespondenz eine Vielzahl von Briefen, in denen er sich um Neuerwerbungen kümmert
+          oder auch als Gutachter äußert. Bei den großen Auktionen war <name>Zweig</name> fast immer
+          durch Agenten oder mit schriftlichen Angeboten vertreten und trat persönlich nur selten in
+          Erscheinung, um die Preise durch seine Anwesenheit nicht unnötig in die Höhe zu treiben. </p>
+        <p> Darüber hinaus war <name>Stefan Zweig</name> beim Ausbau seiner Sammlung auch mit
+          direkten Anfragen bei zeitgenössischen Schriftstellern und Komponisten sehr erfolgreich.
+          Unter anderem folgten <name>Hermann Hesse</name>, <name>Heinrich Mann</name>, <name>Hugo
+            von Hofmannsthal</name> oder <name>Richard Strauss</name> seiner Bitte um
+          Werkmanuskripte. Ab einem gewissen Zeitpunkt war Zweigs Sammlung in Schriftstellerkreisen
+          so bekannt, dass ihm neue Autographen sogar unaufgefordert zugeschickt wurden, wie es
+            <name>Thomas Mann</name> 1920 tat, als er ihm das Manuskript seiner Novelle <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.489"><hi style="italic">Die
+              Hungernden</hi></ref> schenkte. </p>
+        <p> Zwar blieben die von <name>Zweig</name> meist als „Werkschriften“ bezeichneten
+          Vorarbeiten von Texten stets im Mittelpunkt seines Interesses, doch waren
+          selbstverständlich nicht von allen Autoren entsprechende Beispiele auf dem Markt
+          verfügbar. Immer häufiger erwarb <name>Zweig</name> daher auch Reinschriften, um eine
+          möglichst breite Übersicht über die Literatur zusammenzutragen. Und auch bei Briefen, die
+          er ansonsten strikt aus seiner Sammlung auszuschließen versuchte, wurden Ausnahmen gemacht
+          – vor allem dann, wenn es sich um Verfasser wie <name>Wolfgang Amadeus Mozart</name> oder
+            <name>Ludwig van Beethoven</name> handelte. </p>
+        <p> Ab dem Ende der 1920er-Jahre baute <name>Zweig</name> den Bereich der
+          Musikhandschriften, der bis dahin eine eher untergeordnete Rolle gespielt hatte, erheblich
+          aus. Auch auf diesem Gebiet gelangen ihm einige spektakuläre Ankäufe, darunter das Lied
+            <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.936" style="italic">An
+            die Musik</ref> von <name>Franz Schubert</name>, von <name>Ludwig van Beethoven</name>
+          Fragmente aus der Musik zu <name>Goethes</name>
+          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.821" style="italic"
+            >Egmont</ref> sowie das Lied <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.824" style="italic">Der
+            Kuß</ref>. Von <name>Mozart</name> erwarb er unter anderem das Lied <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.907" style="italic">Das
+            Veilchen</ref>, eine Arie des Cherubino aus <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.908" style="italic">Le nozze
+            di Figaro</ref> und ein <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.916" style="italic"
+            >handschriftliches Verzeichnis seiner Werke</ref>. </p>
+        <p> Bei dieser breiten Anlage der Sammlung und <name>Zweigs</name> Bereitschaft, immer
+          größere Summen zu investieren, war es nur konsequent, dass er auch von den meisten
+          Persönlichkeiten, mit denen er sich in seinen literarischen und biographischen Studien
+          beschäftigte, mindestens ein Autograph zu besitzen versuchte. <figure>
             <graphic url="IMG.3"/>
             <figDesc>
-              <caption  xml:lang="de">Fragment einer Auflistung von Autographen aus <name>Stefan Zweigs</name> Sammlung in seiner Handschrift</caption>
+              <caption xml:lang="de">Fragment einer Auflistung von Autographen aus <name>Stefan
+                  Zweigs</name> Sammlung in seiner Handschrift</caption>
             </figDesc>
           </figure>
         </p>
       </div>
+      <div type="col-1" xml:lang="en">
+        <head>
+          <title style="uppercase">Auctions and gifts</title>
+        </head>
+        <p>Most of Stefan Zweig’s acquisitions came from rare book sellers who specialized in
+          autographs and manuscripts, such as Karl Ernst Henrici and Leo Liepmannssohn in Berlin or
+          Charavay in Paris. In later years, Sotheby’s in London became an important source. His
+          frequent travels allowed him to keep in personal touch with dealers and other collectors
+          and to follow market developments. Also, his correspondence contains numerous letters in
+          which he pursues new purchases or gives an expert opinion. At important auctions Zweig
+          nearly almost chose to be represented by an agent or placed absentee bids in advance, lest
+          he drive prices up by attending in person.</p>
+        <p>Yet Stefan Zweig also was highly successful in soliciting items for his collection by
+          applying directly to contemporary writers and composers. Hermann Hesse, Heinrich Mann,
+          Hugo von Hofmannsthal, and Richard Strauss were among the artists who responded to his
+          requests for working manuscripts. Eventually, Zweig’s collection became so well known
+          among writers that they would send him new autographs unprompted, as did Thomas Mann in
+          1920 when he gifted Zweig with the manuscript for his novella, <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.489"><hi style="italic">Die
+              Hungernden</hi></ref> (“Hungry Souls”).</p>
+        <p>While such working drafts, or “Werkschriften”, as he called them, remained the focus of
+          Zweig’s interest, it is clear that relevant examples from many writers would not be
+          available on the market. With increasing frequency Zweig would therefore also buy fair
+          copies, so as to achieve as comprehensive an overview of literature as possible. And
+          although he tried strictly to exclude letters from his collection, certain exceptions were
+          made – especially if the writer were Wolfgang Amadeus Mozart or Ludwig van Beethoven. </p>
+        <p>From the late 1920s onwards, Zweig considerably expanded the section of music
+          manuscripts, which had previously played a fairly minor role. In this field, as well, he
+          succeeded in making several spectacular acquisitions, including Franz Schubert’s song <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.936" style="italic">An die
+            Musik</ref> (“To Music”) and, by Ludwig van Beethoven, fragments of his music for
+          Goethe’s <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.821"
+            style="italic">Egmont</ref> and the song <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.824" style="italic">Der
+            Kuß</ref> (“The Kiss”). Among his pieces by Mozart were the song <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.907" style="italic">Das
+            Veilchen</ref> (“The Violet”), one of Cherubino’s arias from <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.908" style="italic">Le nozze
+            di Figaro</ref> and a <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.916" style="italic"
+            >handwritten list of his works</ref>.</p>
+        <p>Considering how broadly Zweig had conceived his collection and how willingly he spent
+          ever-increasing sums on it, it is only reasonable that he tried to own at least one
+          autograph by most of the historical personalities whose lives he investigated in his
+          literary and biographical studies. <figure>
+            <graphic url="IMG.3"/>
+            <figDesc>
+              <caption xml:lang="en">Fragment of a listing of autographs from Stefan Zweig's
+                collection in his handwriting</caption>
+            </figDesc>
+          </figure></p>
+      </div>
+      <!--  -->
       <div type="col-1" xml:lang="de">
         <head>
           <title style="uppercase">DER GEPLANTE SAMMLUNGSKATALOG</title>
         </head>
-        <p>
-          Mit wachsender Bedeutung seiner Sammlung dachte <name>Stefan Zweig</name> Ende der 1920er-Jahre über die Veröffentlichung eines gedruckten Katalogs nach, der als besondere Ausstattung 
-          farbige Faksimiles der wichtigsten Stücke enthalten sollte. Als Erscheinungstermin war der 28. November 1931 vorgesehen, an dem <name>Zweig</name> seinen fünfzigsten Geburtstag feiern würde.
-          Nach der Weltwirtschaftskrise des Jahres 1929 entschloss er sich jedoch, den Katalog zurückzuhalten. Als Begründung führte <name>Zweig</name> an, seinen kostbaren Besitz der Öffentlichkeit nicht gerade
-          in diesem Moment präsentieren zu wollen. Hinzu kam die Befürchtung, dass die Sammlung wegen ihrer Bedeutung unter staatlichen Schutz gestellt werden könnte, was Verkäufe, Tauschgeschäfte oder auch den
-          Transport ins Ausland unmöglich gemacht hätte. Die Arbeiten am Katalog wurden schließlich ganz eingestellt und das Manuskript ist seitdem verschollen. Doch auch ohne darauf zurückgreifen zu können, 
-          lassen sich große Teile des früheren Sammlungsbestands rekonstruieren, da neben den Autographen auch Umschläge und Karteikarten erhalten geblieben sind, auf denen <name>Zweig</name> Beschreibungen 
-          des jeweiligen Manuskripts und seiner Geschichte eingetragen hat. Mit Hilfe dieser Unterlagen lassen sich zudem zahlreiche Sammlungsstücke nachweisen, von denen <name>Zweig</name> sich im Lauf der 
-          Jahre wieder getrennt hatte. 
-        </p>
+        <p> Mit wachsender Bedeutung seiner Sammlung dachte <name>Stefan Zweig</name> Ende der
+          1920er-Jahre über die Veröffentlichung eines gedruckten Katalogs nach, der als besondere
+          Ausstattung farbige Faksimiles der wichtigsten Stücke enthalten sollte. Als
+          Erscheinungstermin war der 28. November 1931 vorgesehen, an dem <name>Zweig</name> seinen
+          fünfzigsten Geburtstag feiern würde. Nach der Weltwirtschaftskrise des Jahres 1929
+          entschloss er sich jedoch, den Katalog zurückzuhalten. Als Begründung führte
+            <name>Zweig</name> an, seinen kostbaren Besitz der Öffentlichkeit nicht gerade in diesem
+          Moment präsentieren zu wollen. Hinzu kam die Befürchtung, dass die Sammlung wegen ihrer
+          Bedeutung unter staatlichen Schutz gestellt werden könnte, was Verkäufe, Tauschgeschäfte
+          oder auch den Transport ins Ausland unmöglich gemacht hätte. Die Arbeiten am Katalog
+          wurden schließlich ganz eingestellt und das Manuskript ist seitdem verschollen. Doch auch
+          ohne darauf zurückgreifen zu können, lassen sich große Teile des früheren
+          Sammlungsbestands rekonstruieren, da neben den Autographen auch Umschläge und Karteikarten
+          erhalten geblieben sind, auf denen <name>Zweig</name> Beschreibungen des jeweiligen
+          Manuskripts und seiner Geschichte eingetragen hat. Mit Hilfe dieser Unterlagen lassen sich
+          zudem zahlreiche Sammlungsstücke nachweisen, von denen <name>Zweig</name> sich im Lauf der
+          Jahre wieder getrennt hatte. </p>
       </div>
+      <div type="col-1" xml:lang="en">
+        <head>
+          <title style="uppercase">The projected collection catalogue</title>
+        </head>
+        <p>As his collection grew in importance, Stefan Zweig near the end of the 1920s aimed to
+          publish a printed catalogue which was even to contain full-colour facsimiles of the
+          principal items. It was projected to appear on 28 November 1931, Zweig’s fiftieth
+          birthday. However, with the onset of the Great Depression in 1929, Zweig decided to hold
+          off the catalogue, stating that he did not wish to present his treasures to the public at
+          such a time. He also feared that the Austrian government might place his collection under
+          protection as cultural property, which would make it impossible for him to to sell, trade,
+          or even ship it abroad. Ultimately, work on the catalogue was abandoned, and the draft is
+          considered lost. Yet even without recourse to it, large parts of the collection’s former
+          contents can be reconstructed not only from the autographs themselves, but also from
+          surviving folders and record cards on which Zweig noted descriptions of the various
+          manuscripts and their history. With the help of these documents it is possible to
+          ascertain numerous items which Zweig had owned at some point but which he had later chosen
+          to part with. </p>
+      </div>
+      <!--  -->
       <div type="col-1" xml:lang="de">
         <head>
           <title style="uppercase">TEILAUFLÖSUNG DER SAMMLUNG</title>
         </head>
-        <p>
-          Mitte der 1930er-Jahre fasste <name>Stefan Zweig</name> den Entschluss, seinen Salzburger Haushalt aufzulösen und sich dauerhaft in London niederzulassen. Von den Folgen dieser Entscheidung, 
-          die schließlich der erste Schritt auf den Weg in das Exil werden sollte, war neben Zweigs <ref target="https://stefanzweig.digital/o:szd.thema.3" type="issue">Bibliothek</ref> auch die Autographensammlung ganz erheblich betroffen. 
-          In beiden Fällen trennte sich <name>Zweig</name> vom größten Teil des Bestands und gab ihn in den Handel. Während dies bei der Bibliothek kaum dokumentiert geschah, wandte sich <name>Zweig</name> 
-          bei den Autographen an das noch junge Antiquariat <name>Heinrich Hinterberger</name> in Wien, das im Frühjahr 1936 in seinem Verkaufskatalog IX „Eine berühmte Sammlung repräsentativer 
-          Handschriften“ anbot. Dieser Band enthielt mit 304 Katalognummern etwa ein Drittel der Autographen aus der Sammlung Zweig, ohne dass dessen Name darin genannt wurde. Statt zu einem Einzelverkauf der Stücke 
-          kam es unerwarteterweise zur Übernahme des beinahe kompletten Angebots durch den Schweizer Bibliophilen <name>Martin Bodmer</name> aus Zürich, der zusätzlich alle fremdsprachigen Autographen erwarb, 
-          von denen Zweig sich trennen wollte. Dieser Bestand befindet sich heute in der <name ref="#SZDSTA.4" type="location">Fondation Martin Bodmer</name> in Cologny-Genève. Nur ein sehr geringer Teil von <name>Hinterbergers</name> Angebot ging an andere Käufer über.
-        </p>
-        <p>
-          Ein weiteres Konvolut von Autographen übergab <name>Zweig</name> im November 1937 zum Ausgleich von Steuerforderungen an die damalige Theatersammlung der Nationalbibliothek in Wien, das heutige <name ref="#SZDSTA.23" type="location">Theatermuseum</name>.
-          Ein besonderes Stück dieser Schenkung ist eine Seite aus <name>Franz Kafkas</name> Roman <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.388" style = "italic">Amerika</ref> (beziehungsweise <hi style = "italic">Der Verschollene</hi>), die <name>Zweig</name> 
-          als Geschenk von <name>Max Brod</name> erhalten hatte. Weitere Handschriften überließ Zweig der Vorgängerinstitution der  
-          <name ref="#SZDSTA.3" type="location">National Library of Israel</name> in Jerusalem. Dorthin schenkte er bei der Auflösung 
-          seines Salzburger Haushalts auch einen Großteil der bei ihm eingegangenen Korrespondenz bedeutender Zeitgenossen, die gewissermaßen eine weitere Handschriftensammlung darstellten. Schließlich trennte er sich 
-          noch von über 4000 gedruckten Auktions- und Handelskatalogen, die er als Handbibliothek zusammengestellt hatte und nun an <name>Heinrich Hinterberger</name> übergab. Einzelne Bände hieraus sind bereits im 
-          <ref target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de">Katalog der Bibliothek</ref> auf STEFAN ZWEIG DIGITAL verzeichnet. 
-        </p>
-        <p>
-          Damit blieben noch rund 150 Autographen in <name>Zweigs</name> Besitz. Da er mit der Verkleinerung der Bestände das Sammeln nicht aufgegeben hatte, kamen in seiner Exilzeit in London weitere außergewöhnliche Stücke hinzu, 
-          darunter zwei Handschriften <name>Georg Friedrich Händels</name>, die auf dem freien Markt ausgesprochen selten sind. Gut 200 Autographen besaß <name>Zweig</name>, als er Europa im Sommer 1940 verließ und zunächst in die USA und schließlich nach 
-          Brasilien ging. Nur einige wenige Stücke hatte er nach Amerika mitgenommen, der größte Teil der Sammlung befand sich im Safe einer Londoner Bank. 
-          <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.28">Ein Autograph Honoré de Balzacs</ref>,
-          an dessen Biographie Zweig bis kurz vor seinem Tod arbeitete, überreichte er der Nationalbibliothek in Rio de Janeiro. Nahezu alle übrigen Stücke gelangten über seine Erben als Schenkung an die 
-          <name ref="#SZDSTA.5" type="location">British Library</name> in London.
-        </p>
+        <p> Mitte der 1930er-Jahre fasste <name>Stefan Zweig</name> den Entschluss, seinen
+          Salzburger Haushalt aufzulösen und sich dauerhaft in London niederzulassen. Von den Folgen
+          dieser Entscheidung, die schließlich der erste Schritt auf den Weg in das Exil werden
+          sollte, war neben Zweigs <ref target="https://stefanzweig.digital/o:szd.thema.3"
+            type="issue">Bibliothek</ref> auch die Autographensammlung ganz erheblich betroffen. In
+          beiden Fällen trennte sich <name>Zweig</name> vom größten Teil des Bestands und gab ihn in
+          den Handel. Während dies bei der Bibliothek kaum dokumentiert geschah, wandte sich
+            <name>Zweig</name> bei den Autographen an das noch junge Antiquariat <name>Heinrich
+            Hinterberger</name> in Wien, das im Frühjahr 1936 in seinem Verkaufskatalog IX „Eine
+          berühmte Sammlung repräsentativer Handschriften“ anbot. Dieser Band enthielt mit 304
+          Katalognummern etwa ein Drittel der Autographen aus der Sammlung Zweig, ohne dass dessen
+          Name darin genannt wurde. Statt zu einem Einzelverkauf der Stücke kam es unerwarteterweise
+          zur Übernahme des beinahe kompletten Angebots durch den Schweizer Bibliophilen
+            <name>Martin Bodmer</name> aus Zürich, der zusätzlich alle fremdsprachigen Autographen
+          erwarb, von denen Zweig sich trennen wollte. Dieser Bestand befindet sich heute in der
+            <name ref="#SZDSTA.4" type="location">Fondation Martin Bodmer</name> in Cologny-Genève.
+          Nur ein sehr geringer Teil von <name>Hinterbergers</name> Angebot ging an andere Käufer
+          über. </p>
+        <p> Ein weiteres Konvolut von Autographen übergab <name>Zweig</name> im November 1937 zum
+          Ausgleich von Steuerforderungen an die damalige Theatersammlung der Nationalbibliothek in
+          Wien, das heutige <name ref="#SZDSTA.23" type="location">Theatermuseum</name>. Ein
+          besonderes Stück dieser Schenkung ist eine Seite aus <name>Franz Kafkas</name> Roman <ref
+            target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.388" style="italic"
+            >Amerika</ref> (beziehungsweise <hi style="italic">Der Verschollene</hi>), die
+            <name>Zweig</name> als Geschenk von <name>Max Brod</name> erhalten hatte. Weitere
+          Handschriften überließ Zweig der Vorgängerinstitution der <name ref="#SZDSTA.3"
+            type="location">National Library of Israel</name> in Jerusalem. Dorthin schenkte er bei
+          der Auflösung seines Salzburger Haushalts auch einen Großteil der bei ihm eingegangenen
+          Korrespondenz bedeutender Zeitgenossen, die gewissermaßen eine weitere
+          Handschriftensammlung darstellten. Schließlich trennte er sich noch von über 4000
+          gedruckten Auktions- und Handelskatalogen, die er als Handbibliothek zusammengestellt
+          hatte und nun an <name>Heinrich Hinterberger</name> übergab. Einzelne Bände hieraus sind
+          bereits im <ref
+            target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de">Katalog der
+            Bibliothek</ref> auf STEFAN ZWEIG DIGITAL verzeichnet. </p>
+        <p> Damit blieben noch rund 150 Autographen in <name>Zweigs</name> Besitz. Da er mit der
+          Verkleinerung der Bestände das Sammeln nicht aufgegeben hatte, kamen in seiner Exilzeit in
+          London weitere außergewöhnliche Stücke hinzu, darunter zwei Handschriften <name>Georg
+            Friedrich Händels</name>, die auf dem freien Markt ausgesprochen selten sind. Gut 200
+          Autographen besaß <name>Zweig</name>, als er Europa im Sommer 1940 verließ und zunächst in
+          die USA und schließlich nach Brasilien ging. Nur einige wenige Stücke hatte er nach
+          Amerika mitgenommen, der größte Teil der Sammlung befand sich im Safe einer Londoner Bank.
+            <ref target="http://stefanzweig.digital/o:szd.autographen#SZDAUT.28">Ein Autograph
+            Honoré de Balzacs</ref>, an dessen Biographie Zweig bis kurz vor seinem Tod arbeitete,
+          überreichte er der Nationalbibliothek in Rio de Janeiro. Nahezu alle übrigen Stücke
+          gelangten über seine Erben als Schenkung an die <name ref="#SZDSTA.5" type="location"
+            >British Library</name> in London. </p>
       </div>
+      <div type="col-1" xml:lang="en">
+        <head>
+          <title style="uppercase">Dissolving the collection</title>
+        </head>
+        <p>In the mid 1930s Stefan Zweig decided to abandon his household in Salzburg and to settle
+          in London. This decision, which was to be his first step into exile, had far-reaching
+          consequences not only for Zweig’s extensive <ref
+            target="https://stefanzweig.digital/o:szd.thema.3/sdef:TEI/get?locale=en">library</ref>,
+          but also for his manuscripts. Zweig divested himself of most of both collections, handing
+          them over to the trade. While there is little documentation available concerning his
+          library, researchers are luckier in the case of his autographs: for these, Zweig
+          approached the then fairly recently-established Viennese dealer Heinrich Hinterberger, who
+          in the spring of 1936 offered in his sales catalogue IX, “A Famous Collection of
+          Prestigious Manuscripts”. Nowhere mentioning his name, this volume of 304 catalogued items
+          contained about a third of the autographs from the collection of Stefan Zweig.
+          Unexpectedly, the pieces were not dispersed: instead, the Swiss bibliophile Martin Bodmer
+          from Zurich took over nearly the entire inventory en bloc, also buying all
+          foreign-language items with which Zweig wished to part. This material is today kept at the
+            <name ref="#SZDSTA.4" type="location">Fondation Martin Bodmer</name> in Cologny-Genève.
+          Only a very small fraction of Hinterberger’s catalogue offers went to other buyers.</p>
+        <p>To offset tax demands, Zweig in November 1937 presented another set of autographs to what
+          was then the Theatre Collections of the Austrian National Library (now the <name
+            ref="#SZDSTA.23" type="location">Theatermuseum</name>). An outstanding item among this
+          endowment is a single page from Franz Kafka’s novel <ref
+            target="https://stefanzweig.digital/o:szd.autographen/sdef:TEI/get?locale=en#SZDAUT.388"
+            >Amerika</ref> (also known as Der Verschollene/The Man Who Disappeared), which Zweig had
+          received as a gift from Max Brod. Zweig left additional manuscripts to the predecessor
+          institution of the <name ref="#SZDSTA.3" type="location">National Library of Israel</name>
+          in Jerusalem. When he gave up his home in Salzburg, he gifted the same library with the
+          majority of the correspondence he had received from important contemporaries, in a sense a
+          separate manuscript collection in its own right. Finally, he parted with the more than
+          4,000 printed auction and trade catalogues which he had assembled as a reference library,
+          transferring them to Heinrich Hinterberger. Individual volumes from this corpus are
+          already recorded within the <ref
+            target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=en">catalogue
+            of Stefan Zweig’s library</ref> on STEFAN ZWEIG DIGITAL.</p>
+        <p>This left Zweig with some 150 autographs. In spite of his downsizing he had never given
+          up buying, and thus even during his exile in London he was able to add to his collection
+          several exceptional pieces, including two manuscripts by George Frideric Handel,
+          exceedingly rare in the trade. When Zweig left Europe for the USA and ultimately Brazil in
+          the summer of 1940, he owned at least 200 autographs. Only a very few pieces did he take
+          with him to America, while the body of his collection remained in a safe deposit box in a
+          London bank. <ref
+            target="https://stefanzweig.digital/o:szd.autographen/sdef:TEI/get?locale=en#SZDAUT.28"
+            >">An autograph of Honoré de Balzac</ref>, on whose biography Zweig worked until shortly
+          before his death, he presented to the National Library in Rio de Janeiro. Nearly all other
+          pieces were later gifted to the <name ref="#SZDSTA.5" type="location">British
+            Library</name> in London by Zweig’s heirs.</p>
+      </div>
+      <!-- //////// -->
       <div type="col-1" xml:lang="de">
         <head>
           <title style="uppercase">DIE AUTOGRAPHENSAMMLUNG BEI STEFAN ZWEIG DIGITAL</title>
         </head>
-        <p>
-          Rund 1000 Autographen aus <name>Stefan Zweigs</name> früherer Sammlung lassen sich heute noch mit Sicherheit nachweisen. STEFAN ZWEIG DIGITAL verzeichnet dabei nur jene Stücke, die sich entweder in <name>Zweigs</name> Nachlass befanden, 
-          nachweislich bei der Auflösung der Sammlung abgegeben wurden oder auf den erhaltenen Listen, Mappen und Kateikarten registriert sind. Handschriften, die ohne genauere Angaben in Briefen erwähnt werden und deren Besitz nicht durch weitere 
-          Quellen belegt ist, wurden nicht in das Verzeichnis aufgenommen. Dennoch dürfte hier der weitaus größte Teil von <name>Zweigs</name> Sammlung zusammengestellt sein. 
-        </p>
-        <p>
-          Die Einträge auf STEFAN ZWEIG DIGITAL enthalten die wichtigsten Angaben zu jedem Stück und in vielen Fällen Links zu kompletten Digitalisaten auf den Seiten der besitzenden Institutionen. Umfassendere Informationen und Quellenangaben bietet 
-          der 2005 erschienene gedruckte Katalog der Sammlung Zweig, in dem auch seine Aufsätze zum Autographensammeln und eine ausführliche Geschichte der Sammlung enthalten sind. Um das Auffinden der Stücke zu erleichtern, ist bei jedem Eintrag auf 
-          STEFAN ZWEIG DIGITAL als Referenz die jeweilige Nummer aus dem gedruckten Katalog angegeben. 
-        </p>
+        <p> Rund 1000 Autographen aus <name>Stefan Zweigs</name> früherer Sammlung lassen sich heute
+          noch mit Sicherheit nachweisen. STEFAN ZWEIG DIGITAL verzeichnet dabei nur jene Stücke,
+          die sich entweder in <name>Zweigs</name> Nachlass befanden, nachweislich bei der Auflösung
+          der Sammlung abgegeben wurden oder auf den erhaltenen Listen, Mappen und Karteikarten
+          registriert sind. Handschriften, die ohne genauere Angaben in Briefen erwähnt werden und
+          deren Besitz nicht durch weitere Quellen belegt ist, wurden nicht in das Verzeichnis
+          aufgenommen. Dennoch dürfte hier der weitaus größte Teil von <name>Zweigs</name> Sammlung
+          zusammengestellt sein. </p>
+        <p> Die Einträge auf STEFAN ZWEIG DIGITAL enthalten die wichtigsten Angaben zu jedem Stück
+          und in vielen Fällen Links zu kompletten Digitalisaten auf den Seiten der besitzenden
+          Institutionen. Umfassendere Informationen und Quellenangaben bietet der 2005 erschienene
+          gedruckte Katalog der Sammlung Zweig, in dem auch seine Aufsätze zum Autographensammeln
+          und eine ausführliche Geschichte der Sammlung enthalten sind. Um das Auffinden der Stücke
+          zu erleichtern, ist bei jedem Eintrag auf STEFAN ZWEIG DIGITAL als Referenz die jeweilige
+          Nummer aus dem gedruckten Katalog angegeben. </p>
       </div>
+      <div type="col-1" xml:lang="en">
+        <head>
+          <title style="uppercase">The autograph collection on STEFAN ZWEIG DIGITAL </title>
+        </head>
+        <p>About 1,000 autographs from Stefan Zweig’s former collection can be verified today.
+          STEFAN ZWEIG DIGITAL records only such items as either were among Zweig’s estate, are
+          known to have been given away when he dispersed his collection, or can be inferred from
+          the extant lists, folders, and index cards. Manuscripts merely mentioned but not clearly
+          identified in letters or which lack sufficient documentation from other sources have not
+          been included. Nevertheless, the vast majority of Stefan Zweig’s collection may be assumed
+          to be compiled here.</p>
+        <p>The records on STEFAN ZWEIG DIGITAL contain essential information for each individual
+          item and in many cases also hyperlinks to digital images hosted on the various holding
+          institutions’ websites. More extensive information and source references are to be found
+          in the printed catalogue of Stefan Zweig’s collection, published in 2005, which also
+          reprints his essays on collecting autographs and contains a detailed history of the
+          collection. For easy reference, every record on STEFAN ZWEIG DIGITAL also states the
+          respective item number in the printed catalogue.</p>
+      </div>
+      <!--  -->
       <div type="col-1" xml:lang="de">
         <p>
-          <hi style = "italic">„Ich kenne den Zauber der Schrift“<lb/>
-            Katalog und Geschichte der Autographensammlung Stefan Zweig</hi>,<lb/>
-          mit kommentiertem Abdruck von Stefan Zweigs Aufsätzen<lb/>
-          über das Sammeln von Handschriften<lb/>
-          Bearbeitet von Oliver Matuschek<lb/>
-          Antiquariat Inlibris, Wien 2005<lb/>
-          ISBN 978-3-9501809-1-6
-        </p>
+          <hi style="italic">„Ich kenne den Zauber der Schrift“<lb/> Katalog und Geschichte der
+            Autographensammlung Stefan Zweig</hi>,<lb/> mit kommentiertem Abdruck von Stefan Zweigs
+          Aufsätzen<lb/> über das Sammeln von Handschriften<lb/> Bearbeitet von Oliver
+          Matuschek<lb/> Antiquariat Inlibris, Wien 2005<lb/> ISBN 978-3-9501809-1-6 </p>
         <p>
-          <ref target="https://inlibris.at/produkt/bn14143/">
-            Weitere Informationen zum Buch
-          </ref>
+          <ref target="https://inlibris.at/produkt/bn14143/">Weitere Informationen zum Buch</ref>
         </p>
       </div>
-       <!-- <p xml:lang="en">
-          Lorem Ipsum
-        </p-->
-
+      <div type="col-1" xml:lang="en">
+        <p>
+          <hi style="italic">„Ich kenne den Zauber der Schrift“<lb/> Katalog und Geschichte der
+            Autographensammlung Stefan Zweig</hi>,<lb/> mit kommentiertem Abdruck von Stefan Zweigs
+          Aufsätzen<lb/> über das Sammeln von Handschriften<lb/> Compiled by Oliver Matuschek<lb/>
+          Antiquariat Inlibris, Wien 2005<lb/> ISBN 978-3-9501809-1-6 </p>
+        <p>
+          <ref target="https://inlibris.at/produkt/bn14143/">More information about the book</ref>
+        </p>
+      </div>
     </body>
   </text>
   <facsimile>
