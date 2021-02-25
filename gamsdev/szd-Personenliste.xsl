@@ -125,7 +125,7 @@
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                                 </xsl:attribute>
-                                                <img src="{$Icon_gnd}" class="img-responsive icon" alt="Person" />
+                                                <img src="{$Icon_gnd}" class="img-responsive icon" alt="GND Icon"/>
                                             </a>
                                          </xsl:if>
                                         <!--<xsl:if test="contains(t:persName/@ref, 'wikidata.org')">
@@ -135,13 +135,13 @@
                                         </xsl:if>-->
                                         <xsl:if test="t:idno[@type='wikidata']">
                                             <a href="{t:idno[@type='wikidata']}" target="_blank" title="Wikidata">
-                                                <img src="{$Icon_wikidata}" class="img-responsive icon" alt="Person" width="50"/>
+                                                <img src="{$Icon_wikidata}" class="img-responsive icon" alt="Wikidata Icon" width="50"/>
                                             </a>
                                         </xsl:if>
                                          <xsl:text> </xsl:text>
                                          <xsl:if test="@corresp">
                                             <a href="{@corresp}" target="_blank" title="Wikipedia">
-                                                <img src="{$Icon_wiki}" alt="Wiki" width="25"/>
+                                                <img src="{$Icon_wiki}" alt="Wikipedia Icon" width="25"/>
                                             </a>
                                           </xsl:if>
                                     </span>

@@ -33,8 +33,11 @@
    
     <!-- project-specific variables -->
     <xsl:variable name="server_template"></xsl:variable>
-    <!-- glossa: gamsdev/pollin/szd/trunk/www | gams: /szd -->
-    <xsl:variable name="gamsdev_template">/szd</xsl:variable>
+    <!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
+    <xsl:variable name="gamsdev_template">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
+    <!-- GAMS -->
+    <!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
+
     
 
 	
@@ -198,7 +201,7 @@
                         </div>
                     </xsl:for-each-group>
                  </xsl:when>
-            <!-- ORDNUNGSKATEGORIEN for SZDMSK and SZDLEB -->
+                <!-- ORDNUNGSKATEGORIEN for SZDMSK and SZDLEB -->
                 <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente' or $PID = 'o:szd.marbach'">    
                 <xsl:for-each-group select="$Category" group-by=".">
                     <xsl:sort select="."/>
@@ -1259,7 +1262,7 @@
                                 </td>
                             </tr>
                         </xsl:if>
-    				 	 <!-- //////////////////////////////////////////////////////////// -->
+    				 	<!-- //////////////////////////////////////////////////////////// -->
                          <!-- ///Aktueller Ort/// -->
     				     <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:settlement">
     				         <tr class="row"> 
@@ -1372,6 +1375,209 @@
              </xsl:choose>
          </div>
 	</xsl:template>
+    
+    <xsl:template name="FillbiblFull_SZDKOR">
+        <xsl:param name="locale"/>
+	    <xsl:param name="PID"/>
+	    <div class="table-responsive">
+	       <table class="table table-sm">
+	           <tbody>
+               <!-- //////////////////////////////////////////////////////////// -->
+               <!-- ///Sender/// -->
+	               <xsl:if test="t:profileDesc/t:correspDesc/t:correspAction[@type='sent']">
+                      <tr class="row">
+                        <td class="col-3 text-truncate">
+                             <xsl:text>Sender</xsl:text>
+                        </td>
+                        <td class="col-9">
+                            <xsl:for-each select="t:profileDesc/t:correspDesc/t:correspAction[@type='sent']">
+                                <xsl:call-template name="PersonSearch">
+                                    <xsl:with-param name="locale" select="$locale"/>
+                                </xsl:call-template>
+                            </xsl:for-each>
+                         </td>
+                       </tr>
+                    </xsl:if>
+	               <!-- //////////////////////////////////////////////////////////// -->
+	               <!-- ///Sender/// -->
+	               <xsl:if test="t:profileDesc/t:correspDesc/t:correspAction[@type='received']">
+	                   <tr class="row">
+	                       <td class="col-3 text-truncate">
+	                           <xsl:text>Empfänger</xsl:text>
+	                       </td>
+	                       <td class="col-9">
+    	                       <xsl:for-each select="t:profileDesc/t:correspDesc/t:correspAction[@type='received']">
+    	                           <xsl:call-template name="PersonSearch">
+    	                               <xsl:with-param name="locale" select="$locale"/>
+    	                           </xsl:call-template>
+    	                       </xsl:for-each>
+    	                   </td>
+	                   </tr>
+	               </xsl:if>
+	               <!-- ///Betroffene Person/// -->
+	               <xsl:if test="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+	                   <tr class="row">
+	                       <td class="col-3 text-truncate">
+	                           <i18n:text>person_affected</i18n:text>                            
+	                       </td>
+	                       <td class="col-9">
+	                           <xsl:for-each select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected']">
+	                               <xsl:call-template name="PersonSearch">
+	                                   <xsl:with-param name="locale" select="$locale"/>
+	                               </xsl:call-template>
+	                           </xsl:for-each>
+	                       </td>
+	                   </tr>
+	               </xsl:if>
+                   <!-- //////////////////////////////////////////////////////////// -->
+                   <!-- ///Beteiligte/// -->
+	               <xsl:if test="t:fileDesc/t:titleStmt/t:editor">
+                       <tr class="row">
+                          <td class="col-3 text-truncate">
+                              <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#PartiesInvolved')}" target="_blank">
+                                  <i18n:text>partiesinvolved</i18n:text>
+                                  <i class="fa fa-info-circle info_icon" aria-hidden="true"><xsl:text> </xsl:text></i>
+                               </a>
+                           </td>
+                           <td class="col-9">
+                               <xsl:for-each select="t:fileDesc/t:titleStmt/t:editor[@role='contributor']">
+                                   <xsl:call-template name="PersonSearch">
+                                       <xsl:with-param name="locale" select="$locale"/>
+                                   </xsl:call-template>
+                               </xsl:for-each>
+                           </td>
+                       </tr>
+                   </xsl:if>
+                   <!-- //////////////////////////////////////////////////////////// -->
+                   <!-- ///TITLEL/// -->
+                   <tr class="row">
+                    <td class="col-3 text-truncate">
+                        <a href="/o:szd.glossar#Title" target="_blank">
+                            <i18n:text>Titel</i18n:text>
+                        </a>
+                     </td>
+                     <td class="col-9">
+                         <xsl:call-template name="printEnDe">
+                             <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title[not(@type)]"/>
+                             <xsl:with-param name="locale" select="$locale"/>
+                         </xsl:call-template>
+                     </td>
+                   </tr>
+
+                   <!-- //////////////////////////////////////////////////////////// -->
+                   <!-- ///Datum SZDKOR/// -->
+	               <xsl:if test="t:profileDesc/t:correspDesc/t:correspAction/t:date">
+                   <tr class="row">
+                      <td class="col-3 text-truncate">
+                          <i18n:text>dates</i18n:text>
+                       </td>
+                       <td class="col-9">
+                           <xsl:call-template name="printEnDe">
+                               <xsl:with-param name="locale" select="$locale"/>
+                               <xsl:with-param name="path" select="t:profileDesc/t:correspDesc/t:correspAction/t:date"/>
+                           </xsl:call-template>
+                       </td>
+                   </tr>
+                   </xsl:if>
+                   <!-- //////////////////////////////////////////////////////////// -->
+	               <!-- /// Umfang - Pieces of correspondence, Enclosures, notes SZDKOR/// -->
+	               <xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+	               <xsl:if test="$EXTENT">
+                       <tr class="group row">
+                           <td class="col-3 text-truncate">
+                               <i18n:text>physicaldescription</i18n:text>
+                           </td>
+                           <td class="col-9">
+                               <xsl:variable name="PiecesOfCorrespndence" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='correspndence']"/>
+                               <xsl:if test="$PiecesOfCorrespndence">
+                                   <xsl:value-of select="$PiecesOfCorrespndence"/>
+                                   <xsl:choose>
+                                       <xsl:when test="number($PiecesOfCorrespndence) &lt; 2">
+                                           <xsl:text> piece of correspondence</xsl:text>
+                                       </xsl:when>
+                                       <xsl:otherwise>
+                                           <xsl:text> pieces of correspondence</xsl:text>
+                                       </xsl:otherwise>
+                                   </xsl:choose>
+                               </xsl:if>
+                               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='enclosures']">
+                                   <br/>
+                                   <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='enclosures']"/>
+                                   <xsl:text> enclosures, notes</xsl:text>
+                               </xsl:if>
+                           </td>
+                       </tr>
+                   </xsl:if>
+	               <!-- //////////////////////////////////////////////////////////// -->
+	               <!-- Hinweise -->
+	              <xsl:if test="t:fileDesc/t:notesStmt/t:note">
+                    <tr class="row">
+                      <td class="col-3 text-truncate">
+                          <i18n:text>notes</i18n:text>
+                       </td>
+                       <td class="col-9">
+                           <xsl:call-template name="printEnDe">
+                               <xsl:with-param name="path" select="t:fileDesc/t:notesStmt/t:note"/>
+                               <xsl:with-param name="locale" select="$locale"/>
+                           </xsl:call-template>
+                       </td>
+                    </tr>
+                  </xsl:if>
+ 
+                   <!-- //////////////////////////////////////////////////////////// -->
+                   <!-- ///Standort/// -->
+	               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier">
+                       <tr class="row">
+                          <td class="col-3 text-truncate">
+                              <i18n:text>currentlocation</i18n:text>
+                           </td>
+                           <td class="col-9">
+                               <!-- SEARCH WERKE -->
+                               <xsl:call-template name="LocationSearch">
+                                   <xsl:with-param name="locale" select="$locale"/>
+                                   <xsl:with-param name="SZDSTA">
+                                       <xsl:choose>
+                                           <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana">
+                                               <xsl:value-of select="substring-after(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana, '#')"/>
+                                           </xsl:when>
+                                           <xsl:otherwise>
+                                               <xsl:call-template name="GetStandortList">
+                                                   <xsl:with-param name="Standort" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref"></xsl:with-param>
+                                               </xsl:call-template>
+                                           </xsl:otherwise>
+                                       </xsl:choose>
+                                   </xsl:with-param>
+                               </xsl:call-template>
+                               <xsl:choose>
+                                   <xsl:when test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository, 'Literaturarchiv')">
+                                       <xsl:text> </xsl:text>
+                                       <a href="mailto:literaturarchiv@sbg.ac.at" title="Mail" >
+                                           <i class="fas fa-envelope"><xsl:text> </xsl:text></i>
+                                       </a>
+                                   </xsl:when>
+                                   <xsl:otherwise/>
+                               </xsl:choose>
+                               <br/>
+                               <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='signature']"/>
+                               <!-- media id is part of all SZDMSK and SZDLEB in Marbach -->
+                               <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']">
+                                   <xsl:text>, Mediennummer: </xsl:text>
+                                   <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']"/>
+                               </xsl:if>
+                           </td>
+                       </tr>
+                   </xsl:if>
+	           </tbody>
+	          
+	    </table>
+
+	    <!-- card FOOTER -->
+         <xsl:call-template name="getFooter">
+             <xsl:with-param name="PID" select="$PID"/>
+             <xsl:with-param name="locale" select="$locale"/>
+         </xsl:call-template>
+	    </div>
+    </xsl:template>
     
     <!-- //////////////////////////////////////////////////////////// -->
     <!-- ZITIERVORSCHLAG -->
@@ -2394,12 +2600,10 @@
                                         <xsl:attribute name="title">
                                             <xsl:choose>
                                                 <xsl:when test="$locale ='en'">
-                                                    <!--<xsl:text>Access externally sourced digital facsimile</xsl:text>-->
                                                     <xsl:text>Image</xsl:text>
                                                 </xsl:when>
                                                 <xsl:otherwise>
                                                     <xsl:text>Abbildung</xsl:text>
-                                                    <!--<xsl:text>Zur externen Ressource mit digitalem Faksimile</xsl:text>-->
                                                 </xsl:otherwise>
                                             </xsl:choose>
                                         </xsl:attribute>
@@ -2421,10 +2625,6 @@
                             <i18n:text>description</i18n:text>
                         </td>
                         <td class="col-9">
-                            <!--<xsl:call-template name="printEnDe">
-                                <xsl:with-param name="locale" select="$locale"/>
-                                <xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary"/>
-                            </xsl:call-template>-->
                             <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary"/>
                         </td>
                     </tr>
@@ -2556,7 +2756,6 @@
                         </td>
                         <td class="col-9">
                             <!--<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"/>-->
-                            <!--<xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition"/>-->
                             <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition"/>
                         </td>
                     </tr>

@@ -86,6 +86,10 @@
 					<xsl:call-template name="Collection"/>
 				</xsl:when>
 				<xsl:when
+					test="contains($PID, 'o:szd.korrespondenzen')">
+					<xsl:call-template name="Korrespondenzen"/>
+				</xsl:when>
+				<xsl:when
 					test="contains($PID, 'o:szd.SZDBRI')">
 					<szd:Letter>
 						<rdf:comment>Prototype</rdf:comment>
@@ -96,6 +100,38 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</rdf:RDF>
+	</xsl:template>
+	
+	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- szd:BundleOfCorrespondence -->
+	<xsl:template name="Korrespondenzen">
+		<xsl:for-each select="//t:listBibl/t:biblFull">
+			<xsl:variable name="Correspondence_URI" select="concat($BASE_URL, $PID, '#', @xml:id)"/>
+			<xsl:variable name="Correspondence_Extent_URI" select="concat($Correspondence_URI, 'EX')"/>
+			
+			<szd:BundleOfCorrespondence rdf:about="{$Correspondence_URI}">
+				
+				<!--<szd:sender rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
+				<szd:receiver rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>-->
+				
+				<xsl:call-template name="getLocation"/>
+				
+				<!-- COLLECTION  -->
+				<gams:isMemberOfCollection rdf:resource="https://gams.uni-graz.at/o:szd.korrespondenzen"/>
+				<!-- FULLTEXT -->
+				<xsl:call-template name="FulltextSearchData"/>
+			</szd:BundleOfCorrespondence>
+			
+			<!-- extent -->
+			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
+				<szd:Extent
+					rdf:about="{$Correspondence_Extent_URI}">
+					<szd:text>
+						<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+					</szd:text>
+				</szd:Extent>
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
 
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
@@ -1228,42 +1264,8 @@
 		<xsl:call-template name="getLanguage"/>
 
 		<!-- szd:location -->
-		<xsl:choose>
-			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana">
-				<szd:location
-					rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana}"
-				/>
-			</xsl:when>
-			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref">
-				<xsl:choose>
-					<xsl:when
-						test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref, 'SZDSTA')">
-						<szd:location
-							rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref}"
-						/>
-					</xsl:when>
-					<!-- it is a gnd @ref -->
-					<xsl:otherwise>
-						<xsl:call-template name="GetStandortelist">
-							<xsl:with-param name="Standort"
-								select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
-							<xsl:with-param name="Typ" select="'szd:location'"/>
-						</xsl:call-template>
-					</xsl:otherwise>
-				</xsl:choose>
-
-			</xsl:when>
-			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository">
-				<xsl:call-template name="GetStandortelist">
-					<xsl:with-param name="Standort"
-						select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
-					<xsl:with-param name="Typ" select="'szd:location'"/>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:text>Error: in XPath: "t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"</xsl:text>
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:call-template name="getLocation"/>
+		
 
 		<!-- szd:signature -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
@@ -2316,6 +2318,46 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="normalize-space($path[1])"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<!--  -->
+	<xsl:template name="getLocation">
+		<xsl:choose>
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana">
+				<szd:location
+					rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ana}"
+				/>
+			</xsl:when>
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref">
+				<xsl:choose>
+					<xsl:when
+						test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref, 'SZDSTA')">
+						<szd:location
+							rdf:resource="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository/@ref}"
+						/>
+					</xsl:when>
+					<!-- it is a gnd @ref -->
+					<xsl:otherwise>
+						<xsl:call-template name="GetStandortelist">
+							<xsl:with-param name="Standort"
+								select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
+							<xsl:with-param name="Typ" select="'szd:location'"/>
+						</xsl:call-template>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+			</xsl:when>
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository">
+				<xsl:call-template name="GetStandortelist">
+					<xsl:with-param name="Standort"
+						select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"/>
+					<xsl:with-param name="Typ" select="'szd:location'"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>Error: in XPath: "t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
