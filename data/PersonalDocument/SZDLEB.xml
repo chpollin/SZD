@@ -806,7 +806,7 @@
               <note xml:lang="de">Aufschrift „Anzahlg noch nicht geleistet“ von Lotte Zweigs Hand,
                 eigenhändige Unterschriften von Stefan Zweig, Gottfried Bermann Fischer und
                 Vertretern der Verlage Querido und Allert de Lange</note>
-              <note xml:lang="en">Inscribed „Anzahlg noch nicht geleistet“ by Lotte Zweig, holograph
+              <note xml:lang="en">Inscribed „Anzahlg noch nicht geleistet“ by Lotte Zweig's hand, holograph
                 signatures by Stefan Zweig, Gottfried Bermann Fischer, and agents for the publishers
                 Querido and Allert de Lange</note>
             </notesStmt>
@@ -3047,8 +3047,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, 2 Verträge in Dublikat zu "Die Welt von Gestern" zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. mit der Notiz "Cancelled" und 1 Version mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, violetter Stempel</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, 2 contracts in dublicate for "Die Welt von Gestern" between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A. with the note "Cancelled" and 1 version with annotations to the contract in blue ink by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, 2 Verträge in Dublikat zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. mit der Notiz „Cancelled“ und 1 Version mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Contracts with holograph signature in purple ink, 2 contracts in dublicate for „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A. with the note „Cancelled“ and 1 version with annotations to the contract in blue ink by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3793,7 +3793,7 @@
                           <term type="objecttyp">Typoskript</term>, <measure type="leaf">6 Blatt</measure>, verschiedene Formate
                         </span>
                         <span xml:lang="en">
-                         <term type="objecttyp">typescript</term>, <measure type="leaf">6 leaves</measure>, various sizes
+                         <term type="objecttyp">Typescript</term>, <measure type="leaf">6 leaves</measure>, various sizes
                         </span>
                         <measure type="format">28x22 cm bis 32x20 cm</measure>
                       </extent>
@@ -3883,7 +3883,7 @@
                           <term type="objecttyp">Typoskript</term>, <measure type="leaf">3 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">typescript</term>, <measure type="leaf">3 leaves</measure>
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">3 leaves</measure>
                         </span>
                         <measure type="format">36x22 cm</measure>
                       </extent>
@@ -3920,6 +3920,618 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.41"><!-- Jahresangabe noch in Titel ergänzen, etwa in eckigen Klammern? -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Adressbuch</title>
+              <title ana="assigned" xml:lang="en">Address book</title>
+              <title type="Einheitssachtitel" xml:lang="de">Adressbücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Address books</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Ca. 1935-1940, überwiegend maschinenschriftliche Einträge, einige eigenhändige Notizen und Notizen von Lotte Zweigs Hand</note>
+              <note xml:lang="en">Ca. 1935-1940, mostly typescript entries, some holograph notes and notes by Lotte Zweig's hand</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S1.1</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Adressbuch</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Adress book</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Ringbindung</ab>
+                      <ab xml:lang="en">Ring-bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Adressbücher</term>
+                <term type="classification" xml:lang="en">Address books</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.42">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original" xml:lang="de"
+                >Anekdoten über St. Z.</title>
+              <title ana="original" xml:lang="en">Anecdotes about St. Z.</title>
+              <title type="Einheitssachtitel" xml:lang="de">Anekdoten</title>
+              <title type="Einheitssachtitel" xml:lang="en">Anecdotes</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Handschriftliche Notiz von Lotte Zweigs Hand: „Anekdoten über St. Z.“</note>
+              <note xml:lang="en">Handwritten note by Lotte Zweig's hand: „Anekdoten über St. Z.“</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S2.1</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">4 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">4 leaves</measure>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Lotte Zweig</ab>
+                    <ab xml:lang="en">Lotte Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.43">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender 1935</title>
+              <title ana="assigned" xml:lang="en">Calendar 1935</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen</note>
+              <note xml:lang="en">Holograph entries and notes</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.1</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Goldschnitt</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Edges gilt</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1935-01-01">1935</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.44">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender 1936</title>
+              <title ana="assigned" xml:lang="en">Calendar 1936</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen</note>
+              <note xml:lang="en">Holograph entries and notes</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.2</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Goldschnitt</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Edges gilt</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1936-01-01">1936</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.45">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender 1938</title>
+              <title ana="assigned" xml:lang="en">Calendar 1938</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen</note>
+              <note xml:lang="en">Holograph entries and notes</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.3</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Goldschnitt</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Edges gilt</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-01-01">1938</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.46">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender 1939</title>
+              <title ana="assigned" xml:lang="en">Calendar 1939</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen und Einträge und Notizen von fremder Hand</note>
+              <note xml:lang="en">Holograph entries and notes and entries and notes by an unidentified hand</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.4</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Goldschnitt</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Edges gilt</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1939-01-01">1939</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.47">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender April 1940 [I]</title>
+              <title ana="assigned" xml:lang="en">Calendar April 1940 [I]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen</note>
+              <note xml:lang="en">Holograph entries and notes</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.5</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1940-04-01">1940</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.48">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Kalender April 1940 [II]</title>
+              <title ana="assigned" xml:lang="en">Calendar April 1940 [II]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
+              <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Einträge und Notizen</note>
+              <note xml:lang="en">Holograph entries and notes</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/L-S3.6</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">?</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kalender</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Calendar</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Gebunden</ab>
+                      <ab xml:lang="en">Bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1940-04-01">1940</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Kalender</term>
+                <term type="classification" xml:lang="en">Calendars</term>
               </keywords>
             </textClass>
           </profileDesc>
