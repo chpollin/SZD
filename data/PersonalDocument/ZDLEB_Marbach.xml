@@ -96,8 +96,8 @@
                 <biblFull xml:id="SZDLEB.26">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren]</title>
-                            <title ana="assigned" xml:lang="en">Insel-Verlag publishing contract [Emile Verhaeren]</title>
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag</title>
+                            <title ana="assigned" xml:lang="en">Publishing contract Insel-Verlag</title>
                             <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
                             <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
                             <title type="Gesamttitel">SUA:Insel-Verlag/Zentrale Verträge</title>
@@ -122,8 +122,8 @@
                                 Recto mit aufgeklebter Stempelmarke, Stempel und
                                 dazu handschriftliche Anmerkung von unbekannt, verso mit
                                 Unterschrift von Stefan Zweig und Anton Kippenberg</note>
-                            <note xml:lang="en">Recto with pasted stamp mark, stamp and handwritten annotations in an unidentified hand, verso 
-                            holograph signature and signature by Anton Kippenberg</note><!-- Übersetzung überprüfen! -->
+                            <note xml:lang="en">Recto, pasted revenue stamp, stamp and handwritten annotations in an unidentified hand; verso, 
+                            holograph signature and signature by Anton Kippenberg</note>
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -135,6 +135,7 @@
                                     <idno type="mediaid">HS010940949</idno>
                                 </msIdentifier>
                                 <msContents>
+                                    <summary>Emile Verhaeren</summary>
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
@@ -146,7 +147,7 @@
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
                                                   >Doppelbogen, gelocht</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Bifolium, hole punched</material>
+                                                    >Bifolium, hole punched</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                   >Schwarzes Farbband, violette und schwarze
                                                   Tinte</material>
@@ -171,7 +172,7 @@
                                 </physDesc>
                                 <history>
                                     <origin>
-                                        <origPlace>Wien, Leipzig</origPlace>
+                                        <origPlace>Wien/Leipzig</origPlace>
                                         <origDate when="1909-10-14">Wien, den 14 Oktober 1909. | Leipzig, den 12. Oktober 1909.</origDate>
                                     </origin>
                                     <provenance>
@@ -201,10 +202,8 @@
                 <biblFull xml:id="SZDLEB.27">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag [Emile Verhaeren: Drei
-                                Dramen und Emil Verhaeren: Ausgewählte Gedichte]</title>
-                            <title ana="assigned" xml:lang="en">Insel-Verlag publishing contract [Emile Verhaeren:
-                                Drei Dramen and Emil Verhaeren: Ausgewählte Gedichte]</title>
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag</title>
+                            <title ana="assigned" xml:lang="en">Publishing contract Insel-Verlag</title>
                             <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
                             <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
                             <title type="Gesamttitel">SUA:Insel-Verlag/Zentrale Verträge</title>
@@ -222,7 +221,7 @@
                             <note xml:lang="de">Doppelbogen mit drei beschriebenen Seiten, drei aufgeklebten Stempelmarken, Stempeln und
                                 dazu handschriftliche Anmerkung von unbekannt, mit Unterschrift von
                                 Stefan Zweig und Anton Kippenberg</note>
-                            <note xml:lang="en">Biofolio with three inscribed pages, three pasted stamp marks, stamps and handwritten annotations in an unidentified hand, 
+                            <note xml:lang="en">Biofolium with three written pages, three pasted revenue stamps, stamps and handwritten annotations in an unidentified hand, 
                             with holograph signature and signature by Anton Kippenberg</note><!-- Übersetzung überprüfen! -->
                         </notesStmt>
                         <sourceDesc>
@@ -235,6 +234,7 @@
                                     <idno type="mediaid">HS010940949</idno>
                                 </msIdentifier>
                                 <msContents>
+                                    <summary>Emile Verhaeren: Drei Dramen, Emil Verhaeren: Ausgewählte Gedichte</summary>
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
@@ -320,7 +320,6 @@
                                 <ref target="https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625">Manuskripts Augustin Robespierres</ref> aus seiner Sammlung eingenhändig
                                 in violetter Tinte</note>
                             <note xml:lang="en">Holograph notes in purple ink concerning content and acquisition of a <ref target="https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625">manuscript by Augustin Robespierre</ref></note>
-                            <!-- Übersetzung ürberpüfen! -->
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -343,7 +342,7 @@
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
                                                   >Mit Kategorien bedruckte Mappe für Stücke aus der Autographensammlung Stefan Zweigs</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                    >Folder printed with categories for pieces from the autograph collection of Stefan Zweig</material><!-- Übersetzung überprüfen! -->
+                                                    >Folder with printed categories for items from Stefan Zweig’s manuscript collection („Autographensammlung“)</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                   >Violette Tinte</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
@@ -469,7 +468,7 @@
                         <titleStmt>
                             <title ana="original">Verzeichnis meiner Lagerkataloge von Autographen nach Firmen geordnet</title>
                             <title type="Einheitssachtitel" xml:lang="de">Autographenverzeichnisse</title>
-                            <title type="Einheitssachtitel" xml:lang="en">Autograph Indexes</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Autograph indexes</title>
                             <title type="Gesamttitel">A: Zweig, Stefan</title>
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
@@ -484,9 +483,9 @@
                                 Registerbuch, Buchstaben aufgeklebt abwechselnd rot und schwarz, Umschlag aus Stoff mit schwarz-rot-beigem großflächigem Blumenmuster, 
                                auf dem Umschlag Aufkleber „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ von fremder Hand in roter Tinte; einige Seiten überklebt</note>
                             <note xml:lang="en">Cover with label inscribed „Autografen-Kataloge | Lagerverzeichnisse | (nach Firmen geordnet)“, holograph in purple ink, 
-                                title on the endpapers holograph in purple ink, 
-                                register book, letters glued alternately red and blue, book cover made of fabric with black-red-beige large flower pattern, 
-                                outside label inscribed „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ in an unidentified hand in red ink; pasted over pages</note><!-- Übersetzung prüfen! -->
+                                title on the front endpaper holograph in purple ink, 
+                                register book, red and blue letters glued in alternatingely, book covered in cloth with large black, red and beige floral pattern 
+                                and a label inscribed „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ in an unidentified hand in red ink; few pages overpasted</note>
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -509,7 +508,7 @@
                                                 <material ana="szdg:WritingMaterial" xml:lang="de"
                                                     >Registerbuch mit Händlermarke auf Innenseite des Deckels „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, Tabellenvordruck blau und rot, marmorierter Schnitt</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                    >Register book with stationer's label on the inside of the cover „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, with table form blue and red, marbled edges</material>
+                                                    >Register book with stationer's label on the inside of the upper cover „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, with tabular form printed in blue and red, marbled edges</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                     >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
@@ -542,7 +541,7 @@
                                         <list>
                                             <item ana="szdg:Enclosures">
                                                 <desc xml:lang="de">Eingelegt 10 lose Blatt unterschiedlicher Formate</desc>
-                                                <desc xml:lang="en">Includes 10 loose leaves in various sizes</desc>
+                                                <desc xml:lang="en">10 leaves in various sizes loosely inserted</desc>
                                             </item>
                                         </list>
                                     </accMat>
@@ -588,7 +587,7 @@
                             <note xml:lang="de">Auf dem Deckel Aufkleber mit Aufschrift „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“ eigenhändig in schwarzer Tinte, 
                                 kleine blau eingefasste Marken mit Nummern eingeklebt, Aufkleberfragment am Rücken; mit überklebten Seiten</note>
                             <note xml:lang="en">Cover with label inscribed „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“, holograph in black ink, 
-                                small blue framed stamps with numbers glued in, label fragment on spine, pasted over pages</note><!-- Übersetzung prüfen! -->
+                                small blue-bordered stamps with numbers glued in, label fragment on spine, some pages overpasted</note>
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
@@ -612,8 +611,8 @@
                                                     >Registerbuch mit Händlermarke auf Innenseite des Deckels „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
                                                     Tabellenvordruck blau und rot, marmorierter Schnitt</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                    >Register book with stationer's label on the inside of the cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
-                                                    table form blue and red, marbled edges</material>
+                                                    >Register book with stationer's label on the inside of the upper cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    tabular form printed in blue and red, marbled edges</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
                                                     >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
@@ -639,14 +638,14 @@
                                     <bindingDesc>
                                         <binding>
                                             <ab xml:lang="de">schwarz marmorierter Halbleinenband, Rücken gebrochen</ab>
-                                            <ab xml:lang="en">black marbled half cloth, broken book spine</ab>
+                                            <ab xml:lang="en">black marbled half cloth, spine broken</ab>
                                         </binding>
                                     </bindingDesc>
                                     <accMat>
                                         <list>
                                             <item ana="szdg:Enclosures">
                                                 <desc xml:lang="de">Eingelegt 6 lose Blatt unterschiedlicher Formate</desc>
-                                                <desc xml:lang="en">Includes 6 loose leaves in various sizes</desc>
+                                                <desc xml:lang="en">6 leaves in various sizes loosely inserted</desc>
                                             </item>
                                         </list>
                                     </accMat>
