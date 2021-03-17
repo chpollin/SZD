@@ -3014,8 +3014,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Editorial Apolo, Editorial Juventud S.A.</title>
-              <title ana="assigned" xml:lang="en">Contracts Editorial Apolo, Editorial Juventud S.A.</title>
+                >Vertrag Editorial APOLO, BARCELONA [Spanien]</title>
+              <title ana="assigned" xml:lang="en">Contract Editorial APOLO, BARCELONA [Spain]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3024,8 +3024,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, 2 Verträge in Dublikat zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. mit der Notiz „Cancelled“ und 1 Version mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, violetter Stempel</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, 2 contracts in dublicate for „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A. with the note „Cancelled“ and 1 version with annotations to the contract in blue ink by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+              <note xml:lang="de">Eigenhändige Unterschrift in violetter Tinte, Unterschrift von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Holograph signature in purple ink, signature by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3034,13 +3034,13 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.12</idno>
+                  <idno type="signature">SZ-AAP/L13.26</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Mary Baker Eddy, Freud, Mesmer</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
-                    <lang xml:lang="eng">Englisch</lang>
-                  </textLang>
+                                  </textLang>
                 </msContents>
                 <physDesc>
                   <objectDesc>
@@ -3051,19 +3051,18 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes und violettes Farbband, schwarze, blaue und violette Tinte, Bleistift</material>
+                          xml:lang="de">Schwarzes Farbband, violettes Durchschlagpapier, schwarze und violette Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black and purple ribbon, black, blue and purple ink, pencil</material>
+                          xml:lang="en">Black ribbon, purple carbon paper, black and purple ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">5 Blatt</measure>, 
-                          unterschiedliche Formate<!-- und Typoskriptdurchschlag? -->
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">5 leaves</measure>, various sizes
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
                         </span>
-                        <measure type="format">25x23 cm bis 31x20 cm</measure>
+                        <measure type="format">29x21 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -3073,15 +3072,9 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!--  Kraut und Rüben; 1. Ausstellungsd./Ort; 2. Empfangsdatum (Ausstellungsd. fehlt; 3. Ausstellungsd./Ort; 4&5: Ausstellungsd./Orte so belassen? -->
+                  <origin>
                     <origDate when="1931-05-22">22. Mai 1931</origDate>
-                    <origPlace>Berlin</origPlace>
-                    <origDate when="1934-11-23">23. Nov. 1934</origDate>
-                    <origPlace>Salzburg | Barcelona</origPlace>
-                    <origDate when="1936-07-09">9. Juli, 1936</origDate>
-                    <origPlace>Barcelona</origPlace>
-                    <origDate when="1945-11-30">30th day of November of 1945</origDate>
-                    <origPlace>London | Barcelona</origPlace>
+                    <origPlace>Berlin</origPlace>   
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -7462,6 +7455,274 @@
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
                 <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
                   ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.88">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag „Editorial Apolo“ Barcelona [Spanien]</title>
+              <title ana="assigned" xml:lang="en">Contract „Editorial Apolo“ Barcelona [Spain]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufschrift „rekl. 27.4. | 1935“ von fremder Hand in Bleistift, Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Inscribed „rekl. 27.4. | 1935“ by an unidentified hand in pencil, holograph date and signature in purple ink, signature by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.27</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Vierundzwanzig Stunden aus dem Leben einer Frau</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violettes Durchschlagpapier, schwarze und violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple carbon paper, black and purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">25x23 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1934-11-23">23. Nov. 1934</origDate>
+                    <origPlace>Salzburg | Barcelona</origPlace>   
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.89">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Editorial Juventud S.A. [Spanien]</title>
+              <title ana="assigned" xml:lang="en">Contract Editorial Juventud S.A. [Spain]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Holograph date and signature in purple ink, signature by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.28</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Castellio gegen Calvin, Kaleidoscope</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1936-07-15">15. Juli 1936</origDate>
+                    <origPlace>London | Barcelona</origPlace>   
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.90"><!-- Hannah und Hermann Altmann als person_affected eintragen? Befinden sich noch nicht im Personenindex! ÜBERHAUPT AUFNEHMEN? -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Verträge Editorial Apolo, Editorial Juventud S.A.</title>
+              <title ana="assigned" xml:lang="en">Contracts Editorial Apolo, Editorial Juventud S.A.</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, 2 Verträge in Dublikat zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. mit der Notiz „Cancelled“ und 1 Version mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Contracts with holograph signature in purple ink, 2 contracts in dublicate for „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A. with the note „Cancelled“ and 1 version with annotations to the contract in blue ink by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.12</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes und violettes Farbband, schwarze, blaue und violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black and purple ribbon, black, blue and purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">5 Blatt</measure>, 
+                          unterschiedliche Formate<!-- und Typoskriptdurchschlag? -->
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">5 leaves</measure>, various sizes
+                        </span>
+                        <measure type="format">25x23 cm bis 31x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin><!--  Kraut und Rüben; 1. Ausstellungsd./Ort; 2. Empfangsdatum (Ausstellungsd. fehlt; 3. Ausstellungsd./Ort; 4&5: Ausstellungsd./Orte so belassen? -->
+                    <origDate when="1931-05-22">22. Mai 1931</origDate>
+                    <origPlace>Berlin</origPlace>
+                    <origDate when="1934-11-23">23. Nov. 1934</origDate>
+                    <origPlace>Salzburg | Barcelona</origPlace>
+                    <origDate when="1936-07-09">9. Juli, 1936</origDate>
+                    <origPlace>Barcelona</origPlace>
+                    <origDate when="1945-11-30">30th day of November of 1945</origDate>
+                    <origPlace>London | Barcelona</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
