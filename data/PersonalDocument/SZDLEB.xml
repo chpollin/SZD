@@ -3010,7 +3010,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.31"><!-- Hannah und Hermann Altmann als person_affected eintragen? Befinden sich noch nicht im Personenindex! -->
+        <biblFull xml:id="SZDLEB.31">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -3097,12 +3097,12 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.32">
+        <biblFull xml:id="SZDLEB.32"><!-- Juan Carlos Torrendell in Personenliste eintragen und unter affected angeben -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Don Juan Carlos Torrendell</title>
-              <title ana="assigned" xml:lang="en">Contract </title>
+                >Vertrag Juan Carlos Torrendell [Argentinien]</title>
+              <title ana="assigned" xml:lang="en">Contract Juan Carlos Torrendell [Argentina]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3111,8 +3111,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Vertrag mit eigenhändiger Unterschrift in schwarzer Tinte, roter Poststempel</note>
-              <note xml:lang="en">Contract with holograph signature in black ink, red postmark</note><!-- Übersetzung! -->
+              <note xml:lang="de">Eigenhändige Unterschrift in schwarzer Tinte, Unterschrift von Juan Carlos Torrendell, rote Stempel</note>
+              <note xml:lang="en">Holograph signature in black ink, signature by Juan Carlos Torrendell, red stamps</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3121,9 +3121,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.13</idno>
+                  <idno type="signature">SZ-AAP/L13.29</idno>
                 </msIdentifier>
                 <msContents>
+                    <summary>Veincuatro horas de la vida de un mujer, Momentos estelares de la humanidad, Amok, Casanova, Freud, Tres maestros, La confusión del sentimento, Los ojos del hermano eterno, La tragedia de una vid, La lucha contra el demonio, Tolstoi, Verhaeren, Stendahl, El candelabro sepultado</summary>
                   <textLang>
                     <lang xml:lang="spa">Spanisch</lang>
                   </textLang>
@@ -3133,16 +3134,16 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Blaues Farbband, schwarze Tinte</material>
+                          xml:lang="de">Blaues Durchschlagpapier, schwarze Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Blue ribbon, black ink</material>
+                          xml:lang="en">Blue carbon paper, black ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">32x22 cm</measure>
                       </extent>
@@ -3154,8 +3155,9 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- Orte so belassen? -->
-                    <origPlace>Bolivar | Rio de Janeiro</origPlace>
+                  <origin>
+                    <origPlace>Buenos Aires</origPlace>
+                    <origDate when="1936-09-15">quince dias del mes de setiembre del afio mil novecientos treinta y seis</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -3178,12 +3180,12 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.33">
+        <biblFull xml:id="SZDLEB.33"><!-- Halfdan Jespersen in Personenindex ergänzen und unter affected aufnehmen -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Jespersen og Pios Forlag, Grønbech's Forlag</title>
-              <title ana="assigned" xml:lang="en">Contracts Jespersen og Pios Forlag, Grønbech's Forlag</title>
+                >Vertrag Jespersen og Pios Forlag [Dänemark]</title>
+              <title ana="assigned" xml:lang="en">Contract Jespersen og Pios Forlag [Denmark]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3192,8 +3194,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand, 1 Vertrag mit der Notiz "am 28.8.38 [durchgestrichen] März 40 noch nicht bez." in Bleistift</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand, 1 contract with the note "am 28.8.38 [crossed out] März 40 noch nicht bez." in pencil</note><!-- Übersetzung! -->
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschriften von Halfdan Jespersen</note>
+              <note xml:lang="en">Holograph date and signature in purple ink, signatures by Halfdan Jespersen</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3202,11 +3204,13 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.14</idno>
+                  <idno type="signature">SZ-AAP/L13.30</idno>
                 </msIdentifier>
                 <msContents>
+                  <ab xml:lang="de">Biographische Werke</ab>
+                  <ab xml:lang="en">Biographical works</ab>
                   <textLang>
-                    <lang xml:lang="ger">Deutsch</lang>
+                      <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
                 </msContents>
                 <physDesc>
@@ -3218,36 +3222,30 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte, Bleistift</material>
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black and purple ink, pencil</material>
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">4 Blatt</measure>, unterschiedliche Formate
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">4 leaves</measure>, various sizes
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
                         </span>
-                        <measure type="format">28x23 cm bis 36x22 cm</measure>
+                        <measure type="format">29x22 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
-                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, Halfdan Jespersen</ab>
+                    <ab xml:lang="en">Stefan Zweig, Halfdan Jespersen</ab>
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- Ausstellungsd./Ort -->
-                    <origDate when="1935-05-29">29. Mai 1935.</origDate>
-                    <origPlace>Kopenhagen</origPlace>
-                    <origDate when="1938-03-10">10/III 38</origDate>
-                    <origPlace>Kopenhagen</origPlace>
-                    <origDate when="1939-01-30">30. I. 1939</origDate>
-                    <origPlace>Kopenhagen</origPlace>
-                    <origDate when="1940-03-08">8. III 1940</origDate>
-                    <origPlace>Copenhagen</origPlace>
+                  <origin>
+                    <origDate when="1935-05-31">31 V 1935.</origDate>
+                    <origPlace>Zürich | Kopenhagen</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -6764,8 +6762,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter  Tinte und zwei Unterschriften von fremder Hand, violetter Stempel</note>
-              <note xml:lang="en">Date and signature holograph in purple ink, and two signatures by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte und zwei Unterschriften von fremder Hand, violetter Stempel</note>
+              <note xml:lang="en">Holograph date and signature in purple ink, and two signatures by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -6852,7 +6850,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschriften von fremder Hand, schwarzer Stempel</note>
-              <note xml:lang="en">Date and signature holograph in purple ink, signatures by an unidentified hand, black stamp</note><!-- Übersetzung! -->
+              <note xml:lang="en">Holograph date and signature in purple ink, signatures by an unidentified hand, black stamp</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -7606,7 +7604,16 @@
                     <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
                     <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
                   </handDesc>
-                </physDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Vertrag in doppelter Ausführung zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. vom 30. November 1945 mit der Notiz „Cancelled“ und einmal mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, beide Exemplare mit Unterschrift und violettem Stempel</desc>
+                        <desc xml:lang="en">Contract in duplicate on „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A.dated 30th November 1945 dated 30th November 1945 with the note "Cancelled" and one with annotations to the contract in blue ink by by an unidentified hand, both copies with signature and purple stamp</desc>
+                        <measure type="format">31x20 cm</measure>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>              
                 <history>
                   <origin>
                     <origDate when="1936-07-15">15. Juli 1936</origDate>
@@ -7633,12 +7640,12 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.90"><!-- Hannah und Hermann Altmann als person_affected eintragen? Befinden sich noch nicht im Personenindex! ÜBERHAUPT AUFNEHMEN? -->
+        <biblFull xml:id="SZDLEB.90">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Editorial Apolo, Editorial Juventud S.A.</title>
-              <title ana="assigned" xml:lang="en">Contracts Editorial Apolo, Editorial Juventud S.A.</title>
+                >Vertrag Jespersen og Pios Forlag, Grønbech's Forlag</title>
+              <title ana="assigned" xml:lang="en">Contracts Jespersen og Pios Forlag, Grønbech's Forlag</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -7647,8 +7654,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, 2 Verträge in Dublikat zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. mit der Notiz „Cancelled“ und 1 Version mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, violetter Stempel</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, 2 contracts in dublicate for „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A. with the note „Cancelled“ and 1 version with annotations to the contract in blue ink by an unidentified hand, purple stamp</note><!-- Übersetzung! -->
+              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand, 1 Vertrag mit der Notiz "am 28.8.38 [durchgestrichen] März 40 noch nicht bez." in Bleistift</note>
+              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand, 1 contract with the note "am 28.8.38 [crossed out] März 40 noch nicht bez." in pencil</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -7657,12 +7664,11 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.12</idno>
+                  <idno type="signature">SZ-AAP/L13.14</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
-                    <lang xml:lang="eng">Englisch</lang>
                   </textLang>
                 </msContents>
                 <physDesc>
@@ -7674,19 +7680,18 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes und violettes Farbband, schwarze, blaue und violette Tinte, Bleistift</material>
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black and purple ribbon, black, blue and purple ink, pencil</material>
+                          xml:lang="en">Black ribbon, black and purple ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">5 Blatt</measure>, 
-                          unterschiedliche Formate<!-- und Typoskriptdurchschlag? -->
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">4 Blatt</measure>, unterschiedliche Formate
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">5 leaves</measure>, various sizes
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">4 leaves</measure>, various sizes
                         </span>
-                        <measure type="format">25x23 cm bis 31x20 cm</measure>
+                        <measure type="format">28x23 cm bis 36x22 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -7696,15 +7701,15 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!--  Kraut und Rüben; 1. Ausstellungsd./Ort; 2. Empfangsdatum (Ausstellungsd. fehlt; 3. Ausstellungsd./Ort; 4&5: Ausstellungsd./Orte so belassen? -->
-                    <origDate when="1931-05-22">22. Mai 1931</origDate>
-                    <origPlace>Berlin</origPlace>
-                    <origDate when="1934-11-23">23. Nov. 1934</origDate>
-                    <origPlace>Salzburg | Barcelona</origPlace>
-                    <origDate when="1936-07-09">9. Juli, 1936</origDate>
-                    <origPlace>Barcelona</origPlace>
-                    <origDate when="1945-11-30">30th day of November of 1945</origDate>
-                    <origPlace>London | Barcelona</origPlace>
+                  <origin><!-- Ausstellungsd./Ort -->
+                    <origDate when="1935-05-29">29. Mai 1935.</origDate>
+                    <origPlace>Kopenhagen</origPlace>
+                    <origDate when="1938-03-10">10/III 38</origDate>
+                    <origPlace>Kopenhagen</origPlace>
+                    <origDate when="1939-01-30">30. I. 1939</origDate>
+                    <origPlace>Kopenhagen</origPlace>
+                    <origDate when="1940-03-08">8. III 1940</origDate>
+                    <origPlace>Copenhagen</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
