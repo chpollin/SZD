@@ -16,7 +16,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 # here enter the id of your google sheet
 SAMPLE_SPREADSHEET_ID_input = '1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo'
-SAMPLE_RANGE_NAME = 'A1:AA1000'
+SAMPLE_RANGE_NAME = 'A1:C600'
 
 def main():
     global values_input, service
@@ -87,36 +87,36 @@ newPerson = set_excelNames - set_SZDPER
 #print(newPerson)
 
 # creates XML/TEI person/persName
-SZDPER_ID = 1645
+SZDPER_ID = 1653
 #print(df["Correspondent"])
 
 for person in newPerson:
     
-    
     # select the row in which google spreadsheet "Correspondent" has same name
-    df.loc[df["Correspondent"] == person]
-    #print(type(df.loc[df["Correspondent"] == person]["GND"].item()))
-    if(df.loc[df["Correspondent"] == person]["GND"].item() is not None):
-        row = df.loc[df["Correspondent"] == person]["GND"].item()
-    else:
-        row = "TESTerrich"
-
-    # t:person
-    tei_person = ET.Element('person')
-    tei_person.set('xml:id', str(SZDPER_ID) )
-    # t:persName
-    tei_persName = ET.SubElement(tei_person, 'persName')
-    if(row):
-        tei_persName.set('ref', row)
-    # t:forename|t:surname|t:name
-    if(', ' in person):
-        tei_surname = ET.SubElement(tei_persName, 'surname')
-        tei_surname.text = person.split(', ')[0]
-        tei_forename = ET.SubElement(tei_persName, 'forename')
-        tei_forename.text = person.split(', ')[1]
-    else:
-        tei_name = ET.SubElement(tei_persName, 'name')
-        tei_name.text = person
-        
-    SZDPER_ID += 1
-    ET.dump(tei_person)   
+    if(person):
+        df.loc[df["Correspondent"] == person]
+        #print(type(df.loc[df["Correspondent"] == person]["GND"].item()))
+        try:
+            row = df.loc[df["Correspondent"] == person]["GND"].item()
+        except:
+            row = "ToDo_"
+            
+        # t:person
+        tei_person = ET.Element('person')
+        tei_person.set('xml:id', str(SZDPER_ID) )
+        # t:persName
+        tei_persName = ET.SubElement(tei_person, 'persName')
+        if(row):
+            tei_persName.set('ref', row)
+        # t:forename|t:surname|t:name
+        if(', ' in person):
+            tei_surname = ET.SubElement(tei_persName, 'surname')
+            tei_surname.text = person.split(', ')[0]
+            tei_forename = ET.SubElement(tei_persName, 'forename')
+            tei_forename.text = person.split(', ')[1]
+        else:
+            tei_name = ET.SubElement(tei_persName, 'name')
+            tei_name.text = person
+            
+        SZDPER_ID += 1
+        ET.dump(tei_person)   

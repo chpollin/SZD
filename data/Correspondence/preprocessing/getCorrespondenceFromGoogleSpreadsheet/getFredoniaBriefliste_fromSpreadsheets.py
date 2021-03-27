@@ -184,11 +184,12 @@ def main():
                                 tei_persName_sent.set('ref', str(row[2]))
                         ###    
                         if(row[3]):
-                            tei_measure_1 = ET.SubElement(tei_extent, 'measure')
-                            tei_measure_1.text = str(row[3])
-                            tei_measure_1.set('type', "correspondence")
-                            tei_measure_1.set('unit', "piece")
-                            tei_measure_1.set('ana', "received")
+                            if(int(row[3]) > 0):
+                                tei_measure_1 = ET.SubElement(tei_extent, 'measure')
+                                tei_measure_1.text = str(row[3])
+                                tei_measure_1.set('type', "correspondence")
+                                tei_measure_1.set('unit', "piece")
+                                tei_measure_1.set('ana', "received")
                             
                         if(row[4]):
                             tei_measure_2 = ET.SubElement(tei_extent, 'measure')
@@ -196,6 +197,7 @@ def main():
                             tei_measure_2.set('type', "enclosures")
                             tei_measure_2.set('unit', "piece")
                             tei_measure_2.set('ana', "received")
+                            tei_measure_2.set('xml:lang', "en")
                             
                         if(piecesOfCorr_by_zweig):
                             tei_measure_3 = ET.SubElement(tei_extent, 'measure')
@@ -250,7 +252,7 @@ def main():
                         if(row[9]):
                             tei_date_sent.text = str(row[9])             
                 except:
-                    print(f"Exception: invalid row")
+                    print(f"Exception: invalid row {row}")
             # LETTERS By Zweig
             else:
                 print("Log: a LETTERS By Zweig")                   
