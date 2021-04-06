@@ -3180,7 +3180,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.33"><!-- Halfdan Jespersen in Personenindex ergänzen und unter affected aufnehmen -->
+        <biblFull xml:id="SZDLEB.33">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -3265,6 +3265,8 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1939"><persName>
+                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7717,7 +7719,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.91"><!-- Halfdan Jespersen als person affected ergänzen! -->
+        <biblFull xml:id="SZDLEB.91">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -7800,11 +7802,13 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1939"><persName>
+                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.92"><!-- Halfdan Jespersen als person affected ergänzen! -->
+        <biblFull xml:id="SZDLEB.92">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -7892,6 +7896,8 @@
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
                 <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
                   ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1939"><persName>
+                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
