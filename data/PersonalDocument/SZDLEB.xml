@@ -3362,8 +3362,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Bermann-Fischer A.B., Stockholm, Allert de Lange C.V. Amsterdam, Forum Verlag</title>
-              <title ana="assigned" xml:lang="en">Contracts Bermann-Fischer A.B., Stockholm, Allert de Lange C.V. Amsterdam, Forum Verlag</title>
+                >Vertrag Bermann-Fischer A.B., Stockholm und Allert de Lange C.V. Amsterdam [Niederlande]</title>
+              <title ana="assigned" xml:lang="en">Contract Bermann-Fischer A.B., Stockholm and Allert de Lange C.V. Amsterdam [Netherlands]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3372,8 +3372,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand</note><!-- Übersetzung! -->
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von Gottfried Bermann-Fischer und von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by Gottfried Bermann-Fischer and an unidentified hand</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3382,9 +3382,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.16</idno>
+                  <idno type="signature">SZ-AAP/L13.37</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Der Narr des Mitleids [Ungeduld des Herzens]</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -3398,31 +3399,29 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze, violette und grüne Tinte</material>
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze, violette und grüne Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black, purple and green ink</material>
+                          xml:lang="en">Black carbon paper, black, purple and green ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">3 Blatt</measure>
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">2 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">3 leaves</measure>
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">2 leaves</measure>
                         </span>
                         <measure type="format">34x22 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
-                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                    <ab xml:lang="de">Stefan Zweig, Gottfried Bermann-Fischer, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Gottfried Bermann-Fischer, unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- Ausstellungsd./Ort  -->
+                  <origin>
                     <origDate when="1938-07-13">13. Juli 1938</origDate>
-                    <origDate when="1938-08-09">9. August 1938</origDate>
-                    <origPlace>Amsterdam</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -3441,6 +3440,8 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3449,8 +3450,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge H. Aschehoug &amp; Co. (W. Nygaard) A/S</title>
-              <title ana="assigned" xml:lang="en">Contracts H. Aschehoug &amp; Co. (W. Nygaard) A/S</title>
+                >Vertrag H. Aschehoug &amp; Co. (W. Nygaard) A/S [Norwegen]</title>
+              <title ana="assigned" xml:lang="en">Contract H. Aschehoug &amp; Co. (W. Nygaard) A/S [Norway]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3459,8 +3460,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand, 1 Vertrag mit eigenhändigen Notizen zur Abrechnung in violetter Tinte</note><!-- wirklich eigenhändige Notiz? -->
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand, 1 contract with holograph notes concerning the billing in purple ink</note><!-- Übersetzung! -->
+              <note xml:lang="de">Unterschrift eigenhändig und eigenhändige Notiz „Die Abrechnung erfolgt zweimal im Jahre zu Ende jedes Halbjahrs“ in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph and holograph note „Die Abrechnung erfolgt zweimal im Jahre zu Ende jedes Halbjahrs“ in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3469,9 +3470,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.17</idno>
+                  <idno type="signature">SZ-AAP/L13.39</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Magellan</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -3481,9 +3483,9 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="de">gelocht</material>
+                          xml:lang="de">Briefpapier H. Aschehoug &amp; Co. W. Nygaard, gelocht</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">hole punched</material>
+                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationary, hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -3491,10 +3493,10 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">3 Blatt</measure>
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">3 leaves</measure>
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">28x22 cm</measure>
                       </extent>
@@ -3506,11 +3508,9 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- Ausstellungsd./Ort  -->
-                    <origDate when="1938-01-08">8/1 1938</origDate>
-                    <origPlace>Oslo</origPlace>
-                    <origDate when="1939-03-23">23. März 1939</origDate>
-                    <origPlace>Oslo</origPlace>
+                  <origin>
+                    <origDate when="1938-01-11">11 Jan. 1938.</origDate>
+                    <origPlace>London</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -3537,8 +3537,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Wydawnictwo J. Przeworskiego</title>
-              <title ana="assigned" xml:lang="en">Contracts Wydawnictwo J. Przeworskiego</title>
+                >Vertrag Wydawnictwo J. Przeworskiego [Polen]</title>
+              <title ana="assigned" xml:lang="en">Contract Wydawnictwo J. Przeworskiego [Poland]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3547,8 +3547,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand, 1 Vertrag mit dem Vermerk "unbezahlt" in Bleistift</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand, 1 contract with the note "unbezahlt" in pencil</note><!-- Übersetzung! -->
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3557,9 +3557,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.18</idno>
+                  <idno type="signature">SZ-AAP/L13.41</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Magellan</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -3573,16 +3574,16 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte, Bleistift</material>
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material><!-- oder blaue Tinte? -->
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black and purple ink, pencil</material>
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">4 Blatt</measure>
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">4 leaves</measure>
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">32x20 cm</measure>
                       </extent>
@@ -3594,12 +3595,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- Ausstellungsd./Ort(?)Ort/Datum Empfänger fehlt meistens  -->
+                  <origin>
                     <origDate when="1937-06-01">Juni 1937</origDate>
-                    <origPlace>London</origPlace>
-                    <origDate when="1938-10-25">25. Oktober 1938</origDate>
-                    <origPlace>London</origPlace>
-                    <origDate when="1938-11-25">25. November 1938</origDate>
                     <origPlace>London</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
@@ -3623,12 +3620,12 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.38">
+        <biblFull xml:id="SZDLEB.38"><!-- Eugen Relgis in Personenindex (http://d-nb.info/gnd/1057079499) und als person affected ergänzen -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Eugen Relgis</title>
-              <title ana="assigned" xml:lang="en">Contracts Eugen Relgis</title>
+                >Verlagsvertrag Eugen Relgis [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Publishing contract Eugen Relgis [Romania]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3637,8 +3634,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift und Korrekturen in violetter Tinte, Unterschriften und Anmerkungen von Eugen Relgis, 1 Vertrag mit dem Vermerk "bezahlt!" und 2 Verträge mit dem Vermerk "unbezahlt März 40" in Bleistift, 1 Vertrag handschriftlich</note><!-- Schrift eigenhändig? -->
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures and annotations by Eugen Relgis, 1 contract with the note "unbezahlt" and 2 contracts with the note "unbezahlt März 40" in pencil, 1 contract handwritten</note><!-- Übersetzung! -->
+              <note xml:lang="de">Unterschrift und Korrekturen eigenhändig in violetter Tinte, Unterschrift und Notiz von Eugen Relgis</note>
+              <note xml:lang="en">Signature and corrections holograph in purple ink, signatures and annotations by Eugen Relgis</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3647,12 +3644,12 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.19</idno>
+                  <idno type="signature">SZ-AAP/L13.45</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Magellan</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
-                    <lang xml:lang="rum">Rumänisch</lang>
                   </textLang>
                 </msContents>
                 <physDesc>
@@ -3660,18 +3657,18 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte, Bleistift</material>
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black and purple ink, pencil</material>
+                          xml:lang="en">Black ribbon, black and purple ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure>; <term type="objecttyp">Typoskript</term>, <measure type="leaf">6 Blatt</measure>, verschiedene Formate
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure>;  <term type="objecttyp">typescript</term>, <measure type="leaf">6 leaves</measure>, various sizes
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
-                        <measure type="format">21x17 cm bis 32x20 cm</measure>
+                        <measure type="format">25x23 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -3681,16 +3678,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- wie immer, überprüfen!  -->
-                    <origDate when="1936-10-26">26 Oct. 1936</origDate>
-                    <origPlace>London</origPlace>
-                    <origDate when="1937-12-02">2. Dezember I937</origDate>
-                    <origPlace>Bucarest</origPlace>
-                    <origDate when="1938-10-28">28. Oktober 1938</origDate>
-                    <origPlace>London</origPlace>
-                    <origDate when="1939-04-20">20 Aprilie 1939</origDate>
-                    <origPlace>London</origPlace>
-                    <origDate when="1939-07-25">25 Juli 1939</origDate>
+                  <origin>
+                    <origDate when="1937-12-06">6. Dezember I937</origDate>
                     <origPlace>London</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
@@ -3718,8 +3707,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge La Livraria Civilizaçao</title>
-              <title ana="assigned" xml:lang="en">Contracts La Livraria Civilizaçao</title>
+                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title><!-- hier besser Agreement/Vereinbarung? -->
+              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3728,8 +3717,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte und Anmerkungen in violetter und schwarzer Tinte, Unterschriften von fremder Hand</note>
-              <note xml:lang="en">Contracts with holograph signature in purple ink and annotations in purple and black ink, signatures by an unidentified hand</note><!-- Übersetzung! -->
+              <note xml:lang="de">Eigenhändige Notiz in schwarzer Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Holograph note in black ink, signature by an unidentified hand</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3738,9 +3727,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.20</idno>
+                  <idno type="signature">SZ-AAP/L13.51</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>24 Stunden aus dem Leben einer Frau</summary>
                   <textLang>
                     <lang xml:lang="fre">Französisch</lang>
                     <lang xml:lang="ger">Deutsch</lang>
@@ -3750,19 +3740,23 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze, blaue und violette Tinte, blauer Buntstift</material>
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black, blue and purple ink, blue pencil</material>
+                          xml:lang="en">Black ribbon, black ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">6 Blatt</measure>, verschiedene Formate
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                         <term type="objecttyp">Typescript</term>, <measure type="leaf">6 leaves</measure>, various sizes
+                         <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
-                        <measure type="format">28x22 cm bis 32x20 cm</measure>
+                        <measure type="format">28x22 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -3772,16 +3766,8 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- wie immer, überprüfen!  -->
-                    <origDate when="1937-04-15">15 de Abril 1937</origDate>
-                    <origPlace>Porto</origPlace>
-                    <origDate when="1937-09-25">25 septembre 1937</origDate>
-                    <origPlace>Londres</origPlace>
-                    <origDate when="1937-10-27">27 de Outubro de 1937</origDate>
-                    <origPlace>Porto</origPlace>
-                    <origDate when="1938-02-06">6 février 1938</origDate>
-                    <origPlace>Estoril</origPlace>
-                    <origDate when="1938-12-09">9 décembre 1938</origDate>
+                  <origin>
+                    <origDate when="1937-01-02">2-i 937</origDate>
                     <origPlace>Porto</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
@@ -3809,8 +3795,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Verträge Aktiebolaget Skoglunds Bokförlag</title>
-              <title ana="assigned" xml:lang="en">Contracts Aktiebolaget Skoglunds Bokförlag</title>
+                >Vertrag Aktiebolaget Skoglunds Bokförlag [Schweden]</title>
+              <title ana="assigned" xml:lang="en">Contract Aktiebolaget Skoglunds Bokförlag [Sweden]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3819,8 +3805,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Verträge mit eigenhändiger Unterschrift in violetter Tinte, Unterschriften von fremder Hand, 1 Vertrag mit  eigenhändigen Korrekturen in violetter Tinte</note><!-- eigenhändig? überprüfen! -->
-              <note xml:lang="en">Contracts with holograph signature in purple ink, signatures by an unidentified hand, 1 contract with holograph corrections in purple ink</note><!-- Übersetzung! -->
+              <note xml:lang="de">Datum, Unterschrift, Korrekturen und Anmerkungen eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Date, signature, corrections and notes holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -3829,9 +3815,10 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L13.21</idno>
+                  <idno type="signature">SZ-AAP/L13.57</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Castellio gegen Calvin oder Ein Gewissen gegen die Gewalt</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -3840,6 +3827,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -3847,10 +3838,10 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">3 Blatt</measure>
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">3 leaves</measure>
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">36x22 cm</measure>
                       </extent>
@@ -3862,13 +3853,9 @@
                   </handDesc>
                 </physDesc>
                 <history>
-                  <origin><!-- wie immer, überprüfen!  -->
-                    <origDate when="1936-06-03">3 Juni 1936</origDate>
-                    <origPlace>Stockholm</origPlace>
-                    <origDate when="1937-10-04">4 Oct. 1937</origDate>
-                    <origPlace>Stockholm</origPlace>
-                    <origDate when="1938-10-24">24 oktober 1938</origDate>
-                    <origPlace>Stockholm</origPlace>
+                  <origin>
+                    <origDate when="1938-06-08">8. June 1938</origDate>
+                    <origPlace>London</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                     <ab xml:lang="en">Atrium Press</ab></provenance>
@@ -8060,6 +8047,1478 @@
                 <history>
                   <origin>
                     <origDate when="1938-03-12">12 March 1938</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.95">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Forum Verlag [Niederlande]</title>
+              <title ana="assigned" xml:lang="en">Contract Forum Verlag [Netherlands]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von Gottfried Bermann-Fischer und von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by Gottfried Bermann-Fischer and an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.38</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Maria Stuart</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">34x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Gottfried Bermann-Fischer, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Gottfried Bermann-Fischer, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-08-09">9. August 1938</origDate>
+                    <origPlace>Amsterdam</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.96">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag H. Aschehoug &amp; Co. (W. Nygaard) A/S [Norwegen]</title>
+              <title ana="assigned" xml:lang="en">Contract H. Aschehoug &amp; Co. (W. Nygaard) A/S [Norway]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.40</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Briefpapier H. Aschehoug &amp; Co. W. Nygaard, gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationary, hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">2 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">2 leaves</measure>
+                        </span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1939-03-27">27. März 1939</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.97">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Wydawnictwo J. Przeworskiego [Polen]</title>
+              <title ana="assigned" xml:lang="en">Contract Wydawnictwo J. Przeworskiego [Poland]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.42</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-10-25">25. Oktober 1938</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.98">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Wydawnictwo J. Przeworskiego [Polen]</title>
+              <title ana="assigned" xml:lang="en">Contract Wydawnictwo J. Przeworskiego [Poland]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Notiz „unbezahlt“ von Lotte Zweigs Hand in Bleistift, Unterschrift von fremder Hand</note><!-- wirklich Lotte? -->
+              <note xml:lang="en">Signature holograph in purple ink, note „unbezahlt“ by Lotte Zweig's hand, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.43</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Begegnungen mit Menschen, Büchern, Städten</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-11-25">25. November 1938</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.99">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Wydawnictwo J. Przeworskiego [Polen]</title>
+              <title ana="assigned" xml:lang="en">Contract Wydawnictwo J. Przeworskiego [Poland]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.44</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Sternstunden der Menschheit</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.100"><!-- Eugen Relgis in Personenindex (http://d-nb.info/gnd/1057079499) und als person affected ergänzen -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Verlagsvertrag Eugen Relgis [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Publishing contract Eugen Relgis [Romania]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von Eugen Relgis</note><!-- Datum in Bleistift eigenhändig? -->
+              <note xml:lang="en">Signature holograph in purple ink, signature by Eugen Relgis</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.46</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Baumeister der Welt</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durschlagpapier, schwarze und violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Eugen Relgis</ab>
+                    <ab xml:lang="en">Stefan Zweig, Eugen Relgis</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1936-10-26">26. Oct. I936</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.101"><!-- Eugen Relgis in Personenindex (http://d-nb.info/gnd/1057079499) und als person affected ergänzen -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Verlagsvertrag Eugen Relgis [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Publishing contract Eugen Relgis [Romania]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift und Korrektur von Eugen Relgis</note><!-- Korrektur von E. R. so belassen? -->
+              <note xml:lang="en">Signature holograph in purple ink, signature and correction by Eugen Relgis</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.47</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Eugen Relgis</ab>
+                    <ab xml:lang="en">Stefan Zweig, Eugen Relgis</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-10-28">28. Oktober I938</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.102"><!-- Eugen Relgis in Personenindex (http://d-nb.info/gnd/1057079499) und als person affected ergänzen -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Eugen Relgis [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Contract Eugen Relgis [Romania]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Notiz „unbezahlt März 40“ von Lotte Zweigs Hand in Bleistift, Unterschrift von Eugen Relgis</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, note „unbezahlt März 40“ by Lotte Zweig's hand in pencil, signature by Eugen Relgis</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.48</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Castellio gegen Calvin</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durschlagpapier, schwarze und violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">23x17 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, Eugen Relgis</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, Eugen Relgis</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1939-07-25">25 Juli 39</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.103"><!-- Eugen Relgis in Personenindex (http://d-nb.info/gnd/1057079499) und als person affected ergänzen -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Vertrag Eugen Relgis [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Contract Eugen Relgis [Romania]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Notiz „unbezahlt März 40“ von Lotte Zweigs Hand in Bleistift, Unterschrift von Eugen Relgis</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, note „unbezahlt März 40“ by Lotte Zweig's hand in pencil, signature by Eugen Relgis</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.49</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Heilung durch den Geist</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durschlagpapier, schwarze und violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">23x17 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, Eugen Relgis</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, Eugen Relgis</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1939-07-25">25 Juli 39</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.104">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Verlagsvertrag Editura Socec &amp; Co. S.A. [Rumänien]</title>
+              <title ana="assigned" xml:lang="en">Publishing contract Editura Socec &amp; Co. S.A. [Romania]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Deutscher handschriftlicher Vertragsentwurf von unbekannter Hand, rumänischer Vertrag mit Notiz „bezahlt!“ von Lotte Zweigs Hand in Bleistift, Unterschrift von fremder Hand</note><!-- wirklich Lotte? -->
+              <note xml:lang="en">German handwritten draft contract, romanian contract with note „bezahlt!“ by Lotte Zweig's hand in pencil, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.50</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="rum">Rumänisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Doppelbogen</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Bifolium</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durschlagpapier, schwarze Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Konvolut</term>: Manuskript, 1 Blatt; Typoskriptdurchschlag, 1 Blatt</span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Collection</term>: manuscript, 1 leaf; typescript (carbon copy), 1 leaf</span>
+                        <measure type="format">21x17 cm bis 29x23 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1939-04-20">20 Aprilie 1939</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.105">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum, Unterschrift und Notiz eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Date, signature and note holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.52</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Amok, La Confusion des Sentiments, La destruction d'un coeur, Peur, Leporella. La femme et le paysage, Le bouquiniste Mendel. la colection invisible</summary>
+                  <textLang>
+                    <lang xml:lang="fre">Französisch</lang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1937-04-17">17. April 1937</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.106">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Livraria Civilizaçao [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Livraria Civilizaçao [Portugal]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand, korrigiert</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand, corrected</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.53</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Magalhãos</summary>
+                  <textLang>
+                    <lang xml:lang="fre">Französisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1937-09-25">25 septembre 1937</origDate>
+                    <origPlace>London</origPlace><!-- oder: Londres? -->
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.107">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Livraria Civilização de Américo Fraga Lamares [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Livraria Civilização de Américo Fraga Lamares [Portugal]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.54</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Triumph und Tragik des Erasmus ..., Catelio gegen Calvin, Heilung durch den Geist, Baumeister der Welt</summary>
+                  <textLang>
+                    <lang xml:lang="fre">Französisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1937-11-01">1. Nov. 1937</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.108">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Américo Fraga Lamares [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares [Portugal]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Notiz „bezahlt 6. II. 38 in Estoril = £ 20“ von Lotte Zweigs Hand in blauer Tinte und blauem Buntstift, Unterschrift von fremder Hand, korrigiert</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, note „bezahlt 6. II. 38 in Estoril = £ 20“ by Lotte Zweig's hand in blue ink and blue pencil, signature by an unidentified hand, corrected</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.55</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Begegnungen mit Menschen Buchern?Staden</summary><!-- so lassen oder korrekten Titel angeben? -->
+                  <textLang>
+                    <lang xml:lang="fre">Französisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze, blaue und violette Tinte, blauer Buntstift</material><!-- wirklich schwarze Tinte bei Unterschrift oder auch blau? -->
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black, blue and purple ink, blue pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">28x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, Lotte Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, Lotte Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-02-06">6 février 1938</origDate>
+                    <origPlace>Estoril</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.109">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Livraria CIVILIZACAO [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Livraria CIVILIZACAO [Portugal]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.56</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="fre">Französisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">32x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-12-06">6 décembre 1938</origDate>
+                    <origPlace>London</origPlace><!-- oder: Londres? -->
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.110">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Aktiebolaget Skoglunds Bokförlag [Schweden]</title>
+              <title ana="assigned" xml:lang="en">Contract Aktiebolaget Skoglunds Bokförlag [Sweden]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.58</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Sternstunden</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">36x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1937-10-11">11. Oct. 1937</origDate>
+                    <origPlace>London</origPlace>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie's London 2014</ab> 
+                    <ab xml:lang="en">Acquisition
+                      from Christie's London 2014</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verträge</term>
+                <term type="classification" xml:lang="en">Contracts</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.111">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de"
+                >Vertrag Aktiebolaget Skoglunds Bokförlag [Schweden]</title>
+              <title ana="assigned" xml:lang="en">Contract Aktiebolaget Skoglunds Bokförlag [Sweden]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
+              <note xml:lang="en">Date and signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L13.59</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Ungeduld des Herzens</summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">gelocht</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">hole punched</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black and purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">36x22 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                    <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-10-26">26. Oct. 1938</origDate>
                     <origPlace>London</origPlace>
                   </origin>
                   <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
