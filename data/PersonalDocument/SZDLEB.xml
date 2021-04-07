@@ -2159,10 +2159,10 @@
         <biblFull xml:id="SZDLEB.21">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Einladungskarte „At Home“</title>
-              <title ana="assigned" xml:lang="en">Invitation card „At Home“</title>
+              <title ana="assigned" xml:lang="de">At Home Karte</title>
+              <title ana="assigned" xml:lang="en">At Home Card</title>
               <title type="Einheitssachtitel" xml:lang="de">Einladungskarte</title>
-              <title type="Einheitssachtitel" xml:lang="en">Invitation card</title>
+              <title type="Einheitssachtitel" xml:lang="en">Invitation</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
@@ -2233,8 +2233,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Bestellzettel Bücherausgabe</title>
-              <title type="Einheitssachtitel" xml:lang="de">Bestellzettel</title>
-              <title type="Einheitssachtitel" xml:lang="en">Order form</title>
+              <title type="Einheitssachtitel" xml:lang="de">Leihschein</title>
+              <title type="Einheitssachtitel" xml:lang="en">Borrowing slip</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
@@ -2321,13 +2321,14 @@
         <biblFull xml:id="SZDLEB.23">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned">Vermählungskarte von Herrmann Hesse 1904</title>
+              <title ana="assigned" xml:lang="de">Karte von Herrmann Hesse 1904</title>
+              <title ana="assigned" xml:lang="en">Card by Herrmann Hesse 1904</title>
               <title type="Einheitssachtitel" xml:lang="de">Vermählungsankündigung</title>
               <title type="Einheitssachtitel" xml:lang="en">Marriage announcement</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="#SZDPER.608"><persName ref="http://d-nb.info/gnd/11855042X">
-                <surname>Hesse</surname><forename>Hermann</forename></persName></author>
-              <author ref="#SZDPER.1644"><persName ref="http://d-nb.info/gnd/116770511"><forename>Maria</forename><surname>Hesse</surname></persName></author>
+              <editor role="contributor" ref="#SZDPER.608"><persName ref="http://d-nb.info/gnd/11855042X">
+                <surname>Hesse</surname><forename>Hermann</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1644"><persName ref="http://d-nb.info/gnd/116770511"><forename>Maria</forename><surname>Hesse</surname></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3711,8 +3712,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title><!-- hier besser Agreement/Vereinbarung? -->
-              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
+                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. LIVRARIA CIVILIZAÇÃO [Portugal]</title><!-- hier besser Agreement/Vereinbarung? -->
+              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. LIVRARIA CIVILIZAÇÃO [Portugal]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -3886,8 +3887,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Adressbuch [ca. 1935-19040]</title>
-              <title ana="assigned" xml:lang="en">Address book [ca. 1935-19040]</title>
+                >Adressbuch [ca. 1935-1940]</title>
+              <title ana="assigned" xml:lang="en">Address book [ca. 1935-1940]</title>
               <title type="Einheitssachtitel" xml:lang="de">Adressbücher</title>
               <title type="Einheitssachtitel" xml:lang="en">Address books</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -3969,8 +3970,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Handschriftliche Notiz von Lotte Zweigs Hand: „Anekdoten über St. Z.“</note>
-              <note xml:lang="en">Handwritten note by Lotte Zweig's hand: „Anekdoten über St. Z.“</note>
+              <note xml:lang="de">„Anekdoten über St. Z.“ von Lotte Zweigs Hand</note>
+              <note xml:lang="en">„Anekdoten über St. Z.“ by Lotte Zweig's hand</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -4017,6 +4018,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Diverses</term>
                 <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -4029,6 +4032,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4053,12 +4058,6 @@
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="de">Goldschnitt</material>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Edges gilt</material>
-                      </support>
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Kalender</term>
@@ -4075,8 +4074,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden mit Goldschnitt</ab>
+                      <ab xml:lang="en">bound, edges gilt</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4110,6 +4109,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4134,12 +4135,6 @@
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="de">Goldschnitt</material>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Edges gilt</material>
-                      </support>
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Kalender</term>
@@ -4156,8 +4151,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden mit Goldschnitt</ab>
+                      <ab xml:lang="en">bound, edges gilt</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4191,6 +4186,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4215,12 +4212,6 @@
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="de">Goldschnitt</material>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Edges gilt</material>
-                      </support>
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Kalender</term>
@@ -4237,8 +4228,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden mit Goldschnitt</ab>
+                      <ab xml:lang="en">bound, edges gilt</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4272,6 +4263,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4296,12 +4289,6 @@
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="de">Goldschnitt</material>
-                        <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Edges gilt</material>
-                      </support>
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Kalender</term>
@@ -4318,8 +4305,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden mit Goldschnitt</ab>
+                      <ab xml:lang="en">bound, edges gilt</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4353,6 +4340,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4393,8 +4382,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden</ab>
+                      <ab xml:lang="en">bound</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4428,6 +4417,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Kalender</title>
               <title type="Einheitssachtitel" xml:lang="en">Calendars</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -4468,8 +4459,8 @@
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Gebunden</ab>
-                      <ab xml:lang="en">Bound</ab>
+                      <ab xml:lang="de">gebunden</ab>
+                      <ab xml:lang="en">bound</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -4647,8 +4638,7 @@
         <biblFull xml:id="SZDLEB.51">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de"
-                >Geburtsschein Lotte Zweig</title>
+              <title ana="assigned" xml:lang="de">Geburtsschein Lotte Zweig</title>
               <title ana="assigned" xml:lang="en">Birth certificate Lotte Zweig</title>
               <title type="Einheitssachtitel" xml:lang="de">Geburtsschein</title>
               <title type="Einheitssachtitel" xml:lang="en">Birth certificate</title>
@@ -4718,7 +4708,7 @@
         <biblFull xml:id="SZDLEB.52">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Declaration of Acquisition of British Nationality</title>
+              <title ana="original">Declaration of Acquisition of British Nationality [Lotte Zweig]</title>
               <title type="Einheitssachtitel" xml:lang="de">Staatsbürgerschaftserklärung</title>
               <title type="Einheitssachtitel" xml:lang="en">Citizenship declaration</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -4846,18 +4836,18 @@
         <biblFull xml:id="SZDLEB.54">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Brief an Zweig vom Innenministerium</title>
-              <title ana="assigned" xml:lang="en">Letter to Zweig by Home Office</title>
-              <title type="Einheitssachtitel" xml:lang="de">Briefe</title>
-              <title type="Einheitssachtitel" xml:lang="en">Letters</title>
+              <title ana="assigned" xml:lang="de">Mitteilung des britischen Home Office</title>
+              <title ana="assigned" xml:lang="en">Notice from the British Home Office</title>
+              <title type="Einheitssachtitel" xml:lang="de">Mitteilung</title>
+              <title type="Einheitssachtitel" xml:lang="en">Communication</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Brief an Stefan Zweig vom Home Office, Whitehall, bezüglich seines Aufenthalts in Großbritannien</note>
-              <note xml:lang="en">Letter to Stefan Zweig by Home Office, Whitehall, concerning his staying in Britain</note>
+              <note xml:lang="de">Mitteilung des Home Office, Whitehall, bezüglich des Aufenthalts von Stefan Zweig in Großbritannien</note>
+              <note xml:lang="en">Notice from the Home Office, Whitehall, concerning Stefan Zweig's staying in Great Britain</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -4890,7 +4880,7 @@
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>Whitehall, London</origPlace>
+                    <origPlace>London</origPlace>
                     <origDate when="1934-06-29">1934 June 29</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
@@ -4904,8 +4894,8 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term type="classification" xml:lang="de">Korrespondenz</term>
-                <term type="classification" xml:lang="en">Correspondence</term>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -4913,8 +4903,8 @@
         <biblFull xml:id="SZDLEB.55">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Kopien österreichischer Pass</title>
-              <title ana="assigned" xml:lang="en">Copies Austrian Passport</title>
+              <title ana="assigned" xml:lang="de">Österreichischer Pass (Kopien)</title>
+              <title ana="assigned" xml:lang="en">Austrian Passport (copies)</title>
               <title type="Einheitssachtitel" xml:lang="de">Pass</title>
               <title type="Einheitssachtitel" xml:lang="en">Passport</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -4944,11 +4934,11 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Pass (Kopie)</term>, <measure type="leaf"
+                          <term type="objecttyp">Passkopie</term>, <measure type="leaf"
                             >? Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Passport (copy)</term>, <measure
+                          <term type="objecttyp">Passport copy</term>, <measure
                             type="leaf">? leaf</measure>
                         </span>
                       </extent>
@@ -4981,10 +4971,12 @@
         <biblFull xml:id="SZDLEB.56">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Power of Attorney</title>
+              <title ana="original">Power of Attorney [The Viking Press]</title>
               <title type="Einheitssachtitel" xml:lang="de">Vollmacht</title>
               <title type="Einheitssachtitel" xml:lang="en">Power of Attorney</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -5039,8 +5031,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Rechtsdokumente</term>
                 <term type="classification" xml:lang="en">Legal Papers</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -5105,7 +5095,7 @@
           </fileDesc>
           <profileDesc>
             <textClass>
-              <keywords><!-- hier auch Friderike Zweig als "person affected" ergänzen? -->
+              <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -5183,8 +5173,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Certificate of Identity</title>
-              <title type="Einheitssachtitel" xml:lang="de">Nachweis</title>
-              <title type="Einheitssachtitel" xml:lang="en">Certificate</title>
+              <title type="Einheitssachtitel" xml:lang="de">Identitätsnachweis</title>
+              <title type="Einheitssachtitel" xml:lang="en">Certificate of Identity</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
             </titleStmt>
             <publicationStmt>
@@ -5208,7 +5198,7 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Nachweis</term>, <measure type="leaf"
+                          <term type="objecttyp">Urkunde</term>, <measure type="leaf"
                             >3 Blatt</measure>
                         </span>
                         <span xml:lang="en">
@@ -5247,8 +5237,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Bescheid über die Judenvermögensabgabe</title>
-              <title type="Einheitssachtitel" xml:lang="de">Jüdische Vermögensabgabe</title>
-              <title type="Einheitssachtitel" xml:lang="en">Jewish Capital Levy</title>
+              <title type="Einheitssachtitel" xml:lang="de">Bescheid</title>
+              <title type="Einheitssachtitel" xml:lang="en">Notice</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
             </titleStmt>
             <publicationStmt>
@@ -5405,7 +5395,7 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Nachweis</term>, <measure type="leaf">2 Blatt</measure>
+                          <term type="objecttyp">Urkunde</term>, <measure type="leaf">2 Blatt</measure>
                         </span>
                         <span xml:lang="en">
                           <term type="objecttyp">Certificate</term>, <measure type="leaf">2 leaves</measure>
@@ -5441,8 +5431,8 @@
         <biblFull xml:id="SZDLEB.63">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Kopien britischer Pass</title>
-              <title ana="assigned" xml:lang="en">Copies British Passport</title>
+              <title ana="assigned" xml:lang="de">Britischer Pass (Kopien)</title>
+              <title ana="assigned" xml:lang="en">British Passport (copies)</title>
               <title type="Einheitssachtitel" xml:lang="de">Pass</title>
               <title type="Einheitssachtitel" xml:lang="en">Passport</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -5472,11 +5462,11 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Pass (Kopie)</term>, <measure type="leaf"
+                          <term type="objecttyp">Passkopie</term>, <measure type="leaf"
                             >? Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Passport (copy)</term>, <measure
+                          <term type="objecttyp">Passport copy</term>, <measure
                             type="leaf">? leaf</measure>
                         </span>
                       </extent>
@@ -5709,11 +5699,13 @@
               <keywords>
                 <term type="classification" xml:lang="de">Rechtsdokumente</term>
                 <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.67"><!-- Johanna Altmann in Personenliste aufnehmen?! - person affected -->
+        <biblFull xml:id="SZDLEB.67"><!-- Johanna Altmann in Personenliste aufnehmen! - person affected -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de">Vollmacht Johanna Altmann</title>
@@ -5721,6 +5713,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Vollmacht</title>
               <title type="Einheitssachtitel" xml:lang="en">Power of Attorney</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -5776,8 +5770,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Rechtsdokumente</term>
                 <term type="classification" xml:lang="en">Legal Papers</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -5829,9 +5821,7 @@
                 <history>
                   <origin>
                     <origPlace>New York, NY</origPlace>
-                    <origDate when="1941-05-06">1941 May 6 ausgestellt</origDate>
-                    <origDate when="1943-08-25">1943 August 25 hinterlegt</origDate>
-                    <origDate when="1997-11-18">1997 November 18 beglaubigt</origDate>
+                    <origDate when="1941-05-06">1941 May 6</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
                     <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
@@ -6101,6 +6091,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Signet</title>
               <title type="Einheitssachtitel" xml:lang="en">Signet</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <editor role="contributor" ref="SZDPER.828"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Lilien</surname><forename>Ephraim Moses</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6133,8 +6125,6 @@
                 <term type="classification" xml:lang="en">Various</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.828"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Lilien</surname><forename>Ephraim Moses</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6142,27 +6132,27 @@
         <biblFull xml:id="SZDLEB.73">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de"
-                >Briefkonvolut an Lotte Zweig</title>
-              <title ana="assigned" xml:lang="en">Letter collection to Lotte Zweig</title>
-              <title type="Einheitssachtitel" xml:lang="de">Briefe</title>
-              <title type="Einheitssachtitel" xml:lang="en">Letters</title>
-              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <title ana="assigned" xml:lang="de">Abwesenheitsnotiz</title>
+              <title ana="assigned" xml:lang="en">Absence note</title>
+              <title type="Einheitssachtitel" xml:lang="de">Antwortkarte</title>
+              <title type="Einheitssachtitel" xml:lang="en">Reply card</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">2 Briefe und 1 Postkarte an Lotte Zweig von unbekanntem Korrespondenten</note>
-              <note xml:lang="en">2 letters and 1 postcard to Lotte Zweig by unknown correspondent</note>
+              <note xml:lang="de">Aufdruck „Stefan Zweig | ist derzeit verreist, so daß Ihr freundliches Schreiben zur Zeit von ihm nicht beantwortet werden kann. | Salzburg, Datum des Poststempels“</note>
+              <note xml:lang="en">Imprint „Stefan Zweig | ist derzeit verreist, so daß Ihr freundliches Schreiben zur Zeit von ihm nicht beantwortet werden kann. | Salzburg, Datum des Poststempels“</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>USA</country>
-                  <settlement>Fredonia</settlement>
-                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
-                  <idno type="signature">SZ-AP2/L-S14.1</idno>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L2</idno>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -6174,28 +6164,23 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Brief</term>, <measure type="leaf"
-                            >2 Blatt</measure>, <term type="objecttyp">Postkarte</term>, <measure type="leaf"
-                              >1 Blatt</measure>
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">3 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Letter</term>, <measure
-                            type="leaf">2 leaves</measure>, <term type="objecttyp">Postcard</term>, <measure
-                              type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Card</term>, <measure type="leaf">3 leaves</measure>
                         </span>
+                        <measure type="format">15x10 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
                 </physDesc>
                 <history>
-                  <origin>
-                    <origPlace>Wien</origPlace>
-                    <origDate when="1939-01-01">1939</origDate>
-                  </origin>
-                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
-                    <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
-                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs 2002</ab>
-                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig 2002</ab></acquisition>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -6203,8 +6188,8 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term type="classification" xml:lang="de">Korrespondenz</term>
-                <term type="classification" xml:lang="en">Correspondence</term>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7000,7 +6985,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.83"><!-- Harold K. Guinzburg und Fanny [Toni] Strassman als person affected eintragen und in Personenindex aufnehmen -->
+        <biblFull xml:id="SZDLEB.83">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -7085,6 +7070,9 @@
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
                 <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
                   ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1940"><persName ref="http://d-nb.info/gnd/138916284">
+                  <surname>Guinzburg</surname><forename>Harold K.</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1941"><persName><surname>Strassman</surname><forename>Toni (Fanny)</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7630,7 +7618,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.90"><!-- K. B. Grönbech in Personenindex ergänzen und als person affected ergänzen? -->
+        <biblFull xml:id="SZDLEB.90">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -7715,6 +7703,7 @@
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
                 <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
                   ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+                <term type="person_affected" ref="SZDPER.1942"><persName><surname>Grönbech</surname><forename>K. B.</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8082,8 +8071,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Forum Verlag [Niederlande]</title>
-              <title ana="assigned" xml:lang="en">Contract Forum Verlag [Netherlands]</title>
+                >Vertrag FORUM VERLAG [Niederlande]</title>
+              <title ana="assigned" xml:lang="en">Contract FORUM VERLAG [Netherlands]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -8950,8 +8939,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
-              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. [Portugal]</title>
+                >Vertrag Américo Fraga Lamares &amp; Ca. Lda. LIVRARIA CIVILIZAÇÃO [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares &amp; Ca. Lda. LIVRARIA CIVILIZAÇÃO [Portugal]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -9125,8 +9114,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Livraria Civilização de Américo Fraga Lamares [Portugal]</title>
-              <title ana="assigned" xml:lang="en">Contract Livraria Civilização de Américo Fraga Lamares [Portugal]</title>
+                >Vertrag LIVRARIA CIVILIZAÇÃO de Américo Fraga Lamares [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract LIVRARIA CIVILIZAÇÃO de Américo Fraga Lamares [Portugal]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
@@ -9212,8 +9201,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
-                >Vertrag Américo Fraga Lamares [Portugal]</title>
-              <title ana="assigned" xml:lang="en">Contract Américo Fraga Lamares [Portugal]</title>
+                >Vertrag AMÉRICO FRAGA LAMARES LIVRARIA CIVILIZAÇÃO [Portugal]</title>
+              <title ana="assigned" xml:lang="en">Contract AMÉRICO FRAGA LAMARES LIVRARIA CIVILIZAÇÃO [Portugal]</title>
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
