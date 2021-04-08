@@ -490,8 +490,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Frankreich</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts France</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                    ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -597,8 +597,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Italien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Italy</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                    ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -699,8 +699,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Polen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Poland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                    ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.1643"><persName><surname>Przeworski</surname><forename>J.</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
@@ -800,8 +800,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Niederlande</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Netherlands</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
-              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                    ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
                     ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.1573"><persName ref="http://d-nb.info/gnd/118509683"
@@ -895,8 +895,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term ref="http://d-nb.info/gnd/118509683" type="person">Bermann Fischer,
-                  Gottfried</term>
                 <term ref="http://d-nb.info/gnd/118577905" type="person">Marie Antoinette, Frankreich, Königin</term>
               </keywords>
             </textClass>
@@ -2399,6 +2397,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Großbritannien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts United Kingdom</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2472,8 +2472,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2487,6 +2485,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Spanien/Katalonien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Spain/Catalonia</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2558,8 +2558,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118577905" type="person">Marie Antoinette, Frankreich, Königin</term>
+                <term ref="http://d-nb.info/gnd/118534548" type="person">Fouché, Joseph</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2573,6 +2573,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Frankreich</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts France</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2644,8 +2646,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118527053" type="person">Dostoevskij, Fëdor Michajlovič</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2658,6 +2659,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge UdSSR</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts UdSSR</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2733,8 +2736,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2748,6 +2749,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Italien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Italy</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2820,8 +2823,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2835,6 +2836,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Ungarn</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Hungary</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2911,8 +2914,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
+                <term ref="http://d-nb.info/gnd/118530666" type="person">Erasmus von Rotterdam</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -2926,6 +2929,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
+                ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -2997,15 +3004,11 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
-                  ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.31">
+        <biblFull xml:id="SZDLEB.31"><!-- Eddy, Mary Baker in Personenindex ergänzen und dann bei keywords -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -3014,6 +3017,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Spanien/Katalonien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Spain/Catalonia</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3035,7 +3040,7 @@
                   <summary>Mary Baker Eddy, Freud, Mesmer</summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
-                                  </textLang>
+                  </textLang>
                 </msContents>
                 <physDesc>
                   <objectDesc>
@@ -3086,8 +3091,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118535315" type="person">Freud, Sigmund</term>
+                <term ref="http://d-nb.info/gnd/118581309" type="person">Mesmer, Franz Anton</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3101,6 +3106,9 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Argentinien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Argentina</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1943"><persName><surname>Torrendell</surname><forename>Juan Carlos</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3169,9 +3177,11 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1943"><persName><surname>Torrendell</surname><forename>Juan Carlos</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118535315" type="person">Freud, Sigmund</term>
+                <term ref="http://d-nb.info/gnd/118519417" type="person">Casanova, Giacomo</term>
+                <term ref="http://d-nb.info/gnd/11864291X" type="person">Tolstoj, Lev Nikolaevič</term>
+                <term ref="http://d-nb.info/gnd/118768085" type="person">Verhaeren, Emile</term>
+                <term ref="http://d-nb.info/gnd/118617648" type="person">Stendhal</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3185,6 +3195,9 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Dänemark</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Denmark</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1939"><persName><surname>Jespersen</surname><forename>Halfdan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3259,10 +3272,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1939"><persName>
-                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3276,6 +3285,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Finnland</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Finland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3348,10 +3361,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3365,6 +3375,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Niederlande</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Netherlands</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118509683"
+                ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3436,10 +3450,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118509683"
-                  ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3453,6 +3463,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Norwegen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Norway</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3525,8 +3537,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3540,6 +3551,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Polen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Poland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3612,8 +3625,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3627,6 +3639,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
+                ><surname>Relgis</surname><forename>Eugen</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3695,10 +3711,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
-                  ><surname>Relgis</surname><forename>Eugen</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3712,6 +3725,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3785,8 +3800,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -3800,6 +3813,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Schweden</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Sweden</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3872,8 +3887,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118519565" type="person">Châteillon, Sébastien</term>
+                <term ref="http://d-nb.info/gnd/118518534" type="person">Calvin, Jean</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6178,7 +6193,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.74">
+        <biblFull xml:id="SZDLEB.74"><!-- Carlos Chanfón in Personenindex aufnehmen / role contributor ergänzen -->
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -6187,6 +6202,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Großbritannien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts United Kingdom</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6205,6 +6222,7 @@
                   <idno type="signature">SZ-AAP/L13.6</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Magellan's Great Adventures</summary>
                   <textLang>
                     <lang xml:lang="eng">Englisch</lang>
                   </textLang>
@@ -6263,8 +6281,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6277,6 +6294,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Frankreich</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts France</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6352,8 +6371,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
+                <term ref="http://d-nb.info/gnd/118530666" type="person">Erasmus von Rotterdam</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6366,6 +6385,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Frankreich</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts France</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6387,6 +6408,7 @@
                   <idno type="signature">SZ-AAP/L13.11</idno>
                 </msIdentifier>
                 <msContents>
+                  <summary>Moments historiq[u]es, Deux grandes légendes: Le chandelier enterré et Rachel discute avec Dieu, Meurtrier par pitié, Magellan</summary>
                   <textLang>
                     <lang xml:lang="fre">Französisch</lang>
                   </textLang>
@@ -6439,8 +6461,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6454,6 +6475,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Italien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Italy</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6526,8 +6549,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6541,6 +6562,11 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Italien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Italy</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6613,8 +6639,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6628,6 +6652,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Ungarn</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Hungary</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6700,8 +6726,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6715,6 +6739,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Ungarn</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Hungary</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6787,8 +6813,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118524836" type="person">Desbordes-Valmore, Marceline</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6802,6 +6827,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Ungarn</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Hungary</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6873,8 +6900,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6888,6 +6913,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
+                ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6960,10 +6989,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
-                  ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118519565" type="person">Châteillon, Sébastien</term>
+                <term ref="http://d-nb.info/gnd/118518534" type="person">Calvin, Jean</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -6977,6 +7004,14 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1940"><persName ref="http://d-nb.info/gnd/138916284">
+                <surname>Guinzburg</surname><forename>Harold K.</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1941"><persName><surname>Strassman</surname><forename>Toni (Fanny)</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7049,13 +7084,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1940"><persName ref="http://d-nb.info/gnd/138916284">
-                  <surname>Guinzburg</surname><forename>Harold K.</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1941"><persName><surname>Strassman</surname><forename>Toni (Fanny)</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7069,6 +7097,13 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
+                ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7141,12 +7176,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
-                  ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7160,6 +7190,11 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName
+                ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7232,10 +7267,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/11864291X" type="person">Tolstoj, Lev Nikolaevič</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7249,6 +7281,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
+                ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7321,10 +7357,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
-                  ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7338,6 +7370,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge USA</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts USA</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
+                ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7410,10 +7446,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
-                  ><surname>Huebsch</surname><forename>Ben</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7427,6 +7459,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Spanien/Katalonien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Spain/Catalonia</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7499,8 +7533,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7514,6 +7546,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Spanien/Katalonien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Spain/Catalonia</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7595,8 +7629,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118519565" type="person">Châteillon, Sébastien</term>
+                <term ref="http://d-nb.info/gnd/118518534" type="person">Calvin, Jean</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7610,6 +7644,11 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Dänemark</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Denmark</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1942"><persName><surname>Grönbech</surname><forename>K. B.</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7682,11 +7721,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1942"><persName><surname>Grönbech</surname><forename>K. B.</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7700,6 +7734,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Dänemark</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Denmark</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1939"><persName>
+                <surname>Jespersen</surname><forename>Halfdan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7772,10 +7810,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1939"><persName>
-                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7789,6 +7823,12 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Dänemark</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Denmark</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1939"><persName>
+                <surname>Jespersen</surname><forename>Halfdan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7864,12 +7904,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1939"><persName>
-                  <surname>Jespersen</surname><forename>Halfdan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7883,6 +7917,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Finnland</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Finland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -7955,10 +7993,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7972,6 +8006,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Finnland</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Finland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8044,8 +8080,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8059,6 +8094,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Niederlande</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Netherlands</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118509683"
+                ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8131,10 +8170,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1573"><persName ref="http://d-nb.info/gnd/118509683"
-                  ><surname>Bermann-Fischer</surname><forename>Gottfried</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118577808" type="person">Maria Stuart, Schottland, Königin</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8148,6 +8184,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Norwegen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Norway</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8220,8 +8258,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8235,6 +8271,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Polen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Poland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8307,8 +8345,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8322,6 +8358,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Polen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Poland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8394,10 +8434,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8411,6 +8447,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Polen</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Poland</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8482,8 +8520,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8497,6 +8533,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
+                ><surname>Relgis</surname><forename>Eugen</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8565,10 +8605,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
-                  ><surname>Relgis</surname><forename>Eugen</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8582,6 +8618,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
+                ><surname>Relgis</surname><forename>Eugen</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8650,10 +8690,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
-                  ><surname>Relgis</surname><forename>Eugen</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8667,6 +8703,12 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
+                ><surname>Relgis</surname><forename>Eugen</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8735,12 +8777,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
-                  ><surname>Relgis</surname><forename>Eugen</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118519565" type="person">Châteillon, Sébastien</term>
+                <term ref="http://d-nb.info/gnd/118518534" type="person">Calvin, Jean</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8753,6 +8791,12 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
+                ><surname>Relgis</surname><forename>Eugen</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8821,12 +8865,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
-                <term type="person_affected" ref="SZDPER.1153"><persName ref="http://d-nb.info/gnd/1057079499"
-                  ><surname>Relgis</surname><forename>Eugen</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8839,6 +8877,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Rumänien</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Romania</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -8910,10 +8952,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -8927,6 +8965,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9000,8 +9040,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9015,6 +9053,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9087,8 +9127,7 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/117518530" type="person">Magalhães, Fernão de</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9102,6 +9141,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9174,8 +9215,9 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term ref="http://d-nb.info/gnd/118530666" type="person">Erasmus von Rotterdam</term>
+                <term ref="http://d-nb.info/gnd/118519565" type="person">Châteillon, Sébastien</term>
+                <term ref="http://d-nb.info/gnd/118518534" type="person">Calvin, Jean</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9189,6 +9231,10 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9261,10 +9307,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
-                <term type="person_affected" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
-                  ><surname>Zweig</surname><forename>Lotte</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9278,6 +9320,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Portugal</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Portugal</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9350,8 +9394,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9365,6 +9407,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Schweden</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Sweden</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9437,8 +9481,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9452,6 +9494,8 @@
               <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge Schweden</title>
               <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts Sweden</title>
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9524,8 +9568,6 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
-                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
