@@ -2389,7 +2389,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.24"><!-- Carlos Chanfón in Personenindes/person affected ergänzen! -->
+        <biblFull xml:id="SZDLEB.24">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de">Verlagsvertrag Cassel &amp; Company, Limited</title>
@@ -2399,6 +2399,7 @@
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1945"><persName><surname>Chanfón</surname><forename>Carlos</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -3008,7 +3009,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.31"><!-- Eddy, Mary Baker in Personenindex ergänzen und dann bei keywords -->
+        <biblFull xml:id="SZDLEB.31">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -3093,6 +3094,7 @@
                 <term type="classification" xml:lang="en">Contracts</term>
                 <term ref="http://d-nb.info/gnd/118535315" type="person">Freud, Sigmund</term>
                 <term ref="http://d-nb.info/gnd/118581309" type="person">Mesmer, Franz Anton</term>
+                <term ref="http://d-nb.info/gnd/118687778" type="person">Eddy, Mary Baker</term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -7088,7 +7090,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.84"><!-- Rita Whiteson in Personenindex ergänzen/person affected? -->
+        <biblFull xml:id="SZDLEB.84">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -7104,6 +7106,7 @@
                 ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
               <editor role="contributor" ref="SZDPER.648"><persName ref="http://d-nb.info/gnd/13332219X"
                 ><surname>Huebsch</surname><forename>Ben</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1946"><persName><surname>Whiteson</surname><forename>Rita</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
