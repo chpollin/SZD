@@ -6328,7 +6328,7 @@
                             <keywords>
                                 <term type="classification" xml:lang="de">Werknotizen</term>
                                 <term type="classification" xml:lang="en">Working Notes</term>
-                                <term type="person">Marie Antoinette, Frankreich, Königin</term>
+                                <term ref="http://d-nb.info/gnd/118577905" type="person">Marie Antoinette, Frankreich, Königin</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -21616,6 +21616,9 @@
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <editor role="contributor" ref="#SZDPER.1555"><persName
+                                ref="http://d-nb.info/gnd/116001151"
+                                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
