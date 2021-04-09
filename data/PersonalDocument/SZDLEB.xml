@@ -2869,7 +2869,7 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="de">blaues Briefpapier Rózsavölgyi &amp; Comp., gelocht</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Rózsavölgyi &amp; Comp. blue stationary, hole punched</material>
+                          xml:lang="en">Rózsavölgyi &amp; Comp. blue stationery, hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, violette und grüne Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -3497,7 +3497,7 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier H. Aschehoug &amp; Co. W. Nygaard, gelocht</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationary, hole punched</material>
+                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationery, hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -6189,13 +6189,13 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term type="classification" xml:lang="de">Diverses</term>
-                <term type="classification" xml:lang="en">Various</term>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
               </keywords>
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.74"><!-- Carlos Chanfón in Personenindex aufnehmen / role contributor ergänzen -->
+        <biblFull xml:id="SZDLEB.74">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" xml:lang="de"
@@ -6206,6 +6206,7 @@
               <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                 ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1945"><persName><surname>Chanfón</surname><forename>Carlos</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -6303,7 +6304,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Eintragungen in Formular, recto mit
+              <note xml:lang="de">Maschinenschriftliche Eintragungen in Formular, recto mit
                 aufgeklebter Briefmarke und mehrfach gestempelt, verso mit eigenhändiger Aufschrift
                 „lu et approuve“ und Unterschrift von Stefan Zweig und unbekannt</note>
               <note xml:lang="en">Form has typescript entries, postage stamp glued on recto,
@@ -6394,7 +6395,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-                <note xml:lang="de">Maschinschriftliche Eintragungen in Formular, recto mit
+                <note xml:lang="de">Maschinenschriftliche Eintragungen in Formular, recto mit
                   aufgeklebter Briefmarke, Poststempel und Korrektur von fremder Hand in schwarzer Tinte sowie 
                   eigenhändiger Unterschrift; verso mit Unterschrift von Stefan Zweig und unbekannt in schwarzer Tinte</note>
                 <note xml:lang="en">Form has typescript entries, postage stamp glued on recto,
@@ -6509,7 +6510,7 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier Sperling &amp; Kupfer, gelocht</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">Sperling &amp; Kupfer stationary, hole punched</material>
+                          xml:lang="en">Sperling &amp; Kupfer stationery, hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -6924,7 +6925,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Einträge in Formular mit handschriftlichen Korrekturen sowie Unterschrift von Ben Huebsch, eigenhändige Unterschrift in violetter Tinte</note>
+              <note xml:lang="de">Maschinenschriftliche Einträge in Formular mit handschriftlichen Korrekturen sowie Unterschrift von Ben Huebsch, eigenhändige Unterschrift in violetter Tinte</note>
               <note xml:lang="en">Form has typescript entries and handwritten corrections and signature by Ben Huebsch, holograph signature in purple ink</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
@@ -7019,7 +7020,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Eintragungen in Formular, eigenhändige Unterschrift und Unterschrift von Lotte Altmann in violetter Tinte, Unterschriften von Harold K. Guinzburg und Fanny Strassman</note>
+              <note xml:lang="de">Maschinenschriftliche Eintragungen in Formular, eigenhändige Unterschrift und Unterschrift von Lotte Altmann in violetter Tinte, Unterschriften von Harold K. Guinzburg und Fanny Strassman</note>
               <note xml:lang="en">Form has typescript entries, holograph signature and signature by Lotte Altmann in purple ink, signatures by Harold K. Guinzburg and Fanny Strassman</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
@@ -7112,7 +7113,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Einträge in Formular mit handschriftlichen Korrekturen und Unterschrift von Ben Huebsch, eigenhändige Unterschrift und Unterschrift von Lotte Altmann in violetter Tinte, Unterschrift von Rita Whiteson</note>
+              <note xml:lang="de">Maschinenschriftliche Einträge in Formular mit handschriftlichen Korrekturen und Unterschrift von Ben Huebsch, eigenhändige Unterschrift und Unterschrift von Lotte Altmann in violetter Tinte, Unterschrift von Rita Whiteson</note>
               <note xml:lang="en">Form has typescript entries and handwritten corrections and signature by Ben Huebsch, holograph signature and signature by Lotte Altmann in purple ink, signature by Rita Whiteson</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
@@ -7293,7 +7294,7 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Einträge in Formular mit handschriftlichen Korrekturen und Unterschrift von Ben Huebsch, eigenhändige Unterschrift in violetter Tinte</note>
+              <note xml:lang="de">Maschinenschriftliche Einträge in Formular mit handschriftlichen Korrekturen und Unterschrift von Ben Huebsch, eigenhändige Unterschrift in violetter Tinte</note>
               <note xml:lang="en">Form has typescript entries and handwritten corrections and signature by Ben Huebsch, holograph signature in purple ink</note><!-- Übersetzung! -->
             </notesStmt>
             <sourceDesc>
@@ -8219,7 +8220,7 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="de">Briefpapier H. Aschehoug &amp; Co. W. Nygaard, gelocht</material>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationary, hole punched</material>
+                          xml:lang="en">H. Aschehoug &amp; Co. W. Nygaard stationery, hole punched</material>
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes Farbband, schwarze und violette Tinte</material>
                         <material ana="szdg:WritingInstrument"
@@ -9505,7 +9506,7 @@
             </publicationStmt>
             <notesStmt>
               <note xml:lang="de">Datum und Unterschrift eigenhändig in violetter Tinte, Unterschrift von fremder Hand</note>
-              <note xml:lang="en">Date and signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung! -->
+              <note xml:lang="en">Date and signature holograph in purple ink, signature by an unidentified hand</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -9571,6 +9572,890 @@
               <keywords>
                 <term type="classification" xml:lang="de">Verträge</term>
                 <term type="classification" xml:lang="en">Contracts</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.112">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Briefkarten blanko</title>
+              <title ana="assigned" xml:lang="en">Letter cards blank</title>
+              <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
+              <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Blaues Signet von Stefan Zweig mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
+              <note xml:lang="en">Blue signet of Stefan Zweig with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L3</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">19 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Card</term>, <measure type="leaf">19 leaves</measure>
+                        </span>
+                        <measure type="format">18x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.113">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Autogrammkarte</title>
+              <title ana="assigned" xml:lang="en">Autograph card</title>
+              <title type="Einheitssachtitel" xml:lang="de">Autogramm</title>
+              <title type="Einheitssachtitel" xml:lang="en">Autograph</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Spruch mit eigenhändiger Unterschrift in violetter Tinte</note>
+              <note xml:lang="en">Saying with holograph signature in purple ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L4</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                    <support>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="de">Schwarzes Farbband, violette Tinte</material>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="en">Black ribbon, purple ink</material>
+                    </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">13x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.114">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Ex Libris</title>
+              <title type="Einheitssachtitel" xml:lang="de">Exlibris</title>
+              <title type="Einheitssachtitel" xml:lang="en">Bookplate</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Eigenhändige Aufschrift „Esteban Zweig“ in schwarzer Tinte</note><!-- wirklich eigenhändig -->
+              <note xml:lang="en">Holograph inscription „Esteban Zweig“ in black ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L5</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="spa">Spanisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">9x6 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc><!-- wirklich eigenhändig, siehe Hinweis-Feld? -->
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.115">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Correspondenz-Karte [blanko]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
+              <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="SZDPER.1872"><persName ref="http://d-nb.info/gnd/118687077"><name>Fidus</name></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Auf der Rückseite ein von Fidus (Hugo Höppener) gestaltetes schwarzes Signet</note>
+              <note xml:lang="en">On the back a black signet designed by Fidus (Hugo Höppener)</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L6</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">14x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.116">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Briefumschlag</title>
+              <title ana="assigned" xml:lang="en">Envelope</title>
+              <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
+              <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="SZDPER.1872"><persName ref="http://d-nb.info/gnd/118687077"><name>Fidus</name></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Auf der Rückseite ein von Fidus (Hugo Höppener) gestaltetes goldenes Signet</note>
+              <note xml:lang="en">On the back a golden signet designed by Fidus (Hugo Höppener)</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L7</idno>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Briefumschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Envelope</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">13x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.117">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Briefumschlag</title>
+              <title ana="assigned" xml:lang="en">Envelope</title>
+              <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
+              <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Auf der Rückseite aufgedruckt blaues Signet mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
+              <note xml:lang="en">On the back imprinted a blue signet with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L8</idno>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Briefumschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Envelope</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">18x12 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.118">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Frau Anna Meingast | Linzer Gasse 16, Salzburg. [Postvollmacht]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Postvollmacht</title>
+              <title type="Einheitssachtitel" xml:lang="en">Postal Power of Attorney</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Postvollmacht für Anna Meingast, Unterschrift und Korrekturen eigenhändig in schwarzer Tinte</note>
+              <note xml:lang="en">Postal power of attorney for Anna Meingast, signature and corrections holograph in black ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L9</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Durchschlagpapier, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black carbon paper, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><!-- Typoskript oder Durchschlag? -->
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">25x20 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="SZDPER.1575"> <persName ref="http://d-nb.info/gnd/1080163751">
+                  <surname>Meingast</surname><forename>Anna</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.119">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Postvollmacht</title>
+              <title type="Einheitssachtitel" xml:lang="de">Postvollmacht</title>
+              <title type="Einheitssachtitel" xml:lang="en">Postal Power of Attorney</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Vorgedrucktes Formular blanko in zweifacher Ausführung jeweils mit eigenhändiger Unterschrift in schwarzer Tinte</note>
+              <note xml:lang="en">Pre-printed blank form in duplicate each with holograph signature in black ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L10</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Vorgedrucktes Formular, Doppelbogen</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Pre-printed form, bifolium</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">2 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">2 leaves</measure>
+                        </span>
+                        <measure type="format">30x21 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.120"><!-- Anna Meingast contributor, Stefan Zweig betroffene Person?; Kategorie "Diverses" oder "Büromaterialien"?-->
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Rückerstattung der Postfachgebühren</title>
+              <title type="Einheitssachtitel" xml:lang="de">Postgebühren</title>
+              <title type="Einheitssachtitel" xml:lang="en">Postal charges</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Blaues Signet mit den Initialen „SZ“ und „Kapuzinerberg 5 | SALZBURG, am“</note>
+              <note xml:lang="en">Blue signet with initials „SZ“ and „Kapuzinerberg 5 | SALZBURG, am“</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L11</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violettes Durchschlagpapier</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple carbon paper</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><!-- wirklich Durchschlag? -->
+                          <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">23x15 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-02-04">4. Februar 1938</origDate>
+                    <origPlace>Salzburg</origPlace>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.121"><!-- mit Kontoauszügen zu einer neuen Überkategorie zusammenfassen? -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Scheckheft Österreichische Postsparkasse</title>
+              <title ana="assigned" xml:lang="en">Checkbook Austrian Postal Savings Bank</title>
+              <title type="Einheitssachtitel" xml:lang="de">Scheckheft</title>
+              <title type="Einheitssachtitel" xml:lang="en">Checkbook</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt><!-- Einträge im Scheckheft von Anna Meingasts Hand? -->
+              <note xml:lang="de">Vorgedrucktes Scheckheft mit zahlreichen Zahlungseinträgen (Datum, Betrag, Empfänger), 1 Blankoscheck mit eigenhändiger Unterschrift in schwarzer Tinte</note>
+              <note xml:lang="en">Pre-printed checkbook with numerous payment entries (date, amount, recipient), 1 blank check with holograph signature in black ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L12</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Vorgedrucktes Scheckheft</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Pre-printed checkbook</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, purple and black ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Scheckheft</term>, <measure type="leaf">5 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Checkbook</term>, <measure type="leaf">5 leaves</measure>
+                        </span>
+                        <measure type="format">27x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc><!-- Anna Meingast (und) fremde Hand? -->
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">gebunden</ab>
+                      <ab xml:lang="en">bound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.122"><!-- mit Kontoauszügen und LEB.121 zu einer neuen Überkategorie zusammenfassen? -->
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Überweisungsheft Deutsche Reichspost</title>
+              <title ana="assigned" xml:lang="en">Checkbook Deutsche Reichspost</title>
+              <title type="Einheitssachtitel" xml:lang="de">Scheckheft</title>
+              <title type="Einheitssachtitel" xml:lang="en">Checkbook</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Blankoschecks mit eigenhändiger Unterschrift in schwarzer Tinte</note>
+              <note xml:lang="en">Blank checks with holograph signature in black ink</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L13</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Vorgedrucktes Scheckheft</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Pre-printed checkbook</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Scheckheft</term>, <measure type="leaf">20 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Checkbook</term>, <measure type="leaf">20 leaves</measure>
+                        </span>
+                        <measure type="format">25x11 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Klammerheftung</ab>
+                      <ab xml:lang="en">Staple binding</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.123">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Schreibmaschinenzubehör</title>
+              <title type="Einheitssachtitel" xml:lang="de">Schreibmaschinenzubehör</title>
+              <title type="Einheitssachtitel" xml:lang="en">Typewriter supplies</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de"></note>
+              <note xml:lang="en"></note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L14</idno>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Scheckheft</term>, <measure type="leaf">20 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Checkbook</term>, <measure type="leaf">20 leaves</measure>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de"></ab>
+                    <ab xml:lang="en"></ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
