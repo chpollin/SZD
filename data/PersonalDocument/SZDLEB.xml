@@ -6088,7 +6088,7 @@
         <biblFull xml:id="SZDLEB.72">
           <fileDesc>
             <titleStmt>
-              <title type="object">Signet „SZ“</title>
+              <title ana="object">Signet „SZ“</title>
               <title type="Einheitssachtitel" xml:lang="de">Signet</title>
               <title type="Einheitssachtitel" xml:lang="en">Signet</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -10399,21 +10399,19 @@
         <biblFull xml:id="SZDLEB.123">
           <fileDesc>
             <titleStmt>
-              <title type="object">Schreibmaschin-Zubehör</title>
+              <title ana="object">Schreibmaschin-Zubehör</title>
               <title type="Einheitssachtitel" xml:lang="de">Schreibmaschinenzubehör</title>
               <title type="Einheitssachtitel" xml:lang="en">Typewriter supplies</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
-              <editor role="contributor" ref="SZDPER.1575"><persName ref="http://d-nb.info/gnd/1080163751"
-                ><surname>Meingast</surname><forename>Anna</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Schachtel mit Aufschrift „Schreibmaschin-Zubehör“ von Anna Meingasts Hand in schwarzem Buntstift mit zahlreichen Utensilien, u.a.: unbenutztes violettes Farbband in der Originaldose der Firma „Günther Wagner“, drei 
-                leere Farbbandspulen, Typen-Reiniger Knetmasse „Star Type Cleaner No. 1226“ der Marke „Eberhard Faber | New York“, drei Reinigungsbürsten, Pfeifenputzerbürste, Pinsel, Stift, Radiergummi, Karte „Remington Schreibmaschinen | Salzburg“, zwei Schlüssel</note>
-              <note xml:lang="en">Box with inscription „Schreibmaschin-Zubehör“ by Anna Meingast's hand in black pencil with numerous utensils, including: unused violet ribbon in the original tin of the company „Günther Wagner“, 
-                three empty ribbon spools, type cleaner kneading mass „Star Type Cleaner No. 1226“ of the brand „Eberhard Faber | New York“, three cleaning brushes, pipe cleaner brush, brush, pen, eraser, card „Remington Schreibmaschinen | Salzburg“, two keys</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Schachtel mit Aufschrift „Schreibmaschin-Zubehör“ von fremder Hand in schwarzem Buntstift mit zahlreichen Utensilien, u.a.: unbenutztes violettes Farbband in der Originaldose der Firma „Günther Wagner“, drei 
+                leere Farbbandspulen, Typen-Reiniger Knetmasse „Star Type Cleaner No. 1226“ der Marke „Eberhard Faber | New York“, drei Reinigungsbürsten, Pfeifenputzerbürste, Pinsel, Stift, Radiergummi, Korrekturschablone „Remington Schreibmaschinen | Salzburg“, zwei Schlüssel</note>
+              <note xml:lang="en">Box with inscription „Schreibmaschin-Zubehör“ by an unidentified hand in black pencil with numerous utensils, including: unused violet ribbon in the original tin of the company „Günther Wagner“, 
+                three empty ribbon spools, type cleaner kneading mass „Star Type Cleaner No. 1226“ of the brand „Eberhard Faber | New York“, three cleaning brushes, pipe cleaner brush, brush, pen, eraser, correction template „Remington Schreibmaschinen | Salzburg“, two keys</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10426,8 +10424,8 @@
                 </msIdentifier>
                 <physDesc>
                 <handDesc>
-                  <ab xml:lang="de">Anna Meingast</ab>
-                  <ab xml:lang="en">Anna Meingast</ab>
+                  <ab xml:lang="de">Fremde Hand</ab>
+                  <ab xml:lang="en">Unidentified hand</ab>
                 </handDesc>
                 </physDesc>
                 <history>
@@ -10515,7 +10513,7 @@
                   </bindingDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">Eingelegt 1 Blatt von Richard Friedenthal</desc>
                         <desc xml:lang="en">Inserted 1 leaf by Richard Friedenthal</desc>
                         <measure type="format">12x10 cm</measure>
