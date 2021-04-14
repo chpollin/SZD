@@ -10544,6 +10544,99 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDLEB.125">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Bibliographie der Werke von Stefan Zweig</title>
+              <title type="Einheitssachtitel" xml:lang="de">Übersetzungsverzeichnis</title>
+              <title type="Einheitssachtitel" xml:lang="en">Translation register</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Bibliographie zum fünfzigsten Geburtstag von Fritz Adolf Hünich und Erwin Rieger, nummeriertes Exemplar Nr. 315, mit zahlreichen eingeklebten uns losen Ergänzungen sowie handschriftlichen Anmerkungen und Nummerierung in rotem Buntstift; Aufschrift "Ergänzt" von Anna Meingasts Hand in schwarzer Tinte am Buchumschlag</note><<!-- Meingast? -->
+              <note xml:lang="en">XXX</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/L15</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes und violettes Farbband, violette und schwarze Tinte, Bleistift, roter Buntstift</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">XXX</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Buchausgabe mit Ergänzungen</term>, <measure type="leaf">56 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">XX</term>, <measure type="leaf">56 leaves</measure>
+                        </span>
+                        <measure type="format">22x14 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Anna Meingast</ab><!-- ? -->
+                    <ab xml:lang="en">XX</ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">Fadenheftung mit graublauem Pappumschlag und goldener Vignette</ab><<!-- Vignette, Aufkleber - Bibliothek? -->
+                      <ab xml:lang="en">Sewn with XXX cover</ab>
+                    </binding>
+                  </bindingDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Tyoskripte, 25 Blatt</desc>
+                        <desc xml:lang="en">Typescripts, 25 leaves</desc>
+                        <measure type="format">12x2 cm bis 30x21 cm</measure><<!-- englisch! -->
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Anna Meingast</ab>
+                    <ab xml:lang="en">Anna Meingast</ab></provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung Wilhelm Meingast 2000</ab>
+                    <ab xml:lang="en">Gift of Wilhelm Meingast 2000</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verzeichnisse</term>
+                <term type="classification" xml:lang="en">Indexes</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
