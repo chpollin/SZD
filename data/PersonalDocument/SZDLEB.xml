@@ -10558,8 +10558,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Bibliographie zum fünfzigsten Geburtstag von Fritz Adolf Hünich und Erwin Rieger, nummeriertes Exemplar Nr. 315, mit zahlreichen eingeklebten uns losen Ergänzungen sowie handschriftlichen Anmerkungen und Nummerierung in rotem Buntstift; Aufschrift "Ergänzt" von Anna Meingasts Hand in schwarzer Tinte am Buchumschlag</note><<!-- Meingast? -->
-              <note xml:lang="en">XXX</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Bibliographie zum fünfzigsten Geburtstag von Stefan Zweig, zusammengestellt von Fritz Adolf Hünich und Erwin Rieger, nummeriertes Exemplar Nr. 315, mit zahlreichen eingeklebten uns losen Ergänzungen sowie handschriftlichen Anmerkungen und Nummerierung in rotem Buntstift; Aufschrift „Ergänzt“ von Anna Meingasts Hand in schwarzer Tinte am Buchumschlag</note><!-- Meingast? -->
+              <note xml:lang="en">Bibliography on the occasion of the fiftieth birthday of Stefan Zweig, compiled by Fritz Adolf Hünich and Erwin Rieger, numbered copy no. 315, with numerous pasted-in and loose additions as well as handwritten annotations and numbering in red pencil; inscription „Ergänzt“ by Anna Meingast's hand in black ink on the book cover</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10582,14 +10582,14 @@
                         <material ana="szdg:WritingInstrument"
                           xml:lang="de">Schwarzes und violettes Farbband, violette und schwarze Tinte, Bleistift, roter Buntstift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">XXX</material>
+                          xml:lang="en">Black and purple ribbon, purple and black ink, pencil, red pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
                           <term type="objecttyp">Buchausgabe mit Ergänzungen</term>, <measure type="leaf">56 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">XX</term>, <measure type="leaf">56 leaves</measure>
+                          <term type="objecttyp">Book edition with supplements</term>, <measure type="leaf">56 leaves</measure><!-- Übersetzung prüfen! -->
                         </span>
                         <measure type="format">22x14 cm</measure>
                       </extent>
@@ -10597,12 +10597,12 @@
                   </objectDesc>
                   <handDesc>
                     <ab xml:lang="de">Anna Meingast</ab><!-- ? -->
-                    <ab xml:lang="en">XX</ab>
+                    <ab xml:lang="en">Anna Meingast</ab>
                   </handDesc>
                   <bindingDesc>
                     <binding>
-                      <ab xml:lang="de">Fadenheftung mit graublauem Pappumschlag und goldener Vignette</ab><<!-- Vignette, Aufkleber - Bibliothek? -->
-                      <ab xml:lang="en">Sewn with XXX cover</ab>
+                      <ab xml:lang="de">Fadenheftung mit graublauem Pappumschlag und goldener Vignette</ab><!-- Vignette, Aufkleber - Bibliothek? -->
+                      <ab xml:lang="en">Sewn with grey-blue cardboard cover and golden vignette</ab><!-- Übersetzung prüfen! -->
                     </binding>
                   </bindingDesc>
                   <accMat>
@@ -10610,7 +10610,7 @@
                       <item ana="szdg:Enclosures">
                         <desc xml:lang="de">Tyoskripte, 25 Blatt</desc>
                         <desc xml:lang="en">Typescripts, 25 leaves</desc>
-                        <measure type="format">12x2 cm bis 30x21 cm</measure><<!-- englisch! -->
+                        <measure type="format">12x2 cm bis 30x21 cm</measure><!-- englisch! -->
                       </item>
                     </list>
                   </accMat>
