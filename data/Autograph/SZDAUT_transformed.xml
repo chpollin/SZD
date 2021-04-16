@@ -25901,7 +25901,7 @@
         <biblFull xml:id="SZDAUT.426">
           <fileDesc>
             <titleStmt>
-              <title><hi style="italic">Couché dans sa barque flottante</hi></title>
+              <title><hi style="italic">Couché dans sa barque flottante</hi> [Faksimile]</title>
               <author ref="#SZDPER.778">
                 <persName ref="http://d-nb.info/gnd/118726056">
                   <forename>Alphonse de</forename>
@@ -25927,8 +25927,8 @@
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
-                  <summary>Eigenhändiges Gedicht mit Unterschrift, <date when="1823-12-30">30.
-                      Dezember 1823</date></summary>
+                  <summary>Faksimile eines eigenhändigen Gedichts mit Unterschrift, <date when="1823-12-30">30.
+                      Dezember 1823</date>, von Stefan Zweig als Originalautograph erworben</summary>
                   <textLang>
                     <lang xml:lang="fre">Französisch</lang>
                   </textLang>
@@ -60667,6 +60667,54 @@
                       <placeName ref="http://www.geonames.org/6691492"
                         >Cologny-Genève</placeName>
                       <idno type="signature">P-5.1*</idno></orgName>
+                  </provenance>
+                  <acquisition>unbekannt</acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc/>
+        </biblFull>
+        <biblFull xml:id="SZDAUT.998">
+          <fileDesc>
+            <titleStmt>
+              <title>Seelsorgerisches Gutachten</title>
+              <author ref="#SZDPER.874">
+                <persName ref="http://d-nb.info/gnd/118575449"><forename>Martin</forename>
+                  <surname>Luther</surname></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Autographen</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <idno>SZDAUT.998</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>Fragment eines eigenhändigen Manuskripts eines seelsorgerischen Gutachtens für die Brüder Heinrich und Abraham von Einsiedel in Gnadenstein, <date when="1528-01-24">24. Jan. 1528</date></summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <measure type="page">4</measure>
+                        <measure type="format">28,2 x 20,5 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>unbekannt</origin>
+                  <provenance>
+                    <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer,
+                      <placeName ref="http://www.geonames.org/6691492"
+                        >Cologny-Genève</placeName>
+                      <idno type="signature"></idno>
+                    </orgName>
                   </provenance>
                   <acquisition>unbekannt</acquisition>
                 </history>
