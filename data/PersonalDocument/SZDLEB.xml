@@ -10637,6 +10637,146 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDLEB.126">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Hauptbuch Großbritannien</title>
+              <title ana="assigned" xml:lang="en">Principal Ledger Great Britain</title>
+              <title type="Einheitssachtitel" xml:lang="de">Hauptbuch</title>
+              <title type="Einheitssachtitel" xml:lang="en">Principal ledger</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"
+                ><surname>Zweig</surname><forename>Lotte</forename></persName></editor><!-- überprüfen! -->
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Einträge wurden nach 1942 im Verlag Atrium Press fortgeführt</note>
+              <note xml:lang="en">Entries continued after 1942 in the publishing house Atrium Press</note><!-- Übersetzung überprüfen! -->
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Papier mit Tabellenvordruck</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Pre-printed form paper</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes und rotes Farbband, blaue Tinte, Bleistift, pinker Kugelschreiber</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black and red ribbon, blue ink, pencil, pink pen</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kontorbuchbögen</term>, <measure type="leaf">48 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Ledger sheets</term>, <measure type="leaf">48 leaves</measure>
+                        </span>
+                        <measure type="format">44x35 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de"></ab>
+                    <ab xml:lang="en"></ab>
+                  </handDesc>
+                  <bindingDesc>
+                    <binding>
+                      <ab xml:lang="de">ungebunden</ab>
+                      <ab xml:lang="en">unbound</ab>
+                    </binding>
+                  </bindingDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Richard Friedenthal, fremde Hand</ab>
+                    <ab xml:lang="en">Richard Friedenthal, unidentified hand</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Verzeichnisse</term>
+                <term type="classification" xml:lang="en">Indexes</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.127">
+          <fileDesc>
+            <titleStmt>
+              <title ana="object" xml:lang="de">Druckstock mit Adresse</title>
+              <title ana="object" xml:lang="en">Printing block with address</title>
+              <title type="Einheitssachtitel" xml:lang="de">Druckstock</title>
+              <title type="Einheitssachtitel" xml:lang="en">Printing block</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Adolf Haslinger</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">„Dr. PHIL. STEFAN ZWEIG | WIEN | I. RATHHAUSSTRASSE 17.“</note>
+              <note xml:lang="en">„Dr. PHIL. STEFAN ZWEIG | WIEN | I. RATHHAUSSTRASSE 17.“</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger
+                    Literaturstiftung im Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAH/L2</idno>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                      <measure type="format">8x3 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
