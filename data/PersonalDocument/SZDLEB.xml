@@ -9585,13 +9585,15 @@
               <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
               <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="SZDPER.828"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Lilien</surname><forename>Ephraim Moses</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Blaues Signet von Stefan Zweig mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
-              <note xml:lang="en">Blue signet of Stefan Zweig with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Blaues Signet von Stefan Zweig, entworfen von Ephraim Moses Lilien, mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
+              <note xml:lang="en">Blue signet of Stefan Zweig, designed by Ephraim Moses Lilien, with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -9612,10 +9614,10 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Karte</term>, <measure type="leaf">19 Blatt</measure>
+                          <term type="objecttyp">Karten</term>, <measure type="leaf">19 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Card</term>, <measure type="leaf">19 leaves</measure>
+                          <term type="objecttyp">Cards</term>, <measure type="leaf">19 leaves</measure>
                         </span>
                         <measure type="format">18x11 cm</measure>
                       </extent>
@@ -9647,13 +9649,13 @@
         <biblFull xml:id="SZDLEB.113">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Autogrammkarte</title>
-              <title ana="assigned" xml:lang="en">Autograph card</title>
+              <title ana="assigned" xml:lang="de">Autogrammblatt</title>
+              <title ana="assigned" xml:lang="en">Autograph leaf</title>
               <title type="Einheitssachtitel" xml:lang="de">Autogramm</title>
               <title type="Einheitssachtitel" xml:lang="en">Autograph</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
-              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
@@ -9681,16 +9683,16 @@
                     <supportDesc>
                     <support>
                       <material ana="szdg:WritingInstrument"
-                        xml:lang="de">Schwarzes Farbband, violette Tinte</material>
+                        xml:lang="de">Violette Tinte</material>
                       <material ana="szdg:WritingInstrument"
-                        xml:lang="en">Black ribbon, purple ink</material>
+                        xml:lang="en">Purple ink</material>
                     </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Druck</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Print</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">13x9 cm</measure>
                       </extent>
@@ -9728,15 +9730,13 @@
               <title type="Einheitssachtitel" xml:lang="de">Exlibris</title>
               <title type="Einheitssachtitel" xml:lang="en">Bookplate</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
-              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
-                ><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Eigenhändige Aufschrift „Esteban Zweig“ in schwarzer Tinte</note><!-- wirklich eigenhändig -->
-              <note xml:lang="en">Holograph inscription „Esteban Zweig“ in black ink</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Aufschrift „Esteban Zweig“ von fremder Hand in schwarzer Tinte</note>
+              <note xml:lang="en">Inscription „Esteban Zweig“ by an unidentified hand in black ink</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -9772,9 +9772,9 @@
                       </extent>
                     </supportDesc>
                   </objectDesc>
-                  <handDesc><!-- wirklich eigenhändig, siehe Hinweis-Feld? -->
-                    <ab xml:lang="de">Stefan Zweig</ab>
-                    <ab xml:lang="en">Stefan Zweig</ab>
+                  <handDesc>
+                    <ab xml:lang="de">Fremde Hand</ab>
+                    <ab xml:lang="en">Unidentified hand</ab>
                   </handDesc>
                 </physDesc>
                 <history>
@@ -9793,6 +9793,8 @@
               <keywords>
                 <term type="classification" xml:lang="de">Büromaterialien</term>
                 <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
@@ -9935,13 +9937,15 @@
               <title type="Einheitssachtitel" xml:lang="de">Schreibmaterialien</title>
               <title type="Einheitssachtitel" xml:lang="en">Stationery</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="SZDPER.828"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Lilien</surname><forename>Ephraim Moses</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Auf der Rückseite aufgedruckt blaues Signet mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
-              <note xml:lang="en">On the back imprinted a blue signet with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Auf der Rückseite aufgedruckt ein von Ephraim Moses Lilien entworfenes blaues Signet mit den Initialen „SZ“ und „Salzburg | Kapuzinerberg 5“</note>
+              <note xml:lang="en">On the back imprinted a blue signet designed by Ephraim Moses Lilien with initials „SZ“ and „Salzburg | Kapuzinerberg 5“</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -9992,7 +9996,8 @@
         <biblFull xml:id="SZDLEB.118">
           <fileDesc>
             <titleStmt>
-              <title ana="original">Frau Anna Meingast | Linzer Gasse 16, Salzburg. [Postvollmacht]</title>
+              <title ana="assigned" xml:lang="de">Postvollmacht für Anna Meingast</title>
+              <title ana="assigned" xml:lang="en">Postal power of attorney for Anna Meingast</title>
               <title type="Einheitssachtitel" xml:lang="de">Postvollmacht</title>
               <title type="Einheitssachtitel" xml:lang="en">Postal Power of Attorney</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
@@ -10003,8 +10008,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Postvollmacht für Anna Meingast, Unterschrift und Korrekturen eigenhändig in schwarzer Tinte</note>
-              <note xml:lang="en">Postal power of attorney for Anna Meingast, signature and corrections holograph in black ink</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Unterschrift und Korrekturen eigenhändig in schwarzer Tinte</note>
+              <note xml:lang="en">Signature and corrections holograph in black ink</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10030,7 +10035,7 @@
                           xml:lang="en">Black carbon paper, black ink</material>
                       </support>
                       <extent>
-                        <span xml:lang="de"><!-- Typoskript oder Durchschlag? -->
+                        <span xml:lang="de">
                           <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
@@ -10081,8 +10086,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Vorgedrucktes Formular blanko in zweifacher Ausführung jeweils mit eigenhändiger Unterschrift in schwarzer Tinte</note>
-              <note xml:lang="en">Pre-printed blank form in duplicate each with holograph signature in black ink</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Vorgedrucktes Formular blanko in zweifacher Ausführung auf einem Bogen jeweils mit eigenhändiger Unterschrift in schwarzer Tinte</note>
+              <note xml:lang="en">Pre-printed blank form in duplicate on one bifolium each with holograph signature in black ink</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10113,10 +10118,10 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">2 Blatt</measure>
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">2 leaves</measure>
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">30x21 cm</measure>
                       </extent>
@@ -10147,20 +10152,22 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDLEB.120"><!-- Anna Meingast contributor, Stefan Zweig betroffene Person?; -->
+        <biblFull xml:id="SZDLEB.120">
           <fileDesc>
             <titleStmt>
               <title ana="original">Rückerstattung der Postfachgebühren</title>
               <title type="Einheitssachtitel" xml:lang="de">Postgebühren</title>
               <title type="Einheitssachtitel" xml:lang="en">Postal charges</title>
               <title type="Gesamttitel">Stefan Zweig - Sammlung Anna Meingast</title>
+              <editor role="contributor" ref="SZDPER.828"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Lilien</surname><forename>Ephraim Moses</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Blaues Signet mit den Initialen „SZ“ und „Kapuzinerberg 5 | SALZBURG, am“</note>
-              <note xml:lang="en">Blue signet with initials „SZ“ and „Kapuzinerberg 5 | SALZBURG, am“</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Blaues Signet, entworfen von Ephraim Moses Lilien, mit den Initialen „SZ“ und „Kapuzinerberg 5 | SALZBURG, am ...“</note>
+              <note xml:lang="en">Blue signet, designed by Ephraim Moses Lilien, with initials „SZ“ and „Kapuzinerberg 5 | SALZBURG, am ...“</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10186,7 +10193,7 @@
                           xml:lang="en">Purple carbon paper</material>
                       </support>
                       <extent>
-                        <span xml:lang="de"><!-- wirklich Durchschlag? -->
+                        <span xml:lang="de">
                           <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
@@ -10264,9 +10271,9 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">Pre-printed checkbook</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, violette und schwarze Tinte, Bleistift</material>
+                          xml:lang="de">Violette und schwarze Tinte, Bleistift</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, purple and black ink, pencil</material>
+                          xml:lang="en">Purple and black ink, pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -10351,9 +10358,9 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">Pre-printed checkbook</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze Tinte</material>
+                          xml:lang="de">Schwarze Tinte</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black ink</material>
+                          xml:lang="en">Black ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
@@ -10373,7 +10380,7 @@
                   <bindingDesc>
                     <binding>
                       <ab xml:lang="de">Klammerheftung</ab>
-                      <ab xml:lang="en">Staple binding</ab>
+                      <ab xml:lang="en">staple binding</ab>
                     </binding>
                   </bindingDesc>
                 </physDesc>
@@ -10559,8 +10566,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Bibliographie zum fünfzigsten Geburtstag von Stefan Zweig, zusammengestellt von Fritz Adolf Hünich und Erwin Rieger, nummeriertes Exemplar Nr. 315, mit zahlreichen eingeklebten uns losen Ergänzungen sowie handschriftlichen Anmerkungen und Nummerierung in rotem Buntstift; Aufschrift „Ergänzt“ von Anna Meingasts Hand in schwarzer Tinte am Buchumschlag</note><!-- Meingast? -->
-              <note xml:lang="en">Bibliography on the occasion of the fiftieth birthday of Stefan Zweig, compiled by Fritz Adolf Hünich and Erwin Rieger, numbered copy no. 315, with numerous pasted-in and loose additions as well as handwritten annotations and numbering in red pencil; inscription „Ergänzt“ by Anna Meingast's hand in black ink on the book cover</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Bibliographie zum fünfzigsten Geburtstag von Stefan Zweig, zusammengestellt von Fritz Adolf Hünich und Erwin Rieger, nummeriertes Exemplar Nr. 315, mit zahlreichen eingeklebten uns losen Ergänzungen sowie handschriftlichen Anmerkungen und Nummerierung der Hausexemplare in rotem Buntstift; Aufschrift „Ergänzt“ von Anna Meingasts Hand in schwarzer Tinte am Buchumschlag</note><!-- Meingast? -->
+              <note xml:lang="en">Bibliography on the occasion of the fiftieth birthday of Stefan Zweig, compiled by Fritz Adolf Hünich and Erwin Rieger, numbered copy no. 315, with numerous pasted-in and loose additions as well as handwritten annotations and numbering of voucher copies in red pencil; inscription „Ergänzt“ by Anna Meingast's hand in black ink on the book cover</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10686,6 +10693,585 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDLEB.127">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag</title>
+                            <title ana="assigned" xml:lang="en">Publishing contract Insel-Verlag</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+                            <title type="Gesamttitel">SUA:Insel-Verlag/Zentrale Verträge</title>
+                            <author ref="#SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                            <editor ref="#SZDPER.730" role="contributor">
+                                <persName>
+                                    <surname>Kippenberg</surname>
+                                    <forename>Anton</forename>
+                                </persName>
+                            </editor>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">
+                                Recto mit aufgeklebter Stempelmarke, Stempel und
+                                dazu handschriftliche Anmerkung von unbekannt, verso mit
+                                Unterschrift von Stefan Zweig und Anton Kippenberg</note>
+                            <note xml:lang="en">Recto, pasted revenue stamp, stamp and handwritten annotations in an unidentified hand; verso, 
+                            holograph signature and signature by Anton Kippenberg</note>
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">SUA:Insel-Verlag/Zentrale Verträge SU.2010.0001</idno>
+                                    <idno type="mediaid">HS010940949</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>Emile Verhaeren</summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                  >Doppelbogen, gelocht</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                    >Bifolium, hole punched</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                  >Schwarzes Farbband, violette und schwarze
+                                                  Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                  >Black ribbon, purple and black ink</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                  <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                  <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                                                </span>
+                                                <measure type="format">32x41 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, Anton Kippenberg</ab>
+                                        <ab xml:lang="en">Stefan Zweig, Anton Kippenberg</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Wien/Leipzig</origPlace>
+                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909. | Leipzig, den 12. Oktober 1909.</origDate>
+                                    </origin>
+                                    <provenance>
+                                        <ab xml:lang="de">Insel Verlag</ab>
+                                        <ab xml:lang="en">Insel Verlag</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf 2010</ab>
+                                        <ab xml:lang="en">Acquisition 2010</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Verträge</term>
+                                <term type="classification" xml:lang="en">Contracts</term>
+                                <term ref="http://d-nb.info/gnd/118768085" type="person">Verhaeren,
+                                    Émile</term>
+                                <term ref="http://d-nb.info/gnd/117136018" type="person">Oppeln-Bronikowski, Friedrich von</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.128">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Verlagsvertrag Insel-Verlag</title>
+                            <title ana="assigned" xml:lang="en">Publishing contract Insel-Verlag</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Verlagsverträge</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Publishing Contracts</title>
+                            <title type="Gesamttitel">SUA:Insel-Verlag/Zentrale Verträge</title>
+                            <author ref="#SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Doppelbogen mit drei beschriebenen Seiten, drei aufgeklebten Stempelmarken, Stempeln und
+                                dazu handschriftliche Anmerkung von unbekannt, mit Unterschrift von
+                                Stefan Zweig und Anton Kippenberg</note>
+                            <note xml:lang="en">Biofolium with three written pages, three pasted revenue stamps, stamps and handwritten annotations in an unidentified hand, 
+                            with holograph signature and signature by Anton Kippenberg</note><!-- Übersetzung überprüfen! -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">SUA:Insel-Verlag/Zentrale Verträge SU.2010.0001</idno>
+                                    <idno type="mediaid">HS010940949</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>Emile Verhaeren: Drei Dramen, Emil Verhaeren: Ausgewählte Gedichte</summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                  >Doppelbogen, gelocht</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                  >Bifolium, hole punched</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                  >Schwarzes Farbband, violette und schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                  >Black ribbon, purple and black ink</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                  <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                  <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                                                </span>
+                                                <measure type="format">32x41 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, Anton Kippenberg</ab>
+                                        <ab xml:lang="en">Stefan Zweig, Anton Kippenberg</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Wien, Leipzig</origPlace>
+                                        <origDate when="1909-10-14">Wien, den 14 Oktober 1909. | Leipzig, den 12. Oktober 1909.</origDate>
+                                    </origin>
+                                    <provenance>
+                                        <ab xml:lang="de">Insel Verlag</ab>
+                                        <ab xml:lang="en">Insel Verlag</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf 2010</ab>
+                                        <ab xml:lang="en">Acquisition 2010</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Verträge</term>
+                                <term type="classification" xml:lang="en">Contracts</term>
+                                <term ref="http://d-nb.info/gnd/118768085" type="person">Verhaeren,
+                                    Émile</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.129">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Autographenmappe zu einem Manuskript Augustin de
+                                Robespierres</title>
+                            <title ana="assigned" xml:lang="en">Autograph portfolio for a manuscript of Augustin de Robespierre</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Diverses</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Various</title>
+                            <title type="Gesamttitel">A:Zweig, Stefan</title>
+                            <author ref="#SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Notizen Stefan Zweigs zu Inhalt und Erwerbung eines
+                                <ref target="https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625">Manuskripts Augustin Robespierres</ref> aus seiner Sammlung eingenhändig
+                                in violetter Tinte</note>
+                            <note xml:lang="en">Holograph notes in purple ink concerning content and acquisition of a <ref target="https://gams.uni-graz.at/o:szd.autographen#SZDAUT.625">manuscript by Augustin Robespierre</ref></note>
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">A: Zweig, Stefan 79.21</idno>
+                                    <idno type="mediaid">HS00952746X</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                  >Mit Kategorien bedruckte Mappe für Stücke aus der Autographensammlung Stefan Zweigs</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                    >Folder with printed categories for items from Stefan Zweig’s manuscript collection („Autographensammlung“)</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                  >Violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                  >Purple ink</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                  <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure></span>
+                                                <span xml:lang="en">
+                                                  <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure>
+                                                </span>
+                                                <measure type="format">37x53 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf 1979</ab>
+                                        <ab xml:lang="en">Acquisition 1979</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Diverses</term>
+                                <term type="classification" xml:lang="en">Various</term>
+                                <term ref="http://d-nb.info/gnd/10227939X" type="person">Robespierre, Augustin</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.130">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Declaracão (Abschrift, Copia)</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Abschiedsbrief</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Suicide note</title>
+                            <title type="Gesamttitel">A:Zweig, Stefan</title>
+                            <author ref="#SZDPER.1560"><persName
+                                    ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname><forename>Stefan</forename></persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">A:Zweig, Stefan 76.1487</idno>
+                                    <idno type="mediaid">HS009527497</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                        <lang xml:lang="por">Portugiesisch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support><material ana="szdg:WritingInstrument"
+                                                  xml:lang="de">Schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                  >Black ink</material>
+                                            </support>
+                                            <extent><span xml:lang="de">
+                                                  <term type="objecttyp">Manuskript</term>, <measure
+                                                  ana="corrected" type="leaf">1 Blatt, korrigiert</measure></span>
+                                                <span xml:lang="en"><term type="objecttyp">Manuscript</term>, <measure ana="corrected" type="leaf">
+                                                    1 leaf, corrected</measure></span>
+                                                <measure type="format">33x22 cm</measure></extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig</ab>
+                                        <ab xml:lang="en">Stefan Zweig</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Petropolis</origPlace>
+                                        <origDate when="1942-02-22">22. II 1942</origDate>
+                                    </origin>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Abschiedsbrief</term>
+                                <term type="classification" xml:lang="en">Suicide note</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.131">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Verzeichnis meiner Lagerkataloge von Autographen nach Firmen geordnet</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Autographenverzeichnisse</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Autograph indexes</title>
+                            <title type="Gesamttitel">A: Zweig, Stefan</title>
+                            <author ref="#SZDPER.1560"><persName
+                                    ref="http://d-nb.info/gnd/118637479"
+                                        ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Auf dem Deckel Aufkleber mit Aufschrift „Autografen-Kataloge | Lagerverzeichnisse | (nach Firmen geordnet)“ eigenhändig in violetter Tinte, 
+                                Titel auf dem Vorsatz eigenhändig in violetter Tinte, 
+                                Registerbuch, Buchstaben aufgeklebt abwechselnd rot und schwarz, Umschlag aus Stoff mit schwarz-rot-beigem großflächigem Blumenmuster, 
+                               auf dem Umschlag Aufkleber „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ von fremder Hand in roter Tinte; einige Seiten überklebt</note>
+                            <note xml:lang="en">Cover with label inscribed „Autografen-Kataloge | Lagerverzeichnisse | (nach Firmen geordnet)“, holograph in purple ink, 
+                                title on the front endpaper holograph in purple ink, 
+                                register book, red and blue letters glued in alternatingely, book covered in cloth with large black, red and beige floral pattern 
+                                and a label inscribed „Verzeichnis von Lagerkatalogen v. Autografen nach Firmen geordnet“ in an unidentified hand in red ink; few pages overpasted</note>
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">A: Zweig, Stefan 82.82</idno>
+                                    <idno type="mediaid">HS009527414</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                    >Registerbuch mit Händlermarke auf Innenseite des Deckels „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, Tabellenvordruck blau und rot, marmorierter Schnitt</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                    >Register book with stationer's label on the inside of the upper cover „PAPIERHANDLUNG | M. KUHN, NFG. L. REINHART | WIEN. VIII. ALSERSTRASSE 27“, with tabular form printed in blue and red, marbled edges</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                    >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                  >Purple, black, and blue ink, pencil, red and blue pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                  <term type="objecttyp">Registerbuch</term>, <measure
+                                                  type="leaf">119 Blatt, eingelegt: 10 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                  <term type="objecttyp">Register book</term>, <measure
+                                                  type="leaf">119 leaves, inserted: 10 leaves</measure>
+                                                </span>
+                                                <measure type="format">22x16 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                                    </handDesc>
+                                    <bindingDesc>
+                                        <binding>
+                                            <ab xml:lang="de">dunkelgrüner Einband</ab>
+                                            <ab xml:lang="en">dark green binding</ab>
+                                        </binding>
+                                    </bindingDesc>
+                                    <accMat>
+                                        <list>
+                                            <item ana="szdg:Enclosures">
+                                                <desc xml:lang="de">Eingelegt 10 lose Blatt unterschiedlicher Formate</desc>
+                                                <desc xml:lang="en">10 leaves in various sizes loosely inserted</desc>
+                                            </item>
+                                        </list>
+                                    </accMat>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Verzeichnisse</term>
+                                <term type="classification" xml:lang="en">Indexes</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDLEB.132">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Verzeichnis meiner Kataloge von Autografenversteigerungen nach Jahren geordnet</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Autographenverzeichnisse</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Autograph Indexes
+                          </title>
+                            <title type="Gesamttitel">A: Zweig, Stefan</title>
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Auf dem Deckel Aufkleber mit Aufschrift „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“ eigenhändig in schwarzer Tinte, 
+                                kleine blau eingefasste Marken mit Nummern eingeklebt, Aufkleberfragment am Rücken; mit überklebten Seiten</note>
+                            <note xml:lang="en">Cover with label inscribed „Autografen-Kataloge | Versteigerungen | (nach Jahren geordnet)“, holograph in black ink, 
+                                small blue-bordered stamps with numbers glued in, label fragment on spine, some pages overpasted</note>
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</repository>
+                                    <idno type="signature">A: Zweig, Stefan 82.83</idno>
+                                    <idno type="mediaid">HS009527399</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                    >Registerbuch mit Händlermarke auf Innenseite des Deckels „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    Tabellenvordruck blau und rot, marmorierter Schnitt</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en"
+                                                    >Register book with stationer's label on the inside of the upper cover „PAPIERHANDLUNG / M. KUHN, NFG. L. REINHART / WIEN. VIII. ALSERSTRASSE 27“, 
+                                                    tabular form printed in blue and red, marbled edges</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                    >Violette, schwarze und blaue Tinte, Bleistift, roter und blauer  Buntstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                    >Purple, black, and blue ink, pencil, red and blue pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Registerbuch</term>, <measure
+                                                        type="leaf">149 Blatt, eingelegt: 6 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Register book</term>, <measure
+                                                        type="leaf">149 leaves, inserted: 6 leaves</measure>
+                                                </span>
+                                                <measure type="format">22x16 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, unidentified hand</ab>
+                                    </handDesc>
+                                    <bindingDesc>
+                                        <binding>
+                                            <ab xml:lang="de">schwarz marmorierter Halbleinenband, Rücken gebrochen</ab>
+                                            <ab xml:lang="en">black marbled half cloth, spine broken</ab>
+                                        </binding>
+                                    </bindingDesc>
+                                    <accMat>
+                                        <list>
+                                            <item ana="szdg:Enclosures">
+                                                <desc xml:lang="de">Eingelegt 6 lose Blatt unterschiedlicher Formate</desc>
+                                                <desc xml:lang="en">6 leaves in various sizes loosely inserted</desc>
+                                            </item>
+                                        </list>
+                                    </accMat>
+                                </physDesc>
+                                <history>
+                                    <provenance>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">?</ab>
+                                        <ab xml:lang="en">?</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Verzeichnisse</term>
+                                <term type="classification" xml:lang="en">Indexes</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
       </listBibl>
     </body>
   </text>
