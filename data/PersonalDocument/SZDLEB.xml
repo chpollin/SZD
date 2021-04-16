@@ -6100,8 +6100,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Signet von Stefan Zweig mit Initialen „SZ“, entworfen von Ephraim Moses Lilien, Metall mit Holzgriff</note>
-              <note xml:lang="en">Signet of Stefan Zweig with initials „SZ“, designed by Ephraim Moses Lilien, metal with wooden handle</note>
+              <note xml:lang="de">Signet von Stefan Zweig mit Initialen „SZ“, entworfen von Ephraim Moses Lilien</note>
+              <note xml:lang="en">Signet of Stefan Zweig with initials „SZ“, designed by Ephraim Moses Lilien</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -6111,6 +6111,20 @@
                   <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</repository>
                   <idno type="signature">SZ-AP2/L-S13</idno>
                 </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Metallstempel mit Holzgriff</term>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Metal stamp with wooden handle</term>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
                 <history>
                   <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
                     <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
