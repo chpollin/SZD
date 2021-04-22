@@ -31741,9 +31741,9 @@
                                         Literaturarchiv Marbach</repository>
                                     <idno type="signature">SUAD:Insel-Verlag SU.2010.0001</idno>
                                     <idno type="mediaid">HS01071824X</idno>
-                                    <altIdentifier>
+                                   <!-- <altIdentifier>
                                         <idno type="extern">https://www.dla-marbach.de/find/opac/id/HS01071824</idno>
-                                    </altIdentifier>
+                                    </altIdentifier> -->
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
@@ -31763,7 +31763,7 @@
                                                     >Black ribbon, purple ink</material>
                                             </support>
                                             <extent>
-                                                <span xml:lang="de"><!-- oder Durchschlag? -->
+                                                <span xml:lang="de">
                                                     <term type="objecttyp">Typoskript</term>, <measure
                                                         ana="korrigiert" type="leaf">4 Blatt,
                                                         korrigiert</measure></span>
@@ -31786,6 +31786,155 @@
                                 <history>
                                     <provenance><ab xml:lang="de">Insel-Verlag</ab></provenance>
                                 </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term>
+                                <term type="classification" xml:lang="en">Essays/Speeches/Feuilletons</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull ana="Marceline" xml:id="SZDMSK.349">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Marzelline Desbordes-Valmore</title>
+                            <title type="Einheitssachtitel">Marceline Desbordes-Valmore</title>
+                            <title type="Gesamttitel">SUAD:Insel-Verlag</title>
+                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <editor role="contributor" ref="SZDPER.730"><persName
+                                ref="http://d-nb.info/gnd/118723081"
+                                ><surname>Kippenberg</surname><forename>Anton</forename></persName></editor>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Unterschrift, Korrekturen und Anmerkungen eigenhändig in violetter Tinte, Anmerkung von Anton Kippenberg in grünem Buntstift und von fremder Hand</note><!-- am Original prüfen! vl blaue Tinte -->
+                            <note xml:lang="en">Signature, corrections and notes holograph in purple ink, note by Anton Kippenberg in green pencil and by an unidentified hand</note><!-- Übersetzung prüfen! -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches
+                                        Literaturarchiv Marbach</repository>
+                                    <idno type="signature">SUAD:Insel-Verlag SU.2010.0001</idno>
+                                    <idno type="mediaid">HS010719612</idno>
+                                   <!-- <altIdentifier>
+                                        <idno type="extern">https://www.dla-marbach.de/find/opac/id/HS01071961</idno>
+                                    </altIdentifier> -->
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>
+                                        <ab xml:lang="de">Anweisungen zur Neuauflage</ab>
+                                        <ab xml:lang="en">Instructions for the new edition</ab><!-- Übersetzung prüfen! -->
+                                    </summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <incipit>„Dieses Buch, das ich für ein durchaus wichtiges halte, ist seit Jahren vergriffen, …“</incipit>
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                    >Schwarzes Farbband, violette Tinte, roter und grüner Buntstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                    >Black ribbon, purple ink, red and green pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Typoskript</term>, <measure
+                                                        ana="korrigiert" type="leaf">2 Blatt,
+                                                        korrigiert</measure></span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Typescript</term>, <measure
+                                                        ana="corrected" type="leaf">2 leaves,
+                                                        corrected</measure></span>
+                                            </extent>
+                                            <foliation>
+                                                <ab xml:lang="de">paginiert: 2 bis 4</ab>
+                                                <ab xml:lang="en">paginated: 2-4</ab>
+                                            </foliation>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig, Anton Kippenberg, fremde Hand</ab>
+                                        <ab xml:lang="en">Stefan Zweig, Anton Kippenberg, unidentified hand</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Salzburg</origPlace>
+                                        <origDate when="1927-01-03">3. Jänner 1927</origDate>
+                                    </origin>
+                                    <provenance><ab xml:lang="de">Insel-Verlag</ab></provenance>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Biographien</term>
+                                <term type="classification" xml:lang="en">Biographies</term>
+                                <term ref="http://d-nb.info/gnd/118524836" type="person">Desbordes-Valmore, Marceline</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull ana="Marceline" xml:id="SZDMSK.350">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Einige Grundlagen zu einem kollektiv auszuarbeitenden Manifest </title>
+                            <title type="Einheitssachtitel">Einige Grundlagen zu einem kollektiv
+                                auszuarbeitenden Manifest</title>
+                            <title type="Gesamttitel">A:Brod, Max</title>
+                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Deutschland</country>
+                                    <settlement>Marbach</settlement>
+                                    <repository ref="http://d-nb.info/gnd/10155895-8">Deutsches
+                                        Literaturarchiv Marbach</repository>
+                                    <idno type="signature">A:Brod, Max 86.1117,9</idno>
+                                    <idno type="mediaid">HS009527370</idno>
+                                    <!-- <altIdentifier>
+                                        <idno type="extern">https://www.dla-marbach.de/find/opac/id/HS00952737</idno>
+                                    </altIdentifier> -->
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">4 Blatt</measure></span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Typescript (carbon copy)</term>, <measure type="leaf">4 leaves</measure></span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
                             </msDesc>
                         </sourceDesc>
                     </fileDesc>
