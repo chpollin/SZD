@@ -434,7 +434,7 @@
                                     <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
                                     <idno type="signature">Autogr. 295/56-3 HAN MAG</idno>
                                     <altIdentifier>
-                                        <idno type="extern"> http://data.onb.ac.at/rec/AC14235408</idno>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC14235408</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -464,6 +464,200 @@
                             <keywords>
                                 <term type="classification" xml:lang="de">Gedichte</term>
                                 <term type="classification" xml:lang="en">Poetry</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDMSK.357">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="supplied/verified">Widerstand der Wirklichkeit</title><!-- prüfen ob original/verifiziert -->
+                            <title type="Einheitssachtitel">Widerstand der Wirklichkeit</title>
+                            <title type="Gesamttitel"></title><!-- ? -->
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Cod. Ser. n. 37917 - 37918/1 - 4 HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC13913382</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Konvolut</term>:  Manuskript und Typoskript, ? Blatt</span><!-- Angabe unklar: "24 bzw. IV,144,I* Blatt (4 Exemplare)" -->
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Collection</term>: manuscript and typescript, ? leaves</span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origDate when="1926-01-01">1926</origDate>
+                                    </origin>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                                <term type="classification" xml:lang="en">Novels/Stories</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDMSK.358">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="supplied/verified">Wondrak</title><!-- prüfen ob original/verifiziert -->
+                            <title type="Einheitssachtitel">Wondrak</title>
+                            <title type="Gesamttitel"></title><!-- ? -->
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Ser. n. 37919 enthält das Manuskript mit Korrekturen, Manuskript und Typoskript unvollständig</note><!-- Korrekturen eigenhändig? -->
+                            <note xml:lang="en">Ser. n. 37919 contains the manuscript with corrections, manuscript and typescript incomplete</note><!-- Übersetzung überprüfen -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Cod. Ser. n. 37919 - 37920 HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC13913383</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Konvolut</term>:  Manuskript, 32 Blatt; Typoskript, 42 Blatt</span><!-- überprüfen! -->
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Collection</term>: manuscript, 32 leaves; typescript, 42 leaves</span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origDate when="1929-09-01">01.09.1929</origDate>
+                                    </origin>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                                <term type="classification" xml:lang="en">Novels/Stories</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDMSK.359">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Sinn und Schönheit der Autographen</title><!-- prüfen ob original/verifiziert -->
+                            <title type="Einheitssachtitel">Sinn und Schönheit der Autographen</title>
+                            <title type="Gesamttitel">Sammlung Otto Frankfurter</title>
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Eine eigenhändige Anmerkung und Unterschrift</note><!-- Korrekturen eigenhändig? -->
+                            <note xml:lang="en">One holograph note and signature</note><!-- Übersetzung überprüfen -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Autogr. 228/63-6 HAN MAG</idno>
+                                    <idno type="signature">Autogr. 228/63(1-6) HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC13869919</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
+                                            >„Stefan Zweig: Sinn und Schönheit der Autographen“ auf Umschlag von Broschur</docEdition><!-- Schreiberhand! -->
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
+                                            >„Stefan Zweig: Sinn und Schönheit der Autographen“ on cover of brochure</docEdition><!-- Übersetzung prüfen -->
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Typoskript</term>, <measure type="leaf">10 Blatt</measure><!-- Objekttyp unklar! weitere Angabe: "1 S.", damit Broschur gemeint? Blattzahl unklar!-->
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Typescript</term>, <measure type="leaf">10 leaves</measure>
+                                                </span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <accMat>
+                                        <list>
+                                            <item ana="szdg:AdditionalMaterial">
+                                                <desc xml:lang="de">1 Biografische Daten, 1 Verlagsprospekt, 10 Zeitungs-Ausschnitte, 1 Theaterzettel</desc>
+                                                <desc xml:lang="en">1 biographical data, 1 publisher's brochure, 10 newspaper clippings, 1 theatre ticket</desc><!-- Übersetzung prüfen -->
+                                            </item>
+                                        </list>
+                                    </accMat>
+                                </physDesc>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
+                                <term type="classification" xml:lang="en">Novels/Stories</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
