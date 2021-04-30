@@ -97,7 +97,7 @@
                 <biblFull xml:id="SZDMSK.351"><!-- ID ggf. noch anpassen, falls in Haupt-Werkliste in der Zwischenzeit neue Einträge dazugekommen sind -->
                     <fileDesc>
                         <titleStmt>
-                            <title ana="supplied/verified" ref="http://d-nb.info/gnd/112410870X">Die Weltminute von Waterloo (Napoleon, 18. Juni 1815)</title><!-- Titel original oder verifiziert? -->
+                            <title ana="supplied/verified" ref="http://d-nb.info/gnd/112410870X">Die Weltminute von Waterloo (Napoleon, 18. Juni 1815)</title><!-- prüfen ob Titel original oder verifiziert? -->
                             <title type="Einheitssachtitel">Sternstunden der Menschheit: Die Weltminute von Waterloo</title>
                             <title type="Gesamttitel">Teilnachlaß Karl Wache</title>
                             <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
@@ -228,6 +228,10 @@
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
+                                    <summary>
+                                        <ab xml:lang="de">Bild 1-8 und 10</ab>
+                                        <ab xml:lang="en">Image 1-8 and 10</ab>
+                                    </summary>
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
@@ -284,6 +288,182 @@
                                 <term type="classification" xml:lang="de">Bühnenwerke/Filme</term>
                                 <term type="classification" xml:lang="en">Stage works/Films</term>
                                 <term ref="http://d-nb.info/gnd/12409967X" type="person">Lux, Adam</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull ana="02_Adam" xml:id="SZDMSK.354">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="supplied/verified">Adam Lux</title><!-- prüfen ob original/supplied -->
+                            <title type="Einheitssachtitel">Adam Lux</title>
+                            <title type="Gesamttitel"></title><!-- ? -->
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Cod. Ser. n. 37905 HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC13838252</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>
+                                        <ab xml:lang="de">Bild 1, 3, 9 und 10</ab>
+                                        <ab xml:lang="en">Image 1, 3, 9 and 10</ab>
+                                    </summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Typoskript</term>, <measure type="leaf">56 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Typescript</term>, <measure type="leaf">56 leaves</measure>
+                                                </span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Bühnenwerke/Filme</term>
+                                <term type="classification" xml:lang="en">Stage works/Films</term>
+                                <term ref="http://d-nb.info/gnd/12409967X" type="person">Lux, Adam</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull ana="02_Adam" xml:id="SZDMSK.355">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="supplied/verified">Adam Lux</title><!-- prüfen ob original/supplied -->
+                            <title type="Einheitssachtitel">Adam Lux</title>
+                            <title type="Gesamttitel"></title><!-- ? -->
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Cod. Ser. n. 37906 HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern">http://data.onb.ac.at/rec/AC13838253</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <summary>
+                                        <ab xml:lang="de">Materialien</ab>
+                                        <ab xml:lang="en">Materials</ab>
+                                    </summary>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Konvolut</term>:  Manuskript und Typoskript, 53 Blatt</span><!-- wenn möglich genaue Aufteilung feststellen -->
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Collection</term>: manuscript and typescript, 53 leaves</span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Bühnenwerke/Filme</term>
+                                <term type="classification" xml:lang="en">Stage works/Films</term>
+                                <term ref="http://d-nb.info/gnd/12409967X" type="person">Lux, Adam</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDMSK.356"><!-- feststellen, ob Gedicht erschienen ist/"Gedicht" konkretisieren -->
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned" xml:lang="de">Gedicht</title>
+                            <title ana="assigned" xml:lang="en">Poem</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Gedicht</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Poem</title>
+                            <title type="Gesamttitel"></title><!-- ? -->
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author><!-- Achtung: Stefan Zweig hier Übersetzer, neue Rolle definieren oder "role contributor" vergeben!? -->
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Eigenhändige Übersetzung eines Gedichtes mit Unterschrift</note>
+                            <note xml:lang="en">Holograph translation of a poem with signature</note><!-- Übersetzung überprüfen -->
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Wien</settlement>
+                                    <repository ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</repository>
+                                    <idno type="signature">Autogr. 295/56-3 HAN MAG</idno>
+                                    <altIdentifier>
+                                        <idno type="extern"> http://data.onb.ac.at/rec/AC14235408</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure>
+                                                </span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de">Gedichte</term>
+                                <term type="classification" xml:lang="en">Poetry</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
