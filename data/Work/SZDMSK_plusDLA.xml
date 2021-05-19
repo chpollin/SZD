@@ -31946,6 +31946,92 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
+                <biblFull xml:id="SZDMSK.351">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="assigned">Über Dostojewsky</title>
+                            <title type="Einheitssachtitel">Über Dostojewsk</title>
+                            <title type="Gesamttitel">Stefan Zweig - Literaturarchiv
+                                Salzburg</title>
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-LAS/W3</idno>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <incipit>„Ich lese immer wieder Dostojewsky und immer mit …“</incipit>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
+                                            >„For your question about Dostojewsky“ und Unterschrift eigenhändig
+                                            in violetter Tinte</docEdition>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
+                                            >„For your question about Dostojewsky“ and signature, holograph
+                                            in purple ink</docEdition>
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de"
+                                                    >Violettes Durchschlagpapier, violette Tinte, Bleistift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en"
+                                                    >Purple carbon paper, purple ink, pencil</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Typoskriptdurchschlag</term>, <measure
+                                                        ana="corrected" type="leaf">1 Blatt,
+                                                        korrigiert</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Typescript (carbon copy)</term>, <measure
+                                                        ana="corrected" type="leaf">1 leaf,
+                                                        corrected</measure>
+                                                </span>
+                                                <measure type="format">34x21 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Stefan Zweig</ab>
+                                        <ab xml:lang="en">Stefan Zweig</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf April 2021</ab>
+                                        <ab xml:lang="en">Acquisition April 2021</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de"
+                                    >Essays/Reden/Feuilletons</term>
+                                <term type="classification" xml:lang="en"
+                                    >Essays/Speeches/Feuilletons</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
             </listBibl>
         </body>
     </text>
