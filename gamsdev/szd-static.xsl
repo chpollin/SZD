@@ -35,6 +35,7 @@
 		<xsl:value-of select="/s:sparql/s:results/s:result[1]/s:cid"/>
 	</xsl:variable>
 	
+	<!--  -->
 	<xsl:variable name="PID">
 		<xsl:choose>
 			<!-- if its not a TEI file get the PID -->
@@ -85,7 +86,6 @@
 		<xsl:value-of select="concat($server, $gamsdev, '/css/lebenskalender.css')"/>
 	</xsl:variable>
 
-
 	<!-- ICONS: path to .png's  ================================================== -->
 	<xsl:variable name="Icon_Path" select="concat($server, $gamsdev, '/icons/')"/>
 	<xsl:variable name="Icon_bibliothek" select="concat($Icon_Path, 'biblothek.png')"/>
@@ -124,7 +124,6 @@
 				<meta name="content-language" content="de"/>
 				<meta name="content-language" content="en"/>
 				
-			
 				<!--Projekttitel-->
 				<title>
 					<xsl:value-of select="$projectTitle"/>
@@ -133,27 +132,18 @@
 				<!-- Bootstrap core CSS  ================================================== -->
 				<!-- Bootstrap 4 core CSS -->
 				<link href="/lib/2.0/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
-				
-				<!-- fixed navbar-side -->
-				<!--<link href="{concat($server, $gamsdev, '/css/navbar-fixed-side.css')}" rel="stylesheet"/>-->
-
 				<!-- Custom styles for this template  ================================================== -->
 				<!--<link href="{$printcss}" rel="stylesheet" type="text/css" media="print"/>-->
 				<link href="{$projectCss}" rel="stylesheet"/>
 				<link href="{$projectNav}" rel="stylesheet"/>
-				
 				<!-- Timeline: Lebenskalender -->
 				<link href="{$timelineCss}" rel="stylesheet" type="text/css"/>
 				<link type="text/css" rel="stylesheet" href="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.css?v=2.1.5"/>
 				<link rel="stylesheet" href="/lib/2.0/fa/css/all.css"/>
-				
 				<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
-				
-				
 				
 				<!-- jQuery core JavaScript ================================================== -->
 				<script src="/lib/2.0/jquery-3.5.1.min.js"><xsl:text> </xsl:text></script>
-
 				<!-- Bootstrap core JavaScript ================================================== -->
 				<!-- Bootstrap's dropdowns require Popper.js (https://popper.js.org/)  -->
 				<script src="{concat($server, $gamsdev, '/js/popper.min.js')}"><xsl:text> </xsl:text></script>
@@ -168,7 +158,6 @@
 					});
 				</script>
 				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
-				
 			</head>
 
 			<!-- //////////////////////////////////////////////////////////// -->
@@ -207,6 +196,9 @@
 											<a class="dropdown-item text-uppercase" href="/o:szd.lebensdokumente/sdef:TEI/get?locale={$locale}">
 												<i18n:text>personaldocument</i18n:text>
 											</a>
+											<!--<a class="dropdown-item text-uppercase" href="/o:szd.korrespondenzen/sdef:TEI/get?locale={$locale}">
+												<xsl:value-of select="if($locale='en') then 'Correspondence' else 'Korrespondenzen'"/>
+											</a>-->
 										</div>
 									</li>
 									<li class="nav-item dropdown">
@@ -260,9 +252,6 @@
 											<a class="dropdown-item text-uppercase" href="https://de.wikisource.org/wiki/Stefan_Zweig/Erstausgaben" target="_blank">
 												<i18n:text>firstedition</i18n:text>
 											</a>
-											<!--<a class="dropdown-item text-uppercase" href="/o:szd.publikation">
-												<i18n:text>firstedition</i18n:text>
-											</a>-->
 										</div>
 									</li>
 									<li class="nav-item">
@@ -353,27 +342,12 @@
 							</div>
 						</div>
 					</nav>
-					<!--  -->
-					<!--<script src="{concat($server, $gamsdev,'/js/scrolldown.js')}"><xsl:text> </xsl:text></script>
-					<script src="{concat($server, $gamsdev,'/js/scrolldown_search.js')}"><xsl:text> </xsl:text></script>-->
-					
 				</header>
 				
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///CONTENT/// -->
 				<main class="container">
-					<!-- <choose> checks current 'position' on the page -->
-					<xsl:choose>
-						<xsl:when test="$mode = '' and $cid = 'context:szd'">
-							<!--<xsl:text>exception szd-static.xsl</xsl:text>-->
-						</xsl:when>
-						<!-- //////////////////////////////////////////////////////////// -->
-						<!-- /// /// -->
-						<!-- call further content, e.g. databasket view -->
-						<xsl:otherwise>
-							<xsl:call-template name="content"/>
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:call-template name="content"/>
 				</main>
 
 				<!-- //////////////////////////////////////////////////////////// -->
@@ -435,11 +409,7 @@
 										</span>
 									</div>
 									<div class="col-sm-3">
-										<a href="http://www.fotohof.at" target="_blank" >
-											<img class="footer_img"
-												src="{concat($server, $gamsdev, '/img/Fotohof.jpg')}"
-												alt="Fotohof"/>
-										</a>
+										<xsl:text> </xsl:text>
 									</div>
 								</div>
 								<div class="row">
@@ -458,7 +428,7 @@
 											<i18n:text>privacy</i18n:text>
 										</a>
 									</div>
-									<div class="col-sm-3">
+									<div class="col-sm-2">
 										<a target="_blank">
 											<xsl:call-template name="getURL_EN_DE">
 												<xsl:with-param name="URL_EN" select="'http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=&amp;locale=en'"/>
@@ -469,7 +439,14 @@
 												alt="{$gams}"/>
 										</a>
 									</div>
-									<div class="col-sm-3">
+									<div class="col-sm-2">
+										<a href="http://www.fotohof.at" target="_blank">
+											<img class="footer_img"
+												src="{concat($server, $gamsdev, '/img/Fotohof.jpg')}"
+												alt="Fotohof"/>
+										</a>
+									</div>
+									<div class="col-sm-2">
 										<a href="https://web.nli.org.il/sites/NLI/english" target="_blank">
 											<img class="footer_img"
 												src="{concat($server, $gamsdev, '/img/logo_NLI.png')}"
@@ -495,16 +472,16 @@
 												<xsl:with-param name="URL_EN" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.en'"/>
 												<xsl:with-param name="URL_DE" select="'https://creativecommons.org/licenses/by-nc/4.0/deed.de'"/>
 											</xsl:call-template>
-											<img class="footer_img" src="/templates/img/by.png" alt="Lizenz" style="max-width: 40%;margin-top: 3%;"/>
+											<img class="footer_img" src="/templates/img/by.png" alt="Lizenz" style="max-width: 41%;margin-top: 4%;"/>
 										</a>
 									</div>
-									<div class="col-sm-3">
+									<div class="col-sm-2">
 										<a target="_blank">
 											<xsl:call-template name="getURL_EN_DE">
 												<xsl:with-param name="URL_EN" select="'https://informationsmodellierung.uni-graz.at/en/'"/>
 												<xsl:with-param name="URL_DE" select="'https://informationsmodellierung.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img"  style="max-width: 22%;margin-top:6%"
+											<img class="footer_img"  style="max-width: 32%;margin-top:6%"
 												src="/templates/img/ZIM_blau.png"
 												alt="{$zim-acdh}"/>
 										</a>
@@ -514,17 +491,26 @@
 												<xsl:with-param name="URL_EN" select="'https://www.uni-graz.at/en/'"/>
 												<xsl:with-param name="URL_DE" select="'https://www.uni-graz.at'"/>
 											</xsl:call-template>
-											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 22%;margin-top:6%" 
+											<img class="footer_img" src="/templates/img/logo_uni_graz_4c.jpg"  style="max-width: 32%;margin-top:6%" 
 												title="Universität Graz" alt="Logo Uni Graz"/>
 											<xsl:text> </xsl:text>
 										</a>
 										
 									</div>
-									<div class="col-sm-3">
+									<div class="col-sm-2">
 										<a href="http://fredonia.libguides.com/archives/zweig" target="_blank">
 											<img class="footer_img"
 												src="{concat($server, $gamsdev, '/img/fredonia.png')}"
 												alt="Reed Library – Stefan Zweig Collection, Fredonia"/>
+										</a>
+									</div>
+									<div class="col-sm-2">
+										<a target="_blank">
+											<xsl:call-template name="getURL_EN_DE">
+												<xsl:with-param name="URL_EN" select="'https://www.dla-marbach.de/en/'"/>
+												<xsl:with-param name="URL_DE" select="'https://www.dla-marbach.de/'"/>
+											</xsl:call-template>
+											<img class="footer_img" src="{concat($server, $gamsdev, '/img/marbach.jpg')}" style="margin-top:10%" alt="Deutsches Literaturarchiv Marbach"/>
 										</a>
 									</div>
 								</div>
@@ -532,30 +518,8 @@
 						
 						</div>
 					</div>
-						
-					</div>
+				</div>
 				</footer>
-				<!--<script>
-					window.onload = function () {
-						var hash = window.location.hash.substr(1);
-						<!-\-var substring1 = 'SZDMSK';
-						var substring2 = "SZDBIB";
-						var substring3 = "SZDLEB";
-						var substring3 = "SZDAUT";
-						if(hash.includes(substring1) || hash.includes(substring2) || hash.includes(substring3))
-						{-\->
-					    if(location.hash){
-							location.hash = "#" + hash;
-							window.scrollBy(0, -250);
-							$(document.getElementById(hash).getElementsByClassName("collapse")).collapse() ;}
-					}
-				</script>-->
-				<!--<script src="{concat($server, $gamsdev,'/js/gamsTemplate.js')}"><xsl:text> </xsl:text></script>-->
-				<!--<script src="https://glossa.uni-graz.at/gamsdev/stoffse/test/gams.js"><xsl:text> </xsl:text></script>
-				
-				<script>
-					gamsJs.url.alignHashNavAwareOnLoad();
-				</script>-->
 				<script src="{concat($server, $gamsdev,'/js/szd.js')}"><xsl:text> </xsl:text></script>
 			</body>
 		</html>
@@ -578,7 +542,7 @@
 		</xsl:attribute>
 	</xsl:template>
 	
-	
+	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:figure[t:graphic/@url]">
 		<xsl:choose>
 			<xsl:when test="t:caption/t:ref/@target">
@@ -608,7 +572,7 @@
 	</xsl:template>
 	
 	<!-- /////////////////////////////////////////////////////////// -->
-	<!-- ///PERSON/// -->
+	<!-- person -->
 	<xsl:template match="t:name[@type='person']">
 		<xsl:variable name="SZDPER" select="substring-after(@ref, '#')"/>
 		<xsl:variable name="BaseURL" select="'/archive/objects/query:szd.person_search/methods/sdef:Query/get?params='"/>
@@ -630,7 +594,7 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
-	<!-- NEWS datastream in context:szd -->
+	<!-- miscellaneous datastream in context:szd -->
 	<xsl:template match="t:div[@type='miscellaneous']">
 		<div class="card-body border-bottom">
 			<xsl:apply-templates/>
@@ -638,17 +602,8 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////// -->
-	<!-- NEWS datastream in context:szd -->
-	<xsl:template match="t:div[parent::t:div[@type='miscellaneous']]">
-		<div class="mt-5">
-			<xsl:apply-templates/>
-		</div>
-	</xsl:template>
-	
-	<!-- //////////////////////////////////////////////////////////// -->
-	<!-- NEWS datastream in context:szd -->
 	<xsl:template match="t:head[parent::t:div[@type='miscellaneous']]">
-		<h2 class="color">
+		<h2 class="color mt-5">
 			<xsl:apply-templates/>
 		</h2>
 	</xsl:template>
@@ -799,10 +754,6 @@
 	<xsl:template match="t:sic">
 		<span><xsl:apply-templates/><xsl:text> [sic] </xsl:text></span>
 	</xsl:template>
-	
-	<!--<xsl:template match="t:hi[@style='text-secondary']">
-		<xsl:apply-templates/>
-	</xsl:template>-->
 	
 	<!-- //////////////////////////////////////////////////////////// -->
 	<xsl:template match="t:hi[@rend = 'mark']">

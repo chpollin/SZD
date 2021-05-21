@@ -191,14 +191,14 @@
                                 <div class="all_search col-sm-12 mb-2">
                                     <h3>FILTER</h3>
                                     <form id="SucheErweitert" class="form-inline">
-                                        <div class="form-group mr-5">
+                                        <div class="form-group mr-3 small">
                                             <label class="text-uppercase small">
                                                 <input class="form-check-input" type="radio" name="optradio"  id="all_radio" value="all_search" onchange="filter(this)"/>
                                                 <i18n:text>all</i18n:text>
                                             </label>
                                         </div>               
                                         <xsl:if test="contains($Filter_search, 'o:szd.autographen')">
-                                            <div class="form-group mr-5">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="autograph_radio" value="autographen_search" onchange="filter(this)"/>
                                                     <i18n:text>autograph</i18n:text>
@@ -206,7 +206,7 @@
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.bibliothek')">
-                                            <div class="form-group mr-5">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="bibliothek_radio" value="bibliothek_search" onchange="filter(this)"/>
                                                     <i18n:text>library_szd</i18n:text>
@@ -214,7 +214,7 @@
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.lebenskalender')">
-                                            <div class="form-group mr-5">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="biography_radio" value="biography_search" onchange="filter(this)"/>
                                                     <i18n:text>biography</i18n:text>
@@ -222,7 +222,7 @@
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.lebensdokumente')">
-                                            <div class="form-group mr-5">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                  <input class="form-check-input" type="radio" name="optradio" id="lebensdokumente_radio" value="lebensdokumente_search" onchange="filter(this)"/>
                                                  <i18n:text>personaldocument</i18n:text>
@@ -230,7 +230,7 @@
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.personen')">
-                                            <div class="form-group mr-5">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="person_radio" value="person_search" onchange="filter(this)"/>
                                                     <i18n:text>persons</i18n:text>
@@ -238,10 +238,18 @@
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="contains($Filter_search, 'o:szd.werke')">
-                                            <div class="form-group mr-3">
+                                            <div class="form-group mr-3 small">
                                                 <label class="text-uppercase small">
                                                     <input class="form-check-input" type="radio" name="optradio" id="werke_radio" value="werke_search" onchange="filter(this)"/>
                                                     <i18n:text>works</i18n:text>
+                                                </label>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="contains($Filter_search, 'o:szd.korrespondenzen')">
+                                            <div class="form-group mr-3 small">
+                                                <label class="text-uppercase small">
+                                                    <input class="form-check-input" type="radio" name="optradio" id="corresp_radio" value="corresp_search" onchange="filter(this)"/>
+                                                    <i18n:text>correspondence</i18n:text>
                                                 </label>
                                             </div>
                                         </xsl:if>
@@ -463,6 +471,15 @@
                                         </xsl:call-template>
                                     </div>
                                 </xsl:when>
+                                <xsl:when test="contains(current-grouping-key(), '/o:szd.korrespondenzen')">
+                                    <div class="col-12 list-group mt-5" id="corresp_search">
+                                        <h3 class="text-uppercase"><i18n:text>correspondence</i18n:text></h3>
+                                        <xsl:call-template name="SearchListGroup">
+                                            <xsl:with-param name="Current-Grouping-Key" select="current-grouping-key()"/>
+                                            <xsl:with-param name="Current-Group" select="current-group()"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </xsl:when>
                                <!-- <xsl:when test="contains(current-grouping-key(), '/o:szd.publikation')">
                                     <div class="col-12 list-group mt-5" id="autographen_search">
                                         <h3 class="text-uppercase"><i18n:text>publication</i18n:text></h3>
@@ -528,7 +545,7 @@
         <xsl:param name="Current-Grouping-Key"/>
         <xsl:param name="Current-Group"/>
         <!-- to filter all entries with the same @uri, as SPARQL returns same URI's but with other variables: Titel, Originaltitel -->
-        <xsl:for-each-group select="$Current-Group[s:a='T'][s:s | s:sed | s:sco | s:spi| s:sap]" group-by="substring-after(s:re/@uri, '#')">  
+        <xsl:for-each-group select="$Current-Group[s:a='T'][s:s | s:sed | s:sco | s:spi | s:sap | s:ss]" group-by="substring-after(s:re/@uri, '#')">  
            <!-- <xsl:sort select="s:rank" data-type="number"/>-->
             <xsl:sort select="s:s" data-type="text" lang="ger"/>
             <xsl:sort select="s:sed" data-type="text" lang="ger"/>
@@ -540,12 +557,12 @@
             <!-- ENTRY -->
             <xsl:call-template name="createEntry"/>
         </xsl:for-each-group>
-        <xsl:if test="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)][s:a='T']">
+        <xsl:if test="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap | s:ss)][s:a='T']">
             <div class="mt-2 mb-2">
                 <h3>
                     <i18n:text>without_author</i18n:text>
                 </h3>
-                <xsl:for-each-group select="$Current-Group[not(s:s | s:sed | s:sco | s:spi| s:sap)]" group-by="substring-after(s:re/@uri, '#')">  
+                <xsl:for-each-group select="$Current-Group[not(s:s | s:sed | s:sco | s:spi | s:sap | s:ss)]" group-by="substring-after(s:re/@uri, '#')">  
                     <!-- <xsl:sort select="s:rank" data-type="number"/>-->
                     <xsl:sort select="s:t" data-type="text" lang="ger"/>
                     <!-- ////////////////////////////////// -->
@@ -614,12 +631,13 @@
                         </span>
                         <!-- AUTOR -->
                         <xsl:choose> 
-                            <xsl:when test="s:s">
+                            <!-- s:s = surname; s:ss = sender surname -->
+                            <xsl:when test="s:s | s:ss[1]">
                                 <strong>
-                                    <xsl:value-of select="s:s[1]"/>
-                                    <xsl:if test="s:f">
+                                    <xsl:value-of select="s:s[1] | s:ss[1]"/>
+                                    <xsl:if test="s:f  | s:sf[1]">
                                         <xsl:text>, </xsl:text>
-                                        <xsl:value-of select="s:f"/>
+                                        <xsl:value-of select="s:f | s:sf[1]"/>
                                     </xsl:if>
                                 </strong>
                                 <xsl:text>: </xsl:text>
@@ -630,14 +648,7 @@
                                     <xsl:if test="s:fed"><xsl:text>, </xsl:text>
                                         <xsl:value-of select="s:fed[1]"/>
                                     </xsl:if>
-                                    <xsl:choose>
-                                        <xsl:when test="$locale = 'en'">
-                                            <xsl:text> (Editor) </xsl:text>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> (Herausgeber/in) </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
+                                    <xsl:value-of select="if ($locale = 'en') then ' (Editor)' else ' (Herausgeber/in)'"/>
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>

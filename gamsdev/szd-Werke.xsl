@@ -20,21 +20,6 @@
     <!-- ///MANUSKRIPTE/// -->
     <xsl:template name="content">
             <section class="card">
-                <!--<script>
-                    window.onload = function () {
-                    var hash = window.location.hash.substr(1);
-                    if(hash)
-                    {
-                    location.hash = "#" + hash;
-                    window.scrollBy(0, -275);
-                    //collapse anchor selected element
-                    actual = document.getElementById(hash);
-                    var descendants = actual.querySelectorAll('.card-collapse');
-                    $(descendants).collapse() 
-                    }
-                    }
-                </script>
-                -->
                     <!-- call getStickyNavbar in szd-Templates.xsl -->
                     <xsl:call-template name="getStickyNavbar">
                         <xsl:with-param name="Title">
@@ -124,10 +109,12 @@
                                 </h2>
  
                                 <!-- /////////////////////////////////////////// -->    
-                                <!-- for each bibFull group by @type='Einheitssachtitel' -->
-                                    <xsl:for-each-group select="current-group()"  group-by="normalize-space(t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1])"> 
-                                    <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][1]"/>
-                                    
+                                <!-- for each bibFull group by @type='Einheitssachtitel'
+                                     there are Einheitssachtitel with translation and some without-->
+                                    <xsl:for-each-group select="current-group()"  group-by="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][@xml:lang = $locale] | 
+                                        t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][not(@xml:lang)]"> 
+                                        <xsl:sort select="t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][@xml:lang = $locale] | 
+                                            t:fileDesc/t:titleStmt/t:title[@type='Einheitssachtitel'][not(@xml:lang)]"/>
                                         <div class="list-group mt-4">
                                         <h3 id="{concat('mt', generate-id())}">
                                             <xsl:value-of select="current-grouping-key()"/>
@@ -263,8 +250,8 @@
                                                                 </xsl:when>
                                                                 <xsl:otherwise/>
                                                             </xsl:choose>
-                                                            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']">
-                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern']}" target="_blank"  style="color: #631a34;" class="ml-1">
+                                                            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern'][1]">
+                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern'][1]}" target="_blank"  class="ml-1 szd_color">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
                                                                             <xsl:attribute name="title" select="'Access external resource'"/>
@@ -273,7 +260,7 @@
                                                                             <xsl:attribute name="title" select="'Zur externen Ressource'"/>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
-                                                                   <!-- <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>-->
+                                                                    <!--  -->
                                                                     <xsl:call-template name="printCameraIcon">
                                                                         <xsl:with-param name="locale" select="$locale"/>
                                                                     </xsl:call-template>
@@ -301,14 +288,12 @@
                                                             <xsl:with-param name="locale" select="$locale"/>
                                                             <xsl:with-param name="SZDID" select="@xml:id"/>
                                                         </xsl:call-template>
-                                                         
                                                </div>
                                                <!-- card which collapses -->
                                                 <div class="card-body card-collapse collapse" id="{concat('c' , generate-id())}">
                                                    <!-- ///START CREATING TABLE FOR EACH BIBLFULL -->
-                                                   <!--   for each child: <titleStmt>,<seriesStmt>, <editionStmt>, <publicationStmt>, <publicationStmt>, <sourceDesc>
-   		                                                           structure the data in a table based on the TEI-structure.-->
-                                               		<!-- this template is also used for the metadata representation für Collections in szd-templates -->
+                                                   <!-- structure the data in a table based on the TEI-structure-->
+                                                   <!-- this template is used for SZDMSK and SZDLEB (Personal Documents) -->
                                                    <xsl:call-template name="FillbiblFull_SZDMSK">
                                                        <xsl:with-param name="locale" select="$locale"/>
                                                        <xsl:with-param name="PID" select="$PID"/>

@@ -23,15 +23,15 @@
 
 	<!-- DEFINE global variables -->
 	<xsl:variable name="Personlist">
-		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
+		<xsl:copy-of select="document('https://gams.uni-graz.at/o:szd.personen/TEI_SOURCE')"/>
 	</xsl:variable>
 
 	<xsl:variable name="OrganisationList">
-		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.organisation/TEI_SOURCE')"/>
+		<xsl:copy-of select="document('https://gams.uni-graz.at/o:szd.organisation/TEI_SOURCE')"/>
 	</xsl:variable>
 
 	<xsl:variable name="StandorteList">
-		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
+		<xsl:copy-of select="document('https://gams.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
 	</xsl:variable>
 
 
@@ -103,7 +103,7 @@
 	</xsl:template>
 	
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- szd:BundleOfCorrespondence -->
+	<!-- szd:BundleOfCorrespondence SZDKOR -->
 	<xsl:template name="Korrespondenzen">
 		<xsl:for-each select="//t:listBibl/t:biblFull">
 			<xsl:variable name="Correspondence_URI" select="concat($BASE_URL, $PID, '#', @xml:id)"/>
@@ -111,8 +111,50 @@
 			
 			<szd:BundleOfCorrespondence rdf:about="{$Correspondence_URI}">
 				
-				<!--<szd:sender rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
-				<szd:receiver rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>-->
+				<xsl:if test="t:fileDesc/t:titleStmt/t:title[@xml:lang='de']">
+					<szd:title xml:lang="de">
+						<xsl:value-of
+							select="normalize-space(t:fileDesc/t:titleStmt/t:title[@xml:lang='de'])"/>
+					</szd:title>
+				</xsl:if>
+				<xsl:if test="t:fileDesc/t:titleStmt/t:title[@xml:lang='en']">
+					<szd:title xml:lang="en">
+						<xsl:value-of
+							select="normalize-space(t:fileDesc/t:titleStmt/t:title[@xml:lang='en'])"/>
+					</szd:title>
+				</xsl:if>
+				<!-- szd:signature -->
+				<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno">
+					<szd:signature>
+						<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno"/>
+					</szd:signature>
+				</xsl:if>
+				<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
+					<szd:extent rdf:resource="{$Correspondence_Extent_URI}"/>
+				</xsl:if>
+				
+				<xsl:for-each select="t:profileDesc/t:correspDesc/t:correspAction">
+					<xsl:choose>
+						<xsl:when test="@type = 'sent'">
+							<xsl:call-template name="GetPersonlist">
+								<xsl:with-param name="Person" select="t:persName/@ref"/>
+								<xsl:with-param name="Typ" select="'szd:sender'"/>
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:when test="@type = 'received'">
+							<xsl:call-template name="GetPersonlist">
+								<xsl:with-param name="Person" select="t:persName/@ref"/>
+								<xsl:with-param name="Typ" select="'szd:receiver'"/>
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:comment>Error: missing @type in t:correspAction</xsl:comment>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+				
+				<!--
+				-->
 				
 				<xsl:call-template name="getLocation"/>
 				
@@ -123,11 +165,50 @@
 			</szd:BundleOfCorrespondence>
 			
 			<!-- extent -->
-			<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
-				<szd:Extent
-					rdf:about="{$Correspondence_Extent_URI}">
-					<szd:text>
-						<xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+			<xsl:variable name="EXTENT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent"/>
+			<xsl:variable name="piecesOfCorrespondenc" select="sum($EXTENT/t:measure[@type='correspondence'])"/>
+			<xsl:if test="$EXTENT">
+				<szd:Extent rdf:about="{$Correspondence_Extent_URI}">
+					<xsl:if test="$EXTENT/t:measure[@type='correspondence']">
+						<szd:piecesOfCorrespondence>
+							<xsl:value-of select="$piecesOfCorrespondenc"/>
+						</szd:piecesOfCorrespondence>
+					</xsl:if>
+					<xsl:if test="$EXTENT/t:measure[@type='enclosures'][@xml:lang='en']">
+						<szd:piecesOfEnclosures xml:lang="en">
+							<xsl:value-of select="normalize-space($EXTENT/t:measure[@type='enclosures'][@xml:lang='en'])"/>
+						</szd:piecesOfEnclosures>
+					</xsl:if>
+					<xsl:if test="$EXTENT/t:measure[@type='enclosures'][@xml:lang='de']">
+						<szd:piecesOfEnclosures xml:lang="de">
+							<xsl:value-of select="normalize-space($EXTENT/t:measure[@type='enclosures'][@xml:lang='de'])"/>
+						</szd:piecesOfEnclosures>
+					</xsl:if>
+					<szd:text xml:lang="en">
+						<xsl:value-of select="$piecesOfCorrespondenc"/>
+						<xsl:choose>
+							<xsl:when test="$piecesOfCorrespondenc &gt; 1">
+								<xsl:text> Piece of Correspondence</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:text> Pieces of Correspondence</xsl:text>
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:if test="$EXTENT/t:measure[@type='enclosures'][@xml:lang='en']">
+							<xsl:text> : </xsl:text>
+							<xsl:value-of select="normalize-space($EXTENT/t:measure[@type='enclosures'][@xml:lang='en'])"/>
+						</xsl:if>
+					</szd:text>
+					<szd:text xml:lang="de">
+						<xsl:value-of select="$piecesOfCorrespondenc"/>
+						<xsl:choose>
+							<xsl:when test="$piecesOfCorrespondenc &gt; 1">
+								<xsl:text> Korrespondenzstücke</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:text> Korrespondenzstück</xsl:text>
+							</xsl:otherwise>
+						</xsl:choose>
 					</szd:text>
 				</szd:Extent>
 			</xsl:if>
@@ -594,23 +675,31 @@
 					<xsl:choose>
 						<xsl:when test="contains(@ref, 'SZDPER')">
 							<szd:relationTo
-								rdf:resource="{concat($BASE_URL, $PID, '#', @ref)}"
+								rdf:resource="{concat($BASE_URL, 'o:szd.personen', @ref)}"
 							/>
 						</xsl:when>
 						<xsl:when test="contains(@ref, 'SZDMSK')">
 							<szd:relationTo
-								rdf:resource="{concat($BASE_URL, $PID, '#', @ref)}"
+								rdf:resource="{concat($BASE_URL, 'o:szd.werke', @ref)}"
 							/>
 						</xsl:when>
 						<xsl:when test="contains(@ref, 'SZDLEB')">
 							<szd:relationTo
-								rdf:resource="{concat($BASE_URL, $PID, '#', @ref)}"
+								rdf:resource="{concat($BASE_URL, 'o:szd.lebensdokumente', @ref)}"
 							/>
 						</xsl:when>
 						<xsl:when test="contains(@ref, 'SZDBIB')">
 							<szd:relationTo
-								rdf:resource="{concat($BASE_URL, $PID, '#', @ref)}"
+								rdf:resource="{concat($BASE_URL, 'o:szd.bibliothek', @ref)}"
 							/>
+						</xsl:when>
+						<xsl:when test="contains(@ref, 'SZDAUT')">
+							<szd:relationTo
+								rdf:resource="{concat($BASE_URL, 'o:szd.autographen', @ref)}"
+							/>
+						</xsl:when>
+						<xsl:when test="contains(@ref, 'SZDKOR')">
+							<xsl:comment>ToDo: szd:relationTo SZDKOR </xsl:comment>
 						</xsl:when>
 						<xsl:otherwise/>
 					</xsl:choose>
@@ -1628,12 +1717,16 @@
 			select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:accMat/t:list/t:item[contains(@ana, 'szdg:AdditionalMaterial')]">
 			<xsl:choose>
 				<xsl:when test="t:desc[@xml:lang]">
-					<szd:additionalMaterial xml:lang="en">
-						<xsl:value-of select="normalize-space(t:desc[@xml:lang='en'])"/>
-					</szd:additionalMaterial>
-					<szd:additionalMaterial xml:lang="de">
-						<xsl:value-of select="normalize-space(t:desc[@xml:lang='de'])"/>
-					</szd:additionalMaterial>
+					<xsl:for-each select="t:desc[@xml:lang='en']">
+						<szd:additionalMaterial xml:lang="en">
+							<xsl:value-of select="normalize-space(.)"/>
+						</szd:additionalMaterial>
+					</xsl:for-each>
+					<xsl:for-each select="t:desc[@xml:lang='de']">
+						<szd:additionalMaterial xml:lang="de">
+							<xsl:value-of select="normalize-space(.)"/>
+						</szd:additionalMaterial>
+					</xsl:for-each>
 				</xsl:when>
 				<xsl:otherwise>
 					<szd:additionalMaterial>
@@ -1663,6 +1756,7 @@
 			</szd:incipit>
 		</xsl:if>
 
+		<!--  -->
 		<xsl:for-each-group select="t:fileDesc/t:titleStmt/t:editor[@role = 'contributor']"
 			group-by="@ref">
 			<xsl:call-template name="GetPersonlist">
@@ -1822,7 +1916,7 @@
 								</xsl:element>
 							</xsl:for-each>
 						</xsl:when>
-						<!-- if @ef = SZDPER -->
+						<!-- if @ref = SZDPER -->
 						<xsl:when test="contains($String, '#SZDPER.')">
 							<xsl:element name="{$Typ}">
 								<xsl:attribute name="rdf:resource">
@@ -2219,10 +2313,16 @@
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:value-of select="normalize-space($EXTENT/t:span[@xml:lang = $locale])"/>
-			<xsl:if test="$EXTENT/t:measure[@type = 'format']">
-				<xsl:text>, </xsl:text>
-				<xsl:value-of select="normalize-space($EXTENT/t:measure[@type = 'format'])"/>
-			</xsl:if>
+			<xsl:choose>
+				<xsl:when test="$EXTENT/t:measure[@type = 'format'][@xml:lang = $locale]">
+					<xsl:text>, </xsl:text>
+					<xsl:value-of select="normalize-space($EXTENT/t:measure[@type = 'format'][@xml:lang = $locale])"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text>, </xsl:text>
+					<xsl:value-of select="normalize-space($EXTENT/t:measure[@type = 'format'])"/>
+				</xsl:otherwise>
+			</xsl:choose>
 			<xsl:if
 				test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:foliation/t:ab">
 				<xsl:text>, </xsl:text>

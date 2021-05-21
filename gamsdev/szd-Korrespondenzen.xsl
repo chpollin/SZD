@@ -25,8 +25,8 @@
     <xsl:template name="content">
         <section class="card">
             <xsl:variable name="biblFull" select="//t:body/t:listBibl/t:biblFull"/>
-            <xsl:variable name="Sender" select="$biblFull/t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:persName | 
-                $biblFull/t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:name"/>
+            <xsl:variable name="Sender" select="$biblFull/t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:persName/t:surname | 
+                $biblFull/t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:name"/>
             <!-- call getStickyNavbar in szd-Templates.xsl -->
                 <xsl:call-template name="getStickyNavbar">
                     <xsl:with-param name="Title">
@@ -50,18 +50,20 @@
                 <article class="card-body" id="content">
                     <!-- select every biblFull and group through t:author -->
                     
-                    <xsl:for-each-group select="$biblFull" group-by="t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:persName| 
-                        t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:name">  
+                    <xsl:for-each-group select="$biblFull" 
+                        group-by="t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:persName | 
+                        t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:name">  
+                        
                         <xsl:sort data-type="text" lang="ger" select="current-grouping-key()"/>
                         
                         <xsl:variable name="person_affected" select="t:profileDesc/t:textClass/t:keywords/t:term[@type='person_affected'][1]"/>
                         
-                        <xsl:variable name="author" select="t:profileDesc/t:correspDesc/t:correspAction[@type='sent']"/>
+                        <xsl:variable name="author" select="t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]"/>
                         
                         <xsl:call-template name="getfirstforABC">
                             <xsl:with-param name="Persons" select="$Sender"/>
-                            <xsl:with-param name="CurrentNodes" select="t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:persName/t:surname| 
-                                t:profileDesc/t:correspDesc/t:correspAction[@type='sent']/t:name"/>
+                            <xsl:with-param name="CurrentNodes" select="t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:persName/t:surname| 
+                                t:profileDesc/t:correspDesc/t:correspAction[@type='sent'][1]/t:name"/>
                         </xsl:call-template>
                         
                         <!-- if this is the first element beginning with 'A' give it e.g. id="A"; checked by the -->  
@@ -107,7 +109,7 @@
                         <!-- Go through all entries connected to xpath selection in group-by -->
                         <!-- list ccontent -->
                         <xsl:for-each select="current-group()">
-                            <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:title[1]"/>
+                            <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale]"/>
                             <div class="list-group-item entry db_entry shadow-sm" id="{@xml:id}">
                                 <!-- //// -->
                                 <!-- getEntry_SZDBIB_SZDKOR -->
@@ -119,11 +121,10 @@
                                                 <xsl:text>▼ </xsl:text>
                                             </span>
                                             <span>
-                                            <!--<xsl:call-template name="printEnDe">
-                                                <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title"/>
+                                            <xsl:call-template name="printEnDe">
+                                                <xsl:with-param name="path" select="t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale]"/>
                                                 <xsl:with-param name="locale" select="$locale"/>
-                                            </xsl:call-template>-->
-                                                <xsl:text>Briefkonvolut</xsl:text>
+                                            </xsl:call-template>
                                             </span>
                                         </a>
                                         <!-- Signatur -->

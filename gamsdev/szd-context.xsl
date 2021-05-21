@@ -25,27 +25,21 @@
     <!-- ///CONTENT/// -->
     <!-- called in szd-static.xsl -->
     <xsl:template name="content">
-
-        <!-- CHOOSE MODE, param in URL-->
         <xsl:choose>
-            <!-- ///MEMORY/// -->
             <xsl:when test="$mode = 'objectbasket'">
                 <xsl:call-template name="objectbasket"/>
             </xsl:when>
-            <!-- ///DATENKORB/// -->
             <xsl:when test="$mode = 'databasket'">
                 <xsl:call-template name="databasket"/>
             </xsl:when>
-            <!-- ///MEMORY/// -->
             <xsl:when test="$mode = 'memory'">
                 <xsl:call-template name="memory"/>
             </xsl:when>
-            <!-- ///MEMORY/// -->
-            <xsl:when test="$mode = 'map'">
+            <!--<xsl:when test="$mode = 'map'">
                 <xsl:call-template name="map"/>
-            </xsl:when>
+            </xsl:when>-->
             <!-- //////////////////////////////////////////////////////////// -->
-            <!--  ABOUT static datastream in context:szd -->
+            <!--  MISCELLANEOUS static datastream in context:szd -->
             <xsl:when test="$mode = 'miscellaneous'">
                 <article class="card">
                     <xsl:call-template name="getNavbar">
@@ -123,11 +117,9 @@
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                        <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
                                         <span class="sr-only">Previous</span>
                                     </a>
                                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                        <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
@@ -176,7 +168,6 @@
                 <script src="{concat($gamsdev,'/js/pdfmake.min.js')}"><xsl:text> </xsl:text></script>
                 <script src="{concat($gamsdev,'/js/vfs_fonts.js')}"><xsl:text> </xsl:text></script>
                 <script src="{concat($gamsdev,'/js/buttons.html5.min.js')}"><xsl:text> </xsl:text></script>
-
                     <xsl:choose>
                         <xsl:when test="$locale='en'">
                             <p class="card-text row">
@@ -213,11 +204,6 @@
 
                 <xsl:variable name="Table-ID" select="concat('table_id', position())"/>
                 <!-- call DataTable -->
-               <!-- <script>
-                    $(document).ready(function() {
-                    $('#databasket_table').DataTable();
-                    } );
-                </script>-->
                 <script>
                     $(document).ready(function(){
                     $('#databasket_table').DataTable({
@@ -305,7 +291,7 @@
 
     <!-- ////////////////////////////// -->
     <!-- map InfoVis -->
-    <xsl:template name="map">
+   <!-- <xsl:template name="map">
       <link rel="stylesheet" href="/lib/2.0/leaflet/leaflet.css"/>
       <script src="/lib/2.0/leaflet/leaflet.js"><xsl:text> </xsl:text></script>
 
@@ -326,21 +312,6 @@
                    </li>
                </xsl:for-each-group>
             </ul>
-            <!--<xsl:for-each-group select="$RESULTS" group-by="s:name">
-            <h3>
-                <xsl:value-of select="current-grouping-key()"/>
-                <xsl:text> </xsl:text>
-            </h3>
-                <ul>
-                    <xsl:for-each-group select="current-group()" group-by="s:type/@uri">
-                        <li>
-                            <xsl:value-of select="substring-after(current-grouping-key(), '#')"/>:<xsl:value-of select="s:resources"/>
-                            <xsl:text> </xsl:text>
-                        </li>
-                    </xsl:for-each-group>
-                    <xsl:text> </xsl:text>
-                </ul>
-            </xsl:for-each-group>-->
             <h3>
                 <xsl:text>Map</xsl:text>
             </h3>
@@ -407,28 +378,20 @@
      });
    });
 
-
-
  </script>
+    </xsl:template>-->
 
-
-    </xsl:template>
-
+    <!-- this is a easter egg! :) -->
     <!--static memory game -->
     <xsl:template name="memory">
         <!-- insert memopry.css and memory.js only when "get?mode=memory" -->
         <link href="{concat($server, $gamsdev, '/css/memory.css')}" rel="stylesheet" type="text/css"/>
-
-
         <xsl:variable name="pathIMG" select="concat($server, $gamsdev,'/img/memory')"/>
-
         <div class="card">
             <div class="card-body">
                 <h1>Sternstunden des Memorys</h1>
             </div>
-
         <section class="memory_game mt-4 mb-4">
-
                      <div class="memory_card" data-framework="1">
                          <img class="front-face" src="{concat($pathIMG,'/1.jpg')}" alt="React"/>
                          <img class="back-face" src="{concat($pathIMG,'/back.jpg')}" alt="Memory Card"/>
@@ -513,7 +476,7 @@
         <script src="{concat($server, $gamsdev,'/js/memory.js')}"><xsl:text> </xsl:text></script>
     </xsl:template>
 
-
+    <!-- https://zimlab.uni-graz.at/gams/frontend/js-libs/objectbasket -->
     <xsl:template name="objectbasket">
         <div class="mt-5">
             <h1 class="mt-5">Object Basket</h1>
