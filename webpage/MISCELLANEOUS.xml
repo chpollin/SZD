@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>News</title>
-                <author>
-                    <persName>
-                        <forename>Oliver</forename>
-                        <surname>Matuschek</surname>
-                    </persName>
-                </author>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>
-                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
-                </publisher>
-                <authority>
-                    <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>News</title>
+        <author>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
                         Austrian Centre for Digital Humanities, Karl-Franzens-Universität
                         Graz</orgName>
-                </authority>
-                <distributor>
-                    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset
                         Management System</orgName>
-                </distributor>
-                <availability>
-                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
                         Commons BY-NC-SA 4.0</licence>
-                </availability>
-                <publisher>Literaturarchiv Salzburg</publisher>
-                <date when="2020">2020</date>
-            </publicationStmt>
-            <seriesStmt>
-                <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale</title>
-                <respStmt>
-                    <resp>Projektleitung</resp>
-                    <persName>
-                        <forename>Manfred</forename>
-                        <surname>Mittermayer</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Datenerfassung</resp>
-                    <persName>
-                        <forename>Lina</forename>
-                        <surname>Zangerl</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Datenmodellierung</resp>
-                    <persName>
-                        <forename>Christopher</forename>
-                        <surname>Pollin</surname>
-                    </persName>
-                </respStmt>
-            </seriesStmt>
-            <sourceDesc>
-                <p>Digital Born</p>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <date when="2020">2020</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Lina</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Digital Born</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
                     im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
                     wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
                     dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
@@ -71,85 +71,106 @@
                     orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
                     einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
                     (z.B. digitalen Editionen) möglich werden.</p>
-            </projectDesc>
-        </encodingDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="main">
-                
-                <div xml:lang="de">
-                    <div n="1" type="miscellaneous">
-                        <head>
-                            <hi style="uppercase">Stefan Zweigs Manuskripte aus dem DLA Marbach online</hi>
-                        </head>
-                        <p>
-                            <figure>
-                                <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_2/content"></graphic>
-                            </figure>
-                        </p>
-                        <p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="main">
+        <div xml:lang="de">
+            <div n="1" type="miscellaneous">
+                <head>
+                    <hi style="uppercase">Klawiter-Bibliographie auf www.stefanzweig.digital</hi>
+                </head>
+                <p>
+                    <figure>
+                        <graphic url="/archive/objects/context:szd/datastreams/STARTBILD_2/content"></graphic>
+                    </figure>
+                </p>
+                <p>
+                    Viele von Ihnen werden bereits die traurige Nachricht erhalten haben, dass Randolph J. “Randy” Klawiter am 19. Juli dieses Jahres im Alter von 90 Jahren verstorben ist (einen Nachruf finden Sie <ref target="https://www.kaniewski.com/obituary/DrRandolphJRandy-Klawiter">hier</ref>). Randy Klawiters jahrzehntelangem Schaffen verdanken wir die bedeutende und beispiellos umfassende Bibliographie der Werke Stefan Zweigs, die zunächst in Buchform erschien und später online fortgesetzt wurde.
+                </p>
+               <p>Gemeinsam mit der Daniel A. Reed Library der SUNY Fredonia und mit dankenswerter Unterstützung von Randy Klawiters Erben haben wir die Absicht, sein Lebenswerk zu bewahren und die Bibliographie in seinem Sinne auf www.stefanzweig.digital fortzuführen.
+                </p>
+                <p>Randys Arbeit lebte auch von Hinweisen auf neue Literatur oder bisher unentdeckte Werke von oder über Stefan Zweig, die ihm Beiträger*innen aus aller Welt zuschickten. Wir möchten Sie herzlich bitten, dieses wichtige Engagement aufrecht zu erhalten und Informationen zu Neuerscheinungen sowie weitere bibliographische Angaben oder Korrekturen in Zukunft an uns zu senden. Die Adresse dafür ist:
+                </p>
+                <p style="center"><span target="mailto:klawiter@stefanzweig.digital" type="href">klawiter@stefanzweig.digital</span></p>
+                <p>Auf SZD ist die Bibliographie ab sofort unter dem Menüpunkt „Index“ zu finden oder unter <ref target="http://zweig.fredonia.edu/index.php?title=Stefan_Zweig_Bibliography" type="hyperlink">dieser Adresse</ref> direkt zu erreichen.
+                </p>
+                <p>Für Anregungen und Rückfragen steht Ihnen das Team von SZD gern zur Verfügung.</p>
+                <p>Herzlichen Dank für Ihre Unterstützung!</p>
+            </div>
+            <div n="2" type="miscellaneous">
+            <head>
+              <hi style="uppercase">Stefan Zweigs Manuskripte aus dem DLA Marbach online</hi>
+            </head>
+            <p>
+              <figure>
+                  <graphic url="/archive/objects/context:szd/datastreams/STARTBILD_3/content"></graphic>
+              </figure>
+            </p>
+            <p>
                             In Zusammenarbeit mit dem <ref target="https://www.dla-marbach.de/" type="hyperlink">Deutschen Literaturarchiv Marbach (DLA)</ref> 
                             konnten in den letzten Monaten weiterere wesentliche Stücke aus Zweigs Nachlass in STEFAN ZWEIG DIGITAL aufgenommen werden.
-                            Die Werke und Lebensdokumente Stefan Zweigs, die heute im DLA aufbewahrt werden, sind gemeinsam mit den bereits bestehenden           
-                            Datensätzen durchsuchbar und mit dem <ref target="https://www.dla-marbach.de/katalog-ng/" type="hyperlink">neuen Katalog des DLA</ref> verknüpft.
+                            Die Werke und Lebensdokumente Stefan Zweigs, die heute im DLA aufbewahrt werden, sind gemeinsam mit den bereits bestehenden             
+                          Datensätzen durchsuchbar und mit dem <ref target="https://www.dla-marbach.de/katalog-ng/" type="hyperlink">neuen Katalog des DLA</ref> verknüpft.
                         </p>
-                        
-                        <p>
+
+            <p>
                             Das DLA bewahrt zahlreiche bedeutende Originale des Autors auf. Aus den frühen Jahren von Zweigs Schaffen stammt etwa die Carl Seelig gewidmete <ref target="https://stefanzweig.digital/o:szd.werke#SZDMSK.323">Handschrift</ref>
                             der Novelle <hi style="italic">Der Refractär</hi>, die im Sommer 1918 entstand und 1920 im Insel Verlag unter dem Titel <hi style="italic">Der Zwang</hi> erschienen ist. Umfangreiche <ref target="https://stefanzweig.digital/o:szd.werke#SZDMSK.308">Vorarbeiten</ref> 
                             zum Dostojewski-Essay dokumentieren die jahrzehntelange Auseinandersetzung Zweigs mit dem russischen Autor. Im aufbewahrten <ref target="https://stefanzweig.digital/o:szd.werke#SZDMSK.337">Konvolut</ref> zum Roman <hi style="italic">Ungeduld des Herzens</hi>
                             sind alle Originale des Texts – von den ersten Notizen in Ringbüchern bis zu Druckfahnen – in außergewöhnlicher Vollständigkeit überliefert. Unter den Lebensdokumenten,
                             die im DLA archiviert sind, ist eine weitere Fassung des <ref target="https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.130">Abschiedsbriefs</ref> von Stefan Zweig zu finden.
                         </p>
-                        <p>
+            <p>
                             Neben der Ergänzung der Marbacher Originale wurden jüngst zahlreiche weitere Lebensdokumente aus den unterschiedlichen Sammlungen in Salzburg und aus der Daniel A. Reed Library in Fredonia
                             mit aufgenommen. Neben den Tagebüchern liegen nun auch Dokumente wie Finanzunterlagen, Rechtsdokumente, Verlagsverträge und Verzeichnisse der eigenen Werke und Sammlungen des Autors erschlossen vor.
                             Insbesondere die Verlagsverträge zeigen die beeindruckende Fülle der zeitgenössischen Übersetzungen der Werke Zweigs in aller Welt.
                         </p>
-                    </div>
-                    <div n="2" type="miscellaneous">
-                        <head>
-                            <hi style="uppercase">Friderike Maria Zweig zum 50. Todestag am 
+          </div>
+          <div n="3" type="miscellaneous">
+            <head>
+              <hi style="uppercase">Friderike Maria Zweig zum 50. Todestag am 
                                 <date when="2021-01-18">18. Januar 2021</date>
-                            </hi>
-                        </head>
-                        <p>
-                            <figure>
-                                <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_1/content"></graphic>
-                                <caption>Friderike Zweig im Dezember 1962</caption>
-                            </figure>
-                        </p>
-                        <p>
+              </hi>
+            </head>
+            <p>
+              <figure>
+                <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_1/content"></graphic>
+                <caption>Friderike Zweig im Dezember 1962</caption>
+              </figure>
+            </p>
+            <p>
                             Am 18. Januar 1971 verstarb <name ref="#SZDPER.1556" type="person">Friderike Maria Zweig</name> in ihrem Wohnort im US-amerikanischen Exil in Stamford, Connecticut.
                             Sie hatte Stefan Zweig im Jahr 1912 kennengelernt und war von 1920 bis 1938 mit ihm verheiratet.
                             Anlässlich ihres 50. Todestages am 18. Januar 2021 möchten wir drei kaum bekannte Tondokumente vorstellen,
                             die zwischen 1955 und 1962 entstanden sind.
                         </p>
-                        <div>
-                            <head>1955</head>
-                            
-                            <p>
+            <div>
+              <head>1955</head>
+
+              <p>
                                 Die erste Aufnahme ist ein Radiobeitrag des aus Prag stammenden Schriftstellers und 
                                 Journalisten <name ref="SZDPER.1649" type="person">Johannes Urzidil</name>, 
                                 der 1939 zunächst über Italien nach England und 1941 weiter in die USA geflohen war. 
                                 Er besuchte <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> in ihrem Haus in Stamford und berichtet ausführlich über
                                 ihre Werke und von ihrem Leben im Exil.  
                             </p>
-                            <p>
-                                <ref style="button" target="https://www.mediathek.at/atom/1BC4BDCB-319-001C2-00000F98-1BC41845">
-                                    <hi style="uppercase">Zur Aufnahme</hi>
-                                </ref>
-                            </p>
-                            <p>
+              <p>            
+    <ref style="button" target="https://www.mediathek.at/atom/1BC4BDCB-319-001C2-00000F98-1BC41845">
+                  <hi style="uppercase">Zur Aufnahme</hi>
+                </ref>
+              </p>
+              <p>
                                 Dauer 14:24<lb></lb>
                                 Bei einigen Browsern muss die Starttaste auf der externen Seite doppelt geklickt werden.
                             </p>
-                        </div>
-                        <div>
-                            <head>1957</head>
-                            
-                            <p>
+            </div>
+            <div>
+              <head>1957</head>
+
+              <p>
                                 In einer Radioreportage des ORF berichtet der als Symson Weinberg in Kolomea in Galizien geborene 
                                 Komponist und Journalist <name ref="SZDPER.1650" type="person">Jimmy Berg</name> von der 
                                 offiziellen Feier zu <name ref="#SZDPER.1556" type="person">Friderike Zweigs</name> 75. Geburtstag. 
@@ -159,57 +180,83 @@
                                 Hunter College <name ref="SZDPER.1651" type="person">George N. Shuster</name> kommt schließlich <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> selbst zu Wort. 
                                 In ihrem Gruß kündigt sie eine Reise nach Österreich an, das sie seit dem Beginn ihres Exils im Jahr 1938 nicht mehr gesehen hatte.
                             </p>
-                            <p>
-                                <ref style="button" target="https://www.mediathek.at/atom/08F8E9A8-02F-00232-00000EFC-08F80863">
-                                    <hi style="uppercase">Zur Aufnahme</hi>
-                                </ref>
-                            </p>
-                            <p>
+              <p>
+                <ref style="button" target="https://www.mediathek.at/atom/08F8E9A8-02F-00232-00000EFC-08F80863">
+                  <hi style="uppercase">Zur Aufnahme</hi>
+                </ref>
+              </p>
+              <p>
                                 Dauer 5:11<lb></lb>
                                 Bei einigen Browsern muss die Starttaste auf der externen Seite doppelt geklickt werden.
                             </p>
-                        </div>
-                        <div>
-                            <head>1962</head>
-                            <p>
+            </div>
+            <div>
+              <head>1962</head>
+              <p>
                                 Die dritte Aufnahme wurde bei einem Besuch <name ref="#SZDPER.1556" type="person">Friderike Zweigs</name> in ihrer Geburtsstadt Wien aufgezeichnet.
                                 Sie berichtet von Stefan Zweig und über die 1957 von <name ref="SZDPER.1652" type="person">Erich Fitzbauer</name>
                                 gegründete Internationale Stefan Zweig-Gesellschaft,
                                 deren Ehrenpräsidentin sie war. Weitere Details zu der Aufnahme, die leider nur in sehr mangelhafter Qualität vorliegt,
                                 sind nicht bekannt. 
                             </p>
-                            <p>
-                                <media mimeType="audio/mp3" url="https://gams.uni-graz.at/archive/objects/context:szd/datastreams/AUDIO_1/content">
-                                    <desc>Die dritte Aufnahme wurde bei einem Besuch <name ref="#SZDPER.1556" type="person">Friderike Zweigs</name> in ihrer Geburtsstadt Wien aufgezeichnet. 
+              <p>
+                <media mimeType="audio/mp3" url="https://gams.uni-graz.at/archive/objects/context:szd/datastreams/AUDIO_1/content">
+                  <desc>Die dritte Aufnahme wurde bei einem Besuch <name ref="#SZDPER.1556" type="person">Friderike Zweigs</name> in ihrer Geburtsstadt Wien aufgezeichnet. 
                                         Sie berichtet von Stefan Zweig und über die 1957 von <name ref="SZDPER.1652" type="person">Erich Fitzbauer</name> gegründete Internationale Stefan Zweig-Gesellschaft, 
                                         deren Ehrenpräsidentin sie war. Weitere Details zu der Aufnahme, die leider nur in sehr mangelhafter Qualität vorliegt, 
                                         sind nicht bekannt. </desc>
-                                </media>
-                            </p>
-                            <p>
+                </media>
+              </p>
+              <p>
                                 Dauer 4:56
                             </p>
-                        </div>
-                    </div>
-                </div>
-                <div xml:lang="en">
-                    <div n="1" type="miscellaneous">
-                        <head>
-                            <hi style="uppercase">Stefan Zweig’s manuscripts from the DLA Marbach online
+            </div>
+          </div>
+        </div>
+          <div xml:lang="en">
+              <div n="1" type="miscellaneous">
+                  <head>
+                      <hi style="uppercase">Klawiter Bibliography at www.stefanzweig.digital
+                      </hi>
+                  </head>
+                  <p>
+                      <figure>
+                          <graphic url="/archive/objects/context:szd/datastreams/STARTBILD_2/content"></graphic>
+                      </figure>
+                  </p>
+                  <p>
+                      Many of you will already have received the sad news that Randolph J. "Randy" Klawiter passed away on July 19 of this year at the age of 90 (an obituary can be found <ref target="https://www.kaniewski.com/obituary/DrRandolphJRandy-Klawiter">here</ref>). To Randy Klawiter's decades of work we owe the important and unprecedentedly comprehensive bibliography of Stefan Zweig's works, first published in book form and later continued online.
+                  </p>
+                  
+                  <p>
+                      Together with the Daniel A. Reed Library at SUNY Fredonia, and with the grateful support of Randy Klawiter's heirs, we intend to preserve his life's work and continue the bibliography in his spirit at www.stefanzweig.digital.
+                  </p>
+                  <p>
+                      Randy's work also carried on with references to new literature or previously undiscovered works by or about Stefan Zweig, which contributors from all over the world sent to him. We would like to ask you to keep up this important commitment and to send us information about new publications as well as further bibliographic information or corrections in the future. The address for this is:
+                  </p>
+                  <p><span target="mailto:klawiter@stefanzweig.digital" type="href">klawiter@stefanzweig.digital</span></p>
+                  <p>On SZD the bibliography can now be found under the Index menu or can be reached directly under <ref target="http://zweig.fredonia.edu/index.php?title=Stefan_Zweig_Bibliography" type="hyperlink">this address</ref>.</p>
+                  <p>If you have any suggestions or questions, please do not hesitate to contact the SZD team.</p>
+                      <p>Thank you very much for your support!</p>
+              </div>
+
+          <div n="2" type="miscellaneous">
+            <head>
+              <hi style="uppercase">Stefan Zweig’s manuscripts from the DLA Marbach online
                             </hi>
-                        </head>
-                        <p>
-                            <figure>
-                                <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_2/content"></graphic>
-                            </figure>
-                        </p>
-                        <p>
+            </head>
+            <p>
+              <figure>
+                  <graphic url="/archive/objects/context:szd/datastreams/STARTBILD_3/content"></graphic>
+              </figure>
+            </p>
+            <p>
                             A collaboration with the <ref target="https://www.dla-marbach.de/" type="hyperlink">Deutsches Literaturarchiv Marbach (DLA)</ref> 
                             made it possible to add several integral items from Zweig’s posthumous papers to the records in STEFAN ZWEIG DIGITAL.
                             The DLA holdings of Stefan Zweig’s works and personal documents can now be searched together with all previously existing records and are linked with the <ref target="https://www.dla-marbach.de/katalog-ng/" type="hyperlink">new DLA catalogue</ref>.
                         </p>
-                        
-                        <p>
+
+            <p>
                             The DLA is home to numerous important original documents by the author. 
                             An example from Zweig’s early years is the <ref target="https://stefanzweig.digital/o:szd.werke#SZDMSK.323">manuscript</ref>
                             of the novella <hi style="italic">Der Refractär</hi>dedicated to Carl Seelig:
@@ -220,53 +267,50 @@
                             in spiral-bound notebooks to printed galley proofs. Among Stefan Zweig’s personal documents stored at the DLA
                             is an additional version of his <ref target="https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.130">farewell letter</ref>.
                         </p>
-                        <p>
+            <p>
                             Apart from these new original materials from Marbach, numerous further personal documents from the various repositories in Salzburg and the Daniel A. Reed Library in Fredonia could also be recently integrated into STEFAN ZWEIG DIGITAL. Zweig’s diaries are now fully accessible, as are such documents as financial records, publishing contracts, legal documents, and the author’s lists of his own works and collections. The publishing contracts in particular illustrate the impressive breadth of contemporary translations in which Zweig’s works appeared throughout the globe.
                         </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div xml:lang="en">
-                    <div n="2" type="miscellaneous">
-                        <head>
-                            <hi style="uppercase">Friderike Maria Zweig
+          </div>
+        </div>
+        <div n="3" type="miscellaneous">
+          <head>
+            <hi style="uppercase">Friderike Maria Zweig
                                 on the occasion of the 50th anniversary of her death on <date when="2021-01-18">18 January 2021</date>
-                            </hi>
-                        </head>
-                        <p>
-                            <figure>
-                                <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_1/content"></graphic>
-                                <caption>Friderike Zweig in December 1962</caption>
-                            </figure>
-                        </p>
-                        <p>
-                            <name ref="#SZDPER.1556" type="person">Friderike Maria Zweig</name> passed away at her home in Stamford, Connecticut, 
+            </hi>
+          </head>
+          <p>
+            <figure>
+              <graphic url="/archive/objects/context:szd/datastreams/NEWS_IMG_1/content"></graphic>
+              <caption>Friderike Zweig in December 1962</caption>
+            </figure>
+          </p>
+          <p>
+            <name ref="#SZDPER.1556" type="person">Friderike Maria Zweig</name> passed away at her home in Stamford, Connecticut, 
                             her place of exile in the United States, on 18 January 1971. She had met Stefan Zweig in 1912 and had been married to him from 1920 to 1938. 
                             On the occasion of the 50th anniversary of her death on 18 January 2021 we present three rare German-language sound documents recorded between 1955 and 1962.
                         </p>
-                        <div>
-                            <head>1955</head>
-                            
-                            <p>
+          <div>
+            <head>1955</head>
+
+            <p>
                                 The first recording is a radio feature by the Prague-born writer and journalist <name ref="SZDPER.1649" type="person">Johannes Urzidil</name>, 
                                 who had escaped to England via Italy in 1939 and in 1941 made his way to America. 
                                 He visited <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> at her house in Stamford and here gives an extensive account of her works and her life in exile.
                             </p>
-                            <p>
-                                <ref style="button" target="https://www.mediathek.at/atom/1BC4BDCB-319-001C2-00000F98-1BC41845">
-                                    <hi style="uppercase">recording</hi>
-                                </ref>
-                            </p>
-                            <p>
+            <p>
+              <ref style="button" target="https://www.mediathek.at/atom/1BC4BDCB-319-001C2-00000F98-1BC41845">
+                <hi style="uppercase">recording</hi>
+              </ref>
+            </p>
+            <p>
                                 Duration 14:24<lb></lb>
                                 Some browsers will require you to click the Play button on the external website twice.
                             </p>
-                        </div>
-                        <div>
-                            <head>1957</head>
-                            
-                            <p>
+          </div>
+          <div>
+            <head>1957</head>
+
+            <p>
                                 In a radio commentary for the Austrian public broadcaster ORF, the composer and journalist <name ref="SZDPER.1650" type="person">Jimmy Berg</name> – 
                                 born Symson Weinberg in Kolomea, Galicia – reports from the official celebration of <name ref="#SZDPER.1556" type="person">Friderike Zweig</name>’s 75th birthday. 
                                 The reception was given on 16 December 1957 in New York City, at Sara Delano Roosevelt Memorial House on East 65th Street. 
@@ -274,37 +318,37 @@
                                 <name ref="SZDPER.1651" type="person">George N. Shuster</name>, <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> herself is heard speaking. In her address she announces her intention to travel to Austria, 
                                 which she had not visited since she went into exile in 1938.
                             </p>
-                            <p>
-                                <ref style="button" target="https://www.mediathek.at/atom/08F8E9A8-02F-00232-00000EFC-08F80863">
-                                    <hi style="uppercase">recording</hi>
-                                </ref>
-                            </p>
-                            <p>
+            <p>
+              <ref style="button" target="https://www.mediathek.at/atom/08F8E9A8-02F-00232-00000EFC-08F80863">
+                <hi style="uppercase">recording</hi>
+              </ref>
+            </p>
+            <p>
                                 Duration 5:11<lb></lb>
                                 Some browsers will require you to click the Play button on the external website twice.
                             </p>
-                        </div>
-                        <div>
-                            <head>1962</head>
-                            <p>
+          </div>
+          <div>
+            <head>1962</head>
+            <p>
                                 The third recording was made during a visit by <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> to her native Vienna. She speaks about Stefan Zweig and the International Stefan Zweig Society, 
                                 founded by <name ref="SZDPER.1652" type="person">Erich Fitzbauer</name> in 1957, in which she served as Honorary President. 
                                 No further details are known about this recording, whose sound quality is very rough.
                             </p>
-                            <p>
-                                <media mimeType="audio/mp3" url="https://gams.uni-graz.at/archive/objects/context:szd/datastreams/AUDIO_1/content">
-                                    <desc>The third recording was made during a visit by <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> to her native Vienna. She speaks about Stefan Zweig and the International Stefan Zweig Society, 
-                                        founded by <name ref="SZDPER.1652" type="person">Erich Fitzbauer</name> in 1957, in which she served as Honorary President. 
-                                        No further details are known about this recording, whose sound quality is very rough. </desc>
-                                </media>
-                            </p>
-                            <p>
+            <p>
+              <media mimeType="audio/mp3" url="https://gams.uni-graz.at/archive/objects/context:szd/datastreams/AUDIO_1/content">
+                <desc>The third recording was made during a visit by <name ref="#SZDPER.1556" type="person">Friderike Zweig</name> to her native Vienna. She speaks about Stefan Zweig and the International Stefan Zweig Society, 
+                                        founded by <name ref="SZDPER.1652" type="person">Erich Fitzbauer</name> in 1957, in which she served as Honorary President.         
+                                No further details are known about this recording, whose sound quality is very rough. </desc>
+              </media>
+            </p>
+            <p>
                                 Duration 4:56
                             </p>
-                        </div>
-                    </div>
-                </div>
-        </body>
-    </text>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
 </TEI>
 
