@@ -15,20 +15,32 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template name="fix_hi">
+        <xsl:param name="SZDAUT_EN_CONTENT"/>
+        <xsl:value-of select="normalize-space(substring-before($SZDAUT_EN_CONTENT, '&lt;hi&gt;'))"/>
+        <xsl:text> </xsl:text>
+        <xsl:element name="hi">
+            <xsl:attribute name="style"><xsl:text>italic</xsl:text></xsl:attribute>
+            <xsl:value-of select="normalize-space(substring-before(substring-after($SZDAUT_EN_CONTENT, '&lt;hi&gt;'), '&lt;/hi&gt;' ))"/>
+        </xsl:element>
+        <xsl:if test="substring-after($SZDAUT_EN_CONTENT, '&lt;/hi&gt;')">
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="normalize-space(substring-after($SZDAUT_EN_CONTENT, '&lt;/hi&gt;'))"/>
+        </xsl:if>
+    </xsl:template>
+    
     <!-- Title, wenn keine englische Übersetzung, bleibt <span xml:lang="en"> weg-->
     <xsl:template match="t:fileDesc/t:titleStmt/t:title">
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[4]"/>
-        <xsl:copy>
-            <span xml:lang="de">
-                <xsl:apply-templates/>
-            </span>
-            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
-                <span xml:lang="en">
-                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                </span>
-            </xsl:if>
+        <xsl:copy><xsl:attribute name="xml:lang">de</xsl:attribute>
+            <xsl:apply-templates/>
         </xsl:copy>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <title xml:lang="en">
+                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                </title>
+            </xsl:if>
     </xsl:template>
     
     <!-- Summary
@@ -42,7 +54,16 @@
             </span>
             <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
                 <span xml:lang="en">
-                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDAUT_EN_CONTENT, '&lt;hi&gt;')">
+                            <xsl:call-template name="fix_hi">
+                                <xsl:with-param name="SZDAUT_EN_CONTENT" select="$SZDAUT_EN_CONTENT"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </span>
             </xsl:if>
         </xsl:copy>
@@ -96,16 +117,22 @@
             </span>
             <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
                 <span xml:lang="en">
-                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDAUT_EN_CONTENT, '&lt;hi&gt;')">
+                            <xsl:call-template name="fix_hi">
+                                <xsl:with-param name="SZDAUT_EN_CONTENT" select="$SZDAUT_EN_CONTENT"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </span>
             </xsl:if>
         </xsl:copy>
     </xsl:template>
     
-    <!-- Provenance
-    Achtung: ähnliches Problem wie oben
-    AUSSERDEM provenance von SZDAUT.603 schmeißt alles durcheinander, weil hat 2 provenance Element - wozu? das zweite:
-    <provenance type="provenance">Herzog de La Rochefoucauld</provenance>???-->
+    <!-- Provenance-->
     <xsl:template match="t:msDesc/t:history/t:provenance[not(@type)]">
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[12]"/>
@@ -115,7 +142,16 @@
             </span>
             <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
                 <span xml:lang="en">
-                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDAUT_EN_CONTENT, '&lt;hi&gt;')">
+                            <xsl:call-template name="fix_hi">
+                                <xsl:with-param name="SZDAUT_EN_CONTENT" select="$SZDAUT_EN_CONTENT"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </span>
             </xsl:if>
         </xsl:copy>
