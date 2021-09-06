@@ -4,8 +4,6 @@
     xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:t="http://www.tei-c.org/ns/1.0"
     xmlns="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs ss t" version="2.0">
 
-        
-      
     <xsl:variable name="SZDEN">
         <xsl:copy-of select="document('2021_02_25_SZDAUT_rev.xml')"/>
     </xsl:variable>
@@ -25,21 +23,16 @@
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
-            <xsl:choose>
-                <xsl:when test="$SZDAUT_EN_CONTENT != 'xxx'">
-                    <span xml:lang="en">
-                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- show nothing -->
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <span xml:lang="en">
+                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                </span>
+            </xsl:if>
         </xsl:copy>
     </xsl:template>
     
     <!-- Summary
-    wie umgehen mit dates, die irgendwo drin sind? test und dann Element und copy Attribut?-->
+    wie umgehen mit dates, die irgendwo drin sind?-->
     <xsl:template match="t:msDesc/t:msContents/t:summary">
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[6]"/>
@@ -47,60 +40,48 @@
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
-            <xsl:choose>
-                <xsl:when test="$SZDAUT_EN_CONTENT != 'xxx'">
-                    <span xml:lang="en">
-                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- show nothing -->
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <span xml:lang="en">
+                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                </span>
+            </xsl:if>
         </xsl:copy>
     </xsl:template>
-
+        
     <!-- Measure/Extent 
-    manchmal gibt es englischen Eintrag für Maße, aber meistens nicht!-->
+    manchmal gibt es englischen Eintrag für Maße, aber meistens nicht!
+    measure verliert sein type Attribut bei der Transformation?? deshalb xsl:attribute-->
     <xsl:template match="t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='format']">
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDAUT_DE_CONTENT" select="."/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[8]"/>
-        <xsl:copy>
+        <xsl:copy><xsl:attribute name="type">format</xsl:attribute>
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
             <xsl:choose>
-                <xsl:when test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <xsl:when test="contains($SZDAUT_EN_CONTENT, 'cms')"><!-- wenn cms Angabe, dann ist measure englisch vollständig ausgefüllt -->
                     <span xml:lang="en">
                         <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
                     </span>
                 </xsl:when>
+                <xsl:when test="(not(contains($SZDAUT_EN_CONTENT, 'cms'))) and ($SZDAUT_EN_CONTENT != 'xxx') and (contains($SZDAUT_DE_CONTENT, 'cm'))"><!-- keine cms Angabe, aber Information vorhanden, z.B. "boards", kopiert deutsche cm Angabe -->
+                    <span xml:lang="en">
+                        <xsl:value-of select="concat(substring-before($SZDAUT_DE_CONTENT, ', '),', ',$SZDAUT_EN_CONTENT)"/>
+                    </span>
+                </xsl:when>
+                <xsl:when test="($SZDAUT_EN_CONTENT='xxx' and (contains($SZDAUT_DE_CONTENT, 'cm') or contains($SZDAUT_DE_CONTENT, '°')))"><!-- keine englischsprachige Information vorhanden, aber wir wollen Größenangaben auch im Englischen -->
+                    <span xml:lang="en">
+                        <xsl:value-of select="$SZDAUT_DE_CONTENT"/>
+                    </span>
+                </xsl:when><!--
                 <xsl:otherwise>
-                    <!-- show nothing -->
-                </xsl:otherwise>
+                    <span xml:lang="en">
+                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                    </span>
+                </xsl:otherwise>-->
             </xsl:choose>
         </xsl:copy>
-        
-        <!-- man könnte cm Angabe aus de in die en kopieren, aber klappt aus irgendeinem Grund nicht,
-        er schmeißt mir den type="format" aus dem measure raus?-->
-        <!--<xsl:variable name="SZDAUT_DE_CONTENT" select="t:TEI//t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent/t:measure[@type='format']"/>-->
-        <!--<xsl:copy>
-            <span xml:lang="de">
-                <xsl:apply-templates/>
-            </span>
-            <xsl:choose>
-                <xsl:when test="contains($SZDAUT_EN_CONTENT, 'cms')"><!-\- wenn cm Angabe, dann ist measure vollständig ausgefüllt -\->
-                    <span xml:lang="en">
-                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-                <xsl:when test="(not(contains($SZDAUT_EN_CONTENT, 'cms'))) and ($SZDAUT_EN_CONTENT != 'xxx')"><!-\- xxx = kein <span en> (de könnte man kopieren) -\->
-                    <span xml:lang="en">
-                        <xsl:value-of select="concat($SZDAUT_DE_CONTENT,', ',$SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:copy>-->
     </xsl:template>
     
     <!-- Acquisition
@@ -113,16 +94,11 @@
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
-            <xsl:choose>
-                <xsl:when test="$SZDAUT_EN_CONTENT != 'xxx'">
-                    <span xml:lang="en">
-                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- show nothing -->
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <span xml:lang="en">
+                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                </span>
+            </xsl:if>
         </xsl:copy>
     </xsl:template>
     
@@ -130,23 +106,18 @@
     Achtung: ähnliches Problem wie oben
     AUSSERDEM provenance von SZDAUT.603 schmeißt alles durcheinander, weil hat 2 provenance Element - wozu? das zweite:
     <provenance type="provenance">Herzog de La Rochefoucauld</provenance>???-->
-    <xsl:template match="t:msDesc/t:history/t:provenance">
+    <xsl:template match="t:msDesc/t:history/t:provenance[not(@type)]">
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[12]"/>
         <xsl:copy>
             <span xml:lang="de">
                 <xsl:apply-templates/>
             </span>
-            <xsl:choose>
-                <xsl:when test="$SZDAUT_EN_CONTENT != 'xxx'">
-                    <span xml:lang="en">
-                        <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
-                    </span>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- show nothing -->
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <span xml:lang="en">
+                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                </span>
+            </xsl:if>
         </xsl:copy>
     </xsl:template>
 
