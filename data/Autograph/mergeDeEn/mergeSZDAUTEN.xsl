@@ -34,7 +34,8 @@
         <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
         <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[4]"/>
         <xsl:copy><xsl:attribute name="xml:lang">de</xsl:attribute>
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates select="node()"/>
         </xsl:copy>
             <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
                 <title xml:lang="en">
