@@ -127,6 +127,12 @@
                                                 <!-- /////////////////////////////////////////// -->
                                                 <xsl:call-template name="AddData-Databasket"/>
                                                 
+                                                <!-- HREF SCAN -->
+                                                <!-- if a PID exists in the TEI make a @href to the viewer and a different col-md-alignment -->
+                                                <xsl:variable name="PID_IMAGE" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='PID']"/>
+                                                <xsl:variable name="externIIIFManifest" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[@type='extern_iiif']/t:idno[@type='manifest']"/>
+                                                <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='subject']"/>
+                                                
                                                 <div class="card-heading bg-light row">
                                                    <!-- creating collapse id -->
                                                     <h4 class="card-title text-left col-9 small">
@@ -141,11 +147,11 @@
                                                       			        <!-- TITLE -->
 	                                                       			<xsl:choose>
 	                                                       			    <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale][not(@type)]) > 60">
-	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale][not(@type)], 1, 70)"/>
+	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[@xml:lang = $locale][not(@type)], 1, 62)"/>
 	                                                       			        <xsl:text>... </xsl:text>
 	                                                       			    </xsl:when>
 	                                                       			    <xsl:when test="string-length(t:fileDesc/t:titleStmt/t:title[1][not(@type)]) > 60">
-	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[1][not(@type)], 1, 70)"/>
+	                                                       			        <xsl:value-of select="substring(t:fileDesc/t:titleStmt/t:title[1][not(@type)], 1, 62)"/>
 	                                                       			        <xsl:text>... </xsl:text>
 		                     											</xsl:when>
 	                                                       				<xsl:otherwise>
@@ -216,13 +222,8 @@
                                                       		    </xsl:if>
                                                       		</xsl:otherwise>
                                                       	</xsl:choose>
-                                                    </h4>  
-                                                       	<!-- HREF SCAN -->
-                                                       	<!-- if a PID exists in the TEI make a @href to the viewer and a different col-md-alignment -->
-                                                        <xsl:variable name="currentPID" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='PID']"/>
-                                                        <xsl:variable name="externIIIFManifest" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[@type='extern_iiif']/t:idno[@type='manifest']"/>
-                                                        <xsl:variable name="currentCollection" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='subject']"/>
-                                                        <!-- scan, extern, thema button -->
+                                                    </h4>
+                                                    <!-- scan, extern, thema button -->
                                                     <span class="col-2 text-center">
                                                             <xsl:choose>
                                                                 <xsl:when test="$externIIIFManifest">
@@ -242,16 +243,16 @@
                                                                          </xsl:call-template>
                                                                      </a>                                                                    
                                                                 </xsl:when>
-                                                                <xsl:when test="$currentPID">
+                                                                <xsl:when test="$PID_IMAGE">
                                                                     <xsl:call-template name="createViewerHref">
-                                                                        <xsl:with-param name="currentPID" select="$currentPID"/>
+                                                                        <xsl:with-param name="PID_IMAGE" select="$PID_IMAGE"/>
                                                                         <xsl:with-param name="locale" select="$locale"/>
                                                                     </xsl:call-template>
                                                                 </xsl:when>
                                                                 <xsl:otherwise/>
                                                             </xsl:choose>
-                                                            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern'][1]">
-                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern'][1]}" target="_blank"  class="ml-1 szd_color">
+                                                            <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[1]/t:idno[@type='extern'][1]">
+                                                                <a href="{t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[1]/t:idno[@type='extern'][1]}" target="_blank"  class="ml-1 szd_color">
                                                                     <xsl:choose>
                                                                         <xsl:when test="$locale = 'en'">
                                                                             <xsl:attribute name="title" select="'Access external resource'"/>
@@ -297,6 +298,7 @@
                                                    <xsl:call-template name="FillbiblFull_SZDMSK">
                                                        <xsl:with-param name="locale" select="$locale"/>
                                                        <xsl:with-param name="PID" select="$PID"/>
+                                                       <xsl:with-param name="PID_IMAGE" select="$PID_IMAGE"/>
                                                    </xsl:call-template>
                                            </div>
                                        </div>

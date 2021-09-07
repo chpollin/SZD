@@ -34,10 +34,8 @@
     <!-- project-specific variables -->
     <xsl:variable name="server_template"></xsl:variable>
     <!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
-    <xsl:variable name="gamsdev_template">/szd</xsl:variable>
-    
-    <!-- GAMS -->
-    <!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
+    <xsl:variable name="gamsdev_template">/gamsdev/pollin/szd/trunk/www</xsl:variable>
+   
 
     
 
@@ -203,7 +201,7 @@
                     </xsl:for-each-group>
                  </xsl:when>
                 <!-- ORDNUNGSKATEGORIEN for SZDMSK and SZDLEB -->
-                <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente'>    
+                <xsl:when test="$PID = 'o:szd.werke' or $PID = 'o:szd.lebensdokumente'">    
                 <xsl:for-each-group select="$Category" group-by=".">
                     <xsl:sort select="."/>
                     <div class="btn-group btn-group-sm szd_color">
@@ -588,7 +586,7 @@
         <xsl:param name="locale"/>
         <span class="text-center">
             <xsl:choose>
-                <xsl:when test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier/t:idno[@type='extern'][1], 'dla-marbach.de')">
+                <xsl:when test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:altIdentifier[1]/t:idno[@type='extern'][1], 'dla-marbach.de')"> 
                     <i class="fas fa-external-link-alt _icon"><xsl:text> </xsl:text></i>
                 </xsl:when>
                 <xsl:otherwise>
@@ -1560,7 +1558,13 @@
                                <!-- media id is part of all SZDMSK and SZDLEB in Marbach -->
                                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']">
                                    <xsl:text>, Mediennummer: </xsl:text>
-                                   <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']"/>
+                                   <xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:idno[@type='mediaid']">
+                                       <xsl:value-of select="."/>
+                                       <xsl:if test="not(last()=position())">
+                                           <xsl:text>, </xsl:text>
+                                       </xsl:if>
+                                   </xsl:for-each>
+                                   
                                </xsl:if>
                            </td>
                        </tr>
@@ -1585,11 +1589,13 @@
         <xsl:param name="SENT"/>
         <xsl:param name="RECIEVED"/>
         <xsl:param name="TITLE"/>
+        <xsl:param name="PID_IMAGE"/>
         <xsl:variable name="URL" select="concat('https://stefanzweig.digital/', //t:publicationStmt//t:idno[@type='PID'], '#', @xml:id)"/>
         <xsl:variable name="id" select="substring-after(@xml:id, '.')"/>
         <xsl:variable name="accordion_id" select="concat('a', $id)"/>
         <xsl:variable name="permalink_id" select="concat('u', $id)"/>
         <xsl:variable name="citation_id" select="concat('c', $id)"/>
+        
         
         <xsl:variable name="msIdentifier" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier"/>
         
@@ -1617,8 +1623,8 @@
                     </a>
                 </xsl:if>
                 <!-- CITATION -->
-                <a class="col-3 text-center"  data-toggle="collapse" data-target="{concat('#',$citation_id)}">
-                    <i class="fas fa-quote-right d-block" style="color: #631a34">
+                <a class="col-3 text-center" data-toggle="collapse" data-target="{concat('#',$citation_id)}">
+                    <i class="fas fa-quote-right d-block szd_color">
                          <xsl:text> </xsl:text>
                      </i>
                     <span class="footer_icon_text d-none d-sm-block">
@@ -1680,7 +1686,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                        <i class="far fa-file-pdf d-block" style="color: #631a34">
+                        <i class="far fa-file-pdf d-block szd_color">
                             <xsl:text> </xsl:text>
                         </i>
                         <span class="footer_icon_text d-none d-sm-block">
@@ -1695,7 +1701,32 @@
                         </span>
                     </span>
                 </xsl:if>
-                
+                <!-- DOWNLOAD ALL IMAGES FROM IIIF MANIFEST -->
+                <xsl:if test="$PID_IMAGE">
+                    <span onclick="download_images_iiif_manifest('{$PID_IMAGE}')" class="col-3 text-center">
+                        <xsl:attribute name="title">
+                            <xsl:choose>
+                                <xsl:when test="$locale ='en'">
+                                    <xsl:text>For larger objects this may take some time</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>Bei größeren Objekten kann dies eine Zeit dauern.</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:attribute>
+                        <i class="fas fa-download d-block szd_color"><xsl:text> </xsl:text></i>
+                        <span class="footer_icon_text d-none d-sm-block">
+                            <xsl:choose>
+                                <xsl:when test="$locale ='en'">
+                                    <xsl:text>Download Images</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>Bilder herunterladen</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </span>
+                    </span>
+                </xsl:if>
 
             </div>
             <!-- REFERENCE -->
@@ -1993,6 +2024,7 @@
 	<xsl:template name="FillbiblFull_SZDMSK">
 	    <xsl:param name="locale"/>
 	    <xsl:param name="PID"/>
+	    <xsl:param name="PID_IMAGE"/>
 	    <div class="table-responsive">
 	       <table class="table table-sm">
 	           <tbody>
@@ -2066,12 +2098,14 @@
                                           </xsl:when>
                                           <xsl:otherwise>
                                               <xsl:choose>
-                                                  <xsl:when test="t:fileDesc/t:titleStmt/t:title[1]/@ana = 'assigned'">
+                                                  <!-- object example:  https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.126 -->
+                                                  <xsl:when test="t:fileDesc/t:titleStmt/t:title[1]/@ana = 'assigned' or t:fileDesc/t:titleStmt/t:title[1]/@ana = 'object'">
                                                       <xsl:text>fingiert</xsl:text>
                                                   </xsl:when>
                                                   <xsl:when test="t:fileDesc/t:titleStmt/t:title[1]/@ana = 'supplied/verified'">
                                                       <xsl:text>ermittelt</xsl:text>
                                                   </xsl:when>
+                                                 
                                                   <xsl:otherwise>
                                                       <xsl:text>original</xsl:text>
                                                   </xsl:otherwise>
@@ -2100,12 +2134,27 @@
                          </i>
                      <xsl:text> </xsl:text>
                      <!-- INHALT -->
-                     <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/*">
+                     <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary">
                         <br/>
                         <xsl:text>[</xsl:text>
                          <xsl:call-template name="printEnDe">
                              <xsl:with-param name="locale" select="$locale"/>
-                             <xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/*"/>
+                             <xsl:with-param name="path">
+                                 <xsl:choose>
+                                     <xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/*">
+                                         <xsl:call-template name="printEnDe">
+                                             <xsl:with-param name="locale" select="$locale"/>
+                                             <xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/*"/>
+                                         </xsl:call-template>
+                                     </xsl:when>
+                                     <xsl:otherwise>
+                                         <xsl:call-template name="printEnDe">
+                                             <xsl:with-param name="locale" select="$locale"/>
+                                             <xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary"/>
+                                         </xsl:call-template>
+                                     </xsl:otherwise>
+                                 </xsl:choose>
+                             </xsl:with-param>
                          </xsl:call-template>
                         <xsl:text>]</xsl:text>
                      </xsl:if>
@@ -2213,7 +2262,7 @@
                        <tr class="group row">
                            <td class="col-3 text-truncate">
                               <!-- SZDMSK -->
-                              <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#PhysicalDescription')}" target="_blank">
+                              <a href="{concat('/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=', $locale, '#Physicalption')}" target="_blank">
                                   <i18n:text>physicaldescription</i18n:text>
                                   <i class="fa fa-info-circle info_icon" aria-hidden="true"><xsl:text> </xsl:text></i>
                               </a>
@@ -2485,6 +2534,7 @@
          <xsl:call-template name="getFooter">
              <xsl:with-param name="PID" select="$PID"/>
              <xsl:with-param name="locale" select="$locale"/>
+             <xsl:with-param name="PID_IMAGE" select="$PID_IMAGE"></xsl:with-param>
          </xsl:call-template>
 	    </div>
 	</xsl:template>
@@ -2599,25 +2649,36 @@
                                                 </xsl:otherwise>
                                             </xsl:choose>
                                         </xsl:attribute>
-                                        <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title"/>
-                                        <!--<xsl:text> </xsl:text>
-                                        <i class="fas fa-external-link-alt _icon small pl-1"><xsl:text> </xsl:text></i>-->
+                                        <xsl:call-template name="print_title_en_de">
+                                            <xsl:with-param name="locale" select="$locale"/>
+                                        </xsl:call-template>
+                                        <!--<xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title"/>-->
                                     </a>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title"/>
+                                    <xsl:call-template name="print_title_en_de">
+                                        <xsl:with-param name="locale" select="$locale"/>
+                                    </xsl:call-template>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </td>
                     </tr>
                 </xsl:if>
-                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary">
+                <xsl:variable name="SUMMARY_SZDAUT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary"/>
+                <xsl:if test="$SUMMARY_SZDAUT">
                     <tr class="row">
                         <td class="col-3 text-truncate">
                             <i18n:text>description</i18n:text>
                         </td>
                         <td class="col-9">
-                            <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary"/>
+                            <xsl:choose>
+                                <xsl:when test="$locale = 'en'">
+                                    <xsl:apply-templates select="$SUMMARY_SZDAUT/t:span[@xml:lang = 'en']"></xsl:apply-templates>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:apply-templates select="$SUMMARY_SZDAUT/t:span[@xml:lang = 'de']"></xsl:apply-templates>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </td>
                     </tr>
                 </xsl:if>
@@ -2652,7 +2713,11 @@
                             <xsl:choose>
                                 <!-- if its pages -->
                                 <xsl:when test="$EXTENT/t:measure[@type='page']">
-                                    <xsl:value-of select="$EXTENT/t:measure[@type='page']"/>
+                                    <xsl:call-template name="printEnDe">
+                                        <xsl:with-param name="locale" select="$locale"/>
+                                        <xsl:with-param name="path" select="$EXTENT/t:measure[@type='page']"></xsl:with-param>
+                                    </xsl:call-template>
+                                    <!--<xsl:value-of select="$EXTENT/t:measure[@type='page']"/>-->
                                     <xsl:text> </xsl:text>
                                     <xsl:choose>
                                         <xsl:when test="$EXTENT/t:measure[@type='page'] = '1'">
@@ -2679,7 +2744,11 @@
                                 </xsl:when>
                                 <!-- if its a leaf or leaves -->
                                 <xsl:when test="$EXTENT/t:measure[@type='leaf']">
-                                    <xsl:value-of select="$EXTENT/t:measure[@type='leaf']"/>
+                                    <xsl:call-template name="printEnDe">
+                                        <xsl:with-param name="locale" select="$locale"/>
+                                        <xsl:with-param name="path" select="$EXTENT/t:measure[@type='leaf']"></xsl:with-param>
+                                    </xsl:call-template>
+                                    <!--<xsl:value-of select="$EXTENT/t:measure[@type='leaf']"/>-->
                                     <xsl:text> </xsl:text>
                                     <xsl:choose>
                                         <xsl:when test="$EXTENT/t:measure[@type='leaf'] = '1'">
@@ -2714,7 +2783,11 @@
                                     <xsl:otherwise><xsl:value-of select="."/><xsl:text>, </xsl:text></xsl:otherwise>
                                 </xsl:choose> 	
                             </xsl:for-each>
-                            <xsl:value-of select="$EXTENT/t:measure[@type='format']"/>
+                            <xsl:call-template name="printEnDe">
+                                <xsl:with-param name="locale" select="$locale"/>
+                                <xsl:with-param name="path" select="$EXTENT/t:measure[@type='format']"></xsl:with-param>
+                            </xsl:call-template>
+                            <!--<xsl:value-of select="$EXTENT/t:measure[@type='format']"/>-->
                             <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding">
                                 <xsl:text>, </xsl:text>
                                 <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding"/>
@@ -2738,7 +2811,8 @@
 
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- ////// -->
-                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
+                <xsl:variable name="AQUISITION_SZDAUT" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition"/>
+                <xsl:if test="$AQUISITION_SZDAUT">
                     <tr class="row">
                         <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[@type='provenance'])">
                             <xsl:attribute name="class"><xsl:text>row group</xsl:text></xsl:attribute>
@@ -2747,28 +2821,38 @@
                             <i18n:text>acquired</i18n:text>
                         </td>
                         <td class="col-9">
-                            <!--<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"/>-->
-                            <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition"/>
+                            <xsl:choose>
+                                <xsl:when test="$locale ='en'">
+                                    <xsl:apply-templates select="$AQUISITION_SZDAUT/t:span[@xml:lang ='en']"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:apply-templates select="$AQUISITION_SZDAUT/t:span[@xml:lang ='de']"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </td>
                     </tr>
                 </xsl:if>
          
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- Current Location  -->
-                <xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]">
+                <xsl:variable name="PROVENANCE_not_TYPE" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]"/>
+                <xsl:if test="$PROVENANCE_not_TYPE">
                     <tr class="row">
                         <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)">
                             <xsl:attribute name="class"><xsl:text>group row</xsl:text></xsl:attribute>
                         </xsl:if>
-                       
                         <td class="col-3 text-truncate">
                             <i18n:text>currentlocation</i18n:text>
                         </td>
                         <td class="col-9">
-                            <!--<xsl:value-of select="t:sourceDesc/t:msDesc/t:history/t:provenance"/>-->
-                            <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]">
-                                <xsl:with-param name="locale" select="$locale"/>
-                            </xsl:apply-templates>
+                            <xsl:choose>
+                                <xsl:when test="$locale ='en'">
+                                    <xsl:apply-templates select="$PROVENANCE_not_TYPE/t:span[@xml:lang ='en']"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:apply-templates select="$PROVENANCE_not_TYPE/t:span[@xml:lang ='de']"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </td>
                     </tr>
                 </xsl:if>
@@ -2792,13 +2876,19 @@
         <xsl:param name="path"/>
         <xsl:param name="locale"/>
         <xsl:choose>
+            <!-- if there is a hyper link inside; I only did it that way because I didn't want to break any other behavior -->
+            <xsl:when test="$path/t:ref/@target">
+                <xsl:apply-templates select="$path[@xml:lang = $locale]">
+                    <xsl:with-param name="locale" select="$locale"/>
+                </xsl:apply-templates>
+            </xsl:when>
             <!-- path = t:date/t:span[@xml:lang="de"] -->
             <xsl:when test="$path/@xml:lang">
                 <xsl:value-of select="normalize-space($path[@xml:lang = $locale][1])"/>
             </xsl:when>
             <!-- path = t:date and there is a child with a lang tag--> 
             <xsl:when test="$path/*/@xml:lang">
-                <xsl:value-of select="normalize-space($path/*[@xml:lang = $locale][1])"/>
+                <xsl:apply-templates select="$path/*[@xml:lang = $locale][1]"/>
             </xsl:when>
             <!-- path = t:date and no lang tag was found, just print it [no lang tag needed, maybe just numbers]--> 
             <xsl:otherwise>
@@ -2929,7 +3019,9 @@
                             </xsl:when>
                             <!-- for mixed content with <hi class="italic"> -->
                             <xsl:otherwise>
-                                <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[1]"/>
+                                <xsl:call-template name="print_title_en_de">
+                                    <xsl:with-param name="locale" select="$locale"/>
+                                </xsl:call-template>
                             </xsl:otherwise>
                         </xsl:choose>
                     </a>
@@ -2941,7 +3033,6 @@
                         </xsl:call-template>
                     </xsl:if>
                 </h4>
-                
                 <xsl:choose>
                     <xsl:when test="t:fileDesc/t:titleStmt/t:title/@ref">
                         <span class="col-2 text-center">
@@ -3027,10 +3118,10 @@
     </xsl:template>
     
     <xsl:template name="createViewerHref">
-        <xsl:param name="currentPID"/>
+        <xsl:param name="PID_IMAGE"/>
         <xsl:param name="locale"/>
         <xsl:param name="content"/>
-        <a href="{concat('/', $currentPID, '/sdef:IIIF/getMirador')}" target="_blank">
+        <a href="{concat('/', $PID_IMAGE, '/sdef:IIIF/getMirador')}" target="_blank">
             <xsl:choose>
                 <xsl:when test="$locale = 'en'">
                     <!--<xsl:attribute name="title" select="'Access digital facsimile'"/>-->
@@ -3161,5 +3252,25 @@
             <img src="{$Icon_suche_template}" class="img-responsive icon" alt="Person"/>
         </a>
     </xsl:template>
+    
+    <xsl:template name="print_title_en_de">
+        <xsl:param name="locale"/>
+        <xsl:choose>
+            <xsl:when test="t:fileDesc/t:titleStmt/t:title[@xml:lang]">
+                <xsl:choose>
+                    <xsl:when test="$locale = 'en'">
+                        <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[@xml:lang='en']"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[@xml:lang='de']"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
         
 </xsl:stylesheet>

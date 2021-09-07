@@ -632,7 +632,7 @@
                         <!-- AUTOR -->
                         <xsl:choose> 
                             <!-- s:s = surname; s:ss = sender surname -->
-                            <xsl:when test="s:s | s:ss[1]">
+                            <xsl:when test="s:s[not(@bound)] | s:ss[1][not(@bound)]">
                                 <strong>
                                     <xsl:value-of select="s:s[1] | s:ss[1]"/>
                                     <xsl:if test="s:f  | s:sf[1]">
@@ -642,7 +642,7 @@
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
-                            <xsl:when test="s:sed">
+                            <xsl:when test="s:sed[not(@bound)]">
                                 <strong>
                                     <xsl:value-of select="s:sed"/>
                                     <xsl:if test="s:fed"><xsl:text>, </xsl:text>
@@ -652,7 +652,7 @@
                                 </strong>
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
-                            <xsl:when test="s:sco">
+                            <xsl:when test="s:sco[not(@bound)]">
                                 <strong>
                                     <xsl:value-of select="s:sco"/>
                                     <xsl:if test="s:fco">
@@ -664,7 +664,7 @@
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
                             <!-- partie involved -->
-                            <xsl:when test="s:spi">
+                            <xsl:when test="s:spi[not(@bound)]">
                                 <strong>
                                     <xsl:value-of select="s:spi"/>
                                     <xsl:if test="s:fpi"><xsl:text>, </xsl:text>
@@ -675,7 +675,7 @@
                                 <xsl:text>: </xsl:text>
                             </xsl:when>
                             <!-- affected person -->
-                            <xsl:when test="s:sap">
+                            <xsl:when test="s:sap[not(@bound)]">
                                 <strong>
                                     <xsl:value-of select="s:sap"/>
                                     <xsl:if test="s:fap"><xsl:text>, </xsl:text>
@@ -695,7 +695,7 @@
                             </span>
                         <xsl:value-of select="$currentPID"/>
                         <!-- for SZDMSK and SZDLEB add: TITEL | SIGNATURE | SZDID -->
-                        <xsl:if test="s:si and (contains($SZDID, 'SZDMSK') or (contains($SZDID, 'SZDLEB')))">
+                        <xsl:if test="s:si[not(@bound)] and (contains($SZDID, 'SZDMSK') or (contains($SZDID, 'SZDLEB')))">
                             <xsl:text> | </xsl:text>
                             <xsl:value-of select="s:si"/>
                         </xsl:if>
@@ -761,7 +761,7 @@
                             </tr>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- /// /// -->
-                            <xsl:if test="s:co">
+                            <xsl:if test="s:co[not(@bound)]">
                                 <tr class="row">
                                     <td class="col-3 text-truncate">
                                         <i18n:text>description</i18n:text>
@@ -784,7 +784,7 @@
                                 </tr>
                             </xsl:if>-->
                             <!-- ///Veröffentlichung/// -->
-                            <xsl:if test="s:ps">
+                            <xsl:if test="s:ps[not(@bound)]">
                                 <tr class="row">
                                     <td class="col-3 text-truncate">
                                         <i18n:text>publicationdetails</i18n:text>
@@ -812,7 +812,7 @@
                             </xsl:if>-->
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///SPRACHE/// -->
-                            <xsl:if test="s:la">
+                            <xsl:if test="s:la[not(@bound)]">
                                 <tr class="row">
                                     <td class="col-3 text-truncate">
                                         <i18n:text>language</i18n:text>
@@ -827,7 +827,7 @@
                             </xsl:if>
                             <!-- //////////////////////////////////////////////////////////// -->
                             <!-- ///UMFANG/// -->
-                            <xsl:if test="s:ex">
+                            <xsl:if test="s:ex[not(@bound)]">
                                 <tr class="row">
                                     <td class="col-3 text-truncate">
                                         <i18n:text>physicaldescription</i18n:text>
@@ -853,7 +853,7 @@
                             </xsl:if>-->
                             <!-- //////////////////////////////////////////////////////////// --> 
                             <!-- ///Provenienzkriterien/// -->
-                            <xsl:if test="s:pc">
+                            <xsl:if test="s:pc[not(@bound)]">
                                 <tr class="row group">
                                     <td class="col-3 text-truncate">
                                         <xsl:choose>

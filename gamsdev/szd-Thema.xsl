@@ -418,7 +418,7 @@
             <!-- @target contains the PID -->
             <xsl:when test="t:ref/@target">
                 <xsl:call-template name="createViewerHref">
-                    <xsl:with-param name="currentPID" select="t:ref/@target"/>
+                    <xsl:with-param name="PID_IMAGE" select="t:ref/@target"/>
                     <xsl:with-param name="locale" select="$locale"/>
                     <xsl:with-param name="content" select="."/>
                 </xsl:call-template>

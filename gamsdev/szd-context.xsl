@@ -105,14 +105,20 @@
                                     <ol class="carousel-indicators">
                                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"><xsl:text> </xsl:text></li>
                                         <li data-target="#carouselExampleIndicators" data-slide-to="1"><xsl:text> </xsl:text></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"><xsl:text> </xsl:text></li>
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-interval="4000">
                                             <img class="d-block w-75 mx-auto" src="/archive/objects/context:szd/datastreams/STARTBILD/content" alt="First slide"/>
                                         </div>
                                         <div class="carousel-item" data-interval="4000">
-                                            <a href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=miscellaneous&amp;locale=', $locale)}">
+                                            <a href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=miscellaneous&amp;locale=', $locale, '#miscellaneous.1')}">
                                                 <img class="d-block w-75 mx-auto" src="/archive/objects/context:szd/datastreams/STARTBILD_2/content" alt="Second slide"/>
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item" data-interval="4000">
+                                            <a href="{concat('/archive/objects/context:szd/methods/sdef:Context/get?mode=miscellaneous&amp;locale=', $locale, '#miscellaneous.2')}">
+                                                <img class="d-block w-75 mx-auto" src="/archive/objects/context:szd/datastreams/STARTBILD_3/content" alt="Third slide"/>
                                             </a>
                                         </div>
                                     </div>

@@ -20,8 +20,23 @@ $('a[data-toggle="collapse"]').click(function(){
                     
 
 ///////////////////////////////////////////////
+function jump_to_id_switching_language(HREF_URL)
+{
+ // href="{concat('/', $PID, '/sdef:TEI/get?locale=de')}" 
+ console.log(HREF_URL);
+ if(location.hash)
+ {
+    window.location.href = HREF_URL + window.location.hash
+ }
+ else
+ {
+     window.location.href = HREF_URL
+ }
+}
+
+///////////////////////////////////////////////
 window.onload = function () {
-	var hash = window.location.hash.substr(1);
+	const hash = window.location.hash.substr(1);
     if(location.hash){
 		location.hash = "#" + hash;
 		window.scrollBy(0, -250);
@@ -52,3 +67,9 @@ function scrolldown (src) {
     };
 
 };
+
+///////////////////////////////////////////////
+// loading, spinner
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}

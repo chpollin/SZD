@@ -1,5 +1,36 @@
 /* Style the Image Used to Trigger the Modal */
 
+#loading_spinner
+{
+  margin-top: 20%;  
+}
+
+
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+
+
+.btn-link:hover{
+  color: #631a34;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+span.btn-link{
+  cursor: pointer;
+  color: #631a34;
+  font-family: "SansPro", Arial, Helvetica;
+  font-size: 16px;
+}
 
 /*styling für edition <pb>*/
 span.page {

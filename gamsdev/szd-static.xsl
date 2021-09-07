@@ -61,9 +61,9 @@
 	<!-- project-specific variables -->
 	<xsl:variable name="server"></xsl:variable>
 	<!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
-    <xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
+    <!--<xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> -->
 	<!-- GAMS -->
-	<!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
+	<xsl:variable name="gamsdev">/szd</xsl:variable>
 	
 	<xsl:variable name="projectTitle">
 		<xsl:text>Stefan Zweig digital</xsl:text>
@@ -138,9 +138,9 @@
 				<link href="{$projectNav}" rel="stylesheet"/>
 				<!-- Timeline: Lebenskalender -->
 				<link href="{$timelineCss}" rel="stylesheet" type="text/css"/>
-				<link type="text/css" rel="stylesheet" href="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.css?v=2.1.5"/>
+				<link rel="stylesheet" type="text/css" href="/lib/1.0/plugins/fancybox_v2.1.5/source/jquery.fancybox.css?v=2.1.5"/>
 				<link rel="stylesheet" href="/lib/2.0/fa/css/all.css"/>
-				<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
+				<link href="{concat($server, $gamsdev, '/css/dataTables.css')}"  rel="stylesheet" type="text/css"/>
 				
 				<!-- jQuery core JavaScript ================================================== -->
 				<script src="/lib/2.0/jquery-3.5.1.min.js"><xsl:text> </xsl:text></script>
@@ -158,6 +158,10 @@
 					});
 				</script>
 				<script src="{concat($server, $gamsdev,'/js/buildquery.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($server, $gamsdev,'/js/FileSaver.js')}"><xsl:text> </xsl:text></script>
+				<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"><xsl:text> </xsl:text></script-->
+				<script src="{concat($server, $gamsdev,'/js/jszip.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($server, $gamsdev,'/js/download_images_iiif_manifest.js')}"><xsl:text> </xsl:text></script>
 			</head>
 
 			<!-- //////////////////////////////////////////////////////////// -->
@@ -174,6 +178,21 @@
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"><xsl:text> </xsl:text></span>
 						</button>
+						<span class="d-block d-sm-none">
+							<xsl:call-template name="languageButton">
+								<xsl:with-param name="PID">
+									<xsl:choose>
+										<xsl:when test="not($PID = '')">
+											<xsl:value-of select="$PID"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:text>context:szd</xsl:text>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:with-param>
+								<xsl:with-param name="mode" select="$mode"/>
+							</xsl:call-template>
+						</span>
 						<div class="container">
 							<div class="collapse navbar-collapse" id="nav">
 								<ul class="navbar-nav">
@@ -251,6 +270,9 @@
 											</a>
 											<a class="dropdown-item text-uppercase" href="https://de.wikisource.org/wiki/Stefan_Zweig/Erstausgaben" target="_blank">
 												<i18n:text>firstedition</i18n:text>
+											</a>
+											<a class="dropdown-item text-uppercase" href="https://zweig.fredonia.edu" target="_blank">
+												<i18n:text>bibliography</i18n:text>
 											</a>
 										</div>
 									</li>
@@ -346,7 +368,15 @@
 				
 				<!-- //////////////////////////////////////////////////////////// -->
 				<!-- ///CONTENT/// -->
-				<main class="container">
+				<main class="container" >
+					<div id="loading">
+						<div class="d-flex justify-content-center" >
+							<div class="spinner-border" role="status" id="loading_spinner">
+								<span class="sr-only">Loading...</span>
+							</div>
+						</div>
+					</div>
+					
 					<xsl:call-template name="content"/>
 				</main>
 
@@ -379,7 +409,7 @@
 							<div class="col-12 text-center">
 								<div class="row">
 									<div class="col-sm-3">
-										<span class="text-center text-uppercase" target="_blank">
+										<span class="text-center text-uppercase">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:text>PROJECT MANAGEMENT</xsl:text>
@@ -399,7 +429,7 @@
 										</a>
 									</div>
 									<div class="col-sm-3">
-										<span class="text-center text-uppercase" target="_blank">
+										<span class="text-center text-uppercase">
 											<xsl:choose>
 												<xsl:when test="$locale = 'en'">
 													<xsl:text>Project partner</xsl:text>
@@ -461,7 +491,7 @@
 												<xsl:with-param name="URL_EN" select="'https://www.uni-salzburg.at/index.php?id=52&amp;L=1'"/>
 												<xsl:with-param name="URL_DE" select="'https://www.uni-salzburg.at'"/>
 											</xsl:call-template>
-											<img class="footer_img"   style="max-width: 65%;"
+											<img class="footer_img" style="max-width: 65%;"
 												src="{concat($server, $gamsdev, '/img/uni_salzburg.jpg')}"
 												alt="Logo Universität Salzburg"/>
 										</a>
@@ -565,6 +595,11 @@
 					</figcaption>					
 				</figure>
 			</xsl:when>
+			<xsl:when test="ancestor::t:div[@type = 'miscellaneous']">
+				<figure class="text-center pt-4 pb-3">
+					<img class="img-fluid mx-auto d-block w-50" src="{t:graphic/@url}" alt="Image"/>
+				</figure>
+			</xsl:when>
 			<xsl:otherwise>
 				<img class="img-fluid mx-auto d-block" src="{t:graphic/@url}" alt="Image"/>
 			</xsl:otherwise>
@@ -597,6 +632,9 @@
 	<!-- miscellaneous datastream in context:szd -->
 	<xsl:template match="t:div[@type='miscellaneous']">
 		<div class="card-body border-bottom">
+			<xsl:if test="@n">
+				<xsl:attribute name="id" select="concat('miscellaneous.', @n)"/>
+			</xsl:if>
 			<xsl:apply-templates/>
 		</div>
 	</xsl:template>
@@ -793,7 +831,7 @@
 			<xsl:apply-templates/>
 		</a>
 	</xsl:template>
-	
+
 	<!-- //////////////////////////////////////////////////////////// -->
 	<!-- @href starttext -->
 	<xsl:template match="t:span[@type='href']">
@@ -843,9 +881,9 @@
 				</xsl:when>
 				<!-- for TEI objects -->
 				<xsl:otherwise>
-					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=de')}">DE</a>
+					<span class="btn-link" onclick="jump_to_id_switching_language('{concat('/', $PID, '/sdef:TEI/get?locale=de')}')">DE</span>
 					<span class="text-dark pl-1 pr-1">|</span>
-					<a href="{concat('/', $PID, '/sdef:TEI/get?locale=en')}">EN</a>
+					<span class="btn-link" onclick="jump_to_id_switching_language('{concat('/', $PID, '/sdef:TEI/get?locale=en')}')">EN</span>
 				</xsl:otherwise>
 			</xsl:choose>
 		</span>
