@@ -39,7 +39,16 @@
         </xsl:copy>
             <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
                 <title xml:lang="en">
-                    <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDAUT_EN_CONTENT, '&lt;hi&gt;')">
+                            <xsl:call-template name="fix_hi">
+                                <xsl:with-param name="SZDAUT_EN_CONTENT" select="$SZDAUT_EN_CONTENT"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </title>
             </xsl:if>
     </xsl:template>

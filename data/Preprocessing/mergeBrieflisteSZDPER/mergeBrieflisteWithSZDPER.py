@@ -50,8 +50,10 @@ main()
 # load SZDPER
 URL = "https://gams.uni-graz.at/o:szd.personen/TEI_SOURCE"
 response = urllib.request.urlopen(URL).read()
-tree = ET.fromstring(response)
+tree = ET.ElementTree()
+root = ET.fromstring(response)
 tei = "{http://www.tei-c.org/ns/1.0}"
+ET.register_namespace("", "http://www.tei-c.org/ns/1.0")
 
 
 # DataFrame = Google Spreadsheet
@@ -66,7 +68,7 @@ for name in df["Correspondent"]:
     set_excelNames.add(name)
 
 # extract SURNAME, FORENAME from https://gams.uni-graz.at/o:szd.personen/TEI_SOURCE
-for person in tree.findall('.//'+tei+'listPerson//'+tei+'persName'):
+for person in root.findall('.//'+tei+'listPerson//'+tei+'persName'):
     if(person.find(tei+'name') is not None):
         name = person.find(tei+'name').text
         set_SZDPER.add(name)
@@ -87,7 +89,7 @@ newPerson = set_excelNames - set_SZDPER
 #print(newPerson)
 
 # creates XML/TEI person/persName
-SZDPER_ID = 1653
+SZDPER_ID = 1947
 #print(df["Correspondent"])
 
 for person in newPerson:
@@ -103,7 +105,7 @@ for person in newPerson:
             
         # t:person
         tei_person = ET.Element('person')
-        tei_person.set('xml:id', str(SZDPER_ID) )
+        tei_person.set('xml:id', 'SZDPER.' + str(SZDPER_ID) )
         # t:persName
         tei_persName = ET.SubElement(tei_person, 'persName')
         if(row):
@@ -119,4 +121,6 @@ for person in newPerson:
             tei_name.text = person
             
         SZDPER_ID += 1
-        ET.dump(tei_person)   
+        root.append(tei_person)   
+        tree._setroot(root)
+        tree.write('mergeBrieflisteWithSZDPER.xml', encoding="utf-8")
