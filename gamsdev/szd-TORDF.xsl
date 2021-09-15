@@ -1831,11 +1831,16 @@
 
 		<!-- summary -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary">
-			<szd:content>
+			<xsl:call-template name="getEnDe">
+				<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary/t:span"/>
+				<xsl:with-param name="Type" select="'szd:content'"></xsl:with-param>
+			</xsl:call-template>
+			
+			<!--<szd:content>
 				<xsl:value-of
 					select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:summary)"
 				/>
-			</szd:content>
+			</szd:content>-->
 		</xsl:if>
 
 		<!-- szd:location  -->
@@ -1866,19 +1871,24 @@
 			rdf:resource="{$Autograph_Extent_URI}"/>
 
 		<!-- provenance for SZDAUT -->
-		<!--<xsl:call-template name="getProvenance">
-			<xsl:with-param name="locale" select="'en'"/>
-		</xsl:call-template>-->
-		<xsl:call-template name="getProvenance"/>
-
+		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
+			<xsl:call-template name="getEnDe">
+				<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:span"/>
+				<xsl:with-param name="Type" select="'szd:provenance'"/>
+			</xsl:call-template>
+		</xsl:if>
 
 		<!-- acquired -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
-			<szd:acquired>
+			<xsl:call-template name="getEnDe">
+				<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition/t:span"/>
+				<xsl:with-param name="Type" select="'szd:acquired'"/>
+			</xsl:call-template>
+			<!--<szd:acquired>
 				<xsl:value-of
 					select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)"
 				/>
-			</szd:acquired>
+			</szd:acquired>-->
 		</xsl:if>
 	</xsl:template>
 
@@ -2087,8 +2097,6 @@
 			</xsl:choose>
 		</xsl:for-each>
 	</xsl:template>
-
-
 
 	<!-- /////////////////////////////////////////// -->
 	<xsl:template name="createTriple">
@@ -2460,5 +2468,23 @@
 				<xsl:text>Error: in XPath: "t:fileDesc/t:sourceDesc/t:msDesc/t:msIdentifier/t:repository"</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+	
+	<!-- get en/de differentiation -->
+	<xsl:template name="getEnDe">
+		<xsl:param name="XPpath"/>
+		<xsl:param name="Type"/>
+		<xsl:if test="$XPpath">
+			<xsl:element name="{$Type}">
+				<xsl:attribute name="xml:lang" select="'en'"/>
+				<xsl:value-of select="normalize-space($XPpath[@xml:lang = 'en'])"/>
+			</xsl:element>
+		</xsl:if>
+		<xsl:if test="$XPpath">
+			<xsl:element name="{$Type}">
+				<xsl:attribute name="xml:lang" select="'de'"/>
+				<xsl:value-of select="normalize-space($XPpath[@xml:lang = 'de'])"/>
+			</xsl:element>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
