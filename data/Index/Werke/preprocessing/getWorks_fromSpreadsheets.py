@@ -1,13 +1,13 @@
 from __future__ import print_function
+import logging
 import pickle
 import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import xml.etree.ElementTree as ET
-import urllib.request
-import pandas as pd
 from typing import List
+import os
 
 #  https://docs.google.com/spreadsheets/d/16Po8t7cxqkKO7QUvDnLtSXxe2Gm2amoX6DJgDZeb86Y/edit?usp=sharing
 
@@ -22,6 +22,14 @@ def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
+
+    try:
+        os.mkdir("./log")
+    except FileExistsError:
+        pass
+    logging.basicConfig(filename='log/getWorks.log', level=logging.DEBUG, filemode="w")
+    logging.debug('Program started')
+
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -47,7 +55,6 @@ def main():
     
     sheet = service.spreadsheets()
     
-    
     result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                 range=SAMPLE_RANGE_NAME).execute()
     values = result.get('values', [])
@@ -60,7 +67,6 @@ def main():
 
         for index, row in enumerate(values):
             SZDWRK_ID = index
-            print(row)
 
             #####################
             ### <bibl> Attribut sortKey, wie gehen wir das an?
@@ -83,13 +89,18 @@ def main():
             if col_to_string(row, 1) != '' :
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
                 tei_title_single.set('type', 'single')
-                tei_title_single.set('ref', col_to_string(row, 10))
                 tei_title_single.text = col_to_string(row, 1)
+                set_col_att(tei_title_single, 'ref', row, 10)
+
+                # """ if col_to_string(row, 10) != '':
+                #     tei_title_single.set('ref', col_to_string(row, 10))
+                # else:
+                #     pass """
             else:
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
-                tei_title_compil.set('ref', col_to_string(row, 10))  
                 tei_title_compil.text = col_to_string(row, 2)
+                set_col_att(tei_title_compil, 'ref', row, 10)
             
             if col_to_string(row, 9) != '' :
                 tei_title_alt = ET.SubElement(tei_bibl, 'title')
@@ -107,42 +118,44 @@ def main():
             #### <publisher> includes date of creation and publication
             #### creation date(s)
             origDate = col_to_string(row, 3)
-            tei_publisher = ET.SubElement(tei_bibl, 'publisher')
-            tei_origDate = ET.SubElement(tei_publisher, 'origDate')
-            tei_origDate.text = origDate
-            if '/' in origDate:
-                origDate_from = origDate.split('/')[0]
-                origDate_to = origDate.split('/')[1]
-                tei_origDate.set('from', origDate_from)
-                tei_origDate.set('to', origDate_to)
-            else:
-                tei_origDate.set('when', origDate)
+            if origDate != '' :
+                tei_publisher = ET.SubElement(tei_bibl, 'publisher')
+                tei_origDate = ET.SubElement(tei_publisher, 'origDate')
+                tei_origDate.text = origDate
+                if '/' in origDate:
+                    origDate_from = origDate.split('/')[0]
+                    origDate_to = origDate.split('/')[1]
+                    tei_origDate.set('from', origDate_from)
+                    tei_origDate.set('to', origDate_to)
+                else:
+                    tei_origDate.set('when', origDate)
             
             #### publication date # Titel Zusammenstellung hat oft hinten Jahreszahl in Klammer
-            pubDate = col_to_string(row, 4)
-            tei_pubDate = ET.SubElement(tei_publisher, 'pubDate')
-            tei_pubDate.set('when', pubDate)
-            tei_pubDate.text = pubDate
+            if col_to_string(row, 4) != '' :
+                tei_pubDate = ET.SubElement(tei_publisher, 'date')
+                tei_pubDate.set('when', col_to_string(row, 4))
+                tei_pubDate.text = col_to_string(row, 4)
 
             #####################
             #### <term> form of literature
-            tei_term = ET.SubElement(tei_bibl, 'term')
-            tei_term.set('type', 'classification')
-            tei_term.set('xml:lang', 'de')
-            tei_term.text = col_to_string(row, 5)
+            if col_to_string(row, 5) != '' :
+                tei_term = ET.SubElement(tei_bibl, 'term')
+                tei_term.set('type', 'classification')
+                tei_term.set('xml:lang', 'de')
+                tei_term.text = col_to_string(row, 5)
 
             #####################
             #### <sourceDesc> Quelle
-            tei_source = ET.SubElement(tei_bibl, 'sourceDesc')
-            tei_source_p = ET.SubElement(tei_source, 'p')
-            tei_source_p.text = col_to_string(row, 7)
+            if col_to_string(row, 7) != '' :
+                tei_source = ET.SubElement(tei_bibl, 'sourceDesc')
+                tei_source_p = ET.SubElement(tei_source, 'p')
+                tei_source_p.text = col_to_string(row, 7)
 
             #####################
             #### <note> Weitere Angaben im Spreadsheet
-            tei_note = ET.SubElement(tei_bibl, ' note')
-            tei_note.text = col_to_string(row, 8)
-
-
+            if col_to_string(row, 8) != '' :
+                tei_note = ET.SubElement(tei_bibl, ' note')
+                tei_note.text = col_to_string(row, 8)
 
      
     # debugging only  
@@ -159,8 +172,14 @@ def col_to_string(row: List[str], index: int):#type annotation: row = array
         return str(row[index])
     
     except:
+        logging.info(f'Empty string in {str(index)}, {str(row)}. Return empty string to proceed.')
         return ''
-        
+
+def set_col_att(element, attribute: str, row, index: int):
+    if col_to_string(row, index) != '':
+        element.set(attribute, col_to_string(row, index))
+    else:
+        pass
 
 if __name__ == '__main__':
     main()
