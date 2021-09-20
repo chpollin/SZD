@@ -66,7 +66,7 @@ def main():
     else:
 
         for index, row in enumerate(values):
-            SZDWRK_ID = index
+            SZDWRK_ID = index + 1
 
             #####################
             ### <bibl> Attribut sortKey, wie gehen wir das an?
