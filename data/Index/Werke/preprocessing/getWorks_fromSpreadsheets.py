@@ -7,6 +7,7 @@ from google.auth.transport.requests import Request
 import xml.etree.ElementTree as ET
 import urllib.request
 import pandas as pd
+from typing import List
 
 #  https://docs.google.com/spreadsheets/d/16Po8t7cxqkKO7QUvDnLtSXxe2Gm2amoX6DJgDZeb86Y/edit?usp=sharing
 
@@ -58,11 +59,14 @@ def main():
     else:
 
         for index, row in enumerate(values):
+            SZDWRK_ID = index
+            print(row)
 
             #####################
             ### <bibl> Attribut sortKey, wie gehen wir das an?
             tei_bibl = ET.SubElement(tei_listBibl, 'bibl')
-            tei_bibl.set('xml:id', "SZDWRK." + str(row[0]))
+            tei_bibl.set('xml:id', "SZDWRK." + str(SZDWRK_ID))
+            tei_bibl.set('sortKey', col_to_string(row, 0))
                         
             #####################
             #### <author>
@@ -76,25 +80,25 @@ def main():
 
             #####################
             #### <title>       
-            if str(row[0]) != '' :
+            if col_to_string(row, 1) != '' :
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
                 tei_title_single.set('type', 'single')
-                tei_title_single.set('ref', str(row[9]))
-                tei_title_single.text = str(row[0])
+                tei_title_single.set('ref', col_to_string(row, 10))
+                tei_title_single.text = col_to_string(row, 1)
             else:
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
-                tei_title_compil.set('ref', str(row[9]))  
-                tei_title_compil.text = str(row[1])
+                tei_title_compil.set('ref', col_to_string(row, 10))  
+                tei_title_compil.text = col_to_string(row, 2)
             
-            if str(row[8]) != '' :
+            if col_to_string(row, 9) != '' :
                 tei_title_alt = ET.SubElement(tei_bibl, 'title')
                 tei_title_alt.set('type', 'alt')
-                tei_title_alt.text = 'str(row[8])'
+                tei_title_alt.text = col_to_string(row, 9)
 
             #####################
             #### <lang> language work was written in
-            if str(row[5]) == 'ger' :
+            if col_to_string(row, 6) == 'ger' :
                 tei_lang = ET.SubElement(tei_bibl, 'lang')
                 tei_lang.set('xml:lang', 'de')
                 tei_lang.text = 'Deutsch'
@@ -102,7 +106,7 @@ def main():
             #####################
             #### <publisher> includes date of creation and publication
             #### creation date(s)
-            origDate = str(row[2])
+            origDate = col_to_string(row, 3)
             tei_publisher = ET.SubElement(tei_bibl, 'publisher')
             tei_origDate = ET.SubElement(tei_publisher, 'origDate')
             tei_origDate.text = origDate
@@ -112,10 +116,10 @@ def main():
                 tei_origDate.set('from', origDate_from)
                 tei_origDate.set('to', origDate_to)
             else:
-                origDate.set('when', origDate)
+                tei_origDate.set('when', origDate)
             
             #### publication date # Titel Zusammenstellung hat oft hinten Jahreszahl in Klammer
-            pubDate = str(row[3])
+            pubDate = col_to_string(row, 4)
             tei_pubDate = ET.SubElement(tei_publisher, 'pubDate')
             tei_pubDate.set('when', pubDate)
             tei_pubDate.text = pubDate
@@ -125,18 +129,18 @@ def main():
             tei_term = ET.SubElement(tei_bibl, 'term')
             tei_term.set('type', 'classification')
             tei_term.set('xml:lang', 'de')
-            tei_term.text = str(row[4])
+            tei_term.text = col_to_string(row, 5)
 
             #####################
             #### <sourceDesc> Quelle
             tei_source = ET.SubElement(tei_bibl, 'sourceDesc')
             tei_source_p = ET.SubElement(tei_source, 'p')
-            tei_source_p.text = str(row[6])
+            tei_source_p.text = col_to_string(row, 7)
 
             #####################
             #### <note> Weitere Angaben im Spreadsheet
             tei_note = ET.SubElement(tei_bibl, ' note')
-            tei_note.text = str(row[7])
+            tei_note.text = col_to_string(row, 8)
 
 
 
@@ -147,6 +151,17 @@ def main():
     # create a new XML file with the results
     ET.ElementTree(tei_listBibl).write('extractedSZDWRK.xml', encoding="UTF-8", xml_declaration=True)
               
+def col_to_string(row: List[str], index: int):#type annotation: row = array
+    """
+    try and catch empty cells
+    """
+    try:
+        return str(row[index])
+    
+    except:
+        return ''
+        
+
 if __name__ == '__main__':
     main()
     
