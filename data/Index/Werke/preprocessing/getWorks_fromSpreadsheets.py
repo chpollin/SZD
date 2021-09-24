@@ -85,22 +85,22 @@ def main():
             tei__forename_aut.text = 'Stefan'
 
             #####################
-            #### <title>       
+            #### <title> 
             if col_to_string(row, 1) != '' :
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
                 tei_title_single.set('type', 'single')
                 tei_title_single.text = col_to_string(row, 1)
                 set_col_att(tei_title_single, 'ref', row, 10)
-
-                # """ if col_to_string(row, 10) != '':
-                #     tei_title_single.set('ref', col_to_string(row, 10))
-                # else:
-                #     pass """
+                """ if col_to_string(row, 10) != '' :
+                    tei_title_single.set('ref', col_to_string(row, 10)) """
+                
             else:
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
                 tei_title_compil.text = col_to_string(row, 2)
                 set_col_att(tei_title_compil, 'ref', row, 10)
+                """ if col_to_string(row, 10) != '' :
+                    tei_title_compil.set('ref', col_to_string(row, 10)) """
             
             if col_to_string(row, 9) != '' :
                 tei_title_alt = ET.SubElement(tei_bibl, 'title')
@@ -178,8 +178,6 @@ def col_to_string(row: List[str], index: int):#type annotation: row = array
 def set_col_att(element, attribute: str, row, index: int):
     if col_to_string(row, index) != '':
         element.set(attribute, col_to_string(row, index))
-    else:
-        pass
 
 if __name__ == '__main__':
     main()

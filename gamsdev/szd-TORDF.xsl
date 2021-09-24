@@ -34,14 +34,17 @@
 		<xsl:copy-of select="document('https://gams.uni-graz.at/o:szd.standorte/TEI_SOURCE')"/>
 	</xsl:variable>
 
-
 	<xsl:variable name="Languages">
 		<xsl:copy-of
-			select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"
-		/>
+			select="document('http://glossa.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content')"/>
+	</xsl:variable>
+	
+	<xsl:variable name="Werkindex">
+		<xsl:copy-of select="document('https://glossa.uni-graz.at/o:szd.werkindex/TEI_SOURCE')"/>
 	</xsl:variable>
 	
 	<xsl:variable name="BASE_URL" select="'https://gams.uni-graz.at/'"/>
+	<xsl:variable name="GLOSSA_URL" select="'https://glossa.uni-graz.at/'"/>
 	<xsl:variable name="PID" select="//t:fileDesc/t:publicationStmt/t:idno[@type = 'PID']"/>
 
 	<!-- ///////////////////////////////// -->
@@ -1062,6 +1065,42 @@
 		</xsl:for-each>
 	</xsl:template>
 
+	<!-- ///Werkindex -->
+	<xsl:template name="Werkindex">
+		<xsl:variable name="Werk_URI" select="concat($GLOSSA_URL, $PID, '#', @xml:id)"/>
+		
+			<xsl:for-each select="//t:listBibl/t:bibl">
+				<szd:Work 
+					rdf:about="{concat($GLOSSA_URL, $PID, '#', @xml:id)}">
+					<!-- TITLE -->
+					<szd:title>
+						<xsl:value-of select="t:title"/>
+						<gnd:gndIdentifier rdf:resource="{title/@ref}"/>
+					</szd:title>
+					<!-- szd:author = Stefan Zweig -->
+					<szd:author rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
+				</szd:Work>
+				<szd:Publication>
+					<szd:pubDate>
+						<szd:pubDateStmt rdf:about="{concat($Werk_URI, 'pubDate')}">
+							<!--<xsl:choose>
+								<xsl:when test="t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang]">
+									<szd:text xml:lang="en">
+										<xsl:value-of select="normalize-space(t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang ='en'])"/>
+									</szd:text>
+									<szd:text xml:lang="de">
+										<xsl:value-of select="normalize-space(t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang ='de'])"/>
+									</szd:text>
+								</xsl:when>-->
+								<szd:text><xsl:value-of select="normalize-space(t:date)"/></szd:text>
+							<!--</xsl:choose>-->					
+						</szd:pubDateStmt>
+					</szd:pubDate>
+				</szd:Publication>
+			</xsl:for-each>
+			
+		
+	</xsl:template>
 
 	<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ///Lebensdokumente - szd:PersonalDocument/// -->
