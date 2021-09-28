@@ -16,7 +16,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '16Po8t7cxqkKO7QUvDnLtSXxe2Gm2amoX6DJgDZeb86Y'
-SAMPLE_RANGE_NAME = 'A2:J500'
+SAMPLE_RANGE_NAME = 'A2:W500'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -52,7 +52,6 @@ def main():
     service = build('sheets', 'v4', credentials=creds)
 
     # Call the Sheets API
-    
     sheet = service.spreadsheets()
     
     result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
@@ -67,9 +66,10 @@ def main():
 
         for index, row in enumerate(values):
             SZDWRK_ID = index + 1
+            
 
             #####################
-            ### <bibl> Attribut sortKey, wie gehen wir das an?
+            ### <bibl>
             tei_bibl = ET.SubElement(tei_listBibl, 'bibl')
             tei_bibl.set('xml:id', "SZDWRK." + str(SZDWRK_ID))
             tei_bibl.set('sortKey', col_to_string(row, 0))
@@ -90,17 +90,18 @@ def main():
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
                 tei_title_single.set('type', 'single')
                 tei_title_single.text = col_to_string(row, 1)
-                set_col_att(tei_title_single, 'ref', row, 10)
-                """ if col_to_string(row, 10) != '' :
-                    tei_title_single.set('ref', col_to_string(row, 10)) """
+                tei_title_single.set('ref', col_to_string(row, 10))
+                #set_col_att(tei_title_single, 'ref', row, 10)
+                if col_to_string(row, 10) != '' :
+                    tei_title_single.set('ref', col_to_string(row, 10))
                 
             else:
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
                 tei_title_compil.text = col_to_string(row, 2)
-                set_col_att(tei_title_compil, 'ref', row, 10)
-                """ if col_to_string(row, 10) != '' :
-                    tei_title_compil.set('ref', col_to_string(row, 10)) """
+                #set_col_att(tei_title_compil, 'ref', row, 10)
+                if col_to_string(row, 10) != '' :
+                    tei_title_compil.set('ref', col_to_string(row, 10))
             
             if col_to_string(row, 9) != '' :
                 tei_title_alt = ET.SubElement(tei_bibl, 'title')
@@ -118,23 +119,24 @@ def main():
             #### <publisher> includes date of creation and publication
             #### creation date(s)
             origDate = col_to_string(row, 3)
-            if origDate != '' :
+            pubDate = col_to_string(row, 4)
+            if origDate or pubDate:
                 tei_publisher = ET.SubElement(tei_bibl, 'publisher')
-                tei_origDate = ET.SubElement(tei_publisher, 'origDate')
-                tei_origDate.text = origDate
-                if '/' in origDate:
-                    origDate_from = origDate.split('/')[0]
-                    origDate_to = origDate.split('/')[1]
-                    tei_origDate.set('from', origDate_from)
-                    tei_origDate.set('to', origDate_to)
-                else:
-                    tei_origDate.set('when', origDate)
-            
-            #### publication date # Titel Zusammenstellung hat oft hinten Jahreszahl in Klammer
-            if col_to_string(row, 4) != '' :
-                tei_pubDate = ET.SubElement(tei_publisher, 'date')
-                tei_pubDate.set('when', col_to_string(row, 4))
-                tei_pubDate.text = col_to_string(row, 4)
+                if origDate != '' :
+                    tei_origDate = ET.SubElement(tei_publisher, 'origDate')
+                    tei_origDate.text = origDate
+                    if '/' in origDate:
+                        origDate_from = origDate.split('/')[0]
+                        origDate_to = origDate.split('/')[1]
+                        tei_origDate.set('from', origDate_from)
+                        tei_origDate.set('to', origDate_to)
+                    else:
+                        tei_origDate.set('when', origDate)
+                #### publication date # Titel Zusammenstellung hat oft hinten Jahreszahl in Klammer
+                if pubDate != '' :
+                    tei_pubDate = ET.SubElement(tei_publisher, 'date')
+                    tei_pubDate.set('when', col_to_string(row, 4))
+                    tei_pubDate.text = col_to_string(row, 4)
 
             #####################
             #### <term> form of literature
