@@ -44,7 +44,6 @@
 	</xsl:variable>
 	
 	<xsl:variable name="BASE_URL" select="'https://gams.uni-graz.at/'"/>
-	<xsl:variable name="GLOSSA_URL" select="'https://glossa.uni-graz.at/'"/>
 	<xsl:variable name="PID" select="//t:fileDesc/t:publicationStmt/t:idno[@type = 'PID']"/>
 
 	<!-- ///////////////////////////////// -->
@@ -97,6 +96,10 @@
 					<szd:Letter>
 						<rdf:comment>Prototype</rdf:comment>
 					</szd:Letter>
+				</xsl:when>
+				<xsl:when
+					test="contains($PID, 'o:szd.werkindex')">
+					<xsl:call-template name="WerkIndex"/>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:text>No data source define! (like o:szd.bibliothek, o:szd.autographen, o:szd.werke...)</xsl:text>
@@ -1065,24 +1068,106 @@
 		</xsl:for-each>
 	</xsl:template>
 
-	<!-- ///Werkindex -->
-	<xsl:template name="Werkindex">
-		<xsl:variable name="Werk_URI" select="concat($GLOSSA_URL, $PID, '#', @xml:id)"/>
-		
-			<xsl:for-each select="//t:listBibl/t:bibl">
-				<szd:Work 
-					rdf:about="{concat($GLOSSA_URL, $PID, '#', @xml:id)}">
+	<!-- ///Werkindex --><!-- Wo ist der dann einzusetzen? -->
+	<xsl:template name="WerkIndex">
+		<xsl:for-each select="//t:listBibl/t:bibl">
+				<xsl:variable name="WerkIndex_URI" select="concat($BASE_URL, $PID, '#', @xml:id)"/>
+				<szd:WorkIndexEntry 
+					rdf:about="{$WerkIndex_URI}">
 					<!-- TITLE -->
 					<szd:title>
-						<xsl:value-of select="t:title"/>
-						<gnd:gndIdentifier rdf:resource="{title/@ref}"/>
+						<xsl:value-of select="normalize-space(t:title)"/>
 					</szd:title>
+					<xsl:if test="t:title/@ref"><gnd:gndIdentifier rdf:resource="{t:title/@ref}"/></xsl:if>
 					<!-- szd:author = Stefan Zweig -->
 					<szd:author rdf:resource="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"/>
-				</szd:Work>
+					<xsl:if
+						test="t:term">
+						<xsl:variable name="CurrentCategory"
+							select="t:term"/>
+						<szd:category>
+							<xsl:attribute name="rdf:resource">
+								<xsl:choose>
+									<xsl:when test="$CurrentCategory = 'Romane'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Novel</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Autobiographie'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Autobiography</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Biographien'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Biography</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Erzählungen'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Stories</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Drama'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Drama</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Essay'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Essay</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Vorworte'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Foreword</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Historische Miniaturen'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#HistoricalMiniature</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Interview'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Interview</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Journalistische Arbeiten'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#JournalisticWork</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Film'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Movie</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Erzählung'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Movie</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Vorträge'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Narration</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Notizbücher'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Notebook</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Prosa'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Prose</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Romane'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Novel</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Reden'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Speech</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Übersetzung'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Translation</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Werknotizen'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Worknote</xsl:text>
+									</xsl:when>
+									<xsl:when test="$CurrentCategory = 'Tagebücher'">
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Diary</xsl:text>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:text>https://gams.uni-graz.at/o:szd.glossar#Work</xsl:text>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:attribute>
+						</szd:category>
+					</xsl:if>
+					<xsl:if test="t:publisher/t:origDate">
+						<szd:creation><!-- Orientierung an pubDate -->
+						<szd:creationStmt rdf:about="{concat($WerkIndex_URI, 'creation')}">
+							<szd:text><xsl:value-of select="normalize-space(t:publisher/t:origDate)"/></szd:text>
+						</szd:creationStmt>
+					</szd:creation>
+					</xsl:if>
+				</szd:WorkIndexEntry>
+				<!-- vorher ein xsl:if? -->
 				<szd:Publication>
-					<szd:pubDate>
-						<szd:pubDateStmt rdf:about="{concat($Werk_URI, 'pubDate')}">
+					<xsl:if test="t:publisher/t:date">
+						<szd:pubDate>
+						<!-- von Book --><szd:pubDateStmt rdf:about="{concat($WerkIndex_URI, 'pubDate')}">
 							<!--<xsl:choose>
 								<xsl:when test="t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang]">
 									<szd:text xml:lang="en">
@@ -1092,10 +1177,14 @@
 										<xsl:value-of select="normalize-space(t:fileDesc/t:publicationStmt/t:date/t:span[@xml:lang ='de'])"/>
 									</szd:text>
 								</xsl:when>-->
-								<szd:text><xsl:value-of select="normalize-space(t:date)"/></szd:text>
+								<szd:text><xsl:value-of select="normalize-space(t:publisher/t:date)"/></szd:text>
 							<!--</xsl:choose>-->					
 						</szd:pubDateStmt>
 					</szd:pubDate>
+					</xsl:if>
+					<xsl:call-template name="getLanguage">
+						<xsl:with-param name="path" select="t:lang"/>
+					</xsl:call-template>
 				</szd:Publication>
 			</xsl:for-each>
 			
@@ -1389,7 +1478,9 @@
 		</xsl:if>
 
 		<!-- Language -->
-		<xsl:call-template name="getLanguage"/>
+		<xsl:call-template name="getLanguage">
+			<xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang"/>
+		</xsl:call-template>
 
 		<!-- szd:location -->
 		<xsl:call-template name="getLocation"/>
@@ -1615,7 +1706,9 @@
 		</xsl:if>
 
 		<!-- szd:lang -->
-		<xsl:call-template name="getLanguage"/>
+		<xsl:call-template name="getLanguage">
+			<xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang"/>
+		</xsl:call-template>
 
 		<!-- Extent -->
 		<xsl:if
@@ -1903,7 +1996,9 @@
 		</xsl:choose>
 		
 		<!-- languagecode -->
-		<xsl:call-template name="getLanguage"/>		
+		<xsl:call-template name="getLanguage">
+			<xsl:with-param name="path" select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang"/>
+		</xsl:call-template>		
 
 		<!-- extent for SZDAUT -->
 		<szd:extent
@@ -2120,7 +2215,8 @@
 	</xsl:template>
 
 	<xsl:template name="getLanguage">
-		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:msContents/t:textLang/t:lang">
+		<xsl:param name="path"/>
+		<xsl:for-each select="$path">
 			<xsl:choose>
 				<xsl:when test="@xml:lang">
 					<xsl:for-each select="@xml:lang">
