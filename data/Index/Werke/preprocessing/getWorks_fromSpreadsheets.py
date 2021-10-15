@@ -90,18 +90,13 @@ def main():
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
                 tei_title_single.set('type', 'single')
                 tei_title_single.text = col_to_string(row, 1)
-                tei_title_single.set('ref', col_to_string(row, 10))
-                #set_col_att(tei_title_single, 'ref', row, 10)
-                if col_to_string(row, 10) != '' :
-                    tei_title_single.set('ref', col_to_string(row, 10))
+                set_col_att(tei_title_single, 'ref', row, 10)
                 
             else:
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
                 tei_title_compil.text = col_to_string(row, 2)
-                #set_col_att(tei_title_compil, 'ref', row, 10)
-                if col_to_string(row, 10) != '' :
-                    tei_title_compil.set('ref', col_to_string(row, 10))
+                set_col_att(tei_title_compil, 'ref', row, 10)
             
             if col_to_string(row, 9) != '' :
                 tei_title_alt = ET.SubElement(tei_bibl, 'title')
@@ -110,7 +105,7 @@ def main():
 
             #####################
             #### <lang> language work was written in
-            if col_to_string(row, 6) == 'ger' :
+            if col_to_string(row, 6) == 'de' :
                 tei_lang = ET.SubElement(tei_bibl, 'lang')
                 tei_lang.set('xml:lang', 'de')
                 tei_lang.text = 'Deutsch'
