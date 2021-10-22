@@ -1,5 +1,44 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<listBibl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="de">Werke</title>
+                <title xml:lang="en">Works</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+                        ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                </publisher>
+                <authority>
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at"
+                        ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+                        for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+                </authority>
+                <distributor>
+                    <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset Management
+                        System</orgName>
+                </distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+                        4.0</licence>
+                </availability>
+                <publisher>Literaturarchiv Salzburg</publisher>
+                <idno type="PID">o:szd.werkindex</idno>
+                <date when="2021-09-20">20.09.2021</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+           <listBibl>
     <bibl sortKey="Amok" xml:id="SZDWRK.1">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
             <persName>
@@ -2224,3 +2263,7 @@
         <lang xml:lang="de">Deutsch</lang>
     </bibl>
 </listBibl>
+
+        </body>
+    </text>
+</TEI>

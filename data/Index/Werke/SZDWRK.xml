@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -11,2263 +8,2257 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>
-                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-                        ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+                    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287" instant="false" full="yes">Literaturarchiv Salzburg</orgName>
                 </publisher>
                 <authority>
-                    <orgName corresp="https://informationsmodellierung.uni-graz.at"
-                        ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+                    <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463" instant="false" full="yes">Zentrum für Informationsmodellierung - Austrian Centre
                         for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
                 </authority>
                 <distributor>
-                    <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset Management
+                    <orgName ref="https://gams.uni-graz.at" instant="false" full="yes"> GAMS - Geisteswissenschaftliches Asset Management
                         System</orgName>
                 </distributor>
-                <availability>
+                <availability default="false">
                     <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
                         4.0</licence>
                 </availability>
                 <publisher>Literaturarchiv Salzburg</publisher>
                 <idno type="PID">o:szd.werkindex</idno>
-                <date when="2021-09-20">20.09.2021</date>
+                <date when="2021-09-20" instant="false">20.09.2021</date>
             </publicationStmt>
-            <sourceDesc>
-                <p>Information about the source</p>
+            <sourceDesc default="false">
+                <p part="N">Information about the source</p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
     <text>
         <body>
-           <listBibl>
-    <bibl xml:id="SZDWRK.1" sortKey="Amok">
+           <listBibl default="false">
+    <bibl sortKey="Amok" xml:id="SZDWRK.1" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Amok (1922)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.2" sortKey="02_Gedichte">
+    <bibl sortKey="02_Gedichte" xml:id="SZDWRK.2" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Ausgewählte Gedichte (1931)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.3" sortKey="Begegnungen">
+    <bibl sortKey="Begegnungen" xml:id="SZDWRK.3" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Begegnungen mit Menschen, Büchern, Städten</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.4" sortKey="Kampf_mit_dem_dämon">
+    <bibl sortKey="Kampf_mit_dem_dämon" xml:id="SZDWRK.4" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/4779601-7">Der Kampf mit dem
+        <title ref="http://d-nb.info/gnd/4779601-7" type="compilation">Der Kampf mit dem
             Dämon</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.5" sortKey="Baumeister_der_Welt">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien</term></bibl>
+    <bibl sortKey="Baumeister_der_Welt" xml:id="SZDWRK.5" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1129186180">Die Baumeister der
+        <title ref="http://d-nb.info/gnd/1129186180" type="compilation">Die Baumeister der
             Welt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.6" sortKey="Frühen_Kränze">
+    <bibl sortKey="Frühen_Kränze" xml:id="SZDWRK.6" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Die frühen Kränze</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.7" sortKey="01_Gedichte">
+    <bibl sortKey="01_Gedichte" xml:id="SZDWRK.7" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Die gesammelten Gedichte (1924)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.8" sortKey="Heilung_durch_den_Geist">
+    <bibl sortKey="Heilung_durch_den_Geist" xml:id="SZDWRK.8" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1195005334">Die Heilung durch den
+        <title ref="http://d-nb.info/gnd/1195005334" type="compilation">Die Heilung durch den
             Geist</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.9" sortKey="Kette">
+    <bibl sortKey="Kette" xml:id="SZDWRK.9" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/4436254-7">Die Kette. Ein
+        <title ref="http://d-nb.info/gnd/4436254-7" type="compilation">Die Kette. Ein
             Novellenkreis</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.10" sortKey="Liebe_der_Erika_Ewald_Zus">
+    <bibl sortKey="Liebe_der_Erika_Ewald_Zus" xml:id="SZDWRK.10" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1101466375">Die Liebe der Erika Ewald
+        <title ref="http://d-nb.info/gnd/1101466375" type="compilation">Die Liebe der Erika Ewald
             (1904)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.11" sortKey="Drei_Dichter">
+    <bibl sortKey="Drei_Dichter" xml:id="SZDWRK.11" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1124596526">Drei Dichter ihres
+        <title ref="http://d-nb.info/gnd/1124596526" type="compilation">Drei Dichter ihres
             Lebens</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.12" sortKey="Drei_Meister">
+    <bibl sortKey="Drei_Meister" xml:id="SZDWRK.12" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1129186938">Drei Meister: Balzac –
+        <title ref="http://d-nb.info/gnd/1129186938" type="compilation">Drei Meister: Balzac –
             Dickens – Dostojewski</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.13" sortKey="Erstes_Erlebnis">
+    <bibl sortKey="Erstes_Erlebnis" xml:id="SZDWRK.13" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1224973194">Erstes Erlebnis. Vier
+        <title ref="http://d-nb.info/gnd/1224973194" type="compilation">Erstes Erlebnis. Vier
             Geschichten aus Kinderland</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.14" sortKey="Fahrten_Landschaften">
+    <bibl sortKey="Fahrten_Landschaften" xml:id="SZDWRK.14" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Fahrten, Landschaften und Städte</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.15" sortKey="Kaleidoskop">
+    <bibl sortKey="Kaleidoskop" xml:id="SZDWRK.15" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Kaleidoskop </title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.16" sortKey="Kleine_Chronik">
+    <bibl sortKey="Kleine_Chronik" xml:id="SZDWRK.16" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/123585177X">Kleine Chronik. Vier
+        <title ref="http://d-nb.info/gnd/123585177X" type="compilation">Kleine Chronik. Vier
             Erzählungen (1929)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.17" sortKey="Silberne_Saiten">
+    <bibl sortKey="Silberne_Saiten" xml:id="SZDWRK.17" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/1183009399">Silberne Saiten</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1183009399" type="compilation">Silberne Saiten</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.18" sortKey="01_Sternstunden_Zus">
+    <bibl sortKey="01_Sternstunden_Zus" xml:id="SZDWRK.18" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/112448115X">Silberne Saiten</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/112448115X" type="compilation">Silberne Saiten</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.19" sortKey="02_Sternstunden_Zus">
+    <bibl sortKey="02_Sternstunden_Zus" xml:id="SZDWRK.19" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="compilation">Sternstunden der Menschheit. Drei historische Miniaturen
             (1930)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.20" sortKey="Verwirrung_Zus">
+    <bibl sortKey="Verwirrung_Zus" xml:id="SZDWRK.20" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="compilation" ref="http://d-nb.info/gnd/109816556X">Verwirrung der Gefühle. Drei
+        <title ref="http://d-nb.info/gnd/109816556X" type="compilation">Verwirrung der Gefühle. Drei
             Novellen</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.21" sortKey="1914">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="1914" xml:id="SZDWRK.21" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">1914 und heute [Rezension zu Roger Martin du Gards Roman "L'Ete
             1914"]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.22" sortKey="Book_for_the_Salzburg_Babbitts">
+    <bibl sortKey="Book_for_the_Salzburg_Babbitts" xml:id="SZDWRK.22" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">A book for the „Salzburg Babbitts“</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.23" sortKey="Great_Lesson">
+    <bibl sortKey="Great_Lesson" xml:id="SZDWRK.23" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">A Great Lesson from a Great Man</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.24" sortKey="Abschied_von_Alexander_Moissi">
+    <bibl sortKey="Abschied_von_Alexander_Moissi" xml:id="SZDWRK.24" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Abschied von Alexander Moissi</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.25" sortKey="Abschied_von_John_Drinkwater">
+    <bibl sortKey="Abschied_von_John_Drinkwater" xml:id="SZDWRK.25" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Abschied von John Drinkwater</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.26" sortKey="Abschied_von_Rilke">
+    <bibl sortKey="Abschied_von_Rilke" xml:id="SZDWRK.26" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Abschied von Rilke</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.27" sortKey="Adam_Lux">
+    <bibl sortKey="Adam_Lux" xml:id="SZDWRK.27" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Adam Lux</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.28" sortKey="Amerigo">
+    <bibl sortKey="Amerigo" xml:id="SZDWRK.28" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1196980950">Amerigo</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1196980950" type="single">Amerigo</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.29" sortKey="Angst">
+    <bibl sortKey="Angst" xml:id="SZDWRK.29" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4447445-3">Angst</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4447445-3" type="single">Angst</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.30" sortKey="Anmerkungen_zu_Joyce's_Ulysses">
+    <bibl sortKey="Anmerkungen_zu_Joyce's_Ulysses" xml:id="SZDWRK.30" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Anmerkungen zu Joyce's Ulysses</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.31" sortKey="Anton_Kippenberg">
+    <bibl sortKey="Anton_Kippenberg" xml:id="SZDWRK.31" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Anton Kippenberg</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.32" sortKey="Anton">
+    <bibl sortKey="Anton" xml:id="SZDWRK.32" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/112321672X">Anton, Friend of All the
+        <title ref="http://d-nb.info/gnd/112321672X" type="single">Anton, Friend of All the
             World</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.33" sortKey="Antwort_auf_eine_Rundfrage_zur_jüdischen_Literatur">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Essays/Reden/Feuilletons Essays/Reden/Feuilletons Essays/Reden/Feuilletons</term></bibl>
+    <bibl sortKey="Antwort_auf_eine_Rundfrage_zur_jüdischen_Literatur" xml:id="SZDWRK.33" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Antwort auf eine Rundfrage zur jüdischen Literatur</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.34" sortKey="Arthur_Rimbaud">
+    <bibl sortKey="Arthur_Rimbaud" xml:id="SZDWRK.34" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Arthur Rimbaud</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.35" sortKey="Arturo_Toscanini">
+    <bibl sortKey="Arturo_Toscanini" xml:id="SZDWRK.35" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Arturo Toscanini. Ein Bildnis</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.36" sortKey="Auf_Reisen">
+    <bibl sortKey="Auf_Reisen" xml:id="SZDWRK.36" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1120714168">Auf Reisen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1120714168" type="single">Auf Reisen</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.37" sortKey="Aufruf_an_die_Jugend_Amerikas">
+    <bibl sortKey="Aufruf_an_die_Jugend_Amerikas" xml:id="SZDWRK.37" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Aufruf an die Jugend Amerikas</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.38" sortKey="Aufsatz_zur_italienischen_Literatur">
+    <bibl sortKey="Aufsatz_zur_italienischen_Literatur" xml:id="SZDWRK.38" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Aufsatz zur italienischen Literatur</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.39" sortKey="Aus_einer_Studie_über_Autografensammeln">
+    <bibl sortKey="Aus_einer_Studie_über_Autografensammeln" xml:id="SZDWRK.39" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Aus einer Studie über Autografensammeln</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.40" sortKey="Autobiographischer_Aufsatz">
+    <bibl sortKey="Autobiographischer_Aufsatz" xml:id="SZDWRK.40" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Autobiographischer Aufsatz [für ein Werbeprospekt]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.41" sortKey="Balzac">
+    <bibl sortKey="Balzac" xml:id="SZDWRK.41" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1122746091">Balzac</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.42" sortKey="Bau_der_Wiener_Oper">
+        <title ref="http://d-nb.info/gnd/1122746091" type="single">Balzac</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien</term></bibl>
+    <bibl sortKey="Bau_der_Wiener_Oper" xml:id="SZDWRK.42" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Bau der Wiener Oper</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.43" sortKey="Ben_Jonsons_Volpone">
+    <bibl sortKey="Ben_Jonsons_Volpone" xml:id="SZDWRK.43" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ben Jonsons „Volpone“. Eine lieblose Komödie in drei Akten]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.44" sortKey="Benares">
+    <bibl sortKey="Benares" xml:id="SZDWRK.44" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Benares. Die Stadt der tausend Tempel</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.45" sortKey="Berta_von_Suttner">
+    <bibl sortKey="Berta_von_Suttner" xml:id="SZDWRK.45" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Berta von Suttner</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.46" sortKey="Besuch_bei_den_Milliarden">
+    <bibl sortKey="Besuch_bei_den_Milliarden" xml:id="SZDWRK.46" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123162743">Besuch bei den Milliarden</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.47" sortKey="Blick_über_die_elektrische_Stadt">
+        <title ref="http://d-nb.info/gnd/1123162743" type="single">Besuch bei den Milliarden</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Essays/Reden/Feuilletons</term></bibl>
+    <bibl sortKey="Blick_über_die_elektrische_Stadt" xml:id="SZDWRK.47" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Blick über die elektrische Stadt in die Zukunft hinein</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.48" sortKey="Brasilien">
+    <bibl sortKey="Brasilien" xml:id="SZDWRK.48" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/7500623-6">Brasilien, ein Land der
+        <title ref="http://d-nb.info/gnd/7500623-6" type="single">Brasilien, ein Land der
             Zukunft</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.49" sortKey="Brennendes_Geheimnis">
+    <bibl sortKey="Brennendes_Geheimnis" xml:id="SZDWRK.49" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/7853948-1">Brennendes Geheimnis</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/7853948-1" type="single">Brennendes Geheimnis</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.50" sortKey="Brief_einer_Unbekannten">
+    <bibl sortKey="Brief_einer_Unbekannten" xml:id="SZDWRK.50" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4651229-9">Brief einer Unbekannten</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4651229-9" type="single">Brief einer Unbekannten</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.51" sortKey="Bruno_Walter">
+    <bibl sortKey="Bruno_Walter" xml:id="SZDWRK.51" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Bruno Walter. Kunst der Hingabe</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.52" sortKey="Buchmendel">
+    <bibl sortKey="Buchmendel" xml:id="SZDWRK.52" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123598665">Buchmendel</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1123598665" type="single">Buchmendel</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.53" sortKey="Busoni">
+    <bibl sortKey="Busoni" xml:id="SZDWRK.53" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Busoni</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.54" sortKey="Casanova">
+    <bibl sortKey="Casanova" xml:id="SZDWRK.54" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Casanova</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.55" sortKey="Castellio_gegen_Calvin">
+    <bibl sortKey="Castellio_gegen_Calvin" xml:id="SZDWRK.55" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/7846367-1">Castellio gegen Calvin oder Ein
+        <title ref="http://d-nb.info/gnd/7846367-1" type="single">Castellio gegen Calvin oder Ein
             Gewissen gegen die Gewalt</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.56" sortKey="Chenier">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien Biographien Biographien</term></bibl>
+    <bibl sortKey="Chenier" xml:id="SZDWRK.56" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Chenier</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.57" sortKey="Clarissa">
+    <bibl sortKey="Clarissa" xml:id="SZDWRK.57" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1207786888">Clarissa</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1207786888" type="single">Clarissa</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
         <publisher>
-            <origDate from="1941" to="1942">1941/1942</origDate>
-            <date when="1981">1981</date>
+            <origDate from="1941" to="1942" instant="false">1941/1942</origDate>
+            <date when="1981" instant="false">1981</date>
         </publisher>
-        <term type="classification" xml:lang="de">Roman</term>
     </bibl>
-    <bibl xml:id="SZDWRK.58" sortKey="Dank_an_Brasilien">
+    <bibl sortKey="Dank_an_Brasilien" xml:id="SZDWRK.58" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Dank an Brasilien</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.59" sortKey="Dank_an_die_Bücher">
+    <bibl sortKey="Dank_an_die_Bücher" xml:id="SZDWRK.59" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Dank an die Bücher</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.60" sortKey="Dante">
+    <bibl sortKey="Dante" xml:id="SZDWRK.60" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Dante</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.61" sortKey="Buch_als_Eingang">
+    <bibl sortKey="Buch_als_Eingang" xml:id="SZDWRK.61" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Buch als Eingang zur Welt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.62" sortKey="Geheimnis_des_künstlerischen_Schaffens">
+    <bibl sortKey="Geheimnis_des_künstlerischen_Schaffens" xml:id="SZDWRK.62" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Geheimnis des künstlerischen Schaffens</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.63" sortKey="Große_Schweigen">
+    <bibl sortKey="Große_Schweigen" xml:id="SZDWRK.63" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das große Schweigen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.64" sortKey="Haus_am_Meer">
+    <bibl sortKey="Haus_am_Meer" xml:id="SZDWRK.64" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Haus am Meer. Ein Schauspiel in zwei Teilen (drei Aufzügen)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.65" sortKey="Haus_der_tausend_Schicksale">
+    <bibl sortKey="Haus_der_tausend_Schicksale" xml:id="SZDWRK.65" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Haus der tausend Schicksale</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.66" sortKey="Herz_Europas">
+    <bibl sortKey="Herz_Europas" xml:id="SZDWRK.66" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Herz Europas</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.67" sortKey="Lamm_des_Armen">
+    <bibl sortKey="Lamm_des_Armen" xml:id="SZDWRK.67" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1228481385">Das Lamm des Armen. Tragikomödie
+        <title ref="http://d-nb.info/gnd/1228481385" type="single">Das Lamm des Armen. Tragikomödie
             in drei Akten (neun Bildern)</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.68" sortKey="Schönste_Grab_der_Welt">
+    <bibl sortKey="Schönste_Grab_der_Welt" xml:id="SZDWRK.68" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das schönste Grab der Welt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.69" sortKey="Wien_von_Gestern">
+    <bibl sortKey="Wien_von_Gestern" xml:id="SZDWRK.69" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Das Wien von Gestern</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.70" sortKey="Death_before_Fulfillment">
+    <bibl sortKey="Death_before_Fulfillment" xml:id="SZDWRK.70" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Death before Fulfillment. [Rezension zu Ödön von Horvath: A Child of
             our Time]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.71" sortKey="Amokläufer">
+    <bibl sortKey="Amokläufer" xml:id="SZDWRK.71" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4447449-0">Der Amokläufer</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4447449-0" type="single">Der Amokläufer</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.72" sortKey="begrabene_Leuchter">
+    <bibl sortKey="begrabene_Leuchter" xml:id="SZDWRK.72" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1136376275">Der begrabene Leuchter</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.73" sortKey="Bildner">
+        <title ref="http://d-nb.info/gnd/1136376275" type="single">Der begrabene Leuchter</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen</term></bibl>
+    <bibl sortKey="Bildner" xml:id="SZDWRK.73" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der Bildner [Auguste Rodin]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.74" sortKey="Dirigent">
+    <bibl sortKey="Dirigent" xml:id="SZDWRK.74" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der Dirigent. In memoriam Gustav Mahler</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.75" sortKey="Europäische_Gedanke">
+    <bibl sortKey="Europäische_Gedanke" xml:id="SZDWRK.75" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der europäische Gedanke in seiner historischen Entwicklung</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.76" sortKey="Rhythmus_von_New_York">
+    <bibl sortKey="Rhythmus_von_New_York" xml:id="SZDWRK.76" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der Rhythmus von New York</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.77" sortKey="Sechzigjährige_dankt">
+    <bibl sortKey="Sechzigjährige_dankt" xml:id="SZDWRK.77" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der Sechzigjährige dankt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.78" sortKey="Stern_über_dem_Walde">
+    <bibl sortKey="Stern_über_dem_Walde" xml:id="SZDWRK.78" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1101466383">Der Stern über dem Walde</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1101466383" type="single">Der Stern über dem Walde</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.79" sortKey="Verwandelte_Komödiant">
+    <bibl sortKey="Verwandelte_Komödiant" xml:id="SZDWRK.79" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Der verwandelte Komödiant. Ein Spiel aus dem deutschen Rokoko</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.80" sortKey="Zwang">
+    <bibl sortKey="Zwang" xml:id="SZDWRK.80" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1153159732">Der Zwang</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1153159732" type="single">Der Zwang</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.81" sortKey="Augen_des_ewigen_Bruders">
+    <bibl sortKey="Augen_des_ewigen_Bruders" xml:id="SZDWRK.81" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1140748262">Die Augen des ewigen
+        <title ref="http://d-nb.info/gnd/1140748262" type="single">Die Augen des ewigen
             Bruders</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.82" sortKey="Frau_und_die_Landschaft">
+    <bibl sortKey="Frau_und_die_Landschaft" xml:id="SZDWRK.82" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123601526">Die Frau und die
+        <title ref="http://d-nb.info/gnd/1123601526" type="single">Die Frau und die
             Landschaft</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.83" sortKey="Gärten_im_Kriege">
+    <bibl sortKey="Gärten_im_Kriege" xml:id="SZDWRK.83" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Gärten im Kriege</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.84" sortKey="Geschichte_als_Dichterin">
+    <bibl sortKey="Geschichte_als_Dichterin" xml:id="SZDWRK.84" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Geschichte als Dichterin</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.85" sortKey="Gouvernante">
+    <bibl sortKey="Gouvernante" xml:id="SZDWRK.85" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1134993293">Die Gouvernante</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1134993293" type="single">Die Gouvernante</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.86" sortKey="Insel">
+    <bibl sortKey="Insel" xml:id="SZDWRK.86" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Insel</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.87" sortKey="Legende_der_dritten_Taube">
+    <bibl sortKey="Legende_der_dritten_Taube" xml:id="SZDWRK.87" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/113637633X">Die Legende der dritten
+        <title ref="http://d-nb.info/gnd/113637633X" type="single">Die Legende der dritten
             Taube</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.88" sortKey="Liebe_der_Erika_Ewald ">
+    <bibl sortKey="Liebe_der_Erika_Ewald " xml:id="SZDWRK.88" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1154608867">Die Liebe der Erika Ewald </title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1154608867" type="single">Die Liebe der Erika Ewald </title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.89" sortKey="Mondscheingasse">
+    <bibl sortKey="Mondscheingasse" xml:id="SZDWRK.89" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1119745349">Die Mondscheingasse</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1119745349" type="single">Die Mondscheingasse</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.90" sortKey="Monotonisierung_der_Welt">
+    <bibl sortKey="Monotonisierung_der_Welt" xml:id="SZDWRK.90" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Monotonisierung der Welt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.91" sortKey="Moralische_Entgiftung_Europas">
+    <bibl sortKey="Moralische_Entgiftung_Europas" xml:id="SZDWRK.91" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die moralische Entgiftung Europas</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.92" sortKey="Philosophie_des_Hippolyte_Taine">
+    <bibl sortKey="Philosophie_des_Hippolyte_Taine" xml:id="SZDWRK.92" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4320631-1">Die Philosophie des Hippolyte
+        <title ref="http://d-nb.info/gnd/4320631-1" type="single">Die Philosophie des Hippolyte
             Taine</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.93" sortKey="Schlaflose_Welt">
+    <bibl sortKey="Schlaflose_Welt" xml:id="SZDWRK.93" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die schlaflose Welt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.94" sortKey="Schweigsame_Frau">
+    <bibl sortKey="Schweigsame_Frau" xml:id="SZDWRK.94" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die schweigsame Frau. Komische Oper in drei Aufzügen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.95" sortKey="Spät_bezahlte_Schuld">
+    <bibl sortKey="Spät_bezahlte_Schuld" xml:id="SZDWRK.95" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die spät bezahlte Schuld</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.96" sortKey="Stimme">
+    <bibl sortKey="Stimme" xml:id="SZDWRK.96" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Stimme. In memoriam Josef Kainz</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.97" sortKey="Stunde_zwischen_zwei_Ozeanen">
+    <bibl sortKey="Stunde_zwischen_zwei_Ozeanen" xml:id="SZDWRK.97" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die Stunde zwischen zwei Ozeanen. Der Panamakanal</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.98" sortKey="Unsichtbare_Sammlung">
+    <bibl sortKey="Unsichtbare_Sammlung" xml:id="SZDWRK.98" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123234353">Die unsichtbare Sammlung</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1123234353" type="single">Die unsichtbare Sammlung</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.99" sortKey="Unterirdischen_Bücher_Balzacs">
+    <bibl sortKey="Unterirdischen_Bücher_Balzacs" xml:id="SZDWRK.99" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Die unterirdischen Bücher Balzacs</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.100" sortKey="Welt_von_Gestern">
+    <bibl sortKey="Welt_von_Gestern" xml:id="SZDWRK.100" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4436762-4">Die Welt von Gestern</title>
-        <lang xml:lang="de">Deutsch</lang>
-        <term type="classification" xml:lang="de">Autobiographie</term>
-    </bibl>
-    <bibl xml:id="SZDWRK.101" sortKey="Dostojewski">
+        <title ref="http://d-nb.info/gnd/4436762-4" type="single">Die Welt von Gestern</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Autobiographisches Autobiographisches</term></bibl>
+    <bibl sortKey="Dostojewski" xml:id="SZDWRK.101" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Dostojewski</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.102" sortKey="Schimmer_Licht_im_Dunkel">
+    <bibl sortKey="Schimmer_Licht_im_Dunkel" xml:id="SZDWRK.102" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ein Schimmer Licht im Dunkel</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.103" sortKey="Einige_Grundlagen_zu_einem_kollektiv">
+    <bibl sortKey="Einige_Grundlagen_zu_einem_kollektiv" xml:id="SZDWRK.103" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Einige Grundlagen zu einem kollektiv auszuarbeitenden Manifest</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.104" sortKey="Einigung_Europas">
+    <bibl sortKey="Einigung_Europas" xml:id="SZDWRK.104" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Einigung Europas [Vortrag]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.105" sortKey="Emile_Verhaeren">
+    <bibl sortKey="Emile_Verhaeren" xml:id="SZDWRK.105" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1178599310">Emile Verhaeren [1910]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1178599310" type="single">Emile Verhaeren [1910]</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.106" sortKey="Emile_Zola">
+    <bibl sortKey="Emile_Zola" xml:id="SZDWRK.106" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Emile Zola</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.107" sortKey="Episode_vom_Genfer_See">
+    <bibl sortKey="Episode_vom_Genfer_See" xml:id="SZDWRK.107" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123219958">Episode vom Genfer See</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1123219958" type="single">Episode vom Genfer See</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.108" sortKey="Erinnerungen_an_Emile_Verhaeren">
+    <bibl sortKey="Erinnerungen_an_Emile_Verhaeren" xml:id="SZDWRK.108" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1178599310">Erinnerungen an Emile
+        <title ref="http://d-nb.info/gnd/1178599310" type="single">Erinnerungen an Emile
             Verhaeren</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.109" sortKey="Erinnerungen_an_Theodor_Herzl">
+    <bibl sortKey="Erinnerungen_an_Theodor_Herzl" xml:id="SZDWRK.109" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Erinnerungen an Theodor Herzl</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.110" sortKey="Ernest_Renan">
+    <bibl sortKey="Ernest_Renan" xml:id="SZDWRK.110" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ernest Renan. Zum Jahrhunderttage seiner Geburt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.111" sortKey="Europa">
+    <bibl sortKey="Europa" xml:id="SZDWRK.111" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Europa</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.112" sortKey="Exposé_einer_billigen_deutschen">
+    <bibl sortKey="Exposé_einer_billigen_deutschen" xml:id="SZDWRK.112" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Exposé einer billigen deutschen, von jeder staatlichen Beschränkung
             unabhängigen deutschen Bücherei</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.113" sortKey="Frans_Masereel">
+    <bibl sortKey="Frans_Masereel" xml:id="SZDWRK.113" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Frans Masereel. Der Mann und Bildner</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.114" sortKey="Franz_Anton_Mesmer">
+    <bibl sortKey="Franz_Anton_Mesmer" xml:id="SZDWRK.114" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Franz Anton Mesmer</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.115" sortKey="Friedrich_Nietzsche">
+    <bibl sortKey="Friedrich_Nietzsche" xml:id="SZDWRK.115" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Friedrich Nietzsche</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.116" sortKey="Geburtstagsbrief_an_Hermann_Bahr">
+    <bibl sortKey="Geburtstagsbrief_an_Hermann_Bahr" xml:id="SZDWRK.116" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Geburtstagsbrief an Hermann Bahr</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.117" sortKey="Gegenwart_und_Zukunft_der_jüdischen_Literatur">
+    <bibl sortKey="Gegenwart_und_Zukunft_der_jüdischen_Literatur" xml:id="SZDWRK.117" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Gegenwart und Zukunft der jüdischen Literatur. Eine Umfrage</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.118" sortKey="Geschichtsschreibung_von_morgen">
+    <bibl sortKey="Geschichtsschreibung_von_morgen" xml:id="SZDWRK.118" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Geschichtsschreibung von morgen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.119" sortKey="Gespräche_mit_Werfel">
+    <bibl sortKey="Gespräche_mit_Werfel" xml:id="SZDWRK.119" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Gespräche mit Werfel</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.120" sortKey="Goethe_und_Hölderlin">
+    <bibl sortKey="Goethe_und_Hölderlin" xml:id="SZDWRK.120" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Goethe und Hölderlin</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.121" sortKey="Gutachten_zu_Balzac">
+    <bibl sortKey="Gutachten_zu_Balzac" xml:id="SZDWRK.121" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Gutachten zu Balzac</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.122" sortKey="Gutachten_zu_Hermann_Brochs ">
+    <bibl sortKey="Gutachten_zu_Hermann_Brochs " xml:id="SZDWRK.122" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Gutachten zu Hermann Brochs "Der Tod des Vergil" </title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.123" sortKey="Hans_Carossa">
+    <bibl sortKey="Hans_Carossa" xml:id="SZDWRK.123" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Hans Carossa. Brief an einen französischen Freund</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.124" sortKey="Help_the_Jewish_Children">
+    <bibl sortKey="Help_the_Jewish_Children" xml:id="SZDWRK.124" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Help the Jewish Children in Germany</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.125" sortKey="Hölderlin">
+    <bibl sortKey="Hölderlin" xml:id="SZDWRK.125" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Hölderlin</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.126" sortKey="Hugo_von_Hofmannsthal_Gedächtnisrede">
+    <bibl sortKey="Hugo_von_Hofmannsthal_Gedächtnisrede" xml:id="SZDWRK.126" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Hugo von Hofmannsthal. Gedächtnisrede zur Trauerfeier im Wiener
             Burgtheater</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.127" sortKey="Ist_nicht_Alles_was">
+    <bibl sortKey="Ist_nicht_Alles_was" xml:id="SZDWRK.127" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ist nicht Alles, was wir spenden…</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.128" sortKey="Jaurès">
+    <bibl sortKey="Jaurès" xml:id="SZDWRK.128" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Jaurès. Ein Porträt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.129" sortKey="Jeremias">
+    <bibl sortKey="Jeremias" xml:id="SZDWRK.129" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4447446-5">Jeremias</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4447446-5" type="single">Jeremias</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.130" sortKey="Joseph_Fouché">
+    <bibl sortKey="Joseph_Fouché" xml:id="SZDWRK.130" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4214396-2">Joseph Fouché</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4214396-2" type="single">Joseph Fouché</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.131" sortKey="Karl_Geigy-Hagenbach">
+    <bibl sortKey="Karl_Geigy-Hagenbach" xml:id="SZDWRK.131" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Karl Geigy-Hagenbach und seine Sammlung. Zum siebzigsten
             Geburtstage</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.132" sortKey="Kleine_Legende_von_den_gleich-ungleichen_Schwestern">
+    <bibl sortKey="Kleine_Legende_von_den_gleich-ungleichen_Schwestern" xml:id="SZDWRK.132" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Kleine Legende von den gleich-ungleichen Schwestern</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.133" sortKey="Kleine_Reise_nach_Brasilien">
+    <bibl sortKey="Kleine_Reise_nach_Brasilien" xml:id="SZDWRK.133" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Kleine Reise nach Brasilien</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.134" sortKey="Kleist">
+    <bibl sortKey="Kleist" xml:id="SZDWRK.134" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Kleist</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.135" sortKey="L'Unité_spirituelle_du_Monde">
+    <bibl sortKey="L'Unité_spirituelle_du_Monde" xml:id="SZDWRK.135" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1148790543">L'Unité spirituelle du
+        <title ref="http://d-nb.info/gnd/1148790543" type="single">L'Unité spirituelle du
             Monde</title>
     </bibl>
-    <bibl xml:id="SZDWRK.136" sortKey="Legende_eines_Lebens">
+    <bibl sortKey="Legende_eines_Lebens" xml:id="SZDWRK.136" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1139307053">Legende eines Lebens</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1139307053" type="single">Legende eines Lebens</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.137" sortKey="Leporella">
+    <bibl sortKey="Leporella" xml:id="SZDWRK.137" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1214199186">Leporella</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1214199186" type="single">Leporella</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.138" sortKey="Lieber_verehrter_Alfred_Döblin">
+    <bibl sortKey="Lieber_verehrter_Alfred_Döblin" xml:id="SZDWRK.138" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Lieber verehrter Alfred Döblin!</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.139" sortKey="Magellan">
+    <bibl sortKey="Magellan" xml:id="SZDWRK.139" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4436253-5">Magellan</title>
-        <lang xml:lang="de">Deutsch</lang>
-        <term type="classification" xml:lang="de">Biographie</term>
-    </bibl>
-    <bibl xml:id="SZDWRK.140" sortKey="Marceline_Desbordes-Valmore">
+        <title ref="http://d-nb.info/gnd/4436253-5" type="single">Magellan</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien Biographien</term></bibl>
+    <bibl sortKey="Marceline_Desbordes-Valmore" xml:id="SZDWRK.140" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Marceline Desbordes-Valmore</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.141" sortKey="Maria_Stuart">
+    <bibl sortKey="Maria_Stuart" xml:id="SZDWRK.141" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/105216370X">Maria Stuart</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/105216370X" type="single">Maria Stuart</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.142" sortKey="Marie_Antoinette">
+    <bibl sortKey="Marie_Antoinette" xml:id="SZDWRK.142" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1024274039">Marie Antoinette. Bildnis eines
+        <title ref="http://d-nb.info/gnd/1024274039" type="single">Marie Antoinette. Bildnis eines
             mittleren Charakters</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.143" sortKey="Marsyas_und_Apoll">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien Biographien Biographien Biographien Biographien Biographien Biographien Werknotizen</term></bibl>
+    <bibl sortKey="Marsyas_und_Apoll" xml:id="SZDWRK.143" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Marsyas und Apoll</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.144" sortKey="Mary_Baker-Eddy">
+    <bibl sortKey="Mary_Baker-Eddy" xml:id="SZDWRK.144" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Mary Baker-Eddy</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.145" sortKey="Mater_Dolorosa">
+    <bibl sortKey="Mater_Dolorosa" xml:id="SZDWRK.145" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Mater Dolorosa. Die Briefe von Nietzsches Mutter an Overbeck</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.146" sortKey="Mein_lieber_Louis_Golding">
+    <bibl sortKey="Mein_lieber_Louis_Golding" xml:id="SZDWRK.146" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Mein lieber Louis Golding!</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.147" sortKey="Memorandum_für_Bexerly_Baxter">
+    <bibl sortKey="Memorandum_für_Bexerly_Baxter" xml:id="SZDWRK.147" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Memorandum für Bexerly Baxter</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.148" sortKey="Moissi_im_Gespräch">
+    <bibl sortKey="Moissi_im_Gespräch" xml:id="SZDWRK.148" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Moissi im Gespräch</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.149" sortKey="Montaigne">
+    <bibl sortKey="Montaigne" xml:id="SZDWRK.149" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1140124943">Montaigne</title>
-        <lang xml:lang="de">Deutsch</lang>
-        <term type="classification" xml:lang="de">Biographie</term>
-    </bibl>
-    <bibl xml:id="SZDWRK.150" sortKey="Ödön_von_Horváth">
+        <title ref="http://d-nb.info/gnd/1140124943" type="single">Montaigne</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Biographien Biographien Biographien</term></bibl>
+    <bibl sortKey="Ödön_von_Horváth" xml:id="SZDWRK.150" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ödön von Horváth. An Appreciation</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.151" sortKey="Österreich_und_das_deutsche_Volk">
+    <bibl sortKey="Österreich_und_das_deutsche_Volk" xml:id="SZDWRK.151" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1145049362">Österreich und das deutsche
+        <title ref="http://d-nb.info/gnd/1145049362" type="single">Österreich und das deutsche
             Volk</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.152" sortKey="Otto_Zarek">
+    <bibl sortKey="Otto_Zarek" xml:id="SZDWRK.152" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Otto Zarek</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.153" sortKey="Palästina">
+    <bibl sortKey="Palästina" xml:id="SZDWRK.153" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Palästina</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.154" sortKey="Panama">
+    <bibl sortKey="Panama" xml:id="SZDWRK.154" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Panama</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.155" sortKey="Phantastische_Nacht">
+    <bibl sortKey="Phantastische_Nacht" xml:id="SZDWRK.155" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123598924">Phantastische Nacht</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1123598924" type="single">Phantastische Nacht</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.156" sortKey="Praterfrühling">
+    <bibl sortKey="Praterfrühling" xml:id="SZDWRK.156" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/112402736X">Praterfrühling</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/112402736X" type="single">Praterfrühling</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.157" sortKey="Presenting_Tolstoi">
+    <bibl sortKey="Presenting_Tolstoi" xml:id="SZDWRK.157" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Presenting Tolstoi [Foreword for The Living Thoughts of
             Tolstoi]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.158" sortKey="Prolog_zu_Erstes_Erlebnis">
+    <bibl sortKey="Prolog_zu_Erstes_Erlebnis" xml:id="SZDWRK.158" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Prolog zu Erstes Erlebnis</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.159" sortKey="Radio_Address_to_American_Schoolchildren">
+    <bibl sortKey="Radio_Address_to_American_Schoolchildren" xml:id="SZDWRK.159" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Radio Address to American Schoolchildren</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.160" sortKey="Radiovortrag_Lugano">
+    <bibl sortKey="Radiovortrag_Lugano" xml:id="SZDWRK.160" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Radiovortrag Lugano Sept. 1934</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.161" sortKey="Rahel_rechtet_mit_Gott">
+    <bibl sortKey="Rahel_rechtet_mit_Gott" xml:id="SZDWRK.161" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1136376380">Rahel rechtet mit Gott</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1136376380" type="single">Rahel rechtet mit Gott</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.162" sortKey="Rainer_Maria_Rilke">
+    <bibl sortKey="Rainer_Maria_Rilke" xml:id="SZDWRK.162" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Rainer Maria Rilke. Ein Vortrag in London</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.163" sortKey="Rausch_der_Verwandlung">
+    <bibl sortKey="Rausch_der_Verwandlung" xml:id="SZDWRK.163" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/7756961-1">Rausch der Verwandlung</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/7756961-1" type="single">Rausch der Verwandlung</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
         <publisher>
-            <date when="1982">1982</date>
+            <date when="1982" instant="false">1982</date>
         </publisher>
-        <term type="classification" xml:lang="de">Roman</term>
-    </bibl>
-    <bibl xml:id="SZDWRK.164" sortKey="Rede_zu_Ehren_Maxim_Gorkis">
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="Rede_zu_Ehren_Maxim_Gorkis" xml:id="SZDWRK.164" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Rede zu Ehren Maxim Gorkis</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.165" sortKey="Reise_nach_Rußland">
+    <bibl sortKey="Reise_nach_Rußland" xml:id="SZDWRK.165" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1075568714">Reise nach Rußland</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1075568714" type="single">Reise nach Rußland</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.166" sortKey="Romain_Rolland_Der_Mann">
+    <bibl sortKey="Romain_Rolland_Der_Mann" xml:id="SZDWRK.166" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1155244982">Romain Rolland. Der Mann und das
+        <title ref="http://d-nb.info/gnd/1155244982" type="single">Romain Rolland. Der Mann und das
             Werk</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.167" sortKey="Romain_Rolland_Vortrag">
+    <bibl sortKey="Romain_Rolland_Vortrag" xml:id="SZDWRK.167" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Romain Rolland. Vortrag</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.168" sortKey="Rundfrage_1936">
+    <bibl sortKey="Rundfrage_1936" xml:id="SZDWRK.168" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Rundfrage 1936</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.169" sortKey="Rundfrage_Nouvelles_Litteraires">
+    <bibl sortKey="Rundfrage_Nouvelles_Litteraires" xml:id="SZDWRK.169" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Rundfrage Nouvelles Litteraires</title>
     </bibl>
-    <bibl xml:id="SZDWRK.170" sortKey="Rundfrage_Revue_Belge">
+    <bibl sortKey="Rundfrage_Revue_Belge" xml:id="SZDWRK.170" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Rundfrage Revue Belge</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.171" sortKey="Sainte-Beuve">
+    <bibl sortKey="Sainte-Beuve" xml:id="SZDWRK.171" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sainte-Beuve</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.172" sortKey="Salzburg">
+    <bibl sortKey="Salzburg" xml:id="SZDWRK.172" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Salzburg. Die Stadt als Rahmen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.173" sortKey="Schachnovelle">
+    <bibl sortKey="Schachnovelle" xml:id="SZDWRK.173" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4255212-6">Schachnovelle</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4255212-6" type="single">Schachnovelle</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.174" sortKey="Scharlach">
+    <bibl sortKey="Scharlach" xml:id="SZDWRK.174" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124027114">Scharlach</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1124027114" type="single">Scharlach</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.175" sortKey="Sigmund_Freud">
+    <bibl sortKey="Sigmund_Freud" xml:id="SZDWRK.175" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sigmund Freud</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.176" sortKey="Sinn_und_Schönheit_der_Autographen">
+    <bibl sortKey="Sinn_und_Schönheit_der_Autographen" xml:id="SZDWRK.176" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1117947874">Sinn und Schönheit der
+        <title ref="http://d-nb.info/gnd/1117947874" type="single">Sinn und Schönheit der
             Autographen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.177" sortKey="Skizze_für_ein_Interview_Jornal_do_Brasil">
+    <bibl sortKey="Skizze_für_ein_Interview_Jornal_do_Brasil" xml:id="SZDWRK.177" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Skizze für ein Interview der Zeitung "Jornal do Brasil"</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.178" sortKey="Stendhal">
+    <bibl sortKey="Stendhal" xml:id="SZDWRK.178" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Stendhal</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.179" sortKey="04_Sternstunden">
+    <bibl sortKey="04_Sternstunden" xml:id="SZDWRK.179" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sternstunden der Menschheit: Ciceros Tod oder Das Haupt auf der
             Rostra</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.180" sortKey="07_Sternstunden">
+    <bibl sortKey="07_Sternstunden" xml:id="SZDWRK.180" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124489924">Sternstunden der Menschheit: Das
+        <title ref="http://d-nb.info/gnd/1124489924" type="single">Sternstunden der Menschheit: Das
             erste Wort über den Ozean</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.181" sortKey="10_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="10_Sternstunden" xml:id="SZDWRK.181" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124401318">Sternstunden der Menschheit: Das
+        <title ref="http://d-nb.info/gnd/1124401318" type="single">Sternstunden der Menschheit: Das
             Genie einer Nacht</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.182" sortKey="13_Sternstunden">
+    <bibl sortKey="13_Sternstunden" xml:id="SZDWRK.182" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4436252-3">Sternstunden der Menschheit: Der
+        <title ref="http://d-nb.info/gnd/4436252-3" type="single">Sternstunden der Menschheit: Der
             Kampf um den Südpol</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.183" sortKey="06_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="06_Sternstunden" xml:id="SZDWRK.183" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124490469">Sternstunden der Menschheit: Der
+        <title ref="http://d-nb.info/gnd/1124490469" type="single">Sternstunden der Menschheit: Der
             versiegelte Zug</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.184" sortKey="05_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen</term></bibl>
+    <bibl sortKey="05_Sternstunden" xml:id="SZDWRK.184" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/112410867X">Sternstunden der Menschheit: Die
+        <title ref="http://d-nb.info/gnd/112410867X" type="single">Sternstunden der Menschheit: Die
             Entdeckung Eldorados</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.185" sortKey="06_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen</term></bibl>
+    <bibl sortKey="06_Sternstunden" xml:id="SZDWRK.185" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124488960">Sternstunden der Menschheit: Die
+        <title ref="http://d-nb.info/gnd/1124488960" type="single">Sternstunden der Menschheit: Die
             Eroberung von Byzanz</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.186" sortKey="09_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen</term></bibl>
+    <bibl sortKey="09_Sternstunden" xml:id="SZDWRK.186" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124490108">Sternstunden der Menschheit: Die
+        <title ref="http://d-nb.info/gnd/1124490108" type="single">Sternstunden der Menschheit: Die
             Flucht zu Gott</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.187" sortKey="14_Sternstunden">
+    <bibl sortKey="14_Sternstunden" xml:id="SZDWRK.187" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124485430">Sternstunden der Menschheit: Die
+        <title ref="http://d-nb.info/gnd/1124485430" type="single">Sternstunden der Menschheit: Die
             Marienbader Elegie</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.188" sortKey="15_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="15_Sternstunden" xml:id="SZDWRK.188" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/112410870X">Sternstunden der Menschheit: Die
+        <title ref="http://d-nb.info/gnd/112410870X" type="single">Sternstunden der Menschheit: Die
             Weltminute von Waterloo</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.189" sortKey="01_Sternstunden">
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="01_Sternstunden" xml:id="SZDWRK.189" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sternstunden der Menschheit: Einleitung 1</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.190" sortKey="02_Sternstunden">
+    <bibl sortKey="02_Sternstunden" xml:id="SZDWRK.190" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sternstunden der Menschheit: Einleitung 2</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.191" sortKey="03_Sternstunden">
+    <bibl sortKey="03_Sternstunden" xml:id="SZDWRK.191" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sternstunden der Menschheit: Einleitung 3 [Fateful hours]</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.192" sortKey="08_Sternstunden">
+    <bibl sortKey="08_Sternstunden" xml:id="SZDWRK.192" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124488642">Sternstunden der Menschheit:
+        <title ref="http://d-nb.info/gnd/1124488642" type="single">Sternstunden der Menschheit:
             Flucht in die Unsterblichkeit</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.193" sortKey="11_Sternstunden">
+    <bibl sortKey="11_Sternstunden" xml:id="SZDWRK.193" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124489622">Sternstunden der Menschheit:
+        <title ref="http://d-nb.info/gnd/1124489622" type="single">Sternstunden der Menschheit:
             Georg Friedrich Händels Auferstehung</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.194" sortKey="12_Sternstunden">
+    <bibl sortKey="12_Sternstunden" xml:id="SZDWRK.194" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124485511">Sternstunden der Menschheit:
+        <title ref="http://d-nb.info/gnd/1124485511" type="single">Sternstunden der Menschheit:
             Heroischer Augenblick</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.195" sortKey="16_Sternstunden">
+    <bibl sortKey="16_Sternstunden" xml:id="SZDWRK.195" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Sternstunden der Menschheit: Wilson versagt</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.196" sortKey="Tersites">
+    <bibl sortKey="Tersites" xml:id="SZDWRK.196" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Tersites</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.197" sortKey="Thomas_Mann_Lotte">
+    <bibl sortKey="Thomas_Mann_Lotte" xml:id="SZDWRK.197" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Thomas Mann. Lotte in Weimar</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.198" sortKey="Tolstoi">
+    <bibl sortKey="Tolstoi" xml:id="SZDWRK.198" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Tolstoi</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.199" sortKey="Triumph_und_Tragik_des_Erasmus">
+    <bibl sortKey="Triumph_und_Tragik_des_Erasmus" xml:id="SZDWRK.199" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4447447-7">Triumph und Tragik des Erasmus von
+        <title ref="http://d-nb.info/gnd/4447447-7" type="single">Triumph und Tragik des Erasmus von
             Rotterdam</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.200" sortKey="Über_den_Film">
+    <bibl sortKey="Über_den_Film" xml:id="SZDWRK.200" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Über den Film</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.201" sortKey="Ungeduld_des_Herzens">
+    <bibl sortKey="Ungeduld_des_Herzens" xml:id="SZDWRK.201" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/4447444-1">Ungeduld des Herzens</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/4447444-1" type="single">Ungeduld des Herzens</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.202" sortKey="Untergang_eines_Herzens">
+    <bibl sortKey="Untergang_eines_Herzens" xml:id="SZDWRK.202" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124162852">Untergang eines Herzens</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1124162852" type="single">Untergang eines Herzens</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.203" sortKey="Unvergessliches_Erlebnis">
+    <bibl sortKey="Unvergessliches_Erlebnis" xml:id="SZDWRK.203" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Unvergessliches Erlebnis. Ein Tag bei Albert Schweitzer</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.204" sortKey="Unvermutete_Bekanntschaft">
+    <bibl sortKey="Unvermutete_Bekanntschaft" xml:id="SZDWRK.204" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1123178887">Unvermutete Bekanntschaft mit
+        <title ref="http://d-nb.info/gnd/1123178887" type="single">Unvermutete Bekanntschaft mit
             einem Handwerk</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.205" sortKey="Verhaeren-Vorlesung">
+    <bibl sortKey="Verhaeren-Vorlesung" xml:id="SZDWRK.205" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Verhaeren-Vorlesung</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.206" sortKey="Verlaine ">
+    <bibl sortKey="Verlaine " xml:id="SZDWRK.206" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Verlaine </title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.207" sortKey="Verwirrung">
+    <bibl sortKey="Verwirrung" xml:id="SZDWRK.207" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/109816556X">Verwirrung der Gefühle</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.208" sortKey="Vierundzwanzig_Stunden">
+        <title ref="http://d-nb.info/gnd/109816556X" type="single">Verwirrung der Gefühle</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen</term></bibl>
+    <bibl sortKey="Vierundzwanzig_Stunden" xml:id="SZDWRK.208" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/7711238-6">Vierundzwanzig Stunden aus dem
+        <title ref="http://d-nb.info/gnd/7711238-6" type="single">Vierundzwanzig Stunden aus dem
             Leben einer Frau</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.209" sortKey="Von_meinen_Novellen">
+    <bibl sortKey="Von_meinen_Novellen" xml:id="SZDWRK.209" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Von meinen Novellen</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.210" sortKey="Vortrag_über_Dostojewski">
+    <bibl sortKey="Vortrag_über_Dostojewski" xml:id="SZDWRK.210" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Vortrag über Dostojewski</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.211" sortKey="Walter_Rathenau">
+    <bibl sortKey="Walter_Rathenau" xml:id="SZDWRK.211" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Walter Rathenau. Gedächtnisbild</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.212" sortKey="War_er_es">
+    <bibl sortKey="War_er_es" xml:id="SZDWRK.212" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124027068">War er es?</title>
-        <lang xml:lang="de">Deutsch</lang>
-    </bibl>
-    <bibl xml:id="SZDWRK.213" sortKey="Widerstand_der_Wirklichkeit">
+        <title ref="http://d-nb.info/gnd/1124027068" type="single">War er es?</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
+    <term type="classification" xml:lang="de">Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen Romane/Erzählungen</term></bibl>
+    <bibl sortKey="Widerstand_der_Wirklichkeit" xml:id="SZDWRK.213" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124026568">Widerstand der
+        <title ref="http://d-nb.info/gnd/1124026568" type="single">Widerstand der
             Wirklichkeit</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.214" sortKey="Wille_zur_Universalität">
+    <bibl sortKey="Wille_zur_Universalität" xml:id="SZDWRK.214" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Wille zur Universalität</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.215" sortKey="Worte_am_Sarge_Sigmund_Freuds">
+    <bibl sortKey="Worte_am_Sarge_Sigmund_Freuds" xml:id="SZDWRK.215" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Worte am Sarge Sigmund Freuds</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.216" sortKey="Ypern">
+    <bibl sortKey="Ypern" xml:id="SZDWRK.216" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
         <title type="single">Ypern</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
-    <bibl xml:id="SZDWRK.217" sortKey="Zwei_Einsame">
+    <bibl sortKey="Zwei_Einsame" xml:id="SZDWRK.217" default="false" status="draft">
         <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
-            <persName>
-                <surname>Zweig</surname>
-                <forename>Stefan</forename>
+            <persName instant="false" full="yes">
+                <surname full="yes">Zweig</surname>
+                <forename full="yes">Stefan</forename>
             </persName>
         </author>
-        <title type="single" ref="http://d-nb.info/gnd/1124027459">Zwei Einsame</title>
-        <lang xml:lang="de">Deutsch</lang>
+        <title ref="http://d-nb.info/gnd/1124027459" type="single">Zwei Einsame</title>
+        <lang xml:lang="de" opt="false">Deutsch</lang>
     </bibl>
 </listBibl>
+
         </body>
     </text>
 </TEI>

@@ -134,12 +134,12 @@ def main():
                     tei_pubDate.text = col_to_string(row, 4)
 
             #####################
-            #### <term> form of literature
-            if col_to_string(row, 5) != '' :
-                tei_term = ET.SubElement(tei_bibl, 'term')
-                tei_term.set('type', 'classification')
-                tei_term.set('xml:lang', 'de')
-                tei_term.text = col_to_string(row, 5)
+            #### <term> form of literature - erzeugt durch copy aus SDZMSK
+            # if col_to_string(row, 5) != '' :
+            #     tei_term = ET.SubElement(tei_bibl, 'term')
+            #     tei_term.set('type', 'classification')
+            #     tei_term.set('xml:lang', 'de')
+            #     tei_term.text = col_to_string(row, 5)
 
             #####################
             #### <sourceDesc> Quelle
