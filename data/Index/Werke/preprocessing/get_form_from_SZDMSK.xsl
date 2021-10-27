@@ -18,15 +18,18 @@
     
     <xsl:template match="t:bibl">
         <xsl:variable name="WRK_dnb" select="./t:title/@ref"/>
-        <!--<xsl:variable name="WRK_title" select="./t:title"/>-->
-        <!--<xsl:variable name="MSK_title" select="$SZDMSK//t:biblFullt/t:fileDesc/t:titleStmt/t:title[1]"/>-->
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
             
             <xsl:for-each-group select="$SZDMSK//t:biblFull" group-by="t:fileDesc/t:titleStmt/t:title[@ref=$WRK_dnb]">
-                <xsl:if test="position() = 1"><term type="classification" xml:lang="de">
+                <xsl:if test="position() = 1">
+                    <term type="classification" xml:lang="de">
                     <xsl:value-of select="t:profileDesc/t:textClass/t:keywords/t:term[@xml:lang='de']"/>
-                </term></xsl:if>
+                    </term>
+                    <term type="classification" xml:lang="en">
+                        <xsl:value-of select="t:profileDesc/t:textClass/t:keywords/t:term[@xml:lang='en']"/>
+                    </term>
+                </xsl:if>
             </xsl:for-each-group>
         </xsl:copy>
     </xsl:template>
