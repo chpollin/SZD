@@ -166,5 +166,29 @@
             </xsl:if>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:template match="t:msDesc/t:history/t:provenance[@type]">
+        <xsl:variable name="SZDAUT_ID" select="./ancestor::t:biblFull[1]/@xml:id"/>
+        <xsl:variable name="SZDAUT_EN_CONTENT" select="$SZDEN//*:Row[*:Cell[1]/*:Data = $SZDAUT_ID]/*:Cell[13]"/>
+        <xsl:copy><xsl:attribute name="type">provenance</xsl:attribute>
+            <span xml:lang="de">
+                <xsl:apply-templates/>
+            </span>
+            <xsl:if test="$SZDAUT_EN_CONTENT != 'xxx'">
+                <span xml:lang="en">
+                    <xsl:choose>
+                        <xsl:when test="contains($SZDAUT_EN_CONTENT, '&lt;hi&gt;')">
+                            <xsl:call-template name="fix_hi">
+                                <xsl:with-param name="SZDAUT_EN_CONTENT" select="$SZDAUT_EN_CONTENT"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space($SZDAUT_EN_CONTENT)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </span>
+            </xsl:if>
+        </xsl:copy>
+    </xsl:template>
 
 </xsl:stylesheet>
