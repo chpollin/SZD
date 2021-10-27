@@ -1780,7 +1780,21 @@
                             <xsl:with-param name="path">
                                 <xsl:choose>
                                     <xsl:when test="t:fileDesc/t:titleStmt/t:title/@xml:lang">
-                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
+                                        <xsl:choose>
+                                            <xsl:when test="$locale = 'en'">
+                                                <xsl:choose>
+                                                    <xsl:when test="t:fileDesc/t:titleStmt/t:title[@xml:lang][2]">
+                                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang][1]"/>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[@xml:lang  = $locale][1]"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]"/>
@@ -2804,7 +2818,14 @@
                             <i18n:text>provenance</i18n:text>
                         </td>
                         <td class="col-9">
-                            <xsl:value-of select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[@type='provenance']"/>
+                            <xsl:choose>
+                                <xsl:when test="$locale ='en'">
+                                    <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[@type='provenance']/t:span[@xml:lang ='en']"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[@type='provenance']/t:span[@xml:lang ='de']"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </td>
                     </tr>
                 </xsl:if>
@@ -2835,8 +2856,8 @@
          
                 <!-- //////////////////////////////////////////////////////////// -->
                 <!-- Current Location  -->
-                <xsl:variable name="PROVENANCE_not_TYPE" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]"/>
-                <xsl:if test="$PROVENANCE_not_TYPE">
+                <xsl:variable name="SZDAUT_CURRENT_LOCATION" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]"/>
+                <xsl:if test="$SZDAUT_CURRENT_LOCATION">
                     <tr class="row">
                         <xsl:if test="not(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition)">
                             <xsl:attribute name="class"><xsl:text>group row</xsl:text></xsl:attribute>
@@ -2846,11 +2867,35 @@
                         </td>
                         <td class="col-9">
                             <xsl:choose>
-                                <xsl:when test="$locale ='en'">
-                                    <xsl:apply-templates select="$PROVENANCE_not_TYPE/t:span[@xml:lang ='en']"/>
+                                <xsl:when test="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang]/t:orgName/@ref">
+                                    <xsl:choose>
+                                        <xsl:when test="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang]">
+                                            <xsl:for-each select="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang]/t:orgName/@ref">
+                                                <xsl:call-template name="LocationSearch">
+                                                    <xsl:with-param name="locale" select="$locale"/>
+                                                    <xsl:with-param name="SZDSTA">
+                                                        <xsl:call-template name="GetStandortList">
+                                                            <xsl:with-param name="Standort" select="."/>
+                                                        </xsl:call-template>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                                <xsl:if test="not(last() = position())">
+                                                    <br/>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                            <xsl:if test="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang]/t:idno">
+                                                <br/>
+                                                <xsl:value-of select="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang]/t:idno"/>
+                                            </xsl:if>
+                                           
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:apply-templates/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:apply-templates select="$PROVENANCE_not_TYPE/t:span[@xml:lang ='de']"/>
+                                    <xsl:value-of select="$SZDAUT_CURRENT_LOCATION/t:span[@xml:lang = $locale]"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </td>
@@ -2897,45 +2942,57 @@
         </xsl:choose>
     </xsl:template>
    
+    <!--<xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]/t:span">
+        <xsl:param name=""></xsl:param>
+        aaa
+    </xsl:template>-->
+    
+  <!--  <xsl:choose>
+        <xsl:when test="$locale ='en'">
+            <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]/t:span[@xml:lang ='en']">
+                <xsl:with-param name="locale" select="$locale"/>
+            </xsl:apply-templates>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:apply-templates select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]/t:span[@xml:lang ='de']">
+                <xsl:with-param name="locale" select="$locale"/>
+            </xsl:apply-templates>
+        </xsl:otherwise>
+    </xsl:choose>-->
+   
+   
     <!-- //////////////////////////////////////////////////////////// -->
     <!-- for o:szd.autographs-->
-    <xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName">
+    <!--<xsl:template match="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[not(@type)]">
         <xsl:param name="locale"/>
+        <!-\- because only the german part is annotated -\->
         <xsl:choose>
-            <xsl:when test="contains(@ref, '#SZDSTA.')">
+            <xsl:when test="t:span[@xml:lang]/t:orgName/@ref">
                 <xsl:choose>
-                    <xsl:when test="$StandorteList//t:org[@xml:id = substring-after(@ref, '#')]/t:orgName/@xml:lang">
-                        <xsl:choose>
-                            <xsl:when test="$locale = 'en'">
-                                <xsl:value-of select="$StandorteList//t:org[@xml:id = substring-after(@ref, '#')]/t:orgName[@xml:lang = $locale]"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="$StandorteList//t:org[@xml:id = substring-after(@ref, '#')]/t:orgName[@xml:lang = $locale]"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
+                    <xsl:when test="t:span[@xml:lang]">
+                        <xsl:call-template name="LocationSearch">
+                            <xsl:with-param name="locale" select="$locale"/>
+                            <xsl:with-param name="SZDSTA">
+                                <xsl:call-template name="GetStandortList">
+                                    <xsl:with-param name="Standort" select="t:span[@xml:lang]/t:orgName[1]/@ref"/>
+                                </xsl:call-template>
+                            </xsl:with-param>
+                        </xsl:call-template>
+                        <xsl:if test="t:span[@xml:lang]/t:idno">
+                            <br/>
+                            <xsl:value-of select="t:span[@xml:lang]/t:idno"/>
+                        </xsl:if>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:value-of select="."/>
+                        <xsl:apply-templates/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-            <xsl:when test="@ref">
-                <xsl:call-template name="LocationSearch">
-                    <xsl:with-param name="locale" select="$locale"/>
-                    <xsl:with-param name="SZDSTA">
-                        <xsl:call-template name="GetStandortList">
-                            <xsl:with-param name="Standort" select="@ref"/>
-                        </xsl:call-template>
-                    </xsl:with-param>
-                </xsl:call-template>
-            </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates/>
+                <xsl:value-of select="t:span[@xml:lang = $locale]"/>
             </xsl:otherwise>
         </xsl:choose>
-        <br/>
-        <xsl:text> </xsl:text>
-    </xsl:template>
+    </xsl:template>-->
     
     <!-- //////////////////////////////////////////////////////////// -->
     <!-- for o:szd.autographs -->
@@ -3256,7 +3313,8 @@
     <xsl:template name="print_title_en_de">
         <xsl:param name="locale"/>
         <xsl:choose>
-            <xsl:when test="t:fileDesc/t:titleStmt/t:title[@xml:lang]">
+            <!-- if there is a second title with @xml:lang;  -->
+            <xsl:when test="t:fileDesc/t:titleStmt/t:title[2][@xml:lang]">
                 <xsl:choose>
                     <xsl:when test="$locale = 'en'">
                         <xsl:apply-templates select="t:fileDesc/t:titleStmt/t:title[@xml:lang='en']"/>

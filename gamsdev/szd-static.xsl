@@ -61,9 +61,9 @@
 	<!-- project-specific variables -->
 	<xsl:variable name="server"></xsl:variable>
 	<!-- GLOSSA: /gamsdev/pollin/szd/trunk/www | GAMS: /szd -->
-    <!--<xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> -->
+    <xsl:variable name="gamsdev">/gamsdev/pollin/szd/trunk/www</xsl:variable> 
 	<!-- GAMS -->
-	<xsl:variable name="gamsdev">/szd</xsl:variable>
+	<!--<xsl:variable name="gamsdev">/szd</xsl:variable>-->
 	
 	<xsl:variable name="projectTitle">
 		<xsl:text>Stefan Zweig digital</xsl:text>
@@ -162,6 +162,8 @@
 				<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"><xsl:text> </xsl:text></script-->
 				<script src="{concat($server, $gamsdev,'/js/jszip.js')}"><xsl:text> </xsl:text></script>
 				<script src="{concat($server, $gamsdev,'/js/download_images_iiif_manifest.js')}"><xsl:text> </xsl:text></script>
+				<script src="{concat($server, $gamsdev,'/js/szd.js')}"><xsl:text> </xsl:text></script>
+				
 			</head>
 
 			<!-- //////////////////////////////////////////////////////////// -->
@@ -264,10 +266,12 @@
 											<a class="dropdown-item text-uppercase" href="/o:szd.personen/sdef:TEI/get?locale={$locale}">
 												<i18n:text>persons</i18n:text>
 											</a>
-											<!--<a class="dropdown-item" href="{concat($server, '/archive/objects/query:szd.getstandorte/methods/sdef:Query/get?')}"><xsl:text>STANDORTE</xsl:text></a>-->
 											<a class="dropdown-item text-uppercase" href="/o:szd.standorte/sdef:TEI/get?locale={$locale}">
 												<i18n:text>locations</i18n:text>
 											</a>
+											<!--<a class="dropdown-item text-uppercase" href="/o:szd.werkindex/sdef:TEI/get?locale={$locale}">
+												<xsl:value-of select="if ($locale = 'en') then ('Works') else ('Werke')"/>
+											</a>-->
 											<a class="dropdown-item text-uppercase" href="https://de.wikisource.org/wiki/Stefan_Zweig/Erstausgaben" target="_blank">
 												<i18n:text>firstedition</i18n:text>
 											</a>
@@ -550,7 +554,7 @@
 					</div>
 				</div>
 				</footer>
-				<script src="{concat($server, $gamsdev,'/js/szd.js')}"><xsl:text> </xsl:text></script>
+				
 			</body>
 		</html>
 	</xsl:template>

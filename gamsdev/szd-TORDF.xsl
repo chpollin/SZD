@@ -623,11 +623,6 @@
 				<xsl:call-template name="getExtent_SZDBIB_SZDAUT">
 					<xsl:with-param name="locale" select="'de'"/>
 				</xsl:call-template>
-				<!--<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent">
-			    		<szd:extent>
-			    			<xsl:value-of select="normalize-space(t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:objectDesc/t:supportDesc/t:extent)"/>
-			    		</szd:extent>
-			    	</xsl:if>-->
 			</szd:Extent>
 		</xsl:for-each>
 	</xsl:template>
@@ -1977,13 +1972,12 @@
 
 		<!-- szd:location  -->
 		<xsl:choose>
-			<xsl:when
-				test="contains(t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance[1], 'unbekannt')">
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:span[text() = 'unbekannt']">
 				<szd:location rdf:resource="https://gams.uni-graz.at/context:szd#unknown"/>
 			</xsl:when>
-			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
+			<xsl:when test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/*/t:orgName/@ref">
 				<xsl:for-each
-					select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:orgName/@ref">
+					select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/*/t:orgName/@ref">
 					<xsl:call-template name="GetStandortelist">
 						<xsl:with-param name="Standort" select="."/>
 						<xsl:with-param name="Typ" select="'szd:location'"/>
@@ -2005,12 +1999,12 @@
 			rdf:resource="{$Autograph_Extent_URI}"/>
 
 		<!-- provenance for SZDAUT -->
-		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
+		<xsl:for-each select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance">
 			<xsl:call-template name="getEnDe">
 				<xsl:with-param name="XPpath" select="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:provenance/t:span"/>
 				<xsl:with-param name="Type" select="'szd:provenance'"/>
 			</xsl:call-template>
-		</xsl:if>
+		</xsl:for-each>
 
 		<!-- acquired -->
 		<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:history/t:acquisition">
@@ -2418,7 +2412,16 @@
 					</xsl:choose>
 				</xsl:for-each>
 				<xsl:text> </xsl:text>
-				<xsl:value-of select="$EXTENT/t:measure[@type = 'format']"/>
+				<!-- FORMAT -->
+				<xsl:choose>
+					<xsl:when test="$EXTENT/t:measure[@type = 'format']/t:span[@xml:lang]">
+						<xsl:value-of select="$EXTENT/t:measure[@type = 'format']/t:span[@xml:lang = $locale]"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$EXTENT/t:measure[@type = 'format']"/>
+					</xsl:otherwise>
+				</xsl:choose>
+				<!-- BINDING -->
 				<xsl:if test="t:fileDesc/t:sourceDesc/t:msDesc/t:physDesc/t:bindingDesc/t:binding/t:ab">
 					<xsl:text>, </xsl:text>
 					<xsl:choose>

@@ -101,7 +101,7 @@
                                 </xsl:choose>
                                
                             </h3>
-                        <!-- Go through all entries connected to xpath selection in group-by -->
+                        <!-- go through all entries connected to xpath selection in group-by -->
                         <!-- list ccontent -->
                         <xsl:for-each select="current-group()">
                             <xsl:sort data-type="text" lang="ger" select="t:fileDesc/t:titleStmt/t:title[1]"/>
