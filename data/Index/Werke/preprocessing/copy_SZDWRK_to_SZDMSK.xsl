@@ -7,9 +7,7 @@
     <xsl:variable name="SZDWRK">
         <xsl:copy-of select="document('../SZDWRK.xml')"/>
     </xsl:variable>
-    <xsl:variable name="SZDWRK_ID" select="$SZDWRK//t:bibl/@xml:id"/>
-    <xsl:variable name="SZDMSK_dnb" select="//t:biblFull/t:fileDesc/t:titleStmt/t:title/@ref"/>
-    <xsl:variable name="SZDWRK_dnb" select="$SZDWRK//t:bibl/t:title/@ref"/>
+    <xsl:variable name="SZDWRK_bibl" select="$SZDWRK//t:bibl"/>
     
     <xsl:template match="@*|node()">
         
@@ -22,27 +20,18 @@
     <xsl:template match="t:profileDesc/t:textClass/t:keywords">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
-            <xsl:choose>
-                <xsl:when test="parent::t:biblFull[//t:title[@ref=$SZDWRK_dnb]]">
-                <term type="work" ref="{$SZDWRK_ID}"/>
+            <xsl:variable name="GND_MSK" select="ancestor::t:biblFull[1]/t:fileDesc/t:titleStmt"/>
+             
+            <xsl:for-each select="$SZDWRK_bibl/t:title">
+                <xsl:choose>
+                    <xsl:when test="$GND_MSK/t:title[1]/@ref = .[1]/@ref">
+                        <term type="work" ref="{concat('#', ancestor::t:bibl/@xml:id)}"><xsl:value-of select="normalize-space(ancestor::t:bibl/t:title)"/></term>
                 </xsl:when>
-                <xsl:otherwise>
-                    <term type="work" ref="ToDo"/>
-                </xsl:otherwise>
-            </xsl:choose>
-            
-            <!--<term type="work" ref="{$SZDWRK//t:bibl[t:title[@ref=$SZDMSK_dnb]]/@xml:id}"/>-->
-            <!--<xsl:choose>
-                <xsl:when test="preceding::t:biblFull[t:fileDesc/t:titleStmt/t:title[@ref=$SZDWRK_dnb]]">
-                    <term type="work" ref="{$SZDWRK//t:bibl[t:title[@ref=$SZDMSK_dnb]]/@xml:id}"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <term type="work" ref="ToDo"/>
-                </xsl:otherwise>
-            </xsl:choose>-->
-            <!--<xsl:for-each select="ancestor::t:biblFull[t:fileDesc/t:titleStmt/t:title[@ref=$SZDWRK_dnb]]">
-                <term type="work" ref="{$SZDWRK//t:bibl[t:title[@ref=$SZDMSK_dnb]]/@xml:id}"/>
-            </xsl:for-each>-->
+                    <xsl:when test="normalize-space($GND_MSK/t:title[@type='Einheitssachtitel'][1]) = normalize-space(.[1])">
+                        <term type="work" ref="{concat('#', ancestor::t:bibl/@xml:id)}"><xsl:value-of select="normalize-space(ancestor::t:bibl/t:title)"/></term>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:for-each>
         </xsl:copy>
     </xsl:template>
     
