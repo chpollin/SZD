@@ -1133,7 +1133,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="Sternstunden" xml:id="SZDMSK.13">
+                <biblFull ana="01_Sternstunden" xml:id="SZDMSK.13">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original" ref="http://d-nb.info/gnd/1124489924">Das erste
@@ -1159,6 +1159,9 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/W7</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.8093</idno>
+                                    </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
@@ -1427,7 +1430,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="02_Sternstunden" xml:id="SZDMSK.16">
+                <biblFull ana="03_Sternstunden" xml:id="SZDMSK.16">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">WILSON VERSAGT</title>
@@ -2306,10 +2309,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de">Deckblatt blaues Papier aus Notizblock, Notizbuch
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Deckblatt aus Notizblock, Notizbuch
                                                   mit Händlermarke „BEAUVAIS PAPETIER 14, Rue du Bac
                                                   (7e)“</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en">Cover sheet of blue paper from a notepad,
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Cover sheet from a notepad,
                                                   notebook with stationer's label „BEAUVAIS PAPETIER
                                                   14, Rue du Bac (7e)“</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de">Violette Tinte, Bleistift</material>
@@ -2381,7 +2384,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="02_Chenier" xml:id="SZDMSK.26">
+                <biblFull ana="03_Chenier" xml:id="SZDMSK.26">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Chenier</title>
@@ -4470,7 +4473,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="Vortrag" xml:id="SZDMSK.49">
+                <biblFull ana="02_Vortrag" xml:id="SZDMSK.49">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Vortrag über Dostojewski II</title>
@@ -13732,7 +13735,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="03_Sternstunden" xml:id="SZDMSK.162">
+                <biblFull ana="04_Sternstunden" xml:id="SZDMSK.162">
                     <fileDesc>
                         <titleStmt>
                             <title ana="supplied/verified">Wilson versagt</title>
@@ -13806,7 +13809,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="04_Sternstunden" xml:id="SZDMSK.163">
+                <biblFull ana="05_Sternstunden" xml:id="SZDMSK.163">
                     <fileDesc>
                         <titleStmt>
                             <title ana="supplied/verified">Wilson versagt</title>
@@ -13881,7 +13884,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="05_Sternstunden" xml:id="SZDMSK.164">
+                <biblFull ana="06_Sternstunden" xml:id="SZDMSK.164">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Wilson's Failure</title>
@@ -15363,7 +15366,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="Vortrag" xml:id="SZDMSK.183">
+                <biblFull ana="04_Vortrag" xml:id="SZDMSK.183">
                     <fileDesc>
                         <titleStmt>
                             <title ana="assigned" xml:lang="de">Vortrag über Dostojewski</title>
@@ -23148,7 +23151,7 @@
                 </biblFull>
                 <!--  -->
                 <!-- //////// Beilage als eigenes Objekt -->
-                <biblFull xml:id="SZDMSK.284">
+                <biblFull ana="02_Sternstunden" xml:id="SZDMSK.284">
                     <fileDesc>
                         <titleStmt>
                             <title ana="assigned" xml:lang="de">Typoskript Wilson versagt</title>
@@ -23240,7 +23243,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull xml:id="SZDMSK.285">
+                <biblFull ana="02_Chenier" xml:id="SZDMSK.285">
                     <fileDesc>
                         <titleStmt>
                             <title ana="assigned" xml:lang="de">Manuskript Chenier</title>
@@ -23329,7 +23332,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull xml:id="SZDMSK.286">
+                <biblFull ana="03_Vortrag" xml:id="SZDMSK.286">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Eine Dostojewski-Feier</title>
@@ -23427,7 +23430,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull xml:id="SZDMSK.287">
+                <biblFull ana="02_Sternstunden" xml:id="SZDMSK.287">
                     <fileDesc>
                         <titleStmt>
                             <title ana="assigned" xml:lang="de">Das erste Wort über den
@@ -25278,7 +25281,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull xml:id="SZDMSK.307">
+                <biblFull ana="01_Vortrag" xml:id="SZDMSK.307">
                     <fileDesc>
                         <titleStmt>
                             <title ana="original">Vortragsconcept</title>
