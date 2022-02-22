@@ -1,0 +1,193 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Stefan Zweigs Abschiedsbrief</title>
+        <author>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matausek</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                  Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für
+                  Informationsmodellierung - AustrianCentrefor Digital Humanities,
+                  Karl-Franzens-Universität Graz </orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches
+                  Asset ManagementSystem </orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">CreativeCommonsBY-NC-SA 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.thema.5</idno>
+        <date when="2022-02-22">15.12.2017</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Manfred</forename>
+            <surname>Mittermayer</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>SZD Themenseite</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
+      </editorialDecl>
+      <projectDesc>
+        <ab>
+          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
+        </ab>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+               Zweig im digitalen Raum zusammenzuführen und ihn einem
+               literaturwissenschaftlichbzw.wissenschaftlich interessierten Publikum zu erschließen.
+               In Zusammenarbeit mitdemLiteraturarchiv der Universität Salzburg wird dabei,
+               basierend auf dem dortvorhandenenQuellenmaterial, eine digitale
+               Nachlassrekonstruktion des Bestandes generiert.So entstehtein strukturierter Bestand
+               an digitalen Objekten, der im Sinne derdigitalenLangzeitarchivierung repräsentiert
+               wird, und NutzerInnen orts- undzeitunabhängigzugänglich ist. Das Projekt ist so
+               konzipiert, dass zu einem späterenZeitpunktErschließung und Anreicherung des
+               Quellenmaterials (z.B. digitalen Editionen)möglichwerden. </p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>ICH HABE DAS LEBEN ZU SEHR GELIEBT</title>
+        </head>
+
+        <p>Einige Anmerkungen zu Stefan Zweigs „Declaração“ anlässlich seines 80. Todestages am 23. Februar 2022</p>
+        <p>Das von <name ref="#SZDPER.1560">Stefan Zweig</name> mit dem portugiesischen Wort „Declaração“ als „Erklärung“ betitelte Schreiben vom 22. Februar 1942 ist zweifellos sein bekanntestes und meistzitiertes Lebensdokument. 
+          Es entstand unter dramatischen Umständen, denn am folgenden Tag fanden die Bediensteten <name ref="#SZDPER.1560">Zweig</name> und seine Frau <name ref="#SZDPER.1555">Lotte</name> leblos im Bett ihres Hauses in Petrópolis auf. 
+          Der herbeigerufene Arzt trug die Einnahme giftiger Substanzen als Todesursache in die amtlichen Dokumente ein und die polizeiliche Untersuchung schloss eine Beteiligung Dritter aus, so dass keine Zweifel daran bestanden, dass <name ref="#SZDPER.1560">Stefan</name> und <name ref="#SZDPER.1555">Lotte Zweig</name> sich nach Jahren im Exil selbst zu diesem Schritt entschieden hatten.</p>
+        <p>Datierungen und Poststempel zeigen, dass das Ehepaar bereits eine ganze Reihe von persönlichen Abschiedsbriefen an Freunde und Familienmitglieder verfasst und zur Post gebracht hatte, als <name ref="#SZDPER.1560">Stefan Zweig</name> seine offizielle Erklärung niederschrieb. Darin wandte er sich allein an die Öffentlichkeit, ohne seine Frau zu erwähnen, die sich zum gemeinsamen Suizid entschlossen hatte. Aufgrund der langen und durch den Krieg zusätzlich erschwerten Postwege und Zensurkontrollen dürften die persönlichen Abschiedsschreiben ihre Empfängerinnen und Empfänger erst erreicht haben, als die Nachricht vom Tod und die „Erklärung“ Zweigs längst über Zeitungen und das Radio verbreitet worden waren.</p>
+        <p>Dem offiziellen Charakter entsprechend, beginnt <name ref="#SZDPER.1560">Zweig</name> seinen Text mit einem Dank an das Land Brasilien, in dem er und seine Frau die letzten Monate verbracht hatten, und äußert sich anschließend mit erklärenden Worten zu seiner als ausweglos empfundenen Lage. Wegen der Bedeutung des Dokuments hinterließ <name ref="#SZDPER.1560">Zweig</name> zwei Exemplare der „Declaração“, was bislang wenig Beachtung gefunden hat, zumal sich die Texte auf den ersten Blick zu gleichen scheinen und für Abdrucke und Zitate üblicherweise eine von Schreibfehlern und Streichungen bereinigte Fassung genutzt wird. Eine dieser „Erklärungen“ wurde 1976 vom Deutschen Literaturarchiv Marbach erworben, die andere befindet sich seit 1992 in der National Library of Israel in Jerusalem. Beide sind handschriftlich verfasst, unterzeichnet und tragen dasselbe Datum. Als Schreibeigenheit ist bei beiden die fehlende Cedilha am zweiten C des Wortes Declaração festzustellen, was für <name ref="#SZDPER.1560">Zweigs</name> Schreibweise nicht ungewöhnlich ist, denn auch bei französischen Texten verzichtete er in der Handschrift häufig auf die Accents. </p>
+        <p>Als deutlicher Unterschied fällt auf dem Jerusalemer Exemplar zunächst in der oberen linken Ecke eine schräg angebrachte Paraphe auf, die vermutlich von einem der ermittelnden Beamten stammt. Auf dem Marbacher Exemplar hat <name ref="#SZDPER.1560">Zweig</name> selbst hinter der Überschrift in Klammern den Zusatz „Abschrift, Copia“ angebracht. Damit ist der Zweck des sicherheitshalber vorhandenen Doppelstücks korrekt bezeichnet, doch ist die Angabe insofern unrichtig, als es sich eben nicht um eine Abschrift des Textes handelt, sondern vielmehr um dessen Entwurf. Erkennbar wird dies an mehreren Streichungen und Korrekturen, die im vorgeblichen „Original“ aus Jerusalem bereits in der geänderten Form enthalten sind. Obwohl <name ref="#SZDPER.1560">Zweig</name> die entsprechenden Stellen im Marbacher Exemplar mit dem Füllhalter umfassend tilgte, sind alle darunterliegenden Worte der ursprünglichen Formulierungen noch lesbar.</p>
+        <p>Die erste Stelle, die deutliche Korrekturen trägt, ist das Ende des ersten Absatzes. In der endgültigen Fassung lautet diese auf Brasilien bezogene Passage: „Mit jedem Tage habe ich dies Land mehr lieben gelernt und nirgends hätte ich mir mein Leben lieber vom Grunde aus neu aufgebaut, nachdem die Welt meiner eigenen Sprache für mich untergegangen ist und […] meine geistige Heimat Europa sich selber vernichtet.“ In der ersten Version des Textes hatte <name ref="#SZDPER.1560">Zweig</name> am Ende des Satzes noch weniger prägnant geschrieben: „nachdem die Welt in der ich in meiner eigenen Sprache schaffen konnte für mich untergegangen ist und meine geistige Heimat Europa sich selbst vernichtet.“ </p>
+        <p>Die zweite Stelle betrifft den Beweggrund für den Suizid. Hier rückte <name ref="#SZDPER.1560">Zweig</name> allein seine Kraftlosigkeit in den Vordergrund und strich aus dem Satz „Aber nach dem sechzigsten Jahr bedürfte es besonderen Mutes und besonderer Kräfte, um noch einmal völlig neu zu beginnen“ die Worte „besonderen Mutes und“. Außerdem ist zur Verstärkung der Aussage das Wort „völlig“ im Entwurf erst später vor dem Zeilenanfang hinzugefügt worden.</p>
+        <p>Bei der dritten und umfassendsten Streichung handelt es sich um einen ganzen und einen unvollständigen Satz. Die Stelle lautet: „Ich habe das Leben zu sehr geliebt. Eine zerstückte und in ihrem Gefühl verstörte“. In der endgültigen Fassung hat <name ref="#SZDPER.1560">Zweig</name> die Passage mit ihrem prägnanten ersten Satz nicht wieder aufgegriffen.</p>
+        <p>Die letzte Streichung betrifft den Austausch des Wortes „Unabhängigkeit“ durch „Freiheit“, die <name ref="#SZDPER.1560">Zweig</name> für sich als „das höchste Gut dieser Erde“ ansah.</p>
+        <p>Abgesehen von einigen kleineren Varianten wie „dieses Land” und „dies Land“ oder „Rast gewährt“ und „Rast gegeben“ und dem Austausch von Punkt und Ausrufungszeichen bei den beiden letzten Sätzen kam es in der endgültigen Fassung nur noch zu zwei kleineren Korrekturen, die wiederum Streichungen nach sich zogen: zunächst den Beginn des Wortes „Europa“, das <name ref="#SZDPER.1560">Zweig</name> wohl versehentlich ohne den vorangehenden Zusatz „meine geistige Heimat“ abgeschrieben hatte und noch entsprechend ergänzte. An der zweiten Stelle hatte er vermutlich von „fast zehn“ Jahren heimatlosen Wanderns schreiben wollen, sich nach der Niederschrift von „fast zeh“ jedoch für die ursprünglich vorgesehene Form „die langen Jahre“ entschieden.</p>
+        <p>An den Originaldokumenten ist deutlich zu erkennen, dass <name ref="#SZDPER.1560">Zweig</name> seine letzten Worte an die Öffentlichkeit nicht flüssig herunterschrieb, sondern noch zahlreiche Änderungen anbrachte und Aussagen nachschärfte, wie er es bei der Komposition seiner literarischen Werke über Jahrzehnte erprobt und verfeinert hatte. Auf dem Weg vom ersten Gedanken bis zur letzten Fassung entstanden dabei nicht selten vier oder fünf Überarbeitungen, und gemessen an der Bedeutung der „Declaração“ ist keinesfalls auszuschließen, dass auch von diesem Text ursprünglich noch weitere Entwürfe existierten.</p>
+        <p style="horizontal"> </p>
+      </div>
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>Marbacher Exemplar der Declaração</title>
+        </head>
+        <figure>
+          <graphic style="" url="IMG.1"></graphic>
+          <figDesc>
+            <caption>
+              <ref target="https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.130">https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.130</ref>
+            </caption>
+          </figDesc>
+        </figure>
+        <p style="horizontal"> </p>
+        <div type="transcription"><p><hi style="underline">Declaracão</hi> (Abschrift, Copia)</p>
+        <p>Ehe ich aus freiem Willen und mit klaren Sinnen
+          <lb></lb>aus dem Leben scheide, drängt es mich eine letzte
+          <lb></lb>Pflicht zu erfüllen: diesem wundervollen Lande Bra-
+          <lb></lb>silien innig zu danken, das mir und meiner Arbeit
+          <lb></lb>so gute und gastliche Rast gewährt. Mit jedem Tage
+          <lb></lb>habe ich dieses Land mehr lieben gelernt und nir-
+          <lb></lb>gends hätte ich mir lieber mein Leben vom Grunde aus
+          <lb></lb>neu aufgebaut, nachdem die Welt <del rend="strikethrough">in der ich in</del> meiner
+          <lb></lb>eigenen Sprache <del rend="strikethrough">schaffen konnte</del> für mich untergegangen
+          <lb></lb>ist und meine geistige Heimat Europa sich selbst vernich-
+          <lb></lb>tet.</p>
+        <p>Aber nach dem sechzigsten Jahr bedürfte es <del rend="strikethrough">beson-</del>
+          <lb></lb><del rend="strikethrough">deren Mutes</del> und besonderer Kräfte, um noch einmal
+          <lb></lb>völlig neu zu beginnen. Und die meinen sind durch die 
+          <lb></lb>langen Jahre heimatlosen Wanderns erschöpft. <del rend="strikethrough">Ich</del>
+          <lb></lb><del rend="strikethrough">habe das Leben zu sehr geliebt. Eine zerstückte und</del>
+          <lb></lb><del rend="strikethrough">in ihrem Gefühl verstörte</del> So halte ich es für besser,
+          <lb></lb>rechtzeitig und in aufrechter Haltung ein Leben
+          <lb></lb>abzuschliessen, dem geistige Arbeit die lauterste Freude
+          <lb></lb>und persönliche <del rend="strikethrough">Unabhängigkeit</del> Freiheit das höchste Gut dieser
+          <lb></lb>Erde <del rend="strikethrough">war</del> gewesen.</p>
+        <p>Ich grüsse alle meine Freunde! Mögen sie die Morgen
+          <lb></lb>röte noch sehen nach der langen Nacht. Ich, allzu
+          <lb></lb>Ungeduldiger, gehe ihnen voraus!</p>
+        <p><hi rend="left">Petropolis 22. II 1942</hi><hi rend="right">Stefan Zweig</hi><!-- rechts --></p>
+        <p style="horizontal"> </p></div>
+      </div>
+      <div type="transcription"><div type="col-1" xml:lang="de">
+        <head>
+          <title>Jerusalemer Exemplar der Declaração</title>
+        </head>
+        <figure>
+          <graphic style=" " url="IMG.2"></graphic>
+          <figDesc>
+              <caption>
+                <ref target="https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.14">https://stefanzweig.digital/o:szd.lebensdokumente#SZDLEB.14</ref>
+              </caption>
+          </figDesc>   
+        </figure>
+        <p style="horizontal"> </p>
+        <p><hi style="underline">Declaracão</hi></p>
+        <p>Ehe ich aus freiem Willen und mit klaren Sinnen
+          <lb></lb>aus dem Leben scheide, drängt es mich eine letzte Pflicht
+          <lb></lb>zu erfüllen: diesem wundervollen Lande Brasilien 
+          <lb></lb>innig zu danken, das mir und meiner Arbeit so gute
+          <lb></lb>und gastliche Rast gegeben. Mit jedem Tage habe ich dies
+          <lb></lb>Land mehr lieben gelernt und nirgends hätte ich mir
+          <lb></lb>mein Leben lieber vom Grunde aus neu aufgebaut,
+          <lb></lb>nachdem die Welt meiner eigenen Sprache für mich
+          <lb></lb>untergegangen ist und <del rend="strikethrough">Euro</del> meine geistige Heimat Europa
+          <lb></lb>sich selber vernichtet.</p>
+        <p>Aber nach dem sechzigsten Jahre bedürfte es besonderer
+          <lb></lb>Kräfte um noch einmal völlig neu zu beginnen. Und
+          <lb></lb>die meinen sind durch die <del rend="strikethrough">fast zeh</del> langen Jahre heimat-
+          <lb></lb>losen Wanderns erschöpft. So halte ich es für besser,
+          <lb></lb>rechtzeitig und in aufrechter Haltung ein Leben abzu-
+          <lb></lb>schliessen, dem geistige Arbeit immer die lauterste Freude
+          <lb></lb>und persönliche Freiheit das höchste Gut dieser Erde
+          <lb></lb>gewesen.</p>
+        <p>Ich grüsse alle meine Freunde! Mögen sie die Morgen-
+          <lb></lb>röte noch sehen nach der langen Nacht! Ich, allzu
+          <lb></lb>Ungeduldiger, gehe ihnen voraus.</p>
+        <p><hi rend="right">Stefan Zweig</hi><!-- rechts -->
+          <lb></lb><hi rend="right">----</hi><!-- rechts -->
+          <lb></lb><hi rend="right">Petropolis 22. II 1942</hi><!-- rechts -->
+        </p>
+      </div></div>
+    </body>
+  </text>
+  <facsimile>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/TITELBILD.jpg" xml:id="TITELBILD"></graphic>
+    </surface>
+      <surface>
+          <graphic mimeType="image/jpeg" url="file:///img/Declaracao_DLA.jpg" xml:id="IMG.1"></graphic>
+      </surface>
+    <surface>
+        <graphic mimeType="image/jpeg" url="file:///img/Declaracao_NLI.jpg" xml:id="IMG.2"></graphic>
+    </surface>    
+  </facsimile>
+</TEI>
