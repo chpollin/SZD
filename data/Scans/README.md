@@ -58,7 +58,7 @@ Hat folgende Struktur:
 
 Für jeden Bereich den man markieren möchte erzeugt man ein <chapter>. Das beinhaltet den Title (der in der Navigation angezeigt wird) und ein von/bis, das man mit <from> und <to> ausdrückt. Ist es nur eine Seite, wie beim Besitzvermerk, dann ist <from> und <to> der gleiche Wert. In <from> und <to> steht die Nummer des Bildes
 
-szd-JPGtoMETS.xsl
+### szd-JPGtoMETS.xsl
 
 Dieses XLST erzeugt aus den XML-File und den .jpg in dem Ordner dann ein METS-File, das in GAMS ingestiert werden kann. 
 
