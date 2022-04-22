@@ -3,11 +3,11 @@
 ## Workflow für Strukturinformationen der Digitalisate, April 2022
 
 Es gibt einen Ordner benannt nach der Signatur “SZ_AAP_W10”. Darin befindet sich: 
-* ein weiter ordner mit dem selben Namen “SZ_AAP_W10”. In diesem Unterordner befinden sich alle Bilder als .jpg. Diese sind nummeriert nach der Reihenfolge der Bilder.
+* ein weiter Ordner mit dem selben Namen “SZ_AAP_W10”. In diesem Unterordner befinden sich alle Bilder als .jpg. Diese sind nach der Reihenfolge der Bilder nummeriert.
   * SZ_AAP_W10_001.jpg
   * SZ_AAP_W10_002.jpg
   * etc. 
-* ein XML File mit dem selben Namen SZ_AAP_W10.xml
+* ein XML File mit dem selben Namen und der XML-Endung: SZ_AAP_W10.xml.
 
 ### SZ_AAP_W10.xml
 
