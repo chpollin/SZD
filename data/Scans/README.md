@@ -62,6 +62,6 @@ Für jeden Bereich den man markieren möchte erzeugt man ein <chapter>. Das bein
 
 Dieses XLST erzeugt aus den XML-File und den .jpg in dem Ordner dann ein METS-File, das in GAMS ingestiert werden kann. 
 
-### <idno>
+### idno
 
 Für Objekte die schon einen PID in der GAMS haben muss ein <idno> Element hinzugefügt werden, das genau den PID des Objektes beinhaltet.
