@@ -13,7 +13,7 @@ Es gibt einen Ordner benannt nach der Signatur “SZ_AAP_W10”. Darin befindet 
 
 Hat folgende Struktur: 
 
-'''
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <author>Zweig, Stefan</author>
@@ -54,7 +54,7 @@ Hat folgende Struktur:
         </chapter>
     </structure>
 </root>
-'''
+```
 
 Für jeden Bereich den man markieren möchte erzeugt man ein <chapter>. Das beinhaltet den Title (der in der Navigation angezeigt wird) und ein von/bis, das man mit <from> und <to> ausdrückt. Ist es nur eine Seite, wie beim Besitzvermerk, dann ist <from> und <to> der gleiche Wert. In <from> und <to> steht die Nummer des Bildes
 
