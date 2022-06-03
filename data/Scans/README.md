@@ -11,7 +11,54 @@ Es gibt einen Ordner benannt nach der Signatur “SZ_AAP_W10”. Darin befindet 
 
 ### SZ_AAP_W10.xml
 
-Hat folgende Struktur: 
+Hat folgende Struktur. Es gibt auch die Möglichkeit von Unterkapiteln, also `<chapter>` in `<chapter>`.
+
+#### Variante mit `<chapter>` in `<chapter>`
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <author>Zweig, Stefan</author>
+    <titel>Notizbuch Die Welt von Gestern, SZ-AAP/W10</titel>
+    <datum>1940-05</datum>
+    <filename>SZ_AAP_W10_</filename>
+	<idno>o:szd.6815</idno>
+	<structure>
+		<chapter>
+			<title>Buchdeckel</title>
+			<from>001</from>
+			<to>001</to>
+		</chapter>
+		<chapter>
+			<title>Besitzvermerk [1r]</title>
+			<from>002</from>
+			<to>003</to>
+		</chapter>
+		<chapter>
+			<title>Textteil [1v–18r]</title>
+			<from>004</from>
+			<to>005</to>
+			<chapter>
+				<title>Seite 1v</title>
+				<from>004</from>
+				<to>004</to>
+			</chapter>
+			<chapter>
+				<title>Seite 1r</title>
+				<from>005</from>
+				<to>005</to>
+			</chapter>
+		</chapter>
+		<chapter>
+			<title>Ende</title>
+			<from>006</from>
+			<to>006</to>
+		</chapter>
+	</structure>
+</root>
+```
+
+#### flache Variante
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -60,8 +107,12 @@ Für jeden Bereich den man markieren möchte erzeugt man ein <chapter>. Das bein
 
 ### szd-JPGtoMETS.xsl
 
-Dieses XLST erzeugt aus den XML-File und den .jpg in dem Ordner dann ein METS-File, das in GAMS ingestiert werden kann. 
+Dieses XSLT erzeugt aus den XML-File und den .jpg in dem Ordner dann ein METS-File, das in GAMS ingestiert werden kann. 
 
 ### idno
 
 Für Objekte die schon einen PID in der GAMS haben muss ein <idno> Element hinzugefügt werden, das genau den PID des Objektes beinhaltet.
+
+### szd-TOMETS.xsl
+
+Transformation beim Ingest in GAMS, um das METS anzupassen.
