@@ -9,32 +9,32 @@
 		<chapter>
 			<title>Buchdeckel</title>
 			<from>001</from>
-			<to>002</to>
+			<to>001</to>
 		</chapter>
 		<chapter>
 			<title>Besitzvermerk [1r]</title>
-			<from>003</from>
+			<from>002</from>
 			<to>003</to>
 		</chapter>
 		<chapter>
 			<title>Textteil [1v–18r]</title>
 			<from>004</from>
-			<to>037</to>
-		</chapter>
-		<chapter>
-			<title>Leerseiten [18v–90v]</title>
-			<from>038</from>
-			<to>184</to>
-		</chapter>
-		<chapter>
-			<title>Buchdeckel</title>
-			<from>185</from>
-			<to>186</to>
+			<to>005</to>
+			<chapter>
+				<title>Seite 1v</title>
+				<from>004</from>
+				<to>004</to>
+			</chapter>
+			<chapter>
+				<title>Seite 1r</title>
+				<from>005</from>
+				<to>005</to>
+			</chapter>
 		</chapter>
 		<chapter>
 			<title>Ende</title>
-			<from>187</from>
-			<to>187</to>
+			<from>006</from>
+			<to>006</to>
 		</chapter>
 	</structure>
 </root>

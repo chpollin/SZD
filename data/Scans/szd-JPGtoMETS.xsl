@@ -61,10 +61,22 @@
             				<div type="{title}">
             					<xsl:variable name="page_begin" select="from"/>
             					<xsl:variable name="page_end" select="to"/>
-            					<xsl:for-each select="$page_begin to $page_end">
-            						<xsl:variable name="number_with_leading_zero" select="substring(string(1000 + .), 2)"/>
-            						<page xlink:href="{concat($filename, $number_with_leading_zero, '.jpg')}"/>
-            					</xsl:for-each>
+            					<xsl:choose>
+            						<xsl:when test="chapter">
+            							<xsl:for-each select="chapter">
+            								<div type="{title}">
+	            								<xsl:variable name="number_with_leading_zero" select="substring(string(1000 + from), 2)"/>
+	            								<page xlink:href="{concat($filename, $number_with_leading_zero, '.jpg')}"/>
+            								</div>
+            							</xsl:for-each>
+            						</xsl:when>
+            						<xsl:otherwise>
+            							<xsl:for-each select="$page_begin to $page_end">
+            								<xsl:variable name="number_with_leading_zero" select="substring(string(1000 + .), 2)"/>
+            								<page xlink:href="{concat($filename, $number_with_leading_zero, '.jpg')}"/>
+            							</xsl:for-each>
+            						</xsl:otherwise>
+            					</xsl:choose>
             				</div>
             				
             			</xsl:for-each>
