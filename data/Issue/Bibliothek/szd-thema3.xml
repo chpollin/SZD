@@ -1,372 +1,472 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Stefan Zweigs Bibliotheken</title>
-        <author>
-          <persName>
-            <forename>Oliver</forename>
-            <surname>Matuschek</surname>
-          </persName>
-        </author>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
-        </publisher>
-        <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities,
-						Karl-Franzens-Universität Graz </orgName>
-        </authority>
-        <distributor>
-          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
-        </distributor>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY-NC-SA 4.0</licence>
-        </availability>
-        <publisher>Literaturarchiv Salzburg</publisher>
-        <idno type="PID">o:szd.thema.3</idno>
-        <date when="2017-12-15">28.11.2019</date>
-      </publicationStmt>
-      <seriesStmt>
-        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
-        <respStmt>
-          <resp>Projektleitung</resp>
-          <persName>
-            <forename>Manfred</forename>
-            <surname>Mittermayer</surname>
-          </persName>
-        </respStmt>
-        <respStmt>
-          <resp>Datenmodellierung</resp>
-          <persName>
-            <forename>Christopher</forename>
-            <surname>Pollin</surname>
-          </persName>
-        </respStmt>
-      </seriesStmt>
-      <sourceDesc>
-        <p>ToDo: Manuskripte von Stefan Zweig in progress</p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <editorialDecl>
-        <p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
-      </editorialDecl>
-      <projectDesc>
-        <ab>
-          <ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"></ref>
-        </ab>
-        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich
-					interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine
-					digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
-					wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
-					(z.B. digitalen Editionen) möglich werden. </p>
-      </projectDesc>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="introduction" xml:lang="de">
-        <p xml:lang="de">Über <name>Stefan Zweigs</name> Bibliothek, also jene Bücher, die er selbst besaß, 
-          für seine eigene literarische Arbeit nutzte und aus Interesse oder zur Unterhaltung las, war lange Zeit kaum etwas 
-          bekannt. Dabei war <name>Zweig</name> gerade für seine zahlreichen Biographien und Essays über literarische und historische 
-          Persönlichkeiten auf umfassende gedruckte Quellen angewiesen. Entsprechend aussagekräftig für die Forschung kann schon allein
-          deshalb das Wissen um seinen früheren Buchbesitz sein. 
-        </p>
-      </div>
-      <div type="introduction" xml:lang="en">
-        <p xml:lang="en">For a long time, very little was known about <name>Stefan Zweig’s</name> personal library: 
-          the books which he owned, used for his literary work, read for research or for pleasure. 
-          Indeed, for the numerous biographies and essays on literary and historical figures that he wrote, 
-          Zweig very much depended on extensive printed sources. Thus, anything we can learn about the books
-          that were in <name>Zweig’s</name> possession is likely to be of significant value to research.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title style="uppercase">ENTWICKLUNG DER BIBLIOTHEKEN</title>
-        </head>
-        <p xml:lang="de">
-          Bereits als Schüler und junger Autor hatte <name>Zweig</name> eine ganze Reihe von Büchern erworben und den Bestand in den folgenden Jahrzehnten kontinuierlich ausgebaut. Um 1930 war mit
-          über 10.000 Bänden in seinem Salzburger Haus der größte Buchbestand in seinem Besitz erreicht. Neben gezielten Ankäufen waren 
-          zahlreiche Werke als Rezensionsexemplare und Geschenke von Verlagen und Autorinnen und Autoren hinzugekommen. Eine eigene, 
-          sehr umfassende Abteilung bildete die Sammlung der Auktions- und Verkaufskataloge für Autographen, die <name>Zweig</name> 
-          als Dokumentationsmaterial für seine Handschriftensammlung zusammentrug. Mit seinem Weggang aus Österreich und der Auflösung
-          des Haushalts auf dem Salzburger Kapuzinerberg in den Jahren 1936 und 1937 wurde der allergrößte Teil der Bücher verkauft und
-          verschenkt. Für seine neue Wohnung in London stellte sich <name>Zweig</name> aus ausgewählten Resten der in Salzburg vorhandenen
-          Bestände und Neuerwerbungen eine kleinere Arbeitsbibliothek zusammen. Über den eigenen Besitz hinaus nutzte er – vor allem in den 
-          Jahren des Exils – auch Bücher aus öffentlichen Sammlungen, sodass in chronologischer wie auch in räumlicher Hinsicht nicht nur von
-          einer Bibliothek, sondern vielmehr von <hi style = "italic">den</hi> Bibliotheken <name>Stefan Zweigs</name> gesprochen werden kann. 
-          <figure>
-            <graphic url="IMG.2"/>
-            <figDesc>
-              <caption>Stefan Zweigs Salzburger Bibliothek nach 1929</caption>
-            </figDesc>
-          </figure>
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">GENESIS OF ZWEIG'S LIBRARIES</title>
-        </head>
-        <p xml:lang="en">
-          Even in his school days and during his very earliest years as a young writer 
-          Zweig is known to have been an avid buyer of books, and in the 
-          following decades he continuously developed his collection, 
-          a corpus which reached its greatest expanse around 1930, peaking at 
-          the more than 10,000 volumes which he kept at his villa in Salzburg. Deliberate 
-          acquisitions stood beside review copies and gifts received from publishers as well as 
-          from other authors. A quite extensive, independent segment is formed by the collection 
-          of auction and sales catalogues issued by autograph dealers, assembled by Zweig as 
-          documentation for his manuscript collection. When Zweig left Austria and dissolved 
-          his household on Salzburg’s Kapuzinerberg in 1936 and 1937, the vast majority of his
-          books were sold or given away. For his new residence in London, Zweig assembled a
-          reduced working library culled from the remains of his Salzburg collections, but 
-          also including new acquisitions. Especially during his years of exile, Zweig consulted 
-          not only books in his own possession, but also works he found in public collections. 
-          Hence, both in chronological and in spatial terms, it makes sense to speak of not one 
-          library of Stefan Zweig, but of several. 
-          <figure>
-            <graphic url="IMG.2"/>
-            <figDesc>
-              <caption xml:lang="en">Stefan Zweig’s Salzburg library after 1929</caption>
-            </figDesc>
-          </figure>
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title style="uppercase">KATALOGE UND PROVENIENZMERKMALE</title>
-        </head>
-        <p xml:lang="de">
-          Da die meisten Bücher aus <name>Zweigs</name> Bibliotheken noch zu seinen Lebzeiten verteilt wurden und in zumeist unbekannten Besitz übergingen, 
-          ist heute nur noch ein Bruchteil davon sicher nachzuweisen. Ursprünglich waren alle Bestände auf Kateikarten und in Bandkatalogen verzeichnet,
-          von denen jedoch nur noch diejenigen der Autographenkatalogsammlung und der sogenannten <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.glossar#Hausexemplar">Hausexemplare</ref>
-          erhalten geblieben sind. Rund 1.300 der ursprünglich über 10.000 Bände können <name>Stefan Zweig</name> heute anhand von <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature">Provenienzmerkmalen</ref>
-              zugeordnet werden, die mehr oder weniger leicht zu identifizieren sind. Es handelt sich bei diesen Spuren um so eindeutige Zeichen wie Adressstempel oder handschriftliche Randbemerkungen, aber auch um
-              Signaturen der früheren Aufstellungen in <name>Zweigs</name> Wohnungen, die oft nur aus dem Zusammenhang zu erschließen waren. 
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">CATALOGUES AND PROVENANCE FEATURES</title>
-        </head>
-        <p xml:lang="en">
-          Zweig’s libraries were largely dispersed during his own lifetime, and most books ended up in unknown locations; only a fraction of them can be identified with certainty. 
-          Originally, all holdings were recorded on filing cards or in book catalogues, of which only those of the autograph catalogue collection and of the so-called <ref type="hyperlink" target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#Hausexemplar">“Hausexemplare”</ref>
-          (voucher copies of Zweig’s own works) have survived. Today, some 1,300 volumes of the original more than ten thousand can be attributed to Stefan Zweig by means of <ref type="hyperlink" target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#ProvenanceFeature">provenance features</ref>, 
-          some more easily identifiable than others. These features include such unequivocal signs of ownership as address stamps or handwritten annotations, but also shelfmarks 
-          apparently denoting former shelf locations in Zweig’s various residences, the meaning of which often can be inferred only from the context.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title style="uppercase">DIE BIBLIOTHEKEN BEI STEFAN ZWEIG DIGITAL</title>
-        </head>
-        <p xml:lang="de">
-          In den vergangenen Jahren konnten im Rahmen von privaten Initiativen und von STEFAN ZWEIG DIGITAL bisher unzugängliche oder unbekannte Teile von <name>Zweigs</name> 
-          Bibliotheken in privaten und öffentlichen Sammlungen ermittelt und <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.bibliothek">ausführlich katalogisiert</ref> werden. 
-          Eine Ausnahme bilden die über 4.000 Autographenkataloge, von denen sich heute rund 3.000 im Deutschen Literaturarchiv Marbach befinden. Sie sind als Sonderbestand bislang noch nicht einzeln digital erfasst worden, es liegen jedoch Listen der 
-          <ref type="hyperlink" target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525433">gebundenen</ref> und als 
-          <ref type="hyperlink" target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525432">Einzelhefte</ref> erhaltenen Exemplare vor.
-          Neben der Katalogaufnahme nach bibliothekarischen Standards wurden bei der Verzeichnung der Bücher auch alle individuellen Provenienzmerkmale aufgenommen.
-          Die Definition und Erfassung der einzelnen Spuren erfolgt auf Grundlage des <ref type="hyperlink" target="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe">T-PRO Thesaurus</ref>, 
-          der standardisierte Bezeichnungen und Beschreibungen enthält.
-              
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">THE LIBRARIES IN STEFAN ZWEIG DIGITAL</title>
-        </head>
-        <p xml:lang="en">
-          During the past years, private initiatives as well as efforts by the STEFAN ZWEIG DIGITAL project have made it possible to identify and <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.bibliothek/sdef:TEI/get?locale=en">catalogue in depth</ref> previously inaccessible 
-          or unknown parts of Zweig’s libraries now in private and public collections. 
-          The books are catalogued according to library standards, also noting all individual provenance features. 
-          The various traces of Zweig’s ownership have been categorised and recorded on the basis of the <ref type="hyperlink" target="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe">T-PRO Thesaurus of Provenance Terms</ref>, which offers standardised
-          terminology and descriptions. The more than 4,000 autograph catalogues, of which some 3,000 are today held by the Deutsches Literaturarchiv Marbach, 
-          form an exception: so far, no individualized digital records exist of this special collection; instead, researchers may
-          consult lists of the various brochures, some of which are preserved <ref type="hyperlink" target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525432">separately</ref>, others <ref type="hyperlink" target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525433">bound into volumes</ref>.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title>ORIGINALSIGNATUREN</title>
-        </head>
-        <p xml:lang="de">
-          In den einzelnen Katalogeinträgen wurden im Feld
-          <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.glossar#OriginalShelfmark">Originalsignaturen</ref> 
-          auch die zahlreichen Standortangaben und Aufstellungssysteme festgehalten, deren Bedeutung noch nicht 
-          vollständig entschlüsselt werden konnte. Signaturreihen, wechselnde Nummernsysteme und wiederkehrende
-          Kombinationen in thematisch ähnlichen Büchern lassen jedoch Rückschlüsse auf frühere Aufstellungen und
-          auf Fehlstellen in den vorhandenen Beständen zu. 
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">ORIGINAL SHELFMARKS</title>
-        </head>
-        <p xml:lang="en">
-          In the various catalogue entries, the field 
-          <ref type="hyperlink" target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#OriginalShelfmark">“original shelfmarks”</ref> 
-          also records the numerous indicators of location and shelving system whose meaning 
-          so far could be only partially deciphered. Shelfmark sequences, successions of changing
-          numbering systems, and recurring combinations allow us to draw certain conclusions about 
-          the library’s former organisation and about lacunae in the extant inventory.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title style="uppercase">DER BESONDERE BESTAND DER HAUSEXEMPLARE</title>
-        </head>
-        <p xml:lang="de">
-          Mit über 600 Bänden bilden die als „Hausexemplare“ bezeichneten und zumeist mit einem entsprechenden Stempelabdruck gekennzeichneten Belegexemplare von <name>Zweigs</name> eigenen Werken einen bedeutenden Anteil des heute bekannten Buchbestands.
-          Es handelt sich dabei um Originalausgaben sowie um verschiedene Folgeauflagen und Übersetzungen. Die Hausexemplare dienten vorrangig zur Verwaltung der Werke und zur Beantwortung
-          der zahlreichen Anfragen für Übersetzungen und Abdrucke einzelner Texte. Einige der Bücher wurden auch als Textquellen und als Arbeitsexemplare genutzt und enthalten Streichungen, Änderungen und Korrekturen, die <name>Stefan Zweig</name>
-          selbst vorgenommen hat.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">THE SPECIAL COLLECTION OF THE “HAUSEXEMPLARE”</title>
-        </head>
-        <p xml:lang="en">The more than 600 volumes of “Hausexemplare”, Stefan Zweig’s voucher copies of his own works which were mostly marked with a special stamp,
-          constitute a significant proportion of his surviving collection as it is known today. They include original editions as well as various re-issues and translations.
-          The “Hausexemplare” served mainly administrational purposes and facilitated the management of inquiries concerning translations and reprints.
-          Some books, however, were also used as sources and working copies, containing deletions, changes, and corrections in Stefan Zweig’s own hand. </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title>AUSSAGEKRAFT DER BISLANG BEKANNTEN BESTÄNDE</title>
-        </head>
-        <p xml:lang="de">
-          Die übrigen heute noch bekannten Bände aus <name>Zweigs</name> Bibliotheken fallen in unterschiedliche Themenbereiche und literarische Gattungen. Nicht wenige der Bücher sind mit persönlichen <ref type="hyperlink" target="https://gams.uni-graz.at/o:szd.glossar#PresentationInscription">Widmungen</ref> für <name>Stefan Zweig</name> versehen, die einen regen Austausch von Neuerscheinungen in seinem Umfeld dokumentieren.
-            Rückschlüsse auf literarische Vorlieben oder thematische Schwerpunkte sollten anhand der verzeichneten Bücher bislang jedoch nur mit Vorsicht gezogen werden. Dass im bekannten Bestand beispielsweise kein einziges Werk von <name ref="#SZDPER.896" type="person">Thomas Mann</name> enthalten ist, bedeutet keineswegs, dass <name>Zweig</name> keines besessen hat, 
-          sondern nur, dass bislang kein entsprechender Band aus seinem früheren Besitz nachgewiesen werden konnte. Denn durch Briefe und sonstige Bemerkungen ist in diesem Fall zweifelsfrei dokumentiert, dass <name>Zweig</name> und <name ref="#SZDPER.896" type="person">Mann</name> sich ihre jeweils neuesten Werke, oft sogar mit persönlichen Widmungen versehen, gegenseitig zugesandt haben.
-            Bei der Betrachtung der heute bekannten Bestände ist zudem zu berücksichtigen, dass die Bücher auf unterschiedlichen Wegen an verschiedene Orte gelangten. So bilden die heute im Besitz von <name>Stefan Zweigs</name> Erben in London verbliebenen Bände – abgesehen von den Autographenkatalogen – den umfangreichsten Einzelbestand. In seinem Kern geht dieser auf Zweigs eigene
-          Auswahl aus der Salzburger Bibliothek infolge der Haushaltsauflösung zurück. In den folgenden Jahren wurde dieser Bestand beinahe ausschließlich durch gezielte Neuerwerbungen ergänzt und dürfte somit deutliche Hinweise auf <name>Zweigs</name> literarische Interessen in den späten 1930er-Jahren geben. Dagegen sind im Nachlass des Salzburger Schriftstellers <name ref="#SZDPER.1624" type="person">Georg Rendl</name>
-          und in verschiedenem Privatbesitz gerade jene Bücher überliefert, die <name>Zweig</name> beim Gang ins Exil aussortiert hatte und denen er in dieser Phase seines Lebens vermutlich weniger Bedeutung beimaß. 
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title>SIGNIFICANCE OF THE KNOWN INVENTORY</title>
-        </head>
-        <p xml:lang="en">
-          The other identified books from Zweig’s libraries cover a variety of subjects and literary genres. A good number of them contain <ref type="hyperlink" target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#PresentationInscription">personal 
-          inscriptions</ref> to Stefan Zweig, evidencing a lively barter of new publications among his wider circle. Any inferences as to literary 
-          tastes or key themes based on the inventory so far catalogued must be drawn with caution: for example, the fact that the known corpus 
-          contains not a single work by <name ref="#SZDPER.896" type="person">Thomas Mann</name> should not be taken to mean that Zweig owned no such book, but merely that no such volume
-          with his provenance could be identified so far. Indeed, in this case, letters and other remarks prove conclusively that Zweig and <name ref="#SZDPER.896" type="person">Mann</name>
-          frequently sent each other their own latest publications, often inscribed to each other. It should also be taken into account that the
-          books reached their several current locations by various routes. Disregarding the autograph catalogues, it is the volumes which remained
-          in London – now owned by the heirs of Stefan Zweig – which constitute the largest single bloc of the collection. 
-          The nucleus of this trove is formed by those volumes from Zweig’s Salzburg library which he chose to keep when he gave 
-          up his residence in Austria. In the following years, this pared-down collection was expanded almost exclusively by deliberate
-          acquisitions, and the new titles may be assumed strongly to reflect Zweig’s literary interests in the late 1930s. 
-          By contrast, the volumes preserved in the estate of the Salzburg writer Georg Rendl and in various private
-          collections belong to the group of books which Zweig had eliminated when he went into exile, suggesting that these were the titles to which he attached less importance at this stage of his life.
-        </p>
-      </div>
-      <div type="col-1" xml:lang="de">
-        <head>
-          <title>CHANCEN UND PERSPEKTIVEN</title>
-        </head>
-        <p xml:lang="de">
-          Trotz aller Verluste und Einschränkungen lassen sich auf Grundlage des inzwischen bekannten früheren Buchbestands aus <name>Stefan Zweigs</name> 
-          Bibliotheken schon heute wichtige neue Erkenntnisse zu seiner literarischen Arbeit, zu seinen Lektüregewohnheiten und seiner Nutzung von Quellenmaterial 
-          sowie zu seinen persönlichen Interessen gewinnen. Durch die Verzeichnung der Bestände bei STEFAN ZWEIG DIGITAL können die ermittelten Informationen in Verbindung mit
-          zahlreichen Archivalien und Dokumenten aus <name>Zweigs</name> sehr umfangreichem Nachlass betrachtet werden. So besteht in vielen Fällen die Möglichkeit, weitere
-          und bisher oft unsichtbar gebliebene Bezüge der Materialien zueinander zu erkennen.
-          Der Katalog soll auch zukünftig um Einträge neu aufgefundener Bände aus <name>Stefan Zweigs</name> Bibliotheken ergänzt werden.
-          Dabei bietet sich mit den im Rahmen des Projekts ermittelten Provenienzmerkmalen erstmals die Möglichkeit, auch solche Bücher zu identifizieren,
-          deren Herkunft bislang unbemerkt geblieben war. Für Hinweise auf weitere Bände ist das Team von STEFAN ZWEIG DIGITAL sehr dankbar. 
-        </p>
-        <p>
-          <figure>
-            <graphic url="IMG.3"/>
-            <figDesc>
-              <caption xml:lang="de"><ref target="https://verlag.sandstein.de/detailview?no=98-446">Weitere Informationen zum Buch</ref></caption>
-            </figDesc>
-          </figure>
-        </p>
-        <p xml:lang="de">
-          Ausführliche Informationen zur Bibliotheksgeschichte, zu den Beständen, den Provenienzmerkmalen und zu einzelnen Büchern finden sich in der im Rahmen von STEFAN ZWEIG DIGITAL entstandenen Publikation:
-        </p>
-        <p xml:lang="de">Stephan Matthias, Oliver Matuschek<lb/>
-          <hi style = "italic">Stefan Zweigs Bibliotheken</hi><lb/>
-          144 Seiten, 95 Abb., farbig und sw<lb/>
-          27 x 21 cm, Broschur<lb/>
-          Sandstein Verlag, Dresden 2018<lb/>
-          ISBN 978-3-95498-446-6</p>
-        <p xml:lang="de">
-          „Die schicksalhafte Geschichte des Buchbesitzes Stefan Zweigs ist im Rahmen dieser klug konzipierten und reich illustrierten Publikation, die 
-          ich ausdrücklich zur Lektüre empfehle, schon jetzt in einem Umfang ‚sichtbar‘ geworden, 
-          der lange nicht für machbar gehalten wurde.“<lb/>
-          Susanne Buchinger in <hi style = "italic">Aus dem Antiquariat</hi>
-        </p>
-        <p xml:lang="de">
-          <ref target="https://verlag.sandstein.de/reader/98-446_ZweigsBibliotheken">Zur Leseprobe</ref>
-        </p>
-      </div>
-      <div type="col-1" xml:lang="en">
-        <head>
-          <title style="uppercase">OPPORTUNITIES AND OUTLOOK</title>
-        </head>
-        <p xml:lang="en">
-          In spite of all losses and limitations, our newly-gained knowledge of the former extent of Zweig’s 
-          libraries already facilitates important new insights into his literary work, his reading habits,
-          his use of sources, and his personal interests. The inventories catalogued within STEFAN ZWEIG DIGITAL
-          allow for comparisons with numerous archival papers and documents from Zweig’s very extensive estate,
-          investigations which often reveal new and hitherto elusive interconnections. 
-          The catalogue will continue to be enlarged by additional books from Stefan Zweig’s libraries 
-          whenever they can be located. The provenance features established in the course of the project 
-          now make it possible to identify volumes that would otherwise have gone unrecognized. 
-          Any information that contributes to such discoveries would be sincerely appreciated by the
-          team at STEFAN ZWEIG DIGITAL. 
-        </p>
-        <p>
-          <figure>
-            <graphic url="IMG.3"/>
-            <figDesc>
-            	<caption xml:lang="de"><ref type="external" target="https://verlag.sandstein.de/detailview?no=98-446">More about the book</ref></caption>
-            </figDesc>
-          </figure>
-        </p>
-        <p xml:lang="en">
-          Extensive information on the history of the library, about its contents, 
-          the distinguishing provenance features, and about individual books may be
-          found in the following publication which grew out the STEFAN ZWEIG DIGITAL project:
-        </p>
-        <p xml:lang="en">Stephan Matthias, Oliver Matuschek<lb/>
-          <hi style = "italic">Stefan Zweigs Bibliotheken</hi><lb/>
-          144 pages, 95 illustrations in colour and b/w<lb/>
-          27 × 21 cm, softcover<lb/>
-          Sandstein Verlag, Dresden 2018<lb/>
-          ISBN 978-3-95498-446-6</p>
-        <p xml:lang="en">
-          „Die schicksalhafte Geschichte des Buchbesitzes Stefan Zweigs ist im Rahmen dieser klug 
-          konzipierten und reich illustrierten Publikation, die ich ausdrücklich zur Lektüre empfehle,
-          schon jetzt in einem Umfang ‚sichtbar‘ geworden, der lange nicht für machbar gehalten wurde.“ 
-          <lb/>
-          (“By this intelligently conceived and profusely illustrated publication which I recommend unreservedly 
-          to the reader, the fateful history of Stefan Zweig’s personal collection of books has been made ‘visible’ 
-          to a degree long considered unattainable.”)
-          <lb/>
-          Susanne Buchinger in <hi style = "italic">Aus dem Antiquariat</hi>
-        </p>
-        <p xml:lang="en">
-          <ref target="https://verlag.sandstein.de/reader/98-446_ZweigsBibliotheken">Read an extract here</ref>
-        </p>
-      </div>
-    </body>
-  </text>
-  <facsimile>
-    <graphic mimeType="image/jpeg" url="file:///img1.jpg" xml:id="TITELBILD"/>
-    <graphic mimeType="image/jpeg" url="file:///img1_en.jpg" xml:id="TITELBILD_EN"/>
-    <graphic mimeType="image/jpeg" url="file:///img2.jpg" xml:id="IMG.2"/>
-    <graphic mimeType="image/jpeg" url="file:///img3.jpg" xml:id="IMG.3"/>
-  </facsimile>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Stefan Zweigs Bibliotheken</title>
+				<author>
+					<persName>
+						<forename>Oliver</forename>
+						<surname>Matuschek</surname>
+					</persName>
+				</author>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>
+					<orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+						ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+				</publisher>
+				<authority>
+					<orgName corresp="https://informationsmodellierung.uni-graz.at"
+						ref="d-nb.info/gnd/1137284463"> Zentrum für Informationsmodellierung -
+						Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz
+					</orgName>
+				</authority>
+				<distributor>
+					<orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset
+						Management System </orgName>
+				</distributor>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative
+						Commons BY-NC-SA 4.0</licence>
+				</availability>
+				<publisher>Literaturarchiv Salzburg</publisher>
+				<idno type="PID">o:szd.thema.3</idno>
+				<date when="2017-12-15">28.11.2019</date>
+			</publicationStmt>
+			<seriesStmt>
+				<title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale
+					Nachlassrekonstruktion</title>
+				<respStmt>
+					<resp>Projektleitung</resp>
+					<persName>
+						<forename>Manfred</forename>
+						<surname>Mittermayer</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Datenmodellierung</resp>
+					<persName>
+						<forename>Christopher</forename>
+						<surname>Pollin</surname>
+					</persName>
+				</respStmt>
+			</seriesStmt>
+			<sourceDesc>
+				<p>ToDo: Manuskripte von Stefan Zweig in progress</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<p> ToDo: was über die editionsregeln und kodierungsrichtlinien </p>
+			</editorialDecl>
+			<projectDesc>
+				<ab>
+					<ref target="glossa.uni-graz.at/o:szd.collection.1" type="object"/>
+				</ab>
+				<p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+					Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich
+					bzw. wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit
+					mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem
+					dort vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des
+					Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen
+					Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert wird,
+					und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so
+					konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des
+					Quellenmaterials (z.B. digitalen Editionen) möglich werden. </p>
+			</projectDesc>
+		</encodingDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="introduction" xml:lang="de">
+				<p xml:lang="de">Über <name>Stefan Zweigs</name> Bibliothek, also jene Bücher, die
+					er selbst besaß, für seine eigene literarische Arbeit nutzte und aus Interesse
+					oder zur Unterhaltung las, war lange Zeit kaum etwas bekannt. Dabei war
+						<name>Zweig</name> gerade für seine zahlreichen Biographien und Essays über
+					literarische und historische Persönlichkeiten auf umfassende gedruckte Quellen
+					angewiesen. Entsprechend aussagekräftig für die Forschung kann schon allein
+					deshalb das Wissen um seinen früheren Buchbesitz sein. </p>
+			</div>
+			<div type="introduction" xml:lang="en">
+				<p xml:lang="en">For a long time, very little was known about <name>Stefan
+						Zweig’s</name> personal library: the books which he owned, used for his
+					literary work, read for research or for pleasure. Indeed, for the numerous
+					biographies and essays on literary and historical figures that he wrote, Zweig
+					very much depended on extensive printed sources. Thus, anything we can learn
+					about the books that were in <name>Zweig’s</name> possession is likely to be of
+					significant value to research. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title style="uppercase">ENTWICKLUNG DER BIBLIOTHEKEN</title>
+				</head>
+				<p xml:lang="de"> Bereits als Schüler und junger Autor hatte <name>Zweig</name> eine
+					ganze Reihe von Büchern erworben und den Bestand in den folgenden Jahrzehnten
+					kontinuierlich ausgebaut. Um 1930 war mit über 10.000 Bänden in seinem
+					Salzburger Haus der größte Buchbestand in seinem Besitz erreicht. Neben
+					gezielten Ankäufen waren zahlreiche Werke als Rezensionsexemplare und Geschenke
+					von Verlagen und Autorinnen und Autoren hinzugekommen. Eine eigene, sehr
+					umfassende Abteilung bildete die Sammlung der Auktions- und Verkaufskataloge für
+					Autographen, die <name>Zweig</name> als Dokumentationsmaterial für seine
+					Handschriftensammlung zusammentrug. Mit seinem Weggang aus Österreich und der
+					Auflösung des Haushalts auf dem Salzburger Kapuzinerberg in den Jahren 1936 und
+					1937 wurde der allergrößte Teil der Bücher verkauft und verschenkt. Für seine
+					neue Wohnung in London stellte sich <name>Zweig</name> aus ausgewählten Resten
+					der in Salzburg vorhandenen Bestände und Neuerwerbungen eine kleinere
+					Arbeitsbibliothek zusammen. Über den eigenen Besitz hinaus nutzte er – vor allem
+					in den Jahren des Exils – auch Bücher aus öffentlichen Sammlungen, sodass in
+					chronologischer wie auch in räumlicher Hinsicht nicht nur von einer Bibliothek,
+					sondern vielmehr von <hi style="italic">den</hi> Bibliotheken <name>Stefan
+						Zweigs</name> gesprochen werden kann. <figure>
+						<graphic url="IMG.2"/>
+						<figDesc>
+							<caption>Stefan Zweigs Salzburger Bibliothek nach 1929</caption>
+						</figDesc>
+					</figure>
+				</p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">GENESIS OF ZWEIG'S LIBRARIES</title>
+				</head>
+				<p xml:lang="en"> Even in his school days and during his very earliest years as a
+					young writer Zweig is known to have been an avid buyer of books, and in the
+					following decades he continuously developed his collection, a corpus which
+					reached its greatest expanse around 1930, peaking at the more than 10,000
+					volumes which he kept at his villa in Salzburg. Deliberate acquisitions stood
+					beside review copies and gifts received from publishers as well as from other
+					authors. A quite extensive, independent segment is formed by the collection of
+					auction and sales catalogues issued by autograph dealers, assembled by Zweig as
+					documentation for his manuscript collection. When Zweig left Austria and
+					dissolved his household on Salzburg’s Kapuzinerberg in 1936 and 1937, the vast
+					majority of his books were sold or given away. For his new residence in London,
+					Zweig assembled a reduced working library culled from the remains of his
+					Salzburg collections, but also including new acquisitions. Especially during his
+					years of exile, Zweig consulted not only books in his own possession, but also
+					works he found in public collections. Hence, both in chronological and in
+					spatial terms, it makes sense to speak of not one library of Stefan Zweig, but
+					of several. <figure>
+						<graphic url="IMG.2"/>
+						<figDesc>
+							<caption xml:lang="en">Stefan Zweig’s Salzburg library after
+								1929</caption>
+						</figDesc>
+					</figure>
+				</p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title style="uppercase">KATALOGE UND PROVENIENZMERKMALE</title>
+				</head>
+				<p xml:lang="de"> Da die meisten Bücher aus <name>Zweigs</name> Bibliotheken noch zu
+					seinen Lebzeiten verteilt wurden und in zumeist unbekannten Besitz übergingen,
+					ist heute nur noch ein Bruchteil davon sicher nachzuweisen. Ursprünglich waren
+					alle Bestände auf Kateikarten und in Bandkatalogen verzeichnet, von denen jedoch
+					nur noch diejenigen der Autographenkatalogsammlung und der sogenannten <ref
+						type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.glossar#Hausexemplar"
+						>Hausexemplare</ref> erhalten geblieben sind. Rund 1.300 der ursprünglich
+					über 10.000 Bände können <name>Stefan Zweig</name> heute anhand von <ref
+						type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature"
+						>Provenienzmerkmalen</ref> zugeordnet werden, die mehr oder weniger leicht
+					zu identifizieren sind. Es handelt sich bei diesen Spuren um so eindeutige
+					Zeichen wie Adressstempel oder handschriftliche Randbemerkungen, aber auch um
+					Signaturen der früheren Aufstellungen in <name>Zweigs</name> Wohnungen, die oft
+					nur aus dem Zusammenhang zu erschließen waren. </p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">CATALOGUES AND PROVENANCE FEATURES</title>
+				</head>
+				<p xml:lang="en"> Zweig’s libraries were largely dispersed during his own lifetime,
+					and most books ended up in unknown locations; only a fraction of them can be
+					identified with certainty. Originally, all holdings were recorded on filing
+					cards or in book catalogues, of which only those of the autograph catalogue
+					collection and of the so-called <ref type="hyperlink"
+						target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#Hausexemplar"
+						>“Hausexemplare”</ref> (voucher copies of Zweig’s own works) have survived.
+					Today, some 1,300 volumes of the original more than ten thousand can be
+					attributed to Stefan Zweig by means of <ref type="hyperlink"
+						target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#ProvenanceFeature"
+						>provenance features</ref>, some more easily identifiable than others. These
+					features include such unequivocal signs of ownership as address stamps or
+					handwritten annotations, but also shelfmarks apparently denoting former shelf
+					locations in Zweig’s various residences, the meaning of which often can be
+					inferred only from the context. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title style="uppercase">DIE BIBLIOTHEKEN BEI STEFAN ZWEIG DIGITAL</title>
+				</head>
+				<p xml:lang="de"> In den vergangenen Jahren konnten im Rahmen von privaten
+					Initiativen und von STEFAN ZWEIG DIGITAL bisher unzugängliche oder unbekannte
+					Teile von <name>Zweigs</name> Bibliotheken in privaten und öffentlichen
+					Sammlungen ermittelt und <ref type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.bibliothek">ausführlich
+						katalogisiert</ref> werden. Eine Ausnahme bilden die über 4.000
+					Autographenkataloge, von denen sich heute rund 3.000 im Deutschen
+					Literaturarchiv Marbach befinden. Sie sind als Sonderbestand bislang noch nicht
+					einzeln digital erfasst worden, es liegen jedoch Listen der <ref
+						type="hyperlink"
+						target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525433"
+						>gebundenen</ref> und als <ref type="hyperlink"
+						target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525432"
+						>Einzelhefte</ref> erhaltenen Exemplare vor. Neben der Katalogaufnahme nach
+					bibliothekarischen Standards wurden bei der Verzeichnung der Bücher auch alle
+					individuellen Provenienzmerkmale aufgenommen. Die Definition und Erfassung der
+					einzelnen Spuren erfolgt auf Grundlage des <ref type="hyperlink"
+						target="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"
+						>T-PRO Thesaurus</ref>, der standardisierte Bezeichnungen und Beschreibungen
+					enthält. </p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">THE LIBRARIES IN STEFAN ZWEIG DIGITAL</title>
+				</head>
+				<p xml:lang="en"> During the past years, private initiatives as well as efforts by
+					the STEFAN ZWEIG DIGITAL project have made it possible to identify and <ref
+						type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.bibliothek/sdef:TEI/get?locale=en"
+						>catalogue in depth</ref> previously inaccessible or unknown parts of
+					Zweig’s libraries now in private and public collections. The books are
+					catalogued according to library standards, also noting all individual provenance
+					features. The various traces of Zweig’s ownership have been categorised and
+					recorded on the basis of the <ref type="hyperlink"
+						target="https://provenienz.gbv.de/T-PRO_Thesaurus_der_Provenienzbegriffe"
+						>T-PRO Thesaurus of Provenance Terms</ref>, which offers standardised
+					terminology and descriptions. The more than 4,000 autograph catalogues, of which
+					some 3,000 are today held by the Deutsches Literaturarchiv Marbach, form an
+					exception: so far, no individualized digital records exist of this special
+					collection; instead, researchers may consult lists of the various brochures,
+					some of which are preserved <ref type="hyperlink"
+						target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525432"
+						>separately</ref>, others <ref type="hyperlink"
+						target="http://www.dla-marbach.de/cgi-bin/aDISCGI/kallias_prod/lib/adis.pdf?ADISDB=MM&amp;ADISOI=01525433"
+						>bound into volumes</ref>. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title>ORIGINALSIGNATUREN</title>
+				</head>
+				<p xml:lang="de"> In den einzelnen Katalogeinträgen wurden im Feld <ref
+						type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.glossar#OriginalShelfmark"
+						>Originalsignaturen</ref> auch die zahlreichen Standortangaben und
+					Aufstellungssysteme festgehalten, deren Bedeutung noch nicht vollständig
+					entschlüsselt werden konnte. Signaturreihen, wechselnde Nummernsysteme und
+					wiederkehrende Kombinationen in thematisch ähnlichen Büchern lassen jedoch
+					Rückschlüsse auf frühere Aufstellungen und auf Fehlstellen in den vorhandenen
+					Beständen zu. </p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">ORIGINAL SHELFMARKS</title>
+				</head>
+				<p xml:lang="en"> In the various catalogue entries, the field <ref type="hyperlink"
+						target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#OriginalShelfmark"
+						>“original shelfmarks”</ref> also records the numerous indicators of
+					location and shelving system whose meaning so far could be only partially
+					deciphered. Shelfmark sequences, successions of changing numbering systems, and
+					recurring combinations allow us to draw certain conclusions about the library’s
+					former organisation and about lacunae in the extant inventory. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title style="uppercase">DER BESONDERE BESTAND DER HAUSEXEMPLARE</title>
+				</head>
+				<p xml:lang="de"> Mit über 600 Bänden bilden die als „Hausexemplare“ bezeichneten
+					und zumeist mit einem entsprechenden Stempelabdruck gekennzeichneten
+					Belegexemplare von <name>Zweigs</name> eigenen Werken einen bedeutenden Anteil
+					des heute bekannten Buchbestands. Es handelt sich dabei um Originalausgaben
+					sowie um verschiedene Folgeauflagen und Übersetzungen. Die Hausexemplare dienten
+					vorrangig zur Verwaltung der Werke und zur Beantwortung der zahlreichen Anfragen
+					für Übersetzungen und Abdrucke einzelner Texte. Einige der Bücher wurden auch
+					als Textquellen und als Arbeitsexemplare genutzt und enthalten Streichungen,
+					Änderungen und Korrekturen, die <name>Stefan Zweig</name> selbst vorgenommen
+					hat. </p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">THE SPECIAL COLLECTION OF THE “HAUSEXEMPLARE”</title>
+				</head>
+				<p xml:lang="en">The more than 600 volumes of “Hausexemplare”, Stefan Zweig’s
+					voucher copies of his own works which were mostly marked with a special stamp,
+					constitute a significant proportion of his surviving collection as it is known
+					today. They include original editions as well as various re-issues and
+					translations. The “Hausexemplare” served mainly administrational purposes and
+					facilitated the management of inquiries concerning translations and reprints.
+					Some books, however, were also used as sources and working copies, containing
+					deletions, changes, and corrections in Stefan Zweig’s own hand. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title>AUSSAGEKRAFT DER BISLANG BEKANNTEN BESTÄNDE</title>
+				</head>
+				<p xml:lang="de"> Die übrigen heute noch bekannten Bände aus <name>Zweigs</name>
+					Bibliotheken fallen in unterschiedliche Themenbereiche und literarische
+					Gattungen. Nicht wenige der Bücher sind mit persönlichen <ref type="hyperlink"
+						target="https://gams.uni-graz.at/o:szd.glossar#PresentationInscription"
+						>Widmungen</ref> für <name>Stefan Zweig</name> versehen, die einen regen
+					Austausch von Neuerscheinungen in seinem Umfeld dokumentieren. Rückschlüsse auf
+					literarische Vorlieben oder thematische Schwerpunkte sollten anhand der
+					verzeichneten Bücher bislang jedoch nur mit Vorsicht gezogen werden. Dass im
+					bekannten Bestand beispielsweise kein einziges Werk von <name ref="#SZDPER.896"
+						type="person">Thomas Mann</name> enthalten ist, bedeutet keineswegs, dass
+						<name>Zweig</name> keines besessen hat, sondern nur, dass bislang kein
+					entsprechender Band aus seinem früheren Besitz nachgewiesen werden konnte. Denn
+					durch Briefe und sonstige Bemerkungen ist in diesem Fall zweifelsfrei
+					dokumentiert, dass <name>Zweig</name> und <name ref="#SZDPER.896" type="person"
+						>Mann</name> sich ihre jeweils neuesten Werke, oft sogar mit persönlichen
+					Widmungen versehen, gegenseitig zugesandt haben. Bei der Betrachtung der heute
+					bekannten Bestände ist zudem zu berücksichtigen, dass die Bücher auf
+					unterschiedlichen Wegen an verschiedene Orte gelangten. So bilden die heute im
+					Besitz von <name>Stefan Zweigs</name> Erben in London verbliebenen Bände –
+					abgesehen von den Autographenkatalogen – den umfangreichsten Einzelbestand. In
+					seinem Kern geht dieser auf Zweigs eigene Auswahl aus der Salzburger Bibliothek
+					infolge der Haushaltsauflösung zurück. In den folgenden Jahren wurde dieser
+					Bestand beinahe ausschließlich durch gezielte Neuerwerbungen ergänzt und dürfte
+					somit deutliche Hinweise auf <name>Zweigs</name> literarische Interessen in den
+					späten 1930er-Jahren geben. Dagegen sind im Nachlass des Salzburger
+					Schriftstellers <name ref="#SZDPER.1624" type="person">Georg Rendl</name> und in
+					verschiedenem Privatbesitz gerade jene Bücher überliefert, die
+						<name>Zweig</name> beim Gang ins Exil aussortiert hatte und denen er in
+					dieser Phase seines Lebens vermutlich weniger Bedeutung beimaß. </p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title>SIGNIFICANCE OF THE KNOWN INVENTORY</title>
+				</head>
+				<p xml:lang="en"> The other identified books from Zweig’s libraries cover a variety
+					of subjects and literary genres. A good number of them contain <ref
+						type="hyperlink"
+						target="http://gams.uni-graz.at/archive/objects/o:szd.glossar/methods/sdef:SKOS/get?locale=en#PresentationInscription"
+						>personal inscriptions</ref> to Stefan Zweig, evidencing a lively barter of
+					new publications among his wider circle. Any inferences as to literary tastes or
+					key themes based on the inventory so far catalogued must be drawn with caution:
+					for example, the fact that the known corpus contains not a single work by <name
+						ref="#SZDPER.896" type="person">Thomas Mann</name> should not be taken to
+					mean that Zweig owned no such book, but merely that no such volume with his
+					provenance could be identified so far. Indeed, in this case, letters and other
+					remarks prove conclusively that Zweig and <name ref="#SZDPER.896" type="person"
+						>Mann</name> frequently sent each other their own latest publications, often
+					inscribed to each other. It should also be taken into account that the books
+					reached their several current locations by various routes. Disregarding the
+					autograph catalogues, it is the volumes which remained in London – now owned by
+					the heirs of Stefan Zweig – which constitute the largest single bloc of the
+					collection. The nucleus of this trove is formed by those volumes from Zweig’s
+					Salzburg library which he chose to keep when he gave up his residence in
+					Austria. In the following years, this pared-down collection was expanded almost
+					exclusively by deliberate acquisitions, and the new titles may be assumed
+					strongly to reflect Zweig’s literary interests in the late 1930s. By contrast,
+					the volumes preserved in the estate of the Salzburg writer Georg Rendl and in
+					various private collections belong to the group of books which Zweig had
+					eliminated when he went into exile, suggesting that these were the titles to
+					which he attached less importance at this stage of his life. </p>
+			</div>
+			<div type="col-1" xml:lang="de">
+				<head>
+					<title>CHANCEN UND PERSPEKTIVEN</title>
+				</head>
+				<p xml:lang="de"> Trotz aller Verluste und Einschränkungen lassen sich auf Grundlage
+					des inzwischen bekannten früheren Buchbestands aus <name>Stefan Zweigs</name>
+					Bibliotheken schon heute wichtige neue Erkenntnisse zu seiner literarischen
+					Arbeit, zu seinen Lektüregewohnheiten und seiner Nutzung von Quellenmaterial
+					sowie zu seinen persönlichen Interessen gewinnen. Durch die Verzeichnung der
+					Bestände bei STEFAN ZWEIG DIGITAL können die ermittelten Informationen in
+					Verbindung mit zahlreichen Archivalien und Dokumenten aus <name>Zweigs</name>
+					sehr umfangreichem Nachlass betrachtet werden. So besteht in vielen Fällen die
+					Möglichkeit, weitere und bisher oft unsichtbar gebliebene Bezüge der Materialien
+					zueinander zu erkennen. Der Katalog soll auch zukünftig um Einträge neu
+					aufgefundener Bände aus <name>Stefan Zweigs</name> Bibliotheken ergänzt werden.
+					Dabei bietet sich mit den im Rahmen des Projekts ermittelten Provenienzmerkmalen
+					erstmals die Möglichkeit, auch solche Bücher zu identifizieren, deren Herkunft
+					bislang unbemerkt geblieben war. Für Hinweise auf weitere Bände ist das Team von
+					STEFAN ZWEIG DIGITAL sehr dankbar. </p>
+				<p>
+					<figure>
+						<graphic url="IMG.3"/>
+						<figDesc>
+							<caption xml:lang="de"><ref type="external"
+									target="https://verlag.sandstein.de/detailview?no=98-446"
+									>Weitere Informationen zum Buch</ref></caption>
+						</figDesc>
+					</figure>
+				</p>
+				<p xml:lang="de"> Ausführliche Informationen zur Bibliotheksgeschichte, zu den
+					Beständen, den Provenienzmerkmalen und zu einzelnen Büchern finden sich in der
+					im Rahmen von STEFAN ZWEIG DIGITAL entstandenen Publikation: </p>
+				<p xml:lang="de">Stephan Matthias, Oliver Matuschek<lb/>
+					<hi style="italic">Stefan Zweigs Bibliotheken</hi><lb/> 144 Seiten, 95 Abb.,
+					farbig und sw<lb/> 27 x 21 cm, Broschur<lb/> Sandstein Verlag, Dresden 2018<lb/>
+					ISBN 978-3-95498-446-6</p>
+				<p xml:lang="de"> „Die schicksalhafte Geschichte des Buchbesitzes Stefan Zweigs ist
+					im Rahmen dieser klug konzipierten und reich illustrierten Publikation, die ich
+					ausdrücklich zur Lektüre empfehle, schon jetzt in einem Umfang ‚sichtbar‘
+					geworden, der lange nicht für machbar gehalten wurde.“<lb/> Susanne Buchinger in
+						<hi style="italic">Aus dem Antiquariat</hi>
+				</p>
+				<p xml:lang="de">
+					<ref target="https://verlag.sandstein.de/reader/98-446_ZweigsBibliotheken">Zur
+						Leseprobe</ref>
+				</p>
+			</div>
+			<div type="col-1" xml:lang="en">
+				<head>
+					<title style="uppercase">OPPORTUNITIES AND OUTLOOK</title>
+				</head>
+				<p xml:lang="en"> In spite of all losses and limitations, our newly-gained knowledge
+					of the former extent of Zweig’s libraries already facilitates important new
+					insights into his literary work, his reading habits, his use of sources, and his
+					personal interests. The inventories catalogued within STEFAN ZWEIG DIGITAL allow
+					for comparisons with numerous archival papers and documents from Zweig’s very
+					extensive estate, investigations which often reveal new and hitherto elusive
+					interconnections. The catalogue will continue to be enlarged by additional books
+					from Stefan Zweig’s libraries whenever they can be located. The provenance
+					features established in the course of the project now make it possible to
+					identify volumes that would otherwise have gone unrecognized. Any information
+					that contributes to such discoveries would be sincerely appreciated by the team
+					at STEFAN ZWEIG DIGITAL. </p>
+				<p>
+					<figure>
+						<graphic url="IMG.3"/>
+						<figDesc>
+							<caption xml:lang="de"><ref type="external"
+									target="https://verlag.sandstein.de/detailview?no=98-446">More
+									about the book</ref></caption>
+						</figDesc>
+					</figure>
+				</p>
+				<p xml:lang="en"> Extensive information on the history of the library, about its
+					contents, the distinguishing provenance features, and about individual books may
+					be found in the following publication which grew out the STEFAN ZWEIG DIGITAL
+					project: </p>
+				<p xml:lang="en">Stephan Matthias, Oliver Matuschek<lb/>
+					<hi style="italic">Stefan Zweigs Bibliotheken</hi><lb/> 144 pages, 95
+					illustrations in colour and b/w<lb/> 27 × 21 cm, softcover<lb/> Sandstein
+					Verlag, Dresden 2018<lb/> ISBN 978-3-95498-446-6</p>
+				<p xml:lang="en"> „Die schicksalhafte Geschichte des Buchbesitzes Stefan Zweigs ist
+					im Rahmen dieser klug konzipierten und reich illustrierten Publikation, die ich
+					ausdrücklich zur Lektüre empfehle, schon jetzt in einem Umfang ‚sichtbar‘
+					geworden, der lange nicht für machbar gehalten wurde.“ <lb/> (“By this
+					intelligently conceived and profusely illustrated publication which I recommend
+					unreservedly to the reader, the fateful history of Stefan Zweig’s personal
+					collection of books has been made ‘visible’ to a degree long considered
+					unattainable.”) <lb/> Susanne Buchinger in <hi style="italic">Aus dem
+						Antiquariat</hi>
+				</p>
+				<p xml:lang="en">
+					<ref target="https://verlag.sandstein.de/reader/98-446_ZweigsBibliotheken">Read
+						an extract here</ref>
+				</p>
+			</div>
+		</body>
+	</text>
+	<facsimile>
+		<graphic mimeType="image/jpeg" url="file:///img1.jpg" xml:id="TITELBILD"/>
+		<graphic mimeType="image/jpeg" url="file:///img1_en.jpg" xml:id="TITELBILD_EN"/>
+		<graphic mimeType="image/jpeg" url="file:///img2.jpg" xml:id="IMG.2"/>
+		<graphic mimeType="image/jpeg" url="file:///img3.jpg" xml:id="IMG.3"/>
+	</facsimile>
 </TEI>
