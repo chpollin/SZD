@@ -116,3 +116,7 @@ Für Objekte die schon einen PID in der GAMS haben muss ein <idno> Element hinzu
 ### szd-TOMETS.xsl
 
 Transformation beim Ingest in GAMS, um das METS anzupassen.
+
+### szd-MODStoDC_MAPPING.xsl
+
+Transformation beim Ingest um aus dem MODS im METS ein DC zu erzeugen. Darin befindet sich ein dc:relation für die Beziehung zwischen Bild und Eintrag (z.B. in Werke)
