@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -11267,7 +11266,8 @@
         </person>
         <person corresp="https://de.wikipedia.org/wiki/Joachim_Murat" xml:id="SZDPER.1009">
           <persName ref="http://d-nb.info/gnd/118746928">
-            <name>Joachim, König von Neapel</name>
+            <surname>Murat</surname>
+            <forename>Joachim</forename>
           </persName>
           <note type="variants">Gioacchino I., Napoli, Re ; Gioacchino Murat, Napoli, Re ; Joachim,
             Berg, Großherzog ; Joachim, Kleve, Großherzog ; Joachim I., Napoli, Re ; Joachim Murat,
@@ -16974,7 +16974,7 @@
             <surname>Wunderlich</surname>
             <forename>Eva</forename>
           </persName>
-          <note type="variants">Wunderlich Eva C.</note>
+          <note type="variants">Wunderlich, Eva C...</note>
         </person>
         <person corresp="https://de.wikipedia.org/wiki/Wilhelm_Wundt" xml:id="SZDPER.1540">
           <persName ref="http://d-nb.info/gnd/11863562X">
@@ -17386,6 +17386,22 @@
           <persName ref="http://d-nb.info/gnd/118662341">
             <name>Frankreich, Königshaus</name>
           </persName>
+        </person>
+        <person corresp="https://de.wikipedia.org/wiki/Michelangelo" xml:id="SZDPER.1579">
+          <persName ref="http://d-nb.info/gnd/118582143">
+            <forename>Michelangelo</forename>
+            <surname>Buonarroti</surname>
+          </persName>
+          <note type="variants">Angelo, Bonaroti ; Bona Rotta, Michiel Angielo ; Bonarota, Michel
+            Angelo ; Bonarota, Michael Angelus ; Bonaroti, Angelo ; Bonaroti, Michael͏̈ Angelo ;
+            Bonaroti, Michel Angelo ; Bonaroti, Michiel Angelo ; Bonarotus, Michael Angelus ;
+            Buonaroti, Michael Angelo ; Buonaroti, Michelangelo ; Buonaroti, Michiel Angelo ;
+            Buonarotti, Michel-Angelo ; Buonarotti, Michelangelo ; Buonarroti, Michel Angelo ;
+            Buonarroti, Michelagniolo di L. ; Buonarroti, Michelagnolo ; Buonarroti, Mikelandželo ;
+            Buonarrotti, Michel Agnolo ; Buonarrotti, Michel A. ; </note>
+          <birth when="1475-03-06"/>
+          <death when="1564-02-27"/>
+          <idno type="wikidata">http://www.wikidata.org/entity/Q5592</idno>
         </person>
         <person xml:id="SZDPER.1580">
           <persName>
@@ -17839,6 +17855,18 @@
           <death when="1890-12-21"/>
           <idno type="wikidata">http://www.wikidata.org/entity/Q154632</idno>
         </person>
+        <person corresp="https://de.wikipedia.org/wiki/Charles_Gounod" xml:id="SZDPER.1617">
+          <persName ref="http://d-nb.info/gnd/118718312">
+            <forename>Charles</forename>
+            <surname>Gounod</surname>
+          </persName>
+          <note type="variants">Gounod, Felix-Charles ; Gounod, ... ; Gounod, Carlo ; Gounod, C. ;
+            Gounod, Felix Charles ; Gounod, Charles Francois ; Gounod, Charles François ; Gounod,
+            Charles-François ; Gounod, Ch. ; Bach-Gounod, ...</note>
+          <birth when="1818-06-18"/>
+          <death when="1893-10-18"/>
+          <idno type="wikidata">http://www.wikidata.org/entity/Q180278</idno>
+        </person>
         <person corresp="https://de.wikipedia.org/wiki/Ruggero_Leoncavallo" xml:id="SZDPER.1618">
           <persName ref="http://d-nb.info/gnd/118779559">
             <forename>Ruggiero</forename>
@@ -17903,6 +17931,18 @@
           <birth when="1752-04-04"/>
           <death when="1837-05-05"/>
           <idno type="wikidata">http://www.wikidata.org/entity/Q505202</idno>
+        </person>
+        <person corresp="https://de.wikipedia.org/wiki/Joachim_Murat" xml:id="SZDPER.1623">
+          <persName ref="http://d-nb.info/gnd/118746928">
+            <name>Joachim, König von Neapel</name>
+          </persName>
+          <note type="variants">Gioacchino I., Napoli, Re ; Gioacchino Murat, Napoli, Re ; Joachim,
+            Berg, Großherzog ; Joachim, Kleve, Großherzog ; Joachim I., Napoli, Re ; Joachim Murat,
+            Napoli, Re ; Joachim Murat, Neapel, König ; Mjurat, Ioachim ; Murat, ... ; Murat,
+            Joachim ; Gioacchino, Napoli, Re</note>
+          <birth when="1767-03-25"/>
+          <death when="1815-10-13"/>
+          <idno type="wikidata">http://www.wikidata.org/entity/Q151173</idno>
         </person>
         <person xml:id="SZDPER.1624">
           <persName ref="http://d-nb.info/gnd/116438169">
@@ -18076,6 +18116,12 @@
             <surname>Fitzbauer</surname>
           </persName>
         </person>
+        <person xml:id="SZDPER.1653">
+          <persName ref="http://d-nb.info/gnd/118799312">
+            <surname>Suarès</surname>
+            <forename>André</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1654">
           <persName ref="http://d-nb.info/gnd/116865105">
             <surname>Latzko</surname>
@@ -18085,7 +18131,7 @@
         <person xml:id="SZDPER.1655">
           <persName ref="http://d-nb.info/gnd/122012372">
             <surname>Hunt</surname>
-            <forename>Robert Nigel Carew</forename>
+            <forename>Robert Nigel Carew (d. 1959)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1656">
@@ -18175,6 +18221,12 @@
           <persName>
             <surname>Burger</surname>
             <forename>Max</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1671">
+          <persName ref="http://d-nb.info/gnd/118688227">
+            <surname>Ehrenstein</surname>
+            <forename>Albert (1886-1950)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1672">
@@ -18289,6 +18341,12 @@
             <forename>Arthur</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1691">
+          <persName ref="http://d-nb.info/gnd/116017899">
+            <surname>Kesser</surname>
+            <forename>Hermann (pseudonym of Hermann Kaeser-Kesser</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1692">
           <persName ref="http://d-nb.info/gnd/118501038">
             <surname>Agnon</surname>
@@ -18305,6 +18363,12 @@
           <persName ref="http://d-nb.info/gnd/117346926">
             <surname>Wiecke</surname>
             <forename>Paul</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1695">
+          <persName ref="http://d-nb.info/gnd/116742712">
+            <surname>Brügel</surname>
+            <forename>Fritz</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1696">
@@ -18353,6 +18417,12 @@
           <persName ref="http://d-nb.info/gnd/118969846">
             <surname>Eeden</surname>
             <forename>Frederik van</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1704">
+          <persName ref="http://d-nb.info/gnd/1037484347">
+            <surname>Hultenberg</surname>
+            <forename>Hugo (1870-1947)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1705">
@@ -18433,17 +18503,28 @@
             <forename>Wilhelm</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1718">
+          <persName ref="http://d-nb.info/gnd/117050296">
+            <surname>Hünich</surname>
+            <forename>Fritz Adolf</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1719">
           <persName ref="http://d-nb.info/gnd/118534408">
             <surname>Forster</surname>
-            <forename>Edward Morgan</forename>
+            <forename>E. M.</forename>
           </persName>
-          <note type="variants">E. M. Forster</note>
         </person>
         <person xml:id="SZDPER.1720">
           <persName ref="http://d-nb.info/gnd/118852213">
             <surname>Bloch</surname>
             <forename>Ernest</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1721">
+          <persName ref="http://d-nb.info/gnd/118553739">
+            <surname>Horváth</surname>
+            <forename>Ödön von</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1722">
@@ -18463,7 +18544,6 @@
             <surname>Pachter</surname>
             <forename>Henry Maximilian</forename>
           </persName>
-          <note type="variants">Heinz Maximilian Paechter</note>
         </person>
         <person xml:id="SZDPER.1725">
           <persName>
@@ -18480,9 +18560,8 @@
         <person xml:id="SZDPER.1727">
           <persName ref="http://d-nb.info/gnd/127247122">
             <surname>Butler</surname>
-            <forename>Eliza Marian</forename>
+            <forename>E. M.</forename>
           </persName>
-          <note type="variants">E. M. Butler</note>
         </person>
         <person xml:id="SZDPER.1728">
           <persName>
@@ -18579,6 +18658,12 @@
             <forename>Walter</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1744">
+          <persName ref="http://d-nb.info/gnd/11860743X">
+            <surname>Schickele</surname>
+            <forename>René</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1745">
           <persName>
             <surname>Zarek</surname>
@@ -18590,7 +18675,6 @@
             <surname>Hohenlohe-Schillingsfürst</surname>
             <forename>Alexander</forename>
           </persName>
-          <note type="variants">Alexander Prinz zu Hohenlohe-Schillingsfürst</note>
         </person>
         <person xml:id="SZDPER.1747">
           <persName ref="http://d-nb.info/gnd/1102188190">
@@ -18601,10 +18685,8 @@
         <person xml:id="SZDPER.1748">
           <persName ref="http://d-nb.info/gnd/118668528">
             <surname>Carr</surname>
-            <forename>Edward Hallet</forename>
+            <forename>Edward Hallet (1892-1982)</forename>
           </persName>
-          <birth when="1892"/>
-          <death when="1982"/>
         </person>
         <person xml:id="SZDPER.1749">
           <persName ref="http://d-nb.info/gnd/116007605">
@@ -18635,9 +18717,6 @@
             <surname>Castro</surname>
             <forename>Ferreira de</forename>
           </persName>
-          <note type="variants">José Maria</note>
-          <birth when="1898"/>
-          <death when="1974"/>
         </person>
         <person xml:id="SZDPER.1754">
           <persName ref="http://d-nb.info/gnd/118501526">
@@ -18650,7 +18729,6 @@
             <surname>Zech</surname>
             <forename>Hilda</forename>
           </persName>
-          <note type="variants">Zech van Holl</note>
         </person>
         <person xml:id="SZDPER.1756">
           <persName ref="http://d-nb.info/gnd/127900837">
@@ -18688,6 +18766,12 @@
             <forename>J.</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1762">
+          <persName ref="http://d-nb.info/gnd/116430834">
+            <surname>Cain</surname>
+            <forename>Julien</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1763">
           <persName ref="http://d-nb.info/gnd/118691163">
             <surname>Fischer</surname>
@@ -18703,17 +18787,14 @@
         <person xml:id="SZDPER.1765">
           <persName ref="http://d-nb.info/gnd/119292254">
             <surname>Bermann</surname>
-            <forename>Richard Arnold</forename>
+            <forename>Richard Arnold (Pseudonym: Arnold Höllriegel</forename>
           </persName>
-          <note type="variants">Arnold Höllriegel, Richard Arnold Bermann, Richard A.</note>
         </person>
         <person xml:id="SZDPER.1766">
           <persName ref="http://d-nb.info/gnd/118775022">
             <surname>Hostovsky</surname>
-            <forename>Egon F.</forename>
+            <forename>Egon F. (1908-1973)</forename>
           </persName>
-          <birth when="1908"/>
-          <death when="1973"/>
         </person>
         <person xml:id="SZDPER.1767">
           <persName>
@@ -18725,6 +18806,18 @@
           <persName>
             <surname>Kreitner</surname>
             <forename>Bruno</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1769">
+          <persName ref="http://d-nb.info/gnd/118703870">
+            <surname>Hermann-Neisse</surname>
+            <forename>Max (1886-1941)</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1770">
+          <persName ref="http://d-nb.info/gnd/118683829">
+            <surname>Flaischlen</surname>
+            <forename>Cäsar</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1771">
@@ -18742,10 +18835,8 @@
         <person xml:id="SZDPER.1773">
           <persName ref="http://d-nb.info/gnd/11854179X">
             <surname>Greene</surname>
-            <forename>Graham</forename>
+            <forename>Graham (1904-1991)</forename>
           </persName>
-          <birth when="1904"/>
-          <death when="1991"/>
         </person>
         <person xml:id="SZDPER.1774">
           <persName ref="http://d-nb.info/gnd/118601385">
@@ -18763,6 +18854,12 @@
           <persName ref="http://d-nb.info/gnd/1161313577">
             <surname>Kerber</surname>
             <forename>Erwin</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1777">
+          <persName ref="http://d-nb.info/gnd/116273372">
+            <surname>Koch</surname>
+            <forename>Theodore Wesley (1871-1941</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1778">
@@ -18813,6 +18910,12 @@
             <forename>Otto von</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1786">
+          <persName ref="http://d-nb.info/gnd/130102725">
+            <surname>Arcos</surname>
+            <forename>René</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1787">
           <persName ref="http://d-nb.info/gnd/118556932">
             <surname>Jannings</surname>
@@ -18836,7 +18939,6 @@
             <surname>Hudson</surname>
             <forename>Stephen</forename>
           </persName>
-          <note type="variants">Schiff, Sidney Alfred</note>
         </person>
         <person xml:id="SZDPER.1791">
           <persName>
@@ -18877,6 +18979,12 @@
           <persName ref="http://d-nb.info/gnd/118797220">
             <surname>Silone</surname>
             <forename>Ignazio</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1798">
+          <persName ref="http://d-nb.info/gnd/1028492286">
+            <surname>Bouteron</surname>
+            <forename>Marcel (1877-1962)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1799">
@@ -18932,9 +19040,15 @@
           </persName>
         </person>
         <person xml:id="SZDPER.1808">
-          <persName>
+          <persName ref="MISSING">
             <surname>Bauer</surname>
             <forename>Klaus</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1809">
+          <persName ref="http://d-nb.info/gnd/116425725">
+            <surname>Einstein</surname>
+            <forename>Alfred (1880-1952)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1810">
@@ -19062,6 +19176,12 @@
             <forename>Lizzi</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1831">
+          <persName ref="http://d-nb.info/gnd/118564803">
+            <surname>Kolbenheyer</surname>
+            <forename>Erwin Guido</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1832">
           <persName>
             <surname>Mauri</surname>
@@ -19080,10 +19200,16 @@
             <forename>Erwin Herbert</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1835">
+          <persName ref="http://d-nb.info/gnd/119049503">
+            <surname>Ferreira de Castro</surname>
+            <forename>José Maria (1898-1974)</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1836">
           <persName ref="http://d-nb.info/gnd/119010305">
             <surname>Balzás</surname>
-            <forename>Béla</forename>
+            <forename>Balázs</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1837">
@@ -19104,6 +19230,12 @@
             <forename>Jean</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1840">
+          <persName ref="http://d-nb.info/gnd/119049163">
+            <surname>Istrati</surname>
+            <forename>Panaït</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1841">
           <persName ref="http://d-nb.info/gnd/11860063X">
             <surname>Rie</surname>
@@ -19119,10 +19251,14 @@
         <person xml:id="SZDPER.1843">
           <persName ref="http://d-nb.info/gnd/116430834">
             <surname>Cain</surname>
-            <forename>Julien</forename>
+            <forename>Julien (1887-1974)</forename>
           </persName>
-          <birth when="1887"/>
-          <death when="1974"/>
+        </person>
+        <person xml:id="SZDPER.1844">
+          <persName ref="http://d-nb.info/gnd/118823574">
+            <surname>Schrödinger</surname>
+            <forename>Erwin</forename>
+          </persName>
         </person>
         <person xml:id="SZDPER.1845">
           <persName>
@@ -19157,10 +19293,8 @@
         <person xml:id="SZDPER.1850">
           <persName ref="http://d-nb.info/gnd/123462916">
             <surname>Hutchinson</surname>
-            <forename>Ray Coryton</forename>
+            <forename>Ray Coryton (1907-1975)</forename>
           </persName>
-          <birth when="1907"/>
-          <death when="1975"/>
         </person>
         <person xml:id="SZDPER.1851">
           <persName ref="http://d-nb.info/gnd/1157514561">
@@ -19180,10 +19314,22 @@
             <forename>Olga</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1854">
+          <persName ref="http://d-nb.info/gnd/121829324">
+            <surname>Kralik von Meyrswalden</surname>
+            <forename>Heinrich Ritter (1887-1965)</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1855">
           <persName ref="http://d-nb.info/gnd/117353728">
             <surname>Stucken</surname>
             <forename>Ania</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1856">
+          <persName ref="http://d-nb.info/gnd/118569880">
+            <surname>Lasker-Schüler</surname>
+            <forename>Else</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1857">
@@ -19202,7 +19348,6 @@
           <persName ref="http://d-nb.info/gnd/1089457669">
             <surname>Paz</surname>
             <forename>Magdeleine</forename>
-            <note type="variants">Marx</note>
           </persName>
         </person>
         <person xml:id="SZDPER.1860">
@@ -19238,16 +19383,14 @@
         <person xml:id="SZDPER.1865">
           <persName ref="http://d-nb.info/gnd/118587250">
             <surname>Neumann</surname>
-            <forename>Alfred</forename>
+            <forename>Alfred </forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1866">
           <persName ref="http://d-nb.info/gnd/1150268573">
             <surname>Baxter</surname>
-            <forename>A. Beverly</forename>
+            <forename>A. Beverly (1891-1964)</forename>
           </persName>
-          <birth when="1891"/>
-          <death when="1964"/>
         </person>
         <person xml:id="SZDPER.1867">
           <persName>
@@ -19258,6 +19401,12 @@
         <person xml:id="SZDPER.1868">
           <persName>
             <name>Zweig Family</name>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1869">
+          <persName ref="http://d-nb.info/gnd/118659073">
+            <surname>Bloch</surname>
+            <forename>Jean-Richard</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1870">
@@ -19295,10 +19444,22 @@
             <forename>Alfred Oskar</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1876">
+          <persName ref="http://d-nb.info/gnd/118798294">
+            <surname>Spire</surname>
+            <forename>André</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1877">
-          <persName>
+          <persName ref="MISSING">
             <surname>Asch</surname>
             <forename>Mathilda</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1878">
+          <persName ref="http://d-nb.info/gnd/118782665">
+            <surname>Maurois</surname>
+            <forename>André</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1879">
@@ -19317,6 +19478,12 @@
           <persName ref="http://d-nb.info/gnd/11857633X">
             <surname>Mahler-Werfel</surname>
             <forename>Alma</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1882">
+          <persName ref="http://d-nb.info/gnd/11649591X">
+            <surname>Geigy-Hagenbach</surname>
+            <forename>Karl (1866-1949)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1883">
@@ -19353,6 +19520,12 @@
           <persName ref="http://d-nb.info/gnd/116624302">
             <surname>Rosenheim</surname>
             <forename>Felix</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1889">
+          <persName ref="http://d-nb.info/gnd/119292254">
+            <surname>Bermann</surname>
+            <forename>Richard A.</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1890">
@@ -19397,6 +19570,18 @@
             <forename>Hermann</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1897">
+          <persName ref="http://d-nb.info/gnd/118625985">
+            <surname>Valéry</surname>
+            <forename>Paul</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1898">
+          <persName ref="http://d-nb.info/gnd/118523481">
+            <surname>Dalí</surname>
+            <forename>Salvador</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1899">
           <persName>
             <name>Britain in Pictures</name>
@@ -19412,6 +19597,12 @@
           <persName ref="http://d-nb.info/gnd/119505606">
             <surname>Ullmann</surname>
             <forename>Ludwig</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1902">
+          <persName ref="http://d-nb.info/gnd/118539124">
+            <surname>Gide</surname>
+            <forename>André</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1903">
@@ -19432,10 +19623,22 @@
             <forename>Pierre</forename>
           </persName>
         </person>
+        <person xml:id="SZDPER.1906">
+          <persName ref="http://d-nb.info/gnd/1020621311">
+            <surname>Edman</surname>
+            <forename>Irwin (1896-1954)</forename>
+          </persName>
+        </person>
         <person xml:id="SZDPER.1907">
           <persName ref="http://d-nb.info/gnd/1180924266">
             <surname>Chermont</surname>
             <forename>Jayme Sloan</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1908">
+          <persName ref="http://d-nb.info/gnd/11853419X">
+            <surname>Förster-Nietzsche</surname>
+            <forename>Elisabeth</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1909">
@@ -19459,13 +19662,19 @@
         <person xml:id="SZDPER.1912">
           <persName ref="http://d-nb.info/gnd/116792264">
             <surname>Heymann</surname>
-            <forename>Fritz</forename>
+            <forename>Fritz </forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1913">
           <persName ref="http://d-nb.info/gnd/118801767">
             <surname>Tharaud</surname>
             <forename>Jérôme</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1914">
+          <persName ref="http://d-nb.info/gnd/118703870">
+            <surname>Herrmann-Neiße</surname>
+            <forename>Max</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1915">
@@ -19567,7 +19776,7 @@
         <person xml:id="SZDPER.1932">
           <persName ref="http://d-nb.info/gnd/121082350">
             <surname>Deacon</surname>
-            <forename>William-Arthur</forename>
+            <forename>William-Arthur (1890-1977)</forename>
           </persName>
         </person>
         <person xml:id="SZDPER.1933">
@@ -19662,9 +19871,17 @@
           <persName ref="http://d-nb.info/gnd/124395694"
               ><surname>Bornstein</surname><forename>Joseph</forename></persName>
         </person>
+        <person xml:id="SZDPER.1949">
+          <persName ref="http://d-nb.info/gnd/11879311X"><surname>Pourtalès</surname><forename>Guy
+              de</forename></persName>
+        </person>
         <person xml:id="SZDPER.1950">
           <persName ref="http://d-nb.info/gnd/1055229787"><surname>Lewis</surname><forename>B.
               Roland</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1951">
+          <persName ref="http://d-nb.info/gnd/1150268573"><surname>Baxter</surname><forename>A.
+              Beverly</forename></persName>
         </person>
         <person xml:id="SZDPER.1952">
           <persName ref="http://d-nb.info/gnd/117065781"
@@ -19676,6 +19893,30 @@
         <person xml:id="SZDPER.1954">
           <persName ref="http://d-nb.info/gnd/10551858522"
               ><surname>Wellesley</surname><forename>Dorothy</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1955">
+          <persName ref="http://d-nb.info/gnd/11854179X"
+              ><surname>Greene</surname><forename>Graham</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1956">
+          <persName ref="http://d-nb.info/gnd/119049503"><surname>Castro</surname><forename>Ferreira
+              de</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1957">
+          <persName ref="http://d-nb.info/gnd/119328267"><surname>Schmitz</surname><forename>Oscar
+              A. H.</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1958">
+          <persName ref="http://d-nb.info/gnd/116982802"><surname>Horch</surname><forename>Franz
+            </forename></persName>
+        </person>
+        <person xml:id="SZDPER.1959">
+          <persName ref="http://d-nb.info/gnd/118515802"
+              ><surname>Tagger</surname><forename>Theodor</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1960">
+          <persName ref="http://d-nb.info/gnd/118501038"><surname>Agnon</surname><forename>Samuel
+              Josef</forename></persName>
         </person>
         <person xml:id="SZDPER.1961">
           <persName ref="http://d-nb.info/gnd/1055109463"><surname>Vachell</surname><forename>Horace
@@ -19692,9 +19933,26 @@
           <persName ref="http://d-nb.info/gnd/118815415"><surname>Bloch</surname><forename>Françoise
               Richard </forename></persName>
         </person>
+        <person xml:id="SZDPER.1965">
+          <persName ref="http://d-nb.info/gnd/118668528"><surname>Carr</surname><forename>Edward
+              Hallet</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1966">
+          <persName ref="http://d-nb.info/gnd/122012372"><surname>Hunt</surname><forename>Robert
+              Nigel Carew</forename></persName>
+        </person>
         <person xml:id="SZDPER.1967">
           <persName ref="http://d-nb.info/gnd/118904124"
               ><surname>Schlesinger</surname><forename>Helene</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1968">
+          <persName ref="http://d-nb.info/gnd/118835327"><surname>Jacob</surname><forename>Heinrich
+              Eduard</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1969">
+          <persName ref="http://d-nb.info/gnd/118677101"
+              ><surname>Coudenhove-Kalergi</surname><forename>Richard Nicolaus
+            von</forename></persName>
         </person>
         <person xml:id="SZDPER.1970">
           <persName><surname>Psichari</surname><forename>Henriette </forename></persName>
@@ -19706,6 +19964,14 @@
         <person xml:id="SZDPER.1972">
           <persName ref="http://d-nb.info/gnd/1024322149"
               ><surname>Lehner</surname><forename>Frederick J.</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1973">
+          <persName ref="http://d-nb.info/gnd/106926942"><surname>Pange</surname><forename>Pauline
+              de</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1974">
+          <persName ref="http://d-nb.info/gnd/116792264"><surname>Heymann</surname><forename>Fritz
+            </forename></persName>
         </person>
         <person xml:id="SZDPER.1975">
           <persName><name>The Sunday Times</name></persName>
@@ -19725,6 +19991,14 @@
           <persName ref="http://d-nb.info/gnd/116849886"
               ><surname>Lebermann</surname><forename>Norbert</forename></persName>
         </person>
+        <person xml:id="SZDPER.1980">
+          <persName ref="http://d-nb.info/gnd/1057550620"><surname>Fischer</surname><forename>Eduard
+              Wilhelm</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1981">
+          <persName ref="http://d-nb.info/gnd/173226892"
+              ><surname>Schiff</surname><forename>Sydney</forename></persName>
+        </person>
         <person xml:id="SZDPER.1982">
           <persName ref="http://d-nb.info/gnd/118633643"
               ><surname>Winder</surname><forename>Ludwig</forename></persName>
@@ -19739,19 +20013,63 @@
         <person xml:id="SZDPER.1985">
           <persName><surname>Mello Franco</surname><forename>Yolanda de</forename></persName>
         </person>
+        <person xml:id="SZDPER.1986">
+          <persName ref="http://d-nb.info/gnd/119010305"
+              ><surname>Balázs</surname><forename>Béla</forename></persName>
+        </person>
         <person xml:id="SZDPER.1987">
           <persName ref="http://d-nb.info/gnd/119188473"
               ><surname>Morgenstern</surname><forename>Soma</forename></persName>
         </person>
+        <person xml:id="SZDPER.1988">
+          <persName ref="http://d-nb.info/gnd/118969846"><surname>Eeden</surname><forename>Frederik
+              van</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1989">
+          <persName ref="http://d-nb.info/gnd/119037572"><surname>Strobl</surname><forename>Karl
+              Hans</forename></persName>
+        </person>
         <person xml:id="SZDPER.1990">
           <persName><surname>Benaroya</surname><forename>Mois</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1991">
+          <persName ref="http://d-nb.info/gnd/118534408"><surname>Forster</surname><forename>Edward
+              Morgan</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1992">
+          <persName ref="http://d-nb.info/gnd/116845740"
+              ><surname>Fülöp-Miller</surname><forename>René</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1993">
+          <persName ref="http://d-nb.info/gnd/118703870"
+              ><surname>Hermann-Neisse</surname><forename>Max</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1994">
+          <persName ref="http://d-nb.info/gnd/12162918X"><surname>James</surname><forename>Edward
+              Frank Willis</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1995">
+          <persName ref="http://d-nb.info/gnd/118756249"><surname>Taube</surname><forename>Otto
+              von</forename></persName>
         </person>
         <person xml:id="SZDPER.1996">
           <persName><name>Wydawnictwo J. Przeworskiego [publishing house]</name></persName>
         </person>
+        <person xml:id="SZDPER.1997">
+          <persName ref="http://d-nb.info/gnd/1180924266"><surname>Chermont</surname><forename>Jayme
+              Sloan</forename></persName>
+        </person>
         <person xml:id="SZDPER.1998">
           <persName ref="http://d-nb.info/gnd/116888407"
               ><surname>Gruener</surname><forename>Franz</forename></persName>
+        </person>
+        <person xml:id="SZDPER.1999">
+          <persName ref="http://d-nb.info/gnd/121082350"><surname>Deacon</surname><forename>William
+              Arthur</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2000">
+          <persName ref="http://d-nb.info/gnd/11862993X"><surname>Wegner</surname><forename>Armin
+              T.</forename></persName>
         </person>
         <person xml:id="SZDPER.2001">
           <persName ref="http://d-nb.info/gnd/11734155X"
@@ -19776,6 +20094,10 @@
           <persName ref="http://d-nb.info/gnd/117323667"
               ><surname>Utitz</surname><forename>Emil</forename></persName>
         </person>
+        <person xml:id="SZDPER.2007">
+          <persName ref="http://d-nb.info/gnd/118522914"><surname>Csokor</surname><forename>Franz
+              Theodor</forename></persName>
+        </person>
         <person xml:id="SZDPER.2008">
           <persName ref="http://d-nb.info/gnd/119097206"
               ><surname>Isenstein</surname><forename>Harald Kurt</forename></persName>
@@ -19784,13 +20106,33 @@
           <persName ref="http://d-nb.info/gnd/116087056"
               ><surname>Bauer-Mengelberg</surname><forename>Rudolf</forename></persName>
         </person>
+        <person xml:id="SZDPER.2010">
+          <persName ref="http://d-nb.info/gnd/104298324"><surname>Maugham</surname><forename>William
+              Somerset</forename></persName>
+        </person>
         <person xml:id="SZDPER.2011">
           <persName ref="http://d-nb.info/gnd/116662581"
               ><surname>Heinemann</surname><forename>Maria</forename></persName>
         </person>
+        <person xml:id="SZDPER.2012">
+          <persName ref="http://d-nb.info/gnd/118587749"
+              ><surname>Nicolson</surname><forename>Harald</forename></persName>
+        </person>
         <person xml:id="SZDPER.2013">
           <persName ref="http://d-nb.info/gnd/1024893561"
               ><surname>Petzold</surname><forename>Johanna</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2014">
+          <persName ref="http://d-nb.info/gnd/1089457669"
+              ><surname>Marx</surname><forename>Magdeleine</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2015">
+          <persName ref="http://d-nb.info/gnd/1100390251"><surname>Mello
+              Franco</surname><forename>Caio de</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2016">
+          <persName ref="http://d-nb.info/gnd/119292254"><surname>Bermann</surname><forename>Richard
+              Arnold</forename></persName>
         </person>
         <person xml:id="SZDPER.2017">
           <persName><surname>Stein</surname><forename>L.</forename></persName>
@@ -19798,8 +20140,16 @@
         <person xml:id="SZDPER.2018">
           <persName><surname>Spira</surname><forename>Josef</forename></persName>
         </person>
+        <person xml:id="SZDPER.2019">
+          <persName ref="http://d-nb.info/gnd/126605955"><surname>Mendel</surname><forename>Alfred
+              Oskar</forename></persName>
+        </person>
         <person xml:id="SZDPER.2020">
           <persName><surname>Lucas</surname><forename>J. L.</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2021">
+          <persName ref="http://d-nb.info/gnd/1042356041"><surname>Zech van
+              Holl</surname><forename>Hilda</forename></persName>
         </person>
         <person xml:id="SZDPER.2022">
           <persName ref="http://d-nb.info/gnd/118682059"
@@ -19820,8 +20170,20 @@
           <persName ref="http://d-nb.info/gnd/1133111793"
               ><surname>Schimanski</surname><forename>Stefan</forename></persName>
         </person>
+        <person xml:id="SZDPER.2027">
+          <persName ref="http://d-nb.info/gnd/1160612331"><surname>De
+              Wahl</surname><forename>Anders</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2028">
+          <persName ref="http://d-nb.info/gnd/118748912"><surname>Rainalter</surname><forename>Erwin
+              Herbert</forename></persName>
+        </person>
         <person xml:id="SZDPER.2029">
           <persName><surname>House</surname><forename>J.</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2030">
+          <persName ref="http://d-nb.info/gnd/118599631"><surname>Remarque</surname><forename>Erich
+              Maria</forename></persName>
         </person>
         <person xml:id="SZDPER.2031">
           <persName ref="http://d-nb.info/gnd/119235102"><surname>Carlow</surname><forename>George
@@ -19834,6 +20196,10 @@
         <person xml:id="SZDPER.2033">
           <persName><surname>Rank</surname><forename>Estelle</forename></persName>
         </person>
+        <person xml:id="SZDPER.2034">
+          <persName ref="http://d-nb.info/gnd/117368903"><surname>Velde</surname><forename>Theodor
+              Hendrick van de</forename></persName>
+        </person>
         <person xml:id="SZDPER.2035">
           <persName><surname>Zweig</surname><forename>Egon Michael</forename></persName>
         </person>
@@ -19845,9 +20211,33 @@
           <persName ref="http://d-nb.info/gnd/12421908X"><surname>Royce</surname><forename>William
               Hobart</forename></persName>
         </person>
+        <person xml:id="SZDPER.2038">
+          <persName ref="http://d-nb.info/gnd/101207492"
+              ><surname>Körmendi</surname><forename>Ferenc</forename></persName>
+        </person>
         <person xml:id="SZDPER.2039">
           <persName ref="http://d-nb.info/gnd/115998140X"
               ><surname>Singer</surname><forename>Else</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2040">
+          <persName ref="http://d-nb.info/gnd/116561815"><surname>Fisher</surname><forename>Peter
+              Thomas</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2041">
+          <persName ref="http://d-nb.info/gnd/116986689"><surname>Lidin</surname><forename>Vladimir
+              Germanovič</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2042">
+          <persName ref="http://d-nb.info/gnd/123968771"><surname>Lagoa</surname><forename>João
+              António de Mascarenhas Judice de</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2043">
+          <persName ref="http://d-nb.info/gnd/118775022"><surname>Hostovsky</surname><forename>Egon
+              F.</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2044">
+          <persName ref="http://d-nb.info/gnd/123462916"><surname>Hutchinson</surname><forename>Ray
+              Coryton</forename></persName>
         </person>
         <person xml:id="SZDPER.2045">
           <persName ref="http://d-nb.info/gnd/118689398"
@@ -19856,17 +20246,33 @@
         <person xml:id="SZDPER.2046">
           <persName><surname>Mosley</surname><forename>Gordon</forename></persName>
         </person>
+        <person xml:id="SZDPER.2047">
+          <persName ref="http://d-nb.info/gnd/117354848"><surname>Wunderlich</surname><forename>Eva
+              C.</forename></persName>
+        </person>
         <person xml:id="SZDPER.2048">
           <persName ref="http://d-nb.info/gnd/116543779"
               ><surname>Riemerschmid</surname><forename>Werner</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2049">
+          <persName ref="http://d-nb.info/gnd/116733829"
+              ><surname>Brauchbar-Manner</surname><forename>Friederike</forename></persName>
         </person>
         <person xml:id="SZDPER.2050">
           <persName ref="http://d-nb.info/gnd/1024892964"
               ><surname>Petzold</surname><forename>Hedwig</forename></persName>
         </person>
+        <person xml:id="SZDPER.2051">
+          <persName ref="http://d-nb.info/gnd/1157514561"><surname>Forman</surname><forename>Maurice
+              Buxton</forename></persName>
+        </person>
         <person xml:id="SZDPER.2052">
           <persName ref="http://d-nb.info/gnd/118815652"
               ><surname>Warburg</surname><forename>Siegmund</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2053">
+          <persName ref="http://d-nb.info/gnd/127247122"><surname>Butler</surname><forename>Eliza
+              Marian</forename></persName>
         </person>
         <person xml:id="SZDPER.2054">
           <persName ref="http://d-nb.info/gnd/116034920"
@@ -19875,6 +20281,19 @@
         <person xml:id="SZDPER.2055">
           <persName><surname>Winkler</surname><forename>Michel</forename></persName>
         </person>
+        <person xml:id="SZDPER.2056">
+          <persName ref="http://d-nb.info/gnd/118587250"><surname>Neumann</surname><forename>Alfred
+            </forename></persName>
+        </person>
+        <person xml:id="SZDPER.2057">
+          <persName ref="http://d-nb.info/gnd/116953926"
+              ><surname>Hohenlohe-Schillingsfürst</surname><forename>Alexander Prinz
+            zu</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2058">
+          <persName ref="http://d-nb.info/gnd/121829324"><surname>Kralik von
+              Meyrswalden</surname><forename>Heinrich Ritter</forename></persName>
+        </person>
         <person xml:id="SZDPER.2059">
           <persName><surname>Ries</surname><forename>Joseph</forename></persName>
         </person>
@@ -19882,9 +20301,17 @@
           <persName ref="http://d-nb.info/gnd/118821547"
               ><surname>Sochaczewer</surname><forename>Hans</forename></persName>
         </person>
+        <person xml:id="SZDPER.2061">
+          <persName ref="http://d-nb.info/gnd/128866748"><surname>Le
+              Fauconnier</surname><forename>Henri</forename></persName>
+        </person>
         <person xml:id="SZDPER.2062">
           <persName ref="http://d-nb.info/gnd/139727485"
               ><surname>Wolf</surname><forename>Edmund</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2063">
+          <persName ref="http://d-nb.info/gnd/116015047"><surname>Paechter</surname><forename>Heinz
+              Maximilian</forename></persName>
         </person>
         <person xml:id="SZDPER.2064">
           <persName ref="http://d-nb.info/gnd/116247460"><surname>Podbielski</surname><forename>Gert
@@ -19893,7 +20320,12 @@
         <person xml:id="SZDPER.2065">
           <persName><name>Tal Lawsuit</name></persName>
         </person>
+        <person xml:id="SZDPER.2066">
+          <persName ref="http://d-nb.info/gnd/118553739"><surname>Horváth</surname><forename>Ödön
+              von</forename></persName>
+        </person>
       </listPerson>
     </body>
   </text>
+
 </TEI>
