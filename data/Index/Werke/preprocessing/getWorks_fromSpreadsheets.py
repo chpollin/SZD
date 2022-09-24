@@ -9,14 +9,15 @@ import xml.etree.ElementTree as ET
 from typing import List
 import os
 
-#  https://docs.google.com/spreadsheets/d/16Po8t7cxqkKO7QUvDnLtSXxe2Gm2amoX6DJgDZeb86Y/edit?usp=sharing
+
+#  https://docs.google.com/spreadsheets/d/1yf2L0gxUf5nJzYexHkHfd3Xqr_IAezOrKVdJCGclDJ4/edit#gid=0
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '16Po8t7cxqkKO7QUvDnLtSXxe2Gm2amoX6DJgDZeb86Y'
-SAMPLE_RANGE_NAME = 'A2:W500'
+SAMPLE_SPREADSHEET_ID = '1yf2L0gxUf5nJzYexHkHfd3Xqr_IAezOrKVdJCGclDJ4'
+SAMPLE_RANGE_NAME = 'A2:J214'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -70,9 +71,30 @@ def main():
 
             #####################
             ### <bibl>
+            title = col_to_string(row, 0)
+            compilation_title = col_to_string(row, 1)
             tei_bibl = ET.SubElement(tei_listBibl, 'bibl')
             tei_bibl.set('xml:id', "SZDWRK." + str(SZDWRK_ID))
-            tei_bibl.set('sortKey', col_to_string(row, 0))
+            if ('Der' in title[0:4]): 
+                tei_bibl.set('sortKey', title.split("Der ",1)[1].replace(" ", ""))
+            elif ('Die' in title[0:4]): 
+                tei_bibl.set('sortKey', title.split("Die ",1)[1].replace(" ", ""))
+            elif ('Das' in title[0:4]): 
+                tei_bibl.set('sortKey', title.split("Das ",1)[1].replace(" ", ""))    
+            elif (compilation_title != ''):    
+                tei_bibl.set('sortKey', compilation_title.replace(" ", ""))
+            else:
+                if ('Der' in compilation_title[0:4]): 
+                    tei_bibl.set('sortKey', compilation_title.split("Der ",1)[1].replace(" ", ""))
+                elif ('Die' in compilation_title[0:4]): 
+                    tei_bibl.set('sortKey', title.split("Die ",1)[1].replace(" ", ""))
+                elif ('Das' in compilation_title[0:4]): 
+                    tei_bibl.set('sortKey', compilation_title.split("Das ",1)[1].replace(" ", ""))    
+                elif (compilation_title != ''):    
+                    tei_bibl.set('sortKey', compilation_title.replace(" ", ""))
+                else:
+                    tei_bibl.set('sortKey', title.replace(" ", ""))   
+
                         
             #####################
             #### <author>
@@ -86,35 +108,29 @@ def main():
 
             #####################
             #### <title> 
-            if col_to_string(row, 1) != '' :
+            if col_to_string(row, 0) != '' :
                 tei_title_single = ET.SubElement(tei_bibl, 'title')
-                tei_title_single.set('type', 'single')
-                tei_title_single.text = col_to_string(row, 1)
-                set_col_att(tei_title_single, 'ref', row, 10)
-                
-            else:
+                tei_title_single.text = col_to_string(row, 0)
+                if col_to_string(row, 9) != '' :
+                    set_col_att(tei_title_single, 'ref', row, 9)   
+            elif compilation_title != '' :
                 tei_title_compil = ET.SubElement(tei_bibl, 'title')
                 tei_title_compil.set('type', 'compilation')
-                tei_title_compil.text = col_to_string(row, 2)
-                set_col_att(tei_title_compil, 'ref', row, 10)
-            
-            if col_to_string(row, 9) != '' :
-                tei_title_alt = ET.SubElement(tei_bibl, 'title')
-                tei_title_alt.set('type', 'alt')
-                tei_title_alt.text = col_to_string(row, 9)
+                tei_title_compil.text = compilation_title
+                if col_to_string(row, 9) != '' :
+                    set_col_att(tei_title_single, 'ref', row, 9) 
 
             #####################
             #### <lang> language work was written in
-            if col_to_string(row, 6) == 'de' :
+            if col_to_string(row, 5) != '':
                 tei_lang = ET.SubElement(tei_bibl, 'lang')
-                tei_lang.set('xml:lang', 'de')
-                tei_lang.text = 'Deutsch'
+                tei_lang.text = col_to_string(row, 5)
 
             #####################
             #### <publisher> includes date of creation and publication
             #### creation date(s)
-            origDate = col_to_string(row, 3)
-            pubDate = col_to_string(row, 4)
+            origDate = col_to_string(row, 2)
+            pubDate = col_to_string(row, 3)
             if origDate or pubDate:
                 tei_publisher = ET.SubElement(tei_bibl, 'publisher')
                 if origDate != '' :
@@ -130,9 +146,8 @@ def main():
                 #### publication date # Titel Zusammenstellung hat oft hinten Jahreszahl in Klammer
                 if pubDate != '' :
                     tei_pubDate = ET.SubElement(tei_publisher, 'date')
-                    tei_pubDate.set('when', col_to_string(row, 4))
-                    tei_pubDate.text = col_to_string(row, 4)
-
+                    tei_pubDate.set('when', col_to_string(row, 3))
+                    tei_pubDate.text = col_to_string(row, 3)
             #####################
             #### <term> form of literature - erzeugt durch copy aus SDZMSK
             # if col_to_string(row, 5) != '' :
@@ -143,17 +158,12 @@ def main():
 
             #####################
             #### <sourceDesc> Quelle
+            '''
             if col_to_string(row, 7) != '' :
                 tei_source = ET.SubElement(tei_bibl, 'sourceDesc')
                 tei_source_p = ET.SubElement(tei_source, 'p')
                 tei_source_p.text = col_to_string(row, 7)
-
-            #####################
-            #### <note> Weitere Angaben im Spreadsheet
-            if col_to_string(row, 8) != '' :
-                tei_note = ET.SubElement(tei_bibl, ' note')
-                tei_note.text = col_to_string(row, 8)
-
+            '''
      
     # debugging only  
     #ET.dump(tei_listBibl) 
