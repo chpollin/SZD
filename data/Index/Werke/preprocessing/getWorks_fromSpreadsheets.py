@@ -81,19 +81,24 @@ def main():
                 tei_bibl.set('sortKey', title.split("Die ",1)[1].replace(" ", "").capitalize())
             elif ('Das' in title[0:4]): 
                 tei_bibl.set('sortKey', title.split("Das ",1)[1].replace(" ", "").capitalize())    
+            elif ('A ' in title[0:4]): 
+                tei_bibl.set('sortKey', title.split("A ",1)[1].replace(" ", "").capitalize())    
+            elif ('The ' in title[0:5]): 
+                tei_bibl.set('sortKey', title.split("The ",1)[1].replace(" ", "").capitalize())    
+            elif ('Ein ' in title[0:5]): 
+                tei_bibl.set('sortKey', title.split("Ein ",1)[1].replace(" ", "").capitalize())    
+            elif ('Der' in compilation_title[0:4]):
+                tei_bibl.set('sortKey', compilation_title.split("Der ",1)[1].replace(" ", "").capitalize())
+            elif ('Die' in compilation_title[0:4]):
+                tei_bibl.set('sortKey', compilation_title.split("Die ",1)[1].replace(" ", "").capitalize())
+            elif ('Das' in compilation_title[0:4]): 
+                tei_bibl.set('sortKey', compilation_title.split("Das ",1)[1].replace(" ", "").capitalize())    
             elif (compilation_title != ''):    
                 tei_bibl.set('sortKey', compilation_title.replace(" ", "").capitalize())
+            elif (compilation_title != ''):
+                tei_bibl.set('sortKey', compilation_title.replace(" ", "").capitalize())
             else:
-                if ('Der' in compilation_title[0:4]): 
-                    tei_bibl.set('sortKey', compilation_title.split("Der ",1)[1].replace(" ", "").capitalize())
-                elif ('Die' in compilation_title[0:4]): 
-                    tei_bibl.set('sortKey', title.split("Die ",1)[1].replace(" ", "").capitalize())
-                elif ('Das' in compilation_title[0:4]): 
-                    tei_bibl.set('sortKey', compilation_title.split("Das ",1)[1].replace(" ", "").capitalize())    
-                elif (compilation_title != ''):    
-                    tei_bibl.set('sortKey', compilation_title.replace(" ", "").capitalize())
-                else:
-                    tei_bibl.set('sortKey', title.replace(" ", "").capitalize())   
+                tei_bibl.set('sortKey', title.replace(" ", "").capitalize())   
 
                         
             #####################
