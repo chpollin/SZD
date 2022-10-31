@@ -57,6 +57,24 @@
 					</xsl:choose>
 				</date>
 			</xsl:if>
+			<!-- category; for navigation in context:szd.facsimiles.lebensdokumente -->
+			<xsl:choose>
+				<xsl:when test="//category[@xml:lang='en']">
+					<category xml:lang="en">
+						<xsl:value-of select="//category[@xml:lang='en']"/>
+					</category>
+				</xsl:when>
+				<xsl:when test="//category[@xml:lang='de']">
+					<category xml:lang="de">
+						<xsl:value-of select="//category[@xml:lang='de']"/>
+					</category>
+				</xsl:when>
+				<xsl:otherwise>
+					<category>
+						<xsl:value-of select="//category[1]"/>
+					</category>
+				</xsl:otherwise>
+			</xsl:choose>
 			<!--  -->
 			<owner>
 				<name>Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY</name>

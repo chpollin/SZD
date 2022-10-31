@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:vi="http://gams.uni-graz.at/viewer" xmlns:xlink="http://www.w3.org/1999/xlink"><mets:dmdSec ID="DMD.1"><mets:mdWrap MDTYPE="MODS" MIMETYPE="text/xml"><mets:xmlData><mods:mods xmlns:mods="http://www.loc.gov/mods/v3"><mods:titleInfo><mods:title>Notizbuch Die Welt von Gestern, SZ-AAP/W10</mods:title></mods:titleInfo><mods:relatedItem type="otherFormat"><mods:location><mods:url>https://gams.uni-graz.at/o:szd.werke#SZDMSK.17</mods:url></mods:location></mods:relatedItem><mods:name type="personal"><mods:displayForm>Zweig, Stefan</mods:displayForm><mods:role><mods:roleTerm type="text">author</mods:roleTerm></mods:role></mods:name><mods:originInfo><mods:place><mods:placeTerm type="text"/></mods:place><mods:dateIssued>05.1940</mods:dateIssued></mods:originInfo></mods:mods></mets:xmlData></mets:mdWrap></mets:dmdSec><mets:amdSec ID="AMD.1"><mets:rightsMD ID="RMD.1"><mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS"><mets:xmlData><dv:rights xmlns:dv="http://dfg-viewer.de/"><dv:owner>Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY</dv:owner><dv:ownerContact/><dv:ownerLogo/><dv:ownerSiteURL/></dv:rights></mets:xmlData></mets:mdWrap></mets:rightsMD><mets:digiprovMD ID="PMD.1"><mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS"><mets:xmlData><dv:links xmlns:dv="http://dfg-viewer.de/"><dv:reference/><dv:presentation/></dv:links></mets:xmlData></mets:mdWrap></mets:digiprovMD></mets:amdSec><mets:fileSec><mets:fileGrp USE="DEFAULT"><mets:file ID="IMG.1" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_001.jpg"/></mets:file><mets:file ID="IMG.2" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_002.jpg"/></mets:file><mets:file ID="IMG.3" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_003.jpg"/></mets:file><mets:file ID="IMG.4" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_004.jpg"/></mets:file><mets:file ID="IMG.5" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_005.jpg"/></mets:file><mets:file ID="IMG.6" MIMETYPE="image/jpeg"><mets:FLocat LOCTYPE="URL" xlink:href="SZ_AAP_W10_006.jpg"/></mets:file></mets:fileGrp></mets:fileSec><mets:structMap TYPE="PHYSICAL"><mets:div ID="PHY.1" TYPE="physSequence"><mets:div ID="DIV.1" ORDER="1" TYPE="page"><mets:fptr FILEID="IMG.1"/></mets:div><mets:div ID="DIV.2" ORDER="2" TYPE="page"><mets:fptr FILEID="IMG.2"/></mets:div><mets:div ID="DIV.3" ORDER="3" TYPE="page"><mets:fptr FILEID="IMG.3"/></mets:div><mets:div ID="DIV.4" ORDER="4" TYPE="page"><mets:fptr FILEID="IMG.4"/></mets:div><mets:div ID="DIV.5" ORDER="5" TYPE="page"><mets:fptr FILEID="IMG.5"/></mets:div><mets:div ID="DIV.6" ORDER="6" TYPE="page"><mets:fptr FILEID="IMG.6"/></mets:div></mets:div></mets:structMap><mets:structMap TYPE="LOGICAL"><mets:div ADMID="AMD.1" DMDID="DMD.1" ID="LOG.1" TYPE="monograph"><mets:div ID="U.1" TYPE="Buchdeckel"/><mets:div ID="U.2" TYPE="Besitzvermerk [1r]"/><mets:div ID="U.3" TYPE="Textteil [1v–18r]"><mets:div ID="U.3.1" TYPE="Seite 1v"/><mets:div ID="U.3.2" TYPE="Seite 1r"/></mets:div><mets:div ID="U.4" TYPE="Ende"/></mets:div></mets:structMap><mets:structLink><mets:smLink xlink:from="U.1" xlink:to="DIV.1"/><mets:smLink xlink:from="U.2" xlink:to="DIV.2"/><mets:smLink xlink:from="U.2" xlink:to="DIV.3"/><mets:smLink xlink:from="U.3" xlink:to="DIV.3"/><mets:smLink xlink:from="U.3.1" xlink:to="DIV.4"/><mets:smLink xlink:from="U.3.2" xlink:to="DIV.5"/><mets:smLink xlink:from="U.4" xlink:to="DIV.6"/></mets:structLink></mets:mets>
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.loc.gov/mods/v3 ../../../../../../Downloads/mods.xsd"
+ xmlns:mods="http://www.loc.gov/mods/v3">
+	<mods:titleInfo>
+		<mods:title>Tagebuch September 1912 und Frühjahr 1913 (Paris),
+			SZ-AAP/L1</mods:title>
+	</mods:titleInfo>
+	<mods:name type="personal">
+		<mods:displayForm>Zweig, Stefan</mods:displayForm>
+		<mods:role>
+			<mods:roleTerm type="text">author</mods:roleTerm>
+		</mods:role>
+	</mods:name>
+	<mods:originInfo>
+		<mods:place>
+			<mods:placeTerm type="text"/>
+		</mods:place>
+		<mods:dateIssued/>
+	</mods:originInfo>
+	<mods:subject></mods:subject>
+</mods:mods>
