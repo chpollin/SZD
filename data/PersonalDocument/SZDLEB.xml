@@ -1380,7 +1380,7 @@
                           <term type="objecttyp">Notebook</term>, <measure type="leaf">28 leaves,
                             writing on 24 leaves, inserted: typescript, 1 leaf</measure>
                         </span>
-                        <measure type="format">13x9 cm</measure>
+                        <measure type="format">23x8 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -1401,6 +1401,7 @@
                           Tinte</desc>
                         <desc xml:lang="en">Inserted typescript, 1 leaf, with various Paris
                           addresses, black ribbon with holograph annotation in purple ink</desc>
+                        <measure type="format">33x18 cm</measure>
                       </item>
                     </list>
                   </accMat>
@@ -2045,9 +2046,9 @@
                   <accMat>
                     <list>
                       <item ana="szdg:Enclosures">
-                        <desc xml:lang="de">1 „Offene Order“ des k. u. k. Kriegsarchivs zur Durchführung einer Studienreise Zweigs durch Galizien</desc>
-                        <desc xml:lang="en">1 „Offene Order“ by the k. u. k. War Archive to carry out a study tour through Galicia</desc><!-- Übersetzung überprüfen! -->
-                        <measure type="format">34x21 cm</measure>
+                        <ref ana="szd:hasContentRelation" target="#SZDLEB.136">
+                          K. und k. Kriegsarchiv Offene Order.
+                        </ref>
                       </item>
                       <item ana="szdg:Enclosures">
                         <desc xml:lang="de">2 Zeitungsausschnitte von Feuilleton-Artikeln Stefan Zweigs, unterschiedliche Formate</desc>
@@ -7669,7 +7670,7 @@
                   </handDesc>
                   <accMat>
                     <list>
-                      <item ana="szdg:Enclosures">
+                      <item ana="szdg:AdditionalMaterial">
                         <desc xml:lang="de">Vertrag in doppelter Ausführung zu „Die Welt von Gestern“ zwischen Manfred Altmann und Hannah Altmann und Editorial Juventud S.A. vom 30. November 1945 mit der Notiz „Cancelled“ und einmal mit Anmerkungen zum Vertrag in blauer Tinte von fremder Hand, beide Exemplare mit Unterschrift und violettem Stempel</desc>
                         <desc xml:lang="en">Contract in duplicate on „Die Welt von Gestern“ between Manfred Altmann and Hannah Altmann and Editorial Juventud S.A.dated 30th November 1945 dated 30th November 1945 with the note "Cancelled" and one with annotations to the contract in blue ink by by an unidentified hand, both copies with signature and purple stamp</desc>
                         <measure type="format">31x20 cm</measure>
@@ -11526,6 +11527,96 @@
               <keywords>
                 <term type="classification" xml:lang="de">Büromaterialien</term>
                 <term type="classification" xml:lang="en">Office supplies</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.136">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">K. und k. Kriegsarchiv Offene Order.</title>
+              <title type="Einheitssachtitel" xml:lang="de">Militärische Order</title>
+              <title type="Einheitssachtitel" xml:lang="en">Military Order</title>
+              <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+              <editor role="contributor" ref="SZDPER.2066"><persName ref="http://d-nb.info/gnd/117458074"
+                ><surname>Woinovich</surname><forename>Emil von</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Maschinschriftliche Eintragungen in Formular mit drei
+                 Stempel des k. und k. Kriegsarchivs und Unterschrift des Direktors Emil von Woinovich</note>
+              <note xml:lang="en">Form with typescript entries, three stamps of the k. und k. Kriegsarchivs and signature by its director Emil von Woinovich</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/L2</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Betrifft Zweigs Studienreise durch Galizien</ab>
+                    <ab xml:lang="en">Concerning Zweig's study trip through Galicia</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="de">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Vorgedrucktes Formular</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Pre-printed form</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, violette Stempelfarbe</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Black ribbon, black ink, purple stamp ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">34x21 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Emil von Woinovich</ab>
+                    <ab xml:lang="en">Emil von Woinovich</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Wien</origPlace>
+                    <origDate when="1915-07-13">Wien am 13. Julie 1915</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
+                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term ana="szdg:Enclosures" ref="#SZDLEB.19">
+                  Tagebuch im Kriegsjahr 1914
+                </term>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
