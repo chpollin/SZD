@@ -19893,8 +19893,11 @@
         <person xml:id="SZDPER.2065">
           <persName><name>Tal Lawsuit</name></persName>
         </person>
-        <person xml:id="SZDPER.2066">
+        <person corresp="https://de.wikipedia.org/wiki/Emil_Woinovich" xml:id="SZDPER.2066">
           <persName ref="http://d-nb.info/gnd/117458074"><surname>Woinovich</surname><forename>Emil von</forename></persName>
+          <birth when="1851-04-23"/>
+          <death when="1927-02-13"/>
+          <idno type="wikidata">http://www.wikidata.org/entity/Q1307897</idno>
         </person>
       </listPerson>
     </body>
