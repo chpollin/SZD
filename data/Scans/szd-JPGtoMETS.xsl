@@ -29,14 +29,22 @@
 				</author>
 			</xsl:if>
 			<!--  -->
-			<xsl:for-each select="$WERKE//*:biblFull | $LEBENSDOKUMENTE//*:biblFull">
-				<xsl:variable name="SIGNATURE" select="substring-after($ROOT//titel, ', ')"/>
-				<xsl:if test="$SIGNATURE = .//*:idno[@type = 'signature']">
-					<relation>
-						<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.werke#', @xml:id)"/>
-					</relation>
-				</xsl:if>
-			</xsl:for-each>
+			<xsl:choose>
+				<xsl:when test="//relation">
+					
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="$WERKE//*:biblFull | $LEBENSDOKUMENTE//*:biblFull">
+						<xsl:variable name="SIGNATURE" select="substring-after($ROOT//titel, ', ')"/>
+						<xsl:if test="$SIGNATURE = .//*:idno[@type = 'signature']">
+							<relation>
+								<xsl:value-of select="concat('https://gams.uni-graz.at/o:szd.werke#', @xml:id)"/>
+							</relation>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+			
 			<!--  -->
 			<xsl:variable name="date" select="//datum[1]"/>
 			<xsl:if test="$date">
