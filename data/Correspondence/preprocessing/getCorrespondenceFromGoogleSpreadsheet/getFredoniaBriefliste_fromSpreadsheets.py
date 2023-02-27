@@ -8,6 +8,7 @@ from google.auth.transport.requests import Request
 import xml.etree.ElementTree as ET
 import urllib.request
 import pandas as pd
+import validators
 
 # https://docs.google.com/spreadsheets/d/1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo/edit?usp=sharing
 
@@ -16,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo'
-SAMPLE_RANGE_NAME = 'A2:P510'
+SAMPLE_RANGE_NAME = 'A2:N490'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -64,7 +65,7 @@ def main():
             SZDKOR_ID = row[0]
             author = str(row[1])
             
-            signature = str(row[11])
+            signature = str(row[12])
             count_sig = 0
             piecesOfCorr_by_zweig = False
             enclosuers_by_zweig = False
@@ -178,7 +179,8 @@ def main():
                 #tei_title.text = "Briefkonvolut " + author.split(', ')[1] + " " + author.split(', ')[0] + " an Stefan Zweig"
                 
                 if(row[2]):
-                    tei_persName_sent.set('ref', str(row[2]))
+                    if(validators.url(str(row[2]))):
+                        tei_persName_sent.set('ref', str(row[2]))
             ### 
 
             if(row[5]):
@@ -209,11 +211,8 @@ def main():
                 tei_measure_3.set('type', "enclosures")
                 tei_measure_3.set('unit', "piece")
                 tei_measure_3.set('ana', "sent") 
-                
-            try:    
-                tei_idno_msIdentifier.text = str(row[14])
-            except:
-                pass
+            
+            tei_idno_msIdentifier.text = str(signature)
             
             #####################
             # <persName> in <correspAction>
@@ -248,8 +247,25 @@ def main():
             #####################
             # <date> in <correspAction>
             tei_date_sent = ET.SubElement(tei_correspAction_sent, 'date')
-            if(row[12]):
-                tei_date_sent.text = str(row[12])              
+            date = row[10]
+            if(date):
+                tei_date_sent.text = str(date)  
+                if("-" in date):
+                    tei_date_sent.set('from', date.split('-')[0])
+                    if("," in date):
+                        string1 = date.split('-')[1]
+                        string2 = string1.split(',')[0]
+                        tei_date_sent.set('to', string2)
+                    else:
+                        tei_date_sent.set('to', date.split('-')[0])
+                    if("n. d." in date):
+                        tei_date_sent.set('type', 'undated')
+                elif(len(date) == 4 and date.isdigit()):
+                    tei_date_sent.set('when', str(date))
+                elif("n. d." in date):
+                    tei_date_sent.set('type', 'undated')
+                elif("(?)" in date):
+                        tei_date_sent.set('cert', 'unknown') 
                                    
                    
 
