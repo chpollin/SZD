@@ -98,12 +98,13 @@ def main():
                 sum_cor = row[5]
                 for entry in values_corr_by_zweig:
                     if(entry[12] == signature):
-                        print("gaga")
-                        tei_title_de.text =  str(int(sum_cor) + int(entry[5])) + " Korrespondenzstücke [AN/VON Stefan Zweig]"
-                        tei_title_en.text =  str(int(sum_cor) + int(entry[5])) + " Pieces of Correspondence  [TO/FROM Stefan Zweig]"     
-                else:
-                    tei_title_de.text =  str(row[5]) + " Korrespondenzstücke [AN Stefan Zweig]"
-                    tei_title_en.text =  str(row[5]) + " Pieces of Correspondence  [TO Stefan Zweig]"
+                        sum = int(sum_cor) + int(entry[5])
+                        tei_title_de.text =  str(sum) + " Korrespondenzstücke [AN/VON Stefan Zweig]"
+                        tei_title_en.text =  str(sum) + " Pieces of Correspondence  [TO/FROM Stefan Zweig]"     
+                        break
+                    else:
+                        tei_title_de.text =  str(row[5]) + " Korrespondenzstücke [AN Stefan Zweig]"
+                        tei_title_en.text =  str(row[5]) + " Pieces of Correspondence  [TO Stefan Zweig]"
             else:
                 tei_title_de.text = str(row[5]) + " Korrespondenzstück [AN Stefan Zweig]"
                 tei_title_en.text =  str(row[5]) + " Piece of Correspondence  [TO Stefan Zweig]"
@@ -179,7 +180,6 @@ def main():
 
                     tei_correspDesc_by_zweig = ET.SubElement(tei_profileDesc, 'correspDesc')
                     tei_correspDesc_by_zweig.set('type', 'byZweig')
-                    print(entry[12])
                     tei_correspAction_sent_by_zweig = ET.SubElement(tei_correspDesc_by_zweig, 'correspAction')
                     tei_correspAction_sent_by_zweig.set('type', "sent")
                     tei_correspAction_received_by_zweig = ET.SubElement(tei_correspDesc_by_zweig, 'correspAction')
@@ -194,10 +194,16 @@ def main():
 
                     # Corporate bodies | GND (Corporate bodies)
                     if(str(entry[3])):   
-                        tei_orgName_received_by_zweig_2 = ET.SubElement(tei_correspAction_received_by_zweig, 'orgName')
-                        tei_orgName_received_by_zweig_2.text = str(row[3])
+
+                        tei_orgName__sent = ET.SubElement(tei_correspAction_sent, 'orgName') 
+                        tei_orgName__sent.text = str(row[3])
                         if(str(entry[4])):
-                            tei_orgName_received_by_zweig_2.set('ref', row[4])  
+                            tei_orgName__sent.set('ref', row[4])  
+
+                        tei_orgName_received_by_zweig = ET.SubElement(tei_correspAction_received_by_zweig, 'orgName')
+                        tei_orgName_received_by_zweig.text = str(row[3])
+                        if(str(entry[4])):
+                            tei_orgName_received_by_zweig.set('ref', row[4])  
                     
                     
                     if(', ' in entry[1]):
@@ -250,13 +256,6 @@ def main():
             tei_forename_received = ET.SubElement(tei_persName_received, 'forename')
             tei_forename_received.text = "Stefan"
             tei_persName_received.set('ref', 'http://d-nb.info/gnd/118637479')
-
-            # Corporate bodies | GND (Corporate bodies)
-            if(str(row[3])):   
-                tei_orgName_received_by_zweig = ET.SubElement(tei_correspAction_received, 'orgName')
-                tei_orgName_received_by_zweig.text = str(row[3])
-                if(str(row[4])):
-                    tei_orgName_received_by_zweig.set('ref', row[4])    
 
             
             if(', ' in author):
