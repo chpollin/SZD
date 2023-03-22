@@ -172,6 +172,12 @@ def main():
 
             tei_correspAction_received = ET.SubElement(tei_correspDesc, 'correspAction')
             tei_correspAction_received.set('type', "received")
+            # Corporate bodies | GND (Corporate bodies)
+            if(str(row[3])):   
+                tei_orgName__sent = ET.SubElement(tei_correspAction_sent, 'orgName') 
+                tei_orgName__sent.text = str(row[3])
+                if(str(row[4])):
+                    tei_orgName__sent.set('ref', row[4])  
 
 
             #signature is the same in Letters TO Zweig and Letters BY
@@ -194,18 +200,11 @@ def main():
 
                     # Corporate bodies | GND (Corporate bodies)
                     if(str(entry[3])):   
-
-                        tei_orgName__sent = ET.SubElement(tei_correspAction_sent, 'orgName') 
-                        tei_orgName__sent.text = str(row[3])
-                        if(str(entry[4])):
-                            tei_orgName__sent.set('ref', row[4])  
-
                         tei_orgName_received_by_zweig = ET.SubElement(tei_correspAction_received_by_zweig, 'orgName')
                         tei_orgName_received_by_zweig.text = str(row[3])
                         if(str(entry[4])):
-                            tei_orgName_received_by_zweig.set('ref', row[4])  
-                    
-                    
+                            tei_orgName_received_by_zweig.set('ref', row[4])
+                                        
                     if(', ' in entry[1]):
                         tei_persName_received_by_zweig = ET.SubElement(tei_correspAction_received_by_zweig, 'persName')
                         tei_surname_received_by_zweig = ET.SubElement(tei_persName_received_by_zweig, 'surname')
@@ -213,9 +212,8 @@ def main():
                         tei_forename_received_by_zweig = ET.SubElement(tei_persName_received_by_zweig, 'forename')
                         tei_forename_received_by_zweig.text = entry[1].split(', ')[1]
                     if(entry[2]):
-                        if(validators.url(str(entry[2]))):
-                            tei_persName_sent.set('ref', str(entry[2]))
-
+                        tei_persName_sent = ET.SubElement(tei_correspAction_sent, 'persName')
+                        tei_persName_sent.set('ref', str(entry[2]))
                     if(entry[5]):
                         tei_measure_3 = ET.SubElement(tei_extent, 'measure')
                         tei_measure_3.text = entry[5]
@@ -259,23 +257,24 @@ def main():
 
             
             if(', ' in author):
-                tei_persName_sent = ET.SubElement(tei_correspAction_sent, 'persName')
-                tei_surname = ET.SubElement(tei_persName_sent, 'surname')
+                tei_persName_sent_1 = ET.SubElement(tei_correspAction_sent, 'persName')
+                tei_surname = ET.SubElement(tei_persName_sent_1, 'surname')
                 tei_surname.text = author.split(', ')[0]
-                tei_forename = ET.SubElement(tei_persName_sent, 'forename')
+                tei_forename = ET.SubElement(tei_persName_sent_1, 'forename')
                 tei_forename.text = author.split(', ')[1]
                 #tei_title.text = "Briefkonvolut " + author.split(', ')[1] + " " + author.split(', ')[0] + " an Stefan Zweig"
-                
                 if(row[2]):
-                    tei_persName_sent.set('ref', str(row[2]))
+                    tei_persName_sent_1.set('ref', str(row[2]))
+                    print(author + ":" + row[2])
             else:
                 if(row[1]):
                     if('Unidentified' not in row[1]):
                         tei_name_sent = ET.SubElement(tei_correspAction_sent, 'name')
                         tei_name_sent.text = author
                 #tei_title.text = author + " an Stefan Zweig"
-                        if(row[2]):
-                            tei_name_sent.set('ref', str(row[2]))
+                    if(row[2]):
+                        tei_name_sent.set('ref', str(row[2]))
+                        
             
                         
 
