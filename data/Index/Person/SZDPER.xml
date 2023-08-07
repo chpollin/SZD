@@ -19899,6 +19899,24 @@
           <death when="1927-02-13"/>
           <idno type="wikidata">http://www.wikidata.org/entity/Q1307897</idno>
         </person>
+        <person corresp="https://de.wikipedia.org/wiki/Robert_Falcon_Scott" xml:id="SZDPER.2067">
+          <persName ref="https://d-nb.info/gnd/118612395">
+            <surname>Scott</surname>
+            <forename>Robert Falcon</forename>
+          </persName>
+          <note type="variants">Skott, Robert Falkon ; Skott, Robert Falʹkon ; Scott, Robert F. ; Scott, R. F. ; Scott, ... ; Skot, Robert ; Kapitän Scott</note>
+          <birth when="1868-06-06"/>
+          <death when="1912-03-29"/>
+          <idno type="wikidata">https://www.wikidata.org/wiki/Q102527</idno>
+        </person>
+        <person xml:id="SZDPER.2068">
+          <persName ref="https://d-nb.info/gnd/107849658"
+            ><surname>Czernin von und zu Chudenitz</surname>
+            <forename>Ferdinand</forename></persName>
+          <note type="variants">Chudenitz, Ferdinand Czernin von und zu ; Czernin, Ferdinand</note>
+          <birth when="1803"/>
+          <death when="1965"/>
+        </person>
       </listPerson>
     </body>
   </text>
