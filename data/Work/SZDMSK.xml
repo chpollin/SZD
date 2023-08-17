@@ -8457,6 +8457,7 @@
                                 <term ref="http://d-nb.info/gnd/118601717" type="person">Rodin,
                                     Auguste</term>
                                 <term type="work" ref="#SZDWRK.36">Der Bildner [Auguste Rodin]</term>
+                                <term type="work" ref="#SZDWRK.35">Begegnungen mit Menschen, Büchern, Städten</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -8547,6 +8548,7 @@
                                 <term ref="http://d-nb.info/gnd/118576291" type="person">Mahler,
                                     Gustav</term>
                                 <term type="work" ref="#SZDWRK.37">Der Dirigent. In memoriam Gustav Mahler</term>
+                                <term type="work" ref="#SZDWRK.35">Begegnungen mit Menschen, Büchern, Städten</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -13835,9 +13837,9 @@
                     <fileDesc>
                         <titleStmt>
                             <title ana="supplied/verified" ref="http://d-nb.info/gnd/4436255-9"
-                                >Einleitung 1</title>
+                                >Vorwort</title>
                             <title type="Einheitssachtitel">Sternstunden der Menschheit:
-                                Einleitung</title>
+                                Vorwort</title>
                             <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
@@ -13861,8 +13863,8 @@
                                 </msIdentifier>
                                 <msContents>
                                     <summary>
-                                        <ab xml:lang="de">Einleitung</ab>
-                                        <ab xml:lang="en">Introduction</ab>
+                                        <ab xml:lang="de">Vorwort verwendet für Ausgaben ab 1943</ab>
+                                        <ab xml:lang="en">Preface used for editions from 1943 onwards</ab>
                                     </summary>
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
@@ -13886,7 +13888,7 @@
                                                 <span xml:lang="en">
                                                   <term type="objecttyp">Typescript (carbon
                                                   copy)</term>, <measure ana="corrected" type="leaf"
-                                                  >4 leaves, corrected</measure>
+                                                  >4 leaves</measure>
                                                 </span>
                                             </extent>
                                         </supportDesc>
@@ -13909,99 +13911,18 @@
                             <keywords>
                                 <term type="classification" xml:lang="de">Romane/Erzählungen</term>
                                 <term type="classification" xml:lang="en">Novels/Stories</term>
-                                <term type="work" ref="#SZDWRK.45">Sternstunden der Menschheit: Einleitung</term>
+                                <term type="work" ref="#SZDWRK.45">Sternstunden der Menschheit: Vorwort</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="02_Sternstunden" xml:id="SZDMSK.145">
+                <!-- SZDMSK.145 in Lebensdokumente verschoben als SZDLEB.137-->
+                <biblFull ana="02_Sternstunden" xml:id="SZDMSK.146">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/4436255-9" xml:lang="de"
-                                >Einleitung 2</title>
-                            <title ana="assigned" ref="http://d-nb.info/gnd/4436255-9" xml:lang="en"
-                                >Introduction 2</title>
+                            <title ana="original" ref="http://d-nb.info/gnd/4436255-9">Fateful hours</title>
                             <title type="Einheitssachtitel">Sternstunden der Menschheit:
-                                Einleitung</title>
-                            <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
-                            <author ref="#SZDPER.1560"><persName
-                                    ref="http://d-nb.info/gnd/118637479"
-                                        ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
-                        </titleStmt>
-                        <publicationStmt>
-                            <ab>Archivmaterial</ab>
-                        </publicationStmt>
-                        <sourceDesc>
-                            <msDesc>
-                                <msIdentifier>
-                                    <country>USA</country>
-                                    <settlement>Fredonia</settlement>
-                                    <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library –
-                                        Stefan Zweig Collection</repository>
-                                    <idno type="signature">SZ-AP2/W-G752.2</idno>
-                                </msIdentifier>
-                                <msContents>
-                                    <summary>
-                                        <ab xml:lang="de">Veröffentlichungsankündigung (?) mit
-                                            eigenhändigen Korrekturen</ab>
-                                        <ab xml:lang="en">Publication announcement (?) with
-                                            holograph corrections</ab>
-                                    </summary>
-                                    <textLang>
-                                        <lang xml:lang="ger">Deutsch</lang>
-                                    </textLang>
-                                </msContents>
-                                <physDesc>
-                                    <objectDesc>
-                                        <supportDesc>
-                                            <support/>
-                                            <extent>
-                                                <span xml:lang="de">
-                                                  <term type="objecttyp">Typoskript</term>, <measure
-                                                  ana="corrected" type="leaf">2 Blatt,
-                                                  korrigiert</measure>
-                                                </span>
-                                                <span xml:lang="en">
-                                                  <term type="objecttyp">Typescript</term>, <measure
-                                                  ana="corrected" type="leaf">2 leaves,
-                                                  corrected</measure>
-                                                </span>
-                                            </extent>
-                                        </supportDesc>
-                                    </objectDesc>
-                                    <handDesc>
-                                        <ab xml:lang="de">Stefan Zweig</ab>
-                                        <ab xml:lang="en">Stefan Zweig</ab>
-                                    </handDesc>
-                                </physDesc>
-                                <history>
-                                    <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
-                                        <ab xml:lang="en">Heirs of Stefan Zweig,
-                                        London</ab></provenance>
-                                    <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs
-                                            2002</ab>
-                                        <ab xml:lang="en">Gift of the heirs of Stefan Zweig
-                                            2002</ab></acquisition>
-                                </history>
-                            </msDesc>
-                        </sourceDesc>
-                    </fileDesc>
-                    <profileDesc>
-                        <textClass>
-                            <keywords>
-                                <term type="classification" xml:lang="de">Romane/Erzählungen</term>
-                                <term type="classification" xml:lang="en">Novels/Stories</term>
-                            </keywords>
-                        </textClass>
-                    </profileDesc>
-                </biblFull>
-                <biblFull ana="03_Sternstunden" xml:id="SZDMSK.146">
-                    <fileDesc>
-                        <titleStmt>
-                            <title ana="original" ref="http://d-nb.info/gnd/4436255-9">Einleitung 3
-                                [Fateful hours]</title>
-                            <title type="Einheitssachtitel">Sternstunden der Menschheit:
-                                Einleitung</title>
+                                Vorwort</title>
                             <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
@@ -14021,10 +13942,10 @@
                                 </msIdentifier>
                                 <msContents>
                                     <summary>
-                                        <ab xml:lang="de">Titelblatt, Einleitung und
-                                            Inhaltsverzeichnis</ab>
-                                        <ab xml:lang="en">Title page, introduction, and table of
-                                            contents</ab>
+                                        <ab xml:lang="de">Titelblatt, Vorwort und
+                                            Inhaltsverzeichnis zur Übersetzung von Eden und Cedar Paul</ab>
+                                        <ab xml:lang="en">Title page, preface, and table of
+                                            contents for the translation by Eden and Cedar Paul</ab>
                                     </summary>
                                     <textLang>
                                         <lang xml:lang="eng">Englisch</lang>
@@ -14071,7 +13992,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="04_Sternstunden" xml:id="SZDMSK.147">
+                <biblFull ana="03_Sternstunden" xml:id="SZDMSK.147">
                     <fileDesc>
                         <titleStmt>
                             <title ana="supplied/verified" ref="http://d-nb.info/gnd/1125726172"
@@ -14153,7 +14074,7 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="05_Sternstunden" xml:id="SZDMSK.148">
+                <biblFull ana="04_Sternstunden" xml:id="SZDMSK.148">
                     <fileDesc>
                         <titleStmt>
                             <title ana="supplied/verified" ref="http://d-nb.info/gnd/1125726172"
@@ -14306,6 +14227,8 @@
                                 <term ref="http://d-nb.info/gnd/118757938" type="person">Sutter,
                                     Johann August</term>
                                 <term type="work" ref="#SZDWRK.47">Sternstunden der Menschheit: Die Entdeckung Eldorados</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
+                                <term type="work" ref="#SZDWRK.44">Sternstunden der Menschheit. Drei historische Miniaturen (1930)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -14386,6 +14309,8 @@
                                 <term ref="http://d-nb.info/gnd/118757938" type="person">Sutter,
                                     Johann August</term>
                                 <term type="work" ref="#SZDWRK.47">Sternstunden der Menschheit: Die Entdeckung Eldorados</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
+                                <term type="work" ref="#SZDWRK.44">Sternstunden der Menschheit. Drei historische Miniaturen (1930)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -14477,6 +14402,8 @@
                                 <term ref="http://d-nb.info/gnd/118757938" type="person">Sutter,
                                     Johann August</term>
                                 <term type="work" ref="#SZDWRK.47">Sternstunden der Menschheit: Die Entdeckung Eldorados</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
+                                <term type="work" ref="#SZDWRK.44">Sternstunden der Menschheit. Drei historische Miniaturen (1930)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -14955,6 +14882,8 @@
                                 <term ref="https://d-nb.info/gnd/118612395" type="person">Scott,
                                     Robert Falcon</term>
                                 <term type="work" ref="#SZDWRK.49">Sternstunden der Menschheit: Der Kampf um den Südpol</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
+                                <term type="work" ref="#SZDWRK.44">Sternstunden der Menschheit. Drei historische Miniaturen (1930)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -15029,6 +14958,7 @@
                                 <term ref="http://d-nb.info/gnd/118727907" type="person">Levetzow,
                                     Ulrike von</term>
                                 <term type="work" ref="#SZDWRK.50">Sternstunden der Menschheit: Die Marienbader Elegie</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -15263,6 +15193,8 @@
                                 <term ref="http://d-nb.info/gnd/118586408" type="person">Napoleon
                                     I., Frankreich, Kaiser</term>
                                 <term type="work" ref="#SZDWRK.51">Sternstunden der Menschheit: Die Weltminute von Waterloo</term>
+                                <term type="work" ref="#SZDWRK.43">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</term>
+                                <term type="work" ref="#SZDWRK.44">Sternstunden der Menschheit. Drei historische Miniaturen (1930)</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -16104,6 +16036,7 @@
                                 <term ref="http://d-nb.info/gnd/118505955" type="person">Bahr,
                                     Hermann</term>
                                 <term type="work" ref="#SZDWRK.62">Geburtstagsbrief an Hermann Bahr</term>
+                                <term type="work" ref="#SZDWRK.35">Begegnungen mit Menschen, Büchern, Städten</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -16181,6 +16114,7 @@
                                 <term ref="http://d-nb.info/gnd/118506358" type="person">Balzac,
                                     Honoré de</term>
                                 <term type="work" ref="#SZDWRK.63">Die unterirdischen Bücher Balzacs</term>
+                                <term type="work" ref="#SZDWRK.35">Begegnungen mit Menschen, Büchern, Städten</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
@@ -16357,6 +16291,7 @@
                                 <term type="classification" xml:lang="en"
                                     >Essays/Speeches/Feuilletons</term>
                                 <term type="work" ref="#SZDWRK.65">Besuch bei den Milliarden</term>
+                                <term type="work" ref="#SZDWRK.35">Begegnungen mit Menschen, Büchern, Städten</term>
                             </keywords>
                         </textClass>
                     </profileDesc>

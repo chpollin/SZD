@@ -11949,6 +11949,86 @@
             </textClass>
           </profileDesc>
         </biblFull>
+        <biblFull ana="SZDLEB.137">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" ref="http://d-nb.info/gnd/4436255-9" xml:lang="de"
+                >Veröffentlichungsankündigung Sternstunden der Menschheit</title>
+              <title ana="assigned" ref="http://d-nb.info/gnd/4436255-9" xml:lang="en"
+                >Publication announcement Sternstunden der Menschheit</title>
+              <title type="Einheitssachtitel">Veröffentlichungsankündigung</title>
+              <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
+              <author ref="#SZDPER.1560"><persName
+                ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>USA</country>
+                  <settlement>Fredonia</settlement>
+                  <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library –
+                    Stefan Zweig Collection</repository>
+                  <idno type="signature">SZ-AP2/W-G752.2</idno>
+                </msIdentifier>
+                <msContents>
+                  <summary>
+                    <ab xml:lang="de">Veröffentlichungsankündigung mit
+                      eigenhändigen Korrekturen</ab>
+                    <ab xml:lang="en">Publication announcement with
+                      holograph corrections</ab>
+                  </summary>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support/>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Typoskript</term>, <measure
+                            ana="corrected" type="leaf">2 Blatt,
+                            korrigiert</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Typescript</term>, <measure
+                            ana="corrected" type="leaf">2 leaves,
+                            corrected</measure>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig,
+                      London</ab></provenance>
+                  <acquisition><ab xml:lang="de">Schenkung der Erben Stefan Zweigs
+                    2002</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig
+                      2002</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>
