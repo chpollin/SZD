@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo'
-SAMPLE_RANGE_NAME = 'A2:N490'
+SAMPLE_RANGE_NAME = 'A2:P490'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -54,7 +54,7 @@ def main():
     values = result.get('values', [])
 
     # select data in tab "Beruf_Tätigkeit"
-    SAMPLE_RANGE_NAME_corr_by_zweig = "'Letters BY Zweig'!A2:M31"
+    SAMPLE_RANGE_NAME_corr_by_zweig = "'Letters BY Zweig'!A2:P31"
     result_corr_by_zweig = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME_corr_by_zweig).execute()
     values_corr_by_zweig = result_corr_by_zweig.get('values', [])
         
@@ -71,7 +71,7 @@ def main():
             SZDKOR_ID = row[0]
             author = str(row[1])
             
-            signature = str(row[12])
+            signature = str(row[11])
             count_sig = 0
             piecesOfCorr_by_zweig = False
             enclosuers_by_zweig = False
@@ -97,7 +97,7 @@ def main():
             if(int(row[5]) > 1):
                 sum_cor = row[5]
                 for entry in values_corr_by_zweig:
-                    if(entry[12] == signature):
+                    if(entry[11] == signature):
                         sum = int(sum_cor) + int(entry[5])
                         tei_title_de.text =  str(sum) + " Korrespondenzstücke [AN/VON Stefan Zweig]"
                         tei_title_en.text =  str(sum) + " Pieces of Correspondence  [TO/FROM Stefan Zweig]"     
@@ -153,13 +153,19 @@ def main():
                 tei_term = ET.SubElement(tei_keywords, 'term')
                 tei_term.set('type', 'person')
                 tei_term_persName = ET.SubElement(tei_term, 'persName')
-                tei_term_surName = ET.SubElement(tei_term_persName, 'surname')
-                tei_term_foreName = ET.SubElement(tei_term_persName, 'forename')
+                if(',' in row[7]):
+                    tei_term_surName = ET.SubElement(tei_term_persName, 'surname')
+                    tei_term_foreName = ET.SubElement(tei_term_persName, 'forename')
+                    tei_term_surName.text = row[7].split(', ')[0]
+                    tei_term_foreName.text = row[7].split(', ')[1]
+                else:
+                    tei_term_name = ET.SubElement(tei_term_persName, 'name')
+                    tei_term_name.text = row[7]
                 if(',' in row[8]):
-                    tei_term_surName.text = row[8].split(', ')[0]
-                    tei_term_foreName.text = row[8].split(', ')[1]
-                if(row[9]):
-                    tei_term_persName.set('ref', row[9])
+                    tei_term_persName.set('ref', row[8])
+                elif(row[8]):
+                    tei_term_name.set('ref', row[8])
+                    
 
             tei_correspDesc = ET.SubElement(tei_profileDesc, 'correspDesc')
             tei_correspDesc.set('type', 'toZweig')
@@ -182,7 +188,7 @@ def main():
 
             #signature is the same in Letters TO Zweig and Letters BY
             for entry in values_corr_by_zweig:
-                if(entry[12] == signature):
+                if(entry[11] == signature):
 
                     tei_correspDesc_by_zweig = ET.SubElement(tei_profileDesc, 'correspDesc')
                     tei_correspDesc_by_zweig.set('type', 'byZweig')
@@ -224,7 +230,14 @@ def main():
                         tei_measure_3 = ET.SubElement(tei_extent, 'measure')
                         tei_measure_3.text = entry[6]
                         tei_measure_3.set('type', "enclosures") 
-                        tei_measure_3.set('subtype', "received")  
+                        tei_measure_3.set('subtype', "received")
+                        tei_measure_3.set('xml:lang', 'en')
+                    if(entry[12]):
+                        tei_measure_3_de = ET.SubElement(tei_extent, 'measure')
+                        tei_measure_3_de.text = entry[12]
+                        tei_measure_3_de.set('type', "enclosures") 
+                        tei_measure_3_de.set('subtype', "received")
+                        tei_measure_3_de.set('xml:lang', 'de')   
 
 
             if(row[5]):
@@ -237,11 +250,18 @@ def main():
                 
   
                 
-            if(row[6]):
+            if(isinstance(row[6], str) and row[6].strip()):
                 tei_measure_3 = ET.SubElement(tei_extent, 'measure')
                 tei_measure_3.text = row[6]
                 tei_measure_3.set('type', "enclosures") 
-                tei_measure_3.set('subtype', "received")  
+                tei_measure_3.set('subtype', "received")
+                tei_measure_3.set('xml:lang', 'en')   
+            if(isinstance(row[12], str) and row[12].strip()):
+                tei_measure_3_de = ET.SubElement(tei_extent, 'measure')
+                tei_measure_3_de.text = row[12]
+                tei_measure_3_de.set('xml:lang', 'de') 
+                tei_measure_3_de.set('type', "enclosures") 
+                tei_measure_3_de.set('subtype', "received")
             
             tei_idno_msIdentifier.text = str(signature)
             
@@ -274,18 +294,26 @@ def main():
                 #tei_title.text = author + " an Stefan Zweig"
                     if(row[2]):
                         tei_name_sent.set('ref', str(row[2]))
-                        
             
-                        
-
-
+            
+            #####################
+            # Notes, Hinweis
+            if (len(row) > 14 and isinstance(row[14], str) and row[14].strip()):
+                tei_note_de = ET.SubElement(tei_extent, 'note')
+                tei_note_de.text = row[14]
+                tei_note_de.set('xml:lang', 'en') 
+            if (len(row) > 15 and isinstance(row[15], str) and row[15].strip()):
+                tei_note = ET.SubElement(tei_extent, 'note')
+                tei_note.text = row[15]
+                tei_note.set('xml:lang', 'de') 
 
             #####################
-            # <date> in <correspAction>
+            # <date> in <correspAction> EN
             tei_date_sent = ET.SubElement(tei_correspAction_sent, 'date')
-            date = row[10]
+            date = row[9]
             if(date):
-                tei_date_sent.text = str(date)  
+                tei_date_sent.text = str(date)
+                tei_date_sent.set('xml:lang', 'en')
                 if("-" in date):
                     tei_date_sent.set('from', date.split('-')[0])
                     if("," in date):
@@ -303,6 +331,8 @@ def main():
                 elif("(?)" in date):
                         tei_date_sent.set('cert', 'unknown') 
                                    
+
+
                    
 
     # debugging only  
