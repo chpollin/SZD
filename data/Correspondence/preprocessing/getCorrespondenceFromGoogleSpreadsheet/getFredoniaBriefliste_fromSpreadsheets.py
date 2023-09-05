@@ -99,15 +99,15 @@ def main():
                 for entry in values_corr_by_zweig:
                     if(entry[11] == signature):
                         sum = int(sum_cor) + int(entry[5])
-                        tei_title_de.text =  str(sum) + " Korrespondenzstücke [AN/VON Stefan Zweig]"
-                        tei_title_en.text =  str(sum) + " Pieces of Correspondence  [TO/FROM Stefan Zweig]"     
+                        tei_title_de.text =  str(sum) + " Korrespondenzstücke AN/VON Stefan Zweig"
+                        tei_title_en.text =  str(sum) + " Pieces of Correspondence TO/FROM Stefan Zweig"     
                         break
                     else:
-                        tei_title_de.text =  str(row[5]) + " Korrespondenzstücke [AN Stefan Zweig]"
-                        tei_title_en.text =  str(row[5]) + " Pieces of Correspondence  [TO Stefan Zweig]"
+                        tei_title_de.text =  str(row[5]) + " Korrespondenzstücke AN Stefan Zweig"
+                        tei_title_en.text =  str(row[5]) + " Pieces of Correspondence TO Stefan Zweig"
             else:
-                tei_title_de.text = str(row[5]) + " Korrespondenzstück [AN Stefan Zweig]"
-                tei_title_en.text =  str(row[5]) + " Piece of Correspondence  [TO Stefan Zweig]"
+                tei_title_de.text = str(row[5]) + " Korrespondenzstück AN Stefan Zweig"
+                tei_title_en.text =  str(row[5]) + " Piece of Correspondence TO Stefan Zweig"
 
             #####################
             ### <publicationStmt>
