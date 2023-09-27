@@ -193,7 +193,7 @@
 				<bibl xml:id="SZDWRK.40" sortKey="Balzac"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1122746091">Balzac</title> </bibl>
+					<title ref="http://d-nb.info/gnd/1122746091">Balzac (1946)</title> </bibl>
 				<bibl xml:id="SZDWRK.41" sortKey="Castelliogegencalvinodereingewissengegendiegewalt"
 					> <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
@@ -777,7 +777,7 @@
 				<bibl xml:id="SZDWRK.176" sortKey="Emileverhaeren"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1178599310">Emile Verhaeren </title> </bibl>
+					<title ref="http://d-nb.info/gnd/1178599310">Emile Verhaeren</title> </bibl>
 				<bibl xml:id="SZDWRK.177" sortKey="Hausdertausendschicksale"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
@@ -795,10 +795,10 @@
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
 					<title type="compilation">Verwirrung der Gefühle. Drei Novellen</title> </bibl>
-				<bibl xml:id="SZDWRK.181" sortKey="Dreimeister:balzac-dickens-dostojewski"> <author
+				<bibl xml:id="SZDWRK.181" sortKey="Dreimeister"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Drei Meister: Balzac - Dickens - Dostojewski</title> </bibl>
+					<title type="compilation">Drei Meister</title> </bibl>
 				<bibl xml:id="SZDWRK.182" sortKey="Casanova"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
@@ -887,10 +887,10 @@
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
 					<title>Stendhal</title> </bibl>
-				<bibl xml:id="SZDWRK.202" sortKey="Kleinelegendevondengleich-ungleichenschwestern">
+				<bibl xml:id="SZDWRK.202" sortKey="Gleich-ungleichenschwestern">
 					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Kleine Legende von den gleich-ungleichen Schwestern</title> </bibl>
+					<title>Die gleich-ungleichen Schwestern</title> </bibl>
 				<bibl xml:id="SZDWRK.203" sortKey="Buchalseingangzurwelt"> <author
 					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
@@ -972,6 +972,40 @@
 						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
 							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
 					<title>Dickens</title> </bibl>
+				<bibl xml:id="SZDWRK.221"
+					sortKey="Balzac"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>Balzac</title> </bibl>
+				<bibl xml:id="SZDWRK.222" sortKey="Kette(1936)"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						<title type="compilation">Die Kette (1936)</title> </bibl>
+				<bibl xml:id="SZDWRK.223"
+					sortKey="LockstdumichabermalsvomlindenLichte"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>Lockst du mich abermals vom linden Lichte...</title> </bibl>
+				<bibl xml:id="SZDWRK.224"
+					sortKey="OKindheitwieichhinterdeinenGittern"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>O Kindheit, wie ich hinter deinen Gittern...</title> </bibl>
+				<bibl xml:id="SZDWRK.225"
+					sortKey="Geschichteinderdämmerung"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>Geschichte in der Dämmerung</title> </bibl>
+				<bibl xml:id="SZDWRK.226"
+					sortKey="TuaufdichUnterweltderLeidenschaften"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>Tu auf dich, Unterwelt der Leidenschaften...</title> </bibl>
+				<bibl xml:id="SZDWRK.227"
+					sortKey="Balzac.seinweltbildausdenwerken"> <author
+						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
+							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<title>Balzac. Sein Weltbild aus den Werken</title> </bibl>
 			</listBibl>
 		</body>
 	</text>
