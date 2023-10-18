@@ -32714,6 +32714,86 @@
                         </textClass>
                     </profileDesc>
                 </biblFull>
+                <biblFull xml:id="SZDMSK.354">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Der Pantoffel. Allehundertjahrschrift zur Unterhaltung auf der Hochzeitsreise für das Ehepaar Isidor und Irene Elias.</title>
+                            <title type="Einheitssachtitel">Der Pantoffel</title>
+                            <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+                            <author ref="#SZDPER.1560"><persName
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <author ref="#SZDPER.1553"><persName
+                                ref="http://d-nb.info/gnd/1161770038"
+                                ><surname>Zweig</surname><forename>Alfred</forename></persName></author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <notesStmt>
+                            <note xml:lang="de">Deckblatt sowie Seite 3 und 4 einer Hochzeitszeitschrift</note>
+                            <note xml:lang="en">Cover pages and pages 3 and 4 of a wedding magazine</note>
+                        </notesStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-SEF/W3</idno>
+                                    <altIdentifier>
+                                        <idno type="PID"></idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Druck</term>, <measure
+                                                         type="leaf">2 Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Print</term>, <measure
+                                                        type="leaf">2 leaves</measure>
+                                                </span>
+                                                <measure type="format">23x15 cm</measure>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origDate>4. November 1900</origDate>
+                                    </origin>
+                                    <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                                        <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf 2023</ab>
+                                        <ab xml:lang="en">Acquisition 2023</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de"
+                                    >Essays/Reden/Feuilletons</term>
+                                <term type="classification" xml:lang="en"
+                                    >Essays/Speeches/Feuilletons</term>
+                                <term type="work" ref="#SZDWRK.239">Der Pantoffel</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
             </listBibl>
         </body>
     </text>
