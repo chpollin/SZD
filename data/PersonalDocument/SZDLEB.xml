@@ -12213,14 +12213,14 @@
               <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
               <editor role="contributor" ref="SZDPER.2069"><persName><surname>Rzehaczek</surname><forename>Andreas</forename></persName></editor>
               <editor role="contributor" ref="SZDPER.2070"><persName><surname>Schindler</surname><forename>Hugo</forename></persName></editor>
+              <editor role="contributor" ref="SZDPER.1559"><persName><surname>Zweig</surname><forename>Moriz</forename></persName></editor>
             </titleStmt>
             <publicationStmt>
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Maschinschriftliche Eintragungen in Formular mit drei
-                Stempel des k. und k. Kriegsarchivs und Unterschrift des Direktors Emil von Woinovich</note>
-              <note xml:lang="en">Form with typescript entries, three stamps of the k. und k. Kriegsarchivs and signature by its director Emil von Woinovich</note>
+              <note xml:lang="de">Schulnachricht über Stefan Zweig der Volksschule Werdertorgasse zum Schuljahr 1890/91</note>
+              <note xml:lang="en">Report card on Stefan Zweig of the primary schools Werdertorgasse for the school year 1890/91</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -12229,13 +12229,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
-                  <idno type="signature">SZ-AAP/L2</idno>
+                  <idno type="signature">SZ-SEF/L2</idno>
                 </msIdentifier>
                 <msContents>
-                  <summary>
-                    <ab xml:lang="de">Betrifft Zweigs Studienreise durch Galizien</ab>
-                    <ab xml:lang="en">Concerning Zweig's study trip through Galicia</ab>
-                  </summary>
                   <textLang>
                     <lang xml:lang="ger">Deutsch</lang>
                   </textLang>
@@ -12249,33 +12245,33 @@
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">Pre-printed form</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="de">Schwarzes Farbband, schwarze Tinte, violette Stempelfarbe</material>
+                          xml:lang="de">Schwarze,rote und blaue Tinte, blaue Stempelfarbe</material>
                         <material ana="szdg:WritingInstrument"
-                          xml:lang="en">Black ribbon, black ink, purple stamp ink</material>
+                          xml:lang="en">Black, red and blue ink, blue stamp ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Typoskript</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Typescript</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Manuscript</term>, <measure type="leaf">1 leaf</measure>
                         </span>
-                        <measure type="format">34x21 cm</measure>
+                        <measure type="format">31x24 cm</measure>
                       </extent>
                     </supportDesc>
                   </objectDesc>
                   <handDesc>
-                    <ab xml:lang="de">Emil von Woinovich</ab>
-                    <ab xml:lang="en">Emil von Woinovich</ab>
+                    <ab xml:lang="de">Hugo Schindler, Andreas Rzehaczek, Moriz Zweig</ab>
+                    <ab xml:lang="en">Hugo Schindler, Andreas Rzehaczek, Moriz Zweig</ab>
                   </handDesc>
                 </physDesc>
                 <history>
                   <origin>
-                    <origPlace>Wien</origPlace>
-                    <origDate when="1915-07-13">Wien am 13. Julie 1915</origDate>
+                    <origPlace>Wien, I. B., Werderthorgasse Nr. 6</origPlace>
+                    <origDate when="1891">1890/91</origDate>
                   </origin>
-                  <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
-                    <ab xml:lang="en">Atrium Press</ab></provenance>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -12283,9 +12279,6 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ana="szdg:Enclosures" ref="#SZDLEB.19">
-                  Tagebuch im Kriegsjahr 1914
-                </term>
                 <term type="classification" xml:lang="de">Diverses</term>
                 <term type="classification" xml:lang="en">Various</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
