@@ -3017,7 +3017,7 @@
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial"
-                          xml:lang="de">blaues Briefpapier Rózsavölgyi &amp; Comp., gelocht</material>
+                          xml:lang="de">Blaues Briefpapier Rózsavölgyi &amp; Comp., gelocht</material>
                         <material ana="szdg:WritingMaterial"
                           xml:lang="en">Rózsavölgyi &amp; Comp. blue stationery, hole punched</material>
                         <material ana="szdg:WritingInstrument"
@@ -6020,11 +6020,11 @@
                     <supportDesc>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Vollmacht</term>, <measure type="leaf"
+                          <term type="objecttyp">Typoskript</term>, <measure type="leaf"
                             >3 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Power of Attorney</term>, <measure
+                          <term type="objecttyp">Typoscript</term>, <measure
                             type="leaf">3 leaves</measure>
                         </span>
                       </extent>
@@ -12511,6 +12511,174 @@
                 <term type="person_affected" ref="#SZDPER.2072"><persName ref="https://d-nb.info/gnd/137860196"
                   ><surname>Müller</surname><forename>Robert</forename></persName></term>
                 <term type="person_affected" ref="#SZDPER.2073"><persName><surname>Goldmann</surname><forename>Robert</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.142">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Vollmacht Alfred Zweig</title>
+              <title ana="assigned" xml:lang="en">Power of Attorney Johanna Altmann</title>
+              <title type="Einheitssachtitel" xml:lang="de">Vollmacht</title>
+              <title type="Einheitssachtitel" xml:lang="en">Power of Attorney</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Vollmacht für den Bruder Alfred zu einem Hausverkauf des Hauses Garnisongasse 10 in Wien</note>
+              <note xml:lang="en">Power of Attorney to authorize his brother Alfred to sell the house Garnisongasse 10 in Vienna</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L1</idno>
+                  <altIdentifier>
+                    <idno type="PID"></idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Blaues Briefpapier</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Blue stationary</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Manuskript</term>, <measure type="leaf"
+                            >1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Manuscript</term>, <measure
+                            type="leaf">1 leaf</measure>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Newyork</origPlace>
+                    <origDate when="1940-08-09">9. August 1940</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="SZDPER.1553"><persName><surname>Zweig</surname><forename>Alfred</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.143">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Kuvert Testament</title>
+              <title type="Einheitssachtitel" xml:lang="de">Testament</title>
+              <title type="Einheitssachtitel" xml:lang="en">Testament</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Kuvert zu einer Abschrift des Testaments von Stefan Zweig</note>
+              <note xml:lang="en">Envelope to a copy of Stefan Zweig's will</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L7</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="de">Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial"
+                          xml:lang="en">Envelope</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="de">Violette Tinte</material>
+                        <material ana="szdg:WritingInstrument"
+                          xml:lang="en">Purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Kuvert</term>, <measure type="leaf"
+                            >1 Stück</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Envelope</term>, <measure
+                            type="leaf">1 piece</measure>
+                        </span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Stefan Zweig</ab>
+                    <ab xml:lang="en">Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.2074"><persName><surname>Bondi</surname><forename>Arthur</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>
