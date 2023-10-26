@@ -10256,8 +10256,8 @@
               <ab>Archivmaterial</ab>
             </publicationStmt>
             <notesStmt>
-              <note xml:lang="de">Aufschrift „Esteban Zweig“ von fremder Hand in schwarzer Tinte</note>
-              <note xml:lang="en">Inscription „Esteban Zweig“ by an unidentified hand in black ink</note><!-- Übersetzung überprüfen! -->
+              <note xml:lang="de">Graphik eines unbekannten Künstlers mit Aufschrift „Esteban Zweig“ von fremder Hand in schwarzer Tinte</note>
+              <note xml:lang="en">Print by an unknown artist with inscription „Esteban Zweig“ by an unidentified hand in black ink</note><!-- Übersetzung überprüfen! -->
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -10287,10 +10287,10 @@
                       </support>
                       <extent>
                         <span xml:lang="de">
-                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                          <term type="objecttyp">Druck</term>, <measure type="leaf">1 Blatt</measure>
                         </span>
                         <span xml:lang="en">
-                          <term type="objecttyp">Card</term>, <measure type="leaf">1 leaf</measure>
+                          <term type="objecttyp">Print</term>, <measure type="leaf">1 leaf</measure>
                         </span>
                         <measure type="format">9x6 cm</measure>
                       </extent>
@@ -12272,6 +12272,8 @@
                   </origin>
                   <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
                     <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -12283,6 +12285,232 @@
                 <term type="classification" xml:lang="en">Various</term>
                 <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                   ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.139">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Promotionskarte</title>
+              <title type="Einheitssachtitel" xml:lang="de">Promotionsanzeige</title>
+              <title type="Einheitssachtitel" xml:lang="en">Doctoral Graduation Announcement</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+              <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Aufdruck „Stefan Zweig | gestattet sich, Ihnen seine | Promotion zum Dr. phil. | ergebenst mitzutheilen. | Wien, 19. Juli 1904“; Druckerei M. Munk, Wien</note>
+              <note xml:lang="en">Imprint „Stefan Zweig | gestattet sich, Ihnen seine | Promotion zum Dr. phil. | ergebenst mitzutheilen. | Wien, 19. Juli 1904“; Printer M. Munk, Wien</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L3</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">13x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Wien</origPlace>
+                    <origDate when="1904-07-19">19. Juli 1904</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.140">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Ex Libris</title>
+              <title type="Einheitssachtitel" xml:lang="de">Exlibris</title>
+              <title type="Einheitssachtitel" xml:lang="en">Bookplate</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+              <author ref="#SZDPER.828"><persName ref="http://d-nb.info/gnd/112251008X"
+                ><surname>Lilien</surname><forename>Ephraim Mose</forename></persName></author>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Graphik von Ephraim Mose Lilien mit dem Schriftzug „EX LIBRIS | STEFAN ZWEIG“</note>
+              <note xml:lang="en">Print by Ephraim Mose Lilien with the words „EX LIBRIS | STEFAN ZWEIG“</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L5</idno>
+                  <altIdentifier>
+                    <idno type="PID"></idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="spa">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Druck</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Print</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">12x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Büromaterialien</term>
+                <term type="classification" xml:lang="en">Office supplies</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.141">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned">Ansichtspostkarte mit Gruppenbild aus dem Wiener Wurstelprater</title>
+              <title type="Einheitssachtitel" xml:lang="de">Ansichtspostkarte</title>
+              <title type="Einheitssachtitel" xml:lang="en">Picture Postcard</title>
+              <title type="Gesamttitel">Stefan Zweig - Sammlung Inge und Erich Fitzbauer</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Auf dem Foto zu sehen (v. l. n. r.): Alfred Zweig, Ing. Robert Goldmann, ein unbekannter Herr, eine unbekannte Dame, Dr. Robert Müller, Stefan Zweig; rückseitig beschriftet</note>
+              <note xml:lang="en">The photo shows ( f. l. t. r.): Alfred Zweig, Ing. Robert Goldmann, an unknown gentleman, an unknown lady, Dr. Robert Müller, Stefan Zweig; inscribed on the back</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L4</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                      <material ana="szdg:WritingMaterial"
+                        xml:lang="de">Ansichtspostkarte mit Foto</material>
+                      <material ana="szdg:WritingMaterial"
+                        xml:lang="en">Picture postcard with photograph</material>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="de">Bleistift</material>
+                      <material ana="szdg:WritingInstrument"
+                        xml:lang="en">Pencil</material>
+                        </support>
+                      <extent>
+                        <span xml:lang="de">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 Blatt</measure>
+                        </span>
+                        <span xml:lang="en">
+                          <term type="objecttyp">Karte</term>, <measure type="leaf">1 leaf</measure>
+                        </span>
+                        <measure type="format">14x9 cm</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab xml:lang="de">Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Erich Fitzbauer</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Wien</origPlace>
+                    <origDate when="1906">wahrscheinl Frühj 1906</origDate>
+                  </origin>
+                  <provenance><ab xml:lang="de">Inge und Erich Fitzbauer</ab>
+                    <ab xml:lang="en">Inge and Erich Fitzbauer</ab></provenance>
+                  <acquisition><ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab></acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Diverses</term>
+                <term type="classification" xml:lang="en">Various</term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                  ><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1553"><persName ref="http://d-nb.info/gnd/1080333959"
+                  ><surname>Zweig</surname><forename>Alfred</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.2072"><persName ref="https://d-nb.info/gnd/137860196"
+                  ><surname>Müller</surname><forename>Robert</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.2073"><persName><surname>Goldmann</surname><forename>Robert</forename></persName></term>
               </keywords>
             </textClass>
           </profileDesc>

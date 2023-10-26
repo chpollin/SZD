@@ -11788,13 +11788,13 @@
           <note type="variants">Palcios, Jacinto</note>
         </person>
         <person xml:id="SZDPER.1060">
-          <persName ref="http://d-nb.info/gnd/116022299">
+          <persName ref="https://d-nb.info/gnd/106926942">
             <surname>Pange</surname>
-            <forename>Jean de</forename>
+            <forename>Pauline de</forename>
           </persName>
-          <birth when="1881"/>
-          <death when="1957"/>
-          <idno type="wikidata">http://www.wikidata.org/entity/Q3175632</idno>
+          <birth when="1888"/>
+          <death when="1972"/>
+          <idno type="wikidata">https://www.wikidata.org/entity/Q3372766</idno>
         </person>
         <person corresp="https://de.wikipedia.org/wiki/Max_Pannwitz" xml:id="SZDPER.1061">
           <persName ref="http://d-nb.info/gnd/126266522">
@@ -19922,6 +19922,23 @@
         </person>
         <person xml:id="SZDPER.2070">
           <persName><surname>Schindler</surname><forename>Hugo</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2071">
+          <persName ref="https://d-nb.info/gnd/127925023"
+            ><surname>Salazar Diaz</surname>
+            <forename>Pedro</forename></persName>
+        </person>
+        <person xml:id="SZDPER.2072">
+          <persName ref="https://d-nb.info/gnd/137860196">
+            <surname>Müller</surname>
+            <forename>Robert</forename>
+          </persName>
+          <note type="variants">Müller-Einigen, Robert</note>
+          <birth when="1878"/>
+          <death when="1942"/>
+        </person>
+        <person xml:id="SZDPER.2073">
+          <persName><surname>Goldmann</surname><forename>Robert</forename></persName>
         </person>
       </listPerson>
     </body>
