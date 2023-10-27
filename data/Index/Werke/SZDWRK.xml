@@ -7,20 +7,27 @@
 				<title xml:lang="en">Works</title>
 			</titleStmt>
 			<publicationStmt>
-				<publisher> <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-					ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName> </publisher>
-				<authority> <orgName corresp="https://informationsmodellierung.uni-graz.at"
-					ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian
-					Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName> </authority>
-				<distributor> <orgName ref="https://gams.uni-graz.at"> GAMS -
-					Geisteswissenschaftliches Asset Management System</orgName> </distributor>
+				<publisher>
+					<orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+						ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+				</publisher>
+				<authority>
+					<orgName corresp="https://informationsmodellierung.uni-graz.at"
+						ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+						Austrian Centre for Digital Humanities, Karl-Franzens-Universität
+						Graz</orgName>
+				</authority>
+				<distributor>
+					<orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches Asset
+						Management System</orgName>
+				</distributor>
 				<availability>
 					<licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons
 						BY 4.0</licence>
 				</availability>
 				<publisher>Literaturarchiv Salzburg</publisher>
 				<idno type="PID">o:szd.werkindex</idno>
-				<date when="2021-09-20">20.09.2021</date>
+				<date when="2021-09-20">27.10.2023</date>
 			</publicationStmt>
 			<sourceDesc>
 				<p>Information about the source</p>
@@ -30,1046 +37,2230 @@
 	<text>
 		<body>
 			<listBibl>
-				<bibl xml:id="SZDWRK.1" sortKey="Clarissa"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1207786888">Clarissa</title> <lang>ger</lang>
-					<publisher> <origDate from="1941" to="1942">1941/1942</origDate> <date
-					when="1981">1981</date> </publisher> </bibl>
-				<bibl xml:id="SZDWRK.2" sortKey="Rauschderverwandlung"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+				<bibl xml:id="SZDWRK.1" sortKey="Clarissa">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1207786888">Clarissa</title>
+					<lang>ger</lang>
+					<publisher>
+						<origDate from="1941" to="1942">1941/1942</origDate>
+						<date when="1981">1981</date>
+					</publisher>
+				</bibl>
+				<bibl xml:id="SZDWRK.2" sortKey="Rauschderverwandlung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/7756961-1">Rausch der Verwandlung</title>
-					<lang>ger</lang> <publisher> <date when="1982">1982</date> </publisher> </bibl>
-				<bibl xml:id="SZDWRK.3" sortKey="Magellan"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4436253-5">Magellan</title> </bibl>
-				<bibl xml:id="SZDWRK.4" sortKey="Montaigne"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1140124943">Montaigne</title> </bibl>
-				<bibl xml:id="SZDWRK.5" sortKey="Weltvongestern"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4436762-4">Die Welt von Gestern</title> </bibl>
-				<bibl xml:id="SZDWRK.6" sortKey="Bauderwieneroper"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Bau der Wiener Oper</title> </bibl>
-				<bibl xml:id="SZDWRK.7" sortKey="Spätbezahlteschuld"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die spät bezahlte Schuld</title> </bibl>
-				<bibl xml:id="SZDWRK.8" sortKey="Wareres?"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1124027068">War er es?</title> </bibl>
-				<bibl xml:id="SZDWRK.9" sortKey="Widerstandderwirklichkeit"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1124026568">Widerstand der Wirklichkeit</title> </bibl>
+					<lang>ger</lang>
+					<publisher>
+						<date when="1982">1982</date>
+					</publisher>
+				</bibl>
+				<bibl xml:id="SZDWRK.3" sortKey="Magellan">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4436253-5">Magellan</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.4" sortKey="Montaigne">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1140124943">Montaigne</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.5" sortKey="Weltvongestern">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4436762-4">Die Welt von Gestern</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.6" sortKey="Bauderwieneroper">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Bau der Wiener Oper</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.7" sortKey="Spätbezahlteschuld">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die spät bezahlte Schuld</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.8" sortKey="Wareres?">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1124027068">War er es?</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.9" sortKey="Widerstandderwirklichkeit">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1124026568">Widerstand der Wirklichkeit</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.10" sortKey="Antwortaufeinerundfragezurjüdischenliteratur">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Antwort auf eine Rundfrage zur jüdischen Literatur</title> </bibl>
-				<bibl xml:id="SZDWRK.11" sortKey="Chenier"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Chenier</title> </bibl>
-				<bibl xml:id="SZDWRK.12" sortKey="Abschiedvonalexandermoissi"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Abschied von Alexander Moissi</title> </bibl>
-				<bibl xml:id="SZDWRK.13" sortKey="Geheimnisdeskünstlerischenschaffens"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Geheimnis des künstlerischen Schaffens</title> </bibl>
-				<bibl xml:id="SZDWRK.14" sortKey="Gesprächemitwerfel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Gespräche mit Werfel</title> </bibl>
-				<bibl xml:id="SZDWRK.15" sortKey="Goetheundhölderlin"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Goethe und Hölderlin</title> </bibl>
-				<bibl xml:id="SZDWRK.16" sortKey="Greatlessonfromagreatman"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>A Great Lesson from a Great Man</title> </bibl>
-				<bibl xml:id="SZDWRK.17" sortKey="Geschichtsschreibungvonmorgen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Geschichtsschreibung von morgen</title> </bibl>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Antwort auf eine Rundfrage zur jüdischen Literatur</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.11" sortKey="Chenier">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Chenier</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.12" sortKey="Abschiedvonalexandermoissi">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Abschied von Alexander Moissi</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.13" sortKey="Geheimnisdeskünstlerischenschaffens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Geheimnis des künstlerischen Schaffens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.14" sortKey="Gesprächemitwerfel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Gespräche mit Werfel</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.15" sortKey="Goetheundhölderlin">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Goethe und Hölderlin</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.16" sortKey="Greatlessonfromagreatman">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>A Great Lesson from a Great Man</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.17" sortKey="Geschichtsschreibungvonmorgen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Geschichtsschreibung von morgen</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.18" sortKey="Livingthoughtsoftolstoi:presentingtolstoi">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title>The Living Thoughts of Tolstoi: Presenting Tolstoi</title>
-					<lang>eng</lang> </bibl>
-				<bibl xml:id="SZDWRK.19" sortKey="Moissiimgespräch"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Moissi im Gespräch</title> </bibl>
-				<bibl xml:id="SZDWRK.20" sortKey="Großeschweigen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das große Schweigen</title> </bibl>
-				<bibl xml:id="SZDWRK.21" sortKey="Radioaddresstotheamericanschoolchildren"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Radio Address to the American Schoolchildren</title> </bibl>
+					<lang>eng</lang>
+				</bibl>
+				<bibl xml:id="SZDWRK.19" sortKey="Moissiimgespräch">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Moissi im Gespräch</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.20" sortKey="Großeschweigen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das große Schweigen</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.21" sortKey="Radioaddresstotheamericanschoolchildren">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Radio Address to the American Schoolchildren</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.22" sortKey="Blicküberdieelektrischestadtindiezukunfthinein">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Blick über die elektrische Stadt in die Zukunft hinein</title> </bibl>
-				<bibl xml:id="SZDWRK.23" sortKey="Rainermariarilke.einvortraginlondon"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Rainer Maria Rilke. Ein Vortrag in London</title> </bibl>
-				<bibl xml:id="SZDWRK.24" sortKey="Romainrolland.vortrag"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Romain Rolland. Vortrag</title> </bibl>
-				<bibl xml:id="SZDWRK.25" sortKey="Autobiographischeraufsatz(1936)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Autobiographischer Aufsatz (1936)</title> </bibl>
-				<bibl xml:id="SZDWRK.26" sortKey="Vortragüberdostojewski"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Vortrag über Dostojewski</title> </bibl>
-				<bibl xml:id="SZDWRK.27" sortKey="Walterrathenau.gedächtnisbild"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Walter Rathenau. Gedächtnisbild</title> </bibl>
-				<bibl xml:id="SZDWRK.28" sortKey="Worteamsargesigmundfreuds"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Worte am Sarge Sigmund Freuds</title> </bibl>
-				<bibl xml:id="SZDWRK.29" sortKey="Adamlux"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Adam Lux</title> </bibl>
-				<bibl xml:id="SZDWRK.30" sortKey="Marsyasundapoll"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Marsyas und Apoll</title> </bibl>
-				<bibl xml:id="SZDWRK.31" sortKey="Panama"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Panama</title> </bibl>
-				<bibl xml:id="SZDWRK.32" sortKey="Tersites"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Tersites</title> </bibl>
-				<bibl xml:id="SZDWRK.33" sortKey="Schimmerlichtimdunkel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Ein Schimmer Licht im Dunkel</title> </bibl>
-				<bibl xml:id="SZDWRK.34" sortKey="Marieantoinette"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1024274039">Marie Antoinette</title> </bibl>
-				<bibl xml:id="SZDWRK.35" sortKey="Begegnungenmitmenschen,büchern,städten"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Begegnungen mit Menschen, Büchern, Städten</title> </bibl>
-				<bibl xml:id="SZDWRK.36" sortKey="Bildner[augusterodin]"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der Bildner [Auguste Rodin]</title> </bibl>
-				<bibl xml:id="SZDWRK.37" sortKey="Dirigent.inmemoriamgustavmahler"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der Dirigent. In memoriam Gustav Mahler</title> </bibl>
-				<bibl xml:id="SZDWRK.38" sortKey="Begrabeneleuchter"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1136376275">Der begrabene Leuchter</title> </bibl>
-				<bibl xml:id="SZDWRK.39" sortKey="Schachnovelle"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4255212-6">Schachnovelle</title> </bibl>
-				<bibl xml:id="SZDWRK.40" sortKey="Balzac"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1122746091">Balzac (1946)</title> </bibl>
-				<bibl xml:id="SZDWRK.41" sortKey="Castelliogegencalvinodereingewissengegendiegewalt"
-					> <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Blick über die elektrische Stadt in die Zukunft hinein</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.23" sortKey="Rainermariarilke.einvortraginlondon">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Rainer Maria Rilke. Ein Vortrag in London</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.24" sortKey="Romainrolland.vortrag">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Romain Rolland. Vortrag</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.25" sortKey="Autobiographischeraufsatz(1936)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Autobiographischer Aufsatz (1936)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.26" sortKey="Vortragüberdostojewski">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Vortrag über Dostojewski</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.27" sortKey="Walterrathenau.gedächtnisbild">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Walter Rathenau. Gedächtnisbild</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.28" sortKey="Worteamsargesigmundfreuds">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Worte am Sarge Sigmund Freuds</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.29" sortKey="Adamlux">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Adam Lux</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.30" sortKey="Marsyasundapoll">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Marsyas und Apoll</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.31" sortKey="Panama">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Panama</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.32" sortKey="Tersites">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Tersites</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.33" sortKey="Schimmerlichtimdunkel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Ein Schimmer Licht im Dunkel</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.34" sortKey="Marieantoinette">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1024274039">Marie Antoinette</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.35" sortKey="Begegnungenmitmenschen,büchern,städten">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Begegnungen mit Menschen, Büchern, Städten</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.36" sortKey="Bildner[augusterodin]">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der Bildner [Auguste Rodin]</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.37" sortKey="Dirigent.inmemoriamgustavmahler">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der Dirigent. In memoriam Gustav Mahler</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.38" sortKey="Begrabeneleuchter">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1136376275">Der begrabene Leuchter</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.39" sortKey="Schachnovelle">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4255212-6">Schachnovelle</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.40" sortKey="Balzac">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1122746091">Balzac (1946)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.41" sortKey="Castelliogegencalvinodereingewissengegendiegewalt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/7846367-1">Castellio gegen Calvin oder Ein
-					Gewissen gegen die Gewalt</title> </bibl>
-				<bibl xml:id="SZDWRK.42" sortKey="Romainrolland.dermannunddaswerk"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Gewissen gegen die Gewalt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.42" sortKey="Romainrolland.dermannunddaswerk">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/112448115X">Romain Rolland. Der Mann und das
-					Werk</title> </bibl>
-				<bibl xml:id="SZDWRK.43" sortKey="Sternstundendermenschheit(1927)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Sternstunden der Menschheit. Fünf historische Miniaturen (1927)</title> </bibl>
+						Werk</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.43" sortKey="Sternstundendermenschheit(1927)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Sternstunden der Menschheit. Fünf historische
+						Miniaturen (1927)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.44"
-					sortKey="Sternstundendermenschheit.dreihistorischeminiaturen(1930)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit.dreihistorischeminiaturen(1930)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title type="compilation">Sternstunden der Menschheit. Drei historische
-					Miniaturen (1930)</title> </bibl>
-				<bibl xml:id="SZDWRK.45" sortKey="Sternstundendermenschheit:vorwort"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sternstunden der Menschheit: Vorwort</title> </bibl>
+						Miniaturen (1930)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.45" sortKey="Sternstundendermenschheit:vorwort">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sternstunden der Menschheit: Vorwort</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.46" sortKey="Sternstundendermenschheit:einleitung(1927)">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sternstunden der Menschheit: Einleitung (1927)</title> </bibl>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sternstunden der Menschheit: Einleitung (1927)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.47" sortKey="Sternstundendermenschheit:dieentdeckungeldorados">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/112410867X">Sternstunden der Menschheit: Die
-					Entdeckung Eldorados</title> </bibl>
+						Entdeckung Eldorados</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.48"
-					sortKey="Sternstundendermenschheit:fluchtindieunsterblichkeit"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit:fluchtindieunsterblichkeit">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124488642">Sternstunden der Menschheit: Flucht
-					in die Unsterblichkeit</title> </bibl>
+						in die Unsterblichkeit</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.49" sortKey="Sternstundendermenschheit:derkampfumdensüdpol">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/4436252-3">Sternstunden der Menschheit: Der
-					Kampf um den Südpol</title> </bibl>
+						Kampf um den Südpol</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.50" sortKey="Sternstundendermenschheit:diemarienbaderelegie">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124485430">Sternstunden der Menschheit: Die
-					Marienbader Elegie</title> </bibl>
+						Marienbader Elegie</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.51"
-					sortKey="Sternstundendermenschheit:dieweltminutevonwaterloo"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit:dieweltminutevonwaterloo">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/112410870X">Sternstunden der Menschheit: Die
-					Weltminute von Waterloo</title> </bibl>
+						Weltminute von Waterloo</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.52" sortKey="Sternstundendermenschheit:dieeroberungvonbyzanz">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124488960">Sternstunden der Menschheit: Die
-					Eroberung von Byzanz</title> </bibl>
+						Eroberung von Byzanz</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.53"
-					sortKey="Sternstundendermenschheit:daserstewortüberdenozean"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit:daserstewortüberdenozean">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124489924">Sternstunden der Menschheit: Das
-					erste Wort über den Ozean</title> </bibl>
+						erste Wort über den Ozean</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.54" sortKey="Sternstundendermenschheit:derversiegeltezug">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124490469">Sternstunden der Menschheit: Der
-					versiegelte Zug</title> </bibl>
+						versiegelte Zug</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.55" sortKey="Sternstundendermenschheit:dasgenieeinernacht">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124401318">Sternstunden der Menschheit: Das
-					Genie einer Nacht</title> </bibl>
+						Genie einer Nacht</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.56" sortKey="Sternstundendermenschheit:heroischeraugenblick">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124485511">Sternstunden der Menschheit:
-					Heroischer Augenblick</title> </bibl>
+						Heroischer Augenblick</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.57"
-					sortKey="Sternstundendermenschheit:georgfriedrichhändelsauferstehung"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit:georgfriedrichhändelsauferstehung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124489622">Sternstunden der Menschheit: Georg
-					Friedrich Händels Auferstehung</title> </bibl>
+						Friedrich Händels Auferstehung</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.58" sortKey="Sternstundendermenschheit:diefluchtzugott">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1124490108">Sternstunden der Menschheit: Die
-					Flucht zu Gott</title> </bibl>
+						Flucht zu Gott</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.59"
-					sortKey="Sternstundendermenschheit:cicerostododerdashauptaufderrostra"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Sternstundendermenschheit:cicerostododerdashauptaufderrostra">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title>Sternstunden der Menschheit: Ciceros Tod oder Das Haupt auf der
-					Rostra</title> </bibl>
-				<bibl xml:id="SZDWRK.60" sortKey="Sternstundendermenschheit:wilsonversagt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sternstunden der Menschheit: Wilson versagt</title> </bibl>
-				<bibl xml:id="SZDWRK.61" sortKey="Anton,friendofalltheworld"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Rostra</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.60" sortKey="Sternstundendermenschheit:wilsonversagt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sternstunden der Menschheit: Wilson versagt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.61" sortKey="Anton,friendofalltheworld">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/112321672X">Anton, Friend of All the
-					World</title> <lang>eng</lang> </bibl>
-				<bibl xml:id="SZDWRK.62" sortKey="Geburtstagsbriefanhermannbahr"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Geburtstagsbrief an Hermann Bahr</title> </bibl>
-				<bibl xml:id="SZDWRK.63" sortKey="Unterirdischenbücherbalzacs"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die unterirdischen Bücher Balzacs</title> </bibl>
-				<bibl xml:id="SZDWRK.64" sortKey="Memorandumfürbeverlybaxter"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Memorandum für Beverly Baxter</title> </bibl>
-				<bibl xml:id="SZDWRK.65" sortKey="Besuchbeidenmilliarden"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123162743">Besuch bei den Milliarden</title> </bibl>
-				<bibl xml:id="SZDWRK.66" sortKey="Busoni"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Busoni</title> </bibl>
+						World</title>
+					<lang>eng</lang>
+				</bibl>
+				<bibl xml:id="SZDWRK.62" sortKey="Geburtstagsbriefanhermannbahr">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Geburtstagsbrief an Hermann Bahr</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.63" sortKey="Unterirdischenbücherbalzacs">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die unterirdischen Bücher Balzacs</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.64" sortKey="Memorandumfürbeverlybaxter">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Memorandum für Beverly Baxter</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.65" sortKey="Besuchbeidenmilliarden">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123162743">Besuch bei den Milliarden</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.66" sortKey="Busoni">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Busoni</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.67" sortKey="Hanscarossa.briefaneinenfranzösischenfreund">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Hans Carossa. Brief an einen französischen Freund</title> </bibl>
-				<bibl xml:id="SZDWRK.68" sortKey="Bookforthe„salzburgbabbitts“"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>A book for the „Salzburg Babbitts“</title> </bibl>
-				<bibl xml:id="SZDWRK.69" sortKey="Dankanbrasilien"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Dank an Brasilien</title> </bibl>
-				<bibl xml:id="SZDWRK.70" sortKey="Dankandiebücher"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Dank an die Bücher</title> </bibl>
-				<bibl xml:id="SZDWRK.71" sortKey="Dante"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Dante</title> </bibl>
-				<bibl xml:id="SZDWRK.72" sortKey="Marcelinedesbordes-valmore"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Marceline Desbordes-Valmore</title> </bibl>
-				<bibl xml:id="SZDWRK.73" sortKey="Lieberverehrteralfreddöblin!"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Lieber verehrter Alfred Döblin!</title> </bibl>
-				<bibl xml:id="SZDWRK.74" sortKey="Abschiedvonjohndrinkwater"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Abschied von John Drinkwater</title> </bibl>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Hans Carossa. Brief an einen französischen Freund</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.68" sortKey="Bookforthe„salzburgbabbitts“">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>A book for the „Salzburg Babbitts“</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.69" sortKey="Dankanbrasilien">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Dank an Brasilien</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.70" sortKey="Dankandiebücher">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Dank an die Bücher</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.71" sortKey="Dante">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Dante</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.72" sortKey="Marcelinedesbordes-valmore">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Marceline Desbordes-Valmore</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.73" sortKey="Lieberverehrteralfreddöblin!">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Lieber verehrter Alfred Döblin!</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.74" sortKey="Abschiedvonjohndrinkwater">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Abschied von John Drinkwater</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.75"
-					sortKey="Einigegrundlagenzueinemkollektivauszuarbeitendenmanifest"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Einige Grundlagen zu einem kollektiv auszuarbeitenden Manifest</title> </bibl>
-				<bibl xml:id="SZDWRK.76" sortKey="Vortrageinigungeuropas"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Vortrag Einigung Europas</title> </bibl>
-				<bibl xml:id="SZDWRK.77" sortKey="Europäischegedankeinseinerhistorischenentwicklung"
-					> <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der europäische Gedanke in seiner historischen Entwicklung</title> </bibl>
+					sortKey="Einigegrundlagenzueinemkollektivauszuarbeitendenmanifest">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Einige Grundlagen zu einem kollektiv auszuarbeitenden Manifest</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.76" sortKey="Vortrageinigungeuropas">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Vortrag Einigung Europas</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.77" sortKey="Europäischegedankeinseinerhistorischenentwicklung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der europäische Gedanke in seiner historischen Entwicklung</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.78"
-					sortKey="Exposéeinerbilligendeutschen,vonjederstaatlichenbeschränkungunabhängigendeutschenbücherei"
-					> <author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Exposéeinerbilligendeutschen,vonjederstaatlichenbeschränkungunabhängigendeutschenbücherei">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title>Exposé einer billigen deutschen, von jeder staatlichen Beschränkung
-					unabhängigen deutschen Bücherei</title> </bibl>
-				<bibl xml:id="SZDWRK.79" sortKey="Überdenfilm"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Über den Film</title> </bibl>
-				<bibl xml:id="SZDWRK.80" sortKey="Gärtenimkriege"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Gärten im Kriege</title> </bibl>
+						unabhängigen deutschen Bücherei</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.79" sortKey="Überdenfilm">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Über den Film</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.80" sortKey="Gärtenimkriege">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Gärten im Kriege</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.81"
-					sortKey="Gegenwartundzukunftderjüdischenliteratur.eineumfrage"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Gegenwart und Zukunft der jüdischen Literatur. Eine Umfrage</title> </bibl>
-				<bibl xml:id="SZDWRK.82" sortKey="Geschichtealsdichterin"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Geschichte als Dichterin</title> </bibl>
-				<bibl xml:id="SZDWRK.83" sortKey="Meinlieberlouisgolding!"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Mein lieber Louis Golding!</title> </bibl>
-				<bibl xml:id="SZDWRK.84" sortKey="Redezuehrenmaximgorkis"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Rede zu Ehren Maxim Gorkis</title> </bibl>
-				<bibl xml:id="SZDWRK.85" sortKey="Helpthejewishchildreningermany"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Help the Jewish Children in Germany</title> </bibl>
-				<bibl xml:id="SZDWRK.86" sortKey="Herzeuropas"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Herz Europas</title> </bibl>
-				<bibl xml:id="SZDWRK.87" sortKey="Erinnerungenantheodorherzl"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Erinnerungen an Theodor Herzl</title> </bibl>
+					sortKey="Gegenwartundzukunftderjüdischenliteratur.eineumfrage">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Gegenwart und Zukunft der jüdischen Literatur. Eine Umfrage</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.82" sortKey="Geschichtealsdichterin">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Geschichte als Dichterin</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.83" sortKey="Meinlieberlouisgolding!">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Mein lieber Louis Golding!</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.84" sortKey="Redezuehrenmaximgorkis">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Rede zu Ehren Maxim Gorkis</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.85" sortKey="Helpthejewishchildreningermany">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Help the Jewish Children in Germany</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.86" sortKey="Herzeuropas">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Herz Europas</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.87" sortKey="Erinnerungenantheodorherzl">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Erinnerungen an Theodor Herzl</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.88"
 					sortKey="Hugovonhofmannsthal.gedächtnisredezurtrauerfeierimwienerburgtheater">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title>Hugo von Hofmannsthal. Gedächtnisrede zur Trauerfeier im Wiener
-					Burgtheater</title> </bibl>
-				<bibl xml:id="SZDWRK.89" sortKey="Ödönvonhorváth.anappreciation"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Ödön von Horváth. An Appreciation</title> </bibl>
+						Burgtheater</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.89" sortKey="Ödönvonhorváth.anappreciation">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Ödön von Horváth. An Appreciation</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.90"
 					sortKey="Deathbeforefulfillment.ödönvonhorvath:achildofourtime(rezension)">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title>Death before Fulfillment. Ödön von Horvath: A Child of our Time
-					(Rezension)</title> </bibl>
-				<bibl xml:id="SZDWRK.91" sortKey="Jaurès.einporträt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Jaurès. Ein Porträt</title> </bibl>
-				<bibl xml:id="SZDWRK.92" sortKey="Anmerkungenzujoyce'sulysses"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Anmerkungen zu Joyce's Ulysses</title> </bibl>
-				<bibl xml:id="SZDWRK.93" sortKey="Stimme.inmemoriamjosefkainz"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Stimme. In memoriam Josef Kainz</title> </bibl>
-				<bibl xml:id="SZDWRK.94" sortKey="Antonkippenberg"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Anton Kippenberg</title> </bibl>
-				<bibl xml:id="SZDWRK.95" sortKey="Kleinereisenachbrasilien"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Kleine Reise nach Brasilien</title> </bibl>
-				<bibl xml:id="SZDWRK.96" sortKey="Thomasmann.lotteinweimar"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Thomas Mann. Lotte in Weimar</title> </bibl>
-				<bibl xml:id="SZDWRK.97" sortKey="…1914undheute"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>… 1914 und heute</title> </bibl>
-				<bibl xml:id="SZDWRK.98" sortKey="Fransmasereel.dermannundbildner"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Frans Masereel. Der Mann und Bildner</title> </bibl>
-				<bibl xml:id="SZDWRK.99" sortKey="Monotonisierungderwelt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Monotonisierung der Welt</title> </bibl>
-				<bibl xml:id="SZDWRK.100" sortKey="Moralischeentgiftungeuropas"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die moralische Entgiftung Europas</title> </bibl>
+						(Rezension)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.91" sortKey="Jaurès.einporträt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Jaurès. Ein Porträt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.92" sortKey="Anmerkungenzujoyce'sulysses">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Anmerkungen zu Joyce's Ulysses</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.93" sortKey="Stimme.inmemoriamjosefkainz">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Stimme. In memoriam Josef Kainz</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.94" sortKey="Antonkippenberg">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Anton Kippenberg</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.95" sortKey="Kleinereisenachbrasilien">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Kleine Reise nach Brasilien</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.96" sortKey="Thomasmann.lotteinweimar">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Thomas Mann. Lotte in Weimar</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.97" sortKey="…1914undheute">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>… 1914 und heute</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.98" sortKey="Fransmasereel.dermannundbildner">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Frans Masereel. Der Mann und Bildner</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.99" sortKey="Monotonisierungderwelt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Monotonisierung der Welt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.100" sortKey="Moralischeentgiftungeuropas">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die moralische Entgiftung Europas</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.101"
-					sortKey="Materdolorosa.diebriefevonnietzschesmutteranoverbeck"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Mater Dolorosa. Die Briefe von Nietzsches Mutter an Overbeck</title> </bibl>
-				<bibl xml:id="SZDWRK.102" sortKey="Rundfragenouvelleslitteraires"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Rundfrage Nouvelles Litteraires</title> </bibl>
-				<bibl xml:id="SZDWRK.103" sortKey="Vonmeinennovellen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Von meinen Novellen</title> </bibl>
-				<bibl xml:id="SZDWRK.104" sortKey="Palästina"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Palästina</title> </bibl>
-				<bibl xml:id="SZDWRK.105" sortKey="Radiovortragluganosept.1934"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Radiovortrag Lugano Sept. 1934</title> </bibl>
-				<bibl xml:id="SZDWRK.106" sortKey="Schönstegrabderwelt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das schönste Grab der Welt</title> </bibl>
+					sortKey="Materdolorosa.diebriefevonnietzschesmutteranoverbeck">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Mater Dolorosa. Die Briefe von Nietzsches Mutter an Overbeck</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.102" sortKey="Rundfragenouvelleslitteraires">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Rundfrage Nouvelles Litteraires</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.103" sortKey="Vonmeinennovellen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Von meinen Novellen</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.104" sortKey="Palästina">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Palästina</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.105" sortKey="Radiovortragluganosept.1934">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Radiovortrag Lugano Sept. 1934</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.106" sortKey="Schönstegrabderwelt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das schönste Grab der Welt</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.107" sortKey="Ernestrenan.zumjahrhunderttageseinergeburt">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Ernest Renan. Zum Jahrhunderttage seiner Geburt</title> </bibl>
-				<bibl xml:id="SZDWRK.108" sortKey="Rundfragerevuebelge"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Rundfrage Revue Belge</title> </bibl>
-				<bibl xml:id="SZDWRK.109" sortKey="Rhythmusvonnewyork"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der Rhythmus von New York</title> </bibl>
-				<bibl xml:id="SZDWRK.111" sortKey="Abschiedvonrilke"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Abschied von Rilke</title> </bibl>
-				<bibl xml:id="SZDWRK.112" sortKey="Arthurrimbaud"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Arthur Rimbaud</title> </bibl>
-				<bibl xml:id="SZDWRK.113" sortKey="Rundfrage1936"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Rundfrage 1936</title> </bibl>
-				<bibl xml:id="SZDWRK.114" sortKey="Sainte-beuve"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sainte-Beuve</title> </bibl>
-				<bibl xml:id="SZDWRK.115" sortKey="Schlaflosewelt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die schlaflose Welt</title> </bibl>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Ernest Renan. Zum Jahrhunderttage seiner Geburt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.108" sortKey="Rundfragerevuebelge">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Rundfrage Revue Belge</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.109" sortKey="Rhythmusvonnewyork">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der Rhythmus von New York</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.111" sortKey="Abschiedvonrilke">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Abschied von Rilke</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.112" sortKey="Arthurrimbaud">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Arthur Rimbaud</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.113" sortKey="Rundfrage1936">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Rundfrage 1936</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.114" sortKey="Sainte-beuve">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sainte-Beuve</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.115" sortKey="Schlaflosewelt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die schlaflose Welt</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.116"
-					sortKey="Unvergesslicheserlebnis.eintagbeialbertschweitzer"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Unvergessliches Erlebnis. Ein Tag bei Albert Schweitzer</title> </bibl>
-				<bibl xml:id="SZDWRK.117" sortKey="Salzburg.diestadtalsrahmen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Salzburg. Die Stadt als Rahmen</title> </bibl>
-				<bibl xml:id="SZDWRK.118" sortKey="Benares.diestadtdertausendtempel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Benares. Die Stadt der tausend Tempel</title> </bibl>
+					sortKey="Unvergesslicheserlebnis.eintagbeialbertschweitzer">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Unvergessliches Erlebnis. Ein Tag bei Albert Schweitzer</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.117" sortKey="Salzburg.diestadtalsrahmen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Salzburg. Die Stadt als Rahmen</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.118" sortKey="Benares.diestadtdertausendtempel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Benares. Die Stadt der tausend Tempel</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.119" sortKey="Stundezwischenzweiozeanen.derpanamakanal">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Stunde zwischen zwei Ozeanen. Der Panamakanal</title> </bibl>
-				<bibl xml:id="SZDWRK.120" sortKey="Bertavonsuttner"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Berta von Suttner</title> </bibl>
-				<bibl xml:id="SZDWRK.121" sortKey="Arturotoscanini.einbildnis"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Arturo Toscanini. Ein Bildnis</title> </bibl>
-				<bibl xml:id="SZDWRK.122" sortKey="L'unitéspirituelledumonde"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Stunde zwischen zwei Ozeanen. Der Panamakanal</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.120" sortKey="Bertavonsuttner">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Berta von Suttner</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.121" sortKey="Arturotoscanini.einbildnis">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Arturo Toscanini. Ein Bildnis</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.122" sortKey="L'unitéspirituelledumonde">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1148790543">L'Unité spirituelle du
-					Monde</title> </bibl>
-				<bibl xml:id="SZDWRK.123" sortKey="Erinnerungenanemileverhaeren"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Monde</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.123" sortKey="Erinnerungenanemileverhaeren">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1178599310">Erinnerungen an Emile
-					Verhaeren</title> </bibl>
-				<bibl xml:id="SZDWRK.124" sortKey="Verhaeren-vorlesung"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Verhaeren-Vorlesung</title> </bibl>
-				<bibl xml:id="SZDWRK.125" sortKey="Brunowalter.kunstderhingabe"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Bruno Walter. Kunst der Hingabe</title> </bibl>
-				<bibl xml:id="SZDWRK.126" sortKey="Wienvongestern"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Wien von Gestern</title> </bibl>
-				<bibl xml:id="SZDWRK.127" sortKey="Ypern"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Ypern</title> </bibl>
-				<bibl xml:id="SZDWRK.128" sortKey="Ottozarek"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Otto Zarek</title> </bibl>
-				<bibl xml:id="SZDWRK.129" sortKey="Emilezola"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Emile Zola</title> </bibl>
-				<bibl xml:id="SZDWRK.130" sortKey="Briefeinerunbekannten"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4651229-9">Brief einer Unbekannten</title> </bibl>
-				<bibl xml:id="SZDWRK.131" sortKey="Mariastuart"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4436254-7">Maria Stuart</title> </bibl>
-				<bibl xml:id="SZDWRK.132" sortKey="Kette.einnovellenkreis"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die Kette. Ein Novellenkreis</title> </bibl>
-				<bibl xml:id="SZDWRK.133" sortKey="Ungedulddesherzens"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4447444-1">Ungeduld des Herzens</title> </bibl>
-				<bibl xml:id="SZDWRK.134" sortKey="Angst"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4447445-3">Angst</title> </bibl>
-				<bibl xml:id="SZDWRK.135" sortKey="Jeremias"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4447446-5">Jeremias</title> </bibl>
-				<bibl xml:id="SZDWRK.136" sortKey="Triumphundtragikdeserasmusvonrotterdam"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Verhaeren</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.124" sortKey="Verhaeren-vorlesung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Verhaeren-Vorlesung</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.125" sortKey="Brunowalter.kunstderhingabe">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Bruno Walter. Kunst der Hingabe</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.126" sortKey="Wienvongestern">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Wien von Gestern</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.127" sortKey="Ypern">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Ypern</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.128" sortKey="Ottozarek">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Otto Zarek</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.129" sortKey="Emilezola">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Emile Zola</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.130" sortKey="Briefeinerunbekannten">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4651229-9">Brief einer Unbekannten</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.131" sortKey="Mariastuart">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4436254-7">Maria Stuart</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.132" sortKey="Kette.einnovellenkreis">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die Kette. Ein Novellenkreis</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.133" sortKey="Ungedulddesherzens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4447444-1">Ungeduld des Herzens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.134" sortKey="Angst">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4447445-3">Angst</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.135" sortKey="Jeremias">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4447446-5">Jeremias</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.136" sortKey="Triumphundtragikdeserasmusvonrotterdam">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/4447447-7">Triumph und Tragik des Erasmus von
-					Rotterdam</title> </bibl>
-				<bibl xml:id="SZDWRK.137" sortKey="Amokläufer"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4447449-0">Der Amokläufer</title> </bibl>
-				<bibl xml:id="SZDWRK.138" sortKey="Amok(1922)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Amok (1922)</title> </bibl>
-				<bibl xml:id="SZDWRK.139" sortKey="Brennendesgeheimnis"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/7853948-1">Brennendes Geheimnis</title> </bibl>
-				<bibl xml:id="SZDWRK.140" sortKey="Josephfouché"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4214396-2">Joseph Fouché</title> </bibl>
-				<bibl xml:id="SZDWRK.141" sortKey="Philosophiedeshippolytetaine"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Rotterdam</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.137" sortKey="Amokläufer">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4447449-0">Der Amokläufer</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.138" sortKey="Amok(1922)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Amok (1922)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.139" sortKey="Brennendesgeheimnis">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/7853948-1">Brennendes Geheimnis</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.140" sortKey="Josephfouché">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4214396-2">Joseph Fouché</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.141" sortKey="Philosophiedeshippolytetaine">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1183009399">Die Philosophie des Hippolyte
-					Taine</title> </bibl>
-				<bibl xml:id="SZDWRK.142" sortKey="Silbernesaiten"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Silberne Saiten</title> </bibl>
-				<bibl xml:id="SZDWRK.143" sortKey="Zwang"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1153159732">Der Zwang</title> </bibl>
-				<bibl xml:id="SZDWRK.144" sortKey="Liebedererikaewald"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/4779601-7">Die Liebe der Erika Ewald</title> </bibl>
-				<bibl xml:id="SZDWRK.145" sortKey="Liebedererikaewald(1904)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die Liebe der Erika Ewald (1904)</title> </bibl>
-				<bibl xml:id="SZDWRK.146" sortKey="Kampfmitdemdämon"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Der Kampf mit dem Dämon</title> </bibl>
-				<bibl xml:id="SZDWRK.147" sortKey="Brasilien,einlandderzukunft"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Taine</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.142" sortKey="Silbernesaiten">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Silberne Saiten</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.143" sortKey="Zwang">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1153159732">Der Zwang</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.144" sortKey="Liebedererikaewald">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/4779601-7">Die Liebe der Erika Ewald</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.145" sortKey="Liebedererikaewald(1904)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die Liebe der Erika Ewald (1904)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.146" sortKey="Kampfmitdemdämon">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Der Kampf mit dem Dämon</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.147" sortKey="Brasilien,einlandderzukunft">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/7500623-6">Brasilien, ein Land der
-					Zukunft</title> </bibl>
+						Zukunft</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.148" sortKey="Vierundzwanzigstundenausdemlebeneinerfrau">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/7711238-6">Vierundzwanzig Stunden aus dem Leben
-					einer Frau</title> </bibl>
-				<bibl xml:id="SZDWRK.149" sortKey="Verwirrungdergefühle"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/109816556X">Verwirrung der Gefühle</title> </bibl>
-				<bibl xml:id="SZDWRK.150" sortKey="Sternüberdemwalde"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1101466383">Der Stern über dem Walde</title> </bibl>
-				<bibl xml:id="SZDWRK.151" sortKey="Sinnundschönheitderautographen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						einer Frau</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.149" sortKey="Verwirrungdergefühle">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/109816556X">Verwirrung der Gefühle</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.150" sortKey="Sternüberdemwalde">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1101466383">Der Stern über dem Walde</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.151" sortKey="Sinnundschönheitderautographen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1117947874">Sinn und Schönheit der
-					Autographen</title> </bibl>
-				<bibl xml:id="SZDWRK.152" sortKey="Mondscheingasse"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1119745349">Die Mondscheingasse</title> </bibl>
-				<bibl xml:id="SZDWRK.153" sortKey="Aufreisen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1120714168">Auf Reisen</title> </bibl>
+						Autographen</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.152" sortKey="Mondscheingasse">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1119745349">Die Mondscheingasse</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.153" sortKey="Aufreisen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1120714168">Auf Reisen</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.154" sortKey="Unvermutetebekanntschaftmiteinemhandwerk">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1123178887">Unvermutete Bekanntschaft mit einem
-					Handwerk</title> </bibl>
-				<bibl xml:id="SZDWRK.155" sortKey="Episodevomgenfersee"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123219958">Episode vom Genfer See</title> </bibl>
-				<bibl xml:id="SZDWRK.156" sortKey="Unsichtbaresammlung"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123234353">Die unsichtbare Sammlung</title> </bibl>
-				<bibl xml:id="SZDWRK.157" sortKey="Buchmendel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123598665">Buchmendel</title> </bibl>
-				<bibl xml:id="SZDWRK.158" sortKey="Phantastischenacht"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123598924">Phantastische Nacht</title> </bibl>
-				<bibl xml:id="SZDWRK.159" sortKey="Frauunddielandschaft"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1123601526">Die Frau und die Landschaft</title> </bibl>
-				<bibl xml:id="SZDWRK.160" sortKey="Scharlach"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1124027114">Scharlach</title> </bibl>
-				<bibl xml:id="SZDWRK.161" sortKey="Praterfrühling"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/112402736X">Praterfrühling</title> </bibl>
-				<bibl xml:id="SZDWRK.162" sortKey="Zweieinsame"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1124027459">Zwei Einsame</title> </bibl>
-				<bibl xml:id="SZDWRK.163" sortKey="Untergangeinesherzens"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1129186180">Untergang eines Herzens</title> </bibl>
-				<bibl xml:id="SZDWRK.164" sortKey="Dreidichterihreslebens"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Drei Dichter ihres Lebens</title> </bibl>
-				<bibl xml:id="SZDWRK.165" sortKey="Baumeisterderwelt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die Baumeister der Welt</title> </bibl>
-				<bibl xml:id="SZDWRK.166" sortKey="Reisenachrußland"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1075568714">Reise nach Rußland</title> </bibl>
-				<bibl xml:id="SZDWRK.167" sortKey="Gouvernante"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1134993293">Die Gouvernante</title> </bibl>
-				<bibl xml:id="SZDWRK.168" sortKey="Legendederdrittentaube"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Handwerk</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.155" sortKey="Episodevomgenfersee">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123219958">Episode vom Genfer See</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.156" sortKey="Unsichtbaresammlung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123234353">Die unsichtbare Sammlung</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.157" sortKey="Buchmendel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123598665">Buchmendel</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.158" sortKey="Phantastischenacht">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123598924">Phantastische Nacht</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.159" sortKey="Frauunddielandschaft">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1123601526">Die Frau und die Landschaft</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.160" sortKey="Scharlach">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1124027114">Scharlach</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.161" sortKey="Praterfrühling">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/112402736X">Praterfrühling</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.162" sortKey="Zweieinsame">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1124027459">Zwei Einsame</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.163" sortKey="Untergangeinesherzens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1129186180">Untergang eines Herzens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.164" sortKey="Dreidichterihreslebens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Drei Dichter ihres Lebens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.165" sortKey="Baumeisterderwelt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die Baumeister der Welt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.166" sortKey="Reisenachrußland">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1075568714">Reise nach Rußland</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.167" sortKey="Gouvernante">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1134993293">Die Gouvernante</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.168" sortKey="Legendederdrittentaube">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/113637633X">Die Legende der dritten
-					Taube</title> </bibl>
-				<bibl xml:id="SZDWRK.169" sortKey="Rahelrechtetmitgott"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1136376380">Rahel rechtet mit Gott</title> </bibl>
-				<bibl xml:id="SZDWRK.170" sortKey="Legendeeineslebens"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1139307053">Legende eines Lebens</title> </bibl>
-				<bibl xml:id="SZDWRK.171" sortKey="Augendesewigenbruders"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Taube</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.169" sortKey="Rahelrechtetmitgott">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1136376380">Rahel rechtet mit Gott</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.170" sortKey="Legendeeineslebens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1139307053">Legende eines Lebens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.171" sortKey="Augendesewigenbruders">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1140748262">Die Augen des ewigen
-					Bruders</title> </bibl>
-				<bibl xml:id="SZDWRK.172" sortKey="Österreichunddasdeutschevolk"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Bruders</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.172" sortKey="Österreichunddasdeutschevolk">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1145049362">Österreich und das deutsche
-					Volk</title> </bibl>
-				<bibl xml:id="SZDWRK.173" sortKey="Sigmundfreud"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sigmund Freud</title> </bibl>
-				<bibl xml:id="SZDWRK.174" sortKey="Amerigo"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1196980950">Amerigo</title> </bibl>
-				<bibl xml:id="SZDWRK.175" sortKey="Volpone"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Volpone</title> </bibl>
-				<bibl xml:id="SZDWRK.176" sortKey="Emileverhaeren"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1178599310">Emile Verhaeren</title> </bibl>
-				<bibl xml:id="SZDWRK.177" sortKey="Hausdertausendschicksale"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+						Volk</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.173" sortKey="Sigmundfreud">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sigmund Freud</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.174" sortKey="Amerigo">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1196980950">Amerigo</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.175" sortKey="Volpone">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Volpone</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.176" sortKey="Emileverhaeren">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1178599310">Emile Verhaeren</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.177" sortKey="Hausdertausendschicksale">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1129186938">Das Haus der tausend
-					Schicksale</title> </bibl>
-				<bibl xml:id="SZDWRK.178" sortKey="Kaleidoskop"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Kaleidoskop</title> </bibl>
-				<bibl xml:id="SZDWRK.179" sortKey="Heilungdurchdengeist"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die Heilung durch den Geist</title> </bibl>
-				<bibl xml:id="SZDWRK.180" sortKey="Verwirrungdergefühle.dreinovellen"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Verwirrung der Gefühle. Drei Novellen</title> </bibl>
-				<bibl xml:id="SZDWRK.181" sortKey="Dreimeister"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Drei Meister</title> </bibl>
-				<bibl xml:id="SZDWRK.182" sortKey="Casanova"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Casanova</title> </bibl>
-				<bibl xml:id="SZDWRK.183" sortKey="Dostojewski"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Dostojewski</title> </bibl>
-				<bibl xml:id="SZDWRK.184" sortKey="Friedrichnietzsche"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Friedrich Nietzsche</title> </bibl>
-				<bibl xml:id="SZDWRK.185" sortKey="Hölderlin"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Hölderlin</title> </bibl>
-				<bibl xml:id="SZDWRK.186" sortKey="Marybaker-eddy"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Mary Baker-Eddy</title> </bibl>
-				<bibl xml:id="SZDWRK.187" sortKey="Tolstoi"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Tolstoi</title> </bibl>
-				<bibl xml:id="SZDWRK.188" sortKey="Ausgewähltegedichte(1931)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Ausgewählte Gedichte (1931)</title> </bibl>
+						Schicksale</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.178" sortKey="Kaleidoskop">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Kaleidoskop</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.179" sortKey="Heilungdurchdengeist">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die Heilung durch den Geist</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.180" sortKey="Verwirrungdergefühle.dreinovellen">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Verwirrung der Gefühle. Drei Novellen</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.181" sortKey="Dreimeister">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Drei Meister</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.182" sortKey="Casanova">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Casanova</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.183" sortKey="Dostojewski">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Dostojewski</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.184" sortKey="Friedrichnietzsche">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Friedrich Nietzsche</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.185" sortKey="Hölderlin">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Hölderlin</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.186" sortKey="Marybaker-eddy">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Mary Baker-Eddy</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.187" sortKey="Tolstoi">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Tolstoi</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.188" sortKey="Ausgewähltegedichte(1931)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Ausgewählte Gedichte (1931)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.189"
-					sortKey="Hausammeer.einschauspielinzweiteilen(dreiaufzügen)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Haus am Meer. Ein Schauspiel in zwei Teilen (drei Aufzügen)</title> </bibl>
+					sortKey="Hausammeer.einschauspielinzweiteilen(dreiaufzügen)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Haus am Meer. Ein Schauspiel in zwei Teilen (drei Aufzügen)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.190"
-					sortKey="Lammdesarmen.tragikomödieindreiakten(neunbildern)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Lammdesarmen.tragikomödieindreiakten(neunbildern)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1228481385">Das Lamm des Armen. Tragikomödie in
-					drei Akten (neun Bildern)</title> </bibl>
+						drei Akten (neun Bildern)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.191"
-					sortKey="Verwandeltekomödiant.einspielausdemdeutschenrokoko"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der verwandelte Komödiant. Ein Spiel aus dem deutschen Rokoko</title> </bibl>
-				<bibl xml:id="SZDWRK.192" sortKey="Frühenkränze"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die frühen Kränze</title> </bibl>
-				<bibl xml:id="SZDWRK.193" sortKey="Gesammeltengedichte(1924)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Die gesammelten Gedichte (1924)</title> </bibl>
+					sortKey="Verwandeltekomödiant.einspielausdemdeutschenrokoko">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der verwandelte Komödiant. Ein Spiel aus dem deutschen Rokoko</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.192" sortKey="Frühenkränze">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die frühen Kränze</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.193" sortKey="Gesammeltengedichte(1924)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die gesammelten Gedichte (1924)</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.194" sortKey="Schweigsamefrau.komischeoperindreiaufzügen">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/1224973194">Die schweigsame Frau. Komische Oper
-					in drei Aufzügen</title> </bibl>
+						in drei Aufzügen</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.195" sortKey="Ersteserlebnis.viergeschichtenauskinderland">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title type="compilation">Erstes Erlebnis. Vier Geschichten aus
-					Kinderland</title> </bibl>
-				<bibl xml:id="SZDWRK.196" sortKey="Fahrten,landschaftenundstädte"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Fahrten, Landschaften und Städte</title> </bibl>
+						Kinderland</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.196" sortKey="Fahrten,landschaftenundstädte">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Fahrten, Landschaften und Städte</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.197"
-					sortKey="Karlgeigy-hagenbachundseinesammlung.zumsiebzigstengeburtstage"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
+					sortKey="Karlgeigy-hagenbachundseinesammlung.zumsiebzigstengeburtstage">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
 					<title ref="http://d-nb.info/gnd/123585177X">Karl Geigy-Hagenbach und seine
-					Sammlung. Zum siebzigsten Geburtstage</title> </bibl>
-				<bibl xml:id="SZDWRK.198" sortKey="Kleinechronik.viererzählungen(1929)"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title type="compilation">Kleine Chronik. Vier Erzählungen (1929)</title> </bibl>
-				<bibl xml:id="SZDWRK.199" sortKey="Franzantonmesmer"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Franz Anton Mesmer</title> </bibl>
-				<bibl xml:id="SZDWRK.200" sortKey="Leporella"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title ref="http://d-nb.info/gnd/1214199186">Leporella</title> </bibl>
-				<bibl xml:id="SZDWRK.201" sortKey="Stendhal"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Stendhal</title> </bibl>
+						Sammlung. Zum siebzigsten Geburtstage</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.198" sortKey="Kleinechronik.viererzählungen(1929)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Kleine Chronik. Vier Erzählungen (1929)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.199" sortKey="Franzantonmesmer">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Franz Anton Mesmer</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.200" sortKey="Leporella">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title ref="http://d-nb.info/gnd/1214199186">Leporella</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.201" sortKey="Stendhal">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Stendhal</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.202" sortKey="Gleich-ungleichenschwestern">
-					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die gleich-ungleichen Schwestern</title> </bibl>
-				<bibl xml:id="SZDWRK.203" sortKey="Buchalseingangzurwelt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Buch als Eingang zur Welt</title> </bibl>
-				<bibl xml:id="SZDWRK.204" sortKey="Verlaine"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Verlaine</title> </bibl>
-				<bibl xml:id="SZDWRK.205" sortKey="Aufrufandiejugendamerikas"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Aufruf an die Jugend Amerikas</title> </bibl>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die gleich-ungleichen Schwestern</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.203" sortKey="Buchalseingangzurwelt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Buch als Eingang zur Welt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.204" sortKey="Verlaine">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Verlaine</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.205" sortKey="Aufrufandiejugendamerikas">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Aufruf an die Jugend Amerikas</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.206"
-					sortKey="Skizzefüreininterviewderzeitung&quot;jornaldobrasil&quot;"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Skizze für ein Interview der Zeitung "Jornal do Brasil"</title> </bibl>
-				<bibl xml:id="SZDWRK.207" sortKey="Gutachtenzubalzac"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Gutachten zu Balzac</title> </bibl>
-				<bibl xml:id="SZDWRK.208" sortKey="Istnichtalles,waswirspenden…"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Ist nicht Alles, was wir spenden…</title> </bibl>
-				<bibl xml:id="SZDWRK.209" sortKey="Willezuruniversalität"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Wille zur Universalität</title> </bibl>
-				<bibl xml:id="SZDWRK.210" sortKey="Sechzigjährigedankt"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der Sechzigjährige dankt</title> </bibl>
-				<bibl xml:id="SZDWRK.211" sortKey="Prologzuersteserlebnis"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Prolog zu Erstes Erlebnis</title> </bibl>
-				<bibl xml:id="SZDWRK.212" sortKey="Insel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Insel</title> </bibl>
+					sortKey="Skizzefüreininterviewderzeitung&quot;jornaldobrasil&quot;">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Skizze für ein Interview der Zeitung "Jornal do Brasil"</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.207" sortKey="Gutachtenzubalzac">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Gutachten zu Balzac</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.208" sortKey="Istnichtalles,waswirspenden…">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Ist nicht Alles, was wir spenden…</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.209" sortKey="Willezuruniversalität">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Wille zur Universalität</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.210" sortKey="Sechzigjährigedankt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der Sechzigjährige dankt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.211" sortKey="Prologzuersteserlebnis">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Prolog zu Erstes Erlebnis</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.212" sortKey="Insel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Insel</title>
+				</bibl>
 				<bibl xml:id="SZDWRK.213"
-					sortKey="Gutachtenzuhermannbrochs&quot;dertoddesvergil&quot;"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-					<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Gutachten zu Hermann Brochs "Der Tod des Vergil"</title> </bibl>
-				<bibl xml:id="SZDWRK.214"
-					sortKey="Wunderdeslebens"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Wunder des Lebens</title> </bibl>
-				<bibl xml:id="SZDWRK.215"
-					sortKey="ItalienischeLiteratur"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Über italienische Literatur</title> </bibl>
-				<bibl xml:id="SZDWRK.216"
-					sortKey="Dostojewski"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Über Dostojewski</title> </bibl>
-				<bibl xml:id="SZDWRK.217"
-					sortKey="Romainrolland"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Romain Rolland (1926)</title> </bibl>
-				<bibl xml:id="SZDWRK.218"
-					sortKey="Sommernovellette"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sommernovellette</title> </bibl>
-				<bibl xml:id="SZDWRK.219"
-					sortKey="Heinrichvonkleist"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Heinrich von Kleist</title> </bibl>
-				<bibl xml:id="SZDWRK.220"
-					sortKey="Dickens"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Dickens</title> </bibl>
-				<bibl xml:id="SZDWRK.221"
-					sortKey="Balzac"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Balzac</title> </bibl>
-				<bibl xml:id="SZDWRK.222" sortKey="Kette(1936)"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-						<title type="compilation">Die Kette (1936)</title> </bibl>
-				<bibl xml:id="SZDWRK.223"
-					sortKey="LockstdumichabermalsvomlindenLichte"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Lockst du mich abermals vom linden Lichte...</title> </bibl>
-				<bibl xml:id="SZDWRK.224"
-					sortKey="OKindheitwieichhinterdeinenGittern"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>O Kindheit, wie ich hinter deinen Gittern...</title> </bibl>
-				<bibl xml:id="SZDWRK.225"
-					sortKey="Geschichteinderdämmerung"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Geschichte in der Dämmerung</title> </bibl>
-				<bibl xml:id="SZDWRK.226"
-					sortKey="TuaufdichUnterweltderLeidenschaften"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Tu auf dich, Unterwelt der Leidenschaften...</title> </bibl>
-				<bibl xml:id="SZDWRK.227"
-					sortKey="Balzac.seinweltbildausdenwerken"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Balzac. Sein Weltbild aus den Werken</title> </bibl>
-				<bibl xml:id="SZDWRK.228" sortKey="Sternstundendermenschheit:vorwort"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-						<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Sternstunden der Menschheit: Vorwort (1930)</title> </bibl>
-				<bibl xml:id="SZDWRK.229"
-					sortKey="Wanderung"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Wanderung</title> </bibl>
-				<bibl xml:id="SZDWRK.230"
-					sortKey="Turmzubabel"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Der Turm zu Babel</title> </bibl>
-				<bibl xml:id="SZDWRK.231"
-					sortKey="Fishermenontheseine"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>The Fishermen on the Seine</title> </bibl>
-				<bibl xml:id="SZDWRK.232"
-				sortKey="Otokarbrezina"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-						<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Otokar Březina</title> </bibl>
-				<bibl xml:id="SZDWRK.233"
-					sortKey="Geheimnisbyrons"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Das Geheimnis Byrons</title> </bibl>
-				<bibl xml:id="SZDWRK.234"
-					sortKey="Hochzeitvonlyon"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Die Hochzeit von Lyon</title> </bibl>
-				<bibl xml:id="SZDWRK.235"
-					sortKey="Emileverhaeren.Rubens"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Emile Verhaeren: Rubens</title> </bibl>
-				<bibl xml:id="SZDWRK.236"
-					sortKey="Emileverhaeren.Rembrandt"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Emile Verhaeren: Rembrandt</title> </bibl>
-				<bibl xml:id="SZDWRK.237"
-					sortKey="Emileverhaeren.Helenasheimkehr"> <author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-							<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Emile Verhaeren: Helena’s Heimkehr</title> </bibl>
-				<bibl xml:id="SZDWRK.238" sortKey="LieberderGottvomerstenTag..."> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-						<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Lieber der Gott vom ersten Tag…</title> </bibl>
-				<bibl xml:id="SZDWRK.239" sortKey="Pantoffel"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-						<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<author
-						ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1553"> <persName>
-							<surname>Zweig</surname> <forename>Alfred</forename> </persName> </author>
-					<title>Der Pantoffel</title> </bibl>
-				<bibl xml:id="SZDWRK.240" sortKey="InscriptionsurunestatuedeLiebknecht"> <author
-					ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560"> <persName>
-						<surname>Zweig</surname> <forename>Stefan</forename> </persName> </author>
-					<title>Inscription sur une statue de Liebknecht</title> </bibl>
+					sortKey="Gutachtenzuhermannbrochs&quot;dertoddesvergil&quot;">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Gutachten zu Hermann Brochs "Der Tod des Vergil"</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.214" sortKey="Wunderdeslebens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Wunder des Lebens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.215" sortKey="ItalienischeLiteratur">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Über italienische Literatur</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.216" sortKey="Dostojewski">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Über Dostojewski</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.217" sortKey="Romainrolland">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Romain Rolland (1926)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.218" sortKey="Sommernovellette">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sommernovellette</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.219" sortKey="Heinrichvonkleist">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Heinrich von Kleist</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.220" sortKey="Dickens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Dickens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.221" sortKey="Balzac">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Balzac</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.222" sortKey="Kette(1936)">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title type="compilation">Die Kette (1936)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.223" sortKey="LockstdumichabermalsvomlindenLichte">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Lockst du mich abermals vom linden Lichte...</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.224" sortKey="OKindheitwieichhinterdeinenGittern">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>O Kindheit, wie ich hinter deinen Gittern...</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.225" sortKey="Geschichteinderdämmerung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Geschichte in der Dämmerung</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.226" sortKey="TuaufdichUnterweltderLeidenschaften">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Tu auf dich, Unterwelt der Leidenschaften...</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.227" sortKey="Balzac.seinweltbildausdenwerken">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Balzac. Sein Weltbild aus den Werken</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.228" sortKey="Sternstundendermenschheit:vorwort">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Sternstunden der Menschheit: Vorwort (1930)</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.229" sortKey="Wanderung">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Wanderung</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.230" sortKey="Turmzubabel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Der Turm zu Babel</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.231" sortKey="Fishermenontheseine">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>The Fishermen on the Seine</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.232" sortKey="Otokarbrezina">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Otokar Březina</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.233" sortKey="Geheimnisbyrons">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Das Geheimnis Byrons</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.234" sortKey="Hochzeitvonlyon">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Die Hochzeit von Lyon</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.235" sortKey="Emileverhaeren.Rubens">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Emile Verhaeren: Rubens</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.236" sortKey="Emileverhaeren.Rembrandt">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Emile Verhaeren: Rembrandt</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.237" sortKey="Emileverhaeren.Helenasheimkehr">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Emile Verhaeren: Helena’s Heimkehr</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.238" sortKey="LieberderGottvomerstenTag...">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Lieber der Gott vom ersten Tag…</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.239" sortKey="Pantoffel">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1553">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Alfred</forename>
+						</persName>
+					</author>
+					<title>Der Pantoffel</title>
+				</bibl>
+				<bibl xml:id="SZDWRK.240" sortKey="InscriptionsurunestatuedeLiebknecht">
+					<author ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.1560">
+						<persName>
+							<surname>Zweig</surname>
+							<forename>Stefan</forename>
+						</persName>
+					</author>
+					<title>Inscription sur une statue de Liebknecht</title>
+				</bibl>
 			</listBibl>
 		</body>
 	</text>
