@@ -271,17 +271,12 @@
                 <biblFull xml:id="SZDESS.3">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="original">Einleitung zu den Rilke-Vorträgen an der London
-                                School of Economics 27. Oktober 1937</title>
-                            <title type="Einheitssachtitel">Rainer Maria Rilke. Ein Vortrag in
-                                London</title>
+                            <title ana="supplied/verified">Gustinus Ambrosi</title>
+                            <title type="Einheitssachtitel">Ambrosi</title>
                             <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
                             <author ref="#SZDPER.1560"><persName
                                     ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
-                            <editor role="contributor" ref="#SZDPER.1555"><persName
-                                    ref="http://d-nb.info/gnd/116001151"
-                                        ><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
@@ -293,9 +288,9 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287"
                                         >Literaturarchiv Salzburg</repository>
-                                    <idno type="signature">SZ-AAP/W28</idno>
+                                    <idno type="signature">SZ-AAP/W-AA2.1</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.8170</idno>
+                                        <idno type="PID"></idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -303,14 +298,7 @@
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
                                     <msItem>
-                                        <incipit>„Meine Damen und meine Herren! Sie werden an dem
-                                            heutigen Tage und in den folgenden Wochen in den
-                                            Lectures …“</incipit>
-                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
-                                            >Titel von Lotte Zweigs Hand in blauer
-                                            Tinte</docEdition>
-                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
-                                            >Title in Lotte Zweig's hand in blue ink</docEdition>
+                                        <incipit>„Ambrosi, dieser junge starke, schöne Mensch …“</incipit>
                                     </msItem>
                                 </msContents>
                                 <physDesc>
@@ -318,36 +306,33 @@
                                         <supportDesc>
                                             <support>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >Schwarzes Durchschlagpapier, blaue
+                                                  >Violettes Durchschlagpapier, violette
                                                   Tinte</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >Black carbon paper, blue ink</material>
+                                                  >Purple carbon paper, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">
                                                   <term type="objecttyp"
                                                   >Typoskriptdurchschlag</term>, <measure
-                                                  ana="corrected" type="leaf">7 Blatt,
+                                                  ana="corrected" type="leaf">3 Blatt,
                                                   korrigiert</measure>
                                                 </span>
                                                 <span xml:lang="en">
                                                   <term type="objecttyp">Typescript (carbon
                                                   copy)</term>, <measure ana="corrected" type="leaf"
-                                                  >7 leaves, corrected</measure>
+                                                  >3 leaves, corrected</measure>
                                                 </span>
-                                                <measure type="format">33x20 cm</measure>
+                                                <measure type="format">25x21 cm</measure>
                                             </extent>
                                         </supportDesc>
                                     </objectDesc>
                                     <handDesc>
-                                        <ab xml:lang="de">Lotte Zweig</ab>
-                                        <ab xml:lang="en">Lotte Zweig</ab>
+                                        <ab xml:lang="de">Fremde Hand</ab>
+                                        <ab xml:lang="en">Unidentified hand</ab>
                                     </handDesc>
                                 </physDesc>
                                 <history>
-                                    <origin>
-                                        <origDate>1937</origDate>
-                                    </origin>
                                     <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                                         <ab xml:lang="en">Atrium Press</ab></provenance>
                                     <acquisition><ab xml:lang="de">Ankauf Christie's London
@@ -362,26 +347,27 @@
                         <textClass>
                             <keywords>
                                 <term type="classification" xml:lang="de"
-                                    >Essays/Reden/Feuilletons</term>
+                                    >Typoskripte</term>
                                 <term type="classification" xml:lang="en"
-                                    >Essays/Speeches/Feuilletons</term>
-                                <term ref="http://d-nb.info/gnd/118601024" type="person">Rilke,
-                                    Rainer Maria</term>
-                                <term type="work" ref="#SZDWRK.23">Rainer Maria Rilke. Ein Vortrag in London</term>
+                                    >Typescripts</term>
+                                <term ref="https://d-nb.info/gnd/118502433" type="person">Ambrosi, Gustinus</term>
+                                <term type="work" ref="#SZDWRK.241">Gustinus Ambrosi</term>
+                                <!-- Ausstellung Gustinus Ambrosi in Kunstmuseum. August-September 1923. St. Gallen: H.Tschudy & Co., 1923. S.7-9. H 5/J 1-->
                             </keywords>
                         </textClass>
                     </profileDesc>
                 </biblFull>
-                <biblFull ana="Romain" xml:id="SZDMSK.47">
+                <biblFull xml:id="SZDESS.4">
                     <fileDesc>
                         <titleStmt>
-                            <title ana="original">Romain Rolland Vortrag, gehalten von Stefan Zweig
-                                im Meistersaal zu Berlin Sonnabend, den 29. Januar 1926.</title>
-                            <title type="Einheitssachtitel">Romain Rolland. Vortrag</title>
+                            <title ana="assigned" xml:lang="de">Registerblatt „Amerika“</title>
+                            <title ana="assigned" xml:lang="en">Register sheet “Amerika”</title>
+                            <title type="Einheitssachtitel" xml:lang="de">Amerika</title>
+                            <title type="Einheitssachtitel" xml:lang="en">Amerika</title>
                             <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
                             <author ref="#SZDPER.1560"><persName
-                                    ref="http://d-nb.info/gnd/118637479"
-                                        ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                                ref="http://d-nb.info/gnd/118637479"
+                                ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
@@ -393,18 +379,17 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287"
                                         >Literaturarchiv Salzburg</repository>
-                                    <idno type="signature">SZ-AAP/W29</idno>
-                                    <altIdentifier>
-                                        <idno type="PID">o:szd.8171</idno>
-                                    </altIdentifier>
+                                    <idno type="signature">SZ-AAP/W-AA3.0</idno>
                                 </msIdentifier>
                                 <msContents>
                                     <textLang>
                                         <lang xml:lang="ger">Deutsch</lang>
                                     </textLang>
                                     <msItem>
-                                        <incipit>„Wenn ich den verehrten Namen Romain Rolland heute
-                                            vor Ihnen anrufe, so …“</incipit>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
+                                            >„Amerika | Polistische Eindrücke von einer mexikanischen Reise. | Der Rhythmus von New York. | Die Stunde zwischen zwei Ozeanen. | Parsifal in New York.“</docEdition>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
+                                            >“Amerika | Polistische Eindrücke von einer mexikanischen Reise. | Der Rhythmus von New York. | Die Stunde zwischen zwei Ozeanen. | Parsifal in New York.”</docEdition>
                                     </msItem>
                                 </msContents>
                                 <physDesc>
@@ -412,40 +397,32 @@
                                         <supportDesc>
                                             <support>
                                                 <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >Schwarzes Farbband, schwarze Tinte, Bleistift,
-                                                  roter Buntstift</material>
+                                                    >Violette Tinte, schwarze Tinte, Bleistift, roter Kugelschreiber</material>
                                                 <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >Black ribbon, black ink, pencil, red
-                                                  pencil</material>
+                                                    >Purple ink, black ink, pencil, red ballpoint</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">
-                                                  <term type="objecttyp">Typoskript</term>, <measure
-                                                  ana="corrected" type="leaf">21 Blatt,
-                                                  korrigiert</measure>
+                                                    <term type="objecttyp">Manuskript</term>, <measure
+                                                        ana="corrected" type="leaf">2 Blatt</measure>
                                                 </span>
                                                 <span xml:lang="en">
-                                                  <term type="objecttyp">Typescript</term>, <measure
-                                                  ana="corrected" type="leaf">21 leaves,
-                                                  corrected</measure>
+                                                    <term type="objecttyp">Manuscript</term>, <measure
+                                                        ana="corrected" type="leaf">2 leaf</measure>
                                                 </span>
-                                                <measure type="format">33x21 cm</measure>
                                             </extent>
                                         </supportDesc>
                                     </objectDesc>
                                     <handDesc>
-                                        <ab xml:lang="de">Stefan Zweig</ab>
-                                        <ab xml:lang="en">Stefan Zweig</ab>
+                                        <ab xml:lang="de">Richard Friedenthal, fremde Hand</ab>
+                                        <ab xml:lang="en">Richard Friedenthal, unidentified hand</ab>
                                     </handDesc>
                                 </physDesc>
                                 <history>
-                                    <origin>
-                                        <origDate>1926</origDate>
-                                    </origin>
                                     <provenance><ab xml:lang="de">Archiv Atrium Press</ab>
                                         <ab xml:lang="en">Atrium Press</ab></provenance>
                                     <acquisition><ab xml:lang="de">Ankauf Christie's London
-                                            2014</ab>
+                                        2014</ab>
                                         <ab xml:lang="en">Acquisition from Christie's London
                                             2014</ab></acquisition>
                                 </history>
@@ -456,12 +433,193 @@
                         <textClass>
                             <keywords>
                                 <term type="classification" xml:lang="de"
-                                    >Essays/Reden/Feuilletons</term>
+                                    >Registerblatt</term>
                                 <term type="classification" xml:lang="en"
-                                    >Essays/Speeches/Feuilletons</term>
-                                <term ref="http://d-nb.info/gnd/118602330" type="person">Rolland,
-                                    Romain</term>
-                                <term type="work" ref="#SZDWRK.24">Romain Rolland. Vortrag</term>
+                                    >Register sheet</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDESS.5">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Bei den Franzosen in Canada.</title>
+                            <title type="Einheitssachtitel">Amerika</title>
+                            <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+                            <author ref="#SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-AAP/W-AA3.1</idno>
+                                    <altIdentifier>
+                                        <idno type="PID"></idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <incipit>„Der Winterabend in Boston war grau gewesen.“</incipit>
+                                            <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
+                                                >„Frankfurter Zeitung | 25.MRZ 1911“ gestempelt</docEdition>
+                                            <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
+                                                >“Frankfurter Zeitung | 25.MRZ 1911” stamped</docEdition>
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Zeitungsausschnitt</term>,
+                                                    <measure type="leaf" ana="corrected">1
+                                                        Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Newspaper clipping</term>,
+                                                    <measure type="leaf" ana="corrected">1
+                                                        leaf</measure>
+                                                </span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Fremde Hand</ab>
+                                        <ab xml:lang="en">Unidentified hand</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Frankfurt</origPlace>
+                                        <origDate when="1911-03-25">25.MRZ 1911</origDate>
+                                    </origin>
+                                    <provenance>
+                                        <ab xml:lang="de">Archiv Atrium Press</ab>
+                                        <ab xml:lang="en">Atrium Press</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                                        <ab xml:lang="en">Acquisition from Christie&apos;s London
+                                            2014</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de"
+                                    >Zeitungsausschnitte</term>
+                                <term type="classification" xml:lang="en"
+                                    >Newspaper clippings</term>
+                                <term type="work" ref="#SZDWRK.242">Bei den Franzosen in Canada</term>
+                            </keywords>
+                        </textClass>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDESS.6">
+                    <fileDesc>
+                        <titleStmt>
+                            <title ana="original">Der Rhythmus von Newyork.</title>
+                            <title type="Einheitssachtitel">Amerika</title>
+                            <title type="Gesamttitel">Stefan Zweig - Archiv Atrium Press</title>
+                            <author ref="#SZDPER.1560">
+                                <persName ref="http://d-nb.info/gnd/118637479">
+                                    <surname>Zweig</surname>
+                                    <forename>Stefan</forename>
+                                </persName>
+                            </author>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Archivmaterial</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-AAP/W-AA3.2</idno>
+                                    <altIdentifier>
+                                        <idno type="PID"></idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                    </textLang>
+                                    <msItem>
+                                        <incipit>„Ein paar Tage erst in dieser verwirrenden, durch ihre fremdartige Vielfalt gleichzeitig...“</incipit>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="de"
+                                            >„N F Presse | 2. V. 1911“</docEdition>
+                                        <docEdition ana="szdg:IdentifyingInscription" xml:lang="en"
+                                            >“N F Presse | 2. V. 1911”</docEdition>
+                                    </msItem>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <extent>
+                                                <span xml:lang="de">
+                                                    <term type="objecttyp">Zeitungsausschnitt</term>,
+                                                    <measure type="leaf" ana="corrected">2
+                                                        Blatt</measure>
+                                                </span>
+                                                <span xml:lang="en">
+                                                    <term type="objecttyp">Newspaper clipping</term>,
+                                                    <measure type="leaf" ana="corrected">2
+                                                        leaves</measure>
+                                                </span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <ab xml:lang="de">Fremde Hand</ab>
+                                        <ab xml:lang="en">Unidentified hand</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <origin>
+                                        <origPlace>Wien</origPlace>
+                                        <origDate when="1911-05-02">2. V. 1911</origDate>
+                                    </origin>
+                                    <provenance>
+                                        <ab xml:lang="de">Archiv Atrium Press</ab>
+                                        <ab xml:lang="en">Atrium Press</ab>
+                                    </provenance>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                                        <ab xml:lang="en">Acquisition from Christie&apos;s London
+                                            2014</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <textClass>
+                            <keywords>
+                                <term type="classification" xml:lang="de"
+                                    >Zeitungsausschnitte</term>
+                                <term type="classification" xml:lang="en"
+                                    >Newspaper clippings</term>
+                                <term type="work" ref="#SZDWRK.243">Der Rhythmus von Newyork</term>
                             </keywords>
                         </textClass>
                     </profileDesc>
