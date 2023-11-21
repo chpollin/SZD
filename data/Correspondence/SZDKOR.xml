@@ -22565,8 +22565,8 @@
 				<biblFull xml:id="SZDKOR.490">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">20 Korrespondenzstücke AN Stefan Zweig</title>
-							<title xml:lang="en">20 Pieces of Correspondence TO Stefan
+							<title xml:lang="de">19 Korrespondenzstücke AN Stefan Zweig</title>
+							<title xml:lang="en">19 Pieces of Correspondence TO Stefan
 								Zweig</title>
 						</titleStmt>
 						<publicationStmt>
@@ -22586,7 +22586,7 @@
 										<supportDesc>
 											<extent> <measure
 													type="correspondence" unit="piece"
-													subtype="received">20</measure> </extent>
+													subtype="received">19</measure> </extent>
 										</supportDesc>
 									</objectDesc>
 								</physDesc>
@@ -22610,8 +22610,8 @@
 				<biblFull xml:id="SZDKOR.491">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">48 Korrespondenzstücke VON Stefan Zweig</title>
-							<title xml:lang="en">48 Pieces of Correspondence FROM Stefan
+							<title xml:lang="de">47 Korrespondenzstücke VON Stefan Zweig</title>
+							<title xml:lang="en">47 Pieces of Correspondence FROM Stefan
 								Zweig</title>
 						</titleStmt>
 						<publicationStmt>
@@ -22624,13 +22624,13 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-LAS/B3</idno>
+									<idno type="signature">SZ-LAS/B7</idno>
 								</msIdentifier>
 								<physDesc>
 									<objectDesc>
 										<supportDesc>
 											<extent> <measure type="correspondence" unit="piece"
-												subtype="sent">48</measure> </extent>
+												subtype="sent">47</measure> </extent>
 										</supportDesc>
 									</objectDesc>
 								</physDesc>
@@ -22647,6 +22647,140 @@
 								<persName ref="http://d-nb.info/gnd/118535315">
 									<surname>Freud</surname> <forename>Sigmund</forename> </persName>
 								<date xml:lang="en" from="1920" to="1939">1920-1939</date>
+							</correspAction>
+						</correspDesc>
+					</profileDesc>
+				</biblFull>
+				<biblFull xml:id="SZDKOR.492">
+					<fileDesc>
+						<titleStmt>
+							<title xml:lang="de">1 Korrespondenzstück VON Stefan Zweig</title>
+							<title xml:lang="en">1 Piece of Correspondence FROM Stefan
+								Zweig</title>
+						</titleStmt>
+						<publicationStmt>
+							<ab>Briefkonvolut</ab>
+						</publicationStmt>
+						<sourceDesc>
+							<msDesc>
+								<msIdentifier>
+									<country>Österreich</country>
+									<settlement>Salzburg</settlement>
+									<repository ref="http://d-nb.info/gnd/1047605287"
+										>Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-LAS/B7</idno>
+								</msIdentifier>
+								<physDesc>
+									<objectDesc>
+										<supportDesc>
+											<extent> <measure type="correspondence" unit="piece"
+												subtype="sent">1</measure> </extent>
+										</supportDesc>
+									</objectDesc>
+								</physDesc>
+							</msDesc>
+						</sourceDesc>
+					</fileDesc>
+					<profileDesc>
+						<correspDesc type="byZweig">
+							<correspAction type="sent">
+								<persName ref="http://d-nb.info/gnd/118637479">
+									<surname>Zweig</surname> <forename>Stefan</forename> </persName>
+							</correspAction>
+							<correspAction type="received">
+								<persName ref="http://d-nb.info/gnd/118535307">
+									<surname>Freud</surname> <forename>Anna</forename> </persName>
+								<date xml:lang="en" when="1939">1939</date>
+							</correspAction>
+						</correspDesc>
+					</profileDesc>
+				</biblFull>
+				<biblFull xml:id="SZDKOR.493">
+					<fileDesc>
+						<titleStmt>
+							<title xml:lang="de">7 Korrespondenzstücke AN Stefan Zweig</title>
+							<title xml:lang="en">7 Pieces of Correspondence TO Stefan
+								Zweig</title>
+						</titleStmt>
+						<publicationStmt>
+							<ab>Briefkonvolut</ab>
+						</publicationStmt>
+						<sourceDesc>
+							<msDesc>
+								<msIdentifier>
+									<country>Israel</country>
+									<settlement>Jerusalem</settlement>
+									<repository ref="http://d-nb.info/gnd/1004728-1">The National
+										Library of Israel</repository>
+									<idno type="signature">ARC. Ms. Var. 305 1 34</idno>
+								</msIdentifier>
+								<physDesc>
+									<objectDesc>
+										<supportDesc>
+											<extent> <measure
+												type="correspondence" unit="piece"
+												subtype="received">7</measure> </extent>
+										</supportDesc>
+									</objectDesc>
+								</physDesc>
+							</msDesc>
+						</sourceDesc>
+					</fileDesc>
+					<profileDesc>
+						<correspDesc type="toZweig">
+							<correspAction type="sent">
+								<persName ref="http://d-nb.info/gnd/118535307">
+									<surname>Freud</surname> <forename>Anna</forename> </persName>
+								<date xml:lang="en" from="1924" to="1930">1924-1930</date>
+							</correspAction>
+							<correspAction type="received">
+								<persName ref="http://d-nb.info/gnd/118637479">
+									<surname>Zweig</surname> <forename>Stefan</forename> </persName>
+							</correspAction>
+						</correspDesc>
+					</profileDesc>
+				</biblFull>
+				<biblFull xml:id="SZDKOR.494">
+					<fileDesc>
+						<titleStmt>
+							<title xml:lang="de">1 Korrespondenzstück AN Stefan Zweig</title>
+							<title xml:lang="en">1 Piece of Correspondence TO Stefan
+								Zweig</title>
+						</titleStmt>
+						<publicationStmt>
+							<ab>Briefkonvolut</ab>
+						</publicationStmt>
+						<sourceDesc>
+							<msDesc>
+								<msIdentifier>
+									<country>Israel</country>
+									<settlement>Jerusalem</settlement>
+									<repository ref="http://d-nb.info/gnd/1004728-1">The National
+										Library of Israel</repository>
+									<idno type="signature">ARC. Ms. Var. 305 1 34</idno>
+								</msIdentifier>
+								<physDesc>
+									<objectDesc>
+										<supportDesc>
+											<extent> <measure
+												type="correspondence" unit="piece"
+												subtype="received">1</measure> </extent>
+										</supportDesc>
+									</objectDesc>
+								</physDesc>
+							</msDesc>
+						</sourceDesc>
+					</fileDesc>
+					<profileDesc>
+						<correspDesc type="toZweig">
+							<correspAction type="sent">
+								<persName ref="http://d-nb.info/gnd/128882697">
+									<surname>Freud-Bernays</surname> <forename>Anna</forename> </persName>
+								<date xml:lang="en" when="1932">1924-1930</date>
+							</correspAction>
+							<correspAction type="received">
+								<persName ref="http://d-nb.info/gnd/118637479">
+									<surname>Zweig</surname> <forename>Stefan</forename> </persName>
 							</correspAction>
 						</correspDesc>
 					</profileDesc>
