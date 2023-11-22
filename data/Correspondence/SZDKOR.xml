@@ -22657,50 +22657,6 @@
 				<biblFull xml:id="SZDKOR.492">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">1 Korrespondenzstück VON Stefan Zweig</title>
-							<title xml:lang="en">1 Piece of Correspondence FROM Stefan
-								Zweig</title>
-						</titleStmt>
-						<publicationStmt>
-							<ab>Briefkonvolut</ab>
-						</publicationStmt>
-						<sourceDesc>
-							<msDesc>
-								<msIdentifier>
-									<country>Österreich</country>
-									<settlement>Salzburg</settlement>
-									<repository ref="http://d-nb.info/gnd/1047605287"
-										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-LAS/B7</idno>
-								</msIdentifier>
-								<physDesc>
-									<objectDesc>
-										<supportDesc>
-											<extent> <measure type="correspondence" unit="piece"
-												subtype="sent">1</measure> </extent>
-										</supportDesc>
-									</objectDesc>
-								</physDesc>
-							</msDesc>
-						</sourceDesc>
-					</fileDesc>
-					<profileDesc>
-						<correspDesc type="byZweig">
-							<correspAction type="sent">
-								<persName ref="http://d-nb.info/gnd/118637479">
-									<surname>Zweig</surname> <forename>Stefan</forename> </persName>
-							</correspAction>
-							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118535307">
-									<surname>Freud</surname> <forename>Anna</forename> </persName>
-								<date xml:lang="en" when="1939">1939</date>
-							</correspAction>
-						</correspDesc>
-					</profileDesc>
-				</biblFull>
-				<biblFull xml:id="SZDKOR.493">
-					<fileDesc>
-						<titleStmt>
 							<title xml:lang="de">7 Korrespondenzstücke AN Stefan Zweig</title>
 							<title xml:lang="en">7 Pieces of Correspondence TO Stefan
 								Zweig</title>
@@ -22743,6 +22699,55 @@
 						</correspDesc>
 					</profileDesc>
 				</biblFull>
+				<biblFull xml:id="SZDKOR.493">
+					<fileDesc>
+						<titleStmt>
+							<title xml:lang="de">1 Korrespondenzstück VON Stefan Zweig</title>
+							<title xml:lang="en">1 Piece of Correspondence FROM Stefan
+								Zweig</title>
+						</titleStmt>
+						<publicationStmt>
+							<ab>Briefkonvolut</ab>
+						</publicationStmt>
+						<sourceDesc>
+							<msDesc>
+								<msIdentifier>
+									<country>Österreich</country>
+									<settlement>Salzburg</settlement>
+									<repository ref="http://d-nb.info/gnd/1047605287"
+										>Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-LAS/B7</idno>
+									<altIdentifier>
+										<idno type="context">context:szd.facsimiles.korrespondenzen#AnnaFreud</idno>
+									</altIdentifier>
+								</msIdentifier>
+								<physDesc>
+									<objectDesc>
+										<supportDesc>
+											<extent> <measure type="correspondence" unit="piece"
+												subtype="sent">1</measure> </extent>
+										</supportDesc>
+									</objectDesc>
+								</physDesc>
+							</msDesc>
+						</sourceDesc>
+					</fileDesc>
+					<profileDesc>
+						<correspDesc type="byZweig">
+							<correspAction type="received">
+								<persName ref="http://d-nb.info/gnd/118535307">
+									<surname>Freud</surname> <forename>Anna</forename> </persName>
+								<date xml:lang="en" when="1939">1939</date>
+							</correspAction>
+							<correspAction type="sent">
+								<persName ref="http://d-nb.info/gnd/118637479">
+									<surname>Zweig</surname> <forename>Stefan</forename> </persName>
+							</correspAction>
+							
+						</correspDesc>
+					</profileDesc>
+				</biblFull>
+				
 				<biblFull xml:id="SZDKOR.494">
 					<fileDesc>
 						<titleStmt>
