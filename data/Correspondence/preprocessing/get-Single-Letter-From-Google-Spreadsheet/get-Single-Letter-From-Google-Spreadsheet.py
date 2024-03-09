@@ -9,15 +9,38 @@ import xml.etree.ElementTree as ET
 import urllib.request
 import pandas as pd
 import validators
+from xml.dom import minidom
 
-# https://docs.google.com/spreadsheets/d/15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk/edit#gid=0
+language_mapping_de = {
+    "GER": "Deutsch",
+    "EN": "Englisch",
+    "FRA": "Französisch",
+    "IT": "Italienisch",
+    "ITA": "Italienisch",
+    "ES": "Spanisch",
+    "ESP": "Spanisch"
+}
+language_mapping_en = {
+    "GER": "German",
+    "EN": "English",
+    "FRA": "French",
+    "IT": "Italian",
+    "ITA": "Italian",  # Assuming ITA is the same as IT
+    "ES": "Spanish",
+    "ESP": "Spanish"  # Assuming ESP is the same as ES
+}
+
+
+
+# SZ_LAS_Freud: https://docs.google.com/spreadsheets/d/15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk/edit#gid=0
+# SZ-SAM/AK-Meingast_Ansichtskarten: https://docs.google.com/spreadsheets/d/15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE/edit#gid=0
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk'
-SAMPLE_RANGE_NAME = 'A2:AL49'
+SAMPLE_SPREADSHEET_ID = '15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE'
+SAMPLE_RANGE_NAME = 'A2:AO294'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -62,7 +85,9 @@ def main():
     else:
         #print(values)
         for index, row in enumerate(values):
-            biblFull = ET.SubElement(tei_listBibl, "biblFull", {"xml:id": "SZDKOR.491." + str(index+1)})  # PID at index 0
+            # 491 = Freud
+            # ansichtskarten = SZ-SAM/AK-Meingast_Ansichtskarten
+            biblFull = ET.SubElement(tei_listBibl, "biblFull", {"xml:id": "SZDKOR.ansichtskarten." + str(index+1)})  # PID at index 0
 
             # Create nested elements based on the spreadsheet data
             fileDesc = ET.SubElement(biblFull, "fileDesc")
@@ -89,22 +114,34 @@ def main():
             # msContents
             msContents = ET.SubElement(msDesc, "msContents")
             textLang = ET.SubElement(msContents, "textLang")
-            ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"  # Assuming language is in 'Sprache'
-
+            if row[23]:
+                ET.SubElement(textLang, "lang", {"xml:lang": "de"}).text = language_mapping_de.get(row[23])
+                ET.SubElement(textLang, "lang", {"xml:lang": "en"}).text = language_mapping_en .get(row[23])
+            else:
+                ET.SubElement(textLang, "lang", {"xml:lang": "de"}).text = "Deutsch"
+                ET.SubElement(textLang, "lang", {"xml:lang": "en"}).text = "German"
+            
             # physDesc
             physDesc = ET.SubElement(msDesc, "physDesc")
             objectDesc = ET.SubElement(physDesc, "objectDesc")
             supportDesc = ET.SubElement(objectDesc, "supportDesc")
             support = ET.SubElement(supportDesc, "support")
-            ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[24]  # 'Beschreibstoff' in German
-            ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[25]  # 'Writing Material' in English
-            ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[26]  # 'Schreibstoff' in German
-            ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[27]  # 'Writing Instrument' in English
+            if row[24]: 
+                ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[24]  # 'Beschreibstoff' in German
+            if row[25]:
+                ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[25]  # 'Writing Material' in English
+            if row[26]:
+                ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[26]  # 'Schreibstoff' in German
+            if row[27]:
+                ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[27]  # 'Writing Instrument' in English
 
             extent = ET.SubElement(supportDesc, "extent")
-            ET.SubElement(extent, "span", {"xml:lang": "de"}).text = row[10]  # 'Art/Umfang' in German
-            ET.SubElement(extent, "span", {"xml:lang": "en"}).text = row[11]  # 'Physical Description' in English
-            ET.SubElement(extent, "measure", {"type": "format"}).text = row[29]  # 'Maße'
+            if row[10]:
+                ET.SubElement(extent, "span", {"xml:lang": "de"}).text = row[10]  # 'Art/Umfang' in German
+            if row[11]:
+                ET.SubElement(extent, "span", {"xml:lang": "en"}).text = row[11]  # 'Physical Description' in English
+            if row[29]:
+                ET.SubElement(extent, "measure", {"type": "format"}).text = row[29]  # 'Maße'
 
             handDesc = ET.SubElement(physDesc, "handDesc")
             ET.SubElement(handDesc, "ab", {"xml:lang": "de"}).text = row[28]  # Static text
@@ -117,13 +154,21 @@ def main():
 
             # Create 'correspAction' for the sender (Verfasser*in)
             correspActionSent = ET.SubElement(correspDesc, "correspAction", {"type": "sent"})
-            persNameSent = ET.SubElement(correspActionSent, "persName", {"ref": row[3]})  # 'Verfasser*in GND'
-            if ',' in row[2]:  # Check if the name contains a comma
-                surname, forename = row[2].split(", ")
-                ET.SubElement(persNameSent, "surname").text = surname
-                ET.SubElement(persNameSent, "forename").text = forename
-            else:
-                ET.SubElement(persNameSent, "name").text = row[2]  # If no comma, entire content as surname
+            if row[2]:
+                if row[3]:  # 'Verfasser*in GND'
+                    persNameSent = ET.SubElement(correspActionSent, "persName", {"ref": row[3]})  # 'Verfasser*in GND'
+                else:
+                    persNameSent = ET.SubElement(correspActionSent, "persName")
+                if ',' in row[2]:  # Check if the name contains a comma
+                    surname, forename = row[2].split(", ")
+                    ET.SubElement(persNameSent, "surname").text = surname
+                    ET.SubElement(persNameSent, "forename").text = forename
+                else:
+                    ET.SubElement(persNameSent, "name").text = row[2]  # If no comma, entire content as surname
+
+            if row[4]:
+                orgNameSent = ET.SubElement(correspActionSent, "orgName", {"ref": row[5]})  # 'Körperschaft Verfasser*in'
+                orgNameSent.text = row[4]
 
             if row[14]:  # 'Datierung Original'
                 ET.SubElement(correspActionSent, "date", {"xml:lang": "de", "when": row[18]}).text = row[14]
@@ -161,6 +206,7 @@ def main():
                 ET.SubElement(address, "addrLine").text = row[22]
 
 
+
             history = ET.SubElement(msDesc, "history")
             # Add provenance information
             '''
@@ -178,7 +224,20 @@ def main():
 
 
     # Write the XML to a file
-    ET.ElementTree(tei_listBibl).write('extractedSZDKOR-single.xml', encoding="UTF-8", xml_declaration=True)
+    #ET.ElementTree(tei_listBibl).write('extractedSZDKOR-single.xml', encoding="UTF-8", xml_declaration=True)
+
+    # Instead of writing directly to a file, first convert to a string
+    tree_str = ET.tostring(tei_listBibl, encoding='utf-8')
+
+    # Use minidom to parse the string
+    dom = minidom.parseString(tree_str)
+
+    # Pretty-print with indentation (e.g., "\t" for tab)
+    pretty_xml_as_string = dom.toprettyxml(indent="\t")
+
+    # Write the pretty-printed XML to a file
+    with open('extractedSZDKOR-single.txt', 'w', encoding="UTF-8") as output_file:
+        output_file.write(pretty_xml_as_string)
               
 if __name__ == '__main__':
     main()
