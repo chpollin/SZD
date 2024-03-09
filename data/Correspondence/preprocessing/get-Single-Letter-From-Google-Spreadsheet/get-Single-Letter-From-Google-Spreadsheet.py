@@ -115,11 +115,11 @@ def main():
             msContents = ET.SubElement(msDesc, "msContents")
             textLang = ET.SubElement(msContents, "textLang")
             if row[23]:
-                ET.SubElement(textLang, "lang", {"xml:lang": "de"}).text = language_mapping_de.get(row[23])
-                ET.SubElement(textLang, "lang", {"xml:lang": "en"}).text = language_mapping_en .get(row[23])
+                ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_de.get(row[23])
+                ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_en .get(row[23])
             else:
-                ET.SubElement(textLang, "lang", {"xml:lang": "de"}).text = "Deutsch"
-                ET.SubElement(textLang, "lang", {"xml:lang": "en"}).text = "German"
+                ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"
+                ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "German"
             
             # physDesc
             physDesc = ET.SubElement(msDesc, "physDesc")
@@ -143,9 +143,10 @@ def main():
             if row[29]:
                 ET.SubElement(extent, "measure", {"type": "format"}).text = row[29]  # 'Maße'
 
-            handDesc = ET.SubElement(physDesc, "handDesc")
-            ET.SubElement(handDesc, "ab", {"xml:lang": "de"}).text = row[28]  # Static text
-            ET.SubElement(handDesc, "ab", {"xml:lang": "en"}).text = row[28]  # Static text
+            if row[28]:
+                handDesc = ET.SubElement(physDesc, "handDesc")
+                ET.SubElement(handDesc, "ab", {"xml:lang": "de"}).text = row[28]  # Static text
+                ET.SubElement(handDesc, "ab", {"xml:lang": "en"}).text = row[28]  # Static text
 
             profileDesc = ET.SubElement(biblFull, "profileDesc")
 
