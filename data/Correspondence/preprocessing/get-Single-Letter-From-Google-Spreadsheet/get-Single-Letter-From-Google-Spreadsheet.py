@@ -196,7 +196,7 @@ def main():
                 safe_author_name = "Unknown"
             else:
                 safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_')
-                safe_author_name= re.sub(r'[<>:"/\\|?*]', '', safe_author_name)
+                safe_author_name= re.sub(r'[<>:"/\\|?*].', '', safe_author_name)
 
 
 
