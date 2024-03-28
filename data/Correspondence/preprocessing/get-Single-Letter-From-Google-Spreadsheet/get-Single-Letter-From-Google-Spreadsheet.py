@@ -195,8 +195,11 @@ def main():
             if "Unbekannt" in author_name:
                 safe_author_name = "Unknown"
             else:
-                safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_')
-                safe_author_name= re.sub(r'[<>:"/\\|?*].', '', safe_author_name)
+                safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_').replace('?', '').replace('.', '')
+                safe_author_name= re.sub(r'[()<>:"/\\|\?*].', '', safe_author_name)
+                if safe_author_name.endswith('-') or safe_author_name.endswith('-()') or safe_author_name.endswith('-(') or safe_author_name.endswith(')'):
+                    safe_author_name = safe_author_name[:-1]
+                print(safe_author_name)
 
 
 
@@ -363,8 +366,7 @@ def main():
             # Using ElementTree to write the XML document
             tree = ET.ElementTree(TEI)
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
-            
-            print(f"XML file saved at: {file_path}")
+        
 
               
 if __name__ == '__main__':
