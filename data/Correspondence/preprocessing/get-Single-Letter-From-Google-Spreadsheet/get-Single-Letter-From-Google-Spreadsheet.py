@@ -54,14 +54,14 @@ def parse_date(date_str):
 
 
 # Function to create and return a TEI header element
-def create_tei_header(safe_author_name):
+def create_tei_header(author_name, safe_author_name):
     teiHeader = ET.Element("teiHeader")
     fileDesc = ET.SubElement(teiHeader, "fileDesc")
     
     # Title Statement
     titleStmt = ET.SubElement(fileDesc, "titleStmt")
-    title = ET.SubElement(titleStmt, "title")
-    title.text = f"{safe_author_name}"
+    ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = f"Korrespndenz {author_name}"
+    ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = f"Correspondence {author_name}"
     
     # Publication Statement
     publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
@@ -76,6 +76,9 @@ def create_tei_header(safe_author_name):
 
     # ID Number
     idno = ET.SubElement(publicationStmt, "idno", {"type": "PID"})
+    ref = ET.SubElement(publicationStmt, "ref", {"target": "context:szd.korrespondenzen"})
+    ref.text = "Korrespondenzen Stefan Zweig"
+    
     idno.text = f"o:szd.korrespondenzen.{safe_author_name}"
        # Encoding Description
     encodingDesc = ET.SubElement(teiHeader, "encodingDesc")
@@ -187,8 +190,11 @@ def main():
         headers = values[0]
         data_rows = values[1:]
         df = pd.DataFrame(data_rows, columns=headers)
+        verfasser_values = df['Verfasser*in'].unique()
         groups = df.groupby('Verfasser*in')
-        print(groups)
+        if len(verfasser_values) == 1 and verfasser_values[0] == "Zweig, Stefan":
+            groups = df.groupby('Adressat*in')
+
 
         for author_name, group in groups:
             #print(author_name)
@@ -216,7 +222,7 @@ def main():
             TEI = ET.Element("TEI")
             TEI.set("xmlns", "http://www.tei-c.org/ns/1.0")
             # Create and add the TEI header for this record
-            teiHeader = create_tei_header(safe_author_name)
+            teiHeader = create_tei_header(author_name, safe_author_name)
             TEI.append(teiHeader)
             text = ET.Element("text")
             TEI.append(text)
@@ -257,10 +263,10 @@ def main():
                 msContents = ET.SubElement(msDesc, "msContents")
                 textLang = ET.SubElement(msContents, "textLang")
                 if row[23]:
-                    ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_de.get(row[23])
-                    ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_en .get(row[23])
+                    #ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_de.get(row[23])
+                    ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_en.get(row[23])
                 else:
-                    ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"
+                    #ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"
                     ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "German"
                 
                 # physDesc
@@ -366,6 +372,7 @@ def main():
             # Using ElementTree to write the XML document
             tree = ET.ElementTree(TEI)
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
+            print(f"Successfully wrote {file_path}")
         
 
               
