@@ -11,6 +11,7 @@ import pandas as pd
 import validators
 from xml.dom import minidom
 from datetime import datetime
+import re
 
 language_mapping_de = {
     "GER": "Deutsch",
@@ -195,6 +196,7 @@ def main():
                 safe_author_name = "Unknown"
             else:
                 safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_')
+                safe_author_name= re.sub(r'[<>:"/\\|?*]', '', safe_author_name)
 
 
 
