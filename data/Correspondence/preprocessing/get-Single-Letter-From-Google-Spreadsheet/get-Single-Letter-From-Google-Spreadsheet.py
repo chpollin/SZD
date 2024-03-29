@@ -61,7 +61,7 @@ def create_tei_header(author_name, safe_author_name):
     
     # Title Statement
     titleStmt = ET.SubElement(fileDesc, "titleStmt")
-    ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = f"Korrespndenz {author_name}"
+    ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = f"Korrespondenz {author_name}"
     ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = f"Correspondence {author_name}"
     
     # Publication Statement
@@ -145,7 +145,7 @@ def create_tei_header(author_name, safe_author_name):
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE'
+SAMPLE_SPREADSHEET_ID = '15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk'
 SAMPLE_RANGE_NAME = 'A1:AO294'
 
 def main():
