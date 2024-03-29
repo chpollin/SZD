@@ -12,6 +12,7 @@ import validators
 from xml.dom import minidom
 from datetime import datetime
 import re
+import unicodedata
 
 language_mapping_de = {
     "GER": "Deutsch",
@@ -200,12 +201,19 @@ def main():
             #print(author_name)
             if "Unbekannt" in author_name:
                 safe_author_name = "Unknown"
-            else:
-                safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_').replace('?', '').replace('.', '')
-                safe_author_name= re.sub(r'[()<>:"/\\|\?*].', '', safe_author_name)
-                if safe_author_name.endswith('-') or safe_author_name.endswith('-()') or safe_author_name.endswith('-(') or safe_author_name.endswith(')'):
-                    safe_author_name = safe_author_name[:-1]
-                print(safe_author_name)
+            safe_author_name = author_name.replace(' ', '-').replace(',', '').replace('/', '_').replace('?', '').replace('.', '')
+            safe_author_name= re.sub(r'[()<>:"/\\|\?*].', '', safe_author_name)
+            if safe_author_name.endswith('-') or safe_author_name.endswith('-()') or safe_author_name.endswith('-(') or safe_author_name.endswith(')'):
+                safe_author_name = safe_author_name[:-1]
+
+            # Corrected line: use 'safe_author_name' instead of 's'
+            safe_author_name = unicodedata.normalize('NFD', safe_author_name)
+            # Encode to ASCII bytes, ignoring errors, then decode back to string
+            safe_author_name = safe_author_name.encode('ascii', 'ignore').decode('ascii')
+            # Convert to lowercase
+            safe_author_name = safe_author_name.lower()
+                        
+            print(safe_author_name)
 
 
 
