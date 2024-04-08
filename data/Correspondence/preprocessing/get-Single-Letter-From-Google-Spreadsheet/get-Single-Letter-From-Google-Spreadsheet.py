@@ -141,11 +141,14 @@ def create_tei_header(author_name, safe_author_name):
 # SZ_LAS_Freud: https://docs.google.com/spreadsheets/d/15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk/edit#gid=0
 # SZ-SAM/AK-Meingast_Ansichtskarten: https://docs.google.com/spreadsheets/d/15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE/edit#gid=0
 
+Freud = '15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk'
+Ansichtskarten = '15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE'
+
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk'
+SAMPLE_SPREADSHEET_ID = Freud
 SAMPLE_RANGE_NAME = 'A1:AO294'
 
 def main():
@@ -225,6 +228,10 @@ def main():
 
             file_path = os.path.join(dir_name, f"{safe_author_name}.xml")
 
+            main_dir_name = os.path.join("../../byName", f"{safe_author_name}")
+            os.makedirs(main_dir_name, exist_ok=True)
+ 
+
  
             # Initialize the root of your XML document and add TEI namespace
             TEI = ET.Element("TEI")
@@ -247,9 +254,9 @@ def main():
                 fileDesc = ET.SubElement(biblFull, "fileDesc")
                 titleStmt = ET.SubElement(fileDesc, "titleStmt")
                 # [Verfasser] an [Empfänger], [Datierung normalisiert – aber angezeigt als TT.MM.JJJJ] 
-                normalized_date = parse_date(row[18])
-                ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = row[2] + " an " + row[6] + ", " + normalized_date
-                ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = row[2] + " to " + row[6] + ", " + normalized_date
+                normalized_date = parse_date(row.iloc[18])
+                ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = row.iloc[2] + " an " + row.iloc[6] + ", " + normalized_date
+                ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = row.iloc[2] + " to " + row.iloc[6] + ", " + normalized_date
 
                 publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
                 ET.SubElement(publicationStmt, "ab").text = "Einzelbrief"
@@ -259,20 +266,20 @@ def main():
                 msIdentifier = ET.SubElement(msDesc, "msIdentifier")
                 ET.SubElement(msIdentifier, "country").text = "Österreich"  # Static text
                 ET.SubElement(msIdentifier, "settlement").text = "Salzburg"  # Static text
-                repository = ET.SubElement(msIdentifier, "repository", {"ref": row[30]})
+                repository = ET.SubElement(msIdentifier, "repository", {"ref": row.iloc[30]})
                 repository.text = "Literaturarchiv Salzburg"  # Static text
-                ET.SubElement(msIdentifier, "idno", {"type": "signature"}).text = row[31]
+                ET.SubElement(msIdentifier, "idno", {"type": "signature"}).text = row.iloc[31]
                 altIdentifier1 = ET.SubElement(msIdentifier, "altIdentifier")
-                ET.SubElement(altIdentifier1, "idno", {"type": "PID"}).text = row[0]  # PID value
+                ET.SubElement(altIdentifier1, "idno", {"type": "PID"}).text = row.iloc[0]  # PID value
                 altIdentifier2 = ET.SubElement(msIdentifier, "altIdentifier")
-                ET.SubElement(altIdentifier2, "idno", {"type": "context"}).text = row[1]
+                ET.SubElement(altIdentifier2, "idno", {"type": "context"}).text = row.iloc[1]
 
                 # msContents
                 msContents = ET.SubElement(msDesc, "msContents")
                 textLang = ET.SubElement(msContents, "textLang")
-                if row[23]:
-                    #ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_de.get(row[23])
-                    ET.SubElement(textLang, "lang", {"xml:lang": row[23].lower()}).text = language_mapping_en.get(row[23])
+                if row.iloc[23]:
+                    #ET.SubElement(textLang, "lang", {"xml:lang": row.iloc[23].lower()}).text = language_mapping_de.get(row.iloc[23])
+                    ET.SubElement(textLang, "lang", {"xml:lang": row.iloc[23].lower()}).text = language_mapping_en.get(row.iloc[23])
                 else:
                     #ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"
                     ET.SubElement(textLang, "lang", {"xml:lang": "ger"}).text = "German"
@@ -282,27 +289,27 @@ def main():
                 objectDesc = ET.SubElement(physDesc, "objectDesc")
                 supportDesc = ET.SubElement(objectDesc, "supportDesc")
                 support = ET.SubElement(supportDesc, "support")
-                if row[24]: 
-                    ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[24]  # 'Beschreibstoff' in German
-                if row[25]:
-                    ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[25]  # 'Writing Material' in English
-                if row[26]:
-                    ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[26]  # 'Schreibstoff' in German
-                if row[27]:
-                    ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[27]  # 'Writing Instrument' in English
+                if row.iloc[24]: 
+                    ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row.iloc[24]  # 'Beschreibstoff' in German
+                if row.iloc[25]:
+                    ET.SubElement(support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row.iloc[25]  # 'Writing Material' in English
+                if row.iloc[26]:
+                    ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row.iloc[26]  # 'Schreibstoff' in German
+                if row.iloc[27]:
+                    ET.SubElement(support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row.iloc[27]  # 'Writing Instrument' in English
 
                 extent = ET.SubElement(supportDesc, "extent")
-                if row[10]:
-                    ET.SubElement(extent, "span", {"xml:lang": "de"}).text = row[10]  # 'Art/Umfang' in German
-                if row[11]:
-                    ET.SubElement(extent, "span", {"xml:lang": "en"}).text = row[11]  # 'Physical Description' in English
-                if row[29]:
-                    ET.SubElement(extent, "measure", {"type": "format"}).text = row[29]  # 'Maße'
+                if row.iloc[10]:
+                    ET.SubElement(extent, "span", {"xml:lang": "de"}).text = row.iloc[10]  # 'Art/Umfang' in German
+                if row.iloc[11]:
+                    ET.SubElement(extent, "span", {"xml:lang": "en"}).text = row.iloc[11]  # 'Physical Description' in English
+                if row.iloc[29]:
+                    ET.SubElement(extent, "measure", {"type": "format"}).text = row.iloc[29]  # 'Maße'
 
-                if row[28]:
+                if row.iloc[28]:
                     handDesc = ET.SubElement(physDesc, "handDesc")
-                    ET.SubElement(handDesc, "ab", {"xml:lang": "de"}).text = row[28]  # Static text
-                    ET.SubElement(handDesc, "ab", {"xml:lang": "en"}).text = row[28]  # Static text
+                    ET.SubElement(handDesc, "ab", {"xml:lang": "de"}).text = row.iloc[28]  # Static text
+                    ET.SubElement(handDesc, "ab", {"xml:lang": "en"}).text = row.iloc[28]  # Static text
 
                 profileDesc = ET.SubElement(biblFull, "profileDesc")
 
@@ -311,56 +318,56 @@ def main():
 
                 # Create 'correspAction' for the sender (Verfasser*in)
                 correspActionSent = ET.SubElement(correspDesc, "correspAction", {"type": "sent"})
-                if row[2]:
-                    if row[3]:  # 'Verfasser*in GND'
-                        persNameSent = ET.SubElement(correspActionSent, "persName", {"ref": row[3]})  # 'Verfasser*in GND'
+                if row.iloc[2]:
+                    if row.iloc[3]:  # 'Verfasser*in GND'
+                        persNameSent = ET.SubElement(correspActionSent, "persName", {"ref": row.iloc[3]})  # 'Verfasser*in GND'
                     else:
                         persNameSent = ET.SubElement(correspActionSent, "persName")
-                    if ',' in row[2]:  # Check if the name contains a comma
-                        surname, forename = row[2].split(", ")
+                    if ',' in row.iloc[2]:  # Check if the name contains a comma
+                        surname, forename = row.iloc[2].split(", ")
                         ET.SubElement(persNameSent, "surname").text = surname
                         ET.SubElement(persNameSent, "forename").text = forename
                     else:
-                        ET.SubElement(persNameSent, "name").text = row[2]  # If no comma, entire content as surname
+                        ET.SubElement(persNameSent, "name").text = row.iloc[2]  # If no comma, entire content as surname
 
-                if row[4]:
-                    orgNameSent = ET.SubElement(correspActionSent, "orgName", {"ref": row[5]})  # 'Körperschaft Verfasser*in'
-                    orgNameSent.text = row[4]
+                if row.iloc[4]:
+                    orgNameSent = ET.SubElement(correspActionSent, "orgName", {"ref": row.iloc[5]})  # 'Körperschaft Verfasser*in'
+                    orgNameSent.text = row.iloc[4]
 
-                if row[14]:  # 'Datierung Original'
-                    ET.SubElement(correspActionSent, "date", {"xml:lang": "de", "when": row[18]}).text = row[14]
+                if row.iloc[14]:  # 'Datierung Original'
+                    ET.SubElement(correspActionSent, "date", {"xml:lang": "de", "when": row.iloc[18]}).text = row.iloc[14]
                 
-                if row[15]:  # 'Date original'
-                    ET.SubElement(correspActionSent, "date", {"xml:lang": "en", "when": row[18]}).text = row[14]
+                if row.iloc[15]:  # 'Date original'
+                    ET.SubElement(correspActionSent, "date", {"xml:lang": "en", "when": row.iloc[18]}).text = row.iloc[14]
                 
-                if row[16]:  # 'Datierung erschlossen'
-                    ET.SubElement(correspActionSent, "date", {"ana": "supplied/verified", "when": row[18]}).text = row[16]
+                if row.iloc[16]:  # 'Datierung erschlossen'
+                    ET.SubElement(correspActionSent, "date", {"ana": "supplied/verified", "when": row.iloc[18]}).text = row.iloc[16]
 
                 # Handling 'Entstehungsort Original' and 'Entstehungsort erschlossen'
-                if row[20]:  # 'Entstehungsort Original'
-                    ET.SubElement(correspActionSent, "placeName", {"type": "original"}).text = row[20]
+                if row.iloc[20]:  # 'Entstehungsort Original'
+                    ET.SubElement(correspActionSent, "placeName", {"type": "original"}).text = row.iloc[20]
 
-                if row[21]:  # 'Entstehungsort erschlossen'
-                    ET.SubElement(correspActionSent, "placeName", {"ana": "supplied/verified"}).text = row[21]
+                if row.iloc[21]:  # 'Entstehungsort erschlossen'
+                    ET.SubElement(correspActionSent, "placeName", {"ana": "supplied/verified"}).text = row.iloc[21]
 
                 # Create 'correspAction' for the receiver (Adressat*in)
                 correspActionReceived = ET.SubElement(correspDesc, "correspAction", {"type": "received"})
-                persNameReceived = ET.SubElement(correspActionReceived, "persName", {"ref": row[7]})  # 'Adressat*in GND'
-                if ',' in row[6]:  # Similarly for receiver
-                    surname, forename = row[6].split(", ")
+                persNameReceived = ET.SubElement(correspActionReceived, "persName", {"ref": row.iloc[7]})  # 'Adressat*in GND'
+                if ',' in row.iloc[6]:  # Similarly for receiver
+                    surname, forename = row.iloc[6].split(", ")
                     ET.SubElement(persNameReceived, "surname").text = surname
                     ET.SubElement(persNameReceived, "forename").text = forename
                 else:
-                    ET.SubElement(persNameReceived, "name").text = row[6]
+                    ET.SubElement(persNameReceived, "name").text = row.iloc[6]
 
                 # Handling 'Poststempel' (Postal Stamp)
-                if row[19]:  # Assuming 'Poststempel' is in column 19
-                    ET.SubElement(correspActionSent, "note", {"type": "postalStamp"}).text = row[19]
+                if row.iloc[19]:
+                    ET.SubElement(correspActionSent, "note", {"type": "postalStamp"}).text = row.iloc[19]
 
                 # Handling 'Postanschrift' (Postal Address)
-                if row[22]:  # Assuming 'Postanschrift' is in column 22
+                if row.iloc[22]:
                     address = ET.SubElement(correspActionSent, "address")
-                    ET.SubElement(address, "addrLine").text = row[22]
+                    ET.SubElement(address, "addrLine").text = row.iloc[22]
 
 
 
@@ -373,9 +380,65 @@ def main():
 
                 # Add acquisition information
                 acquisition = ET.SubElement(history, "acquisition")
-                ET.SubElement(acquisition, "ab", {"xml:lang": "de"}).text = row[33]  # Text in German
-                ET.SubElement(acquisition, "ab", {"xml:lang": "en"}).text = row[34]
+                ET.SubElement(acquisition, "ab", {"xml:lang": "de"}).text = row.iloc[33]  # Text in German
+                ET.SubElement(acquisition, "ab", {"xml:lang": "en"}).text = row.iloc[34]
         
+            
+
+            ### ONLY FIRST TIME!
+            # Create the "scans" subdirectory
+            scans_dir_name = os.path.join(main_dir_name, "scans")
+            os.makedirs(scans_dir_name, exist_ok=True)
+            # Create and populate the "{name}-scans.xml" document in the "scans" subfolder
+            scans_file_path = os.path.join(scans_dir_name, f"{safe_author_name}-scans.xml")
+
+            for index, row in group.iterrows():
+                author_name = row['Verfasser*in']
+                if ", " in author_name:
+                    surname, forename = author_name.split(", ", 1)  # Splits at the first comma
+                else:
+                    # Handle cases without a comma
+                    # Decide how you want to treat such cases. Here, we'll treat the entire name as a surname.
+                    surname = author_name
+                    forename = ""
+                date = parse_date(row['Datierung normalisiert'])  # Assuming a function to parse date correctly
+                signature = row['Signatur']
+
+                normalized_signature = re.sub(r'[<>:"/\\|?*]', '', signature)  # Removing more problematic characters
+                normalized_signature = normalized_signature.replace(" ", "_").replace(".", "_")[:50]  # Shorten and replace spaces and dots
+
+                # Determine the directory and file names
+                author_dir_name = os.path.join(scans_dir_name, f"{normalized_signature}")
+                os.makedirs(author_dir_name, exist_ok=True)  # Create the directory if it doesn't exist
+                
+
+
+                scans_file_path = os.path.join(author_dir_name, f"{normalized_signature}-scans.xml")
+
+                # Create the XML structure
+                root_scans = ET.Element("root")
+                ET.SubElement(root_scans, "author").text = f"{surname}, {forename}"
+                ET.SubElement(root_scans, "titel").text = f"{surname} {forename} an Stefan Zweig, {date}, {signature}"
+                ET.SubElement(root_scans, "signatur").text = signature
+                ET.SubElement(root_scans, "datum").text = row['Datierung normalisiert']
+                ET.SubElement(root_scans, "filename").text = normalized_signature
+                ET.SubElement(root_scans, "category")
+                structure = ET.SubElement(root_scans, "structure")
+                for title, frm, to in [("Bildseite", "1", "1"), ("Adressseite", "2", "2"), ("Farbreferenz", "3", "3")]:
+                    chapter = ET.SubElement(structure, "chapter")
+                    ET.SubElement(chapter, "title").text = title
+                    ET.SubElement(chapter, "from").text = frm
+                    ET.SubElement(chapter, "to").text = to
+
+                # Write the XML file
+                tree_scans = ET.ElementTree(root_scans)
+                tree_scans.write(scans_file_path, encoding="UTF-8", xml_declaration=True)
+                print(f"Successfully wrote {scans_file_path}")
+
+
+
+
+
 
             # Using ElementTree to write the XML document
             tree = ET.ElementTree(TEI)
