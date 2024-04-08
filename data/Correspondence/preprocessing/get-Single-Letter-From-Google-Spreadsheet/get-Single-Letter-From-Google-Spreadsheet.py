@@ -199,6 +199,7 @@ def main():
         if len(verfasser_values) == 1 and verfasser_values[0] == "Zweig, Stefan":
             groups = df.groupby('Adressat*in')
 
+        total_members_count = 0
 
         for author_name, group in groups:
             #print(author_name)
@@ -383,10 +384,11 @@ def main():
                 ET.SubElement(acquisition, "ab", {"xml:lang": "de"}).text = row.iloc[33]  # Text in German
                 ET.SubElement(acquisition, "ab", {"xml:lang": "en"}).text = row.iloc[34]
         
-            
 
-            ### ONLY FIRST TIME!
-            # Create the "scans" subdirectory
+            
+##########################################
+            ### Create the "scans" subdirectory
+            # Be careful not to overwrite anything!
             scans_dir_name = os.path.join(main_dir_name, "scans")
             os.makedirs(scans_dir_name, exist_ok=True)
             # Create and populate the "{name}-scans.xml" document in the "scans" subfolder
@@ -411,8 +413,6 @@ def main():
                 author_dir_name = os.path.join(scans_dir_name, f"{normalized_signature}")
                 os.makedirs(author_dir_name, exist_ok=True)  # Create the directory if it doesn't exist
                 
-
-
                 scans_file_path = os.path.join(author_dir_name, f"{normalized_signature}-scans.xml")
 
                 # Create the XML structure
@@ -436,8 +436,61 @@ def main():
                 print(f"Successfully wrote {scans_file_path}")
 
 
+##########################################
+            biblFull_path = os.path.join(dir_name, f"{safe_author_name}-biblFull.xml")
 
+            biblFull = ET.Element("biblFull", {"xml:id": ""})
 
+            # fileDesc
+            fileDesc = ET.SubElement(biblFull, "fileDesc")
+            titleStmt = ET.SubElement(fileDesc, "titleStmt")
+            ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = str(total_members_count) + " Korrespondenzstücke VON " + forename + surname
+            ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = str(total_members_count) + " Pieces of Correspondence FROM "
+
+            publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
+            ET.SubElement(publicationStmt, "ab").text = "Briefkonvolut"
+
+            # sourceDesc
+            sourceDesc = ET.SubElement(fileDesc, "sourceDesc")
+            msDesc = ET.SubElement(sourceDesc, "msDesc")
+            msIdentifier = ET.SubElement(msDesc, "msIdentifier")
+            ET.SubElement(msIdentifier, "country").text = "Österreich"
+            ET.SubElement(msIdentifier, "settlement").text = "Salzburg"
+            repository = ET.SubElement(msIdentifier, "repository", {"ref": "http://d-nb.info/gnd/1047605287"})
+            repository.text = "Literaturarchiv Salzburg"
+            ET.SubElement(msIdentifier, "idno", {"type": "signature"}).text = ""
+
+            altIdentifier1 = ET.SubElement(msIdentifier, "altIdentifier")
+            ET.SubElement(altIdentifier1, "idno", {"type": "context"}).text = "context:szd.facsimiles.korrespondenzen#" + safe_author_name
+
+            altIdentifier2 = ET.SubElement(msIdentifier, "altIdentifier")
+            ET.SubElement(altIdentifier2, "idno", {"type": "konvolut"}).text = "o:szd.korrespondenzen." + safe_author_name
+
+            # physDesc
+            physDesc = ET.SubElement(msDesc, "physDesc")
+            objectDesc = ET.SubElement(physDesc, "objectDesc")
+            supportDesc = ET.SubElement(objectDesc, "supportDesc")
+            extent = ET.SubElement(supportDesc, "extent")
+            measure = ET.SubElement(extent, "measure", {"type": "correspondence", "unit": "piece", "subtype": "sent"})
+            measure.text = str(total_members_count)
+
+            # profileDesc
+            profileDesc = ET.SubElement(biblFull, "profileDesc")
+            correspDesc = ET.SubElement(profileDesc, "correspDesc", {"type": "byZweig"})
+            correspAction_sent = ET.SubElement(correspDesc, "correspAction", {"type": "sent"})
+            persName_sent = ET.SubElement(correspAction_sent, "persName", {"ref": ""})
+            ET.SubElement(persName_sent, "surname").text = surname
+            ET.SubElement(persName_sent, "forename").text = forename
+
+            correspAction_received = ET.SubElement(correspDesc, "correspAction", {"type": "received"})
+            persName_received = ET.SubElement(correspAction_received, "persName", {"ref": ""})
+            ET.SubElement(persName_received, "surname").text = ""
+            ET.SubElement(persName_received, "forename").text = ""
+            ET.SubElement(correspAction_received, "date", {"xml:lang": "en", "from": "", "to": ""}).text = ""
+
+            # After all sub-elements have been added, then create the ElementTree and write to the file
+            tree_biblFull = ET.ElementTree(biblFull)
+            tree_biblFull.write(biblFull_path, encoding="UTF-8", xml_declaration=True)
 
 
             # Using ElementTree to write the XML document
