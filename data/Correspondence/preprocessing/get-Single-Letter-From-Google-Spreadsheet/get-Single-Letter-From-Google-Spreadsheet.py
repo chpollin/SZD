@@ -148,7 +148,7 @@ Ansichtskarten = '15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = Freud
+SAMPLE_SPREADSHEET_ID = Ansichtskarten
 SAMPLE_RANGE_NAME = 'A1:AO294'
 
 def main():
@@ -217,7 +217,7 @@ def main():
             # Convert to lowercase
             safe_author_name = safe_author_name.lower()
                         
-            print(safe_author_name)
+            #print(safe_author_name)
 
 
 
@@ -387,53 +387,63 @@ def main():
 
             
 ##########################################
-            ### Create the "scans" subdirectory
-            # Be careful not to overwrite anything!
-            scans_dir_name = os.path.join(main_dir_name, "scans")
-            os.makedirs(scans_dir_name, exist_ok=True)
-            # Create and populate the "{name}-scans.xml" document in the "scans" subfolder
-            scans_file_path = os.path.join(scans_dir_name, f"{safe_author_name}-scans.xml")
+                ### Create the "scans" subdirectory
+                # Be careful not to overwrite anything!
+                scans_dir_name = os.path.join(main_dir_name, "scans")
+                os.makedirs(scans_dir_name, exist_ok=True)
+                # Create and populate the "{name}-scans.xml" document in the "scans" subfolder
+                scans_file_path = os.path.join(scans_dir_name, f"{safe_author_name}-scans.xml")
 
-            for index, row in group.iterrows():
+                # Define namespaces
+                NS = {
+                    '': 'http://gams.uni-graz.at/viewer',  # Default namespace
+                    'xlink': 'http://www.w3.org/1999/xlink'
+                }
+                ET.register_namespace('', NS[''])
+                ET.register_namespace('xlink', NS['xlink'])
+
+                # Extract and prepare author name and signature
                 author_name = row['Verfasser*in']
-                if ", " in author_name:
-                    surname, forename = author_name.split(", ", 1)  # Splits at the first comma
-                else:
-                    # Handle cases without a comma
-                    # Decide how you want to treat such cases. Here, we'll treat the entire name as a surname.
-                    surname = author_name
-                    forename = ""
-                date = parse_date(row['Datierung normalisiert'])  # Assuming a function to parse date correctly
+                surname, forename = author_name.split(", ") if ", " in author_name else (author_name, "")
+
+                date = row['Datierung normalisiert']  # Assuming date is correctly formatted
                 signature = row['Signatur']
+                normalized_signature = re.sub(r'[<>:"/\\|?*]', '', signature)
+                normalized_signature = normalized_signature.replace(" ", "_").replace(".", "_")[:50]
+                # SZ-SAM/AK.1 - SZ_SAM_AK.1
+                folder_name = signature.replace("-", "_").replace("/", "_")
+                print(f"Processing {folder_name}...")
 
-                normalized_signature = re.sub(r'[<>:"/\\|?*]', '', signature)  # Removing more problematic characters
-                normalized_signature = normalized_signature.replace(" ", "_").replace(".", "_")[:50]  # Shorten and replace spaces and dots
+                # Define base directory and ensure it exists
+                base_dir_name = r"C:\Users\pollin\Documents\GitHub\SZD\data\Scans\KulturerbeDigital\SZ_SAM_Ansichtskarten"
+                author_dir_name = os.path.join(base_dir_name, folder_name)
+                os.makedirs(author_dir_name, exist_ok=True)  # Ensures the directory exists without raising an error if it already does
 
-                # Determine the directory and file names
-                author_dir_name = os.path.join(scans_dir_name, f"{normalized_signature}")
-                os.makedirs(author_dir_name, exist_ok=True)  # Create the directory if it doesn't exist
-                
+                # Full path for the XML file
                 scans_file_path = os.path.join(author_dir_name, f"{normalized_signature}-scans.xml")
 
                 # Create the XML structure
-                root_scans = ET.Element("root")
-                ET.SubElement(root_scans, "author").text = f"{surname}, {forename}"
-                ET.SubElement(root_scans, "titel").text = f"{surname} {forename} an Stefan Zweig, {date}, {signature}"
-                ET.SubElement(root_scans, "signatur").text = signature
-                ET.SubElement(root_scans, "datum").text = row['Datierung normalisiert']
-                ET.SubElement(root_scans, "filename").text = normalized_signature
-                ET.SubElement(root_scans, "category")
-                structure = ET.SubElement(root_scans, "structure")
-                for title, frm, to in [("Bildseite", "1", "1"), ("Adressseite", "2", "2"), ("Farbreferenz", "3", "3")]:
-                    chapter = ET.SubElement(structure, "chapter")
-                    ET.SubElement(chapter, "title").text = title
-                    ET.SubElement(chapter, "from").text = frm
-                    ET.SubElement(chapter, "to").text = to
+                root_book = ET.Element("book", {"xmlns": NS[''], "xmlns:xlink": NS['xlink'], "xmlns:file": "http://expath.org/ns/file"})
+                ET.SubElement(root_book, "title").text = f"{forename} {surname} an Stefan Zweig, {date}, {signature}"
+                ET.SubElement(root_book, "author").text = f"{surname}, {forename}"
+                ET.SubElement(root_book, "date").text = parse_date(date)  # Normalized
+                ET.SubElement(root_book, "category").text = "Ansichtskarte"
+                ET.SubElement(root_book, "idno").text = "o:szd." + str(3100 + index)
 
-                # Write the XML file
-                tree_scans = ET.ElementTree(root_scans)
+                owner_element = ET.SubElement(root_book, "owner")
+                name_element = ET.Element("name")
+                name_element.text = "Literaturarchiv Salzburg, https://stefanzweig.digital, CC-BY"
+                owner_element.append(name_element)
+
+                structure = ET.SubElement(root_book, "structure")
+                for title, frm in [("Bildseite", "1"), ("Adressseite", "2"), ("Farbreferenz", "3")]:
+                    div = ET.SubElement(structure, "div", {"type": title})
+                    ET.SubElement(div, "page", {"xlink:href": f"{folder_name}-{frm}.jpg"})
+
+                # Writing the XML file with UTF-8 encoding and XML declaration
+                tree_scans = ET.ElementTree(root_book)
                 tree_scans.write(scans_file_path, encoding="UTF-8", xml_declaration=True)
-                print(f"Successfully wrote {scans_file_path}")
+                #print(f"Successfully wrote {scans_file_path}")
 
 
 ##########################################
@@ -496,7 +506,7 @@ def main():
             # Using ElementTree to write the XML document
             tree = ET.ElementTree(TEI)
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
-            print(f"Successfully wrote {file_path}")
+            #print(f"Successfully wrote {file_path}")
         
 
               
