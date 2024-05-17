@@ -61,8 +61,15 @@ def create_tei_header(author_name, safe_author_name):
     
     # Title Statement
     titleStmt = ET.SubElement(fileDesc, "titleStmt")
-    ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = f"Korrespondenz {author_name}"
-    ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = f"Correspondence {author_name}"
+    author_parts = author_name.split(", ")
+    if len(author_parts) == 2:
+        surname, forename = author_parts
+    else:
+        forename = author_name
+        surname = ""
+
+    ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = f"Korrespondenz {forename} {surname}"
+    ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = f"Correspondence {forename} {surname}"
     
     # Publication Statement
     publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
@@ -77,8 +84,6 @@ def create_tei_header(author_name, safe_author_name):
 
     # ID Number
     idno = ET.SubElement(publicationStmt, "idno", {"type": "PID"})
-    ref = ET.SubElement(publicationStmt, "ref", {"target": "context:szd.korrespondenzen"})
-    ref.text = "Korrespondenzen Stefan Zweig"
     
     idno.text = f"o:szd.korrespondenzen.{safe_author_name}"
        # Encoding Description
@@ -103,14 +108,14 @@ def create_tei_header(author_name, safe_author_name):
     # Series Statement
     seriesStmt = ET.SubElement(fileDesc, "seriesStmt")
     title = ET.SubElement(seriesStmt, "title", ref="https://gams.uni-graz.at/szd")
-    title.text = "Stefan Zweig digitale"
+    title.text = "Stefan Zweig digital"
     
     # Projektleitung
     respStmt_leitung = ET.SubElement(seriesStmt, "respStmt")
     ET.SubElement(respStmt_leitung, "resp").text = "Projektleitung"
     persName_leitung = ET.SubElement(respStmt_leitung, "persName")
-    ET.SubElement(persName_leitung, "forename").text = "Manfred"
-    ET.SubElement(persName_leitung, "surname").text = "Mittermayer"
+    ET.SubElement(persName_leitung, "forename").text = "Lina Maria"
+    ET.SubElement(persName_leitung, "surname").text = "Zangerl"
     
     # Datenerfassung
     respStmt_erfassung = ET.SubElement(seriesStmt, "respStmt")
@@ -202,6 +207,7 @@ def main():
         total_members_count = 0
 
         for author_name, group in groups:
+            total_members_count = len(group)
             #print(author_name)
             if "Unbekannt" in author_name:
                 safe_author_name = "Unknown"
@@ -231,7 +237,9 @@ def main():
 
             main_dir_name = os.path.join("../../byName", f"{safe_author_name}")
             os.makedirs(main_dir_name, exist_ok=True)
- 
+
+  
+
 
  
             # Initialize the root of your XML document and add TEI namespace
@@ -271,7 +279,7 @@ def main():
                 repository.text = "Literaturarchiv Salzburg"  # Static text
                 ET.SubElement(msIdentifier, "idno", {"type": "signature"}).text = row.iloc[31]
                 altIdentifier1 = ET.SubElement(msIdentifier, "altIdentifier")
-                ET.SubElement(altIdentifier1, "idno", {"type": "PID"}).text = row.iloc[0]  # PID value
+                ET.SubElement(altIdentifier1, "idno", {"type": "PID"}).text = "o:szd." + str(3100 + index)  # PID value
                 altIdentifier2 = ET.SubElement(msIdentifier, "altIdentifier")
                 ET.SubElement(altIdentifier2, "idno", {"type": "context"}).text = row.iloc[1]
 
@@ -315,7 +323,7 @@ def main():
                 profileDesc = ET.SubElement(biblFull, "profileDesc")
 
                 # Create 'correspDesc' element
-                correspDesc = ET.SubElement(profileDesc, "correspDesc", {"type": "byZweig"})
+                correspDesc = ET.SubElement(profileDesc, "correspDesc", {"type": "toZweig"})
 
                 # Create 'correspAction' for the sender (Verfasser*in)
                 correspActionSent = ET.SubElement(correspDesc, "correspAction", {"type": "sent"})
@@ -454,8 +462,8 @@ def main():
             # fileDesc
             fileDesc = ET.SubElement(biblFull, "fileDesc")
             titleStmt = ET.SubElement(fileDesc, "titleStmt")
-            ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = str(total_members_count) + " Korrespondenzstücke VON " + forename + surname
-            ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = str(total_members_count) + " Pieces of Correspondence FROM "
+            ET.SubElement(titleStmt, "title", {"xml:lang": "de"}).text = str(total_members_count) + " Korrespondenzstücke AN Stefan Zweig" 
+            ET.SubElement(titleStmt, "title", {"xml:lang": "en"}).text = str(total_members_count) + " Pieces of Correspondence TO Stefan Zweig"
 
             publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
             ET.SubElement(publicationStmt, "ab").text = "Briefkonvolut"
@@ -486,16 +494,17 @@ def main():
 
             # profileDesc
             profileDesc = ET.SubElement(biblFull, "profileDesc")
-            correspDesc = ET.SubElement(profileDesc, "correspDesc", {"type": "byZweig"})
+            correspDesc = ET.SubElement(profileDesc, "correspDesc", {"type": "toZweig"})
             correspAction_sent = ET.SubElement(correspDesc, "correspAction", {"type": "sent"})
             persName_sent = ET.SubElement(correspAction_sent, "persName", {"ref": ""})
             ET.SubElement(persName_sent, "surname").text = surname
             ET.SubElement(persName_sent, "forename").text = forename
 
             correspAction_received = ET.SubElement(correspDesc, "correspAction", {"type": "received"})
-            persName_received = ET.SubElement(correspAction_received, "persName", {"ref": ""})
-            ET.SubElement(persName_received, "surname").text = ""
-            ET.SubElement(persName_received, "forename").text = ""
+            persName_received = ET.SubElement(correspAction_received, "persName", {"ref": "http://d-nb.info/gnd/118637479"})
+            ET.SubElement(persName_received, "surname").text = "Zweig"
+            ET.SubElement(persName_received, "forename").text = "Stefan"
+
             ET.SubElement(correspAction_received, "date", {"xml:lang": "en", "from": "", "to": ""}).text = ""
 
             # After all sub-elements have been added, then create the ElementTree and write to the file
@@ -507,6 +516,14 @@ def main():
             tree = ET.ElementTree(TEI)
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
             #print(f"Successfully wrote {file_path}")
+
+
+            # New directory for collected-byName-XML
+            collected_dir_name = os.path.join("../../byName/collected-byName-XML")
+            # Path to save the XML file in the new directory
+            collected_file_path = os.path.join(collected_dir_name, f"{safe_author_name}.xml")
+            tree.write(file_path, encoding="UTF-8", xml_declaration=True)
+            tree.write(collected_file_path, encoding="UTF-8", xml_declaration=True)
         
 
               
