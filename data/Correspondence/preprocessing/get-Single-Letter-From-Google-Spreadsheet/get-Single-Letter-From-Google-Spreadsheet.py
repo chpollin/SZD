@@ -524,8 +524,8 @@ def main():
             collected_file_path = os.path.join(collected_dir_name, f"{safe_author_name}.xml")
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
             tree.write(collected_file_path, encoding="UTF-8", xml_declaration=True)
-        
 
+        
               
 if __name__ == '__main__':
     main()
