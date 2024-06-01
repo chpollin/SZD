@@ -3,8 +3,8 @@
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title xml:lang="de">SZ_Korrespondenzen_Fredonia</title>
-				<title xml:lang="en">SZ_Korrespondenzen_Fredonia</title>
+				<title xml:lang="de">Korrespondenzen Stefan Zweig digital</title>
+				<title xml:lang="en">Correspondences Stefan Zweig digital</title>
 			</titleStmt>
 			<publicationStmt>
 				<publisher> <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
@@ -22632,7 +22632,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#freud-sigmund</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.freud</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.freud-sigmund</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -31300,64 +31300,6 @@
             </correspDesc>
         </profileDesc>
     </biblFull>
-    <biblFull xml:id="SZDKOR.651">
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="de">1 Korrespondenzstücke AN Stefan Zweig</title>
-                <title xml:lang="en">1 Pieces of Correspondence TO Stefan Zweig</title>
-            </titleStmt>
-            <publicationStmt>
-                <ab>Briefkonvolut</ab>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Österreich</country>
-                        <settlement>Salzburg</settlement>
-                        <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
-                            Salzburg</repository>
-                        <idno type="signature"/>
-                        <altIdentifier>
-                            <idno type="context"
-                                >context:szd.facsimiles.korrespondenzen#unbekannt_unidentified</idno>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <idno type="konvolut"
-                                >o:szd.korrespondenzen.unbekannt_unidentified</idno>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <extent>
-                                    <measure type="correspondence" unit="piece" subtype="sent"
-                                        >1</measure>
-                                </extent>
-                            </supportDesc>
-                        </objectDesc>
-                    </physDesc>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <correspDesc type="toZweig">
-                <correspAction type="sent">
-                    <persName>
-                        <surname>Unbekannt/Unidentified</surname>
-                        <forename/>
-                    </persName>
-                	<date xml:lang="en" when="1921">1921</date>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="http://d-nb.info/gnd/118637479">
-                        <surname>Zweig</surname>
-                        <forename>Stefan</forename>
-                    </persName>
-                    
-                </correspAction>
-            </correspDesc>
-        </profileDesc>
-    </biblFull>
     <biblFull xml:id="SZDKOR.652">
         <fileDesc>
             <titleStmt>
@@ -31418,8 +31360,8 @@
     <biblFull xml:id="SZDKOR.653">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="de">5 Korrespondenzstücke AN Stefan Zweig</title>
-                <title xml:lang="en">5 Pieces of Correspondence TO Stefan Zweig</title>
+                <title xml:lang="de">49 Korrespondenzstücke AN Stefan Zweig</title>
+                <title xml:lang="en">49 Pieces of Correspondence TO Stefan Zweig</title>
             </titleStmt>
             <publicationStmt>
                 <ab>Briefkonvolut</ab>
@@ -31457,8 +31399,7 @@
             <correspDesc type="toZweig">
                 <correspAction type="sent">
                     <persName>
-                        <surname>Unidentified </surname>
-                        <forename/>
+                        <surname>Unidentified</surname>
                     </persName>
                 </correspAction>
                 <correspAction type="received">
