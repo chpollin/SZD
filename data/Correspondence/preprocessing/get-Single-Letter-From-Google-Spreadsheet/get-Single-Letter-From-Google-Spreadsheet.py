@@ -88,7 +88,7 @@ def create_tei_header(author_name, safe_author_name):
     idno.text = f"o:szd.korrespondenzen.{safe_author_name}"
        # Encoding Description
     encodingDesc = ET.SubElement(teiHeader, "encodingDesc")
-    editorialDecl = ET.SubElement(encodingDesc, "editorialDecl")
+    editorialDecl = ET.SubElement(encodingDesc, "editoriidnoalDecl")
     ET.SubElement(editorialDecl, "p").text = "Jeder Einzelbrief wird durch ein biblFull beschrieben."
     projectDesc = ET.SubElement(encodingDesc, "projectDesc")
     ET.SubElement(projectDesc, "p").text = ("Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig "
@@ -154,7 +154,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = Ansichtskarten
-SAMPLE_RANGE_NAME = 'A1:AO294'
+SAMPLE_RANGE_NAME = 'C216:AF264'
 
 def main():
 
