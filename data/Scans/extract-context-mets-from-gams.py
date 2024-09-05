@@ -37,7 +37,7 @@ def xml_to_csv(xml_data, csv_file):
 
     with open(csv_file, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(['Fördernehmer', 'ID', 'Type', 'Ressourcenadresse', 'Titel', 'Language', 'Date', 'Creator', 'Contributor'])
+        writer.writerow(['Fördernehmer', 'ID', 'Type', 'Ressourcenadresse', 'Kontextadresse' 'Titel', 'Language', 'Date', 'Creator', 'Contributor'])
 
         for pid, results in grouped_results.items():
             print(pid)
@@ -45,6 +45,7 @@ def xml_to_csv(xml_data, csv_file):
                 foerdernehmer = "LAS Salzburg"
                 id = extract_pid(pid)
                 ressourcenadresse = f"https://gams.uni-graz.at/{id}"
+                kontextadresse = f"https://gams.uni-graz.at/{id}/DC"
 
                 result = next((r for r in results if r.find('sparql:type', ns).text != "Text"), results[0])
 
@@ -65,7 +66,7 @@ def xml_to_csv(xml_data, csv_file):
                 contributor_elem = result.find('sparql:contributor', ns)
                 contributor = contributor_elem.text if contributor_elem is not None else ""
 
-                row = [foerdernehmer, id, type, ressourcenadresse, title, language, date, creator, contributor]
+                row = [foerdernehmer, id, type, ressourcenadresse, kontextadresse, title, language, date, creator, contributor]
                 writer.writerow(row)
 
             except AttributeError as e:
@@ -76,7 +77,7 @@ def xml_to_csv(xml_data, csv_file):
     logging.info(f"Conversion complete. CSV file saved as {csv_file}")
 
 if __name__ == "__main__":
-    url = "https://gams.uni-graz.at/archive/risearch?type=tuples&lang=sparql&format=Sparql&query=http%3A%2F%2Ffedora%3A8380%2Farchive%2Fget%2Fcontext%3Aszd.mets%2FQUERY%2F2024-08-12T17%3A11%3A10.193Z"
+    url = "https://gams.uni-graz.at/archive/risearch?type=tuples&lang=sparql&format=Sparql&query=http%3A%2F%2Ffedora%3A8380%2Farchive%2Fget%2Fcontext%3Aszd.mets%2FQUERY%2F2024-08-06T17%3A11%3A10.193Z"
     csv_file = "facsimiles-from-mets.csv"
 
     try:
