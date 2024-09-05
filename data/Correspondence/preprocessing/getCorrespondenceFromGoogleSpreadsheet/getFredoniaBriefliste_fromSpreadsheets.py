@@ -9,15 +9,44 @@ import xml.etree.ElementTree as ET
 import urllib.request
 import pandas as pd
 import validators
+from datetime import datetime
+import requests
+
+
+language_mapping_de = {
+    "GER": "Deutsch",
+    "EN": "Englisch",
+    "ENG": "Englisch",
+    "FRA": "Französisch",
+    "FRE": "Französisch",
+    "IT": "Italienisch",
+    "ITA": "Italienisch",
+    "ES": "Spanisch",
+    "ESP": "Spanisch"
+}
+language_mapping_en = {
+    "GER": "German",
+    "EN": "English",
+    "ENG": "English",
+    "FRA": "French",
+    "FRE": "French",
+    "IT": "Italian",
+    "ITA": "Italian",
+    "ES": "Spanish",
+    "ESP": "Spanish"
+}
 
 # https://docs.google.com/spreadsheets/d/1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo/edit?usp=sharing
+# C2:AK274
+Reichner = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo'
-SAMPLE_RANGE_NAME = 'A2:P490'
+SAMPLE_SPREADSHEET_ID = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
+SAMPLE_RANGE_NAME = 'A2:AK274'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -25,7 +54,7 @@ def main():
     """
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
+    # created automatically when the senderization flow completes for the first
     # time.
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
@@ -53,8 +82,8 @@ def main():
                                 range=SAMPLE_RANGE_NAME).execute()
     values = result.get('values', [])
 
-    # select data in tab "Beruf_Tätigkeit"
-    SAMPLE_RANGE_NAME_corr_by_zweig = "'Letters BY Zweig'!A2:P31"
+    ## select data in tab "Beruf_Tätigkeit"
+    SAMPLE_RANGE_NAME_corr_by_zweig = "C2:AK274"
     result_corr_by_zweig = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME_corr_by_zweig).execute()
     values_corr_by_zweig = result_corr_by_zweig.get('values', [])
         
@@ -66,25 +95,39 @@ def main():
         print('No data found.')
     else:
         #print(values)
+        sender = ""
+        receiver = ""
         for index, row in enumerate(values):
             # if the length of row is 12 (columns) than its a valid row
-            SZDKOR_ID = row[0]
-            author = str(row[1])
+            if str(row[0]):
+                if ", " in str(row[0]):
+                    surname, firstname = str(row[0]).split(", ") 
+                    sender = f"{firstname} {surname}"
+            # Körperschaft Verfasser*in     
+            elif str(row[2]):
+                sender = str(row[2])
             
-            signature = str(row[11])
-            count_sig = 0
-            piecesOfCorr_by_zweig = False
-            enclosuers_by_zweig = False
-            for list_ in values:
-                if signature in list_:
-                    count_sig += 1
-                    a = list_[3]
-                    b = list_[4] 
+            # Adressat*in
+            if str(row[4]):
+                if ", " in str(row[4]):
+                    receiver_surname,  receiver_firstname = str(row[4]).split(", ") 
+                    receiver = f"{receiver_firstname} {receiver_surname}"
+            # Körperschaft Adressat*in    
+            elif str(row[6]):
+                receiver = str(row[6])
+
+            date =  str(row[16])
+            signature = str(row[29])
+
+
+            split_languages = [lang.strip() for lang in str(row[21]).split(';')]
+                
+
             
             #####################
             ### <biblFull>
             tei_biblFull = ET.SubElement(tei_listBibl, 'biblFull')
-            tei_biblFull.set('xml:id', "SZDKOR." + str(index + 1) )
+            tei_biblFull.set('xml:id', "SZDKOR.reichner-herbert.B." + str(index + 1) )
             
             #####################
             #### <fileDesc> <titleStmt>
@@ -94,27 +137,19 @@ def main():
             tei_title_de.set('xml:lang', "de")
             tei_title_en = ET.SubElement(tei_titleStmt, 'title')
             tei_title_en.set('xml:lang', "en")
-            if(int(row[5]) > 1):
-                sum_cor = row[5]
-                for entry in values_corr_by_zweig:
-                    if(entry[11] == signature):
-                        sum = int(sum_cor) + int(entry[5])
-                        tei_title_de.text =  str(sum) + " Korrespondenzstücke AN/VON Stefan Zweig"
-                        tei_title_en.text =  str(sum) + " Pieces of Correspondence TO/FROM Stefan Zweig"     
-                        break
-                    else:
-                        tei_title_de.text =  str(row[5]) + " Korrespondenzstücke AN Stefan Zweig"
-                        tei_title_en.text =  str(row[5]) + " Pieces of Correspondence TO Stefan Zweig"
-            else:
-                tei_title_de.text = str(row[5]) + " Korrespondenzstück AN Stefan Zweig"
-                tei_title_en.text =  str(row[5]) + " Piece of Correspondence TO Stefan Zweig"
+
+            if date:
+                date_obj = datetime.strptime(date, "%Y-%m-%d")
+                formatted_date = date_obj.strftime("%d.%m.%Y")
+
+            tei_title_de.text =  sender + " an " + receiver + ", " + formatted_date
+            tei_title_en.text =  sender + " to " + receiver + ", " + formatted_date
 
             #####################
             ### <publicationStmt>
             tei_publicationStmt = ET.SubElement(tei_fileDesc, 'publicationStmt')
             tei_ab_publicationStmt = ET.SubElement(tei_publicationStmt, 'ab')
-            tei_ab_publicationStmt.text = "Briefkonvolut"
-            
+            tei_ab_publicationStmt.text = "Einzelbrief"
             
             #####################
             ### <sourceDesc>
@@ -123,15 +158,41 @@ def main():
             tei_msIdentifier = ET.SubElement(tei_msDesc, 'msIdentifier')
             # chrildren of 
             tei_country_msIdentifier = ET.SubElement(tei_msIdentifier, 'country')
-            tei_country_msIdentifier.text = "USA"
+            tei_country_msIdentifier.text = "Österreich"
             tei_settlement_msIdentifier = ET.SubElement(tei_msIdentifier, 'settlement')
-            tei_settlement_msIdentifier.text = "Fredonia"
+            tei_settlement_msIdentifier.text = "Salzburg"
             tei_repository_msIdentifier = ET.SubElement(tei_msIdentifier, 'repository')
-            tei_repository_msIdentifier.text = "Reed Library – Stefan Zweig Collection"
-            tei_repository_msIdentifier.set('ref', 'http://d-nb.info/gnd/2156743-8')
+            tei_repository_msIdentifier.text = "Literaturarchiv Salzburg"
+            tei_repository_msIdentifier.set('ref', 'http://d-nb.info/gnd/1047605287')
             
             tei_idno_msIdentifier = ET.SubElement(tei_msIdentifier, 'idno')
             tei_idno_msIdentifier.set('type', 'signature')
+            tei_idno_msIdentifier.text = str(signature)
+
+           # Step 4: Extract and print <identifier> elements for each <result>
+            for result in results:
+                title_from_xml = result.find('ns:title', namespaces=namespace)
+                signatur_from_xml = title_from_xml.text.split(',')[1].strip()
+                identifier = result.find('ns:identifier', namespaces=namespace)
+                if signature == signatur_from_xml:
+                    tei_altIdentifier_pid = ET.SubElement(tei_msIdentifier, 'altIdentifier')
+                    tei_altIdentifier_pid_idno = ET.SubElement(tei_altIdentifier_pid, 'idno')
+                    tei_altIdentifier_pid_idno.set('type', 'PID')
+                    tei_altIdentifier_pid_idno.text = str(identifier.text)
+
+
+            # msContents
+            tei_msContents = ET.SubElement(tei_msDesc, "msContents")
+            tei_textLang = ET.SubElement(tei_msContents, "textLang")
+
+            if split_languages:
+                for language in split_languages:
+                    if language != "GER":
+                        ET.SubElement(tei_textLang, "lang", {"xml:lang": language.lower()}).text = language_mapping_en.get(language)
+                        ET.SubElement(tei_textLang, "lang", {"xml:lang": language.lower()}).text = language_mapping_de.get(language)
+                    else:
+                        ET.SubElement(tei_textLang, "lang", {"xml:lang": "ger"}).text = "Deutsch"
+                        ET.SubElement(tei_textLang, "lang", {"xml:lang": "ger"}).text = "German"
 
             #####################
             ### <physDesc>
@@ -140,13 +201,54 @@ def main():
             tei_supportDesc = ET.SubElement(tei_objectDesc, 'supportDesc')
             tei_extent = ET.SubElement(tei_supportDesc, 'extent')
             
+            if row[22]:
+                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[22]  # 'Beschreibstoff' in German
+            if row[23]:
+                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[23]  # 'Writing Material' in English
+            if row[24]:
+                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[24]  # 'Schreibstoff' in German
+            if row[25]:
+                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[25]  # 'Writing Instrument' in English
             
+            if row[8]:
+                ET.SubElement(tei_extent, "span", {"xml:lang": "de"}).text = row[8]  # 'Art/Umfang' in German
+            if row[9]:
+                ET.SubElement(tei_extent, "span", {"xml:lang": "en"}).text = row[9]  # 'Physical Description' in English
+            if row[27]:
+                ET.SubElement(tei_extent, "measure", {"type": "format"}).text = row[27]  # 'Maße'
+
+            if(row[10]):
+                tei_measure_3 = ET.SubElement(tei_extent, 'measure')
+                tei_measure_3.text = row[10]
+                tei_measure_3.set('type', "enclosures") 
+                tei_measure_3.set('ana', "szdg:Enclosures") 
+                tei_measure_3.set('xml:lang', 'en')
+            if(row[11]):
+                tei_measure_3 = ET.SubElement(tei_extent, 'measure')
+                tei_measure_3.text = row[11]
+                tei_measure_3.set('type', "enclosures")
+                tei_measure_3.set('ana', "szdg:Enclosures") 
+                tei_measure_3.set('xml:lang', 'en')
+
+            tei_history = ET.SubElement(tei_msDesc, 'history')
+            if str(row[28]):
+                tei_provenance = ET.SubElement(tei_history, 'provenance')
+                tei_provenance.text = row[28]
+            tei_acquisition = ET.SubElement(tei_history, 'acquisition')
+            if str(row[31]):
+                tei_ab_de = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "de"})
+                tei_ab_de.text = row[31]
+            if str(row[32]):
+                tei_ab_en = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "en"})
+                tei_ab_en.text = row[32]
+
             #####################
             ####  <profileDesc>    
             tei_profileDesc = ET.SubElement(tei_biblFull, 'profileDesc')
 
             #####################
             # Parties involved | GND (Parties involved)
+            '''
             if(row[8]):
                 tei_textClass = ET.SubElement(tei_profileDesc, 'textClass')
                 tei_keywords = ET.SubElement(tei_textClass, 'keywords')
@@ -165,186 +267,72 @@ def main():
                     tei_term_persName.set('ref', row[8])
                 elif(row[8]):
                     tei_term_name.set('ref', row[8])
-                    
+            '''        
 
             tei_correspDesc = ET.SubElement(tei_profileDesc, 'correspDesc')
             tei_correspDesc.set('type', 'toZweig')
            
             
             #####################
-            ### <correspAction>
+            ### correspAction_sent
             tei_correspAction_sent = ET.SubElement(tei_correspDesc, 'correspAction')
             tei_correspAction_sent.set('type', "sent")
+            if row[0]:
+                tei_persName_sent = ET.SubElement(tei_correspAction_sent, 'persName')
+                tei_surname_sent = ET.SubElement(tei_persName_sent, 'surname')
+                tei_surname_sent.text = surname
+                tei_forename_sent = ET.SubElement(tei_persName_sent, 'forename')
+                tei_forename_sent.text = firstname
+                if(str(row[1])):  
+                    tei_persName_sent.set('ref', row[1])
+            if(str(row[2])):   
+                tei_orgName_sent = ET.SubElement(tei_correspAction_sent, 'orgName')
+                tei_orgName_sent.text = str(row[2])
+                if(str(row[3])):
+                    tei_orgName_sent.set('ref', row[3])
+            # date
+            if(str(row[12])):
+                tei_date = ET.SubElement(tei_correspAction_sent, 'date')
+                tei_date.text = str(row[12])
+                if str(row[16]):
+                    tei_date.set('when', str(row[16]))
+            # palce
+            if(str(row[18])):
+                tei_placeName = ET.SubElement(tei_correspAction_sent, 'placeName')
+                tei_placeName.text = str(row[18])
 
-            tei_correspAction_received = ET.SubElement(tei_correspDesc, 'correspAction')
-            tei_correspAction_received.set('type', "received")
-            # Corporate bodies | GND (Corporate bodies)
-            if(str(row[3])):   
-                tei_orgName__sent = ET.SubElement(tei_correspAction_sent, 'orgName') 
-                tei_orgName__sent.text = str(row[3])
-                if(str(row[4])):
-                    tei_orgName__sent.set('ref', row[4])  
-
-
-            #signature is the same in Letters TO Zweig and Letters BY
-            for entry in values_corr_by_zweig:
-                if(entry[11] == signature):
-
-                    tei_correspDesc_by_zweig = ET.SubElement(tei_profileDesc, 'correspDesc')
-                    tei_correspDesc_by_zweig.set('type', 'byZweig')
-                    tei_correspAction_sent_by_zweig = ET.SubElement(tei_correspDesc_by_zweig, 'correspAction')
-                    tei_correspAction_sent_by_zweig.set('type', "sent")
-                    tei_correspAction_received_by_zweig = ET.SubElement(tei_correspDesc_by_zweig, 'correspAction')
-                    tei_correspAction_received_by_zweig.set('type', "received")
-                    
-                    tei_persName_sent_by_zweig = ET.SubElement(tei_correspAction_sent_by_zweig, 'persName')
-                    tei_surname_sent_by_zweig = ET.SubElement(tei_persName_sent_by_zweig, 'surname')
-                    tei_surname_sent_by_zweig.text = "Zweig"
-                    tei_forename_sent_by_zweig = ET.SubElement(tei_persName_sent_by_zweig, 'forename')
-                    tei_forename_sent_by_zweig.text = "Stefan"
-                    tei_persName_sent_by_zweig.set('ref', 'http://d-nb.info/gnd/118637479')
-
-                    # Corporate bodies | GND (Corporate bodies)
-                    if(str(entry[3])):   
-                        tei_orgName_received_by_zweig = ET.SubElement(tei_correspAction_received_by_zweig, 'orgName')
-                        tei_orgName_received_by_zweig.text = str(row[3])
-                        if(str(entry[4])):
-                            tei_orgName_received_by_zweig.set('ref', row[4])
-                                        
-                    if(', ' in entry[1]):
-                        tei_persName_received_by_zweig = ET.SubElement(tei_correspAction_received_by_zweig, 'persName')
-                        tei_surname_received_by_zweig = ET.SubElement(tei_persName_received_by_zweig, 'surname')
-                        tei_surname_received_by_zweig.text = entry[1].split(', ')[0]
-                        tei_forename_received_by_zweig = ET.SubElement(tei_persName_received_by_zweig, 'forename')
-                        tei_forename_received_by_zweig.text = entry[1].split(', ')[1]
-                    if(entry[2]):
-                        tei_persName_sent = ET.SubElement(tei_correspAction_sent, 'persName')
-                        tei_persName_sent.set('ref', str(entry[2]))
-                    if(entry[5]):
-                        tei_measure_3 = ET.SubElement(tei_extent, 'measure')
-                        tei_measure_3.text = entry[5]
-                        tei_measure_3.set('type', "correspondence")
-                        tei_measure_3.set('unit', "piece")
-                        tei_measure_3.set('subtype', "sent") 
-                    if(entry[6]):
-                        tei_measure_3 = ET.SubElement(tei_extent, 'measure')
-                        tei_measure_3.text = entry[6]
-                        tei_measure_3.set('type', "enclosures") 
-                        tei_measure_3.set('subtype', "received")
-                        tei_measure_3.set('xml:lang', 'en')
-                    if(entry[12]):
-                        tei_measure_3_de = ET.SubElement(tei_extent, 'measure')
-                        tei_measure_3_de.text = entry[12]
-                        tei_measure_3_de.set('type', "enclosures") 
-                        tei_measure_3_de.set('subtype', "received")
-                        tei_measure_3_de.set('xml:lang', 'de')   
-
-
-            if(row[5]):
-                if(int(row[5]) > 0):
-                    tei_measure_1 = ET.SubElement(tei_extent, 'measure')
-                    tei_measure_1.text = str(row[5])
-                    tei_measure_1.set('type', "correspondence")
-                    tei_measure_1.set('unit', "piece")    
-                    tei_measure_1.set('subtype', "received")   
-                
-  
-                
-            if(isinstance(row[6], str) and row[6].strip()):
-                tei_measure_3 = ET.SubElement(tei_extent, 'measure')
-                tei_measure_3.text = row[6]
-                tei_measure_3.set('type', "enclosures") 
-                tei_measure_3.set('subtype', "received")
-                tei_measure_3.set('xml:lang', 'en')   
-            if(isinstance(row[12], str) and row[12].strip()):
-                tei_measure_3_de = ET.SubElement(tei_extent, 'measure')
-                tei_measure_3_de.text = row[12]
-                tei_measure_3_de.set('xml:lang', 'de') 
-                tei_measure_3_de.set('type', "enclosures") 
-                tei_measure_3_de.set('subtype', "received")
-            
-            tei_idno_msIdentifier.text = str(signature)
-            
-            #####################
-            # <persName> in <correspAction>
-            
-            tei_persName_received = ET.SubElement(tei_correspAction_received, 'persName')
-            tei_surname_received = ET.SubElement(tei_persName_received, 'surname')
-            tei_surname_received.text = "Zweig"
-            tei_forename_received = ET.SubElement(tei_persName_received, 'forename')
-            tei_forename_received.text = "Stefan"
-            tei_persName_received.set('ref', 'http://d-nb.info/gnd/118637479')
-
-            
-            if(', ' in author):
-                tei_persName_sent_1 = ET.SubElement(tei_correspAction_sent, 'persName')
-                tei_surname = ET.SubElement(tei_persName_sent_1, 'surname')
-                tei_surname.text = author.split(', ')[0]
-                tei_forename = ET.SubElement(tei_persName_sent_1, 'forename')
-                tei_forename.text = author.split(', ')[1]
-                #tei_title.text = "Briefkonvolut " + author.split(', ')[1] + " " + author.split(', ')[0] + " an Stefan Zweig"
-                if(row[2]):
-                    tei_persName_sent_1.set('ref', str(row[2]))
-                    print(author + ":" + row[2])
-            else:
-                if(row[1]):
-                    if('Unidentified' not in row[1]):
-                        tei_name_sent = ET.SubElement(tei_correspAction_sent, 'name')
-                        tei_name_sent.text = author
-                #tei_title.text = author + " an Stefan Zweig"
-                    if(row[2]):
-                        tei_name_sent.set('ref', str(row[2]))
-            
-            
-            #####################
-            # Notes, Hinweis
-            if (len(row) > 14 and isinstance(row[14], str) and row[14].strip()):
-                tei_note_de = ET.SubElement(tei_extent, 'note')
-                tei_note_de.text = row[14]
-                tei_note_de.set('xml:lang', 'en') 
-            if (len(row) > 15 and isinstance(row[15], str) and row[15].strip()):
-                tei_note = ET.SubElement(tei_extent, 'note')
-                tei_note.text = row[15]
-                tei_note.set('xml:lang', 'de') 
-
-            #####################
-            # <date> in <correspAction> EN
-            tei_date_sent = ET.SubElement(tei_correspAction_sent, 'date')
-            date = row[9]
-            if(date):
-                tei_date_sent.text = str(date)
-                tei_date_sent.set('xml:lang', 'en')
-                if("-" in date):
-                    tei_date_sent.set('from', date.split('-')[0])
-                    if("," in date):
-                        string1 = date.split('-')[1]
-                        string2 = string1.split(',')[0]
-                        tei_date_sent.set('to', string2)
-                    else:
-                        tei_date_sent.set('to', date.split('-')[0])
-                    if("n. d." in date):
-                        tei_date_sent.set('type', 'undated')
-                elif(len(date) == 4 and date.isdigit()):
-                    tei_date_sent.set('when', str(date))
-                elif("n. d." in date):
-                    tei_date_sent.set('type', 'undated')
-                elif("(?)" in date):
-                        tei_date_sent.set('cert', 'unknown') 
-                                   
-
-
-                   
-
-    # debugging only  
-    #ET.dump(tei_listBibl) 
-    
+            ### correspAction_received
+            if row[4] or row[6]:
+                tei_correspAction_received = ET.SubElement(tei_correspDesc, 'correspAction')
+                tei_correspAction_received.set('type', "received")
+                if row[4]:
+                    tei_persName_received = ET.SubElement(tei_correspAction_received, 'persName')
+                    tei_surname_received = ET.SubElement(tei_persName_received, 'surname')
+                    tei_surname_received.text = receiver_surname
+                    tei_forename_received = ET.SubElement(tei_persName_received, 'forename')
+                    tei_forename_received.text = receiver_firstname
+                    if(str(row[5])):  
+                        tei_persName_received.set('ref', row[5])
+                if(str(row[6])):   
+                    tei_orgName_received = ET.SubElement(tei_correspAction_received, 'orgName')
+                    tei_orgName_received.text = str(row[6])
+                    if(str(row[7])):
+                        tei_orgName_received.set('ref', row[7])
+     
     # create a new XML file with the results
     ET.ElementTree(tei_listBibl).write('extractedSZDKOR.xml', encoding="UTF-8", xml_declaration=True)
-    #SZDKOR = ET.tostring(tei_listBibl, encoding="us-ascii", method='xml')
-    #myfile = open("SZDKOR.xml", "w")
-    #myfile.write(SZDKOR) 
               
 if __name__ == '__main__':
+
+    url = "https://gams.uni-graz.at/archive/risearch?type=tuples&lang=sparql&format=Sparql&query=http%3A%2F%2Ffedora%3A8380%2Farchive%2Fget%2Fcontext%3Aszd.facsimiles.korrespondenzen%2FQUERY%2F2024-05-17T13%3A52%3A12.890Z"
+    response = requests.get(url)
+    xml_data = response.content
+    namespace = {'ns': 'http://www.w3.org/2001/sw/DataAccess/rf1/result'}
+    root = ET.fromstring(xml_data)
+    # Step 3: Extract all titles using XPath, accounting for namespace
+    results = root.findall('.//ns:result', namespaces=namespace)
+
+
     main()
     
     

@@ -148,13 +148,14 @@ def create_tei_header(author_name, safe_author_name):
 
 Freud = '15fcpWsuX9-VWjx2WswwgYheDYsY4iKHWMK70idPq5qk'
 Ansichtskarten = '15s3Hipu6dznhaFo5xWAEb4gYMKOCVVYJwUpJNy_dYTE'
+Reichner = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = Ansichtskarten
-SAMPLE_RANGE_NAME = 'C216:AF264'
+SAMPLE_SPREADSHEET_ID = Reichner
+SAMPLE_RANGE_NAME = 'C2:AK274'
 
 def main():
 
@@ -451,7 +452,7 @@ def main():
                 # Writing the XML file with UTF-8 encoding and XML declaration
                 tree_scans = ET.ElementTree(root_book)
                 tree_scans.write(scans_file_path, encoding="UTF-8", xml_declaration=True)
-                #print(f"Successfully wrote {scans_file_path}")
+                print(f"Successfully wrote {scans_file_path}")
 
 
 ##########################################
@@ -515,7 +516,7 @@ def main():
             # Using ElementTree to write the XML document
             tree = ET.ElementTree(TEI)
             tree.write(file_path, encoding="UTF-8", xml_declaration=True)
-            #print(f"Successfully wrote {file_path}")
+            print(f"Successfully wrote {file_path}")
 
 
             # New directory for collected-byName-XML
