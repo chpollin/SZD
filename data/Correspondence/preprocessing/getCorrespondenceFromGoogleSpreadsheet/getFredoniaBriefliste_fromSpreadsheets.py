@@ -151,6 +151,20 @@ def main():
             tei_ab_publicationStmt = ET.SubElement(tei_publicationStmt, 'ab')
             tei_ab_publicationStmt.text = "Einzelbrief"
             
+            ###
+            try:
+                if row[35]:
+                    tei_notesStmt = ET.SubElement(tei_fileDesc, 'notesStmt')
+                    tei_note_de = ET.SubElement(tei_notesStmt, 'note')
+                    tei_note_de.set('xml:lang', "de")
+                    tei_note_en = ET.SubElement(tei_notesStmt, 'note')
+                    tei_note_en.set('xml:lang', "en")
+                    tei_note_de.text = row[35]
+                    tei_note_en.text = row[36]
+            except:
+                pass
+
+                
             #####################
             ### <sourceDesc>
             tei_sourceDesc = ET.SubElement(tei_fileDesc, 'sourceDesc')
@@ -222,7 +236,7 @@ def main():
                 tei_measure_3.text = row[10]
                 tei_measure_3.set('type', "enclosures") 
                 tei_measure_3.set('ana', "szdg:Enclosures") 
-                tei_measure_3.set('xml:lang', 'en')
+                tei_measure_3.set('xml:lang', 'de')
             if(row[11]):
                 tei_measure_3 = ET.SubElement(tei_extent, 'measure')
                 tei_measure_3.text = row[11]
@@ -231,9 +245,10 @@ def main():
                 tei_measure_3.set('xml:lang', 'en')
 
             tei_history = ET.SubElement(tei_msDesc, 'history')
-            if str(row[28]):
+            if str(row[30]):
                 tei_provenance = ET.SubElement(tei_history, 'provenance')
-                tei_provenance.text = row[28]
+                tei_provenance_ab = ET.SubElement(tei_provenance, 'ab')
+                tei_provenance_ab.text = row[30]
             tei_acquisition = ET.SubElement(tei_history, 'acquisition')
             if str(row[31]):
                 tei_ab_de = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "de"})
@@ -242,32 +257,31 @@ def main():
                 tei_ab_en = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "en"})
                 tei_ab_en.text = row[32]
 
-            #####################
             ####  <profileDesc>    
             tei_profileDesc = ET.SubElement(tei_biblFull, 'profileDesc')
 
-            #####################
             # Parties involved | GND (Parties involved)
-            '''
-            if(row[8]):
-                tei_textClass = ET.SubElement(tei_profileDesc, 'textClass')
-                tei_keywords = ET.SubElement(tei_textClass, 'keywords')
-                tei_term = ET.SubElement(tei_keywords, 'term')
-                tei_term.set('type', 'person')
-                tei_term_persName = ET.SubElement(tei_term, 'persName')
-                if(',' in row[7]):
-                    tei_term_surName = ET.SubElement(tei_term_persName, 'surname')
-                    tei_term_foreName = ET.SubElement(tei_term_persName, 'forename')
-                    tei_term_surName.text = row[7].split(', ')[0]
-                    tei_term_foreName.text = row[7].split(', ')[1]
-                else:
-                    tei_term_name = ET.SubElement(tei_term_persName, 'name')
-                    tei_term_name.text = row[7]
-                if(',' in row[8]):
-                    tei_term_persName.set('ref', row[8])
-                elif(row[8]):
-                    tei_term_name.set('ref', row[8])
-            '''        
+            try:
+                if(str(row[33])):
+                    tei_textClass = ET.SubElement(tei_profileDesc, 'textClass')
+                    tei_keywords = ET.SubElement(tei_textClass, 'keywords')
+                    tei_term = ET.SubElement(tei_keywords, 'term')
+                    tei_term.set('type', 'person')
+                    tei_term_persName = ET.SubElement(tei_term, 'persName')
+                    if(',' in row[33]):
+                        tei_term_surName = ET.SubElement(tei_term_persName, 'surname')
+                        tei_term_foreName = ET.SubElement(tei_term_persName, 'forename')
+                        tei_term_surName.text = row[33].split(', ')[0]
+                        tei_term_foreName.text = row[33].split(', ')[1]
+                    else:
+                        tei_term_name = ET.SubElement(tei_term_persName, 'name')
+                        tei_term_name.text = row[33]
+                    if(',' in row[34]):
+                        tei_term_persName.set('ref', row[34])
+                    elif(row[34]):
+                        tei_term_name.set('ref', row[34])     
+            except:
+                pass
 
             tei_correspDesc = ET.SubElement(tei_profileDesc, 'correspDesc')
             tei_correspDesc.set('type', 'toZweig')
