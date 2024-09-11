@@ -316,10 +316,15 @@ def main():
                 tei_date.text = str(row[12])
                 if str(row[16]):
                     tei_date.set('when', str(row[16]))
-            # palce
+            # Entstehungsort Original
             if(str(row[18])):
                 tei_placeName = ET.SubElement(tei_correspAction_sent, 'placeName')
                 tei_placeName.text = str(row[18])
+            # Entstehungsort erschlossen
+            if(str(row[19])):
+                tei_placeName_deduced = ET.SubElement(tei_correspAction_sent, 'placeName')
+                tei_placeName_deduced.text = str(row[19])
+                tei_placeName_deduced.set('ana', "deduced")
 
             ### correspAction_received
             if row[4] or row[6]:
