@@ -213,16 +213,17 @@ def main():
             tei_physDesc = ET.SubElement(tei_msDesc, 'physDesc')
             tei_objectDesc = ET.SubElement(tei_physDesc, 'objectDesc')
             tei_supportDesc = ET.SubElement(tei_objectDesc, 'supportDesc')
+            tei_support = ET.SubElement(tei_supportDesc, 'support')
             tei_extent = ET.SubElement(tei_supportDesc, 'extent')
             
             if row[22]:
-                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[22]  # 'Beschreibstoff' in German
+                ET.SubElement(tei_support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "de"}).text = row[22]  # 'Beschreibstoff' in German
             if row[23]:
-                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[23]  # 'Writing Material' in English
+                ET.SubElement(tei_support, "material", {"ana": "szdg:WritingMaterial", "xml:lang": "en"}).text = row[23]  # 'Writing Material' in English
             if row[24]:
-                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[24]  # 'Schreibstoff' in German
+                ET.SubElement(tei_support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "de"}).text = row[24]  # 'Schreibstoff' in German
             if row[25]:
-                ET.SubElement(tei_extent, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[25]  # 'Writing Instrument' in English
+                ET.SubElement(tei_support, "material", {"ana": "szdg:WritingInstrument", "xml:lang": "en"}).text = row[25]  # 'Writing Instrument' in English
             
             if row[8]:
                 ET.SubElement(tei_extent, "span", {"xml:lang": "de"}).text = row[8]  # 'Art/Umfang' in German
@@ -243,6 +244,11 @@ def main():
                 tei_measure_3.set('type', "enclosures")
                 tei_measure_3.set('ana', "szdg:Enclosures") 
                 tei_measure_3.set('xml:lang', 'en')
+
+            if(str(row[26])):
+                tei_handDesc = ET.SubElement(tei_physDesc, 'handDesc')
+                tei_handDesc_ab = ET.SubElement(tei_handDesc, 'ab')
+                tei_handDesc_ab.text = str(row[26])
 
             tei_history = ET.SubElement(tei_msDesc, 'history')
             if str(row[30]):
