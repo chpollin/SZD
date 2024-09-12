@@ -12,6 +12,14 @@ import validators
 from datetime import datetime
 import requests
 
+def parse_date(date_string):
+    formats = ["%Y-%m-%d", "%Y-%m", "%Y"]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_string, fmt)
+        except ValueError:
+            pass
+    raise ValueError(f"Unable to parse date: {date_string}")
 
 language_mapping_de = {
     "GER": "Deutsch",
@@ -39,14 +47,16 @@ language_mapping_en = {
 # https://docs.google.com/spreadsheets/d/1VX9XBH2yQV5TygdRpWLNjkaEObuQ4Hd1eMSyIo6lgxo/edit?usp=sharing
 # C2:AK274
 Reichner = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
-
+Friedenthal = '1CfYgIQu6frij1Bezt8704dGJNsq7mShisuM8q0faF7M'
+Masereel = '15QCMlspH3rYXnGNCLjPC3P6ozFcKFcNcBnbB9cbdxM4'
+Meingast = '1eMZbaqDub8ZW2OrSavi2r68ZTlas8_sz0JCZ-VXeKMY'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
-SAMPLE_RANGE_NAME = 'A2:AK274'
+SAMPLE_SPREADSHEET_ID = '1eMZbaqDub8ZW2OrSavi2r68ZTlas8_sz0JCZ-VXeKMY'
+SAMPLE_RANGE_NAME = 'A2:AM169'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -139,8 +149,13 @@ def main():
             tei_title_en.set('xml:lang', "en")
 
             if date:
-                date_obj = datetime.strptime(date, "%Y-%m-%d")
-                formatted_date = date_obj.strftime("%d.%m.%Y")
+                date_obj = parse_date(date)
+                if date_obj.day == 1 and date_obj.month == 1:
+                    formatted_date = date_obj.strftime("%Y")
+                elif date_obj.day == 1:
+                    formatted_date = date_obj.strftime("%m.%Y")
+                else:
+                    formatted_date = date_obj.strftime("%d.%m.%Y")
 
             tei_title_de.text =  sender + " an " + receiver + ", " + formatted_date
             tei_title_en.text =  sender + " to " + receiver + ", " + formatted_date
@@ -256,13 +271,21 @@ def main():
                 tei_provenance_ab = ET.SubElement(tei_provenance, 'ab')
                 tei_provenance_ab.text = row[30]
             tei_acquisition = ET.SubElement(tei_history, 'acquisition')
-            if str(row[31]):
-                tei_ab_de = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "de"})
-                tei_ab_de.text = row[31]
-            if str(row[32]):
-                tei_ab_en = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "en"})
-                tei_ab_en.text = row[32]
+            
+            try:
+                print(row[31])
+                if str(row[31]):
+                    tei_ab_de = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "de"})
+                    tei_ab_de.text = row[31]
+            except:
+                pass
 
+            try:
+                if str(row[32]):
+                    tei_ab_en = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "en"})
+                    tei_ab_en.text = row[32]
+            except:
+                pass
             ####  <profileDesc>    
             tei_profileDesc = ET.SubElement(tei_biblFull, 'profileDesc')
 
@@ -349,7 +372,7 @@ def main():
               
 if __name__ == '__main__':
 
-    url = "https://gams.uni-graz.at/archive/risearch?type=tuples&lang=sparql&format=Sparql&query=http%3A%2F%2Ffedora%3A8380%2Farchive%2Fget%2Fcontext%3Aszd.facsimiles.korrespondenzen%2FQUERY%2F2024-05-17T13%3A52%3A12.890Z"
+    url = "https://gams.uni-graz.at/archive/risearch?type=tuples&lang=sparql&format=Sparql&query=http%3A%2F%2Ffedora%3A8380%2Farchive%2Fget%2Fcontext%3Aszd.facsimiles.korrespondenzen%2FQUERY%2F2024-09-12T05%3A33%3A39.123Z"
     response = requests.get(url)
     xml_data = response.content
     namespace = {'ns': 'http://www.w3.org/2001/sw/DataAccess/rf1/result'}
