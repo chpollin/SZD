@@ -3,14 +3,14 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="de">Korrespondenz Alfred Kubin</title>
-                <title xml:lang="en">Correspondence Alfred Kubin</title>
+                <title xml:lang="de">Korrespondenz Paul Heidelbach</title>
+                <title xml:lang="en">Correspondence Paul Heidelbach</title>
             </titleStmt>
             <publicationStmt>
                 <publisher><orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
                         ref="d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</orgName></publisher>
-                <idno type="PID">o:szd.korrespondenzen.kubin-alfred</idno>
+                <idno type="PID">o:szd.korrespondenzen.heidelbach-paul</idno>
             </publicationStmt>
             <seriesStmt>
                 <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
@@ -58,11 +58,11 @@
     <text>
         <body>
             <listBibl>
-                <biblFull xml:id="SZDKOR.kubin-alfred.B.1">
+                <biblFull xml:id="SZDKOR.heidelbach-paul.B.1">
                     <fileDesc>
                         <titleStmt>
-                            <title xml:lang="de">Stefan Zweig an Alfred Kubin, 03.1924</title>
-                            <title xml:lang="en">Stefan Zweig to Alfred Kubin, 03.1924</title>
+                            <title xml:lang="de">Victor Fleischer an Paul Heidelbach, 22.11.1908</title>
+                            <title xml:lang="en">Victor Fleischer to Paul Heidelbach, 22.11.1908</title>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Einzelbrief</ab>
@@ -74,9 +74,9 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                                         Salzburg</repository>
-                                    <idno type="signature">SZ-LAS/B4.5</idno>
+                                    <idno type="signature">SZ-SAH/B1.1</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.1411</idno>
+                                        <idno type="PID">o:szd.1826</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -93,9 +93,9 @@
                                                     >Postkarte</material>
                                                 <material ana="szdg:WritingMaterial" xml:lang="en"
                                                     >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette
                                                     Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple
                                                     ink</material>
                                             </support>
                                             <extent>
@@ -105,13 +105,93 @@
                                         </supportDesc>
                                     </objectDesc>
                                     <handDesc>
+                                        <ab>Victor Fleischer</ab>
+                                    </handDesc>
+                                </physDesc>
+                                <history>
+                                    <acquisition>
+                                        <ab xml:lang="de">Ankauf J. A. Stargardt 1999</ab>
+                                        <ab xml:lang="en">Acquisition from J. A. Stargardt 1999</ab>
+                                    </acquisition>
+                                </history>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc>
+                        <correspDesc type="toZweig">
+                            <correspAction type="sent">
+                                <persName ref="https://d-nb.info/gnd/116601485">
+                                    <surname>Fleischer</surname>
+                                    <forename>Victor</forename>
+                                </persName>
+                                <date when="1908-11-22">22/XI. 08</date>
+                                <placeName>Wien</placeName>
+                            </correspAction>
+                            <correspAction type="received">
+                                <persName ref="http://d-nb.info/gnd/116604689">
+                                    <surname>Heidelbach</surname>
+                                    <forename>Paul</forename>
+                                </persName>
+                            </correspAction>
+                        </correspDesc>
+                    </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDKOR.heidelbach-paul.B.2">
+                    <fileDesc>
+                        <titleStmt>
+                            <title xml:lang="de">Stefan Zweig an Paul Heidelbach, 23.11.1908</title>
+                            <title xml:lang="en">Stefan Zweig to Paul Heidelbach, 23.11.1908</title>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Einzelbrief</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Österreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                                        Salzburg</repository>
+                                    <idno type="signature">SZ-SAH/B1.2</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.1827</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                                <msContents>
+                                    <textLang>
+                                        <lang xml:lang="ger">Deutsch</lang>
+                                        <lang xml:lang="ger">German</lang>
+                                    </textLang>
+                                </msContents>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc>
+                                            <support>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de"
+                                                    >Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                    paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                                                    Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                    ink</material>
+                                            </support>
+                                            <extent>
+                                                <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                    Kuvert</span>
+                                                <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                    envelope</span>
+                                            </extent>
+                                        </supportDesc>
+                                    </objectDesc>
+                                    <handDesc>
                                         <ab>Stefan Zweig</ab>
                                     </handDesc>
                                 </physDesc>
                                 <history>
                                     <acquisition>
-                                        <ab xml:lang="de">Dauerleihgabe Stadt Salzburg</ab>
-                                        <ab xml:lang="en">Permanent loan from the City of Salzburg</ab>
+                                        <ab xml:lang="de">Ankauf J. A. Stargardt 1999</ab>
+                                        <ab xml:lang="en">Acquisition from J. A. Stargardt 1999</ab>
                                     </acquisition>
                                 </history>
                             </msDesc>
@@ -124,12 +204,13 @@
                                     <surname>Zweig</surname>
                                     <forename>Stefan</forename>
                                 </persName>
-                                <placeName>Wien</placeName>
+                                <date when="1908-11-23">23. November 1908</date>
+                                <placeName>Dresden</placeName>
                             </correspAction>
                             <correspAction type="received">
-                                <persName ref="http://d-nb.info/gnd/118567365">
-                                    <surname>Kubin</surname>
-                                    <forename>Alfred</forename>
+                                <persName ref="http://d-nb.info/gnd/116604689">
+                                    <surname>Heidelbach</surname>
+                                    <forename>Paul</forename>
                                 </persName>
                             </correspAction>
                         </correspDesc>

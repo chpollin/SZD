@@ -3,14 +3,14 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="de">Korrespondenz Alfred Kubin</title>
-                <title xml:lang="en">Correspondence Alfred Kubin</title>
+                <title xml:lang="de">Korrespondenz Hermann Bahr</title>
+                <title xml:lang="en">Correspondence Hermann Bahr</title>
             </titleStmt>
             <publicationStmt>
                 <publisher><orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
                         ref="d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</orgName></publisher>
-                <idno type="PID">o:szd.korrespondenzen.kubin-alfred</idno>
+                <idno type="PID">o:szd.korrespondenzen.bahr-hermann</idno>
             </publicationStmt>
             <seriesStmt>
                 <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
@@ -58,11 +58,11 @@
     <text>
         <body>
             <listBibl>
-                <biblFull xml:id="SZDKOR.kubin-alfred.B.1">
+                <biblFull xml:id="SZDKOR.bahr-hermann.B.1">
                     <fileDesc>
                         <titleStmt>
-                            <title xml:lang="de">Stefan Zweig an Alfred Kubin, 03.1924</title>
-                            <title xml:lang="en">Stefan Zweig to Alfred Kubin, 03.1924</title>
+                            <title xml:lang="de">Stefan Zweig an Hermann Bahr, 21.09.1923</title>
+                            <title xml:lang="en">Stefan Zweig to Hermann Bahr, 21.09.1923</title>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Einzelbrief</ab>
@@ -74,9 +74,9 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                                         Salzburg</repository>
-                                    <idno type="signature">SZ-LAS/B4.5</idno>
+                                    <idno type="signature">SZ-SHB/B1</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.1411</idno>
+                                        <idno type="PID">o:szd.1741</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -89,13 +89,13 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                    >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                    >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte mit
+                                                    Aufdruck Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard with
+                                                    Stefan Zweig imprint</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette
                                                     Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple
                                                     ink</material>
                                             </support>
                                             <extent>
@@ -109,9 +109,12 @@
                                     </handDesc>
                                 </physDesc>
                                 <history>
+                                    <provenance>
+                                        <ab>Harald Böck</ab>
+                                    </provenance>
                                     <acquisition>
-                                        <ab xml:lang="de">Dauerleihgabe Stadt Salzburg</ab>
-                                        <ab xml:lang="en">Permanent loan from the City of Salzburg</ab>
+                                        <ab xml:lang="de">Ankauf 2013</ab>
+                                        <ab xml:lang="en">Acquisition 2013</ab>
                                     </acquisition>
                                 </history>
                             </msDesc>
@@ -124,12 +127,12 @@
                                     <surname>Zweig</surname>
                                     <forename>Stefan</forename>
                                 </persName>
-                                <placeName>Wien</placeName>
+                                <placeName>Salzburg</placeName>
                             </correspAction>
                             <correspAction type="received">
-                                <persName ref="http://d-nb.info/gnd/118567365">
-                                    <surname>Kubin</surname>
-                                    <forename>Alfred</forename>
+                                <persName ref="http://d-nb.info/gnd/118505955">
+                                    <surname>Bahr</surname>
+                                    <forename>Hermann</forename>
                                 </persName>
                             </correspAction>
                         </correspDesc>

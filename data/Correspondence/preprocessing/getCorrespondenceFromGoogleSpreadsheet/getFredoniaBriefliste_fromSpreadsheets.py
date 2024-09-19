@@ -62,7 +62,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = Vermischtes
 
-SAMPLE_RANGE_NAME = 'Kubin, Alfred!A2:AM2'
+SAMPLE_RANGE_NAME = 'Fleischer, Victor!A2:AM2'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -142,7 +142,7 @@ def main():
             #####################
             ### <biblFull>
             tei_biblFull = ET.SubElement(tei_listBibl, 'biblFull')
-            tei_biblFull.set('xml:id', "SZDKOR.gluecksmann-heinrich.B." + str(index + 1) )
+            tei_biblFull.set('xml:id', "SZDKOR.romains-jules.B." + str(index + 1) )
             
             #####################
             #### <fileDesc> <titleStmt>
