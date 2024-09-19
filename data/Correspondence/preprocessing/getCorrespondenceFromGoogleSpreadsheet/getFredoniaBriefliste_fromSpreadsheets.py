@@ -53,14 +53,16 @@ Meingast = '1eMZbaqDub8ZW2OrSavi2r68ZTlas8_sz0JCZ-VXeKMY'
 Fleischer = '1WbOoUTVw8sFASZ8OGGFbrFjsiKZLAISbgQ0EPw7u9Cc'
 # Fleischer Victor!A2:AM31
 # Fleischer Max!A2:AM46
+Vermischtes = '1hr-mvyhjYfTNYShJRn1uYlbXurhV0qB9LAfgUzjXSXQ'
+# Feld, Leo = "Feld, Leo!A2:AM2"
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = Fleischer
+SAMPLE_SPREADSHEET_ID = Vermischtes
 
-SAMPLE_RANGE_NAME = 'Fleischer Max!A2:AM46'
+SAMPLE_RANGE_NAME = 'Kubin, Alfred!A2:AM2'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -140,7 +142,7 @@ def main():
             #####################
             ### <biblFull>
             tei_biblFull = ET.SubElement(tei_listBibl, 'biblFull')
-            tei_biblFull.set('xml:id', "SZDKOR.fleischer-max.B." + str(index + 1) )
+            tei_biblFull.set('xml:id', "SZDKOR.gluecksmann-heinrich.B." + str(index + 1) )
             
             #####################
             #### <fileDesc> <titleStmt>
