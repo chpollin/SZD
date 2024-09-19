@@ -50,13 +50,17 @@ Reichner = '19RQoTKals6woN2QGYzt2tKp6mKJpfbLUmwnnqgrLqyI'
 Friedenthal = '1CfYgIQu6frij1Bezt8704dGJNsq7mShisuM8q0faF7M'
 Masereel = '15QCMlspH3rYXnGNCLjPC3P6ozFcKFcNcBnbB9cbdxM4'
 Meingast = '1eMZbaqDub8ZW2OrSavi2r68ZTlas8_sz0JCZ-VXeKMY'
+Fleischer = '1WbOoUTVw8sFASZ8OGGFbrFjsiKZLAISbgQ0EPw7u9Cc'
+# Fleischer Victor!A2:AM31
+# Fleischer Max!A2:AM46
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1eMZbaqDub8ZW2OrSavi2r68ZTlas8_sz0JCZ-VXeKMY'
-SAMPLE_RANGE_NAME = 'A2:AM169'
+SAMPLE_SPREADSHEET_ID = Fleischer
+
+SAMPLE_RANGE_NAME = 'Fleischer Max!A2:AM46'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -104,7 +108,6 @@ def main():
     if not values:
         print('No data found.')
     else:
-        #print(values)
         sender = ""
         receiver = ""
         for index, row in enumerate(values):
@@ -137,7 +140,7 @@ def main():
             #####################
             ### <biblFull>
             tei_biblFull = ET.SubElement(tei_listBibl, 'biblFull')
-            tei_biblFull.set('xml:id', "SZDKOR.reichner-herbert.B." + str(index + 1) )
+            tei_biblFull.set('xml:id', "SZDKOR.fleischer-max.B." + str(index + 1) )
             
             #####################
             #### <fileDesc> <titleStmt>
@@ -273,7 +276,6 @@ def main():
             tei_acquisition = ET.SubElement(tei_history, 'acquisition')
             
             try:
-                print(row[31])
                 if str(row[31]):
                     tei_ab_de = ET.SubElement(tei_acquisition, 'ab', {"xml:lang": "de"})
                     tei_ab_de.text = row[31]
