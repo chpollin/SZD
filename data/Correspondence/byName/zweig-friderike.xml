@@ -1,0 +1,1976 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Zweig Friderike</title>
+        <title xml:lang="en">Correspondence Zweig Friderike</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.zweig-friderike</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+        dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+        orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+        einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.zweig-friderike.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.16</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.17</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.18</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.19</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.73</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.74</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.75</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.9</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.11</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B11</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.53</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B11.2</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B7.12</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.14">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.10</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.62</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.59</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.17">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.297</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.18">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.61</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.19">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.49</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.20">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B1.48</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.21">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.2</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.22">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.3</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.23">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.300</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.24">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.56</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.25">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.13</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.26">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.296</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.27">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.14</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.28">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.4</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.29">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.57</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.30">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.1</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.31">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.51</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.32">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.6</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.33">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.294</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.34">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B1.22</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.35">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.58</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.36">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B19</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.37">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.5</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.38">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B7.11</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.39">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.60</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.40">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.8</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.41">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.52</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.42">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.12</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.43">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.299</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.44">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.7</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.45">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.298</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.46">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B11.1</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.47">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B1.37</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.48">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B11.15</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.49">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.66</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-friderike.50">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Friderike, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Friderike, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.55</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Friderike</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
