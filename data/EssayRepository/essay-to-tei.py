@@ -2,7 +2,14 @@ import csv
 import xml.etree.ElementTree as ET
 
 def get_row_value(row, field_name):
-    return row.get(field_name, '').strip()
+    return normalize_string(row.get(field_name, ''))
+
+def normalize_string(text):
+    """Normalize string by removing unnecessary whitespace."""
+    if not text:
+        return ''
+    # Replace multiple whitespace with single space and strip
+    return ' '.join(text.split())
 
 def csv_to_tei(csv_file_path):
     NS_TEI = "http://www.tei-c.org/ns/1.0"
@@ -126,6 +133,14 @@ def csv_to_tei(csv_file_path):
 
             # Map sourceDesc
             sourceDesc = ET.SubElement(fileDesc, '{%s}sourceDesc' % NS_TEI)
+
+            # Add publication information if available
+            publikationsangabe = get_row_value(row, 'Publikationsangabe')
+            if publikationsangabe:
+                bibl = ET.SubElement(sourceDesc, '{%s}bibl' % NS_TEI)
+                bibl.set('type', 'published')
+                bibl.text = publikationsangabe
+
             msDesc = ET.SubElement(sourceDesc, '{%s}msDesc' % NS_TEI)
 
             # msIdentifier
@@ -153,39 +168,46 @@ def csv_to_tei(csv_file_path):
                 lang.set('{http://www.w3.org/XML/1998/namespace}lang', text_lang_code)
                 lang.text = 'Deutsch' if text_lang_code == 'ger' else ''
 
+            # Add identifying inscription if available
+            identifying_inscription = get_row_value(row, 'Aufschrift erstes Blatt / Identifying Inscription')
+            if identifying_inscription:
+                # Create msItem to wrap the docEdition elements
+                ms_item = ET.SubElement(msContents, '{%s}msItem' % NS_TEI)
+                
+                # Add German version
+                doc_edition_de = ET.SubElement(ms_item, '{%s}docEdition' % NS_TEI)
+                doc_edition_de.set('ana', 'szdg:IdentifyingInscription')
+                doc_edition_de.set('{http://www.w3.org/XML/1998/namespace}lang', 'de')
+                doc_edition_de.text = identifying_inscription
+
+                # Add English version
+                doc_edition_en = ET.SubElement(ms_item, '{%s}docEdition' % NS_TEI)
+                doc_edition_en.set('ana', 'szdg:IdentifyingInscription')
+                doc_edition_en.set('{http://www.w3.org/XML/1998/namespace}lang', 'en')
+                doc_edition_en.text = identifying_inscription  # Or translated version if available
+
             # physDesc
             physDesc = ET.SubElement(msDesc, '{%s}physDesc' % NS_TEI)
             objectDesc = ET.SubElement(physDesc, '{%s}objectDesc' % NS_TEI)
             supportDesc = ET.SubElement(objectDesc, '{%s}supportDesc' % NS_TEI)
             support = ET.SubElement(supportDesc, '{%s}support' % NS_TEI)
 
-            # Map 'Schreibstoff' to <material> elements
             schreibstoff = get_row_value(row, 'Schreibstoff')
+            writing_instrument = get_row_value(row, 'Writing Instrument')
+
             if schreibstoff:
+                # German material element
                 material_de = ET.SubElement(support, '{%s}material' % NS_TEI)
                 material_de.set('ana', 'szdg:WritingInstrument')
                 material_de.set('{http://www.w3.org/XML/1998/namespace}lang', 'de')
                 material_de.text = schreibstoff
 
-                # Create empty English material element
+            if writing_instrument:  # Only create English element if there's English content
+                # English material element
                 material_en = ET.SubElement(support, '{%s}material' % NS_TEI)
                 material_en.set('ana', 'szdg:WritingInstrument')
                 material_en.set('{http://www.w3.org/XML/1998/namespace}lang', 'en')
-                material_en.text = ''
-
-            # Map 'Writing Instrument' to <material> elements (if needed)
-            writing_instrument = get_row_value(row, 'Writing Instrument')
-            if writing_instrument:
-                material_de = ET.SubElement(support, '{%s}material' % NS_TEI)
-                material_de.set('ana', 'szdg:WritingInstrument')
-                material_de.set('{http://www.w3.org/XML/1998/namespace}lang', 'de')
-                material_de.text = writing_instrument
-
-                # Create empty English material element
-                material_en = ET.SubElement(support, '{%s}material' % NS_TEI)
-                material_en.set('ana', 'szdg:WritingInstrument')
-                material_en.set('{http://www.w3.org/XML/1998/namespace}lang', 'en')
-                material_en.text = ''
+                material_en.text = writing_instrument
 
             # extent
             art_umfang_anzahl = get_row_value(row, 'Art, Umfang, Anzahl')
@@ -343,7 +365,7 @@ def csv_to_tei(csv_file_path):
     return pretty_xml_as_string
 
 # Example usage
-tei_xml_output = csv_to_tei('SZ_Aufsatzablage - Tabelle1.csv')
+tei_xml_output = csv_to_tei('essays.csv')
 with open('output.xml', 'w', encoding='utf-8') as f:
     f.write(tei_xml_output)
 
