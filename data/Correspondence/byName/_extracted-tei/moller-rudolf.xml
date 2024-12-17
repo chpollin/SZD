@@ -8,7 +8,8 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.moller-rudolf</idno>
       </publicationStmt>
@@ -49,16 +50,16 @@
         <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
       </editorialDecl>
       <projectDesc>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
-        im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
-        wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
-        dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
-        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
-        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
-        Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
-        orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
-        einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
-        (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
       </projectDesc>
       <listPrefixDef>
         <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
@@ -73,7 +74,11 @@
         <biblFull xml:id="SZDKOR.moller-rudolf.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum, SZ-SHB/B6.1</title><title xml:lang="en">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum, SZ-SHB/B6.1</title></titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum,
+                SZ-SHB/B6.1</title>
+              <title xml:lang="en">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum,
+                SZ-SHB/B6.1</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -82,9 +87,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SHB/B6.1</idno>
-                <altIdentifier><idno type="PID">o:szd.1296</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1296</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -101,6 +110,41 @@
                 <persName>
                   <surname>Rudolf</surname>
                   <forename>Moller</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.moller-rudolf.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Rudolf Möller vom 28. November 1930</title>
+              <title xml:lang="en">Ansichtspostkarte an Rudolf Möller vom 28. November 1930</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SHB/B6.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1297</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>1930</surname>
+                  <forename>Ansichtspostkarte an Rudolf Möller vom 28. November</forename>
                 </persName>
               </correspAction>
             </correspDesc>

@@ -8,7 +8,8 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.mazzucchetti-lavinia</idno>
       </publicationStmt>
@@ -49,7 +50,16 @@
         <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
       </editorialDecl>
       <projectDesc>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw. wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
       </projectDesc>
       <listPrefixDef>
         <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
@@ -64,7 +74,11 @@
         <biblFull xml:id="SZDKOR.mazzucchetti-lavinia.22">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Lavinia Mazzucchetti an Stefan Zweig, 1930-04-21, SZ-SAM/AK.118</title><title xml:lang="en">Lavinia Mazzucchetti an Stefan Zweig, 1930-04-21, SZ-SAM/AK.118</title></titleStmt>
+              <title xml:lang="de">Lavinia Mazzucchetti an Stefan Zweig, 1930-04-21,
+                SZ-SAM/AK.118</title>
+              <title xml:lang="en">Lavinia Mazzucchetti an Stefan Zweig, 1930-04-21,
+                SZ-SAM/AK.118</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -73,13 +87,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.118</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.398</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -90,10 +105,13 @@
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
-                      <support>                    
-    <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Heidelberg | Das SchloÃ vom Philosophenweg"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Heidelberg | Das SchloÃ vom Philosophenweg"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Heidelberg | Das SchloÃ vom Philosophenweg"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Heidelberg | Das SchloÃ vom Philosophenweg"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -119,7 +137,9 @@
                   <surname>Mazzucchetti</surname>
                   <forename>Lavinia</forename>
                 </persName>
-                <date when="2030-04-21" xml:lang="de">21. 4. 30</date><date when="2030-04-21" xml:lang="en">21. 4. 30</date><note type="postalStamp">21. 4. 30</note>
+                <date when="2030-04-21" xml:lang="de">21. 4. 30</date>
+                <date when="2030-04-21" xml:lang="en">21. 4. 30</date>
+                <note type="postalStamp">21. 4. 30</note>
               </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
@@ -133,7 +153,11 @@
         <biblFull xml:id="SZDKOR.mazzucchetti-lavinia.23">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Lavinia Mazzucchetti an Stefan Zweig, 1931-12-06, SZ-SAM/AK.119</title><title xml:lang="en">Lavinia Mazzucchetti an Stefan Zweig, 1931-12-06, SZ-SAM/AK.119</title></titleStmt>
+              <title xml:lang="de">Lavinia Mazzucchetti an Stefan Zweig, 1931-12-06,
+                SZ-SAM/AK.119</title>
+              <title xml:lang="en">Lavinia Mazzucchetti an Stefan Zweig, 1931-12-06,
+                SZ-SAM/AK.119</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -142,13 +166,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.119</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.399</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -160,14 +185,18 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Gressoney âÂ La TrinitÃ© â Tramonto a Orsia (m. 1802)"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Gressoney âÂ La TrinitÃ© â Tramonto a Orsia (m. 1802)"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">blau-schwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Gressoney âÂ La TrinitÃ© â Tramonto a Orsia (m. 1802)"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Gressoney âÂ La TrinitÃ© â Tramonto a Orsia (m. 1802)"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blau-schwarze
+                          Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black
+                          ink</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>         
-               <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -188,11 +217,48 @@
                   <surname>Mazzucchetti</surname>
                   <forename>Lavinia</forename>
                 </persName>
-                <date when="1931-12-06" xml:lang="de">6. 12. 31</date><date when="1931-12-06" xml:lang="en">6. 12. 31</date></correspAction>
+                <date when="1931-12-06" xml:lang="de">6. 12. 31</date>
+                <date when="1931-12-06" xml:lang="en">6. 12. 31</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.mazzucchetti-lavinia.24">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Lavinia Mazzucchetti an Anna Meingast</title>
+              <title xml:lang="en">Lavinia Mazzucchetti an Anna Meingast</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1172</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meingast</surname>
+                  <forename>Lavinia Mazzucchetti an Anna</forename>
                 </persName>
               </correspAction>
             </correspDesc>

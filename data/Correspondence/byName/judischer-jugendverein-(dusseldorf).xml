@@ -70,11 +70,51 @@
   <text>
     <body>
       <listBibl>
-        <biblFull xml:id="SZDKOR.judischer-jugendverein-(dusseldorf).1">
+        <biblFull xml:id="SZDKOR.judischer-jugendverein.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Stefan Zweig an Judischer Jugendverein (Dusseldorf), [Date Unknown]</title>
-              <title xml:lang="en">Stefan Zweig to Judischer Jugendverein (Dusseldorf), [Date Unknown]</title>
+              <title xml:lang="de">Stefan Zweig an Judischer Jugendverein</title>
+              <title xml:lang="de">Stefan Zweig an Judischer Jugendverein</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1672</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <name>Jüdischer Jugendverein (Düsseldorf)</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.judischer-jugendverein.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Jüdischer Jugendverein (Düsseldorf) an Stefan Zweig, 1930-06-18</title>
+              <title xml:lang="en">Jüdischer Jugendverein (Düsseldorf) an Stefan Zweig, 1930-06-18</title>
             </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
@@ -86,6 +126,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.125</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.406</idno>
+                  </altIdentifier>
                 </msIdentifier>
               </msDesc>
             </sourceDesc>
@@ -93,26 +136,24 @@
           <profileDesc>
             <correspDesc type="toZweig">
               <correspAction type="sent">
+                <persName>
+                  <name>Jüdischer Jugendverein (Düsseldorf)</name>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
-                </persName>
-                <placeName ana="deduced">Salzburg</placeName>
-              </correspAction>
-              <correspAction type="received">
-                <persName>
-                  <surname>(dusseldorf)</surname>
-                  <forename>Judischer</forename>
                 </persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDKOR.judischer-jugendverein-(dusseldorf).2">
+        <biblFull xml:id="SZDKOR.judischer-jugendverein.3">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Stefan Zweig an Judischer Jugendverein (Dusseldorf), [Date Unknown]</title>
-              <title xml:lang="en">Stefan Zweig to Judischer Jugendverein (Dusseldorf), [Date Unknown]</title>
+              <title xml:lang="de">Jüdischer Jugendverein (Düsseldorf) an Stefan Zweig, 1903-08-24</title>
+              <title xml:lang="en">Jüdischer Jugendverein (Düsseldorf) an Stefan Zweig, 1903-08-24</title>
             </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
@@ -124,6 +165,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.204</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.938</idno>
+                  </altIdentifier>
                 </msIdentifier>
               </msDesc>
             </sourceDesc>
@@ -131,16 +175,14 @@
           <profileDesc>
             <correspDesc type="toZweig">
               <correspAction type="sent">
+                <persName>
+                  <name>Jüdischer Jugendverein (Düsseldorf)</name>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
-                </persName>
-                <placeName ana="deduced">Salzburg</placeName>
-              </correspAction>
-              <correspAction type="received">
-                <persName>
-                  <surname>(dusseldorf)</surname>
-                  <forename>Judischer</forename>
                 </persName>
               </correspAction>
             </correspDesc>

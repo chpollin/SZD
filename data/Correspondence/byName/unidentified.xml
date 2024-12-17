@@ -8,8 +8,8 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
-                    Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.unidentified</idno>
       </publicationStmt>
@@ -50,16 +50,16 @@
         <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
       </editorialDecl>
       <projectDesc>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
-                    im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
-                    wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
-                    dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
-                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
-                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
-                    Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
-                    orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
-                    einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
-                    (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
       </projectDesc>
       <listPrefixDef>
         <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
@@ -74,7 +74,9 @@
         <biblFull xml:id="SZDKOR.unidentified.000">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1921-02-20, SZ-SAM/AK.199</title><title xml:lang="en">Unidentified an Stefan Zweig, 1921-02-20, SZ-SAM/AK.199</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1921-02-20, SZ-SAM/AK.199</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1921-02-20, SZ-SAM/AK.199</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -83,26 +85,29 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.199</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.486</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="fre">FRE</lang>
-                  </textLang>     
-           </msContents>
+                  </textLang>
+                </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "LisbÃ´a. Claustro dos Jeronymos."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "LisbÃ´a. Claustro dos Jeronymos."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "LisbÃ´a. Claustro dos Jeronymos."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "LisbÃ´a. Claustro dos Jeronymos."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -128,7 +133,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2021-02-20" xml:lang="de">20. 2. 21</date><date when="2021-02-20" xml:lang="en">20. 2. 21</date></correspAction>
+                <date when="2021-02-20" xml:lang="de">20. 2. 21</date>
+                <date when="2021-02-20" xml:lang="en">20. 2. 21</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -141,7 +148,9 @@
         <biblFull xml:id="SZDKOR.unidentified.001">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1906, SZ-SAM/AK.116</title><title xml:lang="en">Unidentified an Stefan Zweig, 1906, SZ-SAM/AK.116</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1906, SZ-SAM/AK.116</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1906, SZ-SAM/AK.116</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -150,13 +159,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.116</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.396</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -168,16 +178,19 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Trumau"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Trumau"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Trumau"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Trumau"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
                         <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
-                      </extent>             
-       </supportDesc>
+                      </extent>
+                    </supportDesc>
                   </objectDesc>
                 </physDesc>
                 <history>
@@ -195,7 +208,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2006-01-01" xml:lang="de">1. 1. 06</date><date when="2006-01-01" xml:lang="en">1. 1. 06</date></correspAction>
+                <date when="2006-01-01" xml:lang="de">1. 1. 06</date>
+                <date when="2006-01-01" xml:lang="en">1. 1. 06</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -208,7 +223,9 @@
         <biblFull xml:id="SZDKOR.unidentified.002">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1924-08-26, SZ-SAM/AK.201</title><title xml:lang="en">Unidentified an Stefan Zweig, 1924-08-26, SZ-SAM/AK.201</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1924-08-26, SZ-SAM/AK.201</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1924-08-26, SZ-SAM/AK.201</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -217,13 +234,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.201</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.490</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -235,9 +253,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "MeridianstÃ¶tten ved Hammerfest."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "MeridianstÃ¶tten ved Hammerfest."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "MeridianstÃ¶tten ved Hammerfest."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "MeridianstÃ¶tten ved Hammerfest."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes
+                          Farbband</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material>
                       </support>
                       <extent>
@@ -262,7 +283,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2024-08-26" xml:lang="de">26. 8. 24</date><date when="2024-08-26" xml:lang="en">26. 8. 24</date></correspAction>
+                <date when="2024-08-26" xml:lang="de">26. 8. 24</date>
+                <date when="2024-08-26" xml:lang="en">26. 8. 24</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -275,7 +298,9 @@
         <biblFull xml:id="SZDKOR.unidentified.003">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1933-01-21, SZ-SAM/AK.202</title><title xml:lang="en">Unidentified an Stefan Zweig, 1933-01-21, SZ-SAM/AK.202</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1933-01-21, SZ-SAM/AK.202</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1933-01-21, SZ-SAM/AK.202</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -284,13 +309,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.202</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.491</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -302,8 +328,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de"> Ansichtspostkarte: "Snake Temple Sungei Kluang Penang."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Snake Temple Sungei Kluang Penang."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de"> Ansichtspostkarte:
+                          "Snake Temple Sungei Kluang Penang."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Snake
+                          Temple Sungei Kluang Penang."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
                       </support>
@@ -329,7 +357,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1933-01-21" xml:lang="de">21. 1. 33</date><date when="1933-01-21" xml:lang="en">21. 1. 33</date></correspAction>
+                <date when="1933-01-21" xml:lang="de">21. 1. 33</date>
+                <date when="1933-01-21" xml:lang="en">21. 1. 33</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -342,22 +372,25 @@
         <biblFull xml:id="SZDKOR.unidentified.004">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-08-27, SZ-SAM/AK.206</title><title xml:lang="en">Unidentified an Stefan Zweig, 1926-08-27, SZ-SAM/AK.206</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-08-27, SZ-SAM/AK.206</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1926-08-27, SZ-SAM/AK.206</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
-              <msDesc>   
-             <msIdentifier>
+              <msDesc>
+                <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.206</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.495</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -369,8 +402,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "City Hall, Toronto, Canada."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "City Hall, Toronto, Canada."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "City
+                          Hall, Toronto, Canada."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "City
+                          Hall, Toronto, Canada."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -396,7 +431,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2026-08-27" xml:lang="de">27. 8. 26</date><date when="2026-08-27" xml:lang="en">27. 8. 26</date></correspAction>
+                <date when="2026-08-27" xml:lang="de">27. 8. 26</date>
+                <date when="2026-08-27" xml:lang="en">27. 8. 26</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -409,7 +446,9 @@
         <biblFull xml:id="SZDKOR.unidentified.005">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1928-06-02, SZ-SAM/AK.208</title><title xml:lang="en">Unidentified an Stefan Zweig, 1928-06-02, SZ-SAM/AK.208</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1928-06-02, SZ-SAM/AK.208</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1928-06-02, SZ-SAM/AK.208</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -418,13 +457,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.208</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.497</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -434,10 +474,12 @@
                 </msContents>
                 <physDesc>
                   <objectDesc>
-                    <supportDesc>      
-                <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Notre-Dame de Paris â Vue gÃ©nÃ©rale"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Notre-Dame de Paris â Vue gÃ©nÃ©rale"</material>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Notre-Dame de Paris â Vue gÃ©nÃ©rale"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Notre-Dame de Paris â Vue gÃ©nÃ©rale"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -463,7 +505,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2028-06-02" xml:lang="de">2. 6. 28</date><date when="2028-06-02" xml:lang="en">2. 6. 28</date></correspAction>
+                <date when="2028-06-02" xml:lang="de">2. 6. 28</date>
+                <date when="2028-06-02" xml:lang="en">2. 6. 28</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -476,7 +520,9 @@
         <biblFull xml:id="SZDKOR.unidentified.006">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1928-04-16, SZ-SAM/AK.210</title><title xml:lang="en">Unidentified an Stefan Zweig, 1928-04-16, SZ-SAM/AK.210</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1928-04-16, SZ-SAM/AK.210</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1928-04-16, SZ-SAM/AK.210</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -485,13 +531,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.210</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.500</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -503,16 +550,18 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Karlsbad. |Â Etablissement Schweizerhof"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Karlsbad. |Â Etablissement Schweizerhof"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Karlsbad. |Â Etablissement Schweizerhof"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Karlsbad. |Â Etablissement Schweizerhof"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
                         <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
-                      </extent>                
-    </supportDesc>
+                      </extent>
+                    </supportDesc>
                   </objectDesc>
                 </physDesc>
                 <history>
@@ -530,7 +579,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2028-04-16" xml:lang="de">16. 4. 28</date><date when="2028-04-16" xml:lang="en">16. 4. 28</date></correspAction>
+                <date when="2028-04-16" xml:lang="de">16. 4. 28</date>
+                <date when="2028-04-16" xml:lang="en">16. 4. 28</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -543,7 +594,9 @@
         <biblFull xml:id="SZDKOR.unidentified.007">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-09-28, SZ-SAM/AK.212</title><title xml:lang="en">Unidentified an Stefan Zweig, 1931-09-28, SZ-SAM/AK.212</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-09-28, SZ-SAM/AK.212</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1931-09-28, SZ-SAM/AK.212</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -552,13 +605,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.212</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.502</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -570,10 +624,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Portofino Vetta â Panorama verso Camogli"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Portofino Vetta â Panorama verso Camogli"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">blauschwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Portofino Vetta â Panorama verso Camogli"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Portofino Vetta â Panorama verso Camogli"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blauschwarze
+                          Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black
+                          ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
@@ -597,7 +655,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1931-09-28" xml:lang="de">28. 9. 31</date><date when="1931-09-28" xml:lang="en">28. 9. 31</date></correspAction>
+                <date when="1931-09-28" xml:lang="de">28. 9. 31</date>
+                <date when="1931-09-28" xml:lang="en">28. 9. 31</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -610,7 +670,9 @@
         <biblFull xml:id="SZDKOR.unidentified.008">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-09-24, SZ-SAM/AK.213</title><title xml:lang="en">Unidentified an Stefan Zweig, 1929-09-24, SZ-SAM/AK.213</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-09-24, SZ-SAM/AK.213</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1929-09-24, SZ-SAM/AK.213</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -619,13 +681,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.213</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.503</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -637,9 +700,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Heilsberg. Schloss |Â Kleiner Remter | SterngewÃ¶lbe mit Malerei des 16. Jahrh."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Heilsberg. Schloss |Â Kleiner Remter | SterngewÃ¶lbe mit Malerei des 16. Jahrh."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Heilsberg. Schloss |Â Kleiner Remter | SterngewÃ¶lbe mit Malerei des 16.
+                          Jahrh."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Heilsberg. Schloss |Â Kleiner Remter | SterngewÃ¶lbe mit Malerei des 16.
+                          Jahrh."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -664,7 +732,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2029-09-24" xml:lang="de">24. 9. 29</date><date when="2029-09-24" xml:lang="en">24. 9. 29</date></correspAction>
+                <date when="2029-09-24" xml:lang="de">24. 9. 29</date>
+                <date when="2029-09-24" xml:lang="en">24. 9. 29</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -677,22 +747,25 @@
         <biblFull xml:id="SZDKOR.unidentified.009">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1906-11-23, SZ-SAM/AK.214</title><title xml:lang="en">Unidentified an Stefan Zweig, 1906-11-23, SZ-SAM/AK.214</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1906-11-23, SZ-SAM/AK.214</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1906-11-23, SZ-SAM/AK.214</title>
+            </titleStmt>
             <publicationStmt>
-              <ab>Einzelbrief</ab> 
-           </publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.214</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.504</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -704,9 +777,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Palermo âÂ Villa Giulia â Emicicli pompeiani"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Palermo âÂ Villa Giulia â Emicicli pompeiani"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Palermo âÂ Villa Giulia â Emicicli pompeiani"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Palermo âÂ Villa Giulia â Emicicli pompeiani"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -731,7 +807,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2006-11-23" xml:lang="de">23. 11. 06</date><date when="2006-11-23" xml:lang="en">23. 11. 06</date></correspAction>
+                <date when="2006-11-23" xml:lang="de">23. 11. 06</date>
+                <date when="2006-11-23" xml:lang="en">23. 11. 06</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -744,7 +822,9 @@
         <biblFull xml:id="SZDKOR.unidentified.010">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1919-03-09, SZ-SAM/AK.216</title><title xml:lang="en">Unidentified an Stefan Zweig, 1919-03-09, SZ-SAM/AK.216</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1919-03-09, SZ-SAM/AK.216</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1919-03-09, SZ-SAM/AK.216</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -753,27 +833,31 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.216</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.506</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
                     <lang xml:lang="ita">ITA</lang>
-                  </textLang>           
-     </msContents>
+                  </textLang>
+                </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Campione â Lago di Lugano."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Campione â Lago di Lugano."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Campione â Lago di Lugano."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Campione â Lago di Lugano."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -798,7 +882,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2019-03-09" xml:lang="de">9. 3. 19</date><date when="2019-03-09" xml:lang="en">9. 3. 19</date></correspAction>
+                <date when="2019-03-09" xml:lang="de">9. 3. 19</date>
+                <date when="2019-03-09" xml:lang="en">9. 3. 19</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -811,7 +897,9 @@
         <biblFull xml:id="SZDKOR.unidentified.011">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1907-08-03, SZ-SAM/AK.217</title><title xml:lang="en">Unidentified an Stefan Zweig, 1907-08-03, SZ-SAM/AK.217</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1907-08-03, SZ-SAM/AK.217</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1907-08-03, SZ-SAM/AK.217</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -820,13 +908,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.217</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.507</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -838,9 +927,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Bad-Deutsch Altenburg N. Ã. | Partie aus dem Kurpark mit Kurhaus."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Bad-Deutsch Altenburg N. Ã. | Partie aus dem Kurpark mit Kurhaus."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Bad-Deutsch Altenburg N. Ã. | Partie aus dem Kurpark mit
+                          Kurhaus."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Bad-Deutsch Altenburg N. Ã. | Partie aus dem Kurpark mit
+                          Kurhaus."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -851,8 +945,8 @@
                   </objectDesc>
                 </physDesc>
                 <history>
-                  <acquisition>         
-           <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
                     <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
                   </acquisition>
                 </history>
@@ -865,7 +959,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2007-08-03" xml:lang="de">3. 8. 07</date><date when="2007-08-03" xml:lang="en">3. 8. 07</date></correspAction>
+                <date when="2007-08-03" xml:lang="de">3. 8. 07</date>
+                <date when="2007-08-03" xml:lang="en">3. 8. 07</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -878,7 +974,9 @@
         <biblFull xml:id="SZDKOR.unidentified.012">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-10-03, SZ-SAM/AK.218</title><title xml:lang="en">Unidentified an Stefan Zweig, 1932-10-03, SZ-SAM/AK.218</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-10-03, SZ-SAM/AK.218</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1932-10-03, SZ-SAM/AK.218</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -887,13 +985,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.218</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.508</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -906,8 +1005,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Isola Bella â Lago Maggiore"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Isola Bella â Lago Maggiore"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Isola
+                          Bella â Lago Maggiore"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Isola
+                          Bella â Lago Maggiore"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -933,10 +1034,12 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1932-10-03" xml:lang="de">3. 10. 32</date><date when="1932-10-03" xml:lang="en">3. 10. 32</date></correspAction>
+                <date when="1932-10-03" xml:lang="de">3. 10. 32</date>
+                <date when="1932-10-03" xml:lang="en">3. 10. 32</date>
+              </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479">            
-      <surname>Zweig</surname>
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
               </correspAction>
@@ -946,7 +1049,9 @@
         <biblFull xml:id="SZDKOR.unidentified.013">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1908-07-31, SZ-SAM/AK.219</title><title xml:lang="en">Unidentified an Stefan Zweig, 1908-07-31, SZ-SAM/AK.219</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1908-07-31, SZ-SAM/AK.219</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1908-07-31, SZ-SAM/AK.219</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -955,13 +1060,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.219</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.509</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -973,9 +1079,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Stubaital â Fulpmes gegen die Gletscher"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Stubaital â Fulpmes gegen die Gletscher"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Stubaital â Fulpmes gegen die Gletscher"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Stubaital â Fulpmes gegen die Gletscher"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1000,7 +1109,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2008-07-31" xml:lang="de">31. 7. 08</date><date when="2008-07-31" xml:lang="en">31. 7. 08</date></correspAction>
+                <date when="2008-07-31" xml:lang="de">31. 7. 08</date>
+                <date when="2008-07-31" xml:lang="en">31. 7. 08</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1013,7 +1124,9 @@
         <biblFull xml:id="SZDKOR.unidentified.014">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1921-08-30, SZ-SAM/AK.221</title><title xml:lang="en">Unidentified an Stefan Zweig, 1921-08-30, SZ-SAM/AK.221</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1921-08-30, SZ-SAM/AK.221</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1921-08-30, SZ-SAM/AK.221</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1022,13 +1135,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.221</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.512</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1040,9 +1154,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Hannover â Alte HÃ¤user am Markt"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Hannover â Alte HÃ¤user am Markt"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Hannover â Alte HÃ¤user am Markt"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Hannover â Alte HÃ¤user am Markt"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1067,7 +1184,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2021-08-30" xml:lang="de">30. 8. 21</date><date when="2021-08-30" xml:lang="en">30. 8. 21</date></correspAction>
+                <date when="2021-08-30" xml:lang="de">30. 8. 21</date>
+                <date when="2021-08-30" xml:lang="en">30. 8. 21</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1080,7 +1199,9 @@
         <biblFull xml:id="SZDKOR.unidentified.015">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-01-02, SZ-SAM/AK.222</title><title xml:lang="en">Unidentified an Stefan Zweig, 1927-01-02, SZ-SAM/AK.222</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-01-02, SZ-SAM/AK.222</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1927-01-02, SZ-SAM/AK.222</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1089,27 +1210,31 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.222</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.513</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
-                  <textLang>  
-                  <lang xml:lang="fre">FRE</lang>
+                  <textLang>
+                    <lang xml:lang="fre">FRE</lang>
                   </textLang>
                 </msContents>
                 <physDesc>
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris | Le DÃ´me des Invalides"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris | Le DÃ´me des Invalides"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris
+                          | Le DÃ´me des Invalides"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris
+                          | Le DÃ´me des Invalides"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                       </support>
                       <extent>
@@ -1134,7 +1259,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2027-01-02" xml:lang="de">2. 1. 27</date><date when="2027-01-02" xml:lang="en">2. 1. 27</date></correspAction>
+                <date when="2027-01-02" xml:lang="de">2. 1. 27</date>
+                <date when="2027-01-02" xml:lang="en">2. 1. 27</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1147,7 +1274,9 @@
         <biblFull xml:id="SZDKOR.unidentified.016">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1912-08-24, SZ-SAM/AK.223</title><title xml:lang="en">Unidentified an Stefan Zweig, 1912-08-24, SZ-SAM/AK.223</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1912-08-24, SZ-SAM/AK.223</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1912-08-24, SZ-SAM/AK.223</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1156,13 +1285,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.223</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.514</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1174,9 +1304,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Engelberg und die SpannÃ¶rter 3205 m"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Engelberg und die SpannÃ¶rter 3205 m"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Engelberg und die SpannÃ¶rter 3205 m"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Engelberg und die SpannÃ¶rter 3205 m"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1201,7 +1334,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2012-08-24" xml:lang="de">24. 8. 12</date><date when="2012-08-24" xml:lang="en">24. 8. 12</date></correspAction>
+                <date when="2012-08-24" xml:lang="de">24. 8. 12</date>
+                <date when="2012-08-24" xml:lang="en">24. 8. 12</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1214,7 +1349,9 @@
         <biblFull xml:id="SZDKOR.unidentified.017">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1903-09-01, SZ-SAM/AK.225</title><title xml:lang="en">Unidentified an Stefan Zweig, 1903-09-01, SZ-SAM/AK.225</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1903-09-01, SZ-SAM/AK.225</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1903-09-01, SZ-SAM/AK.225</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1223,13 +1360,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.225</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.516</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1241,76 +1379,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris. âÂ Fontaine MÃ©dicis"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris. âÂ Fontaine MÃ©dicis"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
-                      </support>
-                      <extent>
-                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
-                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
-                      </extent>
-                    </supportDesc>
-                  </objectDesc>
-                </physDesc>
-                <history>
-                  <acquisition>
-                    <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
-                    <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
-                  </acquisition>
-                </history>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-          <profileDesc>
-            <correspDesc type="toZweig">
-              <correspAction type="sent">
-                <persName>
-                  <name>Unbekannt/Unidentified</name>           
-     </persName>
-                <date when="2003-09-01" xml:lang="de">1. 9. 03</date><date when="2003-09-01" xml:lang="en">1. 9. 03</date></correspAction>
-              <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
-              </correspAction>
-            </correspDesc>
-          </profileDesc>
-        </biblFull>
-        <biblFull xml:id="SZDKOR.unidentified.018">
-          <fileDesc>
-            <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1925-08-01, SZ-SAM/AK.226</title><title xml:lang="en">Unidentified an Stefan Zweig, 1925-08-01, SZ-SAM/AK.226</title></titleStmt>
-            <publicationStmt>
-              <ab>Einzelbrief</ab>
-            </publicationStmt>
-            <sourceDesc>
-              <msDesc>
-                <msIdentifier>
-                  <country>Ãsterreich</country>
-                  <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SAM/AK.226</idno>
-                  <altIdentifier>
-                    <idno type="PID">o:szd.672</idno>
-                  </altIdentifier>
-                  <altIdentifier>
-                    <idno type="context" />
-                  </altIdentifier>
-                </msIdentifier>
-                <msContents>
-                  <textLang>
-                    <lang xml:lang="ger">GER</lang>
-                  </textLang>
-                </msContents>
-                <physDesc>
-                  <objectDesc>
-                    <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Pigne d'Arolla"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Pigne d'Arolla"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Paris. âÂ Fontaine MÃ©dicis"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris.
+                          âÂ Fontaine MÃ©dicis"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1335,7 +1409,84 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2025-08-01" xml:lang="de">1. 8. 25</date><date when="2025-08-01" xml:lang="en">1. 8. 25</date></correspAction>
+                <date when="2003-09-01" xml:lang="de">1. 9. 03</date>
+                <date when="2003-09-01" xml:lang="en">1. 9. 03</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.018">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1925-08-01, SZ-SAM/AK.226</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1925-08-01, SZ-SAM/AK.226</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.226</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.672</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                    <idno type="context"/>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">GER</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Pigne
+                          d'Arolla"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Pigne
+                          d'Arolla"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt/Unidentified</name>
+                </persName>
+                <date when="2025-08-01" xml:lang="de">1. 8. 25</date>
+                <date when="2025-08-01" xml:lang="en">1. 8. 25</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1348,7 +1499,9 @@
         <biblFull xml:id="SZDKOR.unidentified.019">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1907-06-26, SZ-SAM/AK.231</title><title xml:lang="en">Unidentified an Stefan Zweig, 1907-06-26, SZ-SAM/AK.231</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1907-06-26, SZ-SAM/AK.231</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1907-06-26, SZ-SAM/AK.231</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1357,13 +1510,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.231</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.523</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1375,9 +1529,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Lille. âÂ Statue de NapolÃ©on â IntÃ©rieur de la Bourse"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Lille. âÂ Statue de NapolÃ©on â IntÃ©rieur de la Bourse"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Lille. âÂ Statue de NapolÃ©on â IntÃ©rieur de la Bourse"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Lille.
+                          âÂ Statue de NapolÃ©on â IntÃ©rieur de la Bourse"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                       </support>
                       <extent>
@@ -1402,7 +1559,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2007-06-26" xml:lang="de">26. 6. 07</date><date when="2007-06-26" xml:lang="en">26. 6. 07</date></correspAction>
+                <date when="2007-06-26" xml:lang="de">26. 6. 07</date>
+                <date when="2007-06-26" xml:lang="en">26. 6. 07</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1415,7 +1574,9 @@
         <biblFull xml:id="SZDKOR.unidentified.020">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, SZ-SAM/AK.232</title><title xml:lang="en">Unidentified an Stefan Zweig, SZ-SAM/AK.232</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, SZ-SAM/AK.232</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, SZ-SAM/AK.232</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1424,13 +1585,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.232</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.524</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1442,9 +1604,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Bamberg. Dom, Figuren am Adamsportal"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Bamberg. Dom, Figuren am Adamsportal"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Bamberg. Dom, Figuren am Adamsportal"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Bamberg. Dom, Figuren am Adamsportal"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1482,7 +1647,9 @@
         <biblFull xml:id="SZDKOR.unidentified.021">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1933-04-17, SZ-SAM/AK.233</title><title xml:lang="en">Unidentified an Stefan Zweig, 1933-04-17, SZ-SAM/AK.233</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1933-04-17, SZ-SAM/AK.233</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1933-04-17, SZ-SAM/AK.233</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1491,13 +1658,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.233</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.525</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1509,15 +1677,17 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Schloss Kyburg vom Flugzeug aus gesehen"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Schloss Kyburg vom Flugzeug aus gesehen"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Schloss Kyburg vom Flugzeug aus gesehen"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Schloss Kyburg vom Flugzeug aus gesehen"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
                       </support>
                       <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
-                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>                
-      </extent>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                      </extent>
                     </supportDesc>
                   </objectDesc>
                 </physDesc>
@@ -1532,11 +1702,13 @@
           </fileDesc>
           <profileDesc>
             <correspDesc type="toZweig">
-              <correspAction type="sent">          
-      <persName>
+              <correspAction type="sent">
+                <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1933-04-17" xml:lang="de">17. 4. 33</date><date when="1933-04-17" xml:lang="en">17. 4. 33</date></correspAction>
+                <date when="1933-04-17" xml:lang="de">17. 4. 33</date>
+                <date when="1933-04-17" xml:lang="en">17. 4. 33</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1549,7 +1721,9 @@
         <biblFull xml:id="SZDKOR.unidentified.022">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1906-03-20, SZ-SAM/AK.235</title><title xml:lang="en">Unidentified an Stefan Zweig, 1906-03-20, SZ-SAM/AK.235</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1906-03-20, SZ-SAM/AK.235</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1906-03-20, SZ-SAM/AK.235</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1558,13 +1732,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.235</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.527</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1576,9 +1751,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris âÂ Avenue d l'OpÃ©ra"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris âÂ Avenue d l'OpÃ©ra"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris
+                          âÂ Avenue d l'OpÃ©ra"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Paris
+                          âÂ Avenue d l'OpÃ©ra"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                       </support>
                       <extent>
@@ -1603,7 +1781,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2006-03-20" xml:lang="de">20. 3. 06</date><date when="2006-03-20" xml:lang="en">20. 3. 06</date></correspAction>
+                <date when="2006-03-20" xml:lang="de">20. 3. 06</date>
+                <date when="2006-03-20" xml:lang="en">20. 3. 06</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1616,7 +1796,9 @@
         <biblFull xml:id="SZDKOR.unidentified.023">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1934-09-27, SZ-SAM/AK.266</title><title xml:lang="en">Unidentified an Stefan Zweig, 1934-09-27, SZ-SAM/AK.266</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1934-09-27, SZ-SAM/AK.266</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1934-09-27, SZ-SAM/AK.266</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1625,13 +1807,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.266</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.559</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1643,9 +1826,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Senate Building, Havana, Cuba."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Senate Building, Havana, Cuba."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Senate Building, Havana, Cuba."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Senate
+                          Building, Havana, Cuba."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes
+                          Farbband</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material>
                       </support>
                       <extent>
@@ -1670,7 +1856,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1934-09-27" xml:lang="de">27. 9. 34</date><date when="1934-09-27" xml:lang="en">27. 9. 34</date></correspAction>
+                <date when="1934-09-27" xml:lang="de">27. 9. 34</date>
+                <date when="1934-09-27" xml:lang="en">27. 9. 34</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1683,22 +1871,25 @@
         <biblFull xml:id="SZDKOR.unidentified.024">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1930-06-04, SZ-SAM/AK.267</title><title xml:lang="en">Unidentified an Stefan Zweig, 1930-06-04, SZ-SAM/AK.267</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1930-06-04, SZ-SAM/AK.267</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1930-06-04, SZ-SAM/AK.267</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
-              <msDesc>       
-         <msIdentifier>
+              <msDesc>
+                <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.267</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.560</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1710,8 +1901,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Moonlight Scene on a Florida River. | View from Grounds of Thomas A. Edison Home. Fort Myers, FLA."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Moonlight Scene on a Florida River. | View from Grounds of Thomas A. Edison Home. Fort Myers, FLA."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Moonlight Scene on a Florida River. | View from Grounds of Thomas A.
+                          Edison Home. Fort Myers, FLA."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Moonlight Scene on a Florida River. | View from Grounds of Thomas A.
+                          Edison Home. Fort Myers, FLA."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -1737,7 +1932,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2030-06-04" xml:lang="de">4. 6. 30</date><date when="2030-06-04" xml:lang="en">4. 6. 30</date></correspAction>
+                <date when="2030-06-04" xml:lang="de">4. 6. 30</date>
+                <date when="2030-06-04" xml:lang="en">4. 6. 30</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1750,7 +1947,9 @@
         <biblFull xml:id="SZDKOR.unidentified.025">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1913-08-25, SZ-SAM/AK.269</title><title xml:lang="en">Unidentified an Stefan Zweig, 1913-08-25, SZ-SAM/AK.269</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1913-08-25, SZ-SAM/AK.269</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1913-08-25, SZ-SAM/AK.269</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1759,13 +1958,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.269</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.562</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1777,12 +1977,15 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Fragsburg gegen Meran (734 m.)"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Fragsburg gegen Meran (734 m.)"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Fragsburg gegen Meran (734 m.)"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Fragsburg gegen Meran (734 m.)"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
-                      </support>    
-                  <extent>
+                      </support>
+                      <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
                         <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
                       </extent>
@@ -1804,7 +2007,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2013-08-25" xml:lang="de">25. 8. 13</date><date when="2013-08-25" xml:lang="en">25. 8. 13</date></correspAction>
+                <date when="2013-08-25" xml:lang="de">25. 8. 13</date>
+                <date when="2013-08-25" xml:lang="en">25. 8. 13</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1817,7 +2022,9 @@
         <biblFull xml:id="SZDKOR.unidentified.026">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-05-29, SZ-SAM/AK.270</title><title xml:lang="en">Unidentified an Stefan Zweig, 1932-05-29, SZ-SAM/AK.270</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-05-29, SZ-SAM/AK.270</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1932-05-29, SZ-SAM/AK.270</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1826,13 +2033,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.270</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.564</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1844,14 +2052,18 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Napoli âÂ Panorama e Vesuvio"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Napoli âÂ Panorama e Vesuvio"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">bauschwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Napoli âÂ Panorama e Vesuvio"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Napoli
+                          âÂ Panorama e Vesuvio"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">bauschwarze
+                          Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black
+                          ink</material>
                       </support>
                       <extent>
-                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>          
-              <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
                       </extent>
                     </supportDesc>
                   </objectDesc>
@@ -1871,7 +2083,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1932-05-29" xml:lang="de">29. 5. 32</date><date when="1932-05-29" xml:lang="en">29. 5. 32</date></correspAction>
+                <date when="1932-05-29" xml:lang="de">29. 5. 32</date>
+                <date when="1932-05-29" xml:lang="en">29. 5. 32</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1884,7 +2098,9 @@
         <biblFull xml:id="SZDKOR.unidentified.027">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-08-01, SZ-SAM/AK.271</title><title xml:lang="en">Unidentified an Stefan Zweig, 1931-08-01, SZ-SAM/AK.271</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-08-01, SZ-SAM/AK.271</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1931-08-01, SZ-SAM/AK.271</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1893,13 +2109,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.271</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.565</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1911,9 +2128,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Gaisberg mit Autostrasse aus 3500m"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Gaisberg mit Autostrasse aus 3500m"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Gaisberg mit Autostrasse aus 3500m"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Gaisberg mit Autostrasse aus 3500m"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -1938,7 +2158,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1931-08-01" xml:lang="de">1. 8. 31</date><date when="1931-08-01" xml:lang="en">1. 8. 31</date></correspAction>
+                <date when="1931-08-01" xml:lang="de">1. 8. 31</date>
+                <date when="1931-08-01" xml:lang="en">1. 8. 31</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -1951,7 +2173,9 @@
         <biblFull xml:id="SZDKOR.unidentified.028">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-10-03, SZ-SAM/AK.272</title><title xml:lang="en">Unidentified an Stefan Zweig, 1926-10-03, SZ-SAM/AK.272</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-10-03, SZ-SAM/AK.272</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1926-10-03, SZ-SAM/AK.272</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -1960,13 +2184,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.272</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.566</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -1978,9 +2203,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Roma. Piazza Vittorio Emanuele. Giardino."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Roma. Piazza Vittorio Emanuele. Giardino."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Roma.
+                          Piazza Vittorio Emanuele. Giardino."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Roma.
+                          Piazza Vittorio Emanuele. Giardino."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2005,7 +2233,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2026-10-03" xml:lang="de">3. 10. 26</date><date when="2026-10-03" xml:lang="en">3. 10. 26</date></correspAction>
+                <date when="2026-10-03" xml:lang="de">3. 10. 26</date>
+                <date when="2026-10-03" xml:lang="en">3. 10. 26</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2018,22 +2248,25 @@
         <biblFull xml:id="SZDKOR.unidentified.029">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1905-04-23, SZ-SAM/AK.274</title><title xml:lang="en">Unidentified an Stefan Zweig, 1905-04-23, SZ-SAM/AK.274</title></titleStmt>
-            <publicationStmt> 
-             <ab>Einzelbrief</ab>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1905-04-23, SZ-SAM/AK.274</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1905-04-23, SZ-SAM/AK.274</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.274</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.568</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2045,9 +2278,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Le Havre. âÂ L'Ãglise St-Michel."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Le Havre. âÂ L'Ãglise St-Michel."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Le
+                          Havre. âÂ L'Ãglise St-Michel."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Le
+                          Havre. âÂ L'Ãglise St-Michel."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2072,7 +2308,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2005-04-23" xml:lang="de">23. 4. 05</date><date when="2005-04-23" xml:lang="en">23. 4. 05</date></correspAction>
+                <date when="2005-04-23" xml:lang="de">23. 4. 05</date>
+                <date when="2005-04-23" xml:lang="en">23. 4. 05</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2085,7 +2323,9 @@
         <biblFull xml:id="SZDKOR.unidentified.030">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1917-08-18, SZ-SAM/AK.276</title><title xml:lang="en">Unidentified an Stefan Zweig, 1917-08-18, SZ-SAM/AK.276</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1917-08-18, SZ-SAM/AK.276</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1917-08-18, SZ-SAM/AK.276</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2094,13 +2334,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.276</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.570</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2112,8 +2353,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Marienbad"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Marienbad"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Marienbad"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Marienbad"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -2139,7 +2382,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2017-08-18" xml:lang="de">18. 8. 17</date><date when="2017-08-18" xml:lang="en">18. 8. 17</date></correspAction>
+                <date when="2017-08-18" xml:lang="de">18. 8. 17</date>
+                <date when="2017-08-18" xml:lang="en">18. 8. 17</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2152,7 +2397,9 @@
         <biblFull xml:id="SZDKOR.unidentified.031">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-07-12, SZ-SAM/AK.277</title><title xml:lang="en">Unidentified an Stefan Zweig, 1927-07-12, SZ-SAM/AK.277</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-07-12, SZ-SAM/AK.277</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1927-07-12, SZ-SAM/AK.277</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2161,13 +2408,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.277</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.571</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2179,9 +2427,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "DÃ¼rnstein a. d. Donau"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "DÃ¼rnstein a. d. Donau"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">blauer Farbstift</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "DÃ¼rnstein a. d. Donau"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "DÃ¼rnstein a. d. Donau"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blauer
+                          Farbstift</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue crayon</material>
                       </support>
                       <extent>
@@ -2206,7 +2457,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2027-07-12" xml:lang="de">12. 7. 27</date><date when="2027-07-12" xml:lang="en">12. 7. 27</date></correspAction>
+                <date when="2027-07-12" xml:lang="de">12. 7. 27</date>
+                <date when="2027-07-12" xml:lang="en">12. 7. 27</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2219,7 +2472,9 @@
         <biblFull xml:id="SZDKOR.unidentified.032">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1912-09-23, SZ-SAM/AK.278</title><title xml:lang="en">Unidentified an Stefan Zweig, 1912-09-23, SZ-SAM/AK.278</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1912-09-23, SZ-SAM/AK.278</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1912-09-23, SZ-SAM/AK.278</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2228,13 +2483,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.278</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.572</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2246,9 +2502,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Ferrara âÂ Cattedrale"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Ferrara âÂ Cattedrale"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Ferrara âÂ Cattedrale"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Ferrara âÂ Cattedrale"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2273,7 +2532,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2012-09-23" xml:lang="de">23. 9. 12</date><date when="2012-09-23" xml:lang="en">23. 9. 12</date></correspAction>
+                <date when="2012-09-23" xml:lang="de">23. 9. 12</date>
+                <date when="2012-09-23" xml:lang="en">23. 9. 12</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2286,7 +2547,9 @@
         <biblFull xml:id="SZDKOR.unidentified.033">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-07-28, SZ-SAM/AK.279</title><title xml:lang="en">Unidentified an Stefan Zweig, 1932-07-28, SZ-SAM/AK.279</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1932-07-28, SZ-SAM/AK.279</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1932-07-28, SZ-SAM/AK.279</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2295,13 +2558,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.279</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.573</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2313,9 +2577,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte [Genfersee]</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard [Lake Geneva]</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte
+                          [Genfersee]</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard [Lake
+                          Geneva]</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2340,7 +2607,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1932-07-28" xml:lang="de">28. 7. 32</date><date when="1932-07-28" xml:lang="en">28. 7. 32</date></correspAction>
+                <date when="1932-07-28" xml:lang="de">28. 7. 32</date>
+                <date when="1932-07-28" xml:lang="en">28. 7. 32</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2353,7 +2622,9 @@
         <biblFull xml:id="SZDKOR.unidentified.034">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1910-04-21, SZ-SAM/AK.280</title><title xml:lang="en">Unidentified an Stefan Zweig, 1910-04-21, SZ-SAM/AK.280</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1910-04-21, SZ-SAM/AK.280</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1910-04-21, SZ-SAM/AK.280</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2362,13 +2633,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.280</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.575</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2380,8 +2652,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Im Moolsdorfer Park. |Â Blick auf das Schloss."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Im Moolsdorfer Park. |Â Blick auf das Schloss."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Im
+                          Moolsdorfer Park. |Â Blick auf das Schloss."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Im
+                          Moolsdorfer Park. |Â Blick auf das Schloss."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">grÃ¼ne Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">green ink</material>
                       </support>
@@ -2407,7 +2681,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2010-04-21" xml:lang="de">21. 4. 10</date><date when="2010-04-21" xml:lang="en">21. 4. 10</date></correspAction>
+                <date when="2010-04-21" xml:lang="de">21. 4. 10</date>
+                <date when="2010-04-21" xml:lang="en">21. 4. 10</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2420,7 +2696,9 @@
         <biblFull xml:id="SZDKOR.unidentified.035">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-07-27, SZ-SAM/AK.282</title><title xml:lang="en">Unidentified an Stefan Zweig, 1929-07-27, SZ-SAM/AK.282</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-07-27, SZ-SAM/AK.282</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1929-07-27, SZ-SAM/AK.282</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2429,13 +2707,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.282</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.577</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2447,9 +2726,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Charlotte Street, Fraserburgh."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Charlotte Street, Fraserburgh."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Charlotte Street, Fraserburgh."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Charlotte Street, Fraserburgh."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2460,8 +2742,8 @@
                   </objectDesc>
                 </physDesc>
                 <history>
-                  <acquisition>               
-     <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
                     <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
                   </acquisition>
                 </history>
@@ -2474,7 +2756,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2029-07-27" xml:lang="de">27. 7. 29</date><date when="2029-07-27" xml:lang="en">27. 7. 29</date></correspAction>
+                <date when="2029-07-27" xml:lang="de">27. 7. 29</date>
+                <date when="2029-07-27" xml:lang="en">27. 7. 29</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2487,7 +2771,9 @@
         <biblFull xml:id="SZDKOR.unidentified.036">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1935-08-27, SZ-SAM/AK.283</title><title xml:lang="en">Unidentified an Stefan Zweig, 1935-08-27, SZ-SAM/AK.283</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1935-08-27, SZ-SAM/AK.283</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1935-08-27, SZ-SAM/AK.283</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2496,13 +2782,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.283</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.578</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2514,9 +2801,14 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "La Farnesina (Sede della Reale Accademia d'Italia) | Loggia di Psiche"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "La Farnesina (Sede della Reale Accademia d'Italia) | Loggia di Psiche"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "La
+                          Farnesina (Sede della Reale Accademia d'Italia) | Loggia di
+                          Psiche"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "La
+                          Farnesina (Sede della Reale Accademia d'Italia) | Loggia di
+                          Psiche"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2541,7 +2833,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1935-08-27" xml:lang="de">27. 8. 35</date><date when="1935-08-27" xml:lang="en">27. 8. 35</date></correspAction>
+                <date when="1935-08-27" xml:lang="de">27. 8. 35</date>
+                <date when="1935-08-27" xml:lang="en">27. 8. 35</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2554,7 +2848,9 @@
         <biblFull xml:id="SZDKOR.unidentified.037">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-06-20, SZ-SAM/AK.285</title><title xml:lang="en">Unidentified an Stefan Zweig, 1926-06-20, SZ-SAM/AK.285</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1926-06-20, SZ-SAM/AK.285</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1926-06-20, SZ-SAM/AK.285</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2563,13 +2859,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.285</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.580</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2581,9 +2878,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Hamburg| St. Pauli, LandungsbrÃ¼cken."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Hamburg| St. Pauli, LandungsbrÃ¼cken."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Hamburg| St. Pauli, LandungsbrÃ¼cken."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Hamburg| St. Pauli, LandungsbrÃ¼cken."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2608,7 +2908,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2026-06-20" xml:lang="de">20. 6. 26</date><date when="2026-06-20" xml:lang="en">20. 6. 26</date></correspAction>
+                <date when="2026-06-20" xml:lang="de">20. 6. 26</date>
+                <date when="2026-06-20" xml:lang="en">20. 6. 26</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2621,7 +2923,9 @@
         <biblFull xml:id="SZDKOR.unidentified.038">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-12-31, SZ-SAM/AK.286</title><title xml:lang="en">Unidentified an Stefan Zweig, 1929-12-31, SZ-SAM/AK.286</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1929-12-31, SZ-SAM/AK.286</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1929-12-31, SZ-SAM/AK.286</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2630,13 +2934,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.286</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.581</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2648,8 +2953,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Bordeaux. âÂ Ruines du Palais Gallien"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Bordeaux. âÂ Ruines du Palais Gallien"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Bordeaux. âÂ Ruines du Palais Gallien"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Bordeaux. âÂ Ruines du Palais Gallien"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -2675,7 +2982,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2029-12-31" xml:lang="de">31. 12. 29</date><date when="2029-12-31" xml:lang="en">31. 12. 29</date></correspAction>
+                <date when="2029-12-31" xml:lang="de">31. 12. 29</date>
+                <date when="2029-12-31" xml:lang="en">31. 12. 29</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2688,7 +2997,9 @@
         <biblFull xml:id="SZDKOR.unidentified.039">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.287</title><title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.287</title></titleStmt>
+              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.287</title>
+              <title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.287</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2697,13 +3008,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.287</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1657</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2715,9 +3027,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Krems a. D."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Krems a. D."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Krems
+                          a. D."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Krems
+                          a. D."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2742,7 +3057,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2030-09-23" xml:lang="de">23. 9. 30</date><date when="2030-09-23" xml:lang="en">23. 9. 30</date></correspAction>
+                <date when="2030-09-23" xml:lang="de">23. 9. 30</date>
+                <date when="2030-09-23" xml:lang="en">23. 9. 30</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2755,7 +3072,9 @@
         <biblFull xml:id="SZDKOR.unidentified.040">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.289</title><title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.289</title></titleStmt>
+              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.289</title>
+              <title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.289</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2764,13 +3083,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.289</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1659</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2780,11 +3100,14 @@
                 </msContents>
                 <physDesc>
                   <objectDesc>
-                    <supportDesc> 
-                     <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Lovrana. âÂ Verafels."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Lovrana. âÂ Verafels."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Lovrana. âÂ Verafels."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Lovrana. âÂ Verafels."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2809,7 +3132,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2018-10-02" xml:lang="de">2. 10. 18</date><date when="2018-10-02" xml:lang="en">2. 10. 18</date></correspAction>
+                <date when="2018-10-02" xml:lang="de">2. 10. 18</date>
+                <date when="2018-10-02" xml:lang="en">2. 10. 18</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2822,7 +3147,9 @@
         <biblFull xml:id="SZDKOR.unidentified.041">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.291</title><title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.291</title></titleStmt>
+              <title xml:lang="de">Unbekannt an Stefan Zweig, SZ-SAM/AK.291</title>
+              <title xml:lang="en">Unbekannt an Stefan Zweig, SZ-SAM/AK.291</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2831,13 +3158,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.291</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1660</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2849,9 +3177,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "LÃ¼beck. Haus der Schiffergesellschaft"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "LÃ¼beck. Haus der Schiffergesellschaft"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "LÃ¼beck. Haus der Schiffergesellschaft"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "LÃ¼beck. Haus der Schiffergesellschaft"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                       </support>
                       <extent>
@@ -2876,7 +3207,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2012-05-26" xml:lang="de">26. 5. 12</date><date when="2012-05-26" xml:lang="en">26. 5. 12</date></correspAction>
+                <date when="2012-05-26" xml:lang="de">26. 5. 12</date>
+                <date when="2012-05-26" xml:lang="en">26. 5. 12</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2889,7 +3222,9 @@
         <biblFull xml:id="SZDKOR.unidentified.042">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-07-14, SZ-SAM/AK.52</title><title xml:lang="en">Unidentified an Stefan Zweig, 1927-07-14, SZ-SAM/AK.52</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1927-07-14, SZ-SAM/AK.52</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1927-07-14, SZ-SAM/AK.52</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2898,13 +3233,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.52</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.621</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2916,9 +3252,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "St. Wolfgang am Abersee, Salzkammergut."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "St. Wolfgang am Abersee, Salzkammergut."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "St.
+                          Wolfgang am Abersee, Salzkammergut."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "St.
+                          Wolfgang am Abersee, Salzkammergut."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -2943,7 +3282,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2027-07-14" xml:lang="de">14. 7. 27</date><date when="2027-07-14" xml:lang="en">14. 7. 27</date></correspAction>
+                <date when="2027-07-14" xml:lang="de">14. 7. 27</date>
+                <date when="2027-07-14" xml:lang="en">14. 7. 27</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -2956,7 +3297,9 @@
         <biblFull xml:id="SZDKOR.unidentified.043">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1930-08-07, SZ-SAM/AK.72</title><title xml:lang="en">Unidentified an Stefan Zweig, 1930-08-07, SZ-SAM/AK.72</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1930-08-07, SZ-SAM/AK.72</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1930-08-07, SZ-SAM/AK.72</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -2965,13 +3308,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.72</idno>
-                  <altIdentifier>                   
- <idno type="PID">o:szd.643</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.643</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -2983,9 +3327,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Bad Ischl"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Bad Ischl"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Bad
+                          Ischl"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Bad
+                          Ischl"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                       </support>
                       <extent>
@@ -3010,7 +3357,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2030-08-07" xml:lang="de">7. 8. 30</date><date when="2030-08-07" xml:lang="en">7. 8. 30</date></correspAction>
+                <date when="2030-08-07" xml:lang="de">7. 8. 30</date>
+                <date when="2030-08-07" xml:lang="en">7. 8. 30</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -3023,7 +3372,9 @@
         <biblFull xml:id="SZDKOR.unidentified.044">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, , SZ-SAM/AK.138</title><title xml:lang="en">Unidentified an Stefan Zweig, , SZ-SAM/AK.138</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, , SZ-SAM/AK.138</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, , SZ-SAM/AK.138</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -3032,13 +3383,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.138</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.420</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -3050,8 +3402,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Kaltenleutgeben."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Kaltenleutgeben."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Kaltenleutgeben."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Kaltenleutgeben."</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
                       </support>
@@ -3090,7 +3444,9 @@
         <biblFull xml:id="SZDKOR.unidentified.045">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1935-01-03, SZ-SAM/AK.209</title><title xml:lang="en">Unidentified an Stefan Zweig, 1935-01-03, SZ-SAM/AK.209</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1935-01-03, SZ-SAM/AK.209</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1935-01-03, SZ-SAM/AK.209</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -3099,13 +3455,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.209</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.498</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -3117,8 +3474,10 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Trieste. Miramare"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Ansichtspostkarte: "Trieste. Miramare"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Trieste. Miramare"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Ansichtspostkarte:
+                          "Trieste. Miramare"</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                       </support>
@@ -3144,7 +3503,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1935-01-03" xml:lang="de">3. 1. 35</date><date when="1935-01-03" xml:lang="en">3. 1. 35</date></correspAction>
+                <date when="1935-01-03" xml:lang="de">3. 1. 35</date>
+                <date when="1935-01-03" xml:lang="en">3. 1. 35</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -3157,7 +3518,9 @@
         <biblFull xml:id="SZDKOR.unidentified.046">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-10-09, SZ-SAM/AK.211</title><title xml:lang="en">Unidentified an Stefan Zweig, 1931-10-09, SZ-SAM/AK.211</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1931-10-09, SZ-SAM/AK.211</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1931-10-09, SZ-SAM/AK.211</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -3166,13 +3529,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.211</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.501</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -3184,9 +3548,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Abbazia âÂ Veduta generale"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Abbazia âÂ Veduta generale"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Abbazia âÂ Veduta generale"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Abbazia âÂ Veduta generale"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -3199,8 +3566,8 @@
                 <history>
                   <acquisition>
                     <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
-                    <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>                  
-</acquisition>
+                    <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
+                  </acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -3211,7 +3578,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1931-10-09" xml:lang="de">9. 10. 31</date><date when="1931-10-09" xml:lang="en">9. 10. 31</date></correspAction>
+                <date when="1931-10-09" xml:lang="de">9. 10. 31</date>
+                <date when="1931-10-09" xml:lang="en">9. 10. 31</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -3224,7 +3593,9 @@
         <biblFull xml:id="SZDKOR.unidentified.047">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1908-09-24, SZ-SAM/AK.224</title><title xml:lang="en">Unidentified an Stefan Zweig, 1908-09-24, SZ-SAM/AK.224</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1908-09-24, SZ-SAM/AK.224</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1908-09-24, SZ-SAM/AK.224</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -3233,13 +3604,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.224</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.515</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -3251,9 +3623,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Breslau. Partie von der SandbrÃ¼cke."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Breslau. Partie von der SandbrÃ¼cke."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Breslau. Partie von der SandbrÃ¼cke."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Breslau. Partie von der SandbrÃ¼cke."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -3278,7 +3653,9 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="2008-09-24" xml:lang="de">24. 9. 08</date><date when="2008-09-24" xml:lang="en">24. 9. 08</date></correspAction>
+                <date when="2008-09-24" xml:lang="de">24. 9. 08</date>
+                <date when="2008-09-24" xml:lang="en">24. 9. 08</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -3286,12 +3663,14 @@
                 </persName>
               </correspAction>
             </correspDesc>
-          </profileDesc>   
-     </biblFull>
+          </profileDesc>
+        </biblFull>
         <biblFull xml:id="SZDKOR.unidentified.048">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Unidentified an Stefan Zweig, 1936-02-12, SZ-SAM/AK.268</title><title xml:lang="en">Unidentified an Stefan Zweig, 1936-02-12, SZ-SAM/AK.268</title></titleStmt>
+              <title xml:lang="de">Unidentified an Stefan Zweig, 1936-02-12, SZ-SAM/AK.268</title>
+              <title xml:lang="en">Unidentified an Stefan Zweig, 1936-02-12, SZ-SAM/AK.268</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -3300,13 +3679,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.268</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.561</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -3315,13 +3695,17 @@
                   </textLang>
                 </msContents>
                 <physDesc>
-                  <objectDesc> 
-                   <supportDesc>
+                  <objectDesc>
+                    <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "The Lama Temple, Peiping. |Â å®®åéå¹³å"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "The Lama Temple, Peiping. |Â å®®åéå¹³å"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">bauschwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "The
+                          Lama Temple, Peiping. |Â å®®åéå¹³å"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "The
+                          Lama Temple, Peiping. |Â å®®åéå¹³å"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">bauschwarze
+                          Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue-black
+                          ink</material>
                       </support>
                       <extent>
                         <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
@@ -3345,11 +3729,597 @@
                 <persName>
                   <name>Unbekannt/Unidentified</name>
                 </persName>
-                <date when="1936-02-12" xml:lang="de">12. 2. 36</date><date when="1936-02-12" xml:lang="en">12. 2. 36</date></correspAction>
+                <date when="1936-02-12" xml:lang="de">12. 2. 36</date>
+                <date when="1936-02-12" xml:lang="en">12. 2. 36</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.109">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Kuvert an Stefan Zweig vom 20. September 1923</title>
+              <title xml:lang="en">Kuvert an Stefan Zweig vom 20. September 1923</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1271</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.114">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an unbekannt ohne Datum</title>
+              <title xml:lang="en">Brief an unbekannt ohne Datum</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SHB/B8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1299</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.108">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt vom 1. Dezember 1931</title>
+              <title xml:lang="en">Brief an Unbekannt vom 1. Dezember 1931</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAH/B6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1382</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.100">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt, o. D.</title>
+              <title xml:lang="en">Brief an Unbekannt, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B4.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1407</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.101">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt, o. D.</title>
+              <title xml:lang="en">Brief an Unbekannt, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1434</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.102">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Memorandum VOLPONE, o. D.</title>
+              <title xml:lang="en">Memorandum VOLPONE, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.28</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1474</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.103">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Auflistung Tantiemen Volpone, o. D.</title>
+              <title xml:lang="en">Auflistung Tantiemen Volpone, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.29</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1338</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.104">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Deckblatt &quot;Copyr. Bureau Korresp. 1939&quot;, o. D.</title>
+              <title xml:lang="en">Deckblatt &quot;Copyr. Bureau Korresp. 1939&quot;, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.0</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1481</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.105">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Briefausschnitt an Unbekannt, o. D.</title>
+              <title xml:lang="en">Briefausschnitt an Unbekannt, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B2.41</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1532</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.106">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt, o. D.</title>
+              <title xml:lang="en">Brief an Unbekannt, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.266</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1621</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.107">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt, o. D.</title>
+              <title xml:lang="en">Brief an Unbekannt, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.267</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1622</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.110">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt vom 27. November 1926</title>
+              <title xml:lang="en">Brief an Unbekannt vom 27. November 1926</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B4.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1410</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.111">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt vom 28. Juni 1920</title>
+              <title xml:lang="en">Brief an Unbekannt vom 28. Juni 1920</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B4.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1409</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.112">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt vom 30. November 1912</title>
+              <title xml:lang="en">Brief an Unbekannt vom 30. November 1912</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B4.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1412</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.113">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Unbekannt an Friderike Zweig</title>
+              <title xml:lang="en">Unbekannt an Friderike Zweig</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.299</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1666</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.115">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Unbekannt an Friderike Zweig</title>
+              <title xml:lang="en">Unbekannt an Friderike Zweig</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.298</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1665</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.unidentified.116">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Unbekannt vom 8. November 1937</title>
+              <title xml:lang="en">Brief an Unbekannt vom 8. November 1937</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1414</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Unbekannt</name>
                 </persName>
               </correspAction>
             </correspDesc>

@@ -8,7 +8,8 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.winternitz-alix</idno>
       </publicationStmt>
@@ -49,7 +50,16 @@
         <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
       </editorialDecl>
       <projectDesc>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw. wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
       </projectDesc>
       <listPrefixDef>
         <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
@@ -64,7 +74,9 @@
         <biblFull xml:id="SZDKOR.winternitz-alix.11">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Alix Winternitz an Stefan Zweig, 1925-08-27, SZ-SAM/AK.108</title><title xml:lang="en">Alix Winternitz an Stefan Zweig, 1925-08-27, SZ-SAM/AK.108</title></titleStmt>
+              <title xml:lang="de">Alix Winternitz an Stefan Zweig, 1925-08-27</title>
+              <title xml:lang="en">Alix Winternitz an Stefan Zweig, 1925-08-27</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -73,13 +85,11 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.108</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.387</idno>
-                  </altIdentifier>
-                  <altIdentifier>
-                    <idno type="context" />
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -91,9 +101,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Gasthof Stern in Oetz."</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Gasthof Stern in Oetz."</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "Gasthof Stern in Oetz."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "Gasthof Stern in Oetz."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -119,7 +132,9 @@
                   <surname>Winternitz</surname>
                   <forename>Alix</forename>
                 </persName>
-                <date when="2025-08-27" xml:lang="de">27. 8. 25</date><date when="2025-08-27" xml:lang="en">27. 8. 25</date></correspAction>
+                <date when="2025-08-27" xml:lang="de">27. 8. 25</date>
+                <date when="2025-08-27" xml:lang="en">27. 8. 25</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
@@ -132,7 +147,9 @@
         <biblFull xml:id="SZDKOR.winternitz-alix.12">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Alix Winternitz an Stefan Zweig, 1932-02, SZ-SAM/AK.109</title><title xml:lang="en">Alix Winternitz an Stefan Zweig, 1932-02, SZ-SAM/AK.109</title></titleStmt>
+              <title xml:lang="de">Alix Winternitz an Stefan Zweig, 1932-02</title>
+              <title xml:lang="en">Alix Winternitz an Stefan Zweig, 1932-02</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -141,13 +158,14 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-SAM/AK.109</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.388</idno>
                   </altIdentifier>
                   <altIdentifier>
-                    <idno type="context" />
+                    <idno type="context"/>
                   </altIdentifier>
                 </msIdentifier>
                 <msContents>
@@ -159,9 +177,12 @@
                   <objectDesc>
                     <supportDesc>
                       <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "KitzbÃ¼hel i. Tirol"</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "KitzbÃ¼hel i. Tirol"</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                          "KitzbÃ¼hel i. Tirol"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
+                          "KitzbÃ¼hel i. Tirol"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze
+                          Tinte</material>
                         <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                       </support>
                       <extent>
@@ -169,10 +190,10 @@
                         <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
                       </extent>
                     </supportDesc>
-                  </objectDesc>          
-      </physDesc>
-                <history>         
-         <acquisition>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
                     <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
                     <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
                   </acquisition>
@@ -187,11 +208,54 @@
                   <surname>Winternitz</surname>
                   <forename>Alix</forename>
                 </persName>
-                <date when="1932-02-01" xml:lang="de">1. 2. 32</date><date when="1932-02-01" xml:lang="en">1. 2. 32</date></correspAction>
+                <date when="1932-02-01" xml:lang="de">1. 2. 32</date>
+                <date when="1932-02-01" xml:lang="en">1. 2. 32</date>
+              </correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.winternitz-alix.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alix von Winternitz vom 29. Juli 1937</title>
+              <title xml:lang="en">Brief an Alix von Winternitz vom 29. Juli 1937</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1413</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1080246215">
+                  <surname>Winternitz</surname>
+                  <forename>Alix</forename>
                 </persName>
               </correspAction>
             </correspDesc>

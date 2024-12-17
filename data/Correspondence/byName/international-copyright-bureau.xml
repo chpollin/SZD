@@ -8,7 +8,8 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.international-copyright-bureau</idno>
       </publicationStmt>
@@ -49,16 +50,16 @@
         <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
       </editorialDecl>
       <projectDesc>
-        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
-        im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
-        wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
-        dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
-        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
-        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
-        Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
-        orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
-        einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
-        (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
       </projectDesc>
       <listPrefixDef>
         <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
@@ -73,7 +74,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 1. Juni 1940, SZ-AAP/B3.25</title><title xml:lang="en">Brief an das International Copyright Bureau vom 1. Juni 1940, SZ-AAP/B3.25</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 1. Juni 1940,
+                SZ-AAP/B3.25</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 1. Juni 1940,
+                SZ-AAP/B3.25</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -82,9 +87,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.25</idno>
-                <altIdentifier><idno type="PID">o:szd.1461</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1461</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -95,7 +104,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1940-06-01" xml:lang="de">1. 6. 40</date><date when="1940-06-01" xml:lang="en">1. 6. 40</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1940-06-01" xml:lang="de">1. 6. 40</date>
+                <date when="1940-06-01" xml:lang="en">1. 6. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -109,7 +120,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.2">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 11. Mai 1940, SZ-AAP/B3.13</title><title xml:lang="en">Brief an das International Copyright Bureau vom 11. Mai 1940, SZ-AAP/B3.13</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 11. Mai 1940,
+                SZ-AAP/B3.13</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 11. Mai 1940,
+                SZ-AAP/B3.13</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -118,9 +133,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.13</idno>
-                <altIdentifier><idno type="PID">o:szd.1486</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1486</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -131,7 +150,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1940-05-11" xml:lang="de">11. 5. 40</date><date when="1940-05-11" xml:lang="en">11. 5. 40</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1940-05-11" xml:lang="de">11. 5. 40</date>
+                <date when="1940-05-11" xml:lang="en">11. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -145,7 +166,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.3">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 13. Juli 1939, SZ-AAP/B3.8</title><title xml:lang="en">Brief an das International Copyright Bureau vom 13. Juli 1939, SZ-AAP/B3.8</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 13. Juli 1939,
+                SZ-AAP/B3.8</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 13. Juli 1939,
+                SZ-AAP/B3.8</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -154,9 +179,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.8</idno>
-                <altIdentifier><idno type="PID">o:szd.1875</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1875</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -167,7 +196,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1939-07-13" xml:lang="de">13. 7. 39</date><date when="1939-07-13" xml:lang="en">13. 7. 39</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1939-07-13" xml:lang="de">13. 7. 39</date>
+                <date when="1939-07-13" xml:lang="en">13. 7. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -181,7 +212,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.4">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. November 1938, SZ-AAP/B3.1</title><title xml:lang="en">Brief an das International Copyright Bureau vom 14. November 1938, SZ-AAP/B3.1</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. November
+                1938, SZ-AAP/B3.1</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 14. November
+                1938, SZ-AAP/B3.1</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -190,9 +225,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.1</idno>
-                <altIdentifier><idno type="PID">o:szd.1482</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1482</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -203,7 +242,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1938-11-14" xml:lang="de">14. 11. 38</date><date when="1938-11-14" xml:lang="en">14. 11. 38</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1938-11-14" xml:lang="de">14. 11. 38</date>
+                <date when="1938-11-14" xml:lang="en">14. 11. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -217,7 +258,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.5">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. Mai 1940, SZ-AAP/B3.14</title><title xml:lang="en">Brief an das International Copyright Bureau vom 14. Mai 1940, SZ-AAP/B3.14</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. Mai 1940,
+                SZ-AAP/B3.14</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 14. Mai 1940,
+                SZ-AAP/B3.14</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -226,9 +271,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.14</idno>
-                <altIdentifier><idno type="PID">o:szd.1487</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1487</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -239,7 +288,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1940-05-14" xml:lang="de">14. 5. 40</date><date when="1940-05-14" xml:lang="en">14. 5. 40</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1940-05-14" xml:lang="de">14. 5. 40</date>
+                <date when="1940-05-14" xml:lang="en">14. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -253,7 +304,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.6">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Warren P. Munsell an das International Copyright Bureau, SZ-AAP/B3.5</title><title xml:lang="en">Warren P. Munsell an das International Copyright Bureau, SZ-AAP/B3.5</title></titleStmt>
+              <title xml:lang="de">Warren P. Munsell an das International Copyright Bureau,
+                SZ-AAP/B3.5</title>
+              <title xml:lang="en">Warren P. Munsell an das International Copyright Bureau,
+                SZ-AAP/B3.5</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -262,9 +317,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.5</idno>
-                <altIdentifier><idno type="PID">o:szd.1493</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1493</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -275,7 +334,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1939-06-22" xml:lang="de">22. 6. 39</date><date when="1939-06-22" xml:lang="en">22. 6. 39</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1939-06-22" xml:lang="de">22. 6. 39</date>
+                <date when="1939-06-22" xml:lang="en">22. 6. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -289,7 +350,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.7">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 24. Mai 1940, SZ-AAP/B3.23</title><title xml:lang="en">Brief an das International Copyright Bureau vom 24. Mai 1940, SZ-AAP/B3.23</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 24. Mai 1940,
+                SZ-AAP/B3.23</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 24. Mai 1940,
+                SZ-AAP/B3.23</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -298,9 +363,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.23</idno>
-                <altIdentifier><idno type="PID">o:szd.1459</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1459</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -311,7 +380,9 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1940-05-24" xml:lang="de">24. 5. 40</date><date when="1940-05-24" xml:lang="en">24. 5. 40</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1940-05-24" xml:lang="de">24. 5. 40</date>
+                <date when="1940-05-24" xml:lang="en">24. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
@@ -325,7 +396,11 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.8">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 9. Dezember 1938, SZ-AAP/B3.3</title><title xml:lang="en">Brief an das International Copyright Bureau vom 9. Dezember 1938, SZ-AAP/B3.3</title></titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 9. Dezember 1938,
+                SZ-AAP/B3.3</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 9. Dezember 1938,
+                SZ-AAP/B3.3</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
@@ -334,9 +409,13 @@
                 <msIdentifier>
                   <country>Ãsterreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.3</idno>
-                <altIdentifier><idno type="PID">o:szd.1874</idno></altIdentifier></msIdentifier>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1874</idno>
+                  </altIdentifier>
+                </msIdentifier>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -347,12 +426,94 @@
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
                 </persName>
-                <date when="1938-12-09" xml:lang="de">9. 12. 38</date><date when="1938-12-09" xml:lang="en">9. 12. 38</date><placeName ana="deduced">Salzburg</placeName>
+                <date when="1938-12-09" xml:lang="de">9. 12. 38</date>
+                <date when="1938-12-09" xml:lang="en">9. 12. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
                 <persName>
                   <surname>Bureau</surname>
                   <forename>International</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 10. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 10. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1485</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Bureau International</name>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 22. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 22. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.19</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1455</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Bureau International</name>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
                 </persName>
               </correspAction>
             </correspDesc>
