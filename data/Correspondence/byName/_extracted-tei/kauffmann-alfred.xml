@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Kauffmann Alfred</title>
+        <title xml:lang="en">Correspondence Kauffmann Alfred</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.kauffmann-alfred</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
+        dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
+        orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
+        einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Kauffmann vom 11. Januar 1938, SZ-AAP/B1.172</title><title xml:lang="en">Brief an Alfred Kauffmann vom 11. Januar 1938, SZ-AAP/B1.172</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.172</idno>
+                <altIdentifier><idno type="PID">o:szd.768</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-11" xml:lang="de">11. 1. 38</date><date when="1938-01-11" xml:lang="en">11. 1. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">    
+            <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 12. Januar 1938, SZ-AAP/B1.173</title><title xml:lang="en">Brief an Stefan Zweig vom 12. Januar 1938, SZ-AAP/B1.173</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.173</idno>
+                <altIdentifier><idno type="PID">o:szd.769</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-12" xml:lang="de">12. 1. 38</date><date when="1938-01-12" xml:lang="en">12. 1. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 14. MÃ¤rz 1938, SZ-AAP/B1.191</title><title xml:lang="en">Brief an Stefan Zweig vom 14. MÃ¤rz 1938, SZ-AAP/B1.191</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.191</idno>
+                <altIdentifier><idno type="PID">o:szd.789</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-03-14" xml:lang="de">14. 3. 38</date><date when="1938-03-14" xml:lang="en">14. 3. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das Schweizerische Vereinssortiment Olten vom 14. Juni 1938, SZ-AAP/B1.251</title><title xml:lang="en">Brief an das Schweizerische Vereinssortiment Olten vom 14. Juni 1938, SZ-AAP/B1.251</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.251</idno>
+                <altIdentifier><idno type="PID">o:szd.1606</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-06-14" xml:lang="de">14. 6. 38</date><date when="1938-06-14" xml:lang="en">14. 6. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Kauffmann vom 14. Juni 1938, SZ-AAP/B1.252</title><title xml:lang="en">Brief an Alfred Kauffmann vom 14. Juni 1938, SZ-AAP/B1.252</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.252</idno>
+                <altIdentifier><idno type="PID">o:szd.1607</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-06-14" xml:lang="de">14. 6. 38</date><date when="1938-06-14" xml:lang="en">14. 6. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 15. Juni 1938, SZ-AAP/B1.253</title><title xml:lang="en">Brief an Stefan Zweig vom 15. Juni 1938, SZ-AAP/B1.253</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.253</idno>
+                <altIdentifier><idno type="PID">o:szd.1608</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-06-15" xml:lang="de">15. 6. 38</date><date when="1938-06-15" xml:lang="en">15. 6. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Kauffmann vom 17. Dezember 1937, SZ-AAP/B1.157</title><title xml:lang="en">Brief an Alfred Kauffmann vom 17. Dezember 1937, SZ-AAP/B1.157</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.157</idno>
+                <altIdentifier><idno type="PID">o:szd.751</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-17" xml:lang="de">17. 12. 37</date><date when="1937-12-17" xml:lang="en">17. 12. 37</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. Dezember 1937, SZ-AAP/B1.158</title><title xml:lang="en">Brief an Stefan Zweig vom 20. Dezember 1937, SZ-AAP/B1.158</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.158</idno>
+                <altIdentifier><idno type="PID">o:szd.752</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-20" xml:lang="de">20. 12. 37</date><date when="1937-12-20" xml:lang="en">20. 12. 37</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Kauffmann vom 22. Dezember 1937, SZ-AAP/B1.161</title><title xml:lang="en">Brief an Alfred Kauffmann vom 22. Dezember 1937, SZ-AAP/B1.161</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.161</idno>
+                <altIdentifier><idno type="PID">o:szd.756</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-22" xml:lang="de">22. 12. 37</date><date when="1937-12-22" xml:lang="en">22. 12. 37</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName> 
+                 <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 23. Dezember 1937, SZ-AAP/B1.162</title><title xml:lang="en">Brief an Stefan Zweig vom 23. Dezember 1937, SZ-AAP/B1.162</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.162</idno>
+                <altIdentifier><idno type="PID">o:szd.757</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-23" xml:lang="de">23. 12. 37</date><date when="1937-12-23" xml:lang="en">23. 12. 37</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 25. Januar 1938, SZ-AAP/B1.176</title><title xml:lang="en">Brief an Stefan Zweig vom 25. Januar 1938, SZ-AAP/B1.176</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.176</idno>
+                <altIdentifier><idno type="PID">o:szd.772</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-25" xml:lang="de">25. 1. 38</date><date when="1938-01-25" xml:lang="en">25. 1. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Kauffmann vom 28. Januar 1938, SZ-AAP/B1.177</title><title xml:lang="en">Brief an Alfred Kauffmann vom 28. Januar 1938, SZ-AAP/B1.177</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.177</idno>
+                <altIdentifier><idno type="PID">o:szd.773</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-28" xml:lang="de">28. 1. 38</date><date when="1938-01-28" xml:lang="en">28. 1. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.kauffmann-alfred.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 8. Januar 1938, SZ-AAP/B1.169</title><title xml:lang="en">Brief an Stefan Zweig vom 8. Januar 1938, SZ-AAP/B1.169</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.169</idno>
+                <altIdentifier><idno type="PID">o:szd.764</idno></altIdentifier></msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-08" xml:lang="de">8. 1. 38</date><date when="1938-01-08" xml:lang="en">8. 1. 38</date><placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Kauffmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

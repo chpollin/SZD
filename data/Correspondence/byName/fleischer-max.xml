@@ -1,0 +1,3732 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Max Fleischer</title>
+        <title xml:lang="en">Correspondence Max Fleischer</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.fleischer-max</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
+                    dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
+                    orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.fleischer-max.246">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Max Fleischer an Stefan Zweig, 1929-07-18, SZ-SAM/AK.56</title><title xml:lang="en">Max Fleischer an Stefan Zweig, 1929-07-18, SZ-SAM/AK.56</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.56</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.625</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>       
+               <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "BÃ¶hmerwald
+                                                  Heimatbilder | Falkenstein"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "BÃ¶hmerwald Heimatbilder |
+                                                  Falkenstein"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz
+                                            2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private
+                                            ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+                <date when="2029-07-18" xml:lang="de">18. 7. 29</date><date when="2029-07-18" xml:lang="en">18. 7. 29</date></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 22. Mai 1901, SZ-LAS/B3.1</title><title xml:lang="en">Brief an Max Fleischer vom 22. Mai 1901, SZ-LAS/B3.1</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1079</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>                        
+<material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-05-22" xml:lang="de">22. 5. 01</date><date when="2001-05-22" xml:lang="en">22. 5. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 30. Mai 1901, SZ-LAS/B3.2</title><title xml:lang="en">Postkarte an Max Fleischer vom 30. Mai 1901, SZ-LAS/B3.2</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1080</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>               
+   </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-05-30" xml:lang="de">30. 5. 01</date><date when="2001-05-30" xml:lang="en">30. 5. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 5. Juni 1901, SZ-LAS/B3.3</title><title xml:lang="en">Postkarte an Max Fleischer vom 5. Juni 1901, SZ-LAS/B3.3</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1081</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-06-05" xml:lang="de">5. 6. 01</date><date when="2001-06-05" xml:lang="en">5. 6. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 17. Juni 1901, SZ-LAS/B3.4</title><title xml:lang="en">Postkarte an Max Fleischer vom 17. Juni 1901, SZ-LAS/B3.4</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1120</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Wiener
+                                                  KÃ¼nstler-Postkarte"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Wiener
+                                                  KÃ¼nstler-Postkarte"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-06-17" xml:lang="de">17. 6. 01</date><date when="2001-06-17" xml:lang="en">17. 6. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>  
+        </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 21. Juni 1901, SZ-LAS/B3.5</title><title xml:lang="en">Postkarte an Max Fleischer vom 21. Juni 1901, SZ-LAS/B3.5</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1126</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-06-21" xml:lang="de">21. 6. 01</date><date when="2001-06-21" xml:lang="en">21. 6. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 3. Juli 1901, SZ-LAS/B3.6</title><title xml:lang="en">Brief an Max Fleischer vom 3. Juli 1901, SZ-LAS/B3.6</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>          
+        <idno type="signature">SZ-LAS/B3.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1127</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-07-03" xml:lang="de">3. 7. 01</date><date when="2001-07-03" xml:lang="en">3. 7. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Briefkarte an Max Fleischer vom 17. Juli 1901, SZ-LAS/B3.7</title><title xml:lang="en">Briefkarte an Max Fleischer vom 17. Juli 1901, SZ-LAS/B3.7</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.7</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1128</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>   
+               <objectDesc>             
+       <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefkarte und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Letter
+                                                  card and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Briefkarte, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter
+                                                  card, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-07-17" xml:lang="de">17. 7. 01</date><date when="2001-07-17" xml:lang="en">17. 7. 01</date><placeName>Marienbad</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 16. August 1901, SZ-LAS/B3.8</title><title xml:lang="en">Postkarte an Max Fleischer vom 16. August 1901, SZ-LAS/B3.8</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1129</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "BRUGES. Quai
+                                                  Rosaire."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "BRUGES. Quai          
+                                        Rosaire."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-08-16" xml:lang="de">16. 8. 01</date><date when="2001-08-16" xml:lang="en">16. 8. 01</date><placeName>Bruges</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Briefkarte an Max Fleischer vom 27. August 1901, SZ-LAS/B3.9</title><title xml:lang="en">Briefkarte an Max Fleischer vom 27. August 1901, SZ-LAS/B3.9</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.9</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1130</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefkarte und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Letter
+                                                  card and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Briefkarte, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>   
+                     <span xml:lang="en">1 letter           
+                                       card, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                        <measure ana="szdg:Enclosures" type="enclosures" xml:lang="de">Artikel "Zur
+                                                  Dichtung der Gegenwart. [â¦] Max Fleischer: Traum
+                                                  und SchÃ¶pfung." (Deutsche Zeitschrift, April
+                                                  1901)</measure>
+                        <measure ana="szdg:Enclosures" type="enclosures" xml:lang="en">Clipping "Zur
+                                                  Dichtung der Gegenwart. [â¦] Max Fleischer: Traum
+                                                  und SchÃ¶pfung." (Deutsche Zeitschrift, April
+                                                  1901)</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-08-27" xml:lang="de">27. 8. 01</date><date when="2001-08-27" xml:lang="en">27. 8. 01</date><placeName>Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Max Fleischer vom 23. Oktober 1901, SZ-LAS/B3.10</title><title xml:lang="en">Ansichtspostkarte an Max Fleischer vom 23. Oktober 1901, SZ-LAS/B3.10</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.10</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1088</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "GruÃ aus Wien. |
+                                                  IX WÃ¤hringerstrasse."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "GruÃ aus Wien. | IX
+                                                  WÃ¤hringerstrasse."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black                 
+                                 ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-10-23" xml:lang="de">23. 10. 01</date><date when="2001-10-23" xml:lang="en">23. 10. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 10. November 1901, SZ-LAS/B3.11</title><title xml:lang="en">Postkarte an Max Fleischer vom 10. November 1901, SZ-LAS/B3.11</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.11</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1089</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Julien BrÃ¼ll</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>BrÃ¼ll</surname>
+                    <forename>Julien</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-11-10" xml:lang="de">10. 11. 01</date><date when="2001-11-10" xml:lang="en">10. 11. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 5. Dezember 1901, SZ-LAS/B3.12</title><title xml:lang="en">Postkarte an Max Fleischer vom 5. Dezember 1901, SZ-LAS/B3.12</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1090</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-12-05" xml:lang="de">5. 12. 01</date><date when="2001-12-05" xml:lang="en">5. 12. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 12. Dezember 1901, SZ-LAS/B3.13</title><title xml:lang="en">Postkarte an Max Fleischer vom 12. Dezember 1901, SZ-LAS/B3.13</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.13</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1091</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-12-12" xml:lang="de">12. 12. 01</date><date when="2001-12-12" xml:lang="en">12. 12. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.14">
+          <fileDesc>  
+          <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 12. Dezember 1901, SZ-LAS/B3.14</title><title xml:lang="en">Postkarte an Max Fleischer vom 12. Dezember 1901, SZ-LAS/B3.14</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.14</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1092</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefkarte aus der Serie "Freunde
+                                                  und GefÃ¤hrten | Meisterdichtungen auf einzelnen
+                                                  BlÃ¤ttern | 442" mit dem Abdruck von Stefan Zweigs
+                                                  Gedicht "Das MÃ¤dchen" </material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Letter
+                                                  card from the series "Freunde und GefÃ¤hrten |
+                                                  Meisterdichtungen auf einzelnen BlÃ¤ttern | 442"
+                                                  with the print of Stefan Zweig's poem "Das
+                                                  MÃ¤dchen"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Briefkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter card,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2001-12-12" xml:lang="de">12. 12. 01</date><date when="2001-12-12" xml:lang="en">12. 12. 01</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 17. Februar 1902, SZ-LAS/B3.15</title><title xml:lang="en">Postkarte an Max Fleischer vom 17. Februar 1902, SZ-LAS/B3.15</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1093</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-02-17" xml:lang="de">17. 2. 02</date><date when="2002-02-17" xml:lang="en">17. 2. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 25. Februar 1902, SZ-LAS/B3.16</title><title xml:lang="en">Postkarte an Max Fleischer vom 25. Februar 1902, SZ-LAS/B3.16</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Umadressiert zur Nachsendung nach Komotau</note>
+              <note xml:lang="en">Redirected for forwarding to Komotau</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.16</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1094</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-02-25" xml:lang="de">25. 2. 02</date><date when="2002-02-25" xml:lang="en">25. 2. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.17">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 1. MÃ¤rz 1902, SZ-LAS/B3.17</title><title xml:lang="en">Brief an Max Fleischer vom 1. MÃ¤rz 1902, SZ-LAS/B3.17</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Umadressiert zur Nachsendung nach Komotau</note>
+              <note xml:lang="en">Redirected for forwarding to Komotau</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.17</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1095</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-03-01" xml:lang="de">1. 3. 02</date><date when="2002-03-01" xml:lang="en">1. 3. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.18">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 21. MÃ¤rz 1902, SZ-LAS/B3.18</title><title xml:lang="en">Postkarte an Max Fleischer vom 21. MÃ¤rz 1902, SZ-LAS/B3.18</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.18</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1096</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>        
+                <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-03-21" xml:lang="de">21. 3. 02</date><date when="2002-03-21" xml:lang="en">21. 3. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.19">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 20. Juni 1902, SZ-LAS/B3.19</title><title xml:lang="en">Postkarte an Max Fleischer vom 20. Juni 1902, SZ-LAS/B3.19</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.19</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1097</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-06-20" xml:lang="de">20. 6. 02</date><date when="2002-06-20" xml:lang="en">20. 6. 02</date><placeName>Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.20">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 2. Juli 1902, SZ-LAS/B3.20</title><title xml:lang="en">Brief an Max Fleischer vom 2. Juli 1902, SZ-LAS/B3.20</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.20</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1099</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-07-02" xml:lang="de">2. 7. 02</date><date when="2002-07-02" xml:lang="en">2. 7. 02</date><placeName>Berlin</placeName>  
+            </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.21">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 13. Juli 1902, SZ-LAS/B3.21</title><title xml:lang="en">Postkarte an Max Fleischer vom 13. Juli 1902, SZ-LAS/B3.21</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.21</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1100</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, H. Embden</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Embden</surname>
+                    <forename>H.
+                                        </forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-07-13" xml:lang="de">13. 7. 02</date><date when="2002-07-13" xml:lang="en">13. 7. 02</date><placeName>Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.22">     
+     <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 13. Juli 1902, SZ-LAS/B3.22</title><title xml:lang="en">Postkarte an Max Fleischer vom 13. Juli 1902, SZ-LAS/B3.22</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.22</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1101</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-07-13" xml:lang="de">13. 7. 02</date><date when="2002-07-13" xml:lang="en">13. 7. 02</date><placeName>Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.23">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 31. Juli 1902, SZ-LAS/B3.23</title><title xml:lang="en">Postkarte an Max Fleischer vom 31. Juli 1902, SZ-LAS/B3.23</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.23</idno>
+                  <altIdentifier>            
+        <idno type="PID">o:szd.1102</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "BLANKENBERGHE. -
+                                                  Panorama"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "BLANKENBERGHE. -
+                                                  Panorama"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-07-31" xml:lang="de">31. 7. 02</date><date when="2002-07-31" xml:lang="en">31. 7. 02</date><placeName>Blankenberghe</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.24">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 16. August 1902, SZ-LAS/B3.24</title><title xml:lang="en">Postkarte an Max Fleischer vom 16. August 1902, SZ-LAS/B3.24</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.24</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1103</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Paris. â Place
+                                                  de la Bastille."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Paris. â Place de la
+                                                  Bastille."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blauer
+                                                  Buntstift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue
+                                                  crayon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-08-16" xml:lang="de">16. 8. 02</date><date when="2002-08-16" xml:lang="en">16. 8. 02</date><placeName>Paris</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.25">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 23. August 1902, SZ-LAS/B3.25</title><title xml:lang="en">Brief an Max Fleischer vom 23. August 1902, SZ-LAS/B3.25</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.25</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1104</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>          
+              <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-08-23" xml:lang="de">23. 8. 02</date><date when="2002-08-23" xml:lang="en">23. 8. 02</date><placeName>Paris</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.26">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Max Fleischer vom 7. September 1902, SZ-LAS/B3.26</title><title xml:lang="en">Ansichtspostkarte an Max Fleischer vom 7. September 1902, SZ-LAS/B3.26</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.26</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1105</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Altes Rathaus |
+                                                  MÃ¼nchen"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Altes Rathaus |
+                                                  MÃ¼nchen"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-09-07" xml:lang="de">7. 9. 02</date><date when="2002-09-07" xml:lang="en">7. 9. 02</date><placeName>MÃ¼nchen</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.27">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 20. September 1902, SZ-LAS/B3.27</title><title xml:lang="en">Postkarte an Max Fleischer vom 20. September 1902, SZ-LAS/B3.27</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.27</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1106</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>  
+                </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-09-20" xml:lang="de">20. 9. 02</date><date when="2002-09-20" xml:lang="en">20. 9. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.28">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 5. Oktober 1902, SZ-LAS/B3.28</title><title xml:lang="en">Postkarte an Max Fleischer vom 5. Oktober 1902, SZ-LAS/B3.28</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.28</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1107</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-05-10" xml:lang="de">10. 5. 02</date><date when="2002-05-10" xml:lang="en">10. 5. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>    
+          </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.29">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 10. Oktober 1902, SZ-LAS/B3.29</title><title xml:lang="en">Brief an Max Fleischer vom 10. Oktober 1902, SZ-LAS/B3.29</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.29</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1108</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und
+                                                  Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Victor Fleischer, Camill Hoffmann</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Fleischer</surname>
+                    <forename>Victor;
+                                            Hoffmann</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-10-10" xml:lang="de">10. 10. 02</date><date when="2002-10-10" xml:lang="en">10. 10. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.30">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 24. Oktober 1902, SZ-LAS/B3.30</title><title xml:lang="en">Postkarte an Max Fleischer vom 24. Oktober 1902, SZ-LAS/B3.30</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.30</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1110</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-10-24" xml:lang="de">24. 10. 02</date><date when="2002-10-24" xml:lang="en">24. 10. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.31">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 1. November 1902, SZ-LAS/B3.31</title><title xml:lang="en">Brief an Max Fleischer vom 1. November 1902, SZ-LAS/B3.31</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.31</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1111</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert Victor
+                                                  Fleischers</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stationary and envelope of Victor
+                                                  Fleischer</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2002-11-01" xml:lang="de">1. 11. 02</date><date when="2002-11-01" xml:lang="en">1. 11. 02</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.32">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 28. November 1902, SZ-LAS/B3.32</title><title xml:lang="en">Postkarte an Max Fleischer vom 28. November 1902, SZ-LAS/B3.32</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.32</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1112</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1931-01-28" xml:lang="de">28. 1. 31</date><date when="1931-01-28" xml:lang="en">28. 1. 31</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.33">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Max Fleischer, 22.12.1902</title>
+              <title xml:lang="en">Stefan Zweig to Max Fleischer, 22.12.1902</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Postkarte ist an die BrÃ¼der Max und Victor
+                                Fleischer adressiert</note>
+              <note xml:lang="en">The postcard is addressed to brothers Max and Victor
+                                Fleischer</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.33</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1113</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte mit Signet und Aufdruck
+                                                  Stefan Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard
+                                                  with Stefan Zweig signet and
+                                                  imprint</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Fleischer</surname>
+                    <forename>Victor</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.34">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Max Fleischer, 28.12.1902</title>
+              <title xml:lang="en">Stefan Zweig to Max Fleischer, 28.12.1902</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Ansichtspostkarte ist an die BrÃ¼der Max und
+                                Victor Fleischer adressiert</note>
+              <note xml:lang="en">The picture postcard is addressed to brothers Max
+                                and Victor Fleischer</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.34</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1114</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Kantstr. 28.
+                                                  |Â Probirstube"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture                          
+                        postcard: "Kantstr. 28. |
+                                                  Probirstube"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Hans ???</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Fleischer</surname>
+                    <forename>Victor;
+                                            Hans</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName>Charlottenburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.35">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Max Fleischer, 1903</title>
+              <title xml:lang="en">Stefan Zweig to Max Fleischer, 1903</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Ansichtspostkarte ist an die BrÃ¼der Max und
+                                Victor Fleischer adressiert</note>
+              <note xml:lang="en">The picture postcard is addressed to brothers Max
+                                and Victor Fleischer</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.35</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1115</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "E. M. Lilien. |
+                                                  ××××¨-××××× |Â Me'or-hagola."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "E. M. Lilien. | ××××¨-××××× |
+                                                  Me'or-hagola."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Georg Busse-Palma, Ephraim Mose Lilien,
+                                            Fritz StÃ¶ber, ###</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Fleischer</surname>
+                    <forename>Victor;
+                                            Busse-Palma</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.36">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 30. Januar 1903, SZ-LAS/B3.36</title><title xml:lang="en">Postkarte an Max Fleischer vom 30. Januar 1903, SZ-LAS/B3.36</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.36</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1116</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte mit
+                                                  Bleistiftzeichnung</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard
+                                                  with pencil drawing</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Victor Fleischer, Ephraim Mose Lilien,
+                                            Martin Buber, Camill Hoffmann, ###; #Dr O.
+                                            Weininger#</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Fleischer</surname>
+                    <forename>Victor;
+                                            Lilien</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2003-01-30" xml:lang="de">30. 1. 03</date><date when="2003-01-30" xml:lang="en">30. 1. 03</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.37">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 23. MÃ¤rz 1903, SZ-LAS/B3.37</title><title xml:lang="en">Brief an Max Fleischer vom 23. MÃ¤rz 1903, SZ-LAS/B3.37</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.37</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1117</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und                                    
+              Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing
+                                                  paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, manuscript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2003-03-23" xml:lang="de">23. 3. 03</date><date when="2003-03-23" xml:lang="en">23. 3. 03</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.38">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Max Fleischer vom 29. Januar 1904, SZ-LAS/B3.40</title><title xml:lang="en">Postkarte an Max Fleischer vom 29. Januar 1904, SZ-LAS/B3.40</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.40</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1121</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple                  
+                                ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>           
+             <span xml:lang="en">1 postcard,
+                                                  manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2004-01-29" xml:lang="de">29. 1. 04</date><date when="2004-01-29" xml:lang="en">29. 1. 04</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.39">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 23. Januar 1912, SZ-LAS/B3.47</title><title xml:lang="en">Brief an Max Fleischer vom 23. Januar 1912, SZ-LAS/B3.47</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.47</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1231</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette
+                                                  Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter,
+                                                  typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>            
+        <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2012-01-23" xml:lang="de">23. 1. 12</date><date when="2012-01-23" xml:lang="en">23. 1. 12</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.40">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 3. Juni 1927, SZ-LAS/B3.68</title><title xml:lang="en">Brief an Max Fleischer vom 3. Juni 1927, SZ-LAS/B3.68</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.68</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1252</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier und Briefkuvert Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette und schwarze
+                                                  Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ribbon, purple and black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, typescript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">    
+          <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2027-06-03" xml:lang="de">3. 6. 27</date><date when="2027-06-03" xml:lang="en">3. 6. 27</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.41">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 2. November 1927, SZ-LAS/B3.69</title><title xml:lang="en">Brief an Max Fleischer vom 2. November 1927, SZ-LAS/B3.69</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.69</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1253</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier und Briefkuvert Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette
+                                                  Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1
+                                                  letter, typescript, 1 leaf; 1
+                                                envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2027-11-02" xml:lang="de">2. 11. 27</date><date when="2027-11-02" xml:lang="en">2. 11. 27</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.42">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 19. Dezember 1927, SZ-LAS/B3.70</title><title xml:lang="en">Brief an Max Fleischer vom 19. Dezember 1927, SZ-LAS/B3.70</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.70</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1254</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaues
+                                                  Farbband, Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue
+                                                  ribbon, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter,
+                                                  typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2027-12-19" xml:lang="de">19. 12. 27</date><date when="2027-12-19" xml:lang="en">19. 12. 27</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.43">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 27. Dezember 1927, SZ-LAS/B3.71</title><title xml:lang="en">Brief an Max Fleischer vom 27. Dezember 1927, SZ-LAS/B3.71</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.71</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1255</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaues
+                                                  Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue
+                                                  ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter,
+                                                  typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2027-12-27" xml:lang="de">27. 12. 27</date><date when="2027-12-27" xml:lang="en">27. 12. 27</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.44">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Max Fleischer vom 31. Dezember 1927, SZ-LAS/B3.72</title><title xml:lang="en">Brief an Max Fleischer vom 31. Dezember 1927, SZ-LAS/B3.72</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>           
+       <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.72</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1256</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan
+                                                  Zweig stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaues
+                                                  Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue
+                                                  ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter,
+                                                  typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2027-12-31" xml:lang="de">31. 12. 27</date><date when="2027-12-31" xml:lang="en">31. 12. 27</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-max.B.45">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Karte an Max Fleischer, o. D., SZ-LAS/B3.75</title><title xml:lang="en">Karte an Max Fleischer, o. D., SZ-LAS/B3.75</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.75</idno>
+                <altIdentifier><idno type="PID">o:szd.1259</idno></altIdentifier></msIdentifier>           
+     <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>           
+       <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Wien. â
+                                                  SchÃ¶nbrunn."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Wien. â
+                                                  SchÃ¶nbrunn."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis
+                                            2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to
+                                            2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/11660090X">
+                  <surname>Fleischer</surname>
+                  <forename>Max</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

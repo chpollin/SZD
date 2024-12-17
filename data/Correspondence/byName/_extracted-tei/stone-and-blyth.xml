@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Stone And Blyth</title>
+        <title xml:lang="en">Correspondence Stone And Blyth</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.stone-and-blyth</idno>
+        <ref target="context:szd.korrespondenzen">Korrespondenzen Stefan Zweig</ref>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digitale</title>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.stone-and-blyth.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stone and Blyth Gesellschaft M. B. H. an Stefan Zweig, SZ-SAM/AK.228</title><title xml:lang="en">Stone and Blyth Gesellschaft M. B. H. an Stefan Zweig, SZ-SAM/AK.228</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.228</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1654</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc />
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

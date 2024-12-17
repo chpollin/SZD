@@ -1,0 +1,2744 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Victor Fleischer</title>
+        <title xml:lang="en">Correspondence Victor Fleischer</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.fleischer-victor</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
+                    dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
+                    orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.fleischer-victor.247">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Victor Fleischer an Stefan Zweig, 1908-07-02, SZ-SAM/AK.57</title><title xml:lang="en">Victor Fleischer an Stefan Zweig, 1908-07-02, SZ-SAM/AK.57</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.57</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.626</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>                
+<physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Komotau
+                                                  AlaunhÃ¼tte"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Komotau AlaunhÃ¼tte"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violetter Farbstift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple
+                                                  crayon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz
+                                            2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private
+                                            ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+                <date when="2008-07-02" xml:lang="de">2. 7. 08</date><date when="2008-07-02" xml:lang="en">2. 7. 08</date></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.248">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Victor Fleischer an Stefan Zweig, 1914-07-06, SZ-SAM/AK.58</title><title xml:lang="en">Victor Fleischer an Stefan Zweig, 1914-07-06, SZ-SAM/AK.58</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.58</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.627</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Salzkammergut
+                                                  Bad Ischl mit kais. Villa"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture                                           
+       postcard: "Salzkammergut Bad Ischl mit kais.
+                                                  Villa"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz
+                                            2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private
+                                            ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+                <date when="2014-07-06" xml:lang="de">6. 7. 14</date><date when="2014-07-06" xml:lang="en">6. 7. 14</date></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.249">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Victor Fleischer an Stefan Zweig, 1926-08-01, SZ-SAM/AK.59</title><title xml:lang="en">Victor Fleischer an Stefan Zweig, 1926-08-01, SZ-SAM/AK.59</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.59</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.628</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Levanto âÂ Veduta
+                                                  del Golfo"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Levanto âÂ Veduta del
+                                                  Golfo"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue
+                                                  Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue
+                                                  ink</material>                 
+     </support>
+                      <extent>              
+          <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz
+                                            2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private
+                                            ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+                <date when="2026-08-01" xml:lang="de">1. 8. 26</date><date when="2026-08-01" xml:lang="en">1. 8. 26</date></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.251">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Victor Fleischer an Stefan Zweig, 1929-08-07, SZ-SAM/AK.60</title><title xml:lang="en">Victor Fleischer an Stefan Zweig, 1929-08-07, SZ-SAM/AK.60</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.60</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.630</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte:
+                                                  "Garda"</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture
+                                                  postcard: "Garda"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black
+                                                  ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte,
+                                                  Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1
+                                                  picture postcard, manuscript, 1
+                                                leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz
+                                            2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private
+                                            ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+                <date when="2029-08-07" xml:lang="de">7. 8. 29</date><date when="2029-08-07" xml:lang="en">7. 8. 29</date></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Victor Fleischer,
+                                27.05.1903</title>
+              <title xml:lang="en">Stefan Zweig to Victor Fleischer,
+                                27.05.1903</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.38</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1118</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>   
+             <placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 30. September 1903, SZ-LAS/B3.39</title><title xml:lang="en">Brief an Victor Fleischer vom 30. September 1903, SZ-LAS/B3.39</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.39</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1119</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2003-09-30" xml:lang="de">30. 9. 03</date><date when="2003-09-30" xml:lang="en">30. 9. 03</date><placeName>Bozen</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Victor Fleischer,
+                                19.02.1906</title>
+              <title xml:lang="en">Stefan Zweig to Victor Fleischer,
+                                19.02.1906</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.41</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1122</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Malli Adelt, Irma Hoffmann, Fritzi Handl,
+                                            Camill Hoffmann, Malte Baltus, Willi Handl</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Adelt; Malli</surname>
+                    <forename>Hoffmann; Irma; Handl</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom [Februar 1907], SZ-LAS/B3.42</title><title xml:lang="en">Brief an Victor Fleischer vom [Februar 1907], SZ-LAS/B3.42</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>          
+        <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.42</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1123</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2007-02-01" xml:lang="de">1. 2. 07</date><date when="2007-02-01" xml:lang="en">1. 2. 07</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Briefumschlag an Victor Fleischer vom 6. Februar 1909, SZ-LAS/B3.44</title><title xml:lang="en">Briefumschlag an Victor Fleischer vom 6. Februar 1909, SZ-LAS/B3.44</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.44</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1124</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>                   
+   <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Briefkuvert</span>
+                        <span xml:lang="en">1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2009-02-06" xml:lang="de">6. 2. 09</date><date when="2009-02-06" xml:lang="en">6. 2. 09</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 7. MÃ¤rz [1909], SZ-LAS/B3.45</title><title xml:lang="en">Brief an Victor Fleischer vom 7. MÃ¤rz [1909], SZ-LAS/B3.45</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.45</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1125</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert Norddeutscher Lloyd
+                                                  Bremen, Dampfer LÃ¼tzow</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stationary and envelope Norddeutscher Lloyd
+                                                  Bremen, Dampfer LÃ¼tzow</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1                   
+                               envelope</span>
+                      </extent>  
+                  </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2009-03-07" xml:lang="de">7. 3. 09</date><date when="2009-03-07" xml:lang="en">7. 3. 09</date><placeName>Napoli</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 3. Januar 1912, SZ-LAS/B3.46</title><title xml:lang="en">Brief an Victor Fleischer vom 3. Januar 1912, SZ-LAS/B3.46</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.46</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1230</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript und
+                                                  Manuskript, 1 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, typescript and
+                                                  manuscript, 1 leaf; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2012-01-03" xml:lang="de">3. 1. 12</date><date when="2012-01-03" xml:lang="en">3. 1. 12</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 25. Dezember 1912, SZ-LAS/B3.48</title><title xml:lang="en">Brief an Victor Fleischer vom 25. Dezember 1912, SZ-LAS/B3.48</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.48</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1232</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2012-12-25" xml:lang="de">25. 12. 12</date><date when="2012-12-25" xml:lang="en">25. 12. 12</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.9">
+          <fileDesc> 
+           <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.49</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.49</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.49</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1233</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte mit Trauerrand</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard with mourning border</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2013-02-19" xml:lang="de">19. 2. 13</date><date when="2013-02-19" xml:lang="en">19. 2. 13</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Victor Fleischer vom 5. November 1913, SZ-LAS/B3.50</title><title xml:lang="en">Ansichtspostkarte an Victor Fleischer vom 5. November 1913, SZ-LAS/B3.50</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>          
+  <sourceDesc>
+              <msDesc>
+                <msIdentifier>            
+      <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.50</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1234</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Elferkofel mit dem BÃ¶densee
+                                                  âÂ Dolomiten. Tirol."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Elferkofel mit dem BÃ¶densee â
+                                                  Dolomiten. Tirol."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2013-11-05" xml:lang="de">5. 11. 13</date><date when="2013-11-05" xml:lang="en">5. 11. 13</date><placeName>Bozen</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.51</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.51</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>            
+      <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>       
+           <idno type="signature">SZ-LAS/B3.51</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1235</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2013-12-27" xml:lang="de">27. 12. 13</date><date when="2013-12-27" xml:lang="en">27. 12. 13</date><placeName>Baden bei Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.52</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.52</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.52</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1236</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Kartenbrief</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Card letter</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Kartenbrief, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 card letter, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-03-31" xml:lang="de">31. 3. 14</date><date when="2014-03-31" xml:lang="en">31. 3. 14</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.53</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.53</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.53</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1237</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>      
+                  <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-05-10" xml:lang="de">10. 5. 14</date><date when="2014-05-10" xml:lang="en">10. 5. 14</date><placeName>Baden bei Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.14">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 10. Juli 1914, SZ-LAS/B3.54</title><title xml:lang="en">Brief an Victor Fleischer vom 10. Juli 1914, SZ-LAS/B3.54</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.54</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1238</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier und Briefkuvert Stefan
+                                                  Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, bauer Farbstift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue crayon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf; 1
+                                                  envelope</span>                      
+</extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2014-07-10" xml:lang="de">10. 7. 14</date><date when="2014-07-10" xml:lang="en">10. 7. 14</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.55</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.55</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.55</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1239</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>          
+      <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-08-09" xml:lang="de">9. 8. 14</date><date when="2014-08-09" xml:lang="en">9. 8. 14</date><placeName>Baden bei Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.56</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.56</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.56</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1240</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc> 
+         </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-08-21" xml:lang="de">21. 8. 14</date><date when="2014-08-21" xml:lang="en">21. 8. 14</date><placeName>Tobelbad</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.17">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.57</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.57</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.57</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1241</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-12-26" xml:lang="de">26. 12. 14</date><date when="2014-12-26" xml:lang="en">26. 12. 14</date><placeName>Baden bei Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.18">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.58</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.58</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.58</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1242</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2014-12-29" xml:lang="de">29. 12. 14</date><date when="2014-12-29" xml:lang="en">29. 12. 14</date><placeName>Baden bei Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.19">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.59</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.59</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.59</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1243</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2015-03-15" xml:lang="de">15. 3. 15</date><date when="2015-03-15" xml:lang="en">15. 3. 15</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.20">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.60</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.60</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>     
+       <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.60</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1244</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2015-08-03" xml:lang="de">3. 8. 15</date><date when="2015-08-03" xml:lang="en">3. 8. 15</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.21">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.61</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.61</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>          
+        <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.61</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1245</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2016-03-17" xml:lang="de">17. 3. 16</date><date when="2016-03-17" xml:lang="en">17. 3. 16</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.22">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.62</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.62</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet. Die angegebene Beilage ist
+                                nicht vorhanden.</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz. The specified supplement is not included.</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.62</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1246</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier und Briefkuvert "F."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">"F." stationary and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2016-10-15" xml:lang="de">15. 10. 16</date><date when="2016-10-15" xml:lang="en">15. 10. 16</date><placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.23">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 1. November 1916, SZ-LAS/B3.63</title><title xml:lang="en">Brief an Victor Fleischer vom 1. November 1916, SZ-LAS/B3.63</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.63</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1247</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Zweig</surname>
+                    <forename>Friderike</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2016-11-01" xml:lang="de">1. 11. 16</date><date when="2016-11-01" xml:lang="en">1. 11. 16</date><placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.24">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer vom 7. Januar 1918, SZ-LAS/B3.64</title><title xml:lang="en">Brief an Victor Fleischer vom 7. Januar 1918, SZ-LAS/B3.64</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.64</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1248</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink</material>
+                      </support>    
+                  <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt; 1                  
+                                Kuvert</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2018-01-07" xml:lang="de">7. 1. 18</date><date when="2018-01-07" xml:lang="en">7. 1. 18</date><placeName>ZÃ¼rich</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.25">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Victor Fleischer vom 18. Februar 1918, SZ-LAS/B3.65</title><title xml:lang="en">Postkarte an Victor Fleischer vom 18. Februar 1918, SZ-LAS/B3.65</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.65</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1249</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>     
+           </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>   
+         <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="2018-02-18" xml:lang="de">18. 2. 18</date><date when="2018-02-18" xml:lang="en">18. 2. 18</date><placeName>ZÃ¼rich</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.26">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.66</title><title xml:lang="en">Friderike von Winternitz an Victor Fleischer, SZ-LAS/B3.66</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.66</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1250</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Zweig</surname>
+                    <forename>Stefan</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <date when="2018-04-09" xml:lang="de">9. 4. 18</date><date when="2018-04-09" xml:lang="en">9. 4. 18</date><placeName>ZÃ¼rich</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.27">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Victor Fleischer,
+                                11.02.1927</title>
+              <title xml:lang="en">Stefan Zweig to Victor Fleischer,
+                                11.02.1927</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.67</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1251</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1927-02-11">11. Februar 1927.</date>
+                <placeName>Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.28">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike Zweig an Victor Fleischer, o. D., SZ-LAS/B3.73</title><title xml:lang="en">Friderike Zweig an Victor Fleischer, o. D., SZ-LAS/B3.73</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.73</idno>
+                <altIdentifier><idno type="PID">o:szd.1257</idno></altIdentifier></msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Perchtoldsdorf, Altes Haus in
+                                                  der ElisabethstraÃe Nr. 4."</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Perchtoldsdorf, Altes Haus in
+                                                  der ElisabethstraÃe Nr. 4."</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+                <placeName>Rodaun</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.29">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Friderike Zweig an Victor Fleischer, o. D., SZ-LAS/B3.74</title><title xml:lang="en">Friderike Zweig an Victor Fleischer, o. D., SZ-LAS/B3.74</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Die Verfasserin hat mit ihrem damaligen Namen
+                                Friderike (von) Winternitz unterzeichnet</note>
+              <note xml:lang="en">The author signed with her then name Friderike (von)
+                                Winternitz</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.74</idno>
+                <altIdentifier><idno type="PID">o:szd.1258</idno></altIdentifier></msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Visitenkarte Friderike von Winternitz</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Calling card Friderike von Winternitz</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Visitenkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 calling card, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Friderike Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.30">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Victor Fleischer, o. D., SZ-LAS/B3.76</title><title xml:lang="en">Brief an Victor Fleischer, o. D., SZ-LAS/B3.76</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B3.76</idno>
+                <altIdentifier><idno type="PID">o:szd.1260</idno></altIdentifier></msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier und Briefkuvert</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper and envelope</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1
+                                                  Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1
+                                                  envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Auktionen 2016 bis 2020</ab>
+                    <ab xml:lang="en">Acquisition, auctions 2016 to 2020</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.fleischer-victor.B.31">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Victor Fleischer</title>
+              <title xml:lang="en">Stefan Zweig to Victor Fleischer</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SHB/B3</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Ephraim Mose Lilien</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Ephraim Mose Lilien stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1         
+                                         Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1                   
+                               leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Ephraim Mose Lilien</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Lilien</surname>
+                    <forename>Ephraim Mose</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Berlin</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

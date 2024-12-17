@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Cassell And Company Ltd</title>
+        <title xml:lang="en">Correspondence Cassell And Company Ltd</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.cassell-and-company-ltd</idno>
+        <ref target="context:szd.korrespondenzen">Korrespondenzen Stefan Zweig</ref>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digitale</title>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.cassell-and-company-ltd.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Cassell and Company, Ltd. vom 20. Juli 1938, SZ-AAP/B1.262</title><title xml:lang="en">Brief an Cassell and Company, Ltd. vom 20. Juli 1938, SZ-AAP/B1.262</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.262</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1617</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc />
+        </biblFull>
+        <biblFull xml:id="SZDKOR.cassell-and-company-ltd.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Cassell and Company, Ltd. vom 19. August 1938, SZ-AAP/B1.265</title><title xml:lang="en">Brief an Cassell and Company, Ltd. vom 19. August 1938, SZ-AAP/B1.265</title></titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.265</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1620</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc />
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
