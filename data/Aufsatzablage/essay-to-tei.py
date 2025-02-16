@@ -1,6 +1,17 @@
 import csv
 import xml.etree.ElementTree as ET
 
+# Possible 3-letter codes and their respective language names.
+LANG_MAP = {
+    'ger': 'Deutsch',
+    'fra': 'Französisch',
+    'ita': 'Italienisch',
+    'spa': 'Spanisch',
+    'eng': 'Englisch',
+    'fin': 'Finnisch',
+    'cze': 'Tschechisch'
+}
+
 def get_row_value(row, field_name):
     return normalize_string(row.get(field_name, ''))
 
@@ -131,6 +142,27 @@ def csv_to_tei(csv_file_path):
             ab = ET.SubElement(publicationStmt, '{%s}ab' % NS_TEI)
             ab.text = 'Archivmaterial'
 
+            # Retrieve the German hint
+            hinweis_de = get_row_value(row, 'Hinweis')
+            # Retrieve the English note
+            notes_statement_en = get_row_value(row, 'Notes/Statement')
+           
+            if hinweis_de or notes_statement_en:
+                print(hinweis_de, notes_statement_en)
+                notesStmt = ET.SubElement(fileDesc, '{%s}notesStmt' % NS_TEI)
+                
+                # If there's a German hint, create the <note xml:lang="de">
+                if hinweis_de:
+                    note_de = ET.SubElement(notesStmt, '{%s}note' % NS_TEI)
+                    note_de.set('{http://www.w3.org/XML/1998/namespace}lang', 'de')
+                    note_de.text = hinweis_de
+
+                # If there's an English note, create the <note xml:lang="en">
+                if notes_statement_en:
+                    note_en = ET.SubElement(notesStmt, '{%s}note' % NS_TEI)
+                    note_en.set('{http://www.w3.org/XML/1998/namespace}lang', 'en')
+                    note_en.text = notes_statement_en
+
             # Map sourceDesc
             sourceDesc = ET.SubElement(fileDesc, '{%s}sourceDesc' % NS_TEI)
 
@@ -160,13 +192,17 @@ def csv_to_tei(csv_file_path):
             idno.text = get_row_value(row, 'Signatur/shelfmark')
 
             # msContents
-            text_lang_code = get_row_value(row, 'Sprachencode [dreistellig]') or 'ger'
+            # fra, ger, ita, spa, eng, cze
+            text_lang_code = get_row_value(row, 'Sprachencode [dreistellig]')
+            # Only proceed if we have a non-empty language code.
             if text_lang_code:
                 msContents = ET.SubElement(msDesc, '{%s}msContents' % NS_TEI)
                 textLang = ET.SubElement(msContents, '{%s}textLang' % NS_TEI)
-                lang = ET.SubElement(textLang, '{%s}lang' % NS_TEI)
-                lang.set('{http://www.w3.org/XML/1998/namespace}lang', text_lang_code)
-                lang.text = 'Deutsch' if text_lang_code == 'ger' else ''
+                lang_el = ET.SubElement(textLang, '{%s}lang' % NS_TEI)
+                # e.g. xml:lang="fra"
+                lang_el.set('{http://www.w3.org/XML/1998/namespace}lang', text_lang_code)
+                # If we recognize the code, use its localized name; otherwise leave text empty.
+                lang_el.text = LANG_MAP.get(text_lang_code, '')
 
             # Add identifying inscription if available
             identifying_inscription = get_row_value(row, 'Aufschrift erstes Blatt / Identifying Inscription')
@@ -272,8 +308,6 @@ def csv_to_tei(csv_file_path):
                 if date_on_document:
                     origDate = ET.SubElement(origin, '{%s}origDate' % NS_TEI)
                     origDate.text = date_on_document
-                    if date_norm:
-                        origDate.set('when', date_norm)
 
                 # Map 'Datierung [erschlossen]' with ana="supplied/verified"
                 if datierung_erschlossen:
@@ -322,7 +356,8 @@ def csv_to_tei(csv_file_path):
             # Initialize a list to hold keywords terms
             keywords_terms = []
 
-            # Map Ordnungskategorie [classification]
+            # -------------------------------------------------------------------
+            # 1) EXISTING classification logic (example)
             ordnungskategorie = get_row_value(row, 'Ordnungskategorie [classification]')
             if ordnungskategorie:
                 term_class_de = ET.Element('{%s}term' % NS_TEI)
@@ -330,7 +365,8 @@ def csv_to_tei(csv_file_path):
                 term_class_de.set('{http://www.w3.org/XML/1998/namespace}lang', 'de')
                 term_class_de.text = ordnungskategorie
                 keywords_terms.append(term_class_de)
-                # Check if English translation is available
+
+                # If there's an English classification, add that too
                 ordnungskategorie_en = get_row_value(row, 'Classification')
                 if ordnungskategorie_en:
                     term_class_en = ET.Element('{%s}term' % NS_TEI)
@@ -339,20 +375,53 @@ def csv_to_tei(csv_file_path):
                     term_class_en.text = ordnungskategorie_en
                     keywords_terms.append(term_class_en)
 
-            # Map GND Werk (SZ)
-            gnd_werk_sz = get_row_value(row, 'GND Werk (SZ)')
-            if gnd_werk_sz:
+            # -------------------------------------------------------------------
+            # 2) NEW LOGIC: person term
+            person_schlagwort = get_row_value(row, 'Personenschlagwort')
+            person_gnd = get_row_value(row, 'GND Personenschlagwort')
+            if person_schlagwort:
+                # Create <term type="person">
+                term_person = ET.Element('{%s}term' % NS_TEI)
+                term_person.set('type', 'person')
+                if person_gnd:
+                    term_person.set('ref', person_gnd)
+                term_person.text = person_schlagwort
+                keywords_terms.append(term_person)
+
+            # -------------------------------------------------------------------
+            # 3) NEW LOGIC: work term
+            werkschlagwort = get_row_value(row, 'Werkschlagwort Dritte')
+            werkschlagwort_gnd = get_row_value(row, 'GND Werkschlagwort Dritte')
+            if werkschlagwort:
+                # Create <term type="work">
                 term_work = ET.Element('{%s}term' % NS_TEI)
                 term_work.set('type', 'work')
-                term_work.set('ref', f'#SZDWRK.{record_id}')  # Use appropriate work ID
-                term_work.text = gnd_werk_sz
+                if werkschlagwort_gnd:
+                    term_work.set('ref', werkschlagwort_gnd)
+                term_work.text = werkschlagwort
                 keywords_terms.append(term_work)
 
-            # Only create <keywords> if there are terms
+            # -------------------------------------------------------------------
+            # Only create <keywords> if we have collected any <term> elements
             if keywords_terms:
-                keywords = ET.SubElement(textClass, '{%s}keywords' % NS_TEI)
-                for term in keywords_terms:
-                    keywords.append(term)
+                keywords_el = ET.SubElement(textClass, '{%s}keywords' % NS_TEI)
+                for term_el in keywords_terms:
+                    keywords_el.append(term_el)
+
+                # Map GND Werk (SZ)
+                gnd_werk_sz = get_row_value(row, 'GND Werk (SZ)')
+                if gnd_werk_sz:
+                    term_work = ET.Element('{%s}term' % NS_TEI)
+                    term_work.set('type', 'work')
+                    term_work.set('ref', f'#SZDWRK.{record_id}')  # Use appropriate work ID
+                    term_work.text = gnd_werk_sz
+                    keywords_terms.append(term_work)
+
+                # Only create <keywords> if there are terms
+                if keywords_terms:
+                    keywords = ET.SubElement(textClass, '{%s}keywords' % NS_TEI)
+                    for term in keywords_terms:
+                        keywords.append(term)
 
     # Convert the ElementTree to a string
     xml_string = ET.tostring(tei, encoding='utf-8', method='xml')
