@@ -2987,7 +2987,8 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                                    <repository ref="https://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-SEF/B3</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1386</idno>
@@ -3021,7 +3022,8 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                                    <repository ref="https://d-nb.info/gnd/1047605287"
+                                        >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-SAH/B1.1</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1826</idno>
@@ -3040,6 +3042,81 @@
                             </correspAction>
                         </correspDesc>
                     </profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDKOR.max-und-victor-fleischer.2">
+                    <fileDesc>
+                        <titleStmt>
+                            <title xml:lang="de">Postkarte an Max und Victor Fleischer vom 22. Dezember 1902, SZ-LAS/B3.33</title>
+                            <title xml:lang="en">Postkarte an Max und Victor Fleischer vom 22. Dezember 1902, SZ-LAS/B3.33</title>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Einzelbrief</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Ãsterreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-LAS/B3.33</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.1113</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc></profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDKOR.max-und-victor-fleischer.3">
+                    <fileDesc>
+                        <titleStmt>
+                            <title xml:lang="de">Postkarte an Max und Victor Fleischer vom 28. Dezember 1902, SZ-LAS/B3.34</title>
+                            <title xml:lang="en">Postkarte an Max und Victor Fleischer vom 28. Dezember 1902, SZ-LAS/B3.34</title>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Einzelbrief</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Ãsterreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-LAS/B3.34</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.1114</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc></profileDesc>
+                </biblFull>
+                <biblFull xml:id="SZDKOR.max-und-victor-fleischer.1">
+                    <fileDesc>
+                        <titleStmt>
+                            <title xml:lang="de">Postkarte an Max und Victor Fleischer vom 1. Januar 1903, SZ-LAS/B3.35</title>
+                            <title xml:lang="en">Postkarte an Max und Victor Fleischer vom 1. Januar 1903, SZ-LAS/B3.35</title>
+                        </titleStmt>
+                        <publicationStmt>
+                            <ab>Einzelbrief</ab>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <msDesc>
+                                <msIdentifier>
+                                    <country>Ãsterreich</country>
+                                    <settlement>Salzburg</settlement>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                                    <idno type="signature">SZ-LAS/B3.35</idno>
+                                    <altIdentifier>                 
+                                        <idno type="PID">o:szd.1115</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                            </msDesc>
+                        </sourceDesc>
+                    </fileDesc>
+                    <profileDesc></profileDesc>
                 </biblFull>
             </listBibl>
         </body>

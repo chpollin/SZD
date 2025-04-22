@@ -198,6 +198,49 @@
             </correspDesc>
           </profileDesc>
         </biblFull>
+        <biblFull xml:id="SZDKOR.alfred-und-stefanie-zweig.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Lotte und Stefan Zweig an Alfred und Stefanie Zweig, SZ-AAP/B10.5</title>
+              <title xml:lang="en">Lotte und Stefan Zweig an Alfred und Stefanie Zweig, SZ-AAP/B10.5</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1431</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1941-12-01" xml:lang="de">1. 12. 41</date>
+                <date when="1941-12-01" xml:lang="en">1. 12. 41</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
       </listBibl>
     </body>
   </text>

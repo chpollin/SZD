@@ -3,15 +3,15 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title xml:lang="de">Korrespondenz International Copyright Bureau</title>
-        <title xml:lang="en">Correspondence International Copyright Bureau</title>
+        <title xml:lang="de">Korrespondenz The International Copyright Bureau Ltd.</title>
+        <title xml:lang="en">Correspondence The International Copyright Bureau Ltd.</title>
       </titleStmt>
       <publicationStmt>
         <publisher>
           <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
             ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
-        <idno type="PID">o:szd.korrespondenzen.international-copyright-bureau</idno>
+        <idno type="PID">o:szd.korrespondenzen.international-copyright-bureau-ltd.-the</idno>
       </publicationStmt>
       <seriesStmt>
         <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
@@ -74,10 +74,10 @@
         <biblFull xml:id="SZDKOR.international-copyright-bureau.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an das International Copyright Bureau vom 1. Juni 1940,
-                SZ-AAP/B3.25</title>
-              <title xml:lang="en">Brief an das International Copyright Bureau vom 1. Juni 1940,
-                SZ-AAP/B3.25</title>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 1. Juni
+                1940</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 1. Juni
+                1940</title>
             </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
@@ -85,7 +85,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -131,7 +131,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -177,7 +177,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -223,7 +223,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -269,7 +269,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -315,7 +315,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -361,7 +361,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -407,7 +407,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -514,6 +514,748 @@
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname>
                   <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 10. Juli 1939, SZ-AAP/B3.6</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 10. Juli 1939, SZ-AAP/B3.6</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1580</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1939-07-10" xml:lang="de">10. 7. 39</date>
+                <date when="1939-07-10" xml:lang="en">10. 7. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 12. Juli 1939, SZ-AAP/B3.7</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 12. Juli 1939, SZ-AAP/B3.7</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.7</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1581</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1939-07-12" xml:lang="de">12. 7. 39</date>
+                <date when="1939-07-12" xml:lang="en">12. 7. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 15. Mai 1940, SZ-AAP/B3.15</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 15. Mai 1940, SZ-AAP/B3.15</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1579</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-15" xml:lang="de">15. 5. 40</date>
+                <date when="1940-05-15" xml:lang="en">15. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. MÃ¤rz 1940, SZ-AAP/B3.11</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. MÃ¤rz 1940, SZ-AAP/B3.11</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.11</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1484</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-03-18" xml:lang="de">18. 3. 40</date>
+                <date when="1940-03-18" xml:lang="en">18. 3. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. Juli 1939, SZ-AAP/B3.10</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. Juli 1939, SZ-AAP/B3.10</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.10</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1483</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1939-07-18" xml:lang="de">18. 7. 39</date>
+                <date when="1939-07-18" xml:lang="en">18. 7. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. Juli 1939, SZ-AAP/B3.9</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. Juli 1939, SZ-AAP/B3.9</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.9</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1497</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1939-07-18" xml:lang="de">18. 7. 39</date>
+                <date when="1939-07-18" xml:lang="en">18. 7. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. Juni 1940, SZ-AAP/B3.26</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 20. Juni 1940, SZ-AAP/B3.26</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.26</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1462</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-06-20" xml:lang="de">20. 6. 40</date>
+                <date when="1940-06-20" xml:lang="en">20. 6. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 21. Mai 1940, SZ-AAP/B3.17</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 21. Mai 1940, SZ-AAP/B3.17</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.17</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1453</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-21" xml:lang="de">21. 5. 40</date>
+                <date when="1940-05-21" xml:lang="en">21. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 23. Mai 1940, SZ-AAP/B3.21</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 23. Mai 1940, SZ-AAP/B3.21</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.21</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1457</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-23" xml:lang="de">23. 5. 40</date>
+                <date when="1940-05-23" xml:lang="en">23. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 24. Mai 1940, SZ-AAP/B3.22</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 24. Mai 1940, SZ-AAP/B3.22</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.22</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1458</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-24" xml:lang="de">24. 5. 40</date>
+                <date when="1940-05-24" xml:lang="en">24. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 30. Mai 1940, SZ-AAP/B3.24</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 30. Mai 1940, SZ-AAP/B3.24</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.24</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1460</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-30" xml:lang="de">30. 5. 40</date>
+                <date when="1940-05-30" xml:lang="en">30. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Suzanne</surname>
+                  <forename>Czech</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 16. Mai 1940, SZ-AAP/B3.16</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 16. Mai 1940, SZ-AAP/B3.16</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.16</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1489</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-16" xml:lang="de">16. 5. 40</date>
+                <date when="1940-05-16" xml:lang="en">16. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname>
+                  <forename>Suzanne</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 21. Juni 1940, SZ-AAP/B3.27</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 21. Juni 1940, SZ-AAP/B3.27</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.27</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1463</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-06-21" xml:lang="de">21. 6. 40</date>
+                <date when="1940-06-21" xml:lang="en">21. 6. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname>
+                  <forename>Suzanne</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 22. Mai 1940, SZ-AAP/B3.18</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 22. Mai 1940, SZ-AAP/B3.18</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.18</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1454</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-22" xml:lang="de">22. 5. 40</date>
+                <date when="1940-05-22" xml:lang="en">22. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname>
+                  <forename>Suzanne</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 23. Mai 1940, SZ-AAP/B3.20</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 23. Mai 1940, SZ-AAP/B3.20</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.20</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1473</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-23" xml:lang="de">23. 5. 40</date>
+                <date when="1940-05-23" xml:lang="en">23. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname>
+                  <forename>Suzanne</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.heilbron-george.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 15. November 1938, SZ-AAP/B3.2</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 15. November 1938, SZ-AAP/B3.2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1490</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-11-15" xml:lang="de">15. 11. 38</date>
+                <date when="1938-11-15" xml:lang="en">15. 11. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>George</surname>
+                  <forename>Heilbron</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.heilbron-george.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. Januar 1939, SZ-AAP/B3.4</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 20. Januar 1939, SZ-AAP/B3.4</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1492</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1939-01-20" xml:lang="de">20. 1. 39</date>
+                <date when="1939-01-20" xml:lang="en">20. 1. 39</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>George</surname>
+                  <forename>Heilbron</forename>
                 </persName>
               </correspAction>
             </correspDesc>
