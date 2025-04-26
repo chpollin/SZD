@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -90,26 +90,24 @@
                     <idno type="PID">o:szd.1468</idno>
                   </altIdentifier>
                 </msIdentifier>
-              </msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>                 
- <forename>Stefan</forename>
-                </persName>
-                <date when="1940-06-10" xml:lang="de">10. 6. 40</date>
-                <date when="1940-06-10" xml:lang="en">10. 6. 40</date>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-06-10" xml:lang="de">10th June 1940.</date>
+                <date when="1940-06-10" xml:lang="en">10th June 1940.</date>
                 <placeName ana="deduced">Salzburg</placeName>
-              </correspAction>
+              <address><addrLine>New York City, 245 West 52nd Street</addrLine></address></correspAction>
               <correspAction type="received">
                 <persName>
                   <surname>York</surname>
                   <forename>Theatre</forename>
                 </persName>
-              </correspAction>
+              <orgName ref="http://d-nb.info/gnd/510308-3">Theatre Guild, Inc.</orgName></correspAction>
             </correspDesc>
           </profileDesc>
         </biblFull>
@@ -122,7 +120,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -133,16 +131,14 @@
                     <idno type="PID">o:szd.1477</idno>
                   </altIdentifier>
                 </msIdentifier>
-              </msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, blue ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, blaue Tinte</material></support><extent><span xml:lang="de">1 Telegrammtext, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 telegram text, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
                 <date when="1940-05-23" xml:lang="de">23. 5. 40</date>
                 <date when="1940-05-23" xml:lang="en">23. 5. 40</date>
                 <placeName ana="deduced">Salzburg</placeName>
@@ -152,7 +148,7 @@
                   <surname>York</surname>
                   <forename>Theatre</forename>
                 </persName>
-              </correspAction>
+              <orgName ref="http://d-nb.info/gnd/510308-3">Theatre Guild, Inc.</orgName></correspAction>
             </correspDesc>
           </profileDesc>
         </biblFull>

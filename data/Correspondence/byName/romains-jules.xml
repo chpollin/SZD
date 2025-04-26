@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -74,16 +74,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 5. August 1937, SZ-LAS/B2.1</title><title xml:lang="en">Brief an Stefan Zweig vom 5. August 1937, SZ-LAS/B2.1</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 5. August 1937</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 5. August 1937</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.1</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1442</idno>
@@ -95,8 +97,8 @@
                     <lang xml:lang="fre">Französisch</lang>
                   </textLang>
                 </msContents>
-                <physDesc>                 
- <objectDesc>
+                <physDesc>
+                  <objectDesc>
                     <supportDesc>
                       <support>
                         <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Jules Romains</material>
@@ -129,16 +131,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-08-05" xml:lang="de">5. 8. 37</date><date when="1937-08-05" xml:lang="en">5. 8. 37</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-08-05" xml:lang="de">5 Août 1937</date>
+                <date when="1937-08-05" xml:lang="en">5 Août 1937</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -146,16 +146,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.2">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 20. August 1937, SZ-LAS/B2.2</title><title xml:lang="en">Brief an Stefan Zweig vom 20. August 1937, SZ-LAS/B2.2</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. August 1937</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 20. August 1937</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.2</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1650</idno>
@@ -201,16 +203,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-08-20" xml:lang="de">20. 8. 37</date><date when="1937-08-20" xml:lang="en">20. 8. 37</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-08-20" xml:lang="de">20 Août 1937.</date>
+                <date when="1937-08-20" xml:lang="en">20 Août 1937.</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -218,16 +218,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.3">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 1. Oktober 1937, SZ-LAS/B2.3</title><title xml:lang="en">Brief an Stefan Zweig vom 1. Oktober 1937, SZ-LAS/B2.3</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 1. Oktober 1937</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 1. Oktober 1937</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.3</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1651</idno>
@@ -264,8 +266,8 @@
                   <acquisition>
                     <ab xml:lang="de">Ankauf 2021</ab>
                     <ab xml:lang="en">Acquisition 2021</ab>
-                  </acquisition>
-                </history>
+                  </acquisition>        
+        </history>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -273,16 +275,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-10-01" xml:lang="de">1. 10. 37</date><date when="1937-10-01" xml:lang="en">1. 10. 37</date><placeName>Paris</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-10-01" xml:lang="de">1° Octobre 1937</date>
+                <date when="1937-10-01" xml:lang="en">1° Octobre 1937</date>
+                <placeName>Paris</placeName>
+              <placeName xml:lang="de">Paris</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -290,16 +290,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.4">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 7. Oktober 1937, SZ-LAS/B2.4</title><title xml:lang="en">Brief an Stefan Zweig vom 7. Oktober 1937, SZ-LAS/B2.4</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 7. Oktober 1937</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 7. Oktober 1937</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.4</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1652</idno>
@@ -345,16 +347,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-10-07" xml:lang="de">7. 10. 37</date><date when="1937-10-07" xml:lang="en">7. 10. 37</date><placeName>Paris</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-10-07" xml:lang="de">7 Octobre 1937</date>
+                <date when="1937-10-07" xml:lang="en">7 Octobre 1937</date>
+                <placeName>Paris</placeName>
+              <placeName xml:lang="de">Paris</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -362,16 +362,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.5">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 3. Juli 1939, SZ-LAS/B2.5</title><title xml:lang="en">Brief an Stefan Zweig vom 3. Juli 1939, SZ-LAS/B2.5</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 3. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 3. Juli 1939</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.5</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1653</idno>
@@ -417,16 +419,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-07-03" xml:lang="de">3. 7. 37</date><date when="1937-07-03" xml:lang="en">3. 7. 37</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-07-03" xml:lang="de">3 Juillet 1939</date>
+                <date when="1937-07-03" xml:lang="en">3 Juillet 1939</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -434,16 +434,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.6">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 10. Juli 1939, SZ-LAS/B2.6</title><title xml:lang="en">Brief an Stefan Zweig vom 10. Juli 1939, SZ-LAS/B2.6</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 10. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 10. Juli 1939</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.6</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1404</idno>
@@ -489,16 +491,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1939-07-10" xml:lang="de">10. 7. 39</date><date when="1939-07-10" xml:lang="en">10. 7. 39</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1939-07-10" xml:lang="de">10 Juillet 1939</date>
+                <date when="1939-07-10" xml:lang="en">10 Juillet 1939</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -506,16 +506,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.7">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 22. Juli 1939, SZ-LAS/B2.7</title><title xml:lang="en">Brief an Stefan Zweig vom 22. Juli 1939, SZ-LAS/B2.7</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 22. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 22. Juli 1939</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.7</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1405</idno>
@@ -561,16 +563,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1939-07-22" xml:lang="de">22. 7. 39</date><date when="1939-07-22" xml:lang="en">22. 7. 39</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1939-07-22" xml:lang="de">22 Juillet 1939</date>
+                <date when="1939-07-22" xml:lang="en">22 Juillet 1939</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -578,16 +578,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.8">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brief an Stefan Zweig vom 29. Juli 1939, SZ-LAS/B2.8</title><title xml:lang="en">Brief an Stefan Zweig vom 29. Juli 1939, SZ-LAS/B2.8</title></titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 29. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 29. Juli 1939</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B2.8</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1406</idno>
@@ -606,8 +608,8 @@
                         <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
                         <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
                         <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
-                      </support>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>               
+       </support>
                       <extent>
                         <span xml:lang="de">1 Brief, Typoskript, 1
                                                   Blatt</span>
@@ -624,8 +626,8 @@
                   <acquisition>
                     <ab xml:lang="de">Ankauf 2021</ab>
                     <ab xml:lang="en">Acquisition 2021</ab>
-                  </acquisition>               
- </history>
+                  </acquisition>
+                </history>
               </msDesc>
             </sourceDesc>
           </fileDesc>
@@ -633,16 +635,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1939-07-29" xml:lang="de">29. 7. 39</date><date when="1939-07-29" xml:lang="en">29. 7. 39</date><placeName>Saint-Avertin</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1939-07-29" xml:lang="de">29 Juillet 1939</date>
+                <date when="1939-07-29" xml:lang="en">29 Juillet 1939</date>
+                <placeName>Saint-Avertin</placeName>
+              <placeName xml:lang="de">Saint-Avertin</placeName></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -650,16 +650,18 @@
         <biblFull xml:id="SZDKOR.romains-jules.B.9">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Telegramm an Stefan Zweig vom 1. Oktober 1937, SZ-AAP/B3.30</title><title xml:lang="en">Telegramm an Stefan Zweig vom 1. Oktober 1937, SZ-AAP/B3.30</title></titleStmt>
+              <title xml:lang="de">Telegramm an Stefan Zweig vom 1. Oktober 1937</title>
+              <title xml:lang="en">Telegramm an Stefan Zweig vom 1. Oktober 1937</title>
+            </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <repository ref="https://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAP/B3.30</idno>
                   <altIdentifier>
                     <idno type="PID">o:szd.1476</idno>
@@ -667,7 +669,7 @@
                 </msIdentifier>
                 <msContents>
                   <textLang>
-                    <lang xml:lang="fre">French</lang>
+                    <lang xml:lang="eng">French</lang>
                     <lang xml:lang="fre">Französisch</lang>
                     <lang xml:lang="eng">English</lang>
                     <lang xml:lang="eng">Englisch</lang>
@@ -707,16 +709,14 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/11860239X">
-                  <surname>Romains</surname>
-                  <forename>Jules</forename>
-                </persName>
-                <date when="1937-10-01" xml:lang="de">1. 10. 37</date><date when="1937-10-01" xml:lang="en">1. 10. 37</date><placeName>Paris</placeName>
-              </correspAction>
+                  <surname>Romains</surname><forename>Jules</forename></persName>
+                <date when="1937-10-01" xml:lang="de">1. 10. 37</date>
+                <date when="1937-10-01" xml:lang="en">1. 10. 37</date>
+                <placeName>Paris</placeName>
+              <placeName type="postmark">1 OC 37</placeName><placeName xml:lang="de">Paris</placeName><address><addrLine>London, 49 Hallam Street</addrLine></address></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
