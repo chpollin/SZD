@@ -1,97 +1,74 @@
 #!/usr/bin/env python3
 """
-fetch_korrespondenzen.py  v0.3 (2025‑04‑22)
+fetch_korrespondenzen.py  v0.7  (2025-04-27)
 
-•  Download the Korrespondenzen SPARQL result (1 201 rows)
-•  Analyse tag structure
-•  Build ASCII‑only slugs (NFD → strip diacritics, ß→ss, etc.)
-•  Fetch every partner’s TEI_SOURCE
-•  Extract every  <idno type="signature">  inside the TEI
-•  Log for each partner which signatures (convolutes) occur
-•  Everything in ONE file: fetch_korrespondenzen.log
+Offline version:
+• reads all TEI XMLs from ./tei/
+• extracts signatures and links them to CSV records in ./data/
+• concise one-line logs, no network calls
 """
 
 from __future__ import annotations
 
 import collections
+import csv
 import logging
 import re
 import sys
 import unicodedata
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
-from urllib.parse import quote
+from typing import Dict, List, Set
 
-import requests
 import xml.etree.ElementTree as ET
 
 # --------------------------------------------------------------------------- #
-#  Config                                                                     #
+#  Paths                                                                      #
 # --------------------------------------------------------------------------- #
-SPARQL_URL = (
-    "https://gams.uni-graz.at/archive/risearch?"
-    "type=tuples&lang=sparql&format=Sparql&"
-    "query=http://fedora:8380/archive/get/context:szd.facsimiles.korrespondenzen/QUERY"
-)
-LOG_FILE = Path(__file__).with_suffix(".log")
-TIMEOUT   = 60      # seconds
-
+BASE     = Path(__file__).parent
+DATA_DIR = BASE / "data"
+TEI_DIR  = BASE / "tei"
+LOG_FILE = BASE / "fetch_korrespondenzen.log"
 
 # --------------------------------------------------------------------------- #
-#  Slug utilities                                                             #
+#  Helpers                                                                    #
 # --------------------------------------------------------------------------- #
-_SPACE_COMMA = str.maketrans(" ,", "--")           # space & comma → hyphen
+_SPACE_COMMA = str.maketrans(" ,", "--")
 
-def _strip_diacritics(s: str) -> str:
-    return "".join(c for c in unicodedata.normalize("NFD", s)
+def _strip_diacritics(txt: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", txt)
                    if not unicodedata.combining(c))
 
-def slugify(person: str) -> str:
-    s = person.strip().lower().translate(_SPACE_COMMA)
+def slugify_name(name: str) -> str:
+    """(still available but not used now; kept for completeness)."""
+    s = name.strip().lower().translate(_SPACE_COMMA)
     s = _strip_diacritics(s).replace("ß", "ss")
-    s = re.sub(r"-{2,}", "-", s)            # collapse “--”
-    s = re.sub(r"[^a-z0-9.\-]", "", s)      # keep safe ASCII only
+    s = re.sub(r"-{2,}", "-", s)
+    s = re.sub(r"[^a-z0-9.\-]", "", s)
     return f"szd.korrespondenzen.{s}"
 
-
-# --------------------------------------------------------------------------- #
-#  XML helpers                                                                #
-# --------------------------------------------------------------------------- #
-def traverse(node: ET.Element,
-             depth: int,
-             tag_counter: collections.Counter,
-             tag_attrs: Dict[str, Set[str]],
-             max_depth: Tuple[int],
-             paths: Set[str],
-             cur_path: str) -> None:
-    tag_counter[node.tag] += 1
-    tag_attrs[node.tag].update(node.attrib.keys())
-    paths.add(cur_path)
-    max_depth[0] = max(max_depth[0], depth)
-    for child in node:
-        traverse(child, depth + 1, tag_counter, tag_attrs,
-                 max_depth, paths, f"{cur_path}/{child.tag}")
-
-def get_person_names(root: ET.Element) -> Set[str]:
-    ns = {"s": "http://www.w3.org/2001/sw/DataAccess/rf1/result"}
-    names: Set[str] = set()
-    for r in root.findall(".//s:result", ns):
-        creator = r.find("s:creator", ns)
-        if creator is not None and creator.text and creator.text != "Zweig, Stefan":
-            names.add(creator.text)
-        contrib = r.find("s:contributor", ns)
-        if contrib is not None and contrib.text and contrib.get("bound") != "false":
-            names.add(contrib.text)
-    return names
-
-def extract_signatures(tei_xml: str) -> List[str]:
+def extract_signatures(xml_txt: str) -> List[str]:
     try:
-        root = ET.fromstring(tei_xml)
+        root = ET.fromstring(xml_txt)
     except ET.ParseError:
         return []
-    sigs = {el.text.strip() for el in
-            root.findall(".//{*}idno[@type='signature']") if el.text}
-    return sorted(sigs)
+    return sorted(
+        {el.text.strip() for el in root.findall(".//{*}idno[@type='signature']") if el.text}
+    )
+
+def load_csv_signatures(folder: Path) -> Dict[str, List[str]]:
+    """Return { signature → [csv filename, …] }."""
+    sig_map: Dict[str, List[str]] = collections.defaultdict(list)
+    for csv_file in folder.glob("*.csv"):
+        try:
+            with csv_file.open(encoding="utf-8-sig", newline="") as f:
+                rdr = csv.DictReader(f)
+                for row in rdr:
+                    sig = (row.get("Signatur") or "").strip()
+                    if sig:
+                        sig_map[sig].append(csv_file.name)
+        except Exception as exc:  # noqa: BLE001
+            logging.error("CSV read error %s – %s", csv_file.name, exc)
+    return sig_map
 
 
 # --------------------------------------------------------------------------- #
@@ -100,69 +77,58 @@ def extract_signatures(tei_xml: str) -> List[str]:
 def main() -> None:
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s %(levelname)-8s %(message)s",
+        format="%(asctime)s %(levelname)s %(message)s",
         handlers=[
-            logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
+            logging.FileHandler(LOG_FILE, "w", "utf-8"),
             logging.StreamHandler(sys.stdout),
         ],
     )
 
-    # 1  download SPARQL result ------------------------------------------------
-    logging.info("Fetching SPARQL XML …")
-    xml_text = requests.get(SPARQL_URL, timeout=TIMEOUT).text
-    root = ET.fromstring(xml_text)
+    # ------------------------------------------------------------------ #
+    # 0  CSV index                                                       #
+    # ------------------------------------------------------------------ #
+    csv_sig_map = load_csv_signatures(DATA_DIR)
+    logging.info("[CSV] %d files, %d unique signatures indexed",
+                 len(list(DATA_DIR.glob('*.csv'))), len(csv_sig_map))
 
-    # 2  basic structure statistics -------------------------------------------
-    tag_counter: collections.Counter = collections.Counter()
-    tag_attrs: Dict[str, Set[str]] = collections.defaultdict(set)
-    max_depth = [0]
-    paths: Set[str] = set()
-    traverse(root, 0, tag_counter, tag_attrs, max_depth, paths, root.tag)
-    logging.info("Root tag: %s  —  total elements: %d  —  max depth: %d",
-                 root.tag, sum(tag_counter.values()), max_depth[0])
+    # ------------------------------------------------------------------ #
+    # 1  TEI loop (local files)                                          #
+    # ------------------------------------------------------------------ #
+    tei_files = sorted(TEI_DIR.glob("*.xml"))
+    if not tei_files:
+        logging.warning("No TEI files found in %s", TEI_DIR)
+        sys.exit(1)
 
-    logging.info("\n---- Tag statistics ----")
-    for tag, cnt in tag_counter.most_common():
-        attrs = ", ".join(sorted(tag_attrs[tag])) or "—"
-        logging.info("• %-25s  count=%-6d  attrs=[%s]", tag, cnt, attrs)
+    logging.info("[TEI] %d files to process", len(tei_files))
 
-    # 3  TEI phase -------------------------------------------------------------
-    names = sorted(get_person_names(root))
-    logging.info("\n---- TEI fetch phase ----")
-    logging.info("Unique persons: %d", len(names))
+    total_sigs = total_csv_hits = parse_errors = 0
 
-    tei_found, tei_missing = 0, 0
-    convolute_map: Dict[str, List[str]] = {}
+    for tei_path in tei_files:
+        slug = f"szd.korrespondenzen.{tei_path.stem}"
 
-    for person in names:
-        slug = slugify(person)
-        url  = f"https://stefanzweig.digital/o:{quote(slug, safe='.:')}/TEI_SOURCE"
         try:
-            r = requests.get(url, timeout=TIMEOUT)
-            if r.status_code == 200:
-                tei_found += 1
-                sigs = extract_signatures(r.text)
-                convolute_map[person] = sigs
-                logging.info("✓ %s", url)
-            else:
-                tei_missing += 1
-                logging.info("✗ %s", url)
-        except requests.RequestException:
-            tei_missing += 1
-            logging.info("✗ %s  (request error)", url)
+            xml_text = tei_path.read_text(encoding="utf-8")
+        except Exception as exc:  # noqa: BLE001
+            parse_errors += 1
+            logging.error("File read error %s – %s", tei_path.name, exc)
+            continue
 
-    # 4  grouping log ----------------------------------------------------------
-    logging.info("\n---- Convolutes per partner ----")
-    for person in sorted(convolute_map):
-        sigs = convolute_map[person]
-        if sigs:
-            logging.info("%s :", person)
-            for s in sigs:
-                logging.info("  * %s", s)
+        sigs = extract_signatures(xml_text)
+        total_sigs += len(sigs)
 
-    # 5  summary ---------------------------------------------------------------
-    logging.info("\nSummary: TEI found=%d  missing=%d", tei_found, tei_missing)
-    print(f"\nAll details written to {LOG_FILE.resolve()}")
+        sig_hits = [s for s in sigs if s in csv_sig_map]
+        total_csv_hits += len(sig_hits)
+
+        logging.info("+ %s | sigs=%d | csv=%d | %s",
+                     slug, len(sigs), len(sig_hits),
+                     ",".join(sig_hits) if sig_hits else "-")
+
+    # ------------------------------------------------------------------ #
+    # 2  summary                                                         #
+    # ------------------------------------------------------------------ #
+    logging.info("[SUM] TEI processed=%d  read_errors=%d  signatures=%d  CSV links=%d",
+                 len(tei_files), parse_errors, total_sigs, total_csv_hits)
+    print(f"\nLog written to {LOG_FILE.resolve()}")
 
 
 if __name__ == "__main__":

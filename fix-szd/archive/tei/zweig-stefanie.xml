@@ -1,0 +1,254 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Zweig Stefanie</title>
+        <title xml:lang="en">Correspondence Zweig Stefanie</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.zweig-stefanie</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit dem
+          Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen orts- und zeitunabhÃ¤ngig
+          zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu einem spÃ¤teren Zeitpunkt
+          ErschlieÃung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) mÃ¶glich
+          werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.zweig-stefanie.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefanie und Alfred Zweig an Friderike Zweig,
+                SZ-SAM/AK.300</title>
+              <title xml:lang="en">Stefanie und Alfred Zweig an Friderike Zweig,
+                SZ-SAM/AK.300</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.300</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1667</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>         
+         <forename>Stefan</forename>
+                </persName>
+                <date when="1930-06-21" xml:lang="de">21. 6. 30</date>
+                <date when="1930-06-21" xml:lang="en">21. 6. 30</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Zweig</surname>
+                  <forename>Stefanie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-stefanie.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Stefanie Zweig, SZ-AAP/B10.3</title>
+              <title xml:lang="en">Stefan Zweig to Stefanie Zweig, SZ-AAP/B10.3</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1429</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-11-15" xml:lang="de">15. XIÂ 1940</date>
+                <date when="1940-11-15" xml:lang="en">15Â NovÂ 1940</date>
+                <placeName ana="deduced">Rio</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Zweig</surname>
+                  <forename>Stefanie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-stefanie.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">LotteÂ Zweig an StefanieÂ Zweig, SZ-AAP/B10.4</title>
+              <title xml:lang="en">LotteÂ Zweig to StefanieÂ Zweig, SZ-AAP/B10.4</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1430</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1940-11-30" xml:lang="de">30. NovemberÂ 1940</date>
+                <date when="1940-11-30" xml:lang="en">30Â NovÂ 1940</date>
+                <placeName ana="deduced">Rio</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Zweig</surname>
+                  <forename>Stefanie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-stefanie.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">StefanÂ Zweig an StefanieÂ Zweig, SZ-AAP/B10.5</title>
+              <title xml:lang="en">StefanÂ Zweig to StefanieÂ Zweig, SZ-AAP/B10.5</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1431</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1941-12" xml:lang="de">DezemberÂ 1941</date>
+                <date when="1941-12" xml:lang="en">DecemberÂ 1941</date>
+                <placeName ana="deduced">PetrÃ³polis</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Zweig</surname>
+                  <forename>Stefanie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

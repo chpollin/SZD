@@ -1,0 +1,377 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Herbert Reichner Verlag</title>
+        <title xml:lang="en">Correspondence Herbert Reichner Verlag</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.herbert-reichner-verlag</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzufÃÂ¼hren und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschlieÃÂen. In Zusammenarbeit mit
+        dem Literaturarchiv der UniversitÃÂ¤t Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung reprÃÂ¤sentiert wird, und NutzerInnen
+        orts- und zeitunabhÃÂ¤ngig zugÃÂ¤nglich ist. Das Projekt ist so konzipiert, dass zu
+        einem spÃÂ¤teren Zeitpunkt ErschlieÃÂung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) mÃÂ¶glich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃÂ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 12. November 1937, SZ-AAP/B1.131</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 12. November 1937, SZ-AAP/B1.131</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.131</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.723</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>     
+             <forename>Stefan</forename>
+                </persName>
+                <date when="1937-11-12" xml:lang="de">12. 11. 37</date>
+                <date when="1937-11-12" xml:lang="en">12. 11. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 13. April 1938, SZ-AAP/B1.198</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 13. April 1938, SZ-AAP/B1.198</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.198</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.796</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-04-13" xml:lang="de">13. 4. 38</date>
+                <date when="1938-04-13" xml:lang="en">13. 4. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 13. Juli 1938, SZ-AAP/B1.260</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 13. Juli 1938, SZ-AAP/B1.260</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.260</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1615</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-07-13" xml:lang="de">13. 7. 38</date>
+                <date when="1938-07-13" xml:lang="en">13. 7. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. September 1937, SZ-AAP/B1.88</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. September 1937, SZ-AAP/B1.88</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.88</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.874</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-09-18" xml:lang="de">18. 9. 37</date>
+                <date when="1937-09-18" xml:lang="en">18. 9. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 30. Dezember 1937, SZ-AAP/B1.163</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 30. Dezember 1937, SZ-AAP/B1.163</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.163</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.758</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-30" xml:lang="de">30. 12. 37</date>
+                <date when="1937-12-30" xml:lang="en">30. 12. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 30. Dezember 1937, SZ-AAP/B1.164</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 30. Dezember 1937, SZ-AAP/B1.164</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.164</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.759</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-12-30" xml:lang="de">30. 12. 37</date>
+                <date when="1937-12-30" xml:lang="en">30. 12. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.herbert-reichner-verlag.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an den Herbert Reichner Verlag vom 8. Januar 1938, SZ-AAP/B1.170</title>
+              <title xml:lang="en">Brief an den Herbert Reichner Verlag vom 8. Januar 1938, SZ-AAP/B1.170</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.170</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.766</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-01-08" xml:lang="de">8. 1. 38</date>
+                <date when="1938-01-08" xml:lang="en">8. 1. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Verlag</surname>
+                  <forename>Herbert</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

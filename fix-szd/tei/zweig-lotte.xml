@@ -1,0 +1,1190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Zweig Lotte</title>
+        <title xml:lang="en">Correspondence Zweig Lotte</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.zweig-lotte</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+        dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+        orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+        einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.zweig-lotte.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.14</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>       
+           <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.5</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.2</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.5</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.19</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.10</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>    
+          <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.17</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.12</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.3</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.8</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.13</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.9</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.4</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.14">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.18</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.6</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.1</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.17">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.11</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-lotte.18">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Zweig Lotte, [Date Unknown]</title>
+              <title xml:lang="en">Stefan Zweig to Zweig Lotte, [Date Unknown]</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.7</idno>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Herbert Reichner vom 10. November 1937</title>
+              <title xml:lang="en">Brief an Herbert Reichner vom 10. November 1937</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.128</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.719</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-11-10" xml:lang="de">10. 11. 37</date>
+                <date when="1937-11-10" xml:lang="en">10. 11. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Lotte Altmann vom 17. Juni 1938</title>
+              <title xml:lang="en">Brief an Lotte Altmann vom 17. Juni 1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.254</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1609</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>    
+      </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-06-17" xml:lang="de">17. 6. 38</date>
+                <date when="1938-06-17" xml:lang="en">17. 6. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Emil Fuchs an Lotte Altmann</title>
+              <title xml:lang="en">Emil Fuchs an Lotte Altmann</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B13.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1435</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-10-23" xml:lang="de">23. 10. 38</date>
+                <date when="1938-10-23" xml:lang="en">23. 10. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Herbert Reichner vom 25. Mai 1937</title>
+              <title xml:lang="en">Brief an Herbert Reichner vom 25. Mai 1937</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.42</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.824</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-05-25" xml:lang="de">25. 5. 37</date>
+                <date when="1937-05-25" xml:lang="en">25. 5. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Herbert Reichner vom 30. Oktober 1937</title>
+              <title xml:lang="en">Brief an Herbert Reichner vom 30. Oktober 1937</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.118</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.708</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-10-30" xml:lang="de">30. 10. 37</date>
+                <date when="1937-10-30" xml:lang="en">30. 10. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Herbert Reichner vom 5. März 1938</title>
+              <title xml:lang="en">Brief an Herbert Reichner vom 5. März 1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.184</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.781</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-03-05" xml:lang="de">5. 3. 38</date>
+                <date when="1938-03-05" xml:lang="en">5. 3. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-lotte.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Herbert Reichner vom 9. März 1938</title>
+              <title xml:lang="en">Brief an Herbert Reichner vom 9. März 1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.188</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.785</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-03-09" xml:lang="de">9. 3. 38</date>
+                <date when="1938-03-09" xml:lang="en">9. 3. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Lotte</surname>
+                  <forename>Altmann</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.lotte-altmann.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Anna Meingast an Lotte Altmann</title>
+              <title xml:lang="en">Anna Meingast an Lotte Altmann</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.16</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1138</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-02-15" xml:lang="de">15. 2. 38</date>
+                <date when="1938-02-15" xml:lang="en">15. 2. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Altmann</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.lotte-altmann.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Anna Meingast an Lotte Altmann</title>
+              <title xml:lang="en">Anna Meingast an Lotte Altmann</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.4</idno>       
+           <altIdentifier>
+                    <idno type="PID">o:szd.1144</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1937-03-05" xml:lang="de">5. 3. 37</date>
+                <date when="1937-03-05" xml:lang="en">5. 3. 37</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Altmann</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.lotte-altmann.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Anna Meingast an Lotte Altmann</title>
+              <title xml:lang="en">Anna Meingast an Lotte Altmann</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/B10.15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1137</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-02-07" xml:lang="de">7. 2. 38</date>
+                <date when="1938-02-07" xml:lang="en">7. 2. 38</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Altmann</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

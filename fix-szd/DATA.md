@@ -1,45 +1,108 @@
 ---
 doc: DATA
 project: fix-szd
-version: 0.3.0
-updated: 2025‑04‑22
-tags: [data]
+version: 0.4.0
+updated: 2025-04-26
+tags: [data, korrespondenzen, zweig]
 ---
 
-### Datasets at a Glance
+# Correspondence corpus – overview
 
-| Dataset            | Description                                                   | Records / Files                    | Format  |
-|--------------------|---------------------------------------------------------------|------------------------------------|---------|
-| SPARQL result set  | Fedora RISearch rows for `szd.facsimiles.korrespondenzen`     | 1 201 rows (259 partners)          | XML     |
-| TEI sources        | TEI XML per partner (`…/o:{slug}/TEI_SOURCE`)                 | 246 found / 13 missing (~5 %)      | TEI XML |
-| Convolute map      | Signatures (`SZ‑…`) extracted from every TEI and grouped      | 246 partners → > 250 signatures    | in log |
+## Snapshot (26 Apr 2025)
 
-### Schema Outline
+| Dataset            | Description                                                               | Records / Files | Format / Size |
+|--------------------|---------------------------------------------------------------------------|-----------------|---------------|
+| **SPARQL result set** | Fedora RISearch rows for context `szd.facsimiles.korrespondenzen`         | 1 201 rows – 259 partners | XML (~2 MB) |
+| **TEI sources**    | One TEI per partner (`…/o:{slug}/TEI_SOURCE`)                             | **245 found / 13 missing** (5 %) | TEI-XML (~23 MB total) |
+| **Convolute map**  | All `<idno type="signature">` values harvested from every TEI             | 245 partners → ≈ 260 signatures | logged |
+| **Item CSVs**      | Catalogue metadata shipped with the repo (`data/*.csv`)                   | 3 files, 2 200 + rows | CSV (UTF-8) |
 
-* **`sparql`** (root)  
-  * `head` – nine `variable @name` nodes (column list).  
-  * `results/result` – 1 201 records containing:  
-    `cid`, `container`, `pid`, `model`, `title`, `identifier`,  
-    `creator`, `contributor [@bound]`, `date`.  
-* **TEI sources** – `<listBibl>/<biblFull>/<idno type="signature">` holds one
-  **convolute signature** such as `SZ‑SAM/AK.12`.  
-  Multiple `<biblFull>` ⇒ multiple signatures for a partner.
+```
+data/
+├─ Other.csv                 – assorted single items
+├─ SZ_AAP_Reichner.csv       – Autograph Album Reichner
+└─ SZ_SAM_Meingast.csv       – Sammlung Meingast
+```
 
-### Access Patterns
+---
 
-* Look up a metadata row by `pid`.  
-* Filter rows by `date` year.  
-* Aggregate by `container` to map sub‑collections.  
-* Resolve TEI source with ASCII‑only slug formula  
-  (strip diacritics, `ß→ss`, spaces/commas → `-`).  
-* Harvest all signatures from each TEI and build a partner → convolute list
-  (now logged).
+## Schema cheat-sheet
 
-### Data Gaps
+### SPARQL XML
 
-* 13 partners still lack a TEI file (mostly corporate names with punctuation).  
-* Some `contributor`/`date` nodes have `@bound="false"` → treat as **NULL**.  
-* A handful of dates deviate from ISO 8601; normalise on ingest.
+```
+sparql
+├─ head
+│  └─ variable @name   (9 columns)
+└─ results
+   └─ result*
+      ├─ cid | container | pid | model
+      ├─ title | identifier
+      ├─ creator
+      ├─ contributor @bound="true|false"
+      └─ date
+```
 
-_Last crawl: 22 Apr 2025 — 246 / 259 TEI sources parsed; signature grouping
-written to **fetch_korrespondenzen.log**._ :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}
+### TEI source
+
+```
+<TEI>
+ └─ text
+     └─ listBibl
+         └─ biblFull*
+             └─ idno type="signature"  →  SZ-…
+```
+
+A partner can have **multiple signatures** (e.g. one convolute plus standalone letters).
+
+### CSV rows
+
+Each CSV row represents *one archival item*.
+
+| Column | Purpose |
+|--------|---------|
+| `Signatur` | Primary key (matches TEI signature) |
+| `Verfasser*in`, `Adressat*in` | Intellectual ownership |
+| `Datierung Original` | Human‐readable date |
+| `Datum normalisiert` | ISO-8601 date |
+| `Sprache`, `Beschreibstoff`, *etc.* | Material & palaeography |
+
+---
+
+## Linking logic (script v0.4)
+
+1. **TEI → signature list** – `extract_signatures()` pulls all `<idno type="signature">`.
+2. **Signature → CSV index** – the script builds `signature → [(csv-file, row-dict)]`.
+3. Matches are logged, e.g.:
+
+```
+✓ https://…/TEI_SOURCE
+  ↳  SZ-SEF/B5.18  found in CSV  Other.csv
+```
+
+Current tally: **127 TEI signatures (≈ 49 %) have at least one CSV row**.
+
+---
+
+## Data gaps & clean-up queue
+
+| Issue | Count | Remedy |
+|-------|------:|--------|
+| Missing TEI files | 13 partners | slug tweak or ingest missing Fedora obj |
+| TEI signatures lacking CSV | ~130 | create new catalogue rows or mark un-catalogued |
+| `@bound="false"` contributors | 55 XML nodes | treat as `NULL` |
+| Non-ISO dates in CSV (`26 AGO 40`, `4 VII 13`, …) | 47 cells | normalise via dateparser |
+
+---
+
+## Recommended access patterns
+
+* **Look-up by `pid`** → unique Fedora handle.  
+* **Filter by year** → normalize `date` and `Datum normalisiert`.  
+* **Collection mapping** → aggregate `container`.  
+* **Partner overview** → group by `creator` / `contributor` and join to TEI signatures.  
+* **Item drill-down** → join TEI signature ↔ CSV row for full physical & provenance data.
+
+---
+
+_Last refresh: 26 Apr 2025 — generated by `fetch_korrespondenzen.py v0.4`._ 

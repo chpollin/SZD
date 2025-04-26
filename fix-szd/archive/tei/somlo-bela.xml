@@ -1,0 +1,60 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Somlo Bela</title>
+        <title xml:lang="en">Correspondence Somlo Bela</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.somlo-bela</idno>
+        <ref target="context:szd.korrespondenzen">Korrespondenzen Stefan Zweig</ref>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digitale</title>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.somlo-bela.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 11. Mai 1938, SZ-AAP/B1.223</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 11. Mai 1938, SZ-AAP/B1.223</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B1.223</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1789</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc></profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

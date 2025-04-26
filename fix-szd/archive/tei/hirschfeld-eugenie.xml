@@ -1,0 +1,1615 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Eugenie Hirschfeld</title>
+        <title xml:lang="en">Correspondence Eugenie Hirschfeld</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.hirschfeld-eugenie</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+                    im digitalen Raum zusammenzufÃ¼hren und ihn einem literaturwissenschaftlich bzw.
+                    wissenschaftlich interessierten Publikum zu erschlieÃen. In Zusammenarbeit mit
+                    dem Literaturarchiv der UniversitÃ¤t Salzburg wird dabei, basierend auf dem dort
+                    vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+                    generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+                    Sinne der digitalen Langzeitarchivierung reprÃ¤sentiert wird, und NutzerInnen
+                    orts- und zeitunabhÃ¤ngig zugÃ¤nglich ist. Das Projekt ist so konzipiert, dass zu
+                    einem spÃ¤teren Zeitpunkt ErschlieÃung und Anreicherung des Quellenmaterials
+                    (z.B. digitalen Editionen) mÃ¶glich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace fÃ¼r den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Stefan Zweig an Eugenie Hirschfeld,
+                                15.06.1906</title>
+              <title xml:lang="en">Stefan Zweig to Eugenie Hirschfeld,
+                                15.06.1906</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ_SEF_B5.1</idno>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>                   
+ <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName>London</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 7. Juli 1906, SZ-SEF/B5.2</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 7. Juli 1906, SZ-SEF/B5.2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1393</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;The Porch |ÃÂ St Mary&apos;s High St
+                                                  |ÃÂ Oxford&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;The Porch | St Mary&apos;s High St
+                                                  | Oxford&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>      
+                  <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-07-04" xml:lang="de">4. 7. 06</date>
+                <date when="1906-07-04" xml:lang="en">4. 7. 06</date>
+                <placeName>Oxford</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 20. Juli 1906, SZ-SEF/B5.3</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 20. Juli 1906, SZ-SEF/B5.3</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">ZusÃ¤tzliche Beschriftung zur Nachsendung </note>
+              <note xml:lang="en">Additional labelling for forwarding</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1394</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;York Minster, S.
+                                                  W.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;York Minster, S.
+                                                  W.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,                                            
+      1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-07-20" xml:lang="de">20. 7. 06</date>
+                <date when="1906-07-20" xml:lang="en">20. 7. 06</date>
+                <placeName>York</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 25. Juli 1906, SZ-SEF/B5.4</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 25. Juli 1906, SZ-SEF/B5.4</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">ZusÃ¤tzliche Beschriftung zur Nachsendung </note>
+              <note xml:lang="en">Additional labelling for forwarding</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1395</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;Dunolly Castle,
+                                                  Oban&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;Dunolly Castle,
+                                                  Oban&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>            
+          </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-07-25" xml:lang="de">25. 7. 06</date>
+                <date when="1906-07-25" xml:lang="en">25. 7. 06</date>
+                <placeName>Oban</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 3. August 1906, SZ-SEF/B5.5</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 3. August 1906, SZ-SEF/B5.5</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">ZusÃ¤tzliche Beschriftung zur Nachsendung </note>
+              <note xml:lang="en">Additional labelling for forwarding</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1396</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;BISHOP LOYDS HOUSE.
+                                                  |ÃÂ CHESTER.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;BISHOP LOYDS HOUSE. |
+                                                  CHESTER.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>             
+   </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-08-03" xml:lang="de">3. 8. 06</date>
+                <date when="1906-08-03" xml:lang="en">3. 8. 06</date>
+                <placeName>Chester</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Eugenie Hirschfeld vom 4. August 1906, SZ-SEF/B5.6</title>
+              <title xml:lang="en">Postkarte an Eugenie Hirschfeld vom 4. August 1906, SZ-SEF/B5.6</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">ZusÃ¤tzliche Beschriftung zur Nachsendung </note>
+              <note xml:lang="en">Additional labelling for forwarding</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1739</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc> 
+         </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-08-04" xml:lang="de">4. 8. 06</date>
+                <date when="1906-08-04" xml:lang="en">4. 8. 06</date>
+                <placeName>London</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 15. August 1906, SZ-SEF/B5.7</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 15. August 1906, SZ-SEF/B5.7</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.7</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1829</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;KENSINGTON GARDENS
+                                                  SQUARE&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;KENSINGTON GARDENS
+                                                  SQUARE&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-08-15" xml:lang="de">15. 8. 06</date>
+                <date when="1906-08-15" xml:lang="en">15. 8. 06</date>
+                <placeName>London</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 22. April 1908, SZ-SEF/B5.8</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 22. April 1908, SZ-SEF/B5.8</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1399</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;LiÃ©ge. âÂ Le Petit
+                                                  Paradis.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;LiÃ©ge. â Le Petit
+                                                  Paradis.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Emile Verhaeren</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="person">
+                  <persName>
+                    <surname>Verhaeren</surname>
+                    <forename>Emile</forename>
+                  </persName>
+                </term>
+              </keywords>
+            </textClass>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-04-22" xml:lang="de">22. 4. 08</date>
+                <date when="1908-04-22" xml:lang="en">22. 4. 08</date>
+                <placeName>LiÃ©ge</placeName>      
+        </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 24. April 1908, SZ-SEF/B5.9</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 24. April 1908, SZ-SEF/B5.9</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.9</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1400</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;LIEGE. â Les Arcades de la
+                                                  2me Cour du Palais de Justice.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;LIEGE. â Les Arcades de la 2me
+                                                  Cour du Palais de Justice.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-04-24" xml:lang="de">24. 4. 08</date>
+                <date when="1908-04-24" xml:lang="en">24. 4. 08</date>
+                <placeName>LiÃ©ge</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom August 1908, SZ-SEF/B5.10</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom August 1908, SZ-SEF/B5.10</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.10</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1390</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;Nieuport â La Tour de
+                                                  l&apos;Eglise.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;Nieuport â La Tour de
+                                                  l&apos;Eglise.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-08-01" xml:lang="de">1. 8. 08</date>
+                <date when="1908-08-01" xml:lang="en">1. 8. 08</date>
+                <placeName>Nieuport</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Eugenie Hirschfeld vom 7. August 1908, SZ-SEF/B5.11</title>
+              <title xml:lang="en">Postkarte an Eugenie Hirschfeld vom 7. August 1908, SZ-SEF/B5.11</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.11</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1391</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-08-07" xml:lang="de">7. 8. 08</date>
+                <date when="1908-08-07" xml:lang="en">7. 8. 08</date>
+                <placeName>QuiÃ©vrain</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 21. Dezember 1908, SZ-SEF/B5.12</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 21. Dezember 1908, SZ-SEF/B5.12</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1392</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;Parsee Tower of Silence.
+                                                  Bombay.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;Parsee Tower of Silence.
+                                                  Bombay.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,                                                 
+ 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-12-21" xml:lang="de">21. 12. 08</date>
+                <date when="1908-12-21" xml:lang="en">21. 12. 08</date>
+                <placeName>Bombay</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 29. Dezember 1908, SZ-SEF/B5.13</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 29. Dezember 1908, SZ-SEF/B5.13</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.13</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1355</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;GATEWAY OF THE JAINA TEMPLE            
+                                      IN THE DELHI CITY.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;GATEWAY OF THE JAINA TEMPLE IN
+                                                  THE DELHI CITY.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-12-29" xml:lang="de">29. 12. 08</date>
+                <date when="1908-12-29" xml:lang="en">29. 12. 08</date>
+                <placeName>Delhi</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.14">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 2. Januar 1909, SZ-SEF/B5.14</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 2. Januar 1909, SZ-SEF/B5.14</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.14</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1356</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;General View, Taj,
+                                                  Agra.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;General View, Taj,
+                                                  Agra.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1909-01-02" xml:lang="de">2. 1. 09</date>
+                <date when="1909-01-02" xml:lang="en">2. 1. 09</date>
+                <placeName>Agra</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 9. Januar 1909, SZ-SEF/B5.15</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 9. Januar 1909, SZ-SEF/B5.15</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1735</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;Entrance to ShwÃ¨ DagÃÂ´n
+                                                  Pagoda. Rangoon.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;Entrance to ShwÃ¨ DagÃÂ´n Pagoda.
+                                                  Rangoon.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,                                                  
+1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1909-01-09" xml:lang="de">9. 1. 09</date>
+                <date when="1909-01-09" xml:lang="en">9. 1. 09</date>
+                <placeName>Rangoon</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 2. Februar 1909, SZ-SEF/B5.16</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 2. Februar 1909, SZ-SEF/B5.16</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.16</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1736</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;The Chief Gopura,
+                                                  Kombakonam&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;The Chief Gopura,
+                                                  Kombakonam&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1909-02-02" xml:lang="de">2. 2. 09</date>
+                <date when="1909-02-02" xml:lang="en">2. 2. 09</date>
+                <placeName>Madras</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.17">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 7. Februar 1909, SZ-SEF/B5.17</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 7. Februar 1909, SZ-SEF/B5.17</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.17</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1737</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;The Lake Kandy.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;The Lake Kandy.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1909-02-07" xml:lang="de">7. 2. 09</date>
+                <date when="1909-02-07" xml:lang="en">7. 2. 09</date>
+                <placeName>Kandy</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.18">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte an Eugenie Hirschfeld vom 29. Januar 1908, SZ-LAS/B4.2</title>
+              <title xml:lang="en">Postkarte an Eugenie Hirschfeld vom 29. Januar 1908, SZ-LAS/B4.2</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>ÃÂsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-LAS/B4.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1408</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, Manuskript, 1
+                                                  Blatt</span>
+                        <span xml:lang="en">1 postcard, manuscript, 1
+                                                  leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <acquisition>
+                    <ab xml:lang="de">Dauerleihgabe Stadt Salzburg</ab>
+                    <ab xml:lang="en">Permanent loan from the City of
+                                            Salzburg</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1908-01-29" xml:lang="de">29. 1. 08</date>
+                <date when="1908-01-29" xml:lang="en">29. 1. 08</date>
+                <placeName>Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.19">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906, SZ-SEF/B5.1</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906, SZ-SEF/B5.1</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1389</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Eugenie Hirschfeld</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.20">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Eugenie Hirschfeld vom 4. Juli 1913</title>
+              <title xml:lang="en">Ansichtspostkarte an Eugenie Hirschfeld vom 4. Juli 1913</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Ãsterreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B5.18</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1360</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>1913</surname>
+                  <forename>Ansichtspostkarte an Eugenie Hirschfeld vom 4. Juli</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

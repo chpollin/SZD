@@ -1,0 +1,1150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz The International Copyright Bureau Ltd.</title>
+        <title xml:lang="en">Correspondence The International Copyright Bureau Ltd.</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.international-copyright-bureau-ltd.-the</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem
+          Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig
+          zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt
+          Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
+          werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 1. Juni
+                1940</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 1. Juni
+                1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Zwei Durchschläge desselben Briefes</note><note type="hint" xml:lang="en">Two carbon copies of the same letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.25</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1461</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 2 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 2 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-06-01" xml:lang="de">1st June, 1940.</date>
+                <date when="1940-06-01" xml:lang="en">1st June, 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 11. Mai 1940</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 11. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.13</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1486</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-11" xml:lang="de">11th May 1940.</date>
+                <date when="1940-05-11" xml:lang="en">11th May 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 13. Juli 1939</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 13. Juli 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1875</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, blue ink, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, blaue Tinte, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 2 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 2 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1939-07-13" xml:lang="de">13. Juli 1939.</date>
+                <date when="1939-07-13" xml:lang="en">13. Juli 1939.</date>
+                <placeName xml:lang="de">Bath</placeName><address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. November
+                1938</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 14. November
+                1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Abschrift des Originalbriefs</note><note type="hint" xml:lang="en">Copy of the original letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1482</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, red ribbon</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, rotes Farbband</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1938-11-14" xml:lang="de">November 14th, 1938.</date>
+                <date when="1938-11-14" xml:lang="en">November 14th, 1938.</date>
+                <placeName xml:lang="de">London</placeName><address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 14. Mai 1940</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 14. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.14</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1487</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-14" xml:lang="de">14th May 1940.</date>
+                <date when="1940-05-14" xml:lang="en">14th May 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Warren P. Munsell an das International Copyright Bureau</title>
+              <title xml:lang="en">Warren P. Munsell an das International Copyright Bureau</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Abschrift des Originalbriefs</note><note type="hint" xml:lang="en">Copy of the original letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1493</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, red ribbon</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, rotes Farbband</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Munsell</surname><forename>Warren</forename></persName>
+                <date when="1939-06-22" xml:lang="de">June 22, 1939.</date>
+                <date when="1939-06-22" xml:lang="en">June 22, 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/510308-3">Theatre Guild, Inc.</orgName><placeName xml:lang="de">New York</placeName><address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 24. Mai 1940</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 24. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151"/></note><note type="hint" xml:lang="de">Zwei Durchschläge desselben Briefes</note><note type="hint" xml:lang="en">Two carbon copies of the same letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.23</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1459</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, blue-black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, blauschwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 2 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 2 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-24" xml:lang="de">May 24th, 1940</date>
+                <date when="1940-05-24" xml:lang="en">May 24th, 1940</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an das International Copyright Bureau vom 9. Dezember 1938</title>
+              <title xml:lang="en">Brief an das International Copyright Bureau vom 9. Dezember 1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Abschrift des Originalbriefs</note><note type="hint" xml:lang="en">Copy of the original letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1874</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, red ribbon</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, rotes Farbband</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1938-12-09" xml:lang="de">9th December, 1938.</date>
+                <date when="1938-12-09" xml:lang="en">9th December, 1938.</date>
+                <placeName xml:lang="de">London</placeName><address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Bureau</surname>
+                  <forename>International</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 10. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 10. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1485</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <name>Bureau International</name>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><date xml:lang="de">10th May 1940.</date><date xml:lang="en">10th May 1940.</date><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lansdown Road, Lansdown Lodge</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.international-copyright-bureau.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 22. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 22. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.19</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1455</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              <date xml:lang="de">22nd May 1940.</date><date xml:lang="en">22nd May 1940.</date><address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 10. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 10. Juli 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1580</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1939-07-10" xml:lang="de">10. Juli 1939.</date>
+                <date when="1939-07-10" xml:lang="en">10. Juli 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>London, 49 Hallam Street</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 12. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 12. Juli 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.7</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1581</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, red ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, rotes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1939-07-12" xml:lang="de">12. Juli 1939.</date>
+                <date when="1939-07-12" xml:lang="en">12. Juli 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lansdown Road, Lansdown Lodge</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 15. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 15. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.15</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1579</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, red ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, rotes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure ana="szdg:Enclosures" xml:lang="de">Tantiemenabrechnung</measure><measure ana="szdg:Enclosures" xml:lang="en">Royalty statement</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-05-15" xml:lang="de">15th May 1940.</date>
+                <date when="1940-05-15" xml:lang="en">15th May 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. März 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. März 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.11</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1484</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, red ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, rotes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-03-18" xml:lang="de">18. Maerz 1940.</date>
+                <date when="1940-03-18" xml:lang="en">18. Maerz 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lansdown Road, Lansdown Lodge</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. Juli 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.10</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1483</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, red ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, rotes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1939-07-18" xml:lang="de">18. Juli 1939.</date>
+                <date when="1939-07-18" xml:lang="en">18. Juli 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lansdown Road, Lansdown Lodge</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 18. Juli 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 18. Juli 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.9</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1497</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1939-07-18" xml:lang="de">18. Juli 1939.</date>
+                <date when="1939-07-18" xml:lang="en">18. Juli 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lansdown Road, Lansdown Lodge</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. Juni 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 20. Juni 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>                
+<msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.26</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1462</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-06-20" xml:lang="de">June 20th, 1940.</date>
+                <date when="1940-06-20" xml:lang="en">June 20th, 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 21. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 21. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.17</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1453</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, red ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, rotes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-05-21" xml:lang="de">May 21st, 1940.</date>
+                <date when="1940-05-21" xml:lang="en">May 21st, 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 23. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 23. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.21</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1457</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-05-23" xml:lang="de">May 23rd, 1940.</date>
+                <date when="1940-05-23" xml:lang="en">May 23rd, 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 24. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 24. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.22</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1458</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-05-24" xml:lang="de">May 24th, 1940.</date>
+                <date when="1940-05-24" xml:lang="en">May 24th, 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.czech-suzanne.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 30. Mai 1940</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 30. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
+                    Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.24</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1460</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+                <date when="1940-05-30" xml:lang="de">May 30th, 1940.</date>                
+<date when="1940-05-30" xml:lang="en">May 30th, 1940.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>Bath, Lyncombe Hill</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 16. Mai 1940</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 16. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.16</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1489</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-16" xml:lang="de">16th May 1940.</date>
+                <date when="1940-05-16" xml:lang="en">16th May 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 21. Juni 1940</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 21. Juni 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.27</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1463</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-06-21" xml:lang="de">21st June 1940.</date>
+                <date when="1940-06-21" xml:lang="en">21st June 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 22. Mai 1940</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 22. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151"/></note><note type="hint" xml:lang="de">Drei Versionen des Briefes, eine davon mit Ergänzungen von Lotte Zweigs Hand</note><note type="hint" xml:lang="en">Three versions of the letter, one of them with additions in Lotte Zweig's hand</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.18</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1454</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, red ink, blue-black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, rote Tinte, blauschwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 4 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 4 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-22" xml:lang="de">22nd May 1940.</date>
+                <date when="1940-05-22" xml:lang="en">22nd May 1940.</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.suzanne-czech.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Suzanne Czech vom 23. Mai 1940</title>
+              <title xml:lang="en">Brief an Suzanne Czech vom 23. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Drei Durchschläge desselben Briefes</note><note type="hint" xml:lang="en">Three carbon copies of the same letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.20</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1473</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 3 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 3 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+                <date when="1940-05-23" xml:lang="de">23rd May 1940</date>
+                <date when="1940-05-23" xml:lang="en">23rd May 1940</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              <address><addrLine>London, Haymarket, Dewar House</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Czech</surname><forename>Suzanne</forename></persName>
+              <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName></correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.heilbron-george.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 15. November 1938</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 15. November 1938</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt><note type="hint" xml:lang="de">Abschrift des Originalbriefs</note><note type="hint" xml:lang="en">Copy of the original letter</note></notesStmt><sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1490</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, red ribbon, blue stamp ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, rotes Farbband, blaue Stempelfarbe</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Heilbron</surname><forename>George</forename></persName>
+                <date when="1938-11-15" xml:lang="de">November 15th, 1938.</date>
+                <date when="1938-11-15" xml:lang="en">November 15th, 1938.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>London, 49 Hallam Street</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.heilbron-george.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Stefan Zweig vom 20. Januar 1939</title>
+              <title xml:lang="en">Brief an Stefan Zweig vom 20. Januar 1939</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1492</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">The International Copyright Bureau Ltd. stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">blue ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier The International Copyright Bureau Ltd.</material><material ana="szdg:WritingInstrument" xml:lang="de">blaues Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Heilbron</surname><forename>George</forename></persName>
+                <date when="1939-01-20" xml:lang="de">20. Januar 1939.</date>
+                <date when="1939-01-20" xml:lang="en">20. Januar 1939.</date>
+                <orgName ref="http://d-nb.info/gnd/1197651861">The International Copyright Bureau Ltd.</orgName><placeName xml:lang="de">London</placeName><address><addrLine>New York City, The Viking Press, 18 East 48th Street</addrLine></address></correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname><forename>Stefan</forename></persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

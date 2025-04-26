@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Theatre Guild New York</title>
+        <title xml:lang="en">Correspondence Theatre Guild New York</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.theatre-guild-new-york</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+        dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+        orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+        einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.theatre-guild-new-york.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an die Theatre Guild, New York, vom 10. Juni 1940</title>
+              <title xml:lang="en">Brief an die Theatre Guild, New York, vom 10. Juni 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.32</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1468</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>                 
+ <forename>Stefan</forename>
+                </persName>
+                <date when="1940-06-10" xml:lang="de">10. 6. 40</date>
+                <date when="1940-06-10" xml:lang="en">10. 6. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>York</surname>
+                  <forename>Theatre</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.theatre-guild-new-york.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Telegrammentwurf an die Theatre Guild, New York, vom 23. Mai 1940</title>
+              <title xml:lang="en">Telegrammentwurf an die Theatre Guild, New York, vom 23. Mai 1940</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B3.31</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1477</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1940-05-23" xml:lang="de">23. 5. 40</date>
+                <date when="1940-05-23" xml:lang="en">23. 5. 40</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>York</surname>
+                  <forename>Theatre</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
