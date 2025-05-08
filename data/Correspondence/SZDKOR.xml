@@ -26162,7 +26162,8 @@
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
 								<persName ref="http://d-nb.info/gnd/placeholder">
-									<name>Lebisch</name>
+									<surname>Lebisch</surname>
+									<forename cert="unknown"/>
 								</persName>
 								<date when="1908" xml:lang="en">1908</date>
 							</correspAction>
@@ -26217,7 +26218,8 @@
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
 								<persName ref="http://d-nb.info/gnd/placeholder">
-									<name>Leischner</name>
+									<surname>Leischner</surname>
+									<forename cert="unknown"/>
 								</persName>
 								<date when="1927" xml:lang="en">1927</date>
 							</correspAction>
@@ -26742,8 +26744,8 @@
 				<biblFull xml:id="SZDKOR.698">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">3 Korrespondenzstücke AN Stefan Zweig</title>
-							<title xml:lang="en">3 Pieces of Correspondence TO Stefan Zweig</title>
+							<title xml:lang="de">3 Korrespondenzstücke AN Stefan Zweig u. a.</title>
+							<title xml:lang="en">3 Pieces of Correspondence TO Stefan Zweig et al.</title>
 						</titleStmt>
 						<publicationStmt>
 							<ab>Briefkonvolut</ab>
@@ -26755,7 +26757,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-SAM/AK</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#mazzucchetti-lavinia</idno>
@@ -33530,7 +33531,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-LAS/B3</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#fleischer-max</idno>
@@ -34665,7 +34665,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-SEF/B6</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#klammer-karl</idno>
@@ -36437,7 +36436,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-SEF/B4</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#glucksmann-heinrich</idno>
@@ -36669,7 +36667,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-SEF/B5</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#hirschfeld-eugenie</idno>
@@ -37072,7 +37069,6 @@
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287"
 										>Literaturarchiv Salzburg</repository>
-									<idno type="signature">SZ-LAS/B2</idno>
 									<altIdentifier>
 										<idno type="context"
 											>context:szd.facsimiles.korrespondenzen#romains-jules</idno>
