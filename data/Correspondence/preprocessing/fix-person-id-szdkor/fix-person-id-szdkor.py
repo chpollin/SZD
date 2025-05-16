@@ -3,23 +3,11 @@
 fix-person-id-szdkor.py
 ======================
 
-Enhanced version — **2025-05-16**
---------------------------------
-* Replaces `@ref` placeholders with the correct **GND URI** from *SZDPER.xml*.
-* Removes the placeholder when the person is present in SZDPER but has **no** GND.
-* Handles:
-  * split `<surname>/<forename>` pairs (case and diacritic insensitive),
-  * single `<name>` corporate bodies,
-  * abbreviations like **"Richard M." ⇄ "Richard M"** (trailing dots ignored).
-* Treats a candidate list as **unambiguous** when every value is identical or
-  when it contains exactly **one non-empty** GND plus any number of empty
-  strings (variants without GND).
-* Output stays namespace-clean (`<TEI xmlns="…">`) → **SZDKOR-fixed.xml**.
-
-Usage:
-```bash
-python fix-person-id-szdkor.py   # defaults inferred from script location
-```
+* Replaces placeholder `@ref` values in **SZDKOR.xml** using **SZDPER.xml**.
+* If the matched person **has a GND** (`persName/@ref`) → write that URI.
+* If the matched person **lacks** a GND → write a *local* reference to the
+  person entry (`ref="#SZDPER.####"`).
+* Produces namespace‑clean output (`<TEI xmlns="…">`).
 """
 from __future__ import annotations
 
@@ -28,95 +16,87 @@ import logging
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, NamedTuple
 from xml.etree import ElementTree as ET
-import re
 
 # ---------------------------------------------------------------------------
-# Namespace handling – default TEI namespace, no ns0 prefixes
+# Namespace handling
 # ---------------------------------------------------------------------------
 TEI_NS_URI = "http://www.tei-c.org/ns/1.0"
 TEI_NS = {"tei": TEI_NS_URI}
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
-ET.register_namespace("", TEI_NS_URI)
+ET.register_namespace("", TEI_NS_URI)  # write default namespace
 
 # ---------------------------------------------------------------------------
-# Helpers
+# Helper functions
 # ---------------------------------------------------------------------------
-DOT_RE = re.compile(r"\.+$")  # trailing dots
-
 
 def _clean_text(el: ET.Element | None) -> str | None:
-    if el is not None and el.text:
-        return " ".join(el.text.split())  # collapse whitespace
-    return None
+    return " ".join(el.text.split()) if el is not None and el.text else None
 
 
 def _simplify(txt: str) -> str:
-    """Lower-case, remove diacritics, collapse whitespace, strip trailing dots."""
     txt = unicodedata.normalize("NFKD", txt)
-    txt = "".join(c for c in txt if not unicodedata.combining(c))
-    tokens = [DOT_RE.sub("", t) for t in txt.lower().split()]
-    return " ".join(tokens)
-
-
-def _is_unambiguous(cands: List[str]) -> tuple[bool, str | None]:
-    """Return (True, chosen_value) if candidate list is unambiguous."""
-    if not cands:
-        return False, None
-    # Deduplicate while preserving order
-    uniq = []
-    for c in cands:
-        if c not in uniq:
-            uniq.append(c)
-    if len(uniq) == 1:
-        return True, uniq[0]
-    # Exactly one non-empty + rest empty → treat as unambiguous non-empty
-    non_empty = [c for c in uniq if c]
-    if len(non_empty) == 1:
-        return True, non_empty[0]
-    return False, None
+    txt = "".join(ch for ch in txt if not unicodedata.combining(ch))
+    return " ".join(txt.lower().split())
 
 # ---------------------------------------------------------------------------
-# Build lookup tables from SZDPER
+# Data structure for person match
+# ---------------------------------------------------------------------------
+class Candidate(NamedTuple):
+    ref: str | None   # the GND URI *or* None if missing
+    pid: str          # SZDPER xml:id (always present)
+
+# ---------------------------------------------------------------------------
+# Build lookup tables from SZDPER.xml
 # ---------------------------------------------------------------------------
 
-def build_indexes(persons_path: Path):
-    pair_idx: Dict[Tuple[str, str], List[str]] = defaultdict(list)
-    full_idx: Dict[str, List[str]] = defaultdict(list)
+def build_indexes(persons_path: Path) -> tuple[
+    Dict[Tuple[str, str], List[Candidate]],
+    Dict[str, List[Candidate]],
+]:
+    tree = ET.parse(persons_path)
+    root = tree.getroot()
 
-    root = ET.parse(persons_path).getroot()
+    pair_idx: Dict[Tuple[str, str], List[Candidate]] = defaultdict(list)
+    full_idx: Dict[str, List[Candidate]] = defaultdict(list)
 
     for person in root.findall(".//tei:person", TEI_NS):
+        pid = person.get(XML_ID)
+        if not pid:
+            continue  # skip malformed
+
         pn = person.find("tei:persName", TEI_NS)
         if pn is None:
             continue
 
-        gnd = pn.get("ref", "")  # empty string → no GND
-
+        gnd = pn.get("ref")  # may be None or empty
         sur = _clean_text(pn.find("tei:surname", TEI_NS))
         fore = _clean_text(pn.find("tei:forename", TEI_NS))
-        if sur and fore:
-            sur_s, fore_s = _simplify(sur), _simplify(fore)
-            pair_idx[(sur_s, fore_s)].append(gnd)
-            full_idx[f"{fore_s} {sur_s}"].append(gnd)
-            full_idx[f"{sur_s} {fore_s}"].append(gnd)
+        if not (sur and fore):
+            continue
 
-        name_raw = _clean_text(pn.find("tei:name", TEI_NS))
-        if name_raw:
-            full_idx[_simplify(name_raw)].append(gnd)
+        cand = Candidate(ref=gnd or None, pid=pid)
+
+        sur_s, fore_s = _simplify(sur), _simplify(fore)
+        pair_idx[(sur_s, fore_s)].append(cand)
+
+        full_fw = f"{fore_s} {sur_s}"
+        full_bw = f"{sur_s} {fore_s}"
+        full_idx[full_fw].append(cand)
+        full_idx[full_bw].append(cand)
 
     return pair_idx, full_idx
 
 # ---------------------------------------------------------------------------
-# Main fix routine
+# Main fixer
 # ---------------------------------------------------------------------------
 
 def fix_szdkor(szdkor: Path, out_path: Path, pair_idx, full_idx):
     tree = ET.parse(szdkor)
     root = tree.getroot()
 
-    added = removed = ambiguous = missing = 0
+    added_gnd = added_local = ambiguous = missing = 0
 
     for bibl in root.findall(".//tei:biblFull", TEI_NS):
         bid = bibl.get(XML_ID, "[no @xml:id]")
@@ -124,52 +104,53 @@ def fix_szdkor(szdkor: Path, out_path: Path, pair_idx, full_idx):
         for pn in bibl.findall(".//tei:persName", TEI_NS):
             ref_val = pn.get("ref")
             if ref_val and not ref_val.endswith("/placeholder"):
-                continue
+                continue  # already proper
 
+            # Key strings
             sur_raw  = _clean_text(pn.find("tei:surname", TEI_NS))
             fore_raw = _clean_text(pn.find("tei:forename", TEI_NS))
-            sur_s    = _simplify(sur_raw) if sur_raw else None
-            fore_s   = _simplify(fore_raw) if fore_raw else None
+            sur_s, fore_s = (_simplify(sur_raw) if sur_raw else None,
+                              _simplify(fore_raw) if fore_raw else None)
 
-            cands: List[str] = []
+            candidates: List[Candidate] = []
             if sur_s and fore_s:
-                cands = pair_idx.get((sur_s, fore_s), [])
-
-            if not cands:
+                candidates = pair_idx.get((sur_s, fore_s), [])
+            if not candidates:
                 name_raw = _clean_text(pn.find("tei:name", TEI_NS))
                 if name_raw:
-                    cands = full_idx.get(_simplify(name_raw), [])
+                    candidates = full_idx.get(_simplify(name_raw), [])
 
-            if not cands and sur_raw and fore_raw:
-                cands = (full_idx.get(_simplify(f"{fore_raw} {sur_raw}"), []) or
-                         full_idx.get(_simplify(f"{sur_raw} {fore_raw}"), []))
+            disp = (
+                _clean_text(pn.find("tei:name", TEI_NS)) or
+                f"{fore_raw or ''} {sur_raw or ''}".strip() or "[unknown name]"
+            )
 
-            disp = (_clean_text(pn.find("tei:name", TEI_NS)) or
-                    f"{fore_raw or ''} {sur_raw or ''}".strip() or "[unknown]")
-
-            ok, chosen = _is_unambiguous(cands)
-            if ok:
-                if chosen:  # non-empty GND
-                    pn.set("ref", chosen)
-                    added += 1
-                    logging.info("Added GND for '%s' in %s -> %s", disp, bid, chosen)
-                else:       # empty → known but no GND yet
-                    pn.attrib.pop("ref", None)
-                    removed += 1
-                    logging.info("Removed placeholder for '%s' in %s (no GND)", disp, bid)
-            elif not cands:
+            if len(candidates) == 1:
+                cand = candidates[0]
+                if cand.ref:  # has GND URI
+                    pn.set("ref", cand.ref)
+                    added_gnd += 1
+                    logging.info("Set GND for '%s' in %s -> %s", disp, bid, cand.ref)
+                else:  # no GND, use local SZDPER id
+                    pn.set("ref", f"#{cand.pid}")
+                    added_local += 1
+                    logging.info("Set local ref for '%s' in %s -> #%s", disp, bid, cand.pid)
+            elif len(candidates) == 0:
                 missing += 1
                 logging.warning("No match for '%s' in %s", disp, bid)
             else:
                 ambiguous += 1
-                logging.warning("Ambiguous match for '%s' in %s (%s)", disp, bid, ", ".join(set(cands)))
+                logging.warning(
+                    "Ambiguous match for '%s' in %s (candidates: %s)",
+                    disp, bid, ", ".join(c.pid for c in candidates)
+                )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     tree.write(out_path, encoding="utf-8", xml_declaration=True)
 
     logging.info(
-        "Finished. %d added, %d placeholders removed, %d ambiguous, %d unmatched.",
-        added, removed, ambiguous, missing,
+        "Finished. %d GND refs added, %d local refs added, %d ambiguous, %d unmatched.",
+        added_gnd, added_local, ambiguous, missing
     )
 
 # ---------------------------------------------------------------------------
@@ -178,21 +159,21 @@ def fix_szdkor(szdkor: Path, out_path: Path, pair_idx, full_idx):
 
 def main():
     base = Path(__file__).resolve().parents[2]
-    parser = argparse.ArgumentParser(description="Fix @ref placeholders in SZDKOR.xml using SZDPER.xml")
-    parser.add_argument("--szdkor", type=Path, default=base / "SZDKOR.xml")
-    parser.add_argument("--persons", type=Path, default=Path(r"C:\Users\Chrisi\Documents\GitHub\SZD\data\Index\Person\SZDPER.xml"))
-    parser.add_argument("--out", type=Path, default=base / "SZDKOR-fixed.xml")
-    args = parser.parse_args()
+    argp = argparse.ArgumentParser(description="Fix person @ref placeholders in SZDKOR.xml")
+    argp.add_argument("--szdkor", type=Path, default=base / "SZDKOR.xml")
+    argp.add_argument("--persons", type=Path, default=Path(r"C:\Users\Chrisi\Documents\GitHub\SZD\data\Index\Person\SZDPER.xml"))
+    argp.add_argument("--out", type=Path, default=base / "SZDKOR-fixed.xml")
+    args = argp.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
     if not args.szdkor.exists():
-        parser.error(f"SZDKOR file not found: {args.szdkor}")
+        argp.error(f"SZDKOR file not found: {args.szdkor}")
     if not args.persons.exists():
-        parser.error(f"SZDPER file not found: {args.persons}")
+        argp.error(f"SZDPER file not found: {args.persons}")
 
     pair_idx, full_idx = build_indexes(args.persons)
-    logging.info("Index loaded: %d pair keys, %d full-name keys", len(pair_idx), len(full_idx))
+    logging.info("Index built: %d pair keys, %d full-name keys", len(pair_idx), len(full_idx))
 
     fix_szdkor(args.szdkor, args.out, pair_idx, full_idx)
 
