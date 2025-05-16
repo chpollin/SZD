@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -79,7 +79,7 @@
                                         <idno type="PID">o:szd.3343</idno>
                                     </altIdentifier>
                                     <altIdentifier>
-                                        <idno type="context"/>
+                                        <idno type="context" />
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -113,7 +113,7 @@
                                 <persName><surname>Ferenčak</surname><forename>Mirko
                                     M.</forename></persName>
                                 <note type="postalStamp">23. XII. 31</note>
-                            <date when="1931-12-23"/><placeName type="postmark">23. XII. 31</placeName><address><addrLine>Salzburg, Kapuzinerberg 5</addrLine></address></correspAction>
+                            <date when="1931-12-23" /><placeName type="postmark">23. XII. 31</placeName><address><addrLine>Salzburg, Kapuzinerberg 5</addrLine></address></correspAction>
                             <correspAction type="received">
                                 <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
                             </correspAction>

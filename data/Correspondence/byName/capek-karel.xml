@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -80,7 +80,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">mehrere Unbekannte/several unidentified signatures<name ref="http://d-nb.info/gnd/118877240"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">mehrere Unbekannte/several unidentified signatures<name ref="http://d-nb.info/gnd/118877240" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -138,7 +138,7 @@
                   <forename>Karel</forename>
                 </persName>
                 <note type="postalStamp">27. II. 16</note>
-              <date when="1916-02-27"/><placeName type="postmark">27. II. 16</placeName><address><addrLine>Wien, Kochgasse 8</addrLine></address></correspAction>
+              <date when="1916-02-27" /><placeName type="postmark">27. II. 16</placeName><address><addrLine>Wien, Kochgasse 8</addrLine></address></correspAction>
               <correspAction type="received">
                 <persName ref="http://d-nb.info/gnd/118637479">
                   <surname>Zweig</surname><forename>Stefan</forename></persName>

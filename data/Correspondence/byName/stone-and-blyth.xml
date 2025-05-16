@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -60,8 +61,7 @@
                 <date xml:lang="de" when="1934-08-16">16.8.1934</date>
               </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                  ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>

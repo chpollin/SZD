@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -90,7 +90,7 @@
                     <idno type="PID">o:szd.1179</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Postkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Wilhelm Meingast</ab></provenance></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Postkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Wilhelm Meingast</ab></provenance></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -102,7 +102,7 @@
                 <date when="1935-03-20" xml:lang="en">20. III. 35</date>
                 <placeName type="postmark">20. III. 35</placeName><placeName xml:lang="de">Salzburg</placeName><address><addrLine>Wien, Porzellangasse 30</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2162">
                   <surname>Meingast</surname><forename>Willi</forename></persName>
               </correspAction>
             </correspDesc>
@@ -128,7 +128,7 @@
                     <idno type="PID">o:szd.1178</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Postkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Wilhelm Meingast</ab></provenance></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Postkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Wilhelm Meingast</ab></provenance></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -140,7 +140,7 @@
                 <date when="1935-08-29" xml:lang="en">29. 8. 35</date>
                 <placeName type="postmark">29. VIII. 35.</placeName><placeName xml:lang="de">Salzburg</placeName><address><addrLine>Salzburg, Linzergasse 16</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2162">
                   <surname>Meingast</surname><forename>Willi</forename></persName>
               </correspAction>
             </correspDesc>

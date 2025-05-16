@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -229,7 +229,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -283,7 +283,7 @@
             <textClass>
               <keywords>
                 <term type="person">
-                  <persName>
+                  <persName ref="http://d-nb.info/gnd/118637479">
                     <name ref="http://d-nb.info/gnd/118637479">Stefan
                                             Zweig</name>
                   </persName>
@@ -1235,7 +1235,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -1289,7 +1289,7 @@
             <textClass>
               <keywords>
                 <term type="person">
-                  <persName>
+                  <persName ref="http://d-nb.info/gnd/118637479">
                     <name ref="http://d-nb.info/gnd/118637479">Stefan
                                             Zweig</name>
                   </persName>
@@ -1401,7 +1401,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig<name ref="http://d-nb.info/gnd/118637460"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig<name ref="http://d-nb.info/gnd/118637460" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -1711,7 +1711,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig<name ref="http://d-nb.info/gnd/118637479" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -1765,7 +1765,7 @@
             <textClass>
               <keywords>
                 <term type="person">
-                  <persName>
+                  <persName ref="http://d-nb.info/gnd/118637479">
                     <name ref="http://d-nb.info/gnd/118637479">Stefan
                                             Zweig</name>
                   </persName>
@@ -1796,7 +1796,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig<name ref="http://d-nb.info/gnd/118637460"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig<name ref="http://d-nb.info/gnd/118637460" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -1958,7 +1958,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Alix Winternitz<name ref="http://d-nb.info/gnd/1080246215"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Alix Winternitz<name ref="http://d-nb.info/gnd/1080246215" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -2426,7 +2426,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig, Charles Baudouin, Moriz Scheyer<name ref="http://d-nb.info/gnd/130144029"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Friderike Zweig, Charles Baudouin, Moriz Scheyer<name ref="http://d-nb.info/gnd/130144029" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -2740,7 +2740,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Alexei Krawtschenko, Abraham Efross<name ref="http://d-nb.info/gnd/115846638"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Alexei Krawtschenko, Abraham Efross<name ref="http://d-nb.info/gnd/115846638" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -2905,7 +2905,7 @@
                                 Friderike Zweigs</note>
               <note xml:lang="en">Signature "Stéfan et Fréderique" written by
                                 Friderike Zweig</note>
-            <note type="participants" xml:lang="de">Stefan Zweig, Pauline Masereel<name ref="http://d-nb.info/gnd/116834609"/></note><note type="hint" xml:lang="de">Unterschrift "Stéfan et Fréderique" von der Hand Friderike Zweigs</note><note type="hint" xml:lang="en">Signature "Stéfan et Fréderique" written by Friderike Zweig</note></notesStmt>
+            <note type="participants" xml:lang="de">Stefan Zweig, Pauline Masereel<name ref="http://d-nb.info/gnd/116834609" /></note><note type="hint" xml:lang="de">Unterschrift "Stéfan et Fréderique" von der Hand Friderike Zweigs</note><note type="hint" xml:lang="en">Signature "Stéfan et Fréderique" written by Friderike Zweig</note></notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
@@ -3752,7 +3752,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig, Pauline Masereel<name ref="http://d-nb.info/gnd/116834609"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Stefan Zweig, Pauline Masereel<name ref="http://d-nb.info/gnd/116834609" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -4369,7 +4369,7 @@
             <notesStmt>
               <note xml:lang="de">Handschriftlicher Zusatz von Lotte Altmann</note>
               <note xml:lang="en">Handwritten addition by Lotte Altmann</note>
-            <note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151"/></note><note type="hint" xml:lang="de">Handschriftlicher Zusatz von Lotte Altmann</note><note type="hint" xml:lang="en">Handwritten addition by Lotte Altmann</note></notesStmt>
+            <note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151" /></note><note type="hint" xml:lang="de">Handschriftlicher Zusatz von Lotte Altmann</note><note type="hint" xml:lang="en">Handwritten addition by Lotte Altmann</note></notesStmt>
             <sourceDesc>
               <msDesc>
                 <msIdentifier>

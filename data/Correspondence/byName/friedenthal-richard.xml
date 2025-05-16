@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -7,8 +7,7 @@
                 <title xml:lang="en">Correspondence Richard Friedenthal</title>
             </titleStmt>
             <publicationStmt>
-                <publisher><orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-                        ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                <publisher><orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</orgName></publisher>
                 <idno type="PID">o:szd.korrespondenzen.friedenthal-richard</idno>
             </publicationStmt>
@@ -74,8 +73,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.1</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1586</idno>
@@ -91,14 +89,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte, blauer Farbstift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink, blue crayon</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, blauer Farbstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, blue crayon</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Manuskript, 1
@@ -159,8 +153,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.2</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1597</idno>
@@ -176,14 +169,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -245,8 +234,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.3</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1598</idno>
@@ -262,26 +250,20 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
                                                   Blatt</span>
                                                 <span xml:lang="en">1 letter, typescript, 1
                                                   leaf</span>
-                                                <measure type="enclosures" ana="szdg:Enclosures"
-                                                  xml:lang="de">Abschrift eines Briefes von Stefan
+                                                <measure type="enclosures" ana="szdg:Enclosures" xml:lang="de">Abschrift eines Briefes von Stefan
                                                   Zweig an Rudolf Kaiser, Redaktion der "Neuen
                                                   Rundschau" in Berlin, 22. September 1924 </measure>
-                                                <measure type="enclosures" ana="szdg:Enclosures"
-                                                  xml:lang="en">Carbon copy of a letter from Stefan
+                                                <measure type="enclosures" ana="szdg:Enclosures" xml:lang="en">Carbon copy of a letter from Stefan
                                                   Zweig to Rudolf Kaiser, editor of the "Neue
                                                   Rundschau" in Berlin, 22 September 1924 </measure>
                                             </extent>
@@ -339,8 +321,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.4</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1599</idno>
@@ -356,14 +337,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -425,8 +402,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.5</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1600</idno>
@@ -442,14 +418,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -511,8 +483,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.6</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1601</idno>
@@ -529,14 +500,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -598,8 +565,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.7</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1602</idno>
@@ -615,14 +581,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Typoskript, 1
@@ -683,8 +645,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.8</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1603</idno>
@@ -700,14 +661,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -769,8 +726,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.9</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1604</idno>
@@ -786,14 +742,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Typoskript, 1
@@ -852,8 +804,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.10</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1587</idno>
@@ -869,14 +820,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -938,8 +885,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.11</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1588</idno>
@@ -955,14 +901,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Manuskript, 1
@@ -1023,8 +965,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.12</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1589</idno>
@@ -1040,14 +981,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Typoskript, 1
@@ -1109,8 +1046,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.13</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1590</idno>
@@ -1126,14 +1062,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1195,8 +1127,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.14</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1591</idno>
@@ -1212,14 +1143,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1285,8 +1212,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.15</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1592</idno>
@@ -1302,14 +1228,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript und
@@ -1375,8 +1297,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.16</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1593</idno>
@@ -1392,14 +1313,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1465,8 +1382,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.17</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1594</idno>
@@ -1482,14 +1398,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1551,8 +1463,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.18</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1595</idno>
@@ -1568,14 +1479,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1637,8 +1544,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.19</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1596</idno>
@@ -1654,14 +1560,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1723,8 +1625,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.20</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1546</idno>
@@ -1740,14 +1641,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Typoskript, 1
@@ -1809,8 +1706,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.21</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1547</idno>
@@ -1826,14 +1722,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1895,8 +1787,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.22</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1567</idno>
@@ -1912,14 +1803,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -1981,8 +1868,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.23</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1568</idno>
@@ -1998,15 +1884,11 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Telegrammformular</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Telegram form</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >Druckerschwärze auf Papierband,
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Telegrammformular</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Telegram form</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">Druckerschwärze auf Papierband,
                                                   Farbstifte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >printing ink on paper tape, crayons</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">printing ink on paper tape, crayons</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Telegramm, 1 Blatt</span>
@@ -2062,8 +1944,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.24</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1550</idno>
@@ -2079,14 +1960,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2148,8 +2025,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.25</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1551</idno>
@@ -2165,14 +2041,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2234,8 +2106,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.26</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1569</idno>
@@ -2251,14 +2122,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2324,8 +2191,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.27</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1553</idno>
@@ -2341,14 +2207,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -2412,8 +2274,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.28</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1554</idno>
@@ -2429,14 +2290,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte, roter Farbstift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink, red crayon</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, roter Farbstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, red crayon</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -2497,8 +2354,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.29</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1570</idno>
@@ -2514,14 +2370,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte, blauer Farbstift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink, blue crayon</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, blauer Farbstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, blue crayon</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2583,8 +2435,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.30</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1556</idno>
@@ -2600,14 +2451,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Stefan Zweig</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Stefan Zweig stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Stefan Zweig</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Stefan Zweig stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2666,15 +2513,14 @@
                         </publicationStmt>
                         <notesStmt>
                             <note xml:lang="de">Spätere Abschrift und Übersetzung erhalten</note>
-                            <note xml:lang="en"/>
+                            <note xml:lang="en" />
                         </notesStmt>
                         <sourceDesc>
                             <msDesc>
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.31</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1557</idno>
@@ -2690,14 +2536,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Luftpost-Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Air mail typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Air mail typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript, 1
@@ -2728,7 +2570,7 @@
                         <textClass>
                             <keywords>
                                 <term type="person">
-                                    <persName>
+                                    <persName ref="http://d-nb.info/gnd/116001151">
                                         <surname>Zweig</surname>
                                         <forename>Lotte</forename>
                                     </persName>
@@ -2769,8 +2611,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.32</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1558</idno>
@@ -2786,14 +2627,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Hotel Taft</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Hotel Taft stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Hotel Taft</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Hotel Taft stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -2859,8 +2696,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.33</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1571</idno>
@@ -2876,17 +2712,13 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Luftpost-Schreibpapier, Schreibmaschinenpapier
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Schreibpapier, Schreibmaschinenpapier
                                                   und Briefkuvert</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Air mail writing paper, typewriter paper and
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Air mail writing paper, typewriter paper and
                                                   envelope</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte, schwarzes Durchschlagpapier,
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, schwarzes Durchschlagpapier,
                                                   schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink, black carbon paper, black
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, black carbon paper, black
                                                   ink</material>
                                             </support>
                                             <extent>
@@ -2894,11 +2726,9 @@
                                                   Kuvert</span>
                                                 <span xml:lang="en">1 letter, manuscript, 3 leaves;
                                                   1 envelope</span>
-                                                <measure type="enclosures" ana="szdg:Enclosures"
-                                                  xml:lang="de">"Moral affidavit" Stefan Zweigs für
+                                                <measure type="enclosures" ana="szdg:Enclosures" xml:lang="de">"Moral affidavit" Stefan Zweigs für
                                                   Richard Friedenthal</measure>
-                                                <measure type="enclosures" ana="szdg:Enclosures"
-                                                  xml:lang="en">"Moral affidavit" for Richard
+                                                <measure type="enclosures" ana="szdg:Enclosures" xml:lang="en">"Moral affidavit" for Richard
                                                   Friedenthal by Stefan Zweig</measure>
                                             </extent>
                                         </supportDesc>
@@ -2924,7 +2754,7 @@
                         <textClass>
                             <keywords>
                                 <term type="person">
-                                    <persName>
+                                    <persName ref="http://d-nb.info/gnd/116001151">
                                         <surname>Zweig</surname>
                                         <forename>Lotte</forename>
                                     </persName>
@@ -2969,8 +2799,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.34</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1560</idno>
@@ -2986,14 +2815,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >writing paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >blaue Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >blue ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">writing paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -3058,8 +2883,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.35</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1561</idno>
@@ -3075,14 +2899,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Luftpost-Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Air mail typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, blaue Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, blue ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Air mail typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskript und
@@ -3146,8 +2966,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.36</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1562</idno>
@@ -3163,14 +2982,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Luftpost-Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Air mail writing paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >blaue Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >blue ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Air mail writing paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -3237,8 +3052,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.37</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1563</idno>
@@ -3254,14 +3068,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Editora Guanabara</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Editora Guanabara stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Editora Guanabara</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Editora Guanabara stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Manuskript, 1
@@ -3323,8 +3133,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.38</idno>
                                 </msIdentifier>
                                 <msContents>
@@ -3337,14 +3146,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Ansichtspostkarte: "Salzburg"</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Picture postcard: "Salzburg"</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Salzburg"</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Salzburg"</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
@@ -3405,8 +3210,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.39</idno>
                                 </msIdentifier>
                                 <msContents>
@@ -3419,14 +3223,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Ansichtspostkarte: "Salzburg"</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Picture postcard: "Salzburg"</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Salzburg"</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Salzburg"</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
@@ -3487,8 +3287,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.40</idno>
                                 </msIdentifier>
                                 <msContents>
@@ -3501,14 +3300,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Postkarte</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Postcard</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarte, Manuskript, 1
@@ -3575,8 +3370,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.41</idno>
                                 </msIdentifier>
                                 <msContents>
@@ -3589,14 +3383,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >Bleistift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >pencil</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">Bleistift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">pencil</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brieffragment, 1 Blatt</span>
@@ -3631,7 +3421,7 @@
                                 </persName>
                             </correspAction>
                             <correspAction type="received">
-                                <persName>
+                                <persName ref="http://d-nb.info/gnd/118535579">
                                     <surname>Friedenthal</surname>
                                     <forename>Richard</forename>
                                 </persName>
@@ -3655,8 +3445,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.42</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1542</idno>
@@ -3672,14 +3461,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Briefpapier Richard Friedenthal</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Richard Friedenthal stationary</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte, Bleistift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink, pencil</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Richard Friedenthal</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Richard Friedenthal stationary</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte, Bleistift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink, pencil</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 2
@@ -3741,8 +3526,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.43</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1534</idno>
@@ -3758,14 +3542,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurffragment,
@@ -3827,8 +3607,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.44</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1535</idno>
@@ -3844,15 +3623,11 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier, schwarze
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, schwarze
                                                   Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper, black ink</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -3914,8 +3689,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.45</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1536</idno>
@@ -3931,14 +3705,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -3997,8 +3767,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.46</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1543</idno>
@@ -4014,14 +3783,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violette Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 1
@@ -4083,8 +3848,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.47</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1545</idno>
@@ -4100,14 +3864,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 1
@@ -4169,8 +3929,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.48</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1539</idno>
@@ -4186,14 +3945,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 1
@@ -4255,8 +4010,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.49</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1540</idno>
@@ -4272,14 +4026,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte, Bleistift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink, pencil</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte, Bleistift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink, pencil</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 1
@@ -4341,8 +4091,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.50</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1541</idno>
@@ -4358,14 +4107,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte, blauer Buntstift</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink, blue crayon</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte, blauer Buntstift</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink, blue crayon</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 1
@@ -4427,8 +4172,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.51</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1507</idno>
@@ -4444,14 +4188,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -4509,8 +4249,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.52</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1508</idno>
@@ -4526,14 +4265,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -4592,8 +4327,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.53</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1509</idno>
@@ -4609,14 +4343,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurf, Manuskript, 2
@@ -4678,8 +4408,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.54</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1527</idno>
@@ -4695,14 +4424,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >blaues Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >blue carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">blaues Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">blue carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -4761,8 +4486,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.55</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1511</idno>
@@ -4778,14 +4502,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -4844,8 +4564,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.56</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1512</idno>
@@ -4861,14 +4580,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">2 Briefentwürfe, Manuskript, 2
@@ -4930,8 +4645,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.57</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1528</idno>
@@ -4947,14 +4661,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5013,8 +4723,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.58</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1514</idno>
@@ -5030,14 +4739,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5096,8 +4801,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.59</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1515</idno>
@@ -5113,14 +4817,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5179,8 +4879,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.60</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1529</idno>
@@ -5196,14 +4895,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5262,8 +4957,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.61</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1517</idno>
@@ -5279,14 +4973,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5348,8 +5038,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.62</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1518</idno>
@@ -5365,14 +5054,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5431,8 +5116,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.63</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1530</idno>
@@ -5448,14 +5132,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >violettes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >purple carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">violettes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">purple carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5514,8 +5194,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.64</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1520</idno>
@@ -5531,14 +5210,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5597,8 +5272,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.65</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1521</idno>
@@ -5614,14 +5288,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5680,8 +5350,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.66</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1522</idno>
@@ -5697,14 +5366,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5763,8 +5428,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.67</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1523</idno>
@@ -5780,14 +5444,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5846,8 +5506,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.68</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1531</idno>
@@ -5863,14 +5522,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -5929,8 +5584,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.69</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1525</idno>
@@ -5946,14 +5600,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -6012,8 +5662,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.70</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1526</idno>
@@ -6029,14 +5678,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Brief, Typoskriptdurchschlag,
@@ -6101,8 +5746,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.71</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1478</idno>
@@ -6118,15 +5762,11 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Farbband, schwarzes Durchschlagpapier,
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarzes Durchschlagpapier,
                                                   schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ribbon, black carbon paper, black
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black carbon paper, black
                                                   ink</material>
                                             </support>
                                             <extent>
@@ -6186,8 +5826,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.73</idno>
                                 </msIdentifier>
                                 <msContents>
@@ -6200,14 +5839,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Writing Paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarze Tinte</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black ink</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Briefentwurffragment,
@@ -6272,8 +5907,7 @@
                                 <msIdentifier>
                                     <country>Österreich</country>
                                     <settlement>Salzburg</settlement>
-                                    <repository ref="http://d-nb.info/gnd/1047605287"
-                                        >Literaturarchiv Salzburg</repository>
+                                    <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/B2.74</idno>
                                     <altIdentifier>
                                         <idno type="PID">o:szd.1817</idno>
@@ -6289,14 +5923,10 @@
                                     <objectDesc>
                                         <supportDesc>
                                             <support>
-                                                <material ana="szdg:WritingMaterial" xml:lang="de"
-                                                  >Schreibmaschinenpapier</material>
-                                                <material ana="szdg:WritingMaterial" xml:lang="en"
-                                                  >Typewriter paper</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="de"
-                                                  >schwarzes Durchschlagpapier</material>
-                                                <material ana="szdg:WritingInstrument" xml:lang="en"
-                                                  >black carbon paper</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                                                <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                                                <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
                                             </support>
                                             <extent>
                                                 <span xml:lang="de">1 Postkarten-Abschrift,

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,8 +8,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.weisflog</idno>
         <ref target="context:szd.korrespondenzen">Korrespondenzen Stefan Zweig</ref>
@@ -55,26 +54,20 @@
                   <objectDesc>
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the
-                          lawyers Dr. H. Weisflog and Dr. Werner Weisflog</material><material
-                          ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple stamp ink,
-                          black ink</material><material ana="szdg:WritingMaterial" xml:lang="de"
-                          >Briefpapier der Rechtsanwälte Dr. H. Weisflog und Dr. Werner
-                          Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="de"
-                          >schwarzes Farbband, violette Stempelfarbe, schwarze
+                          lawyers Dr. H. Weisflog and Dr. Werner Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple stamp ink,
+                          black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier der Rechtsanwälte Dr. H. Weisflog und Dr. Werner
+                          Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Stempelfarbe, schwarze
                         Tinte</material></support>
-                      <extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span
-                          xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format"
-                          >21x30 cm</measure></extent>
+                      <extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">21x30 cm</measure></extent>
                     </supportDesc>
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Archiv Atrium Press</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en"
-                      >Acquisition from Christie's London 2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -82,8 +75,7 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/116402873"
-                    ><surname>Weisflog</surname><forename>Heinrich</forename></persName>
+                <persName ref="http://d-nb.info/gnd/116402873"><surname>Weisflog</surname><forename>Heinrich</forename></persName>
                 <orgName>Rechtsanwälte Dr. H. Weisflog und Dr. Werner Weisflog</orgName>
                 <date xml:lang="de">3. Mai 1938.</date>
                 <date xml:lang="en">3. Mai 1938.</date>
@@ -93,8 +85,7 @@
                 </address>
               </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -111,8 +102,7 @@
               <ab>Einzelbrief</ab>
             </publicationStmt>
             <notesStmt>
-              <note type="participants" xml:lang="de">Lotte Altmann<name
-                  ref="http://d-nb.info/gnd/116001151"/></note>
+              <note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151" /></note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -131,9 +121,7 @@
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy
                           paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black
-                          carbon paper, purple ink</material><material ana="szdg:WritingMaterial"
-                          xml:lang="de">Durchschlagpapier</material><material
-                          ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier,
+                          carbon paper, purple ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier,
                           violette Tinte</material></support>
                       <extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1
                           Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1
@@ -142,12 +130,11 @@
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Archiv Atrium Press</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en"
-                      >Acquisition from Christie's London 2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -155,8 +142,7 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
                 <date xml:lang="de">4. Mai 1938.</date>
                 <date xml:lang="en">4. Mai 1938.</date>
                 <placeName ana="deduced" xml:lang="de">London</placeName>
@@ -199,9 +185,7 @@
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy
                           paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black
-                          carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de"
-                          >Durchschlagpapier</material><material ana="szdg:WritingInstrument"
-                          xml:lang="de">schwarzes Durchschlagpapier</material></support>
+                          carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support>
                       <extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1
                           Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1
                           leaf</span><measure type="format">21x25 cm</measure></extent>
@@ -209,12 +193,11 @@
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Archiv Atrium Press</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en"
-                      >Acquisition from Christie's London 2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -222,8 +205,7 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
                 <date xml:lang="de">5. Mai 1938.</date>
                 <date xml:lang="en">5. Mai 1938.</date>
                 <placeName ana="deduced" xml:lang="de">London</placeName>
@@ -262,25 +244,19 @@
                   <objectDesc>
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the
-                          lawyers Dr. H. Weisflog and Dr. Werner Weisflog</material><material
-                          ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black
-                          ink</material><material ana="szdg:WritingMaterial" xml:lang="de"
-                          >Briefpapier der Rechtsanwälte Dr. H. Weisflog und Dr. Werner
-                          Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="de"
-                          >schwarzes Farbband, schwarze Tinte</material></support>
-                      <extent><span xml:lang="de">1 Brief, Typoskript, 3 Blatt</span><span
-                          xml:lang="en">1 letter, typescript, 3 leaves</span><measure type="format"
-                          >21x30 cm</measure></extent>
+                          lawyers Dr. H. Weisflog and Dr. Werner Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black
+                          ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier der Rechtsanwälte Dr. H. Weisflog und Dr. Werner
+                          Weisflog</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support>
+                      <extent><span xml:lang="de">1 Brief, Typoskript, 3 Blatt</span><span xml:lang="en">1 letter, typescript, 3 leaves</span><measure type="format">21x30 cm</measure></extent>
                     </supportDesc>
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Archiv Atrium Press</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en"
-                      >Acquisition from Christie's London 2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -288,8 +264,7 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/116402873"
-                    ><surname>Weisflog</surname><forename>Heinrich</forename></persName>
+                <persName ref="http://d-nb.info/gnd/116402873"><surname>Weisflog</surname><forename>Heinrich</forename></persName>
                 <orgName>Rechtsanwälte Dr. H. Weisflog und Dr. Werner Weisflog</orgName>
                 <date xml:lang="de">10. Mai 1938.</date>
                 <date xml:lang="en">10. Mai 1938.</date>
@@ -299,8 +274,7 @@
                 </address>
               </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>
@@ -331,9 +305,7 @@
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy
                           paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black
-                          carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de"
-                          >Durchschlagpapier</material><material ana="szdg:WritingInstrument"
-                          xml:lang="de">schwarzes Durchschlagpapier</material></support>
+                          carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support>
                       <extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 2
                           Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 2
                           leaves</span><measure type="format">21x25 cm</measure></extent>
@@ -341,12 +313,11 @@
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Archiv Atrium Press</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en"
-                      >Acquisition from Christie's London 2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -354,8 +325,7 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
                 <date xml:lang="de">12. Mai 1938.</date>
                 <date xml:lang="en">12. Mai 1938.</date>
                 <placeName ana="deduced" xml:lang="de">London</placeName>
@@ -364,8 +334,7 @@
                 </address>
               </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/116402873"
-                    ><surname>Weisflog</surname><forename>Heinrich</forename></persName>
+                <persName ref="http://d-nb.info/gnd/116402873"><surname>Weisflog</surname><forename>Heinrich</forename></persName>
                 <orgName>Rechtsanwälte Dr. H. Weisflog und Dr. Werner Weisflog</orgName>
               </correspAction>
             </correspDesc>

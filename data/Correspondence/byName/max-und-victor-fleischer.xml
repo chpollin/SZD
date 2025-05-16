@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -100,7 +100,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="http://d-nb.info/gnd/11660090X">
                   <surname>Fleischer</surname>
                   <forename>Max</forename>
                 </persName>
@@ -138,7 +138,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="http://d-nb.info/gnd/11660090X">
                   <surname>Fleischer</surname>
                   <forename>Max</forename>
                 </persName>
@@ -176,7 +176,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="http://d-nb.info/gnd/11660090X">
                   <surname>Fleischer</surname>
                   <forename>Max</forename>
                 </persName>

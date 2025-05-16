@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -79,7 +79,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -90,7 +90,7 @@
                     <idno type="PID">o:szd.768</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, pencil</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, Bleistift</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, pencil</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, Bleistift</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -103,7 +103,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2146">
                   <surname>Kauffmann</surname><forename>Alfred</forename></persName>
               </correspAction>
             </correspDesc>
@@ -129,7 +129,7 @@
                     <idno type="PID">o:szd.769</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -167,7 +167,7 @@
                     <idno type="PID">o:szd.789</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann, typescript carbon copy</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann, Typoskriptdurchschlag</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure ana="szdg:Enclosures" xml:lang="de">Abschrift Bescheid Board of Trade</measure><measure ana="szdg:Enclosures" xml:lang="en">Transcript of Board of Trade decision</measure><measure type="format">20x25 cm, 21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann, typescript carbon copy</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann, Typoskriptdurchschlag</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure ana="szdg:Enclosures" xml:lang="de">Abschrift Bescheid Board of Trade</measure><measure ana="szdg:Enclosures" xml:lang="en">Transcript of Board of Trade decision</measure><measure type="format">20x25 cm, 21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="eng" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -194,7 +194,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -205,7 +205,7 @@
                     <idno type="PID">o:szd.1606</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, blue crayon, black stamp ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, blauer Farbstift, schwarze Stempelfarbe</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 3 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 3 leaves</span><measure type="format">20x26 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, blue crayon, black stamp ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, blauer Farbstift, schwarze Stempelfarbe</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 3 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 3 leaves</span><measure type="format">20x26 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -245,7 +245,7 @@
                     <idno type="PID">o:szd.1607</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -258,7 +258,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               <placeName ana="deduced" xml:lang="de">London</placeName><address><addrLine>London, 16 Coleman Street</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2146">
                   <surname>Kauffmann</surname><forename>Alfred</forename></persName>
               </correspAction>
             </correspDesc>
@@ -284,7 +284,7 @@
                     <idno type="PID">o:szd.1608</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure ana="szdg:Enclosures" xml:lang="de">Schreiben an das Schweizerische Vereinssortiment</measure><measure ana="szdg:Enclosures" xml:lang="en">Letter to Schweizerisches Vereinssortiment</measure><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure ana="szdg:Enclosures" xml:lang="de">Schreiben an das Schweizerische Vereinssortiment</measure><measure ana="szdg:Enclosures" xml:lang="en">Letter to Schweizerisches Vereinssortiment</measure><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -322,7 +322,7 @@
                     <idno type="PID">o:szd.751</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -335,7 +335,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               <placeName ana="deduced" xml:lang="de">London</placeName><address><addrLine>London, 16 Coleman Street</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2146">
                   <surname>Kauffmann</surname><forename>Alfred</forename></persName>
               <orgName>Rechtsanwalt Dr. Alfred Kauffmann</orgName></correspAction>
             </correspDesc>
@@ -361,7 +361,7 @@
                     <idno type="PID">o:szd.752</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -399,7 +399,7 @@
                     <idno type="PID">o:szd.756</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">21x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -412,7 +412,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               <placeName ana="deduced" xml:lang="de">London</placeName><address><addrLine>London, 16 Coleman Street</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2146">
                   <surname>Kauffmann</surname><forename>Alfred</forename></persName>
               <orgName>Rechtsanwalt Dr. Alfred Kauffmann</orgName></correspAction>
             </correspDesc>
@@ -438,7 +438,7 @@
                     <idno type="PID">o:szd.757</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -476,7 +476,7 @@
                     <idno type="PID">o:szd.772</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -514,7 +514,7 @@
                     <idno type="PID">o:szd.773</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">20x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">20x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -526,7 +526,7 @@
                 <date when="1938-01-28" xml:lang="en">28. Januar 1938.</date>
                 <placeName xml:lang="de">Estoril</placeName><address><addrLine>London, 16 Coleman Street</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2146">
                   <surname>Kauffmann</surname><forename>Alfred</forename></persName>
               </correspAction>
             </correspDesc>
@@ -541,7 +541,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Lotte Altmann<name ref="http://d-nb.info/gnd/116001151" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -552,7 +552,7 @@
                     <idno type="PID">o:szd.764</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Stationery of the lawyer Dr Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink, black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Alfred Kauffmann</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte, schwarze Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span><span xml:lang="en">1 letter, typescript, 2 leaves</span><measure type="format">20x25 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>

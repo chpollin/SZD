@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -106,7 +106,7 @@
                 <placeName ana="deduced">Salzburg</placeName>
               </correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2239">
                   <surname>Zweig</surname>
                   <forename>Stefanie</forename>
                 </persName>
@@ -135,7 +135,7 @@
                     <idno type="PID">o:szd.1429</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Editora Guanabara air mail stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Briefpapier Editora Guanabara</material><material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material></support><extent><span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span><span xml:lang="en">1 letter, manuscript, 2 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Editora Guanabara air mail stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Briefpapier Editora Guanabara</material><material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material></support><extent><span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span><span xml:lang="en">1 letter, manuscript, 2 leaves</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -147,7 +147,7 @@
                 <date when="1940-11-15" xml:lang="en">15. XI 1940</date>
                 <placeName xml:lang="de">Rio</placeName></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2239">
                   <surname>Zweig</surname><forename>Stefanie</forename></persName>
               </correspAction>
             </correspDesc>
@@ -162,7 +162,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Zweig, Stefan<name ref="http://d-nb.info/gnd/118637479"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Stefan<name ref="http://d-nb.info/gnd/118637479" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -174,7 +174,7 @@
                     <idno type="PID">o:szd.1430</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Hotel Central air mail stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink, purple ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Briefpapier Hotel Central</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte, violette Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript und Manuskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript and manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Hotel Central air mail stationary</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink, purple ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Luftpost-Briefpapier Hotel Central</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte, violette Tinte</material></support><extent><span xml:lang="de">1 Brief, Typoskript und Manuskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript and manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -186,7 +186,7 @@
                 <date when="1940-11-30" xml:lang="en">30. November 1940.</date>
                 <placeName xml:lang="de">Rio</placeName></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2239">
                   <surname>Zweig</surname><forename>Stefanie</forename></persName>
               </correspAction>
             </correspDesc>
@@ -201,7 +201,7 @@
             <publicationStmt>
               <ab>Einzelbrief</ab>
             </publicationStmt>
-            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151"/></note></notesStmt><sourceDesc>
+            <notesStmt><note type="participants" xml:lang="de">Zweig, Lotte<name ref="http://d-nb.info/gnd/116001151" /></note></notesStmt><sourceDesc>
               <msDesc>
                 <msIdentifier>
                   <country>Österreich</country>
@@ -213,7 +213,7 @@
                     <idno type="PID">o:szd.1431</idno>
                   </altIdentifier>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "MERRY XMAS | HAPPY NEW YEAR"</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "MERRY XMAS | HAPPY NEW YEAR"</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "MERRY XMAS | HAPPY NEW YEAR"</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "MERRY XMAS | HAPPY NEW YEAR"</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support><extent><span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span><span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -226,7 +226,7 @@
                 <placeName ana="deduced">Petrópolis</placeName>
               <date type="supplied" xml:lang="de">Dezember 1941</date><date type="supplied" xml:lang="en">December 1941</date><placeName ana="deduced" xml:lang="de">Petrópolis</placeName><address><addrLine>New York City, 18 West 70th Street</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2239">
                   <surname>Zweig</surname><forename>Stefanie</forename></persName>
               </correspAction>
             </correspDesc>

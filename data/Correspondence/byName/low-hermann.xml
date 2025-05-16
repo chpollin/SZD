@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -87,7 +87,7 @@
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAP/B1.131</idno>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">21x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material><material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material></support><extent><span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span><span xml:lang="en">1 letter, typescript, 1 leaf</span><measure type="format">21x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -122,7 +122,7 @@
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAP/B1.144</idno>
                 </msIdentifier>
-              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">22x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger"/></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
+              <physDesc><objectDesc><supportDesc><support><material ana="szdg:WritingMaterial" xml:lang="en">Carbon copy paper</material><material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material><material ana="szdg:WritingMaterial" xml:lang="de">Durchschlagpapier</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material></support><extent><span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span><span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span><measure type="format">22x29 cm</measure></extent></supportDesc></objectDesc></physDesc><msContents><textLang><lang xml:lang="ger" /></textLang></msContents><history><provenance><ab>Archiv Atrium Press</ab></provenance><acquisition><ab xml:lang="de">Ankauf Christie's London 2014</ab><ab xml:lang="en">Acquisition from Christie's London 2014</ab></acquisition></history></msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
@@ -132,7 +132,7 @@
                   <surname>Reichner</surname><forename>Herbert</forename></persName>
                 <orgName ref="http://d-nb.info/gnd/10119809-7">Herbert Reichner Verlag</orgName><date xml:lang="de">2. Dezember 1937</date><date xml:lang="en">2. Dezember 1937</date><placeName xml:lang="de">Wien</placeName><address><addrLine>Wien I., Herrengasse 21</addrLine></address></correspAction>
               <correspAction type="received">
-                <persName>
+                <persName ref="#SZDPER.2159">
                   <surname>Löw</surname><forename>Hermann</forename></persName>
               <orgName>Rechtsanwalt Dr. Hermann Löw</orgName></correspAction>
             </correspDesc>

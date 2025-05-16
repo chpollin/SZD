@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,8 +8,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
         </publisher>
         <idno type="PID">o:szd.korrespondenzen.meyer-richard</idno>
         <ref target="context:szd.korrespondenzen">Korrespondenzen Stefan Zweig</ref>
@@ -55,11 +54,8 @@
                   <objectDesc>
                     <supportDesc>
                       <support><material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard:
-                          "Berlin. Königl. Schloss"</material><material ana="szdg:WritingInstrument"
-                          xml:lang="en">black ink</material><material ana="szdg:WritingMaterial"
-                          xml:lang="de">Ansichtspostkarte: "Berlin. Königl.
-                          Schloss"</material><material ana="szdg:WritingInstrument" xml:lang="de"
-                          >schwarze Tinte</material></support>
+                          "Berlin. Königl. Schloss"</material><material ana="szdg:WritingInstrument" xml:lang="en">black ink</material><material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: "Berlin. Königl.
+                          Schloss"</material><material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material></support>
                       <extent><span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1
                           Blatt</span><span xml:lang="en">1 picture postcard, manuscript, 1
                           leaf</span></extent>
@@ -67,12 +63,11 @@
                   </objectDesc>
                 </physDesc>
                 <msContents>
-                  <textLang><lang xml:lang="ger"/></textLang>
+                  <textLang><lang xml:lang="ger" /></textLang>
                 </msContents>
                 <history>
                   <provenance><ab>Anna Meingast</ab></provenance>
-                  <acquisition><ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab><ab
-                      xml:lang="en">Acquisition from private ownership 2013/2014</ab></acquisition>
+                  <acquisition><ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab><ab xml:lang="en">Acquisition from private ownership 2013/2014</ab></acquisition>
                 </history>
               </msDesc>
             </sourceDesc>
@@ -80,15 +75,14 @@
           <profileDesc>
             <correspDesc>
               <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/119034751"/>
+                <persName ref="http://d-nb.info/gnd/119034751" />
                 <date xml:lang="de" when="1912-06-11">11. 6. 12</date>
                 <address>
                   <addrLine>Wien, Kochgasse 8</addrLine>
                 </address>
               </correspAction>
               <correspAction type="received">
-                <persName ref="http://d-nb.info/gnd/118637479"
-                    ><surname>Zweig</surname><forename>Stefan</forename></persName>
+                <persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName>
               </correspAction>
             </correspDesc>
           </profileDesc>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -2451,7 +2451,7 @@
             <textClass>
               <keywords>
                 <term type="person">
-                  <persName>
+                  <persName ref="http://d-nb.info/gnd/118637479">
                     <surname>Zweig</surname>
                     <forename>Stefan</forename>
                   </persName>
@@ -2843,7 +2843,7 @@
             <textClass>
               <keywords>
                 <term type="person">
-                  <persName>
+                  <persName ref="http://d-nb.info/gnd/112251008X">
                     <surname>Lilien</surname>
                     <forename>Ephraim Mose</forename>
                   </persName>
@@ -2958,7 +2958,7 @@
               </msDesc>
             </sourceDesc>
           </fileDesc>
-          <profileDesc/>
+          <profileDesc />
         </biblFull>
         <biblFull xml:id="SZDKOR.max-und-victor-fleischer.3">
           <fileDesc>
@@ -2983,7 +2983,7 @@
               </msDesc>
             </sourceDesc>
           </fileDesc>
-          <profileDesc/>
+          <profileDesc />
         </biblFull>
         <biblFull xml:id="SZDKOR.max-und-victor-fleischer.1">
           <fileDesc>
@@ -3008,7 +3008,7 @@
               </msDesc>
             </sourceDesc>
           </fileDesc>
-          <profileDesc/>
+          <profileDesc />
         </biblFull>
       </listBibl>
     </body>

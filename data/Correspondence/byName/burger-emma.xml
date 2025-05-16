@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -114,7 +114,7 @@
           <profileDesc>
             <correspDesc type="toZweig">
               <correspAction type="sent">
-                <persName>
+                <persName ref="#SZDPER.2098">
                   <surname>Burger</surname>
                   <forename>Emma</forename>
                 </persName>
