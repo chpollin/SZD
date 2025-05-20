@@ -214,7 +214,7 @@
             <name>Zweig</name> im Radio, dass <name>Sigmund
             Freud</name> in der vergangenen Nacht verstorben war. Am 26. September 1939 hielt er im
           Golders Green Crematorium in London eine <ref
-            target="stefanzweig.digital/o:szd.lebenskalender#SZDBIO.87">Gedenkrede</ref>, in der er seine persönliche Verbundenheit mit dem Verstorbenen noch
+            target="https://stefanzweig.digital/o:szd.lebenskalender#SZDBIO.87">Gedenkrede</ref>, in der er seine persönliche Verbundenheit mit dem Verstorbenen noch
           einmal hervorhob: „Wer ihn erlebt in diesen seinen letzten Jahren, war getröstet in einer
           Stunde vertrauten Gesprächs über den Widersinn und Wahnsinn unserer Welt, und oft habe ich
           mir in solchen Stunden gewünscht, sie seien auch jungen, werdenden Menschen mitgegönnt,
@@ -367,7 +367,10 @@
   </text>
   <facsimile>
     <surface>
-      <graphic mimeType="image/jpeg" url="Startbild_Freud.jpg" xml:id="TITELBILD"/>
+      <graphic mimeType="image/jpeg" url="info:fedora/o:szd.thema.6" xml:id="TITELBILD"></graphic>
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="info:fedora/o:szd.thema.6" xml:id="TITELBILD_EN"></graphic>
     </surface>
   </facsimile>
 </TEI>
