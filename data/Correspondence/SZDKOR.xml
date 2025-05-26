@@ -32337,6 +32337,11 @@
 										<supportDesc>
 											<extent>
 												<measure type="correspondence" unit="piece" subtype="received">49</measure>
+												<note xml:lang="en">3 of the postcards from 1902 and 1903
+													addressed both to Max and Victor Fleischer</note>
+												<note xml:lang="de">3 der Postkarten von 1902 und 1903 sowohl
+													sowohl an Max als auch an Victor Fleischer
+													adressiert</note>
 											</extent>
 										</supportDesc>
 									</objectDesc>
@@ -32345,6 +32350,16 @@
 						</sourceDesc>
 					</fileDesc>
 					<profileDesc>
+						<textClass>
+							<keywords>
+								<term type="person">
+									<persName ref="http://d-nb.info/gnd/116601485">
+										<surname>Fleischer</surname>
+										<forename>Victor</forename>
+									</persName>
+								</term>
+							</keywords>
+						</textClass>
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
 								<persName ref="http://d-nb.info/gnd/11660090X">
@@ -33604,6 +33619,10 @@
 										<supportDesc>
 											<extent>
 												<measure type="correspondence" unit="piece" subtype="received">2</measure>
+												<note xml:lang="en">1 of the letters from 1938
+													addressed to Lotte Altmann</note>
+												<note xml:lang="de">1 der Briefe von 1938 adressiert
+													an Lotte Altmann</note>
 											</extent>
 										</supportDesc>
 									</objectDesc>
@@ -33711,6 +33730,10 @@
 										<supportDesc>
 											<extent>
 												<measure type="correspondence" unit="piece" subtype="sent">65</measure>
+												<note xml:lang="en">3 postcards and 1 letter from Friderike Zweig
+													to Frans Masereel</note>
+												<note xml:lang="de">3 Postkarten und 1 Brief von Friderike Zweig
+													an Frans Masereel</note>
 											</extent>
 										</supportDesc>
 									</objectDesc>
@@ -35901,6 +35924,10 @@
 										<supportDesc>
 											<extent>
 												<measure type="correspondence" unit="piece" subtype="received">27</measure>
+												<note xml:lang="en">4 of the letters from 1940
+													addressed to Suzanne Czech</note>
+												<note xml:lang="de">4 der Briefe von 1940 namentlich adressiert
+													an Suzanne Czech</note>
 											</extent>
 										</supportDesc>
 									</objectDesc>
@@ -35909,6 +35936,16 @@
 						</sourceDesc>
 					</fileDesc>
 					<profileDesc>
+						<textClass>
+							<keywords>
+								<term type="person">
+									<persName ref="#SZDPER.2104">
+										<surname>Czech</surname>
+										<forename>Suzanne</forename>
+									</persName>
+								</term>
+							</keywords>
+						</textClass>
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
 								<persName ref="http://d-nb.info/gnd/placeholder">
@@ -37175,6 +37212,10 @@
 										<supportDesc>
 											<extent>
 												<measure type="correspondence" unit="piece" subtype="sent">2</measure>
+												<note xml:lang="en">1 of the postcards from 1908
+													from Victor Fleischer to Paul Heidelbach</note>
+												<note xml:lang="de">1 der Postkarten von 1908 von
+													Victor Fleischer an Paul Heidelbach</note>
 											</extent>
 										</supportDesc>
 									</objectDesc>
