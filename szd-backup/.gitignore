@@ -1,0 +1,51 @@
+# Large data files (not for Git)
+data/
+metadata/
+logs/
+*.tar.gz
+*.zip
+
+# Archives
+stefan-zweig-digital-*.tar.gz
+
+# Sensitive files
+*TOKEN*
+*token*
+*_TOKEN*.md
+*UPLOAD_STATUS*
+EMAIL_*.txt
+PROJEKT_DOKUMENTATION_*.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary
+nul
+*.tmp
+*.log
+*.bak
+
+# Claude
+.claude/

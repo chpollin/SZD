@@ -1,0 +1,100 @@
+# Citation File Format (CFF) for Stefan Zweig Digital Archive
+# https://citation-file-format.github.io/
+
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Stefan Zweig Digital Archive - Complete Backup"
+version: "1.0.0"
+date-released: "2025-10-22"
+url: "https://stefanzweig.digital"
+repository-code: "https://github.com/yourusername/szd-backup"
+
+abstract: >
+  Complete backup of the Stefan Zweig Digital collection from GAMS
+  (Geisteswissenschaftliches Asset Management System, University of Graz).
+  Contains 2,107 digitized objects with 18,719 high-resolution images (24.7 GB)
+  across four collections: facsimiles, essays, life documents, and correspondence.
+  Downloaded on 2025-10-22. Note: 22 objects (1%) are incomplete due to
+  server-side metadata issues (see DATA_QUALITY_ISSUES.md for details).
+  This archive ensures long-term preservation of this important cultural
+  heritage resource.
+
+authors:
+  - family-names: "Zangerl"
+    given-names: "Lina Maria"
+    affiliation: "Literaturarchiv Salzburg, Paris Lodron Universität Salzburg"
+    orcid: "https://orcid.org/0000-0001-9709-3669"
+  - family-names: "Glunk"
+    given-names: "Julia Rebecca"
+    affiliation: "Literaturarchiv Salzburg, Paris Lodron Universität Salzburg"
+    orcid: "https://orcid.org/0000-0001-6647-9729"
+  - family-names: "Matuschek"
+    given-names: "Oliver"
+    affiliation: "Literaturarchiv Salzburg, Paris Lodron Universität Salzburg"
+  - family-names: "Pollin"
+    given-names: "Christopher"
+    affiliation: "Digital Humanities Craft OG"
+    orcid: "https://orcid.org/0000-0002-4879-129X"
+
+keywords:
+  - "Stefan Zweig"
+  - "Digital Humanities"
+  - "Literary Archive"
+  - "METS"
+  - "GAMS"
+  - "Cultural Heritage"
+  - "Manuscripts"
+  - "Correspondence"
+  - "Facsimiles"
+  - "Digital Preservation"
+
+license: CC-BY-4.0
+
+identifiers:
+  - type: url
+    value: "https://gams.uni-graz.at/context:szd"
+    description: "Original GAMS collection"
+  - type: url
+    value: "https://d-nb.info/gnd/118637479"
+    description: "GND identifier for Stefan Zweig"
+  - type: url
+    value: "https://www.wikidata.org/wiki/Q78491"
+    description: "Wikidata identifier for Stefan Zweig"
+
+contact:
+  - email: "info@stefanzweig.digital"
+    name: "Stefan Zweig Digital Project"
+
+references:
+  - type: website
+    title: "Stefan Zweig Digital"
+    url: "https://stefanzweig.digital"
+  - type: website
+    title: "GAMS - Geisteswissenschaftliches Asset Management System"
+    url: "https://gams.uni-graz.at"
+
+preferred-citation:
+  type: dataset
+  title: "Stefan Zweig Digital Archive - Complete Backup (v1.0.0)"
+  version: "1.0.0"
+  authors:
+    - family-names: "Zangerl"
+      given-names: "Lina Maria"
+      orcid: "https://orcid.org/0000-0001-9709-3669"
+    - family-names: "Glunk"
+      given-names: "Julia Rebecca"
+      orcid: "https://orcid.org/0000-0001-6647-9729"
+    - family-names: "Matuschek"
+      given-names: "Oliver"
+    - family-names: "Pollin"
+      given-names: "Christopher"
+      affiliation: "Digital Humanities Craft OG"
+      orcid: "https://orcid.org/0000-0002-4879-129X"
+  year: 2025
+  url: "https://stefanzweig.digital"
+  license: CC-BY-4.0
+  abstract: >
+    Complete backup of digital facsimiles from the Stefan Zweig Digital
+    collection. 2,107 objects, 18,719 images, 24.7 GB, 99.0% complete.
+    Digitized 2017-2025 by Literaturarchiv Salzburg.
