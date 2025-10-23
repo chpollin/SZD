@@ -45,9 +45,9 @@ The [scripts/](scripts/) directory contains cross-cutting data validation and qu
 
 See [scripts/validation/README.md](scripts/validation/README.md) for detailed documentation on each validation tool.
 
-### Documentation
+### Knowledge Vault
 
-The [docs/](docs/) directory contains technical documentation and specifications. This includes correspondence corpus overviews and TEI-CSV schema mapping documentation describing the data structure and validation requirements.
+The [knowledge/](knowledge/) directory provides comprehensive technical documentation including TEI-XML data models, collection overviews, system architecture, correspondence corpus statistics, and TEI-CSV schema mapping. See [knowledge/README.md](knowledge/README.md) for navigation.
 
 ---
 
