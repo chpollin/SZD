@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/create_split_archives.py:*)",
+      "Bash(awk:*)",
+      "Bash(python scripts/zenodo_upload_split.py:*)",
+      "Bash(python:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
