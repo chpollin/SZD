@@ -75,7 +75,6 @@ Read [ARCHITECTURE.md](ARCHITECTURE.md) for overall system design and platform i
 **TEI Guidelines:** https://tei-c.org/guidelines/
 **GAMS Documentation:** https://gams.uni-graz.at/documentation
 **METS/MODS:** Library metadata standards
-**DataCite Schema 4.0:** Zenodo metadata format
 
 ---
 

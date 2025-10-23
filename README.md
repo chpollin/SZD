@@ -69,7 +69,7 @@ All content in this repository is licensed under CC-BY 4.0 (Creative Commons Att
 
 - Lina Maria Zangerl (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-9709-3669
 - Julia Rebecca Glunk (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-6647-9729
-- Oliver Matuschek (Literaturarchiv Salzburg)
+- Oliver Matuschek
 - Christopher Pollin (Digital Humanities Craft OG) - https://orcid.org/0000-0002-4879-129X
 
 ### Institutions
