@@ -4,7 +4,16 @@
       "Bash(python scripts/create_split_archives.py:*)",
       "Bash(awk:*)",
       "Bash(python scripts/zenodo_upload_split.py:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git log:*)",
+      "Bash(git commit:*)",
+      "Bash(git mv:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []
