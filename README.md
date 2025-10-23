@@ -11,7 +11,7 @@ Digital humanities project for the complete digitization and online availability
 
 ### Primary Data
 
-The [data/](data/) directory contains TEI-XML encoded archival data organized by collection type:
+The [data/](data/) directory contains TEI-XML encoded archival data and digital facsimiles organized by collection type:
 
 - Correspondence (SZDKOR) - Letters and correspondence
 - Works (SZDWRK) - Published writings and literary works

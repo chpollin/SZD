@@ -8,9 +8,9 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 
 ### Data & Structure
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure, bilingual architecture, and encoding patterns
-- [COLLECTIONS.md](COLLECTIONS.md) - Detailed overview of all 9 archival collections
+- [COLLECTIONS.md](COLLECTIONS.md) - Detailed overview of all archival collections
 - [DATA.md](DATA.md) - Correspondence corpus statistics and known data quality issues
-- [MAPPING.md](MAPPING.md) - Complete 41-column TEI-CSV schema mapping
+- [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema mapping
 
 ### System Architecture
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System components, data flow, and platform integration

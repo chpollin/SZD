@@ -6,7 +6,7 @@ Detailed overview of all archival collections in the Stefan Zweig Digital projec
 
 ## Collection Overview
 
-The SZD project organizes Stefan Zweig's digitized materials into nine thematic collections, each encoded in TEI-XML:
+The SZD project organizes Stefan Zweig's digitized materials into thematic collections, each encoded in TEI-XML:
 
 | Collection | File | PID | Description |
 |------------|------|-----|-------------|
@@ -72,7 +72,7 @@ Letters to and from Stefan Zweig organized by correspondence partner. Each entry
 ### Related Documentation
 
 - [DATA.md](DATA.md) - Correspondence corpus statistics and data gaps
-- [MAPPING.md](MAPPING.md) - Complete 41-column TEI-CSV schema
+- [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema mapping
 - [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
 
 ---

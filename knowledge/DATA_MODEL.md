@@ -235,7 +235,7 @@ Uses `<biblFull>` for correspondence bundles with nested `<msDesc>` for individu
 </biblFull>
 ```
 
-See [MAPPING.md](MAPPING.md) for complete 41-column TEI-CSV schema.
+See [MAPPING.md](MAPPING.md) for complete TEI-CSV schema mapping.
 
 ### Person Index (SZDPER)
 

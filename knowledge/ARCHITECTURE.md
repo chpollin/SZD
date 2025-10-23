@@ -31,21 +31,18 @@ Stefan Zweig Digital is a distributed digital humanities platform combining mult
 **TEI-XML Source Files**
 - Location: [data/](../data/)
 - Format: TEI P5 XML
-- Collections: 9 thematic collections + person index
-- Size: Thousands of encoded objects
+- Collections: Thematic collections and person index
 - Encoding: UTF-8 with bilingual content
 
 **CSV Catalogue Data**
 - Location: [scripts/data/](../scripts/data/)
 - Purpose: Authoritative metadata for correspondence
-- Format: 41-column schema
 - Usage: Validation and quality assurance
 
 ### Transformation Layer
 
 **XSL Stylesheets**
 - Location: [gamsdev/](../gamsdev/)
-- Count: 26+ transformation files
 - Technology: XSLT 2.0/3.0
 - Purpose: Convert TEI-XML to HTML for web display
 
@@ -63,12 +60,7 @@ See [gamsdev/README.md](../gamsdev/README.md) for complete list.
 **SPARQL Queries**
 - Location: [gamsdev/sparql/](../gamsdev/sparql/)
 - Database: Blazegraph triple store
-- Query Types:
-  - Fulltext search
-  - Person-based search
-  - Location-based search
-  - Category/subject search
-  - Glossary search
+- Query Types: Fulltext, person-based, location-based, category/subject, glossary
 
 **Features:**
 - Bilingual result sets
@@ -97,12 +89,7 @@ See [gamsdev/sparql/README.md](../gamsdev/sparql/README.md) for details.
 **Python Scripts**
 - Location: [scripts/validation/](../scripts/validation/)
 - Purpose: Data quality assurance
-- Tools:
-  - TEI-XML structure validation
-  - TEI-CSV cross-reference validation
-  - Character encoding cleanup
-  - Signature extraction
-  - Version comparison
+- Tools: TEI-XML structure validation, TEI-CSV cross-reference validation, character encoding cleanup, signature extraction, version comparison
 
 See [scripts/validation/README.md](../scripts/validation/README.md) for complete documentation.
 
@@ -112,11 +99,7 @@ See [scripts/validation/README.md](../scripts/validation/README.md) for complete
 - Location: [szd-zenodo-backup/](../szd-zenodo-backup/)
 - Purpose: Long-term preservation with DOI versioning
 - Format: TAR.GZ archives with DataCite metadata
-- Archive Types:
-  - Facsimiles (high-resolution images)
-  - Correspondence (TEI + images)
-  - Personal documents (life documents)
-  - Essays (academic articles)
+- Archive Types: Facsimiles, correspondence, personal documents, essays
 
 **FAIR Principles:** Findable, Accessible, Interoperable, Reusable
 
@@ -173,7 +156,7 @@ See [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) for workflow d
 ```
 1. Archive Creation
    ├─ Python scripts download data from GAMS
-   ├─ Split into manageable archives (<10GB)
+   ├─ Split into manageable archives
    └─ DataCite metadata generated
 
 2. Zenodo Upload
