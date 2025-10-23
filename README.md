@@ -2,10 +2,11 @@
 
 Digital humanities project for the complete digitization and online availability of Stefan Zweig's works, correspondence, autographs, biographical materials, and personal library.
 
-**Website:** https://stefanzweig.digital
-**GAMS Collection:** https://gams.uni-graz.at/context:szd
-**GND:** https://d-nb.info/gnd/118637479
-**Wikidata:** https://www.wikidata.org/wiki/Q78491
+- Website: https://stefanzweig.digital
+- GAMS Collection: https://gams.uni-graz.at/context:szd
+- Zenodo Archive: https://zenodo.org/uploads/17421555
+- GND: https://d-nb.info/gnd/118637479
+- Wikidata: https://www.wikidata.org/wiki/Q78491
 
 ---
 
@@ -13,7 +14,19 @@ Digital humanities project for the complete digitization and online availability
 
 ### Primary Data
 
-The [data/](data/) directory contains TEI-XML encoded archival data organized by collection type. The main collections include correspondence, works, autographs, library materials, biographical information, essays, personal documents, and authority files for persons and subject terminology. Each collection maintains its own preprocessing scripts within collection-specific subdirectories.
+The [data/](data/) directory contains TEI-XML encoded archival data organized by collection type:
+
+- Correspondence (SZDKOR) - Letters and correspondence
+- Works (SZDWRK) - Published writings and literary works
+- Autographs (SZDAUT) - Handwritten manuscripts
+- Library (SZDLIB) - Personal book collection
+- Biography (SZDBIO) - Life calendar and biographical timeline
+- Essays (SZDESS) - Articles and academic essays
+- Personal Documents (SZDDOC) - Life documents
+- Index (SZDPER) - Person authority file
+- Glossary (SZDGLR) - Subject terminology
+
+Each collection maintains its own preprocessing scripts within collection-specific subdirectories.
 
 ### GAMS Frontend
 
