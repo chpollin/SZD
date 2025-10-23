@@ -82,22 +82,24 @@ All content in this repository is licensed under CC-BY 4.0 (Creative Commons Att
 
 ### Creators
 
-Lina Maria Zangerl (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-9709-3669
-Julia Rebecca Glunk (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-6647-9729
-Oliver Matuschek (Literaturarchiv Salzburg)
-Christopher Pollin (Digital Humanities Craft OG) - https://orcid.org/0000-0002-4879-129X
+- Lina Maria Zangerl (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-9709-3669
+- Julia Rebecca Glunk (Literaturarchiv Salzburg) - https://orcid.org/0000-0001-6647-9729
+- Oliver Matuschek (Literaturarchiv Salzburg)
+- Christopher Pollin (Digital Humanities Craft OG) - https://orcid.org/0000-0002-4879-129X
 
 ### Institutions
 
-Literaturarchiv Salzburg at Paris Lodron University of Salzburg provides the original materials and digitization. GAMS at University of Graz provides the digital infrastructure and hosting platform. Zenodo serves as the long-term preservation platform.
+- Literaturarchiv Salzburg (Paris Lodron University of Salzburg) - Original materials and digitization
+- GAMS (University of Graz) - Digital infrastructure and hosting platform
+- Zenodo - Long-term preservation platform
 
 ---
 
 ## Contact
 
-**Email:** info@stefanzweig.digital
-**Project Website:** https://stefanzweig.digital
-**GAMS Context:** https://gams.uni-graz.at/context:szd
+- Email: info@stefanzweig.digital
+- Project Website: https://stefanzweig.digital
+- GAMS Context: https://gams.uni-graz.at/context:szd
 
 ---
 
