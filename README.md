@@ -26,8 +26,6 @@ The [data/](data/) directory contains TEI-XML encoded archival data organized by
 - Index (SZDPER) - Person authority file
 - Glossary (SZDGLR) - Subject terminology
 
-Each collection maintains its own preprocessing scripts within collection-specific subdirectories.
-
 ### GAMS Frontend
 
 The [gamsdev/](gamsdev/) directory contains the complete frontend codebase for https://stefanzweig.digital/ running on the GAMS platform at University of Graz. This includes XSL transformations for converting TEI-XML to HTML, SPARQL queries for database searches, CSS stylesheets, JavaScript for interactivity, and various web assets. The [sparql/](gamsdev/sparql/) subdirectory provides fulltext search capabilities via Blazegraph, along with location-based, person-based, and category-based search queries with bilingual result sets in German and English.
