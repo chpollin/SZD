@@ -44,12 +44,18 @@ desktop.ini
 .project
 .settings/
 
-# SZD-Zenodo-Backup: Generated data (not source code)
+# SZD-Zenodo-Backup: NO DATA in Git (only code & docs)
+# All data, archives, and metadata are generated locally and uploaded to Zenodo
 szd-zenodo-backup/data/
+szd-zenodo-backup/metadata/
+szd-zenodo-backup/logs/
 szd-zenodo-backup/*.tar.gz
-szd-zenodo-backup/logs/*.json
-szd-zenodo-backup/logs/*.log
-szd-zenodo-backup/zenodo_deposit_info_*.json
+szd-zenodo-backup/*.json
+szd-zenodo-backup/__pycache__/
+szd-zenodo-backup/.claude/
+
+# Old szd-backup directory (should be removed)
+szd-backup/
 
 # Office temporary files
 ~$*.docx
