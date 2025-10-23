@@ -16,10 +16,10 @@ The [data/](data/) directory contains TEI-XML encoded archival data and digital 
 - Correspondence (SZDKOR) - Letters and correspondence
 - Works (SZDWRK) - Published writings and literary works
 - Autographs (SZDAUT) - Handwritten manuscripts
-- Library (SZDLIB) - Personal book collection
+- Library (SZDBIB) - Personal book collection
 - Biography (SZDBIO) - Life calendar and biographical timeline
 - Essays (SZDESS) - Articles and academic essays
-- Personal Documents (SZDDOC) - Life documents
+- Personal Documents (SZDLEB) - Life documents
 - Index (SZDPER) - Person authority file
 - Glossary (SZDGLR) - Subject terminology
 
