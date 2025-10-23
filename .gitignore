@@ -44,12 +44,12 @@ desktop.ini
 .project
 .settings/
 
-# SZD-Backup: Generated data (not source code)
-szd-backup/data/
-szd-backup/*.tar.gz
-szd-backup/logs/*.json
-szd-backup/logs/*.log
-szd-backup/zenodo_deposit_info_*.json
+# SZD-Zenodo-Backup: Generated data (not source code)
+szd-zenodo-backup/data/
+szd-zenodo-backup/*.tar.gz
+szd-zenodo-backup/logs/*.json
+szd-zenodo-backup/logs/*.log
+szd-zenodo-backup/zenodo_deposit_info_*.json
 
 # Office temporary files
 ~$*.docx

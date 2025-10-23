@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(python download_archive.py:*)",
+      "Bash(timeout:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd /c \"taskkill /PID 22864 /T /F\")",
+      "Bash(cmd /c \"taskkill /F /IM python3.11.exe\")",
+      "Bash(powershell \"Stop-Process -Id 22864 -Force; Stop-Process -Id 42888 -Force\")",
+      "Bash(python validate_downloads.py:*)",
+      "Bash(python zenodo_upload_simple.py:*)",
+      "Bash(powershell \"(Get-Item ''stefan-zweig-digital-v1.0.0.tar.gz'').Length / 1GB\")",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(find:*)",
+      "Bash(powershell \"Get-Process | Where-Object {$_ProcessName -like ''*python*''} | Select-Object Id,ProcessName,CPU,StartTime\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
