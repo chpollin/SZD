@@ -3,10 +3,7 @@
 Digital humanities project for the complete digitization and online availability of Stefan Zweig's works, correspondence, autographs, biographical materials, and personal library.
 
 - Website: https://stefanzweig.digital
-- GAMS Collection: https://gams.uni-graz.at/context:szd
 - Zenodo Archive: https://zenodo.org/uploads/17421555
-- GND: https://d-nb.info/gnd/118637479
-- Wikidata: https://www.wikidata.org/wiki/Q78491
 
 ---
 
@@ -56,17 +53,7 @@ The [docs/](docs/) directory contains technical documentation and specifications
 
 ## Technology Stack
 
-### Data Formats and Standards
-
-The project uses TEI-XML (Text Encoding Initiative P5) as the primary data format. Metadata follows METS/MODS and DFG-METS library standards. Zenodo deposits use DataCite Schema 4.0 for metadata description.
-
-### Frontend Technologies
-
-The web frontend uses XSL/XSLT for server-side XML transformations, JavaScript for client-side interactivity, and CSS for responsive web design. Database queries are implemented using SPARQL against a Blazegraph triple store.
-
-### Platform and Infrastructure
-
-The project runs on GAMS (Geisteswissenschaftliches Asset Management System) hosted at University of Graz, providing XML/TEI repository infrastructure, METS/MODS metadata support, and Blazegraph for SPARQL queries. Long-term archival storage is provided by Zenodo with DOI versioning. Data processing and validation scripts are written in Python.
+The project uses TEI-XML (Text Encoding Initiative P5) as the primary data format with metadata following METS/MODS and DFG-METS library standards, while Zenodo deposits use DataCite Schema 4.0 for metadata description. The web frontend uses XSL/XSLT for server-side XML transformations, JavaScript for client-side interactivity, and CSS for responsive web design, with database queries implemented using SPARQL against a Blazegraph triple store. The project runs on GAMS (Geisteswissenschaftliches Asset Management System) hosted at University of Graz, providing XML/TEI repository infrastructure, METS/MODS metadata support, and Blazegraph for SPARQL queries, while long-term archival storage is provided by Zenodo with DOI versioning and data processing and validation scripts are written in Python.
 
 ---
 
@@ -95,11 +82,11 @@ All content in this repository is licensed under CC-BY 4.0 (Creative Commons Att
 
 ## Contact
 
-- Email: info@stefanzweig.digital
-- Project Website: https://stefanzweig.digital
-- GAMS Context: https://gams.uni-graz.at/context:szd
+Email: 
+
+- info@stefanzweig.digital
+- christopher.pollin@dhcraft.org
 
 ---
 
 **Last Updated:** October 2025
-**Repository Status:** Active development and maintenance
