@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Stefan Zweigs Briefe an Frans Masereel</title>
+        <author>
+          <persName>
+            <forename>Julia Rebecca</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
+                  Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für
+                  Informationsmodellierung - Austrian Centre for Digital Humanities,
+                  Karl-Franzens-Universität Graz </orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches
+                  Asset Management System </orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0">Creative Commons BY 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.thema.7</idno>
+        <date when="2025-01-31">31.10.2025</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Technische Umsetzung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>SZD Themenseite</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
+               Zweig im digitalen Raum zusammenzuführen und ihn einem
+               literaturwissenschaftlich bzw. wissenschaftlich interessierten Publikum zu erschließen.
+               In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei,
+               basierend auf dem dort vorhandenen Quellenmaterial, eine digitale
+               Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand
+               an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert
+               wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so
+               konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des
+               Quellenmaterials (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/01_Idee.jpg" xml:id="IMG.1" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/02_Idee-57.jpg" xml:id="IMG.2" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/03_Idee-58.jpg" xml:id="IMG.3" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/04_Zweig_TB_FM-1.jpg" xml:id="IMG.4" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/07_Das_Herz_Europas.jpg" xml:id="IMG.5" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/09_FaitDivers.jpg" xml:id="IMG.6" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/11_1924_Portraet_SZ.jpg" xml:id="IMG.7" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/13_1932_NouvLitt_SZ.jpg" xml:id="IMG.8" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/14_Leicester-1.jpg" xml:id="IMG.9" />
+    </surface>
+    <surface>
+      <graphic mimeType="image/jpeg" url="file:///img/15_FM_Portraet_Suse.jpg" xml:id="IMG.10" />
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div type="introduction" xml:lang="de">
+        
+        <figure>
+          <graphic url="IMG.1" />
+          <figDesc>
+            <caption>L'Idée. Sa naissance – sa vie – sa mort, Paris: Ollendorff, 1920.</caption>
+          </figDesc>
+        </figure>
+        
+        <p style="center">
+          <hi style="bold">von Julia Rebecca Glunk</hi>
+        </p>
+      </div>
+      <div type="introduction" xml:lang="en">
+        <p style="center">
+          <hi style="bold">by Julia Rebecca Glunk</hi>
+        </p>
+      </div>
+      <div type="col-1" xml:lang="de">
+        <p><hi style="italic">Im Frühjahr 2016 konnte das Literaturarchiv Salzburg 19 Postkarten und 44 Briefe von Stefan Zweig an den belgisch-flämischen
+          Holzschneider und Maler <name ref="#SZDPER.916">Frans Masereel</name> (1889-1972) ankaufen, die sich seit ihrem Verkauf auf einer Auktion in Paris im Jahr
+          1986 in Privatbesitz befunden hatten. Mit ihrem Ankauf konnte das LAS seine Sammlung um ein Hauptstück von Zweigs
+          Briefwechsel mit einem seiner nächsten Freunde erweitern. <ref target="https://stefanzweig.digital/o:szd.korrespondenzen.masereel-frans">Seit
+            September 2024 sind sie auf Stefan Zweig digital frei zugänglich.</ref> Unsere langjährige Projektmitarbeiterin Julia Glunk hat die insgesamt 230 erhaltene
+          Briefstücke umfassende Korrespondenz Zweig/Masereel im Rahmen ihrer Doktorarbeit an der Albert-Ludwigs-Universität
+          Freiburg erstmals zusammengeführt, aus dem Französischen ins Deutsche übertragen, mithilfe weiterer relevanter,
+          unveröffentlichter Quellen kontextualisiert und historisch-kritisch ediert. Im Folgenden präsentiert sie die bislang auf</hi>
+          Stefan Zweig digital <hi style="italic"> verfügbaren Digitalisate aus dem Briefwechsel im Kontext der Geschichte der
+          Freundschaft.</hi></p>
+        
+        <p><hi style="italic">Sämtliche hier zitierte Abbildungen entstammen, falls nicht anders vermerkt, dem digitalen Archiv der
+          <ref target="http://masereel.org/">Frans Masereel-Stiftung</ref> (Saarbrücken), die zusammen mit der Studienbibliothek zur Geschichte der Arbeiterbewegung (Zürich)
+          die Weltrechte am Werk Frans Masereels hält, und werden hier mit deren freundlicher Genehmigung reproduziert. Für die
+          Erlaubnis, die beiden Porträtfotografien von Zweig und Masereel aus dem Jahr 1940 zu reproduzieren, danke ich herzlich
+          den Erben von <name ref="#SZDPER.1562">Suse von Winternitz</name>, für die Reproduktion des Masereel-Aquarells aus
+          Zweigs Besitz ebenso herzlich Oliver Matuschek.</hi></p>
+        
+        <p>„Ginge alles zugrunde", so lautet einer der meistzitierten Sätze Stefan Zweigs über seinen Freund, den Künstler
+          <name ref="#SZDPER.916">Frans Masereel</name>, „und blieben nur die Holzschnitte erhalten, die er in zehn Jahren geschaffen hat, so könnte man aus
+          ihnen allein unsere ganze gegenwärtige Welt rekonstruieren [...]." Der <ref target="https://stefanzweig.digital/o:szd.werke/sdef:TEI/get?locale=de#SZDMSK.234">Aufsatz</ref>,
+          in dem er Masereel ein derartiges Denkmal setzt – als einem Chronisten der modernen Zeit, als Erneuerer der mittelalterlichen Holzschneidekunst sowie
+          als Mensch von seltener Aufrichtigkeit, Güte und Stärke – erscheint 1923, inmitten der deutschen Hyperinflation, als
+          Teil einer allerersten, allerdings kaum bezahlbaren bebilderten <ref target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de#SZDBIB.708">Masereel-Monographie</ref>
+          im Berliner Verlag des Dänen <name ref="#SZDPER.2307">Axel Juncker</name>. Ein Jahr später, 1924, bringt Masereels
+          deutscher Verleger <name ref="#SZDPER.2308">Kurt Wolff</name>, der große Konkurrent von Zweigs
+          Stammverlag, dem Insel-Verlag von <name ref="#SZDPER.730">Anton Kippenberg</name>, dessen Holzschnittfolgen in günstigen,
+          auflagenstarken ,Volksausgaben' in den Handel und besiegelt so etwas, das Zweig versucht und vorhergesehen hat, seit er
+          Masereel sieben Jahre zuvor kennengelernt hatte: den Siegeszug seiner neuen Kunstform, der
+          <ref target="https://www.the-low-countries.com/article/the-silent-novels-of-frans-masereel-godfather-of-the-american-graphic-novel/">ersten Graphic Novels der Kunstgeschichte</ref>,
+          durch die junge Weimarer Republik. <ref target="o:szd.896">„[F]ür Dich hätte Deutschland ein viel weiteres Feld als
+          Frankreich"</ref>, prophezeite er schon im Juli 1920 in einem seiner wenigen in deutscher Sprache diktierten Briefe an
+          Masereel, <ref target="o:szd.896">„und ich glaube, Deine künstlerische Stellung würde hier viel besser und früher
+            anerkannt werden."</ref> Dass dabei Masereels Holzschnittfolge <ref target="https://archive.org/details/The_Idea_Frans_Masereel/img001.jpg">L'Idée. Sa naissance – sa vie – sa mort (1920)</ref>,
+          die Lebensgeschichte einer personifizierten revolutionären Idee, die in der modernen Welt Verbreitung, Verfälschung
+          und Verfolgung erfährt, sich letztlich jedoch als unsterblich erweist, deutet auch auf den Kern der fast 25jährigen
+          engen Freundschaft, die ihre bislang nur teilweise<note type="footnote">
+            <bibl>Von den im Literaturarchiv Salzburg aufbewahrten und hier als Digitalisat veröffentlichten Briefen Zweigs
+              an Masereel sind folgende zwölf bereits zur Gänze veröffentlicht: <ref target="o:szd.896">Brief vom 10. Juli 1920</ref> (Briefe an Freunde 1978,
+              S. 121-122), <ref target="o:szd.899">9. November 1920</ref> (Briefe an Freunde 1978, S. 125-126),
+              <ref target="o:szd.902">2. Juli 1921</ref> (Briefe an Freunde 1978, S. 133-135), <ref target="o:szd.912">8. November 1926</ref>
+              (Briefe an Freunde 1978, S. 172-173), <ref target="o:szd.914">29. Juni 1928</ref> (Briefe an Freunde 1978, S. 196),
+              <ref target="o:szd.918">23. März 1931</ref> (Briefe an Freunde 1978, S. 212), <ref target="o:szd.919">13. Juni 1931</ref>
+              (Briefe an Freunde 1978, S. 214-216), <ref target="o:szd.921">18. Juni 1931</ref> (Zweig Briefe III 2000, S. 293-294),
+              <ref target="o:szd.927">18. Januar 1933</ref> (Briefe an Freunde 1978, S. 224-225), <ref target="o:szd.928">15. April 1933</ref>
+              (Briefe an Freunde 1978, S. 226-228), <ref target="o:szd.1646">23. November 1940</ref> (Briefe an Freunde 1978, S. 321-322),
+              <ref target="o:szd.1648">1. August 1941</ref> (Briefe an Freunde 1978, S. 326).</bibl>
+          </note>
+          veröffentlichten Briefe dokumentieren: den tiefen gemeinsamen Glauben an die letztendliche Erhabenheit des Geistigen über
+          das Ungeistige und an die Kraft der Idee, des Ideals, so sehr sich seine Jünger auch in der Minderheit befinden mögen.</p>
+      </div>
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>Kennenlernen in der Schweiz (1917)</title>
+        </head>
+        <p>Frans Masereel ist Belgier, aufgewachsen im flämischen Gent in einer gut situierten Familie aus der französisch
+          sprechenden Bourgeoisie, als Sohn der musikalisch begabten <name ref="#SZDPER.2273">Louise Lava</name>, verwitwete Masereel, und Stiefsohn des
+          Gynäkologen und Progressiven <name ref="#SZDPER.2272">Louis Lava</name>. Als 1914 die deutsche Armee im Land einfällt und der im sogenannten
+          ,Schlieffen-Plan' vorgesehene Durchmarsch durch das neutrale Land nach Frankreich zur brutalen Invasion und Besetzung
+          eskaliert, lebt der gerade 25-jährige Masereel schon seit vier Jahren nicht mehr in seinem Geburtsland, sondern hat
+          seit 1911 versucht, sich in Paris ein Leben als unabhängiger Künstler aufzubauen. Da er sich insbesondere für die
+          Möglichkeiten satirischer Tendenz- und Pressezeichnung interessiert und sich zudem für moderne Literatur, insbesondere
+          der flämischen Naturalisten und Symbolisten, begeistert, hätten er und Zweig sich durchaus auch schon vor dem Krieg in
+          der französischen Hauptstadt kennenlernen können; umso mehr, da einer der ersten Bekannten Masereels in Paris der
+          französische Germanist <name ref="#SZDPER.535">Henri Guilbeaux</name> ist, der ihn 1913, im selben Jahr, in dem er während dessen Paris-Aufenthalts
+          im Frühjahr auch mehrere Male Zweig trifft, bereits bei Zweigs Freunden <name ref="#SZDPER.1462">Émile Verhaeren</name> und
+          <name ref="#SZDPER.82">Léon Bazalgette</name> eingeführt hat. Als Zweig schließlich im November 1917, im vierten Jahre des Krieges, per Beurlaubung vom passiven Militärdienst
+          in die Schweiz kommt, wo der von ihm verehrte französische Literaturnobelpreisträger <name ref="#SZDPER.1192">Romain Rolland</name>
+          drei Jahre zuvor den Impuls zur Bildung einer ganzen französischsprachigen Kolonie pazifistischer Literaten gegeben hat, ist der Zeichner
+          Masereel bereits fester Bestandteil dieser Gruppe.</p>
+        
+        <p>Masereel lebt in Genf zunächst recht prekär, hält sich neben seiner <ref target="http://masereel.org/work/zeitungen-und-zeitschriften/">Tätigkeit als Zeichner</ref>
+          für die pazifistische Zeitschrift <ref target="http://masereel.org/gegenkrieg/1916-1917-demain/"><hi style="italic">demain</hi></ref>
+          von Guilbeaux, die illustrierte Beilage <ref target="http://masereel.org/gegenkrieg/1917-1920-la-feuille-2/"><hi style="italic">La Feuille</hi></ref> zur
+          Genfer Zeitung <hi style="italic">La Nation</hi> sowie zur von ihm
+          selbst mit dem französischen Refraktär Jean Salives gegründeten Zeitschrift <ref target="http://masereel.org/gegenkrieg/1916-1919-les-tablettes/"><hi style="italic">Les Tablettes</hi></ref>
+          mit diversen Nebenbeschäftigungen über Wasser und bewohnt mit seiner Frau, der Französin
+          <name ref="#SZDPER.2270">Pauline Imhoff</name>, und deren 15-jähriger Tochter aus erster Ehe <name ref="#SZDPER.2271">Paule Thomas</name>
+          einen kleinen Dachboden zur Untermiete. Diese Umstände mögen begründen, dass aus dem ersten Jahr ihrer
+          Bekanntschaft keine Briefe von Zweig an Masereel erhalten geblieben sind. <ref target="https://stefanzweig.digital/o:szd.korrespondenzen/sdef:TEI/get?locale=de#SZDKOR.276">Masereels Gegenbriefe</ref>
+          jedoch, die sich in einem Umfang von insgesamt 147 Briefstücken in Zweigs Nachlass erhalten haben, sowie
+          <ref target="https://stefanzweig.digital/o:szd.lebensdokumente/sdef:TEI/get?locale=de#SZDLEB.11">Zweigs Tagebucheinträge aus den Tagen ihrer ersten Begegnungen</ref>
+          dokumentieren deren Umstände gut: </p>
+        
+        <figure>
+          <graphic url="IMG.2" />
+          <figDesc>
+            <caption>Am 29. November 1917: „Masereel: ein schwerer, bärtiger sanfter Mensch mit ernstem
+              schönem Blick durch die Brille. [...] Ich mag ihn vom ersten Blick." (vgl. Zweig Tagebücher 1984, 281-282)
+            </caption>
+          </figDesc>   
+        </figure>
+        
+        <figure>
+          <graphic url="IMG.3" />
+          <figDesc>
+            <caption>Am 30. November 1917: „ein echter Kameradennachmittag mit Masereel [...]. Wie gerecht diese Menschen
+              sind. Wie groß! Wie brüderlich." (vgl. Zweig Tagebücher 1984, 283)</caption>
+          </figDesc>   
+        </figure> 
+        
+        <figure>
+          <graphic url="IMG.4" />
+          <figDesc>
+            <caption>Und am 2. Dezember 1917: „Masereel der mir sehr gefällt, immer besser eigentlich von Stunde zu
+              Stunde." (vgl. Zweig Tagebücher 1984, 283) <ref target="o:szd.70">Hier zum Digitalisat</ref>
+            </caption>
+          </figDesc>   
+        </figure> 
+       
+        <p>Einen auffällig langen Tagebucheintrag widmet Zweig am 2. Dezember seinem ersten Besuch bei Masereel. Hier lernt
+          er ihn, nachdem bereits eine große persönliche Sympathie zwischen ihnen besteht, nun erstmals auch als den Künstler
+          und Beobachter kennen, als den er ihn dauerhaft schätzen wird: „Die Serie ,Les Villes'", schreibt er,
+          „hundertfünfzig Schwarzweiß-Zeichnungen gehören zum Großartigsten, das ich jemals sah.
+          Die ganze Stadt, aber wirklich die ganze mit ihrer ungeheuren Dynamik, ihrer Geschwindigkeit, ihrer gemeinen Geste
+          in tausend Formen." Gleich am Tag darauf weist er seinen Verleger Anton Kippenberg in Leipzig auf Masereel als
+          potenziellen Buchillustrator hin, woraus sich in den Folgemonaten Verhandlungen über zwei konkrete Aufträge und
+          später auch ein persönlicher Briefwechsel zwischen Kippenberg und Masereel ergeben. Eine Woche später bringt
+          Zweig Masereel bei dessen Gegenbesuch in Zürich mit dortigen Galeristen und Verlegern in Kontakt: Zwei
+          Broschürendrucke, die Zweig 1918 im Max Rascher Verlag veröffentlicht – seine <ref target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de#SZDBIB.533">Übersetzung eines Aufsatzes von Rolland</ref>
+          und ein eigenes <ref target="https://stefanzweig.digital/o:szd.werke/sdef:TEI/get?locale=de#SZDMSK.221">Feuilleton über die Genfer Zentrale des IRK</ref> – erscheinen beide mit Tuschzeichnungen von
+          Masereel. Und im September 1918 tritt er mit dem Kunsthistoriker <name ref="#SZDPER.2309">Arthur Rössler</name>
+          in Wien bezüglich einer Publikation der von Masereel illustrierten Novelle <hi style="italic"><ref target="https://stefanzweig.digital/o:szd.werke/sdef:TEI/get?locale=de#SZDMSK.323">Der Zwang</ref></hi> in Rösslers
+          neu gegründetem Avalun-Verlag in Verhandlungen ein. Sie erscheint schließlich 1920 als
+          <ref target="http://masereel.org/illustbcher/1920-zweig-der-zwang/">bibliophile Ausgabe im Insel-Verlag</ref>.</p>
+        
+        <figure>
+          <graphic url="IMG.5" />
+          <figDesc>
+            <caption>Das Herz Europas / Den hingeschlachteten Völkern, Zürich: Max Rascher Verlag, 1918</caption>
+          </figDesc>   
+        </figure>
+        
+        <p>Das Ende des Ersten Weltkriegs und die dramatischen Ereignisse in der Schweiz, wo der Bundesrat in Befürchtung
+          einer bolschewistischen Revolution die Armee gegen die streikende Bevölkerung mobilisiert, erleben Zweig und Masereel,
+          der zum selben Zeitpunkt bei Zweig in Rüschlikon bei Zürich zu Besuch ist, gemeinsam. Die internationalen Nachrichten
+          liest Zweig, insbesondere mit Blick auf den Zerfall Österreich-Ungarns und den allseitigen politischen Umbruch, mit
+          Angst: „Ein Trost in diesen Tagen Masereel, der Klare, Reine, Gütige", schreibt er am 4. November 1918, einen Tag
+          nach Schluss des Waffenstillstands von Villa Giusti, in sein <ref target="o:szd.70">Tagebuch</ref>: „Ich weiß, daß ich nur
+          ganz wenige Menschen habe, die ich so sehr liebe wie ihn." Ähnliche Gefühle sprechen aus seiner ersten erhaltenen Postkarte an Masereel
+          vom 26. November 1918, zehn Tage nach dessen Rückreise nach Genf: <ref target="o:szd.887">„Cher ami"</ref>, heißt es dort,
+          <ref target="o:szd.887">„la maison paraît delaissé sans toi"</ref>, und wie unendlich hindernisreich und ungewiss ihm nun seine Rückkehr nach Österreich erscheine,
+          und wie verrückt, wie verwirrend die Zeit, in der ,Revolutionäre Minister werden und Minister Revolutionäre'.</p>
+      </div>
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>„Romane ohne Worte"</title>
+        </head>
+        
+        <p>Die Geschichte eines Revolutionärs ist auch <hi style="italic"><ref target="https://theanarchistlibrary.org/library/frans-masereel-25-images-of-a-man-s-passion">25 Images de la Passion d'un Homme</ref></hi>,
+          die erste von Masereels Holzschnittserien, die eine eigenständige Erzählung ganz ohne Begleittext bilden. Zweig lernt sie Anfang Oktober
+          bei einem Besuch in Genf kennen und ist voller Enthusiasmus. Seine Besprechung des Büchleins, das Masereel im
+          Selbstverlag in einer Auflage von nur fünfzig Exemplaren herausgebracht hat, erscheint am 4. Dezember 1918 in der Basler
+          National-Zeitung und ist nicht nur der erste von später insgesamt fünf Aufsätzen Zweigs über Masereel (unvollständig
+          verzeichnet auf dem entsprechenden <ref target="https://stefanzweig.digital/o:szd.aufsatzablage/sdef:TEI/get?locale=de#SZDESS.408">Registerblatt der zeitgenössischen Aufsatzablage</ref>).
+          Zweig nimmt hier auch, unter dem Titel <hi style="italic"><ref target="https://stefanzweig.digital/o:szd.aufsatzablage/sdef:TEI/get?locale=de#SZDESS.409">Ein Roman ohne Worte</ref></hi>, die spätere Genrebezeichnung
+          ,Graphic Novel' bereits gewissermaßen vorweg: „Aber er
+          ist überhaupt nicht geschrieben, dieser Roman. Nicht Worte sind sein Mittel. In Holz geschnitten sind die
+          fünfundzwanzig Episoden eines anonymen Menschenlebens von dem jungen Belgier Frans Masereel, in dem wir
+          einen der stärksten Künstler unserer Epoche aus manchem Werk längst lieben und der hier sein Bestes gegeben."</p>
+        
+        <p>Ermutigt sowohl von Zweig, in dessen Aufsatz er sich in seinem künstlerischen Ansatz zum ersten Mal ganz
+          wiedererkannt fühlt, als auch von Romain Rolland, dem gemeinsamen Freund und Idol, geht Masereel in seinem
+          nächsten Buch noch viel weiter: <hi style="italic"><ref target="http://masereel.org/bilderfolgen/1919-mon-livre-dheures/">Mon Livre d'Heures</ref></hi>
+          („Mein Stundenbuch") ist eine autobiographisch beeinflusste
+          Erzählung in 169 kleinformatigen Holzschnitten, die zwischen anekdotischen Episoden in fast filmischer Echtzeit
+          und panoramahaften Stimmungsbildern changiert und so der Erfahrung eines ,Leseerlebnisses' noch ungleich näher
+          kommt. Erneut kann Masereel nur knapp 200 Exemplare im Selbstverlag drucken – diese allerdings finden ihren Weg
+          nicht nur nach Salzburg zu Stefan Zweig, wo dieser soeben seinen neuen Wohnsitz bezogen hat und auf das Buch mit
+          überschwänglicher Begeisterung reagiert. Auch <name ref="#SZDPER.1170">Rainer Maria Rilke</name>, dessen eigenes <ref target="https://stefanzweig.digital/o:szd.aufsatzablage/sdef:TEI/get?locale=de#SZDESS.469">Stundenbuch</ref>
+          1905 im Insel-Verlag erschienen ist, weist Anton Kippenberg mit Nachdruck auf das Potenzial einer deutschen Ausgabe des
+          Masereel-Stundenbuches hin. Schneller ist allerdings <name ref="#SZDPER.2310">Hans Mardersteig</name>, der als Mitarbeiter
+          von Kurt Wolff dem Verleger schon kurz nach Erscheinen der kleinen Privatausgabe die Rechte an einer deutschen, kommerziellen
+          gesichert hat und den Weg dafür ebnet, dass alle vier ,Bilderromane', die Masereel 1919 und 1920 in Genf herausbringt,
+          in den Jahren 1920-1924 exklusiv im Kurt Wolff Verlag in München erscheinen. Zweigs eigene wiederholte Versuche,
+          Masereel in eine langfristige Arbeitsbeziehung mit dem Insel-Verlag zu bringen (vgl. seine Briefe von
+          <ref target="o:szd.891">[Anfang November 1919]</ref> und <ref target="o:szd.892">[Ende November 1919]</ref>),
+          scheitern letztlich daran, dass Kippenberg in seinem persönlichen Briefwechsel mit dem Künstler kein Vertrauensverhältnis aufbauen kann, das dem zwischen
+          Masereel und Mardersteig bzw. Masereel und Wolff nahekommt.</p>
+      
+        
+      <figure>
+        <graphic url="IMG.6" />
+        <figDesc>
+          <caption><hi style="italic">Un fait divers</hi>, Genf: Selbstverlag, 1920</caption>
+        </figDesc>   
+      </figure>
+        
+        <p>Zweigs Briefe aus diesen Jahren zeigen bereits deutlich, was zeitlebens so bleiben wird: dass er den
+          Künstler Masereel, der sich nach seinem Umzug nach Paris im Jahr 1922 verstärkt der Malerei zuwenden wird,
+          hier, im Holzschnitt und im innovativen, autonomen Erzählen in Bildern, am Stärksten findet.
+          „<ref target="o:szd.900">C'est le plus beau que tu as jamais produit, un poème saisissant, plein de force,
+          incomparable dans toute l'art nouvelle</ref>", schreibt er ihm über <hi style="italic">L'Idée</hi> im Dezember 1920.
+          „<ref target="o:szd.899">Tu est a un point de maîtrise ou je ne sais presque pas, comme tu puisses encore monter plus haut</ref>",
+          im November 1920 über die von <name ref="#SZDPER.1556">Friderike Zweig</name> hingegen nicht sehr geschätzte
+          <hi style="italic"><ref target="http://masereel.org/bilderfolgen/1920-geschichte-ohne-worte/">Histoire sans paroles</ref></hi>,
+          eine Serie über das hartnäckige, erfolglose Werben eines Mannes um eine Frau und seinen plötzlichen
+          Interessensverlust an ihr, als sie sich ihm zuwendet. Und selbst <hi style="italic">Un fait divers</hi>, eine kleine, in
+          Deutschland nie nachgedruckte Folge aus acht Holzschnitten über die Verführung einer
+          Frau und ihren Selbstmord, stößt im Juli 1920 auf Zweigs große Bewunderung („<ref target="o:szd.896">irgendwie flämisch in seiner
+          Kühnheit, in seiner dämonischen Freiheit</ref>"). Die in <hi style="italic">Fait divers</hi> zentralen Themen des
+          Missbrauchs, der Abtreibung und der gesellschaftlichen Ächtung von Frauen wird Masereel in
+          <ref target="http://masereel.org/bilderfolgen/1921-grotesk-film/">Groteskfilm</ref>, einer Serie von Tuschzeichnungen, die er
+          im selben Jahr im Umfeld eines Berlinaufenthaltes mit <name ref="#SZDPER.1357">Carl</name> und <name ref="#SZDPER.2275">Thea Sternheim</name>
+          beim jungen Verleger <name ref="#SZDPER.2274">Israel Ber Neumann</name> veröffentlicht,
+          noch weiter führen. Diese wird Zweig allerdings, ebenso wie Masereels andere, deutlich von der deutschen
+          Neuen Sachlichkeit und seinem neu gewonnenen Freund <ref target="https://kmska.be/nl/meesterwerk/acrobatum">George Grosz</ref> beeinflusste Arbeiten, in sein
+          idealisiertes Bild des Künstlers Masereel als einem Barden der Moderne in der Tradition <name ref="#SZDPER.1511">Walt Whitmans</name>
+          und <name ref="#SZDPER.1462">Émile Verhaerens</name> nie integrieren.</p>        
+      </div>
+      
+      <div type="col-1" xml:lang="de">
+         <head>
+        <title>Pariser Jahre</title>
+      </head>
+        
+        <p>Mit Masereels Umzug nach Paris im Frühjahr 1922 – kurz nach <ref target="o:szd.903">seinem ersten und einzigen Besuch bei Zweig in Salzburg</ref>
+          – beginnt für die Freundschaft eine neue Phase regelmäßigerer persönlicher Treffen.
+          Insbesondere wichtig erscheint dabei das Jahr 1924, in dem Zweig dreimal für jeweils längere Aufenthalte
+          nach Paris kommt und mit dem Übersetzer <name ref="#SZDPER.585">Alzir Hella</name> eine wichtige Arbeitsbeziehung anknüpft: Zwischen 1927
+          und 1929 wird dieser sieben seiner Bücher übersetzen und in den größten französischen Verlagshäusern
+          platzieren; danach, bis 1939, erscheint jede von Zweigs Neuveröffentlichungen simultan in Hellas
+          französischer Übersetzung. Das Porträt in Öl, das Masereel im Januar 1924 in Paris von Zweig malt –
+          „<ref target="o:szd.906">Lieber Frans, merci de tout coeur, je me sens reconnu</ref>" –, zeigt den Schriftsteller folglich an einem
+          entscheidenden Punkt kurz vor der für seine Zeit beispiellosen, bahnbrechenden
+          Internationalisierung seines literarischen Erfolgs.</p>
+        
+        <figure>
+          <graphic url="IMG.7" />
+          <figDesc>
+            <caption>Porträt Zweigs (Öl auf Leinwand, 1924) und <hi style="italic">Montmartre. Hôtel et Escaliers</hi>
+              (Aquarell, 1926) mit Widmung an Stefan Zweig.</caption>
+          </figDesc>   
+        </figure>
+        
+        <p>Dieselbe Begeisterung über die Metropole Paris im Modernisierungsschub, mit der Zweig im Januar 1924
+          <name ref="#SZDPER.1556">seiner Frau Friderike</name> vom strahlend schönen, ,welthaften' Paris vorschwärmt, findet sich auch in den
+          <ref target="http://masereel.org/work/aquarelle/">farbigen Stadtaquarellen</ref>, die Masereel in dieser Periode schafft. Dass ihnen beiden jedoch auch eine große
+          Ambivalenz dem gegenüber gemeinsam ist, offenbaren mehrere Briefe aus derselben Periode, in denen Zweig Masereel
+          gesteht, die ,Vergnügungsmaschine Paris' dieses Mal sogar gerne wieder verlassen zu haben und seit einiger Zeit
+          ein neues Bedürfnis in sich zu entdecken: „<ref target="o:szd.907">de devenir eremite, de m'enfoncer dans la foret du travail.</ref>" Dabei
+          sei Masereel, so schreibt er im Dezember 1924, einer der ganz wenigen, die seinen Wunsch nach Abkehr und
+          Anonymität nachfühlen könnten. Zu den vermehrten einsamen Arbeitsreisen, die Zweig sich in den
+          Folgejahren als Rückzug angewöhnt – nach Boulogne, nach <ref target="o:szd.908">Marseille</ref>, nach Dijon, nach Folkestone –,
+          wird er Masereel nicht selten einladen.</p>
+      </div>
+      
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>„Bleiben, was wir sind"</title>
+        </head>
+        
+        <p>„<ref target="o:szd.933">Restons ce que nous sommes et devenons encore plus forts et plus sincères</ref>",
+          hatte Zweig an Masereel geschrieben, bevor er im Frühjahr 1919 nach anderthalbjährigem Aufenthalt die
+          Schweiz verließ, und die Hoffnung angefügt, dass unter all den traurigen Erinnerungen an die schlimme Zeit
+          dort diejenige an die Entstehung ihrer Freundschaft immer klar und rein hervorscheinen möge. In der Tat wird die
+          gemeinsame Schlüsselerfahrung eines auf Kultur und Literatur basierten internationalen Freundeskreises, der
+          sich gemeinsam gegen den Krieg zwischen den Nationen stellt, Masereels und Zweigs Freundschaft über fast 25
+          Jahre tragen, während sich der ursprüngliche ,Genfer Kreis' von 1917 so gut wie auflöst: Der streitbare
+          <name ref="#SZDPER.535">Henri Guilbeaux</name> ist, abgeschoben aus der Schweiz, pünktlich zur Gründung der Kommunistischen Internationale
+          nach Moskau gegangen und wird sich 15 Jahre später, zurück in Frankreich, vor allem durch öffentliche
+          Polemiken gegen die meisten alten Freunde hervortun. <name ref="#SZDPER.688">Pierre Jean Jouve</name>, dessen Buch
+          <hi style="italic">Romain Rolland vivant: 1914-1919</hi> nach dem Krieg neben Zweigs
+          <hi style="italic"><ref target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de#SZDBIB.899">Romain Rolland. Der Mann und das Werk</ref></hi>
+          vor allem zur Stilisierung Rollands als Inbegriff intellektueller Unabhängigkeit beiträgt,
+          hat sich zu Anfang der 1920er Jahre über seiner Scheidung von seiner Frau, der Frauenrechtlerin
+          <name ref="#SZDPER.1920">Andrée Charpentier-Jouve</name>, und seinem Verhältnis zur Psychoanalytikerin
+          <name ref="#SZDPER.1916">Blanche Reverchon</name> erst mit Rolland, dann mit Masereel überworfen.</p>
+        
+        <p>Romain Rolland selbst beginnt mit dem Jahr 1929, unter dem Einfluss seiner neuen russischen Lebensgefährtin
+          <name ref="#SZDPER.2311">Maria Kudaschewa</name> (der späteren Marie Romain Rolland), den Sowjetkommunismus Stalins
+          öffentlich als friedlich-freiheitlichen Gegenpol zu den faschistischen Bewegungen Westeuropas zu idealisieren. Hierauf werden sich zahlreiche der alten
+          ,Rollandisten', wie etwa <name ref="#SZDPER.911">Marcel Martinet</name>, von ihm abkehren. Dass
+          <ref target="o:szd.919">„wir beinahe die letzten sind, die ganz und
+          unverbrüchig zu seinem engeren Kreise gehören</ref>", schreibt Zweig im Juni 1931 an Masereel. Allerdings ignoriert
+          er dabei, dass sich auch zwischen ihm, Rolland und Masereel bereits Differenzen abzeichnen, die sich im Laufe
+          der 1930er Jahre manifestieren werden. (Die große Feier etwa, <ref target="o:szd.1636">die Zweig im Jahr 1935 zu Ehren von
+          Romain Rollands siebzigstem Geburtstag plant</ref>, wird schließlich vollkommen von der komintern-nahen
+          Association des artistes et écrivains révolutionnaires und der Kommunistischen Partei Frankreichs
+          gekapert werden.) Dass er 1931 während mehrerer Monate noch ernsthaft den Plan verfolgt, mit Masereel
+          zusammen einen längeren Aufenthalt in der Sowjetunion zu unternehmen und dort gemeinsam einen illustrierten
+          Reisebericht zu erarbeiten (vgl. seine Briefe an Masereel vom <ref target="o:szd.919">13. Juni 1931</ref>,
+          <ref target="o:szd.922">1. August 1931</ref> und <ref target="o:szd.924">22. August 1931</ref>),
+          erscheint vor diesem Hintergrund insbesondere interessant.</p>
+      </div>
+      
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>Zensur im Nationalsozialismus</title>
+        </head>
+        
+        <p>Im Frühjahr 1931 fungiert Zweig zusammen mit Romain Rolland und <name ref="#SZDPER.894">Heinrich Mann</name> als
+          <ref target="o:szd.918">Jury für ein Preisausschreiben zur Ermittlung des besten Prosatextes zu einer von Masereels
+            Holzschnitt-,Romanen'</ref>, das Masereels neuer Verleger <name ref="#SZDPER.2276">Wilhelm Regendanz</name> (Transmare-Verlag)
+          nach der Auflösung des Kurt Wolff Verlags veranstaltet und das der von Zweig geförderte junge Schriftsteller
+          <name ref="#SZDPER.1743">Walter Bauer</name> für sich entscheiden wird.
+          Im Januar 1932 illustriert Masereel <ref target="o:szd.926">auf Zweigs Bitte hin</ref> ein Interview, das der Journalist
+          Frédéric Lefèvre mit ihm über die ,Rolle des Intellektuellen
+          in der gegenwärtigen Krise' in der Pariser Zeitschrift <hi style="italic">Les Nouvelles littéraires</hi> veröffentlicht, mit einer
+          Porträt-Tuschzeichnung. Da Masereel durch die Wirtschaftskrise immer weniger Gemälde verkauft,
+          wiegt für ihn besonders schwer, dass sich der Transmare-Verlag innerhalb kurzer Zeit als wenig
+          verlässlicher Partner für Deutschland erweist. Auf Masereels Bitte hin versucht Zweig, seinen eigenen
+          Verleger Anton Kippenberg von einer Übernahme der Rechte am gesamten druckgraphischen Werk Masereels zu
+          überzeugen, was Kippenberg in dieser umfassenden Form allerdings strikt ablehnt. Eventuell denkt Zweig
+          dennoch, ihn später noch umstimmen zu können: An Masereel schreibt er im Januar 1933, wobei er die
+          entsprechende Stelle im diktierten Brief noch handschriftlich redigiert: "<ref target="o:szd.927">Mit Kippenberg habe ich gesprochen,
+          er möchte leidenschaftlich gern (und will sich deshalb mit dem Transmare-Verlag ins Einvernehmen setzen) zur
+          Einführung eine Deiner früheren Sachen, etwa ,Idee' in der Inselbücherei zu 80 Pfennig bringen, und ferner
+          Deine neuen Bücher.</ref>" Immerhin: Im April 1933 bringt der Insel-Verlag, während zur selben Zeit bereits Arbeiten
+          von Masereel in der nationalsozialistischen Propaganda-Ausstellung Kulturbolschewistische Bilder gezeigt werden,
+          noch einmal eine Neuauflage der ,Geschichte ohne Worte' heraus, die sogar 1935 wegen ihres durchschlagenden Erfolgs,
+          noch ein zweites Mal mit 5.000 Exemplaren neu aufgelegt wird. Ein Jahr später, 1936, werden die Werke von beiden,
+          Zweig und Masereel, in Deutschland endgültig verboten.</p>
+        
+        <figure>
+          <graphic url="IMG.8" />
+          <figDesc>
+            <caption><hi style="italic">Les Nouvelles littéraires</hi>, 9. Januar 1932, Interview mit Stefan Zweig, illustriert von Frans Masereel.</caption>
+          </figDesc>   
+        </figure>
+        
+        <p>Seinen eigenen Bruch mit dem Insel-Verlag, der in Wahrheit kompliziert und langwierig ist, stellt
+          Zweig Masereel im Oktober 1933 <ref target="o:szd.932">etwas rigoroser dar, als er wirklich ist</ref>. Während Zweig sich damit schwer tut,
+          sich oppositionellen Emigrantenkreisen anzuschließen, arbeitet Masereel in Paris sehr früh mit der deutschen politischen
+          Emigration zusammen und engagiert sich unter anderem auch in Initiativen der KPD im Exil. Dass sich hierüber in diesen
+          Jahren keine tiefe Entfremdung ergibt oder eine solche jedenfalls nicht zum Tragen kommt, erklärt sich wohl teils
+          auch damit, dass Masereel sich von Zweig, der mittlerweile in London lebt – und damit näher an Paris denn je –, auch
+          Hilfe dabei erhofft, auf dem englischen Kunstmarkt Fuß fassen zu können. Mit seiner Bereitschaft, ein <ref target="o:szd.412">Vorwort</ref>
+          zum <ref target="https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=de#SZDBIB.72">Katalog der ersten
+            englischen Masereel-Einzelausstellung</ref> zu schreiben („<ref target="o:szd.1640">Natürlich schreibe ich mit grösster Freude
+          die kleine Vorrede</ref>"), ebnet er hierfür einen ersten Weg. Gleichzeitig versucht er, zusammen mit Masereels Mäzen
+          <name ref="#SZDPER.2277">Georg Reinhart</name> in Winterthur und Masereels Verleger
+          <name ref="#SZDPER.2276">Wilhelm Regendanz</name>, der nach dem Röhm-Putsch ebenfalls nach
+          London geflohen ist, in der englischen Hauptstadt einen Mikroverlag für die Neuherausgabe von Masereels
+          Holzschnittfolgen aus den 1920er Jahren zu gründen – ein Plan, der allerdings keine Früchte trägt.</p>
+        
+        <figure>
+          <graphic url="IMG.9" />
+          <figDesc>
+            <caption>Katalog der ersten englischen Masereel-Einzelausstellung, Leicester Galleries, London, 1936.</caption>
+          </figDesc>   
+        </figure>
+      </div>
+      
+      <div type="col-1" xml:lang="de">
+        <head>
+          <title>„Wir haben nicht das Recht, zu schweigen"</title>
+        </head>
+        
+        <p>Ein Appell, den Masereel kurz vor Kriegsausbruch noch in einer deutschen Emigrantenzeitschrift veröffentlicht,
+          heißt <hi style="italic">An meine Freunde, die Künstler!</hi> und beinhaltet das entschiedene Postulat „Wir haben nicht das Recht, zu schweigen,
+          noch indifferent zu sein gegenüber dem, was rings um uns geschieht". Erstaunlich ähnlich liest sich der Titel
+          der Ansprache, die Zweig bei seinem letzten Aufenthalt in Paris, kurz vor seiner letzten persönlichen Begegnung
+          mit Masereel, für Radio Paris liest: <ref target="o:szd.210"><hi style="italic">Pour ceux qui ne peuvent pas parler</hi></ref>: „Für jene, die nicht sprechen können".
+          Mit der <ref target="o:szd.1645">kurzen Notiz, in der er Masereel den Zeitpunkt der Radioübertragung mitteilt</ref>, schickt er ihm zugleich
+          zwei Eintrittskarten für ihn und seine Frau Pauline für den Vortrag <ref target="https://stefanzweig.digital/o:szd.werke/sdef:TEI/get?locale=de#SZDMSK.276"><hi style="italic">La Vienne d'hier</hi></ref>,
+          „Das Wien von gestern", den er am Abend des 26. April 1940 im Théâtre Marigny vor 1.600 Zuhörerinnen und Zuhörern hält. Nur vierzehn Tage
+          später startet die deutsche Wehrmacht ihren Blitzkrieg gegen Belgien, die Niederlande, Luxemburg und Frankreich,
+          und während Stefan Zweig und <name ref="#SZDPER.1555">seine zweite Frau Lotte</name>, frisch verheiratet, im Juni 1940 in England das Schiff
+          nach New York besteigen, fliehen Frans und Pauline Masereel innerhalb einer Massenkolonne von Flüchtlingen
+          und Soldaten im Rückzug zu Fuß aus Paris, 450 Kilometer nach Südfrankreich, in die freie Zone.
+          Über Umwege – „<ref target="o:szd.1646">un détour via New York</ref>", wie er schreibt – erfährt Stefan Zweig im November 1940,
+          fünf Monate später, vom Aufenthaltsort der Masereels in Avignon und bietet seine Hilfe bei der
+          Ausreise aus Europa an.</p>
+        
+        <figure>
+          <graphic url="IMG.10" />
+          <figDesc>
+            <caption>Frans Masereel und Stefan Zweig, ca. 1940, je fotografiert von <name ref="#SZDPER.1562">Suse von Winternitz</name>.</caption>
+          </figDesc>   
+        </figure>
+        
+        <p>Über den gemeinsamen Freund <name ref="#SZDPER.1574">Hermann Kesten</name>,
+          der sich, selbst ausgewandert, in den USA für die Ausreise verfolgter
+          Intellektueller aus Europa engagiert, bleibt Stefan Zweig auf dem Laufenden über die <ref target="o:szd.1647">Schwierigkeiten, die sich aus
+          Masereels Antrag auf ein Emergency Rescue Visum ergeben</ref>. Mithilfe seiner Beziehungen zum Schriftsteller und
+          kolumbianischen Botschafter in Argentinien <name ref="#SZDPER.2279">Germán Arciniegas</name> und der Kontakte des nach Argentinien ausgewanderten
+          Masereel-Sammlers <name ref="#SZDPER.2280">Walter Engel</name> zum belgischen Diplomaten <name ref="#SZDPER.2313">René Louis van Meerbeke</name> gelingt es jedoch, für Masereel ein
+          Visum nach Kolumbien zu beschaffen. Da Zweigs Briefe bei Masereel – und Masereels Briefe bei Zweig – vermutlich
+          mit einer Verspätung von mehreren Monaten eingehen und nach Zweigs Abreise aus England nach Amerika keine
+          <ref target="https://stefanzweig.digital/o:szd.korrespondenzen/sdef:TEI/get?locale=de#SZDKOR.276">Gegenbriefe von Masereel</ref>
+          mehr erhalten sind, ist nicht klar, ob Zweig nochmals von seinem Freund gehört hat,
+          als er sich im Februar 1942 das Leben nimmt. <ref target="o:szd.1649">Sein letzter Brief an Masereel</ref> datiert vom 15. August 1941.
+          Das Visum für Lateinamerika haben Frans und Pauline Masereel nicht in Anspruch genommen.</p>
+        
+        <p><hi style="italic">Die Dissertation</hi> Stefan Zweig und Frans Masereel. Geschichte ihrer Freundschaft in Briefen und
+          Dokumenten 1917-1942 <hi style="italic">wurde im Dezember 2025 an der Albert-Ludwigs-Universität Freiburg im Breisgau als
+            Promotionsschrift eingereicht und soll 2026 in der Schriftenreihe </hi>Klassische Moderne <hi style="italic">im Nomos Verlag,
+          Baden-Baden erscheinen.</hi></p>
+        
+      </div>
+    </body>
+  </text>
+</TEI>
