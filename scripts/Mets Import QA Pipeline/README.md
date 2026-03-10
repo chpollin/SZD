@@ -2,11 +2,6 @@
 
 Pre-ingest validation and cleanup for digitized object metadata (GAMS Viewer XML + page images).
 
-## Dataset: SZ-AAL/B2
-
-Stefan Zweig → Lotte Zweig correspondence (1934–1935), Literaturarchiv Salzburg.
-49 objects (`SZ_AAL_B2.1`–`SZ_AAL_B2.50`, B2.40 missing), each containing a `Result_*.xml` and JPEG page images.
-
 ## Scripts
 
 | Script | Purpose |
@@ -26,13 +21,6 @@ Run: `python validate_results.py` / `python fix_issues.py`
 | `Farbreferenzen` (plural typo) | B2.14 | Corrected to `Farbreferenz` |
 | `Textseite`/`Adressseite` (singular) | B2.50 | Corrected to plural form |
 
-## Open Issues (require manual intervention)
-
-| Issue | Folder |
-|-------|--------|
-| Empty XML (0 bytes) | B2.16 |
-| Missing image `_004.jpg` + empty `<date/>` | B2.33 |
-| Missing folder | B2.40 |
 
 ## XML Structure
 
