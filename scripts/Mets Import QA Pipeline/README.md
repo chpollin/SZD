@@ -1,4 +1,4 @@
-# GAMS Viewer Import QA Pipeline
+# METS Import QA Pipeline
 
 Pre-ingest validation and cleanup for digitized object metadata (GAMS Viewer XML + page images).
 
