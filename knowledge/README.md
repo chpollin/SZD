@@ -15,6 +15,9 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 ### System Architecture
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System components, data flow, and platform integration
 
+### Ontology
+- [ONTOLOGY.md](ONTOLOGY.md) - Stefan Zweig Digital Nachlass-Ontologie (SZDO): Formaler Ontologie-Entwurf basierend auf RiC, IFLA LRM und CIDOC-CRM, inkl. Klawiter-Integration
+
 ---
 
 ## Quick Reference

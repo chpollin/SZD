@@ -1,0 +1,1118 @@
+@prefix szdo:    <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix szdg:    <https://gams.uni-graz.at/o:szd.glossar#> .
+@prefix gams:    <https://gams.uni-graz.at/o:gams-ontology#> .
+@prefix rico:    <https://www.ica.org/standards/RiC/ontology#> .
+@prefix lrm:     <http://iflastandards.info/ns/lrm/lrmer/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <https://schema.org/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# =============================================================================
+# Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+# =============================================================================
+#
+# Formale Ontologie für den digitalen Nachlass Stefan Zweigs.
+# Archivische Grundlage: Records in Context (RiC-O)
+# Werkmodellierung: IFLA Library Reference Model (LRM)
+# Ereignisse/Provenienz: CIDOC Conceptual Reference Model (CRM)
+#
+# Namespace: https://gams.uni-graz.at/o:szd.ontology#
+# Lizenz: CC-BY 4.0
+# =============================================================================
+
+<https://gams.uni-graz.at/o:szd.ontology>
+    a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:title "Stefan Zweig Digital Nachlass-Ontologie"@de ,
+                  "Stefan Zweig Digital Estate Ontology"@en ;
+    dcterms:description
+        "Ontologie zur Beschreibung des digitalen Nachlasses von Stefan Zweig. Modelliert archivalische, bibliographische und biographische Entitäten und deren Beziehungen."@de ,
+        "Ontology for describing the digital estate of Stefan Zweig. Models archival, bibliographic, and biographical entities and their relationships."@en ;
+    dcterms:creator "Christopher Pollin, Digital Humanities Craft OG" ;
+    dcterms:created "2026-03-29"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports <https://www.ica.org/standards/RiC/ontology> ;
+    rdfs:seeAlso <https://stefanzweig.digital> .
+
+
+# =============================================================================
+# PART 1: ARCHIVSCHICHT (Archival Layer)
+# Fundament: Records in Context (RiC-O)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1.1 Nachlass (Fonds)
+# -----------------------------------------------------------------------------
+
+szdo:Nachlass
+    a owl:Class ;
+    rdfs:subClassOf rico:RecordSet ;
+    rdfs:label "Nachlass"@de , "Estate"@en ;
+    rdfs:comment
+        "Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe."@de ,
+        "The complete estate as an archival fonds. Corresponds to the top-level description unit."@en ;
+    skos:example "Stefan Zweig Nachlass, Literaturarchiv Salzburg" .
+
+# -----------------------------------------------------------------------------
+# 1.2 Sammlungen (Collections / Series)
+# -----------------------------------------------------------------------------
+
+szdo:Sammlung
+    a owl:Class ;
+    rdfs:subClassOf rico:RecordSet ;
+    rdfs:label "Sammlung"@de , "Collection"@en ;
+    rdfs:comment
+        "Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz."@de ,
+        "Sub-collection of the estate, organized by material type or provenance."@en .
+
+szdo:Werksammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Werksammlung"@de , "Works Collection"@en ;
+    rdfs:comment
+        "Sammlung von Manuskripten, Typoskripten und Entwürfen literarischer Werke."@de ,
+        "Collection of manuscripts, typescripts, and drafts of literary works."@en ;
+    szdo:entsprichtPID "o:szd.werke" .
+
+szdo:Korrespondenzsammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Korrespondenzsammlung"@de , "Correspondence Collection"@en ;
+    rdfs:comment
+        "Sammlung der Korrespondenz-Konvolute (Briefe an und von Stefan Zweig)."@de ,
+        "Collection of correspondence bundles (letters to and from Stefan Zweig)."@en ;
+    szdo:entsprichtPID "o:szd.korrespondenzen" .
+
+szdo:Autographensammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Autographensammlung"@de , "Autograph Collection"@en ;
+    rdfs:comment
+        "Zweigs Sammlung handschriftlicher Dokumente anderer Autoren und Persönlichkeiten."@de ,
+        "Zweig's collection of handwritten documents by other authors and public figures."@en ;
+    szdo:entsprichtPID "o:szd.autographen" .
+
+szdo:Bibliothekssammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Bibliothekssammlung"@de , "Library Collection"@en ;
+    rdfs:comment
+        "Rekonstruierte Privatbibliothek Stefan Zweigs mit Provenienzmerkmalen."@de ,
+        "Reconstructed personal library of Stefan Zweig with provenance features."@en ;
+    szdo:entsprichtPID "o:szd.bibliothek" .
+
+szdo:Lebensdokumentesammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Lebensdokumentesammlung"@de , "Personal Documents Collection"@en ;
+    rdfs:comment
+        "Persönliche Dokumente: Verträge, Urkunden, Tagebücher, Ephemera."@de ,
+        "Personal documents: contracts, certificates, diaries, ephemera."@en ;
+    szdo:entsprichtPID "o:szd.lebensdokumente" .
+
+szdo:Aufsatzsammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Aufsatzsammlung"@de , "Essay Collection"@en ;
+    rdfs:comment
+        "Sammlung von Essays, Feuilletons und journalistischen Beiträgen."@de ,
+        "Collection of essays, feuilletons, and journalistic contributions."@en ;
+    szdo:entsprichtPID "o:szd.essays" .
+
+szdo:ThematischeSammlung
+    a owl:Class ;
+    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:label "Thematische Sammlung"@de , "Thematic Collection"@en ;
+    rdfs:comment
+        "Kuratierte, themenbasierte Zusammenstellung aus verschiedenen Beständen."@de ,
+        "Curated, theme-based compilation from various holdings."@en ;
+    skos:example "Wie Stefan Zweig schreibt (o:szd.thema.2), Marie Antoinette (o:szd.thema.1)" .
+
+# -----------------------------------------------------------------------------
+# 1.3 Nachlassobjekte (Records / Items)
+# -----------------------------------------------------------------------------
+
+szdo:NachlassObjekt
+    a owl:Class ;
+    rdfs:subClassOf rico:Record ;
+    rdfs:label "Nachlassobjekt"@de , "Estate Object"@en ;
+    rdfs:comment
+        "Einzelnes physisches Objekt im Nachlass."@de ,
+        "Individual physical object in the estate."@en .
+
+szdo:Manuskript
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Manuskript"@de , "Manuscript"@en ;
+    rdfs:comment
+        "Handschriftliches Werkmanuskript (Autograph)."@de ,
+        "Handwritten work manuscript (autograph)."@en .
+
+szdo:Typoskript
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Typoskript"@de , "Typescript"@en ;
+    rdfs:comment
+        "Maschinschriftliches Dokument."@de ,
+        "Typewritten document."@en .
+
+szdo:Typoskriptdurchschlag
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Typoskriptdurchschlag"@de , "Carbon Copy Typescript"@en ;
+    rdfs:comment
+        "Durchschlag (Kohlepapier-Kopie) eines Typoskripts."@de ,
+        "Carbon copy of a typescript."@en .
+
+szdo:Notizbuch
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Notizbuch"@de , "Notebook"@en ;
+    rdfs:comment
+        "Notizbuch mit Entwürfen, Notizen oder Skizzen."@de ,
+        "Notebook with drafts, notes, or sketches."@en .
+
+szdo:Konvolut
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Konvolut"@de , "Ensemble"@en ;
+    rdfs:comment
+        "Zusammengestelltes Ensemble aus mehreren Dokumententypen (z.B. Typoskript + Durchschlag + Umschlag)."@de ,
+        "Assembled ensemble of multiple document types (e.g., typescript + carbon copy + wrapper)."@en .
+
+szdo:Korrekturfahne
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Korrekturfahne"@de , "Galley Proof"@en ;
+    rdfs:comment
+        "Druckfahne mit handschriftlichen Korrekturen."@de ,
+        "Galley proof with handwritten corrections."@en .
+
+szdo:KorrespondenzKonvolut
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Korrespondenzkonvolut"@de , "Bundle of Correspondence"@en ;
+    rdfs:comment
+        "Bündel von Korrespondenzstücken zwischen Stefan Zweig und einem Korrespondenzpartner."@de ,
+        "Bundle of correspondence pieces between Stefan Zweig and a correspondence partner."@en .
+
+szdo:Autograph
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Autograph"@de , "Autograph"@en ;
+    rdfs:comment
+        "Handschriftliches Dokument eines Dritten aus Zweigs Autographensammlung."@de ,
+        "Handwritten document by a third party from Zweig's autograph collection."@en .
+
+szdo:Buch
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Buch"@de , "Book"@en ;
+    rdfs:comment
+        "Buch aus Stefan Zweigs rekonstruierter Privatbibliothek."@de ,
+        "Book from Stefan Zweig's reconstructed personal library."@en .
+
+szdo:Lebensdokument
+    a owl:Class ;
+    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:label "Lebensdokument"@de , "Personal Document"@en ;
+    rdfs:comment
+        "Persönliches Dokument: Vertrag, Urkunde, Tagebuch, Plakat, Einladung, etc."@de ,
+        "Personal document: contract, certificate, diary, poster, invitation, etc."@en .
+
+# -----------------------------------------------------------------------------
+# 1.4 Digitale Objekte (Digital Representations)
+# -----------------------------------------------------------------------------
+
+szdo:DigitalesObjekt
+    a owl:Class ;
+    rdfs:subClassOf rico:Instantiation ;
+    rdfs:label "Digitales Objekt"@de , "Digital Object"@en ;
+    rdfs:comment
+        "Digitale Repräsentation eines physischen Nachlassobjekts."@de ,
+        "Digital representation of a physical estate object."@en .
+
+szdo:METSObjekt
+    a owl:Class ;
+    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:label "METS-Objekt"@de , "METS Object"@en ;
+    rdfs:comment
+        "METS-Container mit strukturellen Metadaten und Seitenverweisen (DFG-METS)."@de ,
+        "METS container with structural metadata and page references (DFG-METS)."@en .
+
+szdo:IIIFManifest
+    a owl:Class ;
+    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:label "IIIF-Manifest"@de , "IIIF Manifest"@en ;
+    rdfs:comment
+        "IIIF Presentation API Manifest für die Darstellung in Viewern (z.B. Mirador)."@de ,
+        "IIIF Presentation API manifest for rendering in viewers (e.g., Mirador)."@en .
+
+szdo:Faksimile
+    a owl:Class ;
+    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:label "Faksimile"@de , "Facsimile"@en ;
+    rdfs:comment
+        "Einzelnes hochauflösendes digitales Bild einer Seite."@de ,
+        "Single high-resolution digital image of a page."@en .
+
+
+# =============================================================================
+# PART 2: WERKSCHICHT (Work Layer)
+# Fundament: IFLA Library Reference Model (LRM)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 2.1 Werk-Hierarchie (WEMI)
+# -----------------------------------------------------------------------------
+
+szdo:Werk
+    a owl:Class ;
+    rdfs:label "Werk"@de , "Work"@en ;
+    rdfs:comment
+        "Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex."@de ,
+        "Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index."@en ;
+    rdfs:subClassOf lrm:Work ;
+    szdo:entsprichtPID "o:szd.werkindex" .
+
+szdo:WerkExpression
+    a owl:Class ;
+    rdfs:label "Werkexpression"@de , "Work Expression"@en ;
+    rdfs:comment
+        "Sprachliche oder mediale Realisierung eines Werks: Originaltext, Übersetzung, Verfilmung, Vertonung."@de ,
+        "Linguistic or medial realization of a work: original text, translation, film adaptation, musical setting."@en ;
+    rdfs:subClassOf lrm:Expression .
+
+szdo:Manifestation
+    a owl:Class ;
+    rdfs:label "Manifestation"@de , "Manifestation"@en ;
+    rdfs:comment
+        "Publizierte Ausgabe eines Werks: Erstausgabe, Neuauflage, Übersetzungsausgabe. Brücke zu Klawiter-Einträgen."@de ,
+        "Published edition of a work: first edition, reprint, translation edition. Bridge to Klawiter entries."@en ;
+    rdfs:subClassOf lrm:Manifestation .
+
+szdo:Exemplar
+    a owl:Class ;
+    rdfs:label "Exemplar"@de , "Item"@en ;
+    rdfs:comment
+        "Konkretes physisches Exemplar einer Manifestation. Brücke zu szdo:NachlassObjekt (z.B. ein bestimmtes Buch in Zweigs Bibliothek)."@de ,
+        "Concrete physical copy of a manifestation. Bridge to szdo:NachlassObjekt (e.g., a specific book in Zweig's library)."@en ;
+    rdfs:subClassOf lrm:Item .
+
+# -----------------------------------------------------------------------------
+# 2.2 Werktypen (nach Inhalt)
+# -----------------------------------------------------------------------------
+
+szdo:BelletristischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Belletristisches Werk"@de , "Fiction"@en ;
+    rdfs:comment "Novellen, Romane, Erzählungen."@de , "Novellas, novels, short stories."@en .
+
+szdo:EssayistischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Essayistisches Werk"@de , "Essay"@en ;
+    rdfs:comment "Essays, Feuilletons, Rezensionen."@de , "Essays, feuilletons, reviews."@en .
+
+szdo:BiographischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Biographisches Werk"@de , "Biographical Work"@en ;
+    rdfs:comment "Biographien (Fouché, Marie Antoinette, Erasmus, Magellan, etc.)."@de ,
+                 "Biographies (Fouché, Marie Antoinette, Erasmus, Magellan, etc.)."@en .
+
+szdo:HistorischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Historisches Werk"@de , "Historical Work"@en ;
+    rdfs:comment "Historische Miniaturen und Darstellungen (z.B. Sternstunden der Menschheit)."@de ,
+                 "Historical miniatures and depictions (e.g., Decisive Moments in History)."@en .
+
+szdo:DramatischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Dramatisches Werk"@de , "Dramatic Work"@en ;
+    rdfs:comment "Theaterstücke, Libretti."@de , "Plays, libretti."@en .
+
+szdo:LyrischesWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Lyrisches Werk"@de , "Poetry"@en ;
+    rdfs:comment "Gedichte, Gedichtsammlungen."@de , "Poems, poetry collections."@en .
+
+szdo:SammelWerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Sammelwerk"@de , "Collected Works"@en ;
+    rdfs:comment "Kompilationen, gesammelte Werke, Anthologien."@de ,
+                 "Compilations, collected works, anthologies."@en .
+
+szdo:Uebersetzungswerk
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Übersetzungswerk"@de , "Translation Work"@en ;
+    rdfs:comment "Zweigs Übersetzungen von Werken anderer Autoren (Verlaine, Verhaeren, etc.)."@de ,
+                 "Zweig's translations of works by other authors (Verlaine, Verhaeren, etc.)."@en .
+
+szdo:VorwortNachwort
+    a owl:Class ;
+    rdfs:subClassOf szdo:Werk ;
+    rdfs:label "Vorwort/Nachwort"@de , "Foreword/Afterword"@en ;
+    rdfs:comment "Vorworte, Nachworte, Einleitungen zu Werken anderer."@de ,
+                 "Forewords, afterwords, introductions to works by others."@en .
+
+# -----------------------------------------------------------------------------
+# 2.3 Sekundärliteratur (nicht Teil des Nachlasses, aber des Forschungskontexts)
+# -----------------------------------------------------------------------------
+
+szdo:Sekundaerliteratur
+    a owl:Class ;
+    rdfs:label "Sekundärliteratur"@de , "Secondary Literature"@en ;
+    rdfs:comment
+        "Wissenschaftliche oder publizistische Arbeiten über Stefan Zweig und sein Werk. Nicht Teil des Nachlasses, aber des Forschungskontexts (primär aus Klawiter-Bibliographie)."@de ,
+        "Scholarly or journalistic works about Stefan Zweig and his oeuvre. Not part of the estate, but of the research context (primarily from Klawiter bibliography)."@en .
+
+
+# =============================================================================
+# PART 3: AKTEUR- UND INDEXSCHICHT (Agent & Index Layer)
+# =============================================================================
+
+szdo:Akteur
+    a owl:Class ;
+    rdfs:label "Akteur"@de , "Agent"@en ;
+    rdfs:comment "Person oder Organisation mit Bezug zum Nachlass."@de ,
+                 "Person or organization related to the estate."@en ;
+    owl:equivalentClass rico:Agent ;
+    rdfs:subClassOf crm:E39_Actor .
+
+szdo:Person
+    a owl:Class ;
+    rdfs:subClassOf szdo:Akteur ;
+    rdfs:label "Person"@de , "Person"@en ;
+    rdfs:comment
+        "Person mit Normdatenverknüpfung (GND, Wikidata, VIAF). Entspricht SZDPER-Einträgen."@de ,
+        "Person with authority file links (GND, Wikidata, VIAF). Corresponds to SZDPER entries."@en ;
+    owl:equivalentClass rico:Person ;
+    rdfs:subClassOf crm:E21_Person, foaf:Person ;
+    szdo:entsprichtPID "o:szd.personen" .
+
+szdo:Organisation
+    a owl:Class ;
+    rdfs:subClassOf szdo:Akteur ;
+    rdfs:label "Organisation"@de , "Organization"@en ;
+    rdfs:comment
+        "Institution, Verlag, Archiv, Bibliothek. Entspricht SZDSTA-Einträgen (Standorte)."@de ,
+        "Institution, publisher, archive, library. Corresponds to SZDSTA entries (locations)."@en ;
+    owl:equivalentClass rico:CorporateBody ;
+    rdfs:subClassOf crm:E74_Group, foaf:Organization ;
+    szdo:entsprichtPID "o:szd.standorte" .
+
+
+# =============================================================================
+# PART 4: BIOGRAPHIE- UND EREIGNISSCHICHT (Biographical & Event Layer)
+# Fundament: CIDOC-CRM
+# =============================================================================
+
+szdo:BiographischesEreignis
+    a owl:Class ;
+    rdfs:label "Biographisches Ereignis"@de , "Biographical Event"@en ;
+    rdfs:comment
+        "Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender."@de ,
+        "Event in Stefan Zweig's life. Corresponds to SZDBIO entries in the life calendar."@en ;
+    rdfs:subClassOf crm:E5_Event ;
+    szdo:entsprichtPID "o:szd.lebenskalender" .
+
+szdo:Geburt
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Geburt"@de , "Birth"@en ;
+    rdfs:subClassOf crm:E67_Birth .
+
+szdo:Tod
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Tod"@de , "Death"@en ;
+    rdfs:subClassOf crm:E69_Death .
+
+szdo:Reise
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Reise"@de , "Journey"@en ;
+    rdfs:comment "Reisen, Aufenthalte, Ortswechsel."@de , "Journeys, stays, relocations."@en .
+
+szdo:Publikationsereignis
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Publikationsereignis"@de , "Publication Event"@en ;
+    rdfs:comment "Veröffentlichung eines Werks."@de , "Publication of a work."@en .
+
+szdo:Begegnung
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Begegnung"@de , "Encounter"@en ;
+    rdfs:comment "Treffen mit Personen."@de , "Meeting with persons."@en .
+
+szdo:InstitutionellesEreignis
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Institutionelles Ereignis"@de , "Institutional Event"@en ;
+    rdfs:comment "Verleihungen, Ehrungen, Mitgliedschaften."@de ,
+                 "Awards, honors, memberships."@en .
+
+szdo:Exilereignis
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Exilereignis"@de , "Exile Event"@en ;
+    rdfs:comment "Emigration, Flucht, Exilstationen."@de ,
+                 "Emigration, flight, exile stations."@en .
+
+szdo:WissenschaftlichesEreignis
+    a owl:Class ;
+    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:label "Wissenschaftliches Ereignis"@de , "Scholarly Event"@en ;
+    rdfs:comment "Symposien, Konferenzen, Ausstellungen zu Stefan Zweig."@de ,
+                 "Symposia, conferences, exhibitions about Stefan Zweig."@en .
+
+
+# =============================================================================
+# PART 5: ORTS- UND RAUMSCHICHT (Place Layer)
+# =============================================================================
+
+szdo:Ort
+    a owl:Class ;
+    rdfs:label "Ort"@de , "Place"@en ;
+    rdfs:comment "Geographischer oder institutioneller Ort."@de ,
+                 "Geographical or institutional place."@en ;
+    owl:equivalentClass rico:Place ;
+    rdfs:subClassOf crm:E53_Place .
+
+szdo:GeographischerOrt
+    a owl:Class ;
+    rdfs:subClassOf szdo:Ort ;
+    rdfs:label "Geographischer Ort"@de , "Geographical Place"@en ;
+    rdfs:comment "Stadt, Land, Region (Geonames-verknüpft)."@de ,
+                 "City, country, region (Geonames-linked)."@en .
+
+szdo:Aufbewahrungsort
+    a owl:Class ;
+    rdfs:subClassOf szdo:Ort ;
+    rdfs:label "Aufbewahrungsort"@de , "Repository"@en ;
+    rdfs:comment
+        "Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten."@de ,
+        "Archive, library, or museum as repository for estate objects."@en .
+
+szdo:Entstehungsort
+    a owl:Class ;
+    rdfs:subClassOf szdo:Ort ;
+    rdfs:label "Entstehungsort"@de , "Place of Origin"@en ;
+    rdfs:comment "Ort, an dem ein Objekt oder Werk geschaffen wurde."@de ,
+                 "Place where an object or work was created."@en .
+
+
+# =============================================================================
+# PART 6: PROVENIENZSCHICHT (Provenance Layer)
+# =============================================================================
+
+szdo:Provenienzereignis
+    a owl:Class ;
+    rdfs:label "Provenienzereignis"@de , "Provenance Event"@en ;
+    rdfs:comment
+        "Einzelnes Erwerbungs- oder Besitzwechsel-Ereignis in der Geschichte eines Objekts."@de ,
+        "Single acquisition or ownership-change event in the history of an object."@en ;
+    rdfs:subClassOf crm:E8_Acquisition .
+
+szdo:ProvenienzmerkmalInstanz
+    a owl:Class ;
+    rdfs:label "Provenienzmerkmalsinstanz"@de , "Provenance Feature Instance"@en ;
+    rdfs:comment
+        "Konkretes Provenienzmerkmal an einem Objekt (Stempel, Exlibris, Marginalie, etc.). Verknüpft mit szdg:ProvenanceFeature (SKOS)."@de ,
+        "Concrete provenance feature on an object (stamp, bookplate, marginalia, etc.). Linked to szdg:ProvenanceFeature (SKOS)."@en .
+
+szdo:Umfang
+    a owl:Class ;
+    rdfs:label "Umfang"@de , "Extent"@en ;
+    rdfs:comment "Umfangsangabe eines Nachlassobjekts (Blatt, Seiten, Stücke)."@de ,
+                 "Extent information of an estate object (leaves, pages, pieces)."@en .
+
+szdo:Beilage
+    a owl:Class ;
+    rdfs:label "Beilage"@de , "Enclosure"@en ;
+    rdfs:comment "Beilage oder Zusatzmaterial zu einem Nachlassobjekt (Kuvert, Deckblatt, Flügelmappe)."@de ,
+                 "Enclosure or supplementary material of an estate object (envelope, cover sheet, flap binder)."@en .
+
+
+# =============================================================================
+# PART 7: OBJECT PROPERTIES (Beziehungen)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 7.1 Strukturelle Beziehungen (Nachlass-Hierarchie)
+# -----------------------------------------------------------------------------
+
+szdo:enthaelt
+    a owl:ObjectProperty ;
+    rdfs:label "enthält"@de , "contains"@en ;
+    rdfs:comment "Der Nachlass/die Sammlung enthält untergeordnete Sammlungen oder Objekte."@de ;
+    rdfs:domain szdo:Nachlass ;
+    rdfs:range szdo:Sammlung ;
+    owl:equivalentProperty rico:includesOrIncluded .
+
+szdo:istTeilVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Teil von"@de , "is part of"@en ;
+    rdfs:comment "Ein Nachlassobjekt gehört zu einer Sammlung."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Sammlung ;
+    owl:inverseOf szdo:enthaeltObjekt ;
+    owl:equivalentProperty rico:isOrWasIncludedIn .
+
+szdo:enthaeltObjekt
+    a owl:ObjectProperty ;
+    rdfs:label "enthält Objekt"@de , "contains object"@en ;
+    rdfs:domain szdo:Sammlung ;
+    rdfs:range szdo:NachlassObjekt ;
+    owl:inverseOf szdo:istTeilVon .
+
+szdo:hatDigitalesObjekt
+    a owl:ObjectProperty ;
+    rdfs:label "hat digitales Objekt"@de , "has digital object"@en ;
+    rdfs:comment "Verknüpft ein physisches Nachlassobjekt mit seiner digitalen Repräsentation."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:DigitalesObjekt ;
+    owl:equivalentProperty rico:hasInstantiation .
+
+szdo:hatFaksimile
+    a owl:ObjectProperty ;
+    rdfs:label "hat Faksimile"@de , "has facsimile"@en ;
+    rdfs:domain szdo:DigitalesObjekt ;
+    rdfs:range szdo:Faksimile .
+
+# -----------------------------------------------------------------------------
+# 7.2 Werk-Objekt-Beziehungen (LRM-Brücke)
+# -----------------------------------------------------------------------------
+
+szdo:istManifestationVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Manifestation von"@de , "is manifestation of"@en ;
+    rdfs:comment
+        "Verbindet ein physisches Nachlassobjekt (SZDMSK) mit dem abstrakten Werk (SZDWRK), dessen Textzeuge es ist."@de ,
+        "Connects a physical estate object (SZDMSK) with the abstract work (SZDWRK) it witnesses."@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Werk .
+
+szdo:hatManuskriptzeuge
+    a owl:ObjectProperty ;
+    rdfs:label "hat Manuskriptzeugen"@de , "has manuscript witness"@en ;
+    rdfs:comment "Vom Werk zu seinen physischen Textzeugen im Nachlass."@de ;
+    rdfs:domain szdo:Werk ;
+    rdfs:range szdo:NachlassObjekt ;
+    owl:inverseOf szdo:istManifestationVon .
+
+szdo:hatManifestation
+    a owl:ObjectProperty ;
+    rdfs:label "hat Manifestation"@de , "has manifestation"@en ;
+    rdfs:comment "Vom Werk zu einer publizierten Ausgabe (Erstausgabe, Übersetzung, etc.)."@de ;
+    rdfs:domain szdo:Werk ;
+    rdfs:range szdo:Manifestation .
+
+szdo:hatExpression
+    a owl:ObjectProperty ;
+    rdfs:label "hat Expression"@de , "has expression"@en ;
+    rdfs:comment "Vom Werk zu einer sprachlichen/medialen Realisierung (Originaltext, Übersetzung, Verfilmung)."@de ;
+    rdfs:domain szdo:Werk ;
+    rdfs:range szdo:WerkExpression .
+
+szdo:hatExemplar
+    a owl:ObjectProperty ;
+    rdfs:label "hat Exemplar"@de , "has item"@en ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range szdo:Exemplar .
+
+szdo:hatTeil
+    a owl:ObjectProperty ;
+    rdfs:label "hat Teil"@de , "has part"@en ;
+    rdfs:comment "Sammelwerk enthält Einzelwerke."@de ;
+    rdfs:domain szdo:SammelWerk ;
+    rdfs:range szdo:Werk .
+
+szdo:istTeilVonWerk
+    a owl:ObjectProperty ;
+    rdfs:label "ist Teil von Werk"@de , "is part of work"@en ;
+    rdfs:domain szdo:Werk ;
+    rdfs:range szdo:SammelWerk ;
+    owl:inverseOf szdo:hatTeil .
+
+szdo:wirdBehandeltIn
+    a owl:ObjectProperty ;
+    rdfs:label "wird behandelt in"@de , "is subject of"@en ;
+    rdfs:comment "Verknüpft ein Werk mit Sekundärliteratur darüber."@de ;
+    rdfs:domain szdo:Werk ;
+    rdfs:range szdo:Sekundaerliteratur .
+
+szdo:istUebersetzungVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Übersetzung von"@de , "is translation of"@en ;
+    rdfs:domain szdo:WerkExpression ;
+    rdfs:range szdo:WerkExpression .
+
+szdo:istNachdruckVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Nachdruck von"@de , "is reprint of"@en ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range szdo:Manifestation .
+
+szdo:istAdaptionVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Adaption von"@de , "is adaptation of"@en ;
+    rdfs:comment "Verfilmung, Vertonung, Dramatisierung eines Werks."@de ;
+    rdfs:domain szdo:WerkExpression ;
+    rdfs:range szdo:Werk .
+
+szdo:sieheAuch
+    a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "siehe auch"@de , "see also"@en ;
+    rdfs:comment "Allgemeine Querverknüpfung zwischen verwandten Ressourcen."@de .
+
+# -----------------------------------------------------------------------------
+# 7.3 Personenrollen (Agent Properties)
+# -----------------------------------------------------------------------------
+
+szdo:hatAutor
+    a owl:ObjectProperty ;
+    rdfs:label "hat Autor"@de , "has author"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatHerausgeber
+    a owl:ObjectProperty ;
+    rdfs:label "hat Herausgeber"@de , "has editor"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatUebersetzer
+    a owl:ObjectProperty ;
+    rdfs:label "hat Übersetzer"@de , "has translator"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatKomponist
+    a owl:ObjectProperty ;
+    rdfs:label "hat Komponist"@de , "has composer"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatIllustrator
+    a owl:ObjectProperty ;
+    rdfs:label "hat Illustrator"@de , "has illustrator"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatVorwortAutor
+    a owl:ObjectProperty ;
+    rdfs:label "hat Vorwort-Autor"@de , "has foreword author"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatNachwortAutor
+    a owl:ObjectProperty ;
+    rdfs:label "hat Nachwort-Autor"@de , "has afterword author"@en ;
+    rdfs:range szdo:Person .
+
+szdo:hatAbsender
+    a owl:ObjectProperty ;
+    rdfs:label "hat Absender"@de , "has sender"@en ;
+    rdfs:domain szdo:KorrespondenzKonvolut ;
+    rdfs:range szdo:Person .
+
+szdo:hatEmpfaenger
+    a owl:ObjectProperty ;
+    rdfs:label "hat Empfänger"@de , "has receiver"@en ;
+    rdfs:domain szdo:KorrespondenzKonvolut ;
+    rdfs:range szdo:Person .
+
+szdo:hatSchreiberhand
+    a owl:ObjectProperty ;
+    rdfs:label "hat Schreiberhand"@de , "has scribal hand"@en ;
+    rdfs:comment "Person, deren Handschrift auf dem Dokument identifiziert wurde."@de ,
+                 "Person whose handwriting has been identified on the document."@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Person .
+
+szdo:hatBetroffenePerson
+    a owl:ObjectProperty ;
+    rdfs:label "hat betroffene Person"@de , "has affected person"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Person .
+
+szdo:hatBeteiligten
+    a owl:ObjectProperty ;
+    rdfs:label "hat Beteiligten"@de , "has party involved"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Person .
+
+# -----------------------------------------------------------------------------
+# 7.4 Provenienz-Beziehungen
+# -----------------------------------------------------------------------------
+
+szdo:hatProvenienz
+    a owl:ObjectProperty ;
+    rdfs:label "hat Provenienz"@de , "has provenance"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Provenienzereignis .
+
+szdo:hatVorbesitzer
+    a owl:ObjectProperty ;
+    rdfs:label "hat Vorbesitzer"@de , "has previous owner"@en ;
+    rdfs:domain szdo:Provenienzereignis ;
+    rdfs:range szdo:Akteur .
+
+szdo:hatNachbesitzer
+    a owl:ObjectProperty ;
+    rdfs:label "hat Nachbesitzer"@de , "has subsequent owner"@en ;
+    rdfs:domain szdo:Provenienzereignis ;
+    rdfs:range szdo:Akteur .
+
+szdo:hatProvenienzmerkmal
+    a owl:ObjectProperty ;
+    rdfs:label "hat Provenienzmerkmal"@de , "has provenance feature"@en ;
+    rdfs:comment "Verknüpft ein Objekt mit einer konkreten Provenienzmerkmalsinstanz."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:ProvenienzmerkmalInstanz .
+
+szdo:hatMerkmaltyp
+    a owl:ObjectProperty ;
+    rdfs:label "hat Merkmaltyp"@de , "has feature type"@en ;
+    rdfs:comment "Verknüpft eine Provenienzmerkmalsinstanz mit dem SKOS-Konzept aus dem Glossar."@de ;
+    rdfs:domain szdo:ProvenienzmerkmalInstanz ;
+    rdfs:range szdg:ProvenanceFeature .
+
+# -----------------------------------------------------------------------------
+# 7.5 Orts-Beziehungen
+# -----------------------------------------------------------------------------
+
+szdo:wirdAufbewahrtIn
+    a owl:ObjectProperty ;
+    rdfs:label "wird aufbewahrt in"@de , "is held at"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Aufbewahrungsort ;
+    owl:equivalentProperty rico:hasOrHadHolder .
+
+szdo:hatEntstehungsort
+    a owl:ObjectProperty ;
+    rdfs:label "hat Entstehungsort"@de , "has place of origin"@en ;
+    rdfs:range szdo:Ort .
+
+szdo:hatPublikationsort
+    a owl:ObjectProperty ;
+    rdfs:label "hat Publikationsort"@de , "has publication place"@en ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range szdo:Ort .
+
+# -----------------------------------------------------------------------------
+# 7.6 Biographische Beziehungen
+# -----------------------------------------------------------------------------
+
+szdo:hatOrt
+    a owl:ObjectProperty ;
+    rdfs:label "hat Ort"@de , "has place"@en ;
+    rdfs:domain szdo:BiographischesEreignis ;
+    rdfs:range szdo:Ort .
+
+szdo:betrifftPerson
+    a owl:ObjectProperty ;
+    rdfs:label "betrifft Person"@de , "concerns person"@en ;
+    rdfs:domain szdo:BiographischesEreignis ;
+    rdfs:range szdo:Person .
+
+szdo:hatBeilage
+    a owl:ObjectProperty ;
+    rdfs:label "hat Beilage"@de , "has enclosure"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Beilage .
+
+szdo:hatUmfang
+    a owl:ObjectProperty ;
+    rdfs:label "hat Umfang"@de , "has extent"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Umfang .
+
+szdo:hatVerlag
+    a owl:ObjectProperty ;
+    rdfs:label "hat Verlag"@de , "has publisher"@en ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range szdo:Organisation .
+
+
+# =============================================================================
+# PART 8: DATATYPE PROPERTIES (Literale Eigenschaften)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 8.1 Identifikatoren
+# -----------------------------------------------------------------------------
+
+szdo:signatur
+    a owl:DatatypeProperty ;
+    rdfs:label "Signatur"@de , "Shelfmark"@en ;
+    rdfs:comment "Archivsignatur des Objekts (z.B. SZ-AAP/W4.1)."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+szdo:gamsIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "GAMS-PID"@de , "GAMS PID"@en ;
+    rdfs:comment "Persistent Identifier in GAMS (z.B. o:szd.270)."@de ;
+    rdfs:range xsd:string .
+
+szdo:gndIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "GND-Identifikator"@de , "GND Identifier"@en ;
+    rdfs:comment "Identifikator in der Gemeinsamen Normdatei (z.B. http://d-nb.info/gnd/118637479)."@de ;
+    rdfs:range xsd:anyURI .
+
+szdo:wikidataIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Wikidata-Identifikator"@de , "Wikidata Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+szdo:viafIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "VIAF-Identifikator"@de , "VIAF Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+szdo:geonamesIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Geonames-Identifikator"@de , "Geonames Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+szdo:entsprichtPID
+    a owl:AnnotationProperty ;
+    rdfs:label "entspricht PID"@de , "corresponds to PID"@en ;
+    rdfs:comment "GAMS Collection-PID, dem diese Klasse entspricht."@de .
+
+# -----------------------------------------------------------------------------
+# 8.2 Titel und Namen
+# -----------------------------------------------------------------------------
+
+szdo:titel
+    a owl:DatatypeProperty ;
+    rdfs:label "Titel"@de , "Title"@en ;
+    rdfs:range rdf:langString .
+
+szdo:originaltitel
+    a owl:DatatypeProperty ;
+    rdfs:label "Originaltitel"@de , "Original Title"@en ;
+    rdfs:range rdf:langString .
+
+szdo:incipit
+    a owl:DatatypeProperty ;
+    rdfs:label "Incipit"@de , "Incipit"@en ;
+    rdfs:comment "Anfangsworte eines Textes zur Identifizierung."@de ;
+    rdfs:range xsd:string .
+
+szdo:vorname
+    a owl:DatatypeProperty ;
+    rdfs:label "Vorname"@de , "Given Name"@en ;
+    rdfs:domain szdo:Person ;
+    rdfs:range xsd:string .
+
+szdo:nachname
+    a owl:DatatypeProperty ;
+    rdfs:label "Nachname"@de , "Family Name"@en ;
+    rdfs:domain szdo:Person ;
+    rdfs:range xsd:string .
+
+szdo:namensform
+    a owl:DatatypeProperty ;
+    rdfs:label "Namensform"@de , "Name Variant"@en ;
+    rdfs:comment "Alternative Namensschreibung, Pseudonym."@de ;
+    rdfs:domain szdo:Person ;
+    rdfs:range xsd:string .
+
+# -----------------------------------------------------------------------------
+# 8.3 Physische Beschreibung
+# -----------------------------------------------------------------------------
+
+szdo:beschreibstoff
+    a owl:DatatypeProperty ;
+    rdfs:label "Beschreibstoff"@de , "Writing Material"@en ;
+    rdfs:comment "Material des Schriftträgers (z.B. Notizbuch, liniertes Papier, Durchschlagpapier)."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+szdo:schreibstoff
+    a owl:DatatypeProperty ;
+    rdfs:label "Schreibstoff"@de , "Writing Instrument"@en ;
+    rdfs:comment "Schreibwerkzeug/-mittel (z.B. violette Tinte, Bleistift, blauer Buntstift)."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+szdo:aufschrift
+    a owl:DatatypeProperty ;
+    rdfs:label "Aufschrift"@de , "Identifying Inscription"@en ;
+    rdfs:comment "Titelaufschrift oder identifizierende Beschriftung auf dem Objekt."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+szdo:format
+    a owl:DatatypeProperty ;
+    rdfs:label "Format"@de , "Format"@en ;
+    rdfs:comment "Physisches Format/Maße (z.B. 23x17 cm)."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+szdo:blattanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Blattanzahl"@de , "Leaf Count"@en ;
+    rdfs:domain szdo:Umfang ;
+    rdfs:range xsd:integer .
+
+szdo:seitenanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Seitenanzahl"@de , "Page Count"@en ;
+    rdfs:domain szdo:Umfang ;
+    rdfs:range xsd:integer .
+
+szdo:stueckanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Stückanzahl"@de , "Piece Count"@en ;
+    rdfs:comment "Anzahl der Korrespondenzstücke in einem Konvolut."@de ;
+    rdfs:domain szdo:Umfang ;
+    rdfs:range xsd:integer .
+
+szdo:bindung
+    a owl:DatatypeProperty ;
+    rdfs:label "Bindung"@de , "Binding"@en ;
+    rdfs:domain szdo:Buch ;
+    rdfs:range rdf:langString .
+
+szdo:objekttyp
+    a owl:DatatypeProperty ;
+    rdfs:label "Objekttyp"@de , "Object Type"@en ;
+    rdfs:comment "Typologische Bezeichnung (z.B. Manuskript, Typoskript mit Korrekturen)."@de ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+# -----------------------------------------------------------------------------
+# 8.4 Zeitliche Eigenschaften
+# -----------------------------------------------------------------------------
+
+szdo:datum
+    a owl:DatatypeProperty ;
+    rdfs:label "Datum"@de , "Date"@en ;
+    rdfs:range xsd:date .
+
+szdo:fruehestensDatum
+    a owl:DatatypeProperty ;
+    rdfs:label "frühestens"@de , "not before"@en ;
+    rdfs:comment "Frühestmögliches Datum (TEI @notBefore)."@de ;
+    rdfs:range xsd:date .
+
+szdo:spaetestensDatum
+    a owl:DatatypeProperty ;
+    rdfs:label "spätestens"@de , "not after"@en ;
+    rdfs:comment "Spätestmögliches Datum (TEI @notAfter)."@de ;
+    rdfs:range xsd:date .
+
+szdo:sicherheitsgrad
+    a owl:DatatypeProperty ;
+    rdfs:label "Sicherheitsgrad"@de , "Certainty"@en ;
+    rdfs:comment "Grad der Datensicherheit (TEI @cert: low, medium, high)."@de ;
+    rdfs:range xsd:string .
+
+szdo:geburtsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Geburtsdatum"@de , "Date of Birth"@en ;
+    rdfs:domain szdo:Person ;
+    rdfs:range xsd:date .
+
+szdo:todesdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Todesdatum"@de , "Date of Death"@en ;
+    rdfs:domain szdo:Person ;
+    rdfs:range xsd:date .
+
+szdo:publikationsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Publikationsdatum"@de , "Publication Date"@en ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range xsd:gYear .
+
+szdo:entstehungsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Entstehungsdatum"@de , "Date of Creation"@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+# -----------------------------------------------------------------------------
+# 8.5 Inhaltliche Eigenschaften
+# -----------------------------------------------------------------------------
+
+szdo:beschreibung
+    a owl:DatatypeProperty ;
+    rdfs:label "Beschreibung"@de , "Description"@en ;
+    rdfs:range rdf:langString .
+
+szdo:zusammenfassung
+    a owl:DatatypeProperty ;
+    rdfs:label "Zusammenfassung"@de , "Summary"@en ;
+    rdfs:range rdf:langString .
+
+szdo:anmerkung
+    a owl:DatatypeProperty ;
+    rdfs:label "Anmerkung"@de , "Note"@en ;
+    rdfs:range rdf:langString .
+
+szdo:sprache
+    a owl:DatatypeProperty ;
+    rdfs:label "Sprache"@de , "Language"@en ;
+    rdfs:comment "Sprache des Inhalts (ISO 639-3, z.B. ger, eng, fre)."@de ;
+    rdfs:range xsd:string .
+
+szdo:zeitperiode
+    a owl:DatatypeProperty ;
+    rdfs:label "Zeitperiode"@de , "Time Period"@en ;
+    rdfs:comment "Zeitliche Einordnung (pre-zweig, lifetime, post-wwii, late-20c, contemporary)."@de ;
+    rdfs:domain szdo:Manifestation ;
+    rdfs:range xsd:string .
+
+szdo:kategorie
+    a owl:DatatypeProperty ;
+    rdfs:label "Kategorie"@de , "Category"@en ;
+    rdfs:range xsd:string .
+
+
+# =============================================================================
+# PART 9: KLAWITER-INTEGRATION
+# Mapping von klawiter:-Namespace auf SZDO
+# =============================================================================
+
+# Die Klawiter-Bibliographie (https://klawiter-rescue.github.io/vocab/)
+# wird über die Werk-Ebene integriert. Klawiter-Einträge sind primär
+# szdo:Manifestation-Instanzen, verknüpft mit szdo:Werk über szdo:hatManifestation.
+#
+# Mapping:
+#   klawiter:title          → szdo:titel / schema:name
+#   klawiter:year           → szdo:publikationsdatum / schema:datePublished
+#   klawiter:publisher      → szdo:hatVerlag / schema:publisher
+#   klawiter:location       → szdo:hatPublikationsort / schema:locationCreated
+#   klawiter:pageCount      → szdo:seitenanzahl / schema:numberOfPages
+#   klawiter:translator     → szdo:hatUebersetzer / schema:translator
+#   klawiter:entryType      → rdf:type (szdo:BelletristischesWerk, etc.)
+#   klawiter:timePeriod     → szdo:zeitperiode
+#   klawiter:seeAlso        → szdo:sieheAuch / schema:isRelatedTo
+#   klawiter:reprints       → szdo:istNachdruckVon
+#   klawiter:translations   → szdo:istUebersetzungVon / schema:workTranslation
+#   klawiter:contentItems   → szdo:hatTeil / schema:hasPart
+#   klawiter:categories     → szdo:kategorie
+#
+# Sekundärliteratur-Einträge (secondary-literature, historical-study)
+# werden als szdo:Sekundaerliteratur instanziiert und über
+# szdo:wirdBehandeltIn mit dem besprochenen Werk verknüpft.
+#
+# Die Reconciliation erfolgt primär über:
+#   1. GND-Identifikatoren (szdo:gndIdentifier)
+#   2. Wikidata-Identifikatoren (szdo:wikidataIdentifier)
+#   3. Titel-Matching zwischen SZDWRK und Klawiter-Einträgen
