@@ -1,0 +1,39 @@
+name: Deploy Ontology Documentation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'ontology/szd-ontology.ttl'
+      - 'ontology/szd-shapes.ttl'
+      - 'ontology/generate_docs.py'
+      - 'docs/css/**'
+      - 'docs/index.html'
+  workflow_dispatch:
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install rdflib pyshacl
+
+      - name: Validate ontology
+        run: python ontology/validate.py
+
+      - name: Generate documentation
+        run: python ontology/generate_docs.py
+
+      - name: Commit generated docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ontology/
+          git diff --cached --quiet || git commit -m "Auto-regenerate ontology documentation"
+          git push

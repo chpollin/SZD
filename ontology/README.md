@@ -3,14 +3,27 @@
 Formale OWL-Ontologie für den digitalen Nachlass Stefan Zweigs.
 
 **Namespace:** `https://gams.uni-graz.at/o:szd.ontology#` (Prefix: `szdo:`)
-**Version:** 0.1.0
+**Version:** 1.0.0 (Nachfolger der impliziten GAMS v0.x)
 **Lizenz:** CC-BY 4.0
+**Live-Dokumentation:** https://chpollin.github.io/SZD/ontology/
+
+## Versionierung
+
+| Version | Ort | Status |
+|---------|-----|--------|
+| v0.x | GAMS (stefanzweig.digital) | Produktiv, 14 Klassen, 67 Properties (englisch) |
+| **v1.0.0** | GitHub Pages + dieses Repo | Formalisiert, 58+14 Klassen, 77+53 Properties (deutsch + GAMS-Kompatibilitätsschicht) |
+
+Die Kompatibilitätsschicht (PART 10 in `szd-ontology.ttl`) definiert alle alten englischen GAMS-Bezeichner als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Mapping auf die neuen deutschen v1.0.0-Bezeichner.
 
 ## Dateien
 
 | Datei | Beschreibung |
 |-------|-------------|
-| `szd-ontology.ttl` | Kern-Ontologie in Turtle-Serialisierung |
+| `szd-ontology.ttl` | Kern-Ontologie in Turtle (1.243 Triples, 72 Klassen, 130 Properties inkl. GAMS-Kompatibilität) |
+| `szd-shapes.ttl` | SHACL Shapes für Strukturvalidierung (deprecated Entitäten ausgenommen) |
+| `validate.py` | 6-Stufen-Validierungspipeline (Syntax, SHACL, OWL, OntoClean, Kompetenzfragen) |
+| `generate_docs.py` | Generiert HTML-Dokumentation aus der Ontologie nach `../docs/ontology/` |
 
 ## Grundlagen
 
@@ -19,6 +32,20 @@ Die Ontologie basiert auf drei etablierten Standards:
 - **Records in Context (RiC-O)** — Archivische Modellierung (Nachlass → Sammlung → Objekt → Digitales Objekt)
 - **IFLA Library Reference Model (LRM)** — Werkmodellierung (Werk → Expression → Manifestation → Exemplar)
 - **CIDOC Conceptual Reference Model (CRM)** — Ereignisse, Provenienz, Biographie
+
+## Verwendung
+
+```bash
+# Ontologie validieren (0 Fehler = grün)
+python ontology/validate.py
+
+# HTML-Dokumentation generieren
+python ontology/generate_docs.py
+
+# Lokal anschauen
+python -m http.server -d docs 8000
+# → http://localhost:8000/ontology/
+```
 
 ## Klassenübersicht
 
@@ -41,4 +68,5 @@ szdo:Provenienzereignis / szdo:ProvenienzmerkmalInstanz
 
 ## Dokumentation
 
-Ausführliche Dokumentation im Knowledge-Ordner: [../knowledge/ONTOLOGY.md](../knowledge/ONTOLOGY.md)
+- **Ausführliches Design-Dokument:** [../knowledge/ONTOLOGY.md](../knowledge/ONTOLOGY.md) (Designprinzipien, Alignments, Kompetenzfragen, Migrationsstrategie)
+- **Live-Dokumentation:** https://chpollin.github.io/SZD/ontology/ (generiert aus `szd-ontology.ttl`)

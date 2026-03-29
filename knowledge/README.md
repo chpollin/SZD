@@ -17,6 +17,11 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 
 ### Ontology
 - [ONTOLOGY.md](ONTOLOGY.md) - Stefan Zweig Digital Nachlass-Ontologie (SZDO): Formaler Ontologie-Entwurf basierend auf RiC, IFLA LRM und CIDOC-CRM, inkl. Klawiter-Integration
+- Live-Dokumentation: https://chpollin.github.io/SZD/ontology/
+- Formale OWL-Datei: [../ontology/szd-ontology.ttl](../ontology/szd-ontology.ttl)
+- SHACL-Validierung: [../ontology/szd-shapes.ttl](../ontology/szd-shapes.ttl)
+- Validierungspipeline: [../ontology/validate.py](../ontology/validate.py) (6-Stufen: Syntax, SHACL, OWL, OntoClean, Kompetenzfragen)
+- Dokumentationsgenerator: [../ontology/generate_docs.py](../ontology/generate_docs.py)
 
 ---
 
@@ -75,10 +80,13 @@ Read [ARCHITECTURE.md](ARCHITECTURE.md) for overall system design and platform i
 
 ## Standards & References
 
-**TEI Guidelines:** https://tei-c.org/guidelines/
-**GAMS Documentation:** https://gams.uni-graz.at/documentation
-**METS/MODS:** Library metadata standards
+- **TEI Guidelines:** https://tei-c.org/guidelines/
+- **GAMS Documentation:** https://gams.uni-graz.at/documentation
+- **METS/MODS:** Library metadata standards
+- **Records in Context (RiC-O):** https://www.ica.org/standards/RiC/ontology
+- **IFLA LRM:** https://www.ifla.org/publications/ifla-library-reference-model
+- **CIDOC-CRM:** https://www.cidoc-crm.org/
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026

@@ -45,9 +45,23 @@ The [scripts/](scripts/) directory contains cross-cutting data validation and qu
 
 See [scripts/validation/README.md](scripts/validation/README.md) for detailed documentation on each validation tool.
 
+### Nachlass-Ontologie (SZDO)
+
+The [ontology/](ontology/) directory contains the **Stefan Zweig Digital Nachlass-Ontologie** — a formal OWL ontology for the digital estate based on Records in Context (RiC-O), IFLA LRM, and CIDOC-CRM.
+
+- **Live Documentation:** https://chpollin.github.io/SZD/ontology/
+- **Namespace:** `https://gams.uni-graz.at/o:szd.ontology#`
+- **Scope:** 58 classes, 42 object properties, 35 datatype properties
+- **Validation:** 6-stage pipeline (Syntax, SHACL, OWL, OntoClean, Competency Questions) — run `python ontology/validate.py`
+- **Design Document:** [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md)
+
+### GitHub Pages
+
+The [docs/](docs/) directory serves the project documentation site at https://chpollin.github.io/SZD/, including the ontology documentation with bilingual (DE/EN) class/property reference, download links (Turtle, JSON-LD), and navigation by ontology layer.
+
 ### Knowledge Vault
 
-The [knowledge/](knowledge/) directory provides comprehensive technical documentation including TEI-XML data models, collection overviews, system architecture, correspondence corpus statistics, and TEI-CSV schema mapping. See [knowledge/README.md](knowledge/README.md) for navigation.
+The [knowledge/](knowledge/) directory provides comprehensive technical documentation including TEI-XML data models, collection overviews, system architecture, correspondence corpus statistics, TEI-CSV schema mapping, and the ontology design document. See [knowledge/README.md](knowledge/README.md) for navigation.
 
 ---
 
@@ -89,4 +103,4 @@ Email:
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026

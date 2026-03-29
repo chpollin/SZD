@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SZDO — Stefan Zweig Digital Nachlass-Ontologie</title>
+  <meta name="description" content="Formale OWL-Ontologie für den digitalen Nachlass Stefan Zweigs. 58 Klassen, 77 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
+  <link rel="alternate" type="text/turtle" href="szd-ontology.ttl">
+  <link rel="alternate" type="application/ld+json" href="szd-ontology.jsonld">
+  <link rel="stylesheet" href="../css/szd-ontology.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Stefan Zweig Digital Nachlass-Ontologie",
+    "description": "OWL ontology for the digital estate of Stefan Zweig",
+    "url": "https://chpollin.github.io/SZD/ontology/",
+    "version": "1.0.0",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "creator": {
+      "@type": "Organization",
+      "name": "Digital Humanities Craft OG"
+    }
+  }
+  </script>
+</head>
+<body class="lang-de">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="header-brand">
+        <img src="../img/SZlogo.png" alt="SZD Logo" class="header-logo">
+        <span class="header-title">Stefan Zweig Digital</span>
+      </a>
+      <nav class="header-nav">
+        <a href=".">Ontologie</a>
+        <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
+        <div class="lang-toggle">
+          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active">DE</button>
+          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="onto-layout">
+    <nav class="onto-sidebar">
+  <h3><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h3>
+  <h3><span class="de-only">Werkschicht</span><span class="en-only">Work Layer</span></h3>
+  <h3><span class="de-only">Akteure</span><span class="en-only">Agents</span></h3>
+  <h3><span class="de-only">Biographie &amp; Ereignisse</span><span class="en-only">Biography &amp; Events</span></h3>
+  <h3><span class="de-only">Orte</span><span class="en-only">Places</span></h3>
+  <h3><span class="de-only">Provenienz</span><span class="en-only">Provenance</span></h3>
+  <h3>Object Properties</h3>
+  <a href="#author">author</a>
+  <a href="#betrifftPerson">betrifftPerson</a>
+  <a href="#enclosures">enclosures</a>
+  <a href="#enthaelt">enthaelt</a>
+  <a href="#enthaeltObjekt">enthaeltObjekt</a>
+  <a href="#extent">extent</a>
+  <a href="#glossar">glossar</a>
+  <a href="#hasContentRelation">hasContentRelation</a>
+  <a href="#hatAbsender">hatAbsender</a>
+  <a href="#hatAutor">hatAutor</a>
+  <a href="#object-properties">... (56 total)</a>
+  <h3>Datatype Properties</h3>
+  <a href="#acquired">acquired</a>
+  <a href="#additionalMaterial">additionalMaterial</a>
+  <a href="#anmerkung">anmerkung</a>
+  <a href="#aufschrift">aufschrift</a>
+  <a href="#beschreibstoff">beschreibstoff</a>
+  <a href="#beschreibung">beschreibung</a>
+  <a href="#bindung">bindung</a>
+  <a href="#birth">birth</a>
+  <a href="#datatype-properties">... (74 total)</a>
+  <div class="download-links">
+    <h3>Download</h3>
+    <a href="szd-ontology.ttl">Turtle (.ttl)</a>
+    <a href="szd-ontology.jsonld">JSON-LD</a>
+  </div>
+</nav>
+
+    <div class="onto-content">
+  <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>
+  <div class="onto-version">Version 1.0.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
+  <p>72 Klassen · 56 Object Properties · 74 Datatype Properties</p>
+  <div style="margin:1rem 0;">
+    <span class="badge badge-rico">RiC-O</span>     <span class="badge badge-lrm">LRM</span>     <span class="badge badge-crm">CRM</span>     <span class="badge badge-skos">SKOS</span>     <span class="badge badge-foaf">FOAF</span>     <span class="badge badge-schema">Schema.org</span>     <span class="badge badge-dc">Dublin Core</span>
+  </div>
+  <h2 id="section-archiv"><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h2>
+<div class="entity-card" id="Nachlass">
+  <div class="entity-name">szdo:Nachlass</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Nachlass</div>
+  <div class="entity-labels"><span class="label-de">DE: Nachlass</span> <span class="label-en">EN: Estate</span></div>
+  <div class="entity-comment"><span class="de-only">Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe.</span> <span class="en-only comment-en">The complete estate as an archival fonds. Corresponds to the top-level description unit.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#enthaelt"><code>enthaelt</code></a></td><td>enthält</td><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Sammlung">
+  <div class="entity-name">szdo:Sammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Sammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Sammlung</span> <span class="label-en">EN: Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz.</span> <span class="en-only comment-en">Sub-collection of the estate, organized by material type or provenance.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#enthaeltObjekt"><code>enthaeltObjekt</code></a></td><td>enthält Objekt</td><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Werksammlung">
+  <div class="entity-name">szdo:Werksammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Werksammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Werksammlung</span> <span class="label-en">EN: Works Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Sammlung von Manuskripten, Typoskripten und Entwürfen literarischer Werke.</span> <span class="en-only comment-en">Collection of manuscripts, typescripts, and drafts of literary works.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Korrespondenzsammlung">
+  <div class="entity-name">szdo:Korrespondenzsammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Korrespondenzsammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Korrespondenzsammlung</span> <span class="label-en">EN: Correspondence Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Sammlung der Korrespondenz-Konvolute (Briefe an und von Stefan Zweig).</span> <span class="en-only comment-en">Collection of correspondence bundles (letters to and from Stefan Zweig).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Autographensammlung">
+  <div class="entity-name">szdo:Autographensammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Autographensammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Autographensammlung</span> <span class="label-en">EN: Autograph Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Zweigs Sammlung handschriftlicher Dokumente anderer Autoren und Persönlichkeiten.</span> <span class="en-only comment-en">Zweig&#x27;s collection of handwritten documents by other authors and public figures.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Bibliothekssammlung">
+  <div class="entity-name">szdo:Bibliothekssammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Bibliothekssammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Bibliothekssammlung</span> <span class="label-en">EN: Library Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Rekonstruierte Privatbibliothek Stefan Zweigs mit Provenienzmerkmalen.</span> <span class="en-only comment-en">Reconstructed personal library of Stefan Zweig with provenance features.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Lebensdokumentesammlung">
+  <div class="entity-name">szdo:Lebensdokumentesammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Lebensdokumentesammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Lebensdokumentesammlung</span> <span class="label-en">EN: Personal Documents Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Persönliche Dokumente: Verträge, Urkunden, Tagebücher, Ephemera.</span> <span class="en-only comment-en">Personal documents: contracts, certificates, diaries, ephemera.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Aufsatzsammlung">
+  <div class="entity-name">szdo:Aufsatzsammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Aufsatzsammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Aufsatzsammlung</span> <span class="label-en">EN: Essay Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Sammlung von Essays, Feuilletons und journalistischen Beiträgen.</span> <span class="en-only comment-en">Collection of essays, feuilletons, and journalistic contributions.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="ThematischeSammlung">
+  <div class="entity-name">szdo:ThematischeSammlung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#ThematischeSammlung</div>
+  <div class="entity-labels"><span class="label-de">DE: Thematische Sammlung</span> <span class="label-en">EN: Thematic Collection</span></div>
+  <div class="entity-comment"><span class="de-only">Kuratierte, themenbasierte Zusammenstellung aus verschiedenen Beständen.</span> <span class="en-only comment-en">Curated, theme-based compilation from various holdings.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="NachlassObjekt">
+  <div class="entity-name">szdo:NachlassObjekt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#NachlassObjekt</div>
+  <div class="entity-labels"><span class="label-de">DE: Nachlassobjekt</span> <span class="label-en">EN: Estate Object</span></div>
+  <div class="entity-comment"><span class="de-only">Einzelnes physisches Objekt im Nachlass.</span> <span class="en-only comment-en">Individual physical object in the estate.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>RiC-O:Record</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#aufschrift"><code>aufschrift</code></a></td><td>Aufschrift</td><td><code>rdf:langString</code></td></tr>
+    <tr><td><a href="#beschreibstoff"><code>beschreibstoff</code></a></td><td>Beschreibstoff</td><td><code>rdf:langString</code></td></tr>
+    <tr><td><a href="#entstehungsdatum"><code>entstehungsdatum</code></a></td><td>Entstehungsdatum</td><td><code>xsd:string</code></td></tr>
+    <tr><td><a href="#format"><code>format</code></a></td><td>Format</td><td><code>xsd:string</code></td></tr>
+    <tr><td><a href="#hatBeilage"><code>hatBeilage</code></a></td><td>hat Beilage</td><td><a href="#Beilage"><code>szdo:Beilage</code></a></td></tr>
+    <tr><td><a href="#hatBeteiligten"><code>hatBeteiligten</code></a></td><td>hat Beteiligten</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatBetroffenePerson"><code>hatBetroffenePerson</code></a></td><td>hat betroffene Person</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatDigitalesObjekt"><code>hatDigitalesObjekt</code></a></td><td>hat digitales Objekt</td><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+    <tr><td><a href="#hatEntstehungsort"><code>hatEntstehungsort</code></a></td><td>hat Entstehungsort</td><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+    <tr><td><a href="#hatProvenienz"><code>hatProvenienz</code></a></td><td>hat Provenienz</td><td><a href="#Provenienzereignis"><code>szdo:Provenienzereignis</code></a></td></tr>
+    <tr><td><a href="#hatProvenienzmerkmal"><code>hatProvenienzmerkmal</code></a></td><td>hat Provenienzmerkmal</td><td><a href="#ProvenienzmerkmalInstanz"><code>szdo:ProvenienzmerkmalInstanz</code></a></td></tr>
+    <tr><td><a href="#hatSchreiberhand"><code>hatSchreiberhand</code></a></td><td>hat Schreiberhand</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatUmfang"><code>hatUmfang</code></a></td><td>hat Umfang</td><td><a href="#Umfang"><code>szdo:Umfang</code></a></td></tr>
+    <tr><td><a href="#istManifestationVon"><code>istManifestationVon</code></a></td><td>ist Manifestation von</td><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><td><a href="#istTeilVon"><code>istTeilVon</code></a></td><td>ist Teil von</td><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+    <tr><td><a href="#objekttyp"><code>objekttyp</code></a></td><td>Objekttyp</td><td><code>rdf:langString</code></td></tr>
+    <tr><td><a href="#schreibstoff"><code>schreibstoff</code></a></td><td>Schreibstoff</td><td><code>rdf:langString</code></td></tr>
+    <tr><td><a href="#signatur"><code>signatur</code></a></td><td>Signatur</td><td><code>xsd:string</code></td></tr>
+    <tr><td><a href="#wirdAufbewahrtIn"><code>wirdAufbewahrtIn</code></a></td><td>wird aufbewahrt in</td><td><a href="#Aufbewahrungsort"><code>szdo:Aufbewahrungsort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Manuskript">
+  <div class="entity-name">szdo:Manuskript</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Manuskript</div>
+  <div class="entity-labels"><span class="label-de">DE: Manuskript</span> <span class="label-en">EN: Manuscript</span></div>
+  <div class="entity-comment"><span class="de-only">Handschriftliches Werkmanuskript (Autograph).</span> <span class="en-only comment-en">Handwritten work manuscript (autograph).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Typoskript">
+  <div class="entity-name">szdo:Typoskript</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Typoskript</div>
+  <div class="entity-labels"><span class="label-de">DE: Typoskript</span> <span class="label-en">EN: Typescript</span></div>
+  <div class="entity-comment"><span class="de-only">Maschinschriftliches Dokument.</span> <span class="en-only comment-en">Typewritten document.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Typoskriptdurchschlag">
+  <div class="entity-name">szdo:Typoskriptdurchschlag</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Typoskriptdurchschlag</div>
+  <div class="entity-labels"><span class="label-de">DE: Typoskriptdurchschlag</span> <span class="label-en">EN: Carbon Copy Typescript</span></div>
+  <div class="entity-comment"><span class="de-only">Durchschlag (Kohlepapier-Kopie) eines Typoskripts.</span> <span class="en-only comment-en">Carbon copy of a typescript.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Notizbuch">
+  <div class="entity-name">szdo:Notizbuch</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Notizbuch</div>
+  <div class="entity-labels"><span class="label-de">DE: Notizbuch</span> <span class="label-en">EN: Notebook</span></div>
+  <div class="entity-comment"><span class="de-only">Notizbuch mit Entwürfen, Notizen oder Skizzen.</span> <span class="en-only comment-en">Notebook with drafts, notes, or sketches.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Konvolut">
+  <div class="entity-name">szdo:Konvolut</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Konvolut</div>
+  <div class="entity-labels"><span class="label-de">DE: Konvolut</span> <span class="label-en">EN: Ensemble</span></div>
+  <div class="entity-comment"><span class="de-only">Zusammengestelltes Ensemble aus mehreren Dokumententypen (z.B. Typoskript + Durchschlag + Umschlag).</span> <span class="en-only comment-en">Assembled ensemble of multiple document types (e.g., typescript + carbon copy + wrapper).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Korrekturfahne">
+  <div class="entity-name">szdo:Korrekturfahne</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Korrekturfahne</div>
+  <div class="entity-labels"><span class="label-de">DE: Korrekturfahne</span> <span class="label-en">EN: Galley Proof</span></div>
+  <div class="entity-comment"><span class="de-only">Druckfahne mit handschriftlichen Korrekturen.</span> <span class="en-only comment-en">Galley proof with handwritten corrections.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="KorrespondenzKonvolut">
+  <div class="entity-name">szdo:KorrespondenzKonvolut</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#KorrespondenzKonvolut</div>
+  <div class="entity-labels"><span class="label-de">DE: Korrespondenzkonvolut</span> <span class="label-en">EN: Bundle of Correspondence</span></div>
+  <div class="entity-comment"><span class="de-only">Bündel von Korrespondenzstücken zwischen Stefan Zweig und einem Korrespondenzpartner.</span> <span class="en-only comment-en">Bundle of correspondence pieces between Stefan Zweig and a correspondence partner.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatAbsender"><code>hatAbsender</code></a></td><td>hat Absender</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatEmpfaenger"><code>hatEmpfaenger</code></a></td><td>hat Empfänger</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Autograph">
+  <div class="entity-name">szdo:Autograph</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Autograph</div>
+  <div class="entity-labels"><span class="label-de">DE: Autograph</span> <span class="label-en">EN: Autograph</span></div>
+  <div class="entity-comment"><span class="de-only">Handschriftliches Dokument eines Dritten aus Zweigs Autographensammlung.</span> <span class="en-only comment-en">Handwritten document by a third party from Zweig&#x27;s autograph collection.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Buch">
+  <div class="entity-name">szdo:Buch</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Buch</div>
+  <div class="entity-labels"><span class="label-de">DE: Buch</span> <span class="label-en">EN: Book</span></div>
+  <div class="entity-comment"><span class="de-only">Buch aus Stefan Zweigs rekonstruierter Privatbibliothek.</span> <span class="en-only comment-en">Book from Stefan Zweig&#x27;s reconstructed personal library.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#bindung"><code>bindung</code></a></td><td>Bindung</td><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Lebensdokument">
+  <div class="entity-name">szdo:Lebensdokument</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Lebensdokument</div>
+  <div class="entity-labels"><span class="label-de">DE: Lebensdokument</span> <span class="label-en">EN: Personal Document</span></div>
+  <div class="entity-comment"><span class="de-only">Persönliches Dokument: Vertrag, Urkunde, Tagebuch, Plakat, Einladung, etc.</span> <span class="en-only comment-en">Personal document: contract, certificate, diary, poster, invitation, etc.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="DigitalesObjekt">
+  <div class="entity-name">szdo:DigitalesObjekt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#DigitalesObjekt</div>
+  <div class="entity-labels"><span class="label-de">DE: Digitales Objekt</span> <span class="label-en">EN: Digital Object</span></div>
+  <div class="entity-comment"><span class="de-only">Digitale Repräsentation eines physischen Nachlassobjekts.</span> <span class="en-only comment-en">Digital representation of a physical estate object.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>RiC-O:Instantiation</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatFaksimile"><code>hatFaksimile</code></a></td><td>hat Faksimile</td><td><a href="#Faksimile"><code>szdo:Faksimile</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="METSObjekt">
+  <div class="entity-name">szdo:METSObjekt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#METSObjekt</div>
+  <div class="entity-labels"><span class="label-de">DE: METS-Objekt</span> <span class="label-en">EN: METS Object</span></div>
+  <div class="entity-comment"><span class="de-only">METS-Container mit strukturellen Metadaten und Seitenverweisen (DFG-METS).</span> <span class="en-only comment-en">METS container with structural metadata and page references (DFG-METS).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="IIIFManifest">
+  <div class="entity-name">szdo:IIIFManifest</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#IIIFManifest</div>
+  <div class="entity-labels"><span class="label-de">DE: IIIF-Manifest</span> <span class="label-en">EN: IIIF Manifest</span></div>
+  <div class="entity-comment"><span class="de-only">IIIF Presentation API Manifest für die Darstellung in Viewern (z.B. Mirador).</span> <span class="en-only comment-en">IIIF Presentation API manifest for rendering in viewers (e.g., Mirador).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Faksimile">
+  <div class="entity-name">szdo:Faksimile</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Faksimile</div>
+  <div class="entity-labels"><span class="label-de">DE: Faksimile</span> <span class="label-en">EN: Facsimile</span></div>
+  <div class="entity-comment"><span class="de-only">Einzelnes hochauflösendes digitales Bild einer Seite.</span> <span class="en-only comment-en">Single high-resolution digital image of a page.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Umfang">
+  <div class="entity-name">szdo:Umfang</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Umfang</div>
+  <div class="entity-labels"><span class="label-de">DE: Umfang</span> <span class="label-en">EN: Extent</span></div>
+  <div class="entity-comment"><span class="de-only">Umfangsangabe eines Nachlassobjekts (Blatt, Seiten, Stücke).</span> <span class="en-only comment-en">Extent information of an estate object (leaves, pages, pieces).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#blattanzahl"><code>blattanzahl</code></a></td><td>Blattanzahl</td><td><code>xsd:integer</code></td></tr>
+    <tr><td><a href="#seitenanzahl"><code>seitenanzahl</code></a></td><td>Seitenanzahl</td><td><code>xsd:integer</code></td></tr>
+    <tr><td><a href="#stueckanzahl"><code>stueckanzahl</code></a></td><td>Stückanzahl</td><td><code>xsd:integer</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Beilage">
+  <div class="entity-name">szdo:Beilage</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Beilage</div>
+  <div class="entity-labels"><span class="label-de">DE: Beilage</span> <span class="label-en">EN: Enclosure</span></div>
+  <div class="entity-comment"><span class="de-only">Beilage oder Zusatzmaterial zu einem Nachlassobjekt (Kuvert, Deckblatt, Flügelmappe).</span> <span class="en-only comment-en">Enclosure or supplementary material of an estate object (envelope, cover sheet, flap binder).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+  </table>
+</div>
+  <h2 id="section-werk"><span class="de-only">Werkschicht</span><span class="en-only">Work Layer</span></h2>
+<div class="entity-card" id="Werk">
+  <div class="entity-name">szdo:Werk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Werk</div>
+  <div class="entity-labels"><span class="label-de">DE: Werk</span> <span class="label-en">EN: Work</span></div>
+  <div class="entity-comment"><span class="de-only">Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex.</span> <span class="en-only comment-en">Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>LRM:Work</code> <span class="badge badge-lrm">LRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatAutor"><code>hatAutor</code></a></td><td>hat Autor</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatExpression"><code>hatExpression</code></a></td><td>hat Expression</td><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+    <tr><td><a href="#hatManifestation"><code>hatManifestation</code></a></td><td>hat Manifestation</td><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><td><a href="#hatManuskriptzeuge"><code>hatManuskriptzeuge</code></a></td><td>hat Manuskriptzeugen</td><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><td><a href="#istTeilVonWerk"><code>istTeilVonWerk</code></a></td><td>ist Teil von Werk</td><td><a href="#SammelWerk"><code>szdo:SammelWerk</code></a></td></tr>
+    <tr><td><a href="#wirdBehandeltIn"><code>wirdBehandeltIn</code></a></td><td>wird behandelt in</td><td><a href="#Sekundaerliteratur"><code>szdo:Sekundaerliteratur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="WerkExpression">
+  <div class="entity-name">szdo:WerkExpression</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#WerkExpression</div>
+  <div class="entity-labels"><span class="label-de">DE: Werkexpression</span> <span class="label-en">EN: Work Expression</span></div>
+  <div class="entity-comment"><span class="de-only">Sprachliche oder mediale Realisierung eines Werks: Originaltext, Übersetzung, Verfilmung, Vertonung.</span> <span class="en-only comment-en">Linguistic or medial realization of a work: original text, translation, film adaptation, musical setting.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>LRM:Expression</code> <span class="badge badge-lrm">LRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatKomponist"><code>hatKomponist</code></a></td><td>hat Komponist</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatUebersetzer"><code>hatUebersetzer</code></a></td><td>hat Übersetzer</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#istAdaptionVon"><code>istAdaptionVon</code></a></td><td>ist Adaption von</td><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><td><a href="#istUebersetzungVon"><code>istUebersetzungVon</code></a></td><td>ist Übersetzung von</td><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Manifestation">
+  <div class="entity-name">szdo:Manifestation</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Manifestation</div>
+  <div class="entity-labels"><span class="label-de">DE: Manifestation</span> <span class="label-en">EN: Manifestation</span></div>
+  <div class="entity-comment"><span class="de-only">Publizierte Ausgabe eines Werks: Erstausgabe, Neuauflage, Übersetzungsausgabe. Brücke zu Klawiter-Einträgen.</span> <span class="en-only comment-en">Published edition of a work: first edition, reprint, translation edition. Bridge to Klawiter entries.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>LRM:Manifestation</code> <span class="badge badge-lrm">LRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatExemplar"><code>hatExemplar</code></a></td><td>hat Exemplar</td><td><a href="#Exemplar"><code>szdo:Exemplar</code></a></td></tr>
+    <tr><td><a href="#hatHerausgeber"><code>hatHerausgeber</code></a></td><td>hat Herausgeber</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatIllustrator"><code>hatIllustrator</code></a></td><td>hat Illustrator</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatNachwortAutor"><code>hatNachwortAutor</code></a></td><td>hat Nachwort-Autor</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatPublikationsort"><code>hatPublikationsort</code></a></td><td>hat Publikationsort</td><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+    <tr><td><a href="#hatVerlag"><code>hatVerlag</code></a></td><td>hat Verlag</td><td><a href="#Organisation"><code>szdo:Organisation</code></a></td></tr>
+    <tr><td><a href="#hatVorwortAutor"><code>hatVorwortAutor</code></a></td><td>hat Vorwort-Autor</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#istNachdruckVon"><code>istNachdruckVon</code></a></td><td>ist Nachdruck von</td><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><td><a href="#publikationsdatum"><code>publikationsdatum</code></a></td><td>Publikationsdatum</td><td><code>xsd:gYear</code></td></tr>
+    <tr><td><a href="#zeitperiode"><code>zeitperiode</code></a></td><td>Zeitperiode</td><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Exemplar">
+  <div class="entity-name">szdo:Exemplar</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Exemplar</div>
+  <div class="entity-labels"><span class="label-de">DE: Exemplar</span> <span class="label-en">EN: Item</span></div>
+  <div class="entity-comment"><span class="de-only">Konkretes physisches Exemplar einer Manifestation. Brücke zu szdo:NachlassObjekt (z.B. ein bestimmtes Buch in Zweigs Bibliothek).</span> <span class="en-only comment-en">Concrete physical copy of a manifestation. Bridge to szdo:NachlassObjekt (e.g., a specific book in Zweig&#x27;s library).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>LRM:Item</code> <span class="badge badge-lrm">LRM</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="BelletristischesWerk">
+  <div class="entity-name">szdo:BelletristischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#BelletristischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Belletristisches Werk</span> <span class="label-en">EN: Fiction</span></div>
+  <div class="entity-comment"><span class="de-only">Novellen, Romane, Erzählungen.</span> <span class="en-only comment-en">Novellas, novels, short stories.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="EssayistischesWerk">
+  <div class="entity-name">szdo:EssayistischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#EssayistischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Essayistisches Werk</span> <span class="label-en">EN: Essay</span></div>
+  <div class="entity-comment"><span class="de-only">Essays, Feuilletons, Rezensionen.</span> <span class="en-only comment-en">Essays, feuilletons, reviews.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="BiographischesWerk">
+  <div class="entity-name">szdo:BiographischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#BiographischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Biographisches Werk</span> <span class="label-en">EN: Biographical Work</span></div>
+  <div class="entity-comment"><span class="de-only">Biographien (Fouché, Marie Antoinette, Erasmus, Magellan, etc.).</span> <span class="en-only comment-en">Biographies (Fouché, Marie Antoinette, Erasmus, Magellan, etc.).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="HistorischesWerk">
+  <div class="entity-name">szdo:HistorischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#HistorischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Historisches Werk</span> <span class="label-en">EN: Historical Work</span></div>
+  <div class="entity-comment"><span class="de-only">Historische Miniaturen und Darstellungen (z.B. Sternstunden der Menschheit).</span> <span class="en-only comment-en">Historical miniatures and depictions (e.g., Decisive Moments in History).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="DramatischesWerk">
+  <div class="entity-name">szdo:DramatischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#DramatischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Dramatisches Werk</span> <span class="label-en">EN: Dramatic Work</span></div>
+  <div class="entity-comment"><span class="de-only">Theaterstücke, Libretti.</span> <span class="en-only comment-en">Plays, libretti.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="LyrischesWerk">
+  <div class="entity-name">szdo:LyrischesWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#LyrischesWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Lyrisches Werk</span> <span class="label-en">EN: Poetry</span></div>
+  <div class="entity-comment"><span class="de-only">Gedichte, Gedichtsammlungen.</span> <span class="en-only comment-en">Poems, poetry collections.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="SammelWerk">
+  <div class="entity-name">szdo:SammelWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#SammelWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Sammelwerk</span> <span class="label-en">EN: Collected Works</span></div>
+  <div class="entity-comment"><span class="de-only">Kompilationen, gesammelte Werke, Anthologien.</span> <span class="en-only comment-en">Compilations, collected works, anthologies.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatTeil"><code>hatTeil</code></a></td><td>hat Teil</td><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Uebersetzungswerk">
+  <div class="entity-name">szdo:Uebersetzungswerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Uebersetzungswerk</div>
+  <div class="entity-labels"><span class="label-de">DE: Übersetzungswerk</span> <span class="label-en">EN: Translation Work</span></div>
+  <div class="entity-comment"><span class="de-only">Zweigs Übersetzungen von Werken anderer Autoren (Verlaine, Verhaeren, etc.).</span> <span class="en-only comment-en">Zweig&#x27;s translations of works by other authors (Verlaine, Verhaeren, etc.).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="VorwortNachwort">
+  <div class="entity-name">szdo:VorwortNachwort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#VorwortNachwort</div>
+  <div class="entity-labels"><span class="label-de">DE: Vorwort/Nachwort</span> <span class="label-en">EN: Foreword/Afterword</span></div>
+  <div class="entity-comment"><span class="de-only">Vorworte, Nachworte, Einleitungen zu Werken anderer.</span> <span class="en-only comment-en">Forewords, afterwords, introductions to works by others.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Sekundaerliteratur">
+  <div class="entity-name">szdo:Sekundaerliteratur</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Sekundaerliteratur</div>
+  <div class="entity-labels"><span class="label-de">DE: Sekundärliteratur</span> <span class="label-en">EN: Secondary Literature</span></div>
+  <div class="entity-comment"><span class="de-only">Wissenschaftliche oder publizistische Arbeiten über Stefan Zweig und sein Werk. Nicht Teil des Nachlasses, aber des Forschungskontexts (primär aus Klawiter-Bibliographie).</span> <span class="en-only comment-en">Scholarly or journalistic works about Stefan Zweig and his oeuvre. Not part of the estate, but of the research context (primarily from Klawiter bibliography).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>Schema:ScholarlyArticle</code> <span class="badge badge-schema">Schema</span></td></tr>
+  </table>
+</div>
+  <h2 id="section-akteur"><span class="de-only">Akteure</span><span class="en-only">Agents</span></h2>
+<div class="entity-card" id="Akteur">
+  <div class="entity-name">szdo:Akteur</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Akteur</div>
+  <div class="entity-labels"><span class="label-de">DE: Akteur</span> <span class="label-en">EN: Agent</span></div>
+  <div class="entity-comment"><span class="de-only">Person oder Organisation mit Bezug zum Nachlass.</span> <span class="en-only comment-en">Person or organization related to the estate.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>CRM:E39_Actor</code> <span class="badge badge-crm">CRM</span></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:Agent</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Person">
+  <div class="entity-name">szdo:Person</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Person</div>
+  <div class="entity-labels"><span class="label-de">DE: Person</span> <span class="label-en">EN: Person</span></div>
+  <div class="entity-comment"><span class="de-only">Person mit Normdatenverknüpfung (GND, Wikidata, VIAF). Entspricht SZDPER-Einträgen.</span> <span class="en-only comment-en">Person with authority file links (GND, Wikidata, VIAF). Corresponds to SZDPER entries.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Akteur"><code>szdo:Akteur</code></a> , <code>CRM:E21_Person</code> <span class="badge badge-crm">CRM</span> , <code>FOAF:Person</code> <span class="badge badge-foaf">FOAF</span></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:Person</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+    <tr><th>Disjoint with</th><td><a href="#Organisation"><code>szdo:Organisation</code></a></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#geburtsdatum"><code>geburtsdatum</code></a></td><td>Geburtsdatum</td><td><code>xsd:date</code></td></tr>
+    <tr><td><a href="#nachname"><code>nachname</code></a></td><td>Nachname</td><td><code>xsd:string</code></td></tr>
+    <tr><td><a href="#namensform"><code>namensform</code></a></td><td>Namensform</td><td><code>xsd:string</code></td></tr>
+    <tr><td><a href="#todesdatum"><code>todesdatum</code></a></td><td>Todesdatum</td><td><code>xsd:date</code></td></tr>
+    <tr><td><a href="#vorname"><code>vorname</code></a></td><td>Vorname</td><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Organisation">
+  <div class="entity-name">szdo:Organisation</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Organisation</div>
+  <div class="entity-labels"><span class="label-de">DE: Organisation</span> <span class="label-en">EN: Organization</span></div>
+  <div class="entity-comment"><span class="de-only">Institution, Verlag, Archiv, Bibliothek. Entspricht SZDSTA-Einträgen (Standorte).</span> <span class="en-only comment-en">Institution, publisher, archive, library. Corresponds to SZDSTA entries (locations).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Akteur"><code>szdo:Akteur</code></a> , <code>CRM:E74_Group</code> <span class="badge badge-crm">CRM</span> , <code>FOAF:Organization</code> <span class="badge badge-foaf">FOAF</span></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:CorporateBody</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+  <h2 id="section-biographie"><span class="de-only">Biographie &amp; Ereignisse</span><span class="en-only">Biography &amp; Events</span></h2>
+<div class="entity-card" id="BiographischesEreignis">
+  <div class="entity-name">szdo:BiographischesEreignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#BiographischesEreignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Biographisches Ereignis</span> <span class="label-en">EN: Biographical Event</span></div>
+  <div class="entity-comment"><span class="de-only">Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender.</span> <span class="en-only comment-en">Event in Stefan Zweig&#x27;s life. Corresponds to SZDBIO entries in the life calendar.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>CRM:E5_Event</code> <span class="badge badge-crm">CRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#betrifftPerson"><code>betrifftPerson</code></a></td><td>betrifft Person</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatOrt"><code>hatOrt</code></a></td><td>hat Ort</td><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Geburt">
+  <div class="entity-name">szdo:Geburt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Geburt</div>
+  <div class="entity-labels"><span class="label-de">DE: Geburt</span> <span class="label-en">EN: Birth</span></div>
+  <div class="entity-comment"><span class="de-only">Geburtsereignis einer Person.</span> <span class="en-only comment-en">Birth event of a person.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a> , <code>CRM:E67_Birth</code> <span class="badge badge-crm">CRM</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Tod">
+  <div class="entity-name">szdo:Tod</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Tod</div>
+  <div class="entity-labels"><span class="label-de">DE: Tod</span> <span class="label-en">EN: Death</span></div>
+  <div class="entity-comment"><span class="de-only">Todesereignis einer Person.</span> <span class="en-only comment-en">Death event of a person.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a> , <code>CRM:E69_Death</code> <span class="badge badge-crm">CRM</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Reise">
+  <div class="entity-name">szdo:Reise</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Reise</div>
+  <div class="entity-labels"><span class="label-de">DE: Reise</span> <span class="label-en">EN: Journey</span></div>
+  <div class="entity-comment"><span class="de-only">Reisen, Aufenthalte, Ortswechsel.</span> <span class="en-only comment-en">Journeys, stays, relocations.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Publikationsereignis">
+  <div class="entity-name">szdo:Publikationsereignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Publikationsereignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Publikationsereignis</span> <span class="label-en">EN: Publication Event</span></div>
+  <div class="entity-comment"><span class="de-only">Veröffentlichung eines Werks.</span> <span class="en-only comment-en">Publication of a work.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Begegnung">
+  <div class="entity-name">szdo:Begegnung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Begegnung</div>
+  <div class="entity-labels"><span class="label-de">DE: Begegnung</span> <span class="label-en">EN: Encounter</span></div>
+  <div class="entity-comment"><span class="de-only">Treffen mit Personen.</span> <span class="en-only comment-en">Meeting with persons.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="InstitutionellesEreignis">
+  <div class="entity-name">szdo:InstitutionellesEreignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#InstitutionellesEreignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Institutionelles Ereignis</span> <span class="label-en">EN: Institutional Event</span></div>
+  <div class="entity-comment"><span class="de-only">Verleihungen, Ehrungen, Mitgliedschaften.</span> <span class="en-only comment-en">Awards, honors, memberships.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Exilereignis">
+  <div class="entity-name">szdo:Exilereignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Exilereignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Exilereignis</span> <span class="label-en">EN: Exile Event</span></div>
+  <div class="entity-comment"><span class="de-only">Emigration, Flucht, Exilstationen.</span> <span class="en-only comment-en">Emigration, flight, exile stations.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="WissenschaftlichesEreignis">
+  <div class="entity-name">szdo:WissenschaftlichesEreignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#WissenschaftlichesEreignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Wissenschaftliches Ereignis</span> <span class="label-en">EN: Scholarly Event</span></div>
+  <div class="entity-comment"><span class="de-only">Symposien, Konferenzen, Ausstellungen zu Stefan Zweig.</span> <span class="en-only comment-en">Symposia, conferences, exhibitions about Stefan Zweig.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+  </table>
+</div>
+  <h2 id="section-ort"><span class="de-only">Orte</span><span class="en-only">Places</span></h2>
+<div class="entity-card" id="Ort">
+  <div class="entity-name">szdo:Ort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Ort</div>
+  <div class="entity-labels"><span class="label-de">DE: Ort</span> <span class="label-en">EN: Place</span></div>
+  <div class="entity-comment"><span class="de-only">Geographischer oder institutioneller Ort.</span> <span class="en-only comment-en">Geographical or institutional place.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>CRM:E53_Place</code> <span class="badge badge-crm">CRM</span></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:Place</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="GeographischerOrt">
+  <div class="entity-name">szdo:GeographischerOrt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#GeographischerOrt</div>
+  <div class="entity-labels"><span class="label-de">DE: Geographischer Ort</span> <span class="label-en">EN: Geographical Place</span></div>
+  <div class="entity-comment"><span class="de-only">Stadt, Land, Region (Geonames-verknüpft).</span> <span class="en-only comment-en">City, country, region (Geonames-linked).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Aufbewahrungsort">
+  <div class="entity-name">szdo:Aufbewahrungsort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Aufbewahrungsort</div>
+  <div class="entity-labels"><span class="label-de">DE: Aufbewahrungsort</span> <span class="label-en">EN: Repository</span></div>
+  <div class="entity-comment"><span class="de-only">Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten.</span> <span class="en-only comment-en">Archive, library, or museum as repository for estate objects.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="Entstehungsort">
+  <div class="entity-name">szdo:Entstehungsort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Entstehungsort</div>
+  <div class="entity-labels"><span class="label-de">DE: Entstehungsort</span> <span class="label-en">EN: Place of Origin</span></div>
+  <div class="entity-comment"><span class="de-only">Ort, an dem ein Objekt oder Werk geschaffen wurde.</span> <span class="en-only comment-en">Place where an object or work was created.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+  <h2 id="section-provenienz"><span class="de-only">Provenienz</span><span class="en-only">Provenance</span></h2>
+<div class="entity-card" id="Provenienzereignis">
+  <div class="entity-name">szdo:Provenienzereignis</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#Provenienzereignis</div>
+  <div class="entity-labels"><span class="label-de">DE: Provenienzereignis</span> <span class="label-en">EN: Provenance Event</span></div>
+  <div class="entity-comment"><span class="de-only">Einzelnes Erwerbungs- oder Besitzwechsel-Ereignis in der Geschichte eines Objekts.</span> <span class="en-only comment-en">Single acquisition or ownership-change event in the history of an object.</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>CRM:E8_Acquisition</code> <span class="badge badge-crm">CRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatNachbesitzer"><code>hatNachbesitzer</code></a></td><td>hat Nachbesitzer</td><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+    <tr><td><a href="#hatVorbesitzer"><code>hatVorbesitzer</code></a></td><td>hat Vorbesitzer</td><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="ProvenienzmerkmalInstanz">
+  <div class="entity-name">szdo:ProvenienzmerkmalInstanz</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#ProvenienzmerkmalInstanz</div>
+  <div class="entity-labels"><span class="label-de">DE: Provenienzmerkmalsinstanz</span> <span class="label-en">EN: Provenance Feature Instance</span></div>
+  <div class="entity-comment"><span class="de-only">Konkretes Provenienzmerkmal an einem Objekt (Stempel, Exlibris, Marginalie, etc.). Verknüpft mit szdg:ProvenanceFeature (SKOS).</span> <span class="en-only comment-en">Concrete provenance feature on an object (stamp, bookplate, marginalia, etc.). Linked to szdg:ProvenanceFeature (SKOS).</span></div>
+  <table class="prop-table">
+    <tr><th>Subclass of</th><td><code>CRM:E13_Attribute_Assignment</code> <span class="badge badge-crm">CRM</span></td></tr>
+  </table>
+  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <table class="prop-table">
+    <tr><th>Property</th><th>Label</th><th>Range</th></tr>
+    <tr><td><a href="#hatMerkmaltyp"><code>hatMerkmaltyp</code></a></td><td>hat Merkmaltyp</td><td><a href="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature" target="_blank"><code>ProvenanceFeature</code></a></td></tr>
+  </table>
+</div>
+  <h2 id="object-properties">Object Properties</h2>
+<div class="entity-card" id="author">
+  <div class="entity-name">szdo:author</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#author</div>
+  <div class="entity-labels"><span class="label-en">EN: author (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatAutor"><code>szdo:hatAutor</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="betrifftPerson">
+  <div class="entity-name">szdo:betrifftPerson</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#betrifftPerson</div>
+  <div class="entity-labels"><span class="label-de">DE: betrifft Person</span> <span class="label-en">EN: concerns person</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="enclosures">
+  <div class="entity-name">szdo:enclosures</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#enclosures</div>
+  <div class="entity-labels"><span class="label-en">EN: enclosures (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBeilage"><code>szdo:hatBeilage</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="enthaelt">
+  <div class="entity-name">szdo:enthaelt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#enthaelt</div>
+  <div class="entity-labels"><span class="label-de">DE: enthält</span> <span class="label-en">EN: contains</span></div>
+  <div class="entity-comment"><span class="de-only">Der Nachlass/die Sammlung enthält untergeordnete Sammlungen oder Objekte.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Nachlass"><code>szdo:Nachlass</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:includesOrIncluded</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="enthaeltObjekt">
+  <div class="entity-name">szdo:enthaeltObjekt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#enthaeltObjekt</div>
+  <div class="entity-labels"><span class="label-de">DE: enthält Objekt</span> <span class="label-en">EN: contains object</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#istTeilVon"><code>szdo:istTeilVon</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="extent">
+  <div class="entity-name">szdo:extent</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#extent</div>
+  <div class="entity-labels"><span class="label-en">EN: extent (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatUmfang"><code>szdo:hatUmfang</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="glossar">
+  <div class="entity-name">szdo:glossar</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#glossar</div>
+  <div class="entity-labels"><span class="label-en">EN: glossar (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Links to szdg: SKOS concept. In v1.0.0 replaced by szdo:hatMerkmaltyp for provenance or direct SKOS references.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hasContentRelation">
+  <div class="entity-name">szdo:hasContentRelation</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hasContentRelation</div>
+  <div class="entity-labels"><span class="label-en">EN: hasContentRelation (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Content-based relation between objects. In v1.0.0 replaced by szdo:sieheAuch.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatAbsender">
+  <div class="entity-name">szdo:hatAbsender</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatAbsender</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Absender</span> <span class="label-en">EN: has sender</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#KorrespondenzKonvolut"><code>szdo:KorrespondenzKonvolut</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatAutor">
+  <div class="entity-name">szdo:hatAutor</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatAutor</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Autor</span> <span class="label-en">EN: has author</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatBeilage">
+  <div class="entity-name">szdo:hatBeilage</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeilage</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Beilage</span> <span class="label-en">EN: has enclosure</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Beilage"><code>szdo:Beilage</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatBeteiligten">
+  <div class="entity-name">szdo:hatBeteiligten</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeteiligten</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Beteiligten</span> <span class="label-en">EN: has party involved</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatBetroffenePerson">
+  <div class="entity-name">szdo:hatBetroffenePerson</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBetroffenePerson</div>
+  <div class="entity-labels"><span class="label-de">DE: hat betroffene Person</span> <span class="label-en">EN: has affected person</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatDigitalesObjekt">
+  <div class="entity-name">szdo:hatDigitalesObjekt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatDigitalesObjekt</div>
+  <div class="entity-labels"><span class="label-de">DE: hat digitales Objekt</span> <span class="label-en">EN: has digital object</span></div>
+  <div class="entity-comment"><span class="de-only">Verknüpft ein physisches Nachlassobjekt mit seiner digitalen Repräsentation.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:hasInstantiation</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatEmpfaenger">
+  <div class="entity-name">szdo:hatEmpfaenger</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatEmpfaenger</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Empfänger</span> <span class="label-en">EN: has receiver</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#KorrespondenzKonvolut"><code>szdo:KorrespondenzKonvolut</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatEntstehungsort">
+  <div class="entity-name">szdo:hatEntstehungsort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatEntstehungsort</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Entstehungsort</span> <span class="label-en">EN: has place of origin</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatExemplar">
+  <div class="entity-name">szdo:hatExemplar</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatExemplar</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Exemplar</span> <span class="label-en">EN: has item</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Exemplar"><code>szdo:Exemplar</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatExpression">
+  <div class="entity-name">szdo:hatExpression</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatExpression</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Expression</span> <span class="label-en">EN: has expression</span></div>
+  <div class="entity-comment"><span class="de-only">Vom Werk zu einer sprachlichen/medialen Realisierung (Originaltext, Übersetzung, Verfilmung).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatFaksimile">
+  <div class="entity-name">szdo:hatFaksimile</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatFaksimile</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Faksimile</span> <span class="label-en">EN: has facsimile</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Faksimile"><code>szdo:Faksimile</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatHerausgeber">
+  <div class="entity-name">szdo:hatHerausgeber</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatHerausgeber</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Herausgeber</span> <span class="label-en">EN: has editor</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatIllustrator">
+  <div class="entity-name">szdo:hatIllustrator</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatIllustrator</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Illustrator</span> <span class="label-en">EN: has illustrator</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatKomponist">
+  <div class="entity-name">szdo:hatKomponist</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatKomponist</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Komponist</span> <span class="label-en">EN: has composer</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatManifestation">
+  <div class="entity-name">szdo:hatManifestation</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatManifestation</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Manifestation</span> <span class="label-en">EN: has manifestation</span></div>
+  <div class="entity-comment"><span class="de-only">Vom Werk zu einer publizierten Ausgabe (Erstausgabe, Übersetzung, etc.).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatManuskriptzeuge">
+  <div class="entity-name">szdo:hatManuskriptzeuge</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatManuskriptzeuge</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Manuskriptzeugen</span> <span class="label-en">EN: has manuscript witness</span></div>
+  <div class="entity-comment"><span class="de-only">Vom Werk zu seinen physischen Textzeugen im Nachlass.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#istManifestationVon"><code>szdo:istManifestationVon</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatMerkmaltyp">
+  <div class="entity-name">szdo:hatMerkmaltyp</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatMerkmaltyp</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Merkmaltyp</span> <span class="label-en">EN: has feature type</span></div>
+  <div class="entity-comment"><span class="de-only">Verknüpft eine Provenienzmerkmalsinstanz mit dem SKOS-Konzept aus dem Glossar.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#ProvenienzmerkmalInstanz"><code>szdo:ProvenienzmerkmalInstanz</code></a></td></tr>
+    <tr><th>Range</th><td><a href="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature" target="_blank"><code>ProvenanceFeature</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatNachbesitzer">
+  <div class="entity-name">szdo:hatNachbesitzer</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatNachbesitzer</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Nachbesitzer</span> <span class="label-en">EN: has subsequent owner</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Provenienzereignis"><code>szdo:Provenienzereignis</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatNachwortAutor">
+  <div class="entity-name">szdo:hatNachwortAutor</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatNachwortAutor</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Nachwort-Autor</span> <span class="label-en">EN: has afterword author</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatOrt">
+  <div class="entity-name">szdo:hatOrt</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatOrt</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Ort</span> <span class="label-en">EN: has place</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatProvenienz">
+  <div class="entity-name">szdo:hatProvenienz</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatProvenienz</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Provenienz</span> <span class="label-en">EN: has provenance</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Provenienzereignis"><code>szdo:Provenienzereignis</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatProvenienzmerkmal">
+  <div class="entity-name">szdo:hatProvenienzmerkmal</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatProvenienzmerkmal</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Provenienzmerkmal</span> <span class="label-en">EN: has provenance feature</span></div>
+  <div class="entity-comment"><span class="de-only">Verknüpft ein Objekt mit einer konkreten Provenienzmerkmalsinstanz.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#ProvenienzmerkmalInstanz"><code>szdo:ProvenienzmerkmalInstanz</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatPublikationsort">
+  <div class="entity-name">szdo:hatPublikationsort</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatPublikationsort</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Publikationsort</span> <span class="label-en">EN: has publication place</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatSchreiberhand">
+  <div class="entity-name">szdo:hatSchreiberhand</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatSchreiberhand</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Schreiberhand</span> <span class="label-en">EN: has scribal hand</span></div>
+  <div class="entity-comment"><span class="de-only">Person, deren Handschrift auf dem Dokument identifiziert wurde.</span> <span class="en-only comment-en">Person whose handwriting has been identified on the document.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatTeil">
+  <div class="entity-name">szdo:hatTeil</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatTeil</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Teil</span> <span class="label-en">EN: has part</span></div>
+  <div class="entity-comment"><span class="de-only">Sammelwerk enthält Einzelwerke.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#SammelWerk"><code>szdo:SammelWerk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#istTeilVonWerk"><code>szdo:istTeilVonWerk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatUebersetzer">
+  <div class="entity-name">szdo:hatUebersetzer</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatUebersetzer</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Übersetzer</span> <span class="label-en">EN: has translator</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatUmfang">
+  <div class="entity-name">szdo:hatUmfang</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatUmfang</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Umfang</span> <span class="label-en">EN: has extent</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Umfang"><code>szdo:Umfang</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatVerlag">
+  <div class="entity-name">szdo:hatVerlag</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatVerlag</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Verlag</span> <span class="label-en">EN: has publisher</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Organisation"><code>szdo:Organisation</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatVorbesitzer">
+  <div class="entity-name">szdo:hatVorbesitzer</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatVorbesitzer</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Vorbesitzer</span> <span class="label-en">EN: has previous owner</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Provenienzereignis"><code>szdo:Provenienzereignis</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatVorwortAutor">
+  <div class="entity-name">szdo:hatVorwortAutor</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatVorwortAutor</div>
+  <div class="entity-labels"><span class="label-de">DE: hat Vorwort-Autor</span> <span class="label-en">EN: has foreword author</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istAdaptionVon">
+  <div class="entity-name">szdo:istAdaptionVon</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istAdaptionVon</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Adaption von</span> <span class="label-en">EN: is adaptation of</span></div>
+  <div class="entity-comment"><span class="de-only">Verfilmung, Vertonung, Dramatisierung eines Werks.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istManifestationVon">
+  <div class="entity-name">szdo:istManifestationVon</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istManifestationVon</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Manifestation von</span> <span class="label-en">EN: is manifestation of</span></div>
+  <div class="entity-comment"><span class="de-only">Verbindet ein physisches Nachlassobjekt (SZDMSK) mit dem abstrakten Werk (SZDWRK), dessen Textzeuge es ist.</span> <span class="en-only comment-en">Connects a physical estate object (SZDMSK) with the abstract work (SZDWRK) it witnesses.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#hatManuskriptzeuge"><code>szdo:hatManuskriptzeuge</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istNachdruckVon">
+  <div class="entity-name">szdo:istNachdruckVon</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istNachdruckVon</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Nachdruck von</span> <span class="label-en">EN: is reprint of</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istTeilVon">
+  <div class="entity-name">szdo:istTeilVon</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istTeilVon</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Teil von</span> <span class="label-en">EN: is part of</span></div>
+  <div class="entity-comment"><span class="de-only">Ein Nachlassobjekt gehört zu einer Sammlung.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#enthaeltObjekt"><code>szdo:enthaeltObjekt</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:isOrWasIncludedIn</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istTeilVonWerk">
+  <div class="entity-name">szdo:istTeilVonWerk</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istTeilVonWerk</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Teil von Werk</span> <span class="label-en">EN: is part of work</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#SammelWerk"><code>szdo:SammelWerk</code></a></td></tr>
+    <tr><th>Inverse of</th><td><a href="#hatTeil"><code>szdo:hatTeil</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="istUebersetzungVon">
+  <div class="entity-name">szdo:istUebersetzungVon</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#istUebersetzungVon</div>
+  <div class="entity-labels"><span class="label-de">DE: ist Übersetzung von</span> <span class="label-en">EN: is translation of</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#WerkExpression"><code>szdo:WerkExpression</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="location">
+  <div class="entity-name">szdo:location</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#location</div>
+  <div class="entity-labels"><span class="label-en">EN: location (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#wirdAufbewahrtIn"><code>szdo:wirdAufbewahrtIn</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="partyInvolved">
+  <div class="entity-name">szdo:partyInvolved</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#partyInvolved</div>
+  <div class="entity-labels"><span class="label-en">EN: partyInvolved (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBeteiligten"><code>szdo:hatBeteiligten</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="provenanceCharacteristic">
+  <div class="entity-name">szdo:provenanceCharacteristic</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#provenanceCharacteristic</div>
+  <div class="entity-labels"><span class="label-en">EN: provenanceCharacteristic (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatProvenienzmerkmal"><code>szdo:hatProvenienzmerkmal</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="receiver">
+  <div class="entity-name">szdo:receiver</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#receiver</div>
+  <div class="entity-labels"><span class="label-en">EN: receiver (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatEmpfaenger"><code>szdo:hatEmpfaenger</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="relationTo">
+  <div class="entity-name">szdo:relationTo</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#relationTo</div>
+  <div class="entity-labels"><span class="label-en">EN: relationTo (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Generic relation used in Lebenskalender. In v1.0.0 replaced by specific properties (szdo:betrifftPerson, szdo:hatOrt, etc.).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="relationToPerson">
+  <div class="entity-name">szdo:relationToPerson</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#relationToPerson</div>
+  <div class="entity-labels"><span class="label-en">EN: relationToPerson (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBetroffenePerson"><code>szdo:hatBetroffenePerson</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="relationToWork">
+  <div class="entity-name">szdo:relationToWork</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#relationToWork</div>
+  <div class="entity-labels"><span class="label-en">EN: relationToWork (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">In v0.x links physical object to work index. In v1.0.0 replaced by szdo:istManifestationVon.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#istManifestationVon"><code>szdo:istManifestationVon</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="sender">
+  <div class="entity-name">szdo:sender</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#sender</div>
+  <div class="entity-labels"><span class="label-en">EN: sender (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatAbsender"><code>szdo:hatAbsender</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="sieheAuch">
+  <div class="entity-name">szdo:sieheAuch</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#sieheAuch</div>
+  <div class="entity-labels"><span class="label-de">DE: siehe auch</span> <span class="label-en">EN: see also</span></div>
+  <div class="entity-comment"><span class="de-only">Allgemeine Querverknüpfung zwischen verwandten Ressourcen.</span> <span class="en-only comment-en">General cross-reference between related resources.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property · Symmetric</td></tr>
+    <tr><th>Domain</th><td><code>rdfs:Resource</code></td></tr>
+    <tr><th>Range</th><td><code>rdfs:Resource</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="translator">
+  <div class="entity-name">szdo:translator</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#translator</div>
+  <div class="entity-labels"><span class="label-en">EN: translator (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatUebersetzer"><code>szdo:hatUebersetzer</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="wirdAufbewahrtIn">
+  <div class="entity-name">szdo:wirdAufbewahrtIn</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#wirdAufbewahrtIn</div>
+  <div class="entity-labels"><span class="label-de">DE: wird aufbewahrt in</span> <span class="label-en">EN: is held at</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Aufbewahrungsort"><code>szdo:Aufbewahrungsort</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><code>RiC-O:hasOrHadHolder</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="wirdBehandeltIn">
+  <div class="entity-name">szdo:wirdBehandeltIn</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#wirdBehandeltIn</div>
+  <div class="entity-labels"><span class="label-de">DE: wird behandelt in</span> <span class="label-en">EN: is subject of</span></div>
+  <div class="entity-comment"><span class="de-only">Verknüpft ein Werk mit Sekundärliteratur darüber.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Sekundaerliteratur"><code>szdo:Sekundaerliteratur</code></a></td></tr>
+  </table>
+</div>
+  <h2 id="datatype-properties">Datatype Properties</h2>
+<div class="entity-card" id="acquired">
+  <div class="entity-name">szdo:acquired</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#acquired</div>
+  <div class="entity-labels"><span class="label-en">EN: acquired (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Free-text acquisition description. In v1.0.0 modeled as szdo:Provenienzereignis with structured properties.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="additionalMaterial">
+  <div class="entity-name">szdo:additionalMaterial</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#additionalMaterial</div>
+  <div class="entity-labels"><span class="label-en">EN: additionalMaterial (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Free-text description of additional material. No direct v1.0.0 equivalent as DatatypeProperty.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="anmerkung">
+  <div class="entity-name">szdo:anmerkung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#anmerkung</div>
+  <div class="entity-labels"><span class="label-de">DE: Anmerkung</span> <span class="label-en">EN: Note</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="aufschrift">
+  <div class="entity-name">szdo:aufschrift</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#aufschrift</div>
+  <div class="entity-labels"><span class="label-de">DE: Aufschrift</span> <span class="label-en">EN: Identifying Inscription</span></div>
+  <div class="entity-comment"><span class="de-only">Titelaufschrift oder identifizierende Beschriftung auf dem Objekt.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="beschreibstoff">
+  <div class="entity-name">szdo:beschreibstoff</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#beschreibstoff</div>
+  <div class="entity-labels"><span class="label-de">DE: Beschreibstoff</span> <span class="label-en">EN: Writing Material</span></div>
+  <div class="entity-comment"><span class="de-only">Material des Schriftträgers (z.B. Notizbuch, liniertes Papier, Durchschlagpapier).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="beschreibung">
+  <div class="entity-name">szdo:beschreibung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#beschreibung</div>
+  <div class="entity-labels"><span class="label-de">DE: Beschreibung</span> <span class="label-en">EN: Description</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="bindung">
+  <div class="entity-name">szdo:bindung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#bindung</div>
+  <div class="entity-labels"><span class="label-de">DE: Bindung</span> <span class="label-en">EN: Binding</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Buch"><code>szdo:Buch</code></a></td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="birth">
+  <div class="entity-name">szdo:birth</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#birth</div>
+  <div class="entity-labels"><span class="label-en">EN: birth (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#geburtsdatum"><code>szdo:geburtsdatum</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="blattanzahl">
+  <div class="entity-name">szdo:blattanzahl</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#blattanzahl</div>
+  <div class="entity-labels"><span class="label-de">DE: Blattanzahl</span> <span class="label-en">EN: Leaf Count</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Umfang"><code>szdo:Umfang</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:integer</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="category">
+  <div class="entity-name">szdo:category</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#category</div>
+  <div class="entity-labels"><span class="label-en">EN: category (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#kategorie"><code>szdo:kategorie</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="content">
+  <div class="entity-name">szdo:content</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#content</div>
+  <div class="entity-labels"><span class="label-en">EN: content (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#beschreibung"><code>szdo:beschreibung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="dateOfPublication">
+  <div class="entity-name">szdo:dateOfPublication</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#dateOfPublication</div>
+  <div class="entity-labels"><span class="label-en">EN: dateOfPublication (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#publikationsdatum"><code>szdo:publikationsdatum</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="datum">
+  <div class="entity-name">szdo:datum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#datum</div>
+  <div class="entity-labels"><span class="label-de">DE: Datum</span> <span class="label-en">EN: Date</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:date</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="death">
+  <div class="entity-name">szdo:death</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#death</div>
+  <div class="entity-labels"><span class="label-en">EN: death (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#todesdatum"><code>szdo:todesdatum</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="desc">
+  <div class="entity-name">szdo:desc</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#desc</div>
+  <div class="entity-labels"><span class="label-en">EN: desc (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#beschreibung"><code>szdo:beschreibung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="edition">
+  <div class="entity-name">szdo:edition</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#edition</div>
+  <div class="entity-labels"><span class="label-en">EN: edition (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="entstehungsdatum">
+  <div class="entity-name">szdo:entstehungsdatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#entstehungsdatum</div>
+  <div class="entity-labels"><span class="label-de">DE: Entstehungsdatum</span> <span class="label-en">EN: Date of Creation</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="facsimile">
+  <div class="entity-name">szdo:facsimile</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#facsimile</div>
+  <div class="entity-labels"><span class="label-en">EN: facsimile (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">GAMS PID reference to digital facsimile. In v1.0.0 replaced by szdo:hatDigitalesObjekt → szdo:METSObjekt.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="forename">
+  <div class="entity-name">szdo:forename</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#forename</div>
+  <div class="entity-labels"><span class="label-en">EN: forename (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#vorname"><code>szdo:vorname</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="format">
+  <div class="entity-name">szdo:format</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#format</div>
+  <div class="entity-labels"><span class="label-de">DE: Format</span> <span class="label-en">EN: Format</span></div>
+  <div class="entity-comment"><span class="de-only">Physisches Format/Maße (z.B. 23x17 cm).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="fruehestensDatum">
+  <div class="entity-name">szdo:fruehestensDatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#fruehestensDatum</div>
+  <div class="entity-labels"><span class="label-de">DE: frühestens</span> <span class="label-en">EN: not before</span></div>
+  <div class="entity-comment"><span class="de-only">Frühestmögliches Datum (TEI @notBefore).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:date</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="gamsIdentifier">
+  <div class="entity-name">szdo:gamsIdentifier</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#gamsIdentifier</div>
+  <div class="entity-labels"><span class="label-de">DE: GAMS-PID</span> <span class="label-en">EN: GAMS PID</span></div>
+  <div class="entity-comment"><span class="de-only">Persistent Identifier in GAMS (z.B. o:szd.270).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="geburtsdatum">
+  <div class="entity-name">szdo:geburtsdatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#geburtsdatum</div>
+  <div class="entity-labels"><span class="label-de">DE: Geburtsdatum</span> <span class="label-en">EN: Date of Birth</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:date</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="geonamesIdentifier">
+  <div class="entity-name">szdo:geonamesIdentifier</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#geonamesIdentifier</div>
+  <div class="entity-labels"><span class="label-de">DE: Geonames-Identifikator</span> <span class="label-en">EN: Geonames Identifier</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:anyURI</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="gnd">
+  <div class="entity-name">szdo:gnd</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#gnd</div>
+  <div class="entity-labels"><span class="label-en">EN: gnd (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#gndIdentifier"><code>szdo:gndIdentifier</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="gndIdentifier">
+  <div class="entity-name">szdo:gndIdentifier</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#gndIdentifier</div>
+  <div class="entity-labels"><span class="label-de">DE: GND-Identifikator</span> <span class="label-en">EN: GND Identifier</span></div>
+  <div class="entity-comment"><span class="de-only">Identifikator in der Gemeinsamen Normdatei (z.B. http://d-nb.info/gnd/118637479).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:anyURI</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="head">
+  <div class="entity-name">szdo:head</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#head</div>
+  <div class="entity-labels"><span class="label-en">EN: head (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Event heading in Lebenskalender. No direct v1.0.0 equivalent; use szdo:beschreibung.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="identifyingInscription">
+  <div class="entity-name">szdo:identifyingInscription</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#identifyingInscription</div>
+  <div class="entity-labels"><span class="label-en">EN: identifyingInscription (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#aufschrift"><code>szdo:aufschrift</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="incipit">
+  <div class="entity-name">szdo:incipit</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#incipit</div>
+  <div class="entity-labels"><span class="label-de">DE: Incipit</span> <span class="label-en">EN: Incipit</span></div>
+  <div class="entity-comment"><span class="de-only">Anfangsworte eines Textes zur Identifizierung.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="kategorie">
+  <div class="entity-name">szdo:kategorie</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#kategorie</div>
+  <div class="entity-labels"><span class="label-de">DE: Kategorie</span> <span class="label-en">EN: Category</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="language">
+  <div class="entity-name">szdo:language</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#language</div>
+  <div class="entity-labels"><span class="label-en">EN: language (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#sprache"><code>szdo:sprache</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="nachname">
+  <div class="entity-name">szdo:nachname</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#nachname</div>
+  <div class="entity-labels"><span class="label-de">DE: Nachname</span> <span class="label-en">EN: Family Name</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="name">
+  <div class="entity-name">szdo:name</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#name</div>
+  <div class="entity-labels"><span class="label-en">EN: name (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Used for person and location names in v0.x. Replaced by szdo:vorname + szdo:nachname for persons.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="namensform">
+  <div class="entity-name">szdo:namensform</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#namensform</div>
+  <div class="entity-labels"><span class="label-de">DE: Namensform</span> <span class="label-en">EN: Name Variant</span></div>
+  <div class="entity-comment"><span class="de-only">Alternative Namensschreibung, Pseudonym.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="note">
+  <div class="entity-name">szdo:note</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#note</div>
+  <div class="entity-labels"><span class="label-en">EN: note (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#anmerkung"><code>szdo:anmerkung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="objecttyp">
+  <div class="entity-name">szdo:objecttyp</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#objecttyp</div>
+  <div class="entity-labels"><span class="label-en">EN: objecttyp (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#objekttyp"><code>szdo:objekttyp</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="objekttyp">
+  <div class="entity-name">szdo:objekttyp</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#objekttyp</div>
+  <div class="entity-labels"><span class="label-de">DE: Objekttyp</span> <span class="label-en">EN: Object Type</span></div>
+  <div class="entity-comment"><span class="de-only">Typologische Bezeichnung (z.B. Manuskript, Typoskript mit Korrekturen).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="originaltitel">
+  <div class="entity-name">szdo:originaltitel</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#originaltitel</div>
+  <div class="entity-labels"><span class="label-de">DE: Originaltitel</span> <span class="label-en">EN: Original Title</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="originaltitle">
+  <div class="entity-name">szdo:originaltitle</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#originaltitle</div>
+  <div class="entity-labels"><span class="label-en">EN: originaltitle (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#originaltitel"><code>szdo:originaltitel</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="page">
+  <div class="entity-name">szdo:page</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#page</div>
+  <div class="entity-labels"><span class="label-en">EN: page (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#seitenanzahl"><code>szdo:seitenanzahl</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="piecesOfCorrespondence">
+  <div class="entity-name">szdo:piecesOfCorrespondence</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#piecesOfCorrespondence</div>
+  <div class="entity-labels"><span class="label-en">EN: piecesOfCorrespondence (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#stueckanzahl"><code>szdo:stueckanzahl</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="piecesOfEnclosures">
+  <div class="entity-name">szdo:piecesOfEnclosures</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#piecesOfEnclosures</div>
+  <div class="entity-labels"><span class="label-en">EN: piecesOfEnclosures (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="provenance">
+  <div class="entity-name">szdo:provenance</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#provenance</div>
+  <div class="entity-labels"><span class="label-en">EN: provenance (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Free-text provenance string. In v1.0.0 replaced by szdo:hatProvenienz → szdo:Provenienzereignis.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="pubDate">
+  <div class="entity-name">szdo:pubDate</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#pubDate</div>
+  <div class="entity-labels"><span class="label-en">EN: pubDate (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#publikationsdatum"><code>szdo:publikationsdatum</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="pubPlace">
+  <div class="entity-name">szdo:pubPlace</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#pubPlace</div>
+  <div class="entity-labels"><span class="label-en">EN: pubPlace (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatPublikationsort"><code>szdo:hatPublikationsort</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="publikationsdatum">
+  <div class="entity-name">szdo:publikationsdatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#publikationsdatum</div>
+  <div class="entity-labels"><span class="label-de">DE: Publikationsdatum</span> <span class="label-en">EN: Publication Date</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:gYear</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="publisher">
+  <div class="entity-name">szdo:publisher</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#publisher</div>
+  <div class="entity-labels"><span class="label-en">EN: publisher (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">In v1.0.0 replaced by szdo:hatVerlag (ObjectProperty → szdo:Organisation).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="schreibstoff">
+  <div class="entity-name">szdo:schreibstoff</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#schreibstoff</div>
+  <div class="entity-labels"><span class="label-de">DE: Schreibstoff</span> <span class="label-en">EN: Writing Instrument</span></div>
+  <div class="entity-comment"><span class="de-only">Schreibwerkzeug/-mittel (z.B. violette Tinte, Bleistift, blauer Buntstift).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="secretarialHand">
+  <div class="entity-name">szdo:secretarialHand</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#secretarialHand</div>
+  <div class="entity-labels"><span class="label-en">EN: secretarialHand (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">In v0.x this is a literal; in v1.0.0 szdo:hatSchreiberhand is an ObjectProperty pointing to szdo:Person.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatSchreiberhand"><code>szdo:hatSchreiberhand</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="seitenanzahl">
+  <div class="entity-name">szdo:seitenanzahl</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#seitenanzahl</div>
+  <div class="entity-labels"><span class="label-de">DE: Seitenanzahl</span> <span class="label-en">EN: Page Count</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Umfang"><code>szdo:Umfang</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:integer</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="series">
+  <div class="entity-name">szdo:series</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#series</div>
+  <div class="entity-labels"><span class="label-en">EN: series (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="settlement">
+  <div class="entity-name">szdo:settlement</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#settlement</div>
+  <div class="entity-labels"><span class="label-en">EN: settlement (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">City/settlement name on Location. No direct v1.0.0 equivalent; modeled via szdo:GeographischerOrt.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="sicherheitsgrad">
+  <div class="entity-name">szdo:sicherheitsgrad</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#sicherheitsgrad</div>
+  <div class="entity-labels"><span class="label-de">DE: Sicherheitsgrad</span> <span class="label-en">EN: Certainty</span></div>
+  <div class="entity-comment"><span class="de-only">Grad der Datensicherheit (TEI @cert: low, medium, high).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="signatur">
+  <div class="entity-name">szdo:signatur</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#signatur</div>
+  <div class="entity-labels"><span class="label-de">DE: Signatur</span> <span class="label-en">EN: Shelfmark</span></div>
+  <div class="entity-comment"><span class="de-only">Archivsignatur des Objekts (z.B. SZ-AAP/W4.1).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="signature">
+  <div class="entity-name">szdo:signature</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#signature</div>
+  <div class="entity-labels"><span class="label-en">EN: signature (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#signatur"><code>szdo:signatur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="spaetestensDatum">
+  <div class="entity-name">szdo:spaetestensDatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#spaetestensDatum</div>
+  <div class="entity-labels"><span class="label-de">DE: spätestens</span> <span class="label-en">EN: not after</span></div>
+  <div class="entity-comment"><span class="de-only">Spätestmögliches Datum (TEI @notAfter).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:date</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="sprache">
+  <div class="entity-name">szdo:sprache</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#sprache</div>
+  <div class="entity-labels"><span class="label-de">DE: Sprache</span> <span class="label-en">EN: Language</span></div>
+  <div class="entity-comment"><span class="de-only">Sprache des Inhalts (ISO 639-3, z.B. ger, eng, fre).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="stamp">
+  <div class="entity-name">szdo:stamp</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#stamp</div>
+  <div class="entity-labels"><span class="label-en">EN: stamp (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Stamp description on library book. In v1.0.0 modeled via szdo:hatProvenienzmerkmal → szdg:Stamp.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="stueckanzahl">
+  <div class="entity-name">szdo:stueckanzahl</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#stueckanzahl</div>
+  <div class="entity-labels"><span class="label-de">DE: Stückanzahl</span> <span class="label-en">EN: Piece Count</span></div>
+  <div class="entity-comment"><span class="de-only">Anzahl der Korrespondenzstücke in einem Konvolut.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Umfang"><code>szdo:Umfang</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:integer</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="summary">
+  <div class="entity-name">szdo:summary</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#summary</div>
+  <div class="entity-labels"><span class="label-en">EN: summary (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#zusammenfassung"><code>szdo:zusammenfassung</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="surname">
+  <div class="entity-name">szdo:surname</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#surname</div>
+  <div class="entity-labels"><span class="label-en">EN: surname (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#nachname"><code>szdo:nachname</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="text">
+  <div class="entity-name">szdo:text</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#text</div>
+  <div class="entity-labels"><span class="label-en">EN: text (GAMS v0.x)</span></div>
+  <div class="entity-comment"><span class="en-only comment-en">Generic text container used across v0.x for extent descriptions, dates, and free text. No single v1.0.0 equivalent.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+  </table>
+</div>
+<div class="entity-card" id="titel">
+  <div class="entity-name">szdo:titel</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#titel</div>
+  <div class="entity-labels"><span class="label-de">DE: Titel</span> <span class="label-en">EN: Title</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="title">
+  <div class="entity-name">szdo:title</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#title</div>
+  <div class="entity-labels"><span class="label-en">EN: title (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#titel"><code>szdo:titel</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="todesdatum">
+  <div class="entity-name">szdo:todesdatum</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#todesdatum</div>
+  <div class="entity-labels"><span class="label-de">DE: Todesdatum</span> <span class="label-en">EN: Date of Death</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:date</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="viafIdentifier">
+  <div class="entity-name">szdo:viafIdentifier</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#viafIdentifier</div>
+  <div class="entity-labels"><span class="label-de">DE: VIAF-Identifikator</span> <span class="label-en">EN: VIAF Identifier</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:anyURI</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="vorname">
+  <div class="entity-name">szdo:vorname</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#vorname</div>
+  <div class="entity-labels"><span class="label-de">DE: Vorname</span> <span class="label-en">EN: Given Name</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="when">
+  <div class="entity-name">szdo:when</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#when</div>
+  <div class="entity-labels"><span class="label-en">EN: when (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#datum"><code>szdo:datum</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="wikidata">
+  <div class="entity-name">szdo:wikidata</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#wikidata</div>
+  <div class="entity-labels"><span class="label-en">EN: wikidata (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#wikidataIdentifier"><code>szdo:wikidataIdentifier</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="wikidataIdentifier">
+  <div class="entity-name">szdo:wikidataIdentifier</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#wikidataIdentifier</div>
+  <div class="entity-labels"><span class="label-de">DE: Wikidata-Identifikator</span> <span class="label-en">EN: Wikidata Identifier</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>xsd:anyURI</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="writingInstrument">
+  <div class="entity-name">szdo:writingInstrument</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#writingInstrument</div>
+  <div class="entity-labels"><span class="label-en">EN: writingInstrument (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#schreibstoff"><code>szdo:schreibstoff</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="writingMaterial">
+  <div class="entity-name">szdo:writingMaterial</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#writingMaterial</div>
+  <div class="entity-labels"><span class="label-en">EN: writingMaterial (GAMS v0.x)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#beschreibstoff"><code>szdo:beschreibstoff</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="zeitperiode">
+  <div class="entity-name">szdo:zeitperiode</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#zeitperiode</div>
+  <div class="entity-labels"><span class="label-de">DE: Zeitperiode</span> <span class="label-en">EN: Time Period</span></div>
+  <div class="entity-comment"><span class="de-only">Zeitliche Einordnung (pre-zweig, lifetime, post-wwii, late-20c, contemporary).</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Domain</th><td><a href="#Manifestation"><code>szdo:Manifestation</code></a></td></tr>
+    <tr><th>Range</th><td><code>xsd:string</code></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="zusammenfassung">
+  <div class="entity-name">szdo:zusammenfassung</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#zusammenfassung</div>
+  <div class="entity-labels"><span class="label-de">DE: Zusammenfassung</span> <span class="label-en">EN: Summary</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Datatype Property</td></tr>
+    <tr><th>Range</th><td><code>rdf:langString</code></td></tr>
+  </table>
+</div>
+</div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · Generated from <a href="szd-ontology.ttl">szd-ontology.ttl</a></p>
+    </div>
+  </footer>
+</body>
+</html>

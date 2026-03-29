@@ -1,0 +1,274 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix szdo:    <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix rico:    <https://www.ica.org/standards/RiC/ontology#> .
+@prefix lrm:     <http://iflastandards.info/ns/lrm/lrmer/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =============================================================================
+# SHACL Shapes for Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+# Validates structural constraints, naming conventions, and completeness.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Shape 1: Every OWL Class must have bilingual labels and a comment
+# -----------------------------------------------------------------------------
+
+szdo:ClassShape
+    a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "Every class must have at least one rdfs:label."@en ;
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1 ;
+        sh:message "Every class must have at least one rdfs:comment."@en ;
+    ] .
+
+# Check that labels exist in both languages (via SPARQL constraint)
+szdo:ClassBilingualLabelShape
+    a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+    sh:sparql [
+        sh:message "Class {$this} is missing a German (de) rdfs:label." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a owl:Class .
+                FILTER NOT EXISTS { $this rdfs:label ?labelDe . FILTER(lang(?labelDe) = 'de') }
+                FILTER NOT EXISTS { $this owl:deprecated true }
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+            }
+        """ ;
+    ] ;
+    sh:sparql [
+        sh:message "Class {$this} is missing an English (en) rdfs:label." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a owl:Class .
+                FILTER NOT EXISTS { $this rdfs:label ?labelEn . FILTER(lang(?labelEn) = 'en') }
+                FILTER NOT EXISTS { $this owl:deprecated true }
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+            }
+        """ ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 2: Every OWL ObjectProperty must have a label
+# -----------------------------------------------------------------------------
+
+szdo:ObjectPropertyShape
+    a sh:NodeShape ;
+    sh:targetClass owl:ObjectProperty ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "Every object property must have at least one rdfs:label."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 3: Every OWL DatatypeProperty must have a label
+# -----------------------------------------------------------------------------
+
+szdo:DatatypePropertyShape
+    a sh:NodeShape ;
+    sh:targetClass owl:DatatypeProperty ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "Every datatype property must have at least one rdfs:label."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 4: ObjectProperties should have domain and range
+# -----------------------------------------------------------------------------
+
+szdo:ObjectPropertyDomainRangeShape
+    a sh:NodeShape ;
+    sh:targetClass owl:ObjectProperty ;
+    sh:sparql [
+        sh:message "Object property {$this} has no rdfs:domain declared." ;
+        sh:prefixes [
+            sh:declare [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] ;
+            sh:declare [ sh:prefix "owl" ; sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ] ;
+            sh:declare [ sh:prefix "szdo" ; sh:namespace "https://gams.uni-graz.at/o:szd.ontology#"^^xsd:anyURI ] ;
+        ] ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a owl:ObjectProperty .
+                FILTER NOT EXISTS { $this rdfs:domain ?d }
+                FILTER NOT EXISTS { $this owl:deprecated true }
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+            }
+        """ ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 5: Nachlass must contain Sammlungen
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:NachlassInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:Nachlass ;
+    sh:property [
+        sh:path szdo:enthaelt ;
+        sh:minCount 1 ;
+        sh:class szdo:Sammlung ;
+        sh:message "A Nachlass instance must contain at least one Sammlung."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 6: NachlassObjekt must belong to a Sammlung
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:NachlassObjektInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:NachlassObjekt ;
+    sh:property [
+        sh:path szdo:istTeilVon ;
+        sh:minCount 1 ;
+        sh:class szdo:Sammlung ;
+        sh:message "Every NachlassObjekt must be part of a Sammlung."@en ;
+    ] ;
+    sh:property [
+        sh:path szdo:signatur ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Every NachlassObjekt must have a signatur."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 7: Person must have a name
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:PersonInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:Person ;
+    sh:property [
+        sh:path szdo:nachname ;
+        sh:minCount 1 ;
+        sh:message "Every Person must have a nachname (family name)."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 8: KorrespondenzKonvolut must have sender and receiver
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:KorrespondenzKonvolutInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:KorrespondenzKonvolut ;
+    sh:property [
+        sh:path szdo:hatAbsender ;
+        sh:minCount 1 ;
+        sh:class szdo:Person ;
+        sh:message "Every KorrespondenzKonvolut must have a sender (hatAbsender)."@en ;
+    ] ;
+    sh:property [
+        sh:path szdo:hatEmpfaenger ;
+        sh:minCount 1 ;
+        sh:class szdo:Person ;
+        sh:message "Every KorrespondenzKonvolut must have a receiver (hatEmpfaenger)."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 9: Werk must link to WerkExpression or NachlassObjekt
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:WerkInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:Werk ;
+    sh:property [
+        sh:path szdo:titel ;
+        sh:minCount 1 ;
+        sh:message "Every Werk must have a titel."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 10: BiographischesEreignis must have a date
+# (for instance data validation)
+# -----------------------------------------------------------------------------
+
+szdo:BiographischesEreignisInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass szdo:BiographischesEreignis ;
+    sh:property [
+        sh:path szdo:datum ;
+        sh:minCount 1 ;
+        sh:message "Every BiographischesEreignis must have a datum."@en ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 11: Naming convention — all szdo: classes should start uppercase
+# -----------------------------------------------------------------------------
+
+szdo:NamingConventionClassShape
+    a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+    sh:sparql [
+        sh:message "Class local name '{$this}' does not start with an uppercase letter." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a owl:Class .
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+                BIND(REPLACE(STR($this), '^.*#', '') AS ?local)
+                FILTER(!REGEX(?local, '^[A-ZÄÖÜ]'))
+            }
+        """ ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 12: Naming convention — all szdo: properties should start lowercase
+# -----------------------------------------------------------------------------
+
+szdo:NamingConventionPropertyShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rdf:type ;
+    sh:sparql [
+        sh:message "Property local name '{$this}' does not start with a lowercase letter." ;
+        sh:select """
+            SELECT $this WHERE {
+                { $this a owl:ObjectProperty } UNION { $this a owl:DatatypeProperty }
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+                BIND(REPLACE(STR($this), '^.*#', '') AS ?local)
+                FILTER(!REGEX(?local, '^[a-zäöü]'))
+            }
+        """ ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Shape 13: No orphan classes (classes without subClassOf or equivalentClass)
+# -----------------------------------------------------------------------------
+
+szdo:OrphanClassShape
+    a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+    sh:sparql [
+        sh:message "Class {$this} has no rdfs:subClassOf or owl:equivalentClass — it is orphaned in the hierarchy." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a owl:Class .
+                FILTER(isIRI($this))
+                FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
+                FILTER NOT EXISTS { $this rdfs:subClassOf ?parent }
+                FILTER NOT EXISTS { $this owl:equivalentClass ?eq }
+                FILTER NOT EXISTS { $this owl:deprecated true }
+            }
+        """ ;
+    ] .

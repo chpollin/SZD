@@ -605,6 +605,71 @@ Die bestehende implizite `szd:`-Ontologie (definiert in `szd-TORDF.xsl`) wird sc
 
 ---
 
+## 10a. Versionierung und GAMS-Kompatibilität
+
+### Versionsstrategie
+
+Die SZDO nutzt Standard-OWL-Versionierung:
+
+| Version | Ort | Status | Beschreibung |
+|---------|-----|--------|-------------|
+| **v0.x** | GAMS (`stefanzweig.digital`) | Produktiv | Implizit in `szd-TORDF.xsl` definiert. Englische camelCase-Bezeichner. 14 Klassen, 67 Properties. Über Jahre gewachsen. |
+| **v1.0.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Neu | Formale OWL-Ontologie. Deutsche Bezeichner. 58 Klassen, 77 Properties. RiC-O/LRM/CRM-Alignments. GAMS-Kompatibilitätsschicht. |
+
+**OWL-Metadaten:**
+```turtle
+owl:versionInfo "1.0.0" ;
+owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
+owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
+owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
+```
+
+### GAMS-Kompatibilitätsschicht (PART 10 in szd-ontology.ttl)
+
+Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitätsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknüpfungen zu den neuen v1.0.0-Bezeichnern.
+
+**Klassen-Mapping (Auszug):**
+
+| GAMS v0.x (engl.) | SZDO v1.0.0 (dt.) | Mapping |
+|--------------------|--------------------|---------|
+| `szd:Work` | `szdo:NachlassObjekt` | `owl:equivalentClass` |
+| `szd:Book` | `szdo:Buch` | `owl:equivalentClass` |
+| `szd:BundleOfCorrespondence` | `szdo:KorrespondenzKonvolut` | `owl:equivalentClass` |
+| `szd:PersonalDocument` | `szdo:Lebensdokument` | `owl:equivalentClass` |
+| `szd:BiographicalEvent` | `szdo:BiographischesEreignis` | `owl:equivalentClass` |
+| `szd:Agent` | `szdo:Akteur` | `owl:equivalentClass` |
+| `szd:Location` | `szdo:Aufbewahrungsort` | `owl:equivalentClass` |
+| `szd:WorkIndexEntry` | `szdo:Werk` | `owl:equivalentClass` |
+| `szd:Extent` | `szdo:Umfang` | `owl:equivalentClass` |
+| `szd:Enclosur` (Typo) | `szdo:Beilage` | `owl:equivalentClass` |
+
+**Property-Mapping (Auszug):**
+
+| GAMS v0.x | SZDO v1.0.0 | Anmerkung |
+|-----------|-------------|-----------|
+| `szd:title` | `szdo:titel` | Direkt äquivalent |
+| `szd:author` | `szdo:hatAutor` | Namenskonvention: "hat"-Präfix |
+| `szd:sender` | `szdo:hatAbsender` | |
+| `szd:receiver` | `szdo:hatEmpfaenger` | |
+| `szd:writingMaterial` | `szdo:beschreibstoff` | Englisch → Deutsch |
+| `szd:signature` | `szdo:signatur` | |
+| `szd:gnd` | `szdo:gndIdentifier` | |
+| `szd:wikidata` | `szdo:wikidataIdentifier` | |
+| `szd:provenance` | — | In v1.0.0 als `Provenienzereignis` modelliert |
+| `szd:acquired` | — | In v1.0.0 als `Provenienzereignis` modelliert |
+| `szd:text` | — | Generischer Container, kein 1:1-Equivalent |
+| `szd:Enclosur` | `szdo:Beilage` | Typo in v0.x dokumentiert |
+
+### Bekannte Abweichungen zwischen GAMS v0.x und SZDO v1.0.0
+
+1. **Namenskonvention**: v0.x nutzt englisches camelCase, v1.0.0 nutzt deutsche Bezeichner
+2. **Flach vs. geschichtet**: v0.x kennt nur `szd:Work` für alle Manuskripte; v1.0.0 differenziert (Manuskript, Typoskript, Notizbuch, etc.)
+3. **Provenienz**: v0.x nutzt flache Literale (`szd:provenance`, `szd:acquired`); v1.0.0 modelliert als Event-Klasse
+4. **SKOS-Namespace**: v0.x nutzt `https://gams.uni-graz.at/skos/scheme/o:oth/#`; v1.0.0 nutzt Standard W3C SKOS
+5. **Schreiberhand**: v0.x `szd:secretarialHand` ist DatatypeProperty (Literal); v1.0.0 `szdo:hatSchreiberhand` ist ObjectProperty (→ Person)
+
+---
+
 ## 11. Bekannte Lücken und offene Fragen
 
 | Lücke | Beschreibung | Möglicher Ansatz |
@@ -627,6 +692,43 @@ Die Ontologie wird in folgenden Formaten bereitgestellt:
 - **RDF/XML (`.rdf`)**: Für GAMS-Kompatibilität
 - **JSON-LD (`.jsonld`)**: Für Klawiter-Integration und Web-APIs
 - **SKOS (bestehend)**: Glossar bleibt in `szd-Glossary.xml`
+
+---
+
+## 13. Validierungspipeline
+
+Die Ontologie wird durch eine 6-Stufen-Pipeline validiert (`ontology/validate.py`):
+
+| Stufe | Methode | Prüft |
+|-------|---------|-------|
+| 1. Syntax | rdflib Turtle-Parser | Gültige Turtle-Syntax |
+| 2. Metriken | Klassen-/Property-Zählung | Strukturelle Vollständigkeit |
+| 3. SHACL | pySHACL + `szd-shapes.ttl` | Kardinalitäten, Pflicht-Annotationen, Namenskonventionen, Orphan-Klassen |
+| 4. OWL Checks | rdflib-basiert | Orphans, Multi-Domain, Circular SubClassOf, InverseOf-Konsistenz, Disjointness |
+| 5. OntoClean | Rigidity-Analyse | Taxonomische Korrektheit (rigide vs. anti-rigide Klassen) |
+| 6. Kompetenzfragen | 17 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment) |
+
+**Ausführung:** `python ontology/validate.py`
+
+**SHACL Shapes** (`ontology/szd-shapes.ttl`): 13 Constraints für bilinguale Labels, Comments, Property-Domains, Instanzdaten-Validierung und Namenskonventionen.
+
+---
+
+## 14. GitHub Pages Dokumentation
+
+Die Ontologie wird als interaktive HTML-Dokumentation auf GitHub Pages publiziert:
+
+- **URL:** https://chpollin.github.io/SZD/ontology/
+- **Generator:** `ontology/generate_docs.py` (rdflib-basiert, kein pyLODE)
+- **Features:**
+  - Bilingualer DE/EN-Umschalter
+  - Sidebar-Navigation nach Ontologie-Schichten
+  - Fragment-Anker für jede Klasse/Property (`#Manuskript`, `#hatSchreiberhand`, etc.)
+  - Download-Links (Turtle, JSON-LD)
+  - Schema.org JSON-LD Metadata
+  - Externe Vokabular-Badges (RiC-O, LRM, CRM, SKOS, FOAF, Schema.org)
+- **CI/CD:** `.github/workflows/deploy-ontology-docs.yml` — automatische Regenerierung bei Ontologie-Änderungen
+- **Namespace-Strategie:** Kanonischer Namespace bleibt `https://gams.uni-graz.at/o:szd.ontology#`, Dokumentation unter GitHub Pages via `rdfs:isDefinedBy`
 
 ---
 
