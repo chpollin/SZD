@@ -39,37 +39,6 @@ Stefan Zweig Digital is a distributed digital humanities platform combining mult
 - Purpose: Authoritative metadata for correspondence
 - Usage: Validation and quality assurance
 
-### Transformation Layer
-
-**XSL Stylesheets**
-- Location: [gamsdev/](../gamsdev/)
-- Technology: XSLT 2.0/3.0
-- Purpose: Convert TEI-XML to HTML for web display
-
-**Key Transformations:**
-- Collection displays (correspondence, autographs, library, works)
-- Index pages (person directory, location list, glossary)
-- Search interfaces
-- Navigation components
-- Export formats (RDF, specialized views)
-
-See [gamsdev/README.md](../gamsdev/README.md) for complete list.
-
-### Search Layer
-
-**SPARQL Queries**
-- Location: [gamsdev/sparql/](../gamsdev/sparql/)
-- Database: Blazegraph triple store
-- Query Types: Fulltext, person-based, location-based, category/subject, glossary
-
-**Features:**
-- Bilingual result sets
-- Parameterized queries
-- Multiple data source integration
-- RDF triple pattern matching
-
-See [gamsdev/sparql/README.md](../gamsdev/sparql/README.md) for details.
-
 ### Presentation Layer
 
 **Frontend Technologies:**
@@ -368,8 +337,6 @@ The `docs/` folder is deployed as GitHub Pages, serving the ontology documentati
 
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure and encoding
 - [COLLECTIONS.md](COLLECTIONS.md) - Collection-specific details
-- [../gamsdev/README.md](../gamsdev/README.md) - Frontend implementation
-- [../gamsdev/sparql/README.md](../gamsdev/sparql/README.md) - Search queries
 - [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
 - [../szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Archival pipeline
 

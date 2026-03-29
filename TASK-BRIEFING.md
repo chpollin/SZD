@@ -59,8 +59,7 @@ Erweitere `ontology/validate.py` um:
 ## Nicht in Scope
 
 - Frontend-Arbeit (anderer Claude Code)
-- Korrespondenz-Datenlücken (13 fehlende TEI, 47 nicht-ISO-Daten) — separater Task
-- GAMS-Integration — erst nach Datenmodell-Stabilisierung
+- Korrespondenz-Datenlücken: 270 von 289 date-Elementen ohne maschinenlesbare Attribute wurden in SZDKOR.xml nachgetragen (Maerz 2026). 19 `n. d.`-Eintraege bleiben ohne Datum.
 
 ## Relevante Dateien
 

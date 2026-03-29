@@ -23,12 +23,6 @@ The [data/](data/) directory contains TEI-XML encoded archival data and digital 
 - Index (SZDPER) - Person authority file
 - Glossary (SZDGLR) - Subject terminology
 
-### GAMS Frontend
-
-The [gamsdev/](gamsdev/) directory contains the complete frontend codebase for https://stefanzweig.digital/ running on the GAMS platform at University of Graz. This includes XSL transformations for converting TEI-XML to HTML, SPARQL queries for database searches, CSS stylesheets, JavaScript for interactivity, and various web assets. The [sparql/](gamsdev/sparql/) subdirectory provides fulltext search capabilities via Blazegraph, along with location-based, person-based, and category-based search queries with bilingual result sets in German and English.
-
-See [gamsdev/README.md](gamsdev/README.md) for technical details on the GAMS platform integration.
-
 ### Web Content
 
 The [webpage/](webpage/) directory contains static page content and assets including about pages, imprint information, landing page content, audio files, and images used throughout the website. See [webpage/README.md](webpage/README.md) for details on image linking and reference types.
@@ -73,7 +67,7 @@ The [knowledge/](knowledge/) directory provides comprehensive technical document
 
 ## Technology Stack
 
-The project uses TEI-XML (Text Encoding Initiative P5) as the primary data format with metadata following METS/MODS and DFG-METS library standards, while Zenodo deposits use DataCite Schema 4.0 for metadata description. The web frontend uses XSL/XSLT for server-side XML transformations, JavaScript for client-side interactivity, and CSS for responsive web design, with database queries implemented using SPARQL against a Blazegraph triple store. The project runs on GAMS (Geisteswissenschaftliches Asset Management System) hosted at University of Graz, providing XML/TEI repository infrastructure, METS/MODS metadata support, and Blazegraph for SPARQL queries, while long-term archival storage is provided by Zenodo with DOI versioning and data processing and validation scripts are written in Python.
+The project uses TEI-XML (Text Encoding Initiative P5) as the primary data format with metadata following METS/MODS and DFG-METS library standards, while Zenodo deposits use DataCite Schema 4.0 for metadata description. The website runs on GAMS (Geisteswissenschaftliches Asset Management System) hosted at University of Graz, providing XML/TEI repository infrastructure, METS/MODS metadata support, and Blazegraph for SPARQL queries. Long-term archival storage is provided by Zenodo with DOI versioning. Data processing, validation, and ontology tooling are written in Python.
 
 ---
 

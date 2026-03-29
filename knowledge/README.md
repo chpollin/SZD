@@ -73,10 +73,6 @@ Read [ARCHITECTURE.md](ARCHITECTURE.md) for overall system design and platform i
 
 ## External Documentation
 
-### Frontend & Queries
-- [gamsdev/README.md](../gamsdev/README.md) - XSL transformations and frontend code
-- [gamsdev/sparql/README.md](../gamsdev/sparql/README.md) - SPARQL query documentation
-
 ### Validation & Quality
 - [scripts/validation/README.md](../scripts/validation/README.md) - TEI-CSV validation tools
 
