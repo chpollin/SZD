@@ -26,6 +26,9 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 - SHACL-Validierung: [../ontology/szd-shapes.ttl](../ontology/szd-shapes.ttl)
 - Validierungspipeline: [../ontology/validate.py](../ontology/validate.py) (6-Stufen: Syntax, SHACL, OWL, OntoClean, Kompetenzfragen)
 - Dokumentationsgenerator: [../ontology/generate_docs.py](../ontology/generate_docs.py)
+- Klawiter-Reconciliation: [../scripts/reconcile_klawiter.py](../scripts/reconcile_klawiter.py) (105 Werke gematcht, 119 Verknüpfungen)
+- Instanzdaten: [../ontology/sample-instances.ttl](../ontology/sample-instances.ttl) (25 Beispielinstanzen aus 5 Sammlungen)
+- Reconciliation-Triples: [../ontology/reconciliation.ttl](../ontology/reconciliation.ttl) (szdo:hatManifestation / szdo:wirdBehandeltIn)
 
 ---
 
