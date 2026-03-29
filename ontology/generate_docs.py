@@ -227,7 +227,7 @@ def generate_class_card(g, cls_uri):
 
     # Properties
     if props_with_domain:
-        html += '  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>\n'
+        html += '  <h4 class="properties-heading">Properties</h4>\n'
         html += '  <table class="prop-table">\n'
         html += '    <tr><th>Property</th><th>Label</th><th>Range</th></tr>\n'
         for pname, plabel, pranges in sorted(props_with_domain):
@@ -485,7 +485,7 @@ def generate_html(g):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SZDO — Stefan Zweig Digital Nachlass-Ontologie</title>
-  <meta name="description" content="Formale OWL-Ontologie für den digitalen Nachlass Stefan Zweigs. 58 Klassen, 77 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
+  <meta name="description" content="Formale OWL-Ontologie fuer den digitalen Nachlass Stefan Zweigs. 72 Klassen, 130 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
   <link rel="alternate" type="text/turtle" href="szd-ontology.ttl">
   <link rel="alternate" type="application/ld+json" href="szd-ontology.jsonld">
   <link rel="stylesheet" href="../css/szd-ontology.css">
@@ -519,8 +519,8 @@ def generate_html(g):
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
         <div class="lang-toggle">
-          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active">DE</button>
-          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')">EN</button>
+          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active" aria-label="Deutsch">DE</button>
+          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')" aria-label="English">EN</button>
         </div>
       </nav>
     </div>

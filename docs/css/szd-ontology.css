@@ -470,6 +470,42 @@ body.lang-en .de-only { display: none; }
   color: var(--sz-burgundy);
 }
 
+/* --- Stats & Utility --- */
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--sz-burgundy);
+}
+
+.stat-card {
+  text-align: center;
+  cursor: default;
+}
+
+.inline-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+.inline-nav a {
+  color: var(--sz-burgundy);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.properties-heading {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--sz-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .onto-layout {
