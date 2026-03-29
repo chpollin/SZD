@@ -51,10 +51,10 @@ The [ontology/](ontology/) directory contains the **Stefan Zweig Digital Nachlas
 
 - **Live Documentation:** https://chpollin.github.io/SZD/ontology/
 - **Namespace:** `https://gams.uni-graz.at/o:szd.ontology#`
-- **Version:** 1.0.0 (formalizes and extends the implicit GAMS v0.x ontology)
-- **Scope:** 72 classes (58 core + 14 GAMS compatibility), 130 properties (77 core + 53 GAMS compatibility)
-- **GAMS Compatibility:** Full backward-compatible mapping from English v0.x names to German v1.0.0 names via `owl:equivalentClass/Property`
-- **Validation:** 6-stage pipeline (Syntax, SHACL, OWL, OntoClean, 17 Competency Questions) — run `python ontology/validate.py`
+- **Version:** 1.1.0 (adds date evidence, agent role hierarchy, RiC alignments)
+- **Scope:** 72 classes (58 core + 14 GAMS compatibility), 132 properties (79 core + 53 GAMS compatibility)
+- **GAMS Compatibility:** Full backward-compatible mapping from English v0.x names to German v1.1.0 names via `owl:equivalentClass/Property`
+- **Validation:** 6-stage pipeline (Syntax, SHACL, OWL, OntoClean, 19 Competency Questions) — run `python ontology/validate.py`
 - **Design Document:** [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md)
 
 ### GitHub Pages

@@ -29,9 +29,9 @@
 
 <https://gams.uni-graz.at/o:szd.ontology>
     a owl:Ontology ;
-    owl:versionInfo "1.0.0" ;
-    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
-    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
+    owl:versionInfo "1.1.0" ;
+    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
+    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
     dcterms:title "Stefan Zweig Digital Nachlass-Ontologie"@de ,
                   "Stefan Zweig Digital Estate Ontology"@en ;
     dcterms:description
@@ -778,62 +778,81 @@ szdo:sieheAuch
 # 7.3 Personenrollen (Agent Properties)
 # -----------------------------------------------------------------------------
 
+szdo:hatBeteiligtenAkteur
+    a owl:ObjectProperty ;
+    rdfs:label "hat beteiligten Akteur"@de , "has participating agent"@en ;
+    rdfs:comment "Generische Obereigenschaft für alle Personen/Organisationen, die aktiv an einem Objekt oder Werk beteiligt sind."@de ,
+                 "Generic superproperty for all persons/organisations actively involved in an object or work."@en ;
+    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:range szdo:Akteur ;
+    rdfs:subPropertyOf rico:hasOrHadContributor .
+
 szdo:hatAutor
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Autor"@de , "has author"@en ;
     rdfs:domain szdo:Werk ;
     rdfs:range szdo:Person .
 
 szdo:hatHerausgeber
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Herausgeber"@de , "has editor"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
 szdo:hatUebersetzer
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Übersetzer"@de , "has translator"@en ;
     rdfs:domain szdo:WerkExpression ;
     rdfs:range szdo:Person .
 
 szdo:hatKomponist
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Komponist"@de , "has composer"@en ;
     rdfs:domain szdo:WerkExpression ;
     rdfs:range szdo:Person .
 
 szdo:hatIllustrator
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Illustrator"@de , "has illustrator"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
 szdo:hatVorwortAutor
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Vorwort-Autor"@de , "has foreword author"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
 szdo:hatNachwortAutor
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Nachwort-Autor"@de , "has afterword author"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
 szdo:hatAbsender
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Absender"@de , "has sender"@en ;
     rdfs:domain szdo:KorrespondenzKonvolut ;
     rdfs:range szdo:Person .
 
 szdo:hatEmpfaenger
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Empfänger"@de , "has receiver"@en ;
     rdfs:domain szdo:KorrespondenzKonvolut ;
     rdfs:range szdo:Person .
 
 szdo:hatSchreiberhand
     a owl:ObjectProperty ;
+    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
     rdfs:label "hat Schreiberhand"@de , "has scribal hand"@en ;
     rdfs:comment "Person, deren Handschrift auf dem Dokument identifiziert wurde."@de ,
                  "Person whose handwriting has been identified on the document."@en ;
@@ -843,14 +862,11 @@ szdo:hatSchreiberhand
 szdo:hatBetroffenePerson
     a owl:ObjectProperty ;
     rdfs:label "hat betroffene Person"@de , "has affected person"@en ;
+    rdfs:comment "Person, die im Objekt thematisch erwähnt oder behandelt wird — kein aktiver Beteiligter."@de ,
+                 "Person mentioned or discussed in the object — not an active participant."@en ;
     rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Person .
-
-szdo:hatBeteiligten
-    a owl:ObjectProperty ;
-    rdfs:label "hat Beteiligten"@de , "has party involved"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Person .
+    rdfs:range szdo:Person ;
+    rdfs:subPropertyOf rico:hasOrHadSubject .
 
 # -----------------------------------------------------------------------------
 # 7.4 Provenienz-Beziehungen
@@ -1122,6 +1138,14 @@ szdo:sicherheitsgrad
     rdfs:label "Sicherheitsgrad"@de , "Certainty"@en ;
     rdfs:comment "Grad der Datensicherheit (TEI @cert: low, medium, high)."@de ;
     rdfs:range xsd:string .
+
+szdo:datumEvidenz
+    a owl:ObjectProperty ;
+    rdfs:label "Datum-Evidenz"@de , "date evidence"@en ;
+    rdfs:comment "Qualifiziert die Quelle einer Datierung (aus Dokument, aus Kontext, aus externer Quelle, unbekannt). Verweist auf SKOS-Konzepte im SZD-Glossar."@de ,
+                 "Qualifies the source of a date assignment (from document, from context, from external source, unknown). Points to SKOS concepts in the SZD Glossary."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range szdg:DatumEvidenz .
 
 szdo:geburtsdatum
     a owl:DatatypeProperty ;
@@ -1408,10 +1432,17 @@ szdo:translator
 
 szdo:partyInvolved
     a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatBeteiligten ;
+    owl:equivalentProperty szdo:hatBeteiligtenAkteur ;
     owl:deprecated true ;
     rdfs:label "partyInvolved (GAMS v0.x)"@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:hatBeteiligten
+    a owl:ObjectProperty ;
+    owl:equivalentProperty szdo:hatBeteiligtenAkteur ;
+    owl:deprecated true ;
+    rdfs:label "hatBeteiligten (v1.0.0)"@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/1.0.0> .
 
 szdo:relationToPerson
     a owl:ObjectProperty ;

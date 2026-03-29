@@ -12,6 +12,7 @@
     <skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Person"></skos:hasTopConcept>
     <skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:szd.glossar#OriginalShelfmark"></skos:hasTopConcept>
     <skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:szd.glossar#CurrentLocation"></skos:hasTopConcept>
+    <skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz"></skos:hasTopConcept>
   </skos:Schema>
   <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Works">
     <dc:identifier rdf:resource="https://gams.uni-graz.at/o:szd.werke"></dc:identifier>
@@ -402,6 +403,40 @@
           At a later point, the same stamp – without an inscribed number – was used to mark books from Stefan Zweig’s library gifted to today’s Mozarteum University in Salzburg.</skos:definition>
     <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#OriginalShelfmark"></skos:broader>
     <skos:example rdf:resource="https://gams.uni-graz.at/o:szd.glossar/SAMMLUNGZWEIG"></skos:example>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz">
+    <skos:prefLabel xml:lang="de">Datum-Evidenz</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Date Evidence</skos:prefLabel>
+    <skos:definition xml:lang="de">Klassifikation der Quelle, aus der eine Datierung abgeleitet wurde. Komplementiert den Sicherheitsgrad (TEI @cert) um die Angabe, woher die Datierung stammt.</skos:definition>
+    <skos:definition xml:lang="en">Classification of the source from which a date was derived. Complements the certainty level (TEI @cert) by indicating the origin of the dating.</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#AusDokument">
+    <skos:prefLabel xml:lang="de">Aus Dokument</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">From Document</skos:prefLabel>
+    <skos:definition xml:lang="de">Datierung stammt direkt aus dem Dokument selbst, z.B. handschriftliches Datum, Poststempel oder gedrucktes Erscheinungsdatum.</skos:definition>
+    <skos:definition xml:lang="en">Date derived directly from the document itself, e.g. handwritten date, postmark, or printed publication date.</skos:definition>
+    <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz"></skos:broader>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#AusKontext">
+    <skos:prefLabel xml:lang="de">Aus Kontext</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">From Context</skos:prefLabel>
+    <skos:definition xml:lang="de">Datierung aus dem Kontext erschlossen, z.B. anhand benachbarter Briefe, Bezüge auf datierte Ereignisse oder stratigraphischer Position im Konvolut.</skos:definition>
+    <skos:definition xml:lang="en">Date inferred from context, e.g. based on neighbouring letters, references to dated events, or stratigraphic position within a collection.</skos:definition>
+    <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz"></skos:broader>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#AusExternerQuelle">
+    <skos:prefLabel xml:lang="de">Aus externer Quelle</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">From External Source</skos:prefLabel>
+    <skos:definition xml:lang="de">Datierung aus externer Quelle übernommen, z.B. aus einem Auktionskatalog, einer Sekundärpublikation oder einem Normdatensatz.</skos:definition>
+    <skos:definition xml:lang="en">Date taken from an external source, e.g. an auction catalogue, a secondary publication, or an authority record.</skos:definition>
+    <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz"></skos:broader>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://gams.uni-graz.at/o:szd.glossar#Unbekannt">
+    <skos:prefLabel xml:lang="de">Unbekannt</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Unknown</skos:prefLabel>
+    <skos:definition xml:lang="de">Evidenzquelle der Datierung nicht dokumentiert oder nicht ermittelbar.</skos:definition>
+    <skos:definition xml:lang="en">Evidence source of the date not documented or not determinable.</skos:definition>
+    <skos:broader rdf:resource="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz"></skos:broader>
   </skos:Concept>
 </rdf:RDF>
 

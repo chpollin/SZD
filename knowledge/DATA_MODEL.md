@@ -58,13 +58,6 @@ All SZD data uses TEI P5 (Text Encoding Initiative) XML with consistent header a
 <seriesStmt>
   <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
   <respStmt>
-    <resp>Projektleitung</resp>
-    <persName>
-      <forename>Manfred</forename>
-      <surname>Mittermayer</surname>
-    </persName>
-  </respStmt>
-  <respStmt>
     <resp>Datenmodellierung</resp>
     <persName>
       <forename>Christopher</forename>

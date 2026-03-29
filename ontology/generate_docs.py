@@ -279,6 +279,120 @@ def generate_property_card(g, prop_uri, prop_type="Object"):
     return html
 
 
+def generate_prose_section():
+    """Return an HTML prose overview of the ontology (bilingual DE/EN)."""
+    return '''<section class="onto-prose" id="overview">
+
+  <h2><span class="de-only">Überblick</span><span class="en-only">Overview</span></h2>
+
+  <p class="en-only">
+    The Stefan Zweig Digital Ontology (SZDO) provides a formal OWL 2 data model
+    for describing the digital estate (<em>Nachlass</em>) of Stefan Zweig, held
+    primarily at the Literaturarchiv Salzburg. It bridges archival science,
+    library cataloguing, and cultural-heritage modelling into a single,
+    interoperable vocabulary that can be queried, linked, and extended.
+  </p>
+  <p class="de-only">
+    Die Stefan Zweig Digital Ontology (SZDO) stellt ein formales OWL-2-Datenmodell
+    zur Beschreibung des digitalen Nachlasses von Stefan Zweig bereit, der
+    vorwiegend im Literaturarchiv Salzburg verwahrt wird. Sie verbindet
+    Archivwissenschaft, bibliothekarische Erschließung und
+    Kulturerbe-Modellierung in einem einzigen, interoperablen Vokabular.
+  </p>
+
+  <h3><span class="en-only">Design Principles</span><span class="de-only">Entwurfsprinzipien</span></h3>
+
+  <p class="en-only">
+    SZDO follows an archive-first approach: its backbone is aligned with
+    Records in Contexts (RiC-O), ensuring that the hierarchical structure of a
+    literary estate&mdash;from <em>Nachlass</em> down to individual items&mdash;is
+    captured faithfully. For the description of intellectual works the model
+    adopts the FRBR/IFLA-LRM Work&ndash;Expression&ndash;Manifestation&ndash;Item
+    hierarchy, while events and temporal phenomena are modelled in accordance
+    with CIDOC-CRM. All classes and properties carry bilingual labels (German
+    and English), and the design is deliberately extensible so that new
+    sub-collections or scholarly projects can add domain-specific refinements
+    without breaking the core schema.
+  </p>
+  <p class="de-only">
+    SZDO verfolgt einen archivzentrierten Ansatz: Das Rückgrat orientiert sich
+    an Records in Contexts (RiC-O), sodass die hierarchische Struktur eines
+    literarischen Nachlasses&mdash;vom Gesamtbestand bis zum Einzelstück&mdash;originalgetreu
+    abgebildet wird. Für die Beschreibung intellektueller Werke übernimmt das
+    Modell die FRBR/IFLA-LRM-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar),
+    während Ereignisse und zeitliche Phänomene gemäß CIDOC-CRM modelliert werden.
+    Alle Klassen und Properties tragen zweisprachige Labels (Deutsch und Englisch),
+    und das Design ist bewusst erweiterbar.
+  </p>
+
+  <h3><span class="en-only">Layer Architecture</span><span class="de-only">Schichtenarchitektur</span></h3>
+
+  <p class="en-only">
+    The ontology is organised into seven interconnected layers.
+    The <strong>Archival Layer</strong> models the <em>Nachlass</em> structure
+    (collections, sub-collections, and individual archival objects such as
+    manuscripts, typescripts, and notebooks).
+    The <strong>Digital Objects Layer</strong> represents their digital
+    surrogates (METS objects, IIIF manifests, facsimiles).
+    The <strong>Work Layer</strong> maps intellectual creations through the
+    WEMI hierarchy (Work&ndash;Expression&ndash;Manifestation&ndash;Item).
+    The <strong>Agents Layer</strong> covers persons and organisations.
+    The <strong>Biography &amp; Events Layer</strong> captures life-timeline
+    events such as births, deaths, journeys, and encounters.
+    The <strong>Places Layer</strong> distinguishes geographic locations from
+    repositories and places of origin.
+    Finally, the <strong>Provenance Layer</strong> traces the ownership chain
+    of archival objects. These layers are connected through shared properties
+    so that, for example, a manuscript (Archival) can be linked to the work it
+    witnesses (Work), the person who authored it (Agents), the place where it
+    was written (Places), and the event through which it changed hands
+    (Provenance).
+  </p>
+  <p class="de-only">
+    Die Ontologie ist in sieben miteinander verbundene Schichten gegliedert.
+    Die <strong>Archivschicht</strong> bildet die Nachlassstruktur ab
+    (Sammlungen, Teilsammlungen und Einzelobjekte wie Manuskripte, Typoskripte
+    und Notizbücher).
+    Die <strong>Schicht der digitalen Objekte</strong> repräsentiert deren
+    digitale Surrogate (METS-Objekte, IIIF-Manifeste, Faksimiles).
+    Die <strong>Werkschicht</strong> beschreibt intellektuelle Schöpfungen über
+    die WEMI-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar).
+    Die <strong>Akteursschicht</strong> umfasst Personen und Organisationen.
+    Die <strong>Biographie- und Ereignisschicht</strong> erfasst Lebensereignisse
+    wie Geburt, Tod, Reisen und Begegnungen.
+    Die <strong>Ortsschicht</strong> unterscheidet geographische Orte von
+    Aufbewahrungsorten und Entstehungsorten.
+    Die <strong>Provenienzschicht</strong> zeichnet die Besitzkette von
+    Archivalien nach. Die Schichten sind über gemeinsame Properties verbunden.
+  </p>
+
+  <h3><span class="en-only">Integration</span><span class="de-only">Integration</span></h3>
+
+  <p class="en-only">
+    SZDO connects to the
+    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter Bibliography</a>
+    (6,296 entries) via the Work/Manifestation layer, enabling scholars to
+    navigate from a physical manuscript in the Nachlass to its published
+    editions and translations. The ontology also links to external authority
+    files&mdash;GND, Wikidata, VIAF for persons and organisations, and
+    GeoNames for places&mdash;ensuring that every entity can be reconciled
+    with the wider Linked-Data ecosystem.
+  </p>
+  <p class="de-only">
+    SZDO ist über die Werk-/Manifestationsschicht mit der
+    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter-Bibliographie</a>
+    (6.296 Einträge) verbunden, sodass von einem physischen Manuskript im
+    Nachlass zu seinen publizierten Ausgaben und Übersetzungen navigiert werden
+    kann. Darüber hinaus verknüpft die Ontologie mit externen Normdateien&mdash;GND,
+    Wikidata, VIAF für Personen und Organisationen sowie GeoNames für
+    Orte&mdash;und gewährleistet so die Anschlussfähigkeit an das
+    Linked-Data-Ökosystem.
+  </p>
+
+</section>
+'''
+
+
 def generate_html(g):
     """Generate the complete ontology documentation HTML."""
 
@@ -296,6 +410,7 @@ def generate_html(g):
 
     # Build sidebar
     sidebar = '<nav class="onto-sidebar">\n'
+    sidebar += '  <a href="#overview" style="font-weight:600;"><span class="de-only">Überblick</span><span class="en-only">Overview</span></a>\n'
     for sec_id, sec_de, sec_en, _ in SECTIONS:
         sidebar += f'  <h3><span class="de-only">{escape(sec_de)}</span><span class="en-only">{escape(sec_en)}</span></h3>\n'
         for cls_name in [c for _, _, _, classes in SECTIONS if _ == sec_id for c in classes]:
@@ -340,6 +455,9 @@ def generate_html(g):
     content += '    <span class="badge badge-schema">Schema.org</span> '
     content += '    <span class="badge badge-dc">Dublin Core</span>\n'
     content += '  </div>\n'
+
+    # Prose overview section
+    content += generate_prose_section()
 
     # Classes by section
     for sec_id, sec_de, sec_en, cls_names in SECTIONS:

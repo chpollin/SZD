@@ -152,6 +152,23 @@
       transition: border-color 0.15s;
     }
     .viz-btn:hover { border-color: var(--sz-burgundy); color: var(--sz-burgundy); }
+    .viz-btn.active { background: var(--sz-burgundy); color: var(--sz-white); border-color: var(--sz-burgundy); }
+
+    /* Search */
+    .viz-search {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      padding: 0.35rem 0.5rem;
+      border: 1px solid var(--sz-border);
+      border-radius: 3px;
+      background: var(--sz-white);
+      color: var(--sz-text);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .viz-search:focus { border-color: var(--sz-burgundy); }
+    .viz-search::placeholder { color: var(--sz-text-light); }
 
     /* Stats */
     .viz-sidebar__stats {
@@ -236,9 +253,10 @@
     .node circle { stroke: #fff; stroke-width: 2px; cursor: pointer; transition: stroke 0.15s, stroke-width 0.15s; }
     .node text {
       font-family: var(--font-sans);
-      font-size: 10px;
+      font-size: 11px;
       fill: var(--sz-text);
       pointer-events: none;
+      text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
     }
     .node:hover circle { stroke: var(--sz-burgundy); stroke-width: 3px; }
     .node.highlight circle { stroke: var(--sz-burgundy); stroke-width: 3px; }
@@ -249,9 +267,11 @@
       font-size: 8px;
       fill: var(--sz-text-light);
       pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.2s;
+      opacity: 0.3;
+      transition: opacity 0.3s;
     }
+    .edge:hover text { opacity: 1; }
+    .edge.subClassOf text { font-size: 7px; opacity: 0.5; }
     .edge.highlight text { opacity: 1; }
     .edge.highlight line { stroke-opacity: 0.8; stroke-width: 2px; }
     .edge.subClassOf line { stroke-dasharray: 4 2; }
@@ -274,19 +294,32 @@
       border: 1px solid var(--sz-border);
     }
 
+    /* Mobile sidebar toggle */
+    .viz-sidebar-toggle {
+      display: none;
+      background: var(--sz-burgundy);
+      color: var(--sz-white);
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0 0.5rem;
+      line-height: 44px;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .viz-sidebar { width: 200px; }
       .viz-header__nav { display: none; }
-    }
-    @media (max-width: 560px) {
+      .viz-sidebar-toggle { display: block; }
       .viz-sidebar { display: none; }
+      .viz-sidebar.sidebar-open { display: flex; position: absolute; z-index: 10; top: 44px; left: 0; bottom: 0; width: 240px; }
     }
   </style>
 </head>
 <body>
 
   <header class="viz-header">
+    <button class="viz-sidebar-toggle" onclick="document.querySelector('.viz-sidebar').classList.toggle('sidebar-open')" aria-label="Toggle sidebar">&#9776;</button>
     <a href="../" class="viz-header__brand">
       <img src="../img/SZlogo.png" alt="SZD">
       Stefan Zweig Digital
@@ -316,6 +349,12 @@
         <div class="viz-detail__links" id="detail-links"></div>
       </div>
 
+      <!-- Search -->
+      <div class="viz-sidebar__section">
+        <div class="viz-sidebar__heading">Search</div>
+        <input type="text" class="viz-search" id="searchInput" placeholder="Filter classes..." oninput="applySearch(this.value)">
+      </div>
+
       <!-- Layers -->
       <div class="viz-sidebar__section">
         <div class="viz-sidebar__heading">Layers</div>
@@ -329,6 +368,7 @@
           <button class="viz-btn" onclick="resetView()">Reset</button>
           <button class="viz-btn" onclick="zoomFit()">Fit</button>
           <button class="viz-btn" onclick="exportSVG()">Export SVG</button>
+          <button class="viz-btn" id="hierarchyBtn" onclick="toggleHierarchy()">Hierarchy</button>
         </div>
       </div>
 
@@ -350,6 +390,8 @@
     let graphData, simulation, svg, g, nodeEls, edgeEls, zoomBehavior;
     let activeLayers = new Set();
     let selectedNode = null;
+    let hierarchyActive = false;
+    let searchQuery = '';
 
     // English layer labels
     const layerLabelsEN = {
@@ -567,21 +609,48 @@
         `<p>${d.comment_en || ''}</p>` +
         (d.comment_de ? `<p class="en">${d.comment_de}</p>` : '');
 
-      const connected = getConnectedEdges(d);
-      let linksHtml = '<div class="viz-detail__links-heading">Relationships</div>';
-      connected.forEach(e => {
-        const src = typeof e.source === 'object' ? e.source.id : e.source;
-        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
-        if (e.type === 'subClassOf') {
-          if (src === d.id) linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8593; subClassOf ${tgt}</a>`;
-          else linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8595; ${src} subClassOf</a>`;
-        } else {
-          if (src === d.id) linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8594; ${e.label} &#8594; ${tgt}</a>`;
-          else linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8592; ${src} &#8594; ${e.label}</a>`;
-        }
-      });
+      let linksHtml = '';
+
+      // Parent chain (breadcrumb)
+      const chain = getParentChain(d.id);
+      if (chain.length > 0) {
+        linksHtml += '<div class="viz-detail__links-heading">Class hierarchy</div>';
+        const breadcrumb = chain.map(id =>
+          `<a href="#" onclick="focusNode('${id}');return false;">${id}</a>`
+        ).join(' &rsaquo; ');
+        linksHtml += `<div style="font-size:0.72rem;margin-bottom:0.3rem;">${breadcrumb} &rsaquo; <strong>${d.id}</strong></div>`;
+      }
+
+      // Outgoing relationships
+      const outgoing = getOutgoingEdges(d);
+      if (outgoing.length > 0) {
+        linksHtml += '<div class="viz-detail__links-heading">Outgoing</div>';
+        outgoing.forEach(e => {
+          const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+          if (e.type === 'subClassOf') {
+            linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8593; subClassOf ${tgt}</a>`;
+          } else {
+            linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8594; ${e.label} &#8594; ${tgt}</a>`;
+          }
+        });
+      }
+
+      // Incoming relationships
+      const incoming = getIncomingEdges(d);
+      if (incoming.length > 0) {
+        linksHtml += '<div class="viz-detail__links-heading">Incoming</div>';
+        incoming.forEach(e => {
+          const src = typeof e.source === 'object' ? e.source.id : e.source;
+          if (e.type === 'subClassOf') {
+            linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8595; ${src} subClassOf</a>`;
+          } else {
+            linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8592; ${src} &#8594; ${e.label}</a>`;
+          }
+        });
+      }
+
       linksHtml += `<div class="viz-detail__links-heading">Links</div>`;
-      linksHtml += `<a href="./#${d.id}">&#8594; Ontology Reference</a>`;
+      linksHtml += `<a href="index.html#${d.id}">&#8594; Documentation</a>`;
 
       document.getElementById('detail-links').innerHTML = linksHtml;
       document.getElementById('detail').classList.add('active');
@@ -602,9 +671,22 @@
 
     function resetView() {
       closeDetail();
+      // Clear search
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      // Reset layers
       activeLayers.clear();
       Object.keys(graphData.layers).forEach(l => activeLayers.add(l));
       document.querySelectorAll('#controls input[type=checkbox]').forEach(cb => cb.checked = true);
+      // Reset hierarchy
+      if (hierarchyActive) {
+        hierarchyActive = false;
+        document.getElementById('hierarchyBtn').classList.remove('active');
+        const container = document.getElementById('viz');
+        simulation.force('hierY', null);
+        simulation.force('y', d3.forceY(container.clientHeight / 2).strength(0.03));
+        simulation.alpha(0.3).restart();
+      }
       applyFilter();
       zoomFit();
     }
@@ -657,6 +739,126 @@
     function dragEnd(event, d) {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null; d.fy = null;
+    }
+
+    // --- Search/Filter ---
+    function applySearch(query) {
+      searchQuery = query.trim().toLowerCase();
+      if (!searchQuery) {
+        nodeEls.classed('dimmed', false).classed('search-match', false);
+        edgeEls.classed('dimmed', false);
+        applyFilter();
+        return;
+      }
+      const matchIds = new Set();
+      graphData.nodes.forEach(n => {
+        const haystack = `${n.id} ${n.label_de || ''} ${n.label_en || ''}`.toLowerCase();
+        if (haystack.includes(searchQuery)) matchIds.add(n.id);
+      });
+      nodeEls.classed('dimmed', d => !matchIds.has(d.id));
+      nodeEls.classed('search-match', d => matchIds.has(d.id));
+      edgeEls.classed('dimmed', d => {
+        const src = typeof d.source === 'object' ? d.source.id : d.source;
+        const tgt = typeof d.target === 'object' ? d.target.id : d.target;
+        return !matchIds.has(src) || !matchIds.has(tgt);
+      });
+    }
+
+    // --- Hierarchy layout ---
+    function computeDepths() {
+      const depths = {};
+      const children = {};
+      const parentOf = {};
+      graphData.edges.forEach(e => {
+        if (e.type !== 'subClassOf') return;
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        // src subClassOf tgt => tgt is parent
+        parentOf[src] = tgt;
+        if (!children[tgt]) children[tgt] = [];
+        children[tgt].push(src);
+      });
+      // Find roots (nodes with no parent in subClassOf)
+      const allIds = new Set(graphData.nodes.map(n => n.id));
+      const roots = graphData.nodes.filter(n => !parentOf[n.id]).map(n => n.id);
+      // BFS from roots
+      roots.forEach(r => { depths[r] = 0; });
+      const queue = [...roots];
+      while (queue.length) {
+        const cur = queue.shift();
+        (children[cur] || []).forEach(child => {
+          if (depths[child] === undefined) {
+            depths[child] = depths[cur] + 1;
+            queue.push(child);
+          }
+        });
+      }
+      // Assign depth 0 to any unvisited
+      graphData.nodes.forEach(n => {
+        if (depths[n.id] === undefined) depths[n.id] = 0;
+      });
+      return depths;
+    }
+
+    function toggleHierarchy() {
+      hierarchyActive = !hierarchyActive;
+      const btn = document.getElementById('hierarchyBtn');
+      btn.classList.toggle('active', hierarchyActive);
+
+      const container = document.getElementById('viz');
+      const height = container.clientHeight;
+
+      if (hierarchyActive) {
+        const depths = computeDepths();
+        const maxDepth = Math.max(...Object.values(depths), 1);
+        // Store depths on nodes
+        graphData.nodes.forEach(n => { n._depth = depths[n.id]; });
+        const spacing = 120;
+        const topMargin = 80;
+        simulation.force('hierY', d3.forceY(d => topMargin + d._depth * spacing).strength(0.6));
+        simulation.force('y', null);
+      } else {
+        const container2 = document.getElementById('viz');
+        const h = container2.clientHeight;
+        simulation.force('hierY', null);
+        simulation.force('y', d3.forceY(h / 2).strength(0.03));
+      }
+      simulation.alpha(0.8).restart();
+    }
+
+    // --- Parent chain helper ---
+    function getParentChain(nodeId) {
+      const chain = [];
+      const parentOf = {};
+      graphData.edges.forEach(e => {
+        if (e.type !== 'subClassOf') return;
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        parentOf[src] = tgt;
+      });
+      let cur = nodeId;
+      const visited = new Set();
+      while (parentOf[cur] && !visited.has(cur)) {
+        visited.add(cur);
+        cur = parentOf[cur];
+        chain.push(cur);
+      }
+      return chain.reverse();
+    }
+
+    // --- Incoming edges helper ---
+    function getIncomingEdges(d) {
+      return graphData.edges.filter(e => {
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return tgt === d.id;
+      });
+    }
+
+    function getOutgoingEdges(d) {
+      return graphData.edges.filter(e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        return src === d.id;
+      });
     }
 
     init();

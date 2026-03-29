@@ -272,3 +272,13 @@ szdo:OrphanClassShape
             }
         """ ;
     ] .
+
+# -----------------------------------------------------------------------------
+# Shape 14: datumEvidenz must reference a SKOS concept
+# -----------------------------------------------------------------------------
+
+szdo:DatumEvidenzShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf szdo:datumEvidenz ;
+    sh:nodeKind sh:IRI ;
+    sh:message "datumEvidenz must reference an IRI (expected szdg:DatumEvidenz SKOS concept)."@en .

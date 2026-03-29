@@ -663,6 +663,35 @@ def stage_competency_questions(g, result, verbose=False):
             """,
             "expected": True,
         },
+        # CQ16: Active participants vs mentioned persons
+        {
+            "id": "CQ16",
+            "question": "Kann man aktive Beteiligte von erwähnten Personen unterscheiden?",
+            "query": """
+                ASK {
+                    szdo:hatBeteiligtenAkteur a owl:ObjectProperty .
+                    szdo:hatBeteiligtenAkteur rdfs:subPropertyOf rico:hasOrHadContributor .
+                    szdo:hatAutor rdfs:subPropertyOf szdo:hatBeteiligtenAkteur .
+                    szdo:hatBetroffenePerson a owl:ObjectProperty .
+                    szdo:hatBetroffenePerson rdfs:subPropertyOf rico:hasOrHadSubject .
+                    FILTER NOT EXISTS { szdo:hatBetroffenePerson rdfs:subPropertyOf szdo:hatBeteiligtenAkteur }
+                }
+            """,
+            "expected": True,
+        },
+        # CQ17: Date evidence qualification
+        {
+            "id": "CQ17",
+            "question": "Kann die Evidenz einer Datierung qualifiziert werden?",
+            "query": """
+                ASK {
+                    szdo:datumEvidenz a owl:ObjectProperty .
+                    szdo:datum a owl:DatatypeProperty .
+                    szdo:sicherheitsgrad a owl:DatatypeProperty .
+                }
+            """,
+            "expected": True,
+        },
     ]
 
     # Bind prefixes for queries

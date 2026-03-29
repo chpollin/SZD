@@ -19,9 +19,9 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System components, data flow, and platform integration
 
 ### Ontology
-- [ONTOLOGY.md](ONTOLOGY.md) - Stefan Zweig Digital Nachlass-Ontologie (SZDO) v1.0.0: Formaler Ontologie-Entwurf basierend auf RiC, IFLA LRM und CIDOC-CRM, inkl. Klawiter-Integration und GAMS v0.x-Kompatibilitätsschicht
+- [ONTOLOGY.md](ONTOLOGY.md) - Stefan Zweig Digital Nachlass-Ontologie (SZDO) v1.1.0: Formaler Ontologie-Entwurf basierend auf RiC, IFLA LRM und CIDOC-CRM, inkl. Klawiter-Integration und GAMS v0.x-Kompatibilitätsschicht
 - Live-Dokumentation: https://chpollin.github.io/SZD/ontology/
-- Versionierung: v1.0.0 formalisiert die implizite GAMS v0.x-Ontologie (14 deprecated Klassen + 53 deprecated Properties mit owl:equivalentClass/Property-Mapping)
+- Versionierung: v1.1.0 formalisiert die implizite GAMS v0.x-Ontologie (14 deprecated Klassen + 53 deprecated Properties mit owl:equivalentClass/Property-Mapping)
 - Formale OWL-Datei: [../ontology/szd-ontology.ttl](../ontology/szd-ontology.ttl)
 - SHACL-Validierung: [../ontology/szd-shapes.ttl](../ontology/szd-shapes.ttl)
 - Validierungspipeline: [../ontology/validate.py](../ontology/validate.py) (6-Stufen: Syntax, SHACL, OWL, OntoClean, Kompetenzfragen)

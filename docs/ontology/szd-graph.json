@@ -1077,6 +1077,14 @@
       "color": "#2c5aa0"
     },
     {
+      "source": "NachlassObjekt",
+      "target": "Akteur",
+      "type": "property",
+      "label": "hatBeteiligtenAkteur",
+      "label_de": "hat beteiligten Akteur",
+      "color": "#1a6b47"
+    },
+    {
       "source": "Werk",
       "target": "Person",
       "type": "property",
@@ -1162,14 +1170,6 @@
       "type": "property",
       "label": "hatBetroffenePerson",
       "label_de": "hat betroffene Person",
-      "color": "#1a6b47"
-    },
-    {
-      "source": "NachlassObjekt",
-      "target": "Person",
-      "type": "property",
-      "label": "hatBeteiligten",
-      "label_de": "hat Beteiligten",
       "color": "#1a6b47"
     },
     {

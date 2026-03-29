@@ -144,8 +144,25 @@ szdo:Akteur                            ≈ rico:Agent, crm:E39_Actor
 | `szdo:hatAbsender` | KorrespondenzKonvolut | Person | Briefabsender |
 | `szdo:hatEmpfänger` | KorrespondenzKonvolut | Person | Briefempfänger |
 | `szdo:hatSchreiberhand` | NachlassObjekt | Person | Schreiber/Sekretär |
-| `szdo:hatBetroffenePerson` | Lebensdokument | Person | Betroffene Person |
-| `szdo:hatBeteiligten` | NachlassObjekt | Person | Allgemein Beteiligte |
+| `szdo:hatBetroffenePerson` | Lebensdokument | Person | Betroffene Person (thematische Erwähnung, KEINE aktive Beteiligung) |
+| `szdo:hatBeteiligtenAkteur` | NachlassObjekt | Person | Allgemein Beteiligte (Superproperty) |
+
+**Personen-Rollenhierarchie (v1.1.0):**
+
+`szdo:hatBeteiligtenAkteur` ist `rdfs:subPropertyOf rico:hasOrHadContributor` und fungiert als Superproperty fuer alle aktiven Beteiligungsrollen. Folgende 10 Properties sind `rdfs:subPropertyOf szdo:hatBeteiligtenAkteur`:
+
+- `szdo:hatAutor`
+- `szdo:hatHerausgeber`
+- `szdo:hatUebersetzer`
+- `szdo:hatKomponist`
+- `szdo:hatIllustrator`
+- `szdo:hatVorwortAutor`
+- `szdo:hatNachwortAutor`
+- `szdo:hatAbsender`
+- `szdo:hatEmpfaenger`
+- `szdo:hatSchreiberhand`
+
+`szdo:hatBetroffenePerson` ist `rdfs:subPropertyOf rico:hasOrHadSubject` — es bezeichnet thematisch erwähnte Personen, keine aktiv Beteiligten.
 
 ### 3.4 Biographie- und Ereignisschicht
 
@@ -385,7 +402,34 @@ szdo:BiographischesEreignis
     szdo:hatBeschreibung → Literal@de, Literal@en .
 ```
 
-### 5.6 Aufbewahrungs-Beziehungen
+### 5.6 Datum-Evidenz (v1.1.0)
+
+Ergänzend zu `szdo:sicherheitsgrad` (Grad der Gewissheit: low/medium/high) dokumentiert `szdo:datumEvidenz` die **Quelle** einer Datierung.
+
+```turtle
+szdo:datumEvidenz        a owl:ObjectProperty ;
+                         rdfs:domain szdo:NachlassObjekt ;
+                         rdfs:range  szdg:DatumEvidenz ;
+                         rdfs:comment "Evidenzquelle fuer die Datierung eines Objekts"@de .
+```
+
+**SKOS-Konzepte** in `szdg:DatumEvidenz`:
+
+| Konzept | Beschreibung |
+|---------|-------------|
+| `szdg:AusDokument` | Datum direkt aus dem Dokument ablesbar (z.B. Briefdatum, Datumsvermerk) |
+| `szdg:AusKontext` | Datum aus dem Kontext erschlossen (z.B. Begleitbriefe, Werkgenese) |
+| `szdg:AusExternerQuelle` | Datum aus externer Quelle (z.B. Auktionskatalog, Sekundaerliteratur) |
+| `szdg:Unbekannt` | Evidenzquelle unbekannt |
+
+**Zusammenspiel mit sicherheitsgrad:**
+
+- `szdo:sicherheitsgrad` = **wie sicher** ist die Datierung (cert-Wert)
+- `szdo:datumEvidenz` = **woher** stammt die Datierung (Evidenzquelle)
+
+Dieses Muster folgt dem M3GIM-Ansatz (Metadata Model for Grazer Interdisziplinaere Materialien) zur differenzierten Qualifizierung von Metadaten.
+
+### 5.7 Aufbewahrungs-Beziehungen
 
 ```turtle
 szdo:wirdAufbewahrtIn    rdfs:domain szdo:NachlassObjekt ;
@@ -570,6 +614,8 @@ Die Ontologie soll folgende Fragen beantworten können:
 13. Kann ein Klawiter-Bibliographieeintrag einem SZD-Werkindex-Eintrag zugeordnet werden?
 14. Welche GND-Entität verbindet einen Klawiter-Autor mit einem SZD-Personenindex-Eintrag?
 15. Gibt es Manuskriptzeugen (SZD) zu den bei Klawiter verzeichneten Erstausgaben?
+16. Kann man aktive Beteiligte von erwähnten Personen unterscheiden? (→ Tests hatBeteiligtenAkteur als Superproperty vs. hatBetroffenePerson)
+17. Kann die Evidenz einer Datierung qualifiziert werden? (→ Tests datumEvidenz, datum, sicherheitsgrad)
 
 ---
 
@@ -614,23 +660,24 @@ Die SZDO nutzt Standard-OWL-Versionierung:
 | Version | Ort | Status | Beschreibung |
 |---------|-----|--------|-------------|
 | **v0.x** | GAMS (`stefanzweig.digital`) | Produktiv | Implizit in `szd-TORDF.xsl` definiert. Englische camelCase-Bezeichner. 14 Klassen, 67 Properties. Über Jahre gewachsen. |
-| **v1.0.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Neu | Formale OWL-Ontologie. Deutsche Bezeichner. 58 Klassen, 77 Properties. RiC-O/LRM/CRM-Alignments. GAMS-Kompatibilitätsschicht. |
+| **v1.0.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Abgelöst | Formale OWL-Ontologie. Deutsche Bezeichner. 58 Klassen, 77 Properties. RiC-O/LRM/CRM-Alignments. GAMS-Kompatibilitätsschicht. |
+| **v1.1.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Neu | Datum-Evidenz (SKOS), Personen-Rollenhierarchie (hatBeteiligtenAkteur + 10 SubProperties), RiC-Alignments, 2 neue CQs, SHACL Shape 14, Klawiter-Reconciliation-Korrekturen |
 
 **OWL-Metadaten:**
 ```turtle
-owl:versionInfo "1.0.0" ;
-owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
-owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
-owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
+owl:versionInfo "1.1.0" ;
+owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
+owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
+owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
 ```
 
 ### GAMS-Kompatibilitätsschicht (PART 10 in szd-ontology.ttl)
 
-Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitätsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknüpfungen zu den neuen v1.0.0-Bezeichnern.
+Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitätsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknüpfungen zu den neuen v1.1.0-Bezeichnern.
 
 **Klassen-Mapping (Auszug):**
 
-| GAMS v0.x (engl.) | SZDO v1.0.0 (dt.) | Mapping |
+| GAMS v0.x (engl.) | SZDO v1.1.0 (dt.) | Mapping |
 |--------------------|--------------------|---------|
 | `szd:Work` | `szdo:NachlassObjekt` | `owl:equivalentClass` |
 | `szd:Book` | `szdo:Buch` | `owl:equivalentClass` |
@@ -645,7 +692,7 @@ Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. D
 
 **Property-Mapping (Auszug):**
 
-| GAMS v0.x | SZDO v1.0.0 | Anmerkung |
+| GAMS v0.x | SZDO v1.1.0 | Anmerkung |
 |-----------|-------------|-----------|
 | `szd:title` | `szdo:titel` | Direkt äquivalent |
 | `szd:author` | `szdo:hatAutor` | Namenskonvention: "hat"-Präfix |
@@ -655,18 +702,18 @@ Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. D
 | `szd:signature` | `szdo:signatur` | |
 | `szd:gnd` | `szdo:gndIdentifier` | |
 | `szd:wikidata` | `szdo:wikidataIdentifier` | |
-| `szd:provenance` | — | In v1.0.0 als `Provenienzereignis` modelliert |
-| `szd:acquired` | — | In v1.0.0 als `Provenienzereignis` modelliert |
+| `szd:provenance` | — | In v1.1.0 als `Provenienzereignis` modelliert |
+| `szd:acquired` | — | In v1.1.0 als `Provenienzereignis` modelliert |
 | `szd:text` | — | Generischer Container, kein 1:1-Equivalent |
 | `szd:Enclosur` | `szdo:Beilage` | Typo in v0.x dokumentiert |
 
-### Bekannte Abweichungen zwischen GAMS v0.x und SZDO v1.0.0
+### Bekannte Abweichungen zwischen GAMS v0.x und SZDO v1.1.0
 
-1. **Namenskonvention**: v0.x nutzt englisches camelCase, v1.0.0 nutzt deutsche Bezeichner
-2. **Flach vs. geschichtet**: v0.x kennt nur `szd:Work` für alle Manuskripte; v1.0.0 differenziert (Manuskript, Typoskript, Notizbuch, etc.)
-3. **Provenienz**: v0.x nutzt flache Literale (`szd:provenance`, `szd:acquired`); v1.0.0 modelliert als Event-Klasse
-4. **SKOS-Namespace**: v0.x nutzt `https://gams.uni-graz.at/skos/scheme/o:oth/#`; v1.0.0 nutzt Standard W3C SKOS
-5. **Schreiberhand**: v0.x `szd:secretarialHand` ist DatatypeProperty (Literal); v1.0.0 `szdo:hatSchreiberhand` ist ObjectProperty (→ Person)
+1. **Namenskonvention**: v0.x nutzt englisches camelCase, v1.1.0 nutzt deutsche Bezeichner
+2. **Flach vs. geschichtet**: v0.x kennt nur `szd:Work` für alle Manuskripte; v1.1.0 differenziert (Manuskript, Typoskript, Notizbuch, etc.)
+3. **Provenienz**: v0.x nutzt flache Literale (`szd:provenance`, `szd:acquired`); v1.1.0 modelliert als Event-Klasse
+4. **SKOS-Namespace**: v0.x nutzt `https://gams.uni-graz.at/skos/scheme/o:oth/#`; v1.1.0 nutzt Standard W3C SKOS
+5. **Schreiberhand**: v0.x `szd:secretarialHand` ist DatatypeProperty (Literal); v1.1.0 `szdo:hatSchreiberhand` ist ObjectProperty (→ Person)
 
 ---
 
@@ -674,12 +721,12 @@ Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. D
 
 | Lücke | Beschreibung | Möglicher Ansatz |
 |-------|-------------|-----------------|
-| Datenunsicherheit | TEI `@cert` nicht in RDF abgebildet | `szdo:hatSicherheitsgrad` (low/medium/high) |
+| ~~Datenunsicherheit~~ | ~~TEI `@cert` nicht in RDF abgebildet~~ | RESOLVED: `szdo:sicherheitsgrad` + `szdo:datumEvidenz` (v1.1.0) |
 | Datumsintervalle | `@notBefore`/`@notAfter` nicht modelliert | `szdo:frühestensDatum`, `szdo:spätestensDatum` |
 | Adressstruktur | Keine strukturierte Adressmodellierung | `szdo:hatAdresse` → schema:PostalAddress |
-| Verantwortlichkeiten | Katalogisierer, Digitalisierer nicht modelliert | `rico:hasOrHadAgent` mit Rollenqualifizierung |
+| ~~Verantwortlichkeiten~~ | ~~Katalogisierer, Digitalisierer nicht modelliert~~ | RESOLVED: `szdo:hatBeteiligtenAkteur` mit 10 SubProperties + `rico:hasOrHadContributor` (v1.1.0) |
 | Namensvarianten | Pseudonyme, Schreibvarianten | `szdo:hatNamensform` (skos:altLabel) |
-| Klawiter-Reconciliation | 4.751 Einträge noch nicht mit SZDWRK verknüpft | GND-Matching + Titel-Fuzzy-Match |
+| Klawiter-Reconciliation | v1.1.0: 105/590 SZDWRK matched, 119 Links, 8 Typ-Korrekturen. Rest offen. | GND-Matching + Titel-Fuzzy-Match (laufend) |
 | Werkrelationen | Kompilationen/Sammelwerke nicht formal | `szdo:hatTeil` / `szdo:istTeilVon` auf Werkebene |
 
 ---
@@ -706,11 +753,11 @@ Die Ontologie wird durch eine 6-Stufen-Pipeline validiert (`ontology/validate.py
 | 3. SHACL | pySHACL + `szd-shapes.ttl` | Kardinalitäten, Pflicht-Annotationen, Namenskonventionen, Orphan-Klassen |
 | 4. OWL Checks | rdflib-basiert | Orphans, Multi-Domain, Circular SubClassOf, InverseOf-Konsistenz, Disjointness |
 | 5. OntoClean | Rigidity-Analyse | Taxonomische Korrektheit (rigide vs. anti-rigide Klassen) |
-| 6. Kompetenzfragen | 17 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment) |
+| 6. Kompetenzfragen | 19 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment) |
 
 **Ausführung:** `python ontology/validate.py`
 
-**SHACL Shapes** (`ontology/szd-shapes.ttl`): 13 Constraints für bilinguale Labels, Comments, Property-Domains, Instanzdaten-Validierung und Namenskonventionen.
+**SHACL Shapes** (`ontology/szd-shapes.ttl`): 14 Constraints für bilinguale Labels, Comments, Property-Domains, Instanzdaten-Validierung und Namenskonventionen. Shape 14: `DatumEvidenzShape` — validiert, dass `szdo:datumEvidenz`-Zielwerte IRIs aus `szdg:DatumEvidenz` sind (v1.1.0).
 
 ---
 

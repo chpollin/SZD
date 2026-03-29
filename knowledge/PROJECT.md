@@ -24,32 +24,31 @@ Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung 
 
 ### Nachlasssammlungen
 
-| Sammlung | Kennung | Objekte | Beschreibung |
-|----------|---------|---------|-------------|
-| **Werke** | SZDMSK | ~700 | Manuskripte, Typoskripte, Notizbücher, Konvolute, Korrekturfahnen |
-| **Korrespondenz** | SZDKOR | 1.186 | Briefkonvolute mit ~260 Korrespondenzpartnern |
-| **Autographen** | SZDAUT | ~1.000 | Zweigs Sammlung handschriftlicher Dokumente Dritter |
-| **Bibliothek** | SZDBIB | ~1.300 | Rekonstruierte Privatbibliothek mit Provenienzmerkmalen |
-| **Lebensdokumente** | SZDLEB | 127 | Verträge, Urkunden, Tagebücher, Ephemera |
-| **Essays** | SZDESS | 625 | Journalistische und akademische Beiträge |
-| **Publikationen** | SZDPUB | — | Erstveröffentlichungen und Editionsgeschichte |
+| Sammlung | Kennung | Beschreibung |
+|----------|---------|-------------|
+| **Werke** | SZDMSK | Manuskripte, Typoskripte, Notizbücher, Konvolute, Korrekturfahnen |
+| **Korrespondenz** | SZDKOR | Briefkonvolute mit Korrespondenzpartnern |
+| **Autographen** | SZDAUT | Zweigs Sammlung handschriftlicher Dokumente Dritter |
+| **Bibliothek** | SZDBIB | Rekonstruierte Privatbibliothek mit Provenienzmerkmalen |
+| **Lebensdokumente** | SZDLEB | Verträge, Urkunden, Tagebücher, Ephemera |
+| **Essays** | SZDESS | Journalistische und akademische Beiträge |
+| **Publikationen** | SZDPUB | Erstveröffentlichungen und Editionsgeschichte |
 
 ### Indizes und Vokabulare
 
-| Ressource | Kennung | Umfang | Beschreibung |
-|-----------|---------|--------|-------------|
-| **Personenindex** | SZDPER | 700+ Einträge | Normdatenverknüpfung (GND, Wikidata, Wikipedia) |
-| **Standortindex** | SZDSTA | 15+ Institutionen | Archive und Bibliotheken weltweit |
-| **Werkindex** | SZDWRK | ~200 Werke | Abstrakte Werke (intellektuelle Ebene) |
-| **Glossar** | szdg: | 37 SKOS-Konzepte | Kontrolliertes Vokabular (Provenienzmerkmale, Materialien) |
-| **Lebenskalender** | SZDBIO | 100+ Ereignisse | Biographische Zeitleiste (1881–1942) |
+| Ressource | Kennung | Beschreibung |
+|-----------|---------|-------------|
+| **Personenindex** | SZDPER | Normdatenverknüpfung (GND, Wikidata, Wikipedia) |
+| **Standortindex** | SZDSTA | Archive und Bibliotheken weltweit |
+| **Werkindex** | SZDWRK | Abstrakte Werke (intellektuelle Ebene) |
+| **Glossar** | szdg: | Kontrolliertes Vokabular (Provenienzmerkmale, Materialien) |
+| **Lebenskalender** | SZDBIO | Biographische Zeitleiste (1881–1942) |
 
 ### Digitale Faksimiles
 
-- **2.107 digitalisierte Objekte** (99,0% Vollständigkeit)
-- **18.719 hochauflösende Bilder** (4912×7360 px, JPEG)
-- **22,3 GB komprimiert** (24,7 GB unkomprimiert)
+- Hochauflösende Digitalisate aller Sammlungsobjekte (JPEG)
 - Online durchblätterbar über IIIF/Mirador-Viewer
+- Langzeitarchivierung auf Zenodo
 
 ---
 
@@ -60,7 +59,7 @@ Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung 
 Das Projekt verbindet vier methodische Säulen:
 
 1. **Archivwissenschaftliche Erschließung**: Katalogisierung nach RNA (Regeln zur Erschließung von Nachlässen und Autographen) und internationalen Archivstandards
-2. **Semantische Modellierung**: Formale Ontologie (SZDO v1.0.0) basierend auf Records in Context (RiC-O), IFLA LRM und CIDOC-CRM
+2. **Semantische Modellierung**: Formale Ontologie (SZDO v1.1.0) basierend auf Records in Context (RiC-O), IFLA LRM und CIDOC-CRM
 3. **Linked Open Data**: Verknüpfung mit Normdateien (GND, Wikidata, VIAF, Geonames) und kontrollierten Vokabularen (SKOS)
 4. **Digitale Langzeitarchivierung**: OAIS-konforme Speicherung in GAMS, Zenodo-Backup mit DOI-Versionierung
 
@@ -75,13 +74,13 @@ Das Datenmodell folgt dem TEI P5-Standard mit projektspezifischen Erweiterungen:
 
 ### Nachlass-Ontologie (SZDO)
 
-Die Stefan Zweig Digital Nachlass-Ontologie (SZDO v1.0.0) formalisiert das Datenmodell:
+Die Stefan Zweig Digital Nachlass-Ontologie (SZDO v1.1.0) formalisiert das Datenmodell:
 
 - **72 Klassen** (58 Kernklassen + 14 GAMS-Kompatibilitätsklassen)
-- **130 Properties** (77 Kern + 53 GAMS-Kompatibilität)
+- **132 Properties** (79 Kern + 53 GAMS-Kompatibilität)
 - **Alignments**: Records in Context (Archiv), IFLA LRM (Werkschicht), CIDOC-CRM (Ereignisse/Provenienz)
 - **Dokumentation**: https://chpollin.github.io/SZD/ontology/
-- **Validierung**: 6-Stufen-Pipeline mit 17 Kompetenzfragen
+- **Validierung**: 6-Stufen-Pipeline mit 19 Kompetenzfragen
 
 Siehe [ONTOLOGY.md](ONTOLOGY.md) für das vollständige Design-Dokument.
 
@@ -136,14 +135,12 @@ Siehe [ONTOLOGY.md](ONTOLOGY.md) für das vollständige Design-Dokument.
 
 ### FAIR-Compliance
 
-**Gesamtbewertung: 92%**
-
-| Prinzip | Score | Maßnahmen |
-|---------|-------|-----------|
-| **Findable** | 100% | DOI (Zenodo), ORCID, GND, Wikidata, PIDs in GAMS |
-| **Accessible** | 100% | Open Access über GAMS und Zenodo, OAI-PMH |
-| **Interoperable** | 83% | TEI P5, METS/MODS, RDF/SPARQL, kontrollierte Vokabulare |
-| **Reusable** | 100% | CC-BY 4.0, detaillierte Provenienz, Community-Standards |
+| Prinzip | Maßnahmen |
+|---------|-----------|
+| **Findable** | DOI (Zenodo), ORCID, GND, Wikidata, PIDs in GAMS |
+| **Accessible** | Open Access über GAMS und Zenodo, OAI-PMH |
+| **Interoperable** | TEI P5, METS/MODS, RDF/SPARQL, kontrollierte Vokabulare |
+| **Reusable** | CC-BY 4.0, detaillierte Provenienz, Community-Standards |
 
 ### Datenlebenszyklus
 
@@ -209,6 +206,7 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 | Juli 2020 | Version 3 — Autographensammlung, erweiterte Daten |
 | Oktober 2025 | Zenodo-Archivierung (2.107 Objekte, 22,3 GB) |
 | März 2026 | SZDO v1.0.0 — Formale Nachlass-Ontologie, GitHub Pages |
+| März 2026 | SZDO v1.1.0 — Datum-Evidenz, Personen-Rollenhierarchie, RiC-Alignments, Klawiter-Korrekturen |
 
 ---
 
@@ -218,7 +216,6 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 
 | Name | Rolle | Institution | ORCID |
 |------|-------|-------------|-------|
-| Manfred Mittermayer | Projektleitung | Literaturarchiv Salzburg | — |
 | Oliver Matuschek | Projektleitung | Literaturarchiv Salzburg | — |
 | Lina Maria Zangerl | Datenerfassung | Literaturarchiv Salzburg | 0000-0001-9709-3669 |
 | Julia Rebecca Glunk | Datenerfassung | Literaturarchiv Salzburg | 0000-0001-6647-9729 |
