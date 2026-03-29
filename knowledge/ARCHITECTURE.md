@@ -335,6 +335,29 @@ All system components support German and English:
 
 ---
 
+## GitHub Pages — Design System
+
+The `docs/` folder is deployed as GitHub Pages, serving the ontology documentation and project overview. The design is aligned to the Stefan Zweig Digital GAMS reference to form a visual family ("Zweig Forschungsverbund"):
+
+**Shared palette (from GAMS):**
+- Burgundy `#631a34` — header, links, primary accent
+- Gold `#C2A360` — metadata labels, secondary accent
+- Cream `#FAF8F3` — page background
+
+**Typography (Google Fonts):**
+- Source Serif 4 — headings, body text (serif)
+- Source Sans 3 — UI elements, navigation (sans-serif)
+- JetBrains Mono — ontology URIs, code (monospace)
+
+**Design differentiation from Klawiter Bibliography:**
+- Same palette, but "burgundy-forward" (section headings in burgundy, gold used sparingly for metadata)
+- Klawiter is "gold-forward" (section headings in gold, more warm/inviting for browsing)
+- Both share the GAMS color values exactly, creating unmistakable family cohesion
+
+**Files:** `docs/css/szd-ontology.css` (single stylesheet for all pages)
+
+---
+
 ## Related Documentation
 
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure and encoding
