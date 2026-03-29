@@ -385,6 +385,44 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; }
 body.lang-de .en-only { display: none; }
 body.lang-en .de-only { display: none; }
 
+/* --- Verbund Bar --- */
+.verbund-bar {
+  background: #f2f2f2;
+  border-bottom: 1px solid var(--sz-border);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 28px;
+  padding: 0 1rem;
+}
+.verbund-mark {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sz-burgundy);
+  line-height: 1;
+}
+.verbund-bar a {
+  color: var(--sz-text-light);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.verbund-bar a:hover {
+  color: var(--sz-burgundy);
+  text-decoration: none;
+}
+.verbund-bar .verbund-active {
+  color: var(--sz-burgundy);
+  font-weight: 600;
+}
+.verbund-sep {
+  color: var(--sz-border);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .onto-layout {

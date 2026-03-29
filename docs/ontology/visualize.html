@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ontologie-Visualisierung — Stefan Zweig Digital</title>
-  <meta name="description" content="Interaktive Visualisierung der SZDO Nachlass-Ontologie als Force-Directed Graph.">
+  <title>Ontology Visualization — Stefan Zweig Digital</title>
+  <meta name="description" content="Interactive visualization of the SZDO Nachlass ontology as a force-directed graph.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
@@ -133,6 +133,15 @@
   </style>
 </head>
 <body>
+  <nav class="verbund-bar" aria-label="Zweig Digital Research Network">
+    <span class="verbund-mark">&rsaquo;</span>
+    <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Stefan Zweig Digital</a>
+    <span class="verbund-sep">&middot;</span>
+    <a href="https://klawiter-rescue.github.io/">Klawiter Bibliography</a>
+    <span class="verbund-sep">&middot;</span>
+    <span class="verbund-active">Ontology &amp; Data</span>
+  </nav>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="../" class="header-brand">
@@ -140,8 +149,9 @@
         <span class="header-title">Stefan Zweig Digital</span>
       </a>
       <nav class="header-nav">
-        <a href="../project/">Projekt</a>
-        <a href=".">Ontologie</a>
+        <a href="../project/">Project</a>
+        <a href=".">Ontology</a>
+        <a href="visualize.html">Visualize</a>
         <a href="../downloads/">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
@@ -151,9 +161,9 @@
 
   <main style="max-width:var(--max-width);margin:0 auto;padding:1rem 1.5rem;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-      <h1 style="font-size:1.4rem;color:var(--sz-burgundy);margin:0;">Ontologie-Visualisierung</h1>
+      <h1 style="font-size:1.4rem;color:var(--sz-burgundy);margin:0;">Ontology Visualization</h1>
       <div style="display:flex;gap:0.5rem;">
-        <a href="./" style="font-family:var(--font-sans);font-size:0.78rem;">Referenz</a>
+        <a href="./" style="font-family:var(--font-sans);font-size:0.78rem;">Reference</a>
         <span style="color:var(--sz-border);">|</span>
         <a href="visualize.html" style="font-family:var(--font-sans);font-size:0.78rem;font-weight:600;">Graph</a>
       </div>
@@ -189,7 +199,7 @@
       buildControls();
       buildGraph();
       document.getElementById('stats').textContent =
-        `${graphData.meta.nodeCount} Klassen · ${graphData.meta.edgeCount} Beziehungen · v${graphData.meta.version}`;
+        `${graphData.meta.nodeCount} Classes · ${graphData.meta.edgeCount} Relationships · v${graphData.meta.version}`;
     }
 
     function buildControls() {
@@ -207,7 +217,7 @@
       }
 
       // Action buttons
-      html += `<button onclick="resetView()">Zurücksetzen</button>`;
+      html += `<button onclick="resetView()">Reset</button>`;
       html += `<button onclick="exportSVG()">SVG Export</button>`;
 
       ctrl.innerHTML = html;
@@ -349,7 +359,7 @@
         return src === d.id || tgt === d.id;
       });
 
-      let linksHtml = '<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.5rem 0 0.25rem;">Beziehungen</h4>';
+      let linksHtml = '<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.5rem 0 0.25rem;">Relationships</h4>';
       connected.forEach(e => {
         const src = typeof e.source === 'object' ? e.source.id : e.source;
         const tgt = typeof e.target === 'object' ? e.target.id : e.target;
@@ -362,7 +372,7 @@
         }
       });
       linksHtml += `<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.75rem 0 0.25rem;">Links</h4>`;
-      linksHtml += `<a href="./#${d.id}">→ Ontologie-Referenz</a>`;
+      linksHtml += `<a href="./#${d.id}">→ Ontology Reference</a>`;
 
       document.getElementById('detail-links').innerHTML = linksHtml;
       document.getElementById('detail').classList.add('active');

@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Downloads — Stefan Zweig Digital</title>
-  <meta name="description" content="Forschungsdaten und Ontologie zum Download: TEI-XML, RDF, JSON-LD, SKOS.">
+  <meta name="description" content="Research data and ontology for download: TEI-XML, RDF, JSON-LD, SKOS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
   <link rel="stylesheet" href="../css/szd-ontology.css">
 </head>
 <body>
+  <nav class="verbund-bar" aria-label="Zweig Digital Research Network">
+    <span class="verbund-mark">&rsaquo;</span>
+    <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Stefan Zweig Digital</a>
+    <span class="verbund-sep">&middot;</span>
+    <a href="https://klawiter-rescue.github.io/">Klawiter Bibliography</a>
+    <span class="verbund-sep">&middot;</span>
+    <span class="verbund-active">Ontology &amp; Data</span>
+  </nav>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="../" class="header-brand">
@@ -18,8 +27,9 @@
         <span class="header-title">Stefan Zweig Digital</span>
       </a>
       <nav class="header-nav">
-        <a href="../project/">Projekt</a>
-        <a href="../ontology/">Ontologie</a>
+        <a href="../project/">Project</a>
+        <a href="../ontology/">Ontology</a>
+        <a href="../ontology/visualize.html">Visualize</a>
         <a href=".">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
@@ -30,69 +40,69 @@
   <main class="landing">
     <section class="landing-hero">
       <h1>Downloads</h1>
-      <p class="landing-subtitle">Forschungsdaten, Ontologie und Vokabulare</p>
+      <p class="landing-subtitle">Research data, ontology, and vocabularies</p>
     </section>
 
-    <!-- Ontologie -->
+    <!-- Ontology -->
     <section class="landing-about">
-      <h2>Nachlass-Ontologie (SZDO v1.0.0)</h2>
-      <p>Formale OWL-Ontologie für den digitalen Nachlass Stefan Zweigs. 72 Klassen, 130 Properties, Alignments zu RiC-O, IFLA LRM und CIDOC-CRM.</p>
+      <h2>Nachlass Ontology (SZDO v1.0.0)</h2>
+      <p>Formal OWL ontology for the digital estate of Stefan Zweig. 72 classes, 130 properties, alignments to RiC-O, IFLA LRM, and CIDOC-CRM.</p>
       <table class="prop-table">
-        <tr><th>Format</th><th>Datei</th><th>Größe</th><th>Beschreibung</th></tr>
+        <tr><th>Format</th><th>File</th><th>Size</th><th>Description</th></tr>
         <tr>
           <td><span class="badge badge-rico">Turtle</span></td>
           <td><a href="../ontology/szd-ontology.ttl">szd-ontology.ttl</a></td>
           <td>~47 KB</td>
-          <td>Primärformat, menschenlesbar (1.243 Triples)</td>
+          <td>Primary format, human-readable (1,243 triples)</td>
         </tr>
         <tr>
           <td><span class="badge badge-schema">JSON-LD</span></td>
           <td><a href="../ontology/szd-ontology.jsonld">szd-ontology.jsonld</a></td>
           <td>~160 KB</td>
-          <td>JSON-LD Serialisierung für Web-APIs</td>
+          <td>JSON-LD serialization for web APIs</td>
         </tr>
       </table>
-      <p style="margin-top:0.75rem;"><a href="../ontology/">→ Ontologie-Dokumentation</a> · <a href="https://github.com/chpollin/SZD/tree/master/ontology">→ Quellcode auf GitHub</a></p>
+      <p style="margin-top:0.75rem;"><a href="../ontology/">→ Ontology documentation</a> · <a href="https://github.com/chpollin/SZD/tree/master/ontology">→ Source code on GitHub</a></p>
     </section>
 
-    <!-- TEI-XML Sammlungen -->
+    <!-- TEI-XML Collections -->
     <section class="landing-about">
-      <h2>TEI-XML Sammlungen (via GAMS)</h2>
-      <p>Die TEI-XML-Quelldaten sind über das GAMS-Repositorium und das GitHub-Repository zugänglich.</p>
+      <h2>TEI-XML Collections (via GAMS)</h2>
+      <p>The TEI-XML source data is accessible via the GAMS repository and the GitHub repository.</p>
       <table class="prop-table">
-        <tr><th>Sammlung</th><th>TEI Source</th><th>RDF</th><th>GitHub</th></tr>
+        <tr><th>Collection</th><th>TEI Source</th><th>RDF</th><th>GitHub</th></tr>
         <tr>
-          <td><strong>Werke</strong> (SZDMSK)</td>
+          <td><strong>Works</strong> (SZDMSK)</td>
           <td><a href="https://stefanzweig.digital/o:szd.werke/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.werke/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Work" target="_blank" rel="noopener">data/Work</a></td>
         </tr>
         <tr>
-          <td><strong>Korrespondenz</strong> (SZDKOR)</td>
+          <td><strong>Correspondence</strong> (SZDKOR)</td>
           <td><a href="https://stefanzweig.digital/o:szd.korrespondenzen/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.korrespondenzen/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Correspondence" target="_blank" rel="noopener">data/Correspondence</a></td>
         </tr>
         <tr>
-          <td><strong>Autographen</strong> (SZDAUT)</td>
+          <td><strong>Autographs</strong> (SZDAUT)</td>
           <td><a href="https://stefanzweig.digital/o:szd.autographen/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.autographen/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Autograph" target="_blank" rel="noopener">data/Autograph</a></td>
         </tr>
         <tr>
-          <td><strong>Bibliothek</strong> (SZDBIB)</td>
+          <td><strong>Library</strong> (SZDBIB)</td>
           <td><a href="https://stefanzweig.digital/o:szd.bibliothek/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.bibliothek/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Library" target="_blank" rel="noopener">data/Library</a></td>
         </tr>
         <tr>
-          <td><strong>Lebensdokumente</strong> (SZDLEB)</td>
+          <td><strong>Personal Documents</strong> (SZDLEB)</td>
           <td><a href="https://stefanzweig.digital/o:szd.lebensdokumente/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.lebensdokumente/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/PersonalDocument" target="_blank" rel="noopener">data/PersonalDocument</a></td>
         </tr>
         <tr>
-          <td><strong>Lebenskalender</strong> (SZDBIO)</td>
+          <td><strong>Life Calendar</strong> (SZDBIO)</td>
           <td><a href="https://stefanzweig.digital/o:szd.lebenskalender/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.lebenskalender/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Biography" target="_blank" rel="noopener">data/Biography</a></td>
@@ -106,25 +116,25 @@
       </table>
     </section>
 
-    <!-- Indizes und Vokabulare -->
+    <!-- Indexes and Vocabularies -->
     <section class="landing-about">
-      <h2>Indizes und Vokabulare</h2>
+      <h2>Indexes and Vocabularies</h2>
       <table class="prop-table">
-        <tr><th>Ressource</th><th>TEI Source</th><th>RDF</th><th>GitHub</th></tr>
+        <tr><th>Resource</th><th>TEI Source</th><th>RDF</th><th>GitHub</th></tr>
         <tr>
-          <td><strong>Personenindex</strong> (SZDPER, 700+)</td>
+          <td><strong>Person Index</strong> (SZDPER, 700+)</td>
           <td><a href="https://stefanzweig.digital/o:szd.personen/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.personen/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Index/Person" target="_blank" rel="noopener">data/Index/Person</a></td>
         </tr>
         <tr>
-          <td><strong>Standortindex</strong> (SZDSTA)</td>
+          <td><strong>Location Index</strong> (SZDSTA)</td>
           <td><a href="https://stefanzweig.digital/o:szd.standorte/TEI_SOURCE" target="_blank" rel="noopener">TEI</a></td>
           <td><a href="https://stefanzweig.digital/o:szd.standorte/RDF" target="_blank" rel="noopener">RDF</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Index/Location" target="_blank" rel="noopener">data/Index/Location</a></td>
         </tr>
         <tr>
-          <td><strong>Glossar</strong> (SKOS, 37 Konzepte)</td>
+          <td><strong>Glossary</strong> (SKOS, 37 concepts)</td>
           <td colspan="2"><a href="https://stefanzweig.digital/o:szd.glossar/RDF" target="_blank" rel="noopener">RDF/SKOS</a></td>
           <td><a href="https://github.com/chpollin/SZD/tree/master/data/Glossary" target="_blank" rel="noopener">data/Glossary</a></td>
         </tr>
@@ -133,54 +143,54 @@
 
     <!-- Zenodo -->
     <section class="landing-about">
-      <h2>Zenodo-Archiv (Langzeitarchivierung)</h2>
-      <p>Vollständiges Backup aller digitalisierten Objekte inkl. hochauflösender Faksimiles und METS-Metadaten.</p>
+      <h2>Zenodo Archive (Long-Term Preservation)</h2>
+      <p>Complete backup of all digitized objects including high-resolution facsimiles and METS metadata.</p>
       <table class="prop-table">
-        <tr><th>Inhalt</th><th>Umfang</th></tr>
-        <tr><td>Digitalisierte Objekte</td><td>2.107 (99,0% Vollständigkeit)</td></tr>
-        <tr><td>Hochauflösende Bilder</td><td>18.719 (4912×7360 px, JPEG)</td></tr>
-        <tr><td>Gesamtgröße</td><td>22,3 GB komprimiert</td></tr>
-        <tr><td>FAIR-Score</td><td>92%</td></tr>
+        <tr><th>Content</th><th>Scope</th></tr>
+        <tr><td>Digitized objects</td><td>2,107 (99.0% completeness)</td></tr>
+        <tr><td>High-resolution images</td><td>18,719 (4912x7360 px, JPEG)</td></tr>
+        <tr><td>Total size</td><td>22.3 GB compressed</td></tr>
+        <tr><td>FAIR score</td><td>92%</td></tr>
       </table>
-      <p style="margin-top:0.75rem;"><a href="https://zenodo.org/uploads/17421555" target="_blank" rel="noopener">→ Zenodo-Archiv öffnen</a> · <a href="https://github.com/chpollin/SZD/tree/master/szd-zenodo-backup">→ Backup-Dokumentation auf GitHub</a></p>
+      <p style="margin-top:0.75rem;"><a href="https://zenodo.org/uploads/17421555" target="_blank" rel="noopener">→ Open Zenodo archive</a> · <a href="https://github.com/chpollin/SZD/tree/master/szd-zenodo-backup">→ Backup documentation on GitHub</a></p>
     </section>
 
     <!-- Klawiter -->
     <section class="landing-about">
-      <h2>Klawiter-Bibliographie</h2>
-      <p>Vollständige Stefan-Zweig-Bibliographie nach Dr. Randolph J. Klawiter. 6.296 Einträge in JSON-LD.</p>
+      <h2>Klawiter Bibliography</h2>
+      <p>Complete Stefan Zweig bibliography by Dr. Randolph J. Klawiter. 6,296 entries in JSON-LD.</p>
       <table class="prop-table">
-        <tr><th>Format</th><th>Link</th><th>Beschreibung</th></tr>
+        <tr><th>Format</th><th>Link</th><th>Description</th></tr>
         <tr>
           <td><span class="badge badge-schema">JSON-LD</span></td>
           <td><a href="https://github.com/chpollin/klawiter-rescue/blob/main/data/output/klawiter.jsonld" target="_blank" rel="noopener">klawiter.jsonld</a></td>
-          <td>Gesamtdatensatz (6.296 Einträge, ~12 MB)</td>
+          <td>Complete dataset (6,296 entries, ~12 MB)</td>
         </tr>
         <tr>
           <td><span class="badge badge-dc">JSON</span></td>
           <td><a href="https://github.com/chpollin/klawiter-rescue/blob/main/docs/data/klawiter.json" target="_blank" rel="noopener">klawiter.json</a></td>
-          <td>Frontend-optimiert (4.751 Einträge, ~4 MB)</td>
+          <td>Frontend-optimized (4,751 entries, ~4 MB)</td>
         </tr>
       </table>
-      <p style="margin-top:0.75rem;"><a href="https://klawiter-rescue.github.io/" target="_blank" rel="noopener">→ Klawiter-Frontend</a> · <a href="https://github.com/chpollin/klawiter-rescue" target="_blank" rel="noopener">→ GitHub</a></p>
+      <p style="margin-top:0.75rem;"><a href="https://klawiter-rescue.github.io/" target="_blank" rel="noopener">→ Klawiter frontend</a> · <a href="https://github.com/chpollin/klawiter-rescue" target="_blank" rel="noopener">→ GitHub</a></p>
     </section>
 
-    <!-- Lizenz -->
+    <!-- Licensing -->
     <section class="landing-about">
-      <h2>Lizenzierung</h2>
+      <h2>Licensing</h2>
       <table class="prop-table">
-        <tr><th>Daten</th><th>Lizenz</th></tr>
-        <tr><td>TEI-XML Quelldaten</td><td>CC-BY 4.0</td></tr>
-        <tr><td>Ontologie (SZDO)</td><td>CC-BY 4.0</td></tr>
-        <tr><td>Zenodo-Archiv</td><td>CC-BY 4.0</td></tr>
-        <tr><td>Faksimiles</td><td>CC-BY 4.0</td></tr>
+        <tr><th>Data</th><th>License</th></tr>
+        <tr><td>TEI-XML source data</td><td>CC-BY 4.0</td></tr>
+        <tr><td>Ontology (SZDO)</td><td>CC-BY 4.0</td></tr>
+        <tr><td>Zenodo archive</td><td>CC-BY 4.0</td></tr>
+        <tr><td>Facsimiles</td><td>CC-BY 4.0</td></tr>
       </table>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · <a href="mailto:info@stefanzweig.digital">Kontakt</a></p>
+      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · <a href="mailto:info@stefanzweig.digital">Contact</a></p>
     </div>
   </footer>
 </body>

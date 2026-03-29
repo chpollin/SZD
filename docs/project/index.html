@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projekt — Stefan Zweig Digital</title>
-  <meta name="description" content="Stefan Zweig Digital — Forschungsprojekt zur digitalen Nachlassrekonstruktion aus DH- und Forschungsdatenperspektive.">
+  <title>Project — Stefan Zweig Digital</title>
+  <meta name="description" content="Stefan Zweig Digital — Research project on digital estate reconstruction from a DH and research data perspective.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
@@ -14,7 +14,7 @@
     "@context": "https://schema.org",
     "@type": "ResearchProject",
     "name": "Stefan Zweig Digital",
-    "description": "Digitale Nachlassrekonstruktion Stefan Zweigs",
+    "description": "Digital estate reconstruction of Stefan Zweig",
     "url": "https://stefanzweig.digital",
     "funder": {"@type": "Organization", "name": "Literaturarchiv Salzburg, Paris Lodron Universität Salzburg"},
     "member": [
@@ -26,6 +26,15 @@
   </script>
 </head>
 <body>
+  <nav class="verbund-bar" aria-label="Zweig Digital Research Network">
+    <span class="verbund-mark">&rsaquo;</span>
+    <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Stefan Zweig Digital</a>
+    <span class="verbund-sep">&middot;</span>
+    <a href="https://klawiter-rescue.github.io/">Klawiter Bibliography</a>
+    <span class="verbund-sep">&middot;</span>
+    <span class="verbund-active">Ontology &amp; Data</span>
+  </nav>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="../" class="header-brand">
@@ -33,8 +42,9 @@
         <span class="header-title">Stefan Zweig Digital</span>
       </a>
       <nav class="header-nav">
-        <a href=".">Projekt</a>
-        <a href="../ontology/">Ontologie</a>
+        <a href=".">Project</a>
+        <a href="../ontology/">Ontology</a>
+        <a href="../ontology/visualize.html">Visualize</a>
         <a href="../downloads/">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
@@ -45,52 +55,52 @@
   <main class="landing">
     <section class="landing-hero">
       <h1>Stefan Zweig Digital</h1>
-      <p class="landing-subtitle">Digitale Nachlassrekonstruktion — Forschungsprojekt</p>
+      <p class="landing-subtitle">Digital Estate Reconstruction — Research Project</p>
     </section>
 
-    <!-- Projektbeschreibung -->
+    <!-- Project Description -->
     <section class="landing-about">
-      <h2>Der Nachlass Stefan Zweigs</h2>
-      <p>Stefan Zweig (1881–1942) zählt zu den meistgelesenen und meistübersetzten deutschsprachigen Autoren des 20. Jahrhunderts. Sein Nachlass ist durch Exil, Flucht und posthume Zerstreuung auf mehrere öffentliche und private Sammlungen weltweit verteilt.</p>
-      <p><strong>Stefan Zweig Digital</strong> verfolgt das Ziel, den weltweit verstreuten Nachlass im digitalen Raum zusammenzuführen und einem wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv Salzburg entsteht eine digitale Nachlassrekonstruktion, die NutzerInnen orts- und zeitunabhängig zugänglich ist.</p>
+      <h2>The Estate of Stefan Zweig</h2>
+      <p>Stefan Zweig (1881–1942) is one of the most widely read and translated German-language authors of the 20th century. His literary estate is dispersed across several public and private collections worldwide due to exile, flight, and posthumous scattering.</p>
+      <p><strong>Stefan Zweig Digital</strong> aims to reunite the globally dispersed estate in the digital space and make it accessible to a scholarly audience. In collaboration with the Literaturarchiv Salzburg, a digital estate reconstruction is being created that is available to users regardless of time and location.</p>
     </section>
 
-    <!-- Sammlungen -->
+    <!-- Collections -->
     <section class="landing-about">
-      <h2>Sammlungen</h2>
+      <h2>Collections</h2>
       <div style="overflow-x:auto;">
         <table class="prop-table">
-          <tr><th>Sammlung</th><th>Umfang</th><th>Beschreibung</th></tr>
-          <tr><td><strong>Werke</strong></td><td>~700 Objekte</td><td>Manuskripte, Typoskripte, Notizbücher, Korrekturfahnen</td></tr>
-          <tr><td><strong>Korrespondenz</strong></td><td>1.186 Konvolute</td><td>Briefe an und von Stefan Zweig (~260 Korrespondenzpartner)</td></tr>
-          <tr><td><strong>Autographen</strong></td><td>~1.000 Stück</td><td>Zweigs Sammlung handschriftlicher Dokumente Dritter</td></tr>
-          <tr><td><strong>Bibliothek</strong></td><td>~1.300 Bände</td><td>Rekonstruierte Privatbibliothek mit Provenienzmerkmalen</td></tr>
-          <tr><td><strong>Lebensdokumente</strong></td><td>127 Objekte</td><td>Verträge, Urkunden, Tagebücher, Ephemera</td></tr>
-          <tr><td><strong>Essays</strong></td><td>625 Beiträge</td><td>Journalistische und akademische Beiträge</td></tr>
-          <tr><td><strong>Personenindex</strong></td><td>700+ Einträge</td><td>Normdatenverknüpfung (GND, Wikidata)</td></tr>
-          <tr><td><strong>Lebenskalender</strong></td><td>100+ Ereignisse</td><td>Biographische Zeitleiste (1881–1942)</td></tr>
+          <tr><th>Collection</th><th>Scope</th><th>Description</th></tr>
+          <tr><td><strong>Works</strong></td><td>~700 objects</td><td>Manuscripts, typescripts, notebooks, galley proofs</td></tr>
+          <tr><td><strong>Correspondence</strong></td><td>1,186 bundles</td><td>Letters to and from Stefan Zweig (~260 correspondence partners)</td></tr>
+          <tr><td><strong>Autographs</strong></td><td>~1,000 items</td><td>Zweig's collection of handwritten documents by third parties</td></tr>
+          <tr><td><strong>Library</strong></td><td>~1,300 volumes</td><td>Reconstructed private library with provenance features</td></tr>
+          <tr><td><strong>Life Documents</strong></td><td>127 objects</td><td>Contracts, certificates, diaries, ephemera</td></tr>
+          <tr><td><strong>Essays</strong></td><td>625 contributions</td><td>Journalistic and academic contributions</td></tr>
+          <tr><td><strong>Person Index</strong></td><td>700+ entries</td><td>Authority data linking (GND, Wikidata)</td></tr>
+          <tr><td><strong>Life Calendar</strong></td><td>100+ events</td><td>Biographical timeline (1881–1942)</td></tr>
         </table>
       </div>
-      <p style="margin-top:1rem;"><strong>Digitale Faksimiles:</strong> 2.107 digitalisierte Objekte · 18.719 hochauflösende Bilder · 22,3 GB</p>
+      <p style="margin-top:1rem;"><strong>Digital Facsimiles:</strong> 2,107 digitized objects · 18,719 high-resolution images · 22.3 GB</p>
     </section>
 
-    <!-- Methodik -->
+    <!-- Methodology -->
     <section class="landing-about">
-      <h2>Methodischer Rahmen</h2>
+      <h2>Methodological Framework</h2>
       <div class="landing-cards" style="margin:1rem 0;">
         <div class="card" style="cursor:default;">
-          <h2>Archivwissenschaft</h2>
-          <p>Katalogisierung nach RNA und internationalen Archivstandards. Modellierung nach Records in Context (RiC-O).</p>
+          <h2>Archival Science</h2>
+          <p>Cataloguing according to RNA and international archival standards. Modelling based on Records in Context (RiC-O).</p>
           <span class="card-meta">RNA · RiC-O · ISAD(G)</span>
         </div>
         <div class="card" style="cursor:default;">
-          <h2>Semantische Modellierung</h2>
-          <p>Formale OWL-Ontologie (SZDO v1.0.0) mit Alignments zu IFLA LRM und CIDOC-CRM. SKOS-kontrollierte Vokabulare.</p>
+          <h2>Semantic Modelling</h2>
+          <p>Formal OWL ontology (SZDO v1.0.0) with alignments to IFLA LRM and CIDOC-CRM. SKOS-controlled vocabularies.</p>
           <span class="card-meta">OWL 2 · SKOS · Linked Data</span>
         </div>
         <div class="card" style="cursor:default;">
-          <h2>Langzeitarchivierung</h2>
-          <p>OAIS-konforme Speicherung in GAMS mit persistenten Identifikatoren. Zenodo-Backup mit DOI-Versionierung.</p>
+          <h2>Long-Term Preservation</h2>
+          <p>OAIS-compliant storage in GAMS with persistent identifiers. Zenodo backup with DOI versioning.</p>
           <span class="card-meta">GAMS · Zenodo · FAIR 92%</span>
         </div>
       </div>
@@ -98,85 +108,85 @@
 
     <!-- FAIR -->
     <section class="landing-about">
-      <h2>FAIR-Compliance</h2>
+      <h2>FAIR Compliance</h2>
       <table class="prop-table">
-        <tr><th>Prinzip</th><th>Score</th><th>Maßnahmen</th></tr>
+        <tr><th>Principle</th><th>Score</th><th>Measures</th></tr>
         <tr><td><strong>Findable</strong></td><td>100%</td><td>DOI, ORCID, GND, Wikidata, PIDs</td></tr>
         <tr><td><strong>Accessible</strong></td><td>100%</td><td>Open Access, OAI-PMH, GAMS, Zenodo</td></tr>
         <tr><td><strong>Interoperable</strong></td><td>83%</td><td>TEI P5, METS/MODS, RDF/SPARQL, SKOS</td></tr>
-        <tr><td><strong>Reusable</strong></td><td>100%</td><td>CC-BY 4.0, Provenienz, Community-Standards</td></tr>
+        <tr><td><strong>Reusable</strong></td><td>100%</td><td>CC-BY 4.0, Provenance, Community Standards</td></tr>
       </table>
-      <p style="margin-top:0.5rem;"><strong>Gesamtbewertung: 92%</strong></p>
+      <p style="margin-top:0.5rem;"><strong>Overall Score: 92%</strong></p>
     </section>
 
-    <!-- Ontologie -->
+    <!-- Ontology -->
     <section class="landing-about">
-      <h2>Nachlass-Ontologie (SZDO)</h2>
-      <p>Die <a href="../ontology/">Stefan Zweig Digital Nachlass-Ontologie</a> (v1.0.0) formalisiert das Datenmodell des Projekts:</p>
+      <h2>Estate Ontology (SZDO)</h2>
+      <p>The <a href="../ontology/">Stefan Zweig Digital Estate Ontology</a> (v1.0.0) formalizes the project's data model:</p>
       <ul style="margin:0.5rem 0 0.5rem 1.5rem;">
-        <li>72 Klassen · 130 Properties · 1.243 Triples</li>
-        <li>Alignments: Records in Context (Archiv), IFLA LRM (Werk), CIDOC-CRM (Ereignisse)</li>
-        <li>GAMS-Kompatibilitätsschicht (v0.x → v1.0.0)</li>
-        <li>6-Stufen-Validierungspipeline mit 17 Kompetenzfragen</li>
+        <li>72 classes · 130 properties · 1,243 triples</li>
+        <li>Alignments: Records in Context (archival), IFLA LRM (work), CIDOC-CRM (events)</li>
+        <li>GAMS compatibility layer (v0.x → v1.0.0)</li>
+        <li>6-stage validation pipeline with 17 competency questions</li>
       </ul>
-      <p><a href="../ontology/">→ Zur Ontologie-Dokumentation</a></p>
+      <p><a href="../ontology/">→ Go to Ontology Documentation</a></p>
     </section>
 
-    <!-- Vernetzung -->
+    <!-- Network -->
     <section class="landing-about">
-      <h2>Vernetzung</h2>
+      <h2>Network</h2>
       <div class="landing-cards" style="margin:1rem 0;">
         <a href="https://klawiter-rescue.github.io/" class="card" target="_blank" rel="noopener">
-          <h2>Klawiter-Bibliographie</h2>
-          <p>6.296 bibliographische Einträge zu Stefan Zweigs Werken, Übersetzungen in 40+ Sprachen und Sekundärliteratur. Verknüpfung über die SZDO-Werkschicht.</p>
-          <span class="card-meta">JSON-LD · Schema.org · 40+ Sprachen</span>
+          <h2>Klawiter Bibliography</h2>
+          <p>6,296 bibliographic entries on Stefan Zweig's works, translations in 40+ languages, and secondary literature. Linked via the SZDO work layer.</p>
+          <span class="card-meta">JSON-LD · Schema.org · 40+ Languages</span>
         </a>
         <a href="https://gams.uni-graz.at/context:szd" class="card" target="_blank" rel="noopener">
-          <h2>GAMS-Repositorium</h2>
-          <p>Produktionssystem mit allen Forschungsdaten, SPARQL-Endpoint, METS/MODS-Metadaten und IIIF-Faksimiles.</p>
+          <h2>GAMS Repository</h2>
+          <p>Production system with all research data, SPARQL endpoint, METS/MODS metadata, and IIIF facsimiles.</p>
           <span class="card-meta">Fedora Commons · Blazegraph · IIIF</span>
         </a>
       </div>
     </section>
 
-    <!-- Chronologie -->
+    <!-- Timeline -->
     <section class="landing-about">
-      <h2>Projektchronologie</h2>
+      <h2>Project Timeline</h2>
       <table class="prop-table">
-        <tr><th>Datum</th><th>Meilenstein</th></tr>
-        <tr><td>2014</td><td>Literaturarchiv Salzburg erwirbt Stefan-Zweig-Bestände</td></tr>
-        <tr><td>Juni 2018</td><td>Launch Version 1 (stefanzweig.digital)</td></tr>
-        <tr><td>Dezember 2019</td><td>Version 2 — Englische Version</td></tr>
-        <tr><td>Juli 2020</td><td>Version 3 — Autographensammlung, erweiterte Daten</td></tr>
-        <tr><td>Oktober 2025</td><td>Zenodo-Archivierung (2.107 Objekte, 22,3 GB)</td></tr>
-        <tr><td>März 2026</td><td>SZDO v1.0.0 — Formale Nachlass-Ontologie, GitHub Pages</td></tr>
+        <tr><th>Date</th><th>Milestone</th></tr>
+        <tr><td>2014</td><td>Literaturarchiv Salzburg acquires Stefan Zweig holdings</td></tr>
+        <tr><td>June 2018</td><td>Launch of Version 1 (stefanzweig.digital)</td></tr>
+        <tr><td>December 2019</td><td>Version 2 — English version</td></tr>
+        <tr><td>July 2020</td><td>Version 3 — Autograph collection, expanded data</td></tr>
+        <tr><td>October 2025</td><td>Zenodo archival (2,107 objects, 22.3 GB)</td></tr>
+        <tr><td>March 2026</td><td>SZDO v1.0.0 — Formal estate ontology, GitHub Pages</td></tr>
       </table>
     </section>
 
-    <!-- Beteiligte -->
+    <!-- Contributors -->
     <section class="landing-about">
-      <h2>Beteiligte</h2>
+      <h2>Contributors</h2>
       <table class="prop-table">
-        <tr><th>Name</th><th>Rolle</th><th>Institution</th></tr>
-        <tr><td>Manfred Mittermayer</td><td>Projektleitung</td><td>Literaturarchiv Salzburg</td></tr>
-        <tr><td>Oliver Matuschek</td><td>Projektleitung</td><td>Literaturarchiv Salzburg</td></tr>
-        <tr><td><a href="https://orcid.org/0000-0001-9709-3669" target="_blank" rel="noopener">Lina Maria Zangerl</a></td><td>Datenerfassung</td><td>Literaturarchiv Salzburg</td></tr>
-        <tr><td><a href="https://orcid.org/0000-0001-6647-9729" target="_blank" rel="noopener">Julia Rebecca Glunk</a></td><td>Datenerfassung</td><td>Literaturarchiv Salzburg</td></tr>
-        <tr><td><a href="https://orcid.org/0000-0002-4879-129X" target="_blank" rel="noopener">Christopher Pollin</a></td><td>Datenmodellierung</td><td><a href="https://dhcraft.org" target="_blank" rel="noopener">Digital Humanities Craft OG</a></td></tr>
+        <tr><th>Name</th><th>Role</th><th>Institution</th></tr>
+        <tr><td>Manfred Mittermayer</td><td>Project Lead</td><td>Literaturarchiv Salzburg</td></tr>
+        <tr><td>Oliver Matuschek</td><td>Project Lead</td><td>Literaturarchiv Salzburg</td></tr>
+        <tr><td><a href="https://orcid.org/0000-0001-9709-3669" target="_blank" rel="noopener">Lina Maria Zangerl</a></td><td>Data Collection</td><td>Literaturarchiv Salzburg</td></tr>
+        <tr><td><a href="https://orcid.org/0000-0001-6647-9729" target="_blank" rel="noopener">Julia Rebecca Glunk</a></td><td>Data Collection</td><td>Literaturarchiv Salzburg</td></tr>
+        <tr><td><a href="https://orcid.org/0000-0002-4879-129X" target="_blank" rel="noopener">Christopher Pollin</a></td><td>Data Modelling</td><td><a href="https://dhcraft.org" target="_blank" rel="noopener">Digital Humanities Craft OG</a></td></tr>
       </table>
-      <h3 style="margin-top:1rem;font-size:0.9rem;">Institutionelle Partner</h3>
+      <h3 style="margin-top:1rem;font-size:0.9rem;">Institutional Partners</h3>
       <ul style="margin:0.5rem 0 0 1.5rem;">
-        <li><strong>Literaturarchiv Salzburg</strong> (Paris Lodron Universität Salzburg) — Quellenmaterial, Digitalisierung</li>
-        <li><strong>Zentrum für Informationsmodellierung</strong> (Karl-Franzens-Universität Graz) — GAMS-Plattform</li>
-        <li><strong>Daniel A. Reed Library</strong> (SUNY Fredonia) — Kooperationspartner</li>
-        <li><strong>National Library of Israel</strong> (Jerusalem) — Kooperationspartner</li>
+        <li><strong>Literaturarchiv Salzburg</strong> (Paris Lodron Universität Salzburg) — Source material, digitization</li>
+        <li><strong>Zentrum für Informationsmodellierung</strong> (Karl-Franzens-Universität Graz) — GAMS platform</li>
+        <li><strong>Daniel A. Reed Library</strong> (SUNY Fredonia) — Cooperation partner</li>
+        <li><strong>National Library of Israel</strong> (Jerusalem) — Cooperation partner</li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · <a href="mailto:info@stefanzweig.digital">Kontakt</a></p>
+      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · <a href="mailto:info@stefanzweig.digital">Contact</a></p>
     </div>
   </footer>
 </body>
