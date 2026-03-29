@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stefan Zweig Digital</title>
-  <meta name="description" content="Stefan Zweig Digital — Nachlass Ontology, Data and Documentation.">
+  <title>Stefan Zweig Digital — Ontology & Data</title>
+  <meta name="description" content="Stefan Zweig Digital Nachlass Ontology (SZDO): 72 classes, 130 properties, aligned to RiC-O, IFLA LRM and CIDOC-CRM. Interactive visualization, downloads, and documentation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
@@ -39,33 +39,42 @@
 
   <main class="landing">
     <section class="landing-hero">
-      <h1>Stefan Zweig Digital</h1>
-      <p class="landing-subtitle">Digital Nachlass — Ontology, Data and Documentation</p>
+      <h1>Nachlass Ontology</h1>
+      <p class="landing-subtitle">Stefan Zweig Digital — Formal Data Model</p>
     </section>
 
-    <section class="landing-cards">
-      <a href="project/" class="card">
-        <h2>Research Project</h2>
-        <p>The project from a DH and research data perspective: collections, methodology, FAIR compliance, contributors and timeline.</p>
-        <span class="card-meta">DH · Research Data · FAIR 92%</span>
-      </a>
+    <!-- Stats row -->
+    <section class="landing-cards" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="card" style="text-align:center;cursor:default;">
+        <div style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--sz-burgundy);">72</div>
+        <span class="card-meta">Classes</span>
+      </div>
+      <div class="card" style="text-align:center;cursor:default;">
+        <div style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--sz-burgundy);">130</div>
+        <span class="card-meta">Properties</span>
+      </div>
+      <div class="card" style="text-align:center;cursor:default;">
+        <div style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--sz-burgundy);">7</div>
+        <span class="card-meta">Layers</span>
+      </div>
+      <div class="card" style="text-align:center;cursor:default;">
+        <div style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--sz-burgundy);">v1.0.0</div>
+        <span class="card-meta">Current Release</span>
+      </div>
+    </section>
 
+    <!-- Primary actions -->
+    <section class="landing-cards" style="grid-template-columns: repeat(3, 1fr);">
       <a href="ontology/" class="card">
-        <h2>Nachlass Ontology (SZDO)</h2>
-        <p>Formal OWL ontology for Stefan Zweig's digital Nachlass. Models archival, bibliographic and biographical entities based on Records in Context, IFLA LRM and CIDOC-CRM.</p>
-        <span class="card-meta">72 Classes · 130 Properties · v1.0.0</span>
+        <h2>Ontology Reference</h2>
+        <p>Complete bilingual documentation of all classes and properties. Aligned to Records in Context, IFLA LRM and CIDOC-CRM.</p>
+        <span class="card-meta">72 Classes · 130 Properties · DE/EN</span>
       </a>
 
       <a href="ontology/visualize.html" class="card">
-        <h2>Ontology Visualization</h2>
-        <p>Interactive force-directed graph of all SZDO classes and relationships. Filter by layer, explore connections, export as SVG.</p>
-        <span class="card-meta">D3.js · Interactive · 58 Classes · 84 Relationships</span>
-      </a>
-
-      <a href="https://stefanzweig.digital" class="card" target="_blank" rel="noopener">
-        <h2>Stefan Zweig Digital</h2>
-        <p>Digital edition of works, correspondence, autographs and private library of Stefan Zweig. Hosted on the GAMS platform at the University of Graz.</p>
-        <span class="card-meta">2,100+ Objects · 18,700+ Facsimiles</span>
+        <h2>Visualization</h2>
+        <p>Interactive force-directed graph. Filter by layer, explore class hierarchies and relationships, inspect nodes, export as SVG.</p>
+        <span class="card-meta">D3.js · 58 Nodes · 84 Edges</span>
       </a>
 
       <a href="downloads/" class="card">
@@ -73,12 +82,15 @@
         <p>Ontology (Turtle, JSON-LD), TEI-XML collections, SKOS glossary, person index, Klawiter Bibliography and Zenodo archive.</p>
         <span class="card-meta">TEI · RDF · JSON-LD · CC-BY 4.0</span>
       </a>
+    </section>
 
-      <a href="https://github.com/chpollin/SZD" class="card" target="_blank" rel="noopener">
-        <h2>Source Code &amp; Data</h2>
-        <p>TEI-XML data, XSLT transformations, SPARQL queries, validation scripts and full project documentation on GitHub.</p>
-        <span class="card-meta">9 Collections · TEI P5 · SPARQL · CC-BY 4.0</span>
-      </a>
+    <!-- Secondary links -->
+    <section class="landing-about" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;text-align:center;padding:1rem 1.5rem;">
+      <a href="project/" style="color:var(--sz-burgundy);font-family:var(--font-sans);font-size:0.85rem;">Research Project</a>
+      <a href="https://stefanzweig.digital" target="_blank" rel="noopener" style="color:var(--sz-burgundy);font-family:var(--font-sans);font-size:0.85rem;">Stefan Zweig Digital (GAMS)</a>
+      <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener" style="color:var(--sz-burgundy);font-family:var(--font-sans);font-size:0.85rem;">Klawiter Bibliography</a>
+      <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener" style="color:var(--sz-burgundy);font-family:var(--font-sans);font-size:0.85rem;">Source Code (GitHub)</a>
+      <a href="https://zenodo.org/uploads/17421555" target="_blank" rel="noopener" style="color:var(--sz-burgundy);font-family:var(--font-sans);font-size:0.85rem;">Zenodo Archive</a>
     </section>
 
     <section class="landing-about">
@@ -90,7 +102,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></p>
+      <p>&copy; 2026 Stefan Zweig Digital &middot; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></p>
     </div>
   </footer>
 </body>
