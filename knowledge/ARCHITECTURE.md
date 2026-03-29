@@ -354,7 +354,13 @@ The `docs/` folder is deployed as GitHub Pages, serving the ontology documentati
 - Klawiter is "gold-forward" (section headings in gold, more warm/inviting for browsing)
 - Both share the GAMS color values exactly, creating unmistakable family cohesion
 
-**Files:** `docs/css/szd-ontology.css` (single stylesheet for all pages)
+**Landing page:** Ontology-focused dashboard (not a portal). Stats row (72 Classes, 130 Properties, 7 Layers, v1.0.0), three primary cards (Reference, Visualization, Downloads), secondary links row. All pages in English.
+
+**Verbund bar:** Slim navigation bar above header connecting Stefan Zweig Digital (GAMS), Klawiter Bibliography, and Ontology & Data (this site).
+
+**Visualization:** Fullscreen force-directed D3.js graph at `ontology/visualize.html`. Sidebar controls with layer toggles, auto-fit zoom, hover-to-highlight, English labels.
+
+**Files:** `docs/css/szd-ontology.css` (single stylesheet for all pages except visualize.html which has inline styles for fullscreen layout)
 
 ---
 
