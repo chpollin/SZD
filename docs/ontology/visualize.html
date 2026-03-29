@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ontologie-Visualisierung — Stefan Zweig Digital</title>
+  <meta name="description" content="Interaktive Visualisierung der SZDO Nachlass-Ontologie als Force-Directed Graph.">
+  <link rel="stylesheet" href="../css/szd-ontology.css">
+  <style>
+    .viz-container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - var(--header-height) - 2rem);
+      background: var(--sz-white);
+      border: 1px solid var(--sz-border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    svg { width: 100%; height: 100%; }
+    .viz-controls {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .viz-controls button, .viz-controls label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      background: var(--sz-white);
+      border: 1px solid var(--sz-border);
+      border-radius: 3px;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .viz-controls button:hover { border-color: var(--sz-burgundy); }
+    .viz-controls .layer-dot {
+      width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+    }
+    .viz-controls input[type="checkbox"] { margin: 0; }
+
+    /* Detail panel */
+    .detail-panel {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 320px;
+      max-height: calc(100% - 2rem);
+      overflow-y: auto;
+      background: var(--sz-white);
+      border: 1px solid var(--sz-border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      z-index: 10;
+      display: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .detail-panel.active { display: block; }
+    .detail-panel .close-btn {
+      position: absolute; top: 0.5rem; right: 0.75rem;
+      background: none; border: none; font-size: 1.2rem;
+      cursor: pointer; color: var(--sz-text-light); padding: 0;
+    }
+    .detail-panel h3 {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--sz-burgundy);
+      margin-bottom: 0.25rem;
+    }
+    .detail-panel .detail-layer {
+      display: inline-block;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      margin-bottom: 0.5rem;
+    }
+    .detail-panel .detail-comment {
+      font-size: 0.85rem;
+      color: var(--sz-text);
+      margin: 0.5rem 0;
+    }
+    .detail-panel .detail-links a {
+      display: block;
+      font-size: 0.8rem;
+      margin: 0.15rem 0;
+    }
+
+    /* Graph elements */
+    .node circle { stroke: #fff; stroke-width: 2px; cursor: pointer; }
+    .node text {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      fill: var(--sz-text);
+      pointer-events: none;
+    }
+    .node:hover circle { stroke: var(--sz-burgundy); stroke-width: 3px; }
+    .edge line { stroke-opacity: 0.4; }
+    .edge text {
+      font-family: var(--font-sans);
+      font-size: 7px;
+      fill: var(--sz-text-light);
+      pointer-events: none;
+    }
+    .edge.subClassOf line { stroke-dasharray: 4 2; }
+    .node.dimmed circle { opacity: 0.15; }
+    .node.dimmed text { opacity: 0.15; }
+    .edge.dimmed line { opacity: 0.05; }
+    .edge.dimmed text { opacity: 0.05; }
+
+    /* Stats bar */
+    .viz-stats {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      color: var(--sz-text-light);
+      background: rgba(255,255,255,0.9);
+      padding: 0.2rem 0.8rem;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="header-brand">
+        <img src="../img/SZlogo.png" alt="SZD Logo" class="header-logo">
+        <span class="header-title">Stefan Zweig Digital</span>
+      </a>
+      <nav class="header-nav">
+        <a href="../project/">Projekt</a>
+        <a href=".">Ontologie</a>
+        <a href="../downloads/">Downloads</a>
+        <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width:var(--max-width);margin:0 auto;padding:1rem 1.5rem;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+      <h1 style="font-size:1.4rem;color:var(--sz-burgundy);margin:0;">Ontologie-Visualisierung</h1>
+      <div style="display:flex;gap:0.5rem;">
+        <a href="./" style="font-family:var(--font-sans);font-size:0.78rem;">Referenz</a>
+        <span style="color:var(--sz-border);">|</span>
+        <a href="visualize.html" style="font-family:var(--font-sans);font-size:0.78rem;font-weight:600;">Graph</a>
+      </div>
+    </div>
+
+    <div class="viz-container" id="viz">
+      <div class="viz-controls" id="controls"></div>
+      <div class="detail-panel" id="detail">
+        <button class="close-btn" onclick="closeDetail()">&times;</button>
+        <h3 id="detail-name"></h3>
+        <div class="detail-layer" id="detail-layer"></div>
+        <div class="detail-comment" id="detail-comment"></div>
+        <div class="detail-links" id="detail-links"></div>
+      </div>
+      <svg id="graph"></svg>
+      <div class="viz-stats" id="stats"></div>
+    </div>
+  </main>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    let graphData, simulation, svg, g, nodeEls, edgeEls;
+    let activeLayers = new Set();
+    let selectedNode = null;
+
+    async function init() {
+      const resp = await fetch('szd-graph.json');
+      graphData = await resp.json();
+
+      // Initialize all layers as active
+      Object.keys(graphData.layers).forEach(l => activeLayers.add(l));
+
+      buildControls();
+      buildGraph();
+      document.getElementById('stats').textContent =
+        `${graphData.meta.nodeCount} Klassen · ${graphData.meta.edgeCount} Beziehungen · v${graphData.meta.version}`;
+    }
+
+    function buildControls() {
+      const ctrl = document.getElementById('controls');
+      let html = '';
+
+      // Layer toggles
+      for (const [key, label] of Object.entries(graphData.layers)) {
+        const color = graphData.layerColors[key];
+        html += `<label>
+          <input type="checkbox" checked data-layer="${key}" onchange="toggleLayer('${key}', this.checked)">
+          <span class="layer-dot" style="background:${color}"></span>
+          ${label}
+        </label>`;
+      }
+
+      // Action buttons
+      html += `<button onclick="resetView()">Zurücksetzen</button>`;
+      html += `<button onclick="exportSVG()">SVG Export</button>`;
+
+      ctrl.innerHTML = html;
+    }
+
+    function buildGraph() {
+      const container = document.getElementById('viz');
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      svg = d3.select('#graph')
+        .attr('viewBox', [0, 0, width, height]);
+
+      // Zoom
+      const zoom = d3.zoom()
+        .scaleExtent([0.2, 5])
+        .on('zoom', (event) => g.attr('transform', event.transform));
+      svg.call(zoom);
+
+      g = svg.append('g');
+
+      // Arrow markers
+      const defs = svg.append('defs');
+      defs.append('marker')
+        .attr('id', 'arrow')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 22)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', '#999');
+
+      defs.append('marker')
+        .attr('id', 'arrow-hl')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 22)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', '#7A1B2D');
+
+      // Force simulation
+      simulation = d3.forceSimulation(graphData.nodes)
+        .force('link', d3.forceLink(graphData.edges).id(d => d.id).distance(d => d.type === 'subClassOf' ? 60 : 120))
+        .force('charge', d3.forceManyBody().strength(-300))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collision', d3.forceCollide().radius(30));
+
+      // Edges
+      edgeEls = g.append('g').attr('class', 'edges')
+        .selectAll('g')
+        .data(graphData.edges)
+        .join('g')
+        .attr('class', d => `edge ${d.type}`);
+
+      edgeEls.append('line')
+        .attr('stroke', d => d.color)
+        .attr('stroke-width', d => d.type === 'subClassOf' ? 1.5 : 1)
+        .attr('marker-end', 'url(#arrow)');
+
+      edgeEls.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', -4)
+        .text(d => d.type === 'subClassOf' ? '' : d.label);
+
+      // Nodes
+      nodeEls = g.append('g').attr('class', 'nodes')
+        .selectAll('g')
+        .data(graphData.nodes)
+        .join('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+          .on('start', dragStart)
+          .on('drag', dragging)
+          .on('end', dragEnd))
+        .on('click', (event, d) => showDetail(d));
+
+      nodeEls.append('circle')
+        .attr('r', d => 8 + Math.sqrt(d.properties) * 3)
+        .attr('fill', d => d.color);
+
+      nodeEls.append('text')
+        .attr('dx', d => 10 + Math.sqrt(d.properties) * 3)
+        .attr('dy', 3)
+        .text(d => d.label_de);
+
+      // Tick
+      simulation.on('tick', () => {
+        edgeEls.select('line')
+          .attr('x1', d => d.source.x)
+          .attr('y1', d => d.source.y)
+          .attr('x2', d => d.target.x)
+          .attr('y2', d => d.target.y);
+        edgeEls.select('text')
+          .attr('x', d => (d.source.x + d.target.x) / 2)
+          .attr('y', d => (d.source.y + d.target.y) / 2);
+        nodeEls.attr('transform', d => `translate(${d.x},${d.y})`);
+      });
+    }
+
+    function toggleLayer(layer, active) {
+      if (active) activeLayers.add(layer);
+      else activeLayers.delete(layer);
+      applyFilter();
+    }
+
+    function applyFilter() {
+      const visible = new Set(graphData.nodes.filter(n => activeLayers.has(n.layer)).map(n => n.id));
+
+      nodeEls.classed('dimmed', d => !visible.has(d.id));
+      edgeEls.classed('dimmed', d => {
+        const src = typeof d.source === 'object' ? d.source.id : d.source;
+        const tgt = typeof d.target === 'object' ? d.target.id : d.target;
+        return !visible.has(src) || !visible.has(tgt);
+      });
+    }
+
+    function showDetail(d) {
+      selectedNode = d;
+      document.getElementById('detail-name').textContent = `szdo:${d.id}`;
+      const layerEl = document.getElementById('detail-layer');
+      layerEl.textContent = graphData.layers[d.layer] || d.layer;
+      layerEl.style.background = d.color;
+
+      document.getElementById('detail-comment').innerHTML =
+        `<p>${d.comment_de || ''}</p>` +
+        (d.comment_en ? `<p style="color:var(--sz-text-light);font-style:italic;">${d.comment_en}</p>` : '');
+
+      // Find connected edges
+      const connected = graphData.edges.filter(e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return src === d.id || tgt === d.id;
+      });
+
+      let linksHtml = '<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.5rem 0 0.25rem;">Beziehungen</h4>';
+      connected.forEach(e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        if (e.type === 'subClassOf') {
+          if (src === d.id) linksHtml += `<a href="#${tgt}">↑ subClassOf ${tgt}</a>`;
+          else linksHtml += `<a href="#${src}">↓ ${src} subClassOf</a>`;
+        } else {
+          if (src === d.id) linksHtml += `<a href="#${tgt}">→ ${e.label} → ${tgt}</a>`;
+          else linksHtml += `<a href="#${src}">← ${src} → ${e.label}</a>`;
+        }
+      });
+      linksHtml += `<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.75rem 0 0.25rem;">Links</h4>`;
+      linksHtml += `<a href="./#${d.id}">→ Ontologie-Referenz</a>`;
+
+      document.getElementById('detail-links').innerHTML = linksHtml;
+      document.getElementById('detail').classList.add('active');
+
+      // Highlight connected
+      const connectedIds = new Set([d.id]);
+      connected.forEach(e => {
+        connectedIds.add(typeof e.source === 'object' ? e.source.id : e.source);
+        connectedIds.add(typeof e.target === 'object' ? e.target.id : e.target);
+      });
+      nodeEls.classed('dimmed', n => !connectedIds.has(n.id));
+      edgeEls.classed('dimmed', e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return !connectedIds.has(src) || !connectedIds.has(tgt);
+      });
+    }
+
+    function closeDetail() {
+      document.getElementById('detail').classList.remove('active');
+      selectedNode = null;
+      applyFilter();
+    }
+
+    function resetView() {
+      closeDetail();
+      activeLayers.clear();
+      Object.keys(graphData.layers).forEach(l => activeLayers.add(l));
+      document.querySelectorAll('#controls input[type=checkbox]').forEach(cb => cb.checked = true);
+      applyFilter();
+
+      const container = document.getElementById('viz');
+      svg.transition().duration(500).call(
+        d3.zoom().transform,
+        d3.zoomIdentity.translate(container.clientWidth/2, container.clientHeight/2).scale(1).translate(-container.clientWidth/2, -container.clientHeight/2)
+      );
+    }
+
+    function exportSVG() {
+      const svgEl = document.getElementById('graph');
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(svgEl);
+      source = '<?xml version="1.0" encoding="UTF-8"?>\n' + source;
+      const blob = new Blob([source], {type: 'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'szdo-ontology-graph.svg';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function dragStart(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+    }
+    function dragging(event, d) { d.fx = event.x; d.fy = event.y; }
+    function dragEnd(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    }
+
+    init();
+  </script>
+</body>
+</html>

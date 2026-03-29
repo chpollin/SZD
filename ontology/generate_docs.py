@@ -328,7 +328,7 @@ def generate_html(g):
     content = '<div class="onto-content">\n'
     content += f'  <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>\n'
     content += f'  <div class="onto-version">Version {escape(version)} · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>\n'
-    content += f'  <p>{len(all_classes)} Klassen · {len(all_obj_props)} Object Properties · {len(all_dat_props)} Datatype Properties</p>\n'
+    content += f'  <p>{len(all_classes)} Klassen · {len(all_obj_props)} Object Properties · {len(all_dat_props)} Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>\n'
 
     # External vocabularies
     content += '  <div style="margin:1rem 0;">\n'
@@ -450,8 +450,13 @@ def main():
     shutil.copy2(str(ONTOLOGY_FILE), str(ONTO_DOCS_DIR / "szd-ontology.ttl"))
     print(f"       Copied to {ONTO_DOCS_DIR / 'szd-ontology.ttl'}")
 
-    # 4. Generate JSON-LD
-    print("[4/4] Generating JSON-LD ...")
+    # 4. Generate graph data for D3.js visualization
+    print("[4/5] Generating graph data ...")
+    import subprocess
+    subprocess.run([sys.executable, str(Path(__file__).parent / "generate_graph.py")], check=True)
+
+    # 5. Generate JSON-LD
+    print("[5/5] Generating JSON-LD ...")
     jsonld_str = g.serialize(format="json-ld", indent=2)
     (ONTO_DOCS_DIR / "szd-ontology.jsonld").write_text(jsonld_str, encoding="utf-8")
     print(f"       Written to {ONTO_DOCS_DIR / 'szd-ontology.jsonld'}")

@@ -1,0 +1,1296 @@
+{
+  "nodes": [
+    {
+      "id": "Nachlass",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Nachlass",
+      "label_de": "Nachlass",
+      "label_en": "Estate",
+      "comment_de": "Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe.",
+      "comment_en": "The complete estate as an archival fonds. Corresponds to the top-level description unit.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 1
+    },
+    {
+      "id": "Sammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Sammlung",
+      "label_de": "Sammlung",
+      "label_en": "Collection",
+      "comment_de": "Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz.",
+      "comment_en": "Sub-collection of the estate, organized by material type or provenance.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 1
+    },
+    {
+      "id": "Werksammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Werksammlung",
+      "label_de": "Werksammlung",
+      "label_en": "Works Collection",
+      "comment_de": "Sammlung von Manuskripten, Typoskripten und Entwürfen literarischer Werke.",
+      "comment_en": "Collection of manuscripts, typescripts, and drafts of literary works.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Korrespondenzsammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Korrespondenzsammlung",
+      "label_de": "Korrespondenzsammlung",
+      "label_en": "Correspondence Collection",
+      "comment_de": "Sammlung der Korrespondenz-Konvolute (Briefe an und von Stefan Zweig).",
+      "comment_en": "Collection of correspondence bundles (letters to and from Stefan Zweig).",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Autographensammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Autographensammlung",
+      "label_de": "Autographensammlung",
+      "label_en": "Autograph Collection",
+      "comment_de": "Zweigs Sammlung handschriftlicher Dokumente anderer Autoren und Persönlichkeiten.",
+      "comment_en": "Zweig's collection of handwritten documents by other authors and public figures.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Bibliothekssammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Bibliothekssammlung",
+      "label_de": "Bibliothekssammlung",
+      "label_en": "Library Collection",
+      "comment_de": "Rekonstruierte Privatbibliothek Stefan Zweigs mit Provenienzmerkmalen.",
+      "comment_en": "Reconstructed personal library of Stefan Zweig with provenance features.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Lebensdokumentesammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Lebensdokumentesammlung",
+      "label_de": "Lebensdokumentesammlung",
+      "label_en": "Personal Documents Collection",
+      "comment_de": "Persönliche Dokumente: Verträge, Urkunden, Tagebücher, Ephemera.",
+      "comment_en": "Personal documents: contracts, certificates, diaries, ephemera.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Aufsatzsammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Aufsatzsammlung",
+      "label_de": "Aufsatzsammlung",
+      "label_en": "Essay Collection",
+      "comment_de": "Sammlung von Essays, Feuilletons und journalistischen Beiträgen.",
+      "comment_en": "Collection of essays, feuilletons, and journalistic contributions.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "ThematischeSammlung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#ThematischeSammlung",
+      "label_de": "Thematische Sammlung",
+      "label_en": "Thematic Collection",
+      "comment_de": "Kuratierte, themenbasierte Zusammenstellung aus verschiedenen Beständen.",
+      "comment_en": "Curated, theme-based compilation from various holdings.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "NachlassObjekt",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#NachlassObjekt",
+      "label_de": "Nachlassobjekt",
+      "label_en": "Estate Object",
+      "comment_de": "Einzelnes physisches Objekt im Nachlass.",
+      "comment_en": "Individual physical object in the estate.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 19
+    },
+    {
+      "id": "Manuskript",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Manuskript",
+      "label_de": "Manuskript",
+      "label_en": "Manuscript",
+      "comment_de": "Handschriftliches Werkmanuskript (Autograph).",
+      "comment_en": "Handwritten work manuscript (autograph).",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Typoskript",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Typoskript",
+      "label_de": "Typoskript",
+      "label_en": "Typescript",
+      "comment_de": "Maschinschriftliches Dokument.",
+      "comment_en": "Typewritten document.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Typoskriptdurchschlag",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Typoskriptdurchschlag",
+      "label_de": "Typoskriptdurchschlag",
+      "label_en": "Carbon Copy Typescript",
+      "comment_de": "Durchschlag (Kohlepapier-Kopie) eines Typoskripts.",
+      "comment_en": "Carbon copy of a typescript.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Notizbuch",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Notizbuch",
+      "label_de": "Notizbuch",
+      "label_en": "Notebook",
+      "comment_de": "Notizbuch mit Entwürfen, Notizen oder Skizzen.",
+      "comment_en": "Notebook with drafts, notes, or sketches.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Konvolut",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Konvolut",
+      "label_de": "Konvolut",
+      "label_en": "Ensemble",
+      "comment_de": "Zusammengestelltes Ensemble aus mehreren Dokumententypen (z.B. Typoskript + Durchschlag + Umschlag).",
+      "comment_en": "Assembled ensemble of multiple document types (e.g., typescript + carbon copy + wrapper).",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Korrekturfahne",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Korrekturfahne",
+      "label_de": "Korrekturfahne",
+      "label_en": "Galley Proof",
+      "comment_de": "Druckfahne mit handschriftlichen Korrekturen.",
+      "comment_en": "Galley proof with handwritten corrections.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "KorrespondenzKonvolut",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#KorrespondenzKonvolut",
+      "label_de": "Korrespondenzkonvolut",
+      "label_en": "Bundle of Correspondence",
+      "comment_de": "Bündel von Korrespondenzstücken zwischen Stefan Zweig und einem Korrespondenzpartner.",
+      "comment_en": "Bundle of correspondence pieces between Stefan Zweig and a correspondence partner.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 2
+    },
+    {
+      "id": "Autograph",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Autograph",
+      "label_de": "Autograph",
+      "label_en": "Autograph",
+      "comment_de": "Handschriftliches Dokument eines Dritten aus Zweigs Autographensammlung.",
+      "comment_en": "Handwritten document by a third party from Zweig's autograph collection.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "Buch",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Buch",
+      "label_de": "Buch",
+      "label_en": "Book",
+      "comment_de": "Buch aus Stefan Zweigs rekonstruierter Privatbibliothek.",
+      "comment_en": "Book from Stefan Zweig's reconstructed personal library.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 1
+    },
+    {
+      "id": "Lebensdokument",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Lebensdokument",
+      "label_de": "Lebensdokument",
+      "label_en": "Personal Document",
+      "comment_de": "Persönliches Dokument: Vertrag, Urkunde, Tagebuch, Plakat, Einladung, etc.",
+      "comment_en": "Personal document: contract, certificate, diary, poster, invitation, etc.",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    },
+    {
+      "id": "DigitalesObjekt",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#DigitalesObjekt",
+      "label_de": "Digitales Objekt",
+      "label_en": "Digital Object",
+      "comment_de": "Digitale Repräsentation eines physischen Nachlassobjekts.",
+      "comment_en": "Digital representation of a physical estate object.",
+      "layer": "digital",
+      "color": "#2c7da0",
+      "properties": 1
+    },
+    {
+      "id": "METSObjekt",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#METSObjekt",
+      "label_de": "METS-Objekt",
+      "label_en": "METS Object",
+      "comment_de": "METS-Container mit strukturellen Metadaten und Seitenverweisen (DFG-METS).",
+      "comment_en": "METS container with structural metadata and page references (DFG-METS).",
+      "layer": "digital",
+      "color": "#2c7da0",
+      "properties": 0
+    },
+    {
+      "id": "IIIFManifest",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#IIIFManifest",
+      "label_de": "IIIF-Manifest",
+      "label_en": "IIIF Manifest",
+      "comment_de": "IIIF Presentation API Manifest für die Darstellung in Viewern (z.B. Mirador).",
+      "comment_en": "IIIF Presentation API manifest for rendering in viewers (e.g., Mirador).",
+      "layer": "digital",
+      "color": "#2c7da0",
+      "properties": 0
+    },
+    {
+      "id": "Faksimile",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Faksimile",
+      "label_de": "Faksimile",
+      "label_en": "Facsimile",
+      "comment_de": "Einzelnes hochauflösendes digitales Bild einer Seite.",
+      "comment_en": "Single high-resolution digital image of a page.",
+      "layer": "digital",
+      "color": "#2c7da0",
+      "properties": 0
+    },
+    {
+      "id": "Werk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Werk",
+      "label_de": "Werk",
+      "label_en": "Work",
+      "comment_de": "Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex.",
+      "comment_en": "Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 6
+    },
+    {
+      "id": "WerkExpression",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#WerkExpression",
+      "label_de": "Werkexpression",
+      "label_en": "Work Expression",
+      "comment_de": "Sprachliche oder mediale Realisierung eines Werks: Originaltext, Übersetzung, Verfilmung, Vertonung.",
+      "comment_en": "Linguistic or medial realization of a work: original text, translation, film adaptation, musical setting.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 4
+    },
+    {
+      "id": "Manifestation",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Manifestation",
+      "label_de": "Manifestation",
+      "label_en": "Manifestation",
+      "comment_de": "Publizierte Ausgabe eines Werks: Erstausgabe, Neuauflage, Übersetzungsausgabe. Brücke zu Klawiter-Einträgen.",
+      "comment_en": "Published edition of a work: first edition, reprint, translation edition. Bridge to Klawiter entries.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 10
+    },
+    {
+      "id": "Exemplar",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Exemplar",
+      "label_de": "Exemplar",
+      "label_en": "Item",
+      "comment_de": "Konkretes physisches Exemplar einer Manifestation. Brücke zu szdo:NachlassObjekt (z.B. ein bestimmtes Buch in Zweigs Bibliothek).",
+      "comment_en": "Concrete physical copy of a manifestation. Bridge to szdo:NachlassObjekt (e.g., a specific book in Zweig's library).",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "BelletristischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#BelletristischesWerk",
+      "label_de": "Belletristisches Werk",
+      "label_en": "Fiction",
+      "comment_de": "Novellen, Romane, Erzählungen.",
+      "comment_en": "Novellas, novels, short stories.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "EssayistischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#EssayistischesWerk",
+      "label_de": "Essayistisches Werk",
+      "label_en": "Essay",
+      "comment_de": "Essays, Feuilletons, Rezensionen.",
+      "comment_en": "Essays, feuilletons, reviews.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "BiographischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#BiographischesWerk",
+      "label_de": "Biographisches Werk",
+      "label_en": "Biographical Work",
+      "comment_de": "Biographien (Fouché, Marie Antoinette, Erasmus, Magellan, etc.).",
+      "comment_en": "Biographies (Fouché, Marie Antoinette, Erasmus, Magellan, etc.).",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "HistorischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#HistorischesWerk",
+      "label_de": "Historisches Werk",
+      "label_en": "Historical Work",
+      "comment_de": "Historische Miniaturen und Darstellungen (z.B. Sternstunden der Menschheit).",
+      "comment_en": "Historical miniatures and depictions (e.g., Decisive Moments in History).",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "DramatischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#DramatischesWerk",
+      "label_de": "Dramatisches Werk",
+      "label_en": "Dramatic Work",
+      "comment_de": "Theaterstücke, Libretti.",
+      "comment_en": "Plays, libretti.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "LyrischesWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#LyrischesWerk",
+      "label_de": "Lyrisches Werk",
+      "label_en": "Poetry",
+      "comment_de": "Gedichte, Gedichtsammlungen.",
+      "comment_en": "Poems, poetry collections.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "SammelWerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#SammelWerk",
+      "label_de": "Sammelwerk",
+      "label_en": "Collected Works",
+      "comment_de": "Kompilationen, gesammelte Werke, Anthologien.",
+      "comment_en": "Compilations, collected works, anthologies.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 1
+    },
+    {
+      "id": "Uebersetzungswerk",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Uebersetzungswerk",
+      "label_de": "Übersetzungswerk",
+      "label_en": "Translation Work",
+      "comment_de": "Zweigs Übersetzungen von Werken anderer Autoren (Verlaine, Verhaeren, etc.).",
+      "comment_en": "Zweig's translations of works by other authors (Verlaine, Verhaeren, etc.).",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "VorwortNachwort",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#VorwortNachwort",
+      "label_de": "Vorwort/Nachwort",
+      "label_en": "Foreword/Afterword",
+      "comment_de": "Vorworte, Nachworte, Einleitungen zu Werken anderer.",
+      "comment_en": "Forewords, afterwords, introductions to works by others.",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "Sekundaerliteratur",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Sekundaerliteratur",
+      "label_de": "Sekundärliteratur",
+      "label_en": "Secondary Literature",
+      "comment_de": "Wissenschaftliche oder publizistische Arbeiten über Stefan Zweig und sein Werk. Nicht Teil des Nachlasses, aber des Forschungskontexts (primär aus Klawiter-Bibliographie).",
+      "comment_en": "Scholarly or journalistic works about Stefan Zweig and his oeuvre. Not part of the estate, but of the research context (primarily from Klawiter bibliography).",
+      "layer": "werk",
+      "color": "#2c5aa0",
+      "properties": 0
+    },
+    {
+      "id": "Akteur",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Akteur",
+      "label_de": "Akteur",
+      "label_en": "Agent",
+      "comment_de": "Person oder Organisation mit Bezug zum Nachlass.",
+      "comment_en": "Person or organization related to the estate.",
+      "layer": "akteur",
+      "color": "#e67e22",
+      "properties": 0
+    },
+    {
+      "id": "Person",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Person",
+      "label_de": "Person",
+      "label_en": "Person",
+      "comment_de": "Person mit Normdatenverknüpfung (GND, Wikidata, VIAF). Entspricht SZDPER-Einträgen.",
+      "comment_en": "Person with authority file links (GND, Wikidata, VIAF). Corresponds to SZDPER entries.",
+      "layer": "akteur",
+      "color": "#e67e22",
+      "properties": 5
+    },
+    {
+      "id": "Organisation",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Organisation",
+      "label_de": "Organisation",
+      "label_en": "Organization",
+      "comment_de": "Institution, Verlag, Archiv, Bibliothek. Entspricht SZDSTA-Einträgen (Standorte).",
+      "comment_en": "Institution, publisher, archive, library. Corresponds to SZDSTA entries (locations).",
+      "layer": "akteur",
+      "color": "#e67e22",
+      "properties": 0
+    },
+    {
+      "id": "BiographischesEreignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#BiographischesEreignis",
+      "label_de": "Biographisches Ereignis",
+      "label_en": "Biographical Event",
+      "comment_de": "Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender.",
+      "comment_en": "Event in Stefan Zweig's life. Corresponds to SZDBIO entries in the life calendar.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 2
+    },
+    {
+      "id": "Geburt",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Geburt",
+      "label_de": "Geburt",
+      "label_en": "Birth",
+      "comment_de": "Geburtsereignis einer Person.",
+      "comment_en": "Birth event of a person.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Tod",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Tod",
+      "label_de": "Tod",
+      "label_en": "Death",
+      "comment_de": "Todesereignis einer Person.",
+      "comment_en": "Death event of a person.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Reise",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Reise",
+      "label_de": "Reise",
+      "label_en": "Journey",
+      "comment_de": "Reisen, Aufenthalte, Ortswechsel.",
+      "comment_en": "Journeys, stays, relocations.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Publikationsereignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Publikationsereignis",
+      "label_de": "Publikationsereignis",
+      "label_en": "Publication Event",
+      "comment_de": "Veröffentlichung eines Werks.",
+      "comment_en": "Publication of a work.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Begegnung",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Begegnung",
+      "label_de": "Begegnung",
+      "label_en": "Encounter",
+      "comment_de": "Treffen mit Personen.",
+      "comment_en": "Meeting with persons.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "InstitutionellesEreignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#InstitutionellesEreignis",
+      "label_de": "Institutionelles Ereignis",
+      "label_en": "Institutional Event",
+      "comment_de": "Verleihungen, Ehrungen, Mitgliedschaften.",
+      "comment_en": "Awards, honors, memberships.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Exilereignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Exilereignis",
+      "label_de": "Exilereignis",
+      "label_en": "Exile Event",
+      "comment_de": "Emigration, Flucht, Exilstationen.",
+      "comment_en": "Emigration, flight, exile stations.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "WissenschaftlichesEreignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#WissenschaftlichesEreignis",
+      "label_de": "Wissenschaftliches Ereignis",
+      "label_en": "Scholarly Event",
+      "comment_de": "Symposien, Konferenzen, Ausstellungen zu Stefan Zweig.",
+      "comment_en": "Symposia, conferences, exhibitions about Stefan Zweig.",
+      "layer": "biographie",
+      "color": "#8b5e3c",
+      "properties": 0
+    },
+    {
+      "id": "Ort",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Ort",
+      "label_de": "Ort",
+      "label_en": "Place",
+      "comment_de": "Geographischer oder institutioneller Ort.",
+      "comment_en": "Geographical or institutional place.",
+      "layer": "ort",
+      "color": "#6a5acd",
+      "properties": 0
+    },
+    {
+      "id": "GeographischerOrt",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#GeographischerOrt",
+      "label_de": "Geographischer Ort",
+      "label_en": "Geographical Place",
+      "comment_de": "Stadt, Land, Region (Geonames-verknüpft).",
+      "comment_en": "City, country, region (Geonames-linked).",
+      "layer": "ort",
+      "color": "#6a5acd",
+      "properties": 0
+    },
+    {
+      "id": "Aufbewahrungsort",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Aufbewahrungsort",
+      "label_de": "Aufbewahrungsort",
+      "label_en": "Repository",
+      "comment_de": "Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten.",
+      "comment_en": "Archive, library, or museum as repository for estate objects.",
+      "layer": "ort",
+      "color": "#6a5acd",
+      "properties": 0
+    },
+    {
+      "id": "Entstehungsort",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Entstehungsort",
+      "label_de": "Entstehungsort",
+      "label_en": "Place of Origin",
+      "comment_de": "Ort, an dem ein Objekt oder Werk geschaffen wurde.",
+      "comment_en": "Place where an object or work was created.",
+      "layer": "ort",
+      "color": "#6a5acd",
+      "properties": 0
+    },
+    {
+      "id": "Provenienzereignis",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Provenienzereignis",
+      "label_de": "Provenienzereignis",
+      "label_en": "Provenance Event",
+      "comment_de": "Einzelnes Erwerbungs- oder Besitzwechsel-Ereignis in der Geschichte eines Objekts.",
+      "comment_en": "Single acquisition or ownership-change event in the history of an object.",
+      "layer": "provenienz",
+      "color": "#9b3a4e",
+      "properties": 2
+    },
+    {
+      "id": "ProvenienzmerkmalInstanz",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#ProvenienzmerkmalInstanz",
+      "label_de": "Provenienzmerkmalsinstanz",
+      "label_en": "Provenance Feature Instance",
+      "comment_de": "Konkretes Provenienzmerkmal an einem Objekt (Stempel, Exlibris, Marginalie, etc.). Verknüpft mit szdg:ProvenanceFeature (SKOS).",
+      "comment_en": "Concrete provenance feature on an object (stamp, bookplate, marginalia, etc.). Linked to szdg:ProvenanceFeature (SKOS).",
+      "layer": "provenienz",
+      "color": "#9b3a4e",
+      "properties": 1
+    },
+    {
+      "id": "Umfang",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Umfang",
+      "label_de": "Umfang",
+      "label_en": "Extent",
+      "comment_de": "Umfangsangabe eines Nachlassobjekts (Blatt, Seiten, Stücke).",
+      "comment_en": "Extent information of an estate object (leaves, pages, pieces).",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 3
+    },
+    {
+      "id": "Beilage",
+      "uri": "https://gams.uni-graz.at/o:szd.ontology#Beilage",
+      "label_de": "Beilage",
+      "label_en": "Enclosure",
+      "comment_de": "Beilage oder Zusatzmaterial zu einem Nachlassobjekt (Kuvert, Deckblatt, Flügelmappe).",
+      "comment_en": "Enclosure or supplementary material of an estate object (envelope, cover sheet, flap binder).",
+      "layer": "archiv",
+      "color": "#1a6b47",
+      "properties": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": "Werksammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Korrespondenzsammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Autographensammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Bibliothekssammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Lebensdokumentesammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Aufsatzsammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "ThematischeSammlung",
+      "target": "Sammlung",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Manuskript",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Typoskript",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Typoskriptdurchschlag",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Notizbuch",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Konvolut",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Korrekturfahne",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "KorrespondenzKonvolut",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Autograph",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Buch",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Lebensdokument",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "METSObjekt",
+      "target": "DigitalesObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "IIIFManifest",
+      "target": "DigitalesObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Faksimile",
+      "target": "DigitalesObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "BelletristischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "EssayistischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "BiographischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "HistorischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "DramatischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "LyrischesWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "SammelWerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Uebersetzungswerk",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "VorwortNachwort",
+      "target": "Werk",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Person",
+      "target": "Akteur",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Organisation",
+      "target": "Akteur",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Geburt",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Tod",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Reise",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Publikationsereignis",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Begegnung",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "InstitutionellesEreignis",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Exilereignis",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "WissenschaftlichesEreignis",
+      "target": "BiographischesEreignis",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "GeographischerOrt",
+      "target": "Ort",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Aufbewahrungsort",
+      "target": "Ort",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Entstehungsort",
+      "target": "Ort",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Umfang",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Beilage",
+      "target": "NachlassObjekt",
+      "type": "subClassOf",
+      "label": "subClassOf",
+      "color": "#999"
+    },
+    {
+      "source": "Nachlass",
+      "target": "Sammlung",
+      "type": "property",
+      "label": "enthaelt",
+      "label_de": "enthält",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Sammlung",
+      "type": "property",
+      "label": "istTeilVon",
+      "label_de": "ist Teil von",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "Sammlung",
+      "target": "NachlassObjekt",
+      "type": "property",
+      "label": "enthaeltObjekt",
+      "label_de": "enthält Objekt",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "DigitalesObjekt",
+      "type": "property",
+      "label": "hatDigitalesObjekt",
+      "label_de": "hat digitales Objekt",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "DigitalesObjekt",
+      "target": "Faksimile",
+      "type": "property",
+      "label": "hatFaksimile",
+      "label_de": "hat Faksimile",
+      "color": "#2c7da0"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Werk",
+      "type": "property",
+      "label": "istManifestationVon",
+      "label_de": "ist Manifestation von",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "Werk",
+      "target": "NachlassObjekt",
+      "type": "property",
+      "label": "hatManuskriptzeuge",
+      "label_de": "hat Manuskriptzeugen",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Werk",
+      "target": "Manifestation",
+      "type": "property",
+      "label": "hatManifestation",
+      "label_de": "hat Manifestation",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Werk",
+      "target": "WerkExpression",
+      "type": "property",
+      "label": "hatExpression",
+      "label_de": "hat Expression",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Exemplar",
+      "type": "property",
+      "label": "hatExemplar",
+      "label_de": "hat Exemplar",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "SammelWerk",
+      "target": "Werk",
+      "type": "property",
+      "label": "hatTeil",
+      "label_de": "hat Teil",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Werk",
+      "target": "SammelWerk",
+      "type": "property",
+      "label": "istTeilVonWerk",
+      "label_de": "ist Teil von Werk",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Werk",
+      "target": "Sekundaerliteratur",
+      "type": "property",
+      "label": "wirdBehandeltIn",
+      "label_de": "wird behandelt in",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "WerkExpression",
+      "target": "WerkExpression",
+      "type": "property",
+      "label": "istUebersetzungVon",
+      "label_de": "ist Übersetzung von",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Manifestation",
+      "type": "property",
+      "label": "istNachdruckVon",
+      "label_de": "ist Nachdruck von",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "WerkExpression",
+      "target": "Werk",
+      "type": "property",
+      "label": "istAdaptionVon",
+      "label_de": "ist Adaption von",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Werk",
+      "target": "Person",
+      "type": "property",
+      "label": "hatAutor",
+      "label_de": "hat Autor",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Person",
+      "type": "property",
+      "label": "hatHerausgeber",
+      "label_de": "hat Herausgeber",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "WerkExpression",
+      "target": "Person",
+      "type": "property",
+      "label": "hatUebersetzer",
+      "label_de": "hat Übersetzer",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "WerkExpression",
+      "target": "Person",
+      "type": "property",
+      "label": "hatKomponist",
+      "label_de": "hat Komponist",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Person",
+      "type": "property",
+      "label": "hatIllustrator",
+      "label_de": "hat Illustrator",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Person",
+      "type": "property",
+      "label": "hatVorwortAutor",
+      "label_de": "hat Vorwort-Autor",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Person",
+      "type": "property",
+      "label": "hatNachwortAutor",
+      "label_de": "hat Nachwort-Autor",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "KorrespondenzKonvolut",
+      "target": "Person",
+      "type": "property",
+      "label": "hatAbsender",
+      "label_de": "hat Absender",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "KorrespondenzKonvolut",
+      "target": "Person",
+      "type": "property",
+      "label": "hatEmpfaenger",
+      "label_de": "hat Empfänger",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Person",
+      "type": "property",
+      "label": "hatSchreiberhand",
+      "label_de": "hat Schreiberhand",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Person",
+      "type": "property",
+      "label": "hatBetroffenePerson",
+      "label_de": "hat betroffene Person",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Person",
+      "type": "property",
+      "label": "hatBeteiligten",
+      "label_de": "hat Beteiligten",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Provenienzereignis",
+      "type": "property",
+      "label": "hatProvenienz",
+      "label_de": "hat Provenienz",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "Provenienzereignis",
+      "target": "Akteur",
+      "type": "property",
+      "label": "hatVorbesitzer",
+      "label_de": "hat Vorbesitzer",
+      "color": "#9b3a4e"
+    },
+    {
+      "source": "Provenienzereignis",
+      "target": "Akteur",
+      "type": "property",
+      "label": "hatNachbesitzer",
+      "label_de": "hat Nachbesitzer",
+      "color": "#9b3a4e"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "ProvenienzmerkmalInstanz",
+      "type": "property",
+      "label": "hatProvenienzmerkmal",
+      "label_de": "hat Provenienzmerkmal",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Aufbewahrungsort",
+      "type": "property",
+      "label": "wirdAufbewahrtIn",
+      "label_de": "wird aufbewahrt in",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Ort",
+      "type": "property",
+      "label": "hatEntstehungsort",
+      "label_de": "hat Entstehungsort",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Ort",
+      "type": "property",
+      "label": "hatPublikationsort",
+      "label_de": "hat Publikationsort",
+      "color": "#2c5aa0"
+    },
+    {
+      "source": "BiographischesEreignis",
+      "target": "Ort",
+      "type": "property",
+      "label": "hatOrt",
+      "label_de": "hat Ort",
+      "color": "#8b5e3c"
+    },
+    {
+      "source": "BiographischesEreignis",
+      "target": "Person",
+      "type": "property",
+      "label": "betrifftPerson",
+      "label_de": "betrifft Person",
+      "color": "#8b5e3c"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Beilage",
+      "type": "property",
+      "label": "hatBeilage",
+      "label_de": "hat Beilage",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "NachlassObjekt",
+      "target": "Umfang",
+      "type": "property",
+      "label": "hatUmfang",
+      "label_de": "hat Umfang",
+      "color": "#1a6b47"
+    },
+    {
+      "source": "Manifestation",
+      "target": "Organisation",
+      "type": "property",
+      "label": "hatVerlag",
+      "label_de": "hat Verlag",
+      "color": "#2c5aa0"
+    }
+  ],
+  "layers": {
+    "archiv": "Archivschicht",
+    "digital": "Digitale Objekte",
+    "werk": "Werkschicht",
+    "akteur": "Akteure",
+    "biographie": "Biographie & Ereignisse",
+    "ort": "Orte",
+    "provenienz": "Provenienz"
+  },
+  "layerColors": {
+    "archiv": "#1a6b47",
+    "digital": "#2c7da0",
+    "werk": "#2c5aa0",
+    "akteur": "#e67e22",
+    "biographie": "#8b5e3c",
+    "ort": "#6a5acd",
+    "provenienz": "#9b3a4e"
+  },
+  "meta": {
+    "title": "Stefan Zweig Digital Nachlass-Ontologie",
+    "version": "1.0.0",
+    "nodeCount": 58,
+    "edgeCount": 84
+  }
+}
