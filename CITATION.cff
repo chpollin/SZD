@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: Stefan Zweig Digital (SZD)
+message: >-
+  If you use this dataset or ontology, please cite it using
+  the metadata from this file.
+type: dataset
+authors:
+  - given-names: Lina Maria
+    family-names: Zangerl
+    orcid: 'https://orcid.org/0000-0001-9709-3669'
+    affiliation: 'Literaturarchiv Salzburg, Paris Lodron Universität Salzburg'
+  - given-names: Julia Rebecca
+    family-names: Glunk
+    orcid: 'https://orcid.org/0000-0001-6647-9729'
+    affiliation: 'Literaturarchiv Salzburg, Paris Lodron Universität Salzburg'
+  - given-names: Oliver
+    family-names: Matuschek
+    affiliation: 'Literaturarchiv Salzburg, Paris Lodron Universität Salzburg'
+  - given-names: Christopher
+    family-names: Pollin
+    orcid: 'https://orcid.org/0000-0002-4879-129X'
+    affiliation: 'Digital Humanities Craft OG'
+repository-code: 'https://github.com/chpollin/SZD'
+url: 'https://stefanzweig.digital'
+abstract: >-
+  Digitale Nachlassrekonstruktion Stefan Zweigs. TEI-XML-kodierte
+  Sammlungen (Werke, Korrespondenz, Autographen, Bibliothek,
+  Lebensdokumente), formale Nachlass-Ontologie (SZDO v1.0.0), und
+  Forschungsdokumentation. Gehostet auf GAMS (Universität Graz),
+  archiviert auf Zenodo.
+keywords:
+  - Stefan Zweig
+  - digital humanities
+  - literary estate
+  - TEI-XML
+  - ontology
+  - OWL
+  - Records in Context
+  - IFLA LRM
+  - CIDOC-CRM
+  - linked data
+  - GAMS
+license: CC-BY-4.0
+version: 1.0.0
+date-released: '2026-03-29'

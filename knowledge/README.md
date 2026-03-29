@@ -6,6 +6,9 @@ Central documentation hub for understanding the Stefan Zweig Digital project arc
 
 ## Core Documentation
 
+### Project
+- [PROJECT.md](PROJECT.md) - Das Forschungsprojekt aus DH- und Forschungsdatenperspektive (Kontext, Methodik, Sammlungen, FAIR, Chronologie, Beteiligte)
+
 ### Data & Structure
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure, bilingual architecture, and encoding patterns
 - [COLLECTIONS.md](COLLECTIONS.md) - Detailed overview of all archival collections

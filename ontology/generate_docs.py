@@ -395,7 +395,9 @@ def generate_html(g):
         <span class="header-title">Stefan Zweig Digital</span>
       </a>
       <nav class="header-nav">
+        <a href="../project/">Projekt</a>
         <a href=".">Ontologie</a>
+        <a href="../downloads/">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
         <div class="lang-toggle">

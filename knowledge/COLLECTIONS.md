@@ -345,4 +345,6 @@ Long-term preservation copies on Zenodo:
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026
+
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for how each collection maps to SZDO ontology classes (Section 7), [PROJECT.md](PROJECT.md) for the full project context.

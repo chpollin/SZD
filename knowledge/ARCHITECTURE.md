@@ -357,4 +357,6 @@ All system components support German and English:
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026
+
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal data model, [PROJECT.md](PROJECT.md) for the full project description.

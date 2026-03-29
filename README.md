@@ -59,7 +59,11 @@ The [ontology/](ontology/) directory contains the **Stefan Zweig Digital Nachlas
 
 ### GitHub Pages
 
-The [docs/](docs/) directory serves the project documentation site at https://chpollin.github.io/SZD/, including the ontology documentation with bilingual (DE/EN) class/property reference, download links (Turtle, JSON-LD), and navigation by ontology layer.
+The [docs/](docs/) directory serves the project documentation site at https://chpollin.github.io/SZD/:
+
+- **Project:** https://chpollin.github.io/SZD/project/ — DH project description, collections, methodology, FAIR compliance
+- **Ontology:** https://chpollin.github.io/SZD/ontology/ — Bilingual (DE/EN) class/property reference, vocabulary badges
+- **Downloads:** https://chpollin.github.io/SZD/downloads/ — TEI-XML, RDF, Ontologie, Glossar, Klawiter-Bibliographie, Zenodo
 
 ### Knowledge Vault
 
