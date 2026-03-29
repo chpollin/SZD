@@ -423,6 +423,53 @@ body.lang-en .de-only { display: none; }
   color: var(--sz-border);
 }
 
+/* --- Prose overview section --- */
+.onto-prose {
+  max-width: 680px;
+  margin: 1.5rem 0 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--sz-white);
+  border: 1px solid var(--sz-border);
+  border-left: 4px solid var(--sz-gold);
+  border-radius: 6px;
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--sz-text);
+}
+.onto-prose h2 {
+  font-size: 1.3rem;
+  color: var(--sz-burgundy);
+  border-bottom: 1px solid var(--sz-border);
+  padding-bottom: 0.4rem;
+  margin: 0 0 1rem;
+}
+.onto-prose h3 {
+  font-size: 1.05rem;
+  color: var(--sz-burgundy-light);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+}
+.onto-prose p {
+  margin-bottom: 1rem;
+}
+.onto-prose p:last-child {
+  margin-bottom: 0;
+}
+.onto-prose a {
+  color: var(--sz-burgundy);
+  text-decoration: underline;
+  text-decoration-color: var(--sz-gold);
+  text-underline-offset: 2px;
+}
+.onto-prose a:hover {
+  color: var(--sz-burgundy-dark);
+}
+.onto-prose strong {
+  font-weight: 600;
+  color: var(--sz-burgundy);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .onto-layout {
