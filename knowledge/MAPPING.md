@@ -1,8 +1,8 @@
 ---
 doc: TEI-CSV Mapping
-project: fix-szd
+project: SZD
 version: 1.0
-updated: 2025-04-27
+updated: 2026-03-29
 tags: [mapping, zweig, tei, csv]
 ---
 

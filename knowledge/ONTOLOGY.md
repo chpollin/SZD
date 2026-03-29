@@ -682,19 +682,21 @@ Die SZDO nutzt Standard-OWL-Versionierung:
 |---------|-----|--------|-------------|
 | **v0.x** | GAMS (`stefanzweig.digital`) | Produktiv | Implizit in `szd-TORDF.xsl` definiert. Englische camelCase-Bezeichner. 14 Klassen, 67 Properties. Über Jahre gewachsen. |
 | **v1.0.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Abgelöst | Formale OWL-Ontologie. Deutsche Bezeichner. 58 Klassen, 77 Properties. RiC-O/LRM/CRM-Alignments. GAMS-Kompatibilitätsschicht. |
-| **v1.1.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Neu | Datum-Evidenz (SKOS), Personen-Rollenhierarchie (hatBeteiligtenAkteur + 10 SubProperties), RiC-Alignments, 2 neue CQs, SHACL Shape 14, Klawiter-Reconciliation-Korrekturen |
+| **v1.1.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Abgeloest | Datum-Evidenz (SKOS), Personen-Rollenhierarchie (hatBeteiligtenAkteur + 10 SubProperties), RiC-Alignments, 2 neue CQs, SHACL Shape 14, Klawiter-Reconciliation-Korrekturen |
+| **v1.2.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Aktuell | Zwei-Schichten-Architektur: generische `nachlass:` Ontologie (`https://w3id.org/nachlass#`) extrahiert fuer Nachnutzung. SZDO importiert `nachlass:` via `owl:imports`. 3 neue Generalisierungs-CQs (CQ-G1..G3). 22 CQs gesamt. |
 
 **OWL-Metadaten:**
 ```turtle
-owl:versionInfo "1.1.0" ;
-owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
-owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
-owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
+owl:versionInfo "1.2.0" ;
+owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
+owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
+owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
+owl:imports <https://w3id.org/nachlass> ;
 ```
 
-### GAMS-Kompatibilitätsschicht (PART 10 in szd-ontology.ttl)
+### GAMS-Kompatibilitaetsschicht (PART 10 in szd-ontology.ttl)
 
-Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitätsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknüpfungen zu den neuen v1.1.0-Bezeichnern.
+Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitaetsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknuepfungen zu den neuen v1.2.0-Bezeichnern.
 
 **Klassen-Mapping (Auszug):**
 

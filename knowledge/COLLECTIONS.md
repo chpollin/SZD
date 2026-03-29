@@ -76,6 +76,31 @@ Letters to and from Stefan Zweig organized by correspondence partner. Each entry
 
 ---
 
+## Location Index (SZDSTA)
+
+**File:** [data/Index/Location/SZDSTA.xml](../data/Index/Location/SZDSTA.xml)
+**PID:** o:szd.standorte
+
+### Structure
+
+Repository directory using `<listOrg>`:
+
+```xml
+<listOrg>
+  <org xml:id="SZDSTA.1">
+    <orgName>Literaturarchiv Salzburg</orgName>
+    <country>Oesterreich</country>
+    <settlement>Salzburg</settlement>
+  </org>
+</listOrg>
+```
+
+### Content
+
+40 repositories worldwide that hold Stefan Zweig materials (archives, libraries, museums). Each entry includes institution name, country, and city.
+
+---
+
 ## Person Index (SZDPER)
 
 **File:** [data/Index/Person/SZDPER.xml](../data/Index/Person/SZDPER.xml)

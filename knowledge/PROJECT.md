@@ -207,6 +207,8 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 | Oktober 2025 | Zenodo-Archivierung (2.107 Objekte, 22,3 GB) |
 | März 2026 | SZDO v1.0.0 — Formale Nachlass-Ontologie, GitHub Pages |
 | März 2026 | SZDO v1.1.0 — Datum-Evidenz, Personen-Rollenhierarchie, RiC-Alignments, Klawiter-Korrekturen |
+| März 2026 | SZDO v1.2.0 — Generische Nachlass-Ontologie (`nachlass:`), Zwei-Schichten-Architektur, TEI-Datumsnormalisierung (SZDBIB/SZDPUB/SZDAUT/SZDKOR), Dokumentationsbereinigung |
+| März 2026 | GAMS-Frontend (`gamsdev/`) aus Repository entfernt — Frontend wird direkt auf GAMS-Plattform verwaltet |
 
 ---
 
