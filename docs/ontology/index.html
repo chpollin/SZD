@@ -15,7 +15,7 @@
     "name": "Stefan Zweig Digital Nachlass-Ontologie",
     "description": "OWL ontology for the digital estate of Stefan Zweig",
     "url": "https://chpollin.github.io/SZD/ontology/",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "creator": {
       "@type": "Organization",
@@ -25,14 +25,6 @@
   </script>
 </head>
 <body class="lang-de">
-  <nav class="verbund-bar" aria-label="Zweig Digital Research Network">
-    <span class="verbund-mark">&rsaquo;</span>
-    <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Stefan Zweig Digital</a>
-    <span class="verbund-sep">&middot;</span>
-    <a href="https://chpollin.github.io/klawiter-rescue/">Klawiter Bibliography</a>
-    <span class="verbund-sep">&middot;</span>
-    <span class="verbund-active">Ontology &amp; Data</span>
-  </nav>
   <header class="site-header">
     <div class="header-inner">
       <a href="../" class="header-brand">
@@ -55,7 +47,6 @@
 
   <div class="onto-layout">
     <nav class="onto-sidebar">
-  <a href="#overview" style="font-weight:600;"><span class="de-only">Überblick</span><span class="en-only">Overview</span></a>
   <h3><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h3>
   <h3><span class="de-only">Werkschicht</span><span class="en-only">Work Layer</span></h3>
   <h3><span class="de-only">Akteure</span><span class="en-only">Agents</span></h3>
@@ -65,7 +56,6 @@
   <h3>Object Properties</h3>
   <a href="#author">author</a>
   <a href="#betrifftPerson">betrifftPerson</a>
-  <a href="#datumEvidenz">datumEvidenz</a>
   <a href="#enclosures">enclosures</a>
   <a href="#enthaelt">enthaelt</a>
   <a href="#enthaeltObjekt">enthaeltObjekt</a>
@@ -73,7 +63,8 @@
   <a href="#glossar">glossar</a>
   <a href="#hasContentRelation">hasContentRelation</a>
   <a href="#hatAbsender">hatAbsender</a>
-  <a href="#object-properties">... (58 total)</a>
+  <a href="#hatAutor">hatAutor</a>
+  <a href="#object-properties">... (56 total)</a>
   <h3>Datatype Properties</h3>
   <a href="#acquired">acquired</a>
   <a href="#additionalMaterial">additionalMaterial</a>
@@ -93,120 +84,11 @@
 
     <div class="onto-content">
   <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>
-  <div class="onto-version">Version 1.1.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
-  <p>72 Klassen · 58 Object Properties · 74 Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>
+  <div class="onto-version">Version 1.0.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
+  <p>72 Klassen · 56 Object Properties · 74 Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>
   <div style="margin:1rem 0;">
     <span class="badge badge-rico">RiC-O</span>     <span class="badge badge-lrm">LRM</span>     <span class="badge badge-crm">CRM</span>     <span class="badge badge-skos">SKOS</span>     <span class="badge badge-foaf">FOAF</span>     <span class="badge badge-schema">Schema.org</span>     <span class="badge badge-dc">Dublin Core</span>
   </div>
-<section class="onto-prose" id="overview">
-
-  <h2><span class="de-only">Überblick</span><span class="en-only">Overview</span></h2>
-
-  <p class="en-only">
-    The Stefan Zweig Digital Ontology (SZDO) provides a formal OWL 2 data model
-    for describing the digital estate (<em>Nachlass</em>) of Stefan Zweig, held
-    primarily at the Literaturarchiv Salzburg. It bridges archival science,
-    library cataloguing, and cultural-heritage modelling into a single,
-    interoperable vocabulary that can be queried, linked, and extended.
-  </p>
-  <p class="de-only">
-    Die Stefan Zweig Digital Ontology (SZDO) stellt ein formales OWL-2-Datenmodell
-    zur Beschreibung des digitalen Nachlasses von Stefan Zweig bereit, der
-    vorwiegend im Literaturarchiv Salzburg verwahrt wird. Sie verbindet
-    Archivwissenschaft, bibliothekarische Erschließung und
-    Kulturerbe-Modellierung in einem einzigen, interoperablen Vokabular.
-  </p>
-
-  <h3><span class="en-only">Design Principles</span><span class="de-only">Entwurfsprinzipien</span></h3>
-
-  <p class="en-only">
-    SZDO follows an archive-first approach: its backbone is aligned with
-    Records in Contexts (RiC-O), ensuring that the hierarchical structure of a
-    literary estate&mdash;from <em>Nachlass</em> down to individual items&mdash;is
-    captured faithfully. For the description of intellectual works the model
-    adopts the FRBR/IFLA-LRM Work&ndash;Expression&ndash;Manifestation&ndash;Item
-    hierarchy, while events and temporal phenomena are modelled in accordance
-    with CIDOC-CRM. All classes and properties carry bilingual labels (German
-    and English), and the design is deliberately extensible so that new
-    sub-collections or scholarly projects can add domain-specific refinements
-    without breaking the core schema.
-  </p>
-  <p class="de-only">
-    SZDO verfolgt einen archivzentrierten Ansatz: Das Rückgrat orientiert sich
-    an Records in Contexts (RiC-O), sodass die hierarchische Struktur eines
-    literarischen Nachlasses&mdash;vom Gesamtbestand bis zum Einzelstück&mdash;originalgetreu
-    abgebildet wird. Für die Beschreibung intellektueller Werke übernimmt das
-    Modell die FRBR/IFLA-LRM-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar),
-    während Ereignisse und zeitliche Phänomene gemäß CIDOC-CRM modelliert werden.
-    Alle Klassen und Properties tragen zweisprachige Labels (Deutsch und Englisch),
-    und das Design ist bewusst erweiterbar.
-  </p>
-
-  <h3><span class="en-only">Layer Architecture</span><span class="de-only">Schichtenarchitektur</span></h3>
-
-  <p class="en-only">
-    The ontology is organised into seven interconnected layers.
-    The <strong>Archival Layer</strong> models the <em>Nachlass</em> structure
-    (collections, sub-collections, and individual archival objects such as
-    manuscripts, typescripts, and notebooks).
-    The <strong>Digital Objects Layer</strong> represents their digital
-    surrogates (METS objects, IIIF manifests, facsimiles).
-    The <strong>Work Layer</strong> maps intellectual creations through the
-    WEMI hierarchy (Work&ndash;Expression&ndash;Manifestation&ndash;Item).
-    The <strong>Agents Layer</strong> covers persons and organisations.
-    The <strong>Biography &amp; Events Layer</strong> captures life-timeline
-    events such as births, deaths, journeys, and encounters.
-    The <strong>Places Layer</strong> distinguishes geographic locations from
-    repositories and places of origin.
-    Finally, the <strong>Provenance Layer</strong> traces the ownership chain
-    of archival objects. These layers are connected through shared properties
-    so that, for example, a manuscript (Archival) can be linked to the work it
-    witnesses (Work), the person who authored it (Agents), the place where it
-    was written (Places), and the event through which it changed hands
-    (Provenance).
-  </p>
-  <p class="de-only">
-    Die Ontologie ist in sieben miteinander verbundene Schichten gegliedert.
-    Die <strong>Archivschicht</strong> bildet die Nachlassstruktur ab
-    (Sammlungen, Teilsammlungen und Einzelobjekte wie Manuskripte, Typoskripte
-    und Notizbücher).
-    Die <strong>Schicht der digitalen Objekte</strong> repräsentiert deren
-    digitale Surrogate (METS-Objekte, IIIF-Manifeste, Faksimiles).
-    Die <strong>Werkschicht</strong> beschreibt intellektuelle Schöpfungen über
-    die WEMI-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar).
-    Die <strong>Akteursschicht</strong> umfasst Personen und Organisationen.
-    Die <strong>Biographie- und Ereignisschicht</strong> erfasst Lebensereignisse
-    wie Geburt, Tod, Reisen und Begegnungen.
-    Die <strong>Ortsschicht</strong> unterscheidet geographische Orte von
-    Aufbewahrungsorten und Entstehungsorten.
-    Die <strong>Provenienzschicht</strong> zeichnet die Besitzkette von
-    Archivalien nach. Die Schichten sind über gemeinsame Properties verbunden.
-  </p>
-
-  <h3><span class="en-only">Integration</span><span class="de-only">Integration</span></h3>
-
-  <p class="en-only">
-    SZDO connects to the
-    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter Bibliography</a>
-    (6,296 entries) via the Work/Manifestation layer, enabling scholars to
-    navigate from a physical manuscript in the Nachlass to its published
-    editions and translations. The ontology also links to external authority
-    files&mdash;GND, Wikidata, VIAF for persons and organisations, and
-    GeoNames for places&mdash;ensuring that every entity can be reconciled
-    with the wider Linked-Data ecosystem.
-  </p>
-  <p class="de-only">
-    SZDO ist über die Werk-/Manifestationsschicht mit der
-    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter-Bibliographie</a>
-    (6.296 Einträge) verbunden, sodass von einem physischen Manuskript im
-    Nachlass zu seinen publizierten Ausgaben und Übersetzungen navigiert werden
-    kann. Darüber hinaus verknüpft die Ontologie mit externen Normdateien&mdash;GND,
-    Wikidata, VIAF für Personen und Organisationen sowie GeoNames für
-    Orte&mdash;und gewährleistet so die Anschlussfähigkeit an das
-    Linked-Data-Ökosystem.
-  </p>
-
-</section>
   <h2 id="section-archiv"><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h2>
 <div class="entity-card" id="Nachlass">
   <div class="entity-name">szdo:Nachlass</div>
@@ -315,7 +197,7 @@
     <tr><td><a href="#entstehungsdatum"><code>entstehungsdatum</code></a></td><td>Entstehungsdatum</td><td><code>xsd:string</code></td></tr>
     <tr><td><a href="#format"><code>format</code></a></td><td>Format</td><td><code>xsd:string</code></td></tr>
     <tr><td><a href="#hatBeilage"><code>hatBeilage</code></a></td><td>hat Beilage</td><td><a href="#Beilage"><code>szdo:Beilage</code></a></td></tr>
-    <tr><td><a href="#hatBeteiligtenAkteur"><code>hatBeteiligtenAkteur</code></a></td><td>hat beteiligten Akteur</td><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+    <tr><td><a href="#hatBeteiligten"><code>hatBeteiligten</code></a></td><td>hat Beteiligten</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
     <tr><td><a href="#hatBetroffenePerson"><code>hatBetroffenePerson</code></a></td><td>hat betroffene Person</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
     <tr><td><a href="#hatDigitalesObjekt"><code>hatDigitalesObjekt</code></a></td><td>hat digitales Objekt</td><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
     <tr><td><a href="#hatEntstehungsort"><code>hatEntstehungsort</code></a></td><td>hat Entstehungsort</td><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
@@ -879,17 +761,6 @@
     <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
   </table>
 </div>
-<div class="entity-card" id="datumEvidenz">
-  <div class="entity-name">szdo:datumEvidenz</div>
-  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#datumEvidenz</div>
-  <div class="entity-labels"><span class="label-de">DE: Datum-Evidenz</span> <span class="label-en">EN: date evidence</span></div>
-  <div class="entity-comment"><span class="de-only">Qualifiziert die Quelle einer Datierung (aus Dokument, aus Kontext, aus externer Quelle, unbekannt). Verweist auf SKOS-Konzepte im SZD-Glossar.</span> <span class="en-only comment-en">Qualifies the source of a date assignment (from document, from context, from external source, unknown). Points to SKOS concepts in the SZD Glossary.</span></div>
-  <table class="prop-table">
-    <tr><th>Type</th><td>Object Property</td></tr>
-    <tr><th>Domain</th><td><code>owl:Thing</code></td></tr>
-    <tr><th>Range</th><td><a href="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz" target="_blank"><code>DatumEvidenz</code></a></td></tr>
-  </table>
-</div>
 <div class="entity-card" id="enclosures">
   <div class="entity-name">szdo:enclosures</div>
   <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#enclosures</div>
@@ -982,28 +853,17 @@
 <div class="entity-card" id="hatBeteiligten">
   <div class="entity-name">szdo:hatBeteiligten</div>
   <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeteiligten</div>
-  <div class="entity-labels"><span class="label-en">EN: hatBeteiligten (v1.0.0)</span></div>
-  <table class="prop-table">
-    <tr><th>Type</th><td>Object Property</td></tr>
-    <tr><th>Equivalent to</th><td><a href="#hatBeteiligtenAkteur"><code>szdo:hatBeteiligtenAkteur</code></a></td></tr>
-  </table>
-</div>
-<div class="entity-card" id="hatBeteiligtenAkteur">
-  <div class="entity-name">szdo:hatBeteiligtenAkteur</div>
-  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeteiligtenAkteur</div>
-  <div class="entity-labels"><span class="label-de">DE: hat beteiligten Akteur</span> <span class="label-en">EN: has participating agent</span></div>
-  <div class="entity-comment"><span class="de-only">Generische Obereigenschaft für alle Personen/Organisationen, die aktiv an einem Objekt oder Werk beteiligt sind.</span> <span class="en-only comment-en">Generic superproperty for all persons/organisations actively involved in an object or work.</span></div>
+  <div class="entity-labels"><span class="label-de">DE: hat Beteiligten</span> <span class="label-en">EN: has party involved</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
     <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
-    <tr><th>Range</th><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
   </table>
 </div>
 <div class="entity-card" id="hatBetroffenePerson">
   <div class="entity-name">szdo:hatBetroffenePerson</div>
   <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBetroffenePerson</div>
   <div class="entity-labels"><span class="label-de">DE: hat betroffene Person</span> <span class="label-en">EN: has affected person</span></div>
-  <div class="entity-comment"><span class="de-only">Person, die im Objekt thematisch erwähnt oder behandelt wird — kein aktiver Beteiligter.</span> <span class="en-only comment-en">Person mentioned or discussed in the object — not an active participant.</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
     <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
@@ -1353,7 +1213,7 @@
   <div class="entity-labels"><span class="label-en">EN: partyInvolved (GAMS v0.x)</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
-    <tr><th>Equivalent to</th><td><a href="#hatBeteiligtenAkteur"><code>szdo:hatBeteiligtenAkteur</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBeteiligten"><code>szdo:hatBeteiligten</code></a></td></tr>
   </table>
 </div>
 <div class="entity-card" id="provenanceCharacteristic">
