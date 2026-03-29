@@ -4,221 +4,403 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ontology Visualization — Stefan Zweig Digital</title>
-  <meta name="description" content="Interactive visualization of the SZDO Nachlass ontology as a force-directed graph.">
+  <meta name="description" content="Interactive force-directed graph of the SZDO Nachlass Ontology. 58 classes, 84 relationships.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
-  <link rel="stylesheet" href="../css/szd-ontology.css">
   <style>
-    .viz-container {
-      position: relative;
-      width: 100%;
-      height: calc(100vh - var(--header-height) - 2rem);
-      background: var(--sz-white);
-      border: 1px solid var(--sz-border);
-      border-radius: 6px;
-      overflow: hidden;
+    :root {
+      --sz-burgundy: #631a34;
+      --sz-burgundy-dark: #4A1228;
+      --sz-gold: #C2A360;
+      --sz-cream: #FAF8F3;
+      --sz-white: #FFFFFF;
+      --sz-text: #2D2D2D;
+      --sz-text-light: #6B6B6B;
+      --sz-border: #E0D8CC;
+      --font-sans: 'Source Sans 3', -apple-system, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-mono: 'JetBrains Mono', Consolas, monospace;
     }
-    svg { width: 100%; height: 100%; }
-    .viz-controls {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      z-index: 10;
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--sz-cream);
+      color: var(--sz-text);
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      overflow: hidden;
     }
-    .viz-controls button, .viz-controls label {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      background: var(--sz-white);
-      border: 1px solid var(--sz-border);
-      border-radius: 3px;
-      padding: 0.3rem 0.6rem;
-      cursor: pointer;
+
+    /* Compact header */
+    .viz-header {
+      background: var(--sz-burgundy);
+      color: var(--sz-white);
+      height: 44px;
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      padding: 0 1rem;
+      gap: 1rem;
+      flex-shrink: 0;
     }
-    .viz-controls button:hover { border-color: var(--sz-burgundy); }
-    .viz-controls .layer-dot {
-      width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+    .viz-header__brand {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      color: var(--sz-white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
     }
-    .viz-controls input[type="checkbox"] { margin: 0; }
+    .viz-header__brand img { height: 24px; }
+    .viz-header__brand:hover { opacity: 0.9; }
+    .viz-header__title {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .viz-header__sep { opacity: 0.3; }
+    .viz-header__spacer { flex: 1; }
+    .viz-header__nav { display: flex; gap: 1rem; }
+    .viz-header__nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+    .viz-header__nav a:hover { color: var(--sz-white); }
 
-    /* Detail panel */
-    .detail-panel {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 320px;
-      max-height: calc(100% - 2rem);
-      overflow-y: auto;
+    /* Main layout: sidebar + graph */
+    .viz-main {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .viz-sidebar {
+      width: 240px;
+      flex-shrink: 0;
       background: var(--sz-white);
-      border: 1px solid var(--sz-border);
-      border-radius: 6px;
-      padding: 1.25rem;
-      z-index: 10;
-      display: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-right: 1px solid var(--sz-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
     }
-    .detail-panel.active { display: block; }
-    .detail-panel .close-btn {
-      position: absolute; top: 0.5rem; right: 0.75rem;
-      background: none; border: none; font-size: 1.2rem;
-      cursor: pointer; color: var(--sz-text-light); padding: 0;
+    .viz-sidebar__section {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--sz-border);
     }
-    .detail-panel h3 {
+    .viz-sidebar__heading {
+      font-size: 0.625rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sz-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Layer toggles */
+    .layer-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0;
+      cursor: pointer;
+      font-size: 0.78rem;
+      color: var(--sz-text);
+      transition: opacity 0.15s;
+    }
+    .layer-toggle:hover { color: var(--sz-burgundy); }
+    .layer-toggle input { margin: 0; cursor: pointer; }
+    .layer-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .layer-label { flex: 1; }
+    .layer-count {
+      font-size: 0.65rem;
+      color: var(--sz-text-light);
       font-family: var(--font-mono);
-      font-size: 1rem;
-      color: var(--sz-burgundy);
-      margin-bottom: 0.25rem;
     }
-    .detail-panel .detail-layer {
+
+    /* Actions */
+    .viz-sidebar__actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .viz-btn {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.3rem 0.6rem;
+      border: 1px solid var(--sz-border);
+      border-radius: 3px;
+      background: var(--sz-white);
+      color: var(--sz-text);
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .viz-btn:hover { border-color: var(--sz-burgundy); color: var(--sz-burgundy); }
+
+    /* Stats */
+    .viz-sidebar__stats {
+      font-size: 0.7rem;
+      color: var(--sz-text-light);
+      line-height: 1.6;
+    }
+    .viz-sidebar__stats strong { color: var(--sz-text); }
+
+    /* Detail panel in sidebar */
+    .viz-detail {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--sz-border);
+      display: none;
+    }
+    .viz-detail.active { display: block; }
+    .viz-detail__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+    .viz-detail__name {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--sz-burgundy);
+      font-weight: 600;
+    }
+    .viz-detail__close {
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--sz-text-light);
+      padding: 0;
+      line-height: 1;
+    }
+    .viz-detail__layer {
       display: inline-block;
       padding: 0.1rem 0.4rem;
       border-radius: 3px;
       color: #fff;
-      font-family: var(--font-sans);
-      font-size: 0.68rem;
-      margin-bottom: 0.5rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
     }
-    .detail-panel .detail-comment {
-      font-size: 0.85rem;
+    .viz-detail__comment {
+      font-size: 0.78rem;
+      line-height: 1.5;
       color: var(--sz-text);
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
     }
-    .detail-panel .detail-links a {
+    .viz-detail__comment .en { color: var(--sz-text-light); font-style: italic; }
+    .viz-detail__links-heading {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--sz-gold);
+      margin: 0.5rem 0 0.25rem;
+    }
+    .viz-detail__links a {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.72rem;
+      color: var(--sz-burgundy);
       margin: 0.15rem 0;
+      text-decoration: none;
     }
+    .viz-detail__links a:hover { text-decoration: underline; }
+
+    /* Graph area */
+    .viz-graph {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    .viz-graph svg { width: 100%; height: 100%; display: block; }
 
     /* Graph elements */
-    .node circle { stroke: #fff; stroke-width: 2px; cursor: pointer; }
+    .node circle { stroke: #fff; stroke-width: 2px; cursor: pointer; transition: stroke 0.15s, stroke-width 0.15s; }
     .node text {
       font-family: var(--font-sans);
-      font-size: 9px;
+      font-size: 10px;
       fill: var(--sz-text);
       pointer-events: none;
     }
     .node:hover circle { stroke: var(--sz-burgundy); stroke-width: 3px; }
-    .edge line { stroke-opacity: 0.4; }
+    .node.highlight circle { stroke: var(--sz-burgundy); stroke-width: 3px; }
+
+    .edge line { stroke-opacity: 0.35; }
     .edge text {
       font-family: var(--font-sans);
-      font-size: 7px;
+      font-size: 8px;
       fill: var(--sz-text-light);
       pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
+    .edge.highlight text { opacity: 1; }
+    .edge.highlight line { stroke-opacity: 0.8; stroke-width: 2px; }
     .edge.subClassOf line { stroke-dasharray: 4 2; }
-    .node.dimmed circle { opacity: 0.15; }
-    .node.dimmed text { opacity: 0.15; }
-    .edge.dimmed line { opacity: 0.05; }
-    .edge.dimmed text { opacity: 0.05; }
 
-    /* Stats bar */
-    .viz-stats {
+    .node.dimmed circle { opacity: 0.1; }
+    .node.dimmed text { opacity: 0.1; }
+    .edge.dimmed line { opacity: 0.03; }
+    .edge.dimmed text { opacity: 0; }
+
+    /* Minimap / hint */
+    .viz-hint {
       position: absolute;
-      bottom: 0.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: var(--font-sans);
-      font-size: 0.7rem;
+      bottom: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.65rem;
       color: var(--sz-text-light);
       background: rgba(255,255,255,0.9);
-      padding: 0.2rem 0.8rem;
+      padding: 0.25rem 0.6rem;
       border-radius: 3px;
+      border: 1px solid var(--sz-border);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .viz-sidebar { width: 200px; }
+      .viz-header__nav { display: none; }
+    }
+    @media (max-width: 560px) {
+      .viz-sidebar { display: none; }
     }
   </style>
 </head>
 <body>
-  <nav class="verbund-bar" aria-label="Zweig Digital Research Network">
-    <span class="verbund-mark">&rsaquo;</span>
-    <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Stefan Zweig Digital</a>
-    <span class="verbund-sep">&middot;</span>
-    <a href="https://chpollin.github.io/klawiter-rescue/">Klawiter Bibliography</a>
-    <span class="verbund-sep">&middot;</span>
-    <span class="verbund-active">Ontology &amp; Data</span>
-  </nav>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="../" class="header-brand">
-        <img src="../img/SZlogo.png" alt="SZD Logo" class="header-logo">
-        <span class="header-title">Stefan Zweig Digital</span>
-      </a>
-      <nav class="header-nav">
-        <a href="../project/">Project</a>
-        <a href=".">Ontology</a>
-        <a href="visualize.html">Visualize</a>
-        <a href="../downloads/">Downloads</a>
-        <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
-        <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-    </div>
+  <header class="viz-header">
+    <a href="../" class="viz-header__brand">
+      <img src="../img/SZlogo.png" alt="SZD">
+      Stefan Zweig Digital
+    </a>
+    <span class="viz-header__sep">|</span>
+    <span class="viz-header__title">Ontology Visualization</span>
+    <div class="viz-header__spacer"></div>
+    <nav class="viz-header__nav">
+      <a href="./">Reference</a>
+      <a href="../project/">Project</a>
+      <a href="../downloads/">Downloads</a>
+      <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
+      <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
+    </nav>
   </header>
 
-  <main style="max-width:var(--max-width);margin:0 auto;padding:1rem 1.5rem;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-      <h1 style="font-size:1.4rem;color:var(--sz-burgundy);margin:0;">Ontology Visualization</h1>
-      <div style="display:flex;gap:0.5rem;">
-        <a href="./" style="font-family:var(--font-sans);font-size:0.78rem;">Reference</a>
-        <span style="color:var(--sz-border);">|</span>
-        <a href="visualize.html" style="font-family:var(--font-sans);font-size:0.78rem;font-weight:600;">Graph</a>
+  <div class="viz-main">
+    <aside class="viz-sidebar">
+      <!-- Detail (shown when node selected) -->
+      <div class="viz-detail" id="detail">
+        <div class="viz-detail__header">
+          <span class="viz-detail__name" id="detail-name"></span>
+          <button class="viz-detail__close" onclick="closeDetail()">&times;</button>
+        </div>
+        <div class="viz-detail__layer" id="detail-layer"></div>
+        <div class="viz-detail__comment" id="detail-comment"></div>
+        <div class="viz-detail__links" id="detail-links"></div>
       </div>
-    </div>
 
-    <div class="viz-container" id="viz">
-      <div class="viz-controls" id="controls"></div>
-      <div class="detail-panel" id="detail">
-        <button class="close-btn" onclick="closeDetail()">&times;</button>
-        <h3 id="detail-name"></h3>
-        <div class="detail-layer" id="detail-layer"></div>
-        <div class="detail-comment" id="detail-comment"></div>
-        <div class="detail-links" id="detail-links"></div>
+      <!-- Layers -->
+      <div class="viz-sidebar__section">
+        <div class="viz-sidebar__heading">Layers</div>
+        <div id="controls"></div>
       </div>
+
+      <!-- Actions -->
+      <div class="viz-sidebar__section">
+        <div class="viz-sidebar__heading">Actions</div>
+        <div class="viz-sidebar__actions">
+          <button class="viz-btn" onclick="resetView()">Reset</button>
+          <button class="viz-btn" onclick="zoomFit()">Fit</button>
+          <button class="viz-btn" onclick="exportSVG()">Export SVG</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="viz-sidebar__section">
+        <div class="viz-sidebar__heading">Statistics</div>
+        <div class="viz-sidebar__stats" id="stats"></div>
+      </div>
+    </aside>
+
+    <div class="viz-graph" id="viz">
       <svg id="graph"></svg>
-      <div class="viz-stats" id="stats"></div>
+      <div class="viz-hint">Scroll to zoom · Drag to pan · Click nodes to inspect</div>
     </div>
-  </main>
+  </div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
-    let graphData, simulation, svg, g, nodeEls, edgeEls;
+    let graphData, simulation, svg, g, nodeEls, edgeEls, zoomBehavior;
     let activeLayers = new Set();
     let selectedNode = null;
+
+    // English layer labels
+    const layerLabelsEN = {
+      'archiv': 'Archival Layer',
+      'digital': 'Digital Objects',
+      'werk': 'Work Layer',
+      'akteur': 'Agents',
+      'biographie': 'Biography & Events',
+      'ort': 'Places',
+      'provenienz': 'Provenance'
+    };
 
     async function init() {
       const resp = await fetch('szd-graph.json');
       graphData = await resp.json();
 
-      // Initialize all layers as active
       Object.keys(graphData.layers).forEach(l => activeLayers.add(l));
 
       buildControls();
       buildGraph();
-      document.getElementById('stats').textContent =
-        `${graphData.meta.nodeCount} Classes · ${graphData.meta.edgeCount} Relationships · v${graphData.meta.version}`;
+
+      // Stats
+      const layerStats = {};
+      graphData.nodes.forEach(n => {
+        layerStats[n.layer] = (layerStats[n.layer] || 0) + 1;
+      });
+      document.getElementById('stats').innerHTML =
+        `<strong>${graphData.meta.nodeCount}</strong> classes · <strong>${graphData.meta.edgeCount}</strong> relationships · v${graphData.meta.version}`;
     }
 
     function buildControls() {
       const ctrl = document.getElementById('controls');
       let html = '';
 
-      // Layer toggles
+      // Count nodes per layer
+      const layerCounts = {};
+      graphData.nodes.forEach(n => {
+        layerCounts[n.layer] = (layerCounts[n.layer] || 0) + 1;
+      });
+
       for (const [key, label] of Object.entries(graphData.layers)) {
         const color = graphData.layerColors[key];
-        html += `<label>
+        const enLabel = layerLabelsEN[key] || label;
+        const count = layerCounts[key] || 0;
+        html += `<label class="layer-toggle">
           <input type="checkbox" checked data-layer="${key}" onchange="toggleLayer('${key}', this.checked)">
           <span class="layer-dot" style="background:${color}"></span>
-          ${label}
+          <span class="layer-label">${enLabel}</span>
+          <span class="layer-count">${count}</span>
         </label>`;
       }
-
-      // Action buttons
-      html += `<button onclick="resetView()">Reset</button>`;
-      html += `<button onclick="exportSVG()">SVG Export</button>`;
 
       ctrl.innerHTML = html;
     }
@@ -231,11 +413,11 @@
       svg = d3.select('#graph')
         .attr('viewBox', [0, 0, width, height]);
 
-      // Zoom
-      const zoom = d3.zoom()
-        .scaleExtent([0.2, 5])
+      // Zoom — fill the space
+      zoomBehavior = d3.zoom()
+        .scaleExtent([0.15, 6])
         .on('zoom', (event) => g.attr('transform', event.transform));
-      svg.call(zoom);
+      svg.call(zoomBehavior);
 
       g = svg.append('g');
 
@@ -244,33 +426,28 @@
       defs.append('marker')
         .attr('id', 'arrow')
         .attr('viewBox', '0 -5 10 10')
-        .attr('refX', 22)
-        .attr('refY', 0)
-        .attr('markerWidth', 6)
-        .attr('markerHeight', 6)
+        .attr('refX', 22).attr('refY', 0)
+        .attr('markerWidth', 6).attr('markerHeight', 6)
         .attr('orient', 'auto')
-        .append('path')
-        .attr('d', 'M0,-5L10,0L0,5')
-        .attr('fill', '#999');
+        .append('path').attr('d', 'M0,-5L10,0L0,5').attr('fill', '#999');
 
       defs.append('marker')
         .attr('id', 'arrow-hl')
         .attr('viewBox', '0 -5 10 10')
-        .attr('refX', 22)
-        .attr('refY', 0)
-        .attr('markerWidth', 6)
-        .attr('markerHeight', 6)
+        .attr('refX', 22).attr('refY', 0)
+        .attr('markerWidth', 6).attr('markerHeight', 6)
         .attr('orient', 'auto')
-        .append('path')
-        .attr('d', 'M0,-5L10,0L0,5')
-        .attr('fill', '#7A1B2D');
+        .append('path').attr('d', 'M0,-5L10,0L0,5').attr('fill', '#631a34');
 
-      // Force simulation
+      // Force simulation — spread wider
       simulation = d3.forceSimulation(graphData.nodes)
-        .force('link', d3.forceLink(graphData.edges).id(d => d.id).distance(d => d.type === 'subClassOf' ? 60 : 120))
-        .force('charge', d3.forceManyBody().strength(-300))
+        .force('link', d3.forceLink(graphData.edges).id(d => d.id)
+          .distance(d => d.type === 'subClassOf' ? 80 : 150))
+        .force('charge', d3.forceManyBody().strength(-500).distanceMax(600))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('collision', d3.forceCollide().radius(30));
+        .force('collision', d3.forceCollide().radius(d => 12 + Math.sqrt(d.properties) * 3 + 10))
+        .force('x', d3.forceX(width / 2).strength(0.03))
+        .force('y', d3.forceY(height / 2).strength(0.03));
 
       // Edges
       edgeEls = g.append('g').attr('class', 'edges')
@@ -289,7 +466,7 @@
         .attr('dy', -4)
         .text(d => d.type === 'subClassOf' ? '' : d.label);
 
-      // Nodes
+      // Nodes — use English labels
       nodeEls = g.append('g').attr('class', 'nodes')
         .selectAll('g')
         .data(graphData.nodes)
@@ -299,7 +476,9 @@
           .on('start', dragStart)
           .on('drag', dragging)
           .on('end', dragEnd))
-        .on('click', (event, d) => showDetail(d));
+        .on('click', (event, d) => showDetail(d))
+        .on('mouseenter', (event, d) => highlightConnected(d))
+        .on('mouseleave', () => { if (!selectedNode) clearHighlight(); });
 
       nodeEls.append('circle')
         .attr('r', d => 8 + Math.sqrt(d.properties) * 3)
@@ -308,19 +487,56 @@
       nodeEls.append('text')
         .attr('dx', d => 10 + Math.sqrt(d.properties) * 3)
         .attr('dy', 3)
-        .text(d => d.label_de);
+        .text(d => d.label_en || d.label_de);
 
       // Tick
       simulation.on('tick', () => {
         edgeEls.select('line')
-          .attr('x1', d => d.source.x)
-          .attr('y1', d => d.source.y)
-          .attr('x2', d => d.target.x)
-          .attr('y2', d => d.target.y);
+          .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+          .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
         edgeEls.select('text')
           .attr('x', d => (d.source.x + d.target.x) / 2)
           .attr('y', d => (d.source.y + d.target.y) / 2);
         nodeEls.attr('transform', d => `translate(${d.x},${d.y})`);
+      });
+
+      // Auto-fit after simulation settles
+      simulation.on('end', () => zoomFit());
+    }
+
+    function highlightConnected(d) {
+      const connected = getConnectedEdges(d);
+      const connectedIds = new Set([d.id]);
+      connected.forEach(e => {
+        connectedIds.add(typeof e.source === 'object' ? e.source.id : e.source);
+        connectedIds.add(typeof e.target === 'object' ? e.target.id : e.target);
+      });
+
+      nodeEls.classed('dimmed', n => !connectedIds.has(n.id));
+      nodeEls.classed('highlight', n => n.id === d.id);
+      edgeEls.classed('dimmed', e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return !connectedIds.has(src) || !connectedIds.has(tgt);
+      });
+      edgeEls.classed('highlight', e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return connectedIds.has(src) && connectedIds.has(tgt);
+      });
+    }
+
+    function clearHighlight() {
+      nodeEls.classed('dimmed', false).classed('highlight', false);
+      edgeEls.classed('dimmed', false).classed('highlight', false);
+      applyFilter();
+    }
+
+    function getConnectedEdges(d) {
+      return graphData.edges.filter(e => {
+        const src = typeof e.source === 'object' ? e.source.id : e.source;
+        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
+        return src === d.id || tgt === d.id;
       });
     }
 
@@ -332,7 +548,6 @@
 
     function applyFilter() {
       const visible = new Set(graphData.nodes.filter(n => activeLayers.has(n.layer)).map(n => n.id));
-
       nodeEls.classed('dimmed', d => !visible.has(d.id));
       edgeEls.classed('dimmed', d => {
         const src = typeof d.source === 'object' ? d.source.id : d.source;
@@ -345,56 +560,44 @@
       selectedNode = d;
       document.getElementById('detail-name').textContent = `szdo:${d.id}`;
       const layerEl = document.getElementById('detail-layer');
-      layerEl.textContent = graphData.layers[d.layer] || d.layer;
+      layerEl.textContent = layerLabelsEN[d.layer] || d.layer;
       layerEl.style.background = d.color;
 
       document.getElementById('detail-comment').innerHTML =
-        `<p>${d.comment_de || ''}</p>` +
-        (d.comment_en ? `<p style="color:var(--sz-text-light);font-style:italic;">${d.comment_en}</p>` : '');
+        `<p>${d.comment_en || ''}</p>` +
+        (d.comment_de ? `<p class="en">${d.comment_de}</p>` : '');
 
-      // Find connected edges
-      const connected = graphData.edges.filter(e => {
-        const src = typeof e.source === 'object' ? e.source.id : e.source;
-        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
-        return src === d.id || tgt === d.id;
-      });
-
-      let linksHtml = '<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.5rem 0 0.25rem;">Relationships</h4>';
+      const connected = getConnectedEdges(d);
+      let linksHtml = '<div class="viz-detail__links-heading">Relationships</div>';
       connected.forEach(e => {
         const src = typeof e.source === 'object' ? e.source.id : e.source;
         const tgt = typeof e.target === 'object' ? e.target.id : e.target;
         if (e.type === 'subClassOf') {
-          if (src === d.id) linksHtml += `<a href="#${tgt}">↑ subClassOf ${tgt}</a>`;
-          else linksHtml += `<a href="#${src}">↓ ${src} subClassOf</a>`;
+          if (src === d.id) linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8593; subClassOf ${tgt}</a>`;
+          else linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8595; ${src} subClassOf</a>`;
         } else {
-          if (src === d.id) linksHtml += `<a href="#${tgt}">→ ${e.label} → ${tgt}</a>`;
-          else linksHtml += `<a href="#${src}">← ${src} → ${e.label}</a>`;
+          if (src === d.id) linksHtml += `<a href="#" onclick="focusNode('${tgt}');return false;">&#8594; ${e.label} &#8594; ${tgt}</a>`;
+          else linksHtml += `<a href="#" onclick="focusNode('${src}');return false;">&#8592; ${src} &#8594; ${e.label}</a>`;
         }
       });
-      linksHtml += `<h4 style="font-size:0.75rem;color:var(--sz-gold);text-transform:uppercase;margin:0.75rem 0 0.25rem;">Links</h4>`;
-      linksHtml += `<a href="./#${d.id}">→ Ontology Reference</a>`;
+      linksHtml += `<div class="viz-detail__links-heading">Links</div>`;
+      linksHtml += `<a href="./#${d.id}">&#8594; Ontology Reference</a>`;
 
       document.getElementById('detail-links').innerHTML = linksHtml;
       document.getElementById('detail').classList.add('active');
 
-      // Highlight connected
-      const connectedIds = new Set([d.id]);
-      connected.forEach(e => {
-        connectedIds.add(typeof e.source === 'object' ? e.source.id : e.source);
-        connectedIds.add(typeof e.target === 'object' ? e.target.id : e.target);
-      });
-      nodeEls.classed('dimmed', n => !connectedIds.has(n.id));
-      edgeEls.classed('dimmed', e => {
-        const src = typeof e.source === 'object' ? e.source.id : e.source;
-        const tgt = typeof e.target === 'object' ? e.target.id : e.target;
-        return !connectedIds.has(src) || !connectedIds.has(tgt);
-      });
+      highlightConnected(d);
+    }
+
+    function focusNode(id) {
+      const node = graphData.nodes.find(n => n.id === id);
+      if (node) showDetail(node);
     }
 
     function closeDetail() {
       document.getElementById('detail').classList.remove('active');
       selectedNode = null;
-      applyFilter();
+      clearHighlight();
     }
 
     function resetView() {
@@ -403,11 +606,32 @@
       Object.keys(graphData.layers).forEach(l => activeLayers.add(l));
       document.querySelectorAll('#controls input[type=checkbox]').forEach(cb => cb.checked = true);
       applyFilter();
+      zoomFit();
+    }
 
+    function zoomFit() {
       const container = document.getElementById('viz');
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      // Get bounds of all nodes
+      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      graphData.nodes.forEach(d => {
+        if (d.x < minX) minX = d.x;
+        if (d.y < minY) minY = d.y;
+        if (d.x > maxX) maxX = d.x;
+        if (d.y > maxY) maxY = d.y;
+      });
+
+      const dx = maxX - minX + 100;
+      const dy = maxY - minY + 100;
+      const scale = Math.min(width / dx, height / dy, 2) * 0.9;
+      const cx = (minX + maxX) / 2;
+      const cy = (minY + maxY) / 2;
+
       svg.transition().duration(500).call(
-        d3.zoom().transform,
-        d3.zoomIdentity.translate(container.clientWidth/2, container.clientHeight/2).scale(1).translate(-container.clientWidth/2, -container.clientHeight/2)
+        zoomBehavior.transform,
+        d3.zoomIdentity.translate(width / 2, height / 2).scale(scale).translate(-cx, -cy)
       );
     }
 
