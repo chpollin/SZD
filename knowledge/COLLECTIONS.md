@@ -73,7 +73,6 @@ Letters to and from Stefan Zweig organized by correspondence partner. Each entry
 
 - [DATA.md](DATA.md) - Correspondence corpus statistics and data gaps
 - [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema mapping
-- [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
 
 ---
 

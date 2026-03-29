@@ -34,34 +34,6 @@ Stefan Zweig Digital is a distributed digital humanities platform combining mult
 - Collections: Thematic collections and person index
 - Encoding: UTF-8 with bilingual content
 
-**CSV Catalogue Data**
-- Location: [scripts/data/](../scripts/data/)
-- Purpose: Authoritative metadata for correspondence
-- Usage: Validation and quality assurance
-
-### Presentation Layer
-
-**Frontend Technologies:**
-- CSS3 for responsive design
-- JavaScript (ES6+) for interactivity
-- Mirador image viewer integration
-- Custom UI components
-
-**Assets:**
-- Fonts: Web typography
-- Icons: UI elements and graphics
-- Images: Landing page and visual content
-- Memory Game: Educational component
-
-### Validation Layer
-
-**Python Scripts**
-- Location: [scripts/validation/](../scripts/validation/)
-- Purpose: Data quality assurance
-- Tools: TEI-XML structure validation, TEI-CSV cross-reference validation, character encoding cleanup, signature extraction, version comparison
-
-See [scripts/validation/README.md](../scripts/validation/README.md) for complete documentation.
-
 ### Archival Layer
 
 **Zenodo Pipeline**
@@ -337,7 +309,6 @@ The `docs/` folder is deployed as GitHub Pages, serving the ontology documentati
 
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure and encoding
 - [COLLECTIONS.md](COLLECTIONS.md) - Collection-specific details
-- [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
 - [../szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Archival pipeline
 
 ---

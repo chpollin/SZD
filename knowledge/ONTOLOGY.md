@@ -1,8 +1,29 @@
 # Stefan Zweig Digital Nachlass-Ontologie (SZDO)
 
-Entwurf einer formalen Ontologie für den digitalen Nachlass von Stefan Zweig. Die Ontologie modelliert archivalische, bibliographische und biographische Entitäten und deren Beziehungen — abgeleitet aus der Archivwissenschaft (Records in Context), ergänzt durch bibliothekarische Standards (IFLA LRM) und kulturerbe-orientierte Modelle (CIDOC-CRM).
+Formale Ontologie fuer den digitalen Nachlass von Stefan Zweig. Die Ontologie modelliert archivalische, bibliographische und biographische Entitaeten und deren Beziehungen -- abgeleitet aus der Archivwissenschaft (Records in Context), ergaenzt durch bibliothekarische Standards (IFLA LRM) und kulturerbe-orientierte Modelle (CIDOC-CRM).
 
-**Namespace:** `https://gams.uni-graz.at/o:szd.ontology#` (Prefix: `szdo:`)
+## Zwei-Schichten-Architektur (ab v1.2.0)
+
+Die SZDO baut auf der **generischen Nachlass-Ontologie** (`nachlass:`) auf, die nachlassunabhaengig nachgenutzt werden kann:
+
+| Schicht | Namespace | Datei | Zweck |
+|---------|-----------|-------|-------|
+| **Generisch** | `https://w3id.org/nachlass#` (`nachlass:`) | `nachlass-ontology.ttl` | Nachnutzbare Kern-Ontologie fuer beliebige Nachlass-Projekte |
+| **SZD-spezifisch** | `https://gams.uni-graz.at/o:szd.ontology#` (`szdo:`) | `szd-ontology.ttl` | Stefan Zweig Digital: GAMS-PIDs, Klawiter, Werktypen, Kompatibilitaetsschicht |
+
+Die SZDO importiert `nachlass:` via `owl:imports` und spezialisiert die Kernklassen:
+
+```
+nachlass:Nachlass          <--- szdo:Nachlass (+ szdo:entsprichtPID, GAMS-Kontext)
+nachlass:NachlassObjekt    <--- szdo:NachlassObjekt (+ SZD-spezifische Subklassen)
+nachlass:Werk              <--- szdo:Werk (+ Werktypen, Klawiter-Integration)
+nachlass:Akteur            <--- szdo:Akteur (+ SZDPER-PIDs)
+nachlass:BiographischesEreignis <--- szdo:BiographischesEreignis (+ SZDBIO-PIDs)
+nachlass:Ort               <--- szdo:Ort (+ SZDSTA-PIDs)
+```
+
+**Namespace (SZDO):** `https://gams.uni-graz.at/o:szd.ontology#` (Prefix: `szdo:`)
+**Namespace (Nachlass):** `https://w3id.org/nachlass#` (Prefix: `nachlass:`)
 
 ---
 

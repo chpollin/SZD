@@ -36,14 +36,16 @@ from rdflib.namespace import SKOS
 # ---------------------------------------------------------------------------
 SZDO = Namespace("https://gams.uni-graz.at/o:szd.ontology#")
 SZDG = Namespace("https://gams.uni-graz.at/o:szd.glossar#")
+NACHLASS = Namespace("https://w3id.org/nachlass#")
 RICO = Namespace("https://www.ica.org/standards/RiC/ontology#")
 LRM  = Namespace("http://iflastandards.info/ns/lrm/lrmer/")
 CRM  = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 GAMS = Namespace("https://gams.uni-graz.at/o:gams-ontology#")
 DCTERMS = Namespace("http://purl.org/dc/terms/")
 
-ONTOLOGY_FILE = Path(__file__).parent / "szd-ontology.ttl"
-SHAPES_FILE   = Path(__file__).parent / "szd-shapes.ttl"
+ONTOLOGY_FILE  = Path(__file__).parent / "szd-ontology.ttl"
+NACHLASS_FILE  = Path(__file__).parent / "nachlass-ontology.ttl"
+SHAPES_FILE    = Path(__file__).parent / "szd-shapes.ttl"
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -119,10 +121,18 @@ def stage_syntax(result, verbose=False):
         g.parse(str(ONTOLOGY_FILE), format="turtle")
         n_triples = len(g)
         result.add_info("SYNTAX", f"Parsed OK: {n_triples} triples from {ONTOLOGY_FILE.name}")
-        return g
     except Exception as e:
         result.error("SYNTAX", f"Failed to parse {ONTOLOGY_FILE.name}: {e}")
         return None
+    # Also load the generic nachlass ontology if present
+    if NACHLASS_FILE.exists():
+        try:
+            g.parse(str(NACHLASS_FILE), format="turtle")
+            result.add_info("SYNTAX", f"Parsed OK: nachlass-ontology.ttl ({len(g) - n_triples} additional triples)")
+        except Exception as e:
+            result.error("SYNTAX", f"Failed to parse {NACHLASS_FILE.name}: {e}")
+            return None
+    return g
 
 
 # ---------------------------------------------------------------------------
@@ -692,13 +702,58 @@ def stage_competency_questions(g, result, verbose=False):
             """,
             "expected": True,
         },
+        # CQ-G1: Nachlass-Ontologie imported
+        {
+            "id": "CQ-G1",
+            "question": "Importiert die SZDO die generische Nachlass-Ontologie?",
+            "query": """
+                ASK {
+                    <https://gams.uni-graz.at/o:szd.ontology> owl:imports <https://w3id.org/nachlass> .
+                }
+            """,
+            "expected": True,
+        },
+        # CQ-G2: Core classes aligned to nachlass:
+        {
+            "id": "CQ-G2",
+            "question": "Sind die Kernklassen mit nachlass: aligniert?",
+            "query": """
+                ASK {
+                    szdo:Nachlass rdfs:subClassOf nachlass:Nachlass .
+                    szdo:NachlassObjekt rdfs:subClassOf nachlass:NachlassObjekt .
+                    szdo:Werk rdfs:subClassOf nachlass:Werk .
+                    szdo:Akteur rdfs:subClassOf nachlass:Akteur .
+                    szdo:BiographischesEreignis rdfs:subClassOf nachlass:BiographischesEreignis .
+                    szdo:Ort rdfs:subClassOf nachlass:Ort .
+                }
+            """,
+            "expected": True,
+        },
+        # CQ-G3: nachlass: ontology is self-contained
+        {
+            "id": "CQ-G3",
+            "question": "Definiert die nachlass:-Ontologie eigenstaendige Kernklassen?",
+            "query": """
+                ASK {
+                    nachlass:Nachlass a owl:Class .
+                    nachlass:NachlassObjekt a owl:Class .
+                    nachlass:Werk a owl:Class .
+                    nachlass:Person a owl:Class .
+                    nachlass:BiographischesEreignis a owl:Class .
+                    nachlass:Ort a owl:Class .
+                    nachlass:Provenienzereignis a owl:Class .
+                }
+            """,
+            "expected": True,
+        },
     ]
 
     # Bind prefixes for queries
     prefix_block = """
-        PREFIX szdo:    <https://gams.uni-graz.at/o:szd.ontology#>
-        PREFIX szdg:    <https://gams.uni-graz.at/o:szd.glossar#>
-        PREFIX rico:    <https://www.ica.org/standards/RiC/ontology#>
+        PREFIX szdo:     <https://gams.uni-graz.at/o:szd.ontology#>
+        PREFIX szdg:     <https://gams.uni-graz.at/o:szd.glossar#>
+        PREFIX nachlass: <https://w3id.org/nachlass#>
+        PREFIX rico:     <https://www.ica.org/standards/RiC/ontology#>
         PREFIX lrm:     <http://iflastandards.info/ns/lrm/lrmer/>
         PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
         PREFIX owl:     <http://www.w3.org/2002/07/owl#>

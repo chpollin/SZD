@@ -8,10 +8,11 @@ tags: [mapping, zweig, tei, csv]
 
 # Purpose  
 
-Define an *exhaustive, one-to-one* mapping from each **CSV column** in
-`data/*.csv` to the corresponding **TEI element / attribute / value**
-inside every `tei/*.xml` file.  
-These rules are the contract the validation script must follow.
+Define an *exhaustive, one-to-one* mapping from each **CSV column** (external catalogue data)
+to the corresponding **TEI element / attribute / value** inside every TEI-XML file.
+These rules document the schema contract between catalogue metadata and TEI encoding.
+
+> **Note:** The CSV catalogue files are not part of this repository. This document serves as a reference for the encoding schema.
 
 ---
 

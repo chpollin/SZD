@@ -336,11 +336,7 @@ All files validate against TEI P5 schema with SZD-specific customizations.
 
 ### Quality Assurance
 
-See [../scripts/validation/README.md](../scripts/validation/README.md) for validation tools including:
-
-- `validate_tei_csv.py` - TEI-XML structure validation
-- `validate_tei_against_csv.py` - Cross-reference validation
-- `fix_mojibake.py` - Character encoding cleanup
+Ontology validation: `python ontology/validate.py` (6-stage pipeline including SHACL and competency questions).
 
 ---
 

@@ -73,9 +73,6 @@ Read [ARCHITECTURE.md](ARCHITECTURE.md) for overall system design and platform i
 
 ## External Documentation
 
-### Validation & Quality
-- [scripts/validation/README.md](../scripts/validation/README.md) - TEI-CSV validation tools
-
 ### Archival Pipeline
 - [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Zenodo backup automation
 

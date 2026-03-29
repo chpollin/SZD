@@ -33,11 +33,9 @@ The [szd-zenodo-backup/](szd-zenodo-backup/) directory provides an automated arc
 
 Documentation includes quick start guides, technical details, FAIR principles analysis, and data quality assessments. See [szd-zenodo-backup/README.md](szd-zenodo-backup/README.md) for usage instructions.
 
-### Validation Tools
+### Scripts
 
-The [scripts/](scripts/) directory contains cross-cutting data validation and quality assurance utilities. The [validation/](scripts/validation/) subdirectory provides a suite of tools for TEI-XML and CSV validation, including offline validators, synchronization utilities, character encoding cleanup, signature extraction, and version comparison tools. The [data/](scripts/data/) subdirectory contains catalogue CSV files used for validation purposes.
-
-See [scripts/validation/README.md](scripts/validation/README.md) for detailed documentation on each validation tool.
+The [scripts/](scripts/) directory contains data processing and reconciliation tools, including instance data generation (`generate_instances.py`) and Klawiter bibliography reconciliation (`reconcile_klawiter.py`).
 
 ### Nachlass-Ontologie (SZDO)
 
@@ -45,10 +43,10 @@ The [ontology/](ontology/) directory contains the **Stefan Zweig Digital Nachlas
 
 - **Live Documentation:** https://chpollin.github.io/SZD/ontology/
 - **Namespace:** `https://gams.uni-graz.at/o:szd.ontology#`
-- **Version:** 1.1.0 (adds date evidence, agent role hierarchy, RiC alignments)
-- **Scope:** 72 classes (58 core + 14 GAMS compatibility), 132 properties (79 core + 53 GAMS compatibility)
-- **GAMS Compatibility:** Full backward-compatible mapping from English v0.x names to German v1.1.0 names via `owl:equivalentClass/Property`
-- **Validation:** 6-stage pipeline (Syntax, SHACL, OWL, OntoClean, 19 Competency Questions) — run `python ontology/validate.py`
+- **Version:** 1.2.0 (two-layer architecture: generic `nachlass:` + SZD-specific `szdo:`)
+- **Generic Ontology:** `nachlass-ontology.ttl` (`https://w3id.org/nachlass#`) -- reusable for any estate project
+- **GAMS Compatibility:** Full backward-compatible mapping from English v0.x names via `owl:equivalentClass/Property`
+- **Validation:** 6-stage pipeline (Syntax, SHACL, OWL, OntoClean, 22 Competency Questions) -- run `python ontology/validate.py`
 - **Design Document:** [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md)
 
 ### GitHub Pages

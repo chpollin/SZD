@@ -1,18 +1,19 @@
-@prefix szdo:    <https://gams.uni-graz.at/o:szd.ontology#> .
-@prefix szdg:    <https://gams.uni-graz.at/o:szd.glossar#> .
-@prefix gams:    <https://gams.uni-graz.at/o:gams-ontology#> .
-@prefix rico:    <https://www.ica.org/standards/RiC/ontology#> .
-@prefix lrm:     <http://iflastandards.info/ns/lrm/lrmer/> .
-@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix dc:      <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
-@prefix schema:  <https://schema.org/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix szdo:     <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix nachlass: <https://w3id.org/nachlass#> .
+@prefix szdg:     <https://gams.uni-graz.at/o:szd.glossar#> .
+@prefix gams:     <https://gams.uni-graz.at/o:gams-ontology#> .
+@prefix rico:     <https://www.ica.org/standards/RiC/ontology#> .
+@prefix lrm:      <http://iflastandards.info/ns/lrm/lrmer/> .
+@prefix crm:      <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix schema:   <https://schema.org/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 
 # =============================================================================
 # Stefan Zweig Digital Nachlass-Ontologie (SZDO)
@@ -29,9 +30,9 @@
 
 <https://gams.uni-graz.at/o:szd.ontology>
     a owl:Ontology ;
-    owl:versionInfo "1.1.0" ;
-    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
-    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.0.0> ;
+    owl:versionInfo "1.2.0" ;
+    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
+    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
     dcterms:title "Stefan Zweig Digital Nachlass-Ontologie"@de ,
                   "Stefan Zweig Digital Estate Ontology"@en ;
     dcterms:description
@@ -41,7 +42,8 @@
     dcterms:created "2026-03-29"^^xsd:date ;
     dcterms:modified "2026-03-29"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:imports <https://www.ica.org/standards/RiC/ontology> ;
+    owl:imports <https://www.ica.org/standards/RiC/ontology> ,
+               <https://w3id.org/nachlass> ;
     owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
     rdfs:isDefinedBy <https://chpollin.github.io/SZD/ontology/> ;
     rdfs:seeAlso <https://stefanzweig.digital> ;
@@ -61,7 +63,7 @@
 
 szdo:Nachlass
     a owl:Class ;
-    rdfs:subClassOf rico:RecordSet ;
+    rdfs:subClassOf rico:RecordSet , nachlass:Nachlass ;
     rdfs:label "Nachlass"@de , "Estate"@en ;
     rdfs:comment
         "Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe."@de ,
@@ -74,7 +76,7 @@ szdo:Nachlass
 
 szdo:Sammlung
     a owl:Class ;
-    rdfs:subClassOf rico:RecordSet ;
+    rdfs:subClassOf rico:RecordSet , nachlass:Sammlung ;
     rdfs:label "Sammlung"@de , "Collection"@en ;
     rdfs:comment
         "Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz."@de ,
@@ -149,7 +151,7 @@ szdo:ThematischeSammlung
 
 szdo:NachlassObjekt
     a owl:Class ;
-    rdfs:subClassOf rico:Record ;
+    rdfs:subClassOf rico:Record , nachlass:NachlassObjekt ;
     rdfs:label "Nachlassobjekt"@de , "Estate Object"@en ;
     rdfs:comment
         "Einzelnes physisches Objekt im Nachlass."@de ,
@@ -241,7 +243,7 @@ szdo:Lebensdokument
 
 szdo:DigitalesObjekt
     a owl:Class ;
-    rdfs:subClassOf rico:Instantiation ;
+    rdfs:subClassOf rico:Instantiation , nachlass:DigitalesObjekt ;
     rdfs:label "Digitales Objekt"@de , "Digital Object"@en ;
     rdfs:comment
         "Digitale Repräsentation eines physischen Nachlassobjekts."@de ,
@@ -363,7 +365,7 @@ szdo:Werk
     rdfs:comment
         "Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex."@de ,
         "Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index."@en ;
-    rdfs:subClassOf lrm:Work ;
+    rdfs:subClassOf lrm:Work , nachlass:Werk ;
     szdo:entsprichtPID "o:szd.werkindex" .
 
 szdo:WerkExpression
@@ -476,7 +478,7 @@ szdo:Akteur
     rdfs:comment "Person oder Organisation mit Bezug zum Nachlass."@de ,
                  "Person or organization related to the estate."@en ;
     owl:equivalentClass rico:Agent ;
-    rdfs:subClassOf crm:E39_Actor .
+    rdfs:subClassOf crm:E39_Actor , nachlass:Akteur .
 
 szdo:Person
     a owl:Class ;
@@ -512,7 +514,7 @@ szdo:BiographischesEreignis
     rdfs:comment
         "Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender."@de ,
         "Event in Stefan Zweig's life. Corresponds to SZDBIO entries in the life calendar."@en ;
-    rdfs:subClassOf crm:E5_Event ;
+    rdfs:subClassOf crm:E5_Event , nachlass:BiographischesEreignis ;
     szdo:entsprichtPID "o:szd.lebenskalender" .
 
 szdo:Geburt
@@ -577,7 +579,7 @@ szdo:Ort
     rdfs:comment "Geographischer oder institutioneller Ort."@de ,
                  "Geographical or institutional place."@en ;
     owl:equivalentClass rico:Place ;
-    rdfs:subClassOf crm:E53_Place .
+    rdfs:subClassOf crm:E53_Place , nachlass:Ort .
 
 szdo:GeographischerOrt
     a owl:Class ;
