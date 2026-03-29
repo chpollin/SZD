@@ -161,11 +161,11 @@ Physisches Objekt (Archiv)
 
 | Daten | Lizenz |
 |-------|--------|
-| TEI-XML Quelldaten | CC-BY-NC-SA 4.0 |
+| TEI-XML Quelldaten | CC-BY 4.0 |
 | Ontologie (SZDO) | CC-BY 4.0 |
 | Zenodo-Archiv | CC-BY 4.0 |
 | Quellcode | CC-BY 4.0 |
-| Faksimiles | CC-BY-NC-SA 4.0 (Literaturarchiv Salzburg) |
+| Faksimiles | CC-BY 4.0 (Literaturarchiv Salzburg) |
 
 ### Zitierweise
 

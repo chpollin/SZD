@@ -316,7 +316,7 @@ Subject terminology for classification and indexing:
 All collections are published under Creative Commons licenses:
 
 - **Most collections:** CC-BY 4.0
-- **Some collections:** CC-BY-NC 4.0 or CC-BY-NC-SA 4.0
+- **All collections:** CC-BY 4.0
 
 License information is specified in each TEI header `<availability>` element.
 
