@@ -20,102 +20,73 @@ if sys.platform == "win32":
 
 ONTOLOGY_FILE = Path(__file__).parent / "szd-ontology.ttl"
 OUTPUT_FILE = Path(__file__).parent.parent / "docs" / "ontology" / "szd-graph.json"
+CONFIG_FILE = Path(__file__).parent / "graph-config.json"
 
 SZDO = Namespace("https://gams.uni-graz.at/o:szd.ontology#")
 RICO = Namespace("https://www.ica.org/standards/RiC/ontology#")
 LRM  = Namespace("http://iflastandards.info/ns/lrm/lrmer/")
 CRM  = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 
+
+def load_config():
+    """Load layer configuration from graph-config.json."""
+    with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+        config = json.load(f)
+
+    layer_colors = {key: val["color"] for key, val in config["layers"].items()}
+    layer_labels = {key: val["label"] for key, val in config["layers"].items()}
+    class_to_layer = config["classToLayer"]
+    default_color = config.get("defaultColor", "#7A1B2D")
+
+    return class_to_layer, layer_colors, layer_labels, default_color
+
+
 def local_name(uri):
     s = str(uri)
     return s.split("#")[-1] if "#" in s else s.split("/")[-1]
 
+
 def is_szdo(uri):
     return str(uri).startswith(str(SZDO))
+
 
 def is_deprecated(g, uri):
     return (uri, OWL.deprecated, Literal(True)) in g
 
-# Layer assignment based on class hierarchy
-LAYER_MAP = {
-    "Nachlass": "archiv", "Sammlung": "archiv", "Werksammlung": "archiv",
-    "Korrespondenzsammlung": "archiv", "Autographensammlung": "archiv",
-    "Bibliothekssammlung": "archiv", "Lebensdokumentesammlung": "archiv",
-    "Aufsatzsammlung": "archiv", "ThematischeSammlung": "archiv",
-    "NachlassObjekt": "archiv", "Manuskript": "archiv", "Typoskript": "archiv",
-    "Typoskriptdurchschlag": "archiv", "Notizbuch": "archiv", "Konvolut": "archiv",
-    "Korrekturfahne": "archiv", "KorrespondenzKonvolut": "archiv",
-    "Autograph": "archiv", "Buch": "archiv", "Lebensdokument": "archiv",
-    "Umfang": "archiv", "Beilage": "archiv",
-    "DigitalesObjekt": "digital", "METSObjekt": "digital",
-    "IIIFManifest": "digital", "Faksimile": "digital",
-    "Werk": "werk", "WerkExpression": "werk", "Manifestation": "werk",
-    "Exemplar": "werk", "BelletristischesWerk": "werk",
-    "EssayistischesWerk": "werk", "BiographischesWerk": "werk",
-    "HistorischesWerk": "werk", "DramatischesWerk": "werk",
-    "LyrischesWerk": "werk", "SammelWerk": "werk",
-    "Uebersetzungswerk": "werk", "VorwortNachwort": "werk",
-    "Sekundaerliteratur": "werk",
-    "Akteur": "akteur", "Person": "akteur", "Organisation": "akteur",
-    "BiographischesEreignis": "biographie", "Geburt": "biographie",
-    "Tod": "biographie", "Reise": "biographie",
-    "Publikationsereignis": "biographie", "Begegnung": "biographie",
-    "InstitutionellesEreignis": "biographie", "Exilereignis": "biographie",
-    "WissenschaftlichesEreignis": "biographie",
-    "Ort": "ort", "GeographischerOrt": "ort",
-    "Aufbewahrungsort": "ort", "Entstehungsort": "ort",
-    "Provenienzereignis": "provenienz",
-    "ProvenienzmerkmalInstanz": "provenienz",
-}
 
-LAYER_COLORS = {
-    "archiv": "#1a6b47",
-    "digital": "#2c7da0",
-    "werk": "#2c5aa0",
-    "akteur": "#e67e22",
-    "biographie": "#8b5e3c",
-    "ort": "#6a5acd",
-    "provenienz": "#9b3a4e",
-}
-
-LAYER_LABELS = {
-    "archiv": "Archivschicht",
-    "digital": "Digitale Objekte",
-    "werk": "Werkschicht",
-    "akteur": "Akteure",
-    "biographie": "Biographie & Ereignisse",
-    "ort": "Orte",
-    "provenienz": "Provenienz",
-}
+def _get_lang_dict(g, uri, predicate):
+    """Extract a {language: text} dict for a given predicate on uri."""
+    result = {}
+    for obj in g.objects(uri, predicate):
+        if hasattr(obj, "language") and obj.language:
+            result[obj.language] = str(obj)
+    return result
 
 
-def main():
-    print("SZDO Graph Data Generator")
-    print("=" * 40)
+def read_ontology_version(g):
+    """Read owl:versionInfo from the ontology URI in the graph."""
+    onto_uri = URIRef("https://gams.uni-graz.at/o:szd.ontology")
+    version_info = list(g.objects(onto_uri, OWL.versionInfo))
+    return str(version_info[0]) if version_info else "unknown"
 
-    g = Graph()
-    g.parse(str(ONTOLOGY_FILE), format="turtle")
-    print(f"Loaded {len(g)} triples.")
 
+def collect_nodes(g, class_to_layer, layer_colors):
+    """Collect non-deprecated SZDO classes as node dicts.
+
+    Returns a tuple (nodes, node_ids) where nodes is a list of dicts
+    and node_ids is a set of local names.
+    """
     nodes = []
     node_ids = set()
-    edges = []
 
-    # Collect non-deprecated SZDO classes
     for cls in g.subjects(RDF.type, OWL.Class):
         if not is_szdo(cls) or is_deprecated(g, cls):
             continue
         name = local_name(cls)
-        labels = {}
-        for obj in g.objects(cls, RDFS.label):
-            if hasattr(obj, "language") and obj.language:
-                labels[obj.language] = str(obj)
-        comments = {}
-        for obj in g.objects(cls, RDFS.comment):
-            if hasattr(obj, "language") and obj.language:
-                comments[obj.language] = str(obj)
+        labels = _get_lang_dict(g, cls, RDFS.label)
+        comments = _get_lang_dict(g, cls, RDFS.comment)
 
-        layer = LAYER_MAP.get(name, "other")
+        layer = class_to_layer.get(name, "other")
 
         # Count properties where this class is domain
         prop_count = 0
@@ -134,10 +105,20 @@ def main():
             "comment_de": comments.get("de", ""),
             "comment_en": comments.get("en", ""),
             "layer": layer,
-            "color": LAYER_COLORS.get(layer, "#999"),
+            "color": layer_colors.get(layer, "#999"),
             "properties": prop_count,
         })
         node_ids.add(name)
+
+    return nodes, node_ids
+
+
+def collect_edges(g, node_ids, class_to_layer, layer_colors, default_color):
+    """Collect subClassOf and ObjectProperty edges.
+
+    Returns a list of edge dicts.
+    """
+    edges = []
 
     # SubClassOf edges
     for cls in g.subjects(RDF.type, OWL.Class):
@@ -156,15 +137,12 @@ def main():
                         "color": "#999",
                     })
 
-    # Object Property edges (domain → range)
+    # Object Property edges (domain -> range)
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
         if not is_szdo(prop) or is_deprecated(g, prop):
             continue
         pname = local_name(prop)
-        labels = {}
-        for obj in g.objects(prop, RDFS.label):
-            if hasattr(obj, "language") and obj.language:
-                labels[obj.language] = str(obj)
+        labels = _get_lang_dict(g, prop, RDFS.label)
 
         domains = [local_name(d) for d in g.objects(prop, RDFS.domain)
                    if is_szdo(d) and not isinstance(d, BNode) and local_name(d) in node_ids]
@@ -179,17 +157,36 @@ def main():
                     "type": "property",
                     "label": pname,
                     "label_de": labels.get("de", pname),
-                    "color": LAYER_COLORS.get(LAYER_MAP.get(d, "other"), "#7A1B2D"),
+                    "color": layer_colors.get(class_to_layer.get(d, "other"), default_color),
                 })
+
+    return edges
+
+
+def main():
+    print("SZDO Graph Data Generator")
+    print("=" * 40)
+
+    class_to_layer, layer_colors, layer_labels, default_color = load_config()
+
+    g = Graph()
+    g.parse(str(ONTOLOGY_FILE), format="turtle")
+    print(f"Loaded {len(g)} triples.")
+
+    version = read_ontology_version(g)
+    print(f"Ontology version: {version}")
+
+    nodes, node_ids = collect_nodes(g, class_to_layer, layer_colors)
+    edges = collect_edges(g, node_ids, class_to_layer, layer_colors, default_color)
 
     graph_data = {
         "nodes": nodes,
         "edges": edges,
-        "layers": LAYER_LABELS,
-        "layerColors": LAYER_COLORS,
+        "layers": layer_labels,
+        "layerColors": layer_colors,
         "meta": {
             "title": "Stefan Zweig Digital Nachlass-Ontologie",
-            "version": "1.0.0",
+            "version": version,
             "nodeCount": len(nodes),
             "edgeCount": len(edges),
         }

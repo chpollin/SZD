@@ -1,5 +1,5 @@
 """
-Stefan Zweig Digital Nachlass-Ontologie — Validation Pipeline
+Stefan Zweig Digital Nachlass-Ontologie -- Validation Pipeline
 ==============================================================
 
 Runs a multi-stage validation of szd-ontology.ttl:
@@ -46,6 +46,23 @@ DCTERMS = Namespace("http://purl.org/dc/terms/")
 ONTOLOGY_FILE  = Path(__file__).parent / "szd-ontology.ttl"
 NACHLASS_FILE  = Path(__file__).parent / "nachlass-ontology.ttl"
 SHAPES_FILE    = Path(__file__).parent / "szd-shapes.ttl"
+
+# ---------------------------------------------------------------------------
+# SPARQL prefix block for competency question tests (defined once)
+# ---------------------------------------------------------------------------
+CQ_PREFIX_BLOCK = """
+    PREFIX szdo:     <https://gams.uni-graz.at/o:szd.ontology#>
+    PREFIX szdg:     <https://gams.uni-graz.at/o:szd.glossar#>
+    PREFIX nachlass: <https://w3id.org/nachlass#>
+    PREFIX rico:     <https://www.ica.org/standards/RiC/ontology#>
+    PREFIX lrm:     <http://iflastandards.info/ns/lrm/lrmer/>
+    PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+    PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+"""
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -221,7 +238,7 @@ def stage_shacl(g, result, verbose=False):
                 print(results_text[:2000])
 
     except ImportError:
-        result.warn("SHACL", "pyshacl not installed — skipping SHACL validation.")
+        result.warn("SHACL", "pyshacl not installed -- skipping SHACL validation.")
     except Exception as e:
         result.error("SHACL", f"SHACL validation error: {e}")
 
@@ -233,6 +250,142 @@ def stage_shacl(g, result, verbose=False):
 def is_deprecated(g, uri):
     """Check if a resource is marked owl:deprecated true."""
     return (uri, OWL.deprecated, Literal(True)) in g
+
+
+def _check_labels(g, classes, result):
+    """4a: rdfs:label in de and en; 4b: rdfs:comment present."""
+    for cls in classes:
+        labels = list(g.objects(cls, RDFS.label))
+        langs = {l.language for l in labels if hasattr(l, "language") and l.language}
+        name = local_name(cls)
+        if "de" not in langs:
+            result.error("OWL", f"Class '{name}' missing rdfs:label@de")
+        if "en" not in langs:
+            result.error("OWL", f"Class '{name}' missing rdfs:label@en")
+
+    for cls in classes:
+        comments = list(g.objects(cls, RDFS.comment))
+        if not comments:
+            result.warn("OWL", f"Class '{local_name(cls)}' has no rdfs:comment")
+
+
+def _check_hierarchy(g, classes, result):
+    """4c: orphan classes (no superclass); 4i: circular subClassOf."""
+    # 4c
+    for cls in classes:
+        parents = list(g.objects(cls, RDFS.subClassOf))
+        equivs = list(g.objects(cls, OWL.equivalentClass))
+        if not parents and not equivs:
+            result.error("OWL", f"Class '{local_name(cls)}' has no rdfs:subClassOf -- orphaned in hierarchy")
+
+    # 4i
+    for cls in classes:
+        visited = set()
+        current = cls
+        is_cyclic = False
+        while True:
+            if current in visited:
+                is_cyclic = True
+                break
+            visited.add(current)
+            parents = [p for p in g.objects(current, RDFS.subClassOf) if is_szdo(p)]
+            if not parents:
+                break
+            current = parents[0]
+        if is_cyclic:
+            result.error("OWL", f"Circular subClassOf detected involving '{local_name(cls)}'")
+
+
+def _check_naming(g, classes, obj_props, dat_props, result):
+    """4d: ObjectProperty lowercase; 4e: DatatypeProperty lowercase; 4f: Class uppercase."""
+    for prop in obj_props:
+        name = local_name(prop)
+        if name and name[0].isupper():
+            result.warn("OWL", f"ObjectProperty '{name}' starts with uppercase -- convention is lowercase")
+
+    for prop in dat_props:
+        name = local_name(prop)
+        if name and name[0].isupper():
+            result.warn("OWL", f"DatatypeProperty '{name}' starts with uppercase -- convention is lowercase")
+
+    for cls in classes:
+        name = local_name(cls)
+        if name and name[0].islower():
+            result.warn("OWL", f"Class '{name}' starts with lowercase -- convention is uppercase")
+
+
+def _check_property_constraints(g, obj_props, dat_props, result):
+    """4g: multiple rdfs:domain; 4h: multiple rdfs:range; 4j: missing domain; 4k: missing range."""
+    all_props = list(obj_props) + list(dat_props)
+
+    # 4g
+    for prop in all_props:
+        domains = list(g.objects(prop, RDFS.domain))
+        if len(domains) > 1:
+            result.warn("OWL",
+                f"Property '{local_name(prop)}' has {len(domains)} rdfs:domain declarations -- "
+                f"in OWL this means intersection (AND), not union. Consider using owl:unionOf.")
+
+    # 4h
+    for prop in all_props:
+        ranges = list(g.objects(prop, RDFS.range))
+        if len(ranges) > 1:
+            result.warn("OWL",
+                f"Property '{local_name(prop)}' has {len(ranges)} rdfs:range declarations -- "
+                f"in OWL this means intersection. Consider using owl:unionOf.")
+
+    # 4j
+    for prop in obj_props:
+        domains = list(g.objects(prop, RDFS.domain))
+        if not domains:
+            result.warn("OWL", f"ObjectProperty '{local_name(prop)}' has no rdfs:domain")
+
+    # 4k
+    for prop in obj_props:
+        ranges = list(g.objects(prop, RDFS.range))
+        if not ranges:
+            result.warn("OWL", f"ObjectProperty '{local_name(prop)}' has no rdfs:range")
+
+
+def _check_inverses(g, obj_props, result):
+    """4l: owl:inverseOf consistency."""
+    for prop in obj_props:
+        inverses = list(g.objects(prop, OWL.inverseOf))
+        for inv in inverses:
+            back_inverses = list(g.objects(inv, OWL.inverseOf))
+            if prop not in back_inverses:
+                result.warn("OWL",
+                    f"'{local_name(prop)}' declares owl:inverseOf '{local_name(inv)}' "
+                    f"but '{local_name(inv)}' does not declare inverse back")
+
+
+def _check_disjointness(g, classes, result):
+    """4m: sibling classes should ideally be disjoint."""
+    parent_children = defaultdict(list)
+    for cls in classes:
+        for parent in g.objects(cls, RDFS.subClassOf):
+            if is_szdo(parent):
+                parent_children[parent].append(cls)
+
+    disjoint_missing = 0
+    for parent, children in parent_children.items():
+        if len(children) > 1:
+            has_disjoint = False
+            for i, c1 in enumerate(children):
+                for c2 in children[i+1:]:
+                    d1 = list(g.objects(c1, OWL.disjointWith))
+                    d2 = list(g.objects(c2, OWL.disjointWith))
+                    if c2 in d1 or c1 in d2:
+                        has_disjoint = True
+                        break
+            if not has_disjoint:
+                disjoint_missing += 1
+
+    if disjoint_missing > 0:
+        result.warn("OWL",
+            f"{disjoint_missing} parent classes have siblings without owl:disjointWith. "
+            f"Consider adding disjointness axioms for clearer semantics.")
+
 
 def stage_owl_checks(g, result, verbose=False):
     print("[4/6] OWL Consistency Checks ...")
@@ -250,129 +403,12 @@ def stage_owl_checks(g, result, verbose=False):
     if n_dep_cls or n_dep_prop:
         result.add_info("OWL", f"Skipping {n_dep_cls} deprecated classes, {n_dep_prop} deprecated properties (GAMS v0.x compatibility layer)")
 
-    # 4a: Every szdo: class should have rdfs:label in both de and en
-    for cls in szdo_classes:
-        labels = list(g.objects(cls, RDFS.label))
-        langs = {l.language for l in labels if hasattr(l, "language") and l.language}
-        name = local_name(cls)
-        if "de" not in langs:
-            result.error("OWL", f"Class '{name}' missing rdfs:label@de")
-        if "en" not in langs:
-            result.error("OWL", f"Class '{name}' missing rdfs:label@en")
-
-    # 4b: Every szdo: class should have rdfs:comment
-    for cls in szdo_classes:
-        comments = list(g.objects(cls, RDFS.comment))
-        if not comments:
-            result.warn("OWL", f"Class '{local_name(cls)}' has no rdfs:comment")
-
-    # 4c: Every szdo: class should have a superclass (no orphans)
-    for cls in szdo_classes:
-        parents = list(g.objects(cls, RDFS.subClassOf))
-        equivs = list(g.objects(cls, OWL.equivalentClass))
-        if not parents and not equivs:
-            result.error("OWL", f"Class '{local_name(cls)}' has no rdfs:subClassOf — orphaned in hierarchy")
-
-    # 4d: ObjectProperty naming — should start with lowercase
-    for prop in szdo_obj:
-        name = local_name(prop)
-        if name and name[0].isupper():
-            result.warn("OWL", f"ObjectProperty '{name}' starts with uppercase — convention is lowercase")
-
-    # 4e: DatatypeProperty naming — should start with lowercase
-    for prop in szdo_dat:
-        name = local_name(prop)
-        if name and name[0].isupper():
-            result.warn("OWL", f"DatatypeProperty '{name}' starts with uppercase — convention is lowercase")
-
-    # 4f: Class naming — should start with uppercase
-    for cls in szdo_classes:
-        name = local_name(cls)
-        if name and name[0].islower():
-            result.warn("OWL", f"Class '{name}' starts with lowercase — convention is uppercase")
-
-    # 4g: Check for multiple rdfs:domain on the same property (creates intersection, not union!)
-    for prop in list(szdo_obj) + list(szdo_dat):
-        domains = list(g.objects(prop, RDFS.domain))
-        if len(domains) > 1:
-            result.warn("OWL",
-                f"Property '{local_name(prop)}' has {len(domains)} rdfs:domain declarations — "
-                f"in OWL this means intersection (AND), not union. Consider using owl:unionOf.")
-
-    # 4h: Check for multiple rdfs:range on the same property
-    for prop in list(szdo_obj) + list(szdo_dat):
-        ranges = list(g.objects(prop, RDFS.range))
-        if len(ranges) > 1:
-            result.warn("OWL",
-                f"Property '{local_name(prop)}' has {len(ranges)} rdfs:range declarations — "
-                f"in OWL this means intersection. Consider using owl:unionOf.")
-
-    # 4i: Check for circular subClassOf (A subClassOf B subClassOf A)
-    for cls in szdo_classes:
-        visited = set()
-        current = cls
-        is_cyclic = False
-        while True:
-            if current in visited:
-                is_cyclic = True
-                break
-            visited.add(current)
-            parents = [p for p in g.objects(current, RDFS.subClassOf) if is_szdo(p)]
-            if not parents:
-                break
-            current = parents[0]
-        if is_cyclic:
-            result.error("OWL", f"Circular subClassOf detected involving '{local_name(cls)}'")
-
-    # 4j: ObjectProperties with no domain
-    for prop in szdo_obj:
-        domains = list(g.objects(prop, RDFS.domain))
-        if not domains:
-            result.warn("OWL", f"ObjectProperty '{local_name(prop)}' has no rdfs:domain")
-
-    # 4k: ObjectProperties with no range
-    for prop in szdo_obj:
-        ranges = list(g.objects(prop, RDFS.range))
-        if not ranges:
-            result.warn("OWL", f"ObjectProperty '{local_name(prop)}' has no rdfs:range")
-
-    # 4l: Check owl:inverseOf consistency
-    for prop in szdo_obj:
-        inverses = list(g.objects(prop, OWL.inverseOf))
-        for inv in inverses:
-            # Check that inverse points back
-            back_inverses = list(g.objects(inv, OWL.inverseOf))
-            if prop not in back_inverses:
-                result.warn("OWL",
-                    f"'{local_name(prop)}' declares owl:inverseOf '{local_name(inv)}' "
-                    f"but '{local_name(inv)}' does not declare inverse back")
-
-    # 4m: Disjointness check — sibling classes should ideally be disjoint
-    parent_children = defaultdict(list)
-    for cls in szdo_classes:
-        for parent in g.objects(cls, RDFS.subClassOf):
-            if is_szdo(parent):
-                parent_children[parent].append(cls)
-
-    disjoint_missing = 0
-    for parent, children in parent_children.items():
-        if len(children) > 1:
-            # Check if any pair has disjointness declared
-            has_disjoint = False
-            for i, c1 in enumerate(children):
-                for c2 in children[i+1:]:
-                    d1 = list(g.objects(c1, OWL.disjointWith))
-                    d2 = list(g.objects(c2, OWL.disjointWith))
-                    if c2 in d1 or c1 in d2:
-                        has_disjoint = True
-                        break
-            if not has_disjoint:
-                disjoint_missing += 1
-
-    if disjoint_missing > 0:
-        result.warn("OWL",
-            f"{disjoint_missing} parent classes have siblings without owl:disjointWith. "
-            f"Consider adding disjointness axioms for clearer semantics.")
+    _check_labels(g, szdo_classes, result)
+    _check_hierarchy(g, szdo_classes, result)
+    _check_naming(g, szdo_classes, szdo_obj, szdo_dat, result)
+    _check_property_constraints(g, szdo_obj, szdo_dat, result)
+    _check_inverses(g, szdo_obj, result)
+    _check_disjointness(g, szdo_classes, result)
 
 
 # ---------------------------------------------------------------------------
@@ -397,7 +433,7 @@ def stage_ontoclean(g, result, verbose=False):
     }
 
     # Anti-rigid: role-like classes that depend on context
-    # (Currently SZDO doesn't have explicit role classes — roles are modeled as properties,
+    # (Currently SZDO doesn't have explicit role classes -- roles are modeled as properties,
     #  which is actually the correct ODP approach)
 
     # Check: No anti-rigid class should be superclass of a rigid class
@@ -427,12 +463,12 @@ def stage_ontoclean(g, result, verbose=False):
                 f"'{local_name(cls)}' (+R +I): identity via {id_hint}")
 
     # Roles are correctly modeled as properties (hatAutor, hatHerausgeber, etc.)
-    # rather than as role subclasses — this follows the Agent-Role ODP
+    # rather than as role subclasses -- this follows the Agent-Role ODP
     result.add_info("ONTOCLEAN",
-        "Agent roles modeled as properties (ODP Agent-Role pattern) — correct approach")
+        "Agent roles modeled as properties (ODP Agent-Role pattern) -- correct approach")
 
     result.add_info("ONTOCLEAN",
-        f"Analyzed {len(rigid_classes)} rigid classes — no anti-rigid/rigid conflicts detected")
+        f"Analyzed {len(rigid_classes)} rigid classes -- no anti-rigid/rigid conflicts detected")
 
 
 # ---------------------------------------------------------------------------
@@ -606,7 +642,7 @@ def stage_competency_questions(g, result, verbose=False):
             """,
             "expected": True,
         },
-        # CQ13: Klawiter-Eintrag → Werkindex
+        # CQ13: Klawiter-Eintrag -> Werkindex
         {
             "id": "CQ13",
             "question": "Kann ein Klawiter-Eintrag (Manifestation) einem Werk zugeordnet werden?",
@@ -663,7 +699,7 @@ def stage_competency_questions(g, result, verbose=False):
         # CQ-extra: RiC alignment
         {
             "id": "CQ-RiC",
-            "question": "Sind die RiC-Alignments korrekt (Nachlass→RecordSet, NachlassObjekt→Record)?",
+            "question": "Sind die RiC-Alignments korrekt (Nachlass->RecordSet, NachlassObjekt->Record)?",
             "query": """
                 ASK {
                     szdo:Nachlass rdfs:subClassOf rico:RecordSet .
@@ -748,29 +784,14 @@ def stage_competency_questions(g, result, verbose=False):
         },
     ]
 
-    # Bind prefixes for queries
-    prefix_block = """
-        PREFIX szdo:     <https://gams.uni-graz.at/o:szd.ontology#>
-        PREFIX szdg:     <https://gams.uni-graz.at/o:szd.glossar#>
-        PREFIX nachlass: <https://w3id.org/nachlass#>
-        PREFIX rico:     <https://www.ica.org/standards/RiC/ontology#>
-        PREFIX lrm:     <http://iflastandards.info/ns/lrm/lrmer/>
-        PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
-        PREFIX owl:     <http://www.w3.org/2002/07/owl#>
-        PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-    """
-
     passed = 0
     failed = 0
     for test in cq_tests:
-        full_query = prefix_block + test["query"]
+        full_query = CQ_PREFIX_BLOCK + test["query"]
         try:
             actual = bool(g.query(full_query).askAnswer)
         except Exception as e:
-            result.error("CQ", f"{test['id']}: Query error — {e}")
+            result.error("CQ", f"{test['id']}: Query error -- {e}")
             failed += 1
             continue
 

@@ -59,7 +59,7 @@ Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung 
 Das Projekt verbindet vier methodische Säulen:
 
 1. **Archivwissenschaftliche Erschließung**: Katalogisierung nach RNA (Regeln zur Erschließung von Nachlässen und Autographen) und internationalen Archivstandards
-2. **Semantische Modellierung**: Formale Ontologie (SZDO v1.1.0) basierend auf Records in Context (RiC-O), IFLA LRM und CIDOC-CRM
+2. **Semantische Modellierung**: Formale Ontologie (SZDO v1.2.0) basierend auf Records in Context (RiC-O), IFLA LRM und CIDOC-CRM
 3. **Linked Open Data**: Verknüpfung mit Normdateien (GND, Wikidata, VIAF, Geonames) und kontrollierten Vokabularen (SKOS)
 4. **Digitale Langzeitarchivierung**: OAIS-konforme Speicherung in GAMS, Zenodo-Backup mit DOI-Versionierung
 
@@ -74,13 +74,13 @@ Das Datenmodell folgt dem TEI P5-Standard mit projektspezifischen Erweiterungen:
 
 ### Nachlass-Ontologie (SZDO)
 
-Die Stefan Zweig Digital Nachlass-Ontologie (SZDO v1.1.0) formalisiert das Datenmodell:
+Die Stefan Zweig Digital Nachlass-Ontologie (SZDO v1.2.0) formalisiert das Datenmodell:
 
 - **72 Klassen** (58 Kernklassen + 14 GAMS-Kompatibilitätsklassen)
-- **132 Properties** (79 Kern + 53 GAMS-Kompatibilität)
+- **130 Properties** (79 Kern + 51 GAMS-Kompatibilität)
 - **Alignments**: Records in Context (Archiv), IFLA LRM (Werkschicht), CIDOC-CRM (Ereignisse/Provenienz)
 - **Dokumentation**: https://chpollin.github.io/SZD/ontology/
-- **Validierung**: 6-Stufen-Pipeline mit 19 Kompetenzfragen
+- **Validierung**: 6-Stufen-Pipeline mit 22 Kompetenzfragen
 
 Siehe [ONTOLOGY.md](ONTOLOGY.md) für das vollständige Design-Dokument.
 

@@ -68,7 +68,7 @@
     <!-- Collections -->
     <section class="landing-about">
       <h2>Collections</h2>
-      <div style="overflow-x:auto;">
+      <div class="table-scroll">
         <table class="prop-table">
           <tr><th>Collection</th><th>Description</th></tr>
           <tr><td><strong>Works</strong></td><td>Manuscripts, typescripts, notebooks, galley proofs</td></tr>
@@ -81,24 +81,24 @@
           <tr><td><strong>Life Calendar</strong></td><td>Biographical timeline (1881–1942)</td></tr>
         </table>
       </div>
-      <p style="margin-top:1rem;"><strong>Digital Facsimiles:</strong> High-resolution images of all digitized objects, browsable via IIIF/Mirador viewer.</p>
+      <p class="section-note"><strong>Digital Facsimiles:</strong> High-resolution images of all digitized objects, browsable via IIIF/Mirador viewer.</p>
     </section>
 
     <!-- Methodology -->
     <section class="landing-about">
       <h2>Methodological Framework</h2>
-      <div class="landing-cards" style="margin:1rem 0;">
-        <div class="card" style="cursor:default;">
+      <div class="landing-cards badge-row">
+        <div class="card card-static">
           <h2>Archival Science</h2>
           <p>Cataloguing according to RNA and international archival standards. Modelling based on Records in Context (RiC-O).</p>
           <span class="card-meta">RNA · RiC-O · ISAD(G)</span>
         </div>
-        <div class="card" style="cursor:default;">
+        <div class="card card-static">
           <h2>Semantic Modelling</h2>
           <p>Formal OWL ontology (SZDO v1.2.0) with alignments to IFLA LRM and CIDOC-CRM. SKOS-controlled vocabularies.</p>
           <span class="card-meta">OWL 2 · SKOS · Linked Data</span>
         </div>
-        <div class="card" style="cursor:default;">
+        <div class="card card-static">
           <h2>Long-Term Preservation</h2>
           <p>OAIS-compliant storage in GAMS with persistent identifiers. Zenodo backup with DOI versioning.</p>
           <span class="card-meta">GAMS · Zenodo · FAIR-compliant</span>
@@ -122,7 +122,7 @@
     <section class="landing-about">
       <h2>Estate Ontology (SZDO)</h2>
       <p>The <a href="../ontology/">Stefan Zweig Digital Estate Ontology</a> (v1.2.0) formalizes the project's data model:</p>
-      <ul style="margin:0.5rem 0 0.5rem 1.5rem;">
+      <ul class="list-indented">
         <li>72 classes · 130 properties · two-layer architecture (generic nachlass: + SZD-specific)</li>
         <li>Alignments: Records in Context (archival), IFLA LRM (work), CIDOC-CRM (events)</li>
         <li>GAMS compatibility layer (v0.x → v1.2.0)</li>
@@ -134,7 +134,7 @@
     <!-- Network -->
     <section class="landing-about">
       <h2>Network</h2>
-      <div class="landing-cards" style="margin:1rem 0;">
+      <div class="landing-cards badge-row">
         <a href="https://chpollin.github.io/klawiter-rescue/" class="card" target="_blank" rel="noopener">
           <h2>Klawiter Bibliography</h2>
           <p>Comprehensive bibliographic entries on Stefan Zweig's works, translations, and secondary literature. Linked via the SZDO work layer.</p>
@@ -173,8 +173,8 @@
         <tr><td><a href="https://orcid.org/0000-0001-6647-9729" target="_blank" rel="noopener">Julia Rebecca Glunk</a></td><td>Data Collection</td><td>Literaturarchiv Salzburg</td></tr>
         <tr><td><a href="https://orcid.org/0000-0002-4879-129X" target="_blank" rel="noopener">Christopher Pollin</a></td><td>Data Modelling</td><td><a href="https://dhcraft.org" target="_blank" rel="noopener">Digital Humanities Craft OG</a></td></tr>
       </table>
-      <h3 style="margin-top:1rem;font-size:0.9rem;">Institutional Partners</h3>
-      <ul style="margin:0.5rem 0 0 1.5rem;">
+      <h3 class="subsection-heading">Institutional Partners</h3>
+      <ul class="list-indented">
         <li><strong>Literaturarchiv Salzburg</strong> (Paris Lodron Universität Salzburg) — Source material, digitization</li>
         <li><strong>Zentrum für Informationsmodellierung</strong> (Karl-Franzens-Universität Graz) — GAMS platform</li>
         <li><strong>Daniel A. Reed Library</strong> (SUNY Fredonia) — Cooperation partner</li>

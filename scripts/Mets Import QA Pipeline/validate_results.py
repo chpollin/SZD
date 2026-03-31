@@ -14,6 +14,32 @@ BASE_DIR = Path(__file__).parent
 EXPECTED_RANGE = range(1, 51)  # B2.1 bis B2.50
 NS = {"v": "http://gams.uni-graz.at/viewer", "xlink": "http://www.w3.org/1999/xlink"}
 
+# Regex patterns
+RE_FOLDER_NAME = re.compile(r"SZ_AAL_B2\.(\d+)$")
+RE_DOUBLE_XML = re.compile(r"Result_SZ_AAL_B2SZ_AAL_B2\.\d+\.xml$")
+
+# Issue category constants
+ISSUE_CAT = {
+    "missing_folders": "Fehlende Ordner",
+    "unexpected_folders": "Unerwartete Ordner",
+    "no_extension": "Dateien ohne Endung",
+    "double_xml": "Doppelt benannte XMLs",
+    "unexpected_types": "Unerwartete Dateitypen",
+    "missing_standard_xml": "Fehlende Standard-XML",
+    "missing_xml": "Fehlende XML",
+    "xml_parse": "XML Parse-Fehler",
+    "ns_inconsistency": "Namespace-Inkonsistenz",
+    "missing_metadata": "Fehlende/leere Metadaten",
+    "metadata_inconsistency": "Metadaten-Inkonsistenz",
+    "missing_structure": "Fehlende Struktur",
+    "unexpected_structure": "Unerwartete Struktur",
+    "missing_images": "Fehlende Bilder (XML referenziert, Datei fehlt)",
+    "orphan_images": "Verwaiste Bilder (Datei vorhanden, nicht in XML)",
+    "image_naming": "Namenskonvention Bilder",
+    "image_gaps": "Lücken in Bildnummerierung",
+    "empty_images": "Leere Bilddateien",
+}
+
 # Collect all issues
 issues = defaultdict(list)  # category -> list of issue strings
 stats = {
@@ -30,18 +56,18 @@ def check_folder_completeness():
     existing = set()
     for d in BASE_DIR.iterdir():
         if d.is_dir():
-            m = re.match(r"SZ_AAL_B2\.(\d+)$", d.name)
+            m = RE_FOLDER_NAME.match(d.name)
             if m:
                 existing.add(int(m.group(1)))
 
     for i in EXPECTED_RANGE:
         if i not in existing:
-            issues["Fehlende Ordner"].append(f"SZ_AAL_B2.{i} fehlt")
+            issues[ISSUE_CAT["missing_folders"]].append(f"SZ_AAL_B2.{i} fehlt")
 
     # Check for unexpected folders
     for d in BASE_DIR.iterdir():
-        if d.is_dir() and not re.match(r"SZ_AAL_B2\.\d+$", d.name):
-            issues["Unerwartete Ordner"].append(f"Unerwarteter Ordner: {d.name}")
+        if d.is_dir() and not RE_FOLDER_NAME.match(d.name):
+            issues[ISSUE_CAT["unexpected_folders"]].append(f"Unerwarteter Ordner: {d.name}")
 
     return existing
 
@@ -54,17 +80,17 @@ def check_unexpected_files(folder_path, folder_name, num):
         if f.is_file():
             # Files without extension
             if not f.suffix:
-                issues["Dateien ohne Endung"].append(
+                issues[ISSUE_CAT["no_extension"]].append(
                     f"{folder_name}/{f.name} - Datei ohne Dateiendung"
                 )
             # Double-named XMLs
-            elif re.match(r"Result_SZ_AAL_B2SZ_AAL_B2\.\d+\.xml$", f.name):
-                issues["Doppelt benannte XMLs"].append(
+            elif RE_DOUBLE_XML.match(f.name):
+                issues[ISSUE_CAT["double_xml"]].append(
                     f"{folder_name}/{f.name} - fehlerhafter Dateiname (doppeltes Präfix)"
                 )
             # Unexpected file types
             elif f.suffix.lower() not in (".xml", ".jpg", ".jpeg"):
-                issues["Unerwartete Dateitypen"].append(
+                issues[ISSUE_CAT["unexpected_types"]].append(
                     f"{folder_name}/{f.name} - unerwarteter Dateityp '{f.suffix}'"
                 )
 
@@ -77,13 +103,13 @@ def check_xml(folder_path, folder_name, num):
         # Try alternate naming
         alt_xml = folder_path / f"Result_SZ_AAL_B2SZ_AAL_B2.{num}.xml"
         if alt_xml.exists():
-            issues["Fehlende Standard-XML"].append(
+            issues[ISSUE_CAT["missing_standard_xml"]].append(
                 f"{folder_name}: Result_{folder_name}.xml fehlt, "
                 f"nur {alt_xml.name} vorhanden"
             )
             xml_file = alt_xml
         else:
-            issues["Fehlende XML"].append(f"{folder_name}: Keine XML-Datei gefunden")
+            issues[ISSUE_CAT["missing_xml"]].append(f"{folder_name}: Keine XML-Datei gefunden")
             stats["xmls_invalid"] += 1
             return None
 
@@ -93,7 +119,7 @@ def check_xml(folder_path, folder_name, num):
         root = tree.getroot()
         stats["xmls_valid"] += 1
     except ET.ParseError as e:
-        issues["XML Parse-Fehler"].append(f"{folder_name}: {e}")
+        issues[ISSUE_CAT["xml_parse"]].append(f"{folder_name}: {e}")
         stats["xmls_invalid"] += 1
         return None
 
@@ -101,7 +127,7 @@ def check_xml(folder_path, folder_name, num):
     with open(xml_file, "r", encoding="utf-8") as f:
         raw = f.read()
     if "xmlns:file=" in raw:
-        issues["Namespace-Inkonsistenz"].append(
+        issues[ISSUE_CAT["ns_inconsistency"]].append(
             f"{folder_name}: Enthält extra Namespace xmlns:file (nicht in allen XMLs vorhanden)"
         )
 
@@ -110,25 +136,25 @@ def check_xml(folder_path, folder_name, num):
 
     title_el = root.find(f"{tag_prefix}title")
     if title_el is None or not (title_el.text and title_el.text.strip()):
-        issues["Fehlende/leere Metadaten"].append(f"{folder_name}: <title> fehlt oder leer")
+        issues[ISSUE_CAT["missing_metadata"]].append(f"{folder_name}: <title> fehlt oder leer")
     else:
         # Check title contains correct reference
         if f"B2.{num}" not in title_el.text:
-            issues["Metadaten-Inkonsistenz"].append(
+            issues[ISSUE_CAT["metadata_inconsistency"]].append(
                 f"{folder_name}: <title> enthält nicht 'B2.{num}': '{title_el.text}'"
             )
 
     author_el = root.find(f"{tag_prefix}author")
     if author_el is None or not (author_el.text and author_el.text.strip()):
-        issues["Fehlende/leere Metadaten"].append(f"{folder_name}: <author> fehlt oder leer")
+        issues[ISSUE_CAT["missing_metadata"]].append(f"{folder_name}: <author> fehlt oder leer")
 
     date_el = root.find(f"{tag_prefix}date")
     if date_el is None or not (date_el.text and date_el.text.strip()):
-        issues["Fehlende/leere Metadaten"].append(f"{folder_name}: <date> fehlt oder leer")
+        issues[ISSUE_CAT["missing_metadata"]].append(f"{folder_name}: <date> fehlt oder leer")
 
     owner_el = root.find(f"{tag_prefix}owner/{tag_prefix}name")
     if owner_el is None or not (owner_el.text and owner_el.text.strip()):
-        issues["Fehlende/leere Metadaten"].append(f"{folder_name}: <owner><name> fehlt oder leer")
+        issues[ISSUE_CAT["missing_metadata"]].append(f"{folder_name}: <owner><name> fehlt oder leer")
 
     # 9. Structure check - Textseiten and Farbreferenz
     structure_el = root.find(f"{tag_prefix}structure")
@@ -140,14 +166,14 @@ def check_xml(folder_path, folder_name, num):
     div_types = [d.get("type") for d in divs]
 
     if "Textseiten" not in div_types:
-        issues["Fehlende Struktur"].append(f"{folder_name}: <div type='Textseiten'> fehlt")
+        issues[ISSUE_CAT["missing_structure"]].append(f"{folder_name}: <div type='Textseiten'> fehlt")
     if "Farbreferenz" not in div_types:
-        issues["Fehlende Struktur"].append(f"{folder_name}: <div type='Farbreferenz'> fehlt")
+        issues[ISSUE_CAT["missing_structure"]].append(f"{folder_name}: <div type='Farbreferenz'> fehlt")
 
     # Unexpected div types
     for dt in div_types:
         if dt not in ("Textseiten", "Farbreferenz"):
-            issues["Unerwartete Struktur"].append(
+            issues[ISSUE_CAT["unexpected_structure"]].append(
                 f"{folder_name}: Unerwarteter div-Typ '{dt}'"
             )
 
@@ -176,14 +202,14 @@ def check_image_references(folder_path, folder_name, num, referenced_images):
     # 3. Referenced images that don't exist
     for ref in referenced_images:
         if ref not in actual_jpgs:
-            issues["Fehlende Bilder (XML referenziert, Datei fehlt)"].append(
+            issues[ISSUE_CAT["missing_images"]].append(
                 f"{folder_name}: {ref} in XML referenziert, aber Datei fehlt"
             )
 
     # 4. Orphan images (exist but not referenced)
     for jpg in sorted(actual_jpgs):
         if jpg not in referenced_set:
-            issues["Verwaiste Bilder (Datei vorhanden, nicht in XML)"].append(
+            issues[ISSUE_CAT["orphan_images"]].append(
                 f"{folder_name}: {jpg} existiert, ist aber nicht in XML referenziert"
             )
 
@@ -191,7 +217,7 @@ def check_image_references(folder_path, folder_name, num, referenced_images):
     for jpg in sorted(actual_jpgs):
         expected_pattern = rf"^SZ_AAL_B2\.{num}_\d{{3}}\.jpg$"
         if not re.match(expected_pattern, jpg):
-            issues["Namenskonvention Bilder"].append(
+            issues[ISSUE_CAT["image_naming"]].append(
                 f"{folder_name}: {jpg} entspricht nicht dem Schema SZ_AAL_B2.{num}_NNN.jpg"
             )
 
@@ -208,7 +234,7 @@ def check_image_references(folder_path, folder_name, num, referenced_images):
         if numbers != expected:
             missing = set(expected) - set(numbers)
             if missing:
-                issues["Lücken in Bildnummerierung"].append(
+                issues[ISSUE_CAT["image_gaps"]].append(
                     f"{folder_name}: Fehlende Nummern: {sorted(missing)}"
                 )
 
@@ -216,7 +242,7 @@ def check_image_references(folder_path, folder_name, num, referenced_images):
     for jpg in sorted(actual_jpgs):
         jpg_path = folder_path / jpg
         if jpg_path.stat().st_size == 0:
-            issues["Leere Bilddateien"].append(
+            issues[ISSUE_CAT["empty_images"]].append(
                 f"{folder_name}: {jpg} ist leer (0 Bytes)"
             )
 
