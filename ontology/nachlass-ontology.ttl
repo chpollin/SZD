@@ -1,0 +1,915 @@
+@prefix nachlass: <https://w3id.org/nachlass#> .
+@prefix rico:    <https://www.ica.org/standards/RiC/ontology#> .
+@prefix lrm:     <http://iflastandards.info/ns/lrm/lrmer/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <https://schema.org/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# =============================================================================
+# Nachlass-Ontologie (nachlass:)
+# =============================================================================
+#
+# Generische Ontologie fuer die Beschreibung literarischer und kuenstlerischer
+# Nachlaesse. Nachnutzbar fuer beliebige Nachlass-Projekte.
+#
+# Archivische Grundlage: Records in Context (RiC-O)
+# Werkmodellierung: IFLA Library Reference Model (LRM)
+# Ereignisse/Provenienz: CIDOC Conceptual Reference Model (CRM)
+#
+# Namespace: https://w3id.org/nachlass#
+# Lizenz: CC-BY 4.0
+# =============================================================================
+
+<https://w3id.org/nachlass>
+    a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    owl:versionIRI <https://w3id.org/nachlass/0.1.0> ;
+    dcterms:title "Nachlass-Ontologie"@de ,
+                  "Estate Ontology"@en ;
+    dcterms:description
+        "Generische Ontologie zur Beschreibung literarischer und kuenstlerischer Nachlaesse. Modelliert archivalische, bibliographische und biographische Entitaeten und deren Beziehungen. Abgeleitet aus der Stefan Zweig Digital Nachlass-Ontologie (SZDO), generalisiert fuer beliebige Nachlass-Projekte."@de ,
+        "Generic ontology for describing literary and artistic estates. Models archival, bibliographic, and biographical entities and their relationships. Derived from the Stefan Zweig Digital Estate Ontology (SZDO), generalized for arbitrary estate projects."@en ;
+    dcterms:creator "Christopher Pollin, Digital Humanities Craft OG" ;
+    dcterms:created "2026-03-29"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports <https://www.ica.org/standards/RiC/ontology> ;
+    rdfs:seeAlso <https://chpollin.github.io/SZD/ontology/> .
+
+
+# =============================================================================
+# PART 1: ARCHIVSCHICHT (Archival Layer)
+# Fundament: Records in Context (RiC-O)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1.1 Nachlass (Fonds)
+# -----------------------------------------------------------------------------
+
+nachlass:Nachlass
+    a owl:Class ;
+    rdfs:subClassOf rico:RecordSet ;
+    rdfs:label "Nachlass"@de , "Estate"@en ;
+    rdfs:comment
+        "Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe."@de ,
+        "The complete estate as an archival fonds. Corresponds to the top-level description unit."@en .
+
+# -----------------------------------------------------------------------------
+# 1.2 Sammlungen (Collections / Series)
+# -----------------------------------------------------------------------------
+
+nachlass:Sammlung
+    a owl:Class ;
+    rdfs:subClassOf rico:RecordSet ;
+    rdfs:label "Sammlung"@de , "Collection"@en ;
+    rdfs:comment
+        "Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz."@de ,
+        "Sub-collection of the estate, organized by material type or provenance."@en .
+
+# -----------------------------------------------------------------------------
+# 1.3 Nachlassobjekte (Records / Items)
+# -----------------------------------------------------------------------------
+
+nachlass:NachlassObjekt
+    a owl:Class ;
+    rdfs:subClassOf rico:Record ;
+    rdfs:label "Nachlassobjekt"@de , "Estate Object"@en ;
+    rdfs:comment
+        "Einzelnes physisches Objekt im Nachlass."@de ,
+        "Individual physical object in the estate."@en .
+
+nachlass:Manuskript
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Manuskript"@de , "Manuscript"@en ;
+    rdfs:comment "Handschriftliches Werkmanuskript."@de , "Handwritten work manuscript."@en .
+
+nachlass:Typoskript
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Typoskript"@de , "Typescript"@en ;
+    rdfs:comment "Maschinschriftliches Dokument."@de , "Typewritten document."@en .
+
+nachlass:Typoskriptdurchschlag
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Typoskriptdurchschlag"@de , "Carbon Copy Typescript"@en ;
+    rdfs:comment "Durchschlag (Kohlepapier-Kopie) eines Typoskripts."@de ,
+                 "Carbon copy of a typescript."@en .
+
+nachlass:Notizbuch
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Notizbuch"@de , "Notebook"@en ;
+    rdfs:comment "Notizbuch mit Entwuerfen, Notizen oder Skizzen."@de ,
+                 "Notebook with drafts, notes, or sketches."@en .
+
+nachlass:Konvolut
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Konvolut"@de , "Ensemble"@en ;
+    rdfs:comment "Zusammengestelltes Ensemble aus mehreren Dokumententypen."@de ,
+                 "Assembled ensemble of multiple document types."@en .
+
+nachlass:Korrekturfahne
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Korrekturfahne"@de , "Galley Proof"@en ;
+    rdfs:comment "Druckfahne mit handschriftlichen Korrekturen."@de ,
+                 "Galley proof with handwritten corrections."@en .
+
+nachlass:KorrespondenzKonvolut
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Korrespondenzkonvolut"@de , "Bundle of Correspondence"@en ;
+    rdfs:comment "Buendel von Korrespondenzstuecken zwischen Korrespondenzpartnern."@de ,
+                 "Bundle of correspondence pieces between correspondence partners."@en .
+
+nachlass:Autograph
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Autograph"@de , "Autograph"@en ;
+    rdfs:comment "Handschriftliches Dokument eines Dritten aus einer Autographensammlung."@de ,
+                 "Handwritten document by a third party from an autograph collection."@en .
+
+nachlass:Buch
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Buch"@de , "Book"@en ;
+    rdfs:comment "Buch aus einer rekonstruierten Privatbibliothek."@de ,
+                 "Book from a reconstructed personal library."@en .
+
+nachlass:Lebensdokument
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Lebensdokument"@de , "Personal Document"@en ;
+    rdfs:comment "Persoenliches Dokument: Vertrag, Urkunde, Tagebuch, Ephemera."@de ,
+                 "Personal document: contract, certificate, diary, ephemera."@en .
+
+# -----------------------------------------------------------------------------
+# 1.4 Digitale Objekte (Digital Representations)
+# -----------------------------------------------------------------------------
+
+nachlass:DigitalesObjekt
+    a owl:Class ;
+    rdfs:subClassOf rico:Instantiation ;
+    rdfs:label "Digitales Objekt"@de , "Digital Object"@en ;
+    rdfs:comment "Digitale Repraesentation eines physischen Nachlassobjekts."@de ,
+                 "Digital representation of a physical estate object."@en .
+
+nachlass:METSObjekt
+    a owl:Class ;
+    rdfs:subClassOf nachlass:DigitalesObjekt ;
+    rdfs:label "METS-Objekt"@de , "METS Object"@en ;
+    rdfs:comment "METS-Container mit strukturellen Metadaten und Seitenverweisen."@de ,
+                 "METS container with structural metadata and page references."@en .
+
+nachlass:IIIFManifest
+    a owl:Class ;
+    rdfs:subClassOf nachlass:DigitalesObjekt ;
+    rdfs:label "IIIF-Manifest"@de , "IIIF Manifest"@en ;
+    rdfs:comment "IIIF Presentation API Manifest fuer die Darstellung in Viewern."@de ,
+                 "IIIF Presentation API manifest for rendering in viewers."@en .
+
+nachlass:Faksimile
+    a owl:Class ;
+    rdfs:subClassOf nachlass:DigitalesObjekt ;
+    rdfs:label "Faksimile"@de , "Facsimile"@en ;
+    rdfs:comment "Einzelnes hochaufloesendes digitales Bild einer Seite."@de ,
+                 "Single high-resolution digital image of a page."@en .
+
+# -----------------------------------------------------------------------------
+# 1.5 Disjointness Axioms
+# -----------------------------------------------------------------------------
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        nachlass:Manuskript
+        nachlass:Typoskript
+        nachlass:Typoskriptdurchschlag
+        nachlass:Notizbuch
+        nachlass:Konvolut
+        nachlass:Korrekturfahne
+        nachlass:KorrespondenzKonvolut
+        nachlass:Autograph
+        nachlass:Buch
+        nachlass:Lebensdokument
+    ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        nachlass:METSObjekt
+        nachlass:IIIFManifest
+        nachlass:Faksimile
+    ) .
+
+nachlass:Nachlass owl:disjointWith nachlass:NachlassObjekt .
+nachlass:Nachlass owl:disjointWith nachlass:DigitalesObjekt .
+nachlass:NachlassObjekt owl:disjointWith nachlass:DigitalesObjekt .
+
+
+# =============================================================================
+# PART 2: WERKSCHICHT (Work Layer)
+# Fundament: IFLA Library Reference Model (LRM)
+# =============================================================================
+
+nachlass:Werk
+    a owl:Class ;
+    rdfs:subClassOf lrm:Work ;
+    rdfs:label "Werk"@de , "Work"@en ;
+    rdfs:comment
+        "Abstraktes intellektuelles Werk, unabhaengig von physischen Traegern."@de ,
+        "Abstract intellectual work, independent of physical carriers."@en .
+
+nachlass:WerkExpression
+    a owl:Class ;
+    rdfs:subClassOf lrm:Expression ;
+    rdfs:label "Werkexpression"@de , "Work Expression"@en ;
+    rdfs:comment
+        "Sprachliche oder mediale Realisierung eines Werks: Originaltext, Uebersetzung, Verfilmung."@de ,
+        "Linguistic or medial realization of a work: original text, translation, film adaptation."@en .
+
+nachlass:Manifestation
+    a owl:Class ;
+    rdfs:subClassOf lrm:Manifestation ;
+    rdfs:label "Manifestation"@de , "Manifestation"@en ;
+    rdfs:comment
+        "Publizierte Ausgabe eines Werks: Erstausgabe, Neuauflage, Uebersetzungsausgabe."@de ,
+        "Published edition of a work: first edition, reprint, translation edition."@en .
+
+nachlass:Exemplar
+    a owl:Class ;
+    rdfs:subClassOf lrm:Item ;
+    rdfs:label "Exemplar"@de , "Item"@en ;
+    rdfs:comment
+        "Konkretes physisches Exemplar einer Manifestation."@de ,
+        "Concrete physical copy of a manifestation."@en .
+
+nachlass:Sekundaerliteratur
+    a owl:Class ;
+    rdfs:subClassOf schema:ScholarlyArticle ;
+    rdfs:label "Sekundaerliteratur"@de , "Secondary Literature"@en ;
+    rdfs:comment
+        "Wissenschaftliche oder publizistische Arbeiten ueber den Nachlasser und sein Werk."@de ,
+        "Scholarly or journalistic works about the estate creator and their oeuvre."@en .
+
+
+# =============================================================================
+# PART 3: AKTEUR- UND INDEXSCHICHT (Agent & Index Layer)
+# =============================================================================
+
+nachlass:Akteur
+    a owl:Class ;
+    rdfs:label "Akteur"@de , "Agent"@en ;
+    rdfs:comment "Person oder Organisation mit Bezug zum Nachlass."@de ,
+                 "Person or organization related to the estate."@en ;
+    owl:equivalentClass rico:Agent ;
+    rdfs:subClassOf crm:E39_Actor .
+
+nachlass:Person
+    a owl:Class ;
+    rdfs:subClassOf nachlass:Akteur ;
+    rdfs:label "Person"@de , "Person"@en ;
+    rdfs:comment
+        "Person mit Normdatenverknuepfung (GND, Wikidata, VIAF)."@de ,
+        "Person with authority file links (GND, Wikidata, VIAF)."@en ;
+    owl:equivalentClass rico:Person ;
+    rdfs:subClassOf crm:E21_Person , foaf:Person .
+
+nachlass:Organisation
+    a owl:Class ;
+    rdfs:subClassOf nachlass:Akteur ;
+    rdfs:label "Organisation"@de , "Organization"@en ;
+    rdfs:comment
+        "Institution, Verlag, Archiv, Bibliothek."@de ,
+        "Institution, publisher, archive, library."@en ;
+    owl:equivalentClass rico:CorporateBody ;
+    rdfs:subClassOf crm:E74_Group , foaf:Organization .
+
+nachlass:Person owl:disjointWith nachlass:Organisation .
+
+
+# =============================================================================
+# PART 4: BIOGRAPHIE- UND EREIGNISSCHICHT (Biographical & Event Layer)
+# Fundament: CIDOC-CRM
+# =============================================================================
+
+nachlass:BiographischesEreignis
+    a owl:Class ;
+    rdfs:subClassOf crm:E5_Event ;
+    rdfs:label "Biographisches Ereignis"@de , "Biographical Event"@en ;
+    rdfs:comment
+        "Ereignis im Leben des Nachlassers oder einer verwandten Person."@de ,
+        "Event in the life of the estate creator or a related person."@en .
+
+nachlass:Geburt
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis , crm:E67_Birth ;
+    rdfs:label "Geburt"@de , "Birth"@en ;
+    rdfs:comment "Geburtsereignis einer Person."@de , "Birth event of a person."@en .
+
+nachlass:Tod
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis , crm:E69_Death ;
+    rdfs:label "Tod"@de , "Death"@en ;
+    rdfs:comment "Todesereignis einer Person."@de , "Death event of a person."@en .
+
+nachlass:Reise
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis ;
+    rdfs:label "Reise"@de , "Journey"@en ;
+    rdfs:comment "Reisen, Aufenthalte, Ortswechsel."@de , "Journeys, stays, relocations."@en .
+
+nachlass:Publikationsereignis
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis ;
+    rdfs:label "Publikationsereignis"@de , "Publication Event"@en ;
+    rdfs:comment "Veroeffentlichung eines Werks."@de , "Publication of a work."@en .
+
+nachlass:Begegnung
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis ;
+    rdfs:label "Begegnung"@de , "Encounter"@en ;
+    rdfs:comment "Treffen mit Personen."@de , "Meeting with persons."@en .
+
+nachlass:InstitutionellesEreignis
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis ;
+    rdfs:label "Institutionelles Ereignis"@de , "Institutional Event"@en ;
+    rdfs:comment "Verleihungen, Ehrungen, Mitgliedschaften."@de ,
+                 "Awards, honors, memberships."@en .
+
+nachlass:Exilereignis
+    a owl:Class ;
+    rdfs:subClassOf nachlass:BiographischesEreignis ;
+    rdfs:label "Exilereignis"@de , "Exile Event"@en ;
+    rdfs:comment "Emigration, Flucht, Exilstationen."@de ,
+                 "Emigration, flight, exile stations."@en .
+
+
+# =============================================================================
+# PART 5: ORTS- UND RAUMSCHICHT (Place Layer)
+# =============================================================================
+
+nachlass:Ort
+    a owl:Class ;
+    rdfs:label "Ort"@de , "Place"@en ;
+    rdfs:comment "Geographischer oder institutioneller Ort."@de ,
+                 "Geographical or institutional place."@en ;
+    owl:equivalentClass rico:Place ;
+    rdfs:subClassOf crm:E53_Place .
+
+nachlass:GeographischerOrt
+    a owl:Class ;
+    rdfs:subClassOf nachlass:Ort ;
+    rdfs:label "Geographischer Ort"@de , "Geographical Place"@en ;
+    rdfs:comment "Stadt, Land, Region (Geonames-verknuepft)."@de ,
+                 "City, country, region (Geonames-linked)."@en .
+
+nachlass:Aufbewahrungsort
+    a owl:Class ;
+    rdfs:subClassOf nachlass:Ort ;
+    rdfs:label "Aufbewahrungsort"@de , "Repository"@en ;
+    rdfs:comment
+        "Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten."@de ,
+        "Archive, library, or museum as repository for estate objects."@en .
+
+nachlass:Entstehungsort
+    a owl:Class ;
+    rdfs:subClassOf nachlass:Ort ;
+    rdfs:label "Entstehungsort"@de , "Place of Origin"@en ;
+    rdfs:comment "Ort, an dem ein Objekt oder Werk geschaffen wurde."@de ,
+                 "Place where an object or work was created."@en .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        nachlass:GeographischerOrt
+        nachlass:Aufbewahrungsort
+        nachlass:Entstehungsort
+    ) .
+
+
+# =============================================================================
+# PART 6: PROVENIENZSCHICHT (Provenance Layer)
+# =============================================================================
+
+nachlass:Provenienzereignis
+    a owl:Class ;
+    rdfs:subClassOf crm:E8_Acquisition ;
+    rdfs:label "Provenienzereignis"@de , "Provenance Event"@en ;
+    rdfs:comment
+        "Einzelnes Erwerbungs- oder Besitzwechsel-Ereignis in der Geschichte eines Objekts."@de ,
+        "Single acquisition or ownership-change event in the history of an object."@en .
+
+nachlass:ProvenienzmerkmalInstanz
+    a owl:Class ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:label "Provenienzmerkmalsinstanz"@de , "Provenance Feature Instance"@en ;
+    rdfs:comment
+        "Konkretes Provenienzmerkmal an einem Objekt (Stempel, Exlibris, Marginalie, etc.)."@de ,
+        "Concrete provenance feature on an object (stamp, bookplate, marginalia, etc.)."@en .
+
+nachlass:Umfang
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Umfang"@de , "Extent"@en ;
+    rdfs:comment "Umfangsangabe eines Nachlassobjekts (Blatt, Seiten, Stuecke)."@de ,
+                 "Extent information of an estate object (leaves, pages, pieces)."@en .
+
+nachlass:Beilage
+    a owl:Class ;
+    rdfs:subClassOf nachlass:NachlassObjekt ;
+    rdfs:label "Beilage"@de , "Enclosure"@en ;
+    rdfs:comment "Beilage oder Zusatzmaterial zu einem Nachlassobjekt."@de ,
+                 "Enclosure or supplementary material of an estate object."@en .
+
+
+# =============================================================================
+# PART 7: OBJECT PROPERTIES (Beziehungen)
+# =============================================================================
+
+# --- 7.1 Strukturelle Beziehungen ---
+
+nachlass:enthaelt
+    a owl:ObjectProperty ;
+    rdfs:label "enthaelt"@de , "contains"@en ;
+    rdfs:domain nachlass:Nachlass ;
+    rdfs:range nachlass:Sammlung ;
+    owl:equivalentProperty rico:includesOrIncluded .
+
+nachlass:istTeilVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Teil von"@de , "is part of"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Sammlung ;
+    owl:inverseOf nachlass:enthaeltObjekt ;
+    owl:equivalentProperty rico:isOrWasIncludedIn .
+
+nachlass:enthaeltObjekt
+    a owl:ObjectProperty ;
+    rdfs:label "enthaelt Objekt"@de , "contains object"@en ;
+    rdfs:domain nachlass:Sammlung ;
+    rdfs:range nachlass:NachlassObjekt ;
+    owl:inverseOf nachlass:istTeilVon .
+
+nachlass:hatDigitalesObjekt
+    a owl:ObjectProperty ;
+    rdfs:label "hat digitales Objekt"@de , "has digital object"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:DigitalesObjekt ;
+    owl:equivalentProperty rico:hasInstantiation .
+
+nachlass:hatFaksimile
+    a owl:ObjectProperty ;
+    rdfs:label "hat Faksimile"@de , "has facsimile"@en ;
+    rdfs:domain nachlass:DigitalesObjekt ;
+    rdfs:range nachlass:Faksimile .
+
+# --- 7.2 Werk-Objekt-Beziehungen (LRM-Bruecke) ---
+
+nachlass:istManifestationVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Manifestation von"@de , "is manifestation of"@en ;
+    rdfs:comment "Verbindet ein physisches Nachlassobjekt mit dem abstrakten Werk, dessen Textzeuge es ist."@de ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Werk ;
+    owl:inverseOf nachlass:hatManuskriptzeuge .
+
+nachlass:hatManuskriptzeuge
+    a owl:ObjectProperty ;
+    rdfs:label "hat Manuskriptzeugen"@de , "has manuscript witness"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:NachlassObjekt ;
+    owl:inverseOf nachlass:istManifestationVon .
+
+nachlass:hatManifestation
+    a owl:ObjectProperty ;
+    rdfs:label "hat Manifestation"@de , "has manifestation"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:Manifestation .
+
+nachlass:hatExpression
+    a owl:ObjectProperty ;
+    rdfs:label "hat Expression"@de , "has expression"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:WerkExpression .
+
+nachlass:hatExemplar
+    a owl:ObjectProperty ;
+    rdfs:label "hat Exemplar"@de , "has item"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Exemplar .
+
+nachlass:hatTeil
+    a owl:ObjectProperty ;
+    rdfs:label "hat Teil"@de , "has part"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:Werk ;
+    owl:inverseOf nachlass:istTeilVonWerk .
+
+nachlass:istTeilVonWerk
+    a owl:ObjectProperty ;
+    rdfs:label "ist Teil von Werk"@de , "is part of work"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:Werk ;
+    owl:inverseOf nachlass:hatTeil .
+
+nachlass:wirdBehandeltIn
+    a owl:ObjectProperty ;
+    rdfs:label "wird behandelt in"@de , "is subject of"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:Sekundaerliteratur .
+
+nachlass:istUebersetzungVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Uebersetzung von"@de , "is translation of"@en ;
+    rdfs:domain nachlass:WerkExpression ;
+    rdfs:range nachlass:WerkExpression .
+
+nachlass:istNachdruckVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Nachdruck von"@de , "is reprint of"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Manifestation .
+
+nachlass:istAdaptionVon
+    a owl:ObjectProperty ;
+    rdfs:label "ist Adaption von"@de , "is adaptation of"@en ;
+    rdfs:domain nachlass:WerkExpression ;
+    rdfs:range nachlass:Werk .
+
+nachlass:sieheAuch
+    a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "siehe auch"@de , "see also"@en ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:range rdfs:Resource .
+
+# --- 7.3 Personenrollen (Agent Properties) ---
+
+nachlass:hatBeteiligtenAkteur
+    a owl:ObjectProperty ;
+    rdfs:label "hat beteiligten Akteur"@de , "has participating agent"@en ;
+    rdfs:comment "Generische Obereigenschaft fuer alle aktiv Beteiligten."@de ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Akteur ;
+    rdfs:subPropertyOf rico:hasOrHadContributor .
+
+nachlass:hatAutor
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Autor"@de , "has author"@en ;
+    rdfs:domain nachlass:Werk ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatHerausgeber
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Herausgeber"@de , "has editor"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatUebersetzer
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Uebersetzer"@de , "has translator"@en ;
+    rdfs:domain nachlass:WerkExpression ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatKomponist
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Komponist"@de , "has composer"@en ;
+    rdfs:domain nachlass:WerkExpression ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatIllustrator
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Illustrator"@de , "has illustrator"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatAbsender
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Absender"@de , "has sender"@en ;
+    rdfs:domain nachlass:KorrespondenzKonvolut ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatEmpfaenger
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Empfaenger"@de , "has receiver"@en ;
+    rdfs:domain nachlass:KorrespondenzKonvolut ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatSchreiberhand
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nachlass:hatBeteiligtenAkteur ;
+    rdfs:label "hat Schreiberhand"@de , "has scribal hand"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatBetroffenePerson
+    a owl:ObjectProperty ;
+    rdfs:label "hat betroffene Person"@de , "has affected person"@en ;
+    rdfs:comment "Person, die thematisch erwaehnt wird -- kein aktiver Beteiligter."@de ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Person ;
+    rdfs:subPropertyOf rico:hasOrHadSubject .
+
+# --- 7.4 Provenienz-Beziehungen ---
+
+nachlass:hatProvenienz
+    a owl:ObjectProperty ;
+    rdfs:label "hat Provenienz"@de , "has provenance"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Provenienzereignis .
+
+nachlass:hatVorbesitzer
+    a owl:ObjectProperty ;
+    rdfs:label "hat Vorbesitzer"@de , "has previous owner"@en ;
+    rdfs:domain nachlass:Provenienzereignis ;
+    rdfs:range nachlass:Akteur .
+
+nachlass:hatNachbesitzer
+    a owl:ObjectProperty ;
+    rdfs:label "hat Nachbesitzer"@de , "has subsequent owner"@en ;
+    rdfs:domain nachlass:Provenienzereignis ;
+    rdfs:range nachlass:Akteur .
+
+nachlass:hatProvenienzmerkmal
+    a owl:ObjectProperty ;
+    rdfs:label "hat Provenienzmerkmal"@de , "has provenance feature"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:ProvenienzmerkmalInstanz .
+
+nachlass:hatMerkmaltyp
+    a owl:ObjectProperty ;
+    rdfs:label "hat Merkmaltyp"@de , "has feature type"@en ;
+    rdfs:domain nachlass:ProvenienzmerkmalInstanz ;
+    rdfs:range skos:Concept .
+
+# --- 7.5 Orts-Beziehungen ---
+
+nachlass:wirdAufbewahrtIn
+    a owl:ObjectProperty ;
+    rdfs:label "wird aufbewahrt in"@de , "is held at"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Aufbewahrungsort ;
+    owl:equivalentProperty rico:hasOrHadHolder .
+
+nachlass:hatEntstehungsort
+    a owl:ObjectProperty ;
+    rdfs:label "hat Entstehungsort"@de , "has place of origin"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Ort .
+
+nachlass:hatPublikationsort
+    a owl:ObjectProperty ;
+    rdfs:label "hat Publikationsort"@de , "has publication place"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Ort .
+
+nachlass:hatVerlag
+    a owl:ObjectProperty ;
+    rdfs:label "hat Verlag"@de , "has publisher"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range nachlass:Organisation .
+
+# --- 7.6 Biographische Beziehungen ---
+
+nachlass:hatOrt
+    a owl:ObjectProperty ;
+    rdfs:label "hat Ort"@de , "has place"@en ;
+    rdfs:domain nachlass:BiographischesEreignis ;
+    rdfs:range nachlass:Ort .
+
+nachlass:betrifftPerson
+    a owl:ObjectProperty ;
+    rdfs:label "betrifft Person"@de , "concerns person"@en ;
+    rdfs:domain nachlass:BiographischesEreignis ;
+    rdfs:range nachlass:Person .
+
+nachlass:hatBeilage
+    a owl:ObjectProperty ;
+    rdfs:label "hat Beilage"@de , "has enclosure"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Beilage .
+
+nachlass:hatUmfang
+    a owl:ObjectProperty ;
+    rdfs:label "hat Umfang"@de , "has extent"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range nachlass:Umfang .
+
+
+# =============================================================================
+# PART 8: DATATYPE PROPERTIES (Literale Eigenschaften)
+# =============================================================================
+
+# --- 8.1 Identifikatoren ---
+
+nachlass:signatur
+    a owl:DatatypeProperty ;
+    rdfs:label "Signatur"@de , "Shelfmark"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+nachlass:gndIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "GND-Identifikator"@de , "GND Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+nachlass:wikidataIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Wikidata-Identifikator"@de , "Wikidata Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+nachlass:viafIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "VIAF-Identifikator"@de , "VIAF Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+nachlass:geonamesIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Geonames-Identifikator"@de , "Geonames Identifier"@en ;
+    rdfs:range xsd:anyURI .
+
+# --- 8.2 Titel und Namen ---
+
+nachlass:titel
+    a owl:DatatypeProperty ;
+    rdfs:label "Titel"@de , "Title"@en ;
+    rdfs:range rdf:langString .
+
+nachlass:originaltitel
+    a owl:DatatypeProperty ;
+    rdfs:label "Originaltitel"@de , "Original Title"@en ;
+    rdfs:range rdf:langString .
+
+nachlass:incipit
+    a owl:DatatypeProperty ;
+    rdfs:label "Incipit"@de , "Incipit"@en ;
+    rdfs:range xsd:string .
+
+nachlass:vorname
+    a owl:DatatypeProperty ;
+    rdfs:label "Vorname"@de , "Given Name"@en ;
+    rdfs:domain nachlass:Person ;
+    rdfs:range xsd:string .
+
+nachlass:nachname
+    a owl:DatatypeProperty ;
+    rdfs:label "Nachname"@de , "Family Name"@en ;
+    rdfs:domain nachlass:Person ;
+    rdfs:range xsd:string .
+
+nachlass:namensform
+    a owl:DatatypeProperty ;
+    rdfs:label "Namensform"@de , "Name Variant"@en ;
+    rdfs:domain nachlass:Person ;
+    rdfs:range xsd:string .
+
+# --- 8.3 Physische Beschreibung ---
+
+nachlass:beschreibstoff
+    a owl:DatatypeProperty ;
+    rdfs:label "Beschreibstoff"@de , "Writing Material"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+nachlass:schreibstoff
+    a owl:DatatypeProperty ;
+    rdfs:label "Schreibstoff"@de , "Writing Instrument"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+nachlass:aufschrift
+    a owl:DatatypeProperty ;
+    rdfs:label "Aufschrift"@de , "Identifying Inscription"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+nachlass:format
+    a owl:DatatypeProperty ;
+    rdfs:label "Format"@de , "Format"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+nachlass:blattanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Blattanzahl"@de , "Leaf Count"@en ;
+    rdfs:domain nachlass:Umfang ;
+    rdfs:range xsd:integer .
+
+nachlass:seitenanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Seitenanzahl"@de , "Page Count"@en ;
+    rdfs:domain nachlass:Umfang ;
+    rdfs:range xsd:integer .
+
+nachlass:stueckanzahl
+    a owl:DatatypeProperty ;
+    rdfs:label "Stueckanzahl"@de , "Piece Count"@en ;
+    rdfs:domain nachlass:Umfang ;
+    rdfs:range xsd:integer .
+
+nachlass:bindung
+    a owl:DatatypeProperty ;
+    rdfs:label "Bindung"@de , "Binding"@en ;
+    rdfs:domain nachlass:Buch ;
+    rdfs:range rdf:langString .
+
+nachlass:objekttyp
+    a owl:DatatypeProperty ;
+    rdfs:label "Objekttyp"@de , "Object Type"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range rdf:langString .
+
+# --- 8.4 Zeitliche Eigenschaften ---
+
+nachlass:datum
+    a owl:DatatypeProperty ;
+    rdfs:label "Datum"@de , "Date"@en ;
+    rdfs:range xsd:date .
+
+nachlass:fruehestensDatum
+    a owl:DatatypeProperty ;
+    rdfs:label "fruehestens"@de , "not before"@en ;
+    rdfs:range xsd:date .
+
+nachlass:spaetestensDatum
+    a owl:DatatypeProperty ;
+    rdfs:label "spaetestens"@de , "not after"@en ;
+    rdfs:range xsd:date .
+
+nachlass:sicherheitsgrad
+    a owl:DatatypeProperty ;
+    rdfs:label "Sicherheitsgrad"@de , "Certainty"@en ;
+    rdfs:comment "Grad der Datensicherheit (low, medium, high)."@de ;
+    rdfs:range xsd:string .
+
+nachlass:datumEvidenz
+    a owl:ObjectProperty ;
+    rdfs:label "Datum-Evidenz"@de , "Date Evidence"@en ;
+    rdfs:comment "Qualifiziert die Quelle einer Datierung."@de ;
+    rdfs:domain owl:Thing ;
+    rdfs:range skos:Concept .
+
+nachlass:geburtsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Geburtsdatum"@de , "Date of Birth"@en ;
+    rdfs:domain nachlass:Person ;
+    rdfs:range xsd:date .
+
+nachlass:todesdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Todesdatum"@de , "Date of Death"@en ;
+    rdfs:domain nachlass:Person ;
+    rdfs:range xsd:date .
+
+nachlass:publikationsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Publikationsdatum"@de , "Publication Date"@en ;
+    rdfs:domain nachlass:Manifestation ;
+    rdfs:range xsd:gYear .
+
+nachlass:entstehungsdatum
+    a owl:DatatypeProperty ;
+    rdfs:label "Entstehungsdatum"@de , "Date of Creation"@en ;
+    rdfs:domain nachlass:NachlassObjekt ;
+    rdfs:range xsd:string .
+
+# --- 8.5 Inhaltliche Eigenschaften ---
+
+nachlass:beschreibung
+    a owl:DatatypeProperty ;
+    rdfs:label "Beschreibung"@de , "Description"@en ;
+    rdfs:range rdf:langString .
+
+nachlass:zusammenfassung
+    a owl:DatatypeProperty ;
+    rdfs:label "Zusammenfassung"@de , "Summary"@en ;
+    rdfs:range rdf:langString .
+
+nachlass:anmerkung
+    a owl:DatatypeProperty ;
+    rdfs:label "Anmerkung"@de , "Note"@en ;
+    rdfs:range rdf:langString .
+
+nachlass:sprache
+    a owl:DatatypeProperty ;
+    rdfs:label "Sprache"@de , "Language"@en ;
+    rdfs:comment "Sprache des Inhalts (ISO 639-3)."@de ;
+    rdfs:range xsd:string .
+
+nachlass:kategorie
+    a owl:DatatypeProperty ;
+    rdfs:label "Kategorie"@de , "Category"@en ;
+    rdfs:range xsd:string .

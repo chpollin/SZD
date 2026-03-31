@@ -34,65 +34,6 @@ Stefan Zweig Digital is a distributed digital humanities platform combining mult
 - Collections: Thematic collections and person index
 - Encoding: UTF-8 with bilingual content
 
-**CSV Catalogue Data**
-- Location: [scripts/data/](../scripts/data/)
-- Purpose: Authoritative metadata for correspondence
-- Usage: Validation and quality assurance
-
-### Transformation Layer
-
-**XSL Stylesheets**
-- Location: [gamsdev/](../gamsdev/)
-- Technology: XSLT 2.0/3.0
-- Purpose: Convert TEI-XML to HTML for web display
-
-**Key Transformations:**
-- Collection displays (correspondence, autographs, library, works)
-- Index pages (person directory, location list, glossary)
-- Search interfaces
-- Navigation components
-- Export formats (RDF, specialized views)
-
-See [gamsdev/README.md](../gamsdev/README.md) for complete list.
-
-### Search Layer
-
-**SPARQL Queries**
-- Location: [gamsdev/sparql/](../gamsdev/sparql/)
-- Database: Blazegraph triple store
-- Query Types: Fulltext, person-based, location-based, category/subject, glossary
-
-**Features:**
-- Bilingual result sets
-- Parameterized queries
-- Multiple data source integration
-- RDF triple pattern matching
-
-See [gamsdev/sparql/README.md](../gamsdev/sparql/README.md) for details.
-
-### Presentation Layer
-
-**Frontend Technologies:**
-- CSS3 for responsive design
-- JavaScript (ES6+) for interactivity
-- Mirador image viewer integration
-- Custom UI components
-
-**Assets:**
-- Fonts: Web typography
-- Icons: UI elements and graphics
-- Images: Landing page and visual content
-- Memory Game: Educational component
-
-### Validation Layer
-
-**Python Scripts**
-- Location: [scripts/validation/](../scripts/validation/)
-- Purpose: Data quality assurance
-- Tools: TEI-XML structure validation, TEI-CSV cross-reference validation, character encoding cleanup, signature extraction, version comparison
-
-See [scripts/validation/README.md](../scripts/validation/README.md) for complete documentation.
-
 ### Archival Layer
 
 **Zenodo Pipeline**
@@ -335,13 +276,39 @@ All system components support German and English:
 
 ---
 
+## GitHub Pages — Design System
+
+The `docs/` folder is deployed as GitHub Pages, serving the ontology documentation and project overview. The design is aligned to the Stefan Zweig Digital GAMS reference to form a visual family ("Zweig Forschungsverbund"):
+
+**Shared palette (from GAMS):**
+- Burgundy `#631a34` — header, links, primary accent
+- Gold `#C2A360` — metadata labels, secondary accent
+- Cream `#FAF8F3` — page background
+
+**Typography (Google Fonts):**
+- Source Serif 4 — headings, body text (serif)
+- Source Sans 3 — UI elements, navigation (sans-serif)
+- JetBrains Mono — ontology URIs, code (monospace)
+
+**Design differentiation from Klawiter Bibliography:**
+- Same palette, but "burgundy-forward" (section headings in burgundy, gold used sparingly for metadata)
+- Klawiter is "gold-forward" (section headings in gold, more warm/inviting for browsing)
+- Both share the GAMS color values exactly, creating unmistakable family cohesion
+
+**Landing page:** Ontology-focused dashboard (not a portal). Stats row (72 Classes, 132 Properties, 7 Layers, v1.1.0), three primary cards (Reference, Visualization, Downloads), secondary links row. All pages in English.
+
+**Verbund bar:** Slim navigation bar above header connecting Stefan Zweig Digital (GAMS), Klawiter Bibliography, and Ontology & Data (this site).
+
+**Visualization:** Fullscreen force-directed D3.js graph at `ontology/visualize.html`. Sidebar controls with layer toggles, auto-fit zoom, hover-to-highlight, English labels.
+
+**Files:** `docs/css/szd-ontology.css` (single stylesheet for all pages except visualize.html which has inline styles for fullscreen layout)
+
+---
+
 ## Related Documentation
 
 - [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure and encoding
 - [COLLECTIONS.md](COLLECTIONS.md) - Collection-specific details
-- [../gamsdev/README.md](../gamsdev/README.md) - Frontend implementation
-- [../gamsdev/sparql/README.md](../gamsdev/sparql/README.md) - Search queries
-- [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
 - [../szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Archival pipeline
 
 ---
@@ -357,4 +324,6 @@ All system components support German and English:
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026
+
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal data model, [PROJECT.md](PROJECT.md) for the full project description.

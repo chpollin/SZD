@@ -1,0 +1,174 @@
+@prefix szdo:    <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix gams:    <https://gams.uni-graz.at/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# =============================================================================
+# Sample Instance Data for SHACL Validation
+# Generated from TEI-XML by scripts/generate_instances.py
+# =============================================================================
+
+# --- Nachlass (Fonds) ---
+
+gams:context:szd a szdo:Nachlass ;
+    szdo:titel "Stefan Zweig Nachlass"@de , "Stefan Zweig Estate"@en ;
+    szdo:enthaelt gams:o:szd.werke , gams:o:szd.korrespondenzen , gams:o:szd.bibliothek .
+
+# --- Werksammlung ---
+
+gams:o:szd.werke a szdo:Werksammlung ;
+    szdo:titel "Werke"@de , "Works"@en .
+
+# SZDMSK.2: Clarissa
+gams:o:szd.werke#SZDMSK.2 a szdo:Manuskript ;
+    szdo:titel "Clarissa"@de ;
+    szdo:signatur "SZ-AAP/W1" ;
+    szdo:istTeilVon gams:o:szd.werke .
+
+# SZDMSK.3: Rausch der Verwandlung
+gams:o:szd.werke#SZDMSK.3 a szdo:Manuskript ;
+    szdo:titel "Rausch der Verwandlung"@de ;
+    szdo:signatur "SZ-AAP/W2.1" ;
+    szdo:istTeilVon gams:o:szd.werke .
+
+# SZDMSK.4: Rausch der Verwandlung
+gams:o:szd.werke#SZDMSK.4 a szdo:Manuskript ;
+    szdo:titel "Rausch der Verwandlung"@de ;
+    szdo:signatur "SZ-AAP/W2.2" ;
+    szdo:istTeilVon gams:o:szd.werke .
+
+# SZDMSK.5: Magellan
+gams:o:szd.werke#SZDMSK.5 a szdo:Manuskript ;
+    szdo:titel "Magellan"@de ;
+    szdo:signatur "SZ-AAP/W3" ;
+    szdo:istTeilVon gams:o:szd.werke .
+
+# SZDMSK.6: Montaigne
+gams:o:szd.werke#SZDMSK.6 a szdo:Manuskript ;
+    szdo:titel "Montaigne"@de ;
+    szdo:signatur "SZ-AAP/W4.1" ;
+    szdo:istTeilVon gams:o:szd.werke .
+
+# --- Korrespondenzsammlung ---
+
+# SZDKOR.1: 1 Korrespondenzstück AN Stefan Zweig
+gams:o:szd.korrespondenzen#SZDKOR.1 a szdo:KorrespondenzKonvolut ;
+    szdo:titel "1 Korrespondenzstück AN Stefan Zweig"@de ;
+    szdo:signatur "SZ-AP1/B-1.1" ;
+    szdo:istTeilVon gams:o:szd.korrespondenzen .
+
+# SZDKOR.2: 1 Korrespondenzstück AN Stefan Zweig
+gams:o:szd.korrespondenzen#SZDKOR.2 a szdo:KorrespondenzKonvolut ;
+    szdo:titel "1 Korrespondenzstück AN Stefan Zweig"@de ;
+    szdo:signatur "SZ-AP1/B-1.2" ;
+    szdo:istTeilVon gams:o:szd.korrespondenzen .
+
+# SZDKOR.3: 1 Korrespondenzstück AN Stefan Zweig
+gams:o:szd.korrespondenzen#SZDKOR.3 a szdo:KorrespondenzKonvolut ;
+    szdo:titel "1 Korrespondenzstück AN Stefan Zweig"@de ;
+    szdo:signatur "SZ-AP2/B-54A" ;
+    szdo:istTeilVon gams:o:szd.korrespondenzen .
+
+# SZDKOR.4: 3 Korrespondenzstücke AN Stefan Zweig
+gams:o:szd.korrespondenzen#SZDKOR.4 a szdo:KorrespondenzKonvolut ;
+    szdo:titel "3 Korrespondenzstücke AN Stefan Zweig"@de ;
+    szdo:signatur "SZ-AP1/B-1.3" ;
+    szdo:istTeilVon gams:o:szd.korrespondenzen .
+
+# SZDKOR.5: 1 Korrespondenzstück AN Stefan Zweig
+gams:o:szd.korrespondenzen#SZDKOR.5 a szdo:KorrespondenzKonvolut ;
+    szdo:titel "1 Korrespondenzstück AN Stefan Zweig"@de ;
+    szdo:signatur "SZ-AP1/B-1.4" ;
+    szdo:istTeilVon gams:o:szd.korrespondenzen .
+
+# --- Bibliothekssammlung ---
+
+# SZDBIB.1: Der goldene Pfad : eine Botschaft der Liebe und Selbstentäuß
+gams:o:szd.bibliothek#SZDBIB.1 a szdo:Buch ;
+    szdo:titel "Der goldene Pfad : eine Botschaft der Liebe und Selbstentäußerung ; dem\n                heutigen Verständnis genähert"@de ;
+    szdo:istTeilVon gams:o:szd.bibliothek .
+
+# SZDBIB.2: Aufgesang : Gedichte
+gams:o:szd.bibliothek#SZDBIB.2 a szdo:Buch ;
+    szdo:titel "Aufgesang : Gedichte"@de ;
+    szdo:istTeilVon gams:o:szd.bibliothek .
+
+# SZDBIB.3: Im Atem der Erde
+gams:o:szd.bibliothek#SZDBIB.3 a szdo:Buch ;
+    szdo:titel "Im Atem der Erde"@de ;
+    szdo:istTeilVon gams:o:szd.bibliothek .
+
+# SZDBIB.4: Der abtrünnige Zar : eine Legende in sechs Vorgängen
+gams:o:szd.bibliothek#SZDBIB.4 a szdo:Buch ;
+    szdo:titel "Der abtrünnige Zar : eine Legende in sechs Vorgängen"@de ;
+    szdo:istTeilVon gams:o:szd.bibliothek .
+
+# SZDBIB.5: Kleiner Garten : Erlebnisse und Dichtungen
+gams:o:szd.bibliothek#SZDBIB.5 a szdo:Buch ;
+    szdo:titel "Kleiner Garten : Erlebnisse und Dichtungen"@de ;
+    szdo:istTeilVon gams:o:szd.bibliothek .
+
+# --- Personen ---
+
+# SZDPER.1: Pierre Abraham
+gams:o:szd.personen#SZDPER.1 a szdo:Person ;
+    szdo:nachname "Abraham" ;
+    szdo:vorname "Pierre" ;
+    szdo:gndIdentifier "http://d-nb.info/gnd/12490310X"^^xsd:anyURI ;
+    rdfs:label "Pierre Abraham" .
+
+# SZDPER.2: Paul Adam
+gams:o:szd.personen#SZDPER.2 a szdo:Person ;
+    szdo:nachname "Adam" ;
+    szdo:vorname "Paul" ;
+    szdo:gndIdentifier "http://d-nb.info/gnd/118643746"^^xsd:anyURI ;
+    rdfs:label "Paul Adam" .
+
+# SZDPER.3: Jane Addams
+gams:o:szd.personen#SZDPER.3 a szdo:Person ;
+    szdo:nachname "Addams" ;
+    szdo:vorname "Jane" ;
+    szdo:gndIdentifier "http://d-nb.info/gnd/118643800"^^xsd:anyURI ;
+    rdfs:label "Jane Addams" .
+
+# SZDPER.4: Felix Aderca
+gams:o:szd.personen#SZDPER.4 a szdo:Person ;
+    szdo:nachname "Aderca" ;
+    szdo:vorname "Felix" ;
+    szdo:gndIdentifier "http://d-nb.info/gnd/119445336"^^xsd:anyURI ;
+    rdfs:label "Felix Aderca" .
+
+# SZDPER.5: Paul Adler
+gams:o:szd.personen#SZDPER.5 a szdo:Person ;
+    szdo:nachname "Adler" ;
+    szdo:vorname "Paul" ;
+    szdo:gndIdentifier "http://d-nb.info/gnd/118647059"^^xsd:anyURI ;
+    rdfs:label "Paul Adler" .
+
+# --- Biographische Ereignisse ---
+
+# SZDBIO.1
+gams:o:szd.lebenskalender#SZDBIO.1 a szdo:BiographischesEreignis ;
+    szdo:datum "1881-11-28"^^xsd:date ;
+    rdfs:label "SZDBIO.1" .
+
+# SZDBIO.2
+gams:o:szd.lebenskalender#SZDBIO.2 a szdo:BiographischesEreignis ;
+    szdo:datum "1892-04" ;
+    rdfs:label "SZDBIO.2" .
+
+# SZDBIO.3
+gams:o:szd.lebenskalender#SZDBIO.3 a szdo:BiographischesEreignis ;
+    szdo:datum "1895-06" ;
+    rdfs:label "SZDBIO.3" .
+
+# SZDBIO.4
+gams:o:szd.lebenskalender#SZDBIO.4 a szdo:BiographischesEreignis ;
+    szdo:datum "1897-03-10"^^xsd:date ;
+    rdfs:label "SZDBIO.4" .
+
+# SZDBIO.5
+gams:o:szd.lebenskalender#SZDBIO.5 a szdo:BiographischesEreignis ;
+    szdo:datum "1900-07" ;
+    rdfs:label "SZDBIO.5" .

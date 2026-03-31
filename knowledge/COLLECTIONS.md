@@ -73,7 +73,31 @@ Letters to and from Stefan Zweig organized by correspondence partner. Each entry
 
 - [DATA.md](DATA.md) - Correspondence corpus statistics and data gaps
 - [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema mapping
-- [../scripts/validation/README.md](../scripts/validation/README.md) - Validation tools
+
+---
+
+## Location Index (SZDSTA)
+
+**File:** [data/Index/Location/SZDSTA.xml](../data/Index/Location/SZDSTA.xml)
+**PID:** o:szd.standorte
+
+### Structure
+
+Repository directory using `<listOrg>`:
+
+```xml
+<listOrg>
+  <org xml:id="SZDSTA.1">
+    <orgName>Literaturarchiv Salzburg</orgName>
+    <country>Oesterreich</country>
+    <settlement>Salzburg</settlement>
+  </org>
+</listOrg>
+```
+
+### Content
+
+40 repositories worldwide that hold Stefan Zweig materials (archives, libraries, museums). Each entry includes institution name, country, and city.
 
 ---
 
@@ -316,7 +340,7 @@ Subject terminology for classification and indexing:
 All collections are published under Creative Commons licenses:
 
 - **Most collections:** CC-BY 4.0
-- **Some collections:** CC-BY-NC 4.0 or CC-BY-NC-SA 4.0
+- **All collections:** CC-BY 4.0
 
 License information is specified in each TEI header `<availability>` element.
 
@@ -345,4 +369,6 @@ Long-term preservation copies on Zenodo:
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026
+
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for how each collection maps to SZDO ontology classes (Section 7), [PROJECT.md](PROJECT.md) for the full project context.

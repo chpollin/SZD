@@ -1,81 +1,50 @@
-# Knowledge Vault - Stefan Zweig Digital
+# Knowledge Vault -- Stefan Zweig Digital
 
-Central documentation hub for understanding the Stefan Zweig Digital project architecture, data structures, and workflows.
+Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
----
+## Dokumentation
 
-## Core Documentation
+| Datei | Inhalt |
+|-------|--------|
+| [PROJECT.md](PROJECT.md) | Forschungsprojekt: Kontext, Methodik, Sammlungen, FAIR-Compliance, Chronologie |
+| [ONTOLOGY.md](ONTOLOGY.md) | Nachlass-Ontologie (SZDO v1.2.0): Zwei-Schichten-Architektur, Designprinzipien, Alignments, Kompetenzfragen |
+| [COLLECTIONS.md](COLLECTIONS.md) | Alle Sammlungen im Detail: Struktur, Inhalt, TEI-Encoding |
+| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 TEI-Dateien, 311k Zeilen, 15 MB, Datumsqualitaet |
+| [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
+| [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
 
-### Data & Structure
-- [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure, bilingual architecture, and encoding patterns
-- [COLLECTIONS.md](COLLECTIONS.md) - Detailed overview of all archival collections
-- [DATA.md](DATA.md) - Correspondence corpus statistics and known data quality issues
-- [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema mapping
+## Ontologie-Dateien
 
-### System Architecture
-- [ARCHITECTURE.md](ARCHITECTURE.md) - System components, data flow, and platform integration
+| Datei | Zweck |
+|-------|-------|
+| [nachlass-ontology.ttl](../ontology/nachlass-ontology.ttl) | Generische Nachlass-Ontologie (`https://w3id.org/nachlass#`) -- nachnutzbar |
+| [szd-ontology.ttl](../ontology/szd-ontology.ttl) | SZD-spezifische Ontologie (importiert `nachlass:`) |
+| [szd-shapes.ttl](../ontology/szd-shapes.ttl) | SHACL-Shapes fuer Strukturvalidierung |
+| [validate.py](../ontology/validate.py) | 6-Stufen-Pipeline: Syntax, SHACL, OWL, OntoClean, 22 CQs |
+| [generate_docs.py](../ontology/generate_docs.py) | HTML-Dokumentationsgenerator |
+| [sample-instances.ttl](../ontology/sample-instances.ttl) | 25 Beispielinstanzen aus 5 Sammlungen |
+| [reconciliation.ttl](../ontology/reconciliation.ttl) | Klawiter-Reconciliation-Triples |
 
----
+## Scripts
 
-## Quick Reference
+| Datei | Zweck |
+|-------|-------|
+| [reconcile_klawiter.py](../scripts/reconcile_klawiter.py) | Klawiter-Bibliographie Reconciliation (105 Werke, 119 Verknuepfungen) |
+| [generate_instances.py](../scripts/generate_instances.py) | Instanzdaten-Generierung aus TEI-XML |
 
-### What is Stefan Zweig Digital?
+## Externe Dokumentation
 
-A complete digital edition of Stefan Zweig's works, correspondence, autographs, and personal library hosted at https://stefanzweig.digital/
+- [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) -- Zenodo-Archivierung
+- [Live-Dokumentation](https://chpollin.github.io/SZD/ontology/) -- GitHub Pages
 
-**Key Technologies:**
-- TEI-XML P5 for data encoding
-- GAMS platform for hosting and infrastructure
-- XSL/XSLT for transformations
-- SPARQL/Blazegraph for search
-- Zenodo for long-term preservation
+## Standards
 
-**Collections:**
-- Correspondence - Letters and exchanges
-- Works - Published writings
-- Autographs - Handwritten manuscripts
-- Library - Personal book collection
-- Biography - Life calendar timeline
-- Essays - Articles and academic pieces
-- Personal Documents - Life documents
-- Person Index - Authority file with GND/Wikidata links
-- Glossary - Subject terminology
-
----
-
-## Navigation by Topic
-
-### Understanding the Data
-Start with [DATA_MODEL.md](DATA_MODEL.md) to understand TEI-XML structure and bilingual architecture, then explore [COLLECTIONS.md](COLLECTIONS.md) for collection-specific details.
-
-### Working with the Data
-See [MAPPING.md](MAPPING.md) for TEI-CSV schema mapping and [DATA.md](DATA.md) for data quality documentation.
-
-### System Integration
-Read [ARCHITECTURE.md](ARCHITECTURE.md) for overall system design and platform integration details.
+- [Records in Context (RiC-O)](https://www.ica.org/standards/RiC/ontology) -- Archivische Modellierung
+- [IFLA LRM](https://www.ifla.org/publications/ifla-library-reference-model) -- Werkmodellierung
+- [CIDOC-CRM](https://www.cidoc-crm.org/) -- Ereignisse, Provenienz
+- [TEI P5](https://tei-c.org/guidelines/) -- Textencoding
 
 ---
 
-## External Documentation
-
-### Frontend & Queries
-- [gamsdev/README.md](../gamsdev/README.md) - XSL transformations and frontend code
-- [gamsdev/sparql/README.md](../gamsdev/sparql/README.md) - SPARQL query documentation
-
-### Validation & Quality
-- [scripts/validation/README.md](../scripts/validation/README.md) - TEI-CSV validation tools
-
-### Archival Pipeline
-- [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Zenodo backup automation
-
----
-
-## Standards & References
-
-**TEI Guidelines:** https://tei-c.org/guidelines/
-**GAMS Documentation:** https://gams.uni-graz.at/documentation
-**METS/MODS:** Library metadata standards
-
----
-
-**Last Updated:** October 2025
+_Stand: 29. Maerz 2026_

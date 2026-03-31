@@ -58,13 +58,6 @@ All SZD data uses TEI P5 (Text Encoding Initiative) XML with consistent header a
 <seriesStmt>
   <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
   <respStmt>
-    <resp>Projektleitung</resp>
-    <persName>
-      <forename>Manfred</forename>
-      <surname>Mittermayer</surname>
-    </persName>
-  </respStmt>
-  <respStmt>
     <resp>Datenmodellierung</resp>
     <persName>
       <forename>Christopher</forename>
@@ -343,11 +336,7 @@ All files validate against TEI P5 schema with SZD-specific customizations.
 
 ### Quality Assurance
 
-See [../scripts/validation/README.md](../scripts/validation/README.md) for validation tools including:
-
-- `validate_tei_csv.py` - TEI-XML structure validation
-- `validate_tei_against_csv.py` - Cross-reference validation
-- `fix_mojibake.py` - Character encoding cleanup
+Ontology validation: `python ontology/validate.py` (6-stage pipeline including SHACL and competency questions).
 
 ---
 
@@ -366,4 +355,6 @@ See [../scripts/validation/README.md](../scripts/validation/README.md) for valid
 - GND: https://www.dnb.de/gnd
 - Wikidata: https://www.wikidata.org/
 
-**Last Updated:** October 2025
+**Last Updated:** March 2026
+
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal ontology (SZDO v1.0.0) that formalizes this data model with RiC-O, LRM, and CRM alignments.
