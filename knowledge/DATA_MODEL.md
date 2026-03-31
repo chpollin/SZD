@@ -357,4 +357,4 @@ Ontology validation: `python ontology/validate.py` (6-stage pipeline including S
 
 **Last Updated:** March 2026
 
-**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal ontology (SZDO v1.0.0) that formalizes this data model with RiC-O, LRM, and CRM alignments.
+**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal ontology (SZDO v1.2.0) that formalizes this data model with RiC-O, LRM, and CRM alignments.
