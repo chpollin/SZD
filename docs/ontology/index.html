@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SZDO — Stefan Zweig Digital Nachlass-Ontologie</title>
-  <meta name="description" content="Formale OWL-Ontologie für den digitalen Nachlass Stefan Zweigs. 58 Klassen, 77 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
+  <meta name="description" content="Formale OWL-Ontologie fuer den digitalen Nachlass Stefan Zweigs. 72 Klassen, 130 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
   <link rel="alternate" type="text/turtle" href="szd-ontology.ttl">
   <link rel="alternate" type="application/ld+json" href="szd-ontology.jsonld">
   <link rel="stylesheet" href="../css/szd-ontology.css">
@@ -15,7 +15,7 @@
     "name": "Stefan Zweig Digital Nachlass-Ontologie",
     "description": "OWL ontology for the digital estate of Stefan Zweig",
     "url": "https://chpollin.github.io/SZD/ontology/",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "creator": {
       "@type": "Organization",
@@ -38,8 +38,8 @@
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
         <div class="lang-toggle">
-          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active">DE</button>
-          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')">EN</button>
+          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active" aria-label="Deutsch">DE</button>
+          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')" aria-label="English">EN</button>
         </div>
       </nav>
     </div>
@@ -47,6 +47,7 @@
 
   <div class="onto-layout">
     <nav class="onto-sidebar">
+  <a href="#overview" style="font-weight:600;"><span class="de-only">Überblick</span><span class="en-only">Overview</span></a>
   <h3><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h3>
   <h3><span class="de-only">Werkschicht</span><span class="en-only">Work Layer</span></h3>
   <h3><span class="de-only">Akteure</span><span class="en-only">Agents</span></h3>
@@ -56,6 +57,7 @@
   <h3>Object Properties</h3>
   <a href="#author">author</a>
   <a href="#betrifftPerson">betrifftPerson</a>
+  <a href="#datumEvidenz">datumEvidenz</a>
   <a href="#enclosures">enclosures</a>
   <a href="#enthaelt">enthaelt</a>
   <a href="#enthaeltObjekt">enthaeltObjekt</a>
@@ -63,8 +65,7 @@
   <a href="#glossar">glossar</a>
   <a href="#hasContentRelation">hasContentRelation</a>
   <a href="#hatAbsender">hatAbsender</a>
-  <a href="#hatAutor">hatAutor</a>
-  <a href="#object-properties">... (56 total)</a>
+  <a href="#object-properties">... (58 total)</a>
   <h3>Datatype Properties</h3>
   <a href="#acquired">acquired</a>
   <a href="#additionalMaterial">additionalMaterial</a>
@@ -84,11 +85,120 @@
 
     <div class="onto-content">
   <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>
-  <div class="onto-version">Version 1.0.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
-  <p>72 Klassen · 56 Object Properties · 74 Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>
+  <div class="onto-version">Version 1.2.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
+  <p>72 Klassen · 58 Object Properties · 74 Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>
   <div style="margin:1rem 0;">
     <span class="badge badge-rico">RiC-O</span>     <span class="badge badge-lrm">LRM</span>     <span class="badge badge-crm">CRM</span>     <span class="badge badge-skos">SKOS</span>     <span class="badge badge-foaf">FOAF</span>     <span class="badge badge-schema">Schema.org</span>     <span class="badge badge-dc">Dublin Core</span>
   </div>
+<section class="onto-prose" id="overview">
+
+  <h2><span class="de-only">Überblick</span><span class="en-only">Overview</span></h2>
+
+  <p class="en-only">
+    The Stefan Zweig Digital Ontology (SZDO) provides a formal OWL 2 data model
+    for describing the digital estate (<em>Nachlass</em>) of Stefan Zweig, held
+    primarily at the Literaturarchiv Salzburg. It bridges archival science,
+    library cataloguing, and cultural-heritage modelling into a single,
+    interoperable vocabulary that can be queried, linked, and extended.
+  </p>
+  <p class="de-only">
+    Die Stefan Zweig Digital Ontology (SZDO) stellt ein formales OWL-2-Datenmodell
+    zur Beschreibung des digitalen Nachlasses von Stefan Zweig bereit, der
+    vorwiegend im Literaturarchiv Salzburg verwahrt wird. Sie verbindet
+    Archivwissenschaft, bibliothekarische Erschließung und
+    Kulturerbe-Modellierung in einem einzigen, interoperablen Vokabular.
+  </p>
+
+  <h3><span class="en-only">Design Principles</span><span class="de-only">Entwurfsprinzipien</span></h3>
+
+  <p class="en-only">
+    SZDO follows an archive-first approach: its backbone is aligned with
+    Records in Contexts (RiC-O), ensuring that the hierarchical structure of a
+    literary estate&mdash;from <em>Nachlass</em> down to individual items&mdash;is
+    captured faithfully. For the description of intellectual works the model
+    adopts the FRBR/IFLA-LRM Work&ndash;Expression&ndash;Manifestation&ndash;Item
+    hierarchy, while events and temporal phenomena are modelled in accordance
+    with CIDOC-CRM. All classes and properties carry bilingual labels (German
+    and English), and the design is deliberately extensible so that new
+    sub-collections or scholarly projects can add domain-specific refinements
+    without breaking the core schema.
+  </p>
+  <p class="de-only">
+    SZDO verfolgt einen archivzentrierten Ansatz: Das Rückgrat orientiert sich
+    an Records in Contexts (RiC-O), sodass die hierarchische Struktur eines
+    literarischen Nachlasses&mdash;vom Gesamtbestand bis zum Einzelstück&mdash;originalgetreu
+    abgebildet wird. Für die Beschreibung intellektueller Werke übernimmt das
+    Modell die FRBR/IFLA-LRM-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar),
+    während Ereignisse und zeitliche Phänomene gemäß CIDOC-CRM modelliert werden.
+    Alle Klassen und Properties tragen zweisprachige Labels (Deutsch und Englisch),
+    und das Design ist bewusst erweiterbar.
+  </p>
+
+  <h3><span class="en-only">Layer Architecture</span><span class="de-only">Schichtenarchitektur</span></h3>
+
+  <p class="en-only">
+    The ontology is organised into seven interconnected layers.
+    The <strong>Archival Layer</strong> models the <em>Nachlass</em> structure
+    (collections, sub-collections, and individual archival objects such as
+    manuscripts, typescripts, and notebooks).
+    The <strong>Digital Objects Layer</strong> represents their digital
+    surrogates (METS objects, IIIF manifests, facsimiles).
+    The <strong>Work Layer</strong> maps intellectual creations through the
+    WEMI hierarchy (Work&ndash;Expression&ndash;Manifestation&ndash;Item).
+    The <strong>Agents Layer</strong> covers persons and organisations.
+    The <strong>Biography &amp; Events Layer</strong> captures life-timeline
+    events such as births, deaths, journeys, and encounters.
+    The <strong>Places Layer</strong> distinguishes geographic locations from
+    repositories and places of origin.
+    Finally, the <strong>Provenance Layer</strong> traces the ownership chain
+    of archival objects. These layers are connected through shared properties
+    so that, for example, a manuscript (Archival) can be linked to the work it
+    witnesses (Work), the person who authored it (Agents), the place where it
+    was written (Places), and the event through which it changed hands
+    (Provenance).
+  </p>
+  <p class="de-only">
+    Die Ontologie ist in sieben miteinander verbundene Schichten gegliedert.
+    Die <strong>Archivschicht</strong> bildet die Nachlassstruktur ab
+    (Sammlungen, Teilsammlungen und Einzelobjekte wie Manuskripte, Typoskripte
+    und Notizbücher).
+    Die <strong>Schicht der digitalen Objekte</strong> repräsentiert deren
+    digitale Surrogate (METS-Objekte, IIIF-Manifeste, Faksimiles).
+    Die <strong>Werkschicht</strong> beschreibt intellektuelle Schöpfungen über
+    die WEMI-Hierarchie (Werk&ndash;Expression&ndash;Manifestation&ndash;Exemplar).
+    Die <strong>Akteursschicht</strong> umfasst Personen und Organisationen.
+    Die <strong>Biographie- und Ereignisschicht</strong> erfasst Lebensereignisse
+    wie Geburt, Tod, Reisen und Begegnungen.
+    Die <strong>Ortsschicht</strong> unterscheidet geographische Orte von
+    Aufbewahrungsorten und Entstehungsorten.
+    Die <strong>Provenienzschicht</strong> zeichnet die Besitzkette von
+    Archivalien nach. Die Schichten sind über gemeinsame Properties verbunden.
+  </p>
+
+  <h3><span class="en-only">Integration</span><span class="de-only">Integration</span></h3>
+
+  <p class="en-only">
+    SZDO connects to the
+    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter Bibliography</a>
+    (6,296 entries) via the Work/Manifestation layer, enabling scholars to
+    navigate from a physical manuscript in the Nachlass to its published
+    editions and translations. The ontology also links to external authority
+    files&mdash;GND, Wikidata, VIAF for persons and organisations, and
+    GeoNames for places&mdash;ensuring that every entity can be reconciled
+    with the wider Linked-Data ecosystem.
+  </p>
+  <p class="de-only">
+    SZDO ist über die Werk-/Manifestationsschicht mit der
+    <a href="https://chpollin.github.io/klawiter-rescue/" target="_blank" rel="noopener">Klawiter-Bibliographie</a>
+    (6.296 Einträge) verbunden, sodass von einem physischen Manuskript im
+    Nachlass zu seinen publizierten Ausgaben und Übersetzungen navigiert werden
+    kann. Darüber hinaus verknüpft die Ontologie mit externen Normdateien&mdash;GND,
+    Wikidata, VIAF für Personen und Organisationen sowie GeoNames für
+    Orte&mdash;und gewährleistet so die Anschlussfähigkeit an das
+    Linked-Data-Ökosystem.
+  </p>
+
+</section>
   <h2 id="section-archiv"><span class="de-only">Archivschicht</span><span class="en-only">Archival Layer</span></h2>
 <div class="entity-card" id="Nachlass">
   <div class="entity-name">szdo:Nachlass</div>
@@ -96,9 +206,9 @@
   <div class="entity-labels"><span class="label-de">DE: Nachlass</span> <span class="label-en">EN: Estate</span></div>
   <div class="entity-comment"><span class="de-only">Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe.</span> <span class="en-only comment-en">The complete estate as an archival fonds. Corresponds to the top-level description unit.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span> , <a href="https://w3id.org/nachlass#Nachlass" target="_blank"><code>Nachlass</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#enthaelt"><code>enthaelt</code></a></td><td>enthält</td><td><a href="#Sammlung"><code>szdo:Sammlung</code></a></td></tr>
@@ -110,9 +220,9 @@
   <div class="entity-labels"><span class="label-de">DE: Sammlung</span> <span class="label-en">EN: Collection</span></div>
   <div class="entity-comment"><span class="de-only">Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz.</span> <span class="en-only comment-en">Sub-collection of the estate, organized by material type or provenance.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+    <tr><th>Subclass of</th><td><code>RiC-O:RecordSet</code> <span class="badge badge-rico">RiC-O</span> , <a href="https://w3id.org/nachlass#Sammlung" target="_blank"><code>Sammlung</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#enthaeltObjekt"><code>enthaeltObjekt</code></a></td><td>enthält Objekt</td><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
@@ -187,9 +297,9 @@
   <div class="entity-labels"><span class="label-de">DE: Nachlassobjekt</span> <span class="label-en">EN: Estate Object</span></div>
   <div class="entity-comment"><span class="de-only">Einzelnes physisches Objekt im Nachlass.</span> <span class="en-only comment-en">Individual physical object in the estate.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>RiC-O:Record</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+    <tr><th>Subclass of</th><td><code>RiC-O:Record</code> <span class="badge badge-rico">RiC-O</span> , <a href="https://w3id.org/nachlass#NachlassObjekt" target="_blank"><code>NachlassObjekt</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#aufschrift"><code>aufschrift</code></a></td><td>Aufschrift</td><td><code>rdf:langString</code></td></tr>
@@ -197,7 +307,7 @@
     <tr><td><a href="#entstehungsdatum"><code>entstehungsdatum</code></a></td><td>Entstehungsdatum</td><td><code>xsd:string</code></td></tr>
     <tr><td><a href="#format"><code>format</code></a></td><td>Format</td><td><code>xsd:string</code></td></tr>
     <tr><td><a href="#hatBeilage"><code>hatBeilage</code></a></td><td>hat Beilage</td><td><a href="#Beilage"><code>szdo:Beilage</code></a></td></tr>
-    <tr><td><a href="#hatBeteiligten"><code>hatBeteiligten</code></a></td><td>hat Beteiligten</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><td><a href="#hatBeteiligtenAkteur"><code>hatBeteiligtenAkteur</code></a></td><td>hat beteiligten Akteur</td><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
     <tr><td><a href="#hatBetroffenePerson"><code>hatBetroffenePerson</code></a></td><td>hat betroffene Person</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
     <tr><td><a href="#hatDigitalesObjekt"><code>hatDigitalesObjekt</code></a></td><td>hat digitales Objekt</td><td><a href="#DigitalesObjekt"><code>szdo:DigitalesObjekt</code></a></td></tr>
     <tr><td><a href="#hatEntstehungsort"><code>hatEntstehungsort</code></a></td><td>hat Entstehungsort</td><td><a href="#Ort"><code>szdo:Ort</code></a></td></tr>
@@ -275,7 +385,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatAbsender"><code>hatAbsender</code></a></td><td>hat Absender</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
@@ -299,7 +409,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#bindung"><code>bindung</code></a></td><td>Bindung</td><td><code>rdf:langString</code></td></tr>
@@ -320,9 +430,9 @@
   <div class="entity-labels"><span class="label-de">DE: Digitales Objekt</span> <span class="label-en">EN: Digital Object</span></div>
   <div class="entity-comment"><span class="de-only">Digitale Repräsentation eines physischen Nachlassobjekts.</span> <span class="en-only comment-en">Digital representation of a physical estate object.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>RiC-O:Instantiation</code> <span class="badge badge-rico">RiC-O</span></td></tr>
+    <tr><th>Subclass of</th><td><code>RiC-O:Instantiation</code> <span class="badge badge-rico">RiC-O</span> , <a href="https://w3id.org/nachlass#DigitalesObjekt" target="_blank"><code>DigitalesObjekt</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatFaksimile"><code>hatFaksimile</code></a></td><td>hat Faksimile</td><td><a href="#Faksimile"><code>szdo:Faksimile</code></a></td></tr>
@@ -363,7 +473,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#blattanzahl"><code>blattanzahl</code></a></td><td>Blattanzahl</td><td><code>xsd:integer</code></td></tr>
@@ -387,9 +497,9 @@
   <div class="entity-labels"><span class="label-de">DE: Werk</span> <span class="label-en">EN: Work</span></div>
   <div class="entity-comment"><span class="de-only">Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex.</span> <span class="en-only comment-en">Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>LRM:Work</code> <span class="badge badge-lrm">LRM</span></td></tr>
+    <tr><th>Subclass of</th><td><code>LRM:Work</code> <span class="badge badge-lrm">LRM</span> , <a href="https://w3id.org/nachlass#Werk" target="_blank"><code>Werk</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatAutor"><code>hatAutor</code></a></td><td>hat Autor</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
@@ -408,7 +518,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><code>LRM:Expression</code> <span class="badge badge-lrm">LRM</span></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatKomponist"><code>hatKomponist</code></a></td><td>hat Komponist</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
@@ -425,7 +535,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><code>LRM:Manifestation</code> <span class="badge badge-lrm">LRM</span></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatExemplar"><code>hatExemplar</code></a></td><td>hat Exemplar</td><td><a href="#Exemplar"><code>szdo:Exemplar</code></a></td></tr>
@@ -511,7 +621,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatTeil"><code>hatTeil</code></a></td><td>hat Teil</td><td><a href="#Werk"><code>szdo:Werk</code></a></td></tr>
@@ -551,7 +661,7 @@
   <div class="entity-labels"><span class="label-de">DE: Akteur</span> <span class="label-en">EN: Agent</span></div>
   <div class="entity-comment"><span class="de-only">Person oder Organisation mit Bezug zum Nachlass.</span> <span class="en-only comment-en">Person or organization related to the estate.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>CRM:E39_Actor</code> <span class="badge badge-crm">CRM</span></td></tr>
+    <tr><th>Subclass of</th><td><code>CRM:E39_Actor</code> <span class="badge badge-crm">CRM</span> , <a href="https://w3id.org/nachlass#Akteur" target="_blank"><code>Akteur</code></a></td></tr>
     <tr><th>Equivalent to</th><td><code>RiC-O:Agent</code> <span class="badge badge-rico">RiC-O</span></td></tr>
   </table>
 </div>
@@ -565,7 +675,7 @@
     <tr><th>Equivalent to</th><td><code>RiC-O:Person</code> <span class="badge badge-rico">RiC-O</span></td></tr>
     <tr><th>Disjoint with</th><td><a href="#Organisation"><code>szdo:Organisation</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#geburtsdatum"><code>geburtsdatum</code></a></td><td>Geburtsdatum</td><td><code>xsd:date</code></td></tr>
@@ -592,9 +702,9 @@
   <div class="entity-labels"><span class="label-de">DE: Biographisches Ereignis</span> <span class="label-en">EN: Biographical Event</span></div>
   <div class="entity-comment"><span class="de-only">Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender.</span> <span class="en-only comment-en">Event in Stefan Zweig&#x27;s life. Corresponds to SZDBIO entries in the life calendar.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>CRM:E5_Event</code> <span class="badge badge-crm">CRM</span></td></tr>
+    <tr><th>Subclass of</th><td><code>CRM:E5_Event</code> <span class="badge badge-crm">CRM</span> , <a href="https://w3id.org/nachlass#BiographischesEreignis" target="_blank"><code>BiographischesEreignis</code></a></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#betrifftPerson"><code>betrifftPerson</code></a></td><td>betrifft Person</td><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
@@ -680,7 +790,7 @@
   <div class="entity-labels"><span class="label-de">DE: Ort</span> <span class="label-en">EN: Place</span></div>
   <div class="entity-comment"><span class="de-only">Geographischer oder institutioneller Ort.</span> <span class="en-only comment-en">Geographical or institutional place.</span></div>
   <table class="prop-table">
-    <tr><th>Subclass of</th><td><code>CRM:E53_Place</code> <span class="badge badge-crm">CRM</span></td></tr>
+    <tr><th>Subclass of</th><td><code>CRM:E53_Place</code> <span class="badge badge-crm">CRM</span> , <a href="https://w3id.org/nachlass#Ort" target="_blank"><code>Ort</code></a></td></tr>
     <tr><th>Equivalent to</th><td><code>RiC-O:Place</code> <span class="badge badge-rico">RiC-O</span></td></tr>
   </table>
 </div>
@@ -720,7 +830,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><code>CRM:E8_Acquisition</code> <span class="badge badge-crm">CRM</span></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatNachbesitzer"><code>hatNachbesitzer</code></a></td><td>hat Nachbesitzer</td><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
@@ -735,7 +845,7 @@
   <table class="prop-table">
     <tr><th>Subclass of</th><td><code>CRM:E13_Attribute_Assignment</code> <span class="badge badge-crm">CRM</span></td></tr>
   </table>
-  <h4 style="margin-top:0.75rem;font-size:0.8rem;color:var(--sz-gold);text-transform:uppercase;letter-spacing:0.06em;">Properties</h4>
+  <h4 class="properties-heading">Properties</h4>
   <table class="prop-table">
     <tr><th>Property</th><th>Label</th><th>Range</th></tr>
     <tr><td><a href="#hatMerkmaltyp"><code>hatMerkmaltyp</code></a></td><td>hat Merkmaltyp</td><td><a href="https://gams.uni-graz.at/o:szd.glossar#ProvenanceFeature" target="_blank"><code>ProvenanceFeature</code></a></td></tr>
@@ -759,6 +869,17 @@
     <tr><th>Type</th><td>Object Property</td></tr>
     <tr><th>Domain</th><td><a href="#BiographischesEreignis"><code>szdo:BiographischesEreignis</code></a></td></tr>
     <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="datumEvidenz">
+  <div class="entity-name">szdo:datumEvidenz</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#datumEvidenz</div>
+  <div class="entity-labels"><span class="label-de">DE: Datum-Evidenz</span> <span class="label-en">EN: date evidence</span></div>
+  <div class="entity-comment"><span class="de-only">Qualifiziert die Quelle einer Datierung (aus Dokument, aus Kontext, aus externer Quelle, unbekannt). Verweist auf SKOS-Konzepte im SZD-Glossar.</span> <span class="en-only comment-en">Qualifies the source of a date assignment (from document, from context, from external source, unknown). Points to SKOS concepts in the SZD Glossary.</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Domain</th><td><code>owl:Thing</code></td></tr>
+    <tr><th>Range</th><td><a href="https://gams.uni-graz.at/o:szd.glossar#DatumEvidenz" target="_blank"><code>DatumEvidenz</code></a></td></tr>
   </table>
 </div>
 <div class="entity-card" id="enclosures">
@@ -853,17 +974,28 @@
 <div class="entity-card" id="hatBeteiligten">
   <div class="entity-name">szdo:hatBeteiligten</div>
   <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeteiligten</div>
-  <div class="entity-labels"><span class="label-de">DE: hat Beteiligten</span> <span class="label-en">EN: has party involved</span></div>
+  <div class="entity-labels"><span class="label-en">EN: hatBeteiligten (v1.0.0)</span></div>
+  <table class="prop-table">
+    <tr><th>Type</th><td>Object Property</td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBeteiligtenAkteur"><code>szdo:hatBeteiligtenAkteur</code></a></td></tr>
+  </table>
+</div>
+<div class="entity-card" id="hatBeteiligtenAkteur">
+  <div class="entity-name">szdo:hatBeteiligtenAkteur</div>
+  <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBeteiligtenAkteur</div>
+  <div class="entity-labels"><span class="label-de">DE: hat beteiligten Akteur</span> <span class="label-en">EN: has participating agent</span></div>
+  <div class="entity-comment"><span class="de-only">Generische Obereigenschaft für alle Personen/Organisationen, die aktiv an einem Objekt oder Werk beteiligt sind.</span> <span class="en-only comment-en">Generic superproperty for all persons/organisations actively involved in an object or work.</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
     <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
-    <tr><th>Range</th><td><a href="#Person"><code>szdo:Person</code></a></td></tr>
+    <tr><th>Range</th><td><a href="#Akteur"><code>szdo:Akteur</code></a></td></tr>
   </table>
 </div>
 <div class="entity-card" id="hatBetroffenePerson">
   <div class="entity-name">szdo:hatBetroffenePerson</div>
   <div class="entity-uri">https://gams.uni-graz.at/o:szd.ontology#hatBetroffenePerson</div>
   <div class="entity-labels"><span class="label-de">DE: hat betroffene Person</span> <span class="label-en">EN: has affected person</span></div>
+  <div class="entity-comment"><span class="de-only">Person, die im Objekt thematisch erwähnt oder behandelt wird — kein aktiver Beteiligter.</span> <span class="en-only comment-en">Person mentioned or discussed in the object — not an active participant.</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
     <tr><th>Domain</th><td><a href="#NachlassObjekt"><code>szdo:NachlassObjekt</code></a></td></tr>
@@ -1213,7 +1345,7 @@
   <div class="entity-labels"><span class="label-en">EN: partyInvolved (GAMS v0.x)</span></div>
   <table class="prop-table">
     <tr><th>Type</th><td>Object Property</td></tr>
-    <tr><th>Equivalent to</th><td><a href="#hatBeteiligten"><code>szdo:hatBeteiligten</code></a></td></tr>
+    <tr><th>Equivalent to</th><td><a href="#hatBeteiligtenAkteur"><code>szdo:hatBeteiligtenAkteur</code></a></td></tr>
   </table>
 </div>
 <div class="entity-card" id="provenanceCharacteristic">
