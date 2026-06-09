@@ -53,6 +53,13 @@ BADGE_MAP = {
     "http://purl.org/dc/elements/1.1/": ("DC", "badge-dc"),
 }
 
+WELLKNOWN_NS = {
+    "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+    "http://www.w3.org/2002/07/owl#": "owl",
+    "http://www.w3.org/2001/XMLSchema#": "xsd",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+}
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -64,46 +71,40 @@ def local_name(uri):
 def is_szdo(uri):
     return str(uri).startswith(str(SZDO))
 
+def get_lang_values(g, uri, predicate):
+    """Return {lang: value} dict for a predicate."""
+    values = {}
+    for obj in g.objects(uri, predicate):
+        if hasattr(obj, "language") and obj.language:
+            values[obj.language] = str(obj)
+        else:
+            values[""] = str(obj)
+    return values
+
 def get_labels(g, uri):
     """Return {lang: label} dict."""
-    labels = {}
-    for obj in g.objects(uri, RDFS.label):
-        if hasattr(obj, "language") and obj.language:
-            labels[obj.language] = str(obj)
-        else:
-            labels[""] = str(obj)
-    return labels
+    return get_lang_values(g, uri, RDFS.label)
 
 def get_comments(g, uri):
     """Return {lang: comment} dict."""
-    comments = {}
-    for obj in g.objects(uri, RDFS.comment):
-        if hasattr(obj, "language") and obj.language:
-            comments[obj.language] = str(obj)
-        else:
-            comments[""] = str(obj)
-    return comments
+    return get_lang_values(g, uri, RDFS.comment)
 
 def uri_to_link(g, uri):
-    """Create an HTML link for a URI — internal anchor for szdo:, external otherwise."""
+    """Create an HTML link for a URI -- internal anchor for szdo:, external otherwise."""
     if isinstance(uri, BNode):
         return "<em>(blank node)</em>"
     s = str(uri)
     name = local_name(uri)
     if is_szdo(uri):
         return f'<a href="#{escape(name)}"><code>szdo:{escape(name)}</code></a>'
-    # Check known prefixes
+    # Check known prefixes from BADGE_MAP
     for ns_str, (prefix, badge_cls) in BADGE_MAP.items():
         if s.startswith(ns_str):
             return f'<code>{escape(prefix)}:{escape(name)}</code> <span class="badge {badge_cls}">{escape(prefix)}</span>'
-    if s.startswith("http://www.w3.org/2000/01/rdf-schema#"):
-        return f'<code>rdfs:{escape(name)}</code>'
-    if s.startswith("http://www.w3.org/2002/07/owl#"):
-        return f'<code>owl:{escape(name)}</code>'
-    if s.startswith("http://www.w3.org/2001/XMLSchema#"):
-        return f'<code>xsd:{escape(name)}</code>'
-    if s.startswith("http://www.w3.org/1999/02/22-rdf-syntax-ns#"):
-        return f'<code>rdf:{escape(name)}</code>'
+    # Check well-known W3C namespaces via dict lookup
+    for ns_str, prefix in WELLKNOWN_NS.items():
+        if s.startswith(ns_str):
+            return f'<code>{escape(prefix)}:{escape(name)}</code>'
     return f'<a href="{escape(s)}" target="_blank"><code>{escape(name)}</code></a>'
 
 def render_labels_html(labels):
@@ -123,6 +124,16 @@ def render_comments_html(comments):
     if not parts and "" in comments:
         parts.append(escape(comments[""]))
     return " ".join(parts)
+
+def _render_metadata_table(rows):
+    """Render a list of (label, value) tuples as an HTML prop-table string."""
+    if not rows:
+        return ""
+    html = '  <table class="prop-table">\n'
+    for label, val in rows:
+        html += f'    <tr><th>{label}</th><td>{val}</td></tr>\n'
+    html += '  </table>\n'
+    return html
 
 
 # ---------------------------------------------------------------------------
@@ -219,11 +230,7 @@ def generate_class_card(g, cls_uri):
     if disjoints:
         rows.append(("Disjoint with", " , ".join(disjoints)))
 
-    if rows:
-        html += '  <table class="prop-table">\n'
-        for label, val in rows:
-            html += f'    <tr><th>{label}</th><td>{val}</td></tr>\n'
-        html += '  </table>\n'
+    html += _render_metadata_table(rows)
 
     # Properties
     if props_with_domain:
@@ -271,10 +278,7 @@ def generate_property_card(g, prop_uri, prop_type="Object"):
     if equivs:
         rows.append(("Equivalent to", " , ".join(equivs)))
 
-    html += '  <table class="prop-table">\n'
-    for label, val in rows:
-        html += f'    <tr><th>{label}</th><td>{val}</td></tr>\n'
-    html += '  </table>\n'
+    html += _render_metadata_table(rows)
     html += '</div>\n'
     return html
 
@@ -393,22 +397,10 @@ def generate_prose_section():
 '''
 
 
-def generate_html(g):
-    """Generate the complete ontology documentation HTML."""
-
-    # Gather all entities
-    all_classes = sorted([c for c in g.subjects(RDF.type, OWL.Class) if is_szdo(c)], key=lambda x: local_name(x))
-    all_obj_props = sorted([p for p in g.subjects(RDF.type, OWL.ObjectProperty) if is_szdo(p)], key=lambda x: local_name(x))
-    all_dat_props = sorted([p for p in g.subjects(RDF.type, OWL.DatatypeProperty) if is_szdo(p)], key=lambda x: local_name(x))
-
-    # Map class names to URIs
+def _build_sidebar(g, all_classes, all_obj_props, all_dat_props):
+    """Build the sidebar navigation HTML."""
     class_map = {local_name(c): c for c in all_classes}
 
-    # Get ontology metadata
-    onto_uri = URIRef("https://gams.uni-graz.at/o:szd.ontology")
-    version = str(list(g.objects(onto_uri, OWL.versionInfo))[0]) if list(g.objects(onto_uri, OWL.versionInfo)) else "?"
-
-    # Build sidebar
     sidebar = '<nav class="onto-sidebar">\n'
     sidebar += '  <a href="#overview" style="font-weight:600;"><span class="de-only">Überblick</span><span class="en-only">Overview</span></a>\n'
     for sec_id, sec_de, sec_en, _ in SECTIONS:
@@ -438,15 +430,20 @@ def generate_html(g):
     sidebar += '    <a href="szd-ontology.jsonld">JSON-LD</a>\n'
     sidebar += '  </div>\n'
     sidebar += '</nav>\n'
+    return sidebar
 
-    # Build main content
+
+def _build_content(g, all_classes, all_obj_props, all_dat_props, version):
+    """Build the main content area HTML."""
+    class_map = {local_name(c): c for c in all_classes}
+
     content = '<div class="onto-content">\n'
     content += f'  <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>\n'
     content += f'  <div class="onto-version">Version {escape(version)} · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>\n'
     content += f'  <p>{len(all_classes)} Klassen · {len(all_obj_props)} Object Properties · {len(all_dat_props)} Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>\n'
 
     # External vocabularies
-    content += '  <div style="margin:1rem 0;">\n'
+    content += '  <div class="badge-row">\n'
     content += '    <span class="badge badge-rico">RiC-O</span> '
     content += '    <span class="badge badge-lrm">LRM</span> '
     content += '    <span class="badge badge-crm">CRM</span> '
@@ -477,9 +474,12 @@ def generate_html(g):
         content += generate_property_card(g, prop, "Datatype")
 
     content += '</div>\n'
+    return content
 
-    # Assemble full page
-    html = f'''<!DOCTYPE html>
+
+def _build_page(sidebar, content, version):
+    """Assemble the full HTML page from sidebar, content, and version."""
+    return f'''<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -518,9 +518,9 @@ def generate_html(g):
         <a href="../downloads/">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
-        <div class="lang-toggle">
-          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active" aria-label="Deutsch">DE</button>
-          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')" aria-label="English">EN</button>
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button data-lang="de" class="active" aria-pressed="true" aria-label="Deutsch">DE</button>
+          <button data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
       </nav>
     </div>
@@ -536,10 +536,38 @@ def generate_html(g):
       <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · Generated from <a href="szd-ontology.ttl">szd-ontology.ttl</a></p>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(btn) {{
+      btn.addEventListener('click', function() {{
+        document.body.className = 'lang-' + this.dataset.lang;
+        document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(b) {{
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        }});
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+      }});
+    }});
+  </script>
 </body>
 </html>'''
 
-    return html
+
+def generate_html(g):
+    """Generate the complete ontology documentation HTML."""
+
+    # Gather all entities
+    all_classes = sorted([c for c in g.subjects(RDF.type, OWL.Class) if is_szdo(c)], key=lambda x: local_name(x))
+    all_obj_props = sorted([p for p in g.subjects(RDF.type, OWL.ObjectProperty) if is_szdo(p)], key=lambda x: local_name(x))
+    all_dat_props = sorted([p for p in g.subjects(RDF.type, OWL.DatatypeProperty) if is_szdo(p)], key=lambda x: local_name(x))
+
+    # Get ontology metadata
+    onto_uri = URIRef("https://gams.uni-graz.at/o:szd.ontology")
+    version = str(list(g.objects(onto_uri, OWL.versionInfo))[0]) if list(g.objects(onto_uri, OWL.versionInfo)) else "?"
+
+    sidebar = _build_sidebar(g, all_classes, all_obj_props, all_dat_props)
+    content = _build_content(g, all_classes, all_obj_props, all_dat_props, version)
+    return _build_page(sidebar, content, version)
 
 
 # ---------------------------------------------------------------------------

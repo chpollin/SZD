@@ -776,7 +776,7 @@ Die Ontologie wird durch eine 6-Stufen-Pipeline validiert (`ontology/validate.py
 | 3. SHACL | pySHACL + `szd-shapes.ttl` | Kardinalitäten, Pflicht-Annotationen, Namenskonventionen, Orphan-Klassen |
 | 4. OWL Checks | rdflib-basiert | Orphans, Multi-Domain, Circular SubClassOf, InverseOf-Konsistenz, Disjointness |
 | 5. OntoClean | Rigidity-Analyse | Taxonomische Korrektheit (rigide vs. anti-rigide Klassen) |
-| 6. Kompetenzfragen | 19 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment) |
+| 6. Kompetenzfragen | 22 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment, nachlass:-Integration) |
 
 **Ausführung:** `python ontology/validate.py`
 

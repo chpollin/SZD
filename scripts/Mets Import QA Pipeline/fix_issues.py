@@ -9,6 +9,16 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 DRY_RUN = False  # Set True to only print what would happen
+FOLDER_RANGE = range(1, 6)  # B2.1 through B2.5
+
+
+def folder_paths(i):
+    """Return (folder, standard_xml, double_xml, extensionless) paths for B2.{i}."""
+    folder = BASE_DIR / f"SZ_AAL_B2.{i}"
+    standard_xml = folder / f"Result_SZ_AAL_B2.{i}.xml"
+    double_xml = folder / f"Result_SZ_AAL_B2SZ_AAL_B2.{i}.xml"
+    extensionless = folder / f"Result_SZ_AAL_B2.{i}"
+    return folder, standard_xml, double_xml, extensionless
 
 def log(action, detail):
     prefix = "[DRY RUN] " if DRY_RUN else ""
@@ -23,11 +33,8 @@ def fix_rename_and_delete_duplicates():
     print("\n[1] Duplikate bereinigen & XMLs umbenennen (B2.1-B2.5)")
     print("-" * 55)
 
-    for i in range(1, 6):
-        folder = BASE_DIR / f"SZ_AAL_B2.{i}"
-        standard_xml = folder / f"Result_SZ_AAL_B2.{i}.xml"
-        double_xml = folder / f"Result_SZ_AAL_B2SZ_AAL_B2.{i}.xml"
-        extensionless = folder / f"Result_SZ_AAL_B2.{i}"
+    for i in FOLDER_RANGE:
+        folder, standard_xml, double_xml, extensionless = folder_paths(i)
 
         if i == 1:
             # B2.1: standard XML exists, delete the other two
@@ -56,9 +63,9 @@ def fix_remove_file_namespace():
     print("\n[2] xmlns:file Namespace entfernen (B2.1-B2.5)")
     print("-" * 55)
 
-    for i in range(1, 6):
-        folder = BASE_DIR / f"SZ_AAL_B2.{i}"
-        xml_path = folder / f"Result_SZ_AAL_B2.{i}.xml"
+    for i in FOLDER_RANGE:
+        folder, standard_xml, _, _ = folder_paths(i)
+        xml_path = standard_xml
 
         if not xml_path.exists():
             print(f"  WARNUNG: {xml_path.name} nicht gefunden!")

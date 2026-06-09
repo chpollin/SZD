@@ -1,21 +1,7 @@
 """
-SZDO Instance Data Generator
-==============================
-
-Generates sample RDF instance data from TEI-XML collections
-for SHACL validation against the SZDO ontology.
-
-Extracts 5 entries from each major collection:
-  - SZDMSK (Werke/Manuskripte)
-  - SZDKOR (Korrespondenz)
-  - SZDBIB (Bibliothek)
-  - SZDPER (Personen)
-  - SZDBIO (Lebenskalender)
-
-Usage:
-    python scripts/generate_instances.py
+SZDO Instance Data Generator -- generates sample RDF instance data from
+TEI-XML collections for SHACL validation.  Usage: python scripts/generate_instances.py
 """
-
 import sys
 from pathlib import Path
 from lxml import etree
@@ -26,18 +12,20 @@ if sys.platform == "win32":
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 OUTPUT_FILE = PROJECT_ROOT / "ontology" / "sample-instances.ttl"
+SAMPLE_SIZE = 5
 
 TEI = "http://www.tei-c.org/ns/1.0"
 NS = {"t": TEI}
+XID = "{http://www.w3.org/XML/1998/namespace}id"
+XLANG = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
 def parse_text(el, lang="de"):
     """Extract text from an element, preferring given language."""
     if el is None:
         return ""
-    # Try lang-specific child
     for child in el:
-        if child.get("{http://www.w3.org/XML/1998/namespace}lang") == lang:
+        if child.get(XLANG) == lang:
             return (child.text or "").strip()
     return (el.text or "").strip()
 
@@ -47,10 +35,113 @@ def escape_ttl(s):
     return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n").replace("\r", "")
 
 
+def _sig(el):
+    s = el.find(".//t:msIdentifier/t:idno[@type='signature']", NS)
+    return (s.text or "").strip() if s is not None else ""
+
+
+def _title_triples(title_de, sig):
+    t = [f'    szdo:titel "{escape_ttl(title_de)}"@de ;']
+    if sig:
+        t.append(f'    szdo:signatur "{escape_ttl(sig)}" ;')
+    return t
+
+
+# -- Extractors: each returns (comment_str, list_of_triple_lines) -----------
+
+def _extract_standard(bibl):
+    title_el = bibl.find(".//t:titleStmt/t:title", NS)
+    title_de = parse_text(title_el, "de") or parse_text(title_el)
+    xid = bibl.get(XID, "")
+    return f"{xid}: {title_de[:60]}", _title_triples(title_de, _sig(bibl))
+
+
+def _extract_kor(bibl):
+    xid = bibl.get(XID, "")
+    titles = bibl.findall(".//t:titleStmt/t:title", NS)
+    title_de = xid
+    for tel in titles:
+        if tel.get(XLANG, "") == "de" and tel.text:
+            title_de = tel.text.strip(); break
+    if title_de == xid and titles and titles[0].text:
+        title_de = titles[0].text.strip()
+    triples = _title_triples(title_de, _sig(bibl))
+    for role, prop in [("sent", "hatAbsender"), ("received", "hatEmpfaenger")]:
+        pn = bibl.find(f".//t:correspAction[@type='{role}']/t:persName", NS)
+        ref = pn.get("ref", "") if pn is not None else ""
+        if ref and "#SZDPER" in ref:
+            triples.append(f"    szdo:{prop} gams:o:szd.personen#{ref.split('#')[-1]} ;")
+    return f"{xid}: {title_de[:60]}", triples
+
+
+def _extract_per(per):
+    xid = per.get(XID, "")
+    sn = (per.findtext(".//t:surname", "", NS) or "").strip()
+    fn = (per.findtext(".//t:forename", "", NS) or "").strip()
+    pn_el = per.find("t:persName", NS)
+    gnd = pn_el.get("ref", "") if pn_el is not None else ""
+    triples = [f'    szdo:nachname "{escape_ttl(sn)}" ;']
+    if fn:
+        triples.append(f'    szdo:vorname "{escape_ttl(fn)}" ;')
+    if "gnd/" in gnd:
+        triples.append(f'    szdo:gndIdentifier "{escape_ttl(gnd)}"^^xsd:anyURI ;')
+    triples.append(f'    rdfs:label "{escape_ttl(fn + " " + sn)}" .')
+    return f"{xid}: {fn} {sn}", triples
+
+
+def _extract_bio(ev):
+    xid = ev.get(XID, "")
+    date_el = ev.find(".//t:date", NS)
+    when = date_el.get("when", "") if date_el is not None else ""
+    triples = []
+    if when:
+        suffix = "^^xsd:date" if len(when) == 10 else ""
+        triples.append(f'    szdo:datum "{when}"{suffix} ;')
+    triples.append(f'    rdfs:label "{escape_ttl(xid)}" .')
+    return xid, triples
+
+
+# -- Collection configs: (name, label, xml_path, xpath, rdf_class,
+#    uri_base, section_header, parent_prop, extract_fn)
+COLLECTIONS = [
+    ("SZDMSK", "Werke", "Work/SZDMSK.xml", "//t:biblFull",
+     "szdo:Manuskript", "gams:o:szd.werke", None, "szdo:istTeilVon", _extract_standard),
+    ("SZDKOR", "Korrespondenz", "Correspondence/SZDKOR.xml", "//t:biblFull",
+     "szdo:KorrespondenzKonvolut", "gams:o:szd.korrespondenzen",
+     "# --- Korrespondenzsammlung ---", "szdo:istTeilVon", _extract_kor),
+    ("SZDBIB", "Bibliothek", "Library/SZDBIB.xml", "//t:biblFull",
+     "szdo:Buch", "gams:o:szd.bibliothek",
+     "# --- Bibliothekssammlung ---", "szdo:istTeilVon", _extract_standard),
+    ("SZDPER", "Personen", "Index/Person/SZDPER.xml", "//t:person",
+     "szdo:Person", "gams:o:szd.personen", "# --- Personen ---", None, _extract_per),
+    ("SZDBIO", "Lebenskalender", "Biography/SZDBIO.xml", "//t:event",
+     "szdo:BiographischesEreignis", "gams:o:szd.lebenskalender",
+     "# --- Biographische Ereignisse ---", None, _extract_bio),
+]
+
+
+def process_collection(step, total, name, label, xml_path, xpath,
+                       rdf_class, uri_base, header, parent_prop, extract, lines):
+    """Parse one XML collection and append Turtle triples to *lines*."""
+    print(f"[{step}/{total}] {name} ({label}) ...")
+    entries = etree.parse(str(DATA_DIR / xml_path)).xpath(xpath, namespaces=NS)[:SAMPLE_SIZE]
+    if header:
+        lines += [header, ""]
+    for entry in entries:
+        xid = entry.get(XID, "")
+        comment, triples = extract(entry)
+        lines.append(f"# {comment}")
+        lines.append(f"{uri_base}#{xid} a {rdf_class} ;")
+        lines.extend(triples)
+        if parent_prop:
+            lines.append(f"    {parent_prop} {uri_base} .")
+        lines.append("")
+    print(f"       {len(entries)} instances")
+
+
 def main():
     print("SZDO Instance Data Generator")
     print("=" * 50)
-
     lines = [
         '@prefix szdo:    <https://gams.uni-graz.at/o:szd.ontology#> .',
         '@prefix gams:    <https://gams.uni-graz.at/> .',
@@ -63,175 +154,17 @@ def main():
         '# Generated from TEI-XML by scripts/generate_instances.py',
         '# =============================================================================',
         '',
+        '# --- Nachlass (Fonds) ---', '',
+        'gams:context:szd a szdo:Nachlass ;',
+        '    szdo:titel "Stefan Zweig Nachlass"@de , "Stefan Zweig Estate"@en ;',
+        '    szdo:enthaelt gams:o:szd.werke , gams:o:szd.korrespondenzen , gams:o:szd.bibliothek .', '',
+        '# --- Werksammlung ---', '',
+        'gams:o:szd.werke a szdo:Werksammlung ;',
+        '    szdo:titel "Werke"@de , "Works"@en .', '',
     ]
-
-    # --- SZDMSK: Werke/Manuskripte ---
-    print("[1/5] SZDMSK (Werke) ...")
-    tree = etree.parse(str(DATA_DIR / "Work" / "SZDMSK.xml"))
-    bibls = tree.xpath("//t:biblFull", namespaces=NS)[:5]
-
-    # Nachlass (Fonds)
-    lines.append("# --- Nachlass (Fonds) ---")
-    lines.append("")
-    lines.append("gams:context:szd a szdo:Nachlass ;")
-    lines.append('    szdo:titel "Stefan Zweig Nachlass"@de , "Stefan Zweig Estate"@en ;')
-    lines.append("    szdo:enthaelt gams:o:szd.werke , gams:o:szd.korrespondenzen , gams:o:szd.bibliothek .")
-    lines.append("")
-    lines.append("# --- Werksammlung ---")
-    lines.append("")
-    lines.append("gams:o:szd.werke a szdo:Werksammlung ;")
-    lines.append('    szdo:titel "Werke"@de , "Works"@en .')
-    lines.append("")
-
-    for bibl in bibls:
-        xml_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id", "")
-        title_el = bibl.find(".//t:titleStmt/t:title", NS)
-        title_de = parse_text(title_el, "de") or parse_text(title_el)
-        sig_el = bibl.find(".//t:msIdentifier/t:idno[@type='signature']", NS)
-        sig = (sig_el.text or "").strip() if sig_el is not None else ""
-        objtyp_el = bibl.find(".//t:objectDesc//t:measure[@type='leaf']", NS)
-
-        uri = f"gams:o:szd.werke#{xml_id}"
-        lines.append(f"# {xml_id}: {title_de[:60]}")
-        lines.append(f"{uri} a szdo:Manuskript ;")
-        lines.append(f'    szdo:titel "{escape_ttl(title_de)}"@de ;')
-        if sig:
-            lines.append(f'    szdo:signatur "{escape_ttl(sig)}" ;')
-        lines.append(f"    szdo:istTeilVon gams:o:szd.werke .")
-        lines.append("")
-
-    print(f"       {len(bibls)} instances")
-
-    # --- SZDKOR: Korrespondenz ---
-    print("[2/5] SZDKOR (Korrespondenz) ...")
-    tree = etree.parse(str(DATA_DIR / "Correspondence" / "SZDKOR.xml"))
-    bibls = tree.xpath("//t:biblFull", namespaces=NS)[:5]
-
-    lines.append("# --- Korrespondenzsammlung ---")
-    lines.append("")
-
-    for bibl in bibls:
-        xml_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id", "")
-        titles = bibl.findall(".//t:titleStmt/t:title", NS)
-        title_de = xml_id
-        for tel in titles:
-            lang = tel.get("{http://www.w3.org/XML/1998/namespace}lang", "")
-            if lang == "de" and tel.text:
-                title_de = tel.text.strip()
-                break
-        if title_de == xml_id and titles and titles[0].text:
-            title_de = titles[0].text.strip()
-
-        # Sender/receiver
-        sent = bibl.find(".//t:correspAction[@type='sent']/t:persName", NS)
-        recv = bibl.find(".//t:correspAction[@type='received']/t:persName", NS)
-        sender_ref = sent.get("ref", "") if sent is not None else ""
-        recv_ref = recv.get("ref", "") if recv is not None else ""
-
-        sig_el = bibl.find(".//t:msIdentifier/t:idno[@type='signature']", NS)
-        sig = (sig_el.text or "").strip() if sig_el is not None else ""
-
-        uri = f"gams:o:szd.korrespondenzen#{xml_id}"
-        lines.append(f"# {xml_id}: {title_de[:60]}")
-        lines.append(f"{uri} a szdo:KorrespondenzKonvolut ;")
-        lines.append(f'    szdo:titel "{escape_ttl(title_de)}"@de ;')
-        if sig:
-            lines.append(f'    szdo:signatur "{escape_ttl(sig)}" ;')
-        if sender_ref and "#SZDPER" in sender_ref:
-            per_id = sender_ref.split("#")[-1]
-            lines.append(f"    szdo:hatAbsender gams:o:szd.personen#{per_id} ;")
-        if recv_ref and "#SZDPER" in recv_ref:
-            per_id = recv_ref.split("#")[-1]
-            lines.append(f"    szdo:hatEmpfaenger gams:o:szd.personen#{per_id} ;")
-        lines.append(f"    szdo:istTeilVon gams:o:szd.korrespondenzen .")
-        lines.append("")
-
-    print(f"       {len(bibls)} instances")
-
-    # --- SZDBIB: Bibliothek ---
-    print("[3/5] SZDBIB (Bibliothek) ...")
-    tree = etree.parse(str(DATA_DIR / "Library" / "SZDBIB.xml"))
-    bibls = tree.xpath("//t:biblFull", namespaces=NS)[:5]
-
-    lines.append("# --- Bibliothekssammlung ---")
-    lines.append("")
-
-    for bibl in bibls:
-        xml_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id", "")
-        title_el = bibl.find(".//t:titleStmt/t:title", NS)
-        title_de = parse_text(title_el, "de") or parse_text(title_el)
-        sig_el = bibl.find(".//t:msIdentifier/t:idno[@type='signature']", NS)
-        sig = (sig_el.text or "").strip() if sig_el is not None else ""
-
-        uri = f"gams:o:szd.bibliothek#{xml_id}"
-        lines.append(f"# {xml_id}: {title_de[:60]}")
-        lines.append(f"{uri} a szdo:Buch ;")
-        lines.append(f'    szdo:titel "{escape_ttl(title_de)}"@de ;')
-        if sig:
-            lines.append(f'    szdo:signatur "{escape_ttl(sig)}" ;')
-        lines.append(f"    szdo:istTeilVon gams:o:szd.bibliothek .")
-        lines.append("")
-
-    print(f"       {len(bibls)} instances")
-
-    # --- SZDPER: Personen ---
-    print("[4/5] SZDPER (Personen) ...")
-    tree = etree.parse(str(DATA_DIR / "Index" / "Person" / "SZDPER.xml"))
-    persons = tree.xpath("//t:person", namespaces=NS)[:5]
-
-    lines.append("# --- Personen ---")
-    lines.append("")
-
-    for per in persons:
-        xml_id = per.get("{http://www.w3.org/XML/1998/namespace}id", "")
-        surname_el = per.find(".//t:surname", NS)
-        forename_el = per.find(".//t:forename", NS)
-        surname = (surname_el.text or "").strip() if surname_el is not None else ""
-        forename = (forename_el.text or "").strip() if forename_el is not None else ""
-        persname_el = per.find("t:persName", NS)
-        gnd_ref = persname_el.get("ref", "") if persname_el is not None else ""
-
-        uri = f"gams:o:szd.personen#{xml_id}"
-        lines.append(f"# {xml_id}: {forename} {surname}")
-        lines.append(f"{uri} a szdo:Person ;")
-        lines.append(f'    szdo:nachname "{escape_ttl(surname)}" ;')
-        if forename:
-            lines.append(f'    szdo:vorname "{escape_ttl(forename)}" ;')
-        if "gnd/" in gnd_ref:
-            lines.append(f'    szdo:gndIdentifier "{escape_ttl(gnd_ref)}"^^xsd:anyURI ;')
-        lines.append(f"    rdfs:label \"{escape_ttl(forename + ' ' + surname)}\" .")
-        lines.append("")
-
-    print(f"       {len(persons)} instances")
-
-    # --- SZDBIO: Lebenskalender ---
-    print("[5/5] SZDBIO (Lebenskalender) ...")
-    tree = etree.parse(str(DATA_DIR / "Biography" / "SZDBIO.xml"))
-    events = tree.xpath("//t:event", namespaces=NS)[:5]
-
-    lines.append("# --- Biographische Ereignisse ---")
-    lines.append("")
-
-    for ev in events:
-        xml_id = ev.get("{http://www.w3.org/XML/1998/namespace}id", "")
-        date_el = ev.find(".//t:date", NS)
-        when = date_el.get("when", "") if date_el is not None else ""
-
-        uri = f"gams:o:szd.lebenskalender#{xml_id}"
-        lines.append(f"# {xml_id}")
-        lines.append(f"{uri} a szdo:BiographischesEreignis ;")
-        if when:
-            # Only use xsd:date for full dates (YYYY-MM-DD), otherwise xsd:string
-            if len(when) == 10:  # YYYY-MM-DD
-                lines.append(f'    szdo:datum "{when}"^^xsd:date ;')
-            else:
-                lines.append(f'    szdo:datum "{when}" ;')
-        lines.append(f"    rdfs:label \"{escape_ttl(xml_id)}\" .")
-        lines.append("")
-
-    print(f"       {len(events)} instances")
-
-    # Write
+    total = len(COLLECTIONS)
+    for i, (name, label, path, xp, cls, uri, hdr, parent, fn) in enumerate(COLLECTIONS, 1):
+        process_collection(i, total, name, label, path, xp, cls, uri, hdr, parent, fn, lines)
     OUTPUT_FILE.write_text("\n".join(lines), encoding="utf-8")
     print(f"\nWritten to {OUTPUT_FILE}")
 

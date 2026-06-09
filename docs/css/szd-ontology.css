@@ -311,6 +311,11 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; }
   font-style: italic;
 }
 
+/* --- Badge row (vocabulary overview) --- */
+.badge-row {
+  margin: 1rem 0;
+}
+
 /* --- Badges for external vocabularies --- */
 .badge {
   display: inline-block;
@@ -505,6 +510,17 @@ body.lang-en .de-only { display: none; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* --- Layout helpers (replacing inline styles) --- */
+.landing-cards-4 { grid-template-columns: repeat(4, 1fr); }
+.landing-cards-3 { grid-template-columns: repeat(3, 1fr); }
+.table-scroll { overflow-x: auto; }
+.card-static { cursor: default; }
+.badge-row { margin: 1rem 0; }
+.section-note { margin-top: 1rem; }
+.subsection-heading { margin-top: 1rem; font-size: 0.9rem; }
+.list-indented { margin: 0.5rem 0 0.5rem 1.5rem; }
+.link-row { margin-top: 0.75rem; }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {

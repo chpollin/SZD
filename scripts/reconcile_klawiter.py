@@ -1,5 +1,5 @@
 """
-Klawiter ↔ SZDWRK Reconciliation
+Klawiter \u2194 SZDWRK Reconciliation
 ===================================
 
 Matches Klawiter bibliography entries to SZDWRK work index entries
@@ -9,9 +9,9 @@ using a multi-stage approach:
   3. Fuzzy title matching (difflib SequenceMatcher, >=0.85)
 
 Outputs:
-  - scripts/reconciliation_results.json — full match data
-  - scripts/reconciliation_report.md — human-readable report
-  - ontology/reconciliation.ttl — RDF triples (szdo:hatManifestation)
+  - scripts/reconciliation_results.json \u2014 full match data
+  - scripts/reconciliation_report.md \u2014 human-readable report
+  - ontology/reconciliation.ttl \u2014 RDF triples (szdo:hatManifestation)
 
 Usage:
     python scripts/reconcile_klawiter.py
@@ -21,9 +21,9 @@ import sys
 import os
 import json
 import re
+from collections import Counter, defaultdict
 from pathlib import Path
 from difflib import SequenceMatcher
-from collections import defaultdict
 from lxml import etree
 
 if sys.platform == "win32":
@@ -31,7 +31,10 @@ if sys.platform == "win32":
 
 PROJECT_ROOT = Path(__file__).parent.parent
 SZDWRK_FILE = PROJECT_ROOT / "data" / "Index" / "Werke" / "SZDWRK.xml"
-KLAWITER_FILE = Path("c:/Users/Chrisi/Documents/GitHub/klawiter-rescue/docs/data/klawiter.json")
+KLAWITER_FILE = Path(os.environ.get(
+    "KLAWITER_JSON",
+    Path(__file__).parent.parent.parent / "klawiter-rescue" / "docs" / "data" / "klawiter.json"
+))
 RESULTS_FILE = Path(__file__).parent / "reconciliation_results.json"
 REPORT_FILE = Path(__file__).parent / "reconciliation_report.md"
 TTL_FILE = PROJECT_ROOT / "ontology" / "reconciliation.ttl"
@@ -132,14 +135,14 @@ def normalize(title):
     # Remove parenthetical year/info
     t = re.sub(r"\s*\(.*?\)\s*", " ", t)
     # Remove subtitle after colon or dash
-    t = re.sub(r"\s*[:\-–—]\s.*$", "", t)
+    t = re.sub(r"\s*[:\-\u2013\u2014]\s.*$", "", t)
     # Remove punctuation
     t = re.sub(r'[.,;!?\"\'\u00bb\u00ab\u201e\u201c()\[\]]', '', t)
     # Normalize whitespace
     t = re.sub(r"\s+", " ", t).strip()
     # Normalize umlauts
-    t = t.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
-    t = t.replace("ß", "ss")
+    t = t.replace("\u00e4", "ae").replace("\u00f6", "oe").replace("\u00fc", "ue")
+    t = t.replace("\u00df", "ss")
     return t
 
 
@@ -152,53 +155,68 @@ def similarity(a, b):
 # 4. Matching
 # ---------------------------------------------------------------------------
 
-def reconcile(works, klawiter_entries):
-    """Multi-stage matching."""
-    matches = []  # (work, klawiter_entry, confidence, method)
-    matched_work_ids = set()
+def _match_stage(works, index, key_fn, matched_ids,
+                 confidence_primary, confidence_secondary,
+                 method_primary, method_secondary):
+    """Run a single matching stage against an index.
 
-    # Build Klawiter index
-    kl_by_title_exact = defaultdict(list)
-    kl_by_title_norm = defaultdict(list)
-    for e in klawiter_entries:
-        kl_by_title_exact[e["title"].strip().lower()].append(e)
-        kl_by_title_norm[normalize(e["title"])].append(e)
+    Parameters
+    ----------
+    works : list
+        SZDWRK work entries.
+    index : dict
+        Mapping from key (produced by *key_fn*) to list of Klawiter entries.
+    key_fn : callable
+        Receives a work dict, returns the lookup key (or None to skip).
+    matched_ids : set
+        Work IDs already matched in earlier stages (mutated in place).
+    confidence_primary / confidence_secondary : float
+        Confidence scores assigned to primary / secondary matches.
+    method_primary / method_secondary : str
+        Method labels assigned to primary / secondary matches.
 
-    # Stage 1: Exact title match
+    Returns
+    -------
+    list of (work, klawiter_entry, confidence, method) tuples.
+    """
+    stage_matches = []
     for w in works:
-        wt_lower = w["title"].strip().lower()
-        candidates = kl_by_title_exact.get(wt_lower, [])
-        # Prefer primary works over secondary
+        if w["id"] in matched_ids:
+            continue
+        key = key_fn(w)
+        if not key:
+            continue
+        candidates = index.get(key, [])
         primary = [c for c in candidates if c["type"] in PRIMARY_TYPES]
         if primary:
             for c in primary:
-                matches.append((w, c, 0.95, "exact_title"))
-            matched_work_ids.add(w["id"])
+                stage_matches.append((w, c, confidence_primary, method_primary))
+            matched_ids.add(w["id"])
         elif candidates:
             for c in candidates:
-                matches.append((w, c, 0.90, "exact_title_secondary"))
-            matched_work_ids.add(w["id"])
+                stage_matches.append((w, c, confidence_secondary, method_secondary))
+            matched_ids.add(w["id"])
+    return stage_matches
 
-    # Stage 2: Normalized title match
-    for w in works:
-        if w["id"] in matched_work_ids:
-            continue
-        wt_norm = normalize(w["title"])
-        if not wt_norm:
-            continue
-        candidates = kl_by_title_norm.get(wt_norm, [])
-        primary = [c for c in candidates if c["type"] in PRIMARY_TYPES]
-        if primary:
-            for c in primary:
-                matches.append((w, c, 0.85, "normalized_title"))
-            matched_work_ids.add(w["id"])
-        elif candidates:
-            for c in candidates:
-                matches.append((w, c, 0.80, "normalized_title_secondary"))
-            matched_work_ids.add(w["id"])
 
-    # Stage 3: Fuzzy title match (only primary types, >=0.85 similarity)
-    remaining_works = [w for w in works if w["id"] not in matched_work_ids]
+def _fuzzy_match_stage(works, klawiter_entries, matched_ids):
+    """Fuzzy title matching stage (primary types only, >=0.85 similarity).
+
+    Parameters
+    ----------
+    works : list
+        SZDWRK work entries.
+    klawiter_entries : list
+        All Klawiter entries.
+    matched_ids : set
+        Work IDs already matched (mutated in place).
+
+    Returns
+    -------
+    list of (work, klawiter_entry, confidence, method) tuples.
+    """
+    stage_matches = []
+    remaining_works = [w for w in works if w["id"] not in matched_ids]
     primary_kl = [e for e in klawiter_entries if e["type"] in PRIMARY_TYPES]
 
     for w in remaining_works:
@@ -219,10 +237,46 @@ def reconcile(works, klawiter_entries):
                 best_candidates.append((e, sim))
 
         for c, sim in best_candidates[:3]:  # Max 3 fuzzy matches per work
-            matches.append((w, c, round(sim * 0.9, 3), "fuzzy_title"))
+            stage_matches.append((w, c, round(sim * 0.9, 3), "fuzzy_title"))
         if best_candidates:
-            matched_work_ids.add(w["id"])
+            matched_ids.add(w["id"])
 
+    return stage_matches
+
+
+def reconcile(works, klawiter_entries):
+    """Multi-stage matching."""
+    matched_work_ids = set()
+
+    # Build Klawiter indexes
+    kl_by_title_exact = defaultdict(list)
+    kl_by_title_norm = defaultdict(list)
+    for e in klawiter_entries:
+        kl_by_title_exact[e["title"].strip().lower()].append(e)
+        kl_by_title_norm[normalize(e["title"])].append(e)
+
+    # Stage 1: Exact title match
+    exact_matches = _match_stage(
+        works, kl_by_title_exact,
+        key_fn=lambda w: w["title"].strip().lower(),
+        matched_ids=matched_work_ids,
+        confidence_primary=0.95, confidence_secondary=0.90,
+        method_primary="exact_title", method_secondary="exact_title_secondary",
+    )
+
+    # Stage 2: Normalized title match
+    norm_matches = _match_stage(
+        works, kl_by_title_norm,
+        key_fn=lambda w: normalize(w["title"]) or None,
+        matched_ids=matched_work_ids,
+        confidence_primary=0.85, confidence_secondary=0.80,
+        method_primary="normalized_title", method_secondary="normalized_title_secondary",
+    )
+
+    # Stage 3: Fuzzy title match
+    fuzzy_matches = _fuzzy_match_stage(works, klawiter_entries, matched_work_ids)
+
+    matches = exact_matches + norm_matches + fuzzy_matches
     return matches, matched_work_ids
 
 
@@ -261,15 +315,36 @@ def write_json(matches, works, matched_ids):
 # 6. Output: Markdown Report
 # ---------------------------------------------------------------------------
 
+def compute_match_stats(results):
+    """Compute aggregated match statistics from results.
+
+    Returns
+    -------
+    dict with keys:
+        method_counts : Counter  -- matches per method
+        type_counts   : Counter  -- matches per Klawiter type
+    """
+    method_counts = Counter(m["method"] for m in results["matches"])
+    type_counts = Counter(m["klawiter_type"] for m in results["matches"])
+    return {
+        "method_counts": method_counts,
+        "type_counts": type_counts,
+    }
+
+
 def write_report(results):
     meta = results["meta"]
+    stats = compute_match_stats(results)
+    method_counts = stats["method_counts"]
+    type_counts = stats["type_counts"]
+
     lines = [
-        "# Klawiter ↔ SZDWRK Reconciliation Report",
+        "# Klawiter \u2194 SZDWRK Reconciliation Report",
         "",
-        f"**Datum:** 2026-03-29",
+        f"**Datum:** {__import__('datetime').date.today().isoformat()}",
         f"**SZDWRK Werke:** {meta['total_works']}",
         f"**Gematchte Werke:** {meta['matched_works']} ({meta['match_rate']}%)",
-        f"**Gesamte Matches:** {meta['total_matches']} (ein Werk kann mehrere Klawiter-Einträge haben)",
+        f"**Gesamte Matches:** {meta['total_matches']} (ein Werk kann mehrere Klawiter-Eintr\u00e4ge haben)",
         "",
         "## Methoden-Verteilung",
         "",
@@ -277,13 +352,11 @@ def write_report(results):
         "|---------|---------|-----------|",
     ]
 
-    from collections import Counter
-    method_counts = Counter(m["method"] for m in results["matches"])
     method_labels = {
         "exact_title": "Exakter Titel",
-        "exact_title_secondary": "Exakter Titel (Sekundärlit.)",
+        "exact_title_secondary": "Exakter Titel (Sekund\u00e4rlit.)",
         "normalized_title": "Normalisierter Titel",
-        "normalized_title_secondary": "Normalisiert (Sekundärlit.)",
+        "normalized_title_secondary": "Normalisiert (Sekund\u00e4rlit.)",
         "fuzzy_title": "Fuzzy-Match (>=85%)",
     }
     for method, count in method_counts.most_common():
@@ -299,7 +372,6 @@ def write_report(results):
         "| Typ | Matches |",
         "|-----|---------|",
     ]
-    type_counts = Counter(m["klawiter_type"] for m in results["matches"])
     for t, n in type_counts.most_common():
         lines.append(f"| {t} | {n} |")
 
@@ -312,8 +384,10 @@ def write_report(results):
     ]
     for m in results["matches"]:
         if m["confidence"] >= 0.90:
+            kl_short = m['klawiter_id'].split('/')[-1]
+            year = m['klawiter_year'] or '\u2014'
             lines.append(
-                f"| {m['work_id']} | {m['work_title'][:40]} | {m['klawiter_id'].split('/')[-1]} | {m['klawiter_type']} | {m['klawiter_year'] or '—'} | {m['confidence']:.0%} |"
+                f"| {m['work_id']} | {m['work_title'][:40]} | {kl_short} | {m['klawiter_type']} | {year} | {m['confidence']:.0%} |"
             )
 
     lines += [
@@ -322,8 +396,8 @@ def write_report(results):
         "",
     ]
     matched_wids = set(m["work_id"] for m in results["matches"])
-    # We need access to full works list — pass it through
-    lines.append("*(Siehe reconciliation_results.json für Details)*")
+    # We need access to full works list \u2014 pass it through
+    lines.append("*(Siehe reconciliation_results.json f\u00fcr Details)*")
 
     REPORT_FILE.write_text("\n".join(lines), encoding="utf-8")
 
@@ -365,7 +439,7 @@ def write_ttl(results):
             prop = "szdo:hatManifestation" if m["klawiter_type"] in PRIMARY_TYPES else "szdo:wirdBehandeltIn"
             sep = " ;" if i < len(matches_list) - 1 else " ."
             lines.append(f'    {prop} <https://klawiter-rescue.github.io/vocab/{m["klawiter_id"].split(":")[-1]}>{sep}')
-            lines.append(f'    # → {m["klawiter_title"][:60]} [{m["klawiter_type"]}] conf:{m["confidence"]:.0%}')
+            lines.append(f'    # \u2192 {m["klawiter_title"][:60]} [{m["klawiter_type"]}] conf:{m["confidence"]:.0%}')
 
         lines.append("")
 
@@ -419,7 +493,6 @@ def main():
     print(f"  Klawiter entries:    {len(kl)}")
     print(f"  Matched works:       {len(matched_ids)} ({len(matched_ids)/len(works)*100:.1f}%)")
     print(f"  Total match links:   {len(matches)}")
-    from collections import Counter
     mc = Counter(m[3] for m in matches)
     for method, count in mc.most_common():
         print(f"    {method}: {count}")

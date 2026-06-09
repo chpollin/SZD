@@ -37,9 +37,9 @@
         <a href="../downloads/">Downloads</a>
         <a href="https://stefanzweig.digital" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/chpollin/SZD" target="_blank" rel="noopener">GitHub</a>
-        <div class="lang-toggle">
-          <button onclick="document.body.className='lang-de';this.classList.add('active');this.nextElementSibling.classList.remove('active')" class="active" aria-label="Deutsch">DE</button>
-          <button onclick="document.body.className='lang-en';this.classList.add('active');this.previousElementSibling.classList.remove('active')" aria-label="English">EN</button>
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button data-lang="de" class="active" aria-pressed="true" aria-label="Deutsch">DE</button>
+          <button data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
       </nav>
     </div>
@@ -87,7 +87,7 @@
   <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>
   <div class="onto-version">Version 1.2.0 · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>
   <p>72 Klassen · 58 Object Properties · 74 Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>
-  <div style="margin:1rem 0;">
+  <div class="badge-row">
     <span class="badge badge-rico">RiC-O</span>     <span class="badge badge-lrm">LRM</span>     <span class="badge badge-crm">CRM</span>     <span class="badge badge-skos">SKOS</span>     <span class="badge badge-foaf">FOAF</span>     <span class="badge badge-schema">Schema.org</span>     <span class="badge badge-dc">Dublin Core</span>
   </div>
 <section class="onto-prose" id="overview">
@@ -2153,5 +2153,18 @@
       <p>&copy; 2026 Stefan Zweig Digital · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> · Generated from <a href="szd-ontology.ttl">szd-ontology.ttl</a></p>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.body.className = 'lang-' + this.dataset.lang;
+        document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+      });
+    });
+  </script>
 </body>
 </html>
