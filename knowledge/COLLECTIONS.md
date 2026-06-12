@@ -278,20 +278,42 @@ Academic and journalistic essays about Stefan Zweig:
 
 **File:** [data/PersonalDocument/SZDLEB.xml](../data/PersonalDocument/SZDLEB.xml)
 **PID:** o:szd.lebensdokumente
+**Entries:** 143 `<biblFull>`
 
 ### Structure
 
-Life documents using `<msDesc>` for archival materials.
+Each life document is one `<biblFull>` (RNA-based description, emphasis on physical features). The manuscript description is nested under `fileDesc/sourceDesc/msDesc`:
+
+```xml
+<biblFull xml:id="SZDLEB.1">
+  <fileDesc>
+    <titleStmt>… title[@ana], author, editor[@role="contributor"] …</titleStmt>
+    <sourceDesc><msDesc>
+      <msIdentifier>… country, settlement, repository, idno[@type="signature"], altIdentifier/idno[@type="PID"] …</msIdentifier>
+      <msContents>… summary, textLang, msItem/incipit, msItem/docEdition …</msContents>
+      <physDesc>… support/material[@ana="szdg:…"], extent, foliation, handDesc, bindingDesc, accMat …</physDesc>
+      <history>… origin/origDate, origin/origPlace, provenance, acquisition …</history>
+    </msDesc></sourceDesc>
+  </fileDesc>
+  <profileDesc><textClass><keywords>… term[@type] …</keywords></textClass></profileDesc>
+</biblFull>
+```
 
 ### Content
 
-Personal documents from Stefan Zweig's life including:
+Per the glossary's own definition: Zweig's diaries and contracts for his literary works, but also official documents, bank records, theatre posters, invitation cards, unused stationery — a heterogeneous group of life documents.
 
-- Official documents
-- Certificates
-- Legal papers
-- Personal notes
-- Ephemera
+### Data fields vs. frontend display
+
+The TEI holds **41 distinct data fields** (every `@type`/`@ana`-discriminated element path across all 143 records). The public frontend renders only **~22** of them as labelled fields; the rest exist in the TEI/backend only:
+
+- **Not rendered as fields:** Einheitssachtitel & Gesamttitel (fold into the heading bar), `term[@type="work"]` (related work), `term[@type="classification"]` (genre), signature (folded into *Heutiger Standort / Current Location*), internal identifiers (`PID`, `extern`, `mediaid`, `subject`), `summary`.
+
+The **bilingual labels and definitions** of the glossary-backed fields — Beteiligte/Parties Involved, Datierung/Date, Incipit, Aufschrift/Identifying Inscription, Umfang/Einband/Physical Description, Beschreibstoff/Writing Material, Schreibstoff/Writing Instrument, Beilage/Enclosures, Zusatzmaterial/Additional Material — come from the SZD glossary (`szdg:` SKOS concepts), **not** from free templating. The display label for `docEdition[@ana="szdg:IdentifyingInscription"]` is **Aufschrift** (not "Identifizierende Beschriftung").
+
+The complete field catalogue (22 displayed fields, DE/EN label + DE/EN definition) is maintained as a spreadsheet: [docs/SZDLEB_Datenfelder.xlsx](../docs/SZDLEB_Datenfelder.xlsx).
+
+> **Inspecting display labels:** the collection-level dissemination `https://stefanzweig.digital/{PID}/sdef:TEI/get?locale={de|en}` renders the full bilingual frontend view of an entire collection — the reliable way to enumerate display labels. The single-object variant (`o:szd.{n}/sdef:TEI/get`) currently returns HTTP 500.
 
 ---
 
@@ -369,6 +391,6 @@ Long-term preservation copies on Zenodo:
 
 ---
 
-**Last Updated:** March 2026
+**Last Updated:** June 2026
 
 **See also:** [ONTOLOGY.md](ONTOLOGY.md) for how each collection maps to SZDO ontology classes (Section 7), [PROJECT.md](PROJECT.md) for the full project context.

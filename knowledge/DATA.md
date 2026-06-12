@@ -55,6 +55,23 @@ Maschinenlesbare Datumsattribute wurden am 29. Maerz 2026 systematisch nachgetra
 
 ---
 
+## Glossar -- Datenqualitaet
+
+### DE/EN-Definitionen vertauscht (Beilagen vs. Zusatzmaterial)
+
+Im Glossar (`data/Glossary/szd-Glossary.xml`) widersprechen sich bei zwei benachbarten SKOS-Konzepten die deutsche und die englische `skos:definition` -- die Definitionstexte sind ueberkreuz vergeben:
+
+| Konzept (`prefLabel`) | DE-Definition beschreibt | EN-Definition beschreibt |
+|-----------------------|--------------------------|--------------------------|
+| `Enclosures` (Beilagen) | von Zweig selbst / zu Lebzeiten beigelegt | von Dritten / nach seinem Tod hinzugefuegt |
+| `AdditionalMaterial` (Zusatzmaterial) | von Dritten / nach seinem Tod hinzugefuegt | von Zweig selbst / zu Lebzeiten |
+
+Die `prefLabel` (DE/EN) sind in beiden Faellen korrekt; nur die Definitionstexte stehen ueber Kreuz. Innerhalb jedes Konzepts widersprechen sich DE und EN, ueber beide Konzepte hinweg passen sie kreuzweise zusammen. Die semantisch plausible Lesart ist die deutsche (Beilage = von Zweig/zu Lebzeiten, Zusatzmaterial = von Dritten/posthum); welche Sprachfassung kanonisch ist, muss aber redaktionell entschieden werden. **Fix:** die beiden englischen `skos:definition` gegeneinander tauschen.
+
+_Gefunden 11. Juni 2026 beim Abgleich der SZDLEB-Anzeigefelder gegen das Glossar._
+
+---
+
 ## Korrespondenz-Details
 
 ### Struktur
