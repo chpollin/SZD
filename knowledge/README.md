@@ -1,3 +1,16 @@
+---
+title: Knowledge Vault -- Stefan Zweig Digital
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
+updated: 2026-03-29
+---
+
 # Knowledge Vault -- Stefan Zweig Digital
 
 Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.

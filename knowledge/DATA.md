@@ -1,12 +1,21 @@
 ---
-doc: DATA
-project: SZD
+title: TEI-XML Data Overview
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
+updated: 2026-06-12
 version: 1.0.0
-updated: 2026-03-29
 tags: [data, zweig, tei, statistics]
 ---
 
 # TEI-XML Data Overview
+
+Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sowie dokumentierten Datenluecken.
 
 ## Collection Statistics (29 Mar 2026)
 

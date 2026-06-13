@@ -1,3 +1,16 @@
+---
+title: Architecture - Stefan Zweig Digital
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
+updated: 2026-03-31
+---
+
 # Architecture - Stefan Zweig Digital
 
 System architecture, component overview, and data flow for the Stefan Zweig Digital platform.

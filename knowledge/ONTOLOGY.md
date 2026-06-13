@@ -1,3 +1,16 @@
+---
+title: Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2026-03-29
+updated: 2026-03-31
+---
+
 # Stefan Zweig Digital Nachlass-Ontologie (SZDO)
 
 Formale Ontologie fuer den digitalen Nachlass von Stefan Zweig. Die Ontologie modelliert archivalische, bibliographische und biographische Entitaeten und deren Beziehungen -- abgeleitet aus der Archivwissenschaft (Records in Context), ergaenzt durch bibliothekarische Standards (IFLA LRM) und kulturerbe-orientierte Modelle (CIDOC-CRM).

@@ -1,3 +1,16 @@
+---
+title: Collections - Stefan Zweig Digital
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
+updated: 2026-06-12
+---
+
 # Collections - Stefan Zweig Digital
 
 Detailed overview of all archival collections in the Stefan Zweig Digital project, their TEI encoding, and content organization.

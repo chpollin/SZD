@@ -1,3 +1,16 @@
+---
+title: Stefan Zweig Digital — Projektbeschreibung
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2026-03-29
+updated: 2026-03-31
+---
+
 # Stefan Zweig Digital — Projektbeschreibung
 
 Forschungsprojekt zur digitalen Nachlassrekonstruktion Stefan Zweigs aus der Perspektive der Digital Humanities und des Forschungsdatenmanagements.
