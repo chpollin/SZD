@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-12
+updated: 2026-06-15
 ---
 
 # Collections - Stefan Zweig Digital
@@ -291,7 +291,7 @@ Academic and journalistic essays about Stefan Zweig:
 
 **File:** [data/PersonalDocument/SZDLEB.xml](../data/PersonalDocument/SZDLEB.xml)
 **PID:** o:szd.lebensdokumente
-**Entries:** 143 `<biblFull>`
+**Entries:** 156 `<biblFull>`
 
 ### Structure
 
@@ -318,7 +318,7 @@ Per the glossary's own definition: Zweig's diaries and contracts for his literar
 
 ### Data fields vs. frontend display
 
-The TEI holds **41 distinct data fields** (every `@type`/`@ana`-discriminated element path across all 143 records). The public frontend renders only **~22** of them as labelled fields; the rest exist in the TEI/backend only:
+The TEI holds **41 distinct data fields** (every `@type`/`@ana`-discriminated element path across all 156 records). The public frontend renders only **~22** of them as labelled fields; the rest exist in the TEI/backend only:
 
 - **Not rendered as fields:** Einheitssachtitel & Gesamttitel (fold into the heading bar), `term[@type="work"]` (related work), `term[@type="classification"]` (genre), signature (folded into *Heutiger Standort / Current Location*), internal identifiers (`PID`, `extern`, `mediaid`, `subject`), `summary`.
 

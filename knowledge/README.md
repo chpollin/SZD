@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-03-29
+updated: 2026-06-15
 ---
 
 # Knowledge Vault -- Stefan Zweig Digital
@@ -22,7 +22,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [PROJECT.md](PROJECT.md) | Forschungsprojekt: Kontext, Methodik, Sammlungen, FAIR-Compliance, Chronologie |
 | [ONTOLOGY.md](ONTOLOGY.md) | Nachlass-Ontologie (SZDO v1.2.0): Zwei-Schichten-Architektur, Designprinzipien, Alignments, Kompetenzfragen |
 | [COLLECTIONS.md](COLLECTIONS.md) | Alle Sammlungen im Detail: Struktur, Inhalt, TEI-Encoding |
-| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 TEI-Dateien, 311k Zeilen, 15 MB, Datumsqualitaet |
+| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 TEI-Dateien, 312k Zeilen, 15 MB, Datumsqualitaet |
 | [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
 | [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
@@ -45,6 +45,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 |-------|-------|
 | [reconcile_klawiter.py](../scripts/reconcile_klawiter.py) | Klawiter-Bibliographie Reconciliation (105 Werke, 119 Verknuepfungen) |
 | [generate_instances.py](../scripts/generate_instances.py) | Instanzdaten-Generierung aus TEI-XML |
+| [szaal_lebensdokumente/csv_to_szdleb.py](../scripts/szaal_lebensdokumente/csv_to_szdleb.py) | SZ-AAL Lebensdokumente CSV -> SZDLEB.xml ([README](../scripts/szaal_lebensdokumente/README.md)) |
 
 ## Externe Dokumentation
 
@@ -60,4 +61,4 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 ---
 
-_Stand: 29. Maerz 2026_
+_Stand: 15. Juni 2026_
