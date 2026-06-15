@@ -4877,8 +4877,8 @@
         <biblFull xml:id="SZDLEB.51">
           <fileDesc>
             <titleStmt>
-              <title ana="assigned" xml:lang="de">Geburtsschein Lotte Zweig</title>
-              <title ana="assigned" xml:lang="en">Birth certificate Lotte Zweig</title>
+              <title ana="assigned" xml:lang="de">Fotokopie eines Geburtsscheins von Lotte Zweig</title>
+              <title ana="assigned" xml:lang="en">Photocopy of a birth certificate of Lotte Zweig</title>
               <title type="Einheitssachtitel" xml:lang="de">Geburtsschein</title>
               <title type="Einheitssachtitel" xml:lang="en">Birth certificate</title>
               <title type="Gesamttitel">Stefan Zweig - Alberman Papers 2</title>
@@ -4889,6 +4889,8 @@
             <notesStmt>
               <note xml:lang="de">Ausgestellt am 18. Februar 1914</note>
               <note xml:lang="en">Issued 1914 February 18</note>
+              <note xml:lang="de">Angegebenes Geburtsdatum 5. Mai 1908</note>
+              <note xml:lang="en">Stated date of birth 5 May 1908</note>
             </notesStmt>
             <sourceDesc>
               <msDesc>
@@ -4925,8 +4927,7 @@
                 <history>
                   <origin>
                     <origPlace>Kattowitz</origPlace>
-                    <origDate when="1908-05-05">05.05.1908</origDate>
-                    <origDate when="1914-02-18">18.02.1914 ausgestellt</origDate>
+                    <origDate when="1914-02-18">18. Februar 1914</origDate>
                   </origin>
                   <provenance><ab xml:lang="de">Erben Stefan Zweigs, London</ab>
                     <ab xml:lang="en">Heirs of Stefan Zweig, London</ab></provenance>
@@ -12126,7 +12127,7 @@
             </textClass>
           </profileDesc>
         </biblFull>
-        <biblFull ana="SZDLEB.137">
+        <biblFull xml:id="SZDLEB.137">
           <fileDesc>
             <titleStmt>
               <title ana="assigned" ref="http://d-nb.info/gnd/4436255-9" xml:lang="de"
@@ -12729,6 +12730,994 @@
                 <term type="person">
                   Fitzbauer, Inge
                 </term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.144">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Uebereinkommen</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Nicht unterzeichnet</note>
+              <note xml:lang="en">Not signed</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L1</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Uebereinkommen</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Übereinkommen</term>, <measure type="leaf">Typoskript, 2 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">agreement</term>, <measure type="leaf">typescript, 2 leaves</measure></span>
+                      </extent>
+                      <foliation>
+                        <ab>-2- – -3-</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Typoskriptdurchschlag, 2 Blatt</desc>
+                        <desc xml:lang="en">Typescript carbon copy, 2 leaves</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Wien</origPlace>
+                    <origDate when="1937-05-15">15. Mai 1937.</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+                <term type="person_affected" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.145">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Protokoll</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.2294"><persName ref="http://d-nb.info/gnd/116952172">Rechtsanwalt Emil von Hofmannsthal</persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L2</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Protokoll</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Protokoll</term>, <measure type="leaf">Typoskript, 2 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">transcript</term>, <measure type="leaf">typescript, 2 leaves</measure></span>
+                      </extent>
+                      <foliation>
+                        <ab>II.</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig, Emil von Hofmannsthal, unbekannte Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1938-09-27">27.9. 1938</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.146">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Notariatsakt</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.2316"><persName><surname>Geiringer</surname><forename>Josef</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.2317"><persName><surname>Meiler</surname><forename>Friedrich</forename></persName></editor>
+              <editor role="contributor" ref="#SZDPER.2318"><persName><surname>Ullmann</surname><forename>Julius</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L3</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Abschrift! Authentische Ausfertigung. Notariatsakt</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Übereinkommen</term>, <measure type="leaf">Typoskript und Manuskript, 4 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">agreement</term>, <measure type="leaf">typescript and manuscript, 4 leaves</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Wien</origPlace>
+                    <origDate when="1937-05-15">15.( fünfzehnten) Mai 1937( neunzehnhundertsiebenunddreissig)</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.147">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Memorandum mit Herrn Dr. Stefan Zweig</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L4</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Memorandum mit Herrn Dr. Stefan Zweig:</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, grüner Farbstift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, green crayon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Memorandum</term>, <measure type="leaf">Typoskriptdurchschlag, 1 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">memorandum</term>, <measure type="leaf">typescript carbon copy, leaf</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>unbekannte Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1938-11-29">29.November 1938</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.148">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Assignment</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor"><orgName>Notare Fletcher, Liddle &amp; Co.</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L5</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="en">Copy of certified agreement at Fletcher Little &amp; Co Notary London</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, violette Tinte, roter Farbstift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, purple ink, red crayon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Übereinkommen</term>, <measure type="leaf">Typoskript, 2 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">agreement</term>, <measure type="leaf">typescript, 2 leaves</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Rechnung, 1 Blatt</desc>
+                        <desc xml:lang="en">Invoice, 1 leaf</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1938-10-11">the eleventh day of October One thousand nine hundred and thirty eight</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.149">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Bankkontoauszug</title>
+              <title ana="assigned" xml:lang="en">Bank statement</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Zweiter Scheck datiert 22 November 1939</note>
+              <note xml:lang="en">Second check dated 22 November 1939</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L6</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="en">MRS. Friderike Maria Zweig,</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Kontoauszüge</term>, <measure type="leaf">2 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">Bank statements</term>, <measure type="leaf">2 leaves</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1939-08-22">AUG 22 39</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Finanzen</term>
+                <term type="classification" xml:lang="en">Finances</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.150">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Scheck</title>
+              <title ana="assigned" xml:lang="en">Check</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L7</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="en">S. Zweig</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte, rote Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink, red ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Scheck</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">check</term>, <measure type="leaf">1 leaf</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>unbekannte Hand</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1940-02-17">17 FEB 1940</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Finanzen</term>
+                <term type="classification" xml:lang="en">Finances</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.151">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Form E. 1.</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L8</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Fotokopie</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">photocopy</term>, <measure type="leaf">1 leaf</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Bath</origPlace>
+                    <origDate when="1940-01-01">[1 Januar 1940]</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Finanzen</term>
+                <term type="classification" xml:lang="en">Finances</term>
+                <term type="person_affected" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.152">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Power of attorney</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <author ref="#SZDPER.2314"><persName ref="http://d-nb.info/gnd/1117035514"><surname>Hollander</surname><forename>Barnett</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor"><orgName ref="http://d-nb.info/gnd/10102943-3">Viking Press</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L9</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="en">DR. STEFAN ZWEIG | - to - | THE VIKING PRESS INCORPORATED | POWER OF ATTORNEY</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier, schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper, black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Typoskriptdurchschlag</term>, <measure type="leaf">2 Blatt, gebunden</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">typescript carbon copy</term>, <measure type="leaf">2 leaves, bound</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1933-10-26">October 26, 1933</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.153">
+          <fileDesc>
+            <titleStmt>
+              <title ana="assigned" xml:lang="de">Adressbuch [ca. 1934-1940]</title>
+              <title ana="assigned" xml:lang="en">Address book [ca. 1934-1940]</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <author ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></author>
+              <editor role="contributor" ref="#SZDPER.2315"><persName ref="http://d-nb.info/gnd/1170430066"><surname>Altmann</surname><forename>Hannah</forename></persName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Von Hannah Altmann bis 1954 weitergeführt</note>
+              <note xml:lang="en">Continued by Hannah Altmann until 1954</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L10</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="fre">Französisch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="en">Town | Country | Various</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Vorgedruckte Seiten</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed pages</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, schwarze Tinte, Bleistift</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, black ink, pencil</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Adressbuch</term>, <measure type="leaf">gebunden</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">address book</term>, <measure type="leaf">bound</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Lotte Zweig, Hannah Altmann</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">Adresslisten, 2 Blatt</desc>
+                        <desc xml:lang="en">Address lists, 2 leaves</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origDate when="1934">[1934]</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Adressbücher</term>
+                <term type="classification" xml:lang="en">Address books</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.154">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Certificate of Identity, Certificate d'identite</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
+              <editor role="contributor"><orgName ref="http://d-nb.info/gnd/35565-3">Großbritannien. Home Office</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L11</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng">Englisch</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Fotokopie</term>, <measure type="leaf">2 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">photocopy</term>, <measure type="leaf">2 leaves</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1938-08-30">30th August, 1938.</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.155">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Geburtsschein</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor"><orgName>Standesamt Kattowitz</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note xml:lang="de">Angegebenes Geburtsdatum 5. Mai 1908</note>
+              <note xml:lang="en">Stated date of birth 5 May 1908</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L12</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Reg. No 500/08</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Geburtsschein</term>, <measure type="leaf">1 Blatt</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">Birth certificate</term>, <measure type="leaf">1 leaf</measure></span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>Kattowitz</origPlace>
+                    <origDate when="1914-02-18">18. Februar 1914.</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDLEB.156">
+          <fileDesc>
+            <titleStmt>
+              <title ana="original">Reisepass</title>
+              <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
+              <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
+              <editor role="contributor"><orgName>Deutsche Botschaft London, Passtelle</orgName></editor>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Archivmaterial</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/L13</idno>
+                  <!-- PID (o:szd.*) wird beim GAMS-Ingest vergeben -->
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                  </textLang>
+                  <msItem>
+                    <docEdition ana="szdg:IdentifyingInscription" xml:lang="de">Deutsches Reich | Reisepass</docEdition>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Formular</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Pre-printed form</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte, blaue Tinte, Stempel</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink, blue ink, stamps</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de"><term type="objecttyp">Reisepass</term>, <measure type="leaf">16 Blatt, gebunden</measure></span>
+                        <span xml:lang="en"><term type="objecttyp">passport</term>, <measure type="leaf">16 leaves, bound</measure></span>
+                      </extent>
+                      <foliation>
+                        <ab>2–32</ab>
+                      </foliation>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Lotte Zweig</ab>
+                  </handDesc>
+                  <accMat>
+                    <list>
+                      <item ana="szdg:Enclosures">
+                        <desc xml:lang="de">eingeklebte Seite mit weiteren Visa, 1 Blatt</desc>
+                        <desc xml:lang="en">inserted page with additional visa stamps, 1 leaf</desc>
+                      </item>
+                    </list>
+                  </accMat>
+                </physDesc>
+                <history>
+                  <origin>
+                    <origPlace>London</origPlace>
+                    <origDate when="1938-07-11">11 JUL 1938</origDate>
+                  </origin>
+                  <provenance>
+                    <ab xml:lang="de">Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Heirs of Stefan Zweig</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term type="classification" xml:lang="de">Rechtsdokumente</term>
+                <term type="classification" xml:lang="en">Legal Papers</term>
               </keywords>
             </textClass>
           </profileDesc>

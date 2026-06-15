@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-12
+updated: 2026-06-15
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
@@ -26,11 +26,11 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 | Bibliothek | `data/Library/SZDBIB.xml` | 103,319 | 4.2 MB | 1,303 | 1,304 | 1,281 (98%) |
 | Aufsaetze | `data/Aufsatzablage/SZDESS.xml` | 56,284 | 2.9 MB | 624 | 1 | 1 (100%) |
 | Werke/Manuskripte | `data/Work/SZDMSK.xml` | 33,015 | 2.1 MB | 352 | 1 | 1 (100%) |
-| Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 12,739 | 661 KB | 143 | 1 | 1 (100%) |
+| Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 13,728 | 711 KB | 156 | 1 | 1 (100%) |
 | Erstveroeffentlichungen | `data/Publication/SZDPUB.xml` | 8,609 | 506 KB | 159 | 159 | 159 (100%) |
 | Biographie | `data/Biography/SZDBIO.xml` | 1,614 | 87 KB | 104 | 208 | 208 (100%) |
 | Glossar | `data/Glossary/szd-Glossary.xml` | 442 | 58 KB | -- | 0 | -- |
-| **Gesamt** | | **311,212** | **15.0 MB** | **4,405** | **3,645** | **3,601 (99%)** |
+| **Gesamt** | | **312,201** | **15.0 MB** | **4,418** | **3,645** | **3,601 (99%)** |
 
 **Entries** = `<biblFull>` (Sammlungen), `<event>` (Biographie), oder `<person>` (Index).
 **Machine-readable** = `<date>` mit `@when`, `@notBefore`, `@notAfter`, `@from`, oder `@to`.
@@ -39,7 +39,7 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 
 | File | Lines | Purpose |
 |------|------:|---------|
-| `data/Index/Person/SZDPER.xml` | 21,937 | Personen-Normdaten (GND, Wikidata, VIAF) |
+| `data/Index/Person/SZDPER.xml` | 21,967 | Personen-Normdaten (GND, Wikidata, VIAF) |
 | `data/Index/SZDWRK.xml` | 5,422 | Werkindex (WEMI-Ebene) |
 | `data/Index/Location/SZDSTA.xml` | 303 | Standorte/Aufbewahrungsorte |
 | `data/Issue/szd-thema*.xml` (7 Dateien) | ~4,593 | Thematische Sammlungen |
