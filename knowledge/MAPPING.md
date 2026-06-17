@@ -1,8 +1,15 @@
 ---
-doc: TEI-CSV Mapping
-project: SZD
-version: 1.0
+title: TEI-CSV Mapping
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
 updated: 2026-03-29
+version: 1.0
 tags: [mapping, zweig, tei, csv]
 ---
 

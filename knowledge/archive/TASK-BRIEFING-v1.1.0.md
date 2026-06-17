@@ -1,4 +1,19 @@
+---
+title: "Task Briefing: SZDO Datenmodellierung"
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: archived
+created: 2026-03-29
+updated: 2026-03-29
+---
+
 # Task Briefing: SZDO Datenmodellierung
+
+Archiviertes Aufgabenbriefing der vier Datenmodellierungs-Aufgaben, die mit SZDO v1.1.0 umgesetzt wurden.
 
 ## Status: ABGESCHLOSSEN (v1.1.0, März 2026)
 

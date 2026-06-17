@@ -1,12 +1,21 @@
 ---
-doc: DATA
-project: SZD
+title: TEI-XML Data Overview
+project:
+  name: Stefan Zweig Digital
+  repository: https://github.com/chpollin/SZD.git
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/promptotyping
+status: complete
+created: 2025-10-23
+updated: 2026-06-15
 version: 1.0.0
-updated: 2026-03-29
 tags: [data, zweig, tei, statistics]
 ---
 
 # TEI-XML Data Overview
+
+Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sowie dokumentierten Datenluecken.
 
 ## Collection Statistics (29 Mar 2026)
 
@@ -17,11 +26,11 @@ tags: [data, zweig, tei, statistics]
 | Bibliothek | `data/Library/SZDBIB.xml` | 103,319 | 4.2 MB | 1,303 | 1,304 | 1,281 (98%) |
 | Aufsaetze | `data/Aufsatzablage/SZDESS.xml` | 56,284 | 2.9 MB | 624 | 1 | 1 (100%) |
 | Werke/Manuskripte | `data/Work/SZDMSK.xml` | 33,015 | 2.1 MB | 352 | 1 | 1 (100%) |
-| Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 12,739 | 661 KB | 143 | 1 | 1 (100%) |
+| Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 13,728 | 711 KB | 156 | 1 | 1 (100%) |
 | Erstveroeffentlichungen | `data/Publication/SZDPUB.xml` | 8,609 | 506 KB | 159 | 159 | 159 (100%) |
 | Biographie | `data/Biography/SZDBIO.xml` | 1,614 | 87 KB | 104 | 208 | 208 (100%) |
 | Glossar | `data/Glossary/szd-Glossary.xml` | 442 | 58 KB | -- | 0 | -- |
-| **Gesamt** | | **311,212** | **15.0 MB** | **4,405** | **3,645** | **3,601 (99%)** |
+| **Gesamt** | | **312,201** | **15.0 MB** | **4,418** | **3,645** | **3,601 (99%)** |
 
 **Entries** = `<biblFull>` (Sammlungen), `<event>` (Biographie), oder `<person>` (Index).
 **Machine-readable** = `<date>` mit `@when`, `@notBefore`, `@notAfter`, `@from`, oder `@to`.
@@ -30,7 +39,7 @@ tags: [data, zweig, tei, statistics]
 
 | File | Lines | Purpose |
 |------|------:|---------|
-| `data/Index/Person/SZDPER.xml` | 21,937 | Personen-Normdaten (GND, Wikidata, VIAF) |
+| `data/Index/Person/SZDPER.xml` | 21,967 | Personen-Normdaten (GND, Wikidata, VIAF) |
 | `data/Index/SZDWRK.xml` | 5,422 | Werkindex (WEMI-Ebene) |
 | `data/Index/Location/SZDSTA.xml` | 303 | Standorte/Aufbewahrungsorte |
 | `data/Issue/szd-thema*.xml` (7 Dateien) | ~4,593 | Thematische Sammlungen |
@@ -52,6 +61,23 @@ Maschinenlesbare Datumsattribute wurden am 29. Maerz 2026 systematisch nachgetra
 - 19 `n. d.`-Eintraege in SZDKOR (kein Datum verfuegbar)
 - 19 `s.d.`-Eintraege in SZDBIB (sine dato)
 - 1 unvollstaendiges Datum in SZDAUT (`24. April` ohne Jahr)
+
+---
+
+## Glossar -- Datenqualitaet
+
+### DE/EN-Definitionen vertauscht (Beilagen vs. Zusatzmaterial)
+
+Im Glossar (`data/Glossary/szd-Glossary.xml`) widersprechen sich bei zwei benachbarten SKOS-Konzepten die deutsche und die englische `skos:definition` -- die Definitionstexte sind ueberkreuz vergeben:
+
+| Konzept (`prefLabel`) | DE-Definition beschreibt | EN-Definition beschreibt |
+|-----------------------|--------------------------|--------------------------|
+| `Enclosures` (Beilagen) | von Zweig selbst / zu Lebzeiten beigelegt | von Dritten / nach seinem Tod hinzugefuegt |
+| `AdditionalMaterial` (Zusatzmaterial) | von Dritten / nach seinem Tod hinzugefuegt | von Zweig selbst / zu Lebzeiten |
+
+Die `prefLabel` (DE/EN) sind in beiden Faellen korrekt; nur die Definitionstexte stehen ueber Kreuz. Innerhalb jedes Konzepts widersprechen sich DE und EN, ueber beide Konzepte hinweg passen sie kreuzweise zusammen. Die semantisch plausible Lesart ist die deutsche (Beilage = von Zweig/zu Lebzeiten, Zusatzmaterial = von Dritten/posthum); welche Sprachfassung kanonisch ist, muss aber redaktionell entschieden werden. **Fix:** die beiden englischen `skos:definition` gegeneinander tauschen.
+
+_Gefunden 11. Juni 2026 beim Abgleich der SZDLEB-Anzeigefelder gegen das Glossar._
 
 ---
 
