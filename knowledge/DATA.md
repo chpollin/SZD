@@ -17,11 +17,12 @@ tags: [data, zweig, tei, statistics]
 
 Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sowie dokumentierten Datenluecken.
 
-## Collection Statistics (29 Mar 2026)
+## Collection Statistics (24 Jun 2026)
 
 | Collection | File | Lines | Size | Entries | Dates | Machine-readable |
 |------------|------|------:|-----:|--------:|------:|-----------------:|
-| Korrespondenz | `data/Correspondence/SZDKOR.xml` | 37,472 | 1.2 MB | 723 | 721 | 702 (97%) |
+| Korrespondenz (Index) | `data/Correspondence/SZDKOR.xml` | 39,649 | 1.28 MB | 765 | 760 | 741 (98%) |
+| Korrespondenz-Konvolute | `data/Correspondence/konvolute/` (42 Dateien) | 69,461 | 3.0 MB | 904 | 1,720 | 1,629 (95%) |
 | Autographen | `data/Autograph/SZDAUT.xml` | 58,718 | 3.1 MB | 997 | 1,250 | 1,248 (100%) |
 | Bibliothek | `data/Library/SZDBIB.xml` | 103,319 | 4.2 MB | 1,303 | 1,304 | 1,281 (98%) |
 | Aufsaetze | `data/Aufsatzablage/SZDESS.xml` | 56,284 | 2.9 MB | 624 | 1 | 1 (100%) |
@@ -30,9 +31,11 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 | Erstveroeffentlichungen | `data/Publication/SZDPUB.xml` | 8,609 | 506 KB | 159 | 159 | 159 (100%) |
 | Biographie | `data/Biography/SZDBIO.xml` | 1,614 | 87 KB | 104 | 208 | 208 (100%) |
 | Glossar | `data/Glossary/szd-Glossary.xml` | 442 | 58 KB | -- | 0 | -- |
-| **Gesamt** | | **312,201** | **15.0 MB** | **4,418** | **3,645** | **3,601 (99%)** |
+| **Gesamt** | | **383,839** | **18.1 MB** | **5,364** | **5,404** | **5,269 (98%)** |
 
 **Entries** = `<biblFull>` (Sammlungen), `<event>` (Biographie), oder `<person>` (Index).
+
+**Korrespondenz-Konvolute** = die per-Person-Objekte `o:szd.korrespondenzen.<person>` (zweite Ebene, ein `biblFull` pro Einzelbrief mit Faksimile-PID); der Index SZDKOR aggregiert pro Bündel. Im Juni 2026 um die SZ-AAL/B-Korrespondenz erweitert (42 Konvolute, ~480 Briefe; 30 neu, 12 erweitert). Siehe [COLLECTIONS.md](COLLECTIONS.md) und [DATA_MODEL.md](DATA_MODEL.md).
 **Machine-readable** = `<date>` mit `@when`, `@notBefore`, `@notAfter`, `@from`, oder `@to`.
 
 ### Index-Dateien (nicht in Tabelle)

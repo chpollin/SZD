@@ -243,6 +243,38 @@ Uses `<biblFull>` for correspondence bundles with nested `<msDesc>` for individu
 
 See [MAPPING.md](MAPPING.md) for complete TEI-CSV schema mapping.
 
+**Konvolut objects** (`o:szd.korrespondenzen.<person>`) — the second level: one full TEI
+document per correspondence partner, one `<biblFull>` per *individual letter*. The facsimile
+PID sits in `altIdentifier`, which `szd-Konvolut.xsl` turns into a Mirador link:
+
+```xml
+<biblFull xml:id="SZDKOR.altmann-hannah.1">
+  <fileDesc>
+    <titleStmt>
+      <title xml:lang="de">Brief von Stefan Zweig an Hannah Altmann [Februar 1939]</title>
+      <title xml:lang="en">Letter from Stefan Zweig to Hannah Altmann, 1939-02</title>
+    </titleStmt>
+    <publicationStmt><ab>Einzelbrief</ab></publicationStmt>
+    <sourceDesc><msDesc>
+      <msIdentifier>
+        <idno type="signature">SZ-AAL/B1.2</idno>
+        <altIdentifier><idno type="PID">o:szd.3132</idno></altIdentifier>  <!-- facsimile -->
+      </msIdentifier>
+      <!-- physDesc: material (de+en), extent, textLang; history: provenance/acquisition -->
+    </msDesc></sourceDesc>
+  </fileDesc>
+  <profileDesc>
+    <correspDesc type="fromZweig">   <!-- fromZweig: Stefan is sender; else toZweig -->
+      <correspAction type="sent"><persName ref="…gnd…">…</persName><date when="…"/>…</correspAction>
+      <correspAction type="received"><persName ref="…gnd…">…</persName></correspAction>
+    </correspDesc>
+  </profileDesc>
+</biblFull>
+```
+
+The `<person>` slug must byte-match the gallery anchor (`szd-Facsimiles.xsl` `$person-id`) so
+the index/gallery links resolve; `correspDesc/@type` drives the sender display in the renderer.
+
 ### Person Index (SZDPER)
 
 Authority file using `<listPerson>` with external identifiers:

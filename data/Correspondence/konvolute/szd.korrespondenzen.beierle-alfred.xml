@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Beierle Alfred</title>
+        <title xml:lang="en">Correspondence Alfred Beierle</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.beierle-alfred</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.beierle-alfred.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Alfred Beierle an Lotte Zweig</title>
+              <title xml:lang="en">Letter from Alfred Beierle to Lotte Zweig</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B12</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3231</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Royal Phare Hotel Ostende stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Royal Phare Hotel Ostende</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116111976">
+                  <surname>Beierle</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <placeName xml:lang="de">Laeken</placeName>
+                <note>1935</note>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Meiler Friedrich</title>
+        <title xml:lang="en">Correspondence Friedrich Meiler</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.meiler-friedrich</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [20. Mai 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-05-20</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.46</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3443</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-05-20" xml:lang="de">20. Mai 1937</date>
+                <date when="1937-05-20" xml:lang="en">20. Mai 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [25. Mai 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-05-25</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.49</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3446</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-05-25" xml:lang="de">25. Mai 1937</date>
+                <date when="1937-05-25" xml:lang="en">25. Mai 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [1. Juni 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-06-01</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.51</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3449</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-06-01" xml:lang="de">1. Juni 1937</date>
+                <date when="1937-06-01" xml:lang="en">1. Juni 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [14. Juni 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-06-14</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.54</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3452</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-06-14" xml:lang="de">14. Juni 1937</date>
+                <date when="1937-06-14" xml:lang="en">14. Juni 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [23. Juni 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-06-23</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.61</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3460</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-06-23" xml:lang="de">23. Juni 1937</date>
+                <date when="1937-06-23" xml:lang="en">23. Juni 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [19. Juli 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-07-19</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.73</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3473</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-07-19" xml:lang="de">19. Juli 1937</date>
+                <date when="1937-07-19" xml:lang="en">19. Juli 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [23. Juli 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-07-23</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.76</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3476</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-07-23" xml:lang="de">23. Juli 1937</date>
+                <date when="1937-07-23" xml:lang="en">23. Juli 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [1. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-01</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.90</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3492</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-01" xml:lang="de">1. September 1937</date>
+                <date when="1937-09-01" xml:lang="en">1. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Friderike Zweig [3. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Friderike Zweig, 1937-09-03</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.91</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3493</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-03" xml:lang="de">3. September 1937</date>
+                <date when="1937-09-03" xml:lang="en">3. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637460">
+                  <surname>Zweig</surname>
+                  <forename>Friderike</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [7. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-07</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.92</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3494</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-07" xml:lang="de">7. September 1937</date>
+                <date when="1937-09-07" xml:lang="en">7. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.11">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [8. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-08</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.93</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3495</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                        <measure ana="szdg:Enclosures" xml:lang="de">Abschrift "Wortlaut des Schreibens: aus Lugano eingelangt am 7. September 1937.", 1 Blatt</measure>
+                        <measure ana="szdg:Enclosures" xml:lang="en">Transcript "Wortlaut des Schreibens: aus Lugano eingelangt am 7. September 1937.", 1 leaf</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-08" xml:lang="de">8. September 1937</date>
+                <date when="1937-09-08" xml:lang="en">8. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.12">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [10. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-10</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.96</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3498</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-10" xml:lang="de">10. September 1937</date>
+                <date when="1937-09-10" xml:lang="en">10. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.13">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [13. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-13</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.97</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3499</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 4 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 4 leaves</span>
+                        <measure ana="szdg:Enclosures" xml:lang="de">Vertragsentwurf mit Korrekturen Stefan Zweigs, 2 Blatt</measure>
+                        <measure ana="szdg:Enclosures" xml:lang="en">Draft contract with corrections by Stefan Zweig, 2 leaves</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-13" xml:lang="de">13. September 1937</date>
+                <date when="1937-09-13" xml:lang="en">13. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.14">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [24. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-24</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.103</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3343</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 3 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 3 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-24" xml:lang="de">24. September 1937</date>
+                <date when="1937-09-24" xml:lang="en">24. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.15">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [28. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-28</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.104</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3344</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-28" xml:lang="de">28. September 1937</date>
+                <date when="1937-09-28" xml:lang="en">28. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.meiler-friedrich.16">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Friedrich Meiler an Stefan Zweig [30. September 1937]</title>
+              <title xml:lang="en">Letter from Friedrich Meiler to Stefan Zweig, 1937-09-30</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.106</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3346</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Dr. Friedrich Meiler, Rechtsanwalt stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Dr. Friedrich Meiler, Rechtsanwalt</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Meiler</surname>
+                  <forename>Friedrich</forename>
+                </persName>
+                <orgName>Dr. Friedrich Meiler, Rechtsanwalt</orgName>
+                <date when="1937-09-30" xml:lang="de">30. September 1937</date>
+                <date when="1937-09-30" xml:lang="en">30. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -70,6 +70,35 @@ Uses `<listBibl>` containing `<biblFull>` elements for correspondence bundles:
 </listBibl>
 ```
 
+### Two-level architecture: index + konvolut objects
+
+Correspondence is modelled on **two levels**:
+
+1. **Index** — `SZDKOR.xml` (`o:szd.korrespondenzen`): one aggregate `<biblFull>` per
+   archival bundle, carrying the piece count (`measure[@type="correspondence"]`) and two
+   pointers in `msIdentifier/altIdentifier`:
+   - `idno[@type="konvolut"]` → the per-person konvolut object,
+   - `idno[@type="context"]` → the facsimile gallery anchor.
+
+   A correspondent may have **several** index entries (one per archival bundle/signature).
+
+2. **Konvolut objects** — `o:szd.korrespondenzen.<person>`: one full TEI document per
+   correspondence partner, with a `<biblFull>` per **individual letter**. Each letter entry
+   carries the facsimile PID in `msIdentifier/altIdentifier/idno[@type="PID"]`, so
+   `szd-Konvolut.xsl` renders a Mirador link straight to the digitised image, alongside a
+   rich `physDesc`/`correspDesc` (sender/recipient with GND, date, place, material).
+
+The `<person>` slug must equal the gallery anchor that `szd-Facsimiles.xsl` generates
+(`translate(lower-case(normalize-space(name)), ' ,', '-')` plus diacritic folding) —
+otherwise the index→konvolut and gallery→konvolut links do not resolve. `correspDesc/@type`
+(`fromZweig` when Stefan is the sender, else `toZweig`) drives the sender display in both the
+konvolut and the index renderer.
+
+**SZ-AAL/B (June 2026):** the ~480 letters of the Stefan Zweig–Lotte Altmann correspondence
+were catalogued across **42 person konvolute** (30 new objects, 12 extending existing ones),
+generated from per-letter CSVs joined to live facsimile PIDs (via risearch). Konvolut object
+files live in [data/Correspondence/konvolute/](../data/Correspondence/konvolute/).
+
 ### Content
 
 Letters to and from Stefan Zweig organized by correspondence partner. Each entry contains:
@@ -327,6 +356,50 @@ The **bilingual labels and definitions** of the glossary-backed fields — Betei
 The complete field catalogue (22 displayed fields, DE/EN label + DE/EN definition) is maintained as a spreadsheet: [docs/SZDLEB_Datenfelder.xlsx](../docs/SZDLEB_Datenfelder.xlsx).
 
 > **Inspecting display labels:** the collection-level dissemination `https://stefanzweig.digital/{PID}/sdef:TEI/get?locale={de|en}` renders the full bilingual frontend view of an entire collection — the reliable way to enumerate display labels. The single-object variant (`o:szd.{n}/sdef:TEI/get`) currently returns HTTP 500.
+
+### Rendering contract (why an ingested entry can stay invisible)
+
+The Lebensdokumente edition and the Works list share one renderer, `szd-Werke.xsl` in the **gams-www** repo (`ZIMLAB/szd`). It builds the page with a two-level `xsl:for-each-group`: the **outer** group is `term[@type="classification"]` (the h2 navbar category), the **inner** group is `title[@type="Einheitssachtitel"]` (the h3 document-type heading). An entry missing **either** grouping key is silently dropped from the entire output — present in the TEI, ingested, yet rendered nowhere.
+
+Every `biblFull` in a grouped list must therefore carry, beyond its content fields:
+
+- `profileDesc/textClass/keywords/term[@type="classification"]` (de+en) — navbar category;
+- `titleStmt/title[@type="Einheitssachtitel"]` (de+en) — document-type sub-heading;
+- the PID as `msIdentifier/altIdentifier/idno[@type="PID"]` (not a bare `idno`), or the IIIF/Mirador facsimile link is not built.
+
+**Controlled vocabulary:** navbar categories are a closed set — reuse an existing `classification`, add a new one only for something fundamental and permanent. Reuse existing `Einheitssachtitel` values **verbatim** (de and en) so the entry joins the existing heading group instead of spawning a near-duplicate. The renderer side is documented in gams-www `knowledge/Rendering-and-Search.md` (§1).
+
+> **Observed 2026-06:** the 13 SZ-AAL/L documents were ingested with valid PIDs but appeared nowhere in the frontend until each received an `Einheitssachtitel` and its PID was wrapped in `altIdentifier`.
+
+### Rendering contract: correspondence facsimile gallery (person grouping)
+
+A second, independent grouping contract governs the correspondence facsimile gallery
+`context:szd.facsimiles.korrespondenzen`, rendered by `szd-Facsimiles.xsl` (gams-www).
+The default person view groups every letter by its correspondent:
+`group-by="creator[not(. = 'Zweig, Stefan')] | contributor[@bound != 'false']"` — the key
+is `dc:creator` unless it is exactly `Zweig, Stefan`, otherwise a bound `dc:contributor`.
+A letter **authored by Stefan Zweig with no `dc:contributor`** has an empty key and falls
+out of the grouping entirely; only a catch-all branch ("Without correspondent" / "Ohne
+Korrespondenzpartner") can render it, and only if that XSL is deployed.
+
+The correspondence objects are **`cm:dfgMETS` book objects**, not list TEI. In their GAMS
+`<book>` viewer-format source, `<author>` → `dc:creator` and `<contributor>` →
+`dc:contributor`. Every Stefan-authored letter must therefore carry a `<contributor>`
+element = the recipient (`Lastname, Firstname`; several recipients → several
+`<contributor>`), or it never appears in the gallery. The recipient sits in the title
+("Brief von Stefan Zweig **an** <recipient> [date]"). The legacy `enrichXML-briefe.py`
+only matched the older ' an '…' vom ' title pattern and silently skipped bracketed-date
+titles, which is why the SZ-AAL letters stayed contributor-less.
+
+> **Observed 2026-06:** ~204 SZ-AAL Stefan-authored letters (all of B2, ~94 of B1, part
+> of B3) were ingested and were context members, yet absent from the gallery because their
+> book-XML had no `<contributor>`. Fixed by deriving the recipient from the title.
+> Renderer side: gams-www `knowledge/Facsimiles-Korrespondenzen.md` (Befundprotokoll,
+> "Gruppierungs-Lücke").
+
+> **Cache caveat:** the rendered `…/sdef:Context/get` page is cached; context membership
+> (the `QUERY` datastream, queryable live via `risearch`) updates immediately, but the
+> rendered gallery only reflects metadata/membership changes after GAMS rebuilds it.
 
 ---
 

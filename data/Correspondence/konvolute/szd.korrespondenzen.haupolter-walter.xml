@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Haupolter Walter</title>
+        <title xml:lang="en">Correspondence Walter Haupolter</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.haupolter-walter</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.haupolter-walter.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Walter Haupolter an Stefan Zweig [25. August 1938]</title>
+              <title xml:lang="en">Letter from Walter Haupolter to Stefan Zweig, 1938-08-25</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.132</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3370</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Rechtsanwalt Dr. Walter Haupolter stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Walter Haupolter</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1294349775">
+                  <surname>Haupolter</surname>
+                  <forename>Walter</forename>
+                </persName>
+                <orgName>Rechtsanwalt Dr. Walter Haupolter</orgName>
+                <date when="1938-08-25" xml:lang="de">25. August 1938.</date>
+                <date when="1938-08-25" xml:lang="en">25. August 1938.</date>
+                <placeName xml:lang="de">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.haupolter-walter.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Walter Haupolter an Stefan Zweig [16. September 1938]</title>
+              <title xml:lang="en">Letter from Walter Haupolter to Stefan Zweig, 1938-09-16</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.133</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3371</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Rechtsanwalt Dr. Walter Haupolter stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Walter Haupolter</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1294349775">
+                  <surname>Haupolter</surname>
+                  <forename>Walter</forename>
+                </persName>
+                <orgName>Rechtsanwalt Dr. Walter Haupolter</orgName>
+                <date when="1938-09-16" xml:lang="de">16. September 1938</date>
+                <date when="1938-09-16" xml:lang="en">16. September 1938</date>
+                <placeName xml:lang="de">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.haupolter-walter.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Stefan Zweig an Walter Haupolter [19. September 1938]</title>
+              <title xml:lang="en">Letter from Stefan Zweig to Walter Haupolter, 1938-09-19</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.134</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3372</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Typewriter paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black carbon paper</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibmaschinenpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Durchschlagpapier</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskriptdurchschlag, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript carbon copy, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="fromZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1938-09-19" xml:lang="de">19. September 1938.</date>
+                <date when="1938-09-19" xml:lang="en">19. September 1938.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1294349775">
+                  <surname>Haupolter</surname>
+                  <forename>Walter</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.haupolter-walter.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Walter Haupolter an Stefan Zweig [23. November 1938]</title>
+              <title xml:lang="en">Letter from Walter Haupolter to Stefan Zweig, 1938-11-23</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.136</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3374</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Rechtsanwalt Dr. Walter Haupolter stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink, purple ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Walter Haupolter</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte, violette Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1294349775">
+                  <surname>Haupolter</surname>
+                  <forename>Walter</forename>
+                </persName>
+                <orgName>Rechtsanwalt Dr. Walter Haupolter</orgName>
+                <date when="1938-11-23" xml:lang="de">23. November 1938</date>
+                <date when="1938-11-23" xml:lang="en">23. November 1938</date>
+                <placeName xml:lang="de">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.haupolter-walter.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Walter Haupolter an Stefan Zweig [2. Dezember 1938]</title>
+              <title xml:lang="en">Letter from Walter Haupolter to Stefan Zweig, 1938-12-02</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B3.137</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3375</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Rechtsanwalt Dr. Walter Haupolter stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink, pencil</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Rechtsanwalt Dr. Walter Haupolter</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte, Bleistift</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                        <measure ana="szdg:Enclosures" xml:lang="de">Abschrift "Klage auf Ehescheidung", 1 Blatt; Abschrift des Urteils, 2 Blatt; Fotokopie des Originals, 3 Blatt</measure>
+                        <measure ana="szdg:Enclosures" xml:lang="en">Transcript of the "Klage auf Ehescheidung",, 1 page; judgment: transcript, 2 pages; photocopy of the original, 3 pages</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1294349775">
+                  <surname>Haupolter</surname>
+                  <forename>Walter</forename>
+                </persName>
+                <orgName>Rechtsanwalt Dr. Walter Haupolter</orgName>
+                <date when="1938-12-02" xml:lang="de">2. Dezember 1938</date>
+                <date when="1938-12-02" xml:lang="en">2. Dezember 1938</date>
+                <placeName xml:lang="de">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

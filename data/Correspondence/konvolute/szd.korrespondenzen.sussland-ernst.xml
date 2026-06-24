@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Süssland Ernst</title>
+        <title xml:lang="en">Correspondence Ernst Süssland</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.sussland-ernst</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.sussland-ernst.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Ernst Süssland an Stefan Zweig [21. November 1938]</title>
+              <title xml:lang="en">Letter from Ernst Süssland to Stefan Zweig, 1938-11-21</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3228</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Air mail paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Luftpostpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName>
+                  <surname>Süssland</surname>
+                  <forename>Ernst</forename>
+                </persName>
+                <date when="1938-11-21" xml:lang="de">21. November 1938</date>
+                <date when="1938-11-21" xml:lang="en">21. November 1938</date>
+                <placeName xml:lang="de">Prag</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

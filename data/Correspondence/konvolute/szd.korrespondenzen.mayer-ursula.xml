@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Mayer Ursula</title>
+        <title xml:lang="en">Correspondence Ursula Mayer</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.mayer-ursula</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.mayer-ursula.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Eva; Mayer, Ursula Altmann [21. Juli 1940]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Eva Altmann and Ursula Mayer, 1940-07-21</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.34</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3149</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing Paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink, black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte, schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1940-07-21" xml:lang="de">21. 7. 40</date>
+                <date when="1940-07-21" xml:lang="en">21. 7. 40</date>
+                <placeName xml:lang="de">New York</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/128348674">
+                  <surname>Altmann</surname>
+                  <forename>Eva</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Mayer</surname>
+                  <forename>Ursula</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>
