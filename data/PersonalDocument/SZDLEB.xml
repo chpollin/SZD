@@ -12738,6 +12738,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Uebereinkommen</title>
+              <title type="Einheitssachtitel" xml:lang="de">Übereinkommen</title>
+              <title type="Einheitssachtitel" xml:lang="en">Agreement</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
             </titleStmt>
             <publicationStmt>
@@ -12754,7 +12756,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L1</idno>
-                  <idno type="PID">o:szd.3515</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3515</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -12823,6 +12827,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Protokoll</title>
+              <title type="Einheitssachtitel" xml:lang="de">Protokoll</title>
+              <title type="Einheitssachtitel" xml:lang="en">Record</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.2294"><persName ref="http://d-nb.info/gnd/116952172">Rechtsanwalt Emil von Hofmannsthal</persName></editor>
@@ -12837,7 +12843,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L2</idno>
-                  <idno type="PID">o:szd.3520</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3520</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -12900,6 +12908,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Notariatsakt</title>
+              <title type="Einheitssachtitel" xml:lang="de">Notariatsakt</title>
+              <title type="Einheitssachtitel" xml:lang="en">Notarial deed</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1556"><persName ref="http://d-nb.info/gnd/118637460"><surname>Zweig</surname><forename>Friderike</forename></persName></editor>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
@@ -12917,7 +12927,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L3</idno>
-                  <idno type="PID">o:szd.3521</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3521</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -12976,6 +12988,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Memorandum mit Herrn Dr. Stefan Zweig</title>
+              <title type="Einheitssachtitel" xml:lang="de">Memorandum</title>
+              <title type="Einheitssachtitel" xml:lang="en">Memorandum</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
             </titleStmt>
@@ -12989,7 +13003,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L4</idno>
-                  <idno type="PID">o:szd.3522</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3522</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13048,6 +13064,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Assignment</title>
+              <title type="Einheitssachtitel" xml:lang="de">Abtretung</title>
+              <title type="Einheitssachtitel" xml:lang="en">Assignment</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor"><orgName>Notare Fletcher, Liddle &amp; Co.</orgName></editor>
@@ -13062,7 +13080,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L5</idno>
-                  <idno type="PID">o:szd.3523</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3523</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13131,6 +13151,8 @@
             <titleStmt>
               <title ana="assigned" xml:lang="de">Bankkontoauszug</title>
               <title ana="assigned" xml:lang="en">Bank statement</title>
+              <title type="Einheitssachtitel" xml:lang="de">Kontoauszüge</title>
+              <title type="Einheitssachtitel" xml:lang="en">Bank statements</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
             </titleStmt>
@@ -13148,7 +13170,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L6</idno>
-                  <idno type="PID">o:szd.3524</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3524</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13206,6 +13230,8 @@
             <titleStmt>
               <title ana="assigned" xml:lang="de">Scheck</title>
               <title ana="assigned" xml:lang="en">Check</title>
+              <title type="Einheitssachtitel" xml:lang="de">Scheck</title>
+              <title type="Einheitssachtitel" xml:lang="en">Cheque</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
@@ -13220,7 +13246,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L7</idno>
-                  <idno type="PID">o:szd.3525</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3525</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13279,6 +13307,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Form E. 1.</title>
+              <title type="Einheitssachtitel" xml:lang="de">Formular</title>
+              <title type="Einheitssachtitel" xml:lang="en">Form</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor"><orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName></editor>
@@ -13293,7 +13323,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L8</idno>
-                  <idno type="PID">o:szd.3526</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3526</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13345,6 +13377,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Power of attorney</title>
+              <title type="Einheitssachtitel" xml:lang="de">Vollmacht</title>
+              <title type="Einheitssachtitel" xml:lang="en">Power of Attorney</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <author ref="#SZDPER.2314"><persName ref="http://d-nb.info/gnd/1117035514"><surname>Hollander</surname><forename>Barnett</forename></persName></author>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
@@ -13360,7 +13394,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L9</idno>
-                  <idno type="PID">o:szd.3527</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3527</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13417,6 +13453,8 @@
             <titleStmt>
               <title ana="assigned" xml:lang="de">Adressbuch [ca. 1934-1940]</title>
               <title ana="assigned" xml:lang="en">Address book [ca. 1934-1940]</title>
+              <title type="Einheitssachtitel" xml:lang="de">Adressbücher</title>
+              <title type="Einheitssachtitel" xml:lang="en">Address books</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <author ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></author>
               <editor role="contributor" ref="#SZDPER.2315"><persName ref="http://d-nb.info/gnd/1170430066"><surname>Altmann</surname><forename>Hannah</forename></persName></editor>
@@ -13435,7 +13473,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L10</idno>
-                  <idno type="PID">o:szd.3516</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3516</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13503,6 +13543,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Certificate of Identity, Certificate d'identite</title>
+              <title type="Einheitssachtitel" xml:lang="de">Identitätsnachweis</title>
+              <title type="Einheitssachtitel" xml:lang="en">Certificate of Identity</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></editor>
               <editor role="contributor"><orgName ref="http://d-nb.info/gnd/35565-3">Großbritannien. Home Office</orgName></editor>
@@ -13517,7 +13559,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L11</idno>
-                  <idno type="PID">o:szd.3517</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3517</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13568,6 +13612,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Geburtsschein</title>
+              <title type="Einheitssachtitel" xml:lang="de">Geburtsschein</title>
+              <title type="Einheitssachtitel" xml:lang="en">Birth certificate</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
               <editor role="contributor"><orgName>Standesamt Kattowitz</orgName></editor>
@@ -13586,7 +13632,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L12</idno>
-                  <idno type="PID">o:szd.3518</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3518</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -13642,6 +13690,8 @@
           <fileDesc>
             <titleStmt>
               <title ana="original">Reisepass</title>
+              <title type="Einheitssachtitel" xml:lang="de">Pass</title>
+              <title type="Einheitssachtitel" xml:lang="en">Passport</title>
               <title type="Gesamttitel">Stefan Zweig - SZ-AAL</title>
               <editor role="contributor" ref="#SZDPER.1555"><persName ref="http://d-nb.info/gnd/116001151"><surname>Zweig</surname><forename>Lotte</forename></persName></editor>
               <editor role="contributor"><orgName>Deutsche Botschaft London, Passtelle</orgName></editor>
@@ -13656,7 +13706,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-AAL/L13</idno>
-                  <idno type="PID">o:szd.3519</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3519</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
