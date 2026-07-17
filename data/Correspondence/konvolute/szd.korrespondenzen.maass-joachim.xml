@@ -1,0 +1,804 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Joachim Maass</title>
+        <title xml:lang="en">Correspondence Joachim Maass</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.maass-joachim</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw. wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.maass-joachim.19">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Joachim Maass an Stefan Zweig, 1932-05-24</title>
+              <title xml:lang="en">Joachim Maass an Stefan Zweig, 1932-05-24</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SAM/AK.115</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.395</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;Portugal. Cintra. Palacio da Pena.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;Portugal. Cintra. Palacio da Pena.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Anna Meingast</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf aus Privatbesitz 2013/2014</ab>
+                    <ab xml:lang="en">Acquisition from private ownership 2013/2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1932-05-24" xml:lang="de">24. Mai 32.</date>
+                <date when="1932-05-24" xml:lang="en">24. Mai 32.</date>
+                <address>
+                  <addrLine>Salzburg, Kapuzinerberg 5</addrLine>
+                </address>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+              <biblFull xml:id="SZDKOR.maass-joachim.20">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [24. Januar 1936]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1936-01-24</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3379</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="fre"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1936-01-24" xml:lang="de">24. I. 36.</date>
+                <date when="1936-01-24" xml:lang="en">24. I. 36.</date>
+                <placeName xml:lang="de">Altona/Elbe</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.21">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Stefan Zweig [7. Januar 1936]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Stefan Zweig, 1936-01-07</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3380</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 3 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 3 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1936-01-07" xml:lang="de">7. I. 36.</date>
+                <date when="1936-01-07" xml:lang="en">7. I. 36.</date>
+                <placeName xml:lang="de">Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.22">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [2. April 1936]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1936-04-02</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3381</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1936-04-02" xml:lang="de">2. April 36.</date>
+                <date when="1936-04-02" xml:lang="en">2. April 36.</date>
+                <placeName xml:lang="de">Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.23">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [30. Mai 1936]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1936-05-30</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3382</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1936-05-30" xml:lang="de">30. Mai 36.</date>
+                <date when="1936-05-30" xml:lang="en">30. Mai 36.</date>
+                <placeName xml:lang="de">Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.24">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [10. Oktober 1936]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1936-10-10</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3383</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt; 1 Kuvert</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf; 1 envelope</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1936-10-10" xml:lang="de">10. Oktober 36.</date>
+                <date when="1936-10-10" xml:lang="en">10. Oktober 36.</date>
+                <placeName xml:lang="de">Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.25">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [7. April 1938]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1938-04-07</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3384</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1938-04-07" xml:lang="de">7. April 38.</date>
+                <date when="1938-04-07" xml:lang="en">7. April 38.</date>
+                <placeName xml:lang="de">Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.26">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte von Joachim Maass an Lotte Zweig [25. Mai 1938]</title>
+              <title xml:lang="en">Postcard from Joachim Maass to Lotte Zweig, 1938-05-25</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.7</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3385</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, 1 Blatt</span>
+                        <span xml:lang="en">1 postcard, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1938-05-25" xml:lang="de">25. Mai 38.</date>
+                <date when="1938-05-25" xml:lang="en">25. Mai 38.</date>
+                <placeName xml:lang="de">Hamburg-Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.27">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Joachim Maass an Lotte Zweig [12. Juni 1938]</title>
+              <title xml:lang="en">Letter from Joachim Maass to Lotte Zweig, 1938-06-12</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.8</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3386</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1938-06-12" xml:lang="de">12. Juni 38.</date>
+                <date when="1938-06-12" xml:lang="en">12. Juni 38.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.maass-joachim.28">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Postkarte von Joachim Maass an Lotte Zweig [27. Juli 1938]</title>
+              <title xml:lang="en">Postcard from Joachim Maass to Lotte Zweig, 1938-07-27</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B4.9</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3387</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Postcard</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Postkarte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Postkarte, 1 Blatt</span>
+                        <span xml:lang="en">1 postcard, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118575627">
+                  <surname>Maass</surname>
+                  <forename>Joachim</forename>
+                </persName>
+                <date when="1938-07-27" xml:lang="de">27. VII. 38.</date>
+                <date when="1938-07-27" xml:lang="en">27. VII. 38.</date>
+                <placeName xml:lang="de">Hamburg-Altona</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+</listBibl>
+    </body>
+  </text>
+</TEI>

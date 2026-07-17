@@ -1,0 +1,786 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Zweig Alfred</title>
+        <title xml:lang="en">Correspondence Zweig Alfred</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.zweig-alfred</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <projectDesc>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig
+        im digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+        wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit
+        dem Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort
+        vorhandenen Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes
+        generiert. So entsteht ein strukturierter Bestand an digitalen Objekten, der im
+        Sinne der digitalen Langzeitarchivierung repräsentiert wird, und NutzerInnen
+        orts- und zeitunabhängig zugänglich ist. Das Projekt ist so konzipiert, dass zu
+        einem späteren Zeitpunkt Erschließung und Anreicherung des Quellenmaterials
+        (z.B. digitalen Editionen) möglich werden.</p>
+      </projectDesc>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.zweig-alfred.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Vollmacht Alfred Zweig</title>
+              <title xml:lang="en">Vollmacht Alfred Zweig</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/L1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.168</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName>
+                  <surname>Alfred</surname>
+                  <forename>Zweig</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brieffragment an Alfred Zweig, o. D.</title>
+              <title xml:lang="en">Brieffragment an Alfred Zweig, o. D.</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>
+              <note type="participants" xml:lang="de">Zweig, Stefanie</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1428</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink, red crayon</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte, roter Farbstift</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"></lang>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Archiv Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <placeName ana="deduced">Salzburg</placeName>
+                <date type="supplied" xml:lang="de">Juli 1922</date>
+                <date type="supplied" xml:lang="en">July 1922</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief an Alfred Zweig vom 29. November 1931</title>
+              <title xml:lang="en">Brief an Alfred Zweig vom 29. November 1931</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <notesStmt>         
+     <note type="participants" xml:lang="de">Zweig, Stefanie</note>
+              <note type="hint" xml:lang="de">Teile eines Satzes nachträglich geschwärzt</note>
+              <note type="hint" xml:lang="en">Parts of a sentence blackened afterwards</note>
+            </notesStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAP/B10.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1427</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">purple ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">violette Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"></lang>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Archiv Atrium Press</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf Christie&apos;s London 2014</ab>
+                    <ab xml:lang="en">Acquisition from Christie&apos;s London 2014</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1931-11-29" xml:lang="de">29 Nov. 1931</date>
+                <date when="1931-11-29" xml:lang="en">29 Nov. 1931</date>
+                <placeName ana="deduced">Salzburg</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Ansichtspostkarte an Alfred Zweig vom 9. August 1936</title>
+              <title xml:lang="en">Ansichtspostkarte an Alfred Zweig vom 9. August 1936</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-SEF/B10</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1300</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;ROYAL MAIL TURBINE STEAMER &quot;ALCANTARA&quot; (TWIN SCREW 22.209 TONS GROSS) SOUTH AMERICAN SERVICE&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;ROYAL MAIL TURBINE STEAMER &quot;ALCANTARA&quot; (TWIN SCREW 22.209 TONS GROSS) SOUTH AMERICAN SERVICE&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"></lang>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1936-08-09" xml:lang="de">9. 8. 36</date>
+                <date when="1936-08-09" xml:lang="en">9. 8. 36</date>
+                <placeName type="postmark">9 VIII 36</placeName>
+                <placeName xml:lang="de">Cherbourg</placeName>
+                <address>
+                  <addrLine>Wien, Esslinggasse 16</addrLine>
+                </address>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+              <biblFull xml:id="SZDKOR.zweig-alfred.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Alfred Zweig an Stefan Zweig [10. September 1937]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1937-09-10</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.1</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3221</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1937-09-10" xml:lang="de">10. Sept. 37.</date>
+                <date when="1937-09-10" xml:lang="en">10. Sept. 37.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.6">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Alfred Zweig an Stefan Zweig [11. September 1937]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1937-09-11</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.2</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3222</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1937-09-11" xml:lang="de">11. Sept. 37.</date>
+                <date when="1937-09-11" xml:lang="en">11. Sept. 37.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.7">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Alfred Zweig an Stefan Zweig [14. September 1937]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1937-09-14</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.3</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3223</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript und Manuskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript and manuscript, 2 leaves</span>
+                        <measure ana="szdg:Enclosures" xml:lang="de">Angeklebter Zeitungsausschnitt</measure>
+                        <measure ana="szdg:Enclosures" xml:lang="en">Affixed newspaper clipping</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1937-09-14" xml:lang="de">14. September 1937</date>
+                <date when="1937-09-14" xml:lang="en">14. September 1937</date>
+                <placeName xml:lang="de">Wien</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.8">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Alfred Zweig an Stefan Zweig [1. September 1938]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1938-09-01</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.4</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3224</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Hotel Bellerive stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Hotel Bellerive</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript und Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript and manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1938-09-01" xml:lang="de">1. September 1938</date>
+                <date when="1938-09-01" xml:lang="en">1. September 1938</date>
+                <placeName xml:lang="de">Zürich</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.9">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brieffragment von Alfred Zweig an Stefan Zweig [8. September 1938]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1938-09-08</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.5</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3225</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brieffragment, Typoskript und Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 fragment of a letter, typescript and manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1938-09-08" xml:lang="de">8. September 1938.</date>
+                <date when="1938-09-08" xml:lang="en">8. September 1938.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.zweig-alfred.10">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brieffragment von Alfred Zweig an Stefan Zweig [7. Oktober 1938]</title>
+              <title xml:lang="en">Letter from Alfred Zweig to Stefan Zweig, 1938-10-07</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B10.6</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3226</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Writing paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Schreibpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brieffragment, Typoskript und Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 fragment of a letter, typescript and manuscript, 1 leaf</span>
+                        <measure ana="szdg:Enclosures" xml:lang="de">1 Abschrift, Ida Zweig: "Mein letzter Wille.", 1 Blatt; 1 Mitteilung von Ida Zweig an Alfred Zweig: "Unter meinen Schmuckgegenständen …" 1 Blatt; 1 Liste "Schmuckgegenstände", 1 Blatt; 1 „Schätzung" [1], Juwelier Emil Kofmehl, Zürich, 1 Blatt; 1 „Schätzung" [2], Juwelier Emil Kofmehl, Zürich, 1 Blatt; 1 Mitteilung von Alfred Zweig an Stefan Zweig: "Zu den Schätzungen mein Vorschlag", 1 Blatt</measure>
+                        <measure ana="szdg:Enclosures" xml:lang="en">1 copy, Ida Zweig: "Mein letzter Wille.", 1 leaf;  1 message to Alfred Zweig: ‘Among my jewellery …’ 1 sheet; 1 list of “jewellery items”, 1 sheet; 1 “valuation” [1], jeweller Emil Kofmehl, Zurich, 1 sheet; 1 “valuation” [2], jeweller Emil Kofmehl, Zurich, 1 sheet; 1 letter from Alfred Zweig to Stefan Zweig: ‘Zu den Schätzungen mein Vorschlag’, 1 leaf</measure>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/1161770038">
+                  <surname>Zweig</surname>
+                  <forename>Alfred</forename>
+                </persName>
+                <date when="1938-10-07" xml:lang="de">7. Oktober 1938.</date>
+                <date when="1938-10-07" xml:lang="en">7. Oktober 1938.</date>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+</listBibl>
+    </body>
+  </text>
+</TEI>

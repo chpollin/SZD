@@ -19263,10 +19263,12 @@
           <death when="1964"/>
         </person>
         <person xml:id="SZDPER.1867">
-          <persName>
+          <persName ref="http://d-nb.info/gnd/1294349775">
             <surname>Haupolter</surname>
-            <forename>Walther</forename>
+            <forename>Walter</forename>
           </persName>
+          <birth when="1891"/>
+          <death when="1966"/>
         </person>
         <person xml:id="SZDPER.1868">
           <persName>
@@ -20198,7 +20200,7 @@
           <death when="1932"/>
         </person>
         <person xml:id="SZDPER.2083">
-          <persName>
+          <persName ref="http://d-nb.info/gnd/137723520">
             <surname>Altmann</surname>
             <forename>Manfred</forename>
           </persName>
@@ -21149,10 +21151,11 @@
           <death when="1970-07-30"/>
         </person>
         <person xml:id="SZDPER.2211">
-          <persName>
+          <persName ref="http://d-nb.info/gnd/1080209468">
             <surname>Thalhuber</surname>
             <forename>Johann</forename>
           </persName>
+          <birth when="1894"/>
         </person>
         <person xml:id="SZDPER.2212">
           <persName>
@@ -21850,12 +21853,6 @@
           </persName>
           <idno type="wikidata">https://www.wikidata.org/wiki/Q1505163</idno>
         </person>
-        <person xml:id="SZDPER.2302">
-          <persName>
-            <surname>Chaine</surname>
-            <forename>Renée</forename>
-          </persName>
-        </person>
         <person xml:id="SZDPER.2303">
           <persName>
             <surname>Monath</surname>
@@ -21943,22 +21940,50 @@
             <forename>Hannah</forename>
           </persName>
         </person>
-        <person xml:id="SZDPER.2316">
-          <persName>
-            <surname>Geiringer</surname>
-            <forename>Josef</forename>
-          </persName>
-        </person>
-        <person xml:id="SZDPER.2317">
-          <persName>
-            <surname>Meiler</surname>
-            <forename>Friedrich</forename>
-          </persName>
-        </person>
         <person xml:id="SZDPER.2318">
           <persName>
             <surname>Ullmann</surname>
             <forename>Julius</forename>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.2319">
+          <persName ref="http://d-nb.info/gnd/1161770038">
+            <surname>Zweig</surname>
+            <forename>Alfred</forename>
+          </persName>
+          <birth when="1879"/>
+          <death when="1977"/>
+        </person>
+        <person xml:id="SZDPER.2320">
+          <persName ref="http://d-nb.info/gnd/1073665593">
+            <surname>Chaine</surname>
+            <forename>René</forename>
+          </persName>
+          <birth when="1889-07-11"/>
+        </person>
+        <person xml:id="SZDPER.2324">
+          <persName ref="http://d-nb.info/gnd/10102943-3">
+            <name>Viking Press</name>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.2325">
+          <persName ref="http://d-nb.info/gnd/37689-9">
+            <name>Westminster Bank</name>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.2326">
+          <persName ref="http://d-nb.info/gnd/35565-3">
+            <name>Großbritannien. Home Office</name>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.2327">
+          <persName ref="http://d-nb.info/gnd/2134286-6">
+            <name>BDO Binder Hamlyn (London)</name>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.2328">
+          <persName ref="http://d-nb.info/gnd/275785-0">
+            <name>Vita-Lebensversicherungs-Aktiengesellschaft (Zürich)</name>
           </persName>
         </person>
       </listPerson>

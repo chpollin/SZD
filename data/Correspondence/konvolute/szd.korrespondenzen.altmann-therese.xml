@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Korrespondenz Altmann Therese</title>
+        <title xml:lang="en">Correspondence Therese Altmann</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <idno type="PID">o:szd.korrespondenzen.altmann-therese</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Projektleitung</resp>
+          <persName>
+            <forename>Lina Maria</forename>
+            <surname>Zangerl</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Korrespondenzen Stefan Zweig</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Jeder Einzelbrief wird durch ein biblFull beschrieben.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="szdg" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="szdg:$1">
+          <p>Namespace für den Glossar in Stefan Zweig digital.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull xml:id="SZDKOR.altmann-therese.1">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Therese Altmann [19. Oktober 1940]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Therese Altmann, 1940-10-19</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.56</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3173</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">"Editora Guanabara" stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier "Editora Guanabara"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 3 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 3 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1940-10-19" xml:lang="de">19th October 1940</date>
+                <date when="1940-10-19" xml:lang="en">19th October 1940</date>
+                <placeName xml:lang="de">Rio de Janeiro</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1366788923">
+                  <surname>Altmann</surname>
+                  <forename>Therese</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-therese.2">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Therese; Altmann, Hannah; Altmann, Manfred Altmann [9. November 1940]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Therese Altmann and Hannah Altmann and Manfred Altmann, 1940-11-09</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.61</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3179</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">"City Hotel Buenos Aires" stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier "City Hotel Buenos Aires"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 2 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 2 leaves</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1940-11-09" xml:lang="de">9. 11. 40</date>
+                <date when="1940-11-09" xml:lang="en">9. 11. 40</date>
+                <placeName xml:lang="de">Buenos Aires</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1366788923">
+                  <surname>Altmann</surname>
+                  <forename>Therese</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1170430066">
+                  <surname>Altmann</surname>
+                  <forename>Hannah</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/137723520">
+                  <surname>Altmann</surname>
+                  <forename>Manfred</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-therese.3">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Therese Altmann [6. August 1941]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Therese Altmann, 1941-08-06</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.154</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3082</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Air mail paper</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Luftpostpapier</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1941-08-06" xml:lang="de">Aug. 6th, 41</date>
+                <date when="1941-08-06" xml:lang="en">Aug. 6th, 41</date>
+                <placeName xml:lang="de">New York</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1366788923">
+                  <surname>Altmann</surname>
+                  <forename>Therese</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-therese.4">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Therese Altmann [13. September 1941]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Therese Altmann, 1941-09-13</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.166</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3095</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">"Editora Guanabara" stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">blue ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier "Editora Guanabara"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">blaue Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1941-09-13" xml:lang="de">Sept. 13th, 41</date>
+                <date when="1941-09-13" xml:lang="en">Sept. 13th, 41</date>
+                <placeName xml:lang="de">Rio de Janeiro</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1366788923">
+                  <surname>Altmann</surname>
+                  <forename>Therese</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+        <biblFull xml:id="SZDKOR.altmann-therese.5">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang="de">Brief von Lotte Zweig an Therese Altmann [16. November 1941]</title>
+              <title xml:lang="en">Letter from Lotte Zweig to Therese Altmann, 1941-11-16</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+                  <idno type="signature">SZ-AAL/B1.182</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.3113</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">"Petrópolis c/o Editora Guanabara" stationary</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ribbon, red ink</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier "Petrópolis c/o Editora Guanabara"</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarzes Farbband, rote Tinte</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Brief, Typoskript und Manuskript, 1 Blatt</span>
+                        <span xml:lang="en">1 letter, typescript and manuscript, 1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="eng"/>
+                  </textLang>
+                </msContents>
+                <history>
+                  <provenance>
+                    <ab>Erben Stefan Zweigs</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Schenkung der Erben Stefan Zweigs</ab>
+                    <ab xml:lang="en">Gift of the heirs of Stefan Zweig</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type="toZweig">
+              <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/116001151">
+                  <surname>Zweig</surname>
+                  <forename>Lotte</forename>
+                </persName>
+                <date when="1941-11-16" xml:lang="de">16th Nov. 1941.</date>
+                <date when="1941-11-16" xml:lang="en">16th Nov. 1941.</date>
+                <placeName xml:lang="de">Petrópolis</placeName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="http://d-nb.info/gnd/1366788923">
+                  <surname>Altmann</surname>
+                  <forename>Therese</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

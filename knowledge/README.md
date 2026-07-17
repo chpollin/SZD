@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-15
+updated: 2026-06-24
 ---
 
 # Knowledge Vault -- Stefan Zweig Digital
@@ -22,7 +22,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [PROJECT.md](PROJECT.md) | Forschungsprojekt: Kontext, Methodik, Sammlungen, FAIR-Compliance, Chronologie |
 | [ONTOLOGY.md](ONTOLOGY.md) | Nachlass-Ontologie (SZDO v1.2.0): Zwei-Schichten-Architektur, Designprinzipien, Alignments, Kompetenzfragen |
 | [COLLECTIONS.md](COLLECTIONS.md) | Alle Sammlungen im Detail: Struktur, Inhalt, TEI-Encoding |
-| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 TEI-Dateien, 312k Zeilen, 15 MB, Datumsqualitaet |
+| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 Hauptsammlungen + 42 Korrespondenz-Konvolute, ~384k Zeilen, 18 MB, Datumsqualitaet |
 | [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
 | [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
@@ -61,4 +61,4 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 ---
 
-_Stand: 15. Juni 2026_
+_Stand: 24. Juni 2026_
