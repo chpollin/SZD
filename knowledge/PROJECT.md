@@ -229,13 +229,13 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 
 ### Personen
 
-| Name | Rolle | Institution | ORCID |
-|------|-------|-------------|-------|
-| Oliver Matuschek | Projektleitung | Literaturarchiv Salzburg | — |
-| Lina Maria Zangerl | Datenerfassung | Literaturarchiv Salzburg | 0000-0001-9709-3669 |
-| Julia Rebecca Glunk | Datenerfassung | Literaturarchiv Salzburg | 0000-0001-6647-9729 |
-| Verena Maria Höller | Datenerfassung | Literaturarchiv Salzburg | — |
-| Christopher Pollin | Datenmodellierung | Digital Humanities Craft OG | 0000-0002-4879-129X |
+Die namentliche Nennung der Beteiligten führt die Projektwebsite (https://stefanzweig.digital); hier stehen Rollen und Institutionen.
+
+| Rolle | Institution |
+|-------|-------------|
+| Projektleitung | Literaturarchiv Salzburg |
+| Datenerfassung (drei Mitarbeiterinnen) | Literaturarchiv Salzburg |
+| Datenmodellierung (Christopher Pollin, ORCID 0000-0002-4879-129X) | Digital Humanities Craft OG |
 
 ### Institutionen
 
