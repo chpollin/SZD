@@ -69,9 +69,11 @@ The project uses TEI-XML (Text Encoding Initiative P5) as the primary data forma
 
 ---
 
-## License
+## Licence
 
-All content in this repository is licensed under CC-BY 4.0 (Creative Commons Attribution 4.0 International).
+- **Code, ontology, scripts, and tooling**: [MIT](LICENSE).
+- **Documentation, knowledge documents, and other textual content**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **Archival research data**: the TEI-XML encoded estate materials and digital facsimiles originate from the Stefan Zweig collection held by the Literaturarchiv Salzburg (Paris Lodron University of Salzburg); those rights remain with the archive.
 
 ---
 
