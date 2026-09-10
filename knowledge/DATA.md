@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-15
+updated: 2026-09-10
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
@@ -104,6 +104,23 @@ Ein Korrespondenzpartner kann **mehrere Signaturen** haben (z.B. ein Konvolut pl
 |-------|------:|--------|
 | `n. d.` Daten (kein Datum vorhanden) | 19 | Nur durch Archivrecherche loesbar |
 | TEI-Signaturen ohne Katalog-Zuordnung | ~130 | Neue Katalogeintraege oder Markierung als unkatalogisiert |
+
+### Jahrhundertfehler bei zweistelligen Jahresangaben
+
+Bei den Ansichtskarten der Signaturgruppe `SZ-SAM/AK` in den Konvolut-Objekten hat ein
+frueherer Import die zweistellige Jahresangabe der Quelle (`20. 2. 21`) in die 2000er
+expandiert, also `when="2021-02-20"` statt `1921-02-20` gesetzt. Der Anzeigetext des
+`date`-Elements und, wo vorhanden, das Datum im damaligen Titel tragen den richtigen Wert.
+Wo der Titel das Jahr belegte, ist `@when` daraus korrigiert worden
+(`scripts/korrespondenz_titel/`); wo der Titel kein Datum trug, bleibt der Fehler stehen
+und ist nur redaktionell zu entscheiden. Merkmal fuer die Suche: ein `@when` nach 1942 an
+einem Stueck mit Stefan Zweig als Sender oder Empfaenger ist unmoeglich, weil er 1942
+gestorben ist; die Familienkorrespondenz der Konvolute reicht dagegen ueber 1942 hinaus.
+
+Verwandt, aber davon unabhaengig: einzelne Eintraege tragen ein `date` ohne `@when`, eines
+mit abweichender Granularitaet zwischen der deutschen und der englischen Fassung, und
+einzelne `correspAction` ohne Personennamen. Diese Faelle stehen in der Restliste des
+Skripts und werden nicht automatisch geaendert.
 
 ## Lebensdokumente facsimile checkup (10 Sep 2026)
 

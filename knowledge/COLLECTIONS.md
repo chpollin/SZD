@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-15
+updated: 2026-09-10
 ---
 
 # Collections - Stefan Zweig Digital
@@ -98,6 +98,39 @@ konvolut and the index renderer.
 were catalogued across **42 person konvolute** (30 new objects, 12 extending existing ones),
 generated from per-letter CSVs joined to live facsimile PIDs (via risearch). Konvolut object
 files live in [data/Correspondence/konvolute/](../data/Correspondence/konvolute/).
+
+### Entry title and date convention (konvolut objects)
+
+The title of a single-letter entry is derived, not written: it is generated from
+`correspDesc/correspAction` and the physical extent, in both languages.
+
+```
+de: <Dokumenttyp> von <Sender> an <Empfänger> [<Tag>. <Monat> <Jahr>]
+en: <Document type> from <Sender> to <Recipient>, <ISO date>
+```
+
+The document type is the leading noun of `extent/span` in the respective language
+(Brief/Letter, Brieffragment/Letter, Ansichtspostkarte/Picture postcard,
+Postkarte/Postcard, Telegramm/Telegram, Kuvert/Envelope); anything else falls back to
+Brief/Letter. Partner names are `Vorname Nachname`, taken from `persName`
+(`forename` + `surname`); `orgName` stands in only where the action names no person.
+Several senders or recipients are encoded as several `correspAction` elements of the same
+`@type` and are joined with *und* / *and*.
+
+`correspAction[@type="sent"]/date` is the sole carrier of the date. The German title
+repeats it in long form inside square brackets, the English title as the ISO value of
+`@when`; the brackets mark the title date as derived from that element, not the degree of
+editorial certainty, which `@cert` and `@ana` carry. An entry without `@when` gets no date
+in the German title. Neither title carries an ISO date of its own, and neither carries the
+archival signature — that lives in `msIdentifier/idno[@type="signature"]`.
+
+Two deviations from this convention are editorial and stay: entries addressed to Lotte
+Altmann before the 1939 marriage keep the maiden name although `correspAction` records
+`Zweig, Lotte`, and the aggregate titles of the index `SZDKOR.xml` describe bundles
+(`N Korrespondenzstücke AN/VON Stefan Zweig`) rather than single pieces.
+
+`scripts/korrespondenz_titel/` regenerates deviating titles from this rule and verifies
+that the rule reproduces the existing corpus.
 
 ### Content
 
@@ -314,6 +347,28 @@ Academic and journalistic essays about Stefan Zweig:
 - Bibliographic metadata
 - Abstracts
 
+### Classification is mandatory in both languages
+
+SZDESS is rendered by the same `szd-Werke.xsl` as the Works and the Lebensdokumente, so
+the rendering contract below applies here too. Every entry must carry
+`term[@type="classification"]` in German **and** English: the outer `for-each-group` keys
+on the term of the current locale, so an entry classified in one language only vanishes
+from the other language's output entirely, while still being present and ingested.
+Spelling matters as much as presence, because a value that differs from the established
+one only in capitalisation opens a second, near-identical navbar category holding a single
+entry.
+
+The vocabulary is closed. A new object type does not warrant a new category; the
+classification places the item in the navigation, the object type
+(`extent/span/term[@type="objecttyp"]`) describes the piece itself, and the two are kept
+apart. Where an entry needs a category, it takes the pair that the entries with the same
+object type already use. Two German categories, Druckfahnen and Korrekturfahnen, share the
+English term Galley proofs, so the English navigation has one category where the German has
+two; that is an editorial decision on record, not a defect.
+
+`scripts/essay_klassifikation/` completes and normalises these keys and surveys the grouped
+lists for entries that the renderer would drop.
+
 ---
 
 ## Personal Documents (SZDLEB)
@@ -359,12 +414,16 @@ The complete field catalogue (22 displayed fields, DE/EN label + DE/EN definitio
 
 ### Rendering contract (why an ingested entry can stay invisible)
 
-The Lebensdokumente edition and the Works list share one renderer, `szd-Werke.xsl` in the **gams-www** repo (`ZIMLAB/szd`). It builds the page with a two-level `xsl:for-each-group`: the **outer** group is `term[@type="classification"]` (the h2 navbar category), the **inner** group is `title[@type="Einheitssachtitel"]` (the h3 document-type heading). An entry missing **either** grouping key is silently dropped from the entire output — present in the TEI, ingested, yet rendered nowhere.
+The Lebensdokumente edition and the Works list share one renderer, `szd-Werke.xsl` in the **gams-www** repo (`ZIMLAB/szd`). It builds the page with a two-level `xsl:for-each-group`: the **outer** group is `term[@type="classification"]` (the h2 navbar category), the **inner** group is `title[@type="Einheitssachtitel"]` (the h3 document-type heading). An entry missing **either** grouping key is silently dropped — present in the TEI, ingested, yet rendered nowhere. A classification present in one language only drops the entry from that other language's output while it still renders in the first.
 
 Every `biblFull` in a grouped list must therefore carry, beyond its content fields:
 
 - `profileDesc/textClass/keywords/term[@type="classification"]` (de+en) — navbar category;
-- `titleStmt/title[@type="Einheitssachtitel"]` (de+en) — document-type sub-heading;
+- `titleStmt/title[@type="Einheitssachtitel"]` — document-type sub-heading. The inner
+  `group-by` selects the title of the current locale **or** one without `@xml:lang`, so a
+  language-less Einheitssachtitel groups correctly in both languages and only a completely
+  absent one drops the entry. The classification has no such fallback: it is keyed on the
+  locale alone and is therefore required in both languages;
 - the PID as `msIdentifier/altIdentifier/idno[@type="PID"]` (not a bare `idno`), or the IIIF/Mirador facsimile link is not built.
 
 **Controlled vocabulary:** navbar categories are a closed set — reuse an existing `classification`, add a new one only for something fundamental and permanent. Reuse existing `Einheitssachtitel` values **verbatim** (de and en) so the entry joins the existing heading group instead of spawning a near-duplicate. The renderer side is documented in gams-www `knowledge/Rendering-and-Search.md` (§1).
@@ -491,6 +550,6 @@ Long-term preservation copies on Zenodo:
 
 ---
 
-**Last Updated:** June 2026
+**Last Updated:** September 2026
 
 **See also:** [ONTOLOGY.md](ONTOLOGY.md) for how each collection maps to SZDO ontology classes (Section 7), [PROJECT.md](PROJECT.md) for the full project context.

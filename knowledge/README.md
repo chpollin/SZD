@@ -46,6 +46,9 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [reconcile_klawiter.py](../scripts/reconcile_klawiter.py) | Klawiter-Bibliographie Reconciliation (105 Werke, 119 Verknuepfungen) |
 | [generate_instances.py](../scripts/generate_instances.py) | Instanzdaten-Generierung aus TEI-XML |
 | [szaal_lebensdokumente/csv_to_szdleb.py](../scripts/szaal_lebensdokumente/csv_to_szdleb.py) | SZ-AAL Lebensdokumente CSV -> SZDLEB.xml ([README](../scripts/szaal_lebensdokumente/README.md)) |
+| [korrespondenz_titel/fix_titles.py](../scripts/korrespondenz_titel/fix_titles.py) | Eintragstitel der Korrespondenz-Konvolute auf die Titel- und Datumskonvention ziehen ([README](../scripts/korrespondenz_titel/README.md)) |
+| [essay_klassifikation/fix_classification.py](../scripts/essay_klassifikation/fix_classification.py) | Gruppierungsschluessel der Aufsatzablage vervollstaendigen und die gruppierten Listen erheben ([README](../scripts/essay_klassifikation/README.md)) |
+| [personen_ohne_verweis/list_unlinked_persons.py](../scripts/personen_ohne_verweis/list_unlinked_persons.py) | Kandidatenliste der unverknuepften Personeneintraege als CSV ([README](../scripts/personen_ohne_verweis/README.md)) |
 
 ## Externe Dokumentation
 
