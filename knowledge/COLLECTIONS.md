@@ -397,6 +397,20 @@ titles, which is why the SZ-AAL letters stayed contributor-less.
 > Renderer side: gams-www `knowledge/Facsimiles-Korrespondenzen.md` (Befundprotokoll,
 > "Gruppierungs-Lücke").
 
+> **IIIF manifest and structure labels (observed 2026-09-10):** the GAMS method
+> `sdef:IIIF/getManifest` copies the `<div type="…">` labels of the `<book>` structure
+> into the JSON `label` of each `sc:Range` without escaping. A straight double quote in
+> such a label (`&quot;` in the XML) therefore yields invalid JSON, Mirador cannot parse
+> the manifest and the viewer stays empty, although every image datastream and the
+> Image API are intact. Affected: `o:szd.174` (SZ-AP2/L-S1.1, label „Deckblatt
+> "VERLEGER vor dem Index"“), `o:szd.67` (SZ-AAP/L2, „Zeitungsausschnitt/Vom
+> "österreichischen" Dichter“), `o:szd.314` (SZ-AP2/W-G104.1, three quoted incipits).
+> Object titles with quotes are escaped correctly (`o:szd.259`, `o:szd.1481`). Rule for
+> the ingest sources under `PROJECTS/szd/done/**/Result_*.xml`: no straight double
+> quotes in `div/@type`; use typographic „…“ or drop them. Root cause fix would be the
+> escaping in the GAMS manifest generator (ZIM); until then the three sources need
+> corrected labels and a re-ingest.
+
 > **Cache caveat:** the rendered `…/sdef:Context/get` page is cached; context membership
 > (the `QUERY` datastream, queryable live via `risearch`) updates immediately, but the
 > rendered gallery only reflects metadata/membership changes after GAMS rebuilds it.

@@ -105,6 +105,21 @@ Ein Korrespondenzpartner kann **mehrere Signaturen** haben (z.B. ein Konvolut pl
 | `n. d.` Daten (kein Datum vorhanden) | 19 | Nur durch Archivrecherche loesbar |
 | TEI-Signaturen ohne Katalog-Zuordnung | ~130 | Neue Katalogeintraege oder Markierung als unkatalogisiert |
 
+## Lebensdokumente facsimile checkup (10 Sep 2026)
+
+Archive-side checkup list against the catalogue view of `o:szd.lebensdokumente`, checked
+against the TEI source, the facsimile context and the GAMS datastreams:
+
+| Signature | Reported | Finding | Remedy |
+|---|---|---|---|
+| SZ-AP2/L-S1.1 Adressbuch | viewer broken | `o:szd.174` complete (122 images); IIIF manifest invalid because of quotes in a structure label | fix label in the book source, re-ingest; see COLLECTIONS.md |
+| SZ-AAP/L2 Tagebuch 1914 | viewer broken | `o:szd.67` complete (237 images); same manifest defect | same |
+| SZ-AAP/L11 Notizbuch Paris 1936 | facsimile link missing | `o:szd.76` exists in the facsimile context, TEI entry SZDLEB.12 had no PID | PID added in `data/PersonalDocument/SZDLEB.xml`, re-ingest index |
+| SZ-AP2/L-S12 Register der Aufsätze | facsimile link missing | `o:szd.175` exists, TEI entry SZDLEB.71 had no PID | PID added, re-ingest index |
+| SZ-AAP/L2 [Beilage] K. u. k. Kriegsarchiv Offene Order | no facsimile | no facsimile source anywhere: not in the Tagebuch book structure, no `SZ_AAP_L2_Beilage` folder (the Werke use `<sig>_Beilage` folders as separate objects, e.g. SZ-AAP/W31, W45) | archive checks the server files; a Beilage object needs its own signature suffix, the shared `SZ-AAP/L2` would collide with the Tagebuch |
+
+The local TEI matched the GAMS `TEI_SOURCE` entry for entry before the two PID additions.
+
 ---
 
 _Last refresh: 29 Mar 2026._

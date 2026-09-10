@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-06-24
+updated: 2026-09-10
 ---
 
 # Knowledge Vault -- Stefan Zweig Digital
@@ -51,6 +51,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 - [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) -- Zenodo-Archivierung
 - [Live-Dokumentation](https://chpollin.github.io/SZD/ontology/) -- GitHub Pages
+- [docs/lebenskalender/README.md](../docs/lebenskalender/README.md) -- Lebenskalender-Prototyp im SZD-Design, erzeugt aus SZDBIO.xml durch den Generator im gams-www-Harness
 
 ## Standards
 
@@ -61,4 +62,4 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 ---
 
-_Stand: 24. Juni 2026_
+_Stand: 10. September 2026_
