@@ -4115,7 +4115,7 @@
                   <surname>Horváth</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.1419 SZDPER.1420" role="translator">
+              <editor ref="#SZDPER.1419 #SZDPER.1420" role="translator">
                 <persName ref="http://d-nb.info/gnd/127749357">
                   <forename>R. Wills</forename>
                   <surname>Thomas</surname>
@@ -4764,7 +4764,7 @@
           <fileDesc>
             <titleStmt>
               <title>An essay on Flecker</title>
-              <author ref="#SZDPER.793 SZDPER.794">
+              <author ref="#SZDPER.793 #SZDPER.794">
                 <persName ref="http://d-nb.info/gnd/118570358 http://d-nb.info/gnd/118570366">
                   <forename>T. E.</forename>
                   <surname>Lawrence</surname>
@@ -6701,7 +6701,7 @@
           <fileDesc>
             <titleStmt>
               <title>From Olympus to the Styx</title>
-              <author ref="#SZDPER.857 SZDPER.858">
+              <author ref="#SZDPER.857 #SZDPER.858">
                 <persName ref="http://d-nb.info/gnd/1015024483 http://d-nb.info/gnd/182108066">
                   <forename>F. L.</forename>
                   <surname>Lucas</surname>
@@ -7279,10 +7279,8 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.1628">
-                <persName>
-                  <name>The Jew’s Temporary Shelter</name>
-                </persName>
+              <editor ref="https://gams.uni-graz.at/o:szd.organisation#SZDORG.51">
+                <orgName ref="https://gams.uni-graz.at/o:szd.organisation#SZDORG.51">The Jew’s Temporary Shelter</orgName>
               </editor>
             </titleStmt>
             <publicationStmt>
@@ -9824,7 +9822,7 @@
                   <surname>Mauron</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.857 SZDPER.858" role="translator">
+              <editor ref="#SZDPER.857 #SZDPER.858" role="translator">
                 <persName ref="http://d-nb.info/gnd/1015024483 http://d-nb.info/gnd/182108066">
                   <forename>F. L.</forename>
                   <surname>Lucas</surname>
@@ -9969,7 +9967,7 @@
             <titleStmt>
               <title>On the rocks : a political fantasy in two acts by a fellow of the royal society
                 of literature (first rough proof – unpublished)</title>
-              <author ref="#SZDPER.1311 SZDPER.1312">
+              <author ref="#SZDPER.1311 #SZDPER.1312">
                 <persName ref="http://d-nb.info/gnd/123256097 http://d-nb.info/gnd/118642375">
                   <forename>Bernard</forename>
                   <surname>Shaw</surname>
@@ -12547,7 +12545,7 @@
                   <surname>Meynell</surname>
                 </persName>
               </editor>
-              <editor ref="#SZDPER.1392 SZDPER.1393">
+              <editor ref="#SZDPER.1392 #SZDPER.1393">
                 <persName ref="http://d-nb.info/gnd/134231465 http://d-nb.info/gnd/11879955X">
                   <forename>A. J. A.</forename>
                   <surname>Symons</surname>
@@ -12624,7 +12622,7 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.742 SZDPER.743" role="translator">
+              <editor ref="#SZDPER.742 #SZDPER.743" role="translator">
                 <persName ref="http://d-nb.info/gnd/118564064 http://d-nb.info/gnd/116273372">
                   <forename>Theodore W.</forename>
                   <surname>Koch</surname>
@@ -15970,7 +15968,7 @@
           <fileDesc>
             <titleStmt>
               <title>Cinq femmes contre le monde</title>
-              <author ref="#SZDPER.495 SZDPER.496">
+              <author ref="#SZDPER.495 #SZDPER.496">
                 <persName ref="http://d-nb.info/gnd/128694777 http://d-nb.info/gnd/118696211">
                   <forename>Margaret</forename>
                   <surname>Goldsmith</surname>
@@ -16569,7 +16567,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1094" type="person">
+                <term ref="#SZDPER.1094" type="person">
                   <persName ref="http://d-nb.info/gnd/118593862">
                     <name>Philipp II.</name>
                   </persName>
@@ -26910,7 +26908,7 @@
           <fileDesc>
             <titleStmt>
               <title>Lettres autographes : la collection de Alfred Sensier</title>
-              <editor ref="#SZDPER.230 SZDPER.231">
+              <editor ref="#SZDPER.230 #SZDPER.231">
                 <persName ref="http://d-nb.info/gnd/116488808 http://d-nb.info/gnd/1151957666">
                   <forename>Étienne</forename>
                   <surname>Charavay</surname>
@@ -29458,7 +29456,7 @@
           <fileDesc>
             <titleStmt>
               <title>Supplement a l’isographie des hommes célèbres</title>
-              <editor ref="#SZDPER.230 SZDPER.231">
+              <editor ref="#SZDPER.230 #SZDPER.231">
                 <persName ref="http://d-nb.info/gnd/116488808 http://d-nb.info/gnd/1151957666">
                   <forename>Étienne</forename>
                   <surname>Charavay</surname>
@@ -31172,7 +31170,7 @@
                   <surname>Goethe</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1304">
+              <editor ref="#SZDPER.1304">
                 <persName ref="http://d-nb.info/gnd/1171748825">
                   <name>Selbsthilfevereinigung der jüdischen Blinden in Deutschland</name>
                 </persName>
@@ -32157,10 +32155,8 @@
           <fileDesc>
             <titleStmt>
               <title>Almanach 1936</title>
-              <editor ref="#SZDPER.1056">
-                <persName>
-                  <name>Österreichischer Frauen-Not-Dienst</name>
-                </persName>
+              <editor ref="https://gams.uni-graz.at/o:szd.organisation#SZDORG.38">
+                <orgName ref="http://d-nb.info/gnd/146456-5">Österreichischer Frauen-Not-Dienst</orgName>
               </editor>
             </titleStmt>
             <publicationStmt>
@@ -32628,7 +32624,7 @@
                   <surname>Hofmannsthal</surname>
                 </persName>
               </author>
-              <author ref="#SZDPER.1495 SZDPER.1496" role="afterword">
+              <author ref="#SZDPER.1495 #SZDPER.1496" role="afterword">
                 <persName ref="http://d-nb.info/gnd/117149209 http://d-nb.info/gnd/118629387">
                   <forename>Jakob </forename>
                   <surname>Wassermann</surname>
@@ -37669,7 +37665,7 @@
           <fileDesc>
             <titleStmt>
               <title>Briefe deutscher Musiker</title>
-              <editor ref="#SZDPER.352 SZDPER.353">
+              <editor ref="#SZDPER.352 #SZDPER.353">
                 <persName ref="http://d-nb.info/gnd/118529579 http://d-nb.info/gnd/116425725">
                   <forename>Alfred </forename>
                   <surname>Einstein</surname>
@@ -39378,10 +39374,8 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.1461">
-                <persName>
-                  <name>Vereinigte Verlegergruppe</name>
-                </persName>
+              <editor ref="https://gams.uni-graz.at/o:szd.organisation#SZDORG.60">
+                <orgName ref="http://d-nb.info/gnd/1086714458">Vereinigte Verlegergruppe</orgName>
               </editor>
             </titleStmt>
             <publicationStmt>
@@ -42882,7 +42876,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.94" type="person">
+                <term ref="#SZDPER.94" type="person">
                   <persName ref="http://d-nb.info/gnd/118655450">
                     <forename>Edvard</forename>
                     <surname>Beneš</surname>
@@ -46492,7 +46486,7 @@
             <titleStmt>
               <title>Die Entwicklung des Altonaer Stadttheaters : ein Beitrag zu seiner Geschichte ;
                 Festschrift zum fünfzigjährigen Bestehen des jetzigen Hauses</title>
-              <author ref="#SZDPER.624 SZDPER.625 SZDPER.626 SZDPER.627 SZDPER.628">
+              <author ref="#SZDPER.624 #SZDPER.625 #SZDPER.626 #SZDPER.627 #SZDPER.628">
                 <persName ref="http://d-nb.info/gnd/119361973 http://d-nb.info/gnd/118552465 http://d-nb.info/gnd/11855249X http://d-nb.info/gnd/116941383 http://d-nb.info/gnd/124370187">
                   <forename>Paul Th.</forename>
                   <surname>Hoffmann</surname>
@@ -49279,7 +49273,7 @@
                   <surname>Lemonnier</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.5 SZDPER.6" role="translator">
+              <editor ref="#SZDPER.5 #SZDPER.6" role="translator">
                 <persName ref="http://d-nb.info/gnd/118647059 http://d-nb.info/gnd/118647075">
                   <forename>Paul </forename>
                   <surname>Adler</surname>
@@ -51243,7 +51237,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1327" type="person">
+                <term ref="#SZDPER.1327" type="person">
                   <persName ref="http://d-nb.info/gnd/118615270">
                     <name>Socrates</name>
                   </persName>
@@ -51813,10 +51807,8 @@
             <titleStmt>
               <title>Die Wiener Oper : Konkurrenzprojekte. Kartons und Aquarelle und photographische
                 Aufnahmen</title>
-              <editor ref="#SZDPER.1626">
-                <persName ref="http://d-nb.info/gnd/2020891-1">
-                  <name>Österreichische Galerie Wien</name>
-                </persName>
+              <editor ref="https://gams.uni-graz.at/o:szd.organisation#SZDORG.36">
+                <orgName ref="http://d-nb.info/gnd/2020891-1">Österreichische Galerie Wien</orgName>
               </editor>
               <author ref="#SZDPER.543" role="preface">
                 <persName ref="http://d-nb.info/gnd/129153923">
@@ -52540,7 +52532,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.313" type="person">
+                <term ref="#SZDPER.313" type="person">
                   <persName ref="http://d-nb.info/gnd/118527053">
                     <forename>Fëdor Michajlovič</forename>
                     <surname>Dostoevskij</surname>
@@ -53975,7 +53967,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.364" type="person">
+                <term ref="#SZDPER.364" type="person">
                   <persName ref="http://d-nb.info/gnd/118530666">
                     <name>Erasmus von Rotterdam</name>
                   </persName>
@@ -59843,13 +59835,13 @@
                     <surname>Heine</surname>
                   </persName>
                 </term>
-                <term ref="SZDPER.313" type="person">
+                <term ref="#SZDPER.313" type="person">
                   <persName ref="http://d-nb.info/gnd/118527053">
                     <forename>Fëdor Michajlovič</forename>
                     <surname>Dostoevskij</surname>
                   </persName>
                 </term>
-                <term ref="SZDPER.500" type="person">
+                <term ref="#SZDPER.500" type="person">
                   <persName ref="http://d-nb.info/gnd/118639293">
                     <forename>Maksim</forename>
                     <surname>Gorʹkij</surname>
@@ -62913,7 +62905,7 @@
           <fileDesc>
             <titleStmt>
               <title>Jüdisches Blindenjahrbuch 5696 (1935/1936)</title>
-              <editor ref="SZDPER.1304">
+              <editor ref="#SZDPER.1304">
                 <persName ref="http://d-nb.info/gnd/1171748825">
                   <name>Selbsthilfevereinigung der jüdischen Blinden in Deutschland</name>
                 </persName>
@@ -64131,7 +64123,7 @@
           <fileDesc>
             <titleStmt>
               <title>Kopf oder Schrift : Roman</title>
-              <author ref="SZDPER.683">
+              <author ref="#SZDPER.683">
                 <persName ref="http://d-nb.info/gnd/143148745">
                   <forename>Jolán</forename>
                   <surname>Földes </surname>
@@ -68220,7 +68212,7 @@
           <fileDesc>
             <titleStmt>
               <title>Novellen</title>
-              <author ref="SZDPER.783">
+              <author ref="#SZDPER.783">
                 <persName ref="http://d-nb.info/gnd/105511579X">
                   <name>Larin-Kyösti</name>
                 </persName>
@@ -68434,7 +68426,7 @@
           <fileDesc>
             <titleStmt>
               <title>Ober-Oesterreich : Land und Volk</title>
-              <author ref="#SZDPER.568 SZDPER.569" role="preface">
+              <author ref="#SZDPER.568 #SZDPER.569" role="preface">
                 <persName ref="http://d-nb.info/gnd/118709178 http://d-nb.info/gnd/118547070">
                   <forename>Johann Nepomuk</forename>
                   <surname>Hauser</surname>
@@ -72558,7 +72550,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1315" type="person">
+                <term ref="#SZDPER.1315" type="person">
                   <persName ref="http://d-nb.info/gnd/118664417">
                     <name>Buddha</name>
                   </persName>
@@ -74764,7 +74756,7 @@
                   <surname>Gogol</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1206" role="illustrator">
+              <editor ref="#SZDPER.1206" role="illustrator">
                 <persName ref="http://d-nb.info/gnd/118602047">
                   <forename>Karl</forename>
                   <surname>Rössing</surname>
@@ -74834,7 +74826,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1400" type="person">
+                <term ref="#SZDPER.1400" type="person">
                   <persName ref="http://d-nb.info/gnd/119302349">
                     <forename>Taras</forename>
                     <surname>Bulʹba-Borovecʹ</surname>
@@ -75354,7 +75346,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1431" type="person">
+                <term ref="#SZDPER.1431" type="person">
                   <persName ref="http://d-nb.info/gnd/11864291X">
                     <forename>Lev Nikolaevič</forename>
                     <surname>Tolstoj</surname>
@@ -76075,7 +76067,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.749" type="person">
+                <term ref="#SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
                     <name>Ludwig II, König von Bayern</name>rname&gt;</persName>
                 </term>
@@ -76878,7 +76870,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1028" type="person">
+                <term ref="#SZDPER.1028" type="person">
                   <persName ref="http://d-nb.info/gnd/118587943">
                     <forename>Friedrich</forename>
                     <surname>Nietzsche</surname>
@@ -81878,7 +81870,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.749" type="person">
+                <term ref="#SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
                     <forename />
                     <surname>Ludwig II.</surname>
@@ -86363,7 +86355,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1017" type="person">
+                <term ref="#SZDPER.1017" type="person">
                   <persName ref="http://d-nb.info/gnd/118586408">
                     <name>Napoleon I.</name>
                   </persName>
@@ -87226,7 +87218,7 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="#SZDPER.212 SZDPER.213" role="translator">
+              <editor ref="#SZDPER.212 #SZDPER.213" role="translator">
                 <persName ref="http://d-nb.info/gnd/173169147 http://d-nb.info/gnd/118972731">
                   <forename>Candido de</forename>
                   <surname>Carvalho</surname>
@@ -88968,7 +88960,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1086" type="person">
+                <term ref="#SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
                     <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
@@ -90617,7 +90609,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.1086" type="person">
+                <term ref="#SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
                     <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
@@ -92700,7 +92692,7 @@
                   <surname>Bernshtein</surname>
                 </persName>
               </editor>
-              <editor ref="#SZDPER.107 SZDPER.108" role="translator">
+              <editor ref="#SZDPER.107 #SZDPER.108" role="translator">
                 <persName ref="https://d-nb.info/gnd/1151940828 http://d-nb.info/gnd/118952781">
                   <forename>S. I.</forename>
                   <surname>Bernshtein</surname>
@@ -93835,7 +93827,7 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1550" role="translator">
+              <editor ref="#SZDPER.1550" role="translator">
                 <persName ref="http://d-nb.info/gnd/1033603929">
                   <forename>V. A.</forename>
                   <surname>Zorgenfrei</surname>
@@ -94196,13 +94188,13 @@
                   <surname>Fedotov</surname>
                 </persName>
               </editor>
-              <editor ref="#SZDPER.107 SZDPER.108">
+              <editor ref="#SZDPER.107 #SZDPER.108">
                 <persName ref="https://d-nb.info/gnd/1151940828 http://d-nb.info/gnd/118952781">
                   <forename>P. S. </forename>
                   <surname>Bernshtein</surname>
                 </persName>
               </editor>
-              <editor ref="#SZDPER.107 SZDPER.108" role="translator">
+              <editor ref="#SZDPER.107 #SZDPER.108" role="translator">
                 <persName ref="https://d-nb.info/gnd/1151940828 http://d-nb.info/gnd/118952781">
                   <forename>P. S. </forename>
                   <surname>Bernshtein</surname>
@@ -96410,7 +96402,7 @@
           <fileDesc>
             <titleStmt>
               <title>El Ingenioso Hidalgo Don Quixote de la Mancha</title>
-              <author ref="SZDPER.960">
+              <author ref="#SZDPER.960">
                 <persName ref="http://d-nb.info/gnd/11851993X">
                   <forename>Miguel de</forename>
                   <surname>Cervantes Saavedra</surname>
@@ -102544,7 +102536,7 @@
           <fileDesc>
             <titleStmt>
               <title>Ferdinand Magellan</title>
-              <author ref="SZDPER.1576">
+              <author ref="#SZDPER.1576">
                 <persName ref="http://d-nb.info/gnd/11885349X">
                   <forename>E. F.</forename>
                   <surname>Benson</surname>
@@ -102787,7 +102779,7 @@
           <profileDesc>
             <textClass>
               <keywords>
-                <term ref="SZDPER.905" type="person">
+                <term ref="#SZDPER.905" type="person">
                   <persName ref="http://d-nb.info/gnd/118577808">
                     <name>Maria Stuart</name>
                   </persName>
@@ -102800,7 +102792,7 @@
           <fileDesc>
             <titleStmt>
               <title>Jacques Casanova, vénitien : une vie d'aventurier au XVIIIe siècle</title>
-              <author ref="SZDPER.1580">             
+              <author ref="#SZDPER.1580">             
    <persName ref="http://d-nb.info/gnd/124509665">
                   <forename>Charles</forename>
                   <surname>Samaran</surname>
@@ -103089,7 +103081,7 @@
             <titleStmt>
               <title>Auflösung. Blondel zu Marien : für eine Singstimme mit Begleitung des Piano
                 Forte ; Nachlass N° 34</title>
-              <author ref="SZDPER.1578">
+              <author ref="#SZDPER.1578">
                 <persName ref="http://d-nb.info/gnd/119045451">
                   <forename>J.</forename>
                   <surname>Mayrhofer</surname>
@@ -103229,13 +103221,13 @@
           <fileDesc>
             <titleStmt>
               <title>Rose Mirliton : zwanzig Zeichnungen</title>
-              <author ref="SZDPER.1582">
+              <author ref="#SZDPER.1582">
                 <persName ref="http://d-nb.info/gnd/117452297">
                   <forename>J. J.</forename>
                   <surname>Vrieslander</surname>
                 </persName>
               </author>
-              <editor ref="SZDPER.1582" role="illustrator">
+              <editor ref="#SZDPER.1582" role="illustrator">
                 <persName ref="http://d-nb.info/gnd/117452297">
                   <forename>J. J.</forename>
                   <surname>Vrieslander</surname>

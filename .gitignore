@@ -62,3 +62,7 @@ szd-backup/
 ~$*.xlsx
 ~$*.pptx
 data/Issue/Masereel-Aufsatz/.~lock.SZD_SZ_FM_ENGLISCH.docx\#
+
+# Cirilo writes a mets.xml upload list into every image folder on filesystem ingest.
+# It is not part of the TEI sources and is recreated by the next import.
+data/Issue/**/mets.xml

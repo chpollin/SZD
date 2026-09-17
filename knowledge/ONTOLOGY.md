@@ -542,7 +542,7 @@ szdo:Werk (SZDWRK.4 "Montaigne", GND: 1140124943)
 | `SZDAUT.xml` | `o:szd.autographen` | `szdo:Autograph` |
 | `SZDBIB.xml` | `o:szd.bibliothek` | `szdo:Buch` |
 | `SZDLEB.xml` | `o:szd.lebensdokumente` | `szdo:Lebensdokument` |
-| `SZDESS.xml` | `o:szd.essays` | `szdo:NachlassObjekt` (Essay-Material) |
+| `SZDESS.xml` | `o:szd.aufsatzablage` | `szdo:NachlassObjekt` (Essay-Material) |
 | `SZDPUB.xml` | `o:szd.publikationen` | `szdo:Manifestation` (Erstveröffentlichungen) |
 | `SZDBIO.xml` | `o:szd.lebenskalender` | `szdo:BiographischesEreignis` |
 | `SZDPER.xml` | `o:szd.personen` | `szdo:Person` |

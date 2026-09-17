@@ -6,17 +6,32 @@ The list is a candidate list, nothing more. Whether an entry is removed, kept fo
 delivery or linked from somewhere is an editorial decision; this script only writes the
 CSV. It changes no TEI file.
 
-Reference patterns actually used in the corpus, all on @ref, all resolved here:
+A reference counts here when the RDF mapping reads it, not when it merely looks like one.
+GetPersonlist in szd-TORDF.xsl emits a triple for two kinds of value and for nothing else,
+so the same two kinds count as a link:
 
-    ref="#SZDPER.42"                                        (the ordinary case)
-    ref="SZDPER.42"                                         (without the fragment marker)
-    ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.42" (absolute, in some files)
-    ref="#SZDPER.42 SZDPER.43"                              (several ids in one attribute)
+    ref="#SZDPER.42"                                        (the fragment form)
+    ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.42" (absolute, same fragment)
+    ref="http://d-nb.info/gnd/118637479" on a persName       (resolved through the index)
 
-References inside SZDPER.xml itself do not count as a link from another file, but the CSV
-says whether one exists, and likewise whether the entry's GND appears elsewhere in the
-data even though the SZDPER id does not -- such a person is in use and only linked by
-authority number.
+Three consequences of reading it this way, each of them a correction of an earlier count.
+
+A reference written without the fragment marker, ref="SZDPER.42", does not count. The
+mapping drops it, the person view stays empty, and the entry belongs on this list until the
+writing is unified; scripts/checkup_2026_09_index/normalize_person_refs.py does that.
+
+An authority number on a persName does count, wherever under data/ it stands. Such a person
+is linked in the person view through the index lookup, so she is not a candidate at all.
+The number has to sit on a persName: the same number on a repository or an orgName names an
+institution, not the person.
+
+In data/Aufsatzablage/SZDESS.xml the author/@ref is ignored where the inner persName carries
+a reference of its own, because the essay template of szd-TORDF.xsl reads the persName first
+and falls back to the author attribute only where the persName has none. Without this rule
+the sequence numbers that file carried as author references made 84 persons look linked.
+
+References inside SZDPER.xml itself do not count as a link from the holdings, but the CSV
+says whether one exists.
 """
 from __future__ import annotations
 
@@ -40,7 +55,9 @@ TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
 
 PERSON_ID = re.compile(r"SZDPER\.[A-Za-z0-9_.\-]*")
+FRAGMENT_ID = re.compile(r"#(SZDPER\.[A-Za-z0-9_.\-]*)")
 GND = re.compile(r"gnd/([0-9X\-]+)")
+ESSAYS = DATA / "Aufsatzablage" / "SZDESS.xml"
 
 
 def text_of(elem: ET.Element) -> str:
@@ -75,23 +92,50 @@ def authority_links(person: ET.Element) -> str:
     return " ".join(links)
 
 
-def scan_references(data_dir: Path, authority_file: Path) -> tuple[Counter, Counter, set]:
-    """(references from other files, references inside SZDPER, GNDs used elsewhere)."""
+def local_name(elem: ET.Element) -> str:
+    return elem.tag.rsplit("}", 1)[-1]
+
+
+def reads_wrapper(elem: ET.Element, is_essays: bool) -> bool:
+    """Whether the mapping reads this element's own @ref.
+
+    For an essay author it does not, as long as the inner persName carries a reference: the
+    essay template passes that one and never reaches the attribute on the author element.
+    """
+    if not is_essays or local_name(elem) != "author":
+        return True
+    return not any(child.get("ref") for child in elem if local_name(child) == "persName")
+
+
+def scan_references(data_dir: Path, authority_file: Path) -> tuple[Counter, Counter, set, set]:
+    """(links from the holdings, references inside SZDPER, GNDs on a persName, trailing ids).
+
+    The fourth value holds the ids that only ever appear behind the first token of a
+    multi-id attribute. GetPersonlist takes substring-before the first space, so the mapping
+    never sees them; they are reported, not silently counted as links.
+    """
     external: Counter = Counter()
     internal: Counter = Counter()
-    external_gnd: set[str] = set()
+    persname_gnd: set[str] = set()
+    leading: set[str] = set()
+    trailing: set[str] = set()
     for path in sorted(data_dir.rglob("*.xml")):
-        text = path.read_text(encoding="utf-8")
         is_authority = path.resolve() == authority_file.resolve()
+        is_essays = path.resolve() == ESSAYS.resolve()
         target = internal if is_authority else external
-        for match in re.finditer(r'\b(?:ref|key|corresp|target|sameAs)="([^"]*)"', text):
-            value = match.group(1)
-            for person_id in PERSON_ID.findall(value):
-                target[person_id] += 1
-            if not is_authority:
-                for gnd in GND.findall(value):
-                    external_gnd.add(gnd)
-    return external, internal, external_gnd
+        for elem in ET.parse(path).getroot().iter():
+            value = elem.get("ref")
+            if not value or not reads_wrapper(elem, is_essays):
+                continue
+            tokens = value.split()
+            for position, token in enumerate(tokens):
+                for person_id in FRAGMENT_ID.findall(token):
+                    (leading if position == 0 else trailing).add(person_id)
+                    if position == 0:
+                        target[person_id] += 1
+            if not is_authority and local_name(elem) == "persName" and tokens:
+                persname_gnd.update(GND.findall(tokens[0]))
+    return external, internal, persname_gnd, trailing - leading
 
 
 def main() -> int:
@@ -106,34 +150,36 @@ def main() -> int:
 
     persons = list(ET.parse(args.szdper).getroot().iter(f"{TEI}person"))
     known = {p.get(XML + "id") for p in persons}
-    external, internal, external_gnd = scan_references(args.data, args.szdper)
+    external, internal, persname_gnd, trailing_only = scan_references(args.data, args.szdper)
 
     dangling = sorted((set(external) | set(internal)) - known)
     rows = []
     for person in persons:
         xml_id = person.get(XML + "id") or ""
-        if external.get(xml_id):
-            continue
         links = authority_links(person)
         gnds = GND.findall(links)
+        # Either writing is a link: the id in fragment form, or the authority number on a
+        # persName in the holdings, which the mapping resolves through the index.
+        if external.get(xml_id) or any(gnd in persname_gnd for gnd in gnds):
+            continue
         rows.append({
             "id": xml_id,
             "name": display_name(person),
             "normdaten": links,
-            "gnd_sonst_verwendet": "ja" if any(g in external_gnd for g in gnds) else "nein",
             "verweis_innerhalb_szdper": "ja" if internal.get(xml_id) else "nein",
         })
 
     print(f"Personeneinträge insgesamt: {len(persons)}")
     print(f"Ohne Verweis aus einer anderen Datei unter {args.data.name}/: {len(rows)}")
-    print(f"  davon mit anderweitig verwendeter GND: "
-          f"{sum(1 for r in rows if r['gnd_sonst_verwendet'] == 'ja')}")
     print(f"  davon ohne jeden Normdaten-Verweis: "
           f"{sum(1 for r in rows if not r['normdaten'])}")
     print(f"Verweise auf nicht vorhandene Kennungen: {len(dangling)}")
     for person_id in dangling:
         origin = "SZDPER-intern" if person_id in internal else "andere Datei"
         print(f"  {person_id} ({origin})")
+    print(f"Nur hinter dem ersten Token eines Mehrfachverweises genannt: {len(trailing_only)}")
+    for person_id in sorted(trailing_only):
+        print(f"  {person_id}")
 
     if args.dry_run:
         for row in rows[:10]:

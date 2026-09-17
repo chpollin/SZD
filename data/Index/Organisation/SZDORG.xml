@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="de">Organisationen</title>
+        <title xml:lang="en">Organisations</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
+            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+        </publisher>
+        <authority>
+          <orgName corresp="https://informationsmodellierung.uni-graz.at"
+            ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
+            for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+        </authority>
+        <distributor>
+          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management
+            System</orgName>
+        </distributor>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+        </availability>
+        <publisher>Literaturarchiv Salzburg</publisher>
+        <idno type="PID">o:szd.organisation</idno>
+        <date when="2026-09-11">11.09.2026</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
+        <respStmt>
+          <resp>Datenerfassung</resp>
+          <persName>
+            <forename>Stefan</forename>
+            <surname>Matthias</surname>
+          </persName>
+          <persName>
+            <forename>Oliver</forename>
+            <surname>Matuschek</surname>
+          </persName>
+          <persName>
+            <forename>Julia</forename>
+            <surname>Glunk</surname>
+          </persName>
+          <persName>
+            <forename>Lina</forename>
+            <surname>Zangerl</surname>
+          </persName>
+          <persName>
+            <forename>Verena</forename>
+            <surname>Höller</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Datenmodellierung</resp>
+          <persName>
+            <forename>Christopher</forename>
+            <surname>Pollin</surname>
+          </persName>
+        </respStmt>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Körperschaften des Nachlasses von Stefan Zweig, zusammengeführt aus den
+          Körperschaftseinträgen des Personenindex und den Körperschaftsverweisen der
+          Bestandsdateien.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <ab>
+          <ref target="https://gams.uni-graz.at/o:szd.organisation" type="object"/>
+        </ab>
+        <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem
+          Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig
+          zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt
+          Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
+          werden.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listOrg>
+        <org corresp="http://ahl.sbg.ac.at/" xml:id="SZDORG.1">
+          <orgName ref="http://d-nb.info/gnd/1047604132">Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+          <idno type="SZDSTA">SZDSTA.17</idno>
+        </org>
+        <org xml:id="SZDORG.2">
+          <orgName ref="http://d-nb.info/gnd/2131189-4">American Guild for German Cultural Freedom</orgName>
+        </org>
+        <org xml:id="SZDORG.3">
+          <orgName ref="http://d-nb.info/gnd/1072986299">Antiquariat Leo Liepmannssohn, Berlin</orgName>
+        </org>
+        <org xml:id="SZDORG.4">
+          <orgName ref="http://d-nb.info/gnd/1086817966">Authors Guild</orgName>
+          <orgName type="variant">The Authors' Guild</orgName>
+          <idno type="SZDPER">SZDPER.1673</idno>
+        </org>
+        <org corresp="https://stargardt.de" xml:id="SZDORG.5">
+          <orgName ref="http://d-nb.info/gnd/2140517-7">Autographenhandlung J. A. Stargardt</orgName>
+          <country>Deutschland</country>
+          <settlement>Berlin</settlement>
+          <idno type="SZDSTA">SZDSTA.40</idno>
+        </org>
+        <org xml:id="SZDORG.6">
+          <orgName ref="http://d-nb.info/gnd/2134286-6">BDO Binder Hamlyn (London)</orgName>
+          <idno type="SZDPER">SZDPER.2327</idno>
+        </org>
+        <org corresp="http://www.beethoven-haus-bonn.de" xml:id="SZDORG.7">
+          <orgName ref="http://d-nb.info/gnd/2085343-9">Beethoven-Haus Bonn</orgName>
+          <orgName type="variant">Beethoven-Haus Bonn, Bonn</orgName>
+          <country>Deutschland</country>
+          <settlement>Bonn</settlement>
+          <idno type="SZDSTA">SZDSTA.35</idno>
+        </org>
+        <org xml:id="SZDORG.8">
+          <orgName ref="http://d-nb.info/gnd/112881-4">Bennington College</orgName>
+        </org>
+        <org xml:id="SZDORG.9">
+          <orgName>Biblioteca Central Municipal Gabriela Mistral</orgName>
+          <country>Brasilien</country>
+          <settlement>Petrópolis</settlement>
+          <idno type="SZDSTA">SZDSTA.20</idno>
+        </org>
+        <org corresp="https://www.bn.gov.br/en" xml:id="SZDORG.10">
+          <orgName ref="http://d-nb.info/gnd/1003296-4">Biblioteca Nacional</orgName>
+          <orgName type="variant">Biblioteca Nacional, Rio de Janeiro</orgName>
+          <country>Brasilien</country>
+          <settlement>Rio de Janeiro</settlement>
+          <idno type="SZDSTA">SZDSTA.26</idno>
+        </org>
+        <org xml:id="SZDORG.11">
+          <orgName ref="http://d-nb.info/gnd/5156217-0">Bibliothèque Nationale, Paris</orgName>
+        </org>
+        <org xml:id="SZDORG.12">
+          <orgName ref="http://d-nb.info/gnd/815085-0">Canadian Authors’ Association, Toronto</orgName>
+        </org>
+        <org xml:id="SZDORG.13">
+          <orgName ref="http://d-nb.info/gnd/251858-2">Cassell and Company Ltd.</orgName>
+        </org>
+        <org xml:id="SZDORG.14">
+          <orgName ref="http://d-nb.info/gnd/1220936316">Das Tagebuch</orgName>
+        </org>
+        <org corresp="https://lionheartautographs.com/about-us/about/" xml:id="SZDORG.15">
+          <orgName ref="http://d-nb.info/gnd/38379-X">David H. Lowenherz</orgName>
+          <orgName type="variant">The British Museum, London</orgName>
+          <orgName type="variant">The British Museum</orgName>
+          <country>USA</country>
+          <settlement>New York</settlement>
+          <idno type="SZDSTA">SZDSTA.38</idno>
+        </org>
+        <org corresp="https://www.dla-marbach.de/" xml:id="SZDORG.16">
+          <orgName ref="http://d-nb.info/gnd/10155895-8">Deutsches Literaturarchiv Marbach</orgName>
+          <country>Deutschland</country>
+          <settlement>Marbach</settlement>
+          <idno type="SZDSTA">SZDSTA.42</idno>
+        </org>
+        <org corresp="https://www.saengermuseum.de/" xml:id="SZDORG.17">
+          <orgName ref="http://d-nb.info/gnd/4646846-8">Dokumentations- und Forschungszentrum des Deutschen Chorwesens</orgName>
+          <orgName type="variant">Dokumentations- und Forschungszentrum des Deutschen Chorwesens, Feuchtwangen</orgName>
+          <country>Deutschland</country>
+          <settlement>Feuchtwangen</settlement>
+          <idno type="SZDSTA">SZDSTA.29</idno>
+        </org>
+        <org corresp="http://www.literaturhaus.at/index.php?id=6542" xml:id="SZDORG.18">
+          <orgName ref="http://d-nb.info/gnd/2057272-4">Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+          <idno type="SZDSTA">SZDSTA.10</idno>
+        </org>
+        <org xml:id="SZDORG.19">
+          <orgName ref="http://d-nb.info/gnd/1073075974">E. P. Tal &amp; Co.</orgName>
+        </org>
+        <org xml:id="SZDORG.20">
+          <orgName ref="http://d-nb.info/gnd/1056582-6">Erste Donau-Dampfschiffahrts-Gesellschaft</orgName>
+        </org>
+        <org corresp="http://fondationbodmer.ch/en/" xml:id="SZDORG.21">
+          <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer</orgName>
+          <orgName type="variant">Fondation Martin Bodmer, Cologny-Genève</orgName>
+          <orgName type="variant">Fondation Martin Bodmer, Cologny-Genève P-5.1*</orgName>
+          <country>Schweiz</country>
+          <settlement>Cologny-Genève</settlement>
+          <idno type="SZDSTA">SZDSTA.4</idno>
+        </org>
+        <org corresp="https://www.goethe-museum.de/de" xml:id="SZDORG.22">
+          <orgName ref="http://d-nb.info/gnd/2012581-1">Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung</orgName>
+          <orgName type="variant">Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung, Düsseldorf</orgName>
+          <country>Deutschland</country>
+          <settlement>Düsseldorf</settlement>
+          <idno type="SZDSTA">SZDSTA.30</idno>
+        </org>
+        <org xml:id="SZDORG.23">
+          <orgName ref="http://d-nb.info/gnd/35565-3">Großbritannien. Home Office</orgName>
+          <orgName type="variant">Home Office, Whitehall</orgName>
+          <idno type="SZDPER">SZDPER.2326</idno>
+          <idno type="SZDPER">SZDPER.1735</idno>
+        </org>
+        <org xml:id="SZDORG.24">
+          <orgName ref="http://d-nb.info/gnd/10119809-7">Herbert Reichner Verlag</orgName>
+        </org>
+        <org xml:id="SZDORG.25">
+          <orgName ref="http://d-nb.info/gnd/43217-9">Insel-Verlag</orgName>
+        </org>
+        <org corresp="http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/" xml:id="SZDORG.26">
+          <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire</orgName>
+          <orgName type="variant">Institut et Musée Voltaire, Genf</orgName>
+          <country>Schweiz</country>
+          <settlement>Genf</settlement>
+          <idno type="SZDSTA">SZDSTA.33</idno>
+        </org>
+        <org corresp="https://mozarteum.at/e" xml:id="SZDORG.27">
+          <orgName ref="http://d-nb.info/gnd/37019-8">Internationale Stiftung Mozarteum</orgName>
+          <orgName type="variant">Internationale Stiftung Mozarteum, Salzburg</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+          <idno type="SZDSTA">SZDSTA.36</idno>
+        </org>
+        <org xml:id="SZDORG.28">
+          <orgName ref="http://d-nb.info/gnd/10146266-9">Joint Broadcasting Committee, London</orgName>
+          <idno type="SZDPER">SZDPER.1659</idno>
+        </org>
+        <org xml:id="SZDORG.29">
+          <orgName ref="http://d-nb.info/gnd/1086197240">Les Conferénces des Ambassadeurs</orgName>
+          <idno type="SZDPER">SZDPER.1688</idno>
+        </org>
+        <org corresp="https://www.loc.gov/" xml:id="SZDORG.30">
+          <orgName ref="http://d-nb.info/gnd/35626-8">Library of Congress</orgName>
+          <orgName type="variant">Library of Congress, Washington, D. C.</orgName>
+          <country>USA</country>
+          <settlement>Washington, DC</settlement>
+          <idno type="SZDSTA">SZDSTA.28</idno>
+        </org>
+        <org corresp="https://www.uni-salzburg.at/index.php?id=72" xml:id="SZDORG.31">
+          <orgName ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+          <idno type="SZDSTA">SZDSTA.1</idno>
+        </org>
+        <org corresp="https://www.londonlibrary.co.uk/" xml:id="SZDORG.32">
+          <orgName ref="http://d-nb.info/gnd/35655-4">London Library</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
+          <idno type="SZDSTA">SZDSTA.19</idno>
+        </org>
+        <org xml:id="SZDORG.33">
+          <orgName ref="http://d-nb.info/gnd/10290848-5">Metro-Goldwin-Mayer Pictures</orgName>
+        </org>
+        <org xml:id="SZDORG.34">
+          <orgName ref="http://d-nb.info/gnd/142661-8">Meulenhoff en Co.</orgName>
+        </org>
+        <org xml:id="SZDORG.35">
+          <orgName ref="http://d-nb.info/gnd/5130410-7">Ministry of Information, London</orgName>
+        </org>
+        <org xml:id="SZDORG.36">
+          <orgName ref="http://d-nb.info/gnd/2020891-1">Österreichische Galerie Wien</orgName>
+          <idno type="SZDPER">SZDPER.1626</idno>
+        </org>
+        <org corresp="https://www.onb.ac.at/" xml:id="SZDORG.37">
+          <orgName ref="http://d-nb.info/gnd/2020893-5">Österreichische Nationalbibliothek</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+          <idno type="SZDSTA">SZDSTA.43</idno>
+        </org>
+        <org xml:id="SZDORG.38">
+          <orgName ref="http://d-nb.info/gnd/146456-5">Österreichischer Frauen-Not-Dienst</orgName>
+          <idno type="SZDPER">SZDPER.1056</idno>
+        </org>
+        <org xml:id="SZDORG.39">
+          <orgName ref="http://d-nb.info/gnd/1008405-8">Österreichisches Bundesministerium für Unterricht</orgName>
+        </org>
+        <org corresp="https://fredonia.libguides.com/archives/zweig" xml:id="SZDORG.40">
+          <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</orgName>
+          <orgName type="variant">Reed Library – Stefan Zweig Collection, Fredonia</orgName>
+          <country>USA</country>
+          <settlement>Fredonia</settlement>
+          <idno type="SZDSTA">SZDSTA.2</idno>
+        </org>
+        <org xml:id="SZDORG.41">
+          <orgName ref="http://d-nb.info/gnd/2021755-9">Schweizerisches Vereinssortiment Olten</orgName>
+        </org>
+        <org xml:id="SZDORG.42">
+          <orgName ref="http://d-nb.info/gnd/5158511-X">Societe des Auteurs &amp; Compositeurs Dramatiques</orgName>
+        </org>
+        <org xml:id="SZDORG.43">
+          <orgName ref="http://d-nb.info/gnd/1090480520">Société Nouvelle de l’Encyclopédie Française</orgName>
+        </org>
+        <org corresp="https://staatsbibliothek-berlin.de/" xml:id="SZDORG.44">
+          <orgName ref="http://d-nb.info/gnd/5036103-X">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+          <orgName type="variant">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz, Berlin</orgName>
+          <country>Deutschland</country>
+          <settlement>Berlin</settlement>
+          <idno type="SZDSTA">SZDSTA.27</idno>
+        </org>
+        <org corresp="https://library.stanford.edu/collections/memorial-library-music" xml:id="SZDORG.45">
+          <orgName ref="http://d-nb.info/gnd/5069027-9">Stanford University, Memorial Library of Music</orgName>
+          <orgName type="variant">Stanford University, Memorial Library of Music, Stanford, CA</orgName>
+          <country>USA</country>
+          <settlement>Stanford, CA</settlement>
+          <idno type="SZDSTA">SZDSTA.34</idno>
+        </org>
+        <org corresp="http://www.stefan-zweig-centre-salzburg.at/" xml:id="SZDORG.46">
+          <orgName ref="http://d-nb.info/gnd/10368864-X">Stefan Zweig Zentrum</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+          <idno type="SZDSTA">SZDSTA.11</idno>
+        </org>
+        <org corresp="https://haendelhaus.de" xml:id="SZDORG.47">
+          <orgName ref="http://d-nb.info/gnd/16008856-2">Stiftung Händel-Haus Halle</orgName>
+          <country>Deutschland</country>
+          <settlement>Halle/Saale</settlement>
+          <idno type="SZDSTA">SZDSTA.41</idno>
+        </org>
+        <org xml:id="SZDORG.48">
+          <orgName ref="http://d-nb.info/gnd/16314757-7">Stonehill Ltd.</orgName>
+        </org>
+        <org corresp="https://www.bl.uk/" xml:id="SZDORG.49">
+          <orgName ref="http://d-nb.info/gnd/4472698-3">The British Library</orgName>
+          <orgName type="variant">The British Library, London</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
+          <idno type="SZDSTA">SZDSTA.5</idno>
+        </org>
+        <org xml:id="SZDORG.50">
+          <orgName ref="http://d-nb.info/gnd/5213357-6">The H. W. Wilson Company</orgName>
+        </org>
+        <org xml:id="SZDORG.51">
+          <orgName>The Jew’s Temporary Shelter</orgName>
+          <idno type="SZDPER">SZDPER.1628</idno>
+        </org>
+        <org corresp="https://www.themorgan.org/" xml:id="SZDORG.52">
+          <orgName ref="http://d-nb.info/gnd/10156282-2">The Morgan Library &amp; Museum</orgName>
+          <orgName type="variant">The Morgan Library &amp; Museum, New York City</orgName>
+          <country>USA</country>
+          <settlement>New York City</settlement>
+          <idno type="SZDSTA">SZDSTA.6</idno>
+        </org>
+        <org corresp="http://web.nli.org.il/sites/nlis/en" xml:id="SZDORG.53">
+          <orgName ref="http://d-nb.info/gnd/1004728-1">The National Library of Israel</orgName>
+          <orgName type="variant">The National Library of Israel, Jerusalem</orgName>
+          <country>Israel</country>
+          <settlement>Jerusalem</settlement>
+          <idno type="SZDSTA">SZDSTA.3</idno>
+        </org>
+        <org xml:id="SZDORG.54">
+          <orgName ref="http://d-nb.info/gnd/4185027-0">The Sunday Times</orgName>
+          <idno type="SZDPER">SZDPER.1975</idno>
+        </org>
+        <org corresp="https://www.theatermuseum.at/" xml:id="SZDORG.55">
+          <orgName ref="http://d-nb.info/gnd/1033329-0">Theatermuseum</orgName>
+          <orgName type="variant">Theatermuseum, Wien</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+          <idno type="SZDSTA">SZDSTA.23</idno>
+        </org>
+        <org corresp="http://www.tma.ethz.ch/" xml:id="SZDORG.56">
+          <orgName ref="http://d-nb.info/gnd/2024553-1">Thomas-Mann-Archiv an der ETH-Bibliothek</orgName>
+          <orgName type="variant">Thomas-Mann-Archiv an der ETH-Bibliothek, Zürich</orgName>
+          <country>Schweiz</country>
+          <settlement>Zürich</settlement>
+          <idno type="SZDSTA">SZDSTA.7</idno>
+        </org>
+        <org corresp="http://www.ub.unibas.ch/ub-hauptbibliothek/" xml:id="SZDORG.57">
+          <orgName ref="http://d-nb.info/gnd/2023655-4">Universitätsbibliothek Basel</orgName>
+          <orgName type="variant">Universitätsbibliothek Basel, Basel</orgName>
+          <country>Schweiz</country>
+          <settlement>Basel</settlement>
+          <idno type="SZDSTA">SZDSTA.9</idno>
+        </org>
+        <org corresp="https://www.moz.ac.at/de/bibliothek/index.php" xml:id="SZDORG.58">
+          <orgName ref="http://d-nb.info/gnd/5299663-3">Universitätsbibliothek Mozarteum</orgName>
+          <country>Österreich</country>
+          <settlement>Salzburg</settlement>
+          <idno type="SZDSTA">SZDSTA.21</idno>
+        </org>
+        <org corresp="https://www.ub.uni-rostock.de/" xml:id="SZDORG.59">
+          <orgName ref="http://d-nb.info/gnd/25968-8">Universitätsbibliothek Rostock</orgName>
+          <orgName type="variant">Universitätsbibliothek Rostock, Rostock</orgName>
+          <country>Deutschland</country>
+          <settlement>Rostock</settlement>
+          <idno type="SZDSTA">SZDSTA.39</idno>
+        </org>
+        <org xml:id="SZDORG.60">
+          <orgName ref="http://d-nb.info/gnd/1086714458">Vereinigte Verlegergruppe</orgName>
+          <idno type="SZDPER">SZDPER.1461</idno>
+        </org>
+        <org xml:id="SZDORG.61">
+          <orgName ref="http://d-nb.info/gnd/10102943-3">Viking Press</orgName>
+          <idno type="SZDPER">SZDPER.2324</idno>
+        </org>
+        <org xml:id="SZDORG.62">
+          <orgName ref="http://d-nb.info/gnd/275785-0">Vita-Lebensversicherungs-Aktiengesellschaft (Zürich)</orgName>
+          <orgName type="variant">"Vita"-Lebensversicherungs-Aktiengesellschaft</orgName>
+          <idno type="SZDPER">SZDPER.2328</idno>
+        </org>
+        <org xml:id="SZDORG.63">
+          <orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName>
+          <orgName type="variant">Westminster Bank Limited</orgName>
+          <idno type="SZDPER">SZDPER.2325</idno>
+        </org>
+        <org corresp="https://www.wienbibliothek.at/" xml:id="SZDORG.64">
+          <orgName ref="http://d-nb.info/gnd/10144442-4">Wienbibliothek im Rathaus</orgName>
+          <orgName type="variant">Wienbibliothek im Rathaus, Wien</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
+          <idno type="SZDSTA">SZDSTA.8</idno>
+        </org>
+        <org xml:id="SZDORG.65">
+          <orgName>Wydawnictwo J. Przeworskiego (publishing house)</orgName>
+          <idno type="SZDPER">SZDPER.1791</idno>
+          <idno type="SZDPER">SZDPER.1996</idno>
+        </org>
+        <org corresp="https://www.zb.uzh.ch/" xml:id="SZDORG.66">
+          <orgName ref="http://d-nb.info/gnd/1012546-2">Zentralbibliothek Zürich</orgName>
+          <country>Schweiz</country>
+          <settlement>Zürich</settlement>
+          <idno type="SZDSTA">SZDSTA.22</idno>
+        </org>
+      </listOrg>
+    </body>
+  </text>
+</TEI>

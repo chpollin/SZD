@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 # Knowledge Vault -- Stefan Zweig Digital
@@ -26,6 +26,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
 | [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
+| [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md) | Zeitleisten-Lanes des Lebenskalenders: Ereignisschema, Quellenbewahrung, Datierungsregeln, Erzeugung, Auslieferungsstand |
 
 ## Ontologie-Dateien
 
@@ -49,6 +50,10 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [korrespondenz_titel/fix_titles.py](../scripts/korrespondenz_titel/fix_titles.py) | Eintragstitel der Korrespondenz-Konvolute auf die Titel- und Datumskonvention ziehen ([README](../scripts/korrespondenz_titel/README.md)) |
 | [essay_klassifikation/fix_classification.py](../scripts/essay_klassifikation/fix_classification.py) | Gruppierungsschluessel der Aufsatzablage vervollstaendigen und die gruppierten Listen erheben ([README](../scripts/essay_klassifikation/README.md)) |
 | [personen_ohne_verweis/list_unlinked_persons.py](../scripts/personen_ohne_verweis/list_unlinked_persons.py) | Kandidatenliste der unverknuepften Personeneintraege als CSV ([README](../scripts/personen_ohne_verweis/README.md)) |
+| [lebenskalender_lanes/build_lanes.py](../scripts/lebenskalender_lanes/build_lanes.py) | Zeitleisten-Lanes des Lebenskalenders aus den TEI-Quellen ableiten ([README](../scripts/lebenskalender_lanes/README.md)) |
+| [checkup_2026_09_korrespondenz/add_bundle_signatures.py](../scripts/checkup_2026_09_korrespondenz/add_bundle_signatures.py) | Buendelsignaturen der signaturlosen Indexeintraege aus dem Konvolut ableiten ([README](../scripts/checkup_2026_09_korrespondenz/README.md)) |
+| [checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md) | Dublettenzusammenfuehrung im Personenregister, Referenzform der Personenverweise, Autorreferenzen der Aufsatzablage, weitere IIIF-Label-Reparaturen ([README](../scripts/checkup_2026_09_index/README.md)) |
+| [iiif_structure_labels/](../scripts/iiif_structure_labels/README.md) | Vorbereitete Buchquellen ohne Anfuehrungszeichen in Strukturlabels, Ingest offen ([README](../scripts/iiif_structure_labels/README.md)) |
 
 ## Externe Dokumentation
 
@@ -65,4 +70,4 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 ---
 
-_Stand: 10. September 2026_
+_Stand: 11. September 2026_

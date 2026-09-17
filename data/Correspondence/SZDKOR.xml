@@ -1629,7 +1629,7 @@
 					<profileDesc>
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
-								<persName ref="#SZDPER.1990">
+								<persName ref="#SZDPER.92">
 									<surname>Benaroya</surname>
 									<forename>Mois</forename>
 								</persName>
@@ -4458,7 +4458,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1843">
 									<persName ref="http://d-nb.info/gnd/116430834">
 										<surname>Cain</surname>
 										<forename>Julien</forename>
@@ -6321,7 +6321,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1555">
 									<persName ref="http://d-nb.info/gnd/116001151">
 										<surname>Zweig</surname>
 										<forename>Lotte</forename>
@@ -6738,7 +6738,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.175">
 									<persName ref="http://d-nb.info/gnd/118515624">
 										<surname>Brod</surname>
 										<forename>Max</forename>
@@ -7484,7 +7484,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1555">
 									<persName ref="http://d-nb.info/gnd/116001151">
 										<surname>Zweig</surname>
 										<forename>Lotte</forename>
@@ -8759,7 +8759,7 @@
 							<correspAction type="sent">
 								<persName ref="#SZDPER.1867">
 									<surname>Haupolter</surname>
-									<forename>Walther</forename>
+									<forename>Walter</forename>
 								</persName>
 								<date xml:lang="en" when="1938">1938</date>
 							</correspAction>
@@ -8780,7 +8780,7 @@
 							<correspAction type="received">
 								<persName ref="#SZDPER.1867">
 									<surname>Haupolter</surname>
-									<forename>Walther</forename>
+									<forename>Walter</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -8986,7 +8986,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1768">
 									<persName ref="#SZDPER.1768">
 										<surname>Kreitner</surname>
 										<forename>Bruno</forename>
@@ -10613,7 +10613,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1562">
 									<persName ref="http://d-nb.info/gnd/127334882">
 										<surname>Winternitz</surname>
 										<forename>Suse von</forename>
@@ -10818,7 +10818,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.916">
 									<persName ref="http://d-nb.info/gnd/118578669">
 										<surname>Masereel</surname>
 										<forename>Frans</forename>
@@ -14091,7 +14091,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1180">
 									<persName ref="http://d-nb.info/gnd/116578092">
 										<surname>Rocca</surname>
 										<forename>Enrico </forename>
@@ -15958,7 +15958,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1832">
 									<persName ref="#SZDPER.1832">
 										<surname>Mauri</surname>
 										<forename>Umberto</forename>
@@ -20974,7 +20974,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1839">
 									<persName ref="http://d-nb.info/gnd/118801759">
 										<surname>Tharaud</surname>
 										<forename>Jean</forename>
@@ -23385,7 +23385,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1881">
 									<persName ref="http://d-nb.info/gnd/11857633X">
 										<surname>Mahler-Werfel</surname>
 										<forename>Alma </forename>
@@ -24063,7 +24063,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1555">
 									<persName ref="http://d-nb.info/gnd/116001151">
 										<surname>Zweig</surname>
 										<forename>Lotte</forename>
@@ -24235,7 +24235,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1669">
 									<persName ref="http://d-nb.info/gnd/107562278">
 										<surname>Tabori</surname>
 										<forename>Paul</forename>
@@ -26016,6 +26016,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-SAM/B15</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#mazzucchetti-lavinia</idno>
 									</altIdentifier>
@@ -26232,7 +26233,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#meyer-richard-m</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.meyer-richard-m</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.meyer-richard</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -27172,31 +27173,31 @@
 								<term type="organization">
 									<orgName ref="http://d-nb.info/gnd/43217-9">Insel-Verlag</orgName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2208">
 									<persName ref="http://d-nb.info/gnd/131699091">
 										<surname>Steinitz</surname>
 										<forename>Heinrich</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2091">
 									<persName ref="http://d-nb.info/gnd/127851461">
 										<surname>Bing</surname>
 										<forename>Edward J.</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2159">
 									<persName ref="#SZDPER.2159">
 										<surname>Löw</surname>
 										<forename>Hermann</forename>
 									</persName>
 								</term>
-									<term type="person">
+									<term type="person" ref="#SZDPER.2122">
 										<persName ref="http://d-nb.info/gnd/1080041869">
 											<surname>Fuchs</surname>
 											<forename>Emil</forename>
 										</persName>
 									</term>
-									<term type="person">
+									<term type="person" ref="#SZDPER.2146">
 										<persName ref="#SZDPER.2146">
 											<surname>Kauffmann</surname>
 											<forename>Alfred</forename>
@@ -27208,7 +27209,7 @@
 											<forename>Heinrich</forename>
 										</persName>
 									</term>
-									<term type="person">
+									<term type="person" ref="#SZDPER.2206">
 										<persName ref="#SZDPER.2206">
 											<surname>Stauffacher</surname>
 											<forename>Werner</forename>
@@ -27217,7 +27218,7 @@
 									<term type="organization">
 										<orgName ref="http://d-nb.info/gnd/117322695">Schweizerisches Vereinssortiment Olten</orgName>
 									</term>
-									<term type="person">
+									<term type="person" ref="#SZDPER.2187">
 										<persName ref="http://d-nb.info/gnd/116335602">
 											<surname>Rascher</surname>
 											<forename>Max</forename>
@@ -27229,13 +27230,13 @@
 									<term type="organization">
 										<orgName ref="http://d-nb.info/gnd/142661-8">Meulenhoff en Co.</orgName>
 									</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2163">
 									<persName ref="http://d-nb.info/gnd/119331314">
 										<surname>Meulenhoff</surname>
 										<forename>Johannes Marius</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2169">
 									<persName ref="http://d-nb.info/gnd/1299371515">
 										<surname>Modern</surname>
 										<forename>Klara</forename>
@@ -27247,19 +27248,19 @@
 								<term type="organization">
 										<orgName ref="http://d-nb.info/gnd/251858-2">Cassell and Company Ltd.</orgName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1891">
 									<persName ref="#SZDPER.1891">
 										<surname>Geiringer</surname>
 										<forename>Josef</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2106">
 									<persName ref="#SZDPER.2106">
 										<surname>David</surname>
 										<forename>H.</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2083">
 									<persName ref="#SZDPER.2083">
 										<surname>Altmann</surname>
 										<forename>Manfred</forename>
@@ -27268,13 +27269,13 @@
 								<term type="organization">
 										<orgName>Verein Schweizerischer Verlags-Buchhändler</orgName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2196">
 									<persName ref="#SZDPER.2196">
 										<surname>Sauerländer</surname>
 										<forename>Remigius</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2082">
 									<persName ref="http://d-nb.info/gnd/116687983">
 										<surname>Lange</surname>
 										<forename>Allert de</forename>
@@ -27283,25 +27284,25 @@
 								<term type="organization">
 									<orgName>Oxford University Press</orgName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2151">
 									<persName ref="http://d-nb.info/gnd/1116101513">
 										<surname>Köhler</surname>
 										<forename>Richard</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2205">
 									<persName ref="http://d-nb.info/gnd/117476684">
 										<surname>Somló</surname>
 										<forename>Béla</forename>
 									</persName>
 								</term>
-								<term type="person">
-									<persName ref="SZDPER.2216">
+								<term type="person" ref="#SZDPER.2216">
+									<persName ref="#SZDPER.2216">
 										<surname>Tressl</surname>
 										<forename>Otto J.</forename>
 									</persName>
 								</term>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2230">
 									<persName ref="https://d-nb.info/gnd/1076092802">
 										<surname>Willert</surname>
 										<forename>Paul</forename>
@@ -32377,7 +32378,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#ferencak-mirko-m</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.ferencak-mirko-m</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.ferencak-mirko-m.</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -32478,6 +32479,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-LAS/B3</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#fleischer-max</idno>
 									</altIdentifier>
@@ -32505,7 +32507,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.1678">
 									<persName ref="http://d-nb.info/gnd/116601485">
 										<surname>Fleischer</surname>
 										<forename>Victor</forename>
@@ -33256,8 +33258,9 @@
 					<profileDesc>
 						<correspDesc type="toZweig">
 							<correspAction type="sent">
-								<persName ref="http://d-nb.info/gnd/placeholder">
-									<name>Herzfried</name>
+								<persName ref="#SZDPER.2136">
+									<surname>Herzfried</surname>
+									<forename>Oskar</forename>
 								</persName>
 								<date when="1913" xml:lang="en">1913</date>
 							</correspAction>
@@ -33550,6 +33553,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-SEF/B6</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#klammer-karl</idno>
 									</altIdentifier>
@@ -33695,8 +33699,8 @@
 				<biblFull xml:id="SZDKOR.840">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">28 Korrespondenzstücke VON Stefan Zweig u. a.</title>
-							<title xml:lang="en">28 Pieces of Correspondence FROM Stefan Zweig et al.</title>
+							<title xml:lang="de">28 Korrespondenzstücke AN Stefan Zweig u. a.</title>
+							<title xml:lang="en">28 Pieces of Correspondence TO Stefan Zweig et al.</title>
 						</titleStmt>
 						<publicationStmt>
 							<ab>Briefkonvolut</ab>
@@ -34237,9 +34241,9 @@
 								<date when="1935" xml:lang="en">1935</date>
 							</correspAction>
 							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118637479">
-									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+								<persName ref="http://d-nb.info/gnd/1080163751">
+									<surname>Meingast</surname>
+									<forename>Anna</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -36084,7 +36088,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#international-copyright-bureau-ltd-the</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.international-copyright-bureau-ltd-the</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.international-copyright-bureau-ltd.-the</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -36106,7 +36110,7 @@
 					<profileDesc>
 						<textClass>
 							<keywords>
-								<term type="person">
+								<term type="person" ref="#SZDPER.2104">
 									<persName ref="#SZDPER.2104">
 										<surname>Czech</surname>
 										<forename>Suzanne</forename>
@@ -36418,7 +36422,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#stone-and-blyth-gesellschaft-m-b-h</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.stone-and-blyth-gesellschaft-m-b-h</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.stone-and-blyth-gesellschaft-m.-b.-h.</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -36522,7 +36526,7 @@
 										<idno type="context">context:szd.facsimiles.korrespondenzen#kurverwaltung-bad-schallerbach</idno>
 									</altIdentifier>
 									<altIdentifier>
-										<idno type="konvolut">o:szd.korrespondenzen.kurverwaltung-bad-schallerbach</idno>
+										<idno type="konvolut">o:szd.korrespondenzen.bad-schallerbach</idno>
 									</altIdentifier>
 								</msIdentifier>
 								<physDesc>
@@ -37412,8 +37416,8 @@
 				<biblFull xml:id="SZDKOR.928">
 					<fileDesc>
 						<titleStmt>
-							<title xml:lang="de">2 Korrespondenzstücke VON Stefan Zweig u. a.</title>
-							<title xml:lang="en">2 Pieces of Correspondence FROM Stefan
+							<title xml:lang="de">2 Korrespondenzstücke AN Stefan Zweig u. a.</title>
+							<title xml:lang="en">2 Pieces of Correspondence TO Stefan
 								Zweig et al.</title>
 						</titleStmt>
 						<publicationStmt>
@@ -37533,6 +37537,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#altmann-hannah</idno>
 									</altIdentifier>
@@ -37689,6 +37694,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B3</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#meiler-friedrich</idno>
 									</altIdentifier>
@@ -37741,6 +37747,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B4</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#maass-joachim</idno>
 									</altIdentifier>
@@ -37897,6 +37904,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#altmann-eva</idno>
 									</altIdentifier>
@@ -37949,6 +37957,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#kahn-martha</idno>
 									</altIdentifier>
@@ -37971,9 +37980,9 @@
 					<profileDesc>
 						<correspDesc type="fromZweig">
 							<correspAction type="sent">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 								<date from="1940" to="1942" xml:lang="de" notBefore="1940" notAfter="1942">1940-1942</date>
 							</correspAction>
@@ -38001,6 +38010,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#altmann-therese</idno>
 									</altIdentifier>
@@ -38053,6 +38063,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B3</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#haupolter-walter</idno>
 									</altIdentifier>
@@ -38156,6 +38167,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B9</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#roth-joseph</idno>
 									</altIdentifier>
@@ -38208,6 +38220,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#altmann-jan-(hans)</idno>
 									</altIdentifier>
@@ -38260,6 +38273,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B5</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#walter-rose</idno>
 									</altIdentifier>
@@ -38312,6 +38326,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B7</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#kaufmann-charlotte</idno>
 									</altIdentifier>
@@ -38364,6 +38379,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B8</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#bauer-walter</idno>
 									</altIdentifier>
@@ -38393,9 +38409,9 @@
 								<date from="1935" to="1936" xml:lang="de" notBefore="1935" notAfter="1936">1935-1936</date>
 							</correspAction>
 							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -38416,6 +38432,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#mayer-ursula</idno>
 									</altIdentifier>
@@ -38438,9 +38455,9 @@
 					<profileDesc>
 						<correspDesc type="fromZweig">
 							<correspAction type="sent">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 								<date from="1940" to="1940" xml:lang="de" notBefore="1940" notAfter="1940">1940</date>
 							</correspAction>
@@ -38468,6 +38485,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#mrs-rauman</idno>
 									</altIdentifier>
@@ -38519,6 +38537,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#mr.-rauman</idno>
 									</altIdentifier>
@@ -38570,6 +38589,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#miller-edward-leopold</idno>
 									</altIdentifier>
@@ -38622,6 +38642,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#miller-mrs</idno>
 									</altIdentifier>
@@ -38674,6 +38695,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B1</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#broch-hermann</idno>
 									</altIdentifier>
@@ -38829,6 +38851,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B3</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#hofmannsthal-emil-von</idno>
 									</altIdentifier>
@@ -38881,6 +38904,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B3</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#galatti-r.</idno>
 									</altIdentifier>
@@ -38933,6 +38957,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B10</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#birman-c.</idno>
 									</altIdentifier>
@@ -38985,6 +39010,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B10</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#sussland-ernst</idno>
 									</altIdentifier>
@@ -39037,6 +39063,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B10</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#trading</idno>
 									</altIdentifier>
@@ -39088,6 +39115,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B11</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#wolfenstein-alfred</idno>
 									</altIdentifier>
@@ -39140,6 +39168,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B12</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#beierle-alfred</idno>
 									</altIdentifier>
@@ -39191,6 +39220,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B13</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#zarek-otto</idno>
 									</altIdentifier>
@@ -39220,9 +39250,9 @@
 								<date from="1938" to="1938" xml:lang="de" notBefore="1938" notAfter="1938">1938</date>
 							</correspAction>
 							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -39243,6 +39273,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B14</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#frenkel-lotte</idno>
 									</altIdentifier>
@@ -39272,9 +39303,9 @@
 								<date from="1935" to="1935" xml:lang="de" notBefore="1935" notAfter="1935">1935</date>
 							</correspAction>
 							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -39295,6 +39326,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B15</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#kiefer-oskar-alexander</idno>
 									</altIdentifier>
@@ -39324,9 +39356,9 @@
 								<date from="1937" to="1937" xml:lang="de" notBefore="1937" notAfter="1937">1937</date>
 							</correspAction>
 							<correspAction type="received">
-								<persName ref="http://d-nb.info/gnd/118637479">
+								<persName ref="http://d-nb.info/gnd/116001151">
 									<surname>Zweig</surname>
-									<forename>Stefan</forename>
+									<forename>Lotte</forename>
 								</persName>
 							</correspAction>
 						</correspDesc>
@@ -39347,6 +39379,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B16</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#chaine-rene</idno>
 									</altIdentifier>
@@ -39399,6 +39432,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B17</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#rieger-erwin</idno>
 									</altIdentifier>
@@ -39451,6 +39485,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B18</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#monath-paul</idno>
 									</altIdentifier>
@@ -39503,6 +39538,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B19</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#sambat-m.</idno>
 									</altIdentifier>
@@ -39554,6 +39590,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B20</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#garces-mario</idno>
 									</altIdentifier>
@@ -39606,6 +39643,7 @@
 									<country>Österreich</country>
 									<settlement>Salzburg</settlement>
 									<repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
+									<idno type="signature">SZ-AAL/B21</idno>
 									<altIdentifier>
 										<idno type="context">context:szd.facsimiles.korrespondenzen#singer-emmerich</idno>
 									</altIdentifier>

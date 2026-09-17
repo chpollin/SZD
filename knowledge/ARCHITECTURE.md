@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-03-31
+updated: 2026-09-11
 ---
 
 # Architecture - Stefan Zweig Digital
@@ -84,6 +84,26 @@ See [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) for workflow d
 4. Public Access
    └─ https://stefanzweig.digital/
 ```
+
+### Derived timeline assets
+
+The Lebenskalender timeline adds a static JSON delivery path alongside GAMS ingestion.
+`scripts/lebenskalender_lanes/build_lanes.py` derives four event lanes and `index.json`
+from the TEI sources. It writes identical copies to `data/derived/lebenskalender/` and
+`docs/lebenskalender/lanes/`. The presentation repository `ZIMLAB/szd` carries a further
+copy under `data/lebenskalender/`, which must be refreshed explicitly. Its XSLT supplies
+the asset base from `$server` and `$gamsdev`.
+
+The presentation integrates these assets in `mode=timeline` and retains `mode=fancy`
+as a compatibility alias. Frontend commit `b616496` was pushed to `ZIMLAB/szd` on
+11 September 2026. The server mirror is clean at that commit; staging HTTP checks
+confirmed the JavaScript, stylesheets and five JSON files against the local content.
+The standard, Fancy and timeline routes responded in German and English, and the
+browser check confirmed the new timeline on the previously shared Fancy URL.
+The corrected correspondence lane preserves every index record and retains the
+original metadata and permalinks of merged facsimile records in `sources`.
+Production publication and partner acceptance remain open. The schema, dating rules
+and verification scope are maintained in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md).
 
 ### Search Workflow
 

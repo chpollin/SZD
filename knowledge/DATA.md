@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-10
+updated: 2026-09-11
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
@@ -42,10 +42,64 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 
 | File | Lines | Purpose |
 |------|------:|---------|
-| `data/Index/Person/SZDPER.xml` | 21,967 | Personen-Normdaten (GND, Wikidata, VIAF) |
+| `data/Index/Person/SZDPER.xml` | 21,910 | Personen-Normdaten (GND, Wikidata, VIAF) |
 | `data/Index/SZDWRK.xml` | 5,422 | Werkindex (WEMI-Ebene) |
 | `data/Index/Location/SZDSTA.xml` | 303 | Standorte/Aufbewahrungsorte |
 | `data/Issue/szd-thema*.xml` (7 Dateien) | ~4,593 | Thematische Sammlungen |
+| `data/Index/Organisation/SZDORG.xml` | 429 | Koerperschaften (GND), noch nicht ingestiert |
+
+### Organisationenindex SZDORG
+
+`data/Index/Organisation/SZDORG.xml` fuehrt die Koerperschaften des Nachlasses als
+`listOrg/org` mit `orgName/@ref` auf die GND, in der Bauform von
+[`SZDSTA.xml`](../data/Index/Location/SZDSTA.xml). Zweck ist die Aufloesung der
+Koerperschaftsverweise, die der Bestand schon traegt. Verlage, Banken, Behoerden,
+Zeitungen und Vereine standen bisher teils als `person` im Personenindex, teils nur als
+`orgName/@ref` in den Sammlungen, ohne eigene Normdatenliste.
+
+Die Datei traegt die PID `o:szd.organisation`. `o:szd.standorte` bleibt daneben bestehen
+und bleibt die kuratierte Sicht auf die Aufbewahrungsorte, `o:szd.organisation` fuehrt alle
+Koerperschaften einschliesslich dieser Aufbewahrungsorte. Nicht aufgenommen sind die
+SZDSTA-Eintraege, die zwar Material verwahren, aber keine Koerperschaft benennen, also die
+Privatbesitz-Eintraege und die Erbengemeinschaft. Sie bleiben im Standortindex, und die
+Verweise des Bestands auf sie zeigen weiter auf `o:szd.standorte`.
+
+`szd-TORDF.xsl` im Repo `ZIMLAB/szd` laedt das Objekt in die Variable `$OrganisationList`
+und loest dort `t:org[t:orgName[@ref = …]]` zu einer internen `SZDORG`-Kennung auf. Die
+`@ref`-Schreibung `http://d-nb.info/gnd/<Nummer>` muss deshalb zeichengleich zu der im
+Bestand sein. Solange das Objekt in GAMS fehlt, laeuft der Aufruf ins Leere. Das
+`document()` steht in einer globalen Variablen, das Fehlen wirkt also auf die ganze
+Transformation, nicht nur auf die Koerperschaften. Das Template `GetOrglist`, das die
+Aufloesung leistet, wird im Stylesheet zurzeit nirgends aufgerufen und zielt ausserdem auf
+`o:szd.standorte` statt auf `o:szd.organisation`. Beides ist auf der Renderer-Seite zu
+beheben.
+
+Jeder Eintrag traegt `idno type="SZDPER"` auf den Personenindex-Eintrag, aus dem er stammt,
+und `idno type="SZDSTA"` auf den Standortindex, wo die Koerperschaft dort bereits steht.
+Wo zwei Personeneintraege dieselbe Koerperschaft unter verschiedenen Namen fuehrten, stehen
+beide Rueckverweise im selben Eintrag und der zweite Name als `orgName type="variant"`.
+
+### Koerperschaften aus SZDPER heraus
+
+Die als Koerperschaft entschiedenen Eintraege sind aus `SZDPER.xml` entfernt, und die
+Verweise des Bestands auf ihre Kennungen zeigen auf den Organisationenindex. Die
+Verweisform folgt der, die der Bestand fuer Koerperschaften schon verwendet, also `orgName`
+mit `@ref` auf die GND, wo eine GND vorliegt, und sonst mit `@ref` auf
+`https://gams.uni-graz.at/o:szd.organisation#SZDORG.<n>`, gebaut wie der bestehende
+Standortverweis `https://gams.uni-graz.at/o:szd.standorte#SZDSTA.<n>`. Das `@ref` des
+umgebenden `author`- oder `editor`-Elements wird mit umgestellt und nicht gestrichen, weil
+`szd-Bibliothek.xsl` die Bibliotheksliste ueber dieses Attribut gruppiert und sortiert.
+
+Erzeugt und reproduzierbar aus den Quellen mit
+`scripts/organisationen_index/build_org_index.py`, die Umstellung mit
+`scripts/organisationen_index/migrate_org_references.py`. Nach dem Migrationslauf ist der
+Index nicht mehr aus den Quellen erzeugbar und wird von Hand gepflegt. Das Bauskript bricht
+in diesem Fall ab, statt einen verkuerzten Index zu schreiben. Die offenen Befunde in den
+Quelldaten, eine GND mit zwei Koerperschaften und eine Personen-GND an einem `orgName`,
+stehen in der README des Skriptordners.
+
+Beim Ingest gehen `o:szd.personen` und `o:szd.organisation` den Bestaenden voraus, weil
+TORDF die Verweise zur Ingest-Zeit gegen diese Objekte aufloest.
 
 ---
 
@@ -131,12 +185,84 @@ against the TEI source, the facsimile context and the GAMS datastreams:
 |---|---|---|---|
 | SZ-AP2/L-S1.1 Adressbuch | viewer broken | `o:szd.174` complete (122 images); IIIF manifest invalid because of quotes in a structure label | fix label in the book source, re-ingest; see COLLECTIONS.md |
 | SZ-AAP/L2 Tagebuch 1914 | viewer broken | `o:szd.67` complete (237 images); same manifest defect | same |
-| SZ-AAP/L11 Notizbuch Paris 1936 | facsimile link missing | `o:szd.76` exists in the facsimile context, TEI entry SZDLEB.12 had no PID | PID added in `data/PersonalDocument/SZDLEB.xml`, re-ingest index |
-| SZ-AP2/L-S12 Register der Aufsätze | facsimile link missing | `o:szd.175` exists, TEI entry SZDLEB.71 had no PID | PID added, re-ingest index |
-| SZ-AAP/L2 [Beilage] K. u. k. Kriegsarchiv Offene Order | no facsimile | no facsimile source anywhere: not in the Tagebuch book structure, no `SZ_AAP_L2_Beilage` folder (the Werke use `<sig>_Beilage` folders as separate objects, e.g. SZ-AAP/W31, W45) | archive checks the server files; a Beilage object needs its own signature suffix, the shared `SZ-AAP/L2` would collide with the Tagebuch |
+| SZ-AAP/L11 Notizbuch Paris 1936 | facsimile link missing | `o:szd.76` exists in the facsimile context, TEI entry SZDLEB.12 had no PID | PID added in `data/PersonalDocument/SZDLEB.xml`, index re-ingested on 10 September 2026, link live |
+| SZ-AP2/L-S12 Register der Aufsätze | facsimile link missing | `o:szd.175` exists, TEI entry SZDLEB.71 had no PID | PID added, index re-ingested on 10 September 2026, link live |
+| SZ-AAP/L2 [Beilage] K. u. k. Kriegsarchiv Offene Order | no facsimile | no facsimile source anywhere: not in the Tagebuch book structure, no `SZ_AAP_L2_Beilage` folder | archive checks the server files. A Beilage object follows the Werke pattern, a separate object that keeps the main signature in `dc:source` and marks itself with "[Beilage]" in the title (as `o:szd.234` for SZ-AAP/W45), so no new signature suffix is needed |
 
 The local TEI matched the GAMS `TEI_SOURCE` entry for entry before the two PID additions.
+The delivery of the two PIDs was confirmed on 17 September 2026 against the production
+`TEI_SOURCE` and the rendered catalogue.
+
+On 11 September 2026, repaired book sources were prepared for `o:szd.174`, `o:szd.67`
+and `o:szd.314`. The last object belongs to the works collection and has four affected
+structure labels. These prepared copies have not been ingested. Their checksums and
+the recorded XML and manifest checks are maintained in
+[the IIIF repair documentation](../scripts/iiif_structure_labels/README.md).
+
+## Derived Lebenskalender data (11 Sep 2026)
+
+The corrected generator output contains 2,663 events across biography, correspondence,
+personal documents and autograph acquisitions. Four lane files and `index.json` are
+present in `data/derived/lebenskalender/` and `docs/lebenskalender/lanes/`; identical
+copies are included in frontend commit `b616496`, pushed to `ZIMLAB/szd`.
+The correspondence lane contains 1,406 events representing all 765 index records and
+904 records from 42 konvolut files. The former suppression of 180 index records has
+been removed. Merging 188 compatible facsimile groups folds 263 additional records
+into events whose `sources` preserve the original metadata and permalinks.
+Eleven corpus tests verify source coverage, conflict handling and deterministic output.
+
+The source dates 2012-05-26, 2018-10-02 and 2030-09-23 remain unchanged and require
+scholarly review. The event schema, dating rules and coverage evidence are documented
+in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). Staging delivery was confirmed
+with a clean server mirror at `b616496` and identical HTTP-delivered JSON content.
+Production publication, partner review and acceptance remain open
+after the message sent to Salzburg on 11 September 2026.
+
+## Archive checkup (September 2026)
+
+On 16 September 2026 the archive delivered a defect list for all catalogue views, compiled
+against the productive instance. The list was verified item by item on 17 September 2026
+against the working tree, the productive datastreams and the presentation layer. The
+verification notes are archive-internal and stay outside the repository; what follows is
+the durable result.
+
+Almost every reported symptom traces back to one of five causes.
+
+- Aggregate index entries of the SZ-AAL/B ingest (`SZDKOR.928` to `SZDKOR.970`) carry no
+  signature, name Stefan Zweig in a fixed counter-role whether or not a piece involves him,
+  and add the suffix "u. a." or "aus dem Nachlass Stefan Zweigs" to every title. This one
+  generator defect produces the duplicate correspondent headings, the wrong piece counts,
+  the contradictions between overview and entry page, and the unjustified "u. a.".
+- Catalogue entries reference a facsimile object that does not exist or belongs to another
+  signature, while the correct object exists and is a member of its facsimile context. The
+  index encodes konvolut PIDs with a slug normalisation that differs from the live objects.
+- Straight quotes in structure labels of book sources make the IIIF manifest unparsable, so
+  the viewer stays empty although every image is intact.
+- Every `author/@ref` in the Aufsatzablage repeated the essay number instead of naming the
+  author, invisible in the published view because the RDF mapping prefers the GND on the
+  inner `persName`, but misleading for every script that reads the attribute. Person
+  references written without the fragment marker, and `term[@type='person_affected']` in
+  the personal documents, never reached the person view.
+- The presentation layer does not handle corporate bodies as correspondents, sorts undated
+  pieces first, and the search query objects do not read the Themen graphs.
+
+Corrected in the working tree, each with a script that logs every change and verifies the
+written state: bundle signatures where the konvolut proves them
+(`scripts/checkup_2026_09_korrespondenz/`), counter-roles and konvolut pointers in the
+correspondence index, the essay author references, the reference form across all holdings,
+eleven duplicate person entries, the facsimile PIDs of the Werke and Aufsatzablage entries
+the archive reported, and four further prepared IIIF label repairs
+(`scripts/checkup_2026_09_index/`, `scripts/iiif_structure_labels/`). None of it reaches
+production before the affected index objects, the konvolut files and the prepared book
+sources are re-ingested.
+
+Not decidable from data or code, and therefore still open, are the editorial rulings
+(whether an index entry counts an archival bundle or a correspondence relationship, the
+meaning of bracketed title dates, one notation for unidentified senders, the Aufsatzablage
+classification vocabulary, the person markup convention for Themen pages) and the archive
+questions (missing scans, dates the originals must supply, identity of persons with two
+authority numbers, the colour coding of the person index list that the export lost).
 
 ---
 
-_Last refresh: 29 Mar 2026._
+_Statistics retain their stated collection dates; project-specific findings updated 17 Sep 2026._

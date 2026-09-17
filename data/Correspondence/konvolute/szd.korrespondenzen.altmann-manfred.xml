@@ -5079,8 +5079,8 @@
         <biblFull xml:id="SZDKOR.altmann-manfred.64">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Brieffragment von Stefan Zweig an Hannah Altmann; Manfred Altmann [Juli 1941]</title>
-              <title xml:lang="en">Letter from  to Hannah Altmann and Manfred Altmann, 1941-07</title>
+              <title xml:lang="de">Brieffragment von Stefan Zweig an Hannah Altmann und Manfred Altmann [Juli 1941]</title>
+              <title xml:lang="en">Letter from Stefan Zweig to Hannah Altmann and Manfred Altmann, 1941-07</title>
             </titleStmt>
             <publicationStmt>
               <ab>Einzelbrief</ab>
@@ -5133,10 +5133,11 @@
             <correspDesc type="toZweig">
               <correspAction type="sent">
                 <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname></surname>
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
                 </persName>
-                <date when="1941-07" ana="supplied/verified" xml:lang="de">15158</date>
-                <date when="1941-07" ana="supplied/verified" xml:lang="en">15158</date>
+                <date when="1941-07" ana="supplied/verified" xml:lang="de">Juli 1941</date>
+                <date when="1941-07" ana="supplied/verified" xml:lang="en">Juli 1941</date>
                 <placeName xml:lang="de" ana="deduced">Ossining</placeName>
               </correspAction>
               <correspAction type="received">

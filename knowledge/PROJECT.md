@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2026-03-29
-updated: 2026-03-31
+updated: 2026-09-11
 ---
 
 # Stefan Zweig Digital — Projektbeschreibung
@@ -224,6 +224,7 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 | März 2026 | GAMS-Frontend (`gamsdev/`) aus Repository entfernt — Frontend wird direkt auf GAMS-Plattform verwaltet |
 | Juni 2026 | SZ-AAL: 42 Personen-Konvolute der Korrespondenz und 13 Lebensdokumente in TEI, Render-Vertrag für gruppierte Listen dokumentiert |
 | September 2026 | Lebensdokumente: Faksimile-Verknüpfung für Notizbuch Paris 1936 und Register der Aufsätze; Lebenskalender-Prototyp im SZD-Design als Unterseite der Dokumentationssite (`docs/lebenskalender/`) |
+| 11. September 2026 | Vier abgeleitete Lebenskalender-Lanes im GAMS-Frontend integriert und in DE/EN geprüft; Frontendcommit `b616496` nach `ZIMLAB/szd` gepusht und auf Staging durch Serverabgleich, HTTP- und Browserprüfung bestätigt. Die korrigierte Ableitung erhält alle zuvor unterdrückten Indexeinträge und die Quellenmetadaten zusammengeführter Faksimileeinträge. Die Nachricht zur neuen Ansicht wurde laut Nutzerbestätigung an das Literaturarchiv Salzburg gesendet. Fachliche Partnerprüfung, Abnahme und Produktionsveröffentlichung stehen aus. Datenvertrag und Auslieferungsstand stehen in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). |
 
 ---
 

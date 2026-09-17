@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 # Collections - Stefan Zweig Digital
@@ -28,7 +28,7 @@ The SZD project organizes Stefan Zweig's digitized materials into thematic colle
 | Autographs | SZDAUT.xml | o:szd.autographen | Handwritten manuscripts |
 | Library | SZDBIB.xml | o:szd.bibliothek | Personal book collection |
 | Biography | SZDBIO.xml | o:szd.lebenskalender | Life calendar timeline |
-| Essays | SZDESS.xml | o:szd.essays | Articles and academic essays |
+| Essays | SZDESS.xml | o:szd.aufsatzablage | Articles and academic essays |
 | Personal Documents | SZDLEB.xml | o:szd.lebensdokumente | Life documents |
 | Publications | SZDPUB.xml | o:szd.publikationen | Publication records |
 | Glossary | szd-Glossary.xml | o:szd.glossar | Subject terminology |
@@ -88,16 +88,24 @@ Correspondence is modelled on **two levels**:
    `szd-Konvolut.xsl` renders a Mirador link straight to the digitised image, alongside a
    rich `physDesc`/`correspDesc` (sender/recipient with GND, date, place, material).
 
-The `<person>` slug must equal the gallery anchor that `szd-Facsimiles.xsl` generates
-(`translate(lower-case(normalize-space(name)), ' ,', '-')` plus diacritic folding) —
-otherwise the index→konvolut and gallery→konvolut links do not resolve. `correspDesc/@type`
-(`fromZweig` when Stefan is the sender, else `toZweig`) drives the sender display in both the
+In frontend commit `b616496`, gallery links to konvolut objects use the curated
+`idno[@type="konvolut"]` values of the correspondence index. A partner heading receives
+a link only when its normalised person or organisation name identifies one unambiguous
+PID. Name-derived slugs remain local gallery anchors. `correspDesc/@type` (`fromZweig`
+when Stefan is the sender, else `toZweig`) drives the sender display in both the
 konvolut and the index renderer.
 
 **SZ-AAL/B (June 2026):** the ~480 letters of the Stefan Zweig–Lotte Altmann correspondence
 were catalogued across **42 person konvolute** (30 new objects, 12 extending existing ones),
 generated from per-letter CSVs joined to live facsimile PIDs (via risearch). Konvolut object
 files live in [data/Correspondence/konvolute/](../data/Correspondence/konvolute/).
+
+The derived timeline preserves both catalogue levels. Shared signatures do not establish
+complete coverage of a bundle, so all index records remain present. Compatible
+facsimile groups retain their original source records in `sources`, including their
+metadata and permalinks. The resulting event counts combine catalogue
+levels and do not count physical letters. The coverage checks and remaining source-date
+questions are documented in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md).
 
 ### Entry title and date convention (konvolut objects)
 
@@ -332,7 +340,7 @@ Books from Stefan Zweig's personal library including:
 ## Essays (SZDESS)
 
 **File:** [data/Aufsatzablage/SZDESS.xml](../data/Aufsatzablage/SZDESS.xml)
-**PID:** o:szd.essays
+**PID:** o:szd.aufsatzablage
 
 ### Structure
 
@@ -463,12 +471,16 @@ titles, which is why the SZ-AAL letters stayed contributor-less.
 > the manifest and the viewer stays empty, although every image datastream and the
 > Image API are intact. Affected: `o:szd.174` (SZ-AP2/L-S1.1, label „Deckblatt
 > "VERLEGER vor dem Index"“), `o:szd.67` (SZ-AAP/L2, „Zeitungsausschnitt/Vom
-> "österreichischen" Dichter“), `o:szd.314` (SZ-AP2/W-G104.1, three quoted incipits).
+> "österreichischen" Dichter“), `o:szd.314` (SZ-AP2/W-G104.1, four quoted structure labels,
+> confirmed against the prepared repair report on 11 September 2026).
 > Object titles with quotes are escaped correctly (`o:szd.259`, `o:szd.1481`). Rule for
 > the ingest sources under `PROJECTS/szd/done/**/Result_*.xml`: no straight double
 > quotes in `div/@type`; use typographic „…“ or drop them. Root cause fix would be the
 > escaping in the GAMS manifest generator (ZIM); until then the three sources need
-> corrected labels and a re-ingest.
+> corrected labels and a re-ingest. Three repaired source copies are prepared in
+> `scripts/iiif_structure_labels/prepared/`; their report records the exact replacements
+> and source checksums. They have not been ingested. The reproduction and verification
+> procedure is in [the repair README](../scripts/iiif_structure_labels/README.md).
 
 > **Cache caveat:** the rendered `…/sdef:Context/get` page is cached; context membership
 > (the `QUERY` datastream, queryable live via `risearch`) updates immediately, but the

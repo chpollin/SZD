@@ -10,15 +10,33 @@ keine TEI-Datei.
 
 ## Verweismuster
 
-Alle Verweise auf die Personenliste laufen über `@ref`, in vier Schreibungen, die alle
-aufgelöst werden:
+Ein Verweis zählt, wenn das RDF-Mapping ihn liest, nicht wenn er wie ein Verweis aussieht.
+`GetPersonlist` in `szd-TORDF.xsl` erzeugt ein Tripel für genau zwei Schreibungen:
 
 ```
 ref="#SZDPER.42"
-ref="SZDPER.42"
 ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.42"
-ref="#SZDPER.42 SZDPER.43"
+ref="http://d-nb.info/gnd/118637479"   (nur am persName, über den Index aufgelöst)
 ```
+
+Daraus folgen drei Leseregeln, die das Skript seit dem Checkup 2026-09 befolgt.
+
+`ref="SZDPER.42"` ohne Fragmentmarke zählt nicht. Das Mapping verwirft den Wert, die
+Personenansicht bleibt leer, und der Eintrag gehört auf die Liste, solange die Schreibung
+nicht vereinheitlicht ist. Das erledigt
+[`scripts/checkup_2026_09_index/normalize_person_refs.py`](../checkup_2026_09_index/).
+
+Eine Normdatennummer an einem `persName` zählt, wo immer sie unter `data/` steht, denn das
+Mapping löst sie über den Index auf. Dieselbe Nummer an einem `repository` oder `orgName`
+benennt eine Institution und zählt nicht.
+
+In `data/Aufsatzablage/SZDESS.xml` bleibt `author/@ref` unberücksichtigt, wo der innere
+`persName` einen eigenen Verweis trägt, weil die Aufsatzvorlage zuerst den `persName` liest
+und nur ohne dessen Verweis auf das Attribut am `author` zurückfällt.
+
+Bei mehreren Kennungen in einem Attribut, `ref="#SZDPER.42 #SZDPER.43"`, liest
+`GetPersonlist` nur das erste Token. Kennungen, die ausschließlich dahinter stehen, meldet
+der Lauf gesondert, weil sie in der Personenansicht unsichtbar bleiben.
 
 Verweise innerhalb von `SZDPER.xml` zählen nicht als Verwendung durch den Bestand, stehen
 aber als eigene Spalte in der CSV.
@@ -30,12 +48,11 @@ aber als eigene Spalte in der CSV.
 | `id` | Kennung `SZDPER.N` |
 | `name` | Name in der Schreibung der Datei, `Nachname, Vorname` |
 | `normdaten` | `persName/@ref` (GND), Wikidata- und Wikipedia-Kennungen, leerzeichengetrennt |
-| `gnd_sonst_verwendet` | ob die GND dieser Person anderswo unter `data/` vorkommt, obwohl die SZDPER-Kennung nicht verwendet wird |
 | `verweis_innerhalb_szdper` | ob die Personenliste selbst auf den Eintrag verweist |
 
-`gnd_sonst_verwendet: ja` heißt, dass die Person im Bestand vorkommt und nur nicht über
-die Personenliste verknüpft ist. Solche Einträge sind Verknüpfungslücken, keine
-Streichkandidaten.
+Die frühere Spalte `gnd_sonst_verwendet` ist entfallen. Eine anderswo an einem `persName`
+verwendete Normdatennummer ist ein Verweis, solche Einträge stehen deshalb gar nicht mehr
+auf der Liste, und die Spalte trüge in jeder Zeile denselben Wert.
 
 ## Aufruf
 
@@ -47,8 +64,9 @@ python scripts/personen_ohne_verweis/list_unlinked_persons.py --dry-run
 python scripts/personen_ohne_verweis/list_unlinked_persons.py
 ```
 
-Der Lauf meldet zusätzlich Verweise auf Kennungen, die es in der Personenliste nicht gibt.
-Das ist ein eigener Befund, kein Löschkandidat.
+Der Lauf meldet zusätzlich Verweise auf Kennungen, die es in der Personenliste nicht gibt,
+und Kennungen, die nur hinter dem ersten Token eines Mehrfachverweises stehen. Beides ist
+ein eigener Befund, kein Löschkandidat.
 
 ## Was das Skript bewusst nicht anfasst
 
