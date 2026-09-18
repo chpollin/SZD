@@ -20,7 +20,11 @@ das Objekt. Die `@ref`-Schreibung muss deshalb zeichengleich zu der im Bestand s
 
 `o:szd.standorte` bleibt daneben bestehen und bleibt die kuratierte Sicht auf die
 Aufbewahrungsorte. `o:szd.organisation` führt alle Körperschaften einschließlich dieser
-Aufbewahrungsorte, verknüpft über die `idno`-Rückverweise.
+Aufbewahrungsorte, verknüpft über die `idno`-Rückverweise. `<idno type="SZDSTA">` ist ein
+lebender Querverweis auf den Standortindex. `<idno type="SZDPER" subtype="superseded">`
+nennt die Kennung eines Personeneintrags, den die Migration entfernt hat. Sie existiert im
+Personenindex nicht mehr, und `szd-TORDF.xsl` gibt sie als `dcterms:replaces` aus, damit
+alte Verweise auf die Personenkennung zur Körperschaft zurückführen.
 
 ## Zwei Quellen
 

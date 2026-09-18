@@ -553,7 +553,7 @@ def render_tei(records: list[dict], date_iso: str, date_display: str) -> str:
         if record["settlement"]:
             lines.append(f"          <settlement>{_escape(record['settlement'])}</settlement>")
         for person_id in record["szdper"]:
-            lines.append(f'          <idno type="SZDPER">{_escape(person_id)}</idno>')
+            lines.append(f'          <idno type="SZDPER" subtype="superseded">{_escape(person_id)}</idno>')
         if record["szdsta"]:
             lines.append(f'          <idno type="SZDSTA">{_escape(record["szdsta"])}</idno>')
         lines.append("        </org>")

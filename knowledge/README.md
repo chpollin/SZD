@@ -26,6 +26,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
 | [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
+| [journal.md](journal.md) | Arbeitstagebuch, ein Eintrag je substanzieller Session: Änderungen, Entscheidungen, Offenes |
 | [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md) | Zeitleisten-Lanes des Lebenskalenders: Ereignisschema, Quellenbewahrung, Datierungsregeln, Erzeugung, Auslieferungsstand |
 
 ## Ontologie-Dateien
