@@ -70,3 +70,6 @@ data/Issue/**/mets.xml
 # Archive checkup verification notes are archive-internal working material.
 # They live under Documents/PROJECTS/szd/checkup-*/ and never enter this public repository.
 reports/checkup-*/
+
+# Erzeugte Ableitungen, die ihr eigener Generator reproduziert
+data/derived/
