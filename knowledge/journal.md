@@ -4,6 +4,27 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-22 — Dublettenpaare des Checkups entschieden
+
+Entschieden. Die Hauptinstanz hat am 22. September 2026 nach Delegation durch den
+Operator die vier offenen Dublettenpaare des Checkups entschieden, revidierbar. Für
+SZ-SHB/W3 bleibt `o:szd.359`, das byteidentische `o:szd.375` wird gelöscht. Für
+SZ-AP2/W-H206 bleibt `o:szd.2939` als Objekt im neueren Aufnahmestandard, `o:szd.263`
+wird nach Übernahme von Signatur und Datum entbehrlich. Bei Berger und
+Oppeln-Bronikowski bleibt jeweils die Konvolutkennung mit `-von`, auf die der Index
+zeigt, und nimmt den kuratierten Inhalt der Schwesterkennung auf.
+
+Geändert. Im Werkindex zeigt SZDMSK.299 auf `o:szd.359` statt auf „Amerigo“
+`o:szd.358`, SZDMSK.201 auf `o:szd.2939`. Die zusammengeführten Konvolute liegen wie bei
+Ferenčak in der Quellablage außerhalb des Repos, mit Richtung `fromZweig`, Titeln nach der
+Titelkonvention und bei Berger mit Signatur SZ-SEF/B1 und Faksimile `o:szd.1384`. Index
+und Galerieanker zeigen bereits auf die bleibenden Kennungen.
+
+Offen. Auf GAMS stehen Ingest der beiden Konvolute und des Werkindex, das Löschen von
+`o:szd.375`, `o:szd.263` und der beiden Schwesterkonvolute sowie Signatur und Datum in
+`o:szd.2939` aus. Das Blatt von SZ-AP2/W-H206 liegt zusätzlich als erste zwei Bilder in
+`o:szd.220`.
+
 ## 2026-09-18 — Abgelöste Personenkennungen, Checkup-Notizen ausgelagert
 
 Geändert. Die sechzehn Rückverweise des Organisationenindex auf frühere Einträge des
