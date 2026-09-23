@@ -4,6 +4,29 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-23 — Tote Personenverweise und unverknüpfte Korrespondenzpartner
+
+Geändert. In `SZDAUT.xml` trugen vier Autorverweise neben der gültigen Kennung eine zweite,
+die `c1a9a34e` im Jahr 2022 als GND-Dublette aus dem Index entfernt hatte, nämlich
+Michelangelo (1579 neben 194), Joachim Murat (1623 neben 1009) und Gounod (1617 neben 1588).
+Die toten Kennungen sind gestrichen. Aus der Kandidatenliste der unverknüpften Personen ist
+nur verknüpft, was eindeutig ist, also ein `persName` ohne Verweis, dessen Nach- und Vorname
+dem Indexeintrag exakt gleicht, während kein anderer Eintrag denselben Namen führt. Das
+trifft die Korrespondenzpartner Kahn, Mayer, Süssland, Birman, Monath, Sambat und Garcés, je
+in der Sammelzeile von `SZDKOR.xml` und im eigenen Konvolut, dazu Stücke in `altmann-eva` und
+`zweig-lotte`. Die Personen ohne Referenz gehen damit von 354 auf 347 zurück. Birman und
+Sambat stehen in Index und Bestand nur mit Initiale, ihre Einträge sind die einzigen dieses
+Nachnamens.
+
+Offen. Neydisser (`SZDPER.1026`) hat die Archivbearbeitung `a108c6f3` als Namensvariante zu
+Lernet-Holenia (`SZDPER.818`) gezogen, die Bibliothek nennt aber die eigene GND des
+Pseudonyms. `SZDPER.1304` gab es nie, gemeint ist die Selbsthilfevereinigung der jüdischen
+Blinden in Deutschland, eine Körperschaft ohne Eintrag im Organisationenindex. Sieben
+Korrespondenzpartner tragen in `SZDKOR.xml` eine GND, die ihrem Indexeintrag fehlt. Beim
+Operator liegen außerdem abweichende Vornamen (Altmann, Miller, Bischoff), Nennungen in Titeln
+und Fließtext sowie Kuro Masu und Králík, deren Hülle schon auf einen anderen Eintrag zeigt.
+Das Prüfskript erkennt Kennungen mit Buchstabensuffix wie `SZDPER.2080a` nicht als Verweis.
+
 ## 2026-09-23 — Farbcodierung des Personenindex ausgewertet
 
 Geändert. Die Farbcodierung der Archivliste zum Personenindex ist aus dem Word-Original
