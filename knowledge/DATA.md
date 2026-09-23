@@ -28,7 +28,6 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 | Aufsaetze | `data/Aufsatzablage/SZDESS.xml` | 56,284 | 2.9 MB | 624 | 1 | 1 (100%) |
 | Werke/Manuskripte | `data/Work/SZDMSK.xml` | 33,015 | 2.1 MB | 352 | 1 | 1 (100%) |
 | Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 13,728 | 711 KB | 156 | 1 | 1 (100%) |
-| Erstveroeffentlichungen | `data/Publication/SZDPUB.xml` | 8,609 | 506 KB | 159 | 159 | 159 (100%) |
 | Biographie | `data/Biography/SZDBIO.xml` | 1,614 | 87 KB | 104 | 208 | 208 (100%) |
 | Glossar | `data/Glossary/szd-Glossary.xml` | 442 | 58 KB | -- | 0 | -- |
 | **Gesamt** | | **383,839** | **18.1 MB** | **5,364** | **5,404** | **5,269 (98%)** |
@@ -111,7 +110,6 @@ Maschinenlesbare Datumsattribute wurden am 29. Maerz 2026 systematisch nachgetra
 |-------|-------:|--------:|---------|
 | SZDKOR.xml | 60% | 97% | `@notBefore`/`@notAfter` fuer Jahresbereiche; `cert="low"` fuer unsichere Daten |
 | SZDBIB.xml | 2% | 98% | `@when` fuer Jahresangaben; `s.d.` uebersprungen |
-| SZDPUB.xml | 0% | 100% | `@when` fuer Jahre; Mojibake-Dashes repariert |
 | SZDAUT.xml | 58% | 100% | `@when` fuer Jahre; `@notBefore`/`@notAfter` fuer Bereiche; Mojibake-Dashes repariert |
 
 **Verbleibende Luecken:**

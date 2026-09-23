@@ -4,6 +4,27 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-23 — Erstveröffentlichungen entfernt, Staging-Ingest vorbereitet
+
+Entschieden. Der Operator hat die Erstveröffentlichungen (SZDPUB) aufgegeben. Beide
+Fassungen, `data/Publication/SZDPUB.xml` und `data/Index/Erstveröffentlichungen/SZDPUB.xml`,
+sind entfernt und bleiben in der Git-Historie. Sie trugen dieselbe PID `o:szd.publikation`,
+wichen inhaltlich voneinander ab und nannten keine Quelle. Produktiv gab es das Objekt nie,
+die RDF-Transformation hatte keinen Zweig dafür. Die Verweise in COLLECTIONS, DATA, ONTOLOGY
+und PROJECT sind gestrichen.
+
+Geändert. Der Vergleich auf Elementebene zwischen diesem Repo und `TEI_SOURCE` auf Staging
+ergab die Objekte für den nächsten Staging-Ingest, die sechs Bestände, den
+Organisationenindex, drei Konvolute und drei neue Konvolute aus der Quellablage. Das Paket mit
+Prüfsummen liegt außerhalb des Repos unter `Documents/PROJECTS/szd/ingest_staging_2026-09-23/`.
+Personen, Standorte, Werkindex, Lebenskalender und die übrigen Konvolute stimmen mit Staging
+überein.
+
+Offen. Auf Staging können `o:szd.publikation` und das verwaiste
+`o:szd.korrespondenzen.ferencak-mirko-m` gelöscht werden, dessen einziges Stück das neue
+Konvolut `ferencak-mirko` vollständiger führt. Die getaggte Masereel-Themenseite ist noch
+nicht auf Staging ingestiert.
+
 ## 2026-09-22 — Dublettenpaare des Checkups entschieden
 
 Entschieden. Die Hauptinstanz hat am 22. September 2026 nach Delegation durch den

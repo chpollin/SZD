@@ -30,7 +30,6 @@ The SZD project organizes Stefan Zweig's digitized materials into thematic colle
 | Biography | SZDBIO.xml | o:szd.lebenskalender | Life calendar timeline |
 | Essays | SZDESS.xml | o:szd.aufsatzablage | Articles and academic essays |
 | Personal Documents | SZDLEB.xml | o:szd.lebensdokumente | Life documents |
-| Publications | SZDPUB.xml | o:szd.publikationen | Publication records |
 | Glossary | szd-Glossary.xml | o:szd.glossar | Subject terminology |
 
 **Person Index:** SZDPER.xml (o:szd.personen) - Authority file linking to GND and Wikidata
@@ -485,26 +484,6 @@ titles, which is why the SZ-AAL letters stayed contributor-less.
 > **Cache caveat:** the rendered `…/sdef:Context/get` page is cached; context membership
 > (the `QUERY` datastream, queryable live via `risearch`) updates immediately, but the
 > rendered gallery only reflects metadata/membership changes after GAMS rebuilds it.
-
----
-
-## Publications (SZDPUB)
-
-**File:** [data/Publication/SZDPUB.xml](../data/Publication/SZDPUB.xml)
-**PID:** o:szd.publikationen
-
-### Structure
-
-Publication records using `<listBibl>`.
-
-### Content
-
-Comprehensive publication history including:
-
-- First editions
-- Translations
-- Reprints
-- Modern editions
 
 ---
 

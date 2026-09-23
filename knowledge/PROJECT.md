@@ -45,7 +45,6 @@ Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung 
 | **Bibliothek** | SZDBIB | Rekonstruierte Privatbibliothek mit Provenienzmerkmalen |
 | **Lebensdokumente** | SZDLEB | Verträge, Urkunden, Tagebücher, Ephemera |
 | **Essays** | SZDESS | Journalistische und akademische Beiträge |
-| **Publikationen** | SZDPUB | Erstveröffentlichungen und Editionsgeschichte |
 
 ### Indizes und Vokabulare
 
