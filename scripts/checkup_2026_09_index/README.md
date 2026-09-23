@@ -31,8 +31,9 @@ rewrites every reference to a removed id, moves life dates out of the forename f
 lacks. Modelled on `scripts/organisationen_index/migrate_org_references.py`, which does the
 same job for corporate bodies.
 
-Left untouched on purpose: Kesten, Neumann and Pilnjak, where two diverging authority
-numbers make the identity an archive question, and Geiringer, Meiler and the Przeworskiego
+Kesten and Pilnjak followed on 2026-09-23 after a check against the DNB: GND 1185617155
+does not exist, and 1089928157 redirects to 118594397. Left untouched on purpose: Neumann,
+where writer and architect of the same name make the identity an archive question, and Geiringer, Meiler and the Przeworskiego
 publishing house, which an earlier commit and the organisation migration already settled.
 A removed record whose authority number differs from the survivor's is not copied over the
 survivor's; the log records the dropped number so that the contradiction stays visible.

@@ -4,7 +4,7 @@
 The 2026-09 checkup verification (knowledge/DATA.md, Archive checkup) confirmed fourteen
 index entries the archive marked as duplicates and three near-duplicate pairs the archive
 did not mark. The rows classified confirmed-data are merged here; the rows classified
-needs-archive (Kesten, Neumann, Pilnjak) and the rows already fixed by an earlier commit or
+needs-archive (Neumann; Kesten and Pilnjak followed on 2026-09-23 after a DNB check) and the rows already fixed by an earlier commit or
 by the organisation migration (Geiringer, Meiler, Przeworskiego) stay untouched.
 
 Per merge the script
@@ -71,6 +71,10 @@ MERGES: dict[str, tuple[str, ...]] = {
     "SZDPER.278": ("SZDPER.2105",),  # Danowski, 278 is referenced from SZDBIB
     "SZDPER.2008": ("SZDPER.1731",),  # Isenstein, only 2008 carries the GND
     "SZDPER.2064": ("SZDPER.2184",),  # Podbielski, 2064 is the correct spelling
+    # Settled on 2026-09-23 against the DNB, no archive question left: GND 1185617155 does
+    # not exist, and 1089928157 redirects to 118594397.
+    "SZDPER.1574": ("SZDPER.1935",),  # Kesten, only 1574 carries a valid GND
+    "SZDPER.1581": ("SZDPER.1099",),  # Pilnjak, 1581 carries the GND the DNB redirects to
 }
 
 # "Richard (1896-1979)" and "Mois (1896–1967)", hyphen or en dash between the years.

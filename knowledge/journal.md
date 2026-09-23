@@ -4,6 +4,24 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-23 — Farbcodierung des Personenindex ausgewertet
+
+Geändert. Die Farbcodierung der Archivliste zum Personenindex ist aus dem Word-Original
+gelesen, sie war im Textexport verloren. Daraus ist umgesetzt, was aus den Daten eindeutig
+folgt. Kesten und Pilnjak sind je auf den Eintrag mit gültiger GND zusammengeführt
+(`merge_person_duplicates.py`, Protokoll ergänzt), die nicht existierende Kesten-GND in
+`SZDKOR.xml` ist durch 118561715 ersetzt. Die vom Archiv gelb markierten, fälschlich
+unverknüpften Personen Frenkel, Kaufmann und Tomaselli zeigen jetzt in den Konvoluten
+`frenkel-lotte`, `kaufmann-charlotte`, `zweig-lotte` und in `SZDKOR.xml` auf ihren
+Indexeintrag. Kaufmann steht in den Daten als Charlotte, im Index als Lotte, die
+Gleichsetzung folgt der Markierung des Archivs.
+
+Offen. „Britain in Pictures“ ist grün markiert, also Körperschaft, bleibt aber vorerst im
+Personenindex, weil `build_org_index.py` die SZDORG-Kennungen alphabetisch neu vergibt und
+jeder Neuzugang die Kennungen der folgenden Körperschaften verschiebt. Neumann bleibt eine
+Frage an das Archiv. `SZDKOR.xml` trägt weitere Personenverweise mit dem Platzhalter
+`gnd/placeholder`.
+
 ## 2026-09-23 — Erstveröffentlichungen entfernt, Staging-Ingest vorbereitet
 
 Entschieden. Der Operator hat die Erstveröffentlichungen (SZDPUB) aufgegeben. Beide
