@@ -31,6 +31,7 @@ Default behaviour is a dry run. Pass --apply to write.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -40,6 +41,11 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
 KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
@@ -459,16 +465,17 @@ def main() -> int:
         if not case.skip:
             by_file.setdefault(case.path, []).append(case)
     for path, file_cases in by_file.items():
-        text = path.read_text(encoding="utf-8")
+        # newline="" on both sides keeps the CRLF of the konvolut files.
+        text = szd_io.read_text(path)
         for case in file_cases:
             text = rewrite(text, case)
-        path.write_text(text, encoding="utf-8", newline="")
         try:
             ET.fromstring(text)
         except ET.ParseError as exc:
-            print(f"FEHLER: {path.name} ist nach dem Schreiben nicht wohlgeformt: {exc}",
-                  file=sys.stderr)
+            print(f"FEHLER: {path.name} wäre nach der Änderung nicht wohlgeformt, "
+                  f"nichts geschrieben: {exc}", file=sys.stderr)
             return 1
+        szd_io.write_atomic(path, text)
         print(f"geschrieben: {path.name} ({len(file_cases)} Einträge)")
     return 0
 

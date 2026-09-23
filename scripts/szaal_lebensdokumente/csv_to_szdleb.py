@@ -13,12 +13,18 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
 
 # --- column indices (0-based) of the CSV export ---------------------------------
 C_SIG, C_KAT = 0, 1
@@ -79,10 +85,11 @@ def gnd_id(raw: str) -> str:
 
 def load_gnd2szdper(path: Path) -> dict[str, str]:
     """Map every GND id occurring inside a <person> to that person's xml:id."""
-    text = path.read_text(encoding="utf-8")
+    text = szd_io.read_text(path)
     mapping: dict[str, str] = {}
-    for m in re.finditer(r'<person\b[^>]*\bxml:id="(SZDPER\.\d+)"[^>]*>(.*?)</person>',
-                          text, re.DOTALL):
+    # The id pattern includes the letter suffix, so SZDPER.2080a is mapped as well.
+    person = rf'<person\b[^>]*\bxml:id="({szd_io.SZDPER_ID.pattern})"[^>]*>(.*?)</person>'
+    for m in re.finditer(person, text, re.DOTALL):
         pid, body = m.group(1), m.group(2)
         for g in re.findall(r"gnd/([\w-]+)", body):
             mapping.setdefault(g, pid)
@@ -352,12 +359,12 @@ def main() -> int:
     args = ap.parse_args()
 
     szdleb_path = Path(args.szdleb)
-    szdleb_text = szdleb_path.read_text(encoding="utf-8")
+    szdleb_text = szd_io.read_text(szdleb_path)
     gnd2szdper = load_gnd2szdper(Path(args.szdper))
 
     with open(args.csv, encoding="utf-8-sig", newline="") as f:
         rows = [r for r in csv.reader(f)]
-    header, data = rows[0], [r for r in rows[1:] if any(c.strip() for c in r)]
+    data = [r for r in rows[1:] if any(c.strip() for c in r)]  # rows[0] is the header
 
     first_sig = data[0][C_SIG].strip() if data else ""
     if first_sig and first_sig in szdleb_text:
@@ -390,12 +397,14 @@ def main() -> int:
             return 3
         head, tail = szdleb_text.rsplit("</listBibl>", 1)
         merged = head.rstrip() + "\n" + new_xml + "\n      </listBibl>" + tail
-        szdleb_path.write_text(merged, encoding="utf-8")
+        # Trust boundary: check the whole file before it replaces the original.
         try:
-            ET.parse(str(szdleb_path))
+            ET.fromstring(merged)
         except ET.ParseError as e:
-            print(f"FEHLER: SZDLEB.xml nach Einfuegen nicht wohlgeformt: {e}", file=sys.stderr)
+            print(f"FEHLER: SZDLEB.xml nach Einfuegen nicht wohlgeformt, nichts geschrieben: {e}",
+                  file=sys.stderr)
             return 4
+        szd_io.write_atomic(szdleb_path, merged)
 
     # --- report ---
     out = sys.stderr

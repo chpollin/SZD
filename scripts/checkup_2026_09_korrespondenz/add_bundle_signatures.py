@@ -45,6 +45,7 @@ only, run with plain python.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import re
 import subprocess
 import sys
@@ -59,6 +60,11 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
 INDEX = REPO_ROOT / "data" / "Correspondence" / "SZDKOR.xml"
 KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
 DEFAULT_CACHE = Path(tempfile.gettempdir()) / "szd-konvolut-tei"
@@ -300,7 +306,7 @@ def main() -> int:
         print("\ndry run -- nothing written. Use --apply to write.")
         return 0
 
-    text = open(INDEX, encoding="utf-8", newline="").read()
+    text = szd_io.read_text(INDEX)
     written = [c for c in cases if not c.skip]
     # Descending by position, so an earlier insertion cannot move a later offset.
     written.sort(key=lambda c: text.index('<biblFull xml:id="%s"' % c.xml_id), reverse=True)
@@ -312,7 +318,7 @@ def main() -> int:
         print(f"ERROR: the result is not well formed, nothing written: {exc}",
               file=sys.stderr)
         return 1
-    open(INDEX, "w", encoding="utf-8", newline="").write(text)
+    szd_io.write_atomic(INDEX, text)
     print(f"\nwritten: {INDEX.name} ({len(written)} entries)")
     return 0
 
