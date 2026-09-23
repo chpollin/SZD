@@ -1,76 +1,53 @@
-# Personen ohne Verweis aus dem Bestand
+# Persons without a reference from the holdings
 
-Erhebt aus [`data/Index/Person/SZDPER.xml`](../../data/Index/Person/SZDPER.xml), welche
-Personeneinträge von keiner anderen TEI-Datei unter `data/` referenziert werden, und legt
-das Ergebnis als `unlinked_persons.csv` neben dem Skript ab.
+Determines which entries of [`data/Index/Person/SZDPER.xml`](../../data/Index/Person/SZDPER.xml) no other TEI file under `data/` references, and writes the result as `unlinked_persons.csv` beside the script.
 
-Das Ergebnis ist eine Kandidatenliste. Ob ein Eintrag entfernt, für eine kommende
-Lieferung behalten oder irgendwo verlinkt wird, entscheidet das Projekt. Das Skript ändert
-keine TEI-Datei.
+The result is a candidate list. Whether an entry is removed, kept for a coming delivery or linked somewhere is the project's decision. The script changes no TEI file.
 
-## Verweismuster
+[`scripts/checkup_2026_09_index/find_unlinked_persons.py`](../checkup_2026_09_index/README.md#find_unlinked_personspy) complements it for the checkup of September 2026. It reads every reference token, also scans not yet ingested bundles, and searches the element text for places where the unlinked persons are named. Its output stays outside the repository.
 
-Ein Verweis zählt, wenn das RDF-Mapping ihn liest, nicht wenn er wie ein Verweis aussieht.
-`GetPersonlist` in `szd-TORDF.xsl` erzeugt ein Tripel für genau zwei Schreibungen:
+## Reference patterns
+
+A reference counts when the RDF mapping reads it, not when it looks like one. `GetPersonlist` in `szd-TORDF.xsl` produces a triple for these spellings:
 
 ```
 ref="#SZDPER.42"
 ref="https://gams.uni-graz.at/o:szd.personen#SZDPER.42"
-ref="http://d-nb.info/gnd/118637479"   (nur am persName, über den Index aufgelöst)
+ref="http://d-nb.info/gnd/118637479"   (only on persName, resolved through the index)
 ```
 
-Daraus folgen drei Leseregeln, die das Skript seit dem Checkup 2026-09 befolgt.
+Since the checkup of September 2026 the script follows four reading rules derived from this.
 
-`ref="SZDPER.42"` ohne Fragmentmarke zählt nicht. Das Mapping verwirft den Wert, die
-Personenansicht bleibt leer, und der Eintrag gehört auf die Liste, solange die Schreibung
-nicht vereinheitlicht ist. Das erledigt
-[`scripts/checkup_2026_09_index/normalize_person_refs.py`](../checkup_2026_09_index/).
+- `ref="SZDPER.42"` without the fragment marker does not count. The mapping drops the value, the person view stays empty, and the entry belongs on the list as long as the spelling is not normalised. [`scripts/checkup_2026_09_index/normalize_person_refs.py`](../checkup_2026_09_index/README.md#normalize_person_refspy) does that.
+- An authority number on a `persName` counts wherever it stands under `data/`, because the mapping resolves it through the index. The same number on a `repository` or `orgName` names an institution and does not count.
+- In `data/Aufsatzablage/SZDESS.xml`, `author/@ref` is ignored where the inner `persName` carries a reference of its own, because the essay template reads the `persName` first and falls back to the attribute on `author` only without it.
+- With several identifiers in one attribute, `ref="#SZDPER.42 #SZDPER.43"`, the committed `GetPersonlist` reads only the first token. Identifiers that stand only behind it are reported separately, because they stay invisible in the person view.
 
-Eine Normdatennummer an einem `persName` zählt, wo immer sie unter `data/` steht, denn das
-Mapping löst sie über den Index auf. Dieselbe Nummer an einem `repository` oder `orgName`
-benennt eine Institution und zählt nicht.
+References inside `SZDPER.xml` do not count as use by the holdings but have a column of their own in the CSV.
 
-In `data/Aufsatzablage/SZDESS.xml` bleibt `author/@ref` unberücksichtigt, wo der innere
-`persName` einen eigenen Verweis trägt, weil die Aufsatzvorlage zuerst den `persName` liest
-und nur ohne dessen Verweis auf das Attribut am `author` zurückfällt.
+## Columns
 
-Bei mehreren Kennungen in einem Attribut, `ref="#SZDPER.42 #SZDPER.43"`, liest
-`GetPersonlist` nur das erste Token. Kennungen, die ausschließlich dahinter stehen, meldet
-der Lauf gesondert, weil sie in der Personenansicht unsichtbar bleiben.
-
-Verweise innerhalb von `SZDPER.xml` zählen nicht als Verwendung durch den Bestand, stehen
-aber als eigene Spalte in der CSV.
-
-## Spalten
-
-| Spalte | Inhalt |
+| Column | Content |
 |---|---|
-| `id` | Kennung `SZDPER.N` |
-| `name` | Name in der Schreibung der Datei, `Nachname, Vorname` |
-| `normdaten` | `persName/@ref` (GND), Wikidata- und Wikipedia-Kennungen, leerzeichengetrennt |
-| `verweis_innerhalb_szdper` | ob die Personenliste selbst auf den Eintrag verweist |
+| `id` | Identifier `SZDPER.N` |
+| `name` | Name as spelled in the file, `Surname, Forename` |
+| `normdaten` | `persName/@ref` (GND), Wikidata and Wikipedia identifiers, space-separated |
+| `verweis_innerhalb_szdper` | whether the person index itself refers to the entry |
 
-Die frühere Spalte `gnd_sonst_verwendet` ist entfallen. Eine anderswo an einem `persName`
-verwendete Normdatennummer ist ein Verweis, solche Einträge stehen deshalb gar nicht mehr
-auf der Liste, und die Spalte trüge in jeder Zeile denselben Wert.
+The former column `gnd_sonst_verwendet` has been dropped. An authority number used elsewhere on a `persName` is a reference, so such entries no longer appear on the list, and the column would carry the same value in every row.
 
-## Aufruf
+## Usage
 
 ```bash
-# Trockenlauf: Zahlen, tote Verweise und die ersten Zeilen, keine CSV
+# dry run with figures, dead references and the first rows, no CSV
 python scripts/personen_ohne_verweis/list_unlinked_persons.py --dry-run
 
-# CSV schreiben
+# write the CSV
 python scripts/personen_ohne_verweis/list_unlinked_persons.py
 ```
 
-Der Lauf meldet zusätzlich Verweise auf Kennungen, die es in der Personenliste nicht gibt,
-und Kennungen, die nur hinter dem ersten Token eines Mehrfachverweises stehen. Beides ist
-ein eigener Befund, kein Löschkandidat.
+The run also reports references to identifiers that do not exist in the person index, and identifiers that stand only behind the first token of a multiple reference. Both are findings of their own and no candidates for removal.
 
-## Was das Skript bewusst nicht anfasst
+## Scope
 
-- **Die Personenliste selbst.** Nichts wird gelöscht, ergänzt oder umsortiert.
-- **Verknüpfungen über Namen.** Erkannt werden nur Kennungs- und GND-Verweise. Eine
-  Person, die anderswo bloß als Fließtextname steht, gilt hier als unverknüpft.
-- **Andere Verweisziele.** Werk-, Orts- und Sacheinträge bleiben außer Betracht.
+The script leaves the person index untouched and deletes, adds or reorders nothing. It recognises only identifier and GND references, so a person named elsewhere only in running text counts as unlinked here. Work, place and subject references are out of its view.

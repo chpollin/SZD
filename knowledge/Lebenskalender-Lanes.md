@@ -1,5 +1,5 @@
 ---
-title: Lebenskalender-Lanes
+title: Lebenskalender Lanes
 project:
   name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD.git
@@ -8,252 +8,132 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2026-09-11
-updated: 2026-09-11
+updated: 2026-09-23
 version: 1.0.0
 tags: [data, lebenskalender, timeline, derived]
 ---
 
-# Lebenskalender-Lanes
+# Lebenskalender Lanes
 
-Die Zeitleisten-Ansicht des Lebenskalenders zeigt mehrere Bestände nebeneinander als
-Lanes, die Nutzerinnen einzeln ein- und ausschalten. Damit die Ansicht alle Bestände gleich
-behandeln kann, liegt jeder Lane eine eigene JSON-Datei im selben Ereignisschema zugrunde.
-Die Dateien entstehen aus den TEI-Quellen dieses Repos durch
-[`scripts/lebenskalender_lanes/build_lanes.py`](../scripts/lebenskalender_lanes/build_lanes.py);
-die Ansicht ist in der Präsentationsschicht im Repo `ZIMLAB/szd` unter
-`mode=timeline` integriert; `mode=fancy` bleibt als kompatibler Alias erhalten.
-Ihre Implementierung und lokale Prüfung beschreibt dort
-`knowledge/UI-Ueberarbeitung.md`. Frontendcommit `b616496` wurde am 11. September 2026
-nach `ZIMLAB/szd` gepusht. Der erste Serverabgleich bestätigte denselben Implementierungsstand. Der anschließende Frontendcommit `3cb6596` korrigiert die Filterlinks für GAMS und ist ebenfalls auf Staging übernommen. Filter werden im URL-Fragment gespeichert, weil GAMS zusätzliche Queryparameter mit HTTP 404 zurückweist. HTTP-Prüfungen bestätigten die Auslieferung
-der JavaScript- und CSS-Dateien samt Tokens sowie aller fünf JSON-Dateien mit identischem
-Inhalt zum lokalen Stand. Standardansicht, `mode=fancy` und `mode=timeline` antworteten
-in Deutsch und Englisch mit HTTP 200; die beiden Modi laden das neue Timeline-Skript.
-Die Browserprüfung der bereits versendeten Fancy-URL zeigte die neue Ansicht mit allen
-vier Lanes und den Quellenlisten. Fachliche Abnahme und Produktionsveröffentlichung
-stehen aus.
+The timeline view of the Lebenskalender shows several collections side by side as lanes that users switch on and off individually. So that the view can treat all collections alike, each lane is backed by its own JSON file in one shared event schema. The files are derived from the TEI sources of this repository by [`scripts/lebenskalender_lanes/build_lanes.py`](../scripts/lebenskalender_lanes/README.md). The view is integrated in the presentation layer in the repository `ZIMLAB/szd` under `mode=timeline`, and `mode=fancy` stays as a compatible alias. Its implementation and local testing are described there in `knowledge/UI-Ueberarbeitung.md`.
 
-Die Nachricht zur neuen Ansicht an das Literaturarchiv Salzburg wurde laut
-Nutzerbestätigung am 11. September 2026 gesendet. Sie verweist auf die Fancy-Ansicht
-und die Werkliste als Beispiel für die Navigation. Die fachliche Partnerprüfung und
-Abnahme stehen aus.
+## Lanes and Sources
 
-Die frühere HTTP-Prüfung vom selben Tag fand unter der versendeten Staging-URL die ältere
-Ansicht mit `lebenskalender-fancy.js`. Das neue `lebenskalender-timeline.js` und
-`data/lebenskalender/index.json` antworteten dort mit HTTP 404. Auch der saubere
-Stagingspiegel und `origin/main` der Präsentationsschicht standen damals auf `06382eb6`.
-Der inzwischen gepushte Commit `b616496` enthält die neue Integration und die korrigierten
-Lane-Dateien. Der bestätigte Mailversand belegt die Übergabe des zuvor verlinkten Stands.
-
-## Lanes und Quellen
-
-| Lane | Quelle | Objekt |
+| Lane | Source | Object |
 |------|--------|--------|
 | `biography` | `docs/lebenskalender/SZDBIO.xml` | `o:szd.lebenskalender` |
-| `correspondence` | `data/Correspondence/SZDKOR.xml` und `data/Correspondence/konvolute/` | `o:szd.korrespondenzen` und `o:szd.korrespondenzen.<person>` |
+| `correspondence` | `data/Correspondence/SZDKOR.xml` and `data/Correspondence/konvolute/` | `o:szd.korrespondenzen` and `o:szd.korrespondenzen.<person>` |
 | `personal-documents` | `data/PersonalDocument/SZDLEB.xml` | `o:szd.lebensdokumente` |
 | `autographs` | `data/Autograph/SZDAUT.xml` | `o:szd.autographen` |
 
-Die Korrespondenz-Lane deckt beide Ebenen der Zwei-Ebenen-Architektur ab, die
-[COLLECTIONS.md](COLLECTIONS.md) beschreibt, den aggregierenden Index und die
-Einzelbriefe der Konvolut-Objekte.
+The correspondence lane covers both levels of the two-level architecture described in [COLLECTIONS.md](COLLECTIONS.md#two-level-architecture), the aggregating index and the single letters of the konvolut objects.
 
-Die Personenkennungen löst `data/Index/Person/SZDPER.xml` auf. Die Korrespondenz verweist
-über die GND, die übrigen Bestände über die SZDPER-Kennung im `@ref` des `author`. Der
-Index wird bei jedem Lauf gelesen, sodass Änderungen an ihm ohne Eingriff ins Skript
-wirken.
+`data/Index/Person/SZDPER.xml` resolves the person identifiers. The correspondence references persons by GND, the other collections by the SZDPER identifier in the `@ref` of `author`. The index is read on every run, so changes to it take effect without touching the script.
 
-## Ereignisschema
+## Event Schema
 
-Jedes Ereignis ist ein JSON-Objekt mit denselben Feldern, unabhängig von der Lane.
+Every event is a JSON object with the same fields, whatever the lane.
 
 `id`
-Stabile Kennung, die `xml:id` des Quelleintrags, also etwa `SZDBIO.1`, `SZDKOR.127`,
-`SZDKOR.roth-joseph.1`, `SZDLEB.138` oder `SZDAUT.720`.
+
+Stable identifier, the `xml:id` of the source entry, for instance `SZDBIO.1`, `SZDKOR.127`, `SZDKOR.roth-joseph.1`, `SZDLEB.138` or `SZDAUT.720`.
 
 `lane`
-Einer der Werte `biography`, `correspondence`, `personal-documents`, `autographs`.
+
+One of `biography`, `correspondence`, `personal-documents`, `autographs`.
 
 `date`
-Beginn der Datierung als ISO-String in der Granularität der Quelle, `YYYY`, `YYYY-MM` oder
-`YYYY-MM-DD`. Bei undatierten Stücken `null`.
+
+Start of the dating as an ISO string in the granularity of the source, `YYYY`, `YYYY-MM` or `YYYY-MM-DD`. `null` for undated pieces.
 
 `datePrecision`
-Einer der Werte `day`, `month`, `year`, `range`, `inferred`, `undated`. Genau dann
-`undated`, wenn `date` fehlt.
+
+One of `day`, `month`, `year`, `range`, `inferred`, `undated`. It is `undated` exactly when `date` is missing.
 
 `dateEnd`
-Nur bei `range` und `inferred` vorhanden, das Ende des Zeitraums als ISO-String.
+
+Present only for `range` and `inferred`, the end of the period as an ISO string.
 
 `dateLabel`
-Anzeigetext mit den Schlüsseln `de` und `en`, erzeugt aus dem ISO-Wert. Deutsch in der
-Tagesform „7. Januar 1933“, englisch „7 January 1933“, bei Monatsgenauigkeit „Januar 1933“
-beziehungsweise „January 1933“, bei Jahresgenauigkeit die Zahl allein, bei Zeiträumen
-Beginn und Ende verbunden. Wo die Quelle eine Datierung nur als Anzeigetext führt und der
-Parser sie nicht auflöst, steht dieser Quelltext im Label, weil er die einzige Auskunft
-ist, die der Bestand über das Stück gibt.
+
+Display text with the keys `de` and `en`, generated from the ISO value. German in the day form „7. Januar 1933“, English „7 January 1933“, with month precision „Januar 1933“ and „January 1933“, with year precision the number alone, for periods start and end joined. Where the source gives a dating only as display text and the parser does not resolve it, that source text stands in the label, because it is the only information the holdings give about the piece.
 
 `title`
-Titel mit den Schlüsseln `de` und `en`. In der Korrespondenz aus `correspAction` erzeugt
-nach dem Muster „Brief von X an Y“ beziehungsweise „Letter from X to Y“, mit den Namen in
-Lesereihenfolge wie in der Titelkonvention der Konvolut-Objekte. In den Lebensdokumenten
-und Autographen der Titel des `biblFull`, wobei ein zugewiesener Titel vor einem
-Objekttitel und dieser vor dem Originaltitel steht; ein sprachneutraler Titel gilt für
-beide Sprachen, und eine Sprache ohne eigenen Titel übernimmt den der anderen. In der
-Biographie der Text des Eintrags in beiden Sprachen.
+
+Title with the keys `de` and `en`. In the correspondence it is generated from `correspAction` after the pattern „Brief von X an Y“ and „Letter from X to Y“, with the names in reading order as in the title convention of the konvolut objects. In the personal documents and autographs it is the title of the `biblFull`, where an assigned title precedes an object title and that precedes the original title. A language-neutral title applies to both languages, and a language without a title of its own takes the other one. In the biography it is the text of the entry in both languages.
 
 `place`
-Ortsname, wenn die Quelle einen führt. In der Biographie aus der Kopfzeile vor dem
-Datumselement, in der Korrespondenz aus `correspAction/placeName`, in den Autographen aus
-dem Erwerbungsvermerk. Die Lebensdokumente führen keinen Ort.
+
+Place name, where the source gives one. In the biography from the heading before the date element, in the correspondence from `correspAction/placeName`, in the autographs from the acquisition note. The personal documents give no place.
 
 `persons`
-Liste von Objekten mit `id` und `name`. Die `id` ist die SZDPER-Kennung, `null` wo der
-Verweis der Quelle sich nicht auflösen lässt. Der `name` steht in Indexform,
-Nachname gefolgt vom Vornamen, und stammt aus dem Personenindex, soweit die Kennung dort
-steht. In der Biographie sind es die referenzierten Personen des Eintrags, in der
-Korrespondenz Absender und Empfänger, in den übrigen Beständen der Verfasser.
+
+List of objects with `id` and `name`. The `id` is the SZDPER identifier, `null` where the reference of the source cannot be resolved. The `name` stands in index form, surname followed by forename, and comes from the person index as far as the identifier is there. In the biography these are the referenced persons of the entry, in the correspondence sender and recipient, in the other collections the author.
 
 `signature`
-Signatur aus `msIdentifier`, in den Autographen aus dem Provenienzvermerk.
+
+Signature from `msIdentifier`, in the autographs from the provenance note.
 
 `href`
-Detailseite auf stefanzweig.digital, gebildet aus der Objekt-PID der Quelldatei und der
-Kennung des Eintrags als Fragment, also
-`https://stefanzweig.digital/<PID>/sdef:TEI/get#<id>`.
+
+Detail page on stefanzweig.digital, built from the object PID of the source file and the entry identifier as fragment, `https://stefanzweig.digital/<PID>/sdef:TEI/get#<id>`.
 
 `facsimile`
-PID des METS-Objekts, wo der Eintrag eines trägt. Das Faksimile selbst liegt unter
-`https://stefanzweig.digital/<PID>`.
+
+PID of the METS object, where the entry carries one. The facsimile itself is at `https://stefanzweig.digital/<PID>`.
 
 `dateOrigin`, `dateOriginPrecision`, `dateOriginEnd`, `dateOriginLabel`
-Zusätzliche Angaben bei Autographen zur Entstehung des Stücks, mit denselben
-Datierungsformen wie die Erwerbsangabe. Ohne ermittelte Entstehungsdatierung bleiben
-`dateOrigin`, `dateOriginPrecision` und `dateOriginLabel` auf `null`, ebenso bei den übrigen
-Lanes. `dateOriginEnd` wird nur bei einem vorhandenen Endwert gesetzt. Die Ansicht zeigt den Entstehungstext in den Metadaten; die zeitliche
-Einordnung und die Jahresskala verwenden weiterhin den Erwerb aus `date`.
 
-## Datierungsregeln
+Additional data for autographs on the creation of the piece, with the same dating forms as the acquisition. Without a creation date, `dateOrigin`, `dateOriginPrecision` and `dateOriginLabel` stay `null`, as in the other lanes. `dateOriginEnd` is set only when an end value exists. The view shows the creation text in the metadata, while placement on the timeline and the year scale use the acquisition in `date`.
 
-Die Quellen führen ihre Datierungen in maschinenlesbaren Attributen und, wo diese fehlen,
-allein als Anzeigetext. Beide Wege münden in dieselben sechs Werte von `datePrecision`.
+## Dating Rules
 
-Ein `@when` ergibt Tages-, Monats- oder Jahresgenauigkeit nach der Länge des Werts. Ein
-Paar aus `@from` und `@to` ergibt `range` mit `date` als Beginn, und ein `@to` neben einem
-`@when` wird ebenso als Zeitraum gelesen, weil eine Kopfzeile der Biographie ihren Beginn
-so führt. Ein Paar aus `@notBefore` und `@notAfter` ergibt `inferred`, ebenfalls mit `date`
-als Beginn. Ein `@type="undated"` an einem Element, das zugleich einen Wert trägt, gilt
-nicht als Gegenanzeige; im Korrespondenzindex markiert es Bündel, die neben datierten auch
-undatierte Stücke enthalten.
+The sources give their dates in machine-readable attributes and, where these are missing, as display text alone. Both paths lead to the same six values of `datePrecision`.
 
-Datierungen, die nur als Text vorliegen, löst ein enger Parser auf, der die in den Quellen
-vorkommenden Formen kennt, die deutsche und englische Tagesform, die Monatsform, die
-Punktschreibung, die ISO-Schreibung und die nackte Jahreszahl. Zwei oder mehr erkannte
-Werte ergeben `range` von der frühesten zur spätesten Angabe. Eckige Klammern und jeder
-sonstige Wortlaut neben der Datumsangabe, etwa eine Umstandsangabe oder ein Vorbehalt,
-senken die Genauigkeit auf `inferred`. Was der Parser nicht auflöst, bleibt undatiert; für
-eine zweistellige Jahresangabe wird kein Jahrhundert ergänzt, und ein Wochentag ohne Datum
-wird nicht zu einem Datum.
+A `@when` yields day, month or year precision after the length of the value. A pair of `@from` and `@to` yields `range` with `date` as start, and a `@to` beside a `@when` is read as a period as well, because one heading of the biography gives its start that way. A pair of `@notBefore` and `@notAfter` yields `inferred`, again with `date` as start. A `@type="undated"` on an element that also carries a value does not count against it. In the correspondence index it marks bundles that hold undated pieces beside dated ones.
 
-Aus der Entscheidung vom 11. September 2026 folgt die Arbeitsteilung mit dem Frontend.
-Stücke mit reiner Jahresdatierung tragen `year` und werden dort am Jahresanfang gesammelt.
-Undatierte Stücke bleiben in der Datei, erscheinen am Ende ihrer Lane und zählen in der
-Skala nicht mit.
+Dates given only as text are resolved by a narrow parser that knows the forms occurring in the sources, the German and English day form, the month form, the dotted form, the ISO form and the bare year. Two or more recognised values yield `range` from the earliest to the latest. Square brackets and any other wording beside the date, such as a circumstance or a reservation, lower the precision to `inferred`. What the parser does not resolve stays undated. A two-digit year receives no century, and a weekday without a date does not become a date.
 
-## Ereignisdatum der Autographen
+The decision of 11 September 2026 sets the division of labour with the frontend. Pieces dated by year alone carry `year` and are gathered at the start of the year there. Undated pieces stay in the file, appear at the end of their lane and do not count on the scale.
 
-Die Autographen tragen zwei Datierungen, die Entstehung des Autographs im `summary` und den
-Erwerb durch Stefan Zweig im `acquisition`. Die Lane führt den Erwerb, weil der
-Lebenskalender die Ereignisse seines Lebens zeigt. Die Erwerbsdaten liegen innerhalb seiner
-Sammlertätigkeit, während die Entstehungsdaten bis ins 16. Jahrhundert zurückreichen und
-die Skala sprengen würden. Autographen ohne Erwerbsvermerk bleiben mit `undated` in der
-Lane.
+## Event Date of the Autographs
 
-## Dubletten und Abdeckung der Korrespondenz
+The autographs carry two dates, the creation of the autograph in `summary` and its acquisition by Stefan Zweig in `acquisition`. The lane uses the acquisition, because the Lebenskalender shows the events of his life. The acquisition dates fall within his collecting years, while the creation dates reach back to the sixteenth century and would break the scale. Autographs without an acquisition note stay in the lane as `undated`.
 
-Ein Brief an mehrere Empfänger steht im Konvolut-Objekt jedes beteiligten
-Korrespondenzpartners. Die PID des Faksimiles ist die Kennung, die diese Ausfertigungen
-teilen. Der Lauf führt diese Records zusammen, wenn zusätzlich ihre nichtleere Signatur
-übereinstimmt und ihre vorhandenen Datierungen und Orte einander nicht widersprechen.
-Fehlende Datierungen oder Orte dürfen durch einen anderen Record derselben Gruppe
-vertreten sein. Widersprüche führen zu getrennten Ereignissen und einer Laufmeldung.
+## Duplicates and Coverage of the Correspondence
 
-Das Hauptereignis übernimmt die Metadaten des zuerst sortierten Records; die Personen
-der übrigen Records treten zu seiner Personenliste hinzu. Das optionale Feld `sources`
-enthält bei einer Zusammenführung sämtliche ursprünglichen Ereignisobjekte einschließlich
-des Haupteintrags, mit ihren eigenen Datierungen, Titeln, Personen und Permalinks.
-Die enthaltenen Objekte haben selbst kein Feld `sources`. Dadurch bleiben auch abweichende
-Quellangaben und alternative Detailseiten zugänglich. Im aktuellen Bestand ergänzen
-zwei Faksimilegruppen undatierte Records durch datierte Records mit dem Ort Salzburg.
+A letter to several recipients stands in the konvolut object of every correspondence partner involved. The facsimile PID is the identifier these copies share. The run merges such records when, in addition, their non-empty signature matches and their existing dates and places do not contradict each other. Missing dates or places may be supplied by another record of the same group. Contradictions produce separate events and a run message.
 
-Der Korrespondenzindex trägt keine Faksimile-PIDs und nimmt an dieser Zusammenführung
-deshalb nicht teil. Seine Einträge und die Einzelbriefe der Konvolute stehen zueinander im
-Verhältnis von Bündel und Stück. Archivsignaturen und ihre Präfixe werden jedoch von
-verschiedenen Korrespondenzpartnern gemeinsam verwendet und belegen keine vollständige
-Abdeckung eines Indexeintrags. Deshalb erhält der Generator sämtliche Indexeinträge.
-Mehrere Stücke umfassende Einträge behalten den Bündeltitel der Quelle. Die Ereigniszahl
-mischt Katalogebenen und ist keine Zählung physischer Briefe.
+The main event takes the metadata of the record sorted first, and the persons of the other records join its person list. The optional field `sources` holds, for a merge, all original event objects including the main entry, with their own dates, titles, persons and permalinks. The contained objects carry no `sources` field of their own. Deviating source data and alternative detail pages thereby stay accessible. In the holdings of September 2026, some facsimile groups complete undated records with dated records carrying the place Salzburg.
 
-Die Prüfung vom 11. September 2026 ergab für die zuvor unterdrückten 180 Indexeinträge,
-dass 172 auf ein kuratiertes Konvolutobjekt verweisen, das im lokalen Einzelbriefbestand
-fehlt. Drei weitere sind nur teilweise vertreten. Für `SZDKOR.680` stehen fünf Stücke im
-Index zwei passenden Records im verlinkten Alfred-Zweig-Objekt gegenüber; für
-`SZDKOR.800` sind es 52 gegenüber 19 und für `SZDKOR.840` 28 gegenüber 19.
-Fünf Einträge haben je einen passenden Einzelrecord; bei `SZDKOR.858` und `SZDKOR.899`
-widersprechen dessen Personenangaben denen des Index. Eine automatische Unterdrückung
-wird aus diesen Vergleichen nicht abgeleitet.
+The correspondence index carries no facsimile PIDs and therefore takes no part in this merge. Its entries and the letters of the konvolute relate as bundle and piece. Archival signatures and their prefixes are shared by different correspondence partners, however, and prove no complete coverage of an index entry. The generator therefore keeps every index entry. Entries covering several pieces keep the bundle title of the source. The number of events mixes catalogue levels and does not count physical letters.
 
-Die korrigierte Ausgabe umfasst 765 Indexrecords und 904 Records aus 42 Konvolutdateien.
-188 Faksimilegruppen vereinigen 263 zusätzliche Records. Die 1.406 Ereignisse enthalten
-somit alle 1.669 Quellenrecords, unmittelbar oder in `sources`. `index.json` hält
-`mergedDuplicates` als Zahl der Gruppen, `mergedRecords` als Zahl der zusätzlich
-vereinigten Records und das kompatible Feld `suppressedIndexEntries` mit dem numerischen
-Wert `0`. Die Quellen bleiben unverändert. Die Datierungen 2012-05-26,
-2018-10-02 und 2030-09-23 aus den drei betreffenden `unidentified`-Records werden weiterhin
-quellengetreu ausgegeben und bedürfen fachlicher Prüfung.
+An earlier version of the generator suppressed index entries whose signature occurred among the single letters. The check of 11 September 2026 showed that most of these entries point to a curated konvolut object missing from the local single-letter holdings and that others are only partly represented. For `SZDKOR.680`, five pieces in the index face two matching records in the linked Alfred Zweig object. For `SZDKOR.858` and `SZDKOR.899`, the person data of the only matching single record contradicts the index. An automatic suppression cannot be derived from such comparisons, and every lane file therefore holds all source records, directly or in `sources`.
 
-## Erzeugung und Auslieferung
+`index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. The dates 2012-05-26, 2018-10-02 and 2030-09-23 of three `unidentified` records are output as in the source and need scholarly review.
 
-Erzeugt wird mit
+## Generation
 
 ```
 python scripts/lebenskalender_lanes/build_lanes.py
 ```
 
-Die Lane-Dateien und `index.json` landen in `data/derived/lebenskalender/`. Derselbe Lauf
-legt eine Kopie nach `docs/lebenskalender/lanes/`, weil GitHub Pages dieses Repo aus dem
-Ordner `docs/` des Branches `master` ausliefert und Dateien außerhalb davon dort nicht
-erreichbar sind. Eine Kopie und kein Symlink, weil der Prototyp im selben Ordner mit
-`SZDBIO.xml` bereits so verfährt und ein Symlink unter Windows und Git unzuverlässig ist.
-Ein Build-Schritt kommt nicht in Frage, solange der einzige Workflow des Repos die
-Ontologie-Dokumentation erzeugt und die Pages-Auslieferung sonst ohne Build arbeitet.
+The lane files and `index.json` land in `data/derived/lebenskalender/`, a folder ignored by Git that the generator reproduces at any time. The same run puts a copy into `docs/lebenskalender/lanes/`, because GitHub Pages serves this repository from the `docs/` folder of the `master` branch and files outside it are not reachable there. It is a copy rather than a symlink, because the prototype in the same folder already handles `SZDBIO.xml` that way and a symlink is unreliable under Windows and Git. A build step is out of the question as long as the repository's only workflow generates the ontology documentation and the Pages delivery otherwise works without a build. Pages serves the copy only after the maintainer's push.
 
-Die Auslieferung geschieht durch den Push des Maintainers. Solange ein Commit lokal bleibt,
-liefert Pages die Datei nicht aus, auch wenn sie unter `docs/` liegt.
+The lane files are byte-identical across two runs. The generation time lives only in the field `generated` of `index.json`, so that a comparison can leave it out. The corpus tests of the generator check the preservation of all source records, conflict handling and deterministic output.
 
-Die Lane-Dateien sind über zwei Läufe byteidentisch. Der Erzeugungszeitpunkt liegt allein
-im Feld `generated` von `index.json`, damit ein Vergleich ihn ausklammern kann.
+The GAMS presentation layer holds a further copy of all lane files and `index.json` under `ZIMLAB/szd/data/lebenskalender/`. This copy is refreshed explicitly when the data changes, and the generator does not write it. `szd-Lebenskalender.xsl` passes the asset base from `$server` and `$gamsdev` to the client, so lane files and frontend follow the same staging and production path. The deferred Cirilo assignments are documented in the README of the frontend repository.
 
-Die GAMS-Präsentationsschicht enthält zusätzlich eine Kopie aller vier Lane-Dateien und
-der `index.json` unter `ZIMLAB/szd/data/lebenskalender/`. Diese Kopie wird beim Aktualisieren
-des Datenstands ausdrücklich nachgeführt; der Generator schreibt sie bislang nicht.
-`szd-Lebenskalender.xsl` übergibt dem Client die Assetbasis aus `$server` und `$gamsdev`.
-Damit folgen Lane-Dateien und Frontend demselben Staging- und Produktionspfad.
+## Delivery State
 
-Die fünf am 11. September 2026 übernommenen Dateien wurden byteweise mit
-`data/derived/lebenskalender/` verglichen. Der Frontend-Test gegen die lokal gerenderte
-GAMS-Seitenhülle verwendet diese Kopien als Fixtures. Er belegt die lokale Integration,
-Filterung und Ausgabe in beiden Sprachen. Der Generator besteht elf Korpustests für die
-Erhaltung aller Quellenrecords, Konfliktbehandlung und deterministische Ausgabe.
-Die Frontendkopien gehören zum gepushten Commit `b616496`; die Staging-Auslieferung
-wurde anschließend unabhängig durch Serverabgleich, HTTP- und Browserprüfung bestätigt.
-Die auf Nutzerwunsch zurückgestellten Cirilo-Zuordnungen sind in der README des
-Frontendrepos `ZIMLAB/szd` kanonisch dokumentiert. Fachliche Freigabe und
-Produktionsveröffentlichung stehen aus.
+Frontend commit `b616496` with the timeline and the lane copies was pushed to `ZIMLAB/szd` on 11 September 2026, and the following commit `3cb6596` fixes the filter links for GAMS. Filters live in the URL fragment, because GAMS rejects additional query parameters with HTTP 404. Both states are on staging. A server mirror comparison, HTTP checks of scripts, stylesheets and JSON files against the local content and a browser check of the previously shared Fancy URL in German and English confirmed the delivery.
+
+The message about the new view went to the Literaturarchiv Salzburg on 11 September 2026, as confirmed by the operator. Partner review, acceptance and production publication are pending.
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md) — Aufbau der Bestände und der Render-Vertrag
-- [DATA.md](DATA.md) — Bestandsübersicht und dokumentierte Datenlücken
-- [DATA_MODEL.md](DATA_MODEL.md) — Encoding-Muster und bilinguale Architektur
-- [scripts/lebenskalender_lanes/README.md](../scripts/lebenskalender_lanes/README.md) — Lauf, Optionen und Prüfung
-- [docs/lebenskalender/README.md](../docs/lebenskalender/README.md) — Prototyp der Ansicht im SZD-Design
+- [COLLECTIONS.md](COLLECTIONS.md) — structure of the collections and rendering contracts
+- [DATA.md](DATA.md) — counting conventions and documented data gaps
+- [DATA_MODEL.md](DATA_MODEL.md) — encoding patterns and bilingual encoding
+- [scripts/lebenskalender_lanes/README.md](../scripts/lebenskalender_lanes/README.md) — run, options and tests
+- [docs/lebenskalender/README.md](../docs/lebenskalender/README.md) — prototype of the view in the SZD design

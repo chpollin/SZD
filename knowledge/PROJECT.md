@@ -1,5 +1,5 @@
 ---
-title: Stefan Zweig Digital — Projektbeschreibung
+title: Stefan Zweig Digital — Project
 project:
   name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD.git
@@ -11,173 +11,67 @@ created: 2026-03-29
 updated: 2026-09-23
 ---
 
-# Stefan Zweig Digital — Projektbeschreibung
+# Stefan Zweig Digital — Project
 
-Forschungsprojekt zur digitalen Nachlassrekonstruktion Stefan Zweigs aus der Perspektive der Digital Humanities und des Forschungsdatenmanagements.
+Research project on the digital reconstruction of Stefan Zweig's estate from the perspective of the Digital Humanities and research data management.
 
----
+## 1. Context
 
-## 1. Projektkontext
+### The estate of Stefan Zweig
 
-### Der Nachlass Stefan Zweigs
+Stefan Zweig (1881–1942) is among the most widely read and most translated German-language authors of the twentieth century. Exile, flight and posthumous dispersal have spread his estate across several public and private collections worldwide, which puts considerable obstacles in the way of research.
 
-Stefan Zweig (1881–1942) zählt zu den meistgelesenen und meistübersetzten deutschsprachigen Autoren des 20. Jahrhunderts. Sein Nachlass ist durch Exil, Flucht und posthume Zerstreuung auf mehrere öffentliche und private Sammlungen weltweit verteilt — eine für die Forschung komplexe und hindernisreiche Situation.
+Since 2014 the Literaturarchiv Salzburg has held one of the largest collections from Zweig's literary estate, including manuscripts and typescripts, notebooks and all known diaries. Holdings of the Daniel A. Reed Library (SUNY Fredonia, USA) and the National Library of Israel (Jerusalem) complement it.
 
-Seit 2014 beherbergt das **Literaturarchiv Salzburg** eine der größten Sammlungen aus Zweigs literarischem Nachlass: über 50 Manuskripte und Typoskripte, mehr als ein Dutzend Notizbücher und alle bekannten Tagebücher. Ergänzt wird dies durch Bestände der **Daniel A. Reed Library** (SUNY Fredonia, USA) und der **National Library of Israel** (Jerusalem).
+### Aim
 
-### Projektziel
+Stefan Zweig Digital brings the scattered estate together in digital form and opens it to a scholarly audience. The result is a structured body of digital objects, represented for long-term preservation and accessible independent of place and time. The project is laid out so that later enrichment of the sources, for instance by digital editions, remains possible at any time.
 
-**Stefan Zweig Digital** verfolgt das Ziel, den weltweit verstreuten Nachlass im digitalen Raum zusammenzuführen und einem wissenschaftlich interessierten Publikum zu erschließen. Es entsteht ein strukturierter Bestand digitaler Objekte, der im Sinne der digitalen Langzeitarchivierung repräsentiert wird und orts- und zeitunabhängig zugänglich ist.
+## 2. Collections
 
-Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung des Quellenmaterials (z.B. durch digitale Editionen) jederzeit möglich wird.
+The core consists of six estate collections, the works (manuscripts, typescripts, notebooks, bundles, proofs), the correspondence with its person konvolute, Zweig's autograph collection, the reconstructed private library with provenance features, the personal documents (Lebensdokumente) and the essay filing (Aufsatzablage). Indices of persons, corporate bodies, repositories and works, a controlled vocabulary (glossary) and the Lebenskalender with the biographical timeline open them up. Thematic pages present selected holdings. Files, PIDs and encoding of each collection are in [COLLECTIONS.md](COLLECTIONS.md).
 
----
+All collection objects have high-resolution facsimiles. They can be browsed through IIIF in the Mirador viewer and are preserved on Zenodo.
 
-## 2. Inhalte und Sammlungen
+## 3. Method
 
-### Nachlasssammlungen
+The project rests on four methodological pillars.
 
-| Sammlung | Kennung | Beschreibung |
-|----------|---------|-------------|
-| **Werke** | SZDMSK | Manuskripte, Typoskripte, Notizbücher, Konvolute, Korrekturfahnen |
-| **Korrespondenz** | SZDKOR | Briefkonvolute mit Korrespondenzpartnern |
-| **Autographen** | SZDAUT | Zweigs Sammlung handschriftlicher Dokumente Dritter |
-| **Bibliothek** | SZDBIB | Rekonstruierte Privatbibliothek mit Provenienzmerkmalen |
-| **Lebensdokumente** | SZDLEB | Verträge, Urkunden, Tagebücher, Ephemera |
-| **Essays** | SZDESS | Journalistische und akademische Beiträge |
+1. Archival description after the Regeln zur Erschließung von Nachlässen und Autographen (RNA) and international archival standards.
+2. Semantic modelling in a formal ontology (SZDO) based on Records in Context (RiC-O), IFLA LRM and CIDOC-CRM.
+3. Linked Open Data with links to authority files (GND, Wikidata, VIAF, GeoNames) and controlled vocabularies (SKOS).
+4. Long-term preservation in GAMS and as a Zenodo backup with DOI versioning.
 
-### Indizes und Vokabulare
+The data model follows TEI P5 and is bilingual throughout (German and English). Persons, corporate bodies, places and works are identified through GND and Wikidata. The work model has three layers, the work index as intellectual level, the manuscript witnesses as physical level and the facsimiles as digital level. For the library reconstruction, changes of ownership and provenance features (stamps, bookplates, marginalia) are recorded. [DATA_MODEL.md](DATA_MODEL.md) describes the encoding patterns, [ONTOLOGY.md](ONTOLOGY.md) the ontology, with the live documentation at https://chpollin.github.io/SZD/ontology/.
 
-| Ressource | Kennung | Beschreibung |
-|-----------|---------|-------------|
-| **Personenindex** | SZDPER | Normdatenverknüpfung (GND, Wikidata, Wikipedia) |
-| **Standortindex** | SZDSTA | Archive und Bibliotheken weltweit |
-| Organisationenindex | SZDORG | Körperschaften (Verlage, Behörden, Zeitungen, Vereine, Aufbewahrungsorte), seit September 2026 getrennt vom Personenindex |
-| **Werkindex** | SZDWRK | Abstrakte Werke (intellektuelle Ebene) |
-| **Glossar** | szdg: | Kontrolliertes Vokabular (Provenienzmerkmale, Materialien) |
-| **Lebenskalender** | SZDBIO | Biographische Zeitleiste (1881–1942) |
+## 4. Infrastructure
 
-### Digitale Faksimiles
+The data lives as TEI P5 in this repository and is ingested into GAMS (Fedora Commons). XSLT turns it into HTML and RDF, Blazegraph answers the SPARQL queries of the search, Zenodo holds the preservation copy, and GitHub Pages documents ontology and project. [ARCHITECTURE.md](ARCHITECTURE.md) describes components and data flow.
 
-- Hochauflösende Digitalisate aller Sammlungsobjekte (JPEG)
-- Online durchblätterbar über IIIF/Mirador-Viewer
-- Langzeitarchivierung auf Zenodo
+Standards in use:
 
----
+- TEI P5 (Text Encoding Initiative)
+- METS/MODS for structural and descriptive metadata (DFG-METS)
+- DataCite 4.0 for the Zenodo metadata
+- Dublin Core for OAI-PMH harvesting
+- IIIF Presentation API for image delivery and viewer
+- RNA for the description of estates and autographs
+- Records in Context (RiC-O), IFLA LRM and CIDOC-CRM for the ontology
 
-## 3. Methodischer Rahmen
+## 5. Research Data Management
 
-### Digital Humanities Ansatz
+| Principle | Measures |
+|-----------|----------|
+| Findable | DOI (Zenodo), ORCID, GND, Wikidata, PIDs in GAMS |
+| Accessible | Open access through GAMS and Zenodo, OAI-PMH |
+| Interoperable | TEI P5, METS/MODS, RDF and SPARQL, controlled vocabularies |
+| Reusable | CC BY 4.0, documented provenance, community standards |
 
-Das Projekt verbindet vier methodische Säulen:
+An object passes through digitisation, cataloguing in bilingual TEI linked to authority data, transformation into HTML and RDF, publication in GAMS with PIDs and a SPARQL endpoint, preservation on Zenodo and finally reuse through ontology, Linked Data and downloads.
 
-1. **Archivwissenschaftliche Erschließung**: Katalogisierung nach RNA (Regeln zur Erschließung von Nachlässen und Autographen) und internationalen Archivstandards
-2. **Semantische Modellierung**: Formale Ontologie (SZDO v1.2.0) basierend auf Records in Context (RiC-O), IFLA LRM und CIDOC-CRM
-3. **Linked Open Data**: Verknüpfung mit Normdateien (GND, Wikidata, VIAF, Geonames) und kontrollierten Vokabularen (SKOS)
-4. **Digitale Langzeitarchivierung**: OAIS-konforme Speicherung in GAMS, Zenodo-Backup mit DOI-Versionierung
+The TEI files carry CC BY 4.0 in their `availability` element. The licences of code, documentation and archival data of the repository are stated in the [README](../README.md#licence).
 
-### Datenmodellierung
-
-Das Datenmodell folgt dem TEI P5-Standard mit projektspezifischen Erweiterungen:
-
-- **Bilingual**: Alle Metadaten in Deutsch und Englisch (`xml:lang="de"` / `xml:lang="en"`)
-- **Normdatenverknüpft**: Personen, Orte und Werke über GND und Wikidata identifiziert
-- **Dreischichtiges Werkmodell**: Werkindex (intellektuell) → Manuskriptzeugen (physisch) → Digitale Faksimiles (digital)
-- **Provenienzerfassung**: Besitzwechsel, Provenienzmerkmale (Stempel, Exlibris, Marginalien) für die Bibliotheksrekonstruktion
-
-### Nachlass-Ontologie (SZDO)
-
-Die Stefan Zweig Digital Nachlass-Ontologie (SZDO v1.2.0) formalisiert das Datenmodell:
-
-- **72 Klassen** (58 Kernklassen + 14 GAMS-Kompatibilitätsklassen)
-- **130 Properties** (79 Kern + 51 GAMS-Kompatibilität)
-- **Alignments**: Records in Context (Archiv), IFLA LRM (Werkschicht), CIDOC-CRM (Ereignisse/Provenienz)
-- **Dokumentation**: https://chpollin.github.io/SZD/ontology/
-- **Validierung**: 6-Stufen-Pipeline mit 22 Kompetenzfragen
-
-Siehe [ONTOLOGY.md](ONTOLOGY.md) für das vollständige Design-Dokument.
-
----
-
-## 4. Technische Infrastruktur
-
-### Systemarchitektur
-
-```
-┌─────────────────────────────────────────────┐
-│           Stefan Zweig Digital              │
-│         https://stefanzweig.digital         │
-└─────────────────┬───────────────────────────┘
-                  │
-     ┌────────────┼────────────┐
-     │            │            │
-┌────▼────┐ ┌────▼────┐ ┌─────▼─────┐
-│  GAMS   │ │ GitHub  │ │  Zenodo   │
-│Platform │ │  Pages  │ │  Archive  │
-│(Produkt)│ │ (Doku)  │ │ (Backup)  │
-└─────────┘ └─────────┘ └───────────┘
-```
-
-| Komponente | Technologie | Zweck |
-|------------|-------------|-------|
-| Datenformat | TEI P5 XML | Primärkodierung aller Sammlungen |
-| Repository | GAMS (Fedora Commons) | Objektspeicher, PIDs, METS/MODS |
-| Triple Store | Blazegraph | SPARQL 1.1, Volltextsuche |
-| Transformation | XSLT 2.0/3.0 | TEI → HTML, TEI → RDF |
-| Ontologie | OWL 2 (Turtle) | Formale Domänenontologie |
-| Vokabular | SKOS | Kontrollierte Begriffe (Glossar) |
-| Frontend | XSL + CSS + JS | Responsive Weboberfläche |
-| Langzeitarchivierung | Zenodo | DOI-versioniertes Backup |
-| Dokumentation | GitHub Pages | Ontologie-Referenz, Projektseite |
-
-### Standards und Normen
-
-- **TEI P5** — Text Encoding Initiative
-- **METS/MODS** — Strukturelle und deskriptive Metadaten (DFG-METS)
-- **DataCite 4.0** — Zenodo-Deposit-Metadaten
-- **Dublin Core** — OAI-PMH-Harvesting
-- **IIIF Presentation API** — Bildauslieferung und Viewer
-- **RNA** — Regeln zur Erschließung von Nachlässen und Autographen
-- **Records in Context (RiC-O)** — Archivische Ontologie
-- **IFLA LRM** — Bibliographische Werkmodellierung
-- **CIDOC-CRM** — Kulturerbe-Ereignismodellierung
-
----
-
-## 5. Forschungsdatenmanagement
-
-### FAIR-Compliance
-
-| Prinzip | Maßnahmen |
-|---------|-----------|
-| **Findable** | DOI (Zenodo), ORCID, GND, Wikidata, PIDs in GAMS |
-| **Accessible** | Open Access über GAMS und Zenodo, OAI-PMH |
-| **Interoperable** | TEI P5, METS/MODS, RDF/SPARQL, kontrollierte Vokabulare |
-| **Reusable** | CC-BY 4.0, detaillierte Provenienz, Community-Standards |
-
-### Datenlebenszyklus
-
-```
-Physisches Objekt (Archiv)
-    → Digitalisierung (Scan, 4912×7360 px)
-    → Katalogisierung (TEI-XML, bilingual, normdatenverknüpft)
-    → Transformation (XSLT → HTML, XSLT → RDF)
-    → Publikation (GAMS, PIDs, SPARQL)
-    → Langzeitarchivierung (Zenodo, DOI, METS)
-    → Nachnutzung (Ontologie, Linked Data, Downloads)
-```
-
-### Lizenzierung
-
-| Daten | Lizenz |
-|-------|--------|
-| TEI-XML Quelldaten | CC-BY 4.0 |
-| Ontologie (SZDO) | CC-BY 4.0 |
-| Zenodo-Archiv | CC-BY 4.0 |
-| Quellcode | CC-BY 4.0 |
-| Faksimiles | CC-BY 4.0 (Literaturarchiv Salzburg) |
-
-### Zitierweise
+Citation:
 
 ```
 Zweig, Stefan: [Werktitel], [Dokumenttyp]. Literaturarchiv Salzburg,
@@ -185,79 +79,54 @@ Zweig, Stefan: [Werktitel], [Dokumenttyp]. Literaturarchiv Salzburg,
 URL: https://stefanzweig.digital/o:szd.werke#[ID]
 ```
 
----
+## 6. Connected Projects
 
-## 6. Vernetzung und Anschlussprojekte
+The Klawiter bibliography adds the reception and publication history to Stefan Zweig Digital, with first editions, translations, secondary literature and film adaptations. It is connected through the work layer of the SZDO. Repository https://github.com/chpollin/klawiter-rescue, website https://chpollin.github.io/klawiter-rescue/.
 
-### Klawiter-Bibliographie
+The ontology thereby joins three perspectives, the archival perspective of SZD with physical objects, repositories and provenance, the bibliographic perspective of Klawiter with publications, translations and reception, and the biographical perspective of the Lebenskalender with life events, encounters and places. GND numbers and Wikidata entities serve as shared identifiers.
 
-Die **Klawiter Bibliography** (6.296 Einträge) ergänzt Stefan Zweig Digital um die Rezeptions- und Publikationsgeschichte:
+## 7. Chronology
 
-- Erstausgaben, Übersetzungen in 40+ Sprachen, Sekundärliteratur, Verfilmungen
-- Verknüpfung über die SZDO-Werkschicht (szdo:Werk → szdo:Manifestation)
-- GitHub: klawiter-rescue | Dokumentation: https://klawiter-rescue.github.io/
+| Date | Milestone |
+|------|-----------|
+| 2014 | The Literaturarchiv Salzburg acquires Stefan Zweig holdings |
+| 2017–2025 | Ongoing digitisation and cataloguing |
+| June 2018 | Launch of version 1 (stefanzweig.digital) |
+| December 2019 | Version 2 with the English version |
+| July 2020 | Version 3 with the autograph collection and extended data |
+| October 2025 | Zenodo archive of the digitised objects |
+| March 2026 | SZDO v1.0.0, formal Nachlass-Ontologie and GitHub Pages |
+| March 2026 | SZDO v1.1.0 with date evidence, person role hierarchy, RiC alignments and Klawiter corrections |
+| March 2026 | SZDO v1.2.0 with the generic Nachlass-Ontologie (`nachlass:`) and two-layer architecture, date normalisation in SZDBIB, SZDAUT and SZDKOR |
+| March 2026 | GAMS frontend (`gamsdev/`) removed from this repository, it lives in `ZIMLAB/szd` since |
+| June 2026 | SZ-AAL correspondence as person konvolute and SZ-AAL personal documents in TEI, rendering contract for grouped lists documented |
+| September 2026 | Facsimile links for Notizbuch Paris 1936 and Register der Aufsätze, Lebenskalender prototype in the SZD design under `docs/lebenskalender/` |
+| 11 September 2026 | Timeline with derived lanes in the GAMS frontend on staging, state and acceptance in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md#delivery-state) |
+| September 2026 | Archive checkup of the catalogue views evaluated and applied to the data, result in [DATA.md](DATA.md#archive-checkup-september-2026). Corporate bodies moved from the person index to the organisation index. The first editions, never published productively, removed from the repository |
 
-### Integrationsstrategie
+## 8. Participants
 
-Die SZDO-Ontologie dient als Brücke zwischen:
-- **Archivperspektive** (SZD): Physische Objekte, Standorte, Provenienz
-- **Bibliographische Perspektive** (Klawiter): Publikationen, Übersetzungen, Rezeption
-- **Biographische Perspektive** (Lebenskalender): Lebensereignisse, Begegnungen, Orte
+The website (https://stefanzweig.digital) names the participants, this document lists roles and institutions.
 
-GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikatoren.
+| Role | Institution |
+|------|-------------|
+| Project lead | Literaturarchiv Salzburg |
+| Data entry | Literaturarchiv Salzburg |
+| Data modelling (Christopher Pollin, ORCID 0000-0002-4879-129X) | Digital Humanities Craft OG |
 
----
+| Institution | Role |
+|-------------|------|
+| Literaturarchiv Salzburg (Paris Lodron University of Salzburg) | Sources, digitisation, cataloguing |
+| Zentrum für Informationsmodellierung (University of Graz) | Digital infrastructure, GAMS platform |
+| Digital Humanities Craft OG | Data modelling, ontology, technical implementation |
+| Daniel A. Reed Library (SUNY Fredonia) | Partner, holdings |
+| National Library of Israel (Jerusalem) | Partner, holdings |
 
-## 7. Projektchronologie
+## References
 
-| Datum | Meilenstein |
-|-------|-------------|
-| 2014 | Literaturarchiv Salzburg erwirbt Stefan-Zweig-Bestände |
-| 2017–2025 | Laufende Digitalisierung und Katalogisierung |
-| Juni 2018 | Launch Version 1 (stefanzweig.digital) |
-| Dezember 2019 | Version 2 — Englische Version hinzugefügt |
-| Juli 2020 | Version 3 — Autographensammlung, erweiterte Daten |
-| Oktober 2025 | Zenodo-Archivierung (2.107 Objekte, 22,3 GB) |
-| März 2026 | SZDO v1.0.0 — Formale Nachlass-Ontologie, GitHub Pages |
-| März 2026 | SZDO v1.1.0 — Datum-Evidenz, Personen-Rollenhierarchie, RiC-Alignments, Klawiter-Korrekturen |
-| März 2026 | SZDO v1.2.0 — Generische Nachlass-Ontologie (`nachlass:`), Zwei-Schichten-Architektur, TEI-Datumsnormalisierung (SZDBIB/SZDPUB/SZDAUT/SZDKOR), Dokumentationsbereinigung |
-| März 2026 | GAMS-Frontend (`gamsdev/`) aus Repository entfernt — Frontend wird direkt auf GAMS-Plattform verwaltet |
-| Juni 2026 | SZ-AAL: 42 Personen-Konvolute der Korrespondenz und 13 Lebensdokumente in TEI, Render-Vertrag für gruppierte Listen dokumentiert |
-| September 2026 | Lebensdokumente: Faksimile-Verknüpfung für Notizbuch Paris 1936 und Register der Aufsätze; Lebenskalender-Prototyp im SZD-Design als Unterseite der Dokumentationssite (`docs/lebenskalender/`) |
-| 11. September 2026 | Vier abgeleitete Lebenskalender-Lanes im GAMS-Frontend integriert und in DE/EN geprüft; Frontendcommit `b616496` nach `ZIMLAB/szd` gepusht und auf Staging durch Serverabgleich, HTTP- und Browserprüfung bestätigt. Die korrigierte Ableitung erhält alle zuvor unterdrückten Indexeinträge und die Quellenmetadaten zusammengeführter Faksimileeinträge. Die Nachricht zur neuen Ansicht wurde laut Nutzerbestätigung an das Literaturarchiv Salzburg gesendet. Fachliche Partnerprüfung, Abnahme und Produktionsveröffentlichung stehen aus. Datenvertrag und Auslieferungsstand stehen in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). |
-| September 2026 | Archiv-Checkup der Katalogansichten ausgewertet, Ergebnis in [DATA.md](DATA.md#archive-checkup-september-2026). Körperschaften aus dem Personenindex in den Organisationenindex SZDORG überführt. Die Erstveröffentlichungen (SZDPUB), die nie produktiv erschienen, aus dem Repository entfernt |
-
----
-
-## 8. Beteiligte
-
-### Personen
-
-Die namentliche Nennung der Beteiligten führt die Projektwebsite (https://stefanzweig.digital); hier stehen Rollen und Institutionen.
-
-| Rolle | Institution |
-|-------|-------------|
-| Projektleitung | Literaturarchiv Salzburg |
-| Datenerfassung (drei Mitarbeiterinnen) | Literaturarchiv Salzburg |
-| Datenmodellierung (Christopher Pollin, ORCID 0000-0002-4879-129X) | Digital Humanities Craft OG |
-
-### Institutionen
-
-| Institution | Rolle |
-|-------------|-------|
-| Literaturarchiv Salzburg (Paris Lodron Universität Salzburg) | Quellenmaterial, Digitalisierung, Katalogisierung |
-| Zentrum für Informationsmodellierung (Karl-Franzens-Universität Graz) | Digitale Infrastruktur, GAMS-Plattform |
-| Digital Humanities Craft OG | Datenmodellierung, Ontologie, technische Umsetzung |
-| Daniel A. Reed Library (SUNY Fredonia) | Kooperationspartner, Bestände |
-| National Library of Israel (Jerusalem) | Kooperationspartner, Bestände |
-
----
-
-## Referenzen
-
-- **Website:** https://stefanzweig.digital
-- **GAMS-Kontext:** https://gams.uni-graz.at/context:szd
-- **Ontologie:** https://chpollin.github.io/SZD/ontology/
-- **Zenodo-Archiv:** https://zenodo.org/uploads/17421555
-- **GitHub:** https://github.com/chpollin/SZD
-- **Klawiter-Bibliographie:** https://github.com/chpollin/klawiter-rescue
+- Website: https://stefanzweig.digital
+- GAMS context: https://gams.uni-graz.at/context:szd
+- Ontology: https://chpollin.github.io/SZD/ontology/
+- Zenodo archive: https://zenodo.org/records/17421555
+- GitHub: https://github.com/chpollin/SZD
+- Klawiter bibliography: https://github.com/chpollin/klawiter-rescue

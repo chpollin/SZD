@@ -13,22 +13,16 @@ only `docs/`. Refresh it after changes to the biography TEI:
 
 `lanes/` holds the derived timeline lanes, written by
 `scripts/lebenskalender_lanes/build_lanes.py` alongside the copy in
-`data/derived/lebenskalender/`. See `knowledge/Lebenskalender-Lanes.md`.
+`data/derived/lebenskalender/`. The multi-collection timeline built from them is part of
+the presentation repository `ZIMLAB/szd` (`mode=timeline`, with `mode=fancy` as alias) and
+loads its own copy of the lane files. This static biography prototype remains a separate
+view. Schema, coverage and delivery state of the lanes are in
+[knowledge/Lebenskalender-Lanes.md](../../knowledge/Lebenskalender-Lanes.md).
 
-The multi-collection timeline is integrated in the presentation repository `ZIMLAB/szd`
-under `mode=timeline`, with `mode=fancy` retained as an alias. Frontend commit `b616496`
-was pushed on 11 September 2026 and verified on staging through the server mirror,
-HTTP content checks and the browser. The view
-loads its own copy of all five JSON assets from `data/lebenskalender/`. This static
-biography prototype remains a separate view. The corrected correspondence lane preserves
-all index entries and stores merged source records with their original metadata and
-permalinks in `sources`. Partner review, acceptance and production publication of the
-new timeline remain pending following the message sent to Salzburg on 11 September 2026.
-
-`index.html` is generated: it embeds the navbar and footer of the live page and loads
+`index.html` is generated. It embeds the navbar and footer of the live page and loads
 the live stylesheets via `<base href="https://stefanzweig.digital/">`, so the page
 shows the prototype inside the real SZD design. Generator and template live in the
 presentation repository (`gams-www`, `local-test-build/proto/build-lebenskalender-szd.py`
-and `lebenskalender-szd-template.html`); rerun the generator when the live navbar
+and `lebenskalender-szd-template.html`). Rerun the generator when the live navbar
 changes. Do not edit `index.html` by hand. The docs-site variant of the same prototype
 is kept there as `lebenskalender-proto.html` with a jsdom smoke test.

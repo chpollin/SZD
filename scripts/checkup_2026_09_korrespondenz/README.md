@@ -31,9 +31,9 @@ from a name, a title or a piece count.
 
 ## Source of the konvolut evidence
 
-Forty-two konvolut objects exist as files under
-[`data/Correspondence/konvolute/`](../../data/Correspondence/konvolute/). The remaining
-pointers are resolved by one HTTP GET of
+Konvolut objects that exist as files under
+[`data/Correspondence/konvolute/`](../../data/Correspondence/konvolute/) are read locally.
+The remaining pointers are resolved by one HTTP GET of
 `https://gams.uni-graz.at/archive/objects/<pid>/datastreams/TEI_SOURCE/content`, cached on
 disk outside the repository, so a repeated run makes no request. GAMS is read-only here, the
 script never writes to it, and `--offline` refuses to make any request at all.
@@ -67,7 +67,9 @@ entry's `msIdentifier`, which is where every entry that has a signature carries 
 the indentation of that line. The rest of the file text is untouched, so indentation,
 attribute order and line endings stay byte-identical.
 
-## What the script deliberately leaves alone
+## Scope
+
+The script leaves these alone.
 
 - Entries whose konvolut merges several bundles. Among them every entry whose konvolut is a
   large person object such as Anna Meingast, Lotte Zweig, Friderike Zweig or the unidentified
@@ -89,6 +91,6 @@ attribute order and line endings stay byte-identical.
 
 - [`scripts/korrespondenz_titel/`](../korrespondenz_titel/) rebuilds the entry titles of the
   konvolut objects from `correspDesc` and the physical extent.
-- The section "Archive checkup (September 2026)" of [`knowledge/DATA.md`](../../knowledge/DATA.md)
-  summarises the checkup this script answers; the file-and-line diagnosis is an
+- The section "Archive checkup (September 2026)" of [`knowledge/DATA.md`](../../knowledge/DATA.md#archive-checkup-september-2026)
+  summarises the checkup this script answers. The file-and-line diagnosis is an
   archive-internal note outside the repository.

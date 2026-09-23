@@ -1,63 +1,32 @@
-# Klassifikation der Aufsatzablage prüfen und ergänzen
+# Check and complete the Aufsatzablage classification
 
-Repariert den äußeren Gruppierungsschlüssel `term[@type="classification"]` in
-[`data/Aufsatzablage/SZDESS.xml`](../../data/Aufsatzablage/SZDESS.xml) und erhebt für die
-gruppierten Listen, welche Einträge dem Renderer Schlüssel schuldig bleiben.
+Repairs the outer grouping key `term[@type="classification"]` in [`data/Aufsatzablage/SZDESS.xml`](../../data/Aufsatzablage/SZDESS.xml) and surveys, for the grouped lists, which entries lack a key the renderer needs. Why the key must exist in both languages and in one spelling is part of the rendering contract in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#rendering-contract-grouped-lists).
 
-## Warum das zählt
+## Rules
 
-`szd-Werke.xsl` im gams-www-Repo gruppiert die Navigationsebene mit
-`for-each-group group-by="term[@type='classification'][@xml:lang=$locale]"`. Fehlt der Term
-in einer Sprache, fällt der Eintrag aus der Ausgabe dieser Sprache heraus, obwohl er
-ingestiert ist. Weicht ein Term nur in der Schreibung ab, entsteht daneben eine zweite,
-fast gleichnamige Kategorie mit einem einzigen Eintrag.
+- missing-language. An entry carries the classification in one language only. The pair is taken from the entries with the same object type (`extent/span/term[@type="objecttyp"]`, German and English) and a complete classification, but only if all of them point to exactly one pair. Otherwise the entry stays unchanged and appears in the residual list.
+- case-variant. A value differs from the prevailing spelling of the same language only by capitalisation and is moved to that spelling.
 
-Die innere Gruppierung nach `title[@type="Einheitssachtitel"]` akzeptiert im Stylesheet
-ausdrücklich auch Titel ohne `@xml:lang`; sprachlose Einheitssachtitel sind daher kein
-Mangel, anders als die Formulierung „(de+en)" im Render-Vertrag nahelegt.
+The script creates no new categories. The vocabulary stays closed, and only pairs fully attested in the holdings are used.
 
-## Regeln
-
-- **missing-language.** Ein Eintrag trägt die Klassifikation nur in einer Sprache. Das
-  Paar wird von den Einträgen übernommen, die denselben Objekttyp führen
-  (`extent/span/term[@type="objecttyp"]`, deutsch und englisch) und eine vollständige
-  Klassifikation haben, aber nur, wenn alle diese Einträge auf genau ein Paar zeigen.
-  Sonst bleibt der Eintrag unverändert und steht in der Restliste.
-- **case-variant.** Ein Wert unterscheidet sich von der im Bestand überwiegenden
-  Schreibung derselben Sprache nur durch Groß- und Kleinschreibung und wird auf sie
-  gezogen.
-
-Neue Kategorien legt das Skript nicht an. Das Vokabular bleibt geschlossen, es werden nur
-Paare verwendet, die im Bestand vollständig belegt sind.
-
-## Aufruf
+## Usage
 
 ```bash
-# 1) Trockenlauf: geplante Änderungen, Restliste und Erhebung über die gruppierten Listen
+# 1) dry run with planned changes, residual list and survey of the grouped lists
 python scripts/essay_klassifikation/fix_classification.py
 
-# 2) Anwenden
+# 2) apply
 python scripts/essay_klassifikation/fix_classification.py --apply
 
-# 3) Prüflauf
+# 3) check
 python scripts/essay_klassifikation/fix_classification.py --verify
 ```
 
-Der Prüflauf meldet einen Fehler, wenn die Eintragszahl sich gegenüber `HEAD` geändert
-hat, die Reihenfolge verschoben ist, ein anderes Element als ein
-`term[@type="classification"]` seinen Text geändert hat, noch ein Eintrag ohne
-vollständige Klassifikation existiert oder noch Schreibvarianten derselben Kategorie
-nebeneinander stehen. Ein zweiter Trockenlauf plant null Änderungen.
+The check fails when the number of entries differs from `HEAD`, the order has shifted, an element other than `term[@type="classification"]` has changed its text, an entry without complete classification remains, or spelling variants of the same category still stand side by side. A second dry run plans zero changes.
 
-## Was das Skript bewusst nicht anfasst
+## Scope
 
-- **`SZDMSK.xml` und `SZDLEB.xml`** werden nur gelesen. Die Erhebung zeigt dort fehlende
-  Faksimile-PIDs, die kein Gruppierungsproblem sind, sondern nur den Mirador-Link
-  verhindern.
-- **Der Objekttyp** selbst. Er beschreibt das Stück, die Klassifikation ordnet es der
-  Navigationsebene zu; beide bleiben getrennt.
-- **Doppelte englische Entsprechungen.** `Druckfahnen` und `Korrekturfahnen` bilden beide
-  auf `Galley proofs` ab, sind also in der englischen Ausgabe eine Kategorie und in der
-  deutschen zwei. Das ist eine redaktionelle Frage, kein Datenfehler.
-- **Vorhandene Mojibake** und die CRLF-Zeilenenden der Datei. Geschrieben werden nur die
-  betroffenen `term`-Elemente.
+- `SZDMSK.xml` and `SZDLEB.xml` are only read. The survey shows missing facsimile PIDs there, which are no grouping problem and only prevent the Mirador link.
+- The object type describes the piece, the classification places it in the navigation, and the script changes only the latter.
+- `Druckfahnen` and `Korrekturfahnen` both map to `Galley proofs`, one category in the English output and two in the German. This is an editorial question.
+- Existing mojibake and the CRLF line endings of the file stay. Only the affected `term` elements are written.

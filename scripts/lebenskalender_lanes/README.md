@@ -1,79 +1,51 @@
-# Zeitleisten-Lanes des Lebenskalenders erzeugen
+# Build the timeline lanes of the Lebenskalender
 
-Leitet aus den TEI-Quellen je Lane der integrierten Zeitleisten-Ansicht eine JSON-Datei mit
-einem gemeinsamen Ereignisschema ab. Die Präsentationsschicht im Repo `ZIMLAB/szd` schaltet
-die Lanes ein und aus und braucht dafür Ereignisse in einer Form, die über alle Bestände
-gleich ist.
+Derives one JSON file per lane of the integrated timeline view from the TEI sources, in one event schema shared by all collections. The presentation layer in the repository `ZIMLAB/szd` switches the lanes on and off and needs events in a form that is the same for every collection.
 
-Die Frontendkopien der fünf Ausgabedateien sind in Commit `b616496` nach `ZIMLAB/szd`
-gepusht und auf Staging mit identischen JSON-Inhalten bestätigt. Den laufenden
-Auslieferungsstand führt die unten verlinkte Wissensdokumentation.
+Schema, dating rules, coverage and delivery state are described in [`knowledge/Lebenskalender-Lanes.md`](../../knowledge/Lebenskalender-Lanes.md). This file describes the run.
 
-Schema, Datierungsregeln und Auslieferungsweg beschreibt
-[`knowledge/Lebenskalender-Lanes.md`](../../knowledge/Lebenskalender-Lanes.md). Diese Datei
-beschreibt den Lauf.
-
-## Aufruf
+## Usage
 
 ```
 python scripts/lebenskalender_lanes/build_lanes.py
 ```
 
-Nur Standardbibliothek, kein Manifest, keine Installation. Der Lauf liest ausschließlich und
-schreibt allein in die beiden Zielordner.
+Standard library only, no manifest, no installation. The run only reads the sources and writes only into the two target folders.
 
-| Option | Wirkung |
-|--------|---------|
-| `--out-dir` | Zielordner der Lane-Dateien, Vorgabe `data/derived/lebenskalender` |
-| `--docs-dir` | Kopierziel unterhalb von `docs/`, Vorgabe `docs/lebenskalender/lanes` |
-| `--no-docs` | überspringt die Kopie unterhalb von `docs/` |
+| Option | Effect |
+|--------|--------|
+| `--out-dir` | Target folder of the lane files, default `data/derived/lebenskalender` |
+| `--docs-dir` | Copy target below `docs/`, default `docs/lebenskalender/lanes` |
+| `--no-docs` | skips the copy below `docs/` |
 
-## Quellen
+## Sources
 
-| Lane | Quelle |
+| Lane | Source |
 |------|--------|
 | `biography` | `docs/lebenskalender/SZDBIO.xml` |
-| `correspondence` | `data/Correspondence/SZDKOR.xml` und die Konvolut-Objekte in `data/Correspondence/konvolute/` |
+| `correspondence` | `data/Correspondence/SZDKOR.xml` and the konvolut objects in `data/Correspondence/konvolute/` |
 | `personal-documents` | `data/PersonalDocument/SZDLEB.xml` |
 | `autographs` | `data/Autograph/SZDAUT.xml` |
 
-Dazu `data/Index/Person/SZDPER.xml` für die Auflösung der Personenkennungen. Der Index wird
-bei jedem Lauf frisch gelesen, GND-Verweise über die Nummer, direkte Verweise über die
-SZDPER-Kennung. Änderungen am Personenindex wirken damit ohne Eingriff ins Skript.
+`data/Index/Person/SZDPER.xml` resolves the person identifiers, GND references by number and direct references by SZDPER identifier. The index is read fresh on every run, so changes to it take effect without touching the script.
 
-Die Objekt-PID jeder Quelle stammt aus deren `teiHeader/publicationStmt/idno[@type="PID"]`
-und steht nicht im Skript.
+The object PID of each source comes from its `teiHeader/publicationStmt/idno[@type="PID"]` and is not hard-coded.
 
-## Ausgabe
+## Output
 
-`<lane>.json` je Lane als Liste von Ereignissen, dazu `index.json` mit der Lane-Liste, den
-Ereigniszahlen je Lane und je `datePrecision`, der Zahl der zusammengeführten Faksimilegruppen und
-dem Erzeugungszeitpunkt im Feld `generated`.
+`<lane>.json` per lane as a list of events, plus `index.json` with the lane list, the event counts per lane and per `datePrecision`, the number of merged facsimile groups and the generation time in the field `generated`.
 
-Die Korrespondenz erhält alle Indexeinträge, weil gemeinsam verwendete Signaturen keine
-vollständige Abdeckung durch Einzelbriefe belegen. Zusammengeführte Records bleiben mit
-ihren ursprünglichen Metadaten im Feld `sources` erhalten. `mergedDuplicates` zählt die
-Faksimilegruppen, `mergedRecords` die zusätzlich vereinigten Records.
-`suppressedIndexEntries` bleibt für bestehende Leser als numerischer Wert `0` erhalten.
+The correspondence keeps all index entries, because shared signatures prove no complete coverage by single letters. Merged records keep their original metadata in the field `sources`. `mergedDuplicates` counts the facsimile groups, `mergedRecords` the additionally merged records. `suppressedIndexEntries` stays for existing readers as the numeric value `0`.
 
-Die Lane-Dateien sind über zwei Läufe byteidentisch. Der einzige veränderliche Wert liegt in
-`generated`; ein Vergleich klammert dieses Feld aus. Sortiert wird nach ISO-Datum und
-Kennung, undatierte Ereignisse stehen am Ende. Geschrieben wird über eine Temporärdatei mit
-anschließendem Umbenennen, UTF-8 mit LF.
+The lane files are byte-identical across two runs. The only changing value is `generated`, which a comparison leaves out. Events are sorted by ISO date and identifier, undated events come last. Files are written through a temporary file and a rename, as UTF-8 with LF.
 
-## Was das Skript an den Quellen sichtbar macht
+## Reports on the sources
 
-Der Lauf meldet auf `stderr` die Datumstexte, die er nicht auflösen konnte, und die
-Auffälligkeiten, auf die er in den Kopfzeilen der Biographie trifft. Beides ist eine
-Arbeitsliste für die Redaktion und löst keine Änderung an den Quellen aus.
+The run reports on `stderr` the date texts it could not resolve and the irregularities it meets in the headings of the biography. Both are a work list for the editors and trigger no change in the sources.
 
-## Prüfung
+## Tests
 
-Der Generator parst alle Quellen und meldet unauflösbare Datierungen. Die Korpustests
-prüfen zusätzlich, dass sämtliche Korrespondenzrecords einschließlich ihrer Metadaten
-und Permalinks erhalten bleiben. Sie decken unvollständige Konvolute, gemeinsam verwendete
-Signaturen, widersprüchliche Faksimilemetadaten und die drei Datierungen nach 1950 ab.
-Geprüft werden außerdem der deterministische Export und die identische Kopie unter `docs/`.
+The generator parses all sources and reports unresolvable dates. The corpus tests also check that all correspondence records including their metadata and permalinks are preserved. They cover incomplete konvolute, shared signatures, contradictory facsimile metadata and the three dates after 1950. They further check the deterministic export and the identical copy below `docs/`.
 
 ```
 python -m pytest scripts/lebenskalender_lanes/test_build_lanes.py -q

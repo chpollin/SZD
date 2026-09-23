@@ -1,13 +1,14 @@
 # Person index and linkage repairs, checkup 2026-09
 
-Four scripts that carry out the `confirmed-data` findings of the 2026-09 checkup
-verification that concern the person index and the way the holdings reference it. The
-diagnoses are archive-internal verification notes that stay outside the repository; the
-durable summary is the section "Archive checkup (September 2026)" of
-[`knowledge/DATA.md`](../../knowledge/DATA.md).
+Scripts that carry out the `confirmed-data` findings of the 2026-09 checkup verification
+that concern the person index and the way the holdings reference it, a preparation script
+for further IIIF label repairs and a read-only survey of unlinked persons. The diagnoses
+are archive-internal verification notes that stay outside the repository. The durable
+summary is the section "Archive checkup (September 2026)" of
+[`knowledge/DATA.md`](../../knowledge/DATA.md#archive-checkup-september-2026).
 
-Each script defaults to a dry run, writes with `--apply` and checks the written state with
-`--verify`. Each writes a CSV log of every change, in the columns of
+Each writing script defaults to a dry run, writes with `--apply` and checks the written
+state with `--verify`. Each writes a CSV log of every change, in the columns of
 [`scripts/organisationen_index/migration_log.csv`](../organisationen_index/migration_log.csv).
 
 ## Order
@@ -25,18 +26,19 @@ python scripts/checkup_2026_09_index/fix_essay_author_refs.py --apply
 
 ## merge_person_duplicates.py
 
-Merges eleven duplicate pairs and triples into the entry the report names as the survivor,
+Merges the duplicate pairs and triples listed in `MERGES` into the entry the report names as the survivor,
 rewrites every reference to a removed id, moves life dates out of the forename field into
 `birth` and `death`, and carries over an authority number or variant note the survivor
 lacks. Modelled on `scripts/organisationen_index/migrate_org_references.py`, which does the
 same job for corporate bodies.
 
-Kesten and Pilnjak followed on 2026-09-23 after a check against the DNB: GND 1185617155
-does not exist, and 1089928157 redirects to 118594397. Left untouched on purpose: Neumann,
-where writer and architect of the same name make the identity an archive question, and Geiringer, Meiler and the Przeworskiego
-publishing house, which an earlier commit and the organisation migration already settled.
+Kesten and Pilnjak followed on 2026-09-23 after a check against the German National
+Library (DNB), because GND 1185617155 does not exist and 1089928157 redirects to 118594397.
+Neumann stays untouched on purpose, because writer and architect of the same name make the
+identity an archive question. Geiringer, Meiler and the Przeworskiego publishing house are
+left out as well, because an earlier commit and the organisation migration settled them.
 A removed record whose authority number differs from the survivor's is not copied over the
-survivor's; the log records the dropped number so that the contradiction stays visible.
+survivor's. The log records the dropped number so that the contradiction stays visible.
 
 ## normalize_person_refs.py
 
@@ -48,14 +50,14 @@ onto a `term[@type='person']` that carries none, because `Work_RDF` reads the te
 and not the inner name.
 
 A term reference is lifted only where the inner name resolves to exactly one index entry.
-The run lists what it leaves alone: names with no reference at all, an authority number
+The run lists what it leaves alone, meaning names with no reference at all, an authority number
 several index entries share, and a reference sitting on a nested `name` element.
 
 ## fix_essay_author_refs.py
 
 Sets `author/@ref` in `data/Aufsatzablage/SZDESS.xml` to the person the inner `persName`
-names. All 403 values repeated the sequence number of their own entry, so SZDESS.28 pointed
-at SZDPER.28, Hanns Arens, while naming Stefan Zweig. Two entries carry the name
+names. Every value repeated the sequence number of its own entry, so SZDESS.28 pointed
+at SZDPER.28 while naming Stefan Zweig. Two entries carry the name
 "Zweig, Stefan" in the attribute meant for an identifier and get the authority number of the
 index entry as well.
 
@@ -74,9 +76,9 @@ python scripts/checkup_2026_09_index/prepare_iiif_repairs.py --verify
 
 The objects are `o:szd.939` (SZ-SAM/W2), `o:szd.2935` (SZ-AP2/W-H172.4), `o:szd.2409`
 (SZ-AAP/W-AA135.1) and `o:szd.2291` (SZ-AAP/W-AA183.2). Ingest follows the manual procedure
-of the neighbouring README: place the prepared XML beside the existing images, re-ingest
-into the existing object, then fetch the manifest and require valid JSON with the recorded
-canvas count.
+of the neighbouring README. The prepared XML is placed beside the existing images and
+re-ingested into the existing object, and the fetched manifest must then be valid JSON with
+the recorded canvas count.
 
 ## find_unlinked_persons.py
 
@@ -101,11 +103,11 @@ row per text hit (`unverknuepfte_personen_kandidaten.csv`) and a German summary 
 class counts, the most promising candidates and the limits of the text search
 (`unverknuepfte_personen_zusammenfassung.md`).
 
-## What these scripts do not touch
+## Scope
 
-- The presentation layer. `szd-TORDF.xsl` and `query/person_search.sparql` live in the
+- The presentation layer stays untouched. `szd-TORDF.xsl` and `query/person_search.sparql` live in the
   `ZIMLAB/szd` repository, and the mapping gaps the report lists for
   `term[@type='person_affected']` and for the missing Aufsatzablage graph belong there.
-- Anything the report classifies `needs-archive` or `needs-operator`, above all whether
-  unlinked index entries are removed at all.
-- The derived data under `data/derived/`, which its own generator reproduces.
+- Anything the report classifies `needs-archive` or `needs-operator` stays open, above all
+  whether unlinked index entries are removed at all.
+- The derived data under `data/derived/` is reproduced by its own generator.

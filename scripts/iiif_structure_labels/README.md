@@ -12,10 +12,18 @@ quotes. Their other bytes, including metadata and image references, are preserve
 | `o:szd.67` | [Result_SZ_AAP_L2.xml](prepared/Result_SZ_AAP_L2.xml) | 1 | 237 |
 | `o:szd.314` | [Result_SZ_AP2_W_G104.1.xml](prepared/Result_SZ_AP2_W_G104.1.xml) | 4 | 55 |
 
-The last object has four affected labels, as recorded in
-[`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md).
 [repairs.json](prepared/repairs.json) records the exact replacements and SHA-256
-checksums of each original and prepared file.
+checksums of each original and prepared file. The rule for ingest sources that follows
+from the defect is in
+[`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#iiif-structure-labels-in-book-sources).
+
+The archive checkup of September 2026 found four further objects with the same defect,
+`o:szd.939`, `o:szd.2935`, `o:szd.2409` and `o:szd.2291`. Their prepared sources lie in
+the same folder, recorded in
+[repairs-checkup-2026-09.json](prepared/repairs-checkup-2026-09.json), and were produced
+by [`scripts/checkup_2026_09_index/prepare_iiif_repairs.py`](../checkup_2026_09_index/README.md#prepare_iiif_repairspy),
+which reuses `prepare_source` from this script. The ingest procedure below applies to
+them as well. None of the prepared sources has been ingested yet.
 
 ## Reproduce
 

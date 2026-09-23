@@ -4,11 +4,48 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-23 — Prüfliste unverknüpfter Personen, Stagingpaket, Wissensdokumente
+
+Geändert. `scripts/checkup_2026_09_index/find_unlinked_persons.py` (`10728679`) listet die
+Indexpersonen, die die Personensuche nicht findet, weil kein Objekt auf sie verweist, und
+sucht im Elementtext der Bestände nach Stellen, die sie ohne Verweis nennen, auf Wunsch
+auch in den noch nicht ingestierten Konvoluten des Stagingpakets. Die Ausgabe ist eine
+archivinterne Prüfliste unter `Documents/PROJECTS/szd/checkup-2026-09/` außerhalb des Repos.
+
+Das Stagingpaket unter `Documents/PROJECTS/szd/ingest_staging_2026-09-23/` steht auf
+`aac08670`. Seit den Zusammenführungen des Tages enthält es wieder den Personenindex und
+zusätzlich die Konvolute der neu verknüpften Korrespondenzpartner. Die Masereel-Themenseite
+ist inzwischen auf Staging, ihr `TEI_SOURCE` dort trägt die getaggten Personenverweise.
+
+Integriert. Die Wissensdokumente sind auf diesen Stand gebracht und entdoppelt, Vorgänger
+ist `10728679`. Der Organisationenindex ist in [COLLECTIONS.md](COLLECTIONS.md) beschrieben
+statt in DATA.md, Auslieferungsstand und Abdeckung der Lebenskalender-Lanes stehen nur noch
+in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). [DATA.md](DATA.md) führt statt der
+Bestandsstatistik die Zählkonventionen, die heutigen Befunde und die gesammelten offenen
+Punkte. Beispiele in COLLECTIONS und DATA_MODEL stammen jetzt aus den Daten, erfundene
+Signaturen und Datumsformen sind ersetzt. ARCHITECTURE beschreibt die Zwei-Repo-Topographie
+statt allgemeiner Plattformangaben. Die Lizenzangabe in PROJECT folgt dem README (Code MIT),
+der Zenodo-Link zeigt auf den öffentlichen Datensatz. Außerhalb des Journals nennt kein
+Dokument mehr die Erstveröffentlichungen als Bestand. Auf Wunsch des Operators sind die
+bisher deutschen Wissensdokumente und Skript-READMEs ins Englische übertragen, wie
+CLAUDE.md es vorsieht, das Journal bleibt deutsch.
+
+Präsentationsschicht. Die Organisationenseite verlinkt jede Körperschaft, Aufbewahrungsorte
+auf die Standortsuche und die übrigen auf die Personensuche, und zeigt Ort und Land in der
+Kopfzeile (`ZIMLAB/szd` `e7acd7d`).
+
+Offen. Die RDF-Transformation in `ZIMLAB/szd` wird für mehrere Kennungen in einem `@ref`
+und für GND-Verweise mit `https` angepasst. Bis dahin liest `GetPersonlist` nur das erste
+Token, und ein Körperschaftsverweis löst nur zeichengleich zum Index auf. ONTOLOGY.md und
+`ontology/README.md` überarbeitet eine eigene Sitzung mit englischen Bezeichnern, dort fehlt
+der Organisationenindex noch in der Zuordnung der TEI-Dateien. Das Wurzeldokument `mail.md`,
+ein Mailtext zur SZ-AAL/B-Korrespondenz aus dem Juli 2026, hat im Repo keine Funktion.
+
 ## 2026-09-23 — Tote Personenverweise und unverknüpfte Korrespondenzpartner
 
 Geändert. In `SZDAUT.xml` trugen vier Autorverweise neben der gültigen Kennung eine zweite,
 die `c1a9a34e` im Jahr 2022 als GND-Dublette aus dem Index entfernt hatte, nämlich
-Michelangelo (1579 neben 194), Joachim Murat (1623 neben 1009) und Gounod (1617 neben 1588).
+zweimal Michelangelo (1579 neben 194), Joachim Murat (1623 neben 1009) und Gounod (1617 neben 1588).
 Die toten Kennungen sind gestrichen. Aus der Kandidatenliste der unverknüpften Personen ist
 nur verknüpft, was eindeutig ist, also ein `persName` ohne Verweis, dessen Nach- und Vorname
 dem Indexeintrag exakt gleicht, während kein anderer Eintrag denselben Namen führt. Das

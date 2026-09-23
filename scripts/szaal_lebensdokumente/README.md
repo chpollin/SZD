@@ -1,69 +1,48 @@
-# SZ-AAL Lebensdokumente → SZDLEB.xml
+# SZ-AAL personal documents to SZDLEB.xml
 
-Workflow, um Lebensdokumente aus einem Google-Sheets-Export (CSV) in die TEI-Sammlung
-[`data/PersonalDocument/SZDLEB.xml`](../../data/PersonalDocument/SZDLEB.xml) zu überführen.
-Wiederverwendbar für jeden Nachzug weiterer Objekte mit demselben Spaltenlayout.
+Workflow that turns personal documents from a Google Sheets export (CSV) into the TEI collection [`data/PersonalDocument/SZDLEB.xml`](../../data/PersonalDocument/SZDLEB.xml). It is reusable for any later batch with the same column layout.
 
-## Geltungsbereich
+## Scope
 
-Nur **Lebensdokumente** (SZDLEB, `<biblFull>`). Die Briefserie `SZ-AAL/B2.N` gehört in die
-Korrespondenz (SZDKOR) mit anderem Schema — dafür ist dieses Skript **nicht** gebaut.
+The script handles personal documents (SZDLEB, `<biblFull>`) only. The letter series `SZ-AAL/B2.N` belongs to the correspondence (SZDKOR), which follows another schema.
 
-## CSV-Format
+## CSV format
 
-38 Spalten, feste Reihenfolge (siehe `C_*`-Konstanten in `csv_to_szdleb.py`). Erste Zeile ist
-die Kopfzeile. Wichtige Konventionen, die das Skript erwartet:
+38 columns in fixed order (see the `C_*` constants in `csv_to_szdleb.py`), the first row is the header. The script expects these conventions.
 
-- Mehrere Personen je Zelle mit **Semikolon** trennen (`Zweig, Stefan; Hollander, Barnett`).
-  Komma trennt nur `Nachname, Vorname` innerhalb *einer* Person.
-- GND als URL, Reihenfolge parallel zur Namensspalte; leere Slots als leeres Semikolon-Segment.
-- Personennamen möglichst als `Nachname, Vorname` (wird zu `surname`/`forename` zerlegt).
-- Datierung: Original-, erschlossene und normalisierte Spalte. Das Skript zeigt den
-  Original-Wortlaut an, erschlossene Daten in `[…]`, und setzt `@when` aus der ISO-Spalte
-  (`YYYY`, `YYYY-MM`, `YYYY-MM-DD`).
+- Several persons per cell are separated by semicolon (`Zweig, Stefan; Hollander, Barnett`). The comma separates only `Surname, Forename` within one person.
+- GND as URL, in the same order as the name column, empty slots as an empty semicolon segment.
+- Person names preferably as `Surname, Forename`, split into `surname` and `forename`.
+- Dating in an original, a supplied and a normalised column. The script shows the original wording, supplied dates in `[…]`, and sets `@when` from the ISO column (`YYYY`, `YYYY-MM`, `YYYY-MM-DD`).
 
-## Ablauf
+## Run
 
 ```bash
-# 1) Trockenlauf: erzeugt den XML-Block + Report, schreibt nichts
+# 1) dry run, produces the XML block and a report, writes nothing
 python scripts/szaal_lebensdokumente/csv_to_szdleb.py --csv <export.csv> \
     --gesamttitel "Stefan Zweig - <Bestandsname>"
 
-# 2) Report prüfen (siehe unten), dann anwenden
+# 2) check the report (see below), then apply
 python scripts/szaal_lebensdokumente/csv_to_szdleb.py --csv <export.csv> \
     --gesamttitel "Stefan Zweig - <Bestandsname>" --apply
 ```
 
-Parameter: `--csv` (Pflicht), `--szdleb`/`--szdper` (Default: Repo-Pfade), `--gesamttitel`
-(Default-Platzhalter — **Klartextnamen setzen**), `--start-id` (0 = automatisch fortlaufend
-aus der Datei), `--apply` (ohne diese Flag nur Trockenlauf).
+Parameters are `--csv` (required), `--szdleb` and `--szdper` (default the repository paths), `--gesamttitel` (default a placeholder that must be replaced by the written-out collection name), `--start-id` (0 continues the numbering of the file) and `--apply` (without it only a dry run).
 
-Eingebaute Sicherungen: Abbruch, wenn die erste Signatur schon in SZDLEB steht (kein
-Doppelimport); Wohlgeformtheitsprüfung des Blocks und der Gesamtdatei nach dem Schreiben;
-GND→SZDPER-Auflösung live aus der Personenliste (keine hartkodierten Personen-IDs).
+Built-in safeguards stop the run when the first signature already stands in SZDLEB, check the well-formedness of the block and of the whole file after writing, and resolve GND to SZDPER live from the person index without hard-coded person identifiers.
 
-## Manuelle Nachbearbeitung (der Report sagt, was)
+## Manual follow-up
 
-Das Skript kann nicht alles automatisch korrekt machen. Sein Report listet genau die Stellen:
+The report lists the places the script cannot settle.
 
-- **„Personen OHNE SZDPER-Verknüpfung"** — diese Personen fehlen in
-  [`SZDPER.xml`](../../data/Index/Person/SZDPER.xml). Anlegen (mit GND, falls vorhanden; sonst
-  nur `surname`/`forename` — **keine GND raten**), dann im SZDLEB-Eintrag `ref="#SZDPER.N"`
-  am `editor`/`author` ergänzen.
-- **„Personen ohne 'Nachname, Vorname'-Form"** — als `persName`-Volltext übernommen, prüfen.
-- **„Als Körperschaft (orgName) modelliert"** — Institutionen werden per Schlüsselwort-Heuristik
-  (`ORG_KEYWORDS`) als `<editor><orgName>` erfasst (im SZDLEB-Bestand ein neueres Muster).
-  Liste gegenlesen, ob nichts fälschlich als Körperschaft eingestuft wurde.
-- **Gesamttitel** verifizieren: muss der ausgeschriebene Bestandsname sein, einheitlich über
-  alle Einträge (analog `Stefan Zweig - Alberman Papers 2`).
-- **Trennfehler im CSV**: ein Komma statt Semikolon klebt zwei Personen zusammen — der Report
-  zeigt das als unstrukturierten Namen. Im CSV korrigieren oder im XML nachziehen.
+- „Personen OHNE SZDPER-Verknüpfung“ lists persons missing from [`SZDPER.xml`](../../data/Index/Person/SZDPER.xml). Create them with GND where one exists, otherwise with `surname` and `forename` only and never a guessed GND, then add `ref="#SZDPER.N"` on `editor` or `author` in the SZDLEB entry.
+- „Personen ohne 'Nachname, Vorname'-Form“ lists names taken over as full `persName` text, to be checked.
+- „Als Körperschaft (orgName) modelliert“ lists institutions recorded as `<editor><orgName>` by the keyword heuristic `ORG_KEYWORDS`. Check that nothing was classed as a corporate body by mistake. Corporate bodies belong to the organisation index, see [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
+- The Gesamttitel must be the written-out collection name, uniform across all entries (as in `Stefan Zweig - Alberman Papers 2`).
+- A comma instead of a semicolon in the CSV glues two persons together, which the report shows as an unstructured name. Correct it in the CSV or in the XML.
 
-PIDs (`o:szd.*`) werden **nicht** lokal vergeben, sondern beim GAMS-Ingest.
+PIDs (`o:szd.*`) are not assigned locally but at the GAMS ingest.
 
-## Erstanwendung
+## First application
 
-SZ-AAL/L1–L13 → SZDLEB.144–156 (13 Einträge). Dabei in SZDPER nachgepflegt:
-SZDPER.2314 Hollander (GND), 2315 Altmann (GND), 2316 Geiringer, 2317 Meiler, 2318 Ullmann
-(letzte drei ohne GND). Korrigiert: SZDLEB.51 (Titel/Datierung Geburtsschein-Fotokopie),
-SZDLEB.137 (`ana`→`xml:id`).
+SZ-AAL/L1–L13 became SZDLEB.144–156 in June 2026. The person index received SZDPER.2314 Hollander (GND), 2315 Altmann (GND), 2316 Geiringer, 2317 Meiler and 2318 Ullmann (the last three without GND). 2316 and 2317 turned out to be duplicates of existing entries and were merged into them (commit `ce23ddad`). SZDLEB.51 (title and dating of the birth certificate photocopy) and SZDLEB.137 (`ana` to `xml:id`) were corrected at the same time.
