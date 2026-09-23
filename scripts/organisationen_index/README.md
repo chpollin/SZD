@@ -88,7 +88,12 @@ Die `SZDORG`-Kennungen ergeben sich aus der Sortierung nach Hauptnamen und versc
 daher, wenn Einträge hinzukommen. Nach dem Migrationslauf ist der Index nicht mehr aus den
 Quellen erzeugbar, weil die Körperschaften den Personenindex verlassen haben.
 `build_org_index.py` bricht dann mit einer Meldung ab, statt einen verkürzten Index zu
-schreiben. Ab hier wird die Datei von Hand gepflegt.
+schreiben. Ab hier wird die Datei von Hand gepflegt. Eine neue Körperschaft bekommt die
+nächste freie Nummer, die Kennungen sind Teil der RDF-URIs und bleiben stehen. Kommt sie aus
+dem Personenindex, erhält die Entscheidungstabelle ihre Zeile mit `org` und der neuen
+Kennung, danach entfernt `migrate_org_references.py` den Personeneintrag und stellt die
+Verweise um. Das Skript schreibt sein Protokoll neu, die älteren Zeilen sind danach aus der
+Git-Historie wieder voranzustellen. So kam am 2026-09-23 `SZDORG.67` Britain in Pictures hinzu.
 
 ## Form der umgestellten Verweise
 

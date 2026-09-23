@@ -16,9 +16,12 @@ unverknüpften Personen Frenkel, Kaufmann und Tomaselli zeigen jetzt in den Konv
 Indexeintrag. Kaufmann steht in den Daten als Charlotte, im Index als Lotte, die
 Gleichsetzung folgt der Markierung des Archivs.
 
-Offen. „Britain in Pictures“ ist grün markiert, also Körperschaft, bleibt aber vorerst im
-Personenindex, weil `build_org_index.py` die SZDORG-Kennungen alphabetisch neu vergibt und
-jeder Neuzugang die Kennungen der folgenden Körperschaften verschiebt. Neumann bleibt eine
+„Britain in Pictures“, vom Archiv grün als Körperschaft markiert, ist von Hand als
+`SZDORG.67` in den Organisationenindex nachgetragen und über `migrate_org_references.py` aus
+dem Personenindex entfernt. Die Zählung läuft weiter statt neu, weil die Kennungen Teil der
+RDF-URIs sind.
+
+Offen. Neumann bleibt eine
 Frage an das Archiv. `SZDKOR.xml` trägt weitere Personenverweise mit dem Platzhalter
 `gnd/placeholder`.
 
