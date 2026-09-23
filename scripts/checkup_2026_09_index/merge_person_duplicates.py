@@ -31,6 +31,10 @@ Usage:
     python scripts/checkup_2026_09_index/merge_person_duplicates.py --apply
     python scripts/checkup_2026_09_index/merge_person_duplicates.py --verify
 
+An applied run appends its rows to merge_log.csv and never rewrites it, because the log is
+provenance committed with the data. The columns stay those of the existing log, without
+a run date, since the commit that carries a run dates its rows.
+
 Regime: script pipeline in the shape the other scripts of this repo use, standard library
 only, run with plain python.
 """
@@ -38,7 +42,7 @@ only, run with plain python.
 from __future__ import annotations
 
 import argparse
-import csv
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -48,6 +52,12 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
+
 DATA = REPO_ROOT / "data"
 SZDPER_FILE = DATA / "Index" / "Person" / "SZDPER.xml"
 OUT_CSV = Path(__file__).resolve().parent / "merge_log.csv"
@@ -85,31 +95,12 @@ BIBL_ID = re.compile(r'<(?:biblFull|person)[^>]*xml:id="([^"]+)"')
 CLOSING_PERSNAME = re.compile(r"(?m)^(?P<indent>[ \t]*)</persName>")
 
 
-def read(path: Path) -> str:
-    """Read without translating line terminators, so that a write reproduces them."""
-    with path.open("r", encoding="utf-8", newline="") as handle:
-        return handle.read()
-
-
-def write_atomic(path: Path, text: str) -> None:
-    temp = path.with_suffix(path.suffix + ".tmp")
-    with temp.open("w", encoding="utf-8", newline="") as handle:
-        handle.write(text)
-    temp.replace(path)
-
-
 def person_block(person_id: str) -> re.Pattern[str]:
     """The whole record including its own indentation and trailing newline."""
     return re.compile(
         rf'[ \t]*<person[^>]*xml:id="{re.escape(person_id)}">.*?</person>\r?\n',
         re.DOTALL,
     )
-
-
-def token_pattern(person_id: str) -> re.Pattern[str]:
-    """The id as a whole id: SZDPER.105 must miss SZDPER.1056 and SZDPER.2080 miss
-    SZDPER.2080a, which the index carries as a separate person."""
-    return re.compile(rf"{re.escape(person_id)}(?![0-9A-Za-z_.\-])")
 
 
 def facts(block: str) -> dict[str, str]:
@@ -175,7 +166,7 @@ def update_survivor(block: str, gnd: str, variants: str, birth: str, death: str)
 
 def merge_index(rows: list[dict]) -> str:
     """SZDPER with the duplicates removed and the survivors completed."""
-    original = read(SZDPER_FILE)
+    original = szd_io.read_text(SZDPER_FILE)
     text = original
     for survivor, removed_ids in MERGES.items():
         survivor_match = person_block(survivor).search(text)
@@ -256,8 +247,8 @@ def rewrite_references(rows: list[dict]) -> dict[Path, str]:
     for path in sorted(DATA.rglob("*.xml")):
         if path == SZDPER_FILE:
             continue
-        text = read(path)
-        if not any(token_pattern(removed).search(text) for removed in replacement):
+        text = szd_io.read_text(path)
+        if not any(szd_io.person_id_pattern(removed).search(text) for removed in replacement):
             continue
         hits: list[dict] = []
 
@@ -265,7 +256,7 @@ def rewrite_references(rows: list[dict]) -> dict[Path, str]:
             value = match.group("value")
             new_value = value
             for removed, survivor in replacement.items():
-                new_value = token_pattern(removed).sub(survivor, new_value)
+                new_value = szd_io.person_id_pattern(removed).sub(survivor, new_value)
             if new_value == value:
                 return match.group(0)
             hits.append(
@@ -282,7 +273,9 @@ def rewrite_references(rows: list[dict]) -> dict[Path, str]:
 
         result = REF_ATTR.sub(rewrite, text)
         # Trust boundary: a leftover id means a reference form this rewrite does not know.
-        leftover = sorted({rid for rid in replacement if token_pattern(rid).search(result)})
+        leftover = sorted(
+            {rid for rid in replacement if szd_io.person_id_pattern(rid).search(result)}
+        )
         if leftover:
             raise RuntimeError(
                 f"{path.relative_to(REPO_ROOT).as_posix()}: references to "
@@ -311,7 +304,7 @@ def verify() -> int:
             if removed in present:
                 failures.append(f"{removed}: duplicate record still in the index")
     for path in sorted(DATA.rglob("*.xml")):
-        text = read(path)
+        text = szd_io.read_text(path)
         try:
             ET.fromstring(text)
         except ET.ParseError as error:
@@ -320,7 +313,7 @@ def verify() -> int:
         for match in REF_ATTR.finditer(text):
             for survivor, removed_ids in MERGES.items():
                 for removed in removed_ids:
-                    if token_pattern(removed).search(match.group("value")):
+                    if szd_io.person_id_pattern(removed).search(match.group("value")):
                         failures.append(
                             f"{path.relative_to(REPO_ROOT).as_posix()}:"
                             f"{text.count(chr(10), 0, match.start()) + 1} still references "
@@ -364,14 +357,11 @@ def main() -> int:
         print(f"SKIP  dry run, {len(rows)} changes planned, nothing written")
         return 0
 
-    if index_text != read(SZDPER_FILE):
-        write_atomic(SZDPER_FILE, index_text)
+    if index_text != szd_io.read_text(SZDPER_FILE):
+        szd_io.write_atomic(SZDPER_FILE, index_text)
     for path, text in changed.items():
-        write_atomic(path, text)
-    with OUT_CSV.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=LOG_FIELDS)
-        writer.writeheader()
-        writer.writerows(rows)
+        szd_io.write_atomic(path, text)
+    szd_io.append_log(OUT_CSV, LOG_FIELDS, rows)
     print(f"OK  {OUT_CSV.relative_to(REPO_ROOT).as_posix()} ({len(rows)} rows)")
     return 0
 

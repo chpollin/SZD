@@ -21,8 +21,11 @@ The @ref of the wrapping author or editor element is rewritten to the SZDORG for
 not dropped: szd-Bibliothek.xsl groups and sorts the library browse list by that attribute,
 so an empty one would collapse several titles under one heading.
 
-Every rewrite is protocolled in migration_log.csv. The run is idempotent, a second run on
-the same tree finds nothing to do and leaves the protocol alone.
+Every rewrite is protocolled in migration_log.csv. An applied run appends its rows and never
+rewrites the log, because the log is provenance committed with the data. The columns stay
+those of the existing log, without a run date, since the commit that carries a run dates its
+rows. The run is idempotent, a second run on the same tree finds nothing to do and leaves the
+protocol alone.
 
 Usage:
 
@@ -36,7 +39,7 @@ only, no dependency manifest, run with plain python.
 from __future__ import annotations
 
 import argparse
-import csv
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -46,10 +49,17 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
+
 DATA = REPO_ROOT / "data"
 SZDPER_FILE = DATA / "Index" / "Person" / "SZDPER.xml"
 SZDORG_FILE = DATA / "Index" / "Organisation" / "SZDORG.xml"
 OUT_CSV = Path(__file__).resolve().parent / "migration_log.csv"
+LOG_FIELDS = ["datei", "kontext", "zeile", "alte_referenz", "neue_referenz", "aktion"]
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
@@ -58,7 +68,8 @@ ORG_OBJECT_URI = "https://gams.uni-graz.at/o:szd.organisation#"
 
 # The wrapping element that carries the index reference, with the name element inside it.
 WRAPPER = re.compile(
-    r'<(?P<tag>author|editor)(?P<head>[^>]*?)\bref="#?(?P<pid>SZDPER\.\d+)"(?P<tail>[^>]*?)>'
+    r'<(?P<tag>author|editor)(?P<head>[^>]*?)'
+    r'\bref="#?(?P<pid>SZDPER\.\d+[a-z]?)"(?P<tail>[^>]*?)>'
     r"(?P<inner>.*?)"
     r"</(?P=tag)>",
     re.DOTALL,
@@ -72,8 +83,15 @@ BIBL_ID = re.compile(r'<biblFull[^>]*xml:id="([^"]+)"')
 
 
 def _mentions(person_id: str, text: str) -> bool:
-    """Whether the id occurs as a whole id, so that SZDPER.105 misses SZDPER.1056."""
-    return re.search(rf"{re.escape(person_id)}(?![0-9])", text) is not None
+    """Whether the id occurs as a whole id, so that SZDPER.105 misses SZDPER.1056 and
+    SZDPER.2080 misses SZDPER.2080a."""
+    return szd_io.person_id_pattern(person_id).search(text) is not None
+
+
+def _id_order(person_id: str) -> tuple[int, str]:
+    """Numeric order, with a letter suffix after its number (SZDPER.2080, SZDPER.2080a)."""
+    number, suffix = re.fullmatch(r"SZDPER\.(\d+)([a-z]?)", person_id).groups()
+    return int(number), suffix
 
 
 def _person_block(person_id: str) -> re.Pattern[str]:
@@ -148,7 +166,7 @@ def migrate_holdings(targets: dict[str, dict[str, str]]) -> tuple[dict[Path, str
     for path in sorted(DATA.rglob("*.xml")):
         if path in (SZDPER_FILE, SZDORG_FILE):
             continue
-        text = path.read_text(encoding="utf-8")
+        text = szd_io.read_text(path)
         if not any(_mentions(person_id, text) for person_id in targets):
             continue
         pieces: list[str] = []
@@ -187,10 +205,10 @@ def migrate_holdings(targets: dict[str, dict[str, str]]) -> tuple[dict[Path, str
 
 def remove_person_entries(targets: dict[str, dict[str, str]]) -> tuple[str, list[dict]]:
     """SZDPER without the corporate bodies, plus one protocol row per removed entry."""
-    original = SZDPER_FILE.read_text(encoding="utf-8")
+    original = szd_io.read_text(SZDPER_FILE)
     text = original
     rows: list[dict] = []
-    for person_id in sorted(targets, key=lambda pid: int(pid.split(".")[1])):
+    for person_id in sorted(targets, key=_id_order):
         match = _person_block(person_id).search(original)
         if match is None or not _person_block(person_id).search(text):
             continue
@@ -210,12 +228,6 @@ def remove_person_entries(targets: dict[str, dict[str, str]]) -> tuple[str, list
             }
         )
     return text, rows
-
-
-def _write_atomic(path: Path, text: str) -> None:
-    temp = path.with_suffix(path.suffix + ".tmp")
-    temp.write_text(text, encoding="utf-8")
-    temp.replace(path)
 
 
 def main() -> int:
@@ -253,16 +265,10 @@ def main() -> int:
         return 0
 
     for path, text in changed.items():
-        _write_atomic(path, text)
+        szd_io.write_atomic(path, text)
     if person_rows:
-        _write_atomic(SZDPER_FILE, person_text)
-    with OUT_CSV.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=["datei", "kontext", "zeile", "alte_referenz", "neue_referenz", "aktion"],
-        )
-        writer.writeheader()
-        writer.writerows(rows)
+        szd_io.write_atomic(SZDPER_FILE, person_text)
+    szd_io.append_log(OUT_CSV, LOG_FIELDS, rows)
     print(f"OK  {OUT_CSV.relative_to(REPO_ROOT).as_posix()}")
     return 0
 

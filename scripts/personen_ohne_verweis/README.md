@@ -6,6 +6,8 @@ The result is a candidate list. Whether an entry is removed, kept for a coming d
 
 [`scripts/checkup_2026_09_index/find_unlinked_persons.py`](../checkup_2026_09_index/README.md#find_unlinked_personspy) complements it for the checkup of September 2026. It reads every reference token, also scans not yet ingested bundles, and searches the element text for places where the unlinked persons are named. Its output stays outside the repository.
 
+The two scripts read references differently and do not replace each other. This one follows `GetPersonlist` and counts only the first token of `@ref`. `find_unlinked_persons.py` counts every token of `@ref`, `@key` and `@corresp`, so a person on its shorter list is reached by no reference of any form, while a person only on this list is referenced, but in a place the mapping does not read.
+
 ## Reference patterns
 
 A reference counts when the RDF mapping reads it, not when it looks like one. `GetPersonlist` in `szd-TORDF.xsl` produces a triple for these spellings:

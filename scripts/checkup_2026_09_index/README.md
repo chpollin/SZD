@@ -8,8 +8,9 @@ summary is the section "Archive checkup (September 2026)" of
 [`knowledge/DATA.md`](../../knowledge/DATA.md#archive-checkup-september-2026).
 
 Each writing script defaults to a dry run, writes with `--apply` and checks the written
-state with `--verify`. Each writes a CSV log of every change, in the columns of
+state with `--verify`. Each appends a row for every change to its CSV log, in the columns of
 [`scripts/organisationen_index/migration_log.csv`](../organisationen_index/migration_log.csv).
+A later run adds to the log and never replaces the rows of an earlier one.
 
 ## Order
 
@@ -87,8 +88,10 @@ object references them, and searches the element text of the holdings for places
 are named without a link. A reference counts in the two forms `szd-TORDF.xsl` resolves, a
 token containing `#SZDPER.n` and a GND that `GetPersonlist` finds in the index by substring
 match, and every `@ref`, `@key` and `@corresp` token of the scanned files is read, which is
-more than the mapping reads. The scan covers the object holdings under `data/` without
-`data/Index/`, plus optionally the not yet ingested bundles of a staging folder. Persons
+more than the mapping reads. It therefore complements
+[`scripts/personen_ohne_verweis/list_unlinked_persons.py`](../personen_ohne_verweis/README.md),
+which counts only what the mapping reads, and does not replace it. The scan covers the
+object holdings under `data/` without `data/Index/`, plus optionally the not yet ingested bundles of a staging folder. Persons
 whose only reference was the essay numbering error recorded in `essay_author_log.csv` are
 marked as such.
 

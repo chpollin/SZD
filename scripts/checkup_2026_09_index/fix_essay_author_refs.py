@@ -25,6 +25,10 @@ Usage:
     python scripts/checkup_2026_09_index/fix_essay_author_refs.py --apply
     python scripts/checkup_2026_09_index/fix_essay_author_refs.py --verify
 
+An applied run appends its rows to essay_author_log.csv and never rewrites it, because the log is
+provenance committed with the data. The columns stay those of the existing log, without
+a run date, since the commit that carries a run dates its rows.
+
 Regime: script pipeline in the shape the other scripts of this repo use, standard library
 only, run with plain python.
 """
@@ -32,7 +36,7 @@ only, run with plain python.
 from __future__ import annotations
 
 import argparse
-import csv
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -42,6 +46,12 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
+
 DATA = REPO_ROOT / "data"
 SZDESS_FILE = DATA / "Aufsatzablage" / "SZDESS.xml"
 SZDPER_FILE = DATA / "Index" / "Person" / "SZDPER.xml"
@@ -61,19 +71,6 @@ SURNAME = re.compile(r"<surname>(?P<text>[^<]*)</surname>")
 FORENAME = re.compile(r"<forename>(?P<text>[^<]*)</forename>")
 GND_NUMBER = re.compile(r"gnd/([0-9X\-]+)")
 BIBL_ID = re.compile(r'<biblFull[^>]*xml:id="([^"]+)"')
-
-
-def read(path: Path) -> str:
-    """Read without translating line terminators, so that a write reproduces them."""
-    with path.open("r", encoding="utf-8", newline="") as handle:
-        return handle.read()
-
-
-def write_atomic(path: Path, text: str) -> None:
-    temp = path.with_suffix(path.suffix + ".tmp")
-    with temp.open("w", encoding="utf-8", newline="") as handle:
-        handle.write(text)
-    temp.replace(path)
 
 
 class PersonIndex:
@@ -172,7 +169,7 @@ def _context_id(text: str, position: int) -> str:
 
 def verify() -> int:
     index = PersonIndex(SZDPER_FILE)
-    text = read(SZDESS_FILE)
+    text = szd_io.read_text(SZDESS_FILE)
     try:
         ET.fromstring(text)
     except ET.ParseError as error:
@@ -208,7 +205,7 @@ def main() -> int:
         return verify()
 
     index = PersonIndex(SZDPER_FILE)
-    text = read(SZDESS_FILE)
+    text = szd_io.read_text(SZDESS_FILE)
     result, rows, skipped = plan(text, index)
     ET.fromstring(result)  # trust boundary: never write what is not well formed
 
@@ -226,11 +223,8 @@ def main() -> int:
         print(f"SKIP  dry run, {len(rows)} changes planned, nothing written")
         return 0
 
-    write_atomic(SZDESS_FILE, result)
-    with OUT_CSV.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=LOG_FIELDS)
-        writer.writeheader()
-        writer.writerows(rows)
+    szd_io.write_atomic(SZDESS_FILE, result)
+    szd_io.append_log(OUT_CSV, LOG_FIELDS, rows)
     print(f"OK  {OUT_CSV.relative_to(REPO_ROOT).as_posix()} ({len(rows)} rows)")
     return 0
 

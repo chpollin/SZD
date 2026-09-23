@@ -31,6 +31,10 @@ Usage:
     python scripts/checkup_2026_09_index/normalize_person_refs.py --apply
     python scripts/checkup_2026_09_index/normalize_person_refs.py --verify
 
+An applied run appends its rows to normalize_log.csv and never rewrites it, because the log is
+provenance committed with the data. The columns stay those of the existing log, without
+a run date, since the commit that carries a run dates its rows.
+
 Regime: script pipeline in the shape the other scripts of this repo use, standard library
 only, run with plain python.
 """
@@ -38,7 +42,7 @@ only, run with plain python.
 from __future__ import annotations
 
 import argparse
-import csv
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -48,6 +52,12 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
+
 DATA = REPO_ROOT / "data"
 SZDPER_FILE = DATA / "Index" / "Person" / "SZDPER.xml"
 OUT_CSV = Path(__file__).resolve().parent / "normalize_log.csv"
@@ -69,19 +79,6 @@ TERM = re.compile(
 )
 TERM_TYPE = re.compile(r'type="(person|person_affected)"')
 PERSNAME_REF = re.compile(r"<persName[^>]*\bref=\"(?P<value>[^\"]*)\"")
-
-
-def read(path: Path) -> str:
-    """Read without translating line terminators, so that a write reproduces them."""
-    with path.open("r", encoding="utf-8", newline="") as handle:
-        return handle.read()
-
-
-def write_atomic(path: Path, text: str) -> None:
-    temp = path.with_suffix(path.suffix + ".tmp")
-    with temp.open("w", encoding="utf-8", newline="") as handle:
-        handle.write(text)
-    temp.replace(path)
 
 
 def person_ids_by_gnd() -> dict[str, list[str]]:
@@ -194,7 +191,7 @@ def process(rows: list[dict], skipped: list[str]) -> dict[Path, str]:
     for path in sorted(DATA.rglob("*.xml")):
         if path == SZDPER_FILE:
             continue  # the index describes persons, it does not reference the holdings
-        original = read(path)
+        original = szd_io.read_text(path)
         text = add_fragment_marker(original, path, rows)
         text = lift_term_refs(text, path, rows, by_gnd, known, skipped)
         if text != original:
@@ -208,7 +205,7 @@ def verify() -> int:
     for path in sorted(DATA.rglob("*.xml")):
         if path == SZDPER_FILE:
             continue
-        text = read(path)
+        text = szd_io.read_text(path)
         try:
             ET.fromstring(text)
         except ET.ParseError as error:
@@ -273,11 +270,8 @@ def main() -> int:
         return 0
 
     for path, text in changed.items():
-        write_atomic(path, text)
-    with OUT_CSV.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=LOG_FIELDS)
-        writer.writeheader()
-        writer.writerows(rows)
+        szd_io.write_atomic(path, text)
+    szd_io.append_log(OUT_CSV, LOG_FIELDS, rows)
     print(f"OK  {OUT_CSV.relative_to(REPO_ROOT).as_posix()} ({len(rows)} rows)")
     return 0
 
