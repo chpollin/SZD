@@ -1,11 +1,11 @@
 # Organisation index SZDORG
 
-Two scripts that build the organisation index and move the holdings onto it.
+Two scripts built the organisation index on 11 September 2026 and moved the holdings onto it. Since 18 September 2026 [`data/Index/Organisation/SZDORG.xml`](../../data/Index/Organisation/SZDORG.xml) is maintained by hand, see [Maintenance after the migration](#maintenance-after-the-migration).
 
-- `build_org_index.py` writes [`data/Index/Organisation/SZDORG.xml`](../../data/Index/Organisation/SZDORG.xml) and beside it the decision table `organisation_decisions.csv`.
-- `migrate_org_references.py` removes the entries decided as corporate bodies from `SZDPER.xml`, rewrites the references of the holdings and logs every change in `migration_log.csv`.
+- `build_org_index.py` is historical. It wrote the index and beside it the decision table `organisation_decisions.csv`, it now refuses to run, and it stays as the provenance of the decisions of 11 September 2026.
+- `migrate_org_references.py` stays in use. It removes the entries decided as corporate bodies from `SZDPER.xml`, rewrites the references of the holdings and appends every change to `migration_log.csv`.
 
-The order is fixed, because the second script uses the identifiers the first one assigns. Structure of the index, its relation to the location index, the reference form in the holdings and the way the RDF transformation resolves it are described in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
+At the first run the order was fixed, because the second script uses the identifiers the first one assigned. Structure of the index, its relation to the location index, the reference form in the holdings and the way the RDF transformation resolves it are described in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
 
 ## Two sources
 
@@ -29,10 +29,7 @@ Both decisions are constants in the script, not hand corrections of the generate
 ## Usage
 
 ```bash
-# write index and decision table
-python scripts/organisationen_index/build_org_index.py
-
-# report only
+# historical, stops with a message since the migration
 python scripts/organisationen_index/build_org_index.py --dry-run
 
 # clean SZDPER and rewrite the references of the holdings
@@ -46,7 +43,7 @@ Both runs are deterministic, two runs on the same state yield the same files. Th
 
 At generation, the `SZDORG` identifiers followed from sorting by main name, and a rebuild would shift them. After the migration the index can no longer be generated from the sources, because the corporate bodies have left the person index. `build_org_index.py` then stops with a message instead of writing a truncated index, and the file is maintained by hand.
 
-A new body receives the next free number, because the identifiers are part of the RDF URIs. If it comes from the person index, the decision table receives its row with `org` and the new identifier, and `migrate_org_references.py` then removes the person entry and rewrites the references. The script rewrites its log, so the older rows have to be restored from the Git history and put in front. `SZDORG.67` Britain in Pictures was added this way on 23 September 2026.
+A new body receives the next free number, because the identifiers are part of the RDF URIs. If it comes from the person index, the decision table receives its row with `org` and the new identifier, and `migrate_org_references.py` then removes the person entry and rewrites the references. The script appends to its log under the existing header, so the rows of earlier runs stay. `SZDORG.67` Britain in Pictures was added this way on 23 September 2026.
 
 ## Form of the rewritten references
 

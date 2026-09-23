@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Build the corporate body index data/Index/Organisation/SZDORG.xml from the material that
+"""Historical: SZDORG.xml is maintained by hand since 2026-09-18; this script refuses to run
+and is kept as provenance of the 2026-09-11 decisions.
+
+Build the corporate body index data/Index/Organisation/SZDORG.xml from the material that
 already exists in the repository, and write the decision table that explains every entry.
 
 Two sources feed the index.
@@ -45,6 +48,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import re
 import sys
 import unicodedata
@@ -56,6 +60,12 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
+
 DATA = REPO_ROOT / "data"
 SZDPER_FILE = DATA / "Index" / "Person" / "SZDPER.xml"
 SZDSTA_FILE = DATA / "Index" / "Location" / "SZDSTA.xml"
@@ -663,9 +673,7 @@ def main() -> int:
         return 0
 
     OUT_XML.parent.mkdir(parents=True, exist_ok=True)
-    temp = OUT_XML.with_suffix(".xml.tmp")
-    temp.write_text(xml_text, encoding="utf-8")
-    temp.replace(OUT_XML)
+    szd_io.write_atomic(OUT_XML, xml_text)
     write_decisions(candidates, records, excluded)
     print(f"OK  {OUT_XML.relative_to(REPO_ROOT).as_posix()}")
     print(f"OK  {OUT_CSV.relative_to(REPO_ROOT).as_posix()}")

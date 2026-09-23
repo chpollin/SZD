@@ -2,6 +2,8 @@
 
 Pre-ingest validation and cleanup for digitized object metadata (GAMS Viewer XML + page images).
 
+Historical. Both scripts served the METS import cleanup of March 2026, and the `SZ_AAL_B2.*` folders they target no longer exist. `fix_issues.py` is set to a dry run and kept as provenance, do not rerun it.
+
 ## Scripts
 
 | Script | Purpose |
@@ -9,7 +11,6 @@ Pre-ingest validation and cleanup for digitized object metadata (GAMS Viewer XML
 | `validate_results.py` | Validates XML well-formedness, image references, naming conventions, metadata completeness, and structural consistency |
 | `fix_issues.py` | Applies automated fixes (see below) |
 
-Run: `python validate_results.py` / `python fix_issues.py`
 
 ## Fixed Issues
 

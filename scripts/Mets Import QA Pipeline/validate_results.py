@@ -4,7 +4,6 @@ Prüft XML-Wohlgeformtheit, Bild-Referenzen, Namenskonventionen,
 Vollständigkeit und Konsistenz.
 """
 
-import os
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -74,8 +73,6 @@ def check_folder_completeness():
 
 def check_unexpected_files(folder_path, folder_name, num):
     """6. Prüfe auf unerwartete Dateien (ohne Endung, doppelte XMLs etc.)."""
-    expected_xml = f"Result_{folder_name}.xml"
-
     for f in folder_path.iterdir():
         if f.is_file():
             # Files without extension
