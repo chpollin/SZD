@@ -18,8 +18,8 @@ in der Sammelzeile von `SZDKOR.xml` und im eigenen Konvolut, dazu Stücke in `al
 Sambat stehen in Index und Bestand nur mit Initiale, ihre Einträge sind die einzigen dieses
 Nachnamens.
 
-Offen. Neydisser (`SZDPER.1026`) hat die Archivbearbeitung `a108c6f3` als Namensvariante zu
-Lernet-Holenia (`SZDPER.818`) gezogen, die Bibliothek nennt aber die eigene GND des
+Offen. Neydisser (`SZDPER.1026`) ist seit `a108c6f3` vom April 2025 nur noch Namensvariante von
+Lernet-Holenia (`SZDPER.818`), die Bibliothek nennt aber die eigene GND des
 Pseudonyms. `SZDPER.1304` gab es nie, gemeint ist die Selbsthilfevereinigung der jüdischen
 Blinden in Deutschland, eine Körperschaft ohne Eintrag im Organisationenindex. Sieben
 Korrespondenzpartner tragen in `SZDKOR.xml` eine GND, die ihrem Indexeintrag fehlt. Beim
