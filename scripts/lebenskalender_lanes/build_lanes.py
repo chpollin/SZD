@@ -71,7 +71,6 @@ DEFAULT_DOCS_DIR = REPO_ROOT / "docs" / "lebenskalender" / "lanes"
 TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
 
-SITE = "https://stefanzweig.digital"
 # Titles that organise the grouped lists instead of naming the single item.
 STRUCTURAL_TITLE_TYPES = frozenset({"Einheitssachtitel", "Gesamttitel"})
 LANES = ("biography", "correspondence", "personal-documents", "autographs")
@@ -445,7 +444,8 @@ def facsimile_of(bibl_full: ET.Element) -> str | None:
 
 
 def entry_href(pid: str, entry_id: str) -> str:
-    return f"{SITE}/{pid}/sdef:TEI/get#{entry_id}"
+    # relative, so the view resolves it on the host it runs on (staging or production)
+    return f"/{pid}/sdef:TEI/get#{entry_id}"
 
 
 # --- lanes ------------------------------------------------------------------------
@@ -840,12 +840,20 @@ def acquisition_place(acquisition: ET.Element | None) -> str | None:
 # --- output -----------------------------------------------------------------------
 
 
+def slim(event: dict[str, object]) -> dict[str, object]:
+    """Drop empty fields for delivery; date stays, because the view reads null as undated."""
+    kept = {key: value for key, value in event.items() if value is not None or key == "date"}
+    if "sources" in kept:
+        kept["sources"] = [slim(source) for source in kept["sources"]]
+    return kept
+
+
 def write_json(path: Path, payload: object) -> None:
-    """Write UTF-8 JSON with LF endings through a temporary file."""
+    """Write compact UTF-8 JSON with LF endings through a temporary file."""
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     with tmp.open("w", encoding="utf-8", newline="\n") as handle:
-        json.dump(payload, handle, ensure_ascii=False, indent=2)
+        json.dump(payload, handle, ensure_ascii=False, separators=(",", ":"))
         handle.write("\n")
     if path.exists():  # Windows rename fails on an existing target
         path.unlink()
@@ -878,7 +886,7 @@ def main() -> int:
             report.precision[lane][str(event["datePrecision"])] += 1
             if event["place"]:
                 report.places[str(event["place"])] += 1
-        write_json(args.out_dir / f"{lane}.json", events)
+        write_json(args.out_dir / f"{lane}.json", [slim(event) for event in events])
         index_lanes.append(
             {
                 "lane": lane,

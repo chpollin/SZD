@@ -99,7 +99,7 @@ def test_generated_payload_matches_corpus_and_docs_copy(corpus) -> None:
     expected = sorted(lanes.merge_on_facsimile(index + pieces, report), key=lanes.sort_key)
     output = lanes.DEFAULT_OUT_DIR
     actual = json.loads((output / "correspondence.json").read_text(encoding="utf-8"))
-    assert actual == expected
+    assert actual == [lanes.slim(event) for event in expected]
     manifest = json.loads((output / "index.json").read_text(encoding="utf-8"))
     assert manifest["suppressedIndexEntries"] == 0
     assert manifest["mergedDuplicates"] == 188

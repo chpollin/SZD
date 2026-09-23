@@ -32,7 +32,7 @@ The correspondence lane covers both levels of the two-level architecture describ
 
 ## Event Schema
 
-Every event is a JSON object with the same fields, whatever the lane.
+Every event is a JSON object with the same fields, whatever the lane. The files are written compactly, and a field without a value is left out, except `date`, which the view reads as `null` for undated pieces.
 
 `id`
 
@@ -76,7 +76,7 @@ Signature from `msIdentifier`, in the autographs from the provenance note.
 
 `href`
 
-Detail page on stefanzweig.digital, built from the object PID of the source file and the entry identifier as fragment, `https://stefanzweig.digital/<PID>/sdef:TEI/get#<id>`.
+Detail page as a relative path, built from the object PID of the source file and the entry identifier as fragment, `/<PID>/sdef:TEI/get#<id>`. The view resolves it on the host it runs on, so staging links stay on staging.
 
 `facsimile`
 
@@ -84,7 +84,7 @@ PID of the METS object, where the entry carries one. The facsimile itself is at 
 
 `dateOrigin`, `dateOriginPrecision`, `dateOriginEnd`, `dateOriginLabel`
 
-Additional data for autographs on the creation of the piece, with the same dating forms as the acquisition. Without a creation date, `dateOrigin`, `dateOriginPrecision` and `dateOriginLabel` stay `null`, as in the other lanes. `dateOriginEnd` is set only when an end value exists. The view shows the creation text in the metadata, while placement on the timeline and the year scale use the acquisition in `date`.
+Additional data for autographs on the creation of the piece, with the same dating forms as the acquisition. Without a creation date, `dateOrigin`, `dateOriginPrecision` and `dateOriginLabel` are absent, as in the other lanes. `dateOriginEnd` is set only when an end value exists. The view shows the creation text in the metadata, while placement on the timeline and the year scale use the acquisition in `date`.
 
 ## Dating Rules
 
