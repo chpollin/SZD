@@ -78,6 +78,29 @@ of the neighbouring README: place the prepared XML beside the existing images, r
 into the existing object, then fetch the manifest and require valid JSON with the recorded
 canvas count.
 
+## find_unlinked_persons.py
+
+Read-only. Lists the index persons the person search of the website cannot find, because no
+object references them, and searches the element text of the holdings for places where they
+are named without a link. A reference counts in the two forms `szd-TORDF.xsl` resolves, a
+token containing `#SZDPER.n` and a GND that `GetPersonlist` finds in the index by substring
+match, and every `@ref`, `@key` and `@corresp` token of the scanned files is read, which is
+more than the mapping reads. The scan covers the object holdings under `data/` without
+`data/Index/`, plus optionally the not yet ingested bundles of a staging folder. Persons
+whose only reference was the essay numbering error recorded in `essay_author_log.csv` are
+marked as such.
+
+```bash
+python scripts/checkup_2026_09_index/find_unlinked_persons.py \
+    --staging C:/Users/Chrisi/Documents/PROJECTS/szd/ingest_staging_2026-09-23/konvolute_neu \
+    --out-dir C:/Users/Chrisi/Documents/PROJECTS/szd/checkup-2026-09
+```
+
+The output is archive-internal and stays outside the repository, a candidate CSV with one
+row per text hit (`unverknuepfte_personen_kandidaten.csv`) and a German summary with method,
+class counts, the most promising candidates and the limits of the text search
+(`unverknuepfte_personen_zusammenfassung.md`).
+
 ## What these scripts do not touch
 
 - The presentation layer. `szd-TORDF.xsl` and `query/person_search.sparql` live in the
