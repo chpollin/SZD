@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-11
+updated: 2026-09-23
 ---
 
 # Knowledge Vault -- Stefan Zweig Digital
@@ -22,7 +22,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [PROJECT.md](PROJECT.md) | Forschungsprojekt: Kontext, Methodik, Sammlungen, FAIR-Compliance, Chronologie |
 | [ONTOLOGY.md](ONTOLOGY.md) | Nachlass-Ontologie (SZDO v1.2.0): Zwei-Schichten-Architektur, Designprinzipien, Alignments, Kompetenzfragen |
 | [COLLECTIONS.md](COLLECTIONS.md) | Alle Sammlungen im Detail: Struktur, Inhalt, TEI-Encoding |
-| [DATA.md](DATA.md) | Datenbestand-Statistiken: 9 Hauptsammlungen + 42 Korrespondenz-Konvolute, ~384k Zeilen, 18 MB, Datumsqualitaet |
+| [DATA.md](DATA.md) | Datenbestand-Statistiken der Hauptsammlungen und Korrespondenz-Konvolute, Datumsqualitaet, Organisationenindex SZDORG, Archiv-Checkup September 2026 |
 | [DATA_MODEL.md](DATA_MODEL.md) | TEI-XML Encoding-Muster, bilinguale Architektur |
 | [MAPPING.md](MAPPING.md) | TEI-CSV Schema-Mapping (Referenzdokument) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Systemarchitektur, Datenfluss, Plattform-Integration |
@@ -52,6 +52,7 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 | [essay_klassifikation/fix_classification.py](../scripts/essay_klassifikation/fix_classification.py) | Gruppierungsschluessel der Aufsatzablage vervollstaendigen und die gruppierten Listen erheben ([README](../scripts/essay_klassifikation/README.md)) |
 | [personen_ohne_verweis/list_unlinked_persons.py](../scripts/personen_ohne_verweis/list_unlinked_persons.py) | Kandidatenliste der unverknuepften Personeneintraege als CSV ([README](../scripts/personen_ohne_verweis/README.md)) |
 | [lebenskalender_lanes/build_lanes.py](../scripts/lebenskalender_lanes/build_lanes.py) | Zeitleisten-Lanes des Lebenskalenders aus den TEI-Quellen ableiten ([README](../scripts/lebenskalender_lanes/README.md)) |
+| [organisationen_index/](../scripts/organisationen_index/README.md) | Organisationenindex SZDORG erzeugen und die Koerperschaftsverweise des Bestands vom Personenindex darauf umstellen ([README](../scripts/organisationen_index/README.md)) |
 | [checkup_2026_09_korrespondenz/add_bundle_signatures.py](../scripts/checkup_2026_09_korrespondenz/add_bundle_signatures.py) | Buendelsignaturen der signaturlosen Indexeintraege aus dem Konvolut ableiten ([README](../scripts/checkup_2026_09_korrespondenz/README.md)) |
 | [checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md) | Dublettenzusammenfuehrung im Personenregister, Referenzform der Personenverweise, Autorreferenzen der Aufsatzablage, weitere IIIF-Label-Reparaturen ([README](../scripts/checkup_2026_09_index/README.md)) |
 | [iiif_structure_labels/](../scripts/iiif_structure_labels/README.md) | Vorbereitete Buchquellen ohne Anfuehrungszeichen in Strukturlabels, Ingest offen ([README](../scripts/iiif_structure_labels/README.md)) |
@@ -71,4 +72,4 @@ Zentrale Dokumentation fuer das SZD-Projekt. Jedes Thema hat genau eine Datei.
 
 ---
 
-_Stand: 11. September 2026_
+_Stand: 23. September 2026_

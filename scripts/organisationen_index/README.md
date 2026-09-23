@@ -14,9 +14,9 @@ Die Reihenfolge ist fest, das zweite Skript verwendet die Kennungen, die das ers
 
 Die Präsentationsschicht erwartet das Objekt `o:szd.organisation` bereits.
 `szd-TORDF.xsl` im Repo `ZIMLAB/szd` lädt es in die Variable `$OrganisationList` und löst
-darin `t:org[t:orgName[@ref = …]]` zu einer internen `SZDORG`-Kennung auf. In GAMS fehlt
-das Objekt. Die `@ref`-Schreibung muss deshalb zeichengleich zu der im Bestand sein, also
-`http://d-nb.info/gnd/<Nummer>`.
+darin `t:org[t:orgName[@ref = …]]` zu einer internen `SZDORG`-Kennung auf. Auf GAMS Staging
+liegt das Objekt seit dem 18. September 2026. Die `@ref`-Schreibung im Index muss
+zeichengleich zu der im Bestand sein, also `http://d-nb.info/gnd/<Nummer>`.
 
 `o:szd.standorte` bleibt daneben bestehen und bleibt die kuratierte Sicht auf die
 Aufbewahrungsorte. `o:szd.organisation` führt alle Körperschaften einschließlich dieser
@@ -84,8 +84,8 @@ Beide Läufe sind deterministisch, zwei Läufe auf demselben Stand liefern diese
 Dateien. Der Migrationslauf ist zusätzlich idempotent, ein zweiter Lauf findet nichts mehr
 zu tun und lässt das Protokoll stehen.
 
-Die `SZDORG`-Kennungen ergeben sich aus der Sortierung nach Hauptnamen und verschieben sich
-daher, wenn Einträge hinzukommen. Nach dem Migrationslauf ist der Index nicht mehr aus den
+Beim Erzeugen ergaben sich die `SZDORG`-Kennungen aus der Sortierung nach Hauptnamen, ein
+Neuaufbau würde sie verschieben. Nach dem Migrationslauf ist der Index nicht mehr aus den
 Quellen erzeugbar, weil die Körperschaften den Personenindex verlassen haben.
 `build_org_index.py` bricht dann mit einer Meldung ab, statt einen verkürzten Index zu
 schreiben. Ab hier wird die Datei von Hand gepflegt. Eine neue Körperschaft bekommt die

@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2026-03-29
-updated: 2026-09-11
+updated: 2026-09-23
 ---
 
 # Stefan Zweig Digital — Projektbeschreibung
@@ -52,6 +52,7 @@ Das Projekt ist so konzipiert, dass die spätere Erschließung und Anreicherung 
 |-----------|---------|-------------|
 | **Personenindex** | SZDPER | Normdatenverknüpfung (GND, Wikidata, Wikipedia) |
 | **Standortindex** | SZDSTA | Archive und Bibliotheken weltweit |
+| Organisationenindex | SZDORG | Körperschaften (Verlage, Behörden, Zeitungen, Vereine, Aufbewahrungsorte), seit September 2026 getrennt vom Personenindex |
 | **Werkindex** | SZDWRK | Abstrakte Werke (intellektuelle Ebene) |
 | **Glossar** | szdg: | Kontrolliertes Vokabular (Provenienzmerkmale, Materialien) |
 | **Lebenskalender** | SZDBIO | Biographische Zeitleiste (1881–1942) |
@@ -224,6 +225,7 @@ GND-Identifikatoren und Wikidata-Entitäten fungieren als gemeinsame Identifikat
 | Juni 2026 | SZ-AAL: 42 Personen-Konvolute der Korrespondenz und 13 Lebensdokumente in TEI, Render-Vertrag für gruppierte Listen dokumentiert |
 | September 2026 | Lebensdokumente: Faksimile-Verknüpfung für Notizbuch Paris 1936 und Register der Aufsätze; Lebenskalender-Prototyp im SZD-Design als Unterseite der Dokumentationssite (`docs/lebenskalender/`) |
 | 11. September 2026 | Vier abgeleitete Lebenskalender-Lanes im GAMS-Frontend integriert und in DE/EN geprüft; Frontendcommit `b616496` nach `ZIMLAB/szd` gepusht und auf Staging durch Serverabgleich, HTTP- und Browserprüfung bestätigt. Die korrigierte Ableitung erhält alle zuvor unterdrückten Indexeinträge und die Quellenmetadaten zusammengeführter Faksimileeinträge. Die Nachricht zur neuen Ansicht wurde laut Nutzerbestätigung an das Literaturarchiv Salzburg gesendet. Fachliche Partnerprüfung, Abnahme und Produktionsveröffentlichung stehen aus. Datenvertrag und Auslieferungsstand stehen in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). |
+| September 2026 | Archiv-Checkup der Katalogansichten ausgewertet, Ergebnis in [DATA.md](DATA.md#archive-checkup-september-2026). Körperschaften aus dem Personenindex in den Organisationenindex SZDORG überführt. Die Erstveröffentlichungen (SZDPUB), die nie produktiv erschienen, aus dem Repository entfernt |
 
 ---
 

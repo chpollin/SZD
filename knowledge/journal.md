@@ -8,8 +8,9 @@ bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg d
 
 Geändert. Die Farbcodierung der Archivliste zum Personenindex ist aus dem Word-Original
 gelesen, sie war im Textexport verloren. Daraus ist umgesetzt, was aus den Daten eindeutig
-folgt. Kesten und Pilnjak sind je auf den Eintrag mit gültiger GND zusammengeführt
-(`merge_person_duplicates.py`, Protokoll ergänzt), die nicht existierende Kesten-GND in
+folgt. Kesten und Pilnjak sind nach Prüfung bei der DNB je auf den Eintrag mit gültiger GND
+zusammengeführt (`merge_person_duplicates.py`, Protokoll ergänzt), weil 1185617155 nicht
+existiert und 1089928157 auf 118594397 umleitet. Die nicht existierende Kesten-GND in
 `SZDKOR.xml` ist durch 118561715 ersetzt. Die vom Archiv gelb markierten, fälschlich
 unverknüpften Personen Frenkel, Kaufmann und Tomaselli zeigen jetzt in den Konvoluten
 `frenkel-lotte`, `kaufmann-charlotte`, `zweig-lotte` und in `SZDKOR.xml` auf ihren
@@ -19,11 +20,33 @@ Gleichsetzung folgt der Markierung des Archivs.
 „Britain in Pictures“, vom Archiv grün als Körperschaft markiert, ist von Hand als
 `SZDORG.67` in den Organisationenindex nachgetragen und über `migrate_org_references.py` aus
 dem Personenindex entfernt. Die Zählung läuft weiter statt neu, weil die Kennungen Teil der
-RDF-URIs sind.
+RDF-URIs sind. Weil das Skript sein Migrationsprotokoll neu schreibt, sind die älteren
+Zeilen aus der Git-Historie wieder vorangestellt.
 
-Offen. Neumann bleibt eine
-Frage an das Archiv. `SZDKOR.xml` trägt weitere Personenverweise mit dem Platzhalter
-`gnd/placeholder`.
+Die Wissensdokumente sind nachgezogen. [DATA.md](DATA.md) führt die Farbcodierung als
+Quelle, die Ergebnisse und die offenen Punkte im Abschnitt zum Archiv-Checkup, die
+Aussagen zu Organisationenindex und Personenindex in COLLECTIONS, PROJECT, README und der
+README des Organisationsskripts sind auf den Stand gebracht. Der Organisationsabschnitt in
+DATA.md beschrieb `GetOrglist` noch als unaufgerufen, das ist seit dem Frontendcommit
+`ef9a4ce` überholt.
+
+Offen. Neumann, Schriftsteller oder Architekt, bleibt eine Frage an das Archiv. Beim
+Operator liegen die Einträge „Filed as …“, „Unidentified signatures“ und „Zweig Family“,
+die fett markierten Namen und die Frage, ob die unverknüpften Namen, die das Archiv
+entfernt haben will, den Personenindex verlassen. `SZDKOR.xml` trägt weitere
+Personenverweise mit dem Platzhalter `gnd/placeholder`. `SZDSTA.xml` hat seit dem
+Datenupdate vom Juni 2021 (`1ed133c2`) keine `geo`-Angaben mehr, das neue RDF der
+Standorte hat deshalb keine Koordinaten. `ontology/reconciliation.ttl` für Klawiter beruht
+auf Titelabgleich mit Prozentwerten.
+
+Offen und als nächster Schritt geplant ist, auf Anregung des Operators, ein eigenes
+Reconciliation-Skript. Es ergänzt Wikidata-Kennungen über die GND, also über Wikidata P227,
+und schreibt nur eindeutige Treffer automatisch. Die vorhandenen GNDs prüft es bei DNB oder lobid auf Existenz und
+Umleitung und meldet Widersprüche zu Wikidata. Einträge ohne GND bekommen nur eine
+Vorschlagsliste, geschriebene Treffer tragen ihre Herkunft, Orte folgen nachrangig. Zum
+Stand dieses Tages haben 521 Personen eine GND, aber keine Wikidata-Kennung, 220 Personen
+haben keine GND, und keine der 67 Körperschaften trägt eine Wikidata-Kennung. Für
+Körperschaften fehlt in `szd-TORDF.xsl` außerdem noch die Ausgabe von `szd:wikidata`.
 
 ## 2026-09-23 — Erstveröffentlichungen entfernt, Staging-Ingest vorbereitet
 
@@ -32,7 +55,9 @@ Fassungen, `data/Publication/SZDPUB.xml` und `data/Index/Erstveröffentlichungen
 sind entfernt und bleiben in der Git-Historie. Sie trugen dieselbe PID `o:szd.publikation`,
 wichen inhaltlich voneinander ab und nannten keine Quelle. Produktiv gab es das Objekt nie,
 die RDF-Transformation hatte keinen Zweig dafür. Die Verweise in COLLECTIONS, DATA, ONTOLOGY
-und PROJECT sind gestrichen.
+und PROJECT sind gestrichen. Die Summenzeile der Bestandsstatistik in DATA.md und die
+Beschreibung von DATA.md im README enthielten SZDPUB noch und sind am selben Tag
+nachgezogen.
 
 Geändert. Der Vergleich auf Elementebene zwischen diesem Repo und `TEI_SOURCE` auf Staging
 ergab die Objekte für den nächsten Staging-Ingest, die sechs Bestände, den

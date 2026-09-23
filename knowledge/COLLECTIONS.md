@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-11
+updated: 2026-09-23
 ---
 
 # Collections - Stefan Zweig Digital
@@ -33,6 +33,8 @@ The SZD project organizes Stefan Zweig's digitized materials into thematic colle
 | Glossary | szd-Glossary.xml | o:szd.glossar | Subject terminology |
 
 **Person Index:** SZDPER.xml (o:szd.personen) - Authority file linking to GND and Wikidata
+
+The organisation index SZDORG.xml (o:szd.organisation) holds the corporate bodies, which left the person index in September 2026. It is described in [DATA.md](DATA.md#organisationenindex-szdorg).
 
 ---
 
@@ -205,7 +207,7 @@ Authority file using `<listPerson>`:
 
 ### Content
 
-Authority file for all persons mentioned in SZD collections with:
+Authority file for all persons mentioned in SZD collections. Corporate bodies are held in the organisation index SZDORG. Each entry carries, where available:
 
 - GND identifiers (`@ref`)
 - Wikipedia links (`@corresp`)
@@ -215,7 +217,7 @@ Authority file for all persons mentioned in SZD collections with:
 
 ### Usage
 
-All person references in other collections link to SZDPER using `ref="#SZDPER.{NUMBER}"` pattern.
+Person references in other collections point to SZDPER either by `ref="#SZDPER.{NUMBER}"` or by the GND of the index entry. The RDF mapping resolves both forms against the index.
 
 ---
 

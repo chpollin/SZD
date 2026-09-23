@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-09-11
+updated: 2026-09-23
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
@@ -30,7 +30,7 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 | Lebensdokumente | `data/PersonalDocument/SZDLEB.xml` | 13,728 | 711 KB | 156 | 1 | 1 (100%) |
 | Biographie | `data/Biography/SZDBIO.xml` | 1,614 | 87 KB | 104 | 208 | 208 (100%) |
 | Glossar | `data/Glossary/szd-Glossary.xml` | 442 | 58 KB | -- | 0 | -- |
-| **Gesamt** | | **383,839** | **18.1 MB** | **5,364** | **5,404** | **5,269 (98%)** |
+| **Gesamt** | | **376,230** | **17.4 MB** | **5,205** | **5,245** | **5,110 (97%)** |
 
 **Entries** = `<biblFull>` (Sammlungen), `<event>` (Biographie), oder `<person>` (Index).
 
@@ -41,11 +41,11 @@ Bestandsuebersicht der TEI-XML-Sammlungen mit Umfangs- und Datumsstatistiken sow
 
 | File | Lines | Purpose |
 |------|------:|---------|
-| `data/Index/Person/SZDPER.xml` | 21,910 | Personen-Normdaten (GND, Wikidata, VIAF) |
+| `data/Index/Person/SZDPER.xml` | 21,814 | Personen-Normdaten (GND, Wikidata, VIAF) |
 | `data/Index/SZDWRK.xml` | 5,422 | Werkindex (WEMI-Ebene) |
 | `data/Index/Location/SZDSTA.xml` | 303 | Standorte/Aufbewahrungsorte |
 | `data/Issue/szd-thema*.xml` (7 Dateien) | ~4,593 | Thematische Sammlungen |
-| `data/Index/Organisation/SZDORG.xml` | 429 | Koerperschaften (GND), noch nicht ingestiert |
+| `data/Index/Organisation/SZDORG.xml` | 433 | Koerperschaften (GND), seit 18. Sep 2026 auf Staging |
 
 ### Organisationenindex SZDORG
 
@@ -66,12 +66,13 @@ Verweise des Bestands auf sie zeigen weiter auf `o:szd.standorte`.
 `szd-TORDF.xsl` im Repo `ZIMLAB/szd` laedt das Objekt in die Variable `$OrganisationList`
 und loest dort `t:org[t:orgName[@ref = …]]` zu einer internen `SZDORG`-Kennung auf. Die
 `@ref`-Schreibung `http://d-nb.info/gnd/<Nummer>` muss deshalb zeichengleich zu der im
-Bestand sein. Solange das Objekt in GAMS fehlt, laeuft der Aufruf ins Leere. Das
-`document()` steht in einer globalen Variablen, das Fehlen wirkt also auf die ganze
-Transformation, nicht nur auf die Koerperschaften. Das Template `GetOrglist`, das die
-Aufloesung leistet, wird im Stylesheet zurzeit nirgends aufgerufen und zielt ausserdem auf
-`o:szd.standorte` statt auf `o:szd.organisation`. Beides ist auf der Renderer-Seite zu
-beheben.
+Bestand sein. Das `document()` steht in einer globalen Variablen, ein Fehlen des Objekts
+auf einer Instanz wirkt also auf die ganze Transformation, nicht nur auf die
+Koerperschaften. Seit dem Frontendcommit `ef9a4ce` vom 20. September 2026 rufen die
+Bestandszweige das Template `GetOrglist` auf, das die Aufloesung leistet und auf
+`o:szd.organisation` zielt. Der Zweig fuer das Objekt selbst gibt Name, GND, Ort, Land und
+die Rueckverweise aus, aber noch kein `szd:wikidata`, und der Index traegt bisher auch keine
+Wikidata-Kennungen.
 
 Jeder Eintrag traegt `idno type="SZDPER"` auf den Personenindex-Eintrag, aus dem er stammt,
 und `idno type="SZDSTA"` auf den Standortindex, wo die Koerperschaft dort bereits steht.
@@ -93,8 +94,11 @@ Erzeugt und reproduzierbar aus den Quellen mit
 `scripts/organisationen_index/build_org_index.py`, die Umstellung mit
 `scripts/organisationen_index/migrate_org_references.py`. Nach dem Migrationslauf ist der
 Index nicht mehr aus den Quellen erzeugbar und wird von Hand gepflegt. Das Bauskript bricht
-in diesem Fall ab, statt einen verkuerzten Index zu schreiben. Die offenen Befunde in den
-Quelldaten, eine GND mit zwei Koerperschaften und eine Personen-GND an einem `orgName`,
+in diesem Fall ab, statt einen verkuerzten Index zu schreiben. Eine neue Koerperschaft
+erhaelt die naechste freie `SZDORG`-Nummer, weil die Kennungen Teil der RDF-URIs sind und
+stehen bleiben. Kommt sie aus dem Personenindex, stellt `migrate_org_references.py` die
+Verweise um, das Verfahren beschreibt die README des Skriptordners. Die offenen Befunde in
+den Quelldaten, eine GND mit zwei Koerperschaften und eine Personen-GND an einem `orgName`,
 stehen in der README des Skriptordners.
 
 Beim Ingest gehen `o:szd.personen` und `o:szd.organisation` den Bestaenden voraus, weil
@@ -254,13 +258,46 @@ the archive reported, and four further prepared IIIF label repairs
 production before the affected index objects, the konvolut files and the prepared book
 sources are re-ingested.
 
-Not decidable from data or code, and therefore still open, are the editorial rulings
-(whether an index entry counts an archival bundle or a correspondence relationship, the
-meaning of bracketed title dates, one notation for unidentified senders, the Aufsatzablage
-classification vocabulary, the person markup convention for Themen pages) and the archive
-questions (missing scans, dates the originals must supply, identity of persons with two
-authority numbers, the colour coding of the person index list that the export lost).
+The archive's list for the person index carries a colour coding that the text export lost.
+On 23 September 2026 it was read from the Word original, which supersedes the earlier
+reconstruction from the export. Red marks a duplicate or faulty entry, yellow a person
+wrongly left unlinked, green a corporate body, and bold a name where the archive asks
+whether a connection is artificial. The list itself is archive-internal and stays outside
+the repository. What the data settle unambiguously is carried out.
+
+- Kesten (`SZDPER.1935` into `SZDPER.1574`) and Pilnjak (`SZDPER.1099` into
+  `SZDPER.1581`) are merged with `scripts/checkup_2026_09_index/merge_person_duplicates.py`
+  after a check against the German National Library (DNB). GND 1185617155 does not exist,
+  and 1089928157 redirects to 118594397. The Kesten reference in `SZDKOR.xml` carried the
+  non-existent number and now carries 118561715.
+- Frenkel (`SZDPER.2299`) is linked in the konvolute `frenkel-lotte` and `zweig-lotte`,
+  Kaufmann (`SZDPER.2296`) in `kaufmann-charlotte` and `zweig-lotte`, Tomaselli
+  (`SZDPER.2212`) in `SZDKOR.xml`, where the reference previously read `gnd/placeholder`.
+  Kaufmann appears as Charlotte in the holdings and as Lotte in the index. The
+  identification follows the archive's marking.
+- Britain in Pictures moved from the person index to the organisation index as
+  `SZDORG.67`, added by hand with the next free number, since the identifiers are part of
+  the RDF URIs. `migrate_org_references.py` removed `SZDPER.1899`. Its migration log is
+  rewritten on each run, so the earlier rows were restored from the Git history.
+
+Not decidable from data or code, and therefore still open:
+
+- The editorial rulings on whether an index entry counts an archival bundle or a
+  correspondence relationship, on the meaning of bracketed title dates, on one notation for
+  unidentified senders, on the Aufsatzablage classification vocabulary and on the person
+  markup convention for Themen pages.
+- The archive questions on missing scans, on dates the originals must supply, and on
+  whether the index entry for Neumann means the writer or the architect of that name.
+- The operator decisions on the colour-coded list, namely the person index entries
+  "Filed as …", "Unidentified signatures" and "Zweig Family", the names marked bold, and
+  whether the unlinked names the archive wants removed leave the person index.
+- Further person references in `SZDKOR.xml` that carry `gnd/placeholder`.
+- The missing coordinates of the locations. `SZDSTA.xml` has had no `geo` elements since
+  the data update of June 2021, so the location RDF carries none.
+- The Klawiter reconciliation. `ontology/reconciliation.ttl` links Klawiter entries to
+  works by exact, normalised and fuzzy title matching with a percentage confidence, not by
+  authority numbers.
 
 ---
 
-_Statistics retain their stated collection dates; project-specific findings updated 17 Sep 2026._
+_Statistics retain their stated collection dates; project-specific findings updated 23 Sep 2026._
