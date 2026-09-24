@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -75,6 +76,40 @@ def test_ids_are_unique_across_all_lanes() -> None:
     assert len(set(event_ids)) == len(event_ids)
     assert len(set(record_ids)) == len(record_ids)
     assert set(event_ids) <= set(record_ids)
+
+
+# Production objects whose teiHeader names a PID other than the one GAMS holds them under.
+WRONG_HEADER_PIDS = {
+    "szd.korrespondenzen.judischer-jugendverein": "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)",
+    "szd.korrespondenzen.judischer-jugendverein-dusseldorf": "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)",
+    "szd.korrespondenzen.rascher-und-cie": "o:szd.rascher-und-cie",
+}
+
+
+def test_konvolut_hrefs_use_the_pid_of_the_file_name(corpus) -> None:
+    _, pieces = corpus
+    headers = {
+        path.stem: lanes.object_pid(lanes.parse(path))
+        for path in lanes.KONVOLUTE.glob("szd.korrespondenzen.*.xml")
+    }
+    # Everywhere else the file name and the header agree, so the derivation changes nothing.
+    assert {stem: pid for stem, pid in headers.items() if pid != f"o:{stem}"} == WRONG_HEADER_PIDS
+    hrefs = {event["href"].split("/")[1] for event in pieces}
+    # A Konvolut without entries (warren-p.-munsell) yields no href.
+    assert hrefs <= {f"o:{stem}" for stem in headers}
+    assert set(WRONG_HEADER_PIDS.values()).isdisjoint(hrefs)
+    for event in pieces:
+        assert event["href"].endswith("#" + event["id"].split("~")[0])
+
+
+def test_href_pids_are_plain() -> None:
+    for lane in lanes.LANES:
+        events = json.loads((lanes.DEFAULT_OUT_DIR / f"{lane}.json").read_text(encoding="utf-8"))
+        for event in events:
+            for record in event.get("sources", [event]):
+                assert re.fullmatch(r"/o:[A-Za-z0-9._-]+/sdef:TEI/get#.+", record["href"])
+            if "konvolut" in event:
+                assert re.fullmatch(r"/o:[A-Za-z0-9._-]+/sdef:TEI/get", event["konvolut"])
 
 
 def test_shared_xml_ids_are_suffixed_with_their_file(corpus) -> None:

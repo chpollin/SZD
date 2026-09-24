@@ -578,13 +578,17 @@ def disambiguate_ids(per_file: dict[Path, list[dict[str, object]]], report: Repo
         report.note(f"{' and '.join(files)} share {count} xml:id value(s); ids suffixed with ~<file>")
 
 
-def konvolut_pids(paths: list[Path]) -> frozenset[str]:
-    """PIDs of the Konvolut files present, taken from the file names.
+def konvolut_pid(path: Path) -> str:
+    """GAMS PID of a Konvolut file, taken from the file name.
 
-    The import names each file after its production PID, while the teiHeader of a few
-    defective production objects names another one, so the header is no guide here.
+    The import names each file after the PID under which production and staging hold the
+    object, while the teiHeader of a few defective production objects names another one.
     """
-    return frozenset(f"o:{path.stem}" for path in paths)
+    return f"o:{path.stem}"
+
+
+def konvolut_pids(paths: list[Path]) -> frozenset[str]:
+    return frozenset(konvolut_pid(path) for path in paths)
 
 
 def correspondence_from(
@@ -600,7 +604,7 @@ def correspondence_from(
     their Konvolut, the holding repository and the number of pieces.
     """
     tree = parse(path)
-    pid = object_pid(tree)
+    pid = object_pid(tree) if path == SZDKOR else konvolut_pid(path)
     events: list[dict[str, object]] = []
     for bibl_full in tree.getroot().iter(f"{TEI}biblFull"):
         entry_id = bibl_full.get(XML + "id")

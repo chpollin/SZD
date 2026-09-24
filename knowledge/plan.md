@@ -54,7 +54,6 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 - Konvolut dates after 1950 whose display text gives a two-digit year that `@when` places in the twenty-first century.
 - `SZDKOR.696` names `o:szd.korrespondenzen.unbekannt` and `SZDKOR.857` names `o:szd.korrespondenzen.podbielski-gert-rene`, while the repository holds the probable counterparts `unidentified` and `podbieliki-gert-rene`. Which spelling is the correct PID is an operator question, and until then the two index entries carry no `konvolut` link.
 - Konvolut files that reuse the `xml:id` values of another Konvolut, which the run lists and the lanes resolve with a file suffix. The largest group is `friedenthal-richard`, `masereel-frans` and `reichner-herbert`, the others involve `czech-suzanne`, `suzanne-czech`, `international-copyright-bureau-ltd.-the`, `heilbron-george`, `fleischer-max`, `fleischer-victor` and `max-und-victor-fleischer`, and the pairs `judischer-jugendverein` and `judischer-jugendverein-dusseldorf`, `meulenhoff` and `meulenhoff-johannes-marius`, `muller` and `muller-einigen-hans`, `weisflog` and `weisflog-heinrich`. Correcting the ids in the Konvolut files is editorial work.
-- The three defective production objects of the import README give dead `href` values in the lanes until their `teiHeader` PID is corrected.
 
 ## Person index
 

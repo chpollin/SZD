@@ -29,7 +29,7 @@ Standard library only, no manifest, no installation. The run only reads the sour
 
 `data/Index/Person/SZDPER.xml` resolves the person identifiers, GND references by number and direct references by SZDPER identifier. The index is read fresh on every run, so changes to it take effect without touching the script.
 
-The object PID of each source comes from its `teiHeader/publicationStmt/idno[@type="PID"]` and is not hard-coded.
+The object PID of the index and the other holdings comes from `teiHeader/publicationStmt/idno[@type="PID"]`. A Konvolut takes its PID from the file name, `o:` followed by the stem, because the teiHeader of a few defective production objects names another PID.
 
 ## Output
 

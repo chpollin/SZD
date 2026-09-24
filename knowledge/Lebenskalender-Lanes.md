@@ -76,7 +76,7 @@ Signature from `msIdentifier`, in the autographs from the provenance note.
 
 `href`
 
-Detail page as a relative path, built from the object PID of the source file and the entry identifier as fragment, `/<PID>/sdef:TEI/get#<id>`. The view resolves it on the host it runs on, so staging links stay on staging.
+Detail page as a relative path, built from the object PID of the source file and the entry identifier as fragment, `/<PID>/sdef:TEI/get#<id>`. The fragment is the plain `xml:id`, also where `id` carries a file suffix. For the index and the other holdings the PID comes from the `teiHeader`. For a Konvolut it is `o:` followed by the file name without extension, because the import names every file after the PID under which production and staging hold the object, while a few defective production objects name another PID in their header. The view resolves it on the host it runs on, so staging links stay on staging.
 
 `facsimile`
 
@@ -124,7 +124,7 @@ An earlier version of the generator suppressed index entries whose signature occ
 
 `index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. Dates after 1950 are output as in the source and need scholarly review. In the Konvolute taken over from production the display text of these records states a two-digit year, which `@when` places in the twenty-first century. The corpus tests pin the affected records.
 
-Defective production objects affect the links. The files `szd.korrespondenzen.judischer-jugendverein.xml` and `szd.korrespondenzen.judischer-jugendverein-dusseldorf.xml` name the same obsolete PID in their `teiHeader`, so their records share identifiers and a `href` to that PID, and `szd.korrespondenzen.rascher-und-cie.xml` names `o:szd.rascher-und-cie`. Because the generator takes the PID of `href` from the header, these links become correct only with the corrected files, see the [import README](../scripts/konvolute_import/README.md#known-defects-of-production-objects).
+Defective production objects do not affect the links. The files `szd.korrespondenzen.judischer-jugendverein.xml` and `szd.korrespondenzen.judischer-jugendverein-dusseldorf.xml` name the same obsolete PID in their `teiHeader`, and `szd.korrespondenzen.rascher-und-cie.xml` names `o:szd.rascher-und-cie`. Their records link to the objects named by the file, see the [import README](../scripts/konvolute_import/README.md#known-defects-of-production-objects) for the defects themselves.
 
 ## Generation
 
