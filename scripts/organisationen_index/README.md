@@ -4,6 +4,7 @@ Two scripts built the organisation index on 11 September 2026 and moved the hold
 
 - `build_org_index.py` is historical. It wrote the index and beside it the decision table `organisation_decisions.csv`, it now refuses to run, and it stays as the provenance of the decisions of 11 September 2026.
 - `migrate_org_references.py` stays in use. It removes the entries decided as corporate bodies from `SZDPER.xml`, rewrites the references of the holdings and appends every change to `migration_log.csv`.
+- `reconcile_org_places.py` adds `country` and `settlement` from the GND record of each body (`geographicAreaCode` for the country, `placeOfBusiness` for the place), only where the record gives exactly one value, and never overwrites an existing one. It appends every written value to `reconcile_places_log.csv`, and `test_reconcile_org_places.py` checks its mapping rules. The GND code `XA-GB` becomes „Großbritannien“, the country name the organisation and location indexes share since 24 September 2026.
 
 At the first run the order was fixed, because the second script uses the identifiers the first one assigned. Structure of the index, its relation to the location index, the reference form in the holdings and the way the RDF transformation resolves it are described in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
 
@@ -35,6 +36,10 @@ python scripts/organisationen_index/build_org_index.py --dry-run
 # clean SZDPER and rewrite the references of the holdings
 python scripts/organisationen_index/migrate_org_references.py --dry-run
 python scripts/organisationen_index/migrate_org_references.py
+
+# country and place from the GND, cached lobid.org responses in the temp directory
+python scripts/organisationen_index/reconcile_org_places.py --dry-run
+python scripts/organisationen_index/reconcile_org_places.py
 ```
 
 Both runs are deterministic, two runs on the same state yield the same files. The migration run is also idempotent, a second run finds nothing to do and leaves the log alone.

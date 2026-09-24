@@ -4,7 +4,7 @@
 data/Index/Organisation/SZDORG.xml carries one <org> per corporate body, each with an
 <orgName ref="http://d-nb.info/gnd/..."> and, for most entries, a <country> and a
 <settlement> taken from the repository index SZDSTA at build time (see
-scripts/organisationen_index/README.md). 32 entries never received a place because they
+the README beside this script). 32 entries never received a place because they
 came from the person index or a holding reference instead of SZDSTA. This script looks
 their GND record up at lobid.org and adds what the record actually states, never a guess.
 
@@ -35,13 +35,13 @@ For an entry that already carries country and settlement, the script only compar
 against the GND record and logs a contradiction; it never overwrites an existing value.
 
 Regime: script pipeline, standard library only, run as a plain file
-(python scripts/reconcile_org_places.py). File I/O and the append-only CSV log reuse
+(python scripts/organisationen_index/reconcile_org_places.py). File I/O and the append-only CSV log reuse
 scripts/_szd_io.py, loaded by file location because the scripts are not on the import path.
 
 Usage:
 
-    python scripts/reconcile_org_places.py --dry-run
-    python scripts/reconcile_org_places.py
+    python scripts/organisationen_index/reconcile_org_places.py --dry-run
+    python scripts/organisationen_index/reconcile_org_places.py
 
 Options:
 
@@ -69,7 +69,7 @@ from pathlib import Path
 if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
     sys.stdout.reconfigure(errors="replace")
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Shared file helpers, loaded by path because the scripts run as plain files.
 _spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
@@ -77,7 +77,7 @@ szd_io = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(szd_io)
 
 SZDORG_FILE = REPO_ROOT / "data" / "Index" / "Organisation" / "SZDORG.xml"
-LOG_FILE = Path(__file__).resolve().parent / "organisationen_index" / "reconcile_places_log.csv"
+LOG_FILE = Path(__file__).resolve().parent / "reconcile_places_log.csv"
 LOG_FIELDS = ["szdorg_id", "name", "gnd", "aktion", "feld", "neuer_wert", "geo_codes", "orte", "bemerkung"]
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
