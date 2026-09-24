@@ -37,6 +37,7 @@ TEI in chpollin/SZD
 1. TEI files are edited in `data/`. Repairs run as scripts with a dry run, an `--apply` step and a `--verify` step that checks the written state against `HEAD`. Every correspondence Konvolut of production is in the repository since 24 September 2026, so Konvolut corrections happen here too.
 2. `scripts/staging_package/build_staging_package.py --out <folder>` copies the files to ingest into a package outside the repository, in three folders for indexes, holdings and Konvolute, with checksums and a README. The README lists per object the `STYLESHEET` and `TORDF` references it still needs, read live from the datastream redirects of staging. Both references point to the gamsdev mirror of the presentation layer, and a character after `.xsl` makes a reference unusable. A Konvolut whose file does not name its own PID stays out, because Cirilo takes the PID of a new object from the file.
 3. The operator ingests the package with Cirilo in folder order, first on GAMS staging and, after approval by the archive, on the productive instance. At ingest, GAMS derives the RDF with the `TORDF` stylesheet the object points to, so the indexes go in before the holdings that reference them.
+4. The gams-www XSLT renders the TEI to HTML. Search pages run SPARQL query objects against Blazegraph and render the XML result sets.
 
 ### Ingesting TEI with Cirilo
 
@@ -49,8 +50,7 @@ Every TEI document of this repository, holdings, indexes, Konvolute and theme pa
 
 Context objects, query objects, the SKOS glossary and the facsimile book objects have content models of their own and do not go through this dialog.
 
-A new object takes its datastream references from the content model object `cirilo:TEI.szd`. Read on staging on 2026-09-24, its `TORDF` points to the gamsdev mirror and its `STYLESHEET` to the generic GAMS TEI stylesheet, so a newly created Konvolut needs `szd-Konvolut.xsl` set afterwards. Setting the `STYLESHEET` of `cirilo:TEI.szd` to `szd-Konvolut.xsl` before a folder of new Konvolute would give them the right reference at creation, an inference from this inheritance that one ingest has to confirm. An updated object keeps the references it already has.
-4. The gams-www XSLT renders the TEI to HTML. Search pages run SPARQL query objects against Blazegraph and render the XML result sets.
+A new object takes its datastream references from the content model object `cirilo:TEI.szd`. Its `TORDF` points to the gamsdev mirror and its `STYLESHEET` to the generic GAMS TEI stylesheet, which every Konvolut created by the staging ingest of 2026-09-24 received, so a newly created Konvolut needs `szd-Konvolut.xsl` set afterwards. Setting the `STYLESHEET` of `cirilo:TEI.szd` to `szd-Konvolut.xsl` before a folder of new Konvolute would give them the right reference at creation, an inference from this inheritance that no ingest has tested yet. An updated object keeps the references it already has. Cirilo logs an object as refreshed even when its `TORDF` reference is unusable, and the RDF of such objects on staging then differs from the RDF the current stylesheet builds locally, so the log proves the TEI update, not the RDF.
 
 Facsimiles are separate `cm:dfgMETS` book objects (`o:szd.<number>`) whose IIIF manifests feed the Mirador viewer. Catalogue entries link them through `altIdentifier/idno[@type="PID"]`, see [COLLECTIONS.md](COLLECTIONS.md#rendering-contract-grouped-lists).
 

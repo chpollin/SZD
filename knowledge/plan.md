@@ -17,22 +17,18 @@ Open technical work on the data repository and the questions that need a decisio
 
 ## Staging ingest
 
-The data changes of 2026-09-22 to 2026-09-24 are in the repository and not yet on staging. The ingest runs from a package that `scripts/staging_package/build_staging_package.py --out <folder>` writes outside the repository from the current `HEAD`. The operator ingests it with Cirilo.
+The ingest runs from a package that `scripts/staging_package/build_staging_package.py --out <folder>` writes outside the repository from the current `HEAD`, in the order indexes, holdings, Konvolute, because `szd-TORDF.xsl` resolves persons, repositories and corporate bodies against the index objects at ingest time. The operator ingests each folder with Cirilo ([ARCHITECTURE](ARCHITECTURE.md#ingesting-tei-with-cirilo)).
 
-1. Folder `1-index` first, meaning organisation, person, location and work index, because `szd-TORDF.xsl` resolves persons, repositories and corporate bodies against the index objects at ingest time.
-2. Folder `2-bestaende` with the holdings. `o:szd.korrespondenzen` needs this renewed ingest so that its RDF carries the corporate bodies.
-3. Folder `3-konvolute`. Cirilo creates a missing Konvolut from the PID in its file, which concerns the three new Konvolute `berger-gisela-von`, `ferencak-mirko` and `oppeln-bronikowski-friedrich-von` and every Konvolut that exists in production but not on staging.
+The package of the data state of 2026-09-24 went in completely that afternoon, and Cirilo created the Konvolute missing on staging. Indexes and Konvolute on staging match the repository. Still open:
 
-Every object needs `STYLESHEET` and `TORDF` pointing to the gamsdev mirror, and nothing may follow `.xsl` in either reference. The package README lists the references still to set, read live from staging when the package is built.
-
-Before the package is built:
-
+- Set the references the package README lists per object, read live from staging. Most existing Konvolute and several holdings carry a `TORDF` reference that ends in an illegal character, so their RDF is not regenerated, and the Konvolute created by the ingest carry the generic `tei.xsl` as `STYLESHEET` instead of `szd-Konvolut.xsl`.
+- Then ingest the folders `2-bestaende` and `3-konvolute` again. The holdings went in before the organisation fallback of `szd-TORDF.xsl` was on the mirror, so the RDF of library, correspondence and personal documents still lacks the corporate bodies resolved by GND. Their `RDF` datastreams show afterwards whether the ingest reaches the staging organisation index.
 
 On staging after the ingest:
 
 - Delete `o:szd.375`, `o:szd.263`, the two sister Konvolute, `o:szd.publikation` and `o:szd.korrespondenzen.ferencak-mirko-m.`, and carry signature and date into `o:szd.2939` (decisions of 2026-09-22 and 2026-09-23).
 - Re-ingest the prepared book sources of `scripts/iiif_structure_labels/prepared/` into `o:szd.174`, `o:szd.67`, `o:szd.939`, `o:szd.2935`, `o:szd.2409` and `o:szd.2291`, then check that each manifest is valid JSON.
-- Once the fix of the autograph RDF in `szd-TORDF.xsl` (absolute `//t:textClass` path, `ZIMLAB/szd`) is on the mirror, ingest `o:szd.autographen` again, because GAMS derives the RDF only at ingest.
+- The fix of the autograph RDF in `szd-TORDF.xsl` is on the mirror. `o:szd.autographen` still points its `TORDF` to the dead path `trunk/www` and gets its corrected RDF with the renewed ingest of `2-bestaende` once the reference is set.
 
 ## Production ingest
 
@@ -90,4 +86,3 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 
 - `reconcile_klawiter.py` and `generate_instances.py` with `reconciliation_report.md` and `reconciliation_results.json` stay at the top level of `scripts/`. They belong with the ontology, and a move changes the generator comments of `ontology/reconciliation.ttl` and `ontology/sample-instances.ttl`, `ontology/README.md` and [ONTOLOGY](ONTOLOGY.md), so it goes together with the next ontology regeneration.
 - `scripts/SZ-AAL-Pipeline/` holds a second, diverging `szd_pipeline.py` beside `scripts/Processing Pipeline/` and has no README. Which one stays?
-- The README of `scripts/checkup_2026_09_index/` does not yet describe `verify_orphan_persons.py` and `remove_orphan_persons.py`, and the README of `scripts/checkup_2026_09_konvolute/` still speaks of Konvolute that exist only on GAMS.
