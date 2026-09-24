@@ -26,12 +26,10 @@ determine a single value; per the operator's instruction such a case is logged a
 written for that field, never a guess between the candidates (SZDORG.24, Herbert Reichner
 Verlag, moved between Wien, Zürich and Leipzig and stays without country or settlement).
 
-XA-GB has no single existing spelling to reuse: SZDORG uses "England" (SZDORG.32, SZDORG.49,
-both London) and SZDSTA additionally uses "Großbritannien" for an entry without a named city
-(SZDSTA.15, "Privatbesitz, Großbritannien"). This script follows that split, "England" once a
-settlement is determined, "Großbritannien" otherwise; see GB_WITH_CITY/GB_WITHOUT_CITY below.
-This is an inferred convention, not a value found in a single existing row, and stays open to
-correction.
+XA-GB maps to "Großbritannien" like every other code. Until 2026-09-24 the indexes split
+Great Britain into "England" (with a city) and "Großbritannien" (without), and the country
+switch of the index pages showed two groups for one country; the operator unified both indexes
+to "Großbritannien" on 2026-09-24.
 
 For an entry that already carries country and settlement, the script only compares them
 against the GND record and logs a contradiction; it never overwrites an existing value.
@@ -95,6 +93,7 @@ COUNTRY_BY_AREA_CODE = {
     "XA-CH": "Schweiz",
     "XA-FR": "Frankreich",
     "XA-NL": "Niederlande",
+    "XA-GB": "Großbritannien",
     "XD-US": "USA",
     "XD-CA": "Kanada",
     "XD-BR": "Brasilien",
@@ -105,9 +104,6 @@ COUNTRY_BY_AREA_CODE = {
 # "XA-DE-MV" for the same, already-filled entry).
 GERMANY_HISTORICAL_CODES = {"XA-DXDE", "XA-DDDE"}
 IGNORED_AREA_CODES = {"XP", "ZZ"}
-GB_CODE = "XA-GB"
-GB_WITH_CITY = "England"
-GB_WITHOUT_CITY = "Großbritannien"
 
 
 @dataclass(frozen=True)
@@ -239,7 +235,7 @@ def _gnd_place(gnd_ids: list[str], cache_dir: Path, delay: float) -> GndPlace:
 
 
 def _area_code_to_country(code: str) -> str | None:
-    if code in IGNORED_AREA_CODES or code == GB_CODE:
+    if code in IGNORED_AREA_CODES:
         return None
     if code in GERMANY_HISTORICAL_CODES:
         return "Deutschland"
@@ -266,12 +262,10 @@ def _resolve_settlement(place: GndPlace) -> tuple[str | None, str]:
 
 
 def _resolve_country(place: GndPlace, settlement: str | None) -> tuple[str | None, str]:
-    known_codes = [c for c in place.area_codes if c != GB_CODE]
+    known_codes = list(place.area_codes)
     countries = {_area_code_to_country(c) for c in known_codes}
     countries.discard(None)
     unmapped = [c for c in known_codes if c not in IGNORED_AREA_CODES and _area_code_to_country(c) is None]
-    if GB_CODE in place.area_codes:
-        countries.add(GB_WITH_CITY if settlement else GB_WITHOUT_CITY)
     if not countries:
         if unmapped:
             return None, f"geographicAreaCode nicht in der Ländertabelle: {', '.join(unmapped)}"
@@ -295,12 +289,8 @@ def _settlement_tokens(s: str) -> set[str]:
 
 
 def _country_matches(existing: str, place: GndPlace, settlement_hint: str | None) -> bool:
-    known_codes = [c for c in place.area_codes if c != GB_CODE]
-    countries = {_area_code_to_country(c) for c in known_codes}
+    countries = {_area_code_to_country(c) for c in place.area_codes}
     countries.discard(None)
-    if GB_CODE in place.area_codes:
-        countries.add(GB_WITH_CITY)
-        countries.add(GB_WITHOUT_CITY)
     if not countries:
         return True  # nothing to compare against
     return existing.strip().lower() in {c.lower() for c in countries}

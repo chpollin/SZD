@@ -2,7 +2,7 @@
 
 Covers the logic that is not obvious from reading the code once: the area-code-to-country
 table including subdivision and historical codes, the ambiguity rules that make the script
-add nothing rather than guess, the England/Großbritannien split for XA-GB, and the anchor
+add nothing rather than guess, Großbritannien for XA-GB, and the anchor
 that places new <country>/<settlement> elements after the last <orgName> while preserving
 indentation and the existing element order.
 """
@@ -66,9 +66,9 @@ def test_country_needs_exactly_one_distinct_country():
     assert rop._resolve_country(only_ignored, settlement=None) == (None, "")
 
 
-def test_gb_uses_england_with_a_known_city_and_grossbritannien_without():
+def test_gb_is_grossbritannien_with_or_without_city():
     with_city = _place(area_codes=("XA-GB",), place_labels=("London",))
-    assert rop._resolve_country(with_city, settlement="London") == ("England", "")
+    assert rop._resolve_country(with_city, settlement="London") == ("Großbritannien", "")
 
     without_city = _place(area_codes=("XA-GB",))
     assert rop._resolve_country(without_city, settlement=None) == ("Großbritannien", "")
