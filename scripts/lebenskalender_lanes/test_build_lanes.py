@@ -13,15 +13,7 @@ import pytest
 @pytest.fixture(scope="module")
 def corpus() -> tuple[list[dict[str, object]], list[dict[str, object]]]:
     by_gnd, names = lanes.load_person_index()
-    report = lanes.Report()
-    paths = sorted(lanes.KONVOLUTE.glob("szd.korrespondenzen.*.xml"))
-    index = lanes.correspondence_from(
-        lanes.SZDKOR, by_gnd, names, report, lanes.konvolut_pids(paths)
-    )
-    pieces = []
-    for path in paths:
-        pieces.extend(lanes.correspondence_from(path, by_gnd, names, report))
-    return index, pieces
+    return lanes.correspondence_sources(by_gnd, names, lanes.Report())
 
 
 # Facsimile groups of the complete holdings whose records disagree on signature, date or
@@ -38,6 +30,8 @@ MISSING_KONVOLUTE = {
     "SZDKOR.696": "o:szd.korrespondenzen.unbekannt",
     "SZDKOR.857": "o:szd.korrespondenzen.podbielski-gert-rene",
 }
+# Groups of Konvolut files that reuse the same xml:id values, read from the same run.
+SHARED_ID_GROUPS = 10
 
 
 def canonical(events: list[dict[str, object]]) -> list[str]:
@@ -61,7 +55,38 @@ def test_every_source_record_and_its_metadata_survive(corpus) -> None:
     assert sum(len(merge["folded"]) for merge in report.merges) == 424
     conflicts = {p.split()[1].rstrip(":") for p in report.problems if p.startswith("facsimile ")}
     assert conflicts == CONFLICTING_FACSIMILES
-    assert len(report.problems) == len(CONFLICTING_FACSIMILES) + len(MISSING_KONVOLUTE)
+    shared = [p for p in report.problems if "xml:id value(s)" in p]
+    assert len(shared) == SHARED_ID_GROUPS
+    assert len(report.problems) == (
+        len(CONFLICTING_FACSIMILES) + len(MISSING_KONVOLUTE) + SHARED_ID_GROUPS
+    )
+
+
+def test_ids_are_unique_across_all_lanes() -> None:
+    event_ids: list[str] = []
+    record_ids: list[str] = []
+    for lane in lanes.LANES:
+        events = json.loads((lanes.DEFAULT_OUT_DIR / f"{lane}.json").read_text(encoding="utf-8"))
+        event_ids.extend(event["id"] for event in events)
+        # A merged event repeats its own id as the first of its sources.
+        record_ids.extend(
+            source["id"] for event in events for source in event.get("sources", [event])
+        )
+    assert len(set(event_ids)) == len(event_ids)
+    assert len(set(record_ids)) == len(record_ids)
+    assert set(event_ids) <= set(record_ids)
+
+
+def test_shared_xml_ids_are_suffixed_with_their_file(corpus) -> None:
+    _, pieces = corpus
+    ids = {event["id"] for event in pieces}
+    assert "SZDKOR.unidentified.113" in ids
+    assert "SZDKOR.judischer-jugendverein.1" not in ids
+    assert {
+        "SZDKOR.judischer-jugendverein.1~judischer-jugendverein",
+        "SZDKOR.judischer-jugendverein.1~judischer-jugendverein-dusseldorf",
+    } <= ids
+    assert len(ids) == len(pieces)
 
 
 def test_partial_and_unrelated_bundle_records_remain(corpus) -> None:

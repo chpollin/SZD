@@ -536,12 +536,46 @@ def build_correspondence(
     by_gnd: dict[str, str], names: dict[str, str], report: Report
 ) -> list[dict[str, object]]:
     """Keep both catalogue levels; shared archival signatures do not prove coverage."""
-    paths = sorted(KONVOLUTE.glob("szd.korrespondenzen.*.xml"))
-    index_events = correspondence_from(SZDKOR, by_gnd, names, report, konvolut_pids(paths))
-    konvolut_events: list[dict[str, object]] = []
-    for path in paths:
-        konvolut_events.extend(correspondence_from(path, by_gnd, names, report))
+    index_events, konvolut_events = correspondence_sources(by_gnd, names, report)
     return merge_on_facsimile(index_events + konvolut_events, report)
+
+
+def correspondence_sources(
+    by_gnd: dict[str, str], names: dict[str, str], report: Report
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """Events of the index and of all Konvolut files, with ids unique across the files."""
+    paths = sorted(KONVOLUTE.glob("szd.korrespondenzen.*.xml"))
+    per_file = {SZDKOR: correspondence_from(SZDKOR, by_gnd, names, report, konvolut_pids(paths))}
+    for path in paths:
+        per_file[path] = correspondence_from(path, by_gnd, names, report)
+    disambiguate_ids(per_file, report)
+    index_events = per_file.pop(SZDKOR)
+    return index_events, [event for events in per_file.values() for event in events]
+
+
+def disambiguate_ids(per_file: dict[Path, list[dict[str, object]]], report: Report) -> None:
+    """Give an xml:id that occurs in several files a suffix naming the file.
+
+    The view uses the id as DOM id and URL fragment, so it must be unique. Every occurrence
+    is suffixed, including the first, so that the result does not depend on file order, and
+    an id that is unique keeps its plain form and with it its existing permalink. `~` cannot
+    occur in an xml:id, which is an NCName, and is safe in a URL fragment.
+    """
+    files_of: dict[str, set[Path]] = defaultdict(set)
+    for path, events in per_file.items():
+        for event in events:
+            files_of[str(event["id"])].add(path)
+    shared = {event_id for event_id, paths in files_of.items() if len(paths) > 1}
+    for path, events in per_file.items():
+        slug = path.stem.removeprefix("szd.korrespondenzen.")
+        for event in events:
+            if event["id"] in shared:
+                event["id"] = f"{event['id']}~{slug}"
+    groups = Counter(
+        tuple(sorted(path.name for path in files_of[event_id])) for event_id in shared
+    )
+    for files, count in sorted(groups.items()):
+        report.note(f"{' and '.join(files)} share {count} xml:id value(s); ids suffixed with ~<file>")
 
 
 def konvolut_pids(paths: list[Path]) -> frozenset[str]:

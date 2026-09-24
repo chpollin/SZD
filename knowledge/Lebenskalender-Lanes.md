@@ -36,7 +36,7 @@ Every event is a JSON object with the same fields, whatever the lane. The files 
 
 `id`
 
-Stable identifier, the `xml:id` of the source entry, for instance `SZDBIO.1`, `SZDKOR.127`, `SZDKOR.roth-joseph.1`, `SZDLEB.138` or `SZDAUT.720`.
+Stable identifier, the `xml:id` of the source entry, for instance `SZDBIO.1`, `SZDKOR.127`, `SZDKOR.roth-joseph.1`, `SZDLEB.138` or `SZDAUT.720`. The view uses it as DOM id and URL fragment, so it is unique across all lanes, events and `sources` alike. Some Konvolut files reuse the `xml:id` values of another Konvolut. Such an id receives the slug of its file after a tilde in every file it occurs in, for instance `SZDKOR.judischer-jugendverein.1~judischer-jugendverein-dusseldorf`, so that the result does not depend on the order of the files. An `xml:id` that occurs in one file only keeps its plain form and with it its permalink. The run reports every group of files sharing ids as a data defect, and `href` keeps the plain `xml:id` as its fragment, because that is the anchor on the detail page.
 
 `lane`
 
