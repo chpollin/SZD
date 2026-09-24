@@ -71,84 +71,6 @@
   <text>
     <body>
       <listBibl>
-        <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.1">
-          <fileDesc>
-            <titleStmt>
-              <title xml:lang="de">Stefan Zweig an Eugenie Hirschfeld,
-                                15.06.1906</title>
-              <title xml:lang="en">Stefan Zweig to Eugenie Hirschfeld,
-                                15.06.1906</title>
-            </titleStmt>
-            <publicationStmt>
-              <ab>Einzelbrief</ab>
-            </publicationStmt>
-            <sourceDesc>
-              <msDesc>
-                <msIdentifier>
-                  <country>Österreich</country>
-                  <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ_SEF_B5.1</idno>
-                </msIdentifier>
-                <msContents>
-                  <textLang>
-                    <lang xml:lang="ger">Deutsch</lang>
-                    <lang xml:lang="ger">German</lang>
-                  </textLang>
-                </msContents>
-                <physDesc>
-                  <objectDesc>                    
-<supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;LONDON. THE TOWER FROM THE
-                                                  RIVER.&quot;</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;LONDON. THE TOWER FROM THE
-                                                  RIVER.&quot;</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
-                      </support>
-                      <extent>
-                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
-                                                  1 Blatt</span>
-                        <span xml:lang="en">1 picture postcard, manuscript,
-                                                  1 leaf</span>
-                      </extent>
-                    </supportDesc>
-                  </objectDesc>
-                  <handDesc>
-                    <ab>Stefan Zweig</ab>
-                  </handDesc>
-                </physDesc>
-                <history>
-                  <provenance>
-                    <ab>Inge und Erich Fitzbauer</ab>
-                  </provenance>
-                  <acquisition>
-                    <ab xml:lang="de">Ankauf 2023</ab>
-                    <ab xml:lang="en">Acquisition 2023</ab>
-                  </acquisition>
-                </history>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-          <profileDesc>
-            <correspDesc type="toZweig">
-              <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
-                <placeName>London</placeName>
-              </correspAction>
-              <correspAction type="received">
-                <persName ref="#SZDPER.2137">
-                  <surname>Hirschfeld</surname>
-                  <forename>Eugenie</forename>
-                </persName>
-              </correspAction>
-            </correspDesc>
-          </profileDesc>
-        </biblFull>
         <biblFull xml:id="SZDKOR.hirschfeld-eugenie.B.2">
           <fileDesc>
             <titleStmt>
@@ -1562,14 +1484,61 @@
                     <idno type="PID">o:szd.1389</idno>
                   </altIdentifier>
                 </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang="ger">Deutsch</lang>
+                    <lang xml:lang="ger">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>                    
+<supportDesc>
+                      <support>
+                        <material ana="szdg:WritingMaterial" xml:lang="de">Ansichtspostkarte: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
+                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang="de">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang="en">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang="de">Ankauf 2023</ab>
+                    <ab xml:lang="en">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
               </msDesc>
             </sourceDesc>
           </fileDesc>
           <profileDesc>
             <correspDesc type="fromZweig">
               <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1906-06-15">15. Juni 1906</date>
+                <placeName>London</placeName>
+              </correspAction>
+              <correspAction type="received">
                 <persName ref="#SZDPER.2137">
-                  <name>Eugenie Hirschfeld</name>
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
                 </persName>
               </correspAction>
             </correspDesc>

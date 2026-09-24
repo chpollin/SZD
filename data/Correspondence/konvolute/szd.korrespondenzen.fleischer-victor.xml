@@ -2611,6 +2611,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B3.73</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1257</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -2692,6 +2695,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B3.74</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1258</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -2764,6 +2770,9 @@
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
                   <idno type="signature">SZ-LAS/B3.76</idno>
+                  <altIdentifier>
+                    <idno type="PID">o:szd.1260</idno>
+                  </altIdentifier>
                 </msIdentifier>
                 <msContents>
                   <textLang>
@@ -2818,90 +2827,6 @@
             </correspDesc>
           </profileDesc>
         </biblFull>
-        <biblFull xml:id="SZDKOR.fleischer-victor.B.31">
-          <fileDesc>
-            <titleStmt>
-              <title xml:lang="de">Stefan Zweig an Victor Fleischer</title>
-              <title xml:lang="en">Stefan Zweig to Victor Fleischer</title>
-            </titleStmt>
-            <publicationStmt>
-              <ab>Einzelbrief</ab>
-            </publicationStmt>
-            <sourceDesc>
-              <msDesc>
-                <msIdentifier>
-                  <country>Österreich</country>
-                  <settlement>Salzburg</settlement>
-                  <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</repository>
-                  <idno type="signature">SZ-SHB/B3</idno>
-                </msIdentifier>           
-     <msContents>
-                  <textLang>
-                    <lang xml:lang="ger">Deutsch</lang>
-                    <lang xml:lang="ger">German</lang>
-                  </textLang>
-                </msContents>
-                <physDesc>
-                  <objectDesc>
-                    <supportDesc>
-                      <support>
-                        <material ana="szdg:WritingMaterial" xml:lang="de">Briefpapier Ephraim Mose Lilien</material>
-                        <material ana="szdg:WritingMaterial" xml:lang="en">Ephraim Mose Lilien stationary</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="de">schwarze Tinte</material>
-                        <material ana="szdg:WritingInstrument" xml:lang="en">black ink</material>
-                      </support>
-                      <extent>
-                        <span xml:lang="de">1 Brief, Manuskript, 1
-                                                  Blatt</span>
-                        <span xml:lang="en">1 letter, manuscript, 1                   
-                               leaf</span>
-                      </extent>
-                    </supportDesc>
-                  </objectDesc>
-                  <handDesc>
-                    <ab>Stefan Zweig, Ephraim Mose Lilien</ab>
-                  </handDesc>
-                </physDesc>
-                <history>
-                  <provenance>
-                    <ab>Inge und Erich Fitzbauer</ab>
-                  </provenance>
-                  <acquisition>
-                    <ab xml:lang="de">Ankauf 2023</ab>
-                    <ab xml:lang="en">Acquisition 2023</ab>
-                  </acquisition>
-                </history>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-          <profileDesc>
-            <textClass>
-              <keywords>
-                <term type="person">
-                  <persName ref="http://d-nb.info/gnd/112251008X">
-                    <surname>Lilien</surname>
-                    <forename>Ephraim Mose</forename>
-                  </persName>
-                </term>
-              </keywords>
-            </textClass>
-            <correspDesc type="toZweig">
-              <correspAction type="sent">
-                <persName ref="http://d-nb.info/gnd/118637479">
-                  <surname>Zweig</surname>
-                  <forename>Stefan</forename>
-                </persName>
-                <placeName ana="deduced">Berlin</placeName>
-              </correspAction>
-              <correspAction type="received">
-                <persName ref="https://d-nb.info/gnd/116601485">
-                  <surname>Fleischer</surname>
-                  <forename>Victor</forename>
-                </persName>
-              </correspAction>
-            </correspDesc>
-          </profileDesc>
-        </biblFull>
         <biblFull xml:id="SZDKOR.fleischer-victor.B.201">
           <fileDesc>
             <titleStmt>
@@ -2928,9 +2853,15 @@
           <profileDesc>
             <correspDesc type="fromZweig">
               <correspAction type="sent">
-                <persName>
-                  <surname>Datum</surname>
-                  <forename>Brief an Victor Fleischer ohne</forename>
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
                 </persName>
               </correspAction>
             </correspDesc>
@@ -2962,9 +2893,15 @@
           <profileDesc>
             <correspDesc type="fromZweig">
               <correspAction type="sent">
+                <persName ref="https://d-nb.info/gnd/116601485">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+              <correspAction type="received">
                 <persName>
                   <surname>Heidelbach</surname>
-                  <forename>Victor Fleischer an Paul</forename>
+                  <forename>Paul</forename>
                 </persName>
               </correspAction>
             </correspDesc>

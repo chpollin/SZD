@@ -1,0 +1,224 @@
+date,file,shelfmark,field,old,new,evidence
+2026-09-24,szd.korrespondenzen.clauser-suzanne.xml,SZ-SAM/AK.39,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.3326</idno>","<idno type=""PID"">o:szd.683</idno>","verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.despres-fernand.xml,SZ-SAM/AK.43,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.3331</idno>","<idno type=""PID"">o:szd.612</idno>","verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.despres-fernand.xml,SZ-SAM/AK.44,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.3332</idno>","<idno type=""PID"">o:szd.613</idno>","verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.diettrich-fritz.xml,SZ-SAM/AK.46,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.3334</idno>","<idno type=""PID"">o:szd.684</idno>","verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.lovric-bozo.xml,SZ-SAM/AK.112,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.3115</idno>","<idno type=""PID"">o:szd.392</idno>","verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-LAS/B3.73,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1257,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-LAS/B3.74,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1258,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-LAS/B3.76,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1260,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-SHB/B3,biblFull entry (deleted),(added),,"verify-korrespondenz-daten.md and verify-verknuepfung.md, confirmed-data: no object carries the bare signature SZ-SHB/B3, its pieces are SZ-SHB/B3.1-5 and belong to the Kaemmerer correspondence; SZ-SEF/B3 already carries the facsimile in this same konvolut"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-SEF/B3,correspAction (sender/recipient split),"<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName>
+                  <surname>Datum</surname>
+                  <forename>Brief an Victor Fleischer ohne</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName ref=""http://d-nb.info/gnd/118637479"">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+              </correspAction>
+              <correspAction type=""received"">
+                <persName ref=""https://d-nb.info/gnd/116601485"">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","verify-korrespondenz-daten.md, confirmed-data: correspDesc type='fromZweig' with a single correspAction[@type='sent'] whose persName held the whole title phrase 'Brief an Victor Fleischer ohne Datum' instead of a name; the title's own wording establishes sender Stefan Zweig, recipient Victor Fleischer (GND already used elsewhere in this file)"
+2026-09-24,szd.korrespondenzen.fleischer-victor.xml,SZ-SAH/B1.1,correspAction (sender/recipient split),"<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName>
+                  <surname>Heidelbach</surname>
+                  <forename>Victor Fleischer an Paul</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName ref=""https://d-nb.info/gnd/116601485"">
+                  <surname>Fleischer</surname>
+                  <forename>Victor</forename>
+                </persName>
+              </correspAction>
+              <correspAction type=""received"">
+                <persName>
+                  <surname>Heidelbach</surname>
+                  <forename>Paul</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","verify-korrespondenz-daten.md, confirmed-data: correspDesc type='fromZweig' with a single correspAction[@type='sent'] whose persName held the whole title phrase 'Victor Fleischer an Paul Heidelbach'; the title's own wording establishes sender Victor Fleischer (GND already used elsewhere in this file), recipient Paul Heidelbach"
+2026-09-24,szd.korrespondenzen.fleischer-max.xml,SZ-LAS/B3.75,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1259,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.fleischer-max.xml,SZ-LAS/B3.21,title (de/en),02.07.1902,13.07.1902,"verify-korrespondenz-daten.md, confirmed-data: neither entry carries a date element, the title is the sole date carrier, and the archive states the corrected date (13/7 against the current 2/7)"
+2026-09-24,szd.korrespondenzen.fleischer-max.xml,SZ-LAS/B3.21,correspAction/date (added),<placeName>Berlin</placeName>,"<date when=""1902-07-13"">13.07.1902</date>",see title above; no correspAction/date existed before this fix
+2026-09-24,szd.korrespondenzen.fleischer-max.xml,SZ-LAS/B3.22,title (de/en),02.07.1902,13.07.1902,"verify-korrespondenz-daten.md, confirmed-data: neither entry carries a date element, the title is the sole date carrier, and the archive states the corrected date (13/7 against the current 2/7)"
+2026-09-24,szd.korrespondenzen.fleischer-max.xml,SZ-LAS/B3.22,correspAction/date (added),<placeName>Berlin</placeName>,"<date when=""1902-07-13"">13.07.1902</date>",see title above; no correspAction/date existed before this fix
+2026-09-24,szd.korrespondenzen.freud-anna.xml,SZ-LAS/B7.48,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.991,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.38,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1573,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.40,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1628,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.41,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1532,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.50,title (de),"Richard Friedenthal an Stefan Zweig,
+                                25.03.1925","Richard Friedenthal an Stefan Zweig,
+                                02.03.1925","verify-korrespondenz-daten.md, confirmed-data: the entry's own manuscript date text '2. III. 25' (2 March) is encoded as when='1925-03-25' (25 March), a day/month mix-up; the archive's stated correction (02.03.1925) matches the transcribed text"
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.50,title (en),"Richard Friedenthal to Stefan Zweig,
+                                25.03.1925","Richard Friedenthal to Stefan Zweig,
+                                02.03.1925",see title (de) above
+2026-09-24,szd.korrespondenzen.friedenthal-richard.xml,SZ-AAP/B2.50,correspAction/date/@when,"<date when=""1925-03-25"">2. III. 25</date>","<date when=""1925-03-02"">2. III. 25</date>",see title (de) above
+2026-09-24,szd.korrespondenzen.kippenberg-katharina.xml,SZ-SAM/AK.295,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1662,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.hertzka-yella.xml,SZ-SAM/AK.297,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1664,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.rolland-romain.xml,SZ-SAM/B5.1,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1268,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.rolland-romain.xml,SZ-SAM/B5.2,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1269,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.rolland-romain.xml,SZ-SAM/B5.3,msIdentifier/altIdentifier/idno[@type='PID'] (added),(added),o:szd.1270,"verify-verknuepfung.md, confirmed-link: object exists in GAMS, DC title and dc:source carry the shelfmark, member of context:szd.facsimiles.korrespondenzen, re-checked live"
+2026-09-24,szd.korrespondenzen.specht-richard.xml,SZDKOR.specht-richard.1,msIdentifier/altIdentifier/idno[@type='PID'],"<idno type=""PID"">o:szd.1378</idno>","<idno type=""PID"">o:szd.1372</idno>","verify-verknuepfung.md, confirmed-link: o:szd.1378 answers 404, o:szd.1372 carries the matching DC title/source and context membership, re-checked live"
+2026-09-24,szd.korrespondenzen.freud-sigmund.xml,SZ-LAS/B7.1-47,correspDesc/@type (47 entries),"<correspDesc type=""byZweig"">","<correspDesc type=""fromZweig"">","verify-korrespondenz-daten.md, confirmed-data: correspDesc type='byZweig' occurs nowhere else in the corpus and the presentation layer does not resolve it, which is why every one of these 47 entries renders its sender as unbekannt although the persName already correctly holds Stefan Zweig with GND 118637479"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.266,title (de),"Stefan Zweig an Manfred Altmann, 09.09.1947",Stefan Zweig an Manfred Altmann,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.266,title (en),"Stefan Zweig to Manfred Altmann, 09.09.1947",Stefan Zweig to Manfred Altmann,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.267,title (de),"Stefan Zweig an Manfred Altmann, 09.09.1947",Stefan Zweig an Manfred Altmann,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.267,title (en),"Stefan Zweig to Manfred Altmann, 09.09.1947",Stefan Zweig to Manfred Altmann,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.268,title (de),"Klara Modern an Stefan Zweig, 09.09.1947",Klara Modern an Stefan Zweig,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.reichner-herbert.xml,SZ-AAP/B1.268,title (en),"Klara Modern to Stefan Zweig, 09.09.1947",Klara Modern to Stefan Zweig,"verify-korrespondenz-daten.md, confirmed-data: the entry's own correspAction/date reads 'o. D.'/'n. d.' with no @when, the title's 09.09.1947 is the date of the neighbouring entry SZ-AAP/B1AN.5 filled down three rows, five years after Zweig's death"
+2026-09-24,szd.korrespondenzen.moller-rudolf.xml,SZ-SHB/B6.2,correspAction (sender/recipient/date split),"<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName>
+                  <surname>1930</surname>
+                  <forename>Ansichtspostkarte an Rudolf Möller vom 28. November</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","<correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName ref=""http://d-nb.info/gnd/118637479"">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when=""1930-11-28"">28. November 1930</date>
+              </correspAction>
+              <correspAction type=""received"">
+                <persName>
+                  <surname>Möller</surname>
+                  <forename>Rudolf</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>","verify-korrespondenz-daten.md, confirmed-data: correspDesc type='fromZweig' with a single correspAction[@type='sent'] whose persName held the whole title phrase 'Ansichtspostkarte an Rudolf Möller vom 28. November 1930'; the title's own wording establishes sender Stefan Zweig, recipient Rudolf Möller and the date 28 November 1930"
+2026-09-24,szd.korrespondenzen.moller-rudolf.xml,SZ-SHB/B6.1,title/country (encoding),"MÃ¶ller ohne Datum,
+                SZ-SHB/B6.1</title>
+              <title xml:lang=""en"">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum,
+                SZ-SHB/B6.1</title>","Möller ohne Datum,
+                SZ-SHB/B6.1</title>
+              <title xml:lang=""en"">Ansichtspostkarte an Rudolf Möller ohne Datum,
+                SZ-SHB/B6.1</title>","verify-korrespondenz-daten.md, part of the SZ-SHB/B6.2 remedy: 'repair the encoding of the sibling entry'; MÃ¶ller and Ãsterreich are UTF-8 mistakenly decoded as Latin-1"
+2026-09-24,szd.korrespondenzen.moller-rudolf.xml,SZ-SHB/B6.1,country (encoding),<country>Ãsterreich</country>,<country>Österreich</country>,see title/country (encoding) above
+2026-09-24,szd.korrespondenzen.hirschfeld-eugenie.xml,SZ_SEF_B5.1,"biblFull entry (deleted, data moved to SZ-SEF/B5.1)",(added),,"verify-verknuepfung.md, confirmed-data: both entries describe the same picture postcard of 15 June 1906 (both titles agree); the underscore entry carries the physical description, hand and provenance that the canonical entry lacks"
+2026-09-24,szd.korrespondenzen.hirschfeld-eugenie.xml,SZ-SEF/B5.1,"physDesc/handDesc/history (moved in), correspAction (sender/recipient/date completed)","<biblFull xml:id=""SZDKOR.hirschfeld-eugenie.B.19"">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang=""de"">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906</title>
+              <title xml:lang=""en"">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref=""http://d-nb.info/gnd/1047605287"">Literaturarchiv Salzburg</repository>
+                  <idno type=""signature"">SZ-SEF/B5.1</idno>
+                  <altIdentifier>
+                    <idno type=""PID"">o:szd.1389</idno>
+                  </altIdentifier>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName ref=""#SZDPER.2137"">
+                  <name>Eugenie Hirschfeld</name>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>","<biblFull xml:id=""SZDKOR.hirschfeld-eugenie.B.19"">
+          <fileDesc>
+            <titleStmt>
+              <title xml:lang=""de"">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906</title>
+              <title xml:lang=""en"">Ansichtspostkarte an Eugenie Hirschfeld vom 15. Juni 1906</title>
+            </titleStmt>
+            <publicationStmt>
+              <ab>Einzelbrief</ab>
+            </publicationStmt>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <country>Österreich</country>
+                  <settlement>Salzburg</settlement>
+                  <repository ref=""http://d-nb.info/gnd/1047605287"">Literaturarchiv Salzburg</repository>
+                  <idno type=""signature"">SZ-SEF/B5.1</idno>
+                  <altIdentifier>
+                    <idno type=""PID"">o:szd.1389</idno>
+                  </altIdentifier>
+                </msIdentifier>
+                <msContents>
+                  <textLang>
+                    <lang xml:lang=""ger"">Deutsch</lang>
+                    <lang xml:lang=""ger"">German</lang>
+                  </textLang>
+                </msContents>
+                <physDesc>
+                  <objectDesc>                    
+<supportDesc>
+                      <support>
+                        <material ana=""szdg:WritingMaterial"" xml:lang=""de"">Ansichtspostkarte: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana=""szdg:WritingMaterial"" xml:lang=""en"">Picture postcard: &quot;LONDON. THE TOWER FROM THE
+                                                  RIVER.&quot;</material>
+                        <material ana=""szdg:WritingInstrument"" xml:lang=""de"">schwarze Tinte</material>
+                        <material ana=""szdg:WritingInstrument"" xml:lang=""en"">black ink</material>
+                      </support>
+                      <extent>
+                        <span xml:lang=""de"">1 Ansichtspostkarte, Manuskript,
+                                                  1 Blatt</span>
+                        <span xml:lang=""en"">1 picture postcard, manuscript,
+                                                  1 leaf</span>
+                      </extent>
+                    </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                    <ab>Stefan Zweig</ab>
+                  </handDesc>
+                </physDesc>
+                <history>
+                  <provenance>
+                    <ab>Inge und Erich Fitzbauer</ab>
+                  </provenance>
+                  <acquisition>
+                    <ab xml:lang=""de"">Ankauf 2023</ab>
+                    <ab xml:lang=""en"">Acquisition 2023</ab>
+                  </acquisition>
+                </history>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+          <profileDesc>
+            <correspDesc type=""fromZweig"">
+              <correspAction type=""sent"">
+                <persName ref=""http://d-nb.info/gnd/118637479"">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when=""1906-06-15"">15. Juni 1906</date>
+                <placeName>London</placeName>
+              </correspAction>
+              <correspAction type=""received"">
+                <persName ref=""#SZDPER.2137"">
+                  <surname>Hirschfeld</surname>
+                  <forename>Eugenie</forename>
+                </persName>
+              </correspAction>
+            </correspDesc>
+          </profileDesc>
+        </biblFull>","verify-verknuepfung.md, confirmed-data: the canonical entry carried the facsimile PID but neither the physical description nor a complete correspAction; both are established from the SZ_SEF_B5.1 duplicate describing the same postcard"

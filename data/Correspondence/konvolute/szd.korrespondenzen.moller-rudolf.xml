@@ -73,9 +73,9 @@
         <biblFull xml:id="SZDKOR.moller-rudolf.1">
           <fileDesc>
             <titleStmt>
-              <title xml:lang="de">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum,
+              <title xml:lang="de">Ansichtspostkarte an Rudolf Möller ohne Datum,
                 SZ-SHB/B6.1</title>
-              <title xml:lang="en">Ansichtspostkarte an Rudolf MÃ¶ller ohne Datum,
+              <title xml:lang="en">Ansichtspostkarte an Rudolf Möller ohne Datum,
                 SZ-SHB/B6.1</title>
             </titleStmt>
             <publicationStmt>
@@ -84,7 +84,7 @@
             <sourceDesc>
               <msDesc>
                 <msIdentifier>
-                  <country>Ãsterreich</country>
+                  <country>Österreich</country>
                   <settlement>Salzburg</settlement>
                   <repository ref="http://d-nb.info/gnd/1047605287">Literaturarchiv
                     Salzburg</repository>
@@ -141,9 +141,16 @@
           <profileDesc>
             <correspDesc type="fromZweig">
               <correspAction type="sent">
+                <persName ref="http://d-nb.info/gnd/118637479">
+                  <surname>Zweig</surname>
+                  <forename>Stefan</forename>
+                </persName>
+                <date when="1930-11-28">28. November 1930</date>
+              </correspAction>
+              <correspAction type="received">
                 <persName>
-                  <surname>1930</surname>
-                  <forename>Ansichtspostkarte an Rudolf Möller vom 28. November</forename>
+                  <surname>Möller</surname>
+                  <forename>Rudolf</forename>
                 </persName>
               </correspAction>
             </correspDesc>
