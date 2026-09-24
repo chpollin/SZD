@@ -50,6 +50,14 @@ PAUSE = 0.5
 TEI = "{http://www.tei-c.org/ns/1.0}"
 FEDORA = "{http://www.fedora.info/definitions/1/0/types/}"
 
+# Production objects that a merged Konvolut of the repository replaces (merges of 2026-09-22 and
+# 2026-09-23). They are still on GAMS until the operator deletes them there and must not come back.
+SUPERSEDED = {
+    "o:szd.korrespondenzen.berger-gisela": "o:szd.korrespondenzen.berger-gisela-von",
+    "o:szd.korrespondenzen.oppeln-bronikowski-friedrich": "o:szd.korrespondenzen.oppeln-bronikowski-friedrich-von",
+    "o:szd.korrespondenzen.ferencak-mirko-m.": "o:szd.korrespondenzen.ferencak-mirko",
+}
+
 # Production objects whose content does not name their own PID, read on 2026-09-24. They are
 # taken over unchanged so that the repository mirrors production, and the defect is logged;
 # correcting them is editorial work on the repository copy.
@@ -106,8 +114,9 @@ def main() -> None:
     args = parser.parse_args()
 
     pids = production_pids()
-    missing = [pid for pid in pids if not file_for(pid).exists()]
-    print(f"production: {len(pids)} konvolute, already in the repository: {len(pids) - len(missing)}, missing: {len(missing)}")
+    missing = [pid for pid in pids if not file_for(pid).exists() and pid not in SUPERSEDED]
+    superseded = sum(pid in SUPERSEDED for pid in pids)
+    print(f"production: {len(pids)} konvolute, superseded: {superseded}, in the repository: {len(pids) - len(missing) - superseded}, missing: {len(missing)}")
     if not args.apply:
         for pid in missing:
             print("  missing", pid)

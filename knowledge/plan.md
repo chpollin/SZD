@@ -27,7 +27,6 @@ Every object needs `STYLESHEET` and `TORDF` pointing to the gamsdev mirror, and 
 
 Before the package is built:
 
-- The Konvolut files `berger-gisela`, `oppeln-bronikowski-friedrich` and `ferencak-mirko-m.` came into the repository with the production import of 2026-09-24 and name their own PID, so the package would ingest them again. The first two were decided for deletion on 2026-09-22 in favour of the `-von` Konvolute, the third on 2026-09-23 in favour of `ferencak-mirko`. They leave `data/Correspondence/konvolute/` or the package script excludes them.
 
 On staging after the ingest:
 

@@ -59,9 +59,6 @@ fact, a ruling or a write outside this script's scope:
   identity, whether a piece was ever scanned) or `needs-operator` (a merge ruling, a duplicate
   object, a wording decision). These are listed in the operator report of the run that produced
   this script, not repeated here to avoid drifting out of sync with it.
-- The 221 konvolut objects that still exist only on GAMS and not in this repository. Most of
-  the reported defects live there; they can be corrected here only once the objects are ingested
-  into `data/Correspondence/konvolute/`, matching commit `e1b156fa`'s own scope.
 - Two items where the current production download already carries the corrected value, found
   during this run (`SZ-AAL/B1.110a` in `altmann-hannah.xml`/`altmann-manfred.xml`, and
   `SZ-AAL/B3.48` in `geiringer-josef.xml`): both were diagnosed as broken in the verification

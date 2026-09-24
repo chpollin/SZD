@@ -106,6 +106,19 @@ row per text hit (`unverknuepfte_personen_kandidaten.csv`) and a German summary 
 class counts, the most promising candidates and the limits of the text search
 (`unverknuepfte_personen_zusammenfassung.md`).
 
+## verify_orphan_persons.py and remove_orphan_persons.py
+
+`verify_orphan_persons.py` takes the class "kein Treffer im Text" of `find_unlinked_persons.py` and adds three independent checks: the identifier `SZDPER.n` occurs nowhere else (other index entries, the organisation index, any data file, the presentation layer), none of the person's GND numbers occurs in the data, and the person search of GAMS production and staging returns no hit. Only a person that passes all of them counts as certainly unreferenced. The result is an archive-internal CSV.
+
+`remove_orphan_persons.py` removes exactly these persons from `data/Index/Person/SZDPER.xml`, after checking each one again against the current repository. The removed entries are kept unchanged in `removed_persons.xml` beside the script, outside `data/` so that no later scan counts them, and their identifiers are never assigned again. The run of 2026-09-24 is logged in `remove_orphan_persons_log.csv`.
+
+```bash
+python scripts/checkup_2026_09_index/verify_orphan_persons.py --candidates <out-dir>/unverknuepfte_personen_kandidaten.csv --out <out-dir>/sicher_unverknuepft.csv
+python scripts/checkup_2026_09_index/remove_orphan_persons.py --verified <out-dir>/sicher_unverknuepft.csv --apply
+```
+
+A name that the holdings carry only in another spelling, transliteration or inflection is not found by the text search, so "certainly unreferenced" means no reference and no occurrence of the name in the spelling of the index.
+
 ## Scope
 
 - The presentation layer stays untouched. `szd-TORDF.xsl` and `query/person_search.sparql` live in the

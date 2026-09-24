@@ -19,6 +19,10 @@ Taken over unchanged and to be corrected in the repository copy:
 
 The three konvolute of the staging package of 2026-09-23 (`berger-gisela-von`, `ferencak-mirko`, `oppeln-bronikowski-friedrich-von`) came from that package, not from production, whose objects carry placeholder titles.
 
+## Superseded objects
+
+`berger-gisela`, `oppeln-bronikowski-friedrich` and `ferencak-mirko-m.` are replaced by the merged Konvolute `berger-gisela-von`, `oppeln-bronikowski-friedrich-von` and `ferencak-mirko`. They came in with the first import run, were removed again on 2026-09-24 and are skipped by `SUPERSEDED` in the script until the operator deletes them on GAMS.
+
 ## Usage
 
 ```bash
