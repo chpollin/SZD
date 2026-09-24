@@ -124,8 +124,10 @@ def main() -> None:
             row = {"group": title, "pid": pid, "file": f"{folder}/{source.name}", "stylesheet": stylesheet, "status": "", "todo": []}
             if not args.no_staging:
                 if not exists(pid):
+                    # a new object inherits TORDF from cirilo:TEI.szd, which points to the mirror,
+                    # but the generic TEI stylesheet, so only STYLESHEET is left to set after the ingest
                     row["status"] = "new"
-                    row["todo"] = ["STYLESHEET", "TORDF"]
+                    row["todo"] = ["STYLESHEET"]
                 else:
                     row["status"] = "update"
                     for datastream, want in (("STYLESHEET", MIRROR + stylesheet), ("TORDF", MIRROR + "szd-TORDF.xsl")):
@@ -150,7 +152,7 @@ def main() -> None:
         "",
         "Each folder goes through the Cirilo dialog Ingest objects with the content model `TEI Object | cirilo:TEI.szd`, PID box unticked, button From filesystem. Cirilo takes the PID from `<idno type=\"PID\">` in each file. A new object inherits the references of `cirilo:TEI.szd`, see `knowledge/ARCHITECTURE.md` in the data repository.",
         "",
-        "Before the ingest every object needs both references below. Type or paste them so that nothing follows `.xsl`; a trailing character makes the reference unusable.",
+        "An existing object needs both references below before the ingest, a new one needs its STYLESHEET set after the ingest. Type or paste them so that nothing follows `.xsl`; a trailing character makes the reference unusable.",
         "",
         "- STYLESHEET: `" + MIRROR + "<stylesheet>`",
         "- TORDF: `" + MIRROR + "szd-TORDF.xsl`",
