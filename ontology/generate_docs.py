@@ -141,36 +141,36 @@ def _render_metadata_table(rows):
 # ---------------------------------------------------------------------------
 
 SECTIONS = [
-    ("archiv", "Archivschicht", "Archival Layer", [
-        "Nachlass", "Sammlung", "Werksammlung", "Korrespondenzsammlung",
-        "Autographensammlung", "Bibliothekssammlung", "Lebensdokumentesammlung",
-        "Aufsatzsammlung", "ThematischeSammlung",
-        "NachlassObjekt", "Manuskript", "Typoskript", "Typoskriptdurchschlag",
-        "Notizbuch", "Konvolut", "Korrekturfahne", "KorrespondenzKonvolut",
-        "Autograph", "Buch", "Lebensdokument",
-        "DigitalesObjekt", "METSObjekt", "IIIFManifest", "Faksimile",
-        "Umfang", "Beilage",
+    ("archival", "Archivschicht", "Archival Layer", [
+        "Estate", "Collection", "WorksCollection", "CorrespondenceCollection",
+        "AutographCollection", "LibraryCollection", "PersonalDocumentsCollection",
+        "EssayCollection", "ThematicCollection",
+        "Record", "Manuscript", "Typescript", "CarbonCopyTypescript",
+        "Notebook", "Ensemble", "GalleyProof", "BundleOfCorrespondence",
+        "Autograph", "Book", "PersonalDocument",
+        "DigitalObject", "METSObject", "IIIFManifest", "Facsimile",
+        "Extent", "Enclosure",
     ]),
-    ("werk", "Werkschicht", "Work Layer", [
-        "Werk", "WerkExpression", "Manifestation", "Exemplar",
-        "BelletristischesWerk", "EssayistischesWerk", "BiographischesWerk",
-        "HistorischesWerk", "DramatischesWerk", "LyrischesWerk",
-        "SammelWerk", "Uebersetzungswerk", "VorwortNachwort",
-        "Sekundaerliteratur",
+    ("work", "Werkschicht", "Work Layer", [
+        "WorkIndexEntry", "Expression", "Manifestation", "Item",
+        "FictionalWork", "EssayisticWork", "BiographicalWork",
+        "HistoricalWork", "DramaticWork", "PoeticWork",
+        "CollectedWork", "TranslationWork", "ForewordAfterword",
+        "SecondaryLiterature",
     ]),
-    ("akteur", "Akteure", "Agents", [
-        "Akteur", "Person", "Organisation",
+    ("agent", "Akteure", "Agents", [
+        "Agent", "Person", "Organisation",
     ]),
-    ("biographie", "Biographie & Ereignisse", "Biography & Events", [
-        "BiographischesEreignis", "Geburt", "Tod", "Reise",
-        "Publikationsereignis", "Begegnung", "InstitutionellesEreignis",
-        "Exilereignis", "WissenschaftlichesEreignis",
+    ("biography", "Biographie & Ereignisse", "Biography & Events", [
+        "BiographicalEvent", "Birth", "Death", "Journey",
+        "PublicationEvent", "Encounter", "InstitutionalEvent",
+        "ExileEvent", "ScholarlyEvent",
     ]),
-    ("ort", "Orte", "Places", [
-        "Ort", "GeographischerOrt", "Aufbewahrungsort", "Entstehungsort",
+    ("place", "Orte", "Places", [
+        "Place", "GeographicalPlace", "Location", "PlaceOfOrigin",
     ]),
-    ("provenienz", "Provenienz", "Provenance", [
-        "Provenienzereignis", "ProvenienzmerkmalInstanz",
+    ("provenance", "Provenienz", "Provenance", [
+        "ProvenanceEvent", "ProvenanceFeatureInstance",
     ]),
 ]
 
@@ -440,7 +440,7 @@ def _build_content(g, all_classes, all_obj_props, all_dat_props, version):
     content = '<div class="onto-content">\n'
     content += f'  <h1>Stefan Zweig Digital Nachlass-Ontologie</h1>\n'
     content += f'  <div class="onto-version">Version {escape(version)} · Namespace: <code>https://gams.uni-graz.at/o:szd.ontology#</code></div>\n'
-    content += f'  <p>{len(all_classes)} Klassen · {len(all_obj_props)} Object Properties · {len(all_dat_props)} Datatype Properties · <a href="visualize.html">Interaktive Visualisierung</a></p>\n'
+    content += '  <p><a href="visualize.html">Interaktive Visualisierung</a></p>\n'
 
     # External vocabularies
     content += '  <div class="badge-row">\n'
@@ -485,7 +485,7 @@ def _build_page(sidebar, content, version):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SZDO — Stefan Zweig Digital Nachlass-Ontologie</title>
-  <meta name="description" content="Formale OWL-Ontologie fuer den digitalen Nachlass Stefan Zweigs. 72 Klassen, 130 Properties, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
+  <meta name="description" content="Formale OWL-Ontologie fuer den digitalen Nachlass Stefan Zweigs, basierend auf RiC-O, IFLA LRM und CIDOC-CRM.">
   <link rel="alternate" type="text/turtle" href="szd-ontology.ttl">
   <link rel="alternate" type="application/ld+json" href="szd-ontology.jsonld">
   <link rel="stylesheet" href="../css/szd-ontology.css">

@@ -11,7 +11,7 @@ using a multi-stage approach:
 Outputs:
   - scripts/reconciliation_results.json \u2014 full match data
   - scripts/reconciliation_report.md \u2014 human-readable report
-  - ontology/reconciliation.ttl \u2014 RDF triples (szdo:hatManifestation)
+  - ontology/reconciliation.ttl \u2014 RDF triples (szdo:hasManifestation)
 
 Usage:
     python scripts/reconcile_klawiter.py
@@ -429,14 +429,15 @@ def write_ttl(results):
 
     for work_id, matches_list in sorted(work_matches.items()):
         w = matches_list[0]
-        work_uri = f"gams:o:szd.werkindex#{work_id}"
+        # Full IRI, since Turtle reads the '#' in a prefixed name as a comment.
+        work_uri = f"<https://gams.uni-graz.at/o:szd.werkindex#{work_id}>"
         safe_title = w['work_title'].replace('\n', ' ').replace('\r', ' ').strip()
         lines.append(f"# {work_id}: {safe_title[:80]}")
         lines.append(f"{work_uri}")
 
         for i, m in enumerate(matches_list):
             kl_uri = m["klawiter_id"].replace("klawiter:", "klawiter:")
-            prop = "szdo:hatManifestation" if m["klawiter_type"] in PRIMARY_TYPES else "szdo:wirdBehandeltIn"
+            prop = "szdo:hasManifestation" if m["klawiter_type"] in PRIMARY_TYPES else "szdo:isSubjectOf"
             sep = " ;" if i < len(matches_list) - 1 else " ."
             lines.append(f'    {prop} <https://klawiter-rescue.github.io/vocab/{m["klawiter_id"].split(":")[-1]}>{sep}')
             lines.append(f'    # \u2192 {m["klawiter_title"][:60]} [{m["klawiter_type"]}] conf:{m["confidence"]:.0%}')

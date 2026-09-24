@@ -1,12 +1,14 @@
 """
-Stefan Zweig Digital Nachlass-Ontologie -- Validation Pipeline
+Stefan Zweig Digital Estate Ontology -- Validation Pipeline
 ==============================================================
 
 Runs a multi-stage validation of szd-ontology.ttl:
   1. Syntax check (rdflib parse)
   2. Structural metrics (class/property counts)
-  3. SHACL validation (szd-shapes.ttl)
-  4. OWL consistency checks (rdflib-based, no Java required)
+  3. SHACL validation (szd-shapes.ttl) of the ontology together with
+     sample-instances.ttl
+  4. OWL consistency checks (rdflib-based, no Java required), including the
+     guard against the retired v1.2.0 identifiers of migration-v2.csv
   5. OntoClean taxonomy checks
   6. Competency question SPARQL tests
 
@@ -18,6 +20,7 @@ Usage:
 
 import sys
 import os
+import csv
 import argparse
 from pathlib import Path
 from collections import defaultdict
@@ -46,6 +49,11 @@ DCTERMS = Namespace("http://purl.org/dc/terms/")
 ONTOLOGY_FILE  = Path(__file__).parent / "szd-ontology.ttl"
 NACHLASS_FILE  = Path(__file__).parent / "nachlass-ontology.ttl"
 SHAPES_FILE    = Path(__file__).parent / "szd-shapes.ttl"
+SAMPLE_FILE    = Path(__file__).parent / "sample-instances.ttl"
+# Generated RDF that must use current identifiers. reconciliation.ttl is a
+# link set without entity descriptions and is therefore not SHACL-validated.
+INSTANCE_FILES = [SAMPLE_FILE, Path(__file__).parent / "reconciliation.ttl"]
+MIGRATION_FILE = Path(__file__).parent / "migration-v2.csv"
 
 # ---------------------------------------------------------------------------
 # SPARQL prefix block for competency question tests (defined once)
@@ -206,10 +214,20 @@ def stage_shacl(g, result, verbose=False):
         result.warn("SHACL", f"Shapes file not found: {SHAPES_FILE}")
         return
 
+    # The instance shapes (5-10) only fire on instance data, so the sample
+    # instances are validated together with the ontology they use.
+    data = Graph()
+    data += g
+    if SAMPLE_FILE.exists():
+        data.parse(str(SAMPLE_FILE), format="turtle")
+        result.add_info("SHACL", f"Instance data included: {SAMPLE_FILE.name}")
+    else:
+        result.warn("SHACL", f"Sample instances not found: {SAMPLE_FILE.name}")
+
     try:
         from pyshacl import validate
         conforms, results_graph, results_text = validate(
-            data_graph=g,
+            data_graph=data,
             shacl_graph=str(SHAPES_FILE),
             inference="rdfs",
             abort_on_first=False,
@@ -387,6 +405,24 @@ def _check_disjointness(g, classes, result):
             f"Consider adding disjointness axioms for clearer semantics.")
 
 
+def _check_retired_identifiers(g, result):
+    """4j: no retired v1.2.0 identifier from migration-v2.csv reappears in the
+    ontology or in the generated instance files."""
+    if not MIGRATION_FILE.exists():
+        result.error("OWL", f"Mapping file not found: {MIGRATION_FILE.name}")
+        return
+    with MIGRATION_FILE.open(encoding="utf-8") as f:
+        retired = {URIRef(row["old_iri"]) for row in csv.DictReader(f)}
+    data = Graph()
+    data += g
+    for f in INSTANCE_FILES:
+        if f.exists():
+            data.parse(str(f), format="turtle")
+    used = {t for triple in data for t in triple if isinstance(t, URIRef)}
+    for uri in sorted(retired & used, key=str):
+        result.error("OWL", f"Retired v1.2.0 identifier still used: {uri}")
+
+
 def stage_owl_checks(g, result, verbose=False):
     print("[4/6] OWL Consistency Checks ...")
 
@@ -401,7 +437,7 @@ def stage_owl_checks(g, result, verbose=False):
     n_dep_cls = len([c for c in classes if is_szdo(c) and is_deprecated(g, c)])
     n_dep_prop = len([p for p in (obj_props | dat_props) if is_szdo(p) and is_deprecated(g, p)])
     if n_dep_cls or n_dep_prop:
-        result.add_info("OWL", f"Skipping {n_dep_cls} deprecated classes, {n_dep_prop} deprecated properties (GAMS v0.x compatibility layer)")
+        result.add_info("OWL", f"Skipping {n_dep_cls} deprecated classes, {n_dep_prop} deprecated properties (legacy GAMS v0.x terms)")
 
     _check_labels(g, szdo_classes, result)
     _check_hierarchy(g, szdo_classes, result)
@@ -409,6 +445,7 @@ def stage_owl_checks(g, result, verbose=False):
     _check_property_constraints(g, szdo_obj, szdo_dat, result)
     _check_inverses(g, szdo_obj, result)
     _check_disjointness(g, szdo_classes, result)
+    _check_retired_identifiers(g, result)
 
 
 # ---------------------------------------------------------------------------
@@ -423,13 +460,13 @@ def stage_ontoclean(g, result, verbose=False):
     # We tag classes based on domain knowledge
 
     rigid_classes = {
-        SZDO.Person, SZDO.Organisation, SZDO.Nachlass, SZDO.Sammlung,
-        SZDO.NachlassObjekt, SZDO.Manuskript, SZDO.Typoskript, SZDO.Notizbuch,
-        SZDO.Buch, SZDO.Autograph, SZDO.Lebensdokument, SZDO.Konvolut,
-        SZDO.Werk, SZDO.Ort, SZDO.BiographischesEreignis,
-        SZDO.DigitalesObjekt, SZDO.METSObjekt, SZDO.Faksimile,
-        SZDO.KorrespondenzKonvolut, SZDO.Korrekturfahne,
-        SZDO.Typoskriptdurchschlag, SZDO.IIIFManifest,
+        SZDO.Person, SZDO.Organisation, SZDO.Estate, SZDO.Collection,
+        SZDO.Record, SZDO.Manuscript, SZDO.Typescript, SZDO.Notebook,
+        SZDO.Book, SZDO.Autograph, SZDO.PersonalDocument, SZDO.Ensemble,
+        SZDO.WorkIndexEntry, SZDO.Place, SZDO.BiographicalEvent,
+        SZDO.DigitalObject, SZDO.METSObject, SZDO.Facsimile,
+        SZDO.BundleOfCorrespondence, SZDO.GalleyProof,
+        SZDO.CarbonCopyTypescript, SZDO.IIIFManifest,
     }
 
     # Anti-rigid: role-like classes that depend on context
@@ -449,12 +486,12 @@ def stage_ontoclean(g, result, verbose=False):
             result.warn("ONTOCLEAN", f"Rigid class '{local_name(cls)}' not found in ontology")
 
     # Check identity criteria: classes with +I (identity-carrying) should
-    # have an identifier property (signatur, gamsIdentifier, etc.)
+    # have an identifier property (signature, gamsIdentifier, etc.)
     identity_classes = {
-        SZDO.NachlassObjekt: "szdo:signatur",
-        SZDO.Person: "szdo:gndIdentifier or szdo:nachname",
-        SZDO.Werk: "szdo:titel",
-        SZDO.Ort: "szdo:geonamesIdentifier",
+        SZDO.Record: "szdo:signature",
+        SZDO.Person: "szdo:gndIdentifier or szdo:surname",
+        SZDO.WorkIndexEntry: "szdo:title",
+        SZDO.Place: "szdo:geonamesIdentifier",
     }
 
     for cls, id_hint in identity_classes.items():
@@ -462,7 +499,7 @@ def stage_ontoclean(g, result, verbose=False):
             result.add_info("ONTOCLEAN",
                 f"'{local_name(cls)}' (+R +I): identity via {id_hint}")
 
-    # Roles are correctly modeled as properties (hatAutor, hatHerausgeber, etc.)
+    # Roles are correctly modeled as properties (author, editor, etc.)
     # rather than as role subclasses -- this follows the Agent-Role ODP
     result.add_info("ONTOCLEAN",
         "Agent roles modeled as properties (ODP Agent-Role pattern) -- correct approach")
@@ -488,9 +525,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Welche Sammlungen umfasst der Nachlass?",
             "query": """
                 ASK {
-                    szdo:Nachlass a owl:Class .
-                    szdo:Sammlung a owl:Class .
-                    szdo:enthaelt a owl:ObjectProperty .
+                    szdo:Estate a owl:Class .
+                    szdo:Collection a owl:Class .
+                    szdo:contains a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -501,9 +538,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Welche Manuskriptzeugen existieren zu einem Werk?",
             "query": """
                 ASK {
-                    szdo:Werk a owl:Class .
-                    szdo:hatManuskriptzeuge a owl:ObjectProperty .
-                    szdo:NachlassObjekt a owl:Class .
+                    szdo:WorkIndexEntry a owl:Class .
+                    szdo:hasManuscriptWitness a owl:ObjectProperty .
+                    szdo:Record a owl:Class .
                 }
             """,
             "expected": True,
@@ -514,11 +551,11 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Wie ist die Provenienzkette eines Bibliotheksbuchs?",
             "query": """
                 ASK {
-                    szdo:Buch a owl:Class .
-                    szdo:hatProvenienz a owl:ObjectProperty .
-                    szdo:Provenienzereignis a owl:Class .
-                    szdo:hatVorbesitzer a owl:ObjectProperty .
-                    szdo:hatNachbesitzer a owl:ObjectProperty .
+                    szdo:Book a owl:Class .
+                    szdo:hasProvenance a owl:ObjectProperty .
+                    szdo:ProvenanceEvent a owl:Class .
+                    szdo:previousOwner a owl:ObjectProperty .
+                    szdo:subsequentOwner a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -529,8 +566,8 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Welche Schreiberhände finden sich auf einem Manuskript?",
             "query": """
                 ASK {
-                    szdo:Manuskript a owl:Class .
-                    szdo:hatSchreiberhand a owl:ObjectProperty .
+                    szdo:Manuscript a owl:Class .
+                    szdo:scribalHand a owl:ObjectProperty .
                     szdo:Person a owl:Class .
                 }
             """,
@@ -542,9 +579,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Wo wird ein Objekt aufbewahrt?",
             "query": """
                 ASK {
-                    szdo:wirdAufbewahrtIn a owl:ObjectProperty .
-                    szdo:Aufbewahrungsort a owl:Class .
-                    szdo:signatur a owl:DatatypeProperty .
+                    szdo:location a owl:ObjectProperty .
+                    szdo:Location a owl:Class .
+                    szdo:signature a owl:DatatypeProperty .
                 }
             """,
             "expected": True,
@@ -555,8 +592,8 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Welche Manifestationen hat ein Werk?",
             "query": """
                 ASK {
-                    szdo:Werk a owl:Class .
-                    szdo:hatManifestation a owl:ObjectProperty .
+                    szdo:WorkIndexEntry a owl:Class .
+                    szdo:hasManifestation a owl:ObjectProperty .
                     szdo:Manifestation a owl:Class .
                 }
             """,
@@ -568,9 +605,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "In welche Sprachen wurde ein Werk übersetzt?",
             "query": """
                 ASK {
-                    szdo:WerkExpression a owl:Class .
-                    szdo:istUebersetzungVon a owl:ObjectProperty .
-                    szdo:sprache a owl:DatatypeProperty .
+                    szdo:Expression a owl:Class .
+                    szdo:isTranslationOf a owl:ObjectProperty .
+                    szdo:language a owl:DatatypeProperty .
                 }
             """,
             "expected": True,
@@ -581,11 +618,11 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Gibt es Klassen für Textgenese (Notizbuch, Manuskript, Typoskript, Korrekturfahne)?",
             "query": """
                 ASK {
-                    szdo:Notizbuch a owl:Class .
-                    szdo:Manuskript a owl:Class .
-                    szdo:Typoskript a owl:Class .
-                    szdo:Korrekturfahne a owl:Class .
-                    szdo:istManifestationVon a owl:ObjectProperty .
+                    szdo:Notebook a owl:Class .
+                    szdo:Manuscript a owl:Class .
+                    szdo:Typescript a owl:Class .
+                    szdo:GalleyProof a owl:Class .
+                    szdo:relationToWork a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -596,8 +633,8 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Gibt es eine Klasse für Sekundärliteratur?",
             "query": """
                 ASK {
-                    szdo:Sekundaerliteratur a owl:Class .
-                    szdo:wirdBehandeltIn a owl:ObjectProperty .
+                    szdo:SecondaryLiterature a owl:Class .
+                    szdo:isSubjectOf a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -608,10 +645,10 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Können biographische Ereignisse mit Orten verknüpft werden?",
             "query": """
                 ASK {
-                    szdo:BiographischesEreignis a owl:Class .
-                    szdo:hatOrt a owl:ObjectProperty .
-                    szdo:Ort a owl:Class .
-                    szdo:datum a owl:DatatypeProperty .
+                    szdo:BiographicalEvent a owl:Class .
+                    szdo:hasPlace a owl:ObjectProperty .
+                    szdo:Place a owl:Class .
+                    szdo:when a owl:DatatypeProperty .
                 }
             """,
             "expected": True,
@@ -622,9 +659,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Können Korrespondenzpartner identifiziert werden?",
             "query": """
                 ASK {
-                    szdo:KorrespondenzKonvolut a owl:Class .
-                    szdo:hatAbsender a owl:ObjectProperty .
-                    szdo:hatEmpfaenger a owl:ObjectProperty .
+                    szdo:BundleOfCorrespondence a owl:Class .
+                    szdo:sender a owl:ObjectProperty .
+                    szdo:receiver a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -635,9 +672,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Können Werke zeitlich eingeordnet werden?",
             "query": """
                 ASK {
-                    szdo:Werk a owl:Class .
-                    szdo:entstehungsdatum a owl:DatatypeProperty .
-                    szdo:zeitperiode a owl:DatatypeProperty .
+                    szdo:WorkIndexEntry a owl:Class .
+                    szdo:dateOfCreation a owl:DatatypeProperty .
+                    szdo:timePeriod a owl:DatatypeProperty .
                 }
             """,
             "expected": True,
@@ -649,8 +686,8 @@ def stage_competency_questions(g, result, verbose=False):
             "query": """
                 ASK {
                     szdo:Manifestation a owl:Class .
-                    szdo:hatManifestation a owl:ObjectProperty .
-                    szdo:Werk a owl:Class .
+                    szdo:hasManifestation a owl:ObjectProperty .
+                    szdo:WorkIndexEntry a owl:Class .
                 }
             """,
             "expected": True,
@@ -673,8 +710,8 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Können Provenienzmerkmale mit SKOS-Konzepten verknüpft werden?",
             "query": """
                 ASK {
-                    szdo:ProvenienzmerkmalInstanz a owl:Class .
-                    szdo:hatMerkmaltyp a owl:ObjectProperty .
+                    szdo:ProvenanceFeatureInstance a owl:Class .
+                    szdo:hasFeatureType a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -685,13 +722,13 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Ist die vollständige WEMI-Hierarchie (Werk-Expression-Manifestation-Exemplar) modelliert?",
             "query": """
                 ASK {
-                    szdo:Werk a owl:Class .
-                    szdo:WerkExpression a owl:Class .
+                    szdo:WorkIndexEntry a owl:Class .
+                    szdo:Expression a owl:Class .
                     szdo:Manifestation a owl:Class .
-                    szdo:Exemplar a owl:Class .
-                    szdo:hatExpression a owl:ObjectProperty .
-                    szdo:hatManifestation a owl:ObjectProperty .
-                    szdo:hatExemplar a owl:ObjectProperty .
+                    szdo:Item a owl:Class .
+                    szdo:hasExpression a owl:ObjectProperty .
+                    szdo:hasManifestation a owl:ObjectProperty .
+                    szdo:hasItem a owl:ObjectProperty .
                 }
             """,
             "expected": True,
@@ -702,9 +739,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Sind die RiC-Alignments korrekt (Nachlass->RecordSet, NachlassObjekt->Record)?",
             "query": """
                 ASK {
-                    szdo:Nachlass rdfs:subClassOf rico:RecordSet .
-                    szdo:NachlassObjekt rdfs:subClassOf rico:Record .
-                    szdo:DigitalesObjekt rdfs:subClassOf rico:Instantiation .
+                    szdo:Estate rdfs:subClassOf rico:RecordSet .
+                    szdo:Record rdfs:subClassOf rico:Record .
+                    szdo:DigitalObject rdfs:subClassOf rico:Instantiation .
                 }
             """,
             "expected": True,
@@ -715,12 +752,12 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Kann man aktive Beteiligte von erwähnten Personen unterscheiden?",
             "query": """
                 ASK {
-                    szdo:hatBeteiligtenAkteur a owl:ObjectProperty .
-                    szdo:hatBeteiligtenAkteur rdfs:subPropertyOf rico:hasOrHadContributor .
-                    szdo:hatAutor rdfs:subPropertyOf szdo:hatBeteiligtenAkteur .
-                    szdo:hatBetroffenePerson a owl:ObjectProperty .
-                    szdo:hatBetroffenePerson rdfs:subPropertyOf rico:hasOrHadSubject .
-                    FILTER NOT EXISTS { szdo:hatBetroffenePerson rdfs:subPropertyOf szdo:hatBeteiligtenAkteur }
+                    szdo:partyInvolved a owl:ObjectProperty .
+                    szdo:partyInvolved rdfs:subPropertyOf rico:hasOrHadContributor .
+                    szdo:author rdfs:subPropertyOf szdo:partyInvolved .
+                    szdo:affectedPerson a owl:ObjectProperty .
+                    szdo:affectedPerson rdfs:subPropertyOf rico:hasOrHadSubject .
+                    FILTER NOT EXISTS { szdo:affectedPerson rdfs:subPropertyOf szdo:partyInvolved }
                 }
             """,
             "expected": True,
@@ -731,9 +768,9 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Kann die Evidenz einer Datierung qualifiziert werden?",
             "query": """
                 ASK {
-                    szdo:datumEvidenz a owl:ObjectProperty .
-                    szdo:datum a owl:DatatypeProperty .
-                    szdo:sicherheitsgrad a owl:DatatypeProperty .
+                    szdo:dateEvidence a owl:ObjectProperty .
+                    szdo:when a owl:DatatypeProperty .
+                    szdo:certainty a owl:DatatypeProperty .
                 }
             """,
             "expected": True,
@@ -755,12 +792,12 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Sind die Kernklassen mit nachlass: aligniert?",
             "query": """
                 ASK {
-                    szdo:Nachlass rdfs:subClassOf nachlass:Nachlass .
-                    szdo:NachlassObjekt rdfs:subClassOf nachlass:NachlassObjekt .
-                    szdo:Werk rdfs:subClassOf nachlass:Werk .
-                    szdo:Akteur rdfs:subClassOf nachlass:Akteur .
-                    szdo:BiographischesEreignis rdfs:subClassOf nachlass:BiographischesEreignis .
-                    szdo:Ort rdfs:subClassOf nachlass:Ort .
+                    szdo:Estate rdfs:subClassOf nachlass:Estate .
+                    szdo:Record rdfs:subClassOf nachlass:Record .
+                    szdo:WorkIndexEntry rdfs:subClassOf nachlass:Work .
+                    szdo:Agent rdfs:subClassOf nachlass:Agent .
+                    szdo:BiographicalEvent rdfs:subClassOf nachlass:BiographicalEvent .
+                    szdo:Place rdfs:subClassOf nachlass:Place .
                 }
             """,
             "expected": True,
@@ -771,13 +808,13 @@ def stage_competency_questions(g, result, verbose=False):
             "question": "Definiert die nachlass:-Ontologie eigenstaendige Kernklassen?",
             "query": """
                 ASK {
-                    nachlass:Nachlass a owl:Class .
-                    nachlass:NachlassObjekt a owl:Class .
-                    nachlass:Werk a owl:Class .
+                    nachlass:Estate a owl:Class .
+                    nachlass:Record a owl:Class .
+                    nachlass:Work a owl:Class .
                     nachlass:Person a owl:Class .
-                    nachlass:BiographischesEreignis a owl:Class .
-                    nachlass:Ort a owl:Class .
-                    nachlass:Provenienzereignis a owl:Class .
+                    nachlass:BiographicalEvent a owl:Class .
+                    nachlass:Place a owl:Class .
+                    nachlass:ProvenanceEvent a owl:Class .
                 }
             """,
             "expected": True,

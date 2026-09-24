@@ -4,6 +4,32 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-24 — SZDO 2.0.0 with English identifiers
+
+Changed. The ontology uses English identifiers only, as the operator decided on
+2026-09-23 and 2026-09-24. `szdo:` moves to 2.0.0 and `nachlass:` to 0.2.0. Wherever the
+GAMS vocabulary of `szd-TORDF.xsl` already has an English term with the same meaning,
+that term is canonical, so live GAMS data conforms unchanged. Shapes, sample instances,
+Klawiter links, the documentation site and both generating scripts use the new names.
+`ontology/migration-v2.csv` maps every retired identifier to its successor.
+
+Decided. The German v1.2.0 identifiers are dropped without deprecated aliases, because
+aliases would keep German identifiers in the ontology and no live data uses v1.x. The
+missing shelfmark on a record became a SHACL warning, since privately held books have
+inventory numbers only.
+
+Found and fixed. Sample instances and Klawiter links wrote entry IRIs as prefixed names
+with `#`, which Turtle reads as a comment, so every entry collapsed onto its collection
+node and the instance shapes never fired. Both scripts now write full IRIs, the instance
+generator reads the untyped shelfmark of SZDBIB and the GND-referenced correspondents of
+SZDKOR, and `validate.py` now validates the sample instances with SHACL and fails on any
+retired identifier. `reconciliation.ttl` was regenerated from the stored results, which
+also applies the script's `isSubjectOf` for secondary literature.
+
+Open. `szd:glossar`, the hybrid `szd:objecttyp` and the glossary concepts of
+`szdg:DatumEvidenz` keep German-derived identifiers, because they belong to the live GAMS
+vocabulary and glossary. The namespace `https://w3id.org/nachlass#` keeps its name.
+
 ## 2026-09-24 — Land und Ort im Organisationenindex aus der GND ergänzt
 
 Geändert. `scripts/reconcile_org_places.py` ergänzt in `SZDORG.xml` `<country>` und

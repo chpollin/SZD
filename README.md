@@ -37,14 +37,14 @@ The [szd-zenodo-backup/](szd-zenodo-backup/) directory holds the archival pipeli
 
 The [scripts/](scripts/) directory contains the data processing, repair and reconciliation scripts, each with its own README. The index is in [knowledge/README.md](knowledge/README.md#scripts).
 
-### Nachlass-Ontologie (SZDO)
+### Estate ontology (SZDO)
 
-The [ontology/](ontology/) directory contains the Stefan Zweig Digital Nachlass-Ontologie, a formal OWL ontology for the digital estate based on Records in Context (RiC-O), IFLA LRM and CIDOC-CRM.
+The [ontology/](ontology/) directory contains the Stefan Zweig Digital Estate Ontology (Nachlass-Ontologie), a formal OWL ontology for the digital estate based on Records in Contexts (RiC-O), IFLA LRM and CIDOC-CRM.
 
 - Live documentation: https://chpollin.github.io/SZD/ontology/
 - Namespace: `https://gams.uni-graz.at/o:szd.ontology#`
-- Version 1.2.0 with two layers, the generic `nachlass:` in `nachlass-ontology.ttl` (`https://w3id.org/nachlass#`), reusable for any estate project, and the SZD-specific `szdo:`
-- Backward-compatible mapping from the English v0.x names used on GAMS via `owl:equivalentClass` and `owl:equivalentProperty`
+- Version 2.0.0 with English identifiers and two layers, the generic `nachlass:` in `nachlass-ontology.ttl` (`https://w3id.org/nachlass#`), reusable for any estate project, and the SZD-specific `szdo:`
+- The English v0.x terms used on GAMS are the canonical identifiers wherever the meaning is the same, so live GAMS data conforms without a mapping layer
 - Validation with `python ontology/validate.py` (syntax, SHACL, OWL, OntoClean, competency questions)
 - Design document: [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md)
 

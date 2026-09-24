@@ -16,31 +16,32 @@
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 
 # =============================================================================
-# Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+# Stefan Zweig Digital Estate Ontology (SZDO)
 # =============================================================================
 #
-# Formale Ontologie für den digitalen Nachlass Stefan Zweigs.
-# Archivische Grundlage: Records in Context (RiC-O)
-# Werkmodellierung: IFLA Library Reference Model (LRM)
-# Ereignisse/Provenienz: CIDOC Conceptual Reference Model (CRM)
+# Formal ontology for the digital estate of Stefan Zweig.
+# Archival foundation: Records in Contexts (RiC-O)
+# Work modelling: IFLA Library Reference Model (LRM)
+# Events and provenance: CIDOC Conceptual Reference Model (CRM)
 #
 # Namespace: https://gams.uni-graz.at/o:szd.ontology#
-# Lizenz: CC-BY 4.0
+# Licence: CC BY 4.0
 # =============================================================================
 
 <https://gams.uni-graz.at/o:szd.ontology>
     a owl:Ontology ;
-    owl:versionInfo "1.2.0" ;
-    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
-    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
+    owl:versionInfo "2.0.0" ;
+    owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/2.0.0> ;
+    owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
+    owl:incompatibleWith <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
     dcterms:title "Stefan Zweig Digital Nachlass-Ontologie"@de ,
                   "Stefan Zweig Digital Estate Ontology"@en ;
     dcterms:description
-        "Ontologie zur Beschreibung des digitalen Nachlasses von Stefan Zweig. Modelliert archivalische, bibliographische und biographische Entitäten und deren Beziehungen. Version 1.0.0 formalisiert und erweitert die implizite szd:-Ontologie aus dem GAMS-Repositorium (v0.x)."@de ,
-        "Ontology for describing the digital estate of Stefan Zweig. Models archival, bibliographic, and biographical entities and their relationships. Version 1.0.0 formalizes and extends the implicit szd: ontology from the GAMS repository (v0.x)."@en ;
+        "Ontologie zur Beschreibung des digitalen Nachlasses von Stefan Zweig. Modelliert archivalische, bibliographische und biographische Entitäten und deren Beziehungen und formalisiert die implizite szd:-Ontologie des GAMS-Repositoriums (v0.x)."@de ,
+        "Ontology for describing the digital estate of Stefan Zweig. Models archival, bibliographic, and biographical entities and their relationships, and formalizes the implicit szd: ontology of the GAMS repository (v0.x)."@en ;
     dcterms:creator "Christopher Pollin, Digital Humanities Craft OG" ;
     dcterms:created "2026-03-29"^^xsd:date ;
-    dcterms:modified "2026-03-29"^^xsd:date ;
+    dcterms:modified "2026-09-24"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:imports <https://www.ica.org/standards/RiC/ontology> ,
                <https://w3id.org/nachlass> ;
@@ -48,22 +49,22 @@
     rdfs:isDefinedBy <https://chpollin.github.io/SZD/ontology/> ;
     rdfs:seeAlso <https://stefanzweig.digital> ;
     rdfs:comment
-        "Versionierung: Die Vorgängerversion (v0.x) ist implizit in szd-TORDF.xsl definiert und wird im GAMS-Repositorium produktiv genutzt. Diese Version (v1.0.0) formalisiert alle Klassen und Properties, fügt RiC-O/LRM/CRM-Alignments hinzu und definiert die GAMS-Kompatibilitätsschicht (PART 10)."@de ,
-        "Versioning: The prior version (v0.x) is implicitly defined in szd-TORDF.xsl and used in production on the GAMS repository. This version (v1.0.0) formalizes all classes and properties, adds RiC-O/LRM/CRM alignments, and defines the GAMS compatibility layer (PART 10)."@en .
+        "Versionierung: Die Vorgängerversion v0.x ist implizit in szd-TORDF.xsl definiert und wird im GAMS-Repositorium produktiv genutzt. Version 2.0.0 benennt alle Bezeichner englisch. Wo das produktive GAMS-Vokabular bereits einen englischen Term gleicher Bedeutung hat, ist dieser Term der kanonische Bezeichner, sodass die Live-Daten ohne Abbildungsschicht konform sind. GAMS-Terme mit abweichender Bedeutung stehen als owl:deprecated in PART 10. Die deutschen Bezeichner von v1.2.0 entfallen, ihre Zuordnung enthält ontology/migration-v2.csv."@de ,
+        "Versioning: The prior version v0.x is implicitly defined in szd-TORDF.xsl and used in production on the GAMS repository. Version 2.0.0 uses English identifiers throughout. Where the production GAMS vocabulary already has an English term with the same meaning, that term is the canonical identifier, so live data conforms without a mapping layer. GAMS terms whose meaning differs are kept as owl:deprecated in PART 10. The German identifiers of v1.2.0 are dropped, and ontology/migration-v2.csv maps them to the new identifiers."@en .
 
 
 # =============================================================================
-# PART 1: ARCHIVSCHICHT (Archival Layer)
-# Fundament: Records in Context (RiC-O)
+# PART 1: ARCHIVAL LAYER
+# Foundation: Records in Contexts (RiC-O)
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 1.1 Nachlass (Fonds)
+# 1.1 Estate (fonds)
 # -----------------------------------------------------------------------------
 
-szdo:Nachlass
+szdo:Estate
     a owl:Class ;
-    rdfs:subClassOf rico:RecordSet , nachlass:Nachlass ;
+    rdfs:subClassOf rico:RecordSet , nachlass:Estate ;
     rdfs:label "Nachlass"@de , "Estate"@en ;
     rdfs:comment
         "Der Gesamtnachlass als archivischer Fonds. Entspricht der obersten Verzeichnungsstufe."@de ,
@@ -71,74 +72,74 @@ szdo:Nachlass
     skos:example "Stefan Zweig Nachlass, Literaturarchiv Salzburg" .
 
 # -----------------------------------------------------------------------------
-# 1.2 Sammlungen (Collections / Series)
+# 1.2 Collections (series)
 # -----------------------------------------------------------------------------
 
-szdo:Sammlung
+szdo:Collection
     a owl:Class ;
-    rdfs:subClassOf rico:RecordSet , nachlass:Sammlung ;
+    rdfs:subClassOf rico:RecordSet , nachlass:Collection ;
     rdfs:label "Sammlung"@de , "Collection"@en ;
     rdfs:comment
         "Teilbestand des Nachlasses, organisiert nach Materialtyp oder Provenienz."@de ,
         "Sub-collection of the estate, organized by material type or provenance."@en .
 
-szdo:Werksammlung
+szdo:WorksCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Werksammlung"@de , "Works Collection"@en ;
     rdfs:comment
         "Sammlung von Manuskripten, Typoskripten und Entwürfen literarischer Werke."@de ,
         "Collection of manuscripts, typescripts, and drafts of literary works."@en ;
-    szdo:entsprichtPID "o:szd.werke" .
+    szdo:correspondsToPID "o:szd.werke" .
 
-szdo:Korrespondenzsammlung
+szdo:CorrespondenceCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Korrespondenzsammlung"@de , "Correspondence Collection"@en ;
     rdfs:comment
         "Sammlung der Korrespondenz-Konvolute (Briefe an und von Stefan Zweig)."@de ,
         "Collection of correspondence bundles (letters to and from Stefan Zweig)."@en ;
-    szdo:entsprichtPID "o:szd.korrespondenzen" .
+    szdo:correspondsToPID "o:szd.korrespondenzen" .
 
-szdo:Autographensammlung
+szdo:AutographCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Autographensammlung"@de , "Autograph Collection"@en ;
     rdfs:comment
         "Zweigs Sammlung handschriftlicher Dokumente anderer Autoren und Persönlichkeiten."@de ,
         "Zweig's collection of handwritten documents by other authors and public figures."@en ;
-    szdo:entsprichtPID "o:szd.autographen" .
+    szdo:correspondsToPID "o:szd.autographen" .
 
-szdo:Bibliothekssammlung
+szdo:LibraryCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Bibliothekssammlung"@de , "Library Collection"@en ;
     rdfs:comment
         "Rekonstruierte Privatbibliothek Stefan Zweigs mit Provenienzmerkmalen."@de ,
         "Reconstructed personal library of Stefan Zweig with provenance features."@en ;
-    szdo:entsprichtPID "o:szd.bibliothek" .
+    szdo:correspondsToPID "o:szd.bibliothek" .
 
-szdo:Lebensdokumentesammlung
+szdo:PersonalDocumentsCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Lebensdokumentesammlung"@de , "Personal Documents Collection"@en ;
     rdfs:comment
         "Persönliche Dokumente: Verträge, Urkunden, Tagebücher, Ephemera."@de ,
         "Personal documents: contracts, certificates, diaries, ephemera."@en ;
-    szdo:entsprichtPID "o:szd.lebensdokumente" .
+    szdo:correspondsToPID "o:szd.lebensdokumente" .
 
-szdo:Aufsatzsammlung
+szdo:EssayCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Aufsatzsammlung"@de , "Essay Collection"@en ;
     rdfs:comment
         "Sammlung von Essays, Feuilletons und journalistischen Beiträgen."@de ,
         "Collection of essays, feuilletons, and journalistic contributions."@en ;
-    szdo:entsprichtPID "o:szd.essays" .
+    szdo:correspondsToPID "o:szd.essays" .
 
-szdo:ThematischeSammlung
+szdo:ThematicCollection
     a owl:Class ;
-    rdfs:subClassOf szdo:Sammlung ;
+    rdfs:subClassOf szdo:Collection ;
     rdfs:label "Thematische Sammlung"@de , "Thematic Collection"@en ;
     rdfs:comment
         "Kuratierte, themenbasierte Zusammenstellung aus verschiedenen Beständen."@de ,
@@ -146,68 +147,68 @@ szdo:ThematischeSammlung
     skos:example "Wie Stefan Zweig schreibt (o:szd.thema.2), Marie Antoinette (o:szd.thema.1)" .
 
 # -----------------------------------------------------------------------------
-# 1.3 Nachlassobjekte (Records / Items)
+# 1.3 Records
 # -----------------------------------------------------------------------------
 
-szdo:NachlassObjekt
+szdo:Record
     a owl:Class ;
-    rdfs:subClassOf rico:Record , nachlass:NachlassObjekt ;
+    rdfs:subClassOf rico:Record , nachlass:Record ;
     rdfs:label "Nachlassobjekt"@de , "Estate Object"@en ;
     rdfs:comment
         "Einzelnes physisches Objekt im Nachlass."@de ,
         "Individual physical object in the estate."@en .
 
-szdo:Manuskript
+szdo:Manuscript
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Manuskript"@de , "Manuscript"@en ;
     rdfs:comment
         "Handschriftliches Werkmanuskript (Autograph)."@de ,
         "Handwritten work manuscript (autograph)."@en .
 
-szdo:Typoskript
+szdo:Typescript
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Typoskript"@de , "Typescript"@en ;
     rdfs:comment
         "Maschinschriftliches Dokument."@de ,
         "Typewritten document."@en .
 
-szdo:Typoskriptdurchschlag
+szdo:CarbonCopyTypescript
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Typoskriptdurchschlag"@de , "Carbon Copy Typescript"@en ;
     rdfs:comment
         "Durchschlag (Kohlepapier-Kopie) eines Typoskripts."@de ,
         "Carbon copy of a typescript."@en .
 
-szdo:Notizbuch
+szdo:Notebook
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Notizbuch"@de , "Notebook"@en ;
     rdfs:comment
         "Notizbuch mit Entwürfen, Notizen oder Skizzen."@de ,
         "Notebook with drafts, notes, or sketches."@en .
 
-szdo:Konvolut
+szdo:Ensemble
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Konvolut"@de , "Ensemble"@en ;
     rdfs:comment
         "Zusammengestelltes Ensemble aus mehreren Dokumententypen (z.B. Typoskript + Durchschlag + Umschlag)."@de ,
         "Assembled ensemble of multiple document types (e.g., typescript + carbon copy + wrapper)."@en .
 
-szdo:Korrekturfahne
+szdo:GalleyProof
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Korrekturfahne"@de , "Galley Proof"@en ;
     rdfs:comment
         "Druckfahne mit handschriftlichen Korrekturen."@de ,
         "Galley proof with handwritten corrections."@en .
 
-szdo:KorrespondenzKonvolut
+szdo:BundleOfCorrespondence
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Korrespondenzkonvolut"@de , "Bundle of Correspondence"@en ;
     rdfs:comment
         "Bündel von Korrespondenzstücken zwischen Stefan Zweig und einem Korrespondenzpartner."@de ,
@@ -215,43 +216,43 @@ szdo:KorrespondenzKonvolut
 
 szdo:Autograph
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Autograph"@de , "Autograph"@en ;
     rdfs:comment
         "Handschriftliches Dokument eines Dritten aus Zweigs Autographensammlung."@de ,
         "Handwritten document by a third party from Zweig's autograph collection."@en .
 
-szdo:Buch
+szdo:Book
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Buch"@de , "Book"@en ;
     rdfs:comment
         "Buch aus Stefan Zweigs rekonstruierter Privatbibliothek."@de ,
         "Book from Stefan Zweig's reconstructed personal library."@en .
 
-szdo:Lebensdokument
+szdo:PersonalDocument
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Lebensdokument"@de , "Personal Document"@en ;
     rdfs:comment
         "Persönliches Dokument: Vertrag, Urkunde, Tagebuch, Plakat, Einladung, etc."@de ,
         "Personal document: contract, certificate, diary, poster, invitation, etc."@en .
 
 # -----------------------------------------------------------------------------
-# 1.4 Digitale Objekte (Digital Representations)
+# 1.4 Digital objects
 # -----------------------------------------------------------------------------
 
-szdo:DigitalesObjekt
+szdo:DigitalObject
     a owl:Class ;
-    rdfs:subClassOf rico:Instantiation , nachlass:DigitalesObjekt ;
+    rdfs:subClassOf rico:Instantiation , nachlass:DigitalObject ;
     rdfs:label "Digitales Objekt"@de , "Digital Object"@en ;
     rdfs:comment
         "Digitale Repräsentation eines physischen Nachlassobjekts."@de ,
         "Digital representation of a physical estate object."@en .
 
-szdo:METSObjekt
+szdo:METSObject
     a owl:Class ;
-    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:subClassOf szdo:DigitalObject ;
     rdfs:label "METS-Objekt"@de , "METS Object"@en ;
     rdfs:comment
         "METS-Container mit strukturellen Metadaten und Seitenverweisen (DFG-METS)."@de ,
@@ -259,116 +260,116 @@ szdo:METSObjekt
 
 szdo:IIIFManifest
     a owl:Class ;
-    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:subClassOf szdo:DigitalObject ;
     rdfs:label "IIIF-Manifest"@de , "IIIF Manifest"@en ;
     rdfs:comment
         "IIIF Presentation API Manifest für die Darstellung in Viewern (z.B. Mirador)."@de ,
         "IIIF Presentation API manifest for rendering in viewers (e.g., Mirador)."@en .
 
-szdo:Faksimile
+szdo:Facsimile
     a owl:Class ;
-    rdfs:subClassOf szdo:DigitalesObjekt ;
+    rdfs:subClassOf szdo:DigitalObject ;
     rdfs:label "Faksimile"@de , "Facsimile"@en ;
     rdfs:comment
         "Einzelnes hochauflösendes digitales Bild einer Seite."@de ,
         "Single high-resolution digital image of a page."@en .
 
 # -----------------------------------------------------------------------------
-# 1.5 Disjointness Axioms
+# 1.5 Disjointness axioms
 # -----------------------------------------------------------------------------
 
-# Sammlungstypen sind disjunkt
+# Collection types are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:Werksammlung
-        szdo:Korrespondenzsammlung
-        szdo:Autographensammlung
-        szdo:Bibliothekssammlung
-        szdo:Lebensdokumentesammlung
-        szdo:Aufsatzsammlung
-        szdo:ThematischeSammlung
+        szdo:WorksCollection
+        szdo:CorrespondenceCollection
+        szdo:AutographCollection
+        szdo:LibraryCollection
+        szdo:PersonalDocumentsCollection
+        szdo:EssayCollection
+        szdo:ThematicCollection
     ) .
 
-# Nachlassobjekttypen sind disjunkt
+# Record types are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:Manuskript
-        szdo:Typoskript
-        szdo:Typoskriptdurchschlag
-        szdo:Notizbuch
-        szdo:Konvolut
-        szdo:Korrekturfahne
-        szdo:KorrespondenzKonvolut
+        szdo:Manuscript
+        szdo:Typescript
+        szdo:CarbonCopyTypescript
+        szdo:Notebook
+        szdo:Ensemble
+        szdo:GalleyProof
+        szdo:BundleOfCorrespondence
         szdo:Autograph
-        szdo:Buch
-        szdo:Lebensdokument
+        szdo:Book
+        szdo:PersonalDocument
     ) .
 
-# Digitale Objekttypen sind disjunkt
+# Digital object types are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:METSObjekt
+        szdo:METSObject
         szdo:IIIFManifest
-        szdo:Faksimile
+        szdo:Facsimile
     ) .
 
-# Akteurtypen sind disjunkt
+# Agent types are disjoint
 szdo:Person owl:disjointWith szdo:Organisation .
 
-# Ortstypen sind disjunkt
+# Place types are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:GeographischerOrt
-        szdo:Aufbewahrungsort
-        szdo:Entstehungsort
+        szdo:GeographicalPlace
+        szdo:Location
+        szdo:PlaceOfOrigin
     ) .
 
-# Hauptschichten sind disjunkt
+# Main layers are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:Nachlass
-        szdo:NachlassObjekt
-        szdo:Werk
-        szdo:Akteur
-        szdo:Ort
-        szdo:BiographischesEreignis
-        szdo:DigitalesObjekt
+        szdo:Estate
+        szdo:Record
+        szdo:WorkIndexEntry
+        szdo:Agent
+        szdo:Place
+        szdo:BiographicalEvent
+        szdo:DigitalObject
     ) .
 
-# Werktypen sind disjunkt
+# Work types are disjoint
 [] a owl:AllDisjointClasses ;
     owl:members (
-        szdo:BelletristischesWerk
-        szdo:EssayistischesWerk
-        szdo:BiographischesWerk
-        szdo:HistorischesWerk
-        szdo:DramatischesWerk
-        szdo:LyrischesWerk
-        szdo:SammelWerk
-        szdo:Uebersetzungswerk
-        szdo:VorwortNachwort
+        szdo:FictionalWork
+        szdo:EssayisticWork
+        szdo:BiographicalWork
+        szdo:HistoricalWork
+        szdo:DramaticWork
+        szdo:PoeticWork
+        szdo:CollectedWork
+        szdo:TranslationWork
+        szdo:ForewordAfterword
     ) .
 
 
 # =============================================================================
-# PART 2: WERKSCHICHT (Work Layer)
-# Fundament: IFLA Library Reference Model (LRM)
+# PART 2: WORK LAYER
+# Foundation: IFLA Library Reference Model (LRM)
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 2.1 Werk-Hierarchie (WEMI)
+# 2.1 Work hierarchy (WEMI)
 # -----------------------------------------------------------------------------
 
-szdo:Werk
+szdo:WorkIndexEntry
     a owl:Class ;
     rdfs:label "Werk"@de , "Work"@en ;
     rdfs:comment
         "Abstraktes intellektuelles Werk, unabhängig von physischen Trägern. Entspricht SZDWRK-Einträgen im Werkindex."@de ,
         "Abstract intellectual work, independent of physical carriers. Corresponds to SZDWRK entries in the work index."@en ;
-    rdfs:subClassOf lrm:Work , nachlass:Werk ;
-    szdo:entsprichtPID "o:szd.werkindex" .
+    rdfs:subClassOf lrm:Work , nachlass:Work ;
+    szdo:correspondsToPID "o:szd.werkindex" .
 
-szdo:WerkExpression
+szdo:Expression
     a owl:Class ;
     rdfs:label "Werkexpression"@de , "Work Expression"@en ;
     rdfs:comment
@@ -384,82 +385,82 @@ szdo:Manifestation
         "Published edition of a work: first edition, reprint, translation edition. Bridge to Klawiter entries."@en ;
     rdfs:subClassOf lrm:Manifestation .
 
-szdo:Exemplar
+szdo:Item
     a owl:Class ;
     rdfs:label "Exemplar"@de , "Item"@en ;
     rdfs:comment
-        "Konkretes physisches Exemplar einer Manifestation. Brücke zu szdo:NachlassObjekt (z.B. ein bestimmtes Buch in Zweigs Bibliothek)."@de ,
-        "Concrete physical copy of a manifestation. Bridge to szdo:NachlassObjekt (e.g., a specific book in Zweig's library)."@en ;
+        "Konkretes physisches Exemplar einer Manifestation. Brücke zu szdo:Record (z.B. ein bestimmtes Buch in Zweigs Bibliothek)."@de ,
+        "Concrete physical copy of a manifestation. Bridge to szdo:Record (e.g., a specific book in Zweig's library)."@en ;
     rdfs:subClassOf lrm:Item .
 
 # -----------------------------------------------------------------------------
-# 2.2 Werktypen (nach Inhalt)
+# 2.2 Work types (by content)
 # -----------------------------------------------------------------------------
 
-szdo:BelletristischesWerk
+szdo:FictionalWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Belletristisches Werk"@de , "Fiction"@en ;
     rdfs:comment "Novellen, Romane, Erzählungen."@de , "Novellas, novels, short stories."@en .
 
-szdo:EssayistischesWerk
+szdo:EssayisticWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Essayistisches Werk"@de , "Essay"@en ;
     rdfs:comment "Essays, Feuilletons, Rezensionen."@de , "Essays, feuilletons, reviews."@en .
 
-szdo:BiographischesWerk
+szdo:BiographicalWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Biographisches Werk"@de , "Biographical Work"@en ;
     rdfs:comment "Biographien (Fouché, Marie Antoinette, Erasmus, Magellan, etc.)."@de ,
                  "Biographies (Fouché, Marie Antoinette, Erasmus, Magellan, etc.)."@en .
 
-szdo:HistorischesWerk
+szdo:HistoricalWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Historisches Werk"@de , "Historical Work"@en ;
     rdfs:comment "Historische Miniaturen und Darstellungen (z.B. Sternstunden der Menschheit)."@de ,
                  "Historical miniatures and depictions (e.g., Decisive Moments in History)."@en .
 
-szdo:DramatischesWerk
+szdo:DramaticWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Dramatisches Werk"@de , "Dramatic Work"@en ;
     rdfs:comment "Theaterstücke, Libretti."@de , "Plays, libretti."@en .
 
-szdo:LyrischesWerk
+szdo:PoeticWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Lyrisches Werk"@de , "Poetry"@en ;
     rdfs:comment "Gedichte, Gedichtsammlungen."@de , "Poems, poetry collections."@en .
 
-szdo:SammelWerk
+szdo:CollectedWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Sammelwerk"@de , "Collected Works"@en ;
     rdfs:comment "Kompilationen, gesammelte Werke, Anthologien."@de ,
                  "Compilations, collected works, anthologies."@en .
 
-szdo:Uebersetzungswerk
+szdo:TranslationWork
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Übersetzungswerk"@de , "Translation Work"@en ;
     rdfs:comment "Zweigs Übersetzungen von Werken anderer Autoren (Verlaine, Verhaeren, etc.)."@de ,
                  "Zweig's translations of works by other authors (Verlaine, Verhaeren, etc.)."@en .
 
-szdo:VorwortNachwort
+szdo:ForewordAfterword
     a owl:Class ;
-    rdfs:subClassOf szdo:Werk ;
+    rdfs:subClassOf szdo:WorkIndexEntry ;
     rdfs:label "Vorwort/Nachwort"@de , "Foreword/Afterword"@en ;
     rdfs:comment "Vorworte, Nachworte, Einleitungen zu Werken anderer."@de ,
                  "Forewords, afterwords, introductions to works by others."@en .
 
 # -----------------------------------------------------------------------------
-# 2.3 Sekundärliteratur (nicht Teil des Nachlasses, aber des Forschungskontexts)
+# 2.3 Secondary literature (not part of the estate, but of its research context)
 # -----------------------------------------------------------------------------
 
-szdo:Sekundaerliteratur
+szdo:SecondaryLiterature
     a owl:Class ;
     rdfs:subClassOf schema:ScholarlyArticle ;
     rdfs:label "Sekundärliteratur"@de , "Secondary Literature"@en ;
@@ -469,146 +470,147 @@ szdo:Sekundaerliteratur
 
 
 # =============================================================================
-# PART 3: AKTEUR- UND INDEXSCHICHT (Agent & Index Layer)
+# PART 3: AGENT AND INDEX LAYER
 # =============================================================================
 
-szdo:Akteur
+szdo:Agent
     a owl:Class ;
     rdfs:label "Akteur"@de , "Agent"@en ;
     rdfs:comment "Person oder Organisation mit Bezug zum Nachlass."@de ,
                  "Person or organization related to the estate."@en ;
     owl:equivalentClass rico:Agent ;
-    rdfs:subClassOf crm:E39_Actor , nachlass:Akteur .
+    rdfs:subClassOf crm:E39_Actor , nachlass:Agent .
 
 szdo:Person
     a owl:Class ;
-    rdfs:subClassOf szdo:Akteur ;
+    rdfs:subClassOf szdo:Agent ;
     rdfs:label "Person"@de , "Person"@en ;
     rdfs:comment
         "Person mit Normdatenverknüpfung (GND, Wikidata, VIAF). Entspricht SZDPER-Einträgen."@de ,
         "Person with authority file links (GND, Wikidata, VIAF). Corresponds to SZDPER entries."@en ;
     owl:equivalentClass rico:Person ;
     rdfs:subClassOf crm:E21_Person, foaf:Person ;
-    szdo:entsprichtPID "o:szd.personen" .
+    szdo:correspondsToPID "o:szd.personen" .
 
 szdo:Organisation
     a owl:Class ;
-    rdfs:subClassOf szdo:Akteur ;
+    rdfs:subClassOf szdo:Agent ;
     rdfs:label "Organisation"@de , "Organization"@en ;
     rdfs:comment
-        "Institution, Verlag, Archiv, Bibliothek. Entspricht SZDSTA-Einträgen (Standorte)."@de ,
-        "Institution, publisher, archive, library. Corresponds to SZDSTA entries (locations)."@en ;
+        "Institution, Verlag, Archiv, Bibliothek. Entspricht den Einträgen des Organisationsindex SZDORG."@de ,
+        "Institution, publisher, archive, library. Corresponds to the entries of the organisation index SZDORG."@en ;
     owl:equivalentClass rico:CorporateBody ;
     rdfs:subClassOf crm:E74_Group, foaf:Organization ;
-    szdo:entsprichtPID "o:szd.standorte" .
+    szdo:correspondsToPID "o:szd.organisation" .
 
 
 # =============================================================================
-# PART 4: BIOGRAPHIE- UND EREIGNISSCHICHT (Biographical & Event Layer)
-# Fundament: CIDOC-CRM
+# PART 4: BIOGRAPHICAL AND EVENT LAYER
+# Foundation: CIDOC-CRM
 # =============================================================================
 
-szdo:BiographischesEreignis
+szdo:BiographicalEvent
     a owl:Class ;
     rdfs:label "Biographisches Ereignis"@de , "Biographical Event"@en ;
     rdfs:comment
         "Ereignis im Leben Stefan Zweigs. Entspricht SZDBIO-Einträgen im Lebenskalender."@de ,
         "Event in Stefan Zweig's life. Corresponds to SZDBIO entries in the life calendar."@en ;
-    rdfs:subClassOf crm:E5_Event , nachlass:BiographischesEreignis ;
-    szdo:entsprichtPID "o:szd.lebenskalender" .
+    rdfs:subClassOf crm:E5_Event , nachlass:BiographicalEvent ;
+    szdo:correspondsToPID "o:szd.lebenskalender" .
 
-szdo:Geburt
+szdo:Birth
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis , crm:E67_Birth ;
+    rdfs:subClassOf szdo:BiographicalEvent , crm:E67_Birth ;
     rdfs:label "Geburt"@de , "Birth"@en ;
     rdfs:comment "Geburtsereignis einer Person."@de , "Birth event of a person."@en .
 
-szdo:Tod
+szdo:Death
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis , crm:E69_Death ;
+    rdfs:subClassOf szdo:BiographicalEvent , crm:E69_Death ;
     rdfs:label "Tod"@de , "Death"@en ;
     rdfs:comment "Todesereignis einer Person."@de , "Death event of a person."@en .
 
-szdo:Reise
+szdo:Journey
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Reise"@de , "Journey"@en ;
     rdfs:comment "Reisen, Aufenthalte, Ortswechsel."@de , "Journeys, stays, relocations."@en .
 
-szdo:Publikationsereignis
+szdo:PublicationEvent
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Publikationsereignis"@de , "Publication Event"@en ;
     rdfs:comment "Veröffentlichung eines Werks."@de , "Publication of a work."@en .
 
-szdo:Begegnung
+szdo:Encounter
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Begegnung"@de , "Encounter"@en ;
     rdfs:comment "Treffen mit Personen."@de , "Meeting with persons."@en .
 
-szdo:InstitutionellesEreignis
+szdo:InstitutionalEvent
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Institutionelles Ereignis"@de , "Institutional Event"@en ;
     rdfs:comment "Verleihungen, Ehrungen, Mitgliedschaften."@de ,
                  "Awards, honors, memberships."@en .
 
-szdo:Exilereignis
+szdo:ExileEvent
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Exilereignis"@de , "Exile Event"@en ;
     rdfs:comment "Emigration, Flucht, Exilstationen."@de ,
                  "Emigration, flight, exile stations."@en .
 
-szdo:WissenschaftlichesEreignis
+szdo:ScholarlyEvent
     a owl:Class ;
-    rdfs:subClassOf szdo:BiographischesEreignis ;
+    rdfs:subClassOf szdo:BiographicalEvent ;
     rdfs:label "Wissenschaftliches Ereignis"@de , "Scholarly Event"@en ;
     rdfs:comment "Symposien, Konferenzen, Ausstellungen zu Stefan Zweig."@de ,
                  "Symposia, conferences, exhibitions about Stefan Zweig."@en .
 
 
 # =============================================================================
-# PART 5: ORTS- UND RAUMSCHICHT (Place Layer)
+# PART 5: PLACE LAYER
 # =============================================================================
 
-szdo:Ort
+szdo:Place
     a owl:Class ;
     rdfs:label "Ort"@de , "Place"@en ;
     rdfs:comment "Geographischer oder institutioneller Ort."@de ,
                  "Geographical or institutional place."@en ;
     owl:equivalentClass rico:Place ;
-    rdfs:subClassOf crm:E53_Place , nachlass:Ort .
+    rdfs:subClassOf crm:E53_Place , nachlass:Place .
 
-szdo:GeographischerOrt
+szdo:GeographicalPlace
     a owl:Class ;
-    rdfs:subClassOf szdo:Ort ;
+    rdfs:subClassOf szdo:Place ;
     rdfs:label "Geographischer Ort"@de , "Geographical Place"@en ;
     rdfs:comment "Stadt, Land, Region (Geonames-verknüpft)."@de ,
                  "City, country, region (Geonames-linked)."@en .
 
-szdo:Aufbewahrungsort
+szdo:Location
     a owl:Class ;
-    rdfs:subClassOf szdo:Ort ;
+    rdfs:subClassOf szdo:Place ;
     rdfs:label "Aufbewahrungsort"@de , "Repository"@en ;
     rdfs:comment
-        "Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten."@de ,
-        "Archive, library, or museum as repository for estate objects."@en .
+        "Archiv, Bibliothek oder Museum als Aufbewahrungsort von Nachlassobjekten. Entspricht den Einträgen der Standortliste SZDSTA."@de ,
+        "Archive, library, or museum as repository for estate objects. Corresponds to the entries of the repository list SZDSTA."@en ;
+    szdo:correspondsToPID "o:szd.standorte" .
 
-szdo:Entstehungsort
+szdo:PlaceOfOrigin
     a owl:Class ;
-    rdfs:subClassOf szdo:Ort ;
+    rdfs:subClassOf szdo:Place ;
     rdfs:label "Entstehungsort"@de , "Place of Origin"@en ;
     rdfs:comment "Ort, an dem ein Objekt oder Werk geschaffen wurde."@de ,
                  "Place where an object or work was created."@en .
 
 
 # =============================================================================
-# PART 6: PROVENIENZSCHICHT (Provenance Layer)
+# PART 6: PROVENANCE LAYER
 # =============================================================================
 
-szdo:Provenienzereignis
+szdo:ProvenanceEvent
     a owl:Class ;
     rdfs:label "Provenienzereignis"@de , "Provenance Event"@en ;
     rdfs:comment
@@ -616,7 +618,7 @@ szdo:Provenienzereignis
         "Single acquisition or ownership-change event in the history of an object."@en ;
     rdfs:subClassOf crm:E8_Acquisition .
 
-szdo:ProvenienzmerkmalInstanz
+szdo:ProvenanceFeatureInstance
     a owl:Class ;
     rdfs:subClassOf crm:E13_Attribute_Assignment ;
     rdfs:label "Provenienzmerkmalsinstanz"@de , "Provenance Feature Instance"@en ;
@@ -624,151 +626,151 @@ szdo:ProvenienzmerkmalInstanz
         "Konkretes Provenienzmerkmal an einem Objekt (Stempel, Exlibris, Marginalie, etc.). Verknüpft mit szdg:ProvenanceFeature (SKOS)."@de ,
         "Concrete provenance feature on an object (stamp, bookplate, marginalia, etc.). Linked to szdg:ProvenanceFeature (SKOS)."@en .
 
-szdo:Umfang
+szdo:Extent
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Umfang"@de , "Extent"@en ;
     rdfs:comment "Umfangsangabe eines Nachlassobjekts (Blatt, Seiten, Stücke)."@de ,
                  "Extent information of an estate object (leaves, pages, pieces)."@en .
 
-szdo:Beilage
+szdo:Enclosure
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     rdfs:label "Beilage"@de , "Enclosure"@en ;
     rdfs:comment "Beilage oder Zusatzmaterial zu einem Nachlassobjekt (Kuvert, Deckblatt, Flügelmappe)."@de ,
                  "Enclosure or supplementary material of an estate object (envelope, cover sheet, flap binder)."@en .
 
 
 # =============================================================================
-# PART 7: OBJECT PROPERTIES (Beziehungen)
+# PART 7: OBJECT PROPERTIES
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 7.1 Strukturelle Beziehungen (Nachlass-Hierarchie)
+# 7.1 Structural relations (estate hierarchy)
 # -----------------------------------------------------------------------------
 
-szdo:enthaelt
+szdo:contains
     a owl:ObjectProperty ;
     rdfs:label "enthält"@de , "contains"@en ;
     rdfs:comment "Der Nachlass/die Sammlung enthält untergeordnete Sammlungen oder Objekte."@de ;
-    rdfs:domain szdo:Nachlass ;
-    rdfs:range szdo:Sammlung ;
+    rdfs:domain szdo:Estate ;
+    rdfs:range szdo:Collection ;
     owl:equivalentProperty rico:includesOrIncluded .
 
-szdo:istTeilVon
+szdo:isPartOf
     a owl:ObjectProperty ;
     rdfs:label "ist Teil von"@de , "is part of"@en ;
     rdfs:comment "Ein Nachlassobjekt gehört zu einer Sammlung."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Sammlung ;
-    owl:inverseOf szdo:enthaeltObjekt ;
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Collection ;
+    owl:inverseOf szdo:containsRecord ;
     owl:equivalentProperty rico:isOrWasIncludedIn .
 
-szdo:enthaeltObjekt
+szdo:containsRecord
     a owl:ObjectProperty ;
     rdfs:label "enthält Objekt"@de , "contains object"@en ;
-    rdfs:domain szdo:Sammlung ;
-    rdfs:range szdo:NachlassObjekt ;
-    owl:inverseOf szdo:istTeilVon .
+    rdfs:domain szdo:Collection ;
+    rdfs:range szdo:Record ;
+    owl:inverseOf szdo:isPartOf .
 
-szdo:hatDigitalesObjekt
+szdo:hasDigitalObject
     a owl:ObjectProperty ;
     rdfs:label "hat digitales Objekt"@de , "has digital object"@en ;
     rdfs:comment "Verknüpft ein physisches Nachlassobjekt mit seiner digitalen Repräsentation."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:DigitalesObjekt ;
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:DigitalObject ;
     owl:equivalentProperty rico:hasInstantiation .
 
-szdo:hatFaksimile
+szdo:hasFacsimile
     a owl:ObjectProperty ;
     rdfs:label "hat Faksimile"@de , "has facsimile"@en ;
-    rdfs:domain szdo:DigitalesObjekt ;
-    rdfs:range szdo:Faksimile .
+    rdfs:domain szdo:DigitalObject ;
+    rdfs:range szdo:Facsimile .
 
 # -----------------------------------------------------------------------------
-# 7.2 Werk-Objekt-Beziehungen (LRM-Brücke)
+# 7.2 Work-record relations (LRM bridge)
 # -----------------------------------------------------------------------------
 
-szdo:istManifestationVon
+szdo:relationToWork
     a owl:ObjectProperty ;
     rdfs:label "ist Manifestation von"@de , "is manifestation of"@en ;
     rdfs:comment
         "Verbindet ein physisches Nachlassobjekt (SZDMSK) mit dem abstrakten Werk (SZDWRK), dessen Textzeuge es ist."@de ,
         "Connects a physical estate object (SZDMSK) with the abstract work (SZDWRK) it witnesses."@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Werk ;
-    owl:inverseOf szdo:hatManuskriptzeuge .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:WorkIndexEntry ;
+    owl:inverseOf szdo:hasManuscriptWitness .
 
-szdo:hatManuskriptzeuge
+szdo:hasManuscriptWitness
     a owl:ObjectProperty ;
     rdfs:label "hat Manuskriptzeugen"@de , "has manuscript witness"@en ;
     rdfs:comment "Vom Werk zu seinen physischen Textzeugen im Nachlass."@de ;
-    rdfs:domain szdo:Werk ;
-    rdfs:range szdo:NachlassObjekt ;
-    owl:inverseOf szdo:istManifestationVon .
+    rdfs:domain szdo:WorkIndexEntry ;
+    rdfs:range szdo:Record ;
+    owl:inverseOf szdo:relationToWork .
 
-szdo:hatManifestation
+szdo:hasManifestation
     a owl:ObjectProperty ;
     rdfs:label "hat Manifestation"@de , "has manifestation"@en ;
     rdfs:comment "Vom Werk zu einer publizierten Ausgabe (Erstausgabe, Übersetzung, etc.)."@de ;
-    rdfs:domain szdo:Werk ;
+    rdfs:domain szdo:WorkIndexEntry ;
     rdfs:range szdo:Manifestation .
 
-szdo:hatExpression
+szdo:hasExpression
     a owl:ObjectProperty ;
     rdfs:label "hat Expression"@de , "has expression"@en ;
     rdfs:comment "Vom Werk zu einer sprachlichen/medialen Realisierung (Originaltext, Übersetzung, Verfilmung)."@de ;
-    rdfs:domain szdo:Werk ;
-    rdfs:range szdo:WerkExpression .
+    rdfs:domain szdo:WorkIndexEntry ;
+    rdfs:range szdo:Expression .
 
-szdo:hatExemplar
+szdo:hasItem
     a owl:ObjectProperty ;
     rdfs:label "hat Exemplar"@de , "has item"@en ;
     rdfs:domain szdo:Manifestation ;
-    rdfs:range szdo:Exemplar .
+    rdfs:range szdo:Item .
 
-szdo:hatTeil
+szdo:hasPart
     a owl:ObjectProperty ;
     rdfs:label "hat Teil"@de , "has part"@en ;
     rdfs:comment "Sammelwerk enthält Einzelwerke."@de ;
-    rdfs:domain szdo:SammelWerk ;
-    rdfs:range szdo:Werk ;
-    owl:inverseOf szdo:istTeilVonWerk .
+    rdfs:domain szdo:CollectedWork ;
+    rdfs:range szdo:WorkIndexEntry ;
+    owl:inverseOf szdo:isPartOfWork .
 
-szdo:istTeilVonWerk
+szdo:isPartOfWork
     a owl:ObjectProperty ;
     rdfs:label "ist Teil von Werk"@de , "is part of work"@en ;
-    rdfs:domain szdo:Werk ;
-    rdfs:range szdo:SammelWerk ;
-    owl:inverseOf szdo:hatTeil .
+    rdfs:domain szdo:WorkIndexEntry ;
+    rdfs:range szdo:CollectedWork ;
+    owl:inverseOf szdo:hasPart .
 
-szdo:wirdBehandeltIn
+szdo:isSubjectOf
     a owl:ObjectProperty ;
     rdfs:label "wird behandelt in"@de , "is subject of"@en ;
     rdfs:comment "Verknüpft ein Werk mit Sekundärliteratur darüber."@de ;
-    rdfs:domain szdo:Werk ;
-    rdfs:range szdo:Sekundaerliteratur .
+    rdfs:domain szdo:WorkIndexEntry ;
+    rdfs:range szdo:SecondaryLiterature .
 
-szdo:istUebersetzungVon
+szdo:isTranslationOf
     a owl:ObjectProperty ;
     rdfs:label "ist Übersetzung von"@de , "is translation of"@en ;
-    rdfs:domain szdo:WerkExpression ;
-    rdfs:range szdo:WerkExpression .
+    rdfs:domain szdo:Expression ;
+    rdfs:range szdo:Expression .
 
-szdo:istNachdruckVon
+szdo:isReprintOf
     a owl:ObjectProperty ;
     rdfs:label "ist Nachdruck von"@de , "is reprint of"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Manifestation .
 
-szdo:istAdaptionVon
+szdo:isAdaptationOf
     a owl:ObjectProperty ;
     rdfs:label "ist Adaption von"@de , "is adaptation of"@en ;
     rdfs:comment "Verfilmung, Vertonung, Dramatisierung eines Werks."@de ;
-    rdfs:domain szdo:WerkExpression ;
-    rdfs:range szdo:Werk .
+    rdfs:domain szdo:Expression ;
+    rdfs:range szdo:WorkIndexEntry .
 
-szdo:sieheAuch
+szdo:seeAlso
     a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:label "siehe auch"@de , "see also"@en ;
     rdfs:comment "Allgemeine Querverknüpfung zwischen verwandten Ressourcen."@de ,
@@ -777,187 +779,187 @@ szdo:sieheAuch
     rdfs:range rdfs:Resource .
 
 # -----------------------------------------------------------------------------
-# 7.3 Personenrollen (Agent Properties)
+# 7.3 Agent roles
 # -----------------------------------------------------------------------------
 
-szdo:hatBeteiligtenAkteur
+szdo:partyInvolved
     a owl:ObjectProperty ;
     rdfs:label "hat beteiligten Akteur"@de , "has participating agent"@en ;
     rdfs:comment "Generische Obereigenschaft für alle Personen/Organisationen, die aktiv an einem Objekt oder Werk beteiligt sind."@de ,
                  "Generic superproperty for all persons/organisations actively involved in an object or work."@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Akteur ;
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Agent ;
     rdfs:subPropertyOf rico:hasOrHadContributor .
 
-szdo:hatAutor
+szdo:author
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Autor"@de , "has author"@en ;
-    rdfs:domain szdo:Werk ;
+    rdfs:domain szdo:WorkIndexEntry ;
     rdfs:range szdo:Person .
 
-szdo:hatHerausgeber
+szdo:editor
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Herausgeber"@de , "has editor"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
-szdo:hatUebersetzer
+szdo:translator
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Übersetzer"@de , "has translator"@en ;
-    rdfs:domain szdo:WerkExpression ;
+    rdfs:domain szdo:Expression ;
     rdfs:range szdo:Person .
 
-szdo:hatKomponist
+szdo:composer
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Komponist"@de , "has composer"@en ;
-    rdfs:domain szdo:WerkExpression ;
+    rdfs:domain szdo:Expression ;
     rdfs:range szdo:Person .
 
-szdo:hatIllustrator
+szdo:illustrator
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Illustrator"@de , "has illustrator"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
-szdo:hatVorwortAutor
+szdo:writerForeword
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Vorwort-Autor"@de , "has foreword author"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
-szdo:hatNachwortAutor
+szdo:writerAfterword
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Nachwort-Autor"@de , "has afterword author"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range szdo:Person .
 
-szdo:hatAbsender
+szdo:sender
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Absender"@de , "has sender"@en ;
-    rdfs:domain szdo:KorrespondenzKonvolut ;
+    rdfs:domain szdo:BundleOfCorrespondence ;
     rdfs:range szdo:Person .
 
-szdo:hatEmpfaenger
+szdo:receiver
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Empfänger"@de , "has receiver"@en ;
-    rdfs:domain szdo:KorrespondenzKonvolut ;
+    rdfs:domain szdo:BundleOfCorrespondence ;
     rdfs:range szdo:Person .
 
-szdo:hatSchreiberhand
+szdo:scribalHand
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf szdo:hatBeteiligtenAkteur ;
+    rdfs:subPropertyOf szdo:partyInvolved ;
     rdfs:label "hat Schreiberhand"@de , "has scribal hand"@en ;
     rdfs:comment "Person, deren Handschrift auf dem Dokument identifiziert wurde."@de ,
                  "Person whose handwriting has been identified on the document."@en ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range szdo:Person .
 
-szdo:hatBetroffenePerson
+szdo:affectedPerson
     a owl:ObjectProperty ;
     rdfs:label "hat betroffene Person"@de , "has affected person"@en ;
     rdfs:comment "Person, die im Objekt thematisch erwähnt oder behandelt wird — kein aktiver Beteiligter."@de ,
                  "Person mentioned or discussed in the object — not an active participant."@en ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range szdo:Person ;
     rdfs:subPropertyOf rico:hasOrHadSubject .
 
 # -----------------------------------------------------------------------------
-# 7.4 Provenienz-Beziehungen
+# 7.4 Provenance relations
 # -----------------------------------------------------------------------------
 
-szdo:hatProvenienz
+szdo:hasProvenance
     a owl:ObjectProperty ;
     rdfs:label "hat Provenienz"@de , "has provenance"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Provenienzereignis .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:ProvenanceEvent .
 
-szdo:hatVorbesitzer
+szdo:previousOwner
     a owl:ObjectProperty ;
     rdfs:label "hat Vorbesitzer"@de , "has previous owner"@en ;
-    rdfs:domain szdo:Provenienzereignis ;
-    rdfs:range szdo:Akteur .
+    rdfs:domain szdo:ProvenanceEvent ;
+    rdfs:range szdo:Agent .
 
-szdo:hatNachbesitzer
+szdo:subsequentOwner
     a owl:ObjectProperty ;
     rdfs:label "hat Nachbesitzer"@de , "has subsequent owner"@en ;
-    rdfs:domain szdo:Provenienzereignis ;
-    rdfs:range szdo:Akteur .
+    rdfs:domain szdo:ProvenanceEvent ;
+    rdfs:range szdo:Agent .
 
-szdo:hatProvenienzmerkmal
+szdo:hasProvenanceFeature
     a owl:ObjectProperty ;
     rdfs:label "hat Provenienzmerkmal"@de , "has provenance feature"@en ;
     rdfs:comment "Verknüpft ein Objekt mit einer konkreten Provenienzmerkmalsinstanz."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:ProvenienzmerkmalInstanz .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:ProvenanceFeatureInstance .
 
-szdo:hatMerkmaltyp
+szdo:hasFeatureType
     a owl:ObjectProperty ;
     rdfs:label "hat Merkmaltyp"@de , "has feature type"@en ;
     rdfs:comment "Verknüpft eine Provenienzmerkmalsinstanz mit dem SKOS-Konzept aus dem Glossar."@de ;
-    rdfs:domain szdo:ProvenienzmerkmalInstanz ;
+    rdfs:domain szdo:ProvenanceFeatureInstance ;
     rdfs:range szdg:ProvenanceFeature .
 
 # -----------------------------------------------------------------------------
-# 7.5 Orts-Beziehungen
+# 7.5 Place relations
 # -----------------------------------------------------------------------------
 
-szdo:wirdAufbewahrtIn
+szdo:location
     a owl:ObjectProperty ;
     rdfs:label "wird aufbewahrt in"@de , "is held at"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Aufbewahrungsort ;
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Location ;
     owl:equivalentProperty rico:hasOrHadHolder .
 
-szdo:hatEntstehungsort
+szdo:hasPlaceOfOrigin
     a owl:ObjectProperty ;
     rdfs:label "hat Entstehungsort"@de , "has place of origin"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Ort .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Place .
 
-szdo:hatPublikationsort
+szdo:hasPublicationPlace
     a owl:ObjectProperty ;
     rdfs:label "hat Publikationsort"@de , "has publication place"@en ;
     rdfs:domain szdo:Manifestation ;
-    rdfs:range szdo:Ort .
+    rdfs:range szdo:Place .
 
 # -----------------------------------------------------------------------------
-# 7.6 Biographische Beziehungen
+# 7.6 Biographical relations
 # -----------------------------------------------------------------------------
 
-szdo:hatOrt
+szdo:hasPlace
     a owl:ObjectProperty ;
     rdfs:label "hat Ort"@de , "has place"@en ;
-    rdfs:domain szdo:BiographischesEreignis ;
-    rdfs:range szdo:Ort .
+    rdfs:domain szdo:BiographicalEvent ;
+    rdfs:range szdo:Place .
 
-szdo:betrifftPerson
+szdo:concernsPerson
     a owl:ObjectProperty ;
     rdfs:label "betrifft Person"@de , "concerns person"@en ;
-    rdfs:domain szdo:BiographischesEreignis ;
+    rdfs:domain szdo:BiographicalEvent ;
     rdfs:range szdo:Person .
 
-szdo:hatBeilage
+szdo:enclosures
     a owl:ObjectProperty ;
     rdfs:label "hat Beilage"@de , "has enclosure"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Beilage .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Enclosure .
 
-szdo:hatUmfang
+szdo:extent
     a owl:ObjectProperty ;
     rdfs:label "hat Umfang"@de , "has extent"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
-    rdfs:range szdo:Umfang .
+    rdfs:domain szdo:Record ;
+    rdfs:range szdo:Extent .
 
-szdo:hatVerlag
+szdo:hasPublisher
     a owl:ObjectProperty ;
     rdfs:label "hat Verlag"@de , "has publisher"@en ;
     rdfs:domain szdo:Manifestation ;
@@ -965,18 +967,18 @@ szdo:hatVerlag
 
 
 # =============================================================================
-# PART 8: DATATYPE PROPERTIES (Literale Eigenschaften)
+# PART 8: DATATYPE PROPERTIES
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 8.1 Identifikatoren
+# 8.1 Identifiers
 # -----------------------------------------------------------------------------
 
-szdo:signatur
+szdo:signature
     a owl:DatatypeProperty ;
     rdfs:label "Signatur"@de , "Shelfmark"@en ;
     rdfs:comment "Archivsignatur des Objekts (z.B. SZ-AAP/W4.1)."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range xsd:string .
 
 szdo:gamsIdentifier
@@ -1006,21 +1008,21 @@ szdo:geonamesIdentifier
     rdfs:label "Geonames-Identifikator"@de , "Geonames Identifier"@en ;
     rdfs:range xsd:anyURI .
 
-szdo:entsprichtPID
+szdo:correspondsToPID
     a owl:AnnotationProperty ;
     rdfs:label "entspricht PID"@de , "corresponds to PID"@en ;
     rdfs:comment "GAMS Collection-PID, dem diese Klasse entspricht."@de .
 
 # -----------------------------------------------------------------------------
-# 8.2 Titel und Namen
+# 8.2 Titles and names
 # -----------------------------------------------------------------------------
 
-szdo:titel
+szdo:title
     a owl:DatatypeProperty ;
     rdfs:label "Titel"@de , "Title"@en ;
     rdfs:range rdf:langString .
 
-szdo:originaltitel
+szdo:originaltitle
     a owl:DatatypeProperty ;
     rdfs:label "Originaltitel"@de , "Original Title"@en ;
     rdfs:range rdf:langString .
@@ -1031,19 +1033,19 @@ szdo:incipit
     rdfs:comment "Anfangsworte eines Textes zur Identifizierung."@de ;
     rdfs:range xsd:string .
 
-szdo:vorname
+szdo:forename
     a owl:DatatypeProperty ;
     rdfs:label "Vorname"@de , "Given Name"@en ;
     rdfs:domain szdo:Person ;
     rdfs:range xsd:string .
 
-szdo:nachname
+szdo:surname
     a owl:DatatypeProperty ;
     rdfs:label "Nachname"@de , "Family Name"@en ;
     rdfs:domain szdo:Person ;
     rdfs:range xsd:string .
 
-szdo:namensform
+szdo:nameVariant
     a owl:DatatypeProperty ;
     rdfs:label "Namensform"@de , "Name Variant"@en ;
     rdfs:comment "Alternative Namensschreibung, Pseudonym."@de ;
@@ -1051,97 +1053,97 @@ szdo:namensform
     rdfs:range xsd:string .
 
 # -----------------------------------------------------------------------------
-# 8.3 Physische Beschreibung
+# 8.3 Physical description
 # -----------------------------------------------------------------------------
 
-szdo:beschreibstoff
+szdo:writingMaterial
     a owl:DatatypeProperty ;
     rdfs:label "Beschreibstoff"@de , "Writing Material"@en ;
     rdfs:comment "Material des Schriftträgers (z.B. Notizbuch, liniertes Papier, Durchschlagpapier)."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range rdf:langString .
 
-szdo:schreibstoff
+szdo:writingInstrument
     a owl:DatatypeProperty ;
     rdfs:label "Schreibstoff"@de , "Writing Instrument"@en ;
     rdfs:comment "Schreibwerkzeug/-mittel (z.B. violette Tinte, Bleistift, blauer Buntstift)."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range rdf:langString .
 
-szdo:aufschrift
+szdo:identifyingInscription
     a owl:DatatypeProperty ;
     rdfs:label "Aufschrift"@de , "Identifying Inscription"@en ;
     rdfs:comment "Titelaufschrift oder identifizierende Beschriftung auf dem Objekt."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range rdf:langString .
 
 szdo:format
     a owl:DatatypeProperty ;
     rdfs:label "Format"@de , "Format"@en ;
     rdfs:comment "Physisches Format/Maße (z.B. 23x17 cm)."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range xsd:string .
 
-szdo:blattanzahl
+szdo:leafCount
     a owl:DatatypeProperty ;
     rdfs:label "Blattanzahl"@de , "Leaf Count"@en ;
-    rdfs:domain szdo:Umfang ;
+    rdfs:domain szdo:Extent ;
     rdfs:range xsd:integer .
 
-szdo:seitenanzahl
+szdo:page
     a owl:DatatypeProperty ;
     rdfs:label "Seitenanzahl"@de , "Page Count"@en ;
-    rdfs:domain szdo:Umfang ;
+    rdfs:domain szdo:Extent ;
     rdfs:range xsd:integer .
 
-szdo:stueckanzahl
+szdo:piecesOfCorrespondence
     a owl:DatatypeProperty ;
     rdfs:label "Stückanzahl"@de , "Piece Count"@en ;
     rdfs:comment "Anzahl der Korrespondenzstücke in einem Konvolut."@de ;
-    rdfs:domain szdo:Umfang ;
+    rdfs:domain szdo:Extent ;
     rdfs:range xsd:integer .
 
-szdo:bindung
+szdo:binding
     a owl:DatatypeProperty ;
     rdfs:label "Bindung"@de , "Binding"@en ;
-    rdfs:domain szdo:Buch ;
+    rdfs:domain szdo:Book ;
     rdfs:range rdf:langString .
 
-szdo:objekttyp
+szdo:objectType
     a owl:DatatypeProperty ;
     rdfs:label "Objekttyp"@de , "Object Type"@en ;
     rdfs:comment "Typologische Bezeichnung (z.B. Manuskript, Typoskript mit Korrekturen)."@de ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range rdf:langString .
 
 # -----------------------------------------------------------------------------
-# 8.4 Zeitliche Eigenschaften
+# 8.4 Temporal properties
 # -----------------------------------------------------------------------------
 
-szdo:datum
+szdo:when
     a owl:DatatypeProperty ;
     rdfs:label "Datum"@de , "Date"@en ;
     rdfs:range xsd:date .
 
-szdo:fruehestensDatum
+szdo:notBefore
     a owl:DatatypeProperty ;
     rdfs:label "frühestens"@de , "not before"@en ;
     rdfs:comment "Frühestmögliches Datum (TEI @notBefore)."@de ;
     rdfs:range xsd:date .
 
-szdo:spaetestensDatum
+szdo:notAfter
     a owl:DatatypeProperty ;
     rdfs:label "spätestens"@de , "not after"@en ;
     rdfs:comment "Spätestmögliches Datum (TEI @notAfter)."@de ;
     rdfs:range xsd:date .
 
-szdo:sicherheitsgrad
+szdo:certainty
     a owl:DatatypeProperty ;
     rdfs:label "Sicherheitsgrad"@de , "Certainty"@en ;
     rdfs:comment "Grad der Datensicherheit (TEI @cert: low, medium, high)."@de ;
     rdfs:range xsd:string .
 
-szdo:datumEvidenz
+szdo:dateEvidence
     a owl:ObjectProperty ;
     rdfs:label "Datum-Evidenz"@de , "date evidence"@en ;
     rdfs:comment "Qualifiziert die Quelle einer Datierung (aus Dokument, aus Kontext, aus externer Quelle, unbekannt). Verweist auf SKOS-Konzepte im SZD-Glossar."@de ,
@@ -1149,207 +1151,135 @@ szdo:datumEvidenz
     rdfs:domain owl:Thing ;
     rdfs:range szdg:DatumEvidenz .
 
-szdo:geburtsdatum
+szdo:birth
     a owl:DatatypeProperty ;
     rdfs:label "Geburtsdatum"@de , "Date of Birth"@en ;
     rdfs:domain szdo:Person ;
     rdfs:range xsd:date .
 
-szdo:todesdatum
+szdo:death
     a owl:DatatypeProperty ;
     rdfs:label "Todesdatum"@de , "Date of Death"@en ;
     rdfs:domain szdo:Person ;
     rdfs:range xsd:date .
 
-szdo:publikationsdatum
+szdo:dateOfPublication
     a owl:DatatypeProperty ;
     rdfs:label "Publikationsdatum"@de , "Publication Date"@en ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range xsd:gYear .
 
-szdo:entstehungsdatum
+szdo:dateOfCreation
     a owl:DatatypeProperty ;
     rdfs:label "Entstehungsdatum"@de , "Date of Creation"@en ;
-    rdfs:domain szdo:NachlassObjekt ;
+    rdfs:domain szdo:Record ;
     rdfs:range xsd:string .
 
 # -----------------------------------------------------------------------------
-# 8.5 Inhaltliche Eigenschaften
+# 8.5 Content properties
 # -----------------------------------------------------------------------------
 
-szdo:beschreibung
+szdo:description
     a owl:DatatypeProperty ;
     rdfs:label "Beschreibung"@de , "Description"@en ;
     rdfs:range rdf:langString .
 
-szdo:zusammenfassung
+szdo:summary
     a owl:DatatypeProperty ;
     rdfs:label "Zusammenfassung"@de , "Summary"@en ;
     rdfs:range rdf:langString .
 
-szdo:anmerkung
+szdo:note
     a owl:DatatypeProperty ;
     rdfs:label "Anmerkung"@de , "Note"@en ;
     rdfs:range rdf:langString .
 
-szdo:sprache
+szdo:language
     a owl:DatatypeProperty ;
     rdfs:label "Sprache"@de , "Language"@en ;
     rdfs:comment "Sprache des Inhalts (ISO 639-3, z.B. ger, eng, fre)."@de ;
     rdfs:range xsd:string .
 
-szdo:zeitperiode
+szdo:timePeriod
     a owl:DatatypeProperty ;
     rdfs:label "Zeitperiode"@de , "Time Period"@en ;
     rdfs:comment "Zeitliche Einordnung (pre-zweig, lifetime, post-wwii, late-20c, contemporary)."@de ;
     rdfs:domain szdo:Manifestation ;
     rdfs:range xsd:string .
 
-szdo:kategorie
+szdo:category
     a owl:DatatypeProperty ;
     rdfs:label "Kategorie"@de , "Category"@en ;
     rdfs:range xsd:string .
 
 
 # =============================================================================
-# PART 9: KLAWITER-INTEGRATION
-# Mapping von klawiter:-Namespace auf SZDO
+# PART 9: KLAWITER INTEGRATION
+# Mapping of the klawiter: namespace to SZDO
 # =============================================================================
 
-# Die Klawiter-Bibliographie (https://klawiter-rescue.github.io/vocab/)
-# wird über die Werk-Ebene integriert. Klawiter-Einträge sind primär
-# szdo:Manifestation-Instanzen, verknüpft mit szdo:Werk über szdo:hatManifestation.
+# The Klawiter bibliography (https://klawiter-rescue.github.io/vocab/)
+# is integrated through the work layer. Klawiter entries are primarily
+# szdo:Manifestation instances, linked to szdo:WorkIndexEntry via szdo:hasManifestation.
 #
 # Mapping:
-#   klawiter:title          → szdo:titel / schema:name
-#   klawiter:year           → szdo:publikationsdatum / schema:datePublished
-#   klawiter:publisher      → szdo:hatVerlag / schema:publisher
-#   klawiter:location       → szdo:hatPublikationsort / schema:locationCreated
-#   klawiter:pageCount      → szdo:seitenanzahl / schema:numberOfPages
-#   klawiter:translator     → szdo:hatUebersetzer / schema:translator
-#   klawiter:entryType      → rdf:type (szdo:BelletristischesWerk, etc.)
-#   klawiter:timePeriod     → szdo:zeitperiode
-#   klawiter:seeAlso        → szdo:sieheAuch / schema:isRelatedTo
-#   klawiter:reprints       → szdo:istNachdruckVon
-#   klawiter:translations   → szdo:istUebersetzungVon / schema:workTranslation
-#   klawiter:contentItems   → szdo:hatTeil / schema:hasPart
-#   klawiter:categories     → szdo:kategorie
+#   klawiter:title          → szdo:title / schema:name
+#   klawiter:year           → szdo:dateOfPublication / schema:datePublished
+#   klawiter:publisher      → szdo:hasPublisher / schema:publisher
+#   klawiter:location       → szdo:hasPublicationPlace / schema:locationCreated
+#   klawiter:pageCount      → szdo:page / schema:numberOfPages
+#   klawiter:translator     → szdo:translator / schema:translator
+#   klawiter:entryType      → rdf:type (szdo:FictionalWork, etc.)
+#   klawiter:timePeriod     → szdo:timePeriod
+#   klawiter:seeAlso        → szdo:seeAlso / schema:isRelatedTo
+#   klawiter:reprints       → szdo:isReprintOf
+#   klawiter:translations   → szdo:isTranslationOf / schema:workTranslation
+#   klawiter:contentItems   → szdo:hasPart / schema:hasPart
+#   klawiter:categories     → szdo:category
 #
-# Sekundärliteratur-Einträge (secondary-literature, historical-study)
-# werden als szdo:Sekundaerliteratur instanziiert und über
-# szdo:wirdBehandeltIn mit dem besprochenen Werk verknüpft.
+# Secondary literature entries (secondary-literature, historical-study)
+# are instantiated as szdo:SecondaryLiterature and linked to the work
+# they discuss via szdo:isSubjectOf.
 #
-# Die Reconciliation erfolgt primär über:
-#   1. GND-Identifikatoren (szdo:gndIdentifier)
-#   2. Wikidata-Identifikatoren (szdo:wikidataIdentifier)
-#   3. Titel-Matching zwischen SZDWRK und Klawiter-Einträgen
+# Reconciliation relies primarily on:
+#   1. GND identifiers (szdo:gndIdentifier)
+#   2. Wikidata identifiers (szdo:wikidataIdentifier)
+#   3. Title matching between SZDWRK and Klawiter entries
 
 
 # =============================================================================
-# PART 10: GAMS-KOMPATIBILITÄTSSCHICHT (v0.x → v1.0.0)
+# PART 10: LEGACY GAMS TERMS (v0.x)
 # =============================================================================
 #
-# Die Vorgängerversion (v0.x) der Ontologie ist implizit in der XSLT-
-# Transformation szd-TORDF.xsl definiert und wird im GAMS-Repositorium
-# (https://stefanzweig.digital) produktiv genutzt. Sie verwendet englische
-# Bezeichner (camelCase). Diese Sektion dokumentiert das vollständige Mapping
-# zwischen den bestehenden GAMS-Bezeichnern und den neuen v1.0.0-Bezeichnern.
-#
-# Strategie: Die alten Bezeichner werden als owl:deprecated markiert und
-# über owl:equivalentClass/Property mit den neuen verknüpft. So können
-# bestehende GAMS-Daten weiterhin korrekt interpretiert werden.
+# The production vocabulary (v0.x) is implicit in szd-TORDF.xsl and shares
+# this namespace. Every v0.x term with the same meaning as a v2.0.0 concept
+# is itself the canonical identifier and is defined in PARTS 1-8.
+# The terms below remain in live data but differ in meaning, datatype or
+# spelling from the canonical modelling. They are owl:deprecated for new
+# modelling and state their relation to the canonical term where one exists.
+# An owl:equivalentProperty only links properties of the same kind; a
+# literal-valued v0.x term points to its object-property successor with
+# rdfs:seeAlso.
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 10.1 Klassen-Mapping (GAMS v0.x → SZDO v1.0.0)
+# 10.1 Classes
 # -----------------------------------------------------------------------------
 
 szdo:Work
     a owl:Class ;
-    owl:equivalentClass szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     owl:deprecated true ;
     rdfs:label "Work (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. In v1.0.0 replaced by szdo:NachlassObjekt and its subclasses (Manuskript, Typoskript, etc.). The v0.x class conflates the physical object with the intellectual work."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:Autograph_v0
-    a owl:Class ;
-    owl:equivalentClass szdo:Autograph ;
-    owl:deprecated true ;
-    rdfs:label "Autograph (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps directly to szdo:Autograph in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:Book
-    a owl:Class ;
-    owl:equivalentClass szdo:Buch ;
-    owl:deprecated true ;
-    rdfs:label "Book (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Buch in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:BundleOfCorrespondence
-    a owl:Class ;
-    owl:equivalentClass szdo:KorrespondenzKonvolut ;
-    owl:deprecated true ;
-    rdfs:label "BundleOfCorrespondence (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:KorrespondenzKonvolut in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:PersonalDocument
-    a owl:Class ;
-    owl:equivalentClass szdo:Lebensdokument ;
-    owl:deprecated true ;
-    rdfs:label "PersonalDocument (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Lebensdokument in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:BiographicalEvent
-    a owl:Class ;
-    owl:equivalentClass szdo:BiographischesEreignis ;
-    owl:deprecated true ;
-    rdfs:label "BiographicalEvent (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:BiographischesEreignis in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:Agent
-    a owl:Class ;
-    owl:equivalentClass szdo:Akteur ;
-    owl:deprecated true ;
-    rdfs:label "Agent (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Akteur in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:Location
-    a owl:Class ;
-    owl:equivalentClass szdo:Aufbewahrungsort ;
-    owl:deprecated true ;
-    rdfs:label "Location (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Aufbewahrungsort in v1.0.0."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:WorkIndexEntry
-    a owl:Class ;
-    owl:equivalentClass szdo:Werk ;
-    owl:deprecated true ;
-    rdfs:label "WorkIndexEntry (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Werk in v1.0.0. The v0.x WorkIndexEntry corresponds to the abstract work concept."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:Extent
-    a owl:Class ;
-    owl:equivalentClass szdo:Umfang ;
-    owl:deprecated true ;
-    rdfs:label "Extent (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:Umfang in v1.0.0."@en ;
+    rdfs:comment "GAMS class for the physical items of the works collection (SZDMSK), not for the abstract work, which is szdo:WorkIndexEntry. v2.0.0 types these items with the subclasses of szdo:Record (szdo:Manuscript, szdo:Typescript, etc.)."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:Enclosur
     a owl:Class ;
-    owl:equivalentClass szdo:Beilage ;
+    owl:equivalentClass szdo:Enclosure ;
     owl:deprecated true ;
     rdfs:label "Enclosur (GAMS v0.x, typo)"@en ;
-    rdfs:comment "GAMS legacy class with typo (missing 'e'). Maps to szdo:Beilage in v1.0.0."@en ;
+    rdfs:comment "GAMS class name with a typo (missing 'e'). Same meaning as szdo:Enclosure."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:PublicationStmt
@@ -1357,234 +1287,60 @@ szdo:PublicationStmt
     rdfs:subClassOf szdo:Manifestation ;
     owl:deprecated true ;
     rdfs:label "PublicationStmt (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class for publication metadata. Subsumed by szdo:Manifestation in v1.0.0."@en ;
+    rdfs:comment "GAMS class for publication metadata. Subsumed by szdo:Manifestation."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:ProvenanceCharacteristic
     a owl:Class ;
-    owl:equivalentClass szdo:ProvenienzmerkmalInstanz ;
+    rdfs:seeAlso szdo:ProvenanceFeatureInstance ;
     owl:deprecated true ;
     rdfs:label "ProvenanceCharacteristic (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class. Maps to szdo:ProvenienzmerkmalInstanz in v1.0.0."@en ;
+    rdfs:comment "GAMS node that aggregates all provenance features of one book as literal-valued properties (szdo:stamp and others). v2.0.0 models each feature as its own szdo:ProvenanceFeatureInstance with szdo:hasFeatureType."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:OriginalShelfmark
     a owl:Class ;
-    rdfs:subClassOf szdo:NachlassObjekt ;
+    rdfs:subClassOf szdo:Record ;
     owl:deprecated true ;
     rdfs:label "OriginalShelfmark (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS legacy class for original shelf marks. Modeled as szdo:signatur property in v1.0.0."@en ;
+    rdfs:comment "GAMS class for original shelfmarks. Modelled as the property szdo:signature in v2.0.0."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 # -----------------------------------------------------------------------------
-# 10.2 Property-Mapping (GAMS v0.x → SZDO v1.0.0)
-# Naming: GAMS uses English camelCase, SZDO v1.0.0 uses German
+# 10.2 Properties with a canonical equivalent
 # -----------------------------------------------------------------------------
-
-# --- Titel/Name ---
-szdo:title
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:titel ;
-    owl:deprecated true ;
-    rdfs:label "title (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:originaltitle
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:originaltitel ;
-    owl:deprecated true ;
-    rdfs:label "originaltitle (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:name
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "name (GAMS v0.x)"@en ;
-    rdfs:comment "Used for person and location names in v0.x. Replaced by szdo:vorname + szdo:nachname for persons."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Personen/Rollen ---
-szdo:author
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatAutor ;
-    owl:deprecated true ;
-    rdfs:label "author (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:sender
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatAbsender ;
-    owl:deprecated true ;
-    rdfs:label "sender (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:receiver
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatEmpfaenger ;
-    owl:deprecated true ;
-    rdfs:label "receiver (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:translator
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatUebersetzer ;
-    owl:deprecated true ;
-    rdfs:label "translator (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:partyInvolved
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatBeteiligtenAkteur ;
-    owl:deprecated true ;
-    rdfs:label "partyInvolved (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:hatBeteiligten
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatBeteiligtenAkteur ;
-    owl:deprecated true ;
-    rdfs:label "hatBeteiligten (v1.0.0)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/1.0.0> .
-
-szdo:relationToPerson
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatBetroffenePerson ;
-    owl:deprecated true ;
-    rdfs:label "relationToPerson (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:secretarialHand
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:hatSchreiberhand ;
-    owl:deprecated true ;
-    rdfs:label "secretarialHand (GAMS v0.x)"@en ;
-    rdfs:comment "In v0.x this is a literal; in v1.0.0 szdo:hatSchreiberhand is an ObjectProperty pointing to szdo:Person."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Physische Beschreibung ---
-szdo:signature
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:signatur ;
-    owl:deprecated true ;
-    rdfs:label "signature (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:objecttyp
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:objekttyp ;
+    owl:equivalentProperty szdo:objectType ;
     owl:deprecated true ;
     rdfs:label "objecttyp (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:writingMaterial
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:beschreibstoff ;
-    owl:deprecated true ;
-    rdfs:label "writingMaterial (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:writingInstrument
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:schreibstoff ;
-    owl:deprecated true ;
-    rdfs:label "writingInstrument (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:identifyingInscription
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:aufschrift ;
-    owl:deprecated true ;
-    rdfs:label "identifyingInscription (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:additionalMaterial
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "additionalMaterial (GAMS v0.x)"@en ;
-    rdfs:comment "Free-text description of additional material. No direct v1.0.0 equivalent as DatatypeProperty."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Inhalt/Beschreibung ---
-szdo:summary
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:zusammenfassung ;
-    owl:deprecated true ;
-    rdfs:label "summary (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:note
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:anmerkung ;
-    owl:deprecated true ;
-    rdfs:label "note (GAMS v0.x)"@en ;
+    rdfs:comment "GAMS spelling of szdo:objectType."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:content
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:beschreibung ;
+    owl:equivalentProperty szdo:description ;
     owl:deprecated true ;
     rdfs:label "content (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:text
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "text (GAMS v0.x)"@en ;
-    rdfs:comment "Generic text container used across v0.x for extent descriptions, dates, and free text. No single v1.0.0 equivalent."@en ;
+    rdfs:comment "Event description in the life calendar."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:desc
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:beschreibung ;
+    owl:equivalentProperty szdo:description ;
     owl:deprecated true ;
     rdfs:label "desc (GAMS v0.x)"@en ;
+    rdfs:comment "Description of a content relation."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-# --- Standort/Aufbewahrung ---
-szdo:location
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:wirdAufbewahrtIn ;
-    owl:deprecated true ;
-    rdfs:label "location (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:settlement
+szdo:pubDate
     a owl:DatatypeProperty ;
+    owl:equivalentProperty szdo:dateOfPublication ;
     owl:deprecated true ;
-    rdfs:label "settlement (GAMS v0.x)"@en ;
-    rdfs:comment "City/settlement name on Location. No direct v1.0.0 equivalent; modeled via szdo:GeographischerOrt."@en ;
+    rdfs:label "pubDate (GAMS v0.x)"@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-# --- Zeitangaben ---
-szdo:dateOfPublication
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:publikationsdatum ;
-    owl:deprecated true ;
-    rdfs:label "dateOfPublication (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:when
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:datum ;
-    owl:deprecated true ;
-    rdfs:label "when (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:birth
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:geburtsdatum ;
-    owl:deprecated true ;
-    rdfs:label "birth (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:death
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:todesdatum ;
-    owl:deprecated true ;
-    rdfs:label "death (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Normdaten ---
 szdo:gnd
     a owl:DatatypeProperty ;
     owl:equivalentProperty szdo:gndIdentifier ;
@@ -1599,105 +1355,138 @@ szdo:wikidata
     rdfs:label "wikidata (GAMS v0.x)"@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-# --- Beziehungen ---
-szdo:extent
+# -----------------------------------------------------------------------------
+# 10.3 Properties whose meaning or datatype differs
+# -----------------------------------------------------------------------------
+
+szdo:relationToPerson
     a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatUmfang ;
+    rdfs:subPropertyOf rico:hasOrHadSubject ;
+    rdfs:seeAlso szdo:affectedPerson ;
     owl:deprecated true ;
-    rdfs:label "extent (GAMS v0.x)"@en ;
+    rdfs:label "relationToPerson (GAMS v0.x)"@en ;
+    rdfs:comment "Person named as a subject keyword of an object. Broader than szdo:affectedPerson, which GAMS sets for keywords of the type person_affected."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-szdo:enclosures
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatBeilage ;
-    owl:deprecated true ;
-    rdfs:label "enclosures (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:language
+szdo:secretarialHand
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:sprache ;
+    rdfs:seeAlso szdo:scribalHand ;
     owl:deprecated true ;
-    rdfs:label "language (GAMS v0.x)"@en ;
+    rdfs:label "secretarialHand (GAMS v0.x)"@en ;
+    rdfs:comment "Scribal hand as a literal. v2.0.0 links the person with the object property szdo:scribalHand."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-szdo:category
+szdo:pubPlace
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:kategorie ;
+    rdfs:seeAlso szdo:hasPublicationPlace ;
     owl:deprecated true ;
-    rdfs:label "category (GAMS v0.x)"@en ;
+    rdfs:label "pubPlace (GAMS v0.x)"@en ;
+    rdfs:comment "Place of publication as a literal. v2.0.0 links the place with the object property szdo:hasPublicationPlace."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-szdo:relationToWork
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:istManifestationVon ;
+szdo:publisher
+    a owl:DatatypeProperty ;
+    rdfs:seeAlso szdo:hasPublisher ;
     owl:deprecated true ;
-    rdfs:label "relationToWork (GAMS v0.x)"@en ;
-    rdfs:comment "In v0.x links physical object to work index. In v1.0.0 replaced by szdo:istManifestationVon."@en ;
+    rdfs:label "publisher (GAMS v0.x)"@en ;
+    rdfs:comment "Publisher as a literal. v2.0.0 links the organisation with the object property szdo:hasPublisher."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:provenanceCharacteristic
+    a owl:ObjectProperty ;
+    rdfs:seeAlso szdo:hasProvenanceFeature ;
+    owl:deprecated true ;
+    rdfs:label "provenanceCharacteristic (GAMS v0.x)"@en ;
+    rdfs:comment "Links a book to its aggregated szdo:ProvenanceCharacteristic node."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:facsimile
+    a owl:DatatypeProperty ;
+    rdfs:seeAlso szdo:hasDigitalObject ;
+    owl:deprecated true ;
+    rdfs:label "facsimile (GAMS v0.x)"@en ;
+    rdfs:comment "GAMS PID of the digital facsimile as a literal. v2.0.0 uses szdo:hasDigitalObject with szdo:METSObject."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:hasContentRelation
+    a owl:ObjectProperty ;
+    rdfs:seeAlso szdo:seeAlso ;
+    owl:deprecated true ;
+    rdfs:label "hasContentRelation (GAMS v0.x)"@en ;
+    rdfs:comment "Content-based relation between objects. v2.0.0 uses szdo:seeAlso."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:relationTo
     a owl:ObjectProperty ;
     owl:deprecated true ;
     rdfs:label "relationTo (GAMS v0.x)"@en ;
-    rdfs:comment "Generic relation used in Lebenskalender. In v1.0.0 replaced by specific properties (szdo:betrifftPerson, szdo:hatOrt, etc.)."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:hasContentRelation
-    a owl:ObjectProperty ;
-    owl:deprecated true ;
-    rdfs:label "hasContentRelation (GAMS v0.x)"@en ;
-    rdfs:comment "Content-based relation between objects. In v1.0.0 replaced by szdo:sieheAuch."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:facsimile
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "facsimile (GAMS v0.x)"@en ;
-    rdfs:comment "GAMS PID reference to digital facsimile. In v1.0.0 replaced by szdo:hatDigitalesObjekt → szdo:METSObjekt."@en ;
+    rdfs:comment "Generic relation used in the life calendar. v2.0.0 uses specific properties (szdo:concernsPerson, szdo:hasPlace, etc.)."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:glossar
     a owl:ObjectProperty ;
     owl:deprecated true ;
     rdfs:label "glossar (GAMS v0.x)"@en ;
-    rdfs:comment "Links to szdg: SKOS concept. In v1.0.0 replaced by szdo:hatMerkmaltyp for provenance or direct SKOS references."@en ;
+    rdfs:comment "Links to a szdg: SKOS concept. v2.0.0 uses szdo:hasFeatureType for provenance features or direct SKOS references."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:acquired
     a owl:DatatypeProperty ;
+    rdfs:seeAlso szdo:hasProvenance ;
     owl:deprecated true ;
     rdfs:label "acquired (GAMS v0.x)"@en ;
-    rdfs:comment "Free-text acquisition description. In v1.0.0 modeled as szdo:Provenienzereignis with structured properties."@en ;
+    rdfs:comment "Free-text acquisition note. v2.0.0 models acquisitions as szdo:ProvenanceEvent."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:provenance
     a owl:DatatypeProperty ;
+    rdfs:seeAlso szdo:hasProvenance ;
     owl:deprecated true ;
     rdfs:label "provenance (GAMS v0.x)"@en ;
-    rdfs:comment "Free-text provenance string. In v1.0.0 replaced by szdo:hatProvenienz → szdo:Provenienzereignis."@en ;
+    rdfs:comment "Free-text provenance note. v2.0.0 uses szdo:hasProvenance with szdo:ProvenanceEvent."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-# --- Bibliothek-spezifische Properties ---
-szdo:publisher
+szdo:stamp
     a owl:DatatypeProperty ;
+    rdfs:seeAlso szdo:hasProvenanceFeature ;
     owl:deprecated true ;
-    rdfs:label "publisher (GAMS v0.x)"@en ;
-    rdfs:comment "In v1.0.0 replaced by szdo:hatVerlag (ObjectProperty → szdo:Organisation)."@en ;
+    rdfs:label "stamp (GAMS v0.x)"@en ;
+    rdfs:comment "Stamp description on a library book. v2.0.0 uses szdo:hasProvenanceFeature with the concept szdg:Stamp."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-szdo:pubPlace
+szdo:name
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:hatPublikationsort ;
     owl:deprecated true ;
-    rdfs:label "pubPlace (GAMS v0.x)"@en ;
+    rdfs:label "name (GAMS v0.x)"@en ;
+    rdfs:comment "Name of a person or location. v2.0.0 uses szdo:forename and szdo:surname for persons."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
-szdo:pubDate
+szdo:settlement
     a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:publikationsdatum ;
     owl:deprecated true ;
-    rdfs:label "pubDate (GAMS v0.x)"@en ;
+    rdfs:label "settlement (GAMS v0.x)"@en ;
+    rdfs:comment "City name on a location. v2.0.0 models it with szdo:GeographicalPlace."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:text
+    a owl:DatatypeProperty ;
+    owl:deprecated true ;
+    rdfs:label "text (GAMS v0.x)"@en ;
+    rdfs:comment "Generic text container for extent statements, dates and free text. No single v2.0.0 equivalent."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:head
+    a owl:DatatypeProperty ;
+    owl:deprecated true ;
+    rdfs:label "head (GAMS v0.x)"@en ;
+    rdfs:comment "Event heading in the life calendar. v2.0.0 uses szdo:description."@en ;
+    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
+
+szdo:additionalMaterial
+    a owl:DatatypeProperty ;
+    owl:deprecated true ;
+    rdfs:label "additionalMaterial (GAMS v0.x)"@en ;
+    rdfs:comment "Free-text description of additional material. No direct v2.0.0 equivalent."@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:edition
@@ -1710,58 +1499,6 @@ szdo:series
     a owl:DatatypeProperty ;
     owl:deprecated true ;
     rdfs:label "series (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:page
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:seitenanzahl ;
-    owl:deprecated true ;
-    rdfs:label "page (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:stamp
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "stamp (GAMS v0.x)"@en ;
-    rdfs:comment "Stamp description on library book. In v1.0.0 modeled via szdo:hatProvenienzmerkmal → szdg:Stamp."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:provenanceCharacteristic
-    a owl:ObjectProperty ;
-    owl:equivalentProperty szdo:hatProvenienzmerkmal ;
-    owl:deprecated true ;
-    rdfs:label "provenanceCharacteristic (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Personen-Properties ---
-szdo:forename
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:vorname ;
-    owl:deprecated true ;
-    rdfs:label "forename (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-szdo:surname
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:nachname ;
-    owl:deprecated true ;
-    rdfs:label "surname (GAMS v0.x)"@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Lebenskalender ---
-szdo:head
-    a owl:DatatypeProperty ;
-    owl:deprecated true ;
-    rdfs:label "head (GAMS v0.x)"@en ;
-    rdfs:comment "Event heading in Lebenskalender. No direct v1.0.0 equivalent; use szdo:beschreibung."@en ;
-    rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
-
-# --- Korrespondenz ---
-szdo:piecesOfCorrespondence
-    a owl:DatatypeProperty ;
-    owl:equivalentProperty szdo:stueckanzahl ;
-    owl:deprecated true ;
-    rdfs:label "piecesOfCorrespondence (GAMS v0.x)"@en ;
     rdfs:isDefinedBy <https://gams.uni-graz.at/o:szd.ontology/0.x> .
 
 szdo:piecesOfEnclosures

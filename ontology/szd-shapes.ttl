@@ -11,7 +11,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 # =============================================================================
-# SHACL Shapes for Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+# SHACL Shapes for the Stefan Zweig Digital Estate Ontology (SZDO)
 # Validates structural constraints, naming conventions, and completeness.
 # =============================================================================
 
@@ -114,39 +114,42 @@ szdo:ObjectPropertyDomainRangeShape
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 5: Nachlass must contain Sammlungen
+# Shape 5: An estate must contain collections
 # (for instance data validation)
 # -----------------------------------------------------------------------------
 
-szdo:NachlassInstanceShape
+szdo:EstateInstanceShape
     a sh:NodeShape ;
-    sh:targetClass szdo:Nachlass ;
+    sh:targetClass szdo:Estate ;
     sh:property [
-        sh:path szdo:enthaelt ;
+        sh:path szdo:contains ;
         sh:minCount 1 ;
-        sh:class szdo:Sammlung ;
-        sh:message "A Nachlass instance must contain at least one Sammlung."@en ;
+        sh:class szdo:Collection ;
+        sh:message "An Estate instance must contain at least one Collection."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 6: NachlassObjekt must belong to a Sammlung
+# Shape 6: A record must belong to a collection
 # (for instance data validation)
 # -----------------------------------------------------------------------------
 
-szdo:NachlassObjektInstanceShape
+szdo:RecordInstanceShape
     a sh:NodeShape ;
-    sh:targetClass szdo:NachlassObjekt ;
+    sh:targetClass szdo:Record ;
     sh:property [
-        sh:path szdo:istTeilVon ;
+        sh:path szdo:isPartOf ;
         sh:minCount 1 ;
-        sh:class szdo:Sammlung ;
-        sh:message "Every NachlassObjekt must be part of a Sammlung."@en ;
+        sh:class szdo:Collection ;
+        sh:message "Every Record must be part of a Collection."@en ;
     ] ;
+    # A warning, not a violation: books in private ownership (SZDBIB, holder
+    # SZDSTA.12) carry inventory numbers but no shelfmark.
     sh:property [
-        sh:path szdo:signatur ;
+        sh:path szdo:signature ;
         sh:minCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Every NachlassObjekt must have a signatur."@en ;
+        sh:severity sh:Warning ;
+        sh:message "A Record should have a signature (shelfmark)."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
@@ -158,96 +161,96 @@ szdo:PersonInstanceShape
     a sh:NodeShape ;
     sh:targetClass szdo:Person ;
     sh:property [
-        sh:path szdo:nachname ;
+        sh:path szdo:surname ;
         sh:minCount 1 ;
-        sh:message "Every Person must have a nachname (family name)."@en ;
+        sh:message "Every Person must have a surname."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 8: KorrespondenzKonvolut must have sender and receiver
+# Shape 8: A bundle of correspondence must have sender and receiver
 # (for instance data validation)
 # -----------------------------------------------------------------------------
 
-szdo:KorrespondenzKonvolutInstanceShape
+szdo:BundleOfCorrespondenceInstanceShape
     a sh:NodeShape ;
-    sh:targetClass szdo:KorrespondenzKonvolut ;
+    sh:targetClass szdo:BundleOfCorrespondence ;
     sh:property [
-        sh:path szdo:hatAbsender ;
+        sh:path szdo:sender ;
         sh:minCount 1 ;
         sh:class szdo:Person ;
-        sh:message "Every KorrespondenzKonvolut must have a sender (hatAbsender)."@en ;
+        sh:message "Every BundleOfCorrespondence must have a sender."@en ;
     ] ;
     sh:property [
-        sh:path szdo:hatEmpfaenger ;
+        sh:path szdo:receiver ;
         sh:minCount 1 ;
         sh:class szdo:Person ;
-        sh:message "Every KorrespondenzKonvolut must have a receiver (hatEmpfaenger)."@en ;
+        sh:message "Every BundleOfCorrespondence must have a receiver."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 9: Werk must link to WerkExpression or NachlassObjekt
+# Shape 9: A work index entry must have a title
 # (for instance data validation)
 # -----------------------------------------------------------------------------
 
-szdo:WerkInstanceShape
+szdo:WorkIndexEntryInstanceShape
     a sh:NodeShape ;
-    sh:targetClass szdo:Werk ;
+    sh:targetClass szdo:WorkIndexEntry ;
     sh:property [
-        sh:path szdo:titel ;
+        sh:path szdo:title ;
         sh:minCount 1 ;
-        sh:message "Every Werk must have a titel."@en ;
+        sh:message "Every WorkIndexEntry must have a title."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 10: BiographischesEreignis must have a date
+# Shape 10: A biographical event must have a date
 # (for instance data validation)
 # -----------------------------------------------------------------------------
 
-szdo:BiographischesEreignisInstanceShape
+szdo:BiographicalEventInstanceShape
     a sh:NodeShape ;
-    sh:targetClass szdo:BiographischesEreignis ;
+    sh:targetClass szdo:BiographicalEvent ;
     sh:property [
-        sh:path szdo:datum ;
+        sh:path szdo:when ;
         sh:minCount 1 ;
-        sh:message "Every BiographischesEreignis must have a datum."@en ;
+        sh:message "Every BiographicalEvent must have a date (szdo:when)."@en ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 11: Naming convention — all szdo: classes should start uppercase
+# Shape 11: Naming convention, szdo: classes are ASCII UpperCamelCase
 # -----------------------------------------------------------------------------
 
 szdo:NamingConventionClassShape
     a sh:NodeShape ;
     sh:targetClass owl:Class ;
     sh:sparql [
-        sh:message "Class local name '{$this}' does not start with an uppercase letter." ;
+        sh:message "Class local name '{$this}' is not ASCII UpperCamelCase." ;
         sh:select """
             SELECT $this WHERE {
                 $this a owl:Class .
                 FILTER(isIRI($this))
                 FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
                 BIND(REPLACE(STR($this), '^.*#', '') AS ?local)
-                FILTER(!REGEX(?local, '^[A-ZÄÖÜ]'))
+                FILTER(!REGEX(?local, '^[A-Z][A-Za-z0-9]*$'))
             }
         """ ;
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 12: Naming convention — all szdo: properties should start lowercase
+# Shape 12: Naming convention, szdo: properties are ASCII lowerCamelCase
 # -----------------------------------------------------------------------------
 
 szdo:NamingConventionPropertyShape
     a sh:NodeShape ;
     sh:targetSubjectsOf rdf:type ;
     sh:sparql [
-        sh:message "Property local name '{$this}' does not start with a lowercase letter." ;
+        sh:message "Property local name '{$this}' is not ASCII lowerCamelCase." ;
         sh:select """
             SELECT $this WHERE {
                 { $this a owl:ObjectProperty } UNION { $this a owl:DatatypeProperty }
                 FILTER(isIRI($this))
                 FILTER(STRSTARTS(STR($this), 'https://gams.uni-graz.at/o:szd.ontology#'))
                 BIND(REPLACE(STR($this), '^.*#', '') AS ?local)
-                FILTER(!REGEX(?local, '^[a-zäöü]'))
+                FILTER(!REGEX(?local, '^[a-z][A-Za-z0-9]*$'))
             }
         """ ;
     ] .
@@ -274,11 +277,11 @@ szdo:OrphanClassShape
     ] .
 
 # -----------------------------------------------------------------------------
-# Shape 14: datumEvidenz must reference a SKOS concept
+# Shape 14: dateEvidence must reference a SKOS concept
 # -----------------------------------------------------------------------------
 
-szdo:DatumEvidenzShape
+szdo:DateEvidenceShape
     a sh:NodeShape ;
-    sh:targetObjectsOf szdo:datumEvidenz ;
+    sh:targetObjectsOf szdo:dateEvidence ;
     sh:nodeKind sh:IRI ;
-    sh:message "datumEvidenz must reference an IRI (expected szdg:DatumEvidenz SKOS concept)."@en .
+    sh:message "dateEvidence must reference an IRI (expected a concept of szdg:DatumEvidenz)."@en .

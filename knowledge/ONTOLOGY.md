@@ -1,5 +1,5 @@
 ---
-title: Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+title: Stefan Zweig Digital Estate Ontology (SZDO)
 project:
   name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD.git
@@ -8,818 +8,488 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2026-03-29
-updated: 2026-03-31
+updated: 2026-09-24
 ---
 
-# Stefan Zweig Digital Nachlass-Ontologie (SZDO)
+# Stefan Zweig Digital Estate Ontology (SZDO)
 
-Formale Ontologie fuer den digitalen Nachlass von Stefan Zweig. Die Ontologie modelliert archivalische, bibliographische und biographische Entitaeten und deren Beziehungen -- abgeleitet aus der Archivwissenschaft (Records in Context), ergaenzt durch bibliothekarische Standards (IFLA LRM) und kulturerbe-orientierte Modelle (CIDOC-CRM).
+The SZDO is the formal OWL ontology for the digital estate (Nachlass) of Stefan Zweig. It models archival, bibliographic and biographical entities and their relations. Its archival backbone follows Records in Contexts (RiC-O), the work layer follows the IFLA Library Reference Model (LRM), and events and provenance follow the CIDOC Conceptual Reference Model (CRM). The Turtle sources are in [../ontology/](../ontology/), the generated reference is at https://chpollin.github.io/SZD/ontology/.
 
-## Zwei-Schichten-Architektur (ab v1.2.0)
+## 1. Two-layer architecture
 
-Die SZDO baut auf der **generischen Nachlass-Ontologie** (`nachlass:`) auf, die nachlassunabhaengig nachgenutzt werden kann:
+Since v1.2.0 the SZDO builds on a generic estate ontology that other estate projects can reuse.
 
-| Schicht | Namespace | Datei | Zweck |
-|---------|-----------|-------|-------|
-| **Generisch** | `https://w3id.org/nachlass#` (`nachlass:`) | `nachlass-ontology.ttl` | Nachnutzbare Kern-Ontologie fuer beliebige Nachlass-Projekte |
-| **SZD-spezifisch** | `https://gams.uni-graz.at/o:szd.ontology#` (`szdo:`) | `szd-ontology.ttl` | Stefan Zweig Digital: GAMS-PIDs, Klawiter, Werktypen, Kompatibilitaetsschicht |
+| Layer | Namespace and prefix | File | Purpose |
+|-------|----------------------|------|---------|
+| Generic | `https://w3id.org/nachlass#` (`nachlass:`) | `nachlass-ontology.ttl` | Reusable core for any estate project |
+| SZD | `https://gams.uni-graz.at/o:szd.ontology#` (`szdo:`) | `szd-ontology.ttl` | GAMS PIDs, Klawiter integration, work types, legacy GAMS terms |
 
-Die SZDO importiert `nachlass:` via `owl:imports` und spezialisiert die Kernklassen:
+The SZDO imports `nachlass:` via `owl:imports` and specialises its core classes.
 
 ```
-nachlass:Nachlass          <--- szdo:Nachlass (+ szdo:entsprichtPID, GAMS-Kontext)
-nachlass:NachlassObjekt    <--- szdo:NachlassObjekt (+ SZD-spezifische Subklassen)
-nachlass:Werk              <--- szdo:Werk (+ Werktypen, Klawiter-Integration)
-nachlass:Akteur            <--- szdo:Akteur (+ SZDPER-PIDs)
-nachlass:BiographischesEreignis <--- szdo:BiographischesEreignis (+ SZDBIO-PIDs)
-nachlass:Ort               <--- szdo:Ort (+ SZDSTA-PIDs)
+nachlass:Estate            <--- szdo:Estate
+nachlass:Collection        <--- szdo:Collection
+nachlass:Record            <--- szdo:Record (+ SZD record types)
+nachlass:DigitalObject     <--- szdo:DigitalObject
+nachlass:Work              <--- szdo:WorkIndexEntry (+ work types, Klawiter)
+nachlass:Agent             <--- szdo:Agent (+ SZDPER, SZDORG)
+nachlass:BiographicalEvent <--- szdo:BiographicalEvent (+ SZDBIO)
+nachlass:Place             <--- szdo:Place (+ SZDSTA)
 ```
 
-**Namespace (SZDO):** `https://gams.uni-graz.at/o:szd.ontology#` (Prefix: `szdo:`)
-**Namespace (Nachlass):** `https://w3id.org/nachlass#` (Prefix: `nachlass:`)
+## 2. Design principles
 
----
+1. Archive first. RiC-O is the foundation for describing the estate material.
+2. LRM-compatible work layer for the intellectual works.
+3. CIDOC-CRM-compatible events for provenance and biography.
+4. Linked data through GND, Wikidata, GeoNames and VIAF.
+5. Bilingual labels and definitions in German and English.
+6. Extensible for the Klawiter bibliography and later projects.
+7. English identifiers that coincide with the production GAMS vocabulary wherever the meaning is the same (section 3).
 
-## 1. Designprinzipien
+## 3. Naming convention
 
-1. **Archiv-first**: Records in Context (RiC-O) als Fundament für die Beschreibung von Nachlass-Materialien
-2. **FRBR/LRM-kompatibel**: Werk-Ebene nach IFLA Library Reference Model für die intellektuelle Werkschicht
-3. **CIDOC-CRM-anschlussfähig**: Ereignisbasierte Provenienz und biographische Modellierung
-4. **Linked Data**: Maximale Verknüpfung mit GND, Wikidata, Geonames, VIAF
-5. **Bilingual**: Alle Labels und Definitionen in Deutsch und Englisch
-6. **Erweiterbar**: Klawiter-Bibliographie und zukünftige Projekte integrierbar
+- Identifiers are English and ASCII. Classes are UpperCamelCase, properties lowerCamelCase. The SHACL shapes 11 and 12 in `szd-shapes.ttl` enforce this for every `szdo:` term.
+- The production vocabulary of GAMS (v0.x) lives in the same namespace and is produced by `szd-TORDF.xsl` in the presentation-layer repository (`ZIMLAB/szd`), which binds the namespace to the prefix `szd:`. Where a GAMS term has the same meaning as an SZDO concept, the GAMS term is the canonical SZDO identifier. Live GAMS data therefore conforms to v2.0.0 without a mapping layer. This is why agent-role properties are bare role nouns (`author`, `sender`, `previousOwner`) and why some canonical names keep GAMS wording (`signature` for the shelfmark, `when` for the date, `page` for the page count, `writerForeword`).
+- Where GAMS uses a term with a different meaning, datatype or spelling, the SZDO concept has its own English name and the GAMS term stays as an `owl:deprecated` legacy term (section 11.3).
+- Concepts without a GAMS term take their name from the English label or, where the ontology aligns with RiC-O or LRM, from that standard (`Record`, `Expression`, `Item`). Other object properties use `has`/`is` verbs (`hasPart`, `isPartOf`).
+- Labels (`rdfs:label`) and definitions (`rdfs:comment`) stay bilingual. Only identifiers are English.
+- Documentation uses the prefix `szdo:` throughout. `szd:` appears only when quoting the GAMS XSLT, and denotes the same namespace.
+- The glossary concepts in `szdg:` are defined in `data/Glossary/szd-Glossary.xml` and keep their identifiers (for example `szdg:DatumEvidenz`).
 
----
+## 4. External vocabularies
 
-## 2. Externe Vokabulare und Alignments
-
-| Prefix | Namespace | Rolle |
-|--------|-----------|-------|
-| `rico:` | `https://www.ica.org/standards/RiC/ontology#` | Archivische Kernmodellierung |
-| `lrm:` | `http://iflastandards.info/ns/lrm/lrmer/` | Werk-Expression-Manifestation-Item |
-| `crm:` | `http://www.cidoc-crm.org/cidoc-crm/` | Ereignisse, Provenienz, Akteure |
-| `skos:` | `http://www.w3.org/2004/02/skos/core#` | Kontrollierte Vokabulare (Glossar) |
-| `dc:` / `dcterms:` | `http://purl.org/dc/terms/` | Dublin Core Metadaten |
-| `foaf:` | `http://xmlns.com/foaf/0.1/` | Personen-Grunddaten |
-| `schema:` | `https://schema.org/` | Schema.org-Brücke (bes. für Klawiter) |
-| `gams:` | `https://gams.uni-graz.at/o:gams-ontology#` | GAMS-Plattform-Ontologie |
-| `szdg:` | `https://gams.uni-graz.at/o:szd.glossar#` | SZD Glossar (SKOS) |
-| `klawiter:` | `https://klawiter-rescue.github.io/vocab/` | Klawiter-Bibliographie |
-| `gnd:` | `http://d-nb.info/standards/elementset/gnd#` | GND-Normdaten |
-| `wdt:` | `http://www.wikidata.org/prop/direct/` | Wikidata-Properties |
+| Prefix | Namespace | Role |
+|--------|-----------|------|
+| `rico:` | `https://www.ica.org/standards/RiC/ontology#` | Archival core model |
+| `lrm:` | `http://iflastandards.info/ns/lrm/lrmer/` | Work, expression, manifestation, item |
+| `crm:` | `http://www.cidoc-crm.org/cidoc-crm/` | Events, provenance, actors |
+| `skos:` | `http://www.w3.org/2004/02/skos/core#` | Controlled vocabularies (glossary) |
+| `dc:` / `dcterms:` | `http://purl.org/dc/terms/` | Dublin Core metadata |
+| `foaf:` | `http://xmlns.com/foaf/0.1/` | Basic person data |
+| `schema:` | `https://schema.org/` | Schema.org bridge, mainly for Klawiter |
+| `gams:` | `https://gams.uni-graz.at/o:gams-ontology#` | GAMS platform ontology |
+| `szdg:` | `https://gams.uni-graz.at/o:szd.glossar#` | SZD glossary (SKOS) |
+| `klawiter:` | `https://klawiter-rescue.github.io/vocab/` | Klawiter bibliography |
+| `gnd:` | `http://d-nb.info/standards/elementset/gnd#` | GND authority data |
+| `wdt:` | `http://www.wikidata.org/prop/direct/` | Wikidata properties |
 | `iiif:` | `http://iiif.io/api/presentation/3#` | IIIF Presentation API |
 
----
+## 5. Class hierarchy
 
-## 3. Klassenhierarchie
-
-### 3.1 Archivschicht (Nachlass-Struktur)
-
-Fundament: **Records in Context (RiC-O)** — beschreibt den Nachlass als archivisches Ganzes.
+### 5.1 Archival layer
 
 ```
-szdo:Nachlass                          ≡ rico:RecordSet (Fonds-Ebene)
+szdo:Estate                          ⊂ rico:RecordSet (fonds)
 │
-├── szdo:Sammlung                      ⊂ rico:RecordSet (Teilbestand/Series)
-│   ├── szdo:Werksammlung              # Manuskripte, Typoskripte, Entwürfe
-│   ├── szdo:Korrespondenzsammlung     # Korrespondenz-Konvolute
-│   ├── szdo:Autographensammlung       # Gesammelte Autographen Dritter
-│   ├── szdo:Bibliothekssammlung       # Rekonstruierte Privatbibliothek
-│   ├── szdo:Lebensdokumentesammlung   # Persönliche Dokumente
-│   └── szdo:Aufsatzsammlung           # Essays und Aufsätze
+├── szdo:Collection                  ⊂ rico:RecordSet (series)
+│   ├── szdo:WorksCollection         # manuscripts, typescripts, drafts
+│   ├── szdo:CorrespondenceCollection
+│   ├── szdo:AutographCollection     # autographs by third parties
+│   ├── szdo:LibraryCollection       # reconstructed personal library
+│   ├── szdo:PersonalDocumentsCollection
+│   ├── szdo:EssayCollection
+│   └── szdo:ThematicCollection      # curated theme pages
 │
-├── szdo:NachlassObjekt                ⊂ rico:Record (Einzelstück)
-│   ├── szdo:Manuskript                # Handschriftliches Werkmanuskript
-│   ├── szdo:Typoskript                # Maschinschriftliches Dokument
-│   ├── szdo:Typoskriptdurchschlag     # Durchschlag/Kohlepapier-Kopie
-│   ├── szdo:Notizbuch                 # Notizbuch mit Entwürfen
-│   ├── szdo:Konvolut                  # Zusammengestelltes Ensemble
-│   ├── szdo:Korrekturfahne            # Druckfahne mit Korrekturen
-│   ├── szdo:KorrespondenzKonvolut     ⊂ rico:Record # Briefbündel
-│   ├── szdo:Autograph                 # Einzelner Autograph (Sammlung)
-│   ├── szdo:Buch                      # Buch aus Privatbibliothek
-│   └── szdo:Lebensdokument            # Persönliches Dokument
+├── szdo:Record                      ⊂ rico:Record
+│   ├── szdo:Manuscript
+│   ├── szdo:Typescript
+│   ├── szdo:CarbonCopyTypescript
+│   ├── szdo:Notebook
+│   ├── szdo:Ensemble                # Konvolut
+│   ├── szdo:GalleyProof
+│   ├── szdo:BundleOfCorrespondence
+│   ├── szdo:Autograph
+│   ├── szdo:Book
+│   └── szdo:PersonalDocument
 │
-└── szdo:DigitalesObjekt               ⊂ rico:Instantiation
-    ├── szdo:METSObjekt                # METS-Container (strukturelle Metadaten)
-    ├── szdo:IIIFManifest              # IIIF Presentation Manifest
-    └── szdo:Faksimile                 # Einzelnes digitales Bild
+└── szdo:DigitalObject               ⊂ rico:Instantiation
+    ├── szdo:METSObject
+    ├── szdo:IIIFManifest
+    └── szdo:Facsimile
 ```
 
-**RiC-Alignments:**
+`szdo:Extent` and `szdo:Enclosure` are modelled as subclasses of `szdo:Record`, as in v1.2.0.
 
-| SZDO-Klasse | RiC-O Alignment | Erklärung |
-|-------------|-----------------|-----------|
-| `szdo:Nachlass` | `rico:RecordSet` (mit `rico:hasRecordSetType` = Fonds) | Gesamtnachlass als Fonds |
-| `szdo:Sammlung` | `rico:RecordSet` (mit `rico:hasRecordSetType` = Series) | Teilbestand/Kollektion |
-| `szdo:NachlassObjekt` | `rico:Record` | Einzelnes archivisches Objekt |
-| `szdo:DigitalesObjekt` | `rico:Instantiation` | Digitale Repräsentation |
-
-### 3.2 Werkschicht (Intellektuelle Ebene)
-
-Fundament: **IFLA LRM** — modelliert Werke unabhängig von physischen Trägern.
+### 5.2 Work layer
 
 ```
-szdo:Werk                              ≈ lrm:Work
-│  # Abstraktes intellektuelles Werk (z.B. "Schachnovelle")
-│  # Entspricht SZDWRK-Einträgen im Werkindex
-│
-├── szdo:WerkExpression                ≈ lrm:Expression
-│   # Sprachliche/textliche Realisierung (z.B. dt. Originaltext, engl. Übersetzung)
-│
-├── szdo:Manifestation                 ≈ lrm:Manifestation
-│   # Publizierte Ausgabe (Erstausgabe, Neuauflage, Übersetzungsausgabe)
-│   # → Brücke zu Klawiter-Einträgen
-│
-└── szdo:Exemplar                      ≈ lrm:Item
-    # Konkretes physisches Exemplar
-    # → Brücke zu szdo:NachlassObjekt (Manuskript, Buch, etc.)
+szdo:WorkIndexEntry                  ⊂ lrm:Work, nachlass:Work
+│  # abstract work, one entry of the work index SZDWRK
+├── szdo:Expression                  ⊂ lrm:Expression (original text, translation, adaptation)
+├── szdo:Manifestation               ⊂ lrm:Manifestation (published edition, Klawiter)
+└── szdo:Item                        ⊂ lrm:Item (physical copy)
 ```
 
-**Werktypen (nach Inhalt):**
+The work types by content are `FictionalWork`, `EssayisticWork`, `BiographicalWork`, `HistoricalWork`, `DramaticWork`, `PoeticWork`, `CollectedWork` (with `szdo:hasPart`), `TranslationWork` (Zweig's translations of other authors) and `ForewordAfterword`. They are subclasses of `szdo:WorkIndexEntry` and pairwise disjoint. `szdo:SecondaryLiterature` (⊂ `schema:ScholarlyArticle`) covers research about Zweig that is not part of the estate.
+
+The abstract work is named `WorkIndexEntry` because GAMS types the SZDWRK entries with that class. The GAMS class `szd:Work` denotes the physical items of the works collection and therefore stays a legacy term under `szdo:Record` (section 11.3).
+
+### 5.3 Agent layer
 
 ```
-szdo:Werk
-├── szdo:BelletristischesWerk          # Novellen, Romane, Erzählungen
-├── szdo:EssayistischesWerk            # Essays, Feuilletons
-├── szdo:BiographischesWerk            # Biographien (Fouché, Marie Antoinette, etc.)
-├── szdo:HistorischesWerk              # Sternstunden der Menschheit etc.
-├── szdo:DramatischesWerk              # Theaterstücke, Libretti
-├── szdo:LyrischesWerk                 # Gedichte, Gedichtsammlungen
-├── szdo:SammelWerk                    # Gesammelte Werke, Kompilationen
-│   └── szdo:hatTeil → szdo:Werk       # Enthaltene Einzelwerke
-├── szdo:Übersetzungswerk              # Zweigs Übersetzungen anderer Autoren
-└── szdo:VorwortNachwort               # Vorworte, Nachworte, Einleitungen
+szdo:Agent                           ≡ rico:Agent, ⊂ crm:E39_Actor
+├── szdo:Person                      ≡ rico:Person, ⊂ crm:E21_Person (SZDPER)
+└── szdo:Organisation                ≡ rico:CorporateBody, ⊂ crm:E74_Group (SZDORG)
 ```
 
-### 3.3 Akteur- und Indexschicht
+GAMS types the SZDPER entries as `szd:Agent` and the SZDORG entries as `szd:Organisation`.
+
+Agent roles are properties.
+
+| Property | Domain | Range | Meaning |
+|----------|--------|-------|---------|
+| `szdo:author` | WorkIndexEntry | Person | Author |
+| `szdo:editor` | Manifestation | Person | Editor |
+| `szdo:translator` | Expression | Person | Translator |
+| `szdo:composer` | Expression | Person | Composer of a setting |
+| `szdo:illustrator` | Manifestation | Person | Illustrator |
+| `szdo:writerForeword` | Manifestation | Person | Author of a foreword |
+| `szdo:writerAfterword` | Manifestation | Person | Author of an afterword |
+| `szdo:sender` | BundleOfCorrespondence | Person | Sender |
+| `szdo:receiver` | BundleOfCorrespondence | Person | Receiver |
+| `szdo:scribalHand` | Record | Person | Person whose hand is identified on the document |
+| `szdo:partyInvolved` | Record | Agent | Superproperty of all active roles |
+| `szdo:affectedPerson` | Record | Person | Person the object is about, not an active participant |
+
+`szdo:partyInvolved` is a subproperty of `rico:hasOrHadContributor`, and the ten active roles above it are its subproperties. `szdo:affectedPerson` is a subproperty of `rico:hasOrHadSubject` and not of `szdo:partyInvolved`.
+
+### 5.4 Biographical and event layer
 
 ```
-szdo:Akteur                            ≈ rico:Agent, crm:E39_Actor
-├── szdo:Person                        ≈ rico:Person, crm:E21_Person
-│   # Personen mit Normdatenverknüpfung
-│   # Entspricht SZDPER-Einträgen
-│
-└── szdo:Organisation                  ≈ rico:CorporateBody, crm:E74_Group
-    # Institutionen, Verlage, Archive
-    # Entspricht SZDSTA-Einträgen (Standorte)
+szdo:BiographicalEvent               ⊂ crm:E5_Event (SZDBIO)
+├── szdo:Birth                       ⊂ crm:E67_Birth
+├── szdo:Death                       ⊂ crm:E69_Death
+├── szdo:Journey
+├── szdo:PublicationEvent
+├── szdo:Encounter
+├── szdo:InstitutionalEvent
+├── szdo:ExileEvent
+└── szdo:ScholarlyEvent              # symposia, conferences, exhibitions
 ```
 
-**Personenrollen (als Properties):**
-
-| Property | Domain | Range | Beschreibung |
-|----------|--------|-------|--------------|
-| `szdo:hatAutor` | Werk, NachlassObjekt | Person | Verfasser |
-| `szdo:hatHerausgeber` | Werk, Manifestation | Person | Herausgeber |
-| `szdo:hatÜbersetzer` | WerkExpression | Person | Übersetzer |
-| `szdo:hatKomponist` | Werk | Person | Komponist (Vertonungen) |
-| `szdo:hatIllustrator` | Manifestation | Person | Illustrator |
-| `szdo:hatVorwortAutor` | Manifestation | Person | Vorwort-Verfasser |
-| `szdo:hatAbsender` | KorrespondenzKonvolut | Person | Briefabsender |
-| `szdo:hatEmpfänger` | KorrespondenzKonvolut | Person | Briefempfänger |
-| `szdo:hatSchreiberhand` | NachlassObjekt | Person | Schreiber/Sekretär |
-| `szdo:hatBetroffenePerson` | Lebensdokument | Person | Betroffene Person (thematische Erwähnung, KEINE aktive Beteiligung) |
-| `szdo:hatBeteiligtenAkteur` | NachlassObjekt | Person | Allgemein Beteiligte (Superproperty) |
-
-**Personen-Rollenhierarchie (v1.1.0):**
-
-`szdo:hatBeteiligtenAkteur` ist `rdfs:subPropertyOf rico:hasOrHadContributor` und fungiert als Superproperty fuer alle aktiven Beteiligungsrollen. Folgende 10 Properties sind `rdfs:subPropertyOf szdo:hatBeteiligtenAkteur`:
-
-- `szdo:hatAutor`
-- `szdo:hatHerausgeber`
-- `szdo:hatUebersetzer`
-- `szdo:hatKomponist`
-- `szdo:hatIllustrator`
-- `szdo:hatVorwortAutor`
-- `szdo:hatNachwortAutor`
-- `szdo:hatAbsender`
-- `szdo:hatEmpfaenger`
-- `szdo:hatSchreiberhand`
-
-`szdo:hatBetroffenePerson` ist `rdfs:subPropertyOf rico:hasOrHadSubject` — es bezeichnet thematisch erwähnte Personen, keine aktiv Beteiligten.
-
-### 3.4 Biographie- und Ereignisschicht
-
-Fundament: **CIDOC-CRM E5_Event** — Lebensereignisse als zeitgebundene Entitäten.
+### 5.5 Place layer
 
 ```
-szdo:BiographischesEreignis            ≈ crm:E5_Event
-│  # Entspricht SZDBIO-Einträgen im Lebenskalender
-│
-├── szdo:Geburt                        ⊂ crm:E67_Birth
-├── szdo:Tod                           ⊂ crm:E69_Death
-├── szdo:Reise                         # Reisen, Aufenthalte
-├── szdo:Publikationsereignis          # Veröffentlichung eines Werks
-├── szdo:Begegnung                     # Treffen mit Personen
-├── szdo:InstitutionellesEreignis      # Verleihungen, Ehrungen
-└── szdo:Exilereignis                  # Emigration, Flucht
+szdo:Place                           ≡ rico:Place, ⊂ crm:E53_Place
+├── szdo:GeographicalPlace           # GeoNames-linked
+├── szdo:Location                    # repository, one entry of SZDSTA
+└── szdo:PlaceOfOrigin
 ```
 
-### 3.5 Orts- und Raum-Schicht
+`szdo:Location` keeps the GAMS class name for the repositories of SZDSTA. Its English label is "Repository", and the generic layer calls the class `nachlass:Repository`.
+
+### 5.6 Provenance layer
 
 ```
-szdo:Ort                               ≈ crm:E53_Place, rico:Place
-├── szdo:GeographischerOrt             # Stadt, Land (Geonames-verknüpft)
-├── szdo:Aufbewahrungsort              # Archiv, Bibliothek als Standort
-│   # Entspricht SZDSTA-Einträgen
-└── szdo:Entstehungsort                # Wo ein Objekt geschaffen wurde
+szdo:ProvenanceEvent                 ⊂ crm:E8_Acquisition
+    szdo:previousOwner → Agent
+    szdo:subsequentOwner → Agent
+szdo:ProvenanceFeatureInstance       ⊂ crm:E13_Attribute_Assignment
+    szdo:hasFeatureType → szdg:ProvenanceFeature (SKOS)
 ```
 
-### 3.6 Provenienz- und Materialschicht
+### 5.7 Physical description
 
-```
-szdo:Provenienz                        ≈ crm:E8_Acquisition
-│  # Erwerbungskette eines Objekts
-│
-├── szdo:Provenienzeignis              # Einzelnes Erwerbungs-/Besitzwechsel-Ereignis
-│   ├── szdo:hatVorbesitzer → Person/Organisation
-│   ├── szdo:hatNachbesitzer → Person/Organisation
-│   ├── szdo:hatDatum → xsd:date
-│   └── szdo:hatQuelle → Literal       # z.B. "Christie's London 2014"
-│
-└── szdo:ProvenienzmerkmalInstanz      # Konkretes Merkmal an einem Objekt
-    # Verknüpft mit szdg:ProvenanceFeature (SKOS)
-    # z.B. Stempel, Exlibris, Marginalien, Bindung
-```
+| Property | Domain | Range | Glossary concept |
+|----------|--------|-------|------------------|
+| `szdo:writingMaterial` | Record | langString | `szdg:WritingMaterial` |
+| `szdo:writingInstrument` | Record | langString | `szdg:WritingInstrument` |
+| `szdo:extent` | Record | Extent | |
+| `szdo:format` | Record | string | `szdg:PhysicalDescription` |
+| `szdo:binding` | Book | langString | |
+| `szdo:identifyingInscription` | Record | langString | `szdg:IdentifyingInscription` |
+| `szdo:incipit` | | string | `szdg:Incipit` |
+| `szdo:enclosures` | Record | Enclosure | `szdg:Enclosures` |
+| `szdo:language` | | string (ISO 639-3) | |
 
-**Physische Beschreibungseigenschaften:**
+`szdo:Extent` carries `szdo:leafCount`, `szdo:page` and `szdo:piecesOfCorrespondence`.
 
-| Property | Domain | Range | SKOS-Konzept |
-|----------|--------|-------|--------------|
-| `szdo:hatBeschreibstoff` | NachlassObjekt | Literal | `szdg:WritingMaterial` |
-| `szdo:hatSchreibstoff` | NachlassObjekt | Literal | `szdg:WritingInstrument` |
-| `szdo:hatUmfang` | NachlassObjekt | szdo:Umfang | — |
-| `szdo:hatFormat` | NachlassObjekt | Literal | `szdg:PhysicalDescription` |
-| `szdo:hatBindung` | Buch | Literal | — |
-| `szdo:hatAufschrift` | NachlassObjekt | Literal | `szdg:IdentifyingInscription` |
-| `szdo:hatIncipit` | NachlassObjekt | Literal | `szdg:Incipit` |
-| `szdo:hatBeilage` | NachlassObjekt | szdo:Beilage | `szdg:Enclosures` |
-| `szdo:hatZusatzmaterial` | NachlassObjekt | Literal | `szdg:AdditionalMaterial` |
-| `szdo:hatSprache` | NachlassObjekt, Werk | Literal (ISO 639-3) | — |
+### 5.8 Glossary
 
-### 3.7 Kontrolliertes Vokabular (Glossar)
+The SKOS glossary (`szdg:`, `data/Glossary/szd-Glossary.xml`) stays the controlled vocabulary. Its main groups are the work terms (`szdg:Title`, `szdg:Incipit`, `szdg:WritingMaterial`, `szdg:WritingInstrument`, `szdg:PartiesInvolved`, `szdg:Date`, `szdg:IdentifyingInscription`, `szdg:PhysicalDescription`, `szdg:AdditionalMaterial`, `szdg:Enclosures`), the provenance features of the library (`szdg:ProvenanceFeature` with `Autograph`, `Binding`, `Insertion`, `Bookplate`, `Marginalia`, `Marker`, `Note`, `Stamp`, `Overpasting`, `RemovedPage`, `PresentationInscription`) and the date evidence scheme `szdg:DatumEvidenz`.
 
-Der bestehende **SKOS-Glossar** (`szdg:`) bleibt erhalten und wird in die Ontologie eingebunden:
+## 6. Identification
 
-```
-szdg:ConceptScheme                     = skos:ConceptScheme
-│
-├── szdg:Works                         # Werkbezogene Begriffe
-│   ├── szdg:Title
-│   ├── szdg:Incipit
-│   ├── szdg:WritingMaterial           # Beschreibstoff (Papier, Notizbuch, etc.)
-│   ├── szdg:WritingInstrument         # Schreibstoff (violette Tinte, Bleistift, etc.)
-│   ├── szdg:PartiesInvolved
-│   ├── szdg:Date
-│   ├── szdg:IdentifyingInscription
-│   ├── szdg:PhysicalDescription
-│   ├── szdg:AdditionalMaterial
-│   └── szdg:Enclosures
-│
-├── szdg:ProvenanceFeature             # Provenienzmerkmale (Bibliotheksrekonstruktion)
-│   ├── szdg:Autograph
-│   ├── szdg:Binding
-│   ├── szdg:Insertion
-│   ├── szdg:Bookplate (Exlibris)
-│   ├── szdg:Marginalia
-│   ├── szdg:Marker
-│   ├── szdg:Note
-│   ├── szdg:Stamp
-│   ├── szdg:Overpasting
-│   ├── szdg:RemovedPage
-│   └── szdg:PresentationInscription
-│
-├── szdg:Library
-├── szdg:PersonalDocuments
-├── szdg:Biography
-├── szdg:FirstEditions
-├── szdg:Person
-├── szdg:Standorte
-├── szdg:LaterOwner
-├── szdg:OriginalShelfmark
-└── szdg:CurrentLocation
-```
+### 6.1 URI patterns
 
----
-
-## 4. Identifikationssystem
-
-### 4.1 URI-Muster
-
-| Entität | URI-Pattern | Beispiel |
-|---------|-------------|---------|
-| Nachlass (Fonds) | `gams:{context-pid}` | `gams:context:szd` |
-| Sammlung | `gams:{collection-pid}` | `gams:o:szd.werke` |
-| Nachlassobjekt | `gams:{object-pid}` | `gams:o:szd.270` |
-| Nachlassobjekt (intern) | `gams:{collection-pid}#{item-id}` | `gams:o:szd.werke#SZDMSK.6` |
-| Werk (Werkindex) | `gams:o:szd.werkindex#{id}` | `gams:o:szd.werkindex#SZDWRK.4` |
+| Entity | URI pattern | Example |
+|--------|-------------|---------|
+| Estate (fonds) | `gams:{context-pid}` | `gams:context:szd` |
+| Collection | `gams:{collection-pid}` | `gams:o:szd.werke` |
+| Record | `gams:{object-pid}` | `gams:o:szd.270` |
+| Record (catalogue entry) | `gams:{collection-pid}#{item-id}` | `gams:o:szd.werke#SZDMSK.6` |
+| Work index entry | `gams:o:szd.werkindex#{id}` | `gams:o:szd.werkindex#SZDWRK.4` |
 | Person | `gams:o:szd.personen#{id}` | `gams:o:szd.personen#SZDPER.1560` |
-| Standort | `gams:o:szd.standorte#{id}` | `gams:o:szd.standorte#SZDSTA.1` |
-| Glossar-Konzept | `gams:o:szd.glossar#{id}` | `gams:o:szd.glossar#WritingMaterial` |
-| Klawiter-Eintrag | `klawiter:entry/{id}` | `klawiter:entry/52` |
+| Organisation | `gams:o:szd.organisation#{id}` | `gams:o:szd.organisation#SZDORG.1` |
+| Location (repository) | `gams:o:szd.standorte#{id}` | `gams:o:szd.standorte#SZDSTA.1` |
+| Glossary concept | `gams:o:szd.glossar#{id}` | `gams:o:szd.glossar#WritingMaterial` |
+| Klawiter entry | `klawiter:entry/{id}` | `klawiter:entry/52` |
 
-### 4.2 Externe Identifikatoren
+The patterns use the prefix `gams:` for `https://gams.uni-graz.at/` as shorthand. Turtle files write patterns with a fragment as full IRIs (`<https://gams.uni-graz.at/o:szd.werke#SZDMSK.6>`), because Turtle reads `#` in a prefixed name as the start of a comment.
 
-| System | Property | URI-Pattern |
+### 6.2 External identifiers
+
+| System | Property | URI pattern |
 |--------|----------|-------------|
 | GND | `szdo:gndIdentifier` | `http://d-nb.info/gnd/{id}` |
 | Wikidata | `szdo:wikidataIdentifier` | `http://www.wikidata.org/entity/{id}` |
 | VIAF | `szdo:viafIdentifier` | `http://viaf.org/viaf/{id}` |
-| Geonames | `szdo:geonamesIdentifier` | `http://www.geonames.org/{id}` |
-| Signatur | `szdo:signatur` | Literal (z.B. `SZ-AAP/W4.1`) |
-| GAMS-PID | `dcterms:identifier` | `o:szd.{number}` |
+| GeoNames | `szdo:geonamesIdentifier` | `http://www.geonames.org/{id}` |
+| Shelfmark | `szdo:signature` | literal, for example `SZ-AAP/W4.1` |
+| GAMS PID | `szdo:gamsIdentifier` | `o:szd.{number}` |
 
----
+## 7. Core relations
 
-## 5. Kernbeziehungen (Object Properties)
-
-### 5.1 Strukturelle Beziehungen (Nachlass-Hierarchie)
+### 7.1 Estate hierarchy
 
 ```turtle
-szdo:istTeilVon          rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  szdo:Sammlung ;
-                         owl:equivalentProperty rico:isOrWasIncludedIn .
-
-szdo:enthält             owl:inverseOf szdo:istTeilVon ;
-                         owl:equivalentProperty rico:includesOrIncluded .
-
-szdo:hatDigitalesObjekt  rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  szdo:DigitalesObjekt ;
-                         owl:equivalentProperty rico:hasInstantiation .
+szdo:contains          rdfs:domain szdo:Estate ;  rdfs:range szdo:Collection ;
+                       owl:equivalentProperty rico:includesOrIncluded .
+szdo:isPartOf          rdfs:domain szdo:Record ;  rdfs:range szdo:Collection ;
+                       owl:inverseOf szdo:containsRecord ;
+                       owl:equivalentProperty rico:isOrWasIncludedIn .
+szdo:hasDigitalObject  rdfs:domain szdo:Record ;  rdfs:range szdo:DigitalObject ;
+                       owl:equivalentProperty rico:hasInstantiation .
 ```
 
-### 5.2 Werk-Objekt-Beziehungen (LRM-Brücke)
+### 7.2 Records and works
+
+`szdo:relationToWork` links a physical record (SZDMSK and other catalogues) to the abstract work it witnesses (SZDWRK). Its inverse is `szdo:hasManuscriptWitness`. GAMS already emits `szd:relationToWork` from the TEI keywords of type `work`.
+
+```
+szdo:WorkIndexEntry (SZDWRK.4 "Montaigne")
+    ├── szdo:hasManuscriptWitness → szdo:Notebook (SZDMSK.6, SZ-AAP/W4.1)
+    │   └── szdo:hasDigitalObject → szdo:METSObject (o:szd.271)
+    │       └── szdo:hasFacsimile → szdo:Facsimile
+    ├── szdo:hasManuscriptWitness → szdo:Manuscript (SZDMSK.7, SZ-AAP/W4.2)
+    └── szdo:hasManuscriptWitness → szdo:Ensemble (SZDMSK.8, SZ-AAP/W4.3)
+        └── szdo:scribalHand → Stefan Zweig, Lotte Zweig, Richard Friedenthal
+```
+
+### 7.3 Provenance
+
+```
+szdo:Book (SZDBIB.42)
+    szdo:hasProvenance → szdo:ProvenanceEvent [
+        szdo:previousOwner → Stefan Zweig ;
+        szdo:subsequentOwner → later owner ] ;
+    szdo:hasProvenanceFeature → szdo:ProvenanceFeatureInstance [
+        szdo:hasFeatureType → szdg:Stamp ;
+        szdo:description → "Bibliotheksstempel Zweig"@de ] .
+```
+
+### 7.4 Biographical events
+
+A `szdo:BiographicalEvent` carries `szdo:when`, `szdo:hasPlace`, `szdo:concernsPerson` and `szdo:description`.
+
+### 7.5 Date evidence
+
+`szdo:certainty` records how certain a date is (TEI `@cert`). `szdo:dateEvidence` records where the date comes from and points to a concept of `szdg:DatumEvidenz`, which distinguishes a date from the document itself (`szdg:AusDokument`), inferred from context (`szdg:AusKontext`), from an external source (`szdg:AusExternerQuelle`) or unknown (`szdg:Unbekannt`). `szdo:notBefore` and `szdo:notAfter` take TEI `@notBefore` and `@notAfter`. The pattern follows the metadata model of the M³GIM project.
+
+### 7.6 Holdings
+
+`szdo:location` links a record to its `szdo:Location` and is equivalent to `rico:hasOrHadHolder`. `szdo:signature` holds the shelfmark.
+
+## 8. Klawiter integration
+
+The Klawiter bibliography adds the reception and publication history and connects through the work layer.
+
+| Klawiter entry type | SZDO |
+|---------------------|------|
+| `fiction` | `szdo:Manifestation` of a `szdo:FictionalWork` |
+| `essay` | `szdo:Manifestation` of a `szdo:EssayisticWork` |
+| `poetry` | `szdo:Manifestation` of a `szdo:PoeticWork` |
+| `drama` | `szdo:Manifestation` of a `szdo:DramaticWork` |
+| `collected-works` | `szdo:Manifestation` of a `szdo:CollectedWork` |
+| `correspondence` | `szdo:Manifestation` (letter editions) |
+| `film`, `dramatic-reading` | `szdo:Expression` (adaptation, performance) |
+| `translation` | `szdo:Expression` (Zweig's translations) |
+| `foreword` | `szdo:ForewordAfterword` |
+| `secondary-literature`, `historical-study` | `szdo:SecondaryLiterature` |
+| `symposium` | `szdo:ScholarlyEvent` |
+
+| Klawiter property | SZDO | Schema.org |
+|-------------------|------|------------|
+| `klawiter:title` | `szdo:title` | `schema:name` |
+| `klawiter:year` | `szdo:dateOfPublication` | `schema:datePublished` |
+| `klawiter:publisher` | `szdo:hasPublisher` | `schema:publisher` |
+| `klawiter:location` | `szdo:hasPublicationPlace` | `schema:locationCreated` |
+| `klawiter:pageCount` | `szdo:page` | `schema:numberOfPages` |
+| `klawiter:translator` | `szdo:translator` | `schema:translator` |
+| `klawiter:timePeriod` | `szdo:timePeriod` | |
+| `klawiter:seeAlso` | `szdo:seeAlso` | `schema:isRelatedTo` |
+| `klawiter:reprints` | `szdo:isReprintOf` | |
+| `klawiter:translations` | `szdo:isTranslationOf` | `schema:workTranslation` |
+| `klawiter:contentItems` | `szdo:hasPart` | `schema:hasPart` |
+| `klawiter:categories` | `szdo:category` | |
+
+`scripts/reconcile_klawiter.py` matches Klawiter entries to SZDWRK through GND identifiers and title matching and writes the links to `ontology/reconciliation.ttl` (`szdo:hasManifestation` for primary works, `szdo:isSubjectOf` for secondary literature). The match report is `scripts/reconciliation_report.md`.
+
+## 9. Data sources
+
+| TEI file | PID | SZDO class | GAMS class (v0.x) |
+|----------|-----|------------|-------------------|
+| `Work/SZDMSK.xml` | `o:szd.werke` | `szdo:Manuscript`, `szdo:Typescript`, `szdo:Notebook`, `szdo:Ensemble`, `szdo:GalleyProof` | `szd:Work` |
+| `Correspondence/SZDKOR.xml` | `o:szd.korrespondenzen` | `szdo:BundleOfCorrespondence` | `szd:BundleOfCorrespondence` |
+| `Autograph/SZDAUT.xml` | `o:szd.autographen` | `szdo:Autograph` | `szd:Autograph` |
+| `Library/SZDBIB.xml` | `o:szd.bibliothek` | `szdo:Book` | `szd:Book` |
+| `PersonalDocument/SZDLEB.xml` | `o:szd.lebensdokumente` | `szdo:PersonalDocument` | `szd:PersonalDocument` |
+| `Aufsatzablage/SZDESS.xml` | `o:szd.aufsatzablage` | `szdo:Record` (essay material) | `szd:Essay` |
+| `Biography/SZDBIO.xml` | `o:szd.lebenskalender` | `szdo:BiographicalEvent` | `szd:BiographicalEvent` |
+| `Index/Person/SZDPER.xml` | `o:szd.personen` | `szdo:Person` | `szd:Agent` |
+| `Index/Organisation/SZDORG.xml` | `o:szd.organisation` | `szdo:Organisation` | `szd:Organisation` |
+| `Index/Location/SZDSTA.xml` | `o:szd.standorte` | `szdo:Location` | `szd:Location` |
+| `Index/Werke/SZDWRK.xml` | `o:szd.werkindex` | `szdo:WorkIndexEntry` | `szd:WorkIndexEntry` |
+| `Glossary/szd-Glossary.xml` | `o:szd.glossar` | `skos:ConceptScheme` (`szdg:`) | |
+| theme files | `o:szd.thema.*` | `szdo:ThematicCollection` | `szd:Collection` |
+| METS files | `o:szd.{N}` | `szdo:METSObject` | |
+
+The organisation index SZDORG is its own GAMS object. The template `Organisationen` in `szd-TORDF.xsl` selects it by PID and types its entries as `szd:Organisation`, because the repository list SZDSTA is also a `listOrg`. Collection details are in [COLLECTIONS.md](COLLECTIONS.md). GAMS classes without an SZDO counterpart (`szd:Essay`, `szd:Correspondence`, `szd:PhysicalDescription`, `szd:Binding`) are not yet modelled.
+
+## 10. Competency questions
+
+The validation runs one SPARQL ASK query per question against the schema.
+
+Archive
+1. Which collections does the estate comprise?
+2. Which manuscript witnesses exist for a work?
+3. What is the provenance chain of a library book?
+4. Which scribal hands appear on a manuscript?
+5. Where is an object held and under which shelfmark?
+
+Work
+6. Which published editions exist for a work? (Klawiter)
+7. Into which languages was a work translated? (Klawiter)
+8. How did a text develop from notebook to print?
+9. Which secondary literature exists on a work? (Klawiter)
+
+Biography
+10. Which life events are linked to a place?
+11. Which correspondence partners did Zweig have in a period?
+12. Which works were written in a phase of his life?
+
+Linking
+13. Can a Klawiter entry be assigned to an SZD work index entry?
+14. Which GND entity connects a Klawiter author with an SZD person?
+15. Are there SZD manuscript witnesses for first editions recorded by Klawiter?
+16. Can active participants be told apart from persons an object is about? (`szdo:partyInvolved` against `szdo:affectedPerson`)
+17. Can the evidence of a date be qualified? (`szdo:dateEvidence`, `szdo:when`, `szdo:certainty`)
+
+Further checks cover the complete WEMI stack, the RiC-O alignment and the import and alignment of `nachlass:` (CQ-WEMI, CQ-RiC, CQ-G1 to CQ-G3 in `validate.py`).
+
+## 11. Versions and GAMS alignment
+
+### 11.1 Versions
+
+| Version | Location | Change |
+|---------|----------|--------|
+| v0.x | GAMS (stefanzweig.digital) | Implicit in `szd-TORDF.xsl`, English camelCase terms, in production |
+| v1.0.0 | GitHub Pages | Formal OWL ontology with German identifiers, RiC-O, LRM and CRM alignments, GAMS compatibility layer |
+| v1.1.0 | GitHub Pages | Date evidence (SKOS), agent role hierarchy, RiC-O alignments, SHACL shape for date evidence, Klawiter corrections |
+| v1.2.0 | GitHub Pages | Two layers, generic `nachlass:` ontology extracted and imported, generalisation competency questions |
+| v2.0.0 | GitHub Pages | English identifiers only, GAMS terms canonical where the meaning is the same, compatibility layer reduced to legacy GAMS terms, `nachlass:` 0.2.0 with English identifiers |
 
 ```turtle
-szdo:istManifestationVon  rdfs:domain szdo:NachlassObjekt ;
-                          rdfs:range  szdo:Werk ;
-                          rdfs:comment "Verbindet physisches Objekt (SZDMSK) mit abstraktem Werk (SZDWRK)" .
-
-szdo:hatManuskriptzeuge   owl:inverseOf szdo:istManifestationVon ;
-                          rdfs:comment "Vom Werk zu seinen physischen Textzeugen" .
-```
-
-**Drei-Ebenen-Modell (zentral für die Ontologie):**
-
-```
-szdo:Werk (SZDWRK.4 "Montaigne")
-    │
-    ├── szdo:hatManuskriptzeuge → szdo:Notizbuch (SZDMSK.6, SZ-AAP/W4.1)
-    │   └── szdo:hatDigitalesObjekt → szdo:METSObjekt (o:szd.271)
-    │       └── szdo:hatFaksimile → szdo:Faksimile (IMG.1, IMG.2, ...)
-    │
-    ├── szdo:hatManuskriptzeuge → szdo:Manuskript (SZDMSK.7, SZ-AAP/W4.2)
-    │
-    └── szdo:hatManuskriptzeuge → szdo:Konvolut (SZDMSK.8, SZ-AAP/W4.3)
-        ├── szdo:hatSchreiberhand → "Stefan Zweig"
-        ├── szdo:hatSchreiberhand → "Lotte Zweig"
-        └── szdo:hatSchreiberhand → "Richard Friedenthal"
-```
-
-### 5.3 Korrespondenz-Beziehungen
-
-```turtle
-szdo:hatAbsender         rdfs:domain szdo:KorrespondenzKonvolut ;
-                         rdfs:range  szdo:Person .
-
-szdo:hatEmpfänger        rdfs:domain szdo:KorrespondenzKonvolut ;
-                         rdfs:range  szdo:Person .
-
-szdo:hatKorrespondenzDatum  rdfs:domain szdo:KorrespondenzKonvolut ;
-                            rdfs:range  xsd:date .
-
-szdo:hatPoststempel      rdfs:domain szdo:KorrespondenzKonvolut ;
-                         rdfs:range  szdo:Ort .
-```
-
-### 5.4 Provenienz-Beziehungen
-
-```turtle
-szdo:hatProvenienz       rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  szdo:Provenienzeignis .
-
-szdo:hatProvenienzmerkmal rdfs:domain szdo:NachlassObjekt ;
-                          rdfs:range  szdo:ProvenienzmerkmalInstanz .
-
-szdo:ProvenienzmerkmalInstanz
-    szdo:hatMerkmaltyp   → szdg:ProvenanceFeature (SKOS-Konzept) ;
-    szdo:hatBeschreibung → Literal@de, Literal@en .
-```
-
-**Typische Provenienzkette:**
-
-```
-szdo:Buch (SZDBIB.42)
-    szdo:hatProvenienz →
-        szdo:Provenienzeignis [
-            szdo:hatVorbesitzer → "Stefan Zweig" ;
-            szdo:hatNachbesitzer → "Späterer Besitzer X" ;
-        ] ;
-    szdo:hatProvenienzmerkmal →
-        szdo:ProvenienzmerkmalInstanz [
-            szdo:hatMerkmaltyp → szdg:Stamp ;
-            szdo:hatBeschreibung → "Bibliotheksstempel Zweig"@de ;
-        ] ;
-        szdo:ProvenienzmerkmalInstanz [
-            szdo:hatMerkmaltyp → szdg:Marginalia ;
-            szdo:hatBeschreibung → "Bleistiftanmerkungen von Zweig"@de ;
-        ] .
-```
-
-### 5.5 Biographische Beziehungen
-
-```turtle
-szdo:BiographischesEreignis
-    szdo:hatDatum        → xsd:date ;
-    szdo:hatOrt          → szdo:Ort ;
-    szdo:betrifftPerson  → szdo:Person ;
-    szdo:hatBeschreibung → Literal@de, Literal@en .
-```
-
-### 5.6 Datum-Evidenz (v1.1.0)
-
-Ergänzend zu `szdo:sicherheitsgrad` (Grad der Gewissheit: low/medium/high) dokumentiert `szdo:datumEvidenz` die **Quelle** einer Datierung.
-
-```turtle
-szdo:datumEvidenz        a owl:ObjectProperty ;
-                         rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  szdg:DatumEvidenz ;
-                         rdfs:comment "Evidenzquelle fuer die Datierung eines Objekts"@de .
-```
-
-**SKOS-Konzepte** in `szdg:DatumEvidenz`:
-
-| Konzept | Beschreibung |
-|---------|-------------|
-| `szdg:AusDokument` | Datum direkt aus dem Dokument ablesbar (z.B. Briefdatum, Datumsvermerk) |
-| `szdg:AusKontext` | Datum aus dem Kontext erschlossen (z.B. Begleitbriefe, Werkgenese) |
-| `szdg:AusExternerQuelle` | Datum aus externer Quelle (z.B. Auktionskatalog, Sekundaerliteratur) |
-| `szdg:Unbekannt` | Evidenzquelle unbekannt |
-
-**Zusammenspiel mit sicherheitsgrad:**
-
-- `szdo:sicherheitsgrad` = **wie sicher** ist die Datierung (cert-Wert)
-- `szdo:datumEvidenz` = **woher** stammt die Datierung (Evidenzquelle)
-
-Dieses Muster folgt dem M3GIM-Ansatz (Metadata Model for Grazer Interdisziplinaere Materialien) zur differenzierten Qualifizierung von Metadaten.
-
-### 5.7 Aufbewahrungs-Beziehungen
-
-```turtle
-szdo:wirdAufbewahrtIn    rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  szdo:Aufbewahrungsort ;
-                         owl:equivalentProperty rico:hasOrHadHolder .
-
-szdo:hatSignatur         rdfs:domain szdo:NachlassObjekt ;
-                         rdfs:range  xsd:string .
-```
-
----
-
-## 6. Klawiter-Integrationsschicht
-
-Die **Klawiter-Bibliographie** (6.296 Einträge) ergänzt den Nachlass um die **Rezeptions- und Publikationsgeschichte**. Die Integration erfolgt über die Werk-Ebene.
-
-### 6.1 Mapping Klawiter → SZDO
-
-```
-klawiter:FictionEntry        → szdo:Manifestation (von szdo:BelletristischesWerk)
-klawiter:EssayEntry          → szdo:Manifestation (von szdo:EssayistischesWerk)
-klawiter:PoetryEntry         → szdo:Manifestation (von szdo:LyrischesWerk)
-klawiter:DramaEntry          → szdo:Manifestation (von szdo:DramatischesWerk)
-klawiter:CorrespondenceEntry → szdo:Manifestation (Briefeditionen)
-klawiter:FilmEntry           → szdo:WerkExpression (Adaption/Verfilmung)
-klawiter:TranslationEntry    → szdo:WerkExpression (Übersetzung)
-klawiter:SecondaryLiterature  → szdo:Sekundärliteratur (eigenständige Klasse)
-klawiter:HistoricalStudy     → szdo:Sekundärliteratur
-klawiter:SymposiumEntry      → szdo:WissenschaftlichesEreignis
-klawiter:CollectedWorksEntry → szdo:Manifestation (von szdo:SammelWerk)
-```
-
-### 6.2 Verknüpfungsmechanismus
-
-Die zentrale Brücke ist `szdo:Werk`:
-
-```
-szdo:Werk (SZDWRK.4 "Montaigne", GND: 1140124943)
-    │
-    ├── szdo:hatManuskriptzeuge → NachlassObjekte (SZDMSK.6, .7, .8)
-    │   [Archiv-Perspektive: physische Überlieferung]
-    │
-    ├── szdo:hatManifestation → klawiter:entry/1234 (Erstausgabe 1982)
-    │   [Bibliographische Perspektive: publizierte Ausgabe]
-    │
-    ├── szdo:hatManifestation → klawiter:entry/5678 (engl. Übersetzung)
-    │   [Rezeptionsgeschichte: internationale Verbreitung]
-    │
-    └── szdo:wirdBehandeltIn → klawiter:entry/9012 (Sekundärliteratur)
-        [Forschungsgeschichte: wissenschaftliche Rezeption]
-```
-
-### 6.3 Klawiter-spezifische Properties
-
-| Property | Domain | Range | Mapping |
-|----------|--------|-------|---------|
-| `szdo:hatZeitperiode` | Manifestation | Literal | `klawiter:timePeriod` |
-| `szdo:hatVerlag` | Manifestation | Organisation | `klawiter:publisher` → `schema:publisher` |
-| `szdo:hatPublikationsort` | Manifestation | Ort | `klawiter:location` → `schema:locationCreated` |
-| `szdo:hatSeitenanzahl` | Manifestation | xsd:integer | `klawiter:pageCount` → `schema:numberOfPages` |
-| `szdo:istNachdruckVon` | Manifestation | Manifestation | `klawiter:reprints` |
-| `szdo:istÜbersetzungVon` | WerkExpression | WerkExpression | `klawiter:translations` → `schema:workTranslation` |
-| `szdo:hatInhaltsverzeichnis` | Manifestation | rdf:List | `klawiter:contentItems` → `schema:hasPart` |
-| `szdo:sieheAuch` | Manifestation | Manifestation | `klawiter:seeAlso` → `schema:isRelatedTo` |
-
----
-
-## 7. Datenquellen-Mapping
-
-### 7.1 SZD TEI-XML → SZDO Klassen
-
-| TEI-Datei | PID | SZDO-Klasse(n) |
-|-----------|-----|----------------|
-| `SZDMSK.xml` | `o:szd.werke` | `szdo:Manuskript`, `szdo:Typoskript`, `szdo:Notizbuch`, `szdo:Konvolut`, `szdo:Korrekturfahne` |
-| `SZDKOR.xml` | `o:szd.korrespondenzen` | `szdo:KorrespondenzKonvolut` |
-| `SZDAUT.xml` | `o:szd.autographen` | `szdo:Autograph` |
-| `SZDBIB.xml` | `o:szd.bibliothek` | `szdo:Buch` |
-| `SZDLEB.xml` | `o:szd.lebensdokumente` | `szdo:Lebensdokument` |
-| `SZDESS.xml` | `o:szd.aufsatzablage` | `szdo:NachlassObjekt` (Essay-Material) |
-| `SZDBIO.xml` | `o:szd.lebenskalender` | `szdo:BiographischesEreignis` |
-| `SZDPER.xml` | `o:szd.personen` | `szdo:Person` |
-| `SZDSTA.xml` | `o:szd.standorte` | `szdo:Aufbewahrungsort`, `szdo:Organisation` |
-| `SZDWRK.xml` | `o:szd.werkindex` | `szdo:Werk` |
-| `szd-Glossary.xml` | `o:szd.glossar` | `skos:ConceptScheme` (szdg:) |
-| Themen-Dateien | `o:szd.thema.*` | `szdo:ThematischeSammlung` (kuratierte Sammlungen) |
-| METS-Dateien | `o:szd.{N}` | `szdo:METSObjekt` |
-
-### 7.2 Klawiter JSON-LD → SZDO Klassen
-
-| Klawiter entryType | Anzahl | SZDO-Klasse |
-|-------------------|--------|-------------|
-| `fiction` | 1.118 | `szdo:Manifestation` → `szdo:BelletristischesWerk` |
-| `essay` | 905 | `szdo:Manifestation` → `szdo:EssayistischesWerk` |
-| `secondary-literature` | 1.406 | `szdo:Sekundärliteratur` |
-| `historical-study` | 535 | `szdo:Sekundärliteratur` |
-| `poetry` | 275 | `szdo:Manifestation` → `szdo:LyrischesWerk` |
-| `collected-works` | 114 | `szdo:Manifestation` → `szdo:SammelWerk` |
-| `correspondence` | 109 | `szdo:Manifestation` (Briefeditionen) |
-| `film` | 92 | `szdo:WerkExpression` (Adaption) |
-| `translation` | 56 | `szdo:WerkExpression` (Übersetzung Zweigs) |
-| `drama` | 43 | `szdo:Manifestation` → `szdo:DramatischesWerk` |
-| `symposium` | 39 | `szdo:WissenschaftlichesEreignis` |
-| `foreword` | 36 | `szdo:VorwortNachwort` |
-| `dramatic-reading` | 18 | `szdo:WerkExpression` (Aufführung) |
-
----
-
-## 8. Schematische Gesamtübersicht
-
-```
-                        ┌─────────────────────────────────────┐
-                        │       szdo:Nachlass (Fonds)         │
-                        │   "Stefan Zweig Nachlass Salzburg"  │
-                        └────────────────┬────────────────────┘
-                                         │ szdo:enthält
-              ┌──────────────┬───────────┼───────────┬──────────────┐
-              │              │           │           │              │
-     ┌────────▼───────┐ ┌───▼────┐ ┌────▼─────┐ ┌──▼────┐ ┌──────▼──────┐
-     │  Werksammlung  │ │ Korresp│ │Autograph.│ │Biblioth│ │Lebensdok.   │
-     │  (SZDMSK)      │ │(SZDKOR)│ │(SZDAUT)  │ │(SZDBIB)│ │(SZDLEB)     │
-     └───────┬────────┘ └───┬────┘ └────┬─────┘ └──┬────┘ └──────┬──────┘
-             │              │           │           │              │
-     ┌───────▼────────┐     │     ┌─────▼────┐  ┌──▼────┐        │
-     │ NachlassObjekt │     │     │ Autograph │  │ Buch  │        │
-     │ (Manuskript,   │     │     │ (Sammlung │  │(Privat│        │
-     │  Typoskript,..)│     │     │  Dritter) │  │ bibl.)│        │
-     └───────┬────────┘     │     └──────────┘  └───┬───┘        │
-             │              │                       │             │
-             │ szdo:istManifestationVon        szdo:hatProvenienzmerkmal
-             │                                      │
-     ┌───────▼────────┐                    ┌────────▼────────┐
-     │   szdo:Werk    │                    │  szdg:Glossar   │
-     │  (SZDWRK)      │◄─── GND ────►     │  (SKOS)         │
-     │ "Schachnovelle" │                   │ ProvenanceFeature│
-     └───────┬────────┘                    │ WritingMaterial  │
-             │                             │ WritingInstrument│
-             │ szdo:hatManifestation       └─────────────────┘
-             │
-     ┌───────▼──────────────────┐
-     │  Klawiter-Bibliographie  │
-     │  (6.296 Einträge)        │
-     │  Erstausgaben,           │
-     │  Übersetzungen,          │
-     │  Sekundärliteratur       │
-     └──────────────────────────┘
-             │
-             │ szdo:hatÜbersetzer, szdo:hatVerlag, ...
-             │
-     ┌───────▼────────┐     ┌─────────────────┐    ┌──────────────┐
-     │  szdo:Person   │     │   szdo:Ort       │    │szdo:Biograph.│
-     │  (SZDPER)      │     │   (SZDSTA +      │    │Ereignis      │
-     │  GND, Wikidata │     │    Geonames)     │    │(SZDBIO)      │
-     └────────────────┘     └─────────────────┘    └──────────────┘
-```
-
----
-
-## 9. Kompetenzfragen (Competency Questions)
-
-Die Ontologie soll folgende Fragen beantworten können:
-
-### Archiv-Perspektive
-1. Welche Sammlungen umfasst der Nachlass Stefan Zweigs?
-2. Welche Manuskriptzeugen existieren zu einem bestimmten Werk?
-3. Wie ist die Provenienzkette eines Bibliotheksbuchs?
-4. Welche Schreiberhände finden sich auf einem Manuskript?
-5. Wo wird ein bestimmtes Objekt aufbewahrt und unter welcher Signatur?
-
-### Werk-Perspektive
-6. Welche publizierten Ausgaben existieren zu einem Werk? (→ Klawiter)
-7. In welche Sprachen wurde ein Werk übersetzt? (→ Klawiter)
-8. Wie ist die Textgenese eines Werks (Notizbuch → Manuskript → Typoskript → Druck)?
-9. Welche Sekundärliteratur gibt es zu einem Werk? (→ Klawiter)
-
-### Biographische Perspektive
-10. Welche Lebensereignisse sind mit einem bestimmten Ort verbunden?
-11. Welche Korrespondenzpartner hatte Zweig in einem bestimmten Zeitraum?
-12. Welche Werke entstanden während einer bestimmten Lebensphase?
-
-### Verknüpfungsfragen (Cross-Projekt)
-13. Kann ein Klawiter-Bibliographieeintrag einem SZD-Werkindex-Eintrag zugeordnet werden?
-14. Welche GND-Entität verbindet einen Klawiter-Autor mit einem SZD-Personenindex-Eintrag?
-15. Gibt es Manuskriptzeugen (SZD) zu den bei Klawiter verzeichneten Erstausgaben?
-16. Kann man aktive Beteiligte von erwähnten Personen unterscheiden? (→ Tests hatBeteiligtenAkteur als Superproperty vs. hatBetroffenePerson)
-17. Kann die Evidenz einer Datierung qualifiziert werden? (→ Tests datumEvidenz, datum, sicherheitsgrad)
-
----
-
-## 10. Migrations-Strategie (bestehende szd:-Ontologie → szdo:)
-
-Die bestehende implizite `szd:`-Ontologie (definiert in `szd-TORDF.xsl`) wird schrittweise überführt:
-
-### Phase 1: Formalisierung
-- OWL-Datei erstellen (`szd-ontology.ttl` oder `.owl`)
-- Bestehende 15 Klassen + 71 Properties formal definieren
-- `rdfs:label`, `rdfs:comment` bilingual hinzufügen
-- Bekannte Tippfehler korrigieren (`szd:realtionToWork` → `szdo:hatWerkbezug`)
-
-### Phase 2: RiC-Alignment
-- `szdo:Nachlass` als Fonds-Klasse
-- Sammlungen als Series
-- NachlassObjekte als Records
-- Digitale Objekte als Instantiations
-
-### Phase 3: LRM-Werkschicht
-- `szdo:Werk` von SZDWRK ableiten
-- Textgenese-Beziehungen modellieren (Notizbuch → Manuskript → Typoskript → Korrekturfahne)
-- Expression-Ebene für Übersetzungen und Adaptionen
-
-### Phase 4: Klawiter-Integration
-- Manifestations-Brücke zu Klawiter-Einträgen
-- Sekundärliteratur-Klasse
-- Reconciliation über GND-IDs und Werktitel
-
-### Phase 5: CIDOC-CRM-Events
-- Biographie-Ereignisse als crm:E5_Event
-- Provenienz-Ketten als crm:E8_Acquisition-Sequenzen
-
----
-
-## 10a. Versionierung und GAMS-Kompatibilität
-
-### Versionsstrategie
-
-Die SZDO nutzt Standard-OWL-Versionierung:
-
-| Version | Ort | Status | Beschreibung |
-|---------|-----|--------|-------------|
-| **v0.x** | GAMS (`stefanzweig.digital`) | Produktiv | Implizit in `szd-TORDF.xsl` definiert. Englische camelCase-Bezeichner. 14 Klassen, 67 Properties. Über Jahre gewachsen. |
-| **v1.0.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Abgelöst | Formale OWL-Ontologie. Deutsche Bezeichner. 58 Klassen, 77 Properties. RiC-O/LRM/CRM-Alignments. GAMS-Kompatibilitätsschicht. |
-| **v1.1.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Abgeloest | Datum-Evidenz (SKOS), Personen-Rollenhierarchie (hatBeteiligtenAkteur + 10 SubProperties), RiC-Alignments, 2 neue CQs, SHACL Shape 14, Klawiter-Reconciliation-Korrekturen |
-| **v1.2.0** | GitHub Pages (`chpollin.github.io/SZD/ontology/`) | Aktuell | Zwei-Schichten-Architektur: generische `nachlass:` Ontologie (`https://w3id.org/nachlass#`) extrahiert fuer Nachnutzung. SZDO importiert `nachlass:` via `owl:imports`. 3 neue Generalisierungs-CQs (CQ-G1..G3). 22 CQs gesamt. |
-
-**OWL-Metadaten:**
-```turtle
-owl:versionInfo "1.2.0" ;
-owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
-owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.1.0> ;
+owl:versionInfo "2.0.0" ;
+owl:versionIRI <https://gams.uni-graz.at/o:szd.ontology/2.0.0> ;
+owl:priorVersion <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
+owl:incompatibleWith <https://gams.uni-graz.at/o:szd.ontology/1.2.0> ;
 owl:backwardCompatibleWith <https://gams.uni-graz.at/o:szd.ontology/0.x> ;
 owl:imports <https://w3id.org/nachlass> ;
 ```
 
-### GAMS-Kompatibilitaetsschicht (PART 10 in szd-ontology.ttl)
+### 11.2 Decisions of v2.0.0
 
-Die bestehenden GAMS-Daten verwenden englische Bezeichner im selben Namespace. Die Kompatibilitaetsschicht definiert alle 14 alten Klassen und 53 alten Properties als `owl:deprecated` mit `owl:equivalentClass`/`owl:equivalentProperty`-Verknuepfungen zu den neuen v1.2.0-Bezeichnern.
+- The German identifiers of v1.2.0 are dropped without `owl:deprecated` aliases. The operator decided on 2026-09-23 and 2026-09-24 that the formal ontology carries no German identifiers, and deprecated aliases would keep them in it. v1.x was published only as files and documentation of this repository, no live data, script or validation step uses its identifiers, and `migration-v2.csv` (section 11.4) translates old IRIs for anyone who holds them.
+- The migration changes neither `szd-TORDF.xsl` in `ZIMLAB/szd` nor the live RDF of GAMS. Live data stays conformant because the canonical v2.0.0 names are the GAMS terms wherever the meaning is the same.
+- The v1.x compatibility layer declared equivalences from the GAMS terms to the German terms. For every pair with the same meaning the GAMS term is now itself the canonical term, so live data needs no equivalence axiom.
+- `szd:Work` (physical items of the works collection) was declared equivalent to the record class. v2.0.0 makes it a subclass of `szdo:Record`, because books, letters and autographs are records but not `szd:Work`.
+- `szd:ProvenanceCharacteristic` aggregates all features of one book as literals, while `szdo:ProvenanceFeatureInstance` describes one feature. The former equivalence is replaced by `rdfs:seeAlso`, and the same holds for `szd:provenanceCharacteristic` and `szdo:hasProvenanceFeature`.
+- `szd:secretarialHand` and `szd:pubPlace` are literal-valued, their SZDO successors `szdo:scribalHand` and `szdo:hasPublicationPlace` are object properties. An `owl:equivalentProperty` between a datatype and an object property is not valid OWL 2 DL, so both link with `rdfs:seeAlso`.
+- `szd:relationToPerson` (any person keyword) is broader than `szdo:affectedPerson` (keywords of type `person_affected`). It keeps `rico:hasOrHadSubject` as superproperty instead of the former equivalence.
+- Where GAMS has two terms for one concept, one becomes canonical and the other stays equivalent (`szdo:dateOfPublication` with `szd:pubDate`). For the general description neither `szd:content` (life calendar) nor `szd:desc` (content relations) covers the concept, so `szdo:description` is new and both stay equivalent.
+- GAMS spellings that are not English words stay legacy terms (`szd:Enclosur` for `szdo:Enclosure`, `szd:objecttyp` for `szdo:objectType`).
+- `szdo:Organisation` corresponds to the organisation index (`o:szd.organisation`) and `szdo:Location` to the repository list (`o:szd.standorte`), as GAMS produces them.
 
-**Klassen-Mapping (Auszug):**
+### 11.3 Legacy GAMS terms (PART 10 of `szd-ontology.ttl`)
 
-| GAMS v0.x (engl.) | SZDO v1.1.0 (dt.) | Mapping |
-|--------------------|--------------------|---------|
-| `szd:Work` | `szdo:NachlassObjekt` | `owl:equivalentClass` |
-| `szd:Book` | `szdo:Buch` | `owl:equivalentClass` |
-| `szd:BundleOfCorrespondence` | `szdo:KorrespondenzKonvolut` | `owl:equivalentClass` |
-| `szd:PersonalDocument` | `szdo:Lebensdokument` | `owl:equivalentClass` |
-| `szd:BiographicalEvent` | `szdo:BiographischesEreignis` | `owl:equivalentClass` |
-| `szd:Agent` | `szdo:Akteur` | `owl:equivalentClass` |
-| `szd:Location` | `szdo:Aufbewahrungsort` | `owl:equivalentClass` |
-| `szd:WorkIndexEntry` | `szdo:Werk` | `owl:equivalentClass` |
-| `szd:Extent` | `szdo:Umfang` | `owl:equivalentClass` |
-| `szd:Enclosur` (Typo) | `szdo:Beilage` | `owl:equivalentClass` |
+These GAMS terms stay in live data and are `owl:deprecated` for new modelling.
 
-**Property-Mapping (Auszug):**
+| GAMS term | Relation to v2.0.0 |
+|-----------|--------------------|
+| `szd:Work` | `rdfs:subClassOf szdo:Record` |
+| `szd:Enclosur` | `owl:equivalentClass szdo:Enclosure` |
+| `szd:PublicationStmt` | `rdfs:subClassOf szdo:Manifestation` |
+| `szd:ProvenanceCharacteristic` | `rdfs:seeAlso szdo:ProvenanceFeatureInstance` |
+| `szd:OriginalShelfmark` | `rdfs:subClassOf szdo:Record` |
+| `szd:objecttyp` | `owl:equivalentProperty szdo:objectType` |
+| `szd:content`, `szd:desc` | `owl:equivalentProperty szdo:description` |
+| `szd:pubDate` | `owl:equivalentProperty szdo:dateOfPublication` |
+| `szd:gnd`, `szd:wikidata` | `owl:equivalentProperty szdo:gndIdentifier`, `szdo:wikidataIdentifier` |
+| `szd:relationToPerson` | `rdfs:subPropertyOf rico:hasOrHadSubject`, `rdfs:seeAlso szdo:affectedPerson` |
+| `szd:secretarialHand` | `rdfs:seeAlso szdo:scribalHand` |
+| `szd:pubPlace` | `rdfs:seeAlso szdo:hasPublicationPlace` |
+| `szd:publisher` | `rdfs:seeAlso szdo:hasPublisher` |
+| `szd:provenanceCharacteristic` | `rdfs:seeAlso szdo:hasProvenanceFeature` |
+| `szd:facsimile` | `rdfs:seeAlso szdo:hasDigitalObject` |
+| `szd:hasContentRelation` | `rdfs:seeAlso szdo:seeAlso` |
+| `szd:acquired`, `szd:provenance`, `szd:stamp` | `rdfs:seeAlso` to the provenance properties |
+| `szd:relationTo`, `szd:glossar`, `szd:name`, `szd:settlement`, `szd:text`, `szd:head`, `szd:additionalMaterial`, `szd:edition`, `szd:series`, `szd:piecesOfEnclosures` | no direct counterpart, documented in the comment |
 
-| GAMS v0.x | SZDO v1.1.0 | Anmerkung |
-|-----------|-------------|-----------|
-| `szd:title` | `szdo:titel` | Direkt äquivalent |
-| `szd:author` | `szdo:hatAutor` | Namenskonvention: "hat"-Präfix |
-| `szd:sender` | `szdo:hatAbsender` | |
-| `szd:receiver` | `szdo:hatEmpfaenger` | |
-| `szd:writingMaterial` | `szdo:beschreibstoff` | Englisch → Deutsch |
-| `szd:signature` | `szdo:signatur` | |
-| `szd:gnd` | `szdo:gndIdentifier` | |
-| `szd:wikidata` | `szdo:wikidataIdentifier` | |
-| `szd:provenance` | — | In v1.1.0 als `Provenienzereignis` modelliert |
-| `szd:acquired` | — | In v1.1.0 als `Provenienzereignis` modelliert |
-| `szd:text` | — | Generischer Container, kein 1:1-Equivalent |
-| `szd:Enclosur` | `szdo:Beilage` | Typo in v0.x dokumentiert |
+`szd:glossar` and the hybrid spelling `szd:objecttyp` are the only German-derived identifiers left in the ontology. Both are live GAMS terms, declared here only as deprecated legacy terms, and can only disappear together with a change of `szd-TORDF.xsl`. The concepts of the date evidence scheme (`szdg:DatumEvidenz` and its members) also keep German identifiers, because they belong to the SKOS glossary of GAMS (section 5.8), not to the ontology.
 
-### Bekannte Abweichungen zwischen GAMS v0.x und SZDO v1.1.0
+### 11.4 Mapping of the v1.2.0 identifiers
 
-1. **Namenskonvention**: v0.x nutzt englisches camelCase, v1.1.0 nutzt deutsche Bezeichner
-2. **Flach vs. geschichtet**: v0.x kennt nur `szd:Work` für alle Manuskripte; v1.1.0 differenziert (Manuskript, Typoskript, Notizbuch, etc.)
-3. **Provenienz**: v0.x nutzt flache Literale (`szd:provenance`, `szd:acquired`); v1.1.0 modelliert als Event-Klasse
-4. **SKOS-Namespace**: v0.x nutzt `https://gams.uni-graz.at/skos/scheme/o:oth/#`; v1.1.0 nutzt Standard W3C SKOS
-5. **Schreiberhand**: v0.x `szd:secretarialHand` ist DatatypeProperty (Literal); v1.1.0 `szdo:hatSchreiberhand` ist ObjectProperty (→ Person)
+[../ontology/migration-v2.csv](../ontology/migration-v2.csv) maps every retired identifier of `szdo:` v1.2.0 and `nachlass:` 0.1.0 to its successor, with full IRIs, the kind of term and the source of the new name. The source is the GAMS term where one with the same meaning exists, the RiC-O or LRM term where the ontology aligns with that standard, and otherwise the English label. `validate.py` reads the file and fails if a retired identifier reappears in the ontology or in the generated RDF.
 
----
+One retired name needs care. v1.2.0 `szdo:Werk` (the abstract work) becomes `szdo:WorkIndexEntry`, while `szdo:Work` is the deprecated GAMS class for the physical items of the works collection.
 
-## 11. Bekannte Lücken und offene Fragen
+The generic layer uses the same names except where the SZD name follows a GAMS peculiarity. There `nachlass:` 0.2.0 uses plain English names, which are `Work` (SZD `WorkIndexEntry`), `Repository` (`Location`), `isManifestationOf` (`relationToWork`), `isHeldAt` (`location`), `hasEnclosure` (`enclosures`), `hasExtent` (`extent`), `shelfmark` (`signature`), `originalTitle` (`originaltitle`), `pageCount` (`page`), `pieceCount` (`piecesOfCorrespondence`), `date` (`when`), `dateOfBirth` (`birth`), `dateOfDeath` (`death`). Unchanged identifiers are `Autograph`, `IIIFManifest`, `Manifestation`, `Organisation`, `Person`, `format`, `incipit`, the external identifier properties and `gamsIdentifier`.
 
-| Lücke | Beschreibung | Möglicher Ansatz |
-|-------|-------------|-----------------|
-| ~~Datenunsicherheit~~ | ~~TEI `@cert` nicht in RDF abgebildet~~ | RESOLVED: `szdo:sicherheitsgrad` + `szdo:datumEvidenz` (v1.1.0) |
-| Datumsintervalle | `@notBefore`/`@notAfter` nicht modelliert | `szdo:frühestensDatum`, `szdo:spätestensDatum` |
-| Adressstruktur | Keine strukturierte Adressmodellierung | `szdo:hatAdresse` → schema:PostalAddress |
-| ~~Verantwortlichkeiten~~ | ~~Katalogisierer, Digitalisierer nicht modelliert~~ | RESOLVED: `szdo:hatBeteiligtenAkteur` mit 10 SubProperties + `rico:hasOrHadContributor` (v1.1.0) |
-| Namensvarianten | Pseudonyme, Schreibvarianten | `szdo:hatNamensform` (skos:altLabel) |
-| Klawiter-Reconciliation | v1.1.0: 105/590 SZDWRK matched, 119 Links, 8 Typ-Korrekturen. Rest offen. | GND-Matching + Titel-Fuzzy-Match (laufend) |
-| Werkrelationen | Kompilationen/Sammelwerke nicht formal | `szdo:hatTeil` / `szdo:istTeilVon` auf Werkebene |
+## 12. Known gaps
 
----
+| Gap | Possible approach |
+|-----|-------------------|
+| Address structure is not modelled | `schema:PostalAddress` |
+| Name variants and pseudonyms beyond `szdo:nameVariant` | `skos:altLabel` |
+| Work relations of compilations are only schema-level (`szdo:hasPart`, `szdo:isPartOfWork`) | instance data from SZDWRK |
+| Klawiter reconciliation covers part of SZDWRK | GND matching and fuzzy title matching, state in `scripts/reconciliation_report.md` |
+| GAMS classes `szd:Essay`, `szd:Correspondence`, `szd:PhysicalDescription`, `szd:Binding` have no SZDO counterpart | model them or map them to `szdo:Record` subclasses |
+| `szdo:Extent` and `szdo:Enclosure` are subclasses of `szdo:Record`, although an extent statement is not a record | revisit in a modelling release |
+| `szd:gnd` and `szd:wikidata` are emitted with `rdf:resource`, while `szdo:gndIdentifier` and `szdo:wikidataIdentifier` are datatype properties | align datatype or emission |
 
-## 12. Dateiformat und Serialisierung
+## 13. Serialisation
 
-Die Ontologie wird in folgenden Formaten bereitgestellt:
+- Turtle (`.ttl`) is the primary format.
+- JSON-LD (`docs/ontology/szd-ontology.jsonld`) is generated for web use.
+- The glossary stays in `szd-Glossary.xml`.
 
-- **Turtle (`.ttl`)**: Primärformat, menschenlesbar
-- **RDF/XML (`.rdf`)**: Für GAMS-Kompatibilität
-- **JSON-LD (`.jsonld`)**: Für Klawiter-Integration und Web-APIs
-- **SKOS (bestehend)**: Glossar bleibt in `szd-Glossary.xml`
+## 14. Validation
 
----
+`python ontology/validate.py` runs six stages.
 
-## 13. Validierungspipeline
+| Stage | Method | Checks |
+|-------|--------|--------|
+| 1. Syntax | rdflib Turtle parser | valid Turtle for both layers |
+| 2. Metrics | class and property counts | structural overview |
+| 3. SHACL | pySHACL with `szd-shapes.ttl` on the ontology together with `sample-instances.ttl` | bilingual labels, comments, property domains, instance constraints, ASCII naming convention, date evidence targets |
+| 4. OWL checks | rdflib | orphans, multiple domains, circular subclassing, inverse consistency, disjointness, no retired v1.2.0 identifier in the ontology, `sample-instances.ttl` or `reconciliation.ttl` |
+| 5. OntoClean | rigidity analysis | taxonomic correctness |
+| 6. Competency questions | SPARQL ASK | section 10 |
 
-Die Ontologie wird durch eine 6-Stufen-Pipeline validiert (`ontology/validate.py`):
+Deprecated legacy terms are excluded from the label, domain and hierarchy checks, but not from the naming convention. A missing shelfmark on a record is a SHACL warning, not a violation, because books in private ownership carry inventory numbers but no shelfmark. `reconciliation.ttl` is a link set without entity descriptions and is not SHACL-validated.
 
-| Stufe | Methode | Prüft |
-|-------|---------|-------|
-| 1. Syntax | rdflib Turtle-Parser | Gültige Turtle-Syntax |
-| 2. Metriken | Klassen-/Property-Zählung | Strukturelle Vollständigkeit |
-| 3. SHACL | pySHACL + `szd-shapes.ttl` | Kardinalitäten, Pflicht-Annotationen, Namenskonventionen, Orphan-Klassen |
-| 4. OWL Checks | rdflib-basiert | Orphans, Multi-Domain, Circular SubClassOf, InverseOf-Konsistenz, Disjointness |
-| 5. OntoClean | Rigidity-Analyse | Taxonomische Korrektheit (rigide vs. anti-rigide Klassen) |
-| 6. Kompetenzfragen | 22 SPARQL ASK-Queries | Ontologie beantwortet alle definierten Fragen (inkl. RiC/WEMI-Alignment, nachlass:-Integration) |
+## 15. Documentation site
 
-**Ausführung:** `python ontology/validate.py`
+`ontology/generate_docs.py` builds https://chpollin.github.io/SZD/ontology/ with rdflib, including a German and English toggle, anchors per class and property (`#Manuscript`, `#scribalHand`), Turtle and JSON-LD downloads and the interactive graph `visualize.html`. The workflow `.github/workflows/deploy-ontology-docs.yml` validates and regenerates the site when the ontology changes. The canonical namespace stays `https://gams.uni-graz.at/o:szd.ontology#`, and the site is linked through `rdfs:isDefinedBy`.
 
-**SHACL Shapes** (`ontology/szd-shapes.ttl`): 14 Constraints für bilinguale Labels, Comments, Property-Domains, Instanzdaten-Validierung und Namenskonventionen. Shape 14: `DatumEvidenzShape` — validiert, dass `szdo:datumEvidenz`-Zielwerte IRIs aus `szdg:DatumEvidenz` sind (v1.1.0).
+## References
 
----
-
-## 14. GitHub Pages Dokumentation
-
-Die Ontologie wird als interaktive HTML-Dokumentation auf GitHub Pages publiziert:
-
-- **URL:** https://chpollin.github.io/SZD/ontology/
-- **Generator:** `ontology/generate_docs.py` (rdflib-basiert, kein pyLODE)
-- **Features:**
-  - Bilingualer DE/EN-Umschalter
-  - Sidebar-Navigation nach Ontologie-Schichten
-  - Fragment-Anker für jede Klasse/Property (`#Manuskript`, `#hatSchreiberhand`, etc.)
-  - Download-Links (Turtle, JSON-LD)
-  - Schema.org JSON-LD Metadata
-  - Externe Vokabular-Badges (RiC-O, LRM, CRM, SKOS, FOAF, Schema.org)
-- **CI/CD:** `.github/workflows/deploy-ontology-docs.yml` — automatische Regenerierung bei Ontologie-Änderungen
-- **Namespace-Strategie:** Kanonischer Namespace bleibt `https://gams.uni-graz.at/o:szd.ontology#`, Dokumentation unter GitHub Pages via `rdfs:isDefinedBy`
-
----
-
-## Referenzen
-
-- **Records in Context (RiC-O)**: https://www.ica.org/standards/RiC/ontology
-- **IFLA LRM**: https://www.ifla.org/publications/ifla-library-reference-model
-- **CIDOC-CRM**: https://www.cidoc-crm.org/
-- **SKOS**: https://www.w3.org/TR/skos-reference/
-- **TEI P5**: https://tei-c.org/guidelines/
-- **GAMS Ontology**: https://gams.uni-graz.at/o:gams-ontology
-- **RNA (Nachlasserschließung)**: http://kalliope-verbund.info (Regeln zur Erschließung von Nachlässen und Autographen)
+- Records in Contexts (RiC-O), https://www.ica.org/standards/RiC/ontology
+- IFLA LRM, https://www.ifla.org/publications/ifla-library-reference-model
+- CIDOC-CRM, https://www.cidoc-crm.org/
+- SKOS, https://www.w3.org/TR/skos-reference/
+- TEI P5, https://tei-c.org/guidelines/
+- GAMS ontology, https://gams.uni-graz.at/o:gams-ontology
+- Regeln zur Erschließung von Nachlässen und Autographen (RNA), http://kalliope-verbund.info
