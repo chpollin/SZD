@@ -1,21 +1,21 @@
 ---
 title: Lebenskalender Lanes
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2026-09-11
-updated: 2026-09-23
+updated: 2026-09-24
 version: 1.0.0
 tags: [data, lebenskalender, timeline, derived]
 ---
 
 # Lebenskalender Lanes
 
-The timeline view of the Lebenskalender shows several collections side by side as lanes that users switch on and off individually. So that the view can treat all collections alike, each lane is backed by its own JSON file in one shared event schema. The files are derived from the TEI sources of this repository by [`scripts/lebenskalender_lanes/build_lanes.py`](../scripts/lebenskalender_lanes/README.md). The view is integrated in the presentation layer in the repository `ZIMLAB/szd` under `mode=timeline`, and `mode=fancy` stays as a compatible alias. Its implementation and local testing are described there in `knowledge/UI-Ueberarbeitung.md`.
+The timeline view of the Lebenskalender shows several collections side by side as lanes that users switch on and off individually. So that the view can treat all collections alike, each lane is backed by its own JSON file in one shared event schema. The files are derived from the TEI sources of this repository by [`scripts/lebenskalender_lanes/build_lanes.py`](../scripts/lebenskalender_lanes/README.md). The view is integrated in the presentation layer in the repository `ZIMLAB/szd` under `mode=timeline`, and `mode=fancy` stays as a compatible alias. Its implementation is described there in `knowledge/Rendering-and-Search.md` (section Multi-holding timeline), its local testing in `knowledge/Testing.md`.
 
 ## Lanes and Sources
 
@@ -108,9 +108,9 @@ The main event takes the metadata of the record sorted first, and the persons of
 
 The correspondence index carries no facsimile PIDs and therefore takes no part in this merge. Its entries and the letters of the konvolute relate as bundle and piece. Archival signatures and their prefixes are shared by different correspondence partners, however, and prove no complete coverage of an index entry. The generator therefore keeps every index entry. Entries covering several pieces keep the bundle title of the source. The number of events mixes catalogue levels and does not count physical letters.
 
-An earlier version of the generator suppressed index entries whose signature occurred among the single letters. The check of 11 September 2026 showed that most of these entries point to a curated konvolut object missing from the local single-letter holdings and that others are only partly represented. For `SZDKOR.680`, five pieces in the index face two matching records in the linked Alfred Zweig object. For `SZDKOR.858` and `SZDKOR.899`, the person data of the only matching single record contradicts the index. An automatic suppression cannot be derived from such comparisons, and every lane file therefore holds all source records, directly or in `sources`.
+An earlier version of the generator suppressed index entries whose signature occurred among the single letters. The check of 11 September 2026 showed that most of these entries pointed to a curated konvolut object then missing from the local single-letter holdings and that others were only partly represented. Every production Konvolut is in the repository since 24 September 2026, so the lanes need a new run on the complete holdings, see the [plan](plan.md#timeline-lanes). For `SZDKOR.680`, five pieces in the index face two matching records in the linked Alfred Zweig object. For `SZDKOR.858` and `SZDKOR.899`, the person data of the only matching single record contradicts the index. An automatic suppression cannot be derived from such comparisons, and every lane file therefore holds all source records, directly or in `sources`.
 
-`index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. The dates 2012-05-26, 2018-10-02 and 2030-09-23 of three `unidentified` records are output as in the source and need scholarly review.
+`index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. Dates after 1950 are output as in the source and need scholarly review, among them 2012-05-26, 2018-10-02 and 2030-09-23 of three `unidentified` records.
 
 ## Generation
 
@@ -126,14 +126,14 @@ The GAMS presentation layer holds a further copy of all lane files and `index.js
 
 ## Delivery State
 
-Frontend commit `b616496` with the timeline and the lane copies was pushed to `ZIMLAB/szd` on 11 September 2026, and the following commit `3cb6596` fixes the filter links for GAMS. Filters live in the URL fragment, because GAMS rejects additional query parameters with HTTP 404. Both states are on staging. A server mirror comparison, HTTP checks of scripts, stylesheets and JSON files against the local content and a browser check of the previously shared Fancy URL in German and English confirmed the delivery.
+Frontend commit `b616496` with the timeline and the lane copies was pushed to `ZIMLAB/szd` on 11 September 2026, and the following commit `3cb6596` fixes the filter links for GAMS. Filters live in the URL fragment, because GAMS rejects additional query parameters with HTTP 404. Both states are on staging, and the frontend copy was regenerated from the data state of 23 September 2026 (`ZIMLAB/szd` `f70882d`). A server mirror comparison, HTTP checks of scripts, stylesheets and JSON files against the local content and a browser check of the previously shared Fancy URL in German and English confirmed the delivery.
 
 The message about the new view went to the Literaturarchiv Salzburg on 11 September 2026, as confirmed by the operator. Partner review, acceptance and production publication are pending.
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md) — structure of the collections and rendering contracts
-- [DATA.md](DATA.md) — counting conventions and documented data gaps
-- [DATA_MODEL.md](DATA_MODEL.md) — encoding patterns and bilingual encoding
-- [scripts/lebenskalender_lanes/README.md](../scripts/lebenskalender_lanes/README.md) — run, options and tests
-- [docs/lebenskalender/README.md](../docs/lebenskalender/README.md) — prototype of the view in the SZD design
+- [COLLECTIONS.md](COLLECTIONS.md), structure of the collections and rendering contracts
+- [DATA.md](DATA.md), counting conventions and documented data gaps
+- [DATA_MODEL.md](DATA_MODEL.md), encoding patterns and bilingual encoding
+- [scripts/lebenskalender_lanes/README.md](../scripts/lebenskalender_lanes/README.md), run, options and tests
+- [docs/lebenskalender/README.md](../docs/lebenskalender/README.md), prototype of the view in the SZD design

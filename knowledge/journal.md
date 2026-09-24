@@ -1,10 +1,37 @@
+---
+title: Journal
+project:
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
+method:
+  name: Promptotyping
+  url: https://dhcraft.org/Promptotyping/
+status: active
+created: 2026-09-18
+updated: 2026-09-24
+---
+
 # Journal
 
-Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, jüngster
-zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
-bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
+Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
 
-## 2026-09-24 — SZDO 2.0.0 with English identifiers
+## 2026-09-24, complete Konvolute, person index clean-up, staging package
+
+Changed.
+
+- Every correspondence Konvolut of GAMS production is in `data/Correspondence/konvolute/` (`e1b156fa`), taken over byte for byte from `TEI_SOURCE` by `scripts/konvolute_import/fetch_konvolute.py`, and the three new Konvolute of the staging package of 2026-09-23 from that package. Before, the repository held only the Konvolute edited here. Three defective production objects are recorded in the import README.
+- 41 corrections of the Konvolut files that the archive checkup reported and that the verification notes or the facsimile objects on GAMS prove (`2d085b98`, `scripts/checkup_2026_09_konvolute/`), among them wrong and missing facsimile PIDs, the `correspDesc/@type` of the Freud letters, title dates and a duplicate entry in the Hirschfeld Konvolut. Cases without an established value stay unchanged.
+- Person index. `verify_orphan_persons.py` (`81a56e58`) takes the persons without text hit from `find_unlinked_persons.py` and checks identifier, GND and the person search on production and staging. `remove_orphan_persons.py` (`f2bb270c`) removed the 230 persons that pass every check. The removed entries stay unchanged in `scripts/checkup_2026_09_index/removed_persons.xml`, and their identifiers are never assigned again.
+- Organisation index with country and place from the GND (`82da76ee`, entry below). Afterwards "England" became "Großbritannien" in the organisation and the location index (`c63379f6`), because the country switch of the index pages showed two groups for one country, and the script writes "Großbritannien" for `XA-GB` throughout.
+- `scripts/staging_package/build_staging_package.py` (`0b1328e7`) writes the staging ingest package outside the repository, in the order indexes, holdings, Konvolute, with checksums and the `STYLESHEET` and `TORDF` references each object still needs, read live from staging. A Konvolut whose file does not name its own PID stays out.
+- SZDO 2.0.0 with English identifiers (`8f54aeed`, entry below).
+- Documentation refactored after the model of the frontend knowledge base. `knowledge/README.md` became the [index](INDEX.md) with a glossary, the [plan](plan.md) and the [handoff](handoff.md) inbox are new, the journal is English throughout, the open lists of DATA.md and of the journal moved into the plan, and CLAUDE.md became a compact rules file. `reconcile_org_places.py` and its test moved into `scripts/organisationen_index/`.
+
+Found. The import brought back the sister Konvolute decided for deletion on 2026-09-22 and 2026-09-23, and several imported Konvolute carry dates after 1950. Four corpus tests of the timeline lanes pin the corpus before the import and fail since `e1b156fa`. All three are in the plan.
+
+Presentation layer. `szd-TORDF.xsl` read the autograph classification with the absolute path `//t:textClass` and is being fixed in `ZIMLAB/szd` the same day. `o:szd.autographen` needs a renewed ingest afterwards.
+
+## 2026-09-24, SZDO 2.0.0 with English identifiers
 
 Changed. The ontology uses English identifiers only, as the operator decided on
 2026-09-23 and 2026-09-24. `szdo:` moves to 2.0.0 and `nachlass:` to 0.2.0. Wherever the
@@ -30,203 +57,66 @@ Open. `szd:glossar`, the hybrid `szd:objecttyp` and the glossary concepts of
 `szdg:DatumEvidenz` keep German-derived identifiers, because they belong to the live GAMS
 vocabulary and glossary. The namespace `https://w3id.org/nachlass#` keeps its name.
 
-## 2026-09-24 — Land und Ort im Organisationenindex aus der GND ergänzt
+## 2026-09-24, country and place in the organisation index from the GND
 
-Geändert. `scripts/reconcile_org_places.py` ergänzt in `SZDORG.xml` `<country>` und
-`<settlement>` aus dem GND-Datensatz jeder Körperschaft, `placeOfBusiness` für den Ort,
-`geographicAreaCode` für das Land, nie geschätzt und nie über eine Stufe hinweg
-kombiniert. 42 Werte wurden ergänzt, bei 16 der 32 seit der Migration aus dem
-Personenindex unvollständigen Einträge beide Felder, bei 10 weiteren nur das Land, weil
-der GND-Datensatz keinen Ort führt. Für den GND-Code `XA-GB` folgt das Skript der im
-Bestand schon angelegten Trennung, „England" wenn eine Stadt bekannt ist, sonst
-„Großbritannien" (SZDORG.32/49 gegen SZDSTA.15), eine aus dem Bestand abgeleitete
-Setzung, keine GND-eigene. Fünf Einträge liefern im GND-Datensatz keinen geografischen
-Code, drei haben keinen GND-Verweis überhaupt, und bei Herbert Reichner Verlag
-(SZDORG.24) bleiben Land und Ort offen, weil der Datensatz Wien, Zürich und Leipzig
-gleichrangig führt. Das Log `scripts/organisationen_index/reconcile_places_log.csv`
-hält nur tatsächlich geschriebene Werte fest, dazu `scripts/test_reconcile_org_places.py`.
+Changed. `scripts/reconcile_org_places.py` adds `<country>` and `<settlement>` to `SZDORG.xml` from the GND record of each corporate body, `placeOfBusiness` for the place and `geographicAreaCode` for the country, never estimated and never combined across levels. 42 values were added, both fields for 16 of the 32 entries that had been incomplete since the migration from the person index, and the country alone for 10 more, because their GND record names no place. For the GND code `XA-GB` the script followed the split already present in the data, "England" where a city is known and "Großbritannien" otherwise (SZDORG.32/49 against SZDSTA.15), a setting the script derived from the data. Five entries give no geographic code in their GND record, three have no GND reference at all, and for Herbert Reichner Verlag (SZDORG.24) country and place stay open, because the record lists Wien, Zürich and Leipzig with equal rank. The log `scripts/organisationen_index/reconcile_places_log.csv` records only values actually written, and `scripts/test_reconcile_org_places.py` accompanies the script.
 
-Geprüft. Der bekannte Widerspruch bei SZDORG.15 (David H. Lowenherz, GND zeigt auf
-London, der Bestand trägt USA/New York) besteht unverändert und wurde nicht
-überschrieben, kein weiterer Widerspruch zwischen Bestand und GND fand sich unter den
-Einträgen, die schon Land und Ort trugen. Wohlgeformtheit, unveränderte Zahl der
-`<org>`-Einträge, ein rein additiver Diff und ein zweiter, folgenloser Lauf des Skripts
-sind geprüft, ebenso `pytest scripts/test_reconcile_org_places.py` und `ruff check`.
+Checked. The known contradiction at SZDORG.15 (David H. Lowenherz, the GND points to London, the data carry USA/New York) is unchanged and was not overwritten. No further contradiction between data and GND turned up among the entries that already carried country and place. Well-formedness, an unchanged number of `<org>` entries, a purely additive diff and a second run without effect are checked, as are `pytest scripts/test_reconcile_org_places.py` and `ruff check`.
 
-Offen. Der Organisationenindex muss nach der Änderung erneut ingestiert werden. 16
-Einträge bleiben ohne Ort, sechs davon ganz ohne Land oder Ort, weil ihr GND-Datensatz
-dazu nichts hergibt oder mehrdeutig bleibt.
+Open. The organisation index must be ingested again after the change. 16 entries stay without place, six of them without country or place, because their GND record gives nothing or stays ambiguous.
 
-## 2026-09-23 — Prüfliste unverknüpfter Personen, Stagingpaket, Wissensdokumente
+## 2026-09-23, review list of unlinked persons, staging package, knowledge documents
 
-Geändert. `scripts/checkup_2026_09_index/find_unlinked_persons.py` (`10728679`) listet die
-Indexpersonen, die die Personensuche nicht findet, weil kein Objekt auf sie verweist, und
-sucht im Elementtext der Bestände nach Stellen, die sie ohne Verweis nennen, auf Wunsch
-auch in den noch nicht ingestierten Konvoluten des Stagingpakets. Die Ausgabe ist eine
-archivinterne Prüfliste unter `Documents/PROJECTS/szd/checkup-2026-09/` außerhalb des Repos.
+Changed. `scripts/checkup_2026_09_index/find_unlinked_persons.py` (`10728679`) lists the index persons the person search does not find because no object references them, and searches the element text of the holdings for places that name them without a reference, on request also in the Konvolute of the staging package not yet ingested. The output is an archive-internal review list under `Documents/PROJECTS/szd/checkup-2026-09/` outside the repository.
 
-Das Stagingpaket unter `Documents/PROJECTS/szd/ingest_staging_2026-09-23/` steht auf
-`aac08670`. Seit den Zusammenführungen des Tages enthält es wieder den Personenindex und
-zusätzlich die Konvolute der neu verknüpften Korrespondenzpartner. Die Masereel-Themenseite
-ist inzwischen auf Staging, ihr `TEI_SOURCE` dort trägt die getaggten Personenverweise.
+The staging package under `Documents/PROJECTS/szd/ingest_staging_2026-09-23/` stands at `aac08670`. Since the merges of the day it again contains the person index and in addition the Konvolute of the newly linked correspondence partners. The Masereel theme page is now on staging, and its `TEI_SOURCE` there carries the tagged person references.
 
-Integriert. Die Wissensdokumente sind auf diesen Stand gebracht und entdoppelt, Vorgänger
-ist `10728679`. Der Organisationenindex ist in [COLLECTIONS.md](COLLECTIONS.md) beschrieben
-statt in DATA.md, Auslieferungsstand und Abdeckung der Lebenskalender-Lanes stehen nur noch
-in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). [DATA.md](DATA.md) führt statt der
-Bestandsstatistik die Zählkonventionen, die heutigen Befunde und die gesammelten offenen
-Punkte. Beispiele in COLLECTIONS und DATA_MODEL stammen jetzt aus den Daten, erfundene
-Signaturen und Datumsformen sind ersetzt. ARCHITECTURE beschreibt die Zwei-Repo-Topographie
-statt allgemeiner Plattformangaben. Die Lizenzangabe in PROJECT folgt dem README (Code MIT),
-der Zenodo-Link zeigt auf den öffentlichen Datensatz. Außerhalb des Journals nennt kein
-Dokument mehr die Erstveröffentlichungen als Bestand. Auf Wunsch des Operators sind die
-bisher deutschen Wissensdokumente und Skript-READMEs ins Englische übertragen, wie
-CLAUDE.md es vorsieht, das Journal bleibt deutsch.
+Integrated. The knowledge documents are brought to this state and deduplicated, with `10728679` as predecessor. The organisation index is described in [COLLECTIONS.md](COLLECTIONS.md) instead of DATA.md, and delivery state and coverage of the Lebenskalender lanes stand only in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md). [DATA.md](DATA.md) carries the counting conventions, the findings of the day and the collected open points instead of the collection statistics. Examples in COLLECTIONS and DATA_MODEL now come from the data, and invented signatures and date forms are replaced. ARCHITECTURE describes the two-repository topography instead of general platform details. The licence statement in PROJECT follows the README (code MIT), and the Zenodo link points to the public record. Outside the journal no document names the first editions as a collection any more. At the operator's request the knowledge documents and script READMEs that had been German were translated into English, as CLAUDE.md provides, while the journal stayed German.
 
-Präsentationsschicht. Die Organisationenseite verlinkt jede Körperschaft, Aufbewahrungsorte
-auf die Standortsuche und die übrigen auf die Personensuche, und zeigt Ort und Land in der
-Kopfzeile (`ZIMLAB/szd` `e7acd7d`).
+Presentation layer. The organisation page links every corporate body, repositories to the location search and the others to the person search, and shows place and country in the heading line (`ZIMLAB/szd` `e7acd7d`).
 
-Offen. Die RDF-Transformation in `ZIMLAB/szd` wird für mehrere Kennungen in einem `@ref`
-und für GND-Verweise mit `https` angepasst. Bis dahin liest `GetPersonlist` nur das erste
-Token, und ein Körperschaftsverweis löst nur zeichengleich zum Index auf. ONTOLOGY.md und
-`ontology/README.md` überarbeitet eine eigene Sitzung mit englischen Bezeichnern, dort fehlt
-der Organisationenindex noch in der Zuordnung der TEI-Dateien. Das Wurzeldokument `mail.md`,
-ein Mailtext zur SZ-AAL/B-Korrespondenz aus dem Juli 2026, hat im Repo keine Funktion.
+Open. The RDF transformation in `ZIMLAB/szd` is being adapted for several identifiers in one `@ref` and for GND references with `https`. Until then `GetPersonlist` reads only the first token, and a corporate-body reference resolves only if it matches the index character for character. ONTOLOGY.md and `ontology/README.md` are revised in a separate session with English identifiers, and there the organisation index is still missing from the mapping of the TEI files. The root document `mail.md`, a mail text on the SZ-AAL/B correspondence from July 2026, has no function in the repository.
 
-## 2026-09-23 — Tote Personenverweise und unverknüpfte Korrespondenzpartner
+## 2026-09-23, dead person references and unlinked correspondence partners
 
-Geändert. In `SZDAUT.xml` trugen vier Autorverweise neben der gültigen Kennung eine zweite,
-die `c1a9a34e` im Jahr 2022 als GND-Dublette aus dem Index entfernt hatte, nämlich
-zweimal Michelangelo (1579 neben 194), Joachim Murat (1623 neben 1009) und Gounod (1617 neben 1588).
-Die toten Kennungen sind gestrichen. Aus der Kandidatenliste der unverknüpften Personen ist
-nur verknüpft, was eindeutig ist, also ein `persName` ohne Verweis, dessen Nach- und Vorname
-dem Indexeintrag exakt gleicht, während kein anderer Eintrag denselben Namen führt. Das
-trifft die Korrespondenzpartner Kahn, Mayer, Süssland, Birman, Monath, Sambat und Garcés, je
-in der Sammelzeile von `SZDKOR.xml` und im eigenen Konvolut, dazu Stücke in `altmann-eva` und
-`zweig-lotte`. Die Personen ohne Referenz gehen damit von 354 auf 347 zurück. Birman und
-Sambat stehen in Index und Bestand nur mit Initiale, ihre Einträge sind die einzigen dieses
-Nachnamens.
+Changed. In `SZDAUT.xml` four author references carried, beside the valid identifier, a second one that `c1a9a34e` had removed from the index as a GND duplicate in 2022, namely Michelangelo twice (1579 beside 194), Joachim Murat (1623 beside 1009) and Gounod (1617 beside 1588). The dead identifiers are deleted. From the candidate list of unlinked persons only the unambiguous cases are linked, meaning a `persName` without reference whose surname and forename equal the index entry exactly while no other entry carries the same name. This applies to the correspondence partners Kahn, Mayer, Süssland, Birman, Monath, Sambat and Garcés, each in the collective line of `SZDKOR.xml` and in their own Konvolut, plus pieces in `altmann-eva` and `zweig-lotte`. The persons without reference thereby go down from 354 to 347. Birman and Sambat stand in index and holdings with an initial only, and their entries are the only ones of that surname.
 
-Offen. Neydisser (`SZDPER.1026`) ist seit `a108c6f3` vom April 2025 nur noch Namensvariante von
-Lernet-Holenia (`SZDPER.818`), die Bibliothek nennt aber die eigene GND des
-Pseudonyms. `SZDPER.1304` gab es nie, gemeint ist die Selbsthilfevereinigung der jüdischen
-Blinden in Deutschland, eine Körperschaft ohne Eintrag im Organisationenindex. Sieben
-Korrespondenzpartner tragen in `SZDKOR.xml` eine GND, die ihrem Indexeintrag fehlt. Beim
-Operator liegen außerdem abweichende Vornamen (Altmann, Miller, Bischoff), Nennungen in Titeln
-und Fließtext sowie Kuro Masu und Králík, deren Hülle schon auf einen anderen Eintrag zeigt.
-Das Prüfskript erkennt Kennungen mit Buchstabensuffix wie `SZDPER.2080a` nicht als Verweis.
+Open. Neydisser (`SZDPER.1026`) has been only a name variant of Lernet-Holenia (`SZDPER.818`) since `a108c6f3` of April 2025, but the library names the pseudonym's own GND. `SZDPER.1304` never existed, and what is meant is the Selbsthilfevereinigung der jüdischen Blinden in Deutschland, a corporate body without an entry in the organisation index. Seven correspondence partners carry a GND in `SZDKOR.xml` that their index entry lacks. Also with the operator are divergent forenames (Altmann, Miller, Bischoff), mentions in titles and running text, and Kuro Masu and Králík, whose envelope already points to another entry. The check script does not recognise identifiers with a letter suffix such as `SZDPER.2080a` as references.
 
-## 2026-09-23 — Farbcodierung des Personenindex ausgewertet
+## 2026-09-23, colour coding of the person index list evaluated
 
-Geändert. Die Farbcodierung der Archivliste zum Personenindex ist aus dem Word-Original
-gelesen, sie war im Textexport verloren. Daraus ist umgesetzt, was aus den Daten eindeutig
-folgt. Kesten und Pilnjak sind nach Prüfung bei der DNB je auf den Eintrag mit gültiger GND
-zusammengeführt (`merge_person_duplicates.py`, Protokoll ergänzt), weil 1185617155 nicht
-existiert und 1089928157 auf 118594397 umleitet. Die nicht existierende Kesten-GND in
-`SZDKOR.xml` ist durch 118561715 ersetzt. Die vom Archiv gelb markierten, fälschlich
-unverknüpften Personen Frenkel, Kaufmann und Tomaselli zeigen jetzt in den Konvoluten
-`frenkel-lotte`, `kaufmann-charlotte`, `zweig-lotte` und in `SZDKOR.xml` auf ihren
-Indexeintrag. Kaufmann steht in den Daten als Charlotte, im Index als Lotte, die
-Gleichsetzung folgt der Markierung des Archivs.
+Changed. The colour coding of the archive list for the person index is read from the Word original, because it was lost in the text export. What follows unambiguously from the data is carried out. Kesten and Pilnjak are each merged into the entry with the valid GND after a check with the DNB (`merge_person_duplicates.py`, log extended), because 1185617155 does not exist and 1089928157 redirects to 118594397. The non-existent Kesten GND in `SZDKOR.xml` is replaced by 118561715. The persons Frenkel, Kaufmann and Tomaselli, marked yellow by the archive as wrongly unlinked, now point to their index entry in the Konvolute `frenkel-lotte`, `kaufmann-charlotte` and `zweig-lotte` and in `SZDKOR.xml`. Kaufmann appears in the data as Charlotte and in the index as Lotte, and the identification follows the archive's marking.
 
-„Britain in Pictures“, vom Archiv grün als Körperschaft markiert, ist von Hand als
-`SZDORG.67` in den Organisationenindex nachgetragen und über `migrate_org_references.py` aus
-dem Personenindex entfernt. Die Zählung läuft weiter statt neu, weil die Kennungen Teil der
-RDF-URIs sind. Weil das Skript sein Migrationsprotokoll neu schreibt, sind die älteren
-Zeilen aus der Git-Historie wieder vorangestellt.
+"Britain in Pictures", marked green by the archive as a corporate body, is added by hand to the organisation index as `SZDORG.67` and removed from the person index by `migrate_org_references.py`. The numbering continues instead of restarting, because the identifiers are part of the RDF URIs. Because the script rewrote its migration log, the older rows are put back in front from the Git history.
 
-Die Wissensdokumente sind nachgezogen. [DATA.md](DATA.md) führt die Farbcodierung als
-Quelle, die Ergebnisse und die offenen Punkte im Abschnitt zum Archiv-Checkup, die
-Aussagen zu Organisationenindex und Personenindex in COLLECTIONS, PROJECT, README und der
-README des Organisationsskripts sind auf den Stand gebracht. Der Organisationsabschnitt in
-DATA.md beschrieb `GetOrglist` noch als unaufgerufen, das ist seit dem Frontendcommit
-`ef9a4ce` überholt.
+The knowledge documents are updated. [DATA.md](DATA.md) carries the colour coding as a source, the results and the open points in the section on the archive checkup, and the statements on organisation and person index in COLLECTIONS, PROJECT, README and the README of the organisation script are brought up to date. The organisation section in DATA.md still described `GetOrglist` as never called, which frontend commit `ef9a4ce` had made obsolete.
 
-Offen. Neumann, Schriftsteller oder Architekt, bleibt eine Frage an das Archiv. Beim
-Operator liegen die Einträge „Filed as …“, „Unidentified signatures“ und „Zweig Family“,
-die fett markierten Namen und die Frage, ob die unverknüpften Namen, die das Archiv
-entfernt haben will, den Personenindex verlassen. `SZDKOR.xml` trägt weitere
-Personenverweise mit dem Platzhalter `gnd/placeholder`. `SZDSTA.xml` hat seit dem
-Datenupdate vom Juni 2021 (`1ed133c2`) keine `geo`-Angaben mehr, das neue RDF der
-Standorte hat deshalb keine Koordinaten. `ontology/reconciliation.ttl` für Klawiter beruht
-auf Titelabgleich mit Prozentwerten.
+Open. Neumann, writer or architect, remains a question for the archive. With the operator are the entries "Filed as …", "Unidentified signatures" and "Zweig Family", the names marked bold and the question whether the unlinked names the archive wants removed leave the person index. `SZDKOR.xml` carries further person references with the placeholder `gnd/placeholder`. `SZDSTA.xml` has had no `geo` data since the data update of June 2021 (`1ed133c2`), so the new RDF of the locations has no coordinates. `ontology/reconciliation.ttl` for Klawiter rests on title matching with percentage values.
 
-Offen und als nächster Schritt geplant ist, auf Anregung des Operators, ein eigenes
-Reconciliation-Skript. Es ergänzt Wikidata-Kennungen über die GND, also über Wikidata P227,
-und schreibt nur eindeutige Treffer automatisch. Die vorhandenen GNDs prüft es bei DNB oder lobid auf Existenz und
-Umleitung und meldet Widersprüche zu Wikidata. Einträge ohne GND bekommen nur eine
-Vorschlagsliste, geschriebene Treffer tragen ihre Herkunft, Orte folgen nachrangig. Zum
-Stand dieses Tages haben 521 Personen eine GND, aber keine Wikidata-Kennung, 220 Personen
-haben keine GND, und keine der 67 Körperschaften trägt eine Wikidata-Kennung. Für
-Körperschaften fehlt in `szd-TORDF.xsl` außerdem noch die Ausgabe von `szd:wikidata`.
+Open and planned as the next step, at the operator's suggestion, is a reconciliation script of its own. It adds Wikidata identifiers through the GND, meaning Wikidata P227, and writes only unambiguous hits automatically. It checks the existing GNDs at DNB or lobid for existence and redirects and reports contradictions to Wikidata. Entries without GND receive only a suggestion list, written hits carry their provenance, and places follow later. As of that day 521 persons have a GND but no Wikidata identifier, 220 persons have no GND, and none of the 67 corporate bodies carries a Wikidata identifier. For corporate bodies `szd-TORDF.xsl` also still lacks the output of `szd:wikidata`.
 
-## 2026-09-23 — Erstveröffentlichungen entfernt, Staging-Ingest vorbereitet
+## 2026-09-23, first editions removed, staging ingest prepared
 
-Entschieden. Der Operator hat die Erstveröffentlichungen (SZDPUB) aufgegeben. Beide
-Fassungen, `data/Publication/SZDPUB.xml` und `data/Index/Erstveröffentlichungen/SZDPUB.xml`,
-sind entfernt und bleiben in der Git-Historie. Sie trugen dieselbe PID `o:szd.publikation`,
-wichen inhaltlich voneinander ab und nannten keine Quelle. Produktiv gab es das Objekt nie,
-die RDF-Transformation hatte keinen Zweig dafür. Die Verweise in COLLECTIONS, DATA, ONTOLOGY
-und PROJECT sind gestrichen. Die Summenzeile der Bestandsstatistik in DATA.md und die
-Beschreibung von DATA.md im README enthielten SZDPUB noch und sind am selben Tag
-nachgezogen.
+Decided. The operator abandoned the first editions (SZDPUB). Both versions, `data/Publication/SZDPUB.xml` and `data/Index/Erstveröffentlichungen/SZDPUB.xml`, are removed and remain in the Git history. They carried the same PID `o:szd.publikation`, differed in content and named no source. The object never existed in production, and the RDF transformation had no branch for it. The references in COLLECTIONS, DATA, ONTOLOGY and PROJECT are deleted. The total row of the collection statistics in DATA.md and the description of DATA.md in the README still contained SZDPUB and were corrected the same day.
 
-Geändert. Der Vergleich auf Elementebene zwischen diesem Repo und `TEI_SOURCE` auf Staging
-ergab die Objekte für den nächsten Staging-Ingest, die sechs Bestände, den
-Organisationenindex, drei Konvolute und drei neue Konvolute aus der Quellablage. Das Paket mit
-Prüfsummen liegt außerhalb des Repos unter `Documents/PROJECTS/szd/ingest_staging_2026-09-23/`.
-Personen, Standorte, Werkindex, Lebenskalender und die übrigen Konvolute stimmen mit Staging
-überein.
+Changed. The element-level comparison between this repository and `TEI_SOURCE` on staging gave the objects for the next staging ingest, the six holdings, the organisation index, three Konvolute and three new Konvolute from the source folder outside the repository. The package with checksums lies outside the repository under `Documents/PROJECTS/szd/ingest_staging_2026-09-23/`. Persons, locations, work index, Lebenskalender and the other Konvolute match staging.
 
-Offen. Auf Staging können `o:szd.publikation` und das verwaiste
-`o:szd.korrespondenzen.ferencak-mirko-m` gelöscht werden, dessen einziges Stück das neue
-Konvolut `ferencak-mirko` vollständiger führt. Die getaggte Masereel-Themenseite ist noch
-nicht auf Staging ingestiert.
+Open. On staging `o:szd.publikation` can be deleted, and so can the orphaned `o:szd.korrespondenzen.ferencak-mirko-m`, whose only piece the new Konvolut `ferencak-mirko` carries more completely. The tagged Masereel theme page is not yet ingested on staging.
 
-## 2026-09-22 — Dublettenpaare des Checkups entschieden
+## 2026-09-22, duplicate pairs of the checkup decided
 
-Entschieden. Die Hauptinstanz hat am 22. September 2026 nach Delegation durch den
-Operator die vier offenen Dublettenpaare des Checkups entschieden, revidierbar. Für
-SZ-SHB/W3 bleibt `o:szd.359`, das byteidentische `o:szd.375` wird gelöscht. Für
-SZ-AP2/W-H206 bleibt `o:szd.2939` als Objekt im neueren Aufnahmestandard, `o:szd.263`
-wird nach Übernahme von Signatur und Datum entbehrlich. Bei Berger und
-Oppeln-Bronikowski bleibt jeweils die Konvolutkennung mit `-von`, auf die der Index
-zeigt, und nimmt den kuratierten Inhalt der Schwesterkennung auf.
+Decided. On 22 September 2026 the main agent instance decided the four open duplicate pairs of the checkup after delegation by the operator, revisably. For SZ-SHB/W3 `o:szd.359` stays and the byte-identical `o:szd.375` is deleted. For SZ-AP2/W-H206 `o:szd.2939` stays as the object in the newer cataloguing standard, and `o:szd.263` becomes dispensable once its signature and date are taken over. For Berger and Oppeln-Bronikowski the Konvolut identifier with `-von`, to which the index points, stays in each case and takes up the curated content of the sister identifier.
 
-Geändert. Im Werkindex zeigt SZDMSK.299 auf `o:szd.359` statt auf „Amerigo“
-`o:szd.358`, SZDMSK.201 auf `o:szd.2939`. Die zusammengeführten Konvolute liegen wie bei
-Ferenčak in der Quellablage außerhalb des Repos, mit Richtung `fromZweig`, Titeln nach der
-Titelkonvention und bei Berger mit Signatur SZ-SEF/B1 und Faksimile `o:szd.1384`. Index
-und Galerieanker zeigen bereits auf die bleibenden Kennungen.
+Changed. In the work index SZDMSK.299 points to `o:szd.359` instead of "Amerigo" `o:szd.358`, and SZDMSK.201 to `o:szd.2939`. The merged Konvolute lie, as with Ferenčak, in the source folder outside the repository, with direction `fromZweig`, titles after the title convention and, for Berger, signature SZ-SEF/B1 and facsimile `o:szd.1384`. Index and gallery anchors already point to the remaining identifiers.
 
-Offen. Auf GAMS stehen Ingest der beiden Konvolute und des Werkindex, das Löschen von
-`o:szd.375`, `o:szd.263` und der beiden Schwesterkonvolute sowie Signatur und Datum in
-`o:szd.2939` aus. Das Blatt von SZ-AP2/W-H206 liegt zusätzlich als erste zwei Bilder in
-`o:szd.220`.
+Open. On GAMS the ingest of both Konvolute and of the work index, the deletion of `o:szd.375`, `o:szd.263` and of both sister Konvolute, and signature and date in `o:szd.2939` are pending. The sheet of SZ-AP2/W-H206 also lies as the first two images in `o:szd.220`.
 
-## 2026-09-18 — Abgelöste Personenkennungen, Checkup-Notizen ausgelagert
+## 2026-09-18, superseded person identifiers, checkup notes moved out
 
-Geändert. Die sechzehn Rückverweise des Organisationenindex auf frühere Einträge des
-Personenindex tragen `subtype="superseded"`, damit sie von den lebenden Querverweisen
-`idno type="SZDSTA"` unterscheidbar sind. `build_org_index.py` schreibt diese Form, die
-README des Skriptordners erklärt sie. Die RDF-Transformation der Präsentationsschicht
-gibt daraus `dcterms:replaces` auf die alte Personenressource aus.
+Changed. The sixteen back-references of the organisation index to former entries of the person index carry `subtype="superseded"`, so that they can be told apart from the live cross-references `idno type="SZDSTA"`. `build_org_index.py` writes this form, and the README of the script folder explains it. The RDF transformation of the presentation layer outputs `dcterms:replaces` from it, pointing to the old person resource.
 
-Entschieden. Die archivinternen Verifikationsnotizen des Checkups vom September 2026
-liegen unter `Documents/PROJECTS/szd/checkup-2026-09/` außerhalb des Repos, das Muster
-`reports/checkup-*/` ist ignoriert. Das dauerhafte Ergebnis steht in
-[DATA.md](DATA.md) im Abschnitt zum Archiv-Checkup.
+Decided. The archive-internal verification notes of the checkup of September 2026 lie under `Documents/PROJECTS/szd/checkup-2026-09/` outside the repository, and the pattern `reports/checkup-*/` is ignored. The durable result stands in [DATA.md](DATA.md) in the section on the archive checkup.
 
-Geprüft. Personen-, Standort-, Werk- und Organisationenindex sind am selben Tag auf
-GAMS Staging ingestiert. Kein Bestand verweist mehr auf eine abgelöste Personenkennung,
-das Migrationsprotokoll des Organisationenindex deckt sich mit den Zielen, die das
-RDF-Harness der Präsentationsschicht für die Bibliothek auflöst.
+Checked. Person, location, work and organisation index were ingested on GAMS staging the same day. No holding points to a superseded person identifier any more, and the migration log of the organisation index matches the targets that the RDF harness of the presentation layer resolves for the library.
 
-Offen. Der Organisationenindex muss nach der Änderung erneut ingestiert werden. Der
-Mehrheit der Körperschaften fehlen Land und Ort, weil sie aus dem Personenindex stammen.
-Vorgeschlagen und nicht begonnen sind ein Abgleich GND zu Wikidata für Personen mit GND
-ohne Wikidata-Kennung und eine Ortsliste mit GeoNames-Kennungen als Vorstufe eines
-Orteindex, mit den Autographen als Startbestand. `data/derived/lebenskalender/` ist
-untracked, obwohl der Lanes-Vertrag die Dateien dort vorsieht, die ausgelieferte Kopie
-unter `docs/lebenskalender/lanes/` ist inhaltsgleich.
+Open. The organisation index must be ingested again after the change. Most corporate bodies lack country and place, because they come from the person index. Proposed and not begun are a GND-to-Wikidata reconciliation for persons with a GND and without a Wikidata identifier, and a place list with GeoNames identifiers as a first step towards a places index, with the autographs as the starting holding. `data/derived/lebenskalender/` is untracked although the lanes contract provides the files there, and the delivered copy under `docs/lebenskalender/lanes/` has the same content.

@@ -1,14 +1,14 @@
 ---
 title: TEI-CSV Mapping
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-23
+updated: 2026-09-24
 version: 1.0
 tags: [mapping, zweig, tei, csv]
 ---
@@ -51,7 +51,7 @@ All XPath expressions below are written with that default namespace.
 | 3.1 | PID | `tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msIdentifier/tei:altIdentifier/tei:idno[@type='PID']` | 0‒1 | If empty in CSV the node *may* be absent. |
 | 3.2 | Context | `tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msIdentifier/tei:altIdentifier/tei:idno[@type='context']` | 0‒1 | May be empty (`<idno type="context"/>`). |
 | 3.3 | Verfasser\*in | `tei:profileDesc/tei:correspDesc/tei:correspAction[@type='sent']/tei:persName` | 1 | Compare *concatenated* `forename + ' ' + surname`. |
-| 3.4 | Verfasser\*in GND | same node as 3.3 – attribute `@ref` | 0‒1 | URL. |
+| 3.4 | Verfasser\*in GND | same node as 3.3, attribute `@ref` | 0‒1 | URL. |
 | 3.5 | Körperschaft Verfasser\*in | `tei:profileDesc/tei:correspDesc/tei:correspAction[@type='sent']/tei:orgName` | 0‒n | Only if CSV cell not empty. |
 | 3.6 | Körperschaft Verfasser\*in GND | each `orgName/@ref` | 0‒n | 1:1 with 3.5 order. |
 | 3.7 | Adressat\*in | `tei:profileDesc/tei:correspDesc/tei:correspAction[@type='received']/tei:persName` | 1 | |
@@ -109,7 +109,7 @@ All XPath expressions below are written with that default namespace.
 
 ---
 
-## 5. Example – sample row vs. TEI
+## 5. Example, sample row against TEI
 
 | Column | CSV value | TEI node (XPath result) |
 |--------|-----------|--------------------------|
@@ -119,5 +119,5 @@ All XPath expressions below are written with that default namespace.
 | Datierung normalisiert | 1930-09-19 | `<date when="1930-09-19">19. 9. 30</date>` |
 | Writing Material | Picture postcard: "Nella Villa Carlotta" | `<material ana="szdg:WritingMaterial" xml:lang="en">Picture postcard: "Nella Villa Carlotta"</material>` |
 
-The sample row is signature SZ-SAM/AK.1 in the konvolut object `o:szd.korrespondenzen.alberts-margot` on GAMS.
+The sample row is signature SZ-SAM/AK.1 in the konvolut object `o:szd.korrespondenzen.alberts-margot`, [data/Correspondence/konvolute/szd.korrespondenzen.alberts-margot.xml](../data/Correspondence/konvolute/szd.korrespondenzen.alberts-margot.xml).
 

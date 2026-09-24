@@ -1,17 +1,17 @@
 ---
-title: Stefan Zweig Digital — Project
+title: Project
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2026-03-29
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 
-# Stefan Zweig Digital — Project
+# Project
 
 Research project on the digital reconstruction of Stefan Zweig's estate from the perspective of the Digital Humanities and research data management.
 
@@ -103,6 +103,7 @@ The ontology thereby joins three perspectives, the archival perspective of SZD w
 | September 2026 | Facsimile links for Notizbuch Paris 1936 and Register der Aufsätze, Lebenskalender prototype in the SZD design under `docs/lebenskalender/` |
 | 11 September 2026 | Timeline with derived lanes in the GAMS frontend on staging, state and acceptance in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md#delivery-state) |
 | September 2026 | Archive checkup of the catalogue views evaluated and applied to the data, result in [DATA.md](DATA.md#archive-checkup-september-2026). Corporate bodies moved from the person index to the organisation index. The first editions, never published productively, removed from the repository |
+| 24 September 2026 | Every correspondence Konvolut of production in the repository, organisation index with country and place from the GND, certainly unreferenced persons removed from the person index, SZDO 2.0.0 with English identifiers, staging ingest package generated from the repository |
 
 ## 8. Participants
 

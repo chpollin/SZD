@@ -1,67 +1,48 @@
-# CLAUDE.md — Stefan Zweig Digital (SZD) · Daten-Repo
+# CLAUDE.md
 
-Arbeitsanleitung für die Zusammenarbeit in diesem Repository.
+Arbeitsregeln für Agenten im Datenrepository von Stefan Zweig Digital. Beschreibendes, also Bestände, Encoding, Architektur, Ingest und offene Arbeit, steht in der [README](README.md) und unter `knowledge/`. Hier stehen nur Regeln.
 
-## Was das ist
+## Zuerst lesen
 
-Daten- und Preprocessing-Repo für [stefanzweig.digital](https://stefanzweig.digital):
-kuratierte **TEI-P5-Quellen** (`data/`), die **Nachlass-Ontologie** (`ontology/`, SZDO)
-und die Skripte, die Partner-Lieferungen in TEI überführen. Was nach GAMS ingestiert und
-dort gerendert wird, entsteht hier. Die Präsentationsschicht (XSLT/JS/CSS) liegt im
-separaten Repo `ZIMLAB/szd` (`gams-www`).
+1. [knowledge/INDEX.md](knowledge/INDEX.md) als Einstieg mit Dokumentliste, Skriptübersicht und Glossar.
+2. [knowledge/plan.md](knowledge/plan.md) für die offene technische Arbeit und die offenen Fragen an Operator und Archiv.
+3. [knowledge/journal.md](knowledge/journal.md) für Verlauf und Entscheidungsgründe, [knowledge/handoff.md](knowledge/handoff.md) für offene Übergaben aus anderen Sessions.
+4. Je nach Aufgabe [COLLECTIONS](knowledge/COLLECTIONS.md) vor jeder Änderung an TEI-Listen und Indizes, [DATA](knowledge/DATA.md) für Datenlücken und Checkup-Ergebnisse, [ARCHITECTURE](knowledge/ARCHITECTURE.md) für Ingest und Veröffentlichung, [ONTOLOGY](knowledge/ONTOLOGY.md) für SZDO.
 
-## Zwei-Repo-Topographie
+## Zwei Repositories
 
-SZD verteilt sich auf zwei getrennte Git-Repos mit klarer Rollenteilung:
+- Dieses Repository `chpollin/SZD` hält die TEI-Quellen in `data/`, die Ontologie in `ontology/` und die Skripte in `scripts/`.
+- Die Präsentationsschicht mit XSLT, JavaScript, CSS, der RDF-Transformation `szd-TORDF.xsl` und den Query-Vorlagen liegt in `ZIMLAB/szd` (gams-www), lokal unter `GitHub/ZIMLAB/szd`. Arbeit dort folgt deren eigener CLAUDE.md, Befunde für sie gehen in deren Plan oder Handoff.
 
-- **`chpollin/SZD`** (GitHub) — **Daten + Preprocessing.** Kuratierte TEI-Quellen
-  (`data/`), Nachlass-Ontologie, Partner-Lieferungen → TEI. Was ingestiert wird, entsteht
-  hier.
-- **`ZIMLAB/szd`** = `gams-www` (Asset-Basis im Code: `$gamsdev`) —
-  **Präsentationsschicht.** XSLT/JS/CSS, die GAMS rendert.
+## Sprache
 
-Datenfluss: TEI in `chpollin/SZD` → Cirilo-Ingest → GAMS (Fedora) → gams-www-XSLT →
-[stefanzweig.digital](https://stefanzweig.digital). Die Repos sehen sich nicht automatisch
-— Querverweise stehen in beiden CLAUDE.md und im Vault-`Repo-Verzeichnis`.
+- Wissensdokumente unter `knowledge/`, README und Skript-READMEs sind Englisch. Deutsche Projektbegriffe bleiben, wo das Glossar in `knowledge/INDEX.md` sie definiert.
+- Commit-Messages sind Deutsch.
+- Code-Kommentare sind Englisch, knapp und nennen das Warum, das der Code nicht zeigt.
+- TEI ist zweisprachig de/en. Bestehende Schreibungen von Normvokabular werden exakt gespiegelt.
 
-## Render-Vertrag (vor dem Bearbeiten von Listen-TEI beachten)
+## Daten
 
-Einträge der **gruppierten Listen** (Lebensdokumente `SZDLEB`, Werke `SZDMSK`) erscheinen
-im Frontend nur, wenn sie die Gruppierungsschlüssel tragen, die die gams-www-XSLT
-(`szd-Werke.xsl`) erwartet:
+- Einträge der gruppierten Listen (Werke, Lebensdokumente, Aufsatzablage) folgen dem Render-Vertrag in [COLLECTIONS](knowledge/COLLECTIONS.md#rendering-contract-grouped-lists), weil ein Eintrag ohne Gruppierungsschlüssel ingestiert, aber nirgends gerendert wird. Die Navbar-Kategorien sind ein geschlossenes Set, bestehende Werte von `classification` und `Einheitssachtitel` werden wörtlich wiederverwendet.
+- Ein von Zweig verfasster Brief trägt in seiner `<book>`-Quelle den Empfänger als `<contributor>`, sonst fehlt er in der Korrespondenz-Faksimile-Galerie ([COLLECTIONS](knowledge/COLLECTIONS.md#rendering-contract-correspondence-facsimile-gallery)).
+- Kennungen von SZDPER, SZDORG und SZDSTA sind Teil der RDF-URIs. Sie werden nie umnummeriert und nie neu vergeben, auch nach dem Entfernen oder Zusammenführen eines Eintrags nicht. Ein neuer Eintrag erhält die nächste freie Nummer.
+- Datenänderungen laufen als Skript mit Trockenlauf, einem schreibenden Lauf und, wo vorgesehen, `--verify`. Sie lesen und schreiben über `scripts/_szd_io.py` und protokollieren jede Änderung im CSV-Log neben dem Skript. `_szd_io.py` bleibt in `scripts/`, weil die Skripte es über seinen Pfad laden.
+- Werte werden nie geraten. GND, Wikidata, Datum und Ort kommen aus der Quelle, einem Normdatensatz oder einem belegten Befund. Ein mehrdeutiger Fall bleibt unverändert und kommt in den Plan.
+- Archivinterne Prüfnotizen, Prüflisten und Operator-Berichte des Checkups liegen unter `Documents/PROJECTS/szd/checkup-2026-09/` außerhalb des Repositories und werden nie committet. Im Repository steht nur das dauerhafte Ergebnis.
 
-- `term[@type="classification"]` (de+en) — h2-Navbar-Kategorie,
-- `title[@type="Einheitssachtitel"]` (de+en) — h3-Dokumenttyp,
-- PID als `msIdentifier/altIdentifier/idno[@type="PID"]` (nicht bare) — sonst kein
-  Faksimile-Link.
+## Prüfen
 
-`for-each-group` wirft schlüssellose Einträge lautlos aus der ganzen Ausgabe —
-„ingestiert, aber unsichtbar". Navbar-Kategorien sind ein geschlossenes Set; bestehende
-`Einheitssachtitel` exakt (de+en) wiederverwenden. Details:
-[knowledge/COLLECTIONS.md](knowledge/COLLECTIONS.md); Renderer-Seite in gams-www
-`knowledge/Rendering-and-Search.md`.
+- `python -m pytest -q scripts` läuft vor jedem Commit, der Skripte berührt.
+- Jede geschriebene TEI-Datei ist wohlgeformt, bevor sie committet wird.
+- Nach Änderungen an `ontology/` läuft `python ontology/validate.py`.
+- Ein Umzug eines Skripts zieht jede Referenz nach, in Dokumenten, in Pfaden über `parents[...]` und in Generator-Kommentaren, und das Skript läuft danach.
 
-**Zweiter Vertrag — Korrespondenz-Faksimile-Galerie**
-(`context:szd.facsimiles.korrespondenzen`, `szd-Facsimiles.xsl`): gruppiert nach
-Korrespondenzpartner = `dc:creator` (außer exakt `Zweig, Stefan`) ∪ gebundenem
-`dc:contributor`. Von Stefan Zweig verfasste Briefe **ohne `dc:contributor`** (Empfänger)
-fallen aus der Gruppierung und bleiben unsichtbar. Im `<book>`-Quellformat wird `<author>`
-→ dc:creator, `<contributor>` → dc:contributor; der Empfänger muss also als `<contributor>`
-gesetzt sein. Die gerenderte `sdef:Context/get`-Seite ist zudem **gecacht** (Membership
-via `risearch` ist live). Details: [knowledge/COLLECTIONS.md](knowledge/COLLECTIONS.md).
+## Git, Staging und Produktion
 
-## Dokumentation zuerst lesen
-
-- [knowledge/PROJECT.md](knowledge/PROJECT.md) — Forschungsprojekt, Kontext, Chronologie.
-- [knowledge/COLLECTIONS.md](knowledge/COLLECTIONS.md) — Sammlungen, TEI-Encoding, Render-Vertrag.
-- [knowledge/DATA_MODEL.md](knowledge/DATA_MODEL.md) — TEI-Encoding-Muster, bilinguale Architektur.
-- [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md) — Nachlass-Ontologie (SZDO).
-- [knowledge/ARCHITECTURE.md](knowledge/ARCHITECTURE.md) — Systemarchitektur, Datenfluss.
-- [knowledge/README.md](knowledge/README.md) — Index aller Wissensdateien.
-
-## Konventionen
-
-- Knowledge-Dokumente in diesem Repo: **Englisch** (bestehende Konvention).
-  Commits/Journal/Mails: **Deutsch**. Code-Kommentare: **Englisch**, knapp.
-- TEI bilingual de/en; bestehende Schreibung von Normvokabular exakt spiegeln.
-- **Kein `git push`** — Push und GAMS-Ingest macht der Maintainer manuell.
+- Branch `master`. Vor größerer Arbeit wird `origin` abgeholt und abgeglichen.
+- Gestaget werden nur konkrete Pfade, nie `git add -A`, weil parallele Instanzen im selben Working Tree arbeiten.
+- Commits entstehen nach jeder abgeschlossenen, geprüften Einheit. Gepusht wird nur auf ausdrückliches Go des Operators.
+- Der Staging-Ingest läuft über ein Paket von `scripts/staging_package/build_staging_package.py --out <Ordner außerhalb des Repositories>`. Der Operator spielt es mit Cirilo in der Ordnerreihenfolge ein, Indizes vor Beständen vor Konvoluten.
+- Die Verweise `STYLESHEET` und `TORDF` zeigen auf den gamsdev-Spiegel und enden unmittelbar mit `.xsl`. Ein Zeichen danach macht den Verweis unbrauchbar.
+- Cirilo-Einstellungen setzt der Operator. Agenten lesen Datenströme nur über die Datenstrom-URLs von Staging und Produktion, nacheinander und mit Pause.
+- Der Ingest auf die Produktivinstanz ist eine Publikation und folgt erst der Freigabe durch das Archiv.

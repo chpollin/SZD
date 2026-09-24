@@ -1,17 +1,17 @@
 ---
-title: Data Model - Stefan Zweig Digital
+title: Data Model
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 
-# Data Model - Stefan Zweig Digital
+# Data Model
 
 The TEI P5 encoding patterns that all SZD files share, covering the header, the bilingual encoding, authority references, identifiers and dates. The collection-specific structures, with entry examples taken from the data, are in [COLLECTIONS.md](COLLECTIONS.md), the formal ontology in [ONTOLOGY.md](ONTOLOGY.md).
 
@@ -62,7 +62,7 @@ The spelling of the GND prefix is not uniform across the files. Headers carry `d
 
 - Object PIDs follow `o:szd.<name>` for collections and indices (`o:szd.werke`, `o:szd.personen`), `o:szd.korrespondenzen.<person>` for konvolut objects and `o:szd.<number>` for facsimile objects. The full list is the overview table in [COLLECTIONS.md](COLLECTIONS.md#collection-overview).
 - Entries carry `xml:id` values after the pattern `{COLLECTION_CODE}.{NUMBER}` (`SZDKOR.1`, `SZDPER.1`, `SZDBIO.1`), letters in konvolut objects `SZDKOR.<person>.<n>` (`SZDKOR.altmann-hannah.1`).
-- Index identifiers are part of the RDF URIs and are never renumbered. A new entry receives the next free number.
+- Index identifiers are part of the RDF URIs and are never renumbered. A new entry receives the next free number, and the identifier of a removed or merged entry is never assigned again. Removed persons are kept in `scripts/checkup_2026_09_index/removed_persons.xml`, superseded persons that became corporate bodies stay visible as `idno[@type="SZDPER"][@subtype="superseded"]` in the organisation index.
 
 ## Date Encoding
 
@@ -101,8 +101,8 @@ The repository holds no TEI schema or ODD. The processing scripts check well-for
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md) — collection-specific encoding and rendering contracts
-- [MAPPING.md](MAPPING.md) — TEI-CSV schema for correspondence
-- [DATA.md](DATA.md) — data gaps
-- [ARCHITECTURE.md](ARCHITECTURE.md) — system integration and data flow
-- [ONTOLOGY.md](ONTOLOGY.md) — the formal ontology SZDO
+- [COLLECTIONS.md](COLLECTIONS.md), collection-specific encoding and rendering contracts
+- [MAPPING.md](MAPPING.md), TEI-CSV schema for correspondence
+- [DATA.md](DATA.md), data gaps
+- [ARCHITECTURE.md](ARCHITECTURE.md), system integration and data flow
+- [ONTOLOGY.md](ONTOLOGY.md), the formal ontology SZDO

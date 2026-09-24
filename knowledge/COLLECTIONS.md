@@ -1,17 +1,17 @@
 ---
-title: Collections - Stefan Zweig Digital
+title: Collections
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 
-# Collections - Stefan Zweig Digital
+# Collections
 
 The collections and indices of Stefan Zweig Digital, their files and PIDs, their collection-specific TEI encoding and the rendering contracts the presentation layer imposes on them. Encoding patterns shared by all files are in [DATA_MODEL.md](DATA_MODEL.md), data gaps and checkup results in [DATA.md](DATA.md).
 
@@ -64,7 +64,7 @@ Works, Essays and Personal Documents are rendered as grouped lists and must foll
 Correspondence is modelled on two levels.
 
 1. The index `SZDKOR.xml` (`o:szd.korrespondenzen`) holds one aggregate `biblFull` per archival bundle, with the piece count in `measure[@type="correspondence"]` and two pointers in `msIdentifier/altIdentifier`, `idno[@type="konvolut"]` to the per-person konvolut object and `idno[@type="context"]` to the facsimile gallery anchor. A correspondent may have several index entries, one per archival bundle, and the signature distinguishes them.
-2. The konvolut objects `o:szd.korrespondenzen.<person>` in [data/Correspondence/konvolute/](../data/Correspondence/konvolute/) are one TEI document per correspondence partner with one `biblFull` per individual letter. Each letter carries its facsimile PID in `msIdentifier/altIdentifier/idno[@type="PID"]`, which `szd-Konvolut.xsl` turns into a Mirador link, and a `correspDesc` with sender, recipient, date and place.
+2. The konvolut objects `o:szd.korrespondenzen.<person>` in [data/Correspondence/konvolute/](../data/Correspondence/konvolute/) are one TEI document per correspondence partner with one `biblFull` per individual letter. Each letter carries its facsimile PID in `msIdentifier/altIdentifier/idno[@type="PID"]`, which `szd-Konvolut.xsl` turns into a Mirador link, and a `correspDesc` with sender, recipient, date and place. Since 24 September 2026 the folder holds every Konvolut that GAMS production publishes, imported with [scripts/konvolute_import/](../scripts/konvolute_import/README.md). The repository copy is the edited one and can be ahead of production.
 
 An index entry as it stands in the data:
 
@@ -162,6 +162,8 @@ Two deviations are editorial and stay. Entries addressed to Lotte Altmann before
 
 The GND sits in `persName/@ref`, the Wikipedia article in `person/@corresp`, the Wikidata entity in `idno[@type="wikidata"]`. Corporate bodies are held in the organisation index.
 
+On 24 September 2026 the persons that no holding, index, theme page or stylesheet references and that no text of the holdings names were removed from the index after a deterministic check, described in [DATA.md](DATA.md#dead-references-and-unlinked-correspondence-partners). The removed entries are kept unchanged in `scripts/checkup_2026_09_index/removed_persons.xml`, and their identifiers are never assigned again.
+
 Holdings reference a person either by `ref="#SZDPER.<n>"` or by the GND of the index entry. `GetPersonlist` in `szd-TORDF.xsl` resolves both forms against the index, and only a reference it resolves makes the object findable in the person search. The reading rules that follow from the mapping are documented with [scripts/personen_ohne_verweis/](../scripts/personen_ohne_verweis/README.md), the normalisation of the reference form with [scripts/checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md).
 
 ## Organisation Index (SZDORG)
@@ -180,6 +182,8 @@ Holdings reference a person either by `ref="#SZDPER.<n>"` or by the GND of the i
 - `idno type="SZDSTA"` is a live cross-reference to the location index where the body is also a repository.
 - `idno type="SZDPER" subtype="superseded"` names a person index entry the migration removed. The identifier no longer exists in the person index, and `szd-TORDF.xsl` emits it as `dcterms:replaces`, so old references to the person resource lead to the body.
 - Where two person entries named the same body, both back-references stand in one entry and the second name as `orgName type="variant"`.
+
+Country and settlement of a repository come from the location index. For the other bodies `scripts/organisationen_index/reconcile_org_places.py` takes them from the GND record (`geographicAreaCode`, `placeOfBusiness`) and writes a value only where the record gives exactly one. Organisation and location index both name Great Britain „Großbritannien“.
 
 `o:szd.standorte` remains the curated view of the repositories. The location entries that hold material without naming a corporate body, the private-ownership entries and the heirs, stay out of the organisation index, and references to them keep pointing to `o:szd.standorte`.
 
@@ -264,12 +268,12 @@ The GAMS method `sdef:IIIF/getManifest` copies the `<div type="…">` labels of 
 
 ## Licensing and Access
 
-All collections are published under CC BY 4.0, stated in each TEI header's `availability` element. They are accessible at https://stefanzweig.digital/, through the GAMS context https://gams.uni-graz.at/context:szd and per object at `https://gams.uni-graz.at/{PID}`. Long-term preservation copies are on Zenodo, https://zenodo.org/records/17421555.
+Each TEI header states CC BY 4.0 in its `availability` element, while the [README](../README.md#licence) reserves the rights of the archival research data to the archive. Which statement applies is an open question in the [plan](plan.md#operator-questions). They are accessible at https://stefanzweig.digital/, through the GAMS context https://gams.uni-graz.at/context:szd and per object at `https://gams.uni-graz.at/{PID}`. Long-term preservation copies are on Zenodo, https://zenodo.org/records/17421555.
 
 ## Related
 
-- [DATA_MODEL.md](DATA_MODEL.md) — encoding patterns shared by all files
-- [DATA.md](DATA.md) — data gaps and checkup results
-- [MAPPING.md](MAPPING.md) — TEI-CSV schema for correspondence
-- [ONTOLOGY.md](ONTOLOGY.md) — mapping of the collections to SZDO classes (section 7)
-- [ARCHITECTURE.md](ARCHITECTURE.md) — system integration
+- [DATA_MODEL.md](DATA_MODEL.md), encoding patterns shared by all files
+- [DATA.md](DATA.md), data gaps and checkup results
+- [MAPPING.md](MAPPING.md), TEI-CSV schema for correspondence
+- [ONTOLOGY.md](ONTOLOGY.md), mapping of the collections to SZDO classes
+- [ARCHITECTURE.md](ARCHITECTURE.md), system integration and ingest

@@ -14,7 +14,7 @@ Digital humanities project for the complete digitization and online availability
 The [data/](data/) directory contains the TEI-XML sources of the catalogue.
 
 - Works (SZDMSK), manuscripts, typescripts, notebooks and proofs
-- Correspondence (SZDKOR), the correspondence index with the per-person konvolut objects in `data/Correspondence/konvolute/`
+- Correspondence (SZDKOR), the correspondence index with every per-person Konvolut of GAMS production in `data/Correspondence/konvolute/`
 - Autographs (SZDAUT), Zweig's collection of autographs by other hands
 - Library (SZDBIB), the reconstructed private library
 - Essays (SZDESS), the essay filing (Aufsatzablage)
@@ -35,7 +35,7 @@ The [szd-zenodo-backup/](szd-zenodo-backup/) directory holds the archival pipeli
 
 ### Scripts
 
-The [scripts/](scripts/) directory contains the data processing, repair and reconciliation scripts, each with its own README. The index is in [knowledge/README.md](knowledge/README.md#scripts).
+The [scripts/](scripts/) directory contains the data processing, repair, import and reconciliation scripts, each folder with its own README, and the generator of the staging ingest package. The overview is in [knowledge/INDEX.md](knowledge/INDEX.md#scripts). `python -m pytest -q scripts` runs their tests.
 
 ### Estate ontology (SZDO)
 
@@ -59,7 +59,7 @@ The [docs/](docs/) directory serves the documentation site at https://chpollin.g
 
 ### Knowledge Base
 
-The [knowledge/](knowledge/) directory holds the project knowledge, covering collections and encoding, data gaps and checkup results, architecture, the ontology design and the work journal. [knowledge/README.md](knowledge/README.md) is the index.
+The [knowledge/](knowledge/) directory holds the project knowledge, covering collections and encoding, data gaps and checkup results, architecture and ingest, the ontology design, the plan of open work and the work journal. [knowledge/INDEX.md](knowledge/INDEX.md) is the entry point.
 
 ---
 

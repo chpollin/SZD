@@ -1,17 +1,17 @@
 ---
-title: Architecture - Stefan Zweig Digital
+title: Architecture
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 
-# Architecture - Stefan Zweig Digital
+# Architecture
 
 Stefan Zweig Digital is published on GAMS (Geisteswissenschaftliches Asset Management System) at the University of Graz. Its sources and presentation are split across two Git repositories, with Zenodo for long-term preservation and GitHub Pages for the ontology and project documentation.
 
@@ -22,7 +22,7 @@ Stefan Zweig Digital is published on GAMS (Geisteswissenschaftliches Asset Manag
 | `chpollin/SZD` (this repository) | Curated TEI sources in `data/`, the Nachlass-Ontologie in `ontology/`, the scripts that turn partner deliveries into TEI and repair the catalogue data, the GitHub Pages site in `docs/`, the Zenodo pipeline in `szd-zenodo-backup/` |
 | `ZIMLAB/szd` (gams-www) | Presentation layer, meaning the XSLT, JavaScript, CSS and SPARQL query templates that GAMS applies, including the RDF transformation `szd-TORDF.xsl` |
 
-The repositories do not see each other automatically. Their cross-references stand in both `CLAUDE.md` files. Push and GAMS ingest are done manually by the maintainer.
+The repositories do not see each other automatically. Their cross-references stand in both `CLAUDE.md` files. The operator pushes and ingests. Scripts that must read the presentation layer, such as `scripts/checkup_2026_09_index/verify_orphan_persons.py`, expect its checkout at `ZIMLAB/szd` beside this repository.
 
 ```
 TEI in chpollin/SZD
@@ -34,9 +34,10 @@ TEI in chpollin/SZD
 
 ## Publication Workflow
 
-1. TEI files are edited in `data/`. Repairs run as scripts with a dry run, an `--apply` step and a `--verify` step that checks the written state against `HEAD`.
-2. The maintainer ingests the changed objects with Cirilo, first on GAMS staging and then on the productive instance. At ingest, GAMS derives the RDF with the `TORDF` stylesheet the object points to, so the indices `o:szd.personen` and `o:szd.organisation` go in before the holdings that reference them.
-3. The gams-www XSLT renders the TEI to HTML. Search pages run SPARQL query objects against Blazegraph and render the XML result sets.
+1. TEI files are edited in `data/`. Repairs run as scripts with a dry run, an `--apply` step and a `--verify` step that checks the written state against `HEAD`. Every correspondence Konvolut of production is in the repository since 24 September 2026, so Konvolut corrections happen here too.
+2. `scripts/staging_package/build_staging_package.py --out <folder>` copies the files to ingest into a package outside the repository, in three folders for indexes, holdings and Konvolute, with checksums and a README. The README lists per object the `STYLESHEET` and `TORDF` references it still needs, read live from the datastream redirects of staging. Both references point to the gamsdev mirror of the presentation layer, and a character after `.xsl` makes a reference unusable. A Konvolut whose file does not name its own PID stays out, because Cirilo takes the PID of a new object from the file.
+3. The operator ingests the package with Cirilo in folder order, first on GAMS staging and, after approval by the archive, on the productive instance. At ingest, GAMS derives the RDF with the `TORDF` stylesheet the object points to, so the indexes go in before the holdings that reference them.
+4. The gams-www XSLT renders the TEI to HTML. Search pages run SPARQL query objects against Blazegraph and render the XML result sets.
 
 Facsimiles are separate `cm:dfgMETS` book objects (`o:szd.<number>`) whose IIIF manifests feed the Mirador viewer. Catalogue entries link them through `altIdentifier/idno[@type="PID"]`, see [COLLECTIONS.md](COLLECTIONS.md#rendering-contract-grouped-lists).
 
@@ -63,7 +64,8 @@ The design is aligned to the Stefan Zweig Digital GAMS site as one visual family
 
 ## Related
 
-- [DATA_MODEL.md](DATA_MODEL.md) — encoding patterns and authority references
-- [COLLECTIONS.md](COLLECTIONS.md) — collections and rendering contracts
-- [ONTOLOGY.md](ONTOLOGY.md) — the formal ontology and its documentation site
-- [PROJECT.md](PROJECT.md) — project context and standards
+- [DATA_MODEL.md](DATA_MODEL.md), encoding patterns and authority references
+- [COLLECTIONS.md](COLLECTIONS.md), collections and rendering contracts
+- [ONTOLOGY.md](ONTOLOGY.md), the formal ontology and its documentation site
+- [PROJECT.md](PROJECT.md), project context and standards
+- [plan](plan.md), the pending staging and production ingest

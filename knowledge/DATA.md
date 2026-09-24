@@ -1,21 +1,21 @@
 ---
 title: TEI-XML Data Overview
 project:
-  name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  name: Stefan Zweig Digital, data repository
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-23
+updated: 2026-09-24
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
 
 # TEI-XML Data Overview
 
-Coverage of the TEI sources, their documented data gaps and the results of the archive checkups of September 2026. Files, PIDs and encoding of the collections are in [COLLECTIONS.md](COLLECTIONS.md).
+Coverage of the TEI sources, their documented data gaps and the results of the archive checkups of September 2026. Files, PIDs and encoding of the collections are in [COLLECTIONS.md](COLLECTIONS.md), the open corrections and decisions in the [plan](plan.md).
 
 ## Counting conventions
 
@@ -43,7 +43,7 @@ A correspondence partner can have several signatures, for instance a bundle and 
 
 ### Century error in two-digit years
 
-For the picture postcards of the signature group `SZ-SAM/AK` in the konvolut objects, an earlier import expanded the two-digit year of the source (`20. 2. 21`) into the 2000s and set `when="2021-02-20"` instead of `1921-02-20`. The display text of the `date` element and, where present, the date in the former title carry the right value. Where the title proved the year, `@when` has been corrected from it ([scripts/korrespondenz_titel/](../scripts/korrespondenz_titel/README.md)). Where the title carried no date, the error stands and needs an editorial decision. A `@when` after 1942 on a piece with Zweig as sender or recipient is impossible and serves as the search criterion, while the family correspondence of the konvolute reaches beyond 1942.
+For the picture postcards of the signature group `SZ-SAM/AK` in the konvolut objects, an earlier import expanded the two-digit year of the source (`20. 2. 21`) into the 2000s and set `when="2021-02-20"` instead of `1921-02-20`. The display text of the `date` element and, where present, the date in the former title carry the right value. Where the title proved the year, `@when` has been corrected from it ([scripts/korrespondenz_titel/](../scripts/korrespondenz_titel/README.md)). Where the title carried no date, the error stands and needs an editorial decision. A `@when` after 1942 on a piece with Zweig as sender or recipient is impossible and serves as the search criterion, while the family correspondence of the konvolute reaches beyond 1942. Since the import of all production Konvolute on 24 September 2026 the criterion also finds entries outside `SZ-SAM/AK`, listed in the [plan](plan.md#konvolute).
 
 Related but independent, single entries carry a `date` without `@when`, one with a different granularity between the German and the English version, and some `correspAction` elements name no person. These cases are in the residual list of the title script and are not changed automatically.
 
@@ -90,9 +90,10 @@ Corrected in the working tree, each with a script that logs every change and ver
 - counter-roles and konvolut pointers in the correspondence index,
 - the essay author references, the reference form across all holdings and the duplicate person entries ([scripts/checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md)),
 - the facsimile PIDs of the Works and Aufsatzablage entries the archive reported,
-- further prepared IIIF label repairs ([scripts/iiif_structure_labels/](../scripts/iiif_structure_labels/README.md)).
+- further prepared IIIF label repairs ([scripts/iiif_structure_labels/](../scripts/iiif_structure_labels/README.md)),
+- the evidenced defects of the Konvolut files, once all of them were in the repository ([scripts/checkup_2026_09_konvolute/](../scripts/checkup_2026_09_konvolute/README.md)).
 
-The corporate bodies left the person index for the organisation index ([COLLECTIONS.md](COLLECTIONS.md#organisation-index-szdorg)). The presentation-layer causes were fixed in `ZIMLAB/szd` (frontend commit `8ec067b` and later). None of the data corrections reaches production before the affected index objects, the konvolut files and the prepared book sources are re-ingested. The staging state is recorded in the [journal](journal.md).
+The corporate bodies left the person index for the organisation index ([COLLECTIONS.md](COLLECTIONS.md#organisation-index-szdorg)). The presentation-layer causes were fixed in `ZIMLAB/szd` (frontend commit `8ec067b` and later). None of the data corrections reaches production before the affected index objects, the konvolut files and the prepared book sources are re-ingested. The ingest steps are in the [plan](plan.md#staging-ingest).
 
 ### Colour-coded person index list
 
@@ -110,21 +111,11 @@ A `persName` without reference is linked only where forename and surname equal a
 
 [find_unlinked_persons.py](../scripts/checkup_2026_09_index/README.md#find_unlinked_personspy) lists the index persons the person search cannot find and the places in the holdings where they are named without a link. Its output is an archive-internal review list outside the repository.
 
-### Open
-
-Not decidable from data or code:
-
-- The editorial rulings on whether an index entry counts an archival bundle or a correspondence relationship, on the meaning of bracketed title dates, on one notation for unidentified senders, on the Aufsatzablage classification vocabulary and on the person markup convention for Themen pages.
-- The archive questions on missing scans, on dates the originals must supply, and on whether the index entry for Neumann means the writer or the architect of that name.
-- The operator decisions on the colour-coded list, namely the entries "Filed as …", "Unidentified signatures" and "Zweig Family", the names marked bold, and whether the unlinked names the archive wants removed leave the person index. Also with the operator are divergent forenames between holdings and index, persons named only in titles and running text, and entries whose envelope already points to another index entry.
-- `SZDPER.1026` (Neydisser) has been a name variant of `SZDPER.818` (Lernet-Holenia) since April 2025 (commit `a108c6f3`), while the library still names the pseudonym's own GND. `SZDPER.1304` never existed, and the body it means has no entry in the organisation index.
-- Correspondence partners whose GND in `SZDKOR.xml` is missing from their index entry, and further person references in `SZDKOR.xml` that carry `gnd/placeholder`.
-- The missing coordinates of the locations. `SZDSTA.xml` has had no `geo` elements since the data update of June 2021 (commit `1ed133c2`), so the location RDF carries none.
-- The Klawiter reconciliation. `ontology/reconciliation.ttl` links Klawiter entries to works by exact, normalised and fuzzy title matching with a percentage confidence, not by authority numbers.
-- Wikidata identifiers. Many persons with a GND lack one, and no corporate body carries one. A reconciliation over the GND is planned, see the [journal](journal.md).
+A person without any reference and without any text hit is certainly unreferenced when, in addition, its identifier occurs nowhere else in the data and the presentation layer, none of its GND numbers occurs outside its own entry, and the person search of production and staging finds nothing (`verify_orphan_persons.py`). On 24 September 2026 `remove_orphan_persons.py` removed the persons that pass all these checks. They are kept unchanged in `scripts/checkup_2026_09_index/removed_persons.xml`, outside `data/` so that no later scan counts them as references, and their identifiers are never assigned again.
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md) — files, PIDs, encoding and rendering contracts
-- [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md) — derived timeline data, its coverage and delivery
-- [journal.md](journal.md) — work sessions, ingest state and decisions
+- [COLLECTIONS.md](COLLECTIONS.md), files, PIDs, encoding and rendering contracts
+- [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md), derived timeline data, its coverage and delivery
+- [plan](plan.md), open corrections, ingest steps and decisions
+- [journal](journal.md), work sessions and decisions
