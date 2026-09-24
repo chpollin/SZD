@@ -40,10 +40,11 @@ MIRROR = STAGING + "/gamsdev/pollin/szd/gams-www/"
 PAUSE = 0.2
 
 # (group, PID, repository file, page stylesheet); every object gets szd-TORDF.xsl
+# the three include wrappers render through szd-Index.xsl and are what Cirilo references today
 INDEXES = [
-    ("o:szd.organisation", "Index/Organisation/SZDORG.xml", "szd-Index.xsl"),
-    ("o:szd.personen", "Index/Person/SZDPER.xml", "szd-Index.xsl"),
-    ("o:szd.standorte", "Index/Location/SZDSTA.xml", "szd-Index.xsl"),
+    ("o:szd.organisation", "Index/Organisation/SZDORG.xml", "szd-Organisationen.xsl"),
+    ("o:szd.personen", "Index/Person/SZDPER.xml", "szd-Personenliste.xsl"),
+    ("o:szd.standorte", "Index/Location/SZDSTA.xml", "szd-Standortliste.xsl"),
     ("o:szd.werkindex", "Index/Werke/SZDWRK.xml", "szd-Index.xsl"),
 ]
 HOLDINGS = [
@@ -110,14 +111,17 @@ def main() -> None:
     ]
 
     if args.out.exists():
-        # only a folder this script wrote before is replaced, never an arbitrary directory
+        # only a folder this script wrote before is refreshed, and only its own parts: Cirilo writes
+        # ingest.log into the folder it ingests from, and a rebuild during an ingest must not touch that
         if not (args.out / "SHA256SUMS").exists():
             raise SystemExit(f"{args.out} exists and is not a package built by this script")
-        shutil.rmtree(args.out)
+        for _, folder, _ in groups:
+            if (args.out / folder).exists():
+                shutil.rmtree(args.out / folder)
     sums, table = [], []
     for title, folder, items in groups:
         target = args.out / folder
-        target.mkdir(parents=True)
+        target.mkdir(parents=True, exist_ok=True)
         for pid, source, stylesheet in items:
             shutil.copy2(source, target / source.name)
             sums.append(f"{hashlib.sha256(source.read_bytes()).hexdigest()}  {folder}/{source.name}")
