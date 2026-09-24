@@ -135,7 +135,8 @@ def main() -> None:
             print(pid, row["status"], ",".join(row["todo"]))
 
     revision = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
-    (args.out / "SHA256SUMS").write_text("\n".join(sums) + "\n", encoding="utf-8")
+    # sha256sum -c reads LF only, and Windows would otherwise write CRLF
+    (args.out / "SHA256SUMS").write_text("\n".join(sums) + "\n", encoding="utf-8", newline="\n")
     lines = [
         f"# Staging ingest package, data repository `{revision}`",
         "",
