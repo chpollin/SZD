@@ -95,9 +95,13 @@
         </org>
         <org xml:id="SZDORG.2">
           <orgName ref="http://d-nb.info/gnd/2131189-4">American Guild for German Cultural Freedom</orgName>
+          <country>USA</country>
+          <settlement>New York, NY</settlement>
         </org>
         <org xml:id="SZDORG.3">
           <orgName ref="http://d-nb.info/gnd/1072986299">Antiquariat Leo Liepmannssohn, Berlin</orgName>
+          <country>Deutschland</country>
+          <settlement>Berlin</settlement>
         </org>
         <org xml:id="SZDORG.4">
           <orgName ref="http://d-nb.info/gnd/1086817966">Authors Guild</orgName>
@@ -112,6 +116,8 @@
         </org>
         <org xml:id="SZDORG.6">
           <orgName ref="http://d-nb.info/gnd/2134286-6">BDO Binder Hamlyn (London)</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
           <idno type="SZDPER" subtype="superseded">SZDPER.2327</idno>
         </org>
         <org corresp="http://www.beethoven-haus-bonn.de" xml:id="SZDORG.7">
@@ -123,6 +129,8 @@
         </org>
         <org xml:id="SZDORG.8">
           <orgName ref="http://d-nb.info/gnd/112881-4">Bennington College</orgName>
+          <country>USA</country>
+          <settlement>Bennington, Vt.</settlement>
         </org>
         <org xml:id="SZDORG.9">
           <orgName>Biblioteca Central Municipal Gabriela Mistral</orgName>
@@ -139,6 +147,8 @@
         </org>
         <org xml:id="SZDORG.11">
           <orgName ref="http://d-nb.info/gnd/5156217-0">Bibliothèque Nationale, Paris</orgName>
+          <country>Frankreich</country>
+          <settlement>Paris</settlement>
         </org>
         <org xml:id="SZDORG.67">
           <orgName>Britain in Pictures</orgName>
@@ -146,12 +156,17 @@
         </org>
         <org xml:id="SZDORG.12">
           <orgName ref="http://d-nb.info/gnd/815085-0">Canadian Authors’ Association, Toronto</orgName>
+          <country>Kanada</country>
+          <settlement>Campbellford (Ontario)</settlement>
         </org>
         <org xml:id="SZDORG.13">
           <orgName ref="http://d-nb.info/gnd/251858-2">Cassell and Company Ltd.</orgName>
+          <country>England</country>
+          <settlement>London</settlement>
         </org>
         <org xml:id="SZDORG.14">
           <orgName ref="http://d-nb.info/gnd/1220936316">Das Tagebuch</orgName>
+          <country>Deutschland</country>
         </org>
         <org corresp="https://lionheartautographs.com/about-us/about/" xml:id="SZDORG.15">
           <orgName ref="http://d-nb.info/gnd/38379-X">David H. Lowenherz</orgName>
@@ -182,9 +197,13 @@
         </org>
         <org xml:id="SZDORG.19">
           <orgName ref="http://d-nb.info/gnd/1073075974">E. P. Tal &amp; Co.</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
         </org>
         <org xml:id="SZDORG.20">
           <orgName ref="http://d-nb.info/gnd/1056582-6">Erste Donau-Dampfschiffahrts-Gesellschaft</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
         </org>
         <org corresp="http://fondationbodmer.ch/en/" xml:id="SZDORG.21">
           <orgName ref="http://d-nb.info/gnd/1019332-7">Fondation Martin Bodmer</orgName>
@@ -204,6 +223,7 @@
         <org xml:id="SZDORG.23">
           <orgName ref="http://d-nb.info/gnd/35565-3">Großbritannien. Home Office</orgName>
           <orgName type="variant">Home Office, Whitehall</orgName>
+          <country>Großbritannien</country>
           <idno type="SZDPER" subtype="superseded">SZDPER.2326</idno>
           <idno type="SZDPER" subtype="superseded">SZDPER.1735</idno>
         </org>
@@ -212,6 +232,8 @@
         </org>
         <org xml:id="SZDORG.25">
           <orgName ref="http://d-nb.info/gnd/43217-9">Insel-Verlag</orgName>
+          <country>Deutschland</country>
+          <settlement>Leipzig</settlement>
         </org>
         <org corresp="http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/" xml:id="SZDORG.26">
           <orgName ref="http://d-nb.info/gnd/40303-9">Institut et Musée Voltaire</orgName>
@@ -229,6 +251,7 @@
         </org>
         <org xml:id="SZDORG.28">
           <orgName ref="http://d-nb.info/gnd/10146266-9">Joint Broadcasting Committee, London</orgName>
+          <country>Großbritannien</country>
           <idno type="SZDPER" subtype="superseded">SZDPER.1659</idno>
         </org>
         <org xml:id="SZDORG.29">
@@ -256,15 +279,21 @@
         </org>
         <org xml:id="SZDORG.33">
           <orgName ref="http://d-nb.info/gnd/10290848-5">Metro-Goldwin-Mayer Pictures</orgName>
+          <country>USA</country>
         </org>
         <org xml:id="SZDORG.34">
           <orgName ref="http://d-nb.info/gnd/142661-8">Meulenhoff en Co.</orgName>
+          <country>Niederlande</country>
+          <settlement>Amsterdam</settlement>
         </org>
         <org xml:id="SZDORG.35">
           <orgName ref="http://d-nb.info/gnd/5130410-7">Ministry of Information, London</orgName>
+          <country>Großbritannien</country>
         </org>
         <org xml:id="SZDORG.36">
           <orgName ref="http://d-nb.info/gnd/2020891-1">Österreichische Galerie Wien</orgName>
+          <country>Österreich</country>
+          <settlement>Wien</settlement>
           <idno type="SZDPER" subtype="superseded">SZDPER.1626</idno>
         </org>
         <org corresp="https://www.onb.ac.at/" xml:id="SZDORG.37">
@@ -275,10 +304,12 @@
         </org>
         <org xml:id="SZDORG.38">
           <orgName ref="http://d-nb.info/gnd/146456-5">Österreichischer Frauen-Not-Dienst</orgName>
+          <country>Österreich</country>
           <idno type="SZDPER" subtype="superseded">SZDPER.1056</idno>
         </org>
         <org xml:id="SZDORG.39">
           <orgName ref="http://d-nb.info/gnd/1008405-8">Österreichisches Bundesministerium für Unterricht</orgName>
+          <country>Österreich</country>
         </org>
         <org corresp="https://fredonia.libguides.com/archives/zweig" xml:id="SZDORG.40">
           <orgName ref="http://d-nb.info/gnd/2156743-8">Reed Library – Stefan Zweig Collection</orgName>
@@ -289,9 +320,12 @@
         </org>
         <org xml:id="SZDORG.41">
           <orgName ref="http://d-nb.info/gnd/2021755-9">Schweizerisches Vereinssortiment Olten</orgName>
+          <country>Schweiz</country>
+          <settlement>Olten</settlement>
         </org>
         <org xml:id="SZDORG.42">
           <orgName ref="http://d-nb.info/gnd/5158511-X">Societe des Auteurs &amp; Compositeurs Dramatiques</orgName>
+          <country>Frankreich</country>
         </org>
         <org xml:id="SZDORG.43">
           <orgName ref="http://d-nb.info/gnd/1090480520">Société Nouvelle de l’Encyclopédie Française</orgName>
@@ -334,6 +368,8 @@
         </org>
         <org xml:id="SZDORG.50">
           <orgName ref="http://d-nb.info/gnd/5213357-6">The H. W. Wilson Company</orgName>
+          <country>USA</country>
+          <settlement>New York, NY</settlement>
         </org>
         <org xml:id="SZDORG.51">
           <orgName>The Jew’s Temporary Shelter</orgName>
@@ -355,6 +391,7 @@
         </org>
         <org xml:id="SZDORG.54">
           <orgName ref="http://d-nb.info/gnd/4185027-0">The Sunday Times</orgName>
+          <country>Großbritannien</country>
           <idno type="SZDPER" subtype="superseded">SZDPER.1975</idno>
         </org>
         <org corresp="https://www.theatermuseum.at/" xml:id="SZDORG.55">
@@ -397,16 +434,21 @@
         </org>
         <org xml:id="SZDORG.61">
           <orgName ref="http://d-nb.info/gnd/10102943-3">Viking Press</orgName>
+          <country>USA</country>
+          <settlement>New York, NY</settlement>
           <idno type="SZDPER" subtype="superseded">SZDPER.2324</idno>
         </org>
         <org xml:id="SZDORG.62">
           <orgName ref="http://d-nb.info/gnd/275785-0">Vita-Lebensversicherungs-Aktiengesellschaft (Zürich)</orgName>
           <orgName type="variant">"Vita"-Lebensversicherungs-Aktiengesellschaft</orgName>
+          <country>Schweiz</country>
+          <settlement>Zürich</settlement>
           <idno type="SZDPER" subtype="superseded">SZDPER.2328</idno>
         </org>
         <org xml:id="SZDORG.63">
           <orgName ref="http://d-nb.info/gnd/37689-9">Westminster Bank</orgName>
           <orgName type="variant">Westminster Bank Limited</orgName>
+          <country>Großbritannien</country>
           <idno type="SZDPER" subtype="superseded">SZDPER.2325</idno>
         </org>
         <org corresp="https://www.wienbibliothek.at/" xml:id="SZDORG.64">

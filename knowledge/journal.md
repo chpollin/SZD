@@ -4,6 +4,33 @@ Arbeitstagebuch des Datenrepos, ein kurzer Eintrag je substanzieller Session, j�
 zuerst. Festgehalten wird, was sich geändert hat, was entschieden wurde und was offen
 bleibt. Dauerhafte Befunde stehen in den Wissensdokumenten, hier steht der Weg dorthin.
 
+## 2026-09-24 — Land und Ort im Organisationenindex aus der GND ergänzt
+
+Geändert. `scripts/reconcile_org_places.py` ergänzt in `SZDORG.xml` `<country>` und
+`<settlement>` aus dem GND-Datensatz jeder Körperschaft, `placeOfBusiness` für den Ort,
+`geographicAreaCode` für das Land, nie geschätzt und nie über eine Stufe hinweg
+kombiniert. 42 Werte wurden ergänzt, bei 16 der 32 seit der Migration aus dem
+Personenindex unvollständigen Einträge beide Felder, bei 10 weiteren nur das Land, weil
+der GND-Datensatz keinen Ort führt. Für den GND-Code `XA-GB` folgt das Skript der im
+Bestand schon angelegten Trennung, „England" wenn eine Stadt bekannt ist, sonst
+„Großbritannien" (SZDORG.32/49 gegen SZDSTA.15), eine aus dem Bestand abgeleitete
+Setzung, keine GND-eigene. Fünf Einträge liefern im GND-Datensatz keinen geografischen
+Code, drei haben keinen GND-Verweis überhaupt, und bei Herbert Reichner Verlag
+(SZDORG.24) bleiben Land und Ort offen, weil der Datensatz Wien, Zürich und Leipzig
+gleichrangig führt. Das Log `scripts/organisationen_index/reconcile_places_log.csv`
+hält nur tatsächlich geschriebene Werte fest, dazu `scripts/test_reconcile_org_places.py`.
+
+Geprüft. Der bekannte Widerspruch bei SZDORG.15 (David H. Lowenherz, GND zeigt auf
+London, der Bestand trägt USA/New York) besteht unverändert und wurde nicht
+überschrieben, kein weiterer Widerspruch zwischen Bestand und GND fand sich unter den
+Einträgen, die schon Land und Ort trugen. Wohlgeformtheit, unveränderte Zahl der
+`<org>`-Einträge, ein rein additiver Diff und ein zweiter, folgenloser Lauf des Skripts
+sind geprüft, ebenso `pytest scripts/test_reconcile_org_places.py` und `ruff check`.
+
+Offen. Der Organisationenindex muss nach der Änderung erneut ingestiert werden. 16
+Einträge bleiben ohne Ort, sechs davon ganz ohne Land oder Ort, weil ihr GND-Datensatz
+dazu nichts hergibt oder mehrdeutig bleibt.
+
 ## 2026-09-23 — Prüfliste unverknüpfter Personen, Stagingpaket, Wissensdokumente
 
 Geändert. `scripts/checkup_2026_09_index/find_unlinked_persons.py` (`10728679`) listet die
