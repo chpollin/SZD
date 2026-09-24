@@ -71,6 +71,12 @@ DEFAULT_DOCS_DIR = REPO_ROOT / "docs" / "lebenskalender" / "lanes"
 TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
 
+# The estate's home archive. Only a bundle held elsewhere states its repository, because
+# the view presents the holdings of Salzburg by default. The name is matched besides the GND,
+# because some Konvolut files carry a wrong GND on this repository.
+HOME_REPOSITORY_GND = "1047605287"
+HOME_REPOSITORY_NAME = "Literaturarchiv Salzburg"
+
 # Titles that organise the grouped lists instead of naming the single item.
 STRUCTURAL_TITLE_TYPES = frozenset({"Einheitssachtitel", "Gesamttitel"})
 LANES = ("biography", "correspondence", "personal-documents", "autographs")
@@ -530,16 +536,35 @@ def build_correspondence(
     by_gnd: dict[str, str], names: dict[str, str], report: Report
 ) -> list[dict[str, object]]:
     """Keep both catalogue levels; shared archival signatures do not prove coverage."""
-    index_events = correspondence_from(SZDKOR, by_gnd, names, report)
+    paths = sorted(KONVOLUTE.glob("szd.korrespondenzen.*.xml"))
+    index_events = correspondence_from(SZDKOR, by_gnd, names, report, konvolut_pids(paths))
     konvolut_events: list[dict[str, object]] = []
-    for path in sorted(KONVOLUTE.glob("szd.korrespondenzen.*.xml")):
+    for path in paths:
         konvolut_events.extend(correspondence_from(path, by_gnd, names, report))
     return merge_on_facsimile(index_events + konvolut_events, report)
 
 
+def konvolut_pids(paths: list[Path]) -> frozenset[str]:
+    """PIDs of the Konvolut files present, taken from the file names.
+
+    The import names each file after its production PID, while the teiHeader of a few
+    defective production objects names another one, so the header is no guide here.
+    """
+    return frozenset(f"o:{path.stem}" for path in paths)
+
+
 def correspondence_from(
-    path: Path, by_gnd: dict[str, str], names: dict[str, str], report: Report
+    path: Path,
+    by_gnd: dict[str, str],
+    names: dict[str, str],
+    report: Report,
+    known_konvolute: frozenset[str] | None = None,
 ) -> list[dict[str, object]]:
+    """Events of one correspondence file.
+
+    known_konvolute is passed for the index only, whose bundle entries carry the link to
+    their Konvolut, the holding repository and the number of pieces.
+    """
     tree = parse(path)
     pid = object_pid(tree)
     events: list[dict[str, object]] = []
@@ -566,16 +591,61 @@ def correspondence_from(
             stated = holding_title(bibl_full)
             if stated["de"] or stated["en"]:
                 title = stated
-        events.append(
-            make_event(
-                entry_id, "correspondence", value, raw,
-                title,
-                persons, action_place(sent),
-                signature_of(bibl_full), entry_href(pid, entry_id),
-                facsimile_of(bibl_full),
-            )
+        event = make_event(
+            entry_id, "correspondence", value, raw,
+            title,
+            persons, action_place(sent),
+            signature_of(bibl_full), entry_href(pid, entry_id),
+            facsimile_of(bibl_full),
         )
+        if known_konvolute is not None:
+            event["konvolut"] = konvolut_href(bibl_full, known_konvolute, entry_id, report)
+            event["repository"] = foreign_repository(bibl_full)
+            event["extent"] = extent_of(bibl_full)
+        events.append(event)
     return events
+
+
+def konvolut_href(
+    bibl_full: ET.Element, known: frozenset[str], entry_id: str, report: Report
+) -> str | None:
+    """Detail page of the Konvolut an index entry names, if that object is in the repository.
+
+    A link to a Konvolut the repository lacks would lead to an object nobody can check here,
+    so it is reported instead of emitted.
+    """
+    for idno in bibl_full.iter(f"{TEI}idno"):
+        if idno.get("type") != "konvolut":
+            continue
+        pid = text_of(idno)
+        if pid in known:
+            return f"/{pid}/sdef:TEI/get"
+        report.note(f"SZDKOR.xml: {entry_id} names Konvolut {pid}, which is not in the repository")
+    return None
+
+
+def foreign_repository(bibl_full: ET.Element) -> dict[str, str] | None:
+    identifier = bibl_full.find(f".//{TEI}msIdentifier")
+    if identifier is None:
+        return None
+    repository = identifier.find(f"{TEI}repository")
+    name = text_of(repository)
+    if not name:
+        return None
+    assert repository is not None
+    if name == HOME_REPOSITORY_NAME or gnd_number(repository.get("ref")) == HOME_REPOSITORY_GND:
+        return None
+    return {"name": name, "settlement": text_of(identifier.find(f"{TEI}settlement"))}
+
+
+def extent_of(bibl_full: ET.Element) -> list[dict[str, object]] | None:
+    """Pieces per direction, a list because a bundle can hold letters sent and received."""
+    extent = [
+        {"count": int(text_of(measure)), "subtype": measure.get("subtype")}
+        for measure in bibl_full.iter(f"{TEI}measure")
+        if measure.get("type") == "correspondence" and text_of(measure).isdigit()
+    ]
+    return extent or None
 
 
 def piece_count(bibl_full: ET.Element) -> int:

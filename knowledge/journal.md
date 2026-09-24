@@ -15,6 +15,12 @@ updated: 2026-09-24
 
 Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
 
+## 2026-09-24, timeline lanes on the complete Konvolute
+
+Changed. `build_lanes.py` ran on the complete Konvolute, and the corpus tests pin the new state with values read from the run. Correspondence events from the index carry three new fields, `konvolut` with the detail page of the named Konvolut where its file exists, `repository` for bundles held outside the Literaturarchiv Salzburg and `extent` with the pieces per direction ([Lebenskalender-Lanes](Lebenskalender-Lanes.md#event-schema)). `extent` is a list, because some bundles carry a measure for letters sent and one for letters received. The lane files went to `docs/lebenskalender/lanes/` and to `ZIMLAB/szd/data/lebenskalender/`.
+
+Open. The conflicting facsimile groups, the two index entries whose Konvolut PID has no file and the Konvolut dates after 1950 are in the [plan](plan.md#timeline-lanes).
+
 ## 2026-09-24, complete Konvolute, person index clean-up, staging package
 
 Changed.

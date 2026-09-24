@@ -9,7 +9,7 @@ method:
 status: complete
 created: 2026-09-11
 updated: 2026-09-24
-version: 1.0.0
+version: 1.1.0
 tags: [data, lebenskalender, timeline, derived]
 ---
 
@@ -82,6 +82,18 @@ Detail page as a relative path, built from the object PID of the source file and
 
 PID of the METS object, where the entry carries one. The facsimile itself is at `https://stefanzweig.digital/<PID>`.
 
+`konvolut`
+
+Present only on correspondence events from the index. The detail page of the Konvolut the entry names in `msIdentifier/altIdentifier/idno[@type="konvolut"]`, as a relative path `/o:szd.korrespondenzen.<slug>/sdef:TEI/get`. It is set only where `data/Correspondence/konvolute/` holds a file of that PID, so the link never leads to an object the repository cannot check. A named Konvolut without such a file produces a run message. `href` keeps pointing to the entry on the index page.
+
+`repository`
+
+Present only on correspondence events from the index whose bundle is held outside the Literaturarchiv Salzburg. An object with `name` and `settlement`, taken from `msIdentifier/repository` and `msIdentifier/settlement` with normalised whitespace. The Literaturarchiv Salzburg is recognised by its GND number 1047605287 or by its name, because some Konvolut files carry a wrong GND on this repository. In the index the other holders are the Reed Library in Fredonia and the National Library of Israel in Jerusalem.
+
+`extent`
+
+Present only on correspondence events from the index. A list of objects with `count`, the number in `measure[@type="correspondence"]`, and `subtype`, its `@subtype` (`sent` or `received`). It is a list because a bundle can hold letters in both directions and then carries one measure for each.
+
 `dateOrigin`, `dateOriginPrecision`, `dateOriginEnd`, `dateOriginLabel`
 
 Additional data for autographs on the creation of the piece, with the same dating forms as the acquisition. Without a creation date, `dateOrigin`, `dateOriginPrecision` and `dateOriginLabel` are absent, as in the other lanes. `dateOriginEnd` is set only when an end value exists. The view shows the creation text in the metadata, while placement on the timeline and the year scale use the acquisition in `date`.
@@ -102,15 +114,17 @@ The autographs carry two dates, the creation of the autograph in `summary` and i
 
 ## Duplicates and Coverage of the Correspondence
 
-A letter to several recipients stands in the konvolut object of every correspondence partner involved. The facsimile PID is the identifier these copies share. The run merges such records when, in addition, their non-empty signature matches and their existing dates and places do not contradict each other. Missing dates or places may be supplied by another record of the same group. Contradictions produce separate events and a run message.
+A letter to several recipients stands in the konvolut object of every correspondence partner involved. The facsimile PID is the identifier these copies share. The run merges such records when, in addition, their non-empty signature matches and their existing dates and places do not contradict each other. Missing dates or places may be supplied by another record of the same group. Contradictions produce separate events and a run message. In the complete holdings such conflicts arise where the Konvolute of two partners give different places for the same letter, where a bundle-level record dates by year what the single record dates by day, and where one facsimile PID stands at records with different signatures.
 
 The main event takes the metadata of the record sorted first, and the persons of the other records join its person list. The optional field `sources` holds, for a merge, all original event objects including the main entry, with their own dates, titles, persons and permalinks. The contained objects carry no `sources` field of their own. Deviating source data and alternative detail pages thereby stay accessible. In the holdings of September 2026, some facsimile groups complete undated records with dated records carrying the place Salzburg.
 
 The correspondence index carries no facsimile PIDs and therefore takes no part in this merge. Its entries and the letters of the konvolute relate as bundle and piece. Archival signatures and their prefixes are shared by different correspondence partners, however, and prove no complete coverage of an index entry. The generator therefore keeps every index entry. Entries covering several pieces keep the bundle title of the source. The number of events mixes catalogue levels and does not count physical letters.
 
-An earlier version of the generator suppressed index entries whose signature occurred among the single letters. The check of 11 September 2026 showed that most of these entries pointed to a curated konvolut object then missing from the local single-letter holdings and that others were only partly represented. Every production Konvolut is in the repository since 24 September 2026, so the lanes need a new run on the complete holdings, see the [plan](plan.md#timeline-lanes). For `SZDKOR.680`, five pieces in the index face two matching records in the linked Alfred Zweig object. For `SZDKOR.858` and `SZDKOR.899`, the person data of the only matching single record contradicts the index. An automatic suppression cannot be derived from such comparisons, and every lane file therefore holds all source records, directly or in `sources`.
+An earlier version of the generator suppressed index entries whose signature occurred among the single letters. The check of 11 September 2026 showed that most of these entries pointed to a curated konvolut object then missing from the local single-letter holdings and that others were only partly represented. Since 24 September 2026 every production Konvolut is in the repository, and the lanes are generated from the complete holdings. For `SZDKOR.680`, five pieces in the index face two matching records in the linked Alfred Zweig object. For `SZDKOR.858` and `SZDKOR.899`, the person data of the only matching single record contradicts the index. An automatic suppression cannot be derived from such comparisons, and every lane file therefore holds all source records, directly or in `sources`.
 
-`index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. Dates after 1950 are output as in the source and need scholarly review, among them 2012-05-26, 2018-10-02 and 2030-09-23 of three `unidentified` records.
+`index.json` holds `mergedDuplicates` as the number of merged facsimile groups, `mergedRecords` as the number of additionally merged records, and the compatibility field `suppressedIndexEntries` with the numeric value `0`. The sources stay unchanged. Dates after 1950 are output as in the source and need scholarly review. In the Konvolute taken over from production the display text of these records states a two-digit year, which `@when` places in the twenty-first century. The corpus tests pin the affected records.
+
+Defective production objects affect the links. The files `szd.korrespondenzen.judischer-jugendverein.xml` and `szd.korrespondenzen.judischer-jugendverein-dusseldorf.xml` name the same obsolete PID in their `teiHeader`, so their records share identifiers and a `href` to that PID, and `szd.korrespondenzen.rascher-und-cie.xml` names `o:szd.rascher-und-cie`. Because the generator takes the PID of `href` from the header, these links become correct only with the corrected files, see the [import README](../scripts/konvolute_import/README.md#known-defects-of-production-objects).
 
 ## Generation
 
@@ -126,7 +140,7 @@ The GAMS presentation layer holds a further copy of all lane files and `index.js
 
 ## Delivery State
 
-Frontend commit `b616496` with the timeline and the lane copies was pushed to `ZIMLAB/szd` on 11 September 2026, and the following commit `3cb6596` fixes the filter links for GAMS. Filters live in the URL fragment, because GAMS rejects additional query parameters with HTTP 404. Both states are on staging, and the frontend copy was regenerated from the data state of 23 September 2026 (`ZIMLAB/szd` `f70882d`). A server mirror comparison, HTTP checks of scripts, stylesheets and JSON files against the local content and a browser check of the previously shared Fancy URL in German and English confirmed the delivery.
+Frontend commit `b616496` with the timeline and the lane copies was pushed to `ZIMLAB/szd` on 11 September 2026, and the following commit `3cb6596` fixes the filter links for GAMS. Filters live in the URL fragment, because GAMS rejects additional query parameters with HTTP 404. Both states are on staging, and the frontend copy was regenerated from the data state of 23 September 2026 (`ZIMLAB/szd` `f70882d`). A server mirror comparison, HTTP checks of scripts, stylesheets and JSON files against the local content and a browser check of the previously shared Fancy URL in German and English confirmed the delivery. On 24 September 2026 the lane files from the complete Konvolute, with the fields `konvolut`, `repository` and `extent`, were copied into `ZIMLAB/szd/data/lebenskalender/`.
 
 The message about the new view went to the Literaturarchiv Salzburg on 11 September 2026, as confirmed by the operator. Partner review, acceptance and production publication are pending.
 

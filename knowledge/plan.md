@@ -48,7 +48,12 @@ The corrections reach production only after the archive has approved them on sta
 
 ## Timeline lanes
 
-Since the production import of 2026-09-24 four corpus tests in `scripts/lebenskalender_lanes/test_build_lanes.py` fail, because they pin the corpus before the import (piece count, the absence of `alberts-margot` records, the set of dates after 1950, the delivered copy). The lanes need a new run of `build_lanes.py` on the complete Konvolute, a review of the facsimile merges, updated test expectations and a refreshed copy in `docs/lebenskalender/lanes/` and in `ZIMLAB/szd/data/lebenskalender/`.
+The lanes are generated from the complete Konvolute, and the corpus tests pin that state. The run messages leave editorial work in the Konvolut data.
+
+- Facsimile groups whose records conflict and therefore stay separate, listed in `CONFLICTING_FACSIMILES` of the test. About half concern places that the Konvolut `zweig-friderike` gives as Salzburg against the sender's place in `fleischer-victor` and `fleischer-max`. Others involve the pairs `glucksmann-heinrich` and `gluecksmann-heinrich` or `meulenhoff` and `meulenhoff-johannes-marius`, which look like duplicate objects, and coarser dates in `reichner-herbert` and `meingast-anna` against day dates of the partner's record. In the two Jugendverein files one copy of `SZDKOR.judischer-jugendverein.1` carries a date as its place. `o:szd.3204` and `o:szd.3317` stand at records with different signatures and dates, and at `o:szd.909` one record dates 2019 for 1919 and one sits in the file `masereel-frans` with a `reichner-herbert` identifier.
+- Konvolut dates after 1950 whose display text gives a two-digit year that `@when` places in the twenty-first century.
+- `SZDKOR.696` names `o:szd.korrespondenzen.unbekannt` and `SZDKOR.857` names `o:szd.korrespondenzen.podbielski-gert-rene`, while the repository holds the probable counterparts `unidentified` and `podbieliki-gert-rene`. Which spelling is the correct PID is an operator question, and until then the two index entries carry no `konvolut` link.
+- The three defective production objects of the import README give dead `href` values in the lanes until their `teiHeader` PID is corrected.
 
 ## Person index
 

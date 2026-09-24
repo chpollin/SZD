@@ -41,11 +41,11 @@ The lane files are byte-identical across two runs. The only changing value is `g
 
 ## Reports on the sources
 
-The run reports on `stderr` the date texts it could not resolve and the irregularities it meets in the headings of the biography. Both are a work list for the editors and trigger no change in the sources.
+The run reports on `stderr` the date texts it could not resolve, the irregularities it meets in the headings of the biography, the facsimile groups whose records conflict and the index entries that name a Konvolut missing from the repository. Both are a work list for the editors and trigger no change in the sources.
 
 ## Tests
 
-The generator parses all sources and reports unresolvable dates. The corpus tests also check that all correspondence records including their metadata and permalinks are preserved. They cover incomplete konvolute, shared signatures, contradictory facsimile metadata and the three dates after 1950. They further check the deterministic export and the identical copy below `docs/`.
+The generator parses all sources and reports unresolvable dates. The corpus tests also check that all correspondence records including their metadata and permalinks are preserved. They cover incomplete konvolute, shared signatures, contradictory facsimile metadata, the dates after 1950 and the Konvolut links, repositories and extents of the index entries. They further check the deterministic export and the identical copy below `docs/`.
 
 ```
 python -m pytest scripts/lebenskalender_lanes/test_build_lanes.py -q
