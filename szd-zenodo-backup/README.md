@@ -156,7 +156,7 @@ See [CITATION.cff](CITATION.cff) for citation details.
 
 ## 📜 License
 
-- **Scripts/Code:** MIT License (see [LICENSE](LICENSE))
+- **Scripts/Code:** MIT License (see [LICENSE](../LICENSE))
 - **Data:** CC-BY 4.0 (Creative Commons Attribution 4.0) - see Zenodo deposit
 
 ## 🙏 Acknowledgments

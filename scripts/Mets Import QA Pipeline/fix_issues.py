@@ -1,14 +1,14 @@
-"""
+"""Historical, March 2026 METS import cleanup; the targets no longer exist. Do not rerun.
+
 Fix-Script für SZ_AAL_B2 Result-Ordner.
 Behebt alle automatisch fixbaren Probleme.
 """
 
-import os
 import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-DRY_RUN = False  # Set True to only print what would happen
+DRY_RUN = True  # Historical script, kept as provenance; must not write again
 FOLDER_RANGE = range(1, 6)  # B2.1 through B2.5
 
 

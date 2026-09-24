@@ -8,335 +8,62 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-03-31
+updated: 2026-09-23
 ---
 
 # Architecture - Stefan Zweig Digital
 
-System architecture, component overview, and data flow for the Stefan Zweig Digital platform.
+Stefan Zweig Digital is published on GAMS (Geisteswissenschaftliches Asset Management System) at the University of Graz. Its sources and presentation are split across two Git repositories, with Zenodo for long-term preservation and GitHub Pages for the ontology and project documentation.
 
----
+## Two Repositories
 
-## System Overview
+| Repository | Role |
+|------------|------|
+| `chpollin/SZD` (this repository) | Curated TEI sources in `data/`, the Nachlass-Ontologie in `ontology/`, the scripts that turn partner deliveries into TEI and repair the catalogue data, the GitHub Pages site in `docs/`, the Zenodo pipeline in `szd-zenodo-backup/` |
+| `ZIMLAB/szd` (gams-www) | Presentation layer, meaning the XSLT, JavaScript, CSS and SPARQL query templates that GAMS applies, including the RDF transformation `szd-TORDF.xsl` |
 
-Stefan Zweig Digital is a distributed digital humanities platform combining multiple technologies for data encoding, transformation, presentation, search, and long-term preservation.
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   Stefan Zweig Digital                       │
-│                  https://stefanzweig.digital                 │
-└─────────────────────────────────────────────────────────────┘
-                              │
-        ┌─────────────────────┼─────────────────────┐
-        │                     │                     │
-   ┌────▼────┐          ┌─────▼─────┐         ┌────▼────┐
-   │  GAMS   │          │ TEI-XML   │         │ Zenodo  │
-   │Platform │          │   Data    │         │ Archive │
-   └─────────┘          └───────────┘         └─────────┘
-```
-
----
-
-## Component Architecture
-
-### Data Layer
-
-**TEI-XML Source Files**
-- Location: [data/](../data/)
-- Format: TEI P5 XML
-- Collections: Thematic collections and person index
-- Encoding: UTF-8 with bilingual content
-
-### Archival Layer
-
-**Zenodo Pipeline**
-- Location: [szd-zenodo-backup/](../szd-zenodo-backup/)
-- Purpose: Long-term preservation with DOI versioning
-- Format: TAR.GZ archives with DataCite metadata
-- Archive Types: Facsimiles, correspondence, personal documents, essays
-
-**FAIR Principles:** Findable, Accessible, Interoperable, Reusable
-
-See [szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) for workflow details.
-
----
-
-## Data Flow
-
-### Publication Workflow
+The repositories do not see each other automatically. Their cross-references stand in both `CLAUDE.md` files. Push and GAMS ingest are done manually by the maintainer.
 
 ```
-1. Data Creation/Encoding
-   ├─ TEI-XML files created/edited in data/
-   ├─ Validation with Python scripts
-   └─ CSV catalogue updates
-
-2. GAMS Ingestion
-   ├─ TEI files uploaded to GAMS repository
-   ├─ Metadata extracted to triple store
-   └─ RDF graphs generated
-
-3. Web Transformation
-   ├─ XSL stylesheets transform TEI to HTML
-   ├─ SPARQL queries provide search results
-   └─ JavaScript adds interactivity
-
-4. Public Access
-   └─ https://stefanzweig.digital/
+TEI in chpollin/SZD
+  └─ Cirilo ingest ──► GAMS object (Fedora, PID o:szd.*)
+                         ├─ TEI_SOURCE datastream
+                         ├─ RDF via szd-TORDF.xsl ──► Blazegraph triple store
+                         └─ rendering via gams-www XSLT ──► https://stefanzweig.digital
 ```
 
-### Search Workflow
+## Publication Workflow
 
-```
-1. User Query
-   └─ Search form on website
+1. TEI files are edited in `data/`. Repairs run as scripts with a dry run, an `--apply` step and a `--verify` step that checks the written state against `HEAD`.
+2. The maintainer ingests the changed objects with Cirilo, first on GAMS staging and then on the productive instance. At ingest, GAMS derives the RDF with the `TORDF` stylesheet the object points to, so the indices `o:szd.personen` and `o:szd.organisation` go in before the holdings that reference them.
+3. The gams-www XSLT renders the TEI to HTML. Search pages run SPARQL query objects against Blazegraph and render the XML result sets.
 
-2. SPARQL Execution
-   ├─ Query sent to Blazegraph
-   ├─ Triple pattern matching
-   └─ Bilingual filtering
+Facsimiles are separate `cm:dfgMETS` book objects (`o:szd.<number>`) whose IIIF manifests feed the Mirador viewer. Catalogue entries link them through `altIdentifier/idno[@type="PID"]`, see [COLLECTIONS.md](COLLECTIONS.md#rendering-contract-grouped-lists).
 
-3. Results Processing
-   ├─ XML result set returned
-   ├─ XSL transforms to HTML
-   └─ JavaScript enhances display
+## Derived Timeline Assets
 
-4. Result Display
-   └─ Formatted search results with links
-```
+The timeline of the Lebenskalender adds a static JSON delivery path beside the GAMS ingest. `scripts/lebenskalender_lanes/build_lanes.py` derives the lane files from the TEI sources and writes identical copies to `data/derived/lebenskalender/` (ignored by Git, reproduced by the generator) and `docs/lebenskalender/lanes/`. The presentation repository carries a further copy under `data/lebenskalender/`, refreshed explicitly. Schema, dating rules and delivery state are in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md).
 
-### Archival Workflow
+## Long-term Preservation
 
-```
-1. Archive Creation
-   ├─ Python scripts download data from GAMS
-   ├─ Split into manageable archives
-   └─ DataCite metadata generated
+The pipeline in [szd-zenodo-backup/](../szd-zenodo-backup/README.md) downloads the digitised objects from GAMS, packs them into TAR.GZ archives with DataCite metadata and uploads them to Zenodo with DOI versioning. The data itself is generated locally and never committed. The deposit is https://zenodo.org/records/17421555.
 
-2. Zenodo Upload
-   ├─ TAR.GZ files uploaded
-   ├─ Metadata attached
-   └─ DOI assigned
+## GitHub Pages
 
-3. Version Management
-   ├─ New versions for updates
-   └─ DOI versioning chain
-```
+The `docs/` folder is served from the `master` branch at https://chpollin.github.io/SZD/ without a build step. The only workflow, `.github/workflows/deploy-ontology-docs.yml`, regenerates the ontology documentation from `ontology/szd-ontology.ttl`. The site holds the ontology reference, the project page, downloads and the Lebenskalender prototype.
 
----
+The design is aligned to the Stefan Zweig Digital GAMS site as one visual family with the Klawiter Bibliography.
 
-## GAMS Platform Integration
+- Palette from GAMS, burgundy `#631a34` for header, links and primary accent, gold `#C2A360` for metadata labels, cream `#FAF8F3` as page background. The ontology site is burgundy-forward with section headings in burgundy, the Klawiter site gold-forward.
+- Typography Source Serif 4 for headings and body, Source Sans 3 for UI elements and navigation, JetBrains Mono for URIs and code.
+- The landing page is an ontology dashboard with a stats row, three primary cards (reference, visualisation, downloads) and a row of secondary links. All pages are in English.
+- A slim bar above the header connects Stefan Zweig Digital (GAMS), the Klawiter Bibliography and this site.
+- `ontology/visualize.html` is a fullscreen force-directed D3.js graph with layer toggles and hover highlighting.
+- `docs/css/szd-ontology.css` is the stylesheet for all pages except `visualize.html`, which carries inline styles for its fullscreen layout.
 
-**GAMS (Geisteswissenschaftliches Asset Management System)**
-- Host: University of Graz
-- URL: https://gams.uni-graz.at/
-- SZD Context: https://gams.uni-graz.at/context:szd
+## Related
 
-### Platform Components
-
-**Fedora Commons Repository**
-- Digital object storage
-- PID management (o:szd.*)
-- Version control
-- Access control
-
-**Blazegraph Triple Store**
-- RDF graph database
-- SPARQL 1.1 endpoint
-- Full-text indexing
-- Bilingual content support
-
-**METS/MODS Support**
-- Structural metadata
-- Descriptive metadata
-- Administrative metadata
-- Rights metadata
-
-**XSL Transformation Pipeline**
-- Server-side XSLT processing
-- Template inheritance
-- Dynamic content generation
-- Format conversions
-
----
-
-## Technology Stack Summary
-
-### Data Encoding
-- **TEI P5:** Primary data format
-- **XML Schema:** Validation
-- **UTF-8:** Character encoding
-- **ISO 8601:** Date encoding
-
-### Metadata Standards
-- **METS/MODS:** GAMS structural metadata
-- **DataCite 4.0:** Zenodo deposits
-- **Dublin Core:** OAI-PMH harvesting
-- **GND/Wikidata:** Authority files
-
-### Web Technologies
-- **XSLT 2.0/3.0:** XML transformations
-- **CSS3:** Responsive styling
-- **JavaScript ES6+:** Client interactivity
-- **HTML5:** Semantic markup
-
-### Database & Search
-- **SPARQL 1.1:** Query language
-- **Blazegraph:** Triple store
-- **RDF:** Data model
-- **Fedora Commons:** Repository backend
-
-### Programming
-- **Python 3:** Validation and archival scripts
-- **lxml:** XML processing
-- **requests:** HTTP operations
-- **BeautifulSoup:** HTML parsing
-
-### Infrastructure
-- **GAMS:** Hosting platform (University of Graz)
-- **Zenodo:** Long-term preservation
-- **Git:** Version control
-- **GitHub:** Code repository
-
----
-
-## Integration Points
-
-### External Authority Files
-
-**GND (Gemeinsame Normdatei)**
-- URL pattern: `http://d-nb.info/gnd/{ID}`
-- Usage: Person, organization, place identifiers
-- Integration: `@ref` attributes in TEI
-
-**Wikidata**
-- URL pattern: `https://www.wikidata.org/wiki/{ID}`
-- Usage: Entity linking and enrichment
-- Integration: `@corresp` attributes in TEI
-
-**Wikipedia**
-- URL pattern: `https://de.wikipedia.org/wiki/{TITLE}`
-- Usage: Biographical context
-- Integration: `@corresp` attributes in TEI
-
-### Content Delivery
-
-**IIIF (International Image Interoperability Framework)**
-- Image delivery for high-resolution facsimiles
-- Mirador viewer integration
-- Zoom and pan functionality
-
-**OAI-PMH (Open Archives Initiative Protocol)**
-- Metadata harvesting
-- Dublin Core exports
-- Repository interoperability
-
----
-
-## Bilingual Architecture
-
-All system components support German and English:
-
-**Data Level**
-- `xml:lang="de"` and `xml:lang="en"` attributes in TEI
-
-**Query Level**
-- SPARQL FILTER clauses for language selection
-- Bilingual result sets
-
-**Display Level**
-- XSL templates with language parameters
-- JavaScript language switching
-- CSS styling for both languages
-
-**URL Level**
-- Language parameter in URLs
-- Content negotiation
-
----
-
-## Performance Considerations
-
-**Caching**
-- XSL transformation results cached
-- SPARQL query results cached
-- Static asset caching (CSS, JS, images)
-
-**Optimization**
-- Lazy loading for images
-- Minified CSS/JS
-- Optimized SPARQL queries
-- Index-based searches
-
----
-
-## Security & Access Control
-
-**Repository Access**
-- GAMS authentication for editing
-- Public read access for published content
-- Role-based permissions
-
-**Data Integrity**
-- Git version control for source files
-- GAMS object versioning
-- Zenodo immutable archives
-
-**Licensing**
-- CC-BY 4.0 for most content
-- License metadata in TEI headers
-- Rights statements in web interface
-
----
-
-## GitHub Pages — Design System
-
-The `docs/` folder is deployed as GitHub Pages, serving the ontology documentation and project overview. The design is aligned to the Stefan Zweig Digital GAMS reference to form a visual family ("Zweig Forschungsverbund"):
-
-**Shared palette (from GAMS):**
-- Burgundy `#631a34` — header, links, primary accent
-- Gold `#C2A360` — metadata labels, secondary accent
-- Cream `#FAF8F3` — page background
-
-**Typography (Google Fonts):**
-- Source Serif 4 — headings, body text (serif)
-- Source Sans 3 — UI elements, navigation (sans-serif)
-- JetBrains Mono — ontology URIs, code (monospace)
-
-**Design differentiation from Klawiter Bibliography:**
-- Same palette, but "burgundy-forward" (section headings in burgundy, gold used sparingly for metadata)
-- Klawiter is "gold-forward" (section headings in gold, more warm/inviting for browsing)
-- Both share the GAMS color values exactly, creating unmistakable family cohesion
-
-**Landing page:** Ontology-focused dashboard (not a portal). Stats row (72 Classes, 130 Properties, 7 Sections, v1.2.0), three primary cards (Reference, Visualization, Downloads), secondary links row. All pages in English.
-
-**Verbund bar:** Slim navigation bar above header connecting Stefan Zweig Digital (GAMS), Klawiter Bibliography, and Ontology & Data (this site).
-
-**Visualization:** Fullscreen force-directed D3.js graph at `ontology/visualize.html`. Sidebar controls with layer toggles, auto-fit zoom, hover-to-highlight, English labels.
-
-**Files:** `docs/css/szd-ontology.css` (single stylesheet for all pages except visualize.html which has inline styles for fullscreen layout)
-
----
-
-## Related Documentation
-
-- [DATA_MODEL.md](DATA_MODEL.md) - TEI-XML structure and encoding
-- [COLLECTIONS.md](COLLECTIONS.md) - Collection-specific details
-- [../szd-zenodo-backup/README.md](../szd-zenodo-backup/README.md) - Archival pipeline
-
----
-
-## External Resources
-
-- **GAMS Platform:** https://gams.uni-graz.at/
-- **GAMS Documentation:** https://gams.uni-graz.at/documentation
-- **TEI Guidelines:** https://tei-c.org/guidelines/
-- **Blazegraph:** https://github.com/blazegraph/database/wiki
-- **Fedora Commons:** https://fedora.lyrasis.org/
-- **Zenodo:** https://zenodo.org/
-
----
-
-**Last Updated:** March 2026
-
-**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal data model, [PROJECT.md](PROJECT.md) for the full project description.
+- [DATA_MODEL.md](DATA_MODEL.md) — encoding patterns and authority references
+- [COLLECTIONS.md](COLLECTIONS.md) — collections and rendering contracts
+- [ONTOLOGY.md](ONTOLOGY.md) — the formal ontology and its documentation site
+- [PROJECT.md](PROJECT.md) — project context and standards

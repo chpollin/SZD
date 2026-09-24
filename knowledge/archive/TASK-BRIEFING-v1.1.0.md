@@ -1,5 +1,5 @@
 ---
-title: "Task Briefing: SZDO Datenmodellierung"
+title: "Task Briefing: SZDO Data Modelling"
 project:
   name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD.git
@@ -8,80 +8,64 @@ method:
   url: https://dhcraft.org/promptotyping
 status: archived
 created: 2026-03-29
-updated: 2026-03-29
+updated: 2026-09-23
 ---
 
-# Task Briefing: SZDO Datenmodellierung
+# Task Briefing: SZDO Data Modelling
 
-Archiviertes Aufgabenbriefing der vier Datenmodellierungs-Aufgaben, die mit SZDO v1.1.0 umgesetzt wurden.
+Archived briefing of the four data modelling tasks that were carried out with SZDO v1.1.0 in March 2026. File and class names are those of v1.1.0.
 
-## Status: ABGESCHLOSSEN (v1.1.0, März 2026)
+## Outcome
 
-Alle vier Aufgaben wurden in SZDO v1.1.0 umgesetzt:
-- [x] Aufgabe 1: `szdo:datumEvidenz` als SKOS-Vokabular implementiert (4 Konzepte in szdg:DatumEvidenz)
-- [x] Aufgabe 2: `szdo:hatBeteiligtenAkteur` als Superproperty mit 10 Rolleneigenschaften + RiC-Alignment
-- [x] Aufgabe 3: Klawiter-Reconciliation geprüft, 8 Typ-Korrekturen (historical-study zu hatManifestation)
-- [x] Aufgabe 4: Validierungspipeline erweitert (CQ16, CQ17, SHACL Shape 14)
+- Task 1, `szdo:datumEvidenz` implemented as a SKOS vocabulary with four concepts in `szdg:DatumEvidenz`.
+- Task 2, `szdo:hatBeteiligtenAkteur` as superproperty of ten role properties with RiC alignment.
+- Task 3, Klawiter reconciliation checked, eight type corrections (historical-study to `hatManifestation`).
+- Task 4, validation pipeline extended (CQ16, CQ17, SHACL shape 14).
 
-## Kontext
+## Context
 
-Die Stefan Zweig Digital Nachlass-Ontologie (SZDO) v1.0.0 ist publiziert (72 Klassen, 130 Properties). Sie integriert RiC-O, IFLA LRM und CIDOC-CRM in einer geschichteten Architektur. Dokumentation: `knowledge/ONTOLOGY.md`. OWL-Datei: `ontology/szd-ontology.ttl`. Validierungspipeline: `ontology/validate.py`.
+SZDO v1.0.0 was published at the time with 72 classes and 130 properties. It integrates RiC-O, IFLA LRM and CIDOC-CRM in a layered architecture. Documentation `knowledge/ONTOLOGY.md`, OWL file `ontology/szd-ontology.ttl`, validation pipeline `ontology/validate.py`.
 
-## Aufgaben
+## Tasks
 
-### 1. Evidenzquellen-Modell ergänzen
+### 1. Evidence source model
 
-Aktuell hat die SZDO nur `szdo:sicherheitsgrad` (low/medium/high) für Datumsunsicherheit. Ergänze eine Property `szdo:datumEvidenz`, die die *Quelle* einer Datierung qualifiziert:
+SZDO then had only `szdo:sicherheitsgrad` (low, medium, high) for date uncertainty. A property `szdo:datumEvidenz` was to qualify the source of a dating.
 
-- `aus-dokument` — Datum steht im Dokument selbst
-- `aus-kontext` — Aus Kontext erschlossen (z.B. benachbarte Briefe)
-- `aus-externer-quelle` — Aus externer Quelle (Katalog, Sekundärliteratur)
-- `unbekannt` — Evidenzquelle nicht dokumentiert
+- `aus-dokument`, the date stands in the document itself
+- `aus-kontext`, inferred from context such as neighbouring letters
+- `aus-externer-quelle`, taken from an external source such as a catalogue or secondary literature
+- `unbekannt`, evidence source not documented
 
-Das komplementiert den bestehenden Sicherheitsgrad. Implementiere als SKOS-Vokabular im SZD-Glossar (analog zu `szdg:ProvenanceFeature`). Aktualisiere die SHACL-Shapes.
+It complements the degree of certainty and was to be implemented as a SKOS vocabulary in the SZD glossary (analogous to `szdg:ProvenanceFeature`), with updated SHACL shapes. The M³GIM project uses `m3gim:dateEvidence` for the same concept.
 
-Referenz: M³GIM-Projekt verwendet `m3gim:dateEvidence` für dasselbe Konzept. Siehe `knowledge/ONTOLOGY.md` Section "Known Limitations".
+### 2. Person roles
 
-### 2. Personen-Rollendifferenzierung
+SZDO did not distinguish persons actively involved (author, addressee, scribe) from persons only mentioned. To be added:
 
-Aktuell unterscheidet die SZDO nicht zwischen Personen, die *aktiv beteiligt* sind (Autor, Adressat, Schreiber) und solchen, die nur *erwähnt* werden. Ergänze:
+- `szdo:hatBeteiligtenAkteur` (⊂ `rico:hasOrHadContributor`) for active involvement
+- `rico:hasOrHadSubject` for thematic mention, already present in RiC-O
 
-- `szdo:hatBeteiligtenAkteur` (⊂ `rico:hasOrHadContributor`) — aktive Beteiligung
-- Nutze `rico:hasOrHadSubject` für thematische Erwähnung (existiert bereits in RiC-O)
+The existing properties `szdo:hatAutor`, `szdo:hatSchreiberhand` and `szdo:hatAdressat` imply active involvement and were to be declared `rdfs:subPropertyOf szdo:hatBeteiligtenAkteur`. A new competency question was to distinguish active involvement from mention, as needed for network analyses of the correspondence.
 
-Prüfe die bestehenden Properties `szdo:hatAutor`, `szdo:hatSchreiberhand`, `szdo:hatAdressat` — diese sind implizit "aktive Beteiligung" und sollten als `rdfs:subPropertyOf szdo:hatBeteiligtenAkteur` deklariert werden.
+### 3. Klawiter reconciliation mapping
 
-Aktualisiere die Competency Questions: Ergänze eine CQ, die aktive Beteiligung von Erwähnung unterscheidet (relevant für Netzwerkanalysen der Korrespondenz).
+Part of the Klawiter entries was reconciled with the work index. The task checked whether the links through `szdo:hatManifestation` (work to Klawiter entry) are typed correctly (first editions as `szdo:Manifestation`, translations as `szdo:WerkExpression`, secondary literature as `szdo:Sekundaerliteratur`) and whether the Klawiter JSON-LD types and the SZDO classes are consistent. Klawiter data in `../klawiter-rescue/data/output/klawiter.jsonld`, vocabulary in `../klawiter-rescue/pipeline/lib/vocabulary.py`.
 
-### 3. Klawiter-Reconciliation Mapping prüfen
+### 4. Validation pipeline
 
-1.545 von 6.296 Klawiter-Einträgen sind mit dem Werkindex reconciliert. Prüfe die bestehenden Mappings in der Ontologie:
+`ontology/validate.py` was to receive tests for the new properties (`datumEvidenz`, `hatBeteiligtenAkteur`), a competency question on persons actively involved in a document versus only mentioned, and SHACL shapes for the evidence sources.
 
-- `szdo:hatManifestation` verknüpft Werk → Klawiter-Eintrag
-- Sind die 1.545 Verknüpfungen korrekt typisiert? (Erstausgaben → `szdo:Manifestation`, Übersetzungen → `szdo:WerkExpression`, Sekundärliteratur → `szdo:Sekundaerliteratur`)
-- Gibt es Inkonsistenzen zwischen den Klawiter JSON-LD-Typen und den SZDO-Klassen?
+## Scope
 
-Klawiter-Daten: Das Repo `../klawiter-rescue/data/output/klawiter.jsonld` enthält die vollständigen Daten. Vocabulary-Definition: `../klawiter-rescue/pipeline/lib/vocabulary.py`.
+Frontend work belonged to another agent session. The correspondence date gaps had been closed separately in March 2026, see [DATA.md](../DATA.md#dates).
 
-### 4. Validierungspipeline erweitern
+## Files
 
-Erweitere `ontology/validate.py` um:
-
-- Tests für die neuen Properties (datumEvidenz, hatBeteiligtenAkteur)
-- Eine neue Competency Question: "Welche Personen sind aktiv an einem Dokument beteiligt vs. nur erwähnt?"
-- SHACL-Shapes für die Evidenzquellen
-
-## Nicht in Scope
-
-- Frontend-Arbeit (anderer Claude Code)
-- Korrespondenz-Datenlücken: 270 von 289 date-Elementen ohne maschinenlesbare Attribute wurden in SZDKOR.xml nachgetragen (Maerz 2026). 19 `n. d.`-Eintraege bleiben ohne Datum.
-
-## Relevante Dateien
-
-| Datei | Zweck |
-|-------|-------|
-| `ontology/szd-ontology.ttl` | Hauptdatei — hier editieren |
-| `ontology/szd-shapes.ttl` | SHACL-Shapes — erweitern |
-| `ontology/validate.py` | Validierungspipeline — erweitern |
-| `knowledge/ONTOLOGY.md` | Design-Dokument — aktualisieren |
-| `knowledge/DATA_MODEL.md` | Datenmodell-Doku — bei Bedarf aktualisieren |
+| File | Purpose |
+|------|---------|
+| `ontology/szd-ontology.ttl` | Main file, edited here |
+| `ontology/szd-shapes.ttl` | SHACL shapes, extended |
+| `ontology/validate.py` | Validation pipeline, extended |
+| `knowledge/ONTOLOGY.md` | Design document, updated |
+| `knowledge/DATA_MODEL.md` | Data model documentation, updated where needed |

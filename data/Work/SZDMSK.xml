@@ -12612,6 +12612,9 @@
                                     <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library –
                                         Stefan Zweig Collection</repository>
                                     <idno type="signature">SZ-AP2/W-G503.6</idno>
+                                    <altIdentifier>
+                                        <idno type="PID">o:szd.323</idno>
+                                    </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
                                     <summary>
@@ -18683,7 +18686,7 @@
                                         Stefan Zweig Collection</repository>
                                     <idno type="signature">SZ-AP2/W-H206</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.263</idno>
+                                        <idno type="PID">o:szd.2939</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -25774,7 +25777,7 @@
                                         >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/W9.1</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.280</idno>
+                                        <idno type="PID">o:szd.281</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -25973,7 +25976,7 @@
                                         >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/W31</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.217</idno>
+                                        <idno type="PID">o:szd.218</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -26077,7 +26080,7 @@
                                         >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-AAP/W45</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.233</idno>
+                                        <idno type="PID">o:szd.234</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -27185,7 +27188,7 @@
                                         Salzburg</repository>
                                     <idno type="signature">SZ-SAM/W2</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.1893</idno>
+                                        <idno type="PID">o:szd.939</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -27375,9 +27378,9 @@
                                     <settlement>Salzburg</settlement>
                                     <repository ref="http://d-nb.info/gnd/1047605287"
                                         >Literaturarchiv Salzburg</repository>
-                                    <idno type="signature">SZ-SHB/W2</idno>
+                                    <idno type="signature">SZ-SHB/W3</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.358</idno>
+                                        <idno type="PID">o:szd.359</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>
@@ -27809,7 +27812,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -27918,7 +27921,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
@@ -28015,7 +28018,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28108,7 +28111,7 @@
                             <title ana="original">Vortragsconcept</title>
                             <title type="Einheitssachtitel">Vortrag über Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28207,7 +28210,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28298,7 +28301,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28412,7 +28415,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28515,7 +28518,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28595,7 +28598,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28681,7 +28684,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28795,7 +28798,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28887,7 +28890,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -28991,7 +28994,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29104,7 +29107,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29214,7 +29217,7 @@
                             <title type="Einheitssachtitel">Drei Meister. Balzac – Dickens –
                                 Dostojewski</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29321,7 +29324,7 @@
                             <title ana="original">Österreich und das Deutsche Volk</title>
                             <title type="Einheitssachtitel">Österreich und das Deutsche Volk</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29401,7 +29404,7 @@
                             <title type="Einheitssachtitel">Ernest Renan zum Jahrhundertage seiner
                                 Geburt 28. II 1823</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29513,7 +29516,7 @@
                             <title ana="original">Leporella</title>
                             <title type="Einheitssachtitel">Kleine Chronik</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29609,9 +29612,9 @@
                             <title ana="original">Maria Stuart</title>
                             <title type="Einheitssachtitel">Maria Stuart</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
-                            <editor ref="SZDPER.1645" role="contributor"><persName
+                            <editor ref="#SZDPER.1645" role="contributor"><persName
                                     ref="http://d-nb.info/gnd/116402873"
                                         ><surname>Reichner</surname><forename>Herbert</forename></persName></editor>
                         </titleStmt>
@@ -29738,7 +29741,7 @@
                             <title ana="original">Der Refractär</title>
                             <title type="Einheitssachtitel">Der Zwang</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29843,7 +29846,7 @@
                                 Achill“</title>
                             <title type="Einheitssachtitel">Tersites</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -29929,7 +29932,7 @@
                             <title ana="original">Die Wunder des Lebens</title>
                             <title type="Einheitssachtitel">Die Liebe der Erika Ewald</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30041,7 +30044,7 @@
                                 Amerikas</title>
                             <title type="Einheitssachtitel">Aufruf an die Jugend Amerikas</title>
                             <title type="Gesamttitel">A:Gregor-Dellin, Martin</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30128,7 +30131,7 @@
                             <title type="Einheitssachtitel" xml:lang="en">Notes for an interview
                                 with the newspaper"Jornal do Brasil</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30226,7 +30229,7 @@
                             <title type="Einheitssachtitel" xml:lang="en">Report on Balzac</title>
                             <title type="Gesamttitel">B:Balzac, Honoré de/Prozess um"Contes
                                 drolatiques"</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30319,7 +30322,7 @@
                             <title ana="assigned">Ist nicht Alles, was wir spenden …</title>
                             <title type="Einheitssachtitel">Ist nicht Alles, was wir spenden …</title>
                             <title type="Gesamttitel">A:Kressner, Marlis</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
@@ -30402,7 +30405,7 @@
                             <title type="Einheitssachtitel">Navigare necesse est</title>
                             <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse
                                 est</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30516,7 +30519,7 @@
                             <title type="Einheitssachtitel">Navigare necesse est</title>
                             <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse
                                 est</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30635,7 +30638,7 @@
                             <title ana="supplied/verified">Der Sechzigjährige dankt</title>
                             <title type="Einheitssachtitel">Der Sechzigjährige dankt</title>
                             <title type="Gesamttitel">A:Wittkowski, Victor</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30728,7 +30731,7 @@
                                 …</title>
                             <title type="Gesamttitel">A:Wiedemann, Gisela und
                                 Hans-Rudolf°Zweig</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -30818,7 +30821,7 @@
                             <title ana="original">Prolog zum „Ersten Erlebnis“</title>
                             <title type="Einheitssachtitel">Erstes Erlebnis</title>
                             <title type="Gesamttitel">A:Wiedemann, Gisela und Hans-Rudolf°Zweig</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
                             <ab>Archivmaterial</ab>
@@ -30911,7 +30914,7 @@
                             <title type="Einheitssachtitel">Navigare necesse est</title>
                             <title type="Gesamttitel">A:Kippenberg-Archiv/Navigare necesse
                                 est</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31007,7 +31010,7 @@
                             <title type="Einheitssachtitel">Gutachten zu Hermann Brochs „Der Tod des
                                 Vergil“</title>
                             <title type="Gesamttitel">A:Broch, Hermann/Norden Lowe</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31103,7 +31106,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31236,7 +31239,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31385,7 +31388,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31516,7 +31519,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31656,7 +31659,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31761,7 +31764,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31873,7 +31876,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -31986,7 +31989,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32097,7 +32100,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32198,7 +32201,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32299,7 +32302,7 @@
                                 Herzens</title>
                             <title type="Einheitssachtitel" xml:lang="en">Beware of Pity</title>
                             <title type="Gesamttitel">A:Zweig, Stefan</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                         ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32415,7 +32418,7 @@
                             <title ana="original">Vorschläge für die französische Anthologie</title>
                             <title type="Einheitssachtitel">Vorschläge für die französische Anthologie</title>
                             <title type="Gesamttitel">SUAD:Insel-Verlag</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32498,9 +32501,9 @@
                             <title ana="original">Marzelline Desbordes-Valmore</title>
                             <title type="Einheitssachtitel">Marceline Desbordes-Valmore</title>
                             <title type="Gesamttitel">SUAD:Insel-Verlag</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
-                            <editor role="contributor" ref="SZDPER.730"><persName
+                            <editor role="contributor" ref="#SZDPER.730"><persName
                                 ref="http://d-nb.info/gnd/118723081"
                                 ><surname>Kippenberg</surname><forename>Anton</forename></persName></editor>
                         </titleStmt>
@@ -32594,7 +32597,7 @@
                             <title type="Einheitssachtitel">Einige Grundlagen zu einem kollektiv
                                 auszuarbeitenden Manifest</title>
                             <title type="Gesamttitel">A:Brod, Max</title>
-                            <author ref="SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
+                            <author ref="#SZDPER.1560"><persName ref="http://d-nb.info/gnd/118637479"
                                 ><surname>Zweig</surname><forename>Stefan</forename></persName></author>
                         </titleStmt>
                         <publicationStmt>
@@ -32859,7 +32862,7 @@
                                         >Literaturarchiv Salzburg</repository>
                                     <idno type="signature">SZ-SEF/W2</idno>
                                     <altIdentifier>
-                                        <idno type="PID">o:szd.118</idno>
+                                        <idno type="PID">o:szd.942</idno>
                                     </altIdentifier>
                                 </msIdentifier>
                                 <msContents>

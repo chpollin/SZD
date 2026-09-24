@@ -8,398 +8,101 @@ method:
   url: https://dhcraft.org/promptotyping
 status: complete
 created: 2025-10-23
-updated: 2026-03-31
+updated: 2026-09-23
 ---
 
 # Data Model - Stefan Zweig Digital
 
-Technical documentation of TEI-XML structure, bilingual architecture, and encoding patterns used across all SZD collections.
+The TEI P5 encoding patterns that all SZD files share, covering the header, the bilingual encoding, authority references, identifiers and dates. The collection-specific structures, with entry examples taken from the data, are in [COLLECTIONS.md](COLLECTIONS.md), the formal ontology in [ONTOLOGY.md](ONTOLOGY.md).
 
----
+## TEI Header
 
-## TEI-XML Structure
+Every file is a TEI document in the namespace `http://www.tei-c.org/ns/1.0` with a `teiHeader` and a `text` whose `body` holds the collection list. The header of the correspondence index shows the common parts, with bilingual titles in `titleStmt`, publisher, authority and distributor in `publicationStmt`, the licence and the object PID.
 
-### Core Architecture
-
-All SZD data uses TEI P5 (Text Encoding Initiative) XML with consistent header and body structure:
-
-```xml
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <!-- Metadata -->
-  </teiHeader>
-  <text>
-    <body>
-      <!-- Collection-specific content -->
-    </body>
-  </text>
-</TEI>
-```
-
-### TEI Header Components
-
-**titleStmt** - Bilingual titles
 ```xml
 <titleStmt>
   <title xml:lang="de">Korrespondenzen Stefan Zweig digital</title>
   <title xml:lang="en">Correspondences Stefan Zweig digital</title>
 </titleStmt>
-```
-
-**publicationStmt** - Publisher, authority, distributor
-```xml
 <publicationStmt>
   <publisher>
-    <orgName ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+    <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
   </publisher>
   <authority>
-    <orgName ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung</orgName>
+    <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
   </authority>
   <distributor>
-    <orgName ref="https://gams.uni-graz.at">GAMS</orgName>
+    <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management System</orgName>
   </distributor>
   <availability>
-    <licence target="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</licence>
+    <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
   </availability>
   <idno type="PID">o:szd.korrespondenzen</idno>
   <date when="2021-02-25">25.02.2021</date>
 </publicationStmt>
 ```
 
-**seriesStmt** - Project metadata and responsibilities
-```xml
-<seriesStmt>
-  <title ref="https://gams.uni-graz.at/szd">Stefan Zweig digital</title>
-  <respStmt>
-    <resp>Datenmodellierung</resp>
-    <persName>
-      <forename>Christopher</forename>
-      <surname>Pollin</surname>
-    </persName>
-  </respStmt>
-</seriesStmt>
-```
+`seriesStmt` names the project and the responsibilities (`respStmt` with `resp` Datenerfassung and Datenmodellierung), and `encodingDesc/projectDesc` carries the German project description. The `idno[@type="PID"]` in `publicationStmt` is the object PID that scripts such as the timeline generator read.
 
-**projectDesc** - Project description in German
-```xml
-<projectDesc>
-  <p>Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von
-  Stefan Zweig im digitalen Raum zusammenzuführen und ihn einem
-  literaturwissenschaftlich bzw. wissenschaftlich interessierten Publikum
-  zu erschließen...</p>
-</projectDesc>
-```
+## Bilingual Encoding
 
----
+User-facing content is encoded in German and English with `xml:lang`, either as parallel elements (`title`, `span`, `ab`, `material`, `date`) or as parallel `span` elements inside one element. The frontend XSL selects the language by a locale parameter, and SPARQL queries filter by language tag. Where a language is missing, the renderers behave differently per field. The rendering contract in [COLLECTIONS.md](COLLECTIONS.md#rendering-contract-grouped-lists) names the keys that must exist in both languages.
 
-## Bilingual Architecture
+## Authority References
 
-All user-facing content is encoded in both German and English using `xml:lang` attributes.
+- `@ref` carries the primary authority identifier, for persons and corporate bodies the GND (`http://d-nb.info/gnd/<id>`), for places a GeoNames URI where present.
+- `@corresp` carries additional links, the Wikipedia article on `person` and institutional websites on `org` and `orgName`.
+- `idno[@type="wikidata"]` in the person index carries the Wikidata entity (`http://www.wikidata.org/entity/<Q-id>`).
 
-### Implementation Patterns
+References from the holdings to the indices take the forms `ref="#SZDPER.<n>"`, the GND of the index entry, or for bodies without GND `https://gams.uni-graz.at/o:szd.organisation#SZDORG.<n>` and `https://gams.uni-graz.at/o:szd.standorte#SZDSTA.<n>`. How the RDF transformation resolves them is described per index in [COLLECTIONS.md](COLLECTIONS.md).
 
-**Titles**
-```xml
-<title xml:lang="de">Korrespondenzstück AN Stefan Zweig</title>
-<title xml:lang="en">Piece of Correspondence TO Stefan Zweig</title>
-```
+The spelling of the GND prefix is not uniform across the files. Headers carry `d-nb.info/gnd/…` without scheme, the holdings `http://d-nb.info/gnd/…`, and some values `https://`. A comparison of GND values therefore normalises scheme and trailing slash, or it matches character for character and inherits this variation.
 
-**Biographical Events**
-```xml
-<event xml:id="SZDBIO.1">
-  <head>
-    <span xml:lang="de">Wien <date when="1881-11-28">28. November 1881</date></span>
-    <span xml:lang="en">Vienna, <date when="1881-11-28">28 November 1881</date></span>
-  </head>
-  <ab xml:lang="de">Stefan Zweig wird als zweiter Sohn von Ida und Moriz Zweig geboren.</ab>
-  <ab xml:lang="en">Stefan Zweig is born the second son of Ida and Moriz Zweig.</ab>
-</event>
-```
+## Identifiers
 
-**Person Names**
-```xml
-<person xml:id="SZDPER.1">
-  <persName ref="http://d-nb.info/gnd/12490310X">
-    <surname>Abraham</surname>
-    <forename>Pierre</forename>
-  </persName>
-</person>
-```
-
-### Display Logic
-
-Frontend XSL stylesheets select content based on language parameter:
-- German content: `xml:lang="de"`
-- English content: `xml:lang="en"`
-
-SPARQL queries include bilingual result sets using FILTER clauses on language tags.
-
----
-
-## Authority File Integration
-
-### Person References
-
-All persons link to authority files using standard identifiers:
-
-**GND (Gemeinsame Normdatei)**
-```xml
-<persName ref="http://d-nb.info/gnd/12490310X">
-  <surname>Abraham</surname>
-  <forename>Pierre</forename>
-</persName>
-```
-
-**Wikidata/Wikipedia**
-```xml
-<person corresp="https://de.wikipedia.org/wiki/Pierre_Abraham" xml:id="SZDPER.1">
-  <persName ref="http://d-nb.info/gnd/12490310X">
-    <surname>Abraham</surname>
-    <forename>Pierre</forename>
-  </persName>
-</person>
-```
-
-### Organization References
-
-```xml
-<orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-         ref="d-nb.info/gnd/1047605287">
-  Literaturarchiv Salzburg
-</orgName>
-```
-
-### Reference Patterns
-
-- `@ref` - Primary authority file identifier (GND)
-- `@corresp` - Additional links (Wikipedia, Wikidata, institutional URLs)
-- `@type` - Reference type (person, place, organization)
-
----
-
-## Identifier System
-
-### Collection Identifiers
-
-Each collection has a persistent identifier (PID) pattern:
-
-- `o:szd.korrespondenzen` - Correspondence collection
-- `o:szd.personen` - Person index
-- `o:szd.lebenskalender` - Biography timeline
-- `o:szd.autographen` - Autographs
-- `o:szd.bibliothek` - Library
-- `o:szd.werke` - Works
-
-### Item Identifiers
-
-Individual items use collection-specific IDs:
-
-**Correspondence**
-```xml
-<biblFull xml:id="SZDKOR.1">
-```
-
-**Persons**
-```xml
-<person xml:id="SZDPER.1">
-```
-
-**Biographical Events**
-```xml
-<event xml:id="SZDBIO.1">
-```
-
-**Pattern:** `{COLLECTION_CODE}.{NUMBER}`
-
----
-
-## Collection-Specific Structures
-
-### Correspondence (SZDKOR)
-
-Uses `<biblFull>` for correspondence bundles with nested `<msDesc>` for individual letters:
-
-```xml
-<biblFull xml:id="SZDKOR.1">
-  <fileDesc>
-    <titleStmt>
-      <title xml:lang="de">1 Korrespondenzstück AN Stefan Zweig</title>
-      <title xml:lang="en">1 Piece of Correspondence TO Stefan Zweig</title>
-    </titleStmt>
-    <publicationStmt>
-      <ab>Briefkonvolut</ab>
-    </publicationStmt>
-    <sourceDesc>
-      <msDesc>
-        <msIdentifier>
-          <repository>Literaturarchiv Salzburg</repository>
-          <idno type="signature">SZ-AAP/W20</idno>
-        </msIdentifier>
-      </msDesc>
-    </sourceDesc>
-  </fileDesc>
-</biblFull>
-```
-
-See [MAPPING.md](MAPPING.md) for complete TEI-CSV schema mapping.
-
-**Konvolut objects** (`o:szd.korrespondenzen.<person>`) — the second level: one full TEI
-document per correspondence partner, one `<biblFull>` per *individual letter*. The facsimile
-PID sits in `altIdentifier`, which `szd-Konvolut.xsl` turns into a Mirador link:
-
-```xml
-<biblFull xml:id="SZDKOR.altmann-hannah.1">
-  <fileDesc>
-    <titleStmt>
-      <title xml:lang="de">Brief von Stefan Zweig an Hannah Altmann [Februar 1939]</title>
-      <title xml:lang="en">Letter from Stefan Zweig to Hannah Altmann, 1939-02</title>
-    </titleStmt>
-    <publicationStmt><ab>Einzelbrief</ab></publicationStmt>
-    <sourceDesc><msDesc>
-      <msIdentifier>
-        <idno type="signature">SZ-AAL/B1.2</idno>
-        <altIdentifier><idno type="PID">o:szd.3132</idno></altIdentifier>  <!-- facsimile -->
-      </msIdentifier>
-      <!-- physDesc: material (de+en), extent, textLang; history: provenance/acquisition -->
-    </msDesc></sourceDesc>
-  </fileDesc>
-  <profileDesc>
-    <correspDesc type="fromZweig">   <!-- fromZweig: Stefan is sender; else toZweig -->
-      <correspAction type="sent"><persName ref="…gnd…">…</persName><date when="…"/>…</correspAction>
-      <correspAction type="received"><persName ref="…gnd…">…</persName></correspAction>
-    </correspDesc>
-  </profileDesc>
-</biblFull>
-```
-
-The `<person>` slug must byte-match the gallery anchor (`szd-Facsimiles.xsl` `$person-id`) so
-the index/gallery links resolve; `correspDesc/@type` drives the sender display in the renderer.
-
-### Person Index (SZDPER)
-
-Authority file using `<listPerson>` with external identifiers:
-
-```xml
-<listPerson>
-  <person corresp="https://de.wikipedia.org/wiki/Pierre_Abraham" xml:id="SZDPER.1">
-    <persName ref="http://d-nb.info/gnd/12490310X">
-      <surname>Abraham</surname>
-      <forename>Pierre</forename>
-    </persName>
-  </person>
-</listPerson>
-```
-
-### Biography (SZDBIO)
-
-Timeline using `<listEvent>` with bilingual descriptions:
-
-```xml
-<listEvent>
-  <event xml:id="SZDBIO.1">
-    <head>
-      <span xml:lang="de">Wien <date when="1881-11-28">28. November 1881</date></span>
-      <span xml:lang="en">Vienna, <date when="1881-11-28">28 November 1881</date></span>
-    </head>
-    <ab xml:lang="de">Stefan Zweig wird als zweiter Sohn geboren.</ab>
-    <ab xml:lang="en">Stefan Zweig is born the second son.</ab>
-  </event>
-</listEvent>
-```
-
-### Works (SZDWRK)
-
-Uses `<listBibl>` for published works with publication details and classifications.
-
-### Library (SZDLIB)
-
-Personal book collection using `<listBibl>` with annotations and provenance information.
-
-### Autographs (SZDAUT)
-
-Handwritten manuscripts using `<msDesc>` with physical descriptions and facsimile links.
-
----
+- Object PIDs follow `o:szd.<name>` for collections and indices (`o:szd.werke`, `o:szd.personen`), `o:szd.korrespondenzen.<person>` for konvolut objects and `o:szd.<number>` for facsimile objects. The full list is the overview table in [COLLECTIONS.md](COLLECTIONS.md#collection-overview).
+- Entries carry `xml:id` values after the pattern `{COLLECTION_CODE}.{NUMBER}` (`SZDKOR.1`, `SZDPER.1`, `SZDBIO.1`), letters in konvolut objects `SZDKOR.<person>.<n>` (`SZDKOR.altmann-hannah.1`).
+- Index identifiers are part of the RDF URIs and are never renumbered. A new entry receives the next free number.
 
 ## Date Encoding
 
-### ISO 8601 Dates
-
-All machine-readable dates use `@when` attribute:
+Machine-readable dates use ISO 8601 values in the attributes of `date` or `origDate`, beside the display text of the source. The forms below are taken from the data.
 
 ```xml
+<!-- exact date, SZDBIO -->
 <date when="1881-11-28">28. November 1881</date>
+
+<!-- range, SZDBIO -->
+<date from="1906-04" to="1906-08">April bis August 1906</date>
+
+<!-- inferred range, SZDBIB -->
+<date notBefore="1899" notAfter="1900">1899-1900</date>
+
+<!-- uncertain date, SZDKOR -->
+<date xml:lang="en" cert="low" when="1939">1939 (?)</date>
+
+<!-- supplied date in a konvolut object -->
+<date when="1939-02" ana="supplied/verified" xml:lang="de">Februar 1939</date>
 ```
 
-### Date Ranges
-
-```xml
-<date from="1900" to="1910">1900-1910</date>
-```
-
-### Uncertain Dates
-
-```xml
-<date when="1920" cert="medium">ca. 1920</date>
-```
-
----
+The coverage of machine-readable dates and the remaining gaps are in [DATA.md](DATA.md#dates), the reading rules of the timeline generator in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md#dating-rules).
 
 ## Metadata Standards
 
-### METS/MODS
+- METS/MODS carries the structural metadata of the facsimile objects in GAMS and does not appear in the TEI files.
+- Dublin Core is generated from the TEI for OAI-PMH harvesting.
+- DataCite Schema 4.0 describes the Zenodo deposits and is derived from the TEI.
 
-Used for structural metadata in GAMS infrastructure (not visible in TEI files).
+## Character Encoding and Validation
 
-### DataCite Schema 4.0
+All files are UTF-8, and special characters are written as characters rather than XML entities where possible. Some konvolut files carry double-encoded umlauts from earlier imports.
 
-Used for Zenodo deposits - metadata extracted from TEI and transformed to DataCite JSON.
+The repository holds no TEI schema or ODD. The processing scripts check well-formedness and the invariants of their own changes with `--verify`. The ontology is validated separately with `python ontology/validate.py`.
 
-### Dublin Core
+## Related
 
-Generated from TEI header for OAI-PMH harvesting.
-
----
-
-## Character Encoding
-
-All files use UTF-8 encoding:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-```
-
-Special characters are encoded as UTF-8 rather than XML entities where possible.
-
----
-
-## Validation
-
-### TEI P5 Schema
-
-All files validate against TEI P5 schema with SZD-specific customizations.
-
-### Quality Assurance
-
-Ontology validation: `python ontology/validate.py` (6-stage pipeline including SHACL and competency questions).
-
----
-
-## Related Documentation
-
-- [COLLECTIONS.md](COLLECTIONS.md) - Collection-specific encoding details
-- [MAPPING.md](MAPPING.md) - Complete TEI-CSV schema for correspondence
-- [DATA.md](DATA.md) - Data quality and coverage statistics
-- [ARCHITECTURE.md](ARCHITECTURE.md) - System integration and data flow
-
----
-
-**Standards:**
-- TEI P5 Guidelines: https://tei-c.org/guidelines/
-- ISO 8601: Date/time encoding
-- GND: https://www.dnb.de/gnd
-- Wikidata: https://www.wikidata.org/
-
-**Last Updated:** March 2026
-
-**See also:** [ONTOLOGY.md](ONTOLOGY.md) for the formal ontology (SZDO v1.2.0) that formalizes this data model with RiC-O, LRM, and CRM alignments.
+- [COLLECTIONS.md](COLLECTIONS.md) — collection-specific encoding and rendering contracts
+- [MAPPING.md](MAPPING.md) — TEI-CSV schema for correspondence
+- [DATA.md](DATA.md) — data gaps
+- [ARCHITECTURE.md](ARCHITECTURE.md) — system integration and data flow
+- [ONTOLOGY.md](ONTOLOGY.md) — the formal ontology SZDO
