@@ -34,6 +34,8 @@ python scripts/korrespondenz_titel/fix_titles.py --apply
 python scripts/korrespondenz_titel/fix_titles.py --verify
 ```
 
+An applied run appends one row per changed value to `titles_log.csv` beside the script, with date, file, entry, field, old and new value and the rule that made the change. The log is provenance and is committed with the data.
+
 The check compares the working tree with `HEAD` and fails when the number of `biblFull` elements has changed, a file is not well-formed, an element other than `title` has changed its text or an attribute other than `date/@when` its value, or an old pattern remains outside the documented residual list. The run is idempotent, a second dry run reports zero changes.
 
 ## Scope

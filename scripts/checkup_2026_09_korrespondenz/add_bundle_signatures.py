@@ -54,6 +54,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -65,6 +66,9 @@ _spec.loader.exec_module(szd_io)
 INDEX = REPO_ROOT / "data" / "Correspondence" / "SZDKOR.xml"
 KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
 DEFAULT_CACHE = Path(tempfile.gettempdir()) / "szd-konvolut-tei"
+# Provenance of every applied change, appended and committed with the data.
+LOG = Path(__file__).resolve().parent / "signatures_log.csv"
+LOG_FIELDS = ["date", "file", "entry", "field", "old", "new", "rule"]
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
@@ -176,7 +180,7 @@ def escape(s: str) -> str:
 
 def insert_signature(text: str, case: Case) -> str:
     """Insert the signature idno where the entries that have one carry it."""
-    start = re.search(r'<biblFull xml:id="%s"' % re.escape(case.xml_id), text).start()
+    start = re.search(rf'<biblFull xml:id="{re.escape(case.xml_id)}"', text).start()
     end = text.index("</biblFull>", start)
     ms_start = text.index("<msIdentifier>", start)
     ms_end = text.index("</msIdentifier>", ms_start)
@@ -262,7 +266,7 @@ def verify(cache: Path, offline: bool) -> int:
             print(f"ERROR {xml_id}: konvolut not resolvable: {origin}")
             problems += 1
             continue
-        groups, pieces = konvolut_groups(path)
+        groups, _ = konvolut_groups(path)
         checked += 1
         if groups != [signature]:
             print(f"ERROR {xml_id}: index says {signature}, konvolut {pointer} "
@@ -280,6 +284,16 @@ def verify(cache: Path, offline: bool) -> int:
         print("no signature-less entry left that the rule could resolve")
     print(f"problems: {problems}")
     return problems
+
+
+def log_rows(written: list[Case]) -> list[dict[str, str]]:
+    today = date.today().isoformat()
+    return [
+        {"date": today, "file": INDEX.name, "entry": case.xml_id,
+         "field": "msIdentifier/idno[@type='signature']", "old": "", "new": case.signature,
+         "rule": f"only bundle group of {case.pid} ({case.origin}, {case.pieces} pieces)"}
+        for case in written
+    ]
 
 
 def main() -> int:
@@ -307,7 +321,7 @@ def main() -> int:
     text = szd_io.read_text(INDEX)
     written = [c for c in cases if not c.skip]
     # Descending by position, so an earlier insertion cannot move a later offset.
-    written.sort(key=lambda c: text.index('<biblFull xml:id="%s"' % c.xml_id), reverse=True)
+    written.sort(key=lambda c: text.index(f'<biblFull xml:id="{c.xml_id}"'), reverse=True)
     for case in written:
         text = insert_signature(text, case)
     try:
@@ -317,6 +331,7 @@ def main() -> int:
               file=sys.stderr)
         return 1
     szd_io.write_atomic(INDEX, text)
+    szd_io.append_log(LOG, LOG_FIELDS, log_rows(written))
     print(f"\nwritten: {INDEX.name} ({len(written)} entries)")
     return 0
 

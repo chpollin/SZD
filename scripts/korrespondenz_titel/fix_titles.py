@@ -35,6 +35,7 @@ import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
+from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -44,6 +45,9 @@ _spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" 
 szd_io = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(szd_io)
 KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
+# Provenance of every applied change, appended and committed with the data.
+LOG = Path(__file__).resolve().parent / "titles_log.csv"
+LOG_FIELDS = ["date", "file", "entry", "field", "old", "new", "rule"]
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
 XML = "{http://www.w3.org/XML/1998/namespace}"
@@ -69,9 +73,10 @@ MONTHS_DE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
 BILINGUAL_NAMES = {"Unbekannt/Unidentified": ("Unbekannt", "Unidentified")}
 
 # Titles in the shape the majority uses; used by --verify and by the guard below.
-CANONICAL_DE = re.compile(r"^(?:%s) von .+ an .+?(?: \[[^\]]+\])?$" % "|".join(DOC_TYPES))
-CANONICAL_EN = re.compile(r"^(?:%s) from .+ to .+?(?:, .+)?$"
-                          % "|".join(sorted({en for _, en in DOC_TYPES.values()})))
+_DE_TYPES = "|".join(DOC_TYPES)
+_EN_TYPES = "|".join(sorted({en for _, en in DOC_TYPES.values()}))
+CANONICAL_DE = re.compile(rf"^(?:{_DE_TYPES}) von .+ an .+?(?: \[[^\]]+\])?$")
+CANONICAL_EN = re.compile(rf"^(?:{_EN_TYPES}) from .+ to .+?(?:, .+)?$")
 
 HAS_ISO = re.compile(r"\d{4}-\d{2}")
 HAS_SIGNATURE = re.compile(r"SZ-[A-Z]")
@@ -276,7 +281,7 @@ BIBL_FULL = re.compile(r'<biblFull xml:id="([^"]+)"')
 
 
 def block_span(text: str, xml_id: str) -> tuple[int, int]:
-    match = re.search(r'<biblFull xml:id="%s"' % re.escape(xml_id), text)
+    match = re.search(rf'<biblFull xml:id="{re.escape(xml_id)}"', text)
     if not match:
         raise KeyError(xml_id)
     end = text.index("</biblFull>", match.start())
@@ -287,8 +292,8 @@ def rewrite(text: str, case: Case) -> str:
     start, end = block_span(text, case.xml_id)
     block = text[start:end]
     for lang, new in (("de", case.new_de), ("en", case.new_en)):
-        pattern = re.compile(r'(<title xml:lang="%s">)(.*?)(</title>)' % lang, re.S)
-        block, count = pattern.subn(lambda m: m.group(1) + escape(new) + m.group(3),
+        pattern = re.compile(rf'(<title xml:lang="{lang}">)(.*?)(</title>)', re.S)
+        block, count = pattern.subn(lambda m, new=new: m.group(1) + escape(new) + m.group(3),
                                     block, count=1)
         if count != 1:
             raise ValueError(f"{case.xml_id}: title[@xml:lang={lang}] nicht eindeutig gefunden")
@@ -296,8 +301,8 @@ def rewrite(text: str, case: Case) -> str:
         sent = re.search(r'<correspAction type="sent">.*?</correspAction>', block, re.S)
         if not sent:
             raise ValueError(f"{case.xml_id}: correspAction[@type=sent] nicht gefunden")
-        patched = re.sub(r'(<date[^>]*?)when="%s"' % re.escape(case.when_old),
-                         lambda m: m.group(1) + 'when="%s"' % case.when_new, sent.group(0))
+        patched = re.sub(rf'(<date[^>]*?)when="{re.escape(case.when_old)}"',
+                         lambda m: m.group(1) + f'when="{case.when_new}"', sent.group(0))
         block = block[:sent.start()] + patched + block[sent.end():]
     return text[:start] + block + text[end:]
 
@@ -358,7 +363,7 @@ def structural_diff(before: str, after: str) -> list[str]:
     if len(old) != len(new):
         return [f"Elementanzahl {len(old)} -> {len(new)}"]
     problems: list[str] = []
-    for (path_o, tag_o, text_o, attr_o), (path_n, tag_n, text_n, attr_n) in zip(old, new):
+    for (path_o, tag_o, text_o, attr_o), (path_n, tag_n, text_n, attr_n) in zip(old, new, strict=True):
         if (path_o, tag_o) != (path_n, tag_n):
             problems.append(f"Struktur verschoben: {path_o} -> {path_n}")
             continue
@@ -433,6 +438,22 @@ def verify(paths: list[Path]) -> int:
     return problems
 
 
+def log_rows(path: Path, cases: list[Case]) -> list[dict[str, str]]:
+    """One log row per changed title and per corrected date of the written cases."""
+    today = date.today().isoformat()
+    rows = []
+    for case in cases:
+        base = {"date": today, "file": path.name, "entry": case.xml_id}
+        for field, old, new in (("title[@xml:lang='de']", case.old_de, case.new_de),
+                                ("title[@xml:lang='en']", case.old_en, case.new_en)):
+            if old != new:
+                rows.append({**base, "field": field, "old": old, "new": new, "rule": case.rule})
+        if case.when_new:
+            rows.append({**base, "field": "correspAction[@type='sent']/date/@when",
+                         "old": case.when_old, "new": case.when_new, "rule": "century"})
+    return rows
+
+
 def main() -> int:
     szd_io.console_utf8()
     parser = argparse.ArgumentParser(description=__doc__,
@@ -474,6 +495,7 @@ def main() -> int:
                   f"nichts geschrieben: {exc}", file=sys.stderr)
             return 1
         szd_io.write_atomic(path, text)
+        szd_io.append_log(LOG, LOG_FIELDS, log_rows(path, file_cases))
         print(f"geschrieben: {path.name} ({len(file_cases)} Einträge)")
     return 0
 

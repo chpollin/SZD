@@ -51,6 +51,8 @@ python scripts/checkup_2026_09_korrespondenz/add_bundle_signatures.py --apply
 python scripts/checkup_2026_09_korrespondenz/add_bundle_signatures.py --verify
 ```
 
+An applied run appends one row per changed value to `signatures_log.csv` beside the script, with date, file, entry, field, old and new value and the rule that made the change. The log is provenance and is committed with the data.
+
 `--cache` sets the directory for the fetched konvolut sources, by default a folder in the
 system temp directory. The run is idempotent, so a second dry run after `--apply` reports zero
 entries.

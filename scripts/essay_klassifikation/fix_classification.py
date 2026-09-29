@@ -33,6 +33,7 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -42,6 +43,9 @@ _spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" 
 szd_io = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(szd_io)
 SZDESS = REPO_ROOT / "data" / "Aufsatzablage" / "SZDESS.xml"
+# Provenance of every applied change, appended and committed with the data.
+LOG = Path(__file__).resolve().parent / "classification_log.csv"
+LOG_FIELDS = ["date", "file", "entry", "field", "old", "new", "rule"]
 GROUPED_LISTS = [
     SZDESS,
     REPO_ROOT / "data" / "Work" / "SZDMSK.xml",
@@ -137,20 +141,21 @@ TERM_PATTERN = '<term type="classification" xml:lang="%s">'
 
 
 def rewrite(text: str, change: Change) -> str:
-    start = text.index('<biblFull xml:id="%s"' % change.xml_id)
+    start = text.index(f'<biblFull xml:id="{change.xml_id}"')
     end = text.index("</biblFull>", start)
     block = text[start:end]
     for lang in ("de", "en"):
         new = change.new[lang]
-        pattern = re.compile(r'(<term type="classification" xml:lang="%s">)(.*?)(</term>)'
-                             % lang, re.S)
-        block, count = pattern.subn(lambda m: m.group(1) + new + m.group(3), block, count=1)
+        pattern = re.compile(rf'(<term type="classification" xml:lang="{lang}">)(.*?)(</term>)',
+                             re.S)
+        block, count = pattern.subn(lambda m, new=new: m.group(1) + new + m.group(3), block,
+                                    count=1)
         if count:
             continue
         # Language missing: insert next to the sibling that is present, same indentation.
         other = "en" if lang == "de" else "de"
-        sibling = re.search(r'([ \t]*)<term type="classification" xml:lang="%s">.*?</term>'
-                            % other, block, re.S)
+        sibling = re.search(rf'([ \t]*)<term type="classification" xml:lang="{other}">.*?</term>',
+                            block, re.S)
         if not sibling:
             raise ValueError(f"{change.xml_id}: kein classification-Term zum Anlehnen")
         indent = sibling.group(1)
@@ -210,7 +215,7 @@ def verify(path: Path) -> int:
             print("FEHLER: Eintragszahl hat sich geändert")
             problems += 1
         touched = 0
-        for old, new in zip(before_entries, all_entries):
+        for old, new in zip(before_entries, all_entries, strict=False):
             if old.get(XML + "id") != new.get(XML + "id"):
                 print(f"FEHLER: Reihenfolge verschoben bei {old.get(XML + 'id')}")
                 problems += 1
@@ -259,6 +264,19 @@ def verify(path: Path) -> int:
     return problems
 
 
+def log_rows(path: Path, changes: list[Change]) -> list[dict[str, str]]:
+    """One log row per changed language of each written change."""
+    today = date.today().isoformat()
+    return [
+        {"date": today, "file": path.name, "entry": change.xml_id,
+         "field": f"term[@type='classification'][@xml:lang='{lang}']",
+         "old": change.old.get(lang, ""), "new": change.new[lang], "rule": change.rule}
+        for change in changes
+        for lang in ("de", "en")
+        if change.old.get(lang, "") != change.new[lang]
+    ]
+
+
 def main() -> int:
     szd_io.console_utf8()
     parser = argparse.ArgumentParser(description=__doc__,
@@ -287,17 +305,17 @@ def main() -> int:
               f"Mit --apply anwenden.")
         return 0
 
-    with open(args.szdess, encoding="utf-8", newline="") as handle:
-        text = handle.read()
+    text = szd_io.read_text(args.szdess)
     for change in changes:
         text = rewrite(text, change)
-    with open(args.szdess, "w", encoding="utf-8", newline="") as handle:
-        handle.write(text)
     try:
         ET.fromstring(text)
     except ET.ParseError as exc:
-        print(f"FEHLER: {args.szdess.name} ist nicht wohlgeformt: {exc}", file=sys.stderr)
+        print(f"FEHLER: {args.szdess.name} wäre nicht wohlgeformt, nichts geschrieben: {exc}",
+              file=sys.stderr)
         return 1
+    szd_io.write_atomic(args.szdess, text)
+    szd_io.append_log(LOG, LOG_FIELDS, log_rows(args.szdess, changes))
     print(f"\ngeschrieben: {args.szdess.name} ({len(changes)} Einträge)")
     return 0
 

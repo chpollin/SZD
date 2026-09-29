@@ -22,6 +22,8 @@ python scripts/essay_klassifikation/fix_classification.py --apply
 python scripts/essay_klassifikation/fix_classification.py --verify
 ```
 
+An applied run appends one row per changed value to `classification_log.csv` beside the script, with date, file, entry, field, old and new value and the rule that made the change. The log is provenance and is committed with the data.
+
 The check fails when the number of entries differs from `HEAD`, the order has shifted, an element other than `term[@type="classification"]` has changed its text, an entry without complete classification remains, or spelling variants of the same category still stand side by side. A second dry run plans zero changes.
 
 ## Scope
