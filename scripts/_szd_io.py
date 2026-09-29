@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import csv
 import re
+import subprocess
 import sys
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
@@ -97,3 +98,67 @@ def append_log(path: Path, fieldnames: Sequence[str], rows: Iterable[Mapping]) -
             writer.writeheader()
         writer.writerows(rows)
     return len(rows)
+
+
+def _git(root: Path, *args: str, stdin: bytes | None = None) -> bytes:
+    """Run git in root and return stdout; a failing call is a broken precondition."""
+    result = subprocess.run(["git", "-C", str(root), *args], input=stdin, capture_output=True)
+    if result.returncode != 0:
+        message = result.stderr.decode(errors="replace").strip()
+        raise RuntimeError(f"git {' '.join(args)}: {message}")
+    return result.stdout
+
+
+def head_commit(root: Path) -> str:
+    """Short hash of HEAD."""
+    return _git(root, "rev-parse", "--short", "HEAD").decode().strip()
+
+
+def head_revision(path: Path, root: Path) -> str | None:
+    """The file's text at HEAD, or None where HEAD does not hold it."""
+    rel = path.resolve().relative_to(root.resolve()).as_posix()
+    result = subprocess.run(["git", "-C", str(root), "show", f"HEAD:{rel}"], capture_output=True)
+    return result.stdout.decode("utf-8") if result.returncode == 0 else None
+
+
+def head_files(root: Path, prefix: str, suffix: str = ".xml") -> dict[str, bytes]:
+    """{repository path: bytes at HEAD} of every tracked file under prefix ending in suffix.
+
+    Read in one git cat-file batch rather than one git show per file, because the Konvolut
+    folder alone holds several hundred files. The bytes are the committed blobs, so their
+    line endings do not depend on the autocrlf setting of the working tree.
+    """
+    listing = _git(root, "ls-tree", "-r", "-z", "HEAD", "--", prefix)
+    entries: list[tuple[str, str]] = []
+    for record in filter(None, listing.split(b"\x00")):
+        meta, _, name = record.partition(b"\t")
+        _, kind, sha = meta.decode().split()
+        path = name.decode("utf-8")
+        if kind == "blob" and path.endswith(suffix):
+            entries.append((sha, path))
+    request = "".join(f"{sha}\n" for sha, _ in entries).encode()
+    out = _git(root, "cat-file", "--batch", stdin=request)
+    files: dict[str, bytes] = {}
+    at = 0
+    for sha, path in entries:
+        header_end = out.index(b"\n", at)
+        got_sha, _, size = out[at:header_end].decode().split()
+        if got_sha != sha:
+            raise RuntimeError(f"git cat-file answered {got_sha} for {sha} ({path})")
+        start = header_end + 1
+        files[path] = out[start : start + int(size)]
+        at = start + int(size) + 1
+    return files
+
+
+def uncommitted(root: Path, prefix: str) -> list[str]:
+    """Paths under prefix whose working tree differs from HEAD, untracked files included."""
+    status = _git(root, "status", "--porcelain", "-z", "--untracked-files=all", "--", prefix)
+    records = iter(status.split(b"\x00"))
+    paths: list[str] = []
+    for entry in records:
+        if len(entry) > 3:
+            paths.append(entry[3:].decode("utf-8"))
+            if entry[:1] in (b"R", b"C"):
+                next(records, None)  # the source path of a rename or copy follows
+    return paths
