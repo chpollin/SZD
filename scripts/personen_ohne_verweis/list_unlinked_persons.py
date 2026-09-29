@@ -37,16 +37,18 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import re
-import sys
 import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
-if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
 DATA = REPO_ROOT / "data"
 SZDPER = DATA / "Index" / "Person" / "SZDPER.xml"
 DEFAULT_CSV = Path(__file__).resolve().parent / "unlinked_persons.csv"
@@ -150,6 +152,7 @@ def shown(path: Path) -> str:
 
 
 def main() -> int:
+    szd_io.console_utf8()
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--szdper", type=Path, default=SZDPER)

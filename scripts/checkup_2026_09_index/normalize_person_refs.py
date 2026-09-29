@@ -48,9 +48,6 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Shared file helpers, loaded by path because the scripts run as plain files.
@@ -238,6 +235,7 @@ def verify() -> int:
 
 
 def main() -> int:
+    szd_io.console_utf8()
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )

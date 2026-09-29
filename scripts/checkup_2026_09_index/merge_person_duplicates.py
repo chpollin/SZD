@@ -48,9 +48,6 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Shared file helpers, loaded by path because the scripts run as plain files.
@@ -87,8 +84,8 @@ MERGES: dict[str, tuple[str, ...]] = {
     "SZDPER.1581": ("SZDPER.1099",),  # Pilnjak, 1581 carries the GND the DNB redirects to
 }
 
-# "Richard (1896-1979)" and "Mois (1896–1967)", hyphen or en dash between the years.
-LIFE_DATES = re.compile(r"^(?P<name>.*?)\s*\((?P<birth>\d{4})\s*[-–]\s*(?P<death>\d{4})\)$")
+# "Richard (1896-1979)" and "Mois (1896–1967)", hyphen or en dash between the years.  # noqa: RUF003
+LIFE_DATES = re.compile(r"^(?P<name>.*?)\s*\((?P<birth>\d{4})\s*[-–]\s*(?P<death>\d{4})\)$")  # noqa: RUF001 (en dash as written in the index)
 REF_ATTR = re.compile(r'ref="(?P<value>[^"]*)"')
 GND_NUMBER = re.compile(r"gnd/([0-9X\-]+)")
 BIBL_ID = re.compile(r'<(?:biblFull|person)[^>]*xml:id="([^"]+)"')
@@ -252,7 +249,8 @@ def rewrite_references(rows: list[dict]) -> dict[Path, str]:
             continue
         hits: list[dict] = []
 
-        def rewrite(match: re.Match[str]) -> str:
+        # Bound as defaults: the closure runs inside this iteration, the binding makes that explicit.
+        def rewrite(match: re.Match[str], hits=hits, path=path, text=text) -> str:
             value = match.group("value")
             new_value = value
             for removed, survivor in replacement.items():
@@ -328,6 +326,7 @@ def verify() -> int:
 
 
 def main() -> int:
+    szd_io.console_utf8()
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )

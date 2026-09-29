@@ -28,16 +28,19 @@ are. Default behaviour is a dry run; pass --apply to write.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import re
 import sys
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from pathlib import Path
 
-if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Shared file helpers, loaded by path because the scripts run as plain files.
+_spec = importlib.util.spec_from_file_location("_szd_io", REPO_ROOT / "scripts" / "_szd_io.py")
+szd_io = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(szd_io)
 SZDESS = REPO_ROOT / "data" / "Aufsatzablage" / "SZDESS.xml"
 GROUPED_LISTS = [
     SZDESS,
@@ -257,6 +260,7 @@ def verify(path: Path) -> int:
 
 
 def main() -> int:
+    szd_io.console_utf8()
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--szdess", type=Path, default=SZDESS)

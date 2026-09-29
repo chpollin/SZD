@@ -46,14 +46,10 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
-import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
-
-if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
@@ -732,6 +728,7 @@ def verify() -> int:
 
 
 def main() -> int:
+    szd_io.console_utf8()
     parser = argparse.ArgumentParser(description=__doc__,
                                       formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--apply", action="store_true", help="write the changes")

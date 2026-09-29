@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import csv
 import re
+import sys
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
 
@@ -33,6 +34,19 @@ SZDPER_ID = re.compile(r"SZDPER\.\d+[a-z]?(?![0-9A-Za-z_])")
 def person_id_pattern(person_id: str) -> re.Pattern[str]:
     """One given id as a whole id, with the same boundary as SZDPER_ID."""
     return re.compile(rf"{re.escape(person_id)}(?![0-9A-Za-z_])")
+
+
+def console_utf8() -> None:
+    """Write stdout and stderr as UTF-8.
+
+    On Windows a redirected stream defaults to the ANSI code page, and a console that
+    decodes the output as UTF-8 then shows "M�rz"; errors="replace" alone only hides the
+    characters the code page lacks. Called from main(), never at import, so that tests
+    keep their captured streams.
+    """
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
 
 def read_text(path: Path) -> str:

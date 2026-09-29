@@ -2,6 +2,10 @@
 from __future__ import annotations
 
 import csv
+import os
+import subprocess
+import sys
+from pathlib import Path
 
 import _szd_io as szd_io
 import pytest
@@ -58,3 +62,16 @@ def test_whole_person_id():
     assert not pattern.search("#SZDPER.2080a")
     assert not pattern.search("#SZDPER.20801")
     assert pattern.search('ref="#SZDPER.2080"')
+
+
+def test_console_utf8_writes_umlauts_as_utf8_into_a_pipe():
+    env = {k: v for k, v in os.environ.items() if k not in ("PYTHONIOENCODING", "PYTHONUTF8")}
+    code = (
+        "import importlib.util, sys; "
+        f"s = importlib.util.spec_from_file_location('_szd_io', {str(Path(szd_io.__file__))!r}); "
+        "m = importlib.util.module_from_spec(s); s.loader.exec_module(m); "
+        "m.console_utf8(); print('M\u00e4rz'); print('M\u00e4rz', file=sys.stderr)"
+    )
+    result = subprocess.run([sys.executable, "-c", code], capture_output=True, env=env, check=True)
+    assert result.stdout.strip() == "März".encode()
+    assert result.stderr.strip() == "März".encode()
