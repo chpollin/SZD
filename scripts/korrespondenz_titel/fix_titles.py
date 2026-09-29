@@ -49,8 +49,7 @@ KONVOLUTE = REPO_ROOT / "data" / "Correspondence" / "konvolute"
 LOG = Path(__file__).resolve().parent / "titles_log.csv"
 LOG_FIELDS = ["date", "file", "entry", "field", "old", "new", "rule"]
 
-TEI = "{http://www.tei-c.org/ns/1.0}"
-XML = "{http://www.w3.org/XML/1998/namespace}"
+TEI, XML, text_of = szd_io.TEI, szd_io.XML, szd_io.text_of
 
 # Document type of the entry title, keyed by the leading noun of the German extent.
 # Derived from the corpus, not invented: every value below is attested in title/extent
@@ -90,10 +89,6 @@ LAST_PLAUSIBLE_YEAR = 1942
 
 def local(tag: str) -> str:
     return tag.split("}")[-1]
-
-
-def text_of(elem: ET.Element) -> str:
-    return re.sub(r"\s+", " ", "".join(elem.itertext())).strip()
 
 
 def escape(s: str) -> str:
@@ -378,14 +373,6 @@ def structural_diff(before: str, after: str) -> list[str]:
     return problems
 
 
-def head_revision(path: Path) -> str | None:
-    import subprocess
-    rel = path.resolve().relative_to(REPO_ROOT).as_posix()
-    result = subprocess.run(["git", "show", f"HEAD:{rel}"], cwd=REPO_ROOT,
-                            capture_output=True)
-    return result.stdout.decode("utf-8") if result.returncode == 0 else None
-
-
 def verify(paths: list[Path]) -> int:
     """Re-derive every canonical title in the corpus and check the invariants."""
     problems = 0
@@ -400,7 +387,7 @@ def verify(paths: list[Path]) -> int:
             problems += 1
             continue
         entries_after += len(list(root.iter(f"{TEI}biblFull")))
-        before = head_revision(path)
+        before = szd_io.head_revision(path, REPO_ROOT)
         if before is None:
             print(f"HINWEIS: {path.name} ist in HEAD nicht vorhanden, kein Strukturvergleich")
         else:

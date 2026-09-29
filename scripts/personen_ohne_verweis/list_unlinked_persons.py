@@ -53,19 +53,12 @@ DATA = REPO_ROOT / "data"
 SZDPER = DATA / "Index" / "Person" / "SZDPER.xml"
 DEFAULT_CSV = Path(__file__).resolve().parent / "unlinked_persons.csv"
 
-TEI = "{http://www.tei-c.org/ns/1.0}"
-XML = "{http://www.w3.org/XML/1998/namespace}"
+TEI, XML, text_of = szd_io.TEI, szd_io.XML, szd_io.text_of
 
-PERSON_ID = re.compile(r"SZDPER\.[A-Za-z0-9_.\-]*")
-FRAGMENT_ID = re.compile(r"#(SZDPER\.[A-Za-z0-9_.\-]*)")
-GND = re.compile(r"gnd/([0-9X\-]+)")
+FRAGMENT_ID = re.compile(f"#({szd_io.SZDPER_ID.pattern})")
 ESSAYS = Path("Aufsatzablage") / "SZDESS.xml"  # relative to --data
 # Fixed, so that an empty result still writes a CSV with its header.
 CSV_FIELDS = ["id", "name", "normdaten", "verweis_innerhalb_szdper"]
-
-
-def text_of(elem: ET.Element) -> str:
-    return re.sub(r"\s+", " ", "".join(elem.itertext())).strip()
 
 
 def display_name(person: ET.Element) -> str:
@@ -139,7 +132,7 @@ def scan_references(data_dir: Path, authority_file: Path) -> tuple[Counter, Coun
                     if position == 0:
                         target[person_id] += 1
             if not is_authority and local_name(elem) == "persName" and tokens:
-                persname_gnd.update(GND.findall(tokens[0]))
+                persname_gnd.update(szd_io.gnd_ids(tokens[0]))
     return external, internal, persname_gnd, trailing - leading
 
 
@@ -171,7 +164,7 @@ def main() -> int:
     for person in persons:
         xml_id = person.get(XML + "id") or ""
         links = authority_links(person)
-        gnds = GND.findall(links)
+        gnds = szd_io.gnd_ids(links)
         # Either writing is a link: the id in fragment form, or the authority number on a
         # persName in the holdings, which the mapping resolves through the index.
         if external.get(xml_id) or any(gnd in persname_gnd for gnd in gnds):

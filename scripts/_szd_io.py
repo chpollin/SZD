@@ -1,4 +1,8 @@
-"""File helpers shared by the scripts that rewrite TEI under data/ and log what they change.
+"""File helpers shared by the scripts that rewrite TEI under data/ and log what they change,
+together with the TEI namespaces, the id and GND patterns and the reads from HEAD they share.
+
+The checkup_2026_09_* scripts keep their own copies of these helpers, because they are
+finished and stay as the provenance of the changes they made.
 
 The data files are mixed, the index files carry LF and the konvolut files CRLF, and on
 Windows a plain read_text/write_text pair turns one into the other. Reading and writing
@@ -23,6 +27,7 @@ import csv
 import re
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
 
@@ -32,9 +37,34 @@ from pathlib import Path
 SZDPER_ID = re.compile(r"SZDPER\.\d+[a-z]?(?![0-9A-Za-z_])")
 
 
+TEI_NS = "http://www.tei-c.org/ns/1.0"
+TEI = "{" + TEI_NS + "}"
+XML = "{http://www.w3.org/XML/1998/namespace}"
+XML_ID = XML + "id"
+
+# A reference value may name several GND records. The data separates them by spaces, by
+# ";" or "," and in one index entry by " / ", so all of these count as separators.
+GND_SEPARATORS = re.compile(r"\s*[;,]\s*|\s+/\s+|\s+")
+GND_IN_TOKEN = re.compile(r"d-nb\.info/gnd/([^\s;,/]*)")
+
+
 def person_id_pattern(person_id: str) -> re.Pattern[str]:
     """One given id as a whole id, with the same boundary as SZDPER_ID."""
     return re.compile(rf"{re.escape(person_id)}(?![0-9A-Za-z_])")
+
+
+def text_of(elem: ET.Element) -> str:
+    """The element's whole text, whitespace collapsed."""
+    return re.sub(r"\s+", " ", "".join(elem.itertext())).strip()
+
+
+def gnd_ids(value: str) -> list[str]:
+    """The GND numbers a reference value names, in order, whatever separates them.
+
+    The number is returned as written, so a malformed one (gnd/placeholder) stays visible
+    to the caller instead of being cut to its digits.
+    """
+    return [m.group(1) for token in GND_SEPARATORS.split(value.strip()) if (m := GND_IN_TOKEN.search(token))]
 
 
 def console_utf8() -> None:

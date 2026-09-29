@@ -75,3 +75,21 @@ def test_console_utf8_writes_umlauts_as_utf8_into_a_pipe():
     result = subprocess.run([sys.executable, "-c", code], capture_output=True, env=env, check=True)
     assert result.stdout.strip() == "März".encode()
     assert result.stderr.strip() == "März".encode()
+
+
+# Reference values as they stand in the data (SZDPER.xml, SZDESS.xml, SZDKOR.xml).
+@pytest.mark.parametrize(
+    ("value", "ids"),
+    [
+        ("http://d-nb.info/gnd/1037465881 / http://d-nb.info/gnd/1037465261", ["1037465881", "1037465261"]),
+        ("http://d-nb.info/gnd/118543628, http://d-nb.info/gnd/118563076", ["118543628", "118563076"]),
+        ("https://d-nb.info/gnd/118527053; http://d-nb.info/gnd/118732641", ["118527053", "118732641"]),
+        ("http://d-nb.info/gnd/1038039797 http://d-nb.info/gnd/116060891", ["1038039797", "116060891"]),
+        (" http://d-nb.info/gnd/1217682775", ["1217682775"]),
+        ("http://d-nb.info/gnd/7846367-1 ", ["7846367-1"]),
+        ("http://d-nb.info/gnd/placeholder", ["placeholder"]),
+        ("#SZDPER.42", []),
+    ],
+)
+def test_gnd_ids_split_every_separator_of_the_data(value, ids):
+    assert szd_io.gnd_ids(value) == ids

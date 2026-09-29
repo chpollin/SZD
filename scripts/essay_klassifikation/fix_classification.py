@@ -52,12 +52,7 @@ GROUPED_LISTS = [
     REPO_ROOT / "data" / "PersonalDocument" / "SZDLEB.xml",
 ]
 
-TEI = "{http://www.tei-c.org/ns/1.0}"
-XML = "{http://www.w3.org/XML/1998/namespace}"
-
-
-def text_of(elem: ET.Element) -> str:
-    return re.sub(r"\s+", " ", "".join(elem.itertext())).strip()
+TEI, XML, text_of = szd_io.TEI, szd_io.XML, szd_io.text_of
 
 
 def classification(bibl_full: ET.Element) -> dict[str, str]:
@@ -203,12 +198,9 @@ def verify(path: Path) -> int:
     all_entries = list(root.iter(f"{TEI}biblFull"))
     print(f"Einträge (biblFull): {len(all_entries)}")
 
-    import subprocess
-    rel = path.resolve().relative_to(REPO_ROOT).as_posix()
-    result = subprocess.run(["git", "show", f"HEAD:{rel}"], cwd=REPO_ROOT,
-                            capture_output=True)
-    if result.returncode == 0:
-        before = ET.fromstring(result.stdout.decode("utf-8"))
+    before_text = szd_io.head_revision(path, REPO_ROOT)
+    if before_text is not None:
+        before = ET.fromstring(before_text)
         before_entries = list(before.iter(f"{TEI}biblFull"))
         print(f"Einträge in HEAD: {len(before_entries)}")
         if len(before_entries) != len(all_entries):
