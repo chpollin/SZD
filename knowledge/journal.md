@@ -8,12 +8,22 @@ method:
   url: https://dhcraft.org/Promptotyping/
 status: active
 created: 2026-09-18
-updated: 2026-09-24
+updated: 2026-09-29
 ---
 
 # Journal
 
 Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
+
+## 2026-09-29, script repairs and a data check before staging
+
+Changed. The script part of the refactoring plan of the presentation layer (phase 4) is done in `scripts/`, one commit per repair. `list_unlinked_persons.py` no longer stops when `--csv` points outside the repository, and `unlinked_persons.csv` is regenerated without the persons removed on 2026-09-24. `find_unlinked_persons.py` normalises names and text to NFC before it splits them into words, because the person index writes names such as that of `SZDPER.21` decomposed and the word index never found them. Twelve scripts wrote their console output in the ANSI code page and lost umlauts in a pipe, and `console_utf8()` in `_szd_io.py` now sets stdout and stderr to UTF-8. The staging package reads its files from `HEAD`, names uncommitted changes under `data/`, refuses an `--out` inside the repository and lists staging answers other than a redirect, 400 or 404 as errors with exit code 1, where it used to count them as new objects. `fix_titles.py`, `add_bundle_signatures.py` and `fix_classification.py` append every applied change to a CSV log beside them, and `fix_classification.py` checks well-formedness before it writes. The newer scripts take namespaces, `text_of`, `head_revision` and `gnd_ids` from `_szd_io.py`, while the finished checkup scripts keep their copies as provenance.
+
+Changed. `scripts/check_data.py` checks every TEI file under `data/` read-only and returns an exit code. The open findings of the decided checks are frozen in the script as known exceptions, each group with the place in the [plan](plan.md) where its question stands, so that only a new finding fails. `build_staging_package.py` runs it over the `HEAD` files before it writes and stops on a file that is not well formed or on a new finding. Tests cover the century rule of `fix_titles.py` on `SZDKOR.freud-sigmund.5` and `SZDKOR.heidelbach-paul.B.1` at a fixed data commit, the group order and PID rule of the package, the reading of staging answers and the corpus state of the check.
+
+Decided. NFC, correspondence dates after 1950 and whitespace in `@ref` only warn in `check_data.py`, because the operator has not decided them. `fix_titles.py --apply` was not run. The deterministic data corrections of the same day ran in a separate session under `scripts/datenkorrektur_2026_09_29/`.
+
+Open. The check found a date that does not exist, two GND numbers on one index person, a name in `@ref`, an eleven-digit GND number and `@ref` values with leading whitespace, all in the [plan](plan.md). The NFC question, the tooling of the repository and the unexplained red `--verify` of `fix_konvolut_defects.py` are there too.
 
 ## 2026-09-24, staging ingest of the data package
 

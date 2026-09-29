@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/Promptotyping/
 status: active
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-29
 ---
 
 # Plan
@@ -39,7 +39,8 @@ The corrections reach production only after the archive has approved them on sta
 - Three production objects are defective and stay out of the staging package, because their files do not name their own PID. `o:szd.korrespondenzen.judischer-jugendverein` and `o:szd.korrespondenzen.judischer-jugendverein-dusseldorf` are two objects for one body, and both name the obsolete PID `o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)`. `o:szd.korrespondenzen.rascher-und-cie` carries the content of `alberts-margot` and no PID of its own. Operator question, which of the two Jugendverein objects stays, and where the correct content of the Rascher Konvolut can be recovered from.
 - Left untouched by `scripts/checkup_2026_09_konvolute/fix_konvolut_defects.py` because the correct value is not established. Specht Richard `SZ-SEF/B9.1` (recipient Richard Specht or Lotte Altmann, archive at the original). `SZ-SAM/B18.1–3` (which date belongs to which piece, archive). `SZ-LAS/B3.33–35`, carried by both `fleischer-max` and `fleischer-victor` with diverging content (which object is canonical, operator). The remaining `needs-archive` and `needs-operator` items of the archive-internal operator report.
 - Thalhuber `SZ-SAM/B17`. The defect lies in the correspondence index `SZDKOR.xml`, which the Konvolut script does not write. Technical, a correction with evidence in the index scripts.
-- Dates after 1950. The imported Konvolute `bahr-hermann`, `feld-leo`, `freud-sigmund`, `heidelbach-paul`, `jeanrenaud`, `kaemmerer-ami`, `kaemmerer-maria`, `kubin-alfred`, `mees-friedrich-siegbert`, `unidentified` and `winternitz-friderike-von` carry `@when` values after 1950 (read on 2026-09-24). Most look like the century error of two-digit years described in [DATA](DATA.md#century-error-in-two-digit-years), while family letters may genuinely be later. Where title or display text proves the year, `scripts/korrespondenz_titel/` corrects it, the rest needs an editorial decision.
+- Dates after 1950. The imported Konvolute `bahr-hermann`, `feld-leo`, `freud-sigmund`, `heidelbach-paul`, `jeanrenaud`, `kaemmerer-ami`, `kaemmerer-maria`, `kubin-alfred`, `mees-friedrich-siegbert`, `unidentified` and `winternitz-friderike-von` carry `@when` values after 1950 (read on 2026-09-24). Most look like the century error of two-digit years described in [DATA](DATA.md#century-error-in-two-digit-years), while family letters may genuinely be later. Where title or display text proves the year, `scripts/korrespondenz_titel/fix_titles.py` corrects it, the rest needs an editorial decision. Its dry run is ready and logs every change, the run with `--apply` waits on the operator.
+- `SZDKOR.reitter-eugenie.65` is dated 29 February 1934, a day that does not exist. Only the original can give the date.
 - The `dc:title` values of the Konvolut objects follow several patterns (frontend `knowledge/Facsimiles-Korrespondenzen.md`). The header titles of the Konvolut files are their source.
 
 ## Timeline lanes
@@ -58,6 +59,8 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 - Archive question, whether the entry for Neumann means the writer or the architect of that name.
 - `SZDPER.1026` (Neydisser) has been a name variant of `SZDPER.818` (Lernet-Holenia) since `a108c6f3`, while the library still names the pseudonym's own GND. `SZDPER.1304` never existed, and the body it means, the Selbsthilfevereinigung der jüdischen Blinden in Deutschland, has no entry in the organisation index.
 - Correspondence partners whose GND in `SZDKOR.xml` is missing from their index entry, and person references in `SZDKOR.xml` that carry `gnd/placeholder`.
+- `SZDPER.1680` carries two GND numbers on one `persName`, separated by " / ", and `SZDKOR.zweig-friderike.89` has the name "Zweig, Friderike" in `@ref` instead of a reference. `SZDKOR.371` and `SZDPER.1858` carry the eleven-digit number 11055719711, which fits no GND form.
+- Several `@ref` values in `SZDKOR.xml`, `SZDPER.xml`, `SZDMSK.xml`, `SZDAUT.xml` and the Konvolut `kaemmerer-ami` begin or end with whitespace. Because `GetPersonlist` takes the part before the first space, a leading space probably leaves the mapping an empty value and loses the person. Trimming is deterministic, but the operator has not yet decided it.
 - The check scripts do not read identifiers with a letter suffix such as `SZDPER.2080a` as references.
 
 ## Organisation and location index
@@ -80,9 +83,13 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 - Glossary. The German and English definitions of `Enclosures` and `AdditionalMaterial` are crossed ([DATA](DATA.md#glossary)). Which language version is canonical?
 - Editorial rulings from the archive checkup. Whether an index entry counts an archival bundle or a correspondence relationship, what bracketed title dates mean, one notation for unidentified senders, and the classification vocabulary of the Aufsatzablage.
 - Archive questions on missing scans and on dates only the originals can supply.
+- NFC. The person index writes a large part of its names decomposed, and a few further files carry single decomposed characters. Normalise all TEI files to NFC, or leave the form as delivered?
 - The root file `mail.md`, a mail text of July 2026 on the SZ-AAL/B correspondence, has no function in the repository. Remove it?
 
 ## Scripts and documentation
 
 - `reconcile_klawiter.py` and `generate_instances.py` with `reconciliation_report.md` and `reconciliation_results.json` stay at the top level of `scripts/`. They belong with the ontology, and a move changes the generator comments of `ontology/reconciliation.ttl` and `ontology/sample-instances.ttl`, `ontology/README.md` and [ONTOLOGY](ONTOLOGY.md), so it goes together with the next ontology regeneration.
+- `scripts/check_data.py` runs before every staging package. Its checks for NFC, for correspondence dates after 1950 and for whitespace in `@ref` only warn until the operator decides NFC normalisation, the century corrections and the trimming. A decided check then moves into the enforced set with its remaining findings as known exceptions. The known exceptions of the enforced checks are the open findings listed in this plan.
+- `scripts/checkup_2026_09_konvolute/fix_konvolut_defects.py --verify` finds, for several of its entries, neither the old nor the new value any more. Which later change replaced them is not yet traced.
+- The Python tooling of the repository (`pyproject.toml`, `uv`, `ruff` configuration, pre-commit) is an operator decision. Until then the scripts touched in September 2026 are checked with the `ruff` rule set of the house style from the command line, and the formatter has not been run over the holdings.
 - `scripts/SZ-AAL-Pipeline/` holds a second, diverging `szd_pipeline.py` beside `scripts/Processing Pipeline/` and has no README. Which one stays?

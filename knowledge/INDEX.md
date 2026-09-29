@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-24
+updated: 2026-09-29
 ---
 
 # Index
@@ -36,12 +36,13 @@ Further documentation sits beside the material it describes, [ontology/README.md
 
 ## Scripts
 
-Every script folder has a README with procedure, options and log format. Scripts that rewrite files under `data/` read and write through [scripts/_szd_io.py](../scripts/_szd_io.py), which keeps each file's line endings and writes only after a well-formedness check, and they append every change to a CSV log beside them.
+Every script folder has a README with procedure, options and log format. Scripts that rewrite files under `data/` read and write through [scripts/_szd_io.py](../scripts/_szd_io.py), which keeps each file's line endings and writes only after a well-formedness check, and they append every change to a CSV log beside them. The same module holds the TEI namespaces, the person id and GND patterns, the UTF-8 console setup and the reads from `HEAD` that the newer scripts share. The finished `checkup_2026_09_*` scripts keep their own copies as the record of the changes they made.
 
 | Path | Purpose |
 |---|---|
 | [konvolute_import/](../scripts/konvolute_import/README.md) | Import of every correspondence Konvolut from GAMS production into `data/Correspondence/konvolute/`, with the known defective production objects |
-| [staging_package/build_staging_package.py](../scripts/staging_package/build_staging_package.py) | Staging ingest package outside the repository, in ingest order, with checksums and the Cirilo references still to set |
+| [check_data.py](../scripts/check_data.py) | Read-only checks of all TEI files with an exit code, from well-formedness and double-encoded umlauts to dangling references, GND form, dates and the Konvolut PIDs, with the open findings frozen as documented exceptions |
+| [staging_package/build_staging_package.py](../scripts/staging_package/build_staging_package.py) | Staging ingest package from `HEAD` outside the repository, in ingest order, with checksums and the Cirilo references still to set, after `check_data.py` |
 | [checkup_2026_09_konvolute/](../scripts/checkup_2026_09_konvolute/README.md) | Evidenced corrections of the Konvolut files from the archive checkup of September 2026 |
 | [checkup_2026_09_korrespondenz/](../scripts/checkup_2026_09_korrespondenz/README.md) | Bundle signatures of correspondence index entries without signature |
 | [checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md) | Person duplicates, reference form, essay author references and further IIIF label repairs, the survey of unlinked persons (`find_unlinked_persons.py`), and the check and removal of certainly unreferenced persons (`verify_orphan_persons.py`, `remove_orphan_persons.py`, removed entries kept in `removed_persons.xml`) |
