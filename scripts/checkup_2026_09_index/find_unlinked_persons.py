@@ -29,6 +29,7 @@ import argparse
 import csv
 import re
 import sys
+import unicodedata
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -87,7 +88,18 @@ def local(tag: str) -> str:
 
 
 def norm(text: str) -> str:
-    return " ".join(text.replace("\u2019", "'").split())
+    """Whitespace-collapsed NFC text.
+
+    The index writes several names decomposed (SZDPER.21 as Ampe + U+0300 + re) where the
+    holdings write them composed, and \\w+ splits a decomposed name at the combining mark, so
+    without NFC the word index never finds it.
+    """
+    return " ".join(unicodedata.normalize("NFC", text).replace("\u2019", "'").split())
+
+
+def words(text: str) -> list[str]:
+    """Search tokens of a text; casefold can leave a composed character decomposed."""
+    return WORD.findall(unicodedata.normalize("NFC", text.casefold()))
 
 
 @dataclass
@@ -238,15 +250,15 @@ class TextIndex:
         self.nodes = [(doc, el, text) for doc in docs for el, text in doc.texts]
         self.words: dict[str, list[int]] = defaultdict(list)
         for i, (_, _, text) in enumerate(self.nodes):
-            for word in set(WORD.findall(text.casefold())):
+            for word in set(words(text)):
                 self.words[word].append(i)
         self.fulltext: dict[int, str] = {}
 
     def candidates(self, phrase: str) -> list[int]:
-        words = WORD.findall(phrase.casefold())
-        if not words:
+        tokens = words(phrase)
+        if not tokens:
             return []
-        return self.words.get(max(words, key=len), [])
+        return self.words.get(max(tokens, key=len), [])
 
     def full(self, el: ET.Element) -> str:
         key = id(el)
@@ -515,9 +527,9 @@ def main() -> int:
         for r in results:
             base = [r["pid"], r["label"], r["gnd"], r["klasse"]]
             if not r["hits"]:
-                writer.writerow(base + ["", "", "", "", ""])
+                writer.writerow([*base, "", "", "", "", ""])
             for h in r["hits"]:
-                writer.writerow(base + [h.doc.label, h.object_id, h.path, h.existing, h.context])
+                writer.writerow([*base, h.doc.label, h.object_id, h.path, h.existing, h.context])
     write_summary(args.out_dir / "unverknuepfte_personen_zusammenfassung.md", results, counts,
                   len(persons), len(docs), strict, outside, near_miss, bare, ambiguous)
 
