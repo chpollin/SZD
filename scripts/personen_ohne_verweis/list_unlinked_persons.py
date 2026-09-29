@@ -57,7 +57,9 @@ XML = "{http://www.w3.org/XML/1998/namespace}"
 PERSON_ID = re.compile(r"SZDPER\.[A-Za-z0-9_.\-]*")
 FRAGMENT_ID = re.compile(r"#(SZDPER\.[A-Za-z0-9_.\-]*)")
 GND = re.compile(r"gnd/([0-9X\-]+)")
-ESSAYS = DATA / "Aufsatzablage" / "SZDESS.xml"
+ESSAYS = Path("Aufsatzablage") / "SZDESS.xml"  # relative to --data
+# Fixed, so that an empty result still writes a CSV with its header.
+CSV_FIELDS = ["id", "name", "normdaten", "verweis_innerhalb_szdper"]
 
 
 def text_of(elem: ET.Element) -> str:
@@ -119,9 +121,10 @@ def scan_references(data_dir: Path, authority_file: Path) -> tuple[Counter, Coun
     persname_gnd: set[str] = set()
     leading: set[str] = set()
     trailing: set[str] = set()
+    essays = (data_dir / ESSAYS).resolve()
     for path in sorted(data_dir.rglob("*.xml")):
         is_authority = path.resolve() == authority_file.resolve()
-        is_essays = path.resolve() == ESSAYS.resolve()
+        is_essays = path.resolve() == essays
         target = internal if is_authority else external
         for elem in ET.parse(path).getroot().iter():
             value = elem.get("ref")
@@ -136,6 +139,14 @@ def scan_references(data_dir: Path, authority_file: Path) -> tuple[Counter, Coun
             if not is_authority and local_name(elem) == "persName" and tokens:
                 persname_gnd.update(GND.findall(tokens[0]))
     return external, internal, persname_gnd, trailing - leading
+
+
+def shown(path: Path) -> str:
+    """The path relative to the repository where it lies inside, else absolute."""
+    resolved = path.resolve()
+    if resolved.is_relative_to(REPO_ROOT):
+        return resolved.relative_to(REPO_ROOT).as_posix()
+    return str(resolved)
 
 
 def main() -> int:
@@ -187,11 +198,11 @@ def main() -> int:
         print("\nTrockenlauf -- keine CSV geschrieben.")
         return 0
 
-    with open(args.csv, "w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+    with args.csv.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"\ngeschrieben: {args.csv.relative_to(REPO_ROOT)} ({len(rows)} Zeilen)")
+    print(f"\ngeschrieben: {shown(args.csv)} ({len(rows)} Zeilen)")
     return 0
 
 
