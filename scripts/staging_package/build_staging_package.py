@@ -17,6 +17,10 @@ index objects on the instance at ingest time, so the indexes go in before everyt
 A konvolut whose TEI does not name its own PID is left out, because Cirilo takes the PID of a
 new object from the file and would create a wrong object.
 
+Before anything is written, scripts/check_data.py runs over the same HEAD files. A file that
+is not well formed or a finding of a decided check outside its known exceptions stops the
+build, the checks the operator has not decided (NFC, century, ref whitespace) only warn.
+
 A staging answer other than a redirect, 400 or 404 (a server error, a timeout, no network) is
 collected as an error instead of being read as "new object" or "reference to set". The package
 is still written, its README lists the errors, and the exit code is 1.
@@ -48,6 +52,11 @@ ROOT = Path(__file__).resolve().parents[2]
 _spec = importlib.util.spec_from_file_location("_szd_io", ROOT / "scripts" / "_szd_io.py")
 szd_io = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(szd_io)
+# Registered before it runs, because its dataclasses look their module up by name.
+_spec = importlib.util.spec_from_file_location("check_data", ROOT / "scripts" / "check_data.py")
+check_data = importlib.util.module_from_spec(_spec)
+sys.modules["check_data"] = check_data
+_spec.loader.exec_module(check_data)
 
 STAGING = "https://gams-staging.uni-graz.at"
 MIRROR = STAGING + "/gamsdev/pollin/szd/gams-www/"
@@ -180,6 +189,12 @@ def main() -> int:
         for path in pending:
             print(f"  {path}", file=sys.stderr)
     files = szd_io.head_files(ROOT, "data/")
+    # A file that does not parse would break the ingest, and a new finding of a decided check
+    # is a regression; both stop the package. Undecided checks only warn.
+    print("data checks over HEAD (scripts/check_data.py):")
+    if check_data.summarise(check_data.check(files)):
+        print("ERROR: data checks failed, no package built", file=sys.stderr)
+        return 1
     groups, skipped = package_groups(files)
 
     if args.out.exists():
