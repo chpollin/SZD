@@ -37,7 +37,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):  # Windows consoles default to cp1252
-    sys.stdout.reconfigure(errors="replace")
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 TARGETS = [
