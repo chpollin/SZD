@@ -4,6 +4,7 @@
     <fileDesc>
       <titleStmt>
         <title>Autographen</title>
+        <title xml:lang="en">Autographs</title>
         <author>
           <persName>
             <forename>Oliver</forename>
@@ -13,28 +14,22 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72"
-            ref="d-nb.info/gnd/1047605287">Literaturarchiv Salzburg</orgName>
+          <orgName ref="https://d-nb.info/gnd/1047605287" corresp="https://www.plus.ac.at/literaturarchiv-salzburg/">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at"
-            ref="d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung - Austrian Centre
-            for Digital Humanities, Karl-Franzens-Universität Graz </orgName>
+          <orgName corresp="https://digital-humanities.uni-graz.at/">Institut für Digitale Geisteswissenschaften, Universität Graz</orgName>
         </authority>
         <distributor>
-          <orgName ref="https://gams.uni-graz.at">GAMS - Geisteswissenschaftliches Asset Management
-            System</orgName>
+          <orgName ref="https://gams.uni-graz.at">GAMS, Geisteswissenschaftliches Asset Management System</orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons
-            BY</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</licence>
         </availability>
-        <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.thema.4</idno>
         <date when="2020-07-01">01.07.2020</date>
       </publicationStmt>
       <seriesStmt>
-        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
         <respStmt>
           <resp>Datenmodellierung</resp>
           <persName>

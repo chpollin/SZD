@@ -4,6 +4,7 @@
     <fileDesc>
       <titleStmt>
         <title>Wie Stefan Zweig schreibt</title>
+        <title xml:lang="en">Stefan Zweig at Work</title>
         <author>
           <persName>
             <forename>Simone</forename>
@@ -13,27 +14,22 @@
       </titleStmt>
       <publicationStmt>
         <publisher>
-          <orgName corresp="https://www.uni-salzburg.at/index.php?id=72" ref="d-nb.info/gnd/1047605287">Literaturarchiv
-                  Salzburg</orgName>
+          <orgName ref="https://d-nb.info/gnd/1047605287" corresp="https://www.plus.ac.at/literaturarchiv-salzburg/">Literaturarchiv Salzburg</orgName>
         </publisher>
         <authority>
-          <orgName corresp="https://informationsmodellierung.uni-graz.at" ref="d-nb.info/gnd/1137284463">Zentrum für
-                  Informationsmodellierung - AustrianCentrefor Digital Humanities,
-                  Karl-Franzens-Universität Graz </orgName>
+          <orgName corresp="https://digital-humanities.uni-graz.at/">Institut für Digitale Geisteswissenschaften, Universität Graz</orgName>
         </authority>
         <distributor>
-          <orgName ref="https://gams.uni-graz.at"> GAMS - Geisteswissenschaftliches
-                  Asset ManagementSystem </orgName>
+          <orgName ref="https://gams.uni-graz.at">GAMS, Geisteswissenschaftliches Asset Management System</orgName>
         </distributor>
         <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</licence>
         </availability>
-        <publisher>Literaturarchiv Salzburg</publisher>
         <idno type="PID">o:szd.thema.2</idno>
         <date when="2017-12-15">15.12.2017</date>
       </publicationStmt>
       <seriesStmt>
-        <title ref="gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
+        <title ref="https://gams.uni-graz.at/szd">Stefan Zweig Digitale Nachlassrekonstruktion</title>
         <respStmt>
           <resp>Datenmodellierung</resp>
           <persName>
@@ -48,16 +44,16 @@
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan
-               Zweig im digitalen Raum zusammenzuführen und ihn einem
-               literaturwissenschaftlichbzw.wissenschaftlich interessierten Publikum zu erschließen.
-               In Zusammenarbeit mitdemLiteraturarchiv der Universität Salzburg wird dabei,
-               basierend auf dem dortvorhandenenQuellenmaterial, eine digitale
-               Nachlassrekonstruktion des Bestandes generiert.So entstehtein strukturierter Bestand
-               an digitalen Objekten, der im Sinne derdigitalenLangzeitarchivierung repräsentiert
-               wird, und NutzerInnen orts- undzeitunabhängigzugänglich ist. Das Projekt ist so
-               konzipiert, dass zu einem späterenZeitpunktErschließung und Anreicherung des
-               Quellenmaterials (z.B. digitalen Editionen)möglichwerden.</p>
+        <p> Das Projekt verfolgt das Ziel, den weltweit verstreuten Nachlass von Stefan Zweig im
+          digitalen Raum zusammenzuführen und ihn einem literaturwissenschaftlich bzw.
+          wissenschaftlich interessierten Publikum zu erschließen. In Zusammenarbeit mit dem
+          Literaturarchiv der Universität Salzburg wird dabei, basierend auf dem dort vorhandenen
+          Quellenmaterial, eine digitale Nachlassrekonstruktion des Bestandes generiert. So entsteht
+          ein strukturierter Bestand an digitalen Objekten, der im Sinne der digitalen
+          Langzeitarchivierung repräsentiert wird, und NutzerInnen orts- und zeitunabhängig
+          zugänglich ist. Das Projekt ist so konzipiert, dass zu einem späteren Zeitpunkt
+          Erschließung und Anreicherung des Quellenmaterials (z.B. digitalen Editionen) möglich
+          werden.</p>
       </projectDesc>
     </encodingDesc>
   </teiHeader>
