@@ -19,7 +19,7 @@ Work diary of the data repository, one short entry per substantive session, newe
 
 Changed. `scripts/referenzen_2026_10_13/fix_dead_references.py` repoints references to objects production does not serve. `SZDKOR.857` follows the live PID `podbieliki-gert-rene` (same signature `SZ-SAM/B16`), `SZDKOR.696` links `unidentified`, the only Konvolut with the `SZ-SAM/AK` pieces of unknown senders. Theme page 1 (English) takes `o:szd.143` for the Hauptbuch, theme page 2 replaces the pre-2022 PIDs with `o:szd.233`, `o:szd.234` and `o:szd.278`, identified by its image files and an image match. The pins of `check_data.py` and the lane tests follow.
 
-Open. Duplicate and unlinked Konvolute ([DATA](DATA.md#unlinked-and-duplicate-konvolute)), the misspelt Podbielski PID, the piece count of `SZDKOR.696`, the re-ingest and the lane regeneration are in the [plan](plan.md). The news item on Dostojewski in `webpage/MISCELLANEOUS.xml` still links `o:szd.8250` for `o:szd.306`.
+Open. Duplicate and unlinked Konvolute ([DATA](DATA.md#unlinked-and-duplicate-konvolute)), the piece count of `SZDKOR.696`, the re-ingest and the lane regeneration are in the [plan](plan.md). The news item on Dostojewski in `webpage/MISCELLANEOUS.xml` still links `o:szd.8250` for `o:szd.306`.
 
 ## 2026-10-13, data findings of the live-site audit
 

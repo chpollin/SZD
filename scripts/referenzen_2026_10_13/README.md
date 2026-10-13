@@ -4,7 +4,7 @@
 
 | File | Old | New | Evidence |
 |---|---|---|---|
-| `data/Correspondence/SZDKOR.xml`, `SZDKOR.857` | `o:szd.korrespondenzen.podbielski-gert-rene` | `o:szd.korrespondenzen.podbieliki-gert-rene` | Production answers 404 for the first and serves the second, whose single letter carries the same signature `SZ-SAM/B16`. The data follow the misspelt live PID, because renaming a GAMS object is the operator's. |
+| `data/Correspondence/SZDKOR.xml`, `SZDKOR.857` | `o:szd.korrespondenzen.podbielski-gert-rene` | `o:szd.korrespondenzen.podbieliki-gert-rene` | Production answers 404 for the first and serves the second, whose single letter carries the same signature `SZ-SAM/B16`. The data follow the misspelt live PID, because GAMS cannot rename a PID; the operator decided on 2026-10-13 to keep it. |
 | `data/Correspondence/SZDKOR.xml`, `SZDKOR.696` | `o:szd.korrespondenzen.unbekannt` | `o:szd.korrespondenzen.unidentified` | Production answers 404 for `unbekannt`. The entry counts `SZ-SAM/AK` pieces from sender "Unbekannt", 1903 to 1939, and `unidentified` is the only Konvolut holding `SZ-SAM/AK` pieces of sender "Unbekannt/Unidentified", the earliest dated 1903. |
 | `data/Issue/MarieAntoinette/szd-thema1.xml`, English column | `facs="o:szd.8360"` | `facs="o:szd.143"` | Pre-2022 PID. `SZDLEB.3` and the German column give `o:szd.143` (Hauptbuch, `SZ-SAM/L1`), commit `e71a0edb` fixed only the German line. |
 | `data/Issue/Textgenese/szd-thema2.xml` | `o:szd.8249` | `o:szd.233` | Pre-2022 PID. Every linked image is a `SZ_AAP_W45` notebook page, the ring notebook H1 (Werknotizen 7, `SZDMSK.64`). |
