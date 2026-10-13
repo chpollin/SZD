@@ -68,6 +68,7 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 - `SZDPER.1680` carries two GND numbers on one `persName`, separated by " / ", and `SZDKOR.zweig-friderike.89` has the name "Zweig, Friderike" in `@ref` instead of a reference. `SZDKOR.371` and `SZDPER.1858` carry the eleven-digit number 11055719711, which fits no GND form.
 - Several `@ref` values in `SZDKOR.xml`, `SZDPER.xml`, `SZDMSK.xml`, `SZDAUT.xml` and the Konvolut `kaemmerer-ami` begin or end with whitespace. Because `GetPersonlist` takes the part before the first space, a leading space probably leaves the mapping an empty value and loses the person. Trimming is deterministic, but the operator has not yet decided it. The live audit of 2026-10-13 confirms the effect on `SZDPER.2143` (Kaemmerer, Ami), whose GND `@ref` starts with a space and renders as an empty GND link; it stays until the trimming is decided.
 - The check scripts do not read identifiers with a letter suffix such as `SZDPER.2080a` as references.
+- Theme page 8 (`data/Issue/Familienkorrespondenz/szd-thema8.xml`) names the Zweig biographer Donald Prater with `#SZDPER.2321`, an identifier that belonged to Johann Thalhuber and was retired in the duplicate merge `92b51549`; Prater has no index entry. He needs a new entry with the next free number and an evidenced GND, then the two references follow. `check_data.py` reports the reference as dangling until then.
 
 ## Organisation and location index
 

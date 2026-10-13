@@ -48,6 +48,9 @@ Every script folder has a README with procedure, options and log format. Scripts
 | [checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md) | Person duplicates, reference form, essay author references and further IIIF label repairs, the survey of unlinked persons (`find_unlinked_persons.py`), and the check and removal of certainly unreferenced persons (`verify_orphan_persons.py`, `remove_orphan_persons.py`, removed entries kept in `removed_persons.xml`) |
 | [organisationen_index/](../scripts/organisationen_index/README.md) | Build (historical) and maintenance of the organisation index, country and place from the GND (`reconcile_org_places.py`) |
 | [personen_ohne_verweis/](../scripts/personen_ohne_verweis/README.md) | Person entries the RDF mapping finds no reference to |
+| [datenkorrektur_2026_10_13/](../scripts/datenkorrektur_2026_10_13/README.md) | Data findings of the live audit of 2026-10-13: news numbering, an empty provenance, an empty essay identifier, an empty Wikidata element |
+| [encoding_reparatur_2026_10_13/](../scripts/encoding_reparatur_2026_10_13/README.md) | Run-wise repair of double-encoded UTF-8 in the Konvolut files, including mixed text nodes |
+| [referenzen_2026_10_13/](../scripts/referenzen_2026_10_13/README.md) | Dead object references in the correspondence index, theme pages and news, repointed to the evidenced production objects |
 | [korrespondenz_titel/](../scripts/korrespondenz_titel/README.md) | Entry titles of the Konvolut files after the title and date convention |
 | [essay_klassifikation/](../scripts/essay_klassifikation/README.md) | Grouping keys of the Aufsatzablage and survey of the grouped lists |
 | [lebenskalender_lanes/](../scripts/lebenskalender_lanes/README.md) | Timeline lanes of the Lebenskalender from the TEI sources |

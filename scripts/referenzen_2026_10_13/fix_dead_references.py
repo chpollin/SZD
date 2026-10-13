@@ -55,6 +55,7 @@ LOG_FIELDS = ["datei", "zeile", "eintrag", "alt", "neu", "beleg"]
 SZDKOR = "data/Correspondence/SZDKOR.xml"
 THEMA1 = "data/Issue/MarieAntoinette/szd-thema1.xml"
 THEMA2 = "data/Issue/Textgenese/szd-thema2.xml"
+MISCELLANEOUS = "webpage/MISCELLANEOUS.xml"
 
 BIBLFULL_ID = re.compile(r'<biblFull\b[^>]*\bxml:id="([^"]+)"')
 
@@ -117,6 +118,14 @@ CHANGES = (
         8,
         "",
         "o:szd.8231 404; H2 page matches o:szd.234 IMG.1 (Beilage SZ-AAP/W45)",
+    ),
+    Change(
+        MISCELLANEOUS,
+        "/objects/o:szd.8250/methods/",
+        "/objects/o:szd.306/methods/",
+        2,
+        "",
+        "o:szd.8250 404; news item 4 links SZDMSK.351, whose facsimile is o:szd.306 (Über Dostojewsky, SZ-LAS/W3)",
     ),
 )
 

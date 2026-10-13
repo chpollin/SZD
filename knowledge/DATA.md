@@ -74,7 +74,7 @@ Further unlinked Konvolute hold third-party letters of the Reichner publishing c
 
 ### Pre-2022 PIDs in theme pages and news
 
-Theme pages and news items written before the facsimile PIDs were renumbered in 2022 carry four-digit PIDs of the form `o:szd.82xx` and `o:szd.83xx`, which production does not serve. Commit `e71a0edb` repointed most of them on theme page 1. The remaining ones on theme pages 1 and 2 were repointed on 2026-10-13 with [scripts/referenzen_2026_10_13/](../scripts/referenzen_2026_10_13/README.md), each to the object its catalogue entry or its image files identify. The news item on Dostojewski in `webpage/MISCELLANEOUS.xml` links `o:szd.8250`, while its text points to `SZDMSK.351`, whose facsimile is `o:szd.306` (`SZ-LAS/W3`).
+Theme pages and news items written before the facsimile PIDs were renumbered in 2022 carry four-digit PIDs of the form `o:szd.82xx` and `o:szd.83xx`, which production does not serve. Commit `e71a0edb` repointed most of them on theme page 1. The remaining ones on theme pages 1 and 2 and in the news item on Dostojewski in `webpage/MISCELLANEOUS.xml` were repointed on 2026-10-13 with [scripts/referenzen_2026_10_13/](../scripts/referenzen_2026_10_13/README.md), each to the object its catalogue entry or its image files identify.
 
 ## Glossary
 

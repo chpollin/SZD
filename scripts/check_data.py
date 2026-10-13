@@ -342,21 +342,6 @@ KNOWN_EXCEPTIONS: frozenset[tuple[str, str, str, str]] = frozenset({
     ("konvolut-pid", "data/Correspondence/konvolute/szd.korrespondenzen.judischer-jugendverein-dusseldorf.xml", "", "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)"),
     ("konvolut-pid", "data/Correspondence/konvolute/szd.korrespondenzen.judischer-jugendverein.xml", "", "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)"),
     ("konvolut-pid", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "o:szd.rascher-und-cie"),
-    # mojibake. Text nodes that mix correct and double-encoded characters, which
-    # datenkorrektur_2026_09_29/fix_mojibake.py leaves alone by design, and the Rascher file, whose
-    # content belongs to another object (plan, Konvolute).
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.freud-sigmund.xml", "SZDKOR.freud-sigmund.15", "\u2019"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.freud-sigmund.xml", "SZDKOR.freud-sigmund.29", "“"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.freud-sigmund.xml", "SZDKOR.freud-sigmund.29", "”"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.freud-sigmund.xml", "SZDKOR.freud-sigmund.29", "„"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.freud-sigmund.xml", "SZDKOR.freud-sigmund.8", "ô"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "\u009f"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "¤"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "¶"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "¼"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.rascher-und-cie.xml", "", "Ã"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.unidentified.xml", "SZDKOR.unidentified.008", "\u00a0"),
-    ("mojibake", "data/Correspondence/konvolute/szd.korrespondenzen.unidentified.xml", "SZDKOR.unidentified.029", "É"),
     # ref-separator. Two GND numbers on one index person and a name written into @ref (plan, Person
     # index).
     ("ref-separator", "data/Correspondence/konvolute/szd.korrespondenzen.zweig-friderike.xml", "SZDKOR.zweig-friderike.89", "Zweig, Friderike"),

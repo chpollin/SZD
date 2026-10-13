@@ -10,6 +10,7 @@
 | `data/Issue/Textgenese/szd-thema2.xml` | `o:szd.8249` | `o:szd.233` | Pre-2022 PID. Every linked image is a `SZ_AAP_W45` notebook page, the ring notebook H1 (Werknotizen 7, `SZDMSK.64`). |
 | `data/Issue/Textgenese/szd-thema2.xml` | `o:szd.8232` | `o:szd.278` | Pre-2022 PID. Every linked image is a `SZ_AAP_W7` typescript page (`SZDMSK.13`). |
 | `data/Issue/Textgenese/szd-thema2.xml` | `o:szd.8231` | `o:szd.234` | Pre-2022 PID for the loose sheets H2. The theme image of H2 ("Dieses Jahr 1837, Menschheit …") is a crop of `IMG.1` of `o:szd.234`, Das erste Wort über den Ozean [Beilage], `SZ-AAP/W45` (`SZDMSK.287`). |
+| `webpage/MISCELLANEOUS.xml`, news item 4, German and English | `o:szd.8250` | `o:szd.306` | Pre-2022 PID. The item links `SZDMSK.351`, Über Dostojewsky, whose facsimile is `o:szd.306` (`SZ-LAS/W3`). |
 
 The context anchors (`idno[@type="context"]`) of the two index entries stay unchanged, they are gallery anchors and not object PIDs.
 

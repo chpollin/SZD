@@ -95,7 +95,7 @@ The coverage of machine-readable dates and the remaining gaps are in [DATA.md](D
 
 ## Character Encoding and Validation
 
-All files are UTF-8, and special characters are written as characters rather than XML entities where possible. Some konvolut files carry double-encoded umlauts from earlier imports.
+All files are UTF-8, and special characters are written as characters rather than XML entities where possible.
 
 The repository holds no TEI schema or ODD. The processing scripts check well-formedness and the invariants of their own changes with `--verify`. The ontology is validated separately with `python ontology/validate.py`.
 
