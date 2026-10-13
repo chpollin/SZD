@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/Promptotyping/
 status: active
 created: 2026-09-24
-updated: 2026-09-29
+updated: 2026-10-13
 ---
 
 # Plan
@@ -60,7 +60,7 @@ The lanes are generated from the complete Konvolute, and the corpus tests pin th
 - `SZDPER.1026` (Neydisser) has been a name variant of `SZDPER.818` (Lernet-Holenia) since `a108c6f3`, while the library still names the pseudonym's own GND. `SZDPER.1304` never existed, and the body it means, the Selbsthilfevereinigung der jüdischen Blinden in Deutschland, has no entry in the organisation index.
 - Correspondence partners whose GND in `SZDKOR.xml` is missing from their index entry, and person references in `SZDKOR.xml` that carry `gnd/placeholder`.
 - `SZDPER.1680` carries two GND numbers on one `persName`, separated by " / ", and `SZDKOR.zweig-friderike.89` has the name "Zweig, Friderike" in `@ref` instead of a reference. `SZDKOR.371` and `SZDPER.1858` carry the eleven-digit number 11055719711, which fits no GND form.
-- Several `@ref` values in `SZDKOR.xml`, `SZDPER.xml`, `SZDMSK.xml`, `SZDAUT.xml` and the Konvolut `kaemmerer-ami` begin or end with whitespace. Because `GetPersonlist` takes the part before the first space, a leading space probably leaves the mapping an empty value and loses the person. Trimming is deterministic, but the operator has not yet decided it.
+- Several `@ref` values in `SZDKOR.xml`, `SZDPER.xml`, `SZDMSK.xml`, `SZDAUT.xml` and the Konvolut `kaemmerer-ami` begin or end with whitespace. Because `GetPersonlist` takes the part before the first space, a leading space probably leaves the mapping an empty value and loses the person. Trimming is deterministic, but the operator has not yet decided it. The live audit of 2026-10-13 confirms the effect on `SZDPER.2143` (Kaemmerer, Ami), whose GND `@ref` starts with a space and renders as an empty GND link; it stays until the trimming is decided.
 - The check scripts do not read identifiers with a letter suffix such as `SZDPER.2080a` as references.
 
 ## Organisation and location index

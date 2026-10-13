@@ -15,6 +15,12 @@ updated: 2026-10-13
 
 Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
 
+## 2026-10-13, data findings of the live-site audit
+
+Changed. `scripts/datenkorrektur_2026_10_13/fix_audit_findings.py` repairs four findings of the live audit. The English news items in `webpage/MISCELLANEOUS.xml` take the numbers of the German items with the same image, which removes the duplicate `miscellaneous.2`. The blank typed provenance of `SZDAUT.218` and the empty Wikidata `idno` of `SZDPER.2299` are removed, as entries without these values omit the element. The Aufsatzablage entry with the empty id `SZDESS.` (SZ-AAP/W-AA212.3, `o:szd.2838`) is no duplicate, its row in the source table had no ID, and it takes the next free number `SZDESS.624`, because the ids run without gap and are never renumbered.
+
+Open. The GND `@ref` of `SZDPER.2143` starts with a space and stays until the operator decides the trimming ([plan](plan.md#person-index)).
+
 ## 2026-10-13, remaining double-encoded UTF-8
 
 Changed. `scripts/encoding_reparatur_2026_10_13/fix_double_encoding.py` reverses the double-encoded UTF-8 per character run that `fix_mojibake.py` of 2026-09-29 left in mixed text nodes and in the excluded Rascher file, 22 runs in `freud-sigmund`, `unidentified` and `rascher-und-cie`, the Rascher header damaged twice. Correct characters beside them stay as written, and every repair is checked to give back the original when damaged again. A scan of all other files under `data/` outside `data/Library/` found no further case, and none was ambiguous.
