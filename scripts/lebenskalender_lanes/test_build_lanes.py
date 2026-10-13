@@ -26,11 +26,9 @@ CONFLICTING_FACSIMILES = frozenset({
     "o:szd.1611", "o:szd.1614", "o:szd.1672", "o:szd.1733", "o:szd.3204", "o:szd.3317",
     "o:szd.769", "o:szd.798", "o:szd.821", "o:szd.858", "o:szd.909",
 })
-# Index entries naming a Konvolut PID for which the import found no production object.
-MISSING_KONVOLUTE = {
-    "SZDKOR.696": "o:szd.korrespondenzen.unbekannt",
-    "SZDKOR.857": "o:szd.korrespondenzen.podbielski-gert-rene",
-}
+# Index entries naming a Konvolut PID for which the import found no production object. Empty
+# since scripts/referenzen_2026_10_13 repointed SZDKOR.696 and SZDKOR.857 to the live objects.
+MISSING_KONVOLUTE: dict[str, str] = {}
 # Groups of Konvolut files that reuse the same xml:id values, read from the same run.
 SHARED_ID_GROUPS = 10
 
@@ -141,7 +139,7 @@ def test_partial_and_unrelated_bundle_records_remain(corpus) -> None:
 def test_index_entries_link_their_konvolut_where_it_exists(corpus) -> None:
     index, pieces = corpus
     linked = [event for event in index if event["konvolut"]]
-    assert len(linked) == 271
+    assert len(linked) == 273
     for event in linked:
         pid = str(event["konvolut"]).split("/")[1]
         assert (lanes.KONVOLUTE / f"{pid[2:]}.xml").is_file()

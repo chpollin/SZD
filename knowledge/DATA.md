@@ -8,7 +8,7 @@ method:
   url: https://dhcraft.org/Promptotyping/
 status: complete
 created: 2025-10-23
-updated: 2026-09-24
+updated: 2026-10-13
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
@@ -46,6 +46,35 @@ A correspondence partner can have several signatures, for instance a bundle and 
 For the picture postcards of the signature group `SZ-SAM/AK` in the konvolut objects, an earlier import expanded the two-digit year of the source (`20. 2. 21`) into the 2000s and set `when="2021-02-20"` instead of `1921-02-20`. The display text of the `date` element and, where present, the date in the former title carry the right value. Where the title proved the year, `@when` has been corrected from it ([scripts/korrespondenz_titel/](../scripts/korrespondenz_titel/README.md)). Where the title carried no date, the error stands and needs an editorial decision. A `@when` after 1942 on a piece with Zweig as sender or recipient is impossible and serves as the search criterion, while the family correspondence of the konvolute reaches beyond 1942. Since the import of all production Konvolute on 24 September 2026 the criterion also finds entries outside `SZ-SAM/AK`, listed in the [plan](plan.md#konvolute).
 
 Related but independent, single entries carry a `date` without `@when`, one with a different granularity between the German and the English version, and some `correspAction` elements name no person. These cases are in the residual list of the title script and are not changed automatically.
+
+### Unlinked and duplicate Konvolute
+
+An analysis of 2026-10-13 compared the Konvolut files with the `konvolut` pointers of `SZDKOR.xml`. Every Konvolut file was imported from production on 2026-09-24 ([scripts/konvolute_import/](../scripts/konvolute_import/README.md)), so production serves both objects of each pair below, and a live read of `moeller-rudolf` and `moller-rudolf` confirmed this on 2026-10-13. Nothing was deleted or merged.
+
+Pairs or groups for one partner, the linked object first where the index links one:
+
+| Linked | Unlinked | Relation |
+|---|---|---|
+| `moller-rudolf` | `moeller-rudolf` | same signatures `SZ-SHB/B6.1–2` |
+| `glucksmann-heinrich` | `gluecksmann-heinrich` | same signatures and facsimile PIDs |
+| `tomaselli-lini-karolina` | `tomaselli-lini-arolina` | same signature `SZ-SAM/AK.193`, different facsimile PIDs |
+| `reichner-herbert` | `herbert-reichner-verlag` | all pieces also in `reichner-herbert` |
+| `muller-einigen-hans` | `muller-hans` | shares signature `SZ-SAM/AK.150` |
+| `clauser-suzanne` | `suzanne` | shares signature `SZ-SAM/AK.39` |
+| `diettrich-fritz` | `fritz` | shares signature `SZ-SAM/AK.46` |
+| `zweig-stefanie` | `alfred-und-stefanie-zweig`, `stefanie-und-alfred-zweig` | each shares one piece of `zweig-stefanie` |
+| `zweig-friderike` | `winternitz-friderike-von` | shares its one piece |
+| `fleischer-max`, `fleischer-victor` | `max-und-victor-fleischer` | signatures `SZ-LAS/B3.33–35`, carried by all three |
+| none | `meulenhoff`, `meulenhoff-johannes-marius` | shared signatures and facsimile PIDs |
+| none | `weisflog`, `weisflog-heinrich` | shared signatures and facsimile PIDs |
+| none | `schweizerische-vereinssortiment-olten`, `schweizerisches-vereinssortiment-olten` | shared signatures, the first file without facsimile PIDs |
+| none | `czech-suzanne`, `suzanne-czech` | different pieces of `SZ-AAP/B3`, all also in `international-copyright-bureau-ltd.-the` |
+
+Further unlinked Konvolute hold third-party letters of the Reichner publishing correspondence (`SZ-AAP/B1`) whose pieces stand in `reichner-herbert` as well: `allert-de-lange`, `bing-edward`, `bruder-wltzek-buchhandlung`, `buchhandlung-julius-kittls-nachfolger`, `cassell-and-company-ltd`, `david-h.`, `dykhoffz`, `insel-verlag`, `kauffmann-alfred`, `kohler-richard`, `low-hermann`, `modern-klara`, `rascher-max`, `rascher-und-cie` (defective, see the [plan](plan.md#konvolute)), `sauerlander-remigius`, `somlo-bela`, `stauffacher-werner`, `steinitz-heinrich` and `tressl-otto-j.`. Unlinked without such a counterpart are `heilbron-george` (pieces also in `international-copyright-bureau-ltd.-the`), `zweig-stefan` (its piece also in `zweig-friderike`) and `warren-p.-munsell`, which production serves without any letter. Which object of a pair stays is an operator decision in the [plan](plan.md#konvolute).
+
+### Pre-2022 PIDs in theme pages and news
+
+Theme pages and news items written before the facsimile PIDs were renumbered in 2022 carry four-digit PIDs of the form `o:szd.82xx` and `o:szd.83xx`, which production does not serve. Commit `e71a0edb` repointed most of them on theme page 1. The remaining ones on theme pages 1 and 2 were repointed on 2026-10-13 with [scripts/referenzen_2026_10_13/](../scripts/referenzen_2026_10_13/README.md), each to the object its catalogue entry or its image files identify. The news item on Dostojewski in `webpage/MISCELLANEOUS.xml` links `o:szd.8250`, while its text points to `SZDMSK.351`, whose facsimile is `o:szd.306` (`SZ-LAS/W3`).
 
 ## Glossary
 

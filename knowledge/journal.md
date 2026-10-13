@@ -15,6 +15,12 @@ updated: 2026-10-13
 
 Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
 
+## 2026-10-13, dead references of the live-site audit
+
+Changed. `scripts/referenzen_2026_10_13/fix_dead_references.py` repoints references to objects production does not serve. `SZDKOR.857` follows the live PID `podbieliki-gert-rene` (same signature `SZ-SAM/B16`), `SZDKOR.696` links `unidentified`, the only Konvolut with the `SZ-SAM/AK` pieces of unknown senders. Theme page 1 (English) takes `o:szd.143` for the Hauptbuch, theme page 2 replaces the pre-2022 PIDs with `o:szd.233`, `o:szd.234` and `o:szd.278`, identified by its image files and an image match. The pins of `check_data.py` and the lane tests follow.
+
+Open. Duplicate and unlinked Konvolute ([DATA](DATA.md#unlinked-and-duplicate-konvolute)), the misspelt Podbielski PID, the piece count of `SZDKOR.696`, the re-ingest and the lane regeneration are in the [plan](plan.md). The news item on Dostojewski in `webpage/MISCELLANEOUS.xml` still links `o:szd.8250` for `o:szd.306`.
+
 ## 2026-10-13, data findings of the live-site audit
 
 Changed. `scripts/datenkorrektur_2026_10_13/fix_audit_findings.py` repairs four findings of the live audit. The English news items in `webpage/MISCELLANEOUS.xml` take the numbers of the German items with the same image, which removes the duplicate `miscellaneous.2`. The blank typed provenance of `SZDAUT.218` and the empty Wikidata `idno` of `SZDPER.2299` are removed, as entries without these values omit the element. The Aufsatzablage entry with the empty id `SZDESS.` (SZ-AAP/W-AA212.3, `o:szd.2838`) is no duplicate, its row in the source table had no ID, and it takes the next free number `SZDESS.624`, because the ids run without gap and are never renumbered.

@@ -338,9 +338,6 @@ KNOWN_EXCEPTIONS: frozenset[tuple[str, str, str, str]] = frozenset({
     ("gnd-form", "data/Correspondence/SZDKOR.xml", "SZDKOR.904", "placeholder"),
     ("gnd-form", "data/Correspondence/SZDKOR.xml", "SZDKOR.908", "placeholder"),
     ("gnd-form", "data/Index/Person/SZDPER.xml", "SZDPER.1858", "11055719711"),
-    # konvolut-link. Which spelling is the correct PID is an operator question (plan, Timeline lanes).
-    ("konvolut-link", "data/Correspondence/SZDKOR.xml", "SZDKOR.696", "o:szd.korrespondenzen.unbekannt"),
-    ("konvolut-link", "data/Correspondence/SZDKOR.xml", "SZDKOR.857", "o:szd.korrespondenzen.podbielski-gert-rene"),
     # konvolut-pid. The three defective production objects (plan, Konvolute).
     ("konvolut-pid", "data/Correspondence/konvolute/szd.korrespondenzen.judischer-jugendverein-dusseldorf.xml", "", "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)"),
     ("konvolut-pid", "data/Correspondence/konvolute/szd.korrespondenzen.judischer-jugendverein.xml", "", "o:szd.korrespondenzen.judischer-jugendverein-(dusseldorf)"),
