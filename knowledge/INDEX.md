@@ -51,6 +51,7 @@ Every script folder has a README with procedure, options and log format. Scripts
 | [datenkorrektur_2026_10_13/](../scripts/datenkorrektur_2026_10_13/README.md) | Data findings of the live audit of 2026-10-13: news numbering, an empty provenance, an empty essay identifier, an empty Wikidata element |
 | [encoding_reparatur_2026_10_13/](../scripts/encoding_reparatur_2026_10_13/README.md) | Run-wise repair of double-encoded UTF-8 in the Konvolut files, including mixed text nodes |
 | [referenzen_2026_10_13/](../scripts/referenzen_2026_10_13/README.md) | Dead object references in the correspondence index, theme pages and news, repointed to the evidenced production objects |
+| [audit_2026_10_13_teil2/](../scripts/audit_2026_10_13_teil2/README.md) | Second batch of live-audit findings: theme page links, locale and typos, two catalogue values, the about page and Konvolut dates with a wrong century |
 | [korrespondenz_titel/](../scripts/korrespondenz_titel/README.md) | Entry titles of the Konvolut files after the title and date convention |
 | [essay_klassifikation/](../scripts/essay_klassifikation/README.md) | Grouping keys of the Aufsatzablage and survey of the grouped lists |
 | [lebenskalender_lanes/](../scripts/lebenskalender_lanes/README.md) | Timeline lanes of the Lebenskalender from the TEI sources |

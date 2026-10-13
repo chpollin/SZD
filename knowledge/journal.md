@@ -15,6 +15,12 @@ updated: 2026-10-13
 
 Work diary of the data repository, one short entry per substantive session, newest first. It records what changed, what was decided and what stayed open at the time. Durable findings stand in the documents listed in the [index](INDEX.md), current open work in the [plan](plan.md). The entries up to the organisation places of 2026-09-24 were written in German and translated on 2026-09-24, and Git keeps their wording.
 
+## 2026-10-13, second batch of live-site audit findings
+
+Changed. `scripts/audit_2026_10_13_teil2/fix_audit_findings_2.py` corrects findings whose value the repository evidences. Theme page 6 (English) takes the German column's letter PIDs `o:szd.996` and `o:szd.990` for the reply of December 1929 and the last letter of September 1939, the https scheme for the eulogy link, the gallery anchor `freud-sigmund` in both columns and six missing spaces. Theme page 4 loses a stray `">`, theme page 1 (English) takes the current NLI URL and the heading "Principal Ledger" of `SZDLEB.3`, theme page 7 (English) links the catalogues with `locale=en`. `SZDLEB.40` takes "Publishing Contracts" like its siblings, `SZDMSK.289` "Drei Dichter" after its own work reference, `webpage/ABOUT.xml` loses three typos. Eleven Konvolut dates in 2027 to 2030 take the 19xx year their display text gives, and the lane test no longer pins them.
+
+Open. Editorial wording on theme page 6 and the Konvolut dates from 1951 to 2026 are in the [plan](plan.md).
+
 ## 2026-10-13, dead references of the live-site audit
 
 Changed. `scripts/referenzen_2026_10_13/fix_dead_references.py` repoints references to objects production does not serve. `SZDKOR.857` follows the live PID `podbieliki-gert-rene` (same signature `SZ-SAM/B16`), `SZDKOR.696` links `unidentified`, the only Konvolut with the `SZ-SAM/AK` pieces of unknown senders. Theme page 1 (English) takes `o:szd.143` for the Hauptbuch, theme page 2 replaces the pre-2022 PIDs with `o:szd.233`, `o:szd.234` and `o:szd.278`, identified by its image files and an image match. The pins of `check_data.py` and the lane tests follow.
