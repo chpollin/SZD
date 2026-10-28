@@ -1,6 +1,6 @@
 # Check and complete the Aufsatzablage classification
 
-Repairs the outer grouping key `term[@type="classification"]` in [`data/Aufsatzablage/SZDESS.xml`](../../data/Aufsatzablage/SZDESS.xml) and surveys, for the grouped lists, which entries lack a key the renderer needs. Why the key must exist in both languages and in one spelling is part of the rendering contract in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#rendering-contract-grouped-lists).
+Repairs the outer grouping key `term[@type="classification"]` in [`data/Aufsatzablage/SZDESS.xml`](../../data/Aufsatzablage/SZDESS.xml) and surveys, for the grouped lists, which entries lack a key the renderer needs. Why the key must exist in both languages and in one spelling is part of the rendering contract in [`knowledge/collections.md`](../../knowledge/collections.md#rendering-contract-grouped-lists).
 
 ## Rules
 

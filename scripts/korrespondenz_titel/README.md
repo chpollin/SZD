@@ -4,7 +4,7 @@ Brings the titles of the single-letter entries in [`data/Correspondence/konvolut
 
 ## Target form
 
-The title convention, with document type, name form and date, is defined in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#entry-title-and-date-convention-konvolut-objects). The script applies it with these additional rules.
+The title convention, with document type, name form and date, is defined in [`knowledge/collections.md`](../../knowledge/collections.md#entry-title-and-date-convention-konvolut-objects). The script applies it with these additional rules.
 
 - Names come from `persName` (`forename` and `surname`), otherwise from the element text.
 - The German title takes the date only from `@when`. The English title takes the ISO value and falls back to the display text when the entry has no `@when`. Without a date the date part is dropped.
@@ -19,7 +19,7 @@ The title convention, with document type, name form and date, is defined in [`kn
 
 ## Century error in the date
 
-In the machine-date titles the title often carries a plausible year, while `date/@when` expanded the two-digit year of the source into the 2000s (`@when="2021-02-20"` for `20. 2. 21`, title `1921-02-20`). Before the date leaves the title, the script corrects `@when` from the title, provided both differ only in the century and `@when` lies after 1942. Any other difference between title date and `@when` is reported and not changed. The remaining cases are described in [`knowledge/DATA.md`](../../knowledge/DATA.md#century-error-in-two-digit-years).
+In the machine-date titles the title often carries a plausible year, while `date/@when` expanded the two-digit year of the source into the 2000s (`@when="2021-02-20"` for `20. 2. 21`, title `1921-02-20`). Before the date leaves the title, the script corrects `@when` from the title, provided both differ only in the century and `@when` lies after 1942. Any other difference between title date and `@when` is reported and not changed. The remaining cases are described in [`knowledge/data-quality.md`](../../knowledge/data-quality.md#century-error-in-two-digit-years).
 
 ## Usage
 

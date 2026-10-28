@@ -5,7 +5,7 @@ that concern the person index and the way the holdings reference it, a preparati
 for further IIIF label repairs and a read-only survey of unlinked persons. The diagnoses
 are archive-internal verification notes that stay outside the repository. The durable
 summary is the section "Archive checkup (September 2026)" of
-[`knowledge/DATA.md`](../../knowledge/DATA.md#archive-checkup-september-2026).
+[`knowledge/data-quality.md`](../../knowledge/data-quality.md#archive-checkup-september-2026).
 
 Each writing script defaults to a dry run, writes with `--apply` and checks the written
 state with `--verify`. Each appends a row for every change to its CSV log, in the columns of

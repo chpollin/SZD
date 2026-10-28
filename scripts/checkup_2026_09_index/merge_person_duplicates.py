@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Merge the duplicate person index entries confirmed by the 2026-09 checkup verification.
 
-The 2026-09 checkup verification (knowledge/DATA.md, Archive checkup) confirmed fourteen
+The 2026-09 checkup verification (knowledge/data-quality.md, Archive checkup) confirmed fourteen
 index entries the archive marked as duplicates and three near-duplicate pairs the archive
 did not mark. The rows classified confirmed-data are merged here; the rows classified
 needs-archive (Neumann; Kesten and Pilnjak followed on 2026-09-23 after a DNB check) and the rows already fixed by an earlier commit or

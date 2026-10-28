@@ -23,7 +23,15 @@ The [data/](data/) directory contains the TEI-XML sources of the catalogue.
 - Themes, curated thematic pages in `data/Issue/`
 - Indices for persons (SZDPER), corporate bodies (SZDORG), repositories (SZDSTA) and works (SZDWRK), and the glossary
 
-Files, PIDs and encoding are described in [knowledge/COLLECTIONS.md](knowledge/COLLECTIONS.md). The presentation layer (XSLT, JavaScript, CSS) that GAMS applies to these sources lives in the separate repository `ZIMLAB/szd`.
+Files, PIDs and encoding are described in [knowledge/collections.md](knowledge/collections.md). The presentation layer that GAMS applies to these sources, the page stylesheets, the RDF transformation `szd-TORDF.xsl`, JavaScript, CSS, fonts, icons, images and the generated timeline data, lives in the ZimLab repository gams-www (https://zimlab.uni-graz.at/gams/projects/szd/gams-www), which holds only the files GAMS serves. Its documentation, tests and the other ingest material live here.
+
+### GAMS ingest material
+
+The [gams/](gams/) directory holds what the operator copies into Cirilo. [gams/query/](gams/query/README.md) contains the SPARQL templates of the `QUERY` datastreams of the five search objects. `szd-TOMETS.xsl`, `szd-MODStoDC_MAPPING.xsl` and `szd-tei-hssf.xsl` are documented copies of ingest transformations that GAMS does not read from gams-www, see [gams/README.md](gams/README.md).
+
+### Local test harness
+
+The [local-test-build/](local-test-build/README.md) directory renders the page stylesheets and the RDF transformation of a gams-www checkout with SaxonJS against the data of this repository and checks the result. It finds gams-www at `../ZIMLAB/szd` beside this repository or at the path in `SZD_WWW`.
 
 ### Web Content
 
@@ -46,7 +54,7 @@ The [ontology/](ontology/) directory contains the Stefan Zweig Digital Estate On
 - Version 2.0.0 with English identifiers and two layers, the generic `nachlass:` in `nachlass-ontology.ttl` (`https://w3id.org/nachlass#`), reusable for any estate project, and the SZD-specific `szdo:`
 - The English v0.x terms used on GAMS are the canonical identifiers wherever the meaning is the same, so live GAMS data conforms without a mapping layer
 - Validation with `python ontology/validate.py` (syntax, SHACL, OWL, OntoClean, competency questions)
-- Design document: [knowledge/ONTOLOGY.md](knowledge/ONTOLOGY.md)
+- Design document: [knowledge/ontology.md](knowledge/ontology.md)
 
 ### GitHub Pages
 
@@ -59,7 +67,7 @@ The [docs/](docs/) directory serves the documentation site at https://chpollin.g
 
 ### Knowledge Base
 
-The [knowledge/](knowledge/) directory holds the project knowledge, covering collections and encoding, data gaps and checkup results, architecture and ingest, the ontology design, the plan of open work and the work journal. [knowledge/INDEX.md](knowledge/INDEX.md) is the entry point.
+The [knowledge/](knowledge/) directory holds the project knowledge of both repositories, covering collections and encoding, data gaps and checkup results, architecture and ingest, the ontology design, the rendering, search and RDF of the presentation layer, testing and deployment, the plan of open work and the work journal. [knowledge/INDEX.md](knowledge/INDEX.md) is the entry point.
 
 ---
 

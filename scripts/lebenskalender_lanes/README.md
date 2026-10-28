@@ -2,7 +2,7 @@
 
 Derives one JSON file per lane of the integrated timeline view from the TEI sources, in one event schema shared by all collections. The presentation layer in the repository `ZIMLAB/szd` switches the lanes on and off and needs events in a form that is the same for every collection.
 
-Schema, dating rules, coverage and delivery state are described in [`knowledge/Lebenskalender-Lanes.md`](../../knowledge/Lebenskalender-Lanes.md). This file describes the run.
+Schema, dating rules, coverage and delivery state are described in [`knowledge/lebenskalender-lanes.md`](../../knowledge/lebenskalender-lanes.md). This file describes the run.
 
 ## Usage
 

@@ -2,13 +2,14 @@
 title: Stefan Zweig Digital Estate Ontology (SZDO)
 project:
   name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: complete
+language: en
 created: 2026-03-29
-updated: 2026-09-24
+updated: 2026-10-28
 ---
 
 # Stefan Zweig Digital Estate Ontology (SZDO)
@@ -345,7 +346,7 @@ The Klawiter bibliography adds the reception and publication history and connect
 | theme files | `o:szd.thema.*` | `szdo:ThematicCollection` | `szd:Collection` |
 | METS files | `o:szd.{N}` | `szdo:METSObject` | |
 
-The organisation index SZDORG is its own GAMS object. The template `Organisationen` in `szd-TORDF.xsl` selects it by PID and types its entries as `szd:Organisation`, because the repository list SZDSTA is also a `listOrg`. Collection details are in [COLLECTIONS.md](COLLECTIONS.md). GAMS classes without an SZDO counterpart (`szd:Essay`, `szd:Correspondence`, `szd:PhysicalDescription`, `szd:Binding`) are not yet modelled.
+The organisation index SZDORG is its own GAMS object. The template `Organisationen` in `szd-TORDF.xsl` selects it by PID and types its entries as `szd:Organisation`, because the repository list SZDSTA is also a `listOrg`. Collection details are in [collections.md](collections.md). GAMS classes without an SZDO counterpart (`szd:Essay`, `szd:Correspondence`, `szd:PhysicalDescription`, `szd:Binding`) are not yet modelled.
 
 ## 10. Competency questions
 

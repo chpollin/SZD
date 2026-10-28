@@ -1,14 +1,15 @@
 ---
 title: Lebenskalender Lanes
 project:
-  name: Stefan Zweig Digital, data repository
+  name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
   url: https://dhcraft.org/Promptotyping/
 status: complete
+language: en
 created: 2026-09-11
-updated: 2026-09-24
+updated: 2026-10-28
 version: 1.1.0
 tags: [data, lebenskalender, timeline, derived]
 ---
@@ -26,7 +27,7 @@ The timeline view of the Lebenskalender shows several collections side by side a
 | `personal-documents` | `data/PersonalDocument/SZDLEB.xml` | `o:szd.lebensdokumente` |
 | `autographs` | `data/Autograph/SZDAUT.xml` | `o:szd.autographen` |
 
-The correspondence lane covers both levels of the two-level architecture described in [COLLECTIONS.md](COLLECTIONS.md#two-level-architecture), the aggregating index and the single letters of the konvolut objects.
+The correspondence lane covers both levels of the two-level architecture described in [collections.md](collections.md#two-level-architecture), the aggregating index and the single letters of the konvolut objects.
 
 `data/Index/Person/SZDPER.xml` resolves the person identifiers. The correspondence references persons by GND, the other collections by the SZDPER identifier in the `@ref` of `author`. The index is read on every run, so changes to it take effect without touching the script.
 
@@ -146,8 +147,8 @@ The message about the new view went to the Literaturarchiv Salzburg on 11 Septem
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md), structure of the collections and rendering contracts
-- [DATA.md](DATA.md), counting conventions and documented data gaps
-- [DATA_MODEL.md](DATA_MODEL.md), encoding patterns and bilingual encoding
+- [collections.md](collections.md), structure of the collections and rendering contracts
+- [data-quality.md](data-quality.md), counting conventions and documented data gaps
+- [data-model.md](data-model.md), encoding patterns and bilingual encoding
 - [scripts/lebenskalender_lanes/README.md](../scripts/lebenskalender_lanes/README.md), run, options and tests
 - [docs/lebenskalender/README.md](../docs/lebenskalender/README.md), prototype of the view in the SZD design

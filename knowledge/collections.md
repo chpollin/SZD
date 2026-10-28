@@ -1,19 +1,20 @@
 ---
 title: Collections
 project:
-  name: Stefan Zweig Digital, data repository
+  name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
   url: https://dhcraft.org/Promptotyping/
 status: complete
+language: en
 created: 2025-10-23
-updated: 2026-09-24
+updated: 2026-10-28
 ---
 
 # Collections
 
-The collections and indices of Stefan Zweig Digital, their files and PIDs, their collection-specific TEI encoding and the rendering contracts the presentation layer imposes on them. Encoding patterns shared by all files are in [DATA_MODEL.md](DATA_MODEL.md), data gaps and checkup results in [DATA.md](DATA.md).
+The collections and indices of Stefan Zweig Digital, their files and PIDs, their collection-specific TEI encoding and the rendering contracts the presentation layer imposes on them. Encoding patterns shared by all files are in [data-model.md](data-model.md), data gaps and checkup results in [data-quality.md](data-quality.md).
 
 ## Collection Overview
 
@@ -124,7 +125,7 @@ A letter in a konvolut object:
 
 `correspDesc/@type` is `fromZweig` when Zweig is the sender and `toZweig` otherwise. It drives the sender display in the konvolut and the index renderer. The gallery links of the presentation layer use the curated `idno[@type="konvolut"]` values of the index. A partner heading receives a link only when its normalised person or organisation name identifies one unambiguous PID, and name-derived slugs remain local gallery anchors.
 
-The SZ-AAL/B correspondence was catalogued in June 2026 as person konvolute generated from per-letter CSVs joined to the live facsimile PIDs. The derived timeline keeps both catalogue levels, see [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md#duplicates-and-coverage-of-the-correspondence).
+The SZ-AAL/B correspondence was catalogued in June 2026 as person konvolute generated from per-letter CSVs joined to the live facsimile PIDs. The derived timeline keeps both catalogue levels, see [lebenskalender-lanes.md](lebenskalender-lanes.md#duplicates-and-coverage-of-the-correspondence).
 
 ### Entry title and date convention (konvolut objects)
 
@@ -162,7 +163,7 @@ Two deviations are editorial and stay. Entries addressed to Lotte Altmann before
 
 The GND sits in `persName/@ref`, the Wikipedia article in `person/@corresp`, the Wikidata entity in `idno[@type="wikidata"]`. Corporate bodies are held in the organisation index.
 
-On 24 September 2026 the persons that no holding, index, theme page or stylesheet references and that no text of the holdings names were removed from the index after a deterministic check, described in [DATA.md](DATA.md#dead-references-and-unlinked-correspondence-partners). The removed entries are kept unchanged in `scripts/checkup_2026_09_index/removed_persons.xml`, and their identifiers are never assigned again.
+On 24 September 2026 the persons that no holding, index, theme page or stylesheet references and that no text of the holdings names were removed from the index after a deterministic check, described in [data-quality.md](data-quality.md#dead-references-and-unlinked-correspondence-partners). The removed entries are kept unchanged in `scripts/checkup_2026_09_index/removed_persons.xml`, and their identifiers are never assigned again.
 
 Holdings reference a person either by `ref="#SZDPER.<n>"` or by the GND of the index entry. `GetPersonlist` in `szd-TORDF.xsl` resolves both forms against the index, and only a reference it resolves makes the object findable in the person search. The reading rules that follow from the mapping are documented with [scripts/personen_ohne_verweis/](../scripts/personen_ohne_verweis/README.md), the normalisation of the reference form with [scripts/checkup_2026_09_index/](../scripts/checkup_2026_09_index/README.md).
 
@@ -205,7 +206,7 @@ Since the migration the index is maintained by hand. A new body receives the nex
 </org>
 ```
 
-The entries carry no `geo` elements, see [DATA.md](DATA.md#archive-checkup-september-2026).
+The entries carry no `geo` elements, see [data-quality.md](data-quality.md#archive-checkup-september-2026).
 
 ## Biography (SZDBIO)
 
@@ -250,7 +251,7 @@ Every `biblFull` in a grouped list therefore carries, beyond its content fields:
 - `titleStmt/title[@type="Einheitssachtitel"]`, the document-type sub-heading. The inner `group-by` selects the title of the current locale or one without `@xml:lang`, so a language-less Einheitssachtitel groups correctly in both languages and only a completely absent one drops the entry.
 - the PID as `msIdentifier/altIdentifier/idno[@type="PID"]`, because a bare `idno` produces no IIIF or Mirador facsimile link.
 
-Navbar categories are a closed set. A new classification is added only for something fundamental and permanent. Existing `Einheitssachtitel` values are reused verbatim in both languages, so the entry joins the existing heading group. The renderer side is documented in gams-www `knowledge/Rendering-and-Search.md`.
+Navbar categories are a closed set. A new classification is added only for something fundamental and permanent. Existing `Einheitssachtitel` values are reused verbatim in both languages, so the entry joins the existing heading group. The renderer side is documented in [rendering-architecture](rendering-architecture.md), which came from the former gams-www document `Rendering-and-Search.md`.
 
 In June 2026 the thirteen SZ-AAL/L documents were ingested with valid PIDs and appeared nowhere in the frontend until each received an `Einheitssachtitel` and its PID was wrapped in `altIdentifier`.
 
@@ -272,8 +273,8 @@ Each TEI header states CC BY 4.0 in its `availability` element, while the [READM
 
 ## Related
 
-- [DATA_MODEL.md](DATA_MODEL.md), encoding patterns shared by all files
-- [DATA.md](DATA.md), data gaps and checkup results
-- [MAPPING.md](MAPPING.md), TEI-CSV schema for correspondence
-- [ONTOLOGY.md](ONTOLOGY.md), mapping of the collections to SZDO classes
-- [ARCHITECTURE.md](ARCHITECTURE.md), system integration and ingest
+- [data-model.md](data-model.md), encoding patterns shared by all files
+- [data-quality.md](data-quality.md), data gaps and checkup results
+- [konvolut-csv-mapping.md](konvolut-csv-mapping.md), TEI-CSV schema for correspondence
+- [ontology.md](ontology.md), mapping of the collections to SZDO classes
+- [architecture.md](architecture.md), system integration and ingest

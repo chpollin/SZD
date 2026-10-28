@@ -37,7 +37,7 @@ The report lists the places the script cannot settle.
 
 - „Personen OHNE SZDPER-Verknüpfung“ lists persons missing from [`SZDPER.xml`](../../data/Index/Person/SZDPER.xml). Create them with GND where one exists, otherwise with `surname` and `forename` only and never a guessed GND, then add `ref="#SZDPER.N"` on `editor` or `author` in the SZDLEB entry.
 - „Personen ohne 'Nachname, Vorname'-Form“ lists names taken over as full `persName` text, to be checked.
-- „Als Körperschaft (orgName) modelliert“ lists institutions recorded as `<editor><orgName>` by the keyword heuristic `ORG_KEYWORDS`. Check that nothing was classed as a corporate body by mistake. Corporate bodies belong to the organisation index, see [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
+- „Als Körperschaft (orgName) modelliert“ lists institutions recorded as `<editor><orgName>` by the keyword heuristic `ORG_KEYWORDS`. Check that nothing was classed as a corporate body by mistake. Corporate bodies belong to the organisation index, see [`knowledge/collections.md`](../../knowledge/collections.md#organisation-index-szdorg).
 - The Gesamttitel must be the written-out collection name, uniform across all entries (as in `Stefan Zweig - Alberman Papers 2`).
 - A comma instead of a semicolon in the CSV glues two persons together, which the report shows as an unstructured name. Correct it in the CSV or in the XML.
 

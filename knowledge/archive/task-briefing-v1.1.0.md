@@ -2,13 +2,14 @@
 title: "Task Briefing: SZDO Data Modelling"
 project:
   name: Stefan Zweig Digital
-  repository: https://github.com/chpollin/SZD.git
+  repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
-  url: https://dhcraft.org/promptotyping
+  url: https://dhcraft.org/Promptotyping/
 status: archived
+language: en
 created: 2026-03-29
-updated: 2026-09-23
+updated: 2026-10-28
 ---
 
 # Task Briefing: SZDO Data Modelling
@@ -58,7 +59,7 @@ Part of the Klawiter entries was reconciled with the work index. The task checke
 
 ## Scope
 
-Frontend work belonged to another agent session. The correspondence date gaps had been closed separately in March 2026, see [DATA.md](../DATA.md#dates).
+Frontend work belonged to another agent session. The correspondence date gaps had been closed separately in March 2026, see [data-quality.md](../data-quality.md#dates).
 
 ## Files
 

@@ -17,7 +17,7 @@ only `docs/`. Refresh it after changes to the biography TEI:
 the presentation repository `ZIMLAB/szd` (`mode=timeline`, with `mode=fancy` as alias) and
 loads its own copy of the lane files. This static biography prototype remains a separate
 view. Schema, coverage and delivery state of the lanes are in
-[knowledge/Lebenskalender-Lanes.md](../../knowledge/Lebenskalender-Lanes.md).
+[knowledge/lebenskalender-lanes.md](../../knowledge/lebenskalender-lanes.md).
 
 `index.html` is generated. It embeds the navbar and footer of the live page and loads
 the live stylesheets via `<base href="https://stefanzweig.digital/">`, so the page

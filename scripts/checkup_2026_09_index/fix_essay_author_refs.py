@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Point the author reference of every Aufsatzablage entry at the author, not at the entry.
 
-The 2026-09 checkup verification (knowledge/DATA.md, Archive checkup) found the defect. All 403
+The 2026-09 checkup verification (knowledge/data-quality.md, Archive checkup) found the defect. All 403
 author/@ref values in data/Aufsatzablage/SZDESS.xml repeat the sequence number of the entry
 they sit in, so SZDESS.28 carries ref="#SZDPER.28", which is Hanns Arens, while the author
 element names Stefan Zweig, SZDPER.1560. The wrong number does not reach the published page,

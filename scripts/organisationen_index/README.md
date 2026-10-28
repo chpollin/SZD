@@ -6,7 +6,7 @@ Two scripts built the organisation index on 11 September 2026 and moved the hold
 - `migrate_org_references.py` stays in use. It removes the entries decided as corporate bodies from `SZDPER.xml`, rewrites the references of the holdings and appends every change to `migration_log.csv`.
 - `reconcile_org_places.py` adds `country` and `settlement` from the GND record of each body (`geographicAreaCode` for the country, `placeOfBusiness` for the place), only where the record gives exactly one value, and never overwrites an existing one. It appends every written value to `reconcile_places_log.csv`, and `test_reconcile_org_places.py` checks its mapping rules. The GND code `XA-GB` becomes „Großbritannien“, the country name the organisation and location indexes share since 24 September 2026.
 
-At the first run the order was fixed, because the second script uses the identifiers the first one assigned. Structure of the index, its relation to the location index, the reference form in the holdings and the way the RDF transformation resolves it are described in [`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#organisation-index-szdorg).
+At the first run the order was fixed, because the second script uses the identifiers the first one assigned. Structure of the index, its relation to the location index, the reference form in the holdings and the way the RDF transformation resolves it are described in [`knowledge/collections.md`](../../knowledge/collections.md#organisation-index-szdorg).
 
 ## Two sources
 

@@ -5,7 +5,7 @@ carries no `msIdentifier/idno[@type="signature"]`, namely the contiguous block `
 `SZDKOR.970` created with the SZ-AAL/B ingest of June 2026, and a smaller set of older entries,
 which the dry run of this script lists in full. The September 2026 archive checkup reports most
 of them as duplicate correspondent headings. They are not duplicates. The two-level model of
-[`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md) allows a correspondent several
+[`knowledge/collections.md`](../../knowledge/collections.md) allows a correspondent several
 index entries, one per archival bundle, and the signature is what distinguishes them. Without
 it the second entry of a person reads as a repetition of the first.
 
@@ -93,6 +93,6 @@ The script leaves these alone.
 
 - [`scripts/korrespondenz_titel/`](../korrespondenz_titel/) rebuilds the entry titles of the
   konvolut objects from `correspDesc` and the physical extent.
-- The section "Archive checkup (September 2026)" of [`knowledge/DATA.md`](../../knowledge/DATA.md#archive-checkup-september-2026)
+- The section "Archive checkup (September 2026)" of [`knowledge/data-quality.md`](../../knowledge/data-quality.md#archive-checkup-september-2026)
   summarises the checkup this script answers. The file-and-line diagnosis is an
   archive-internal note outside the repository.

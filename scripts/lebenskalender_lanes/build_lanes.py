@@ -39,7 +39,7 @@ Design decisions, with their reasons:
   introduced for this one script, which departs from the house default of a pyproject.toml
   per pipeline.
 
-See knowledge/Lebenskalender-Lanes.md for the schema and the delivery path.
+See knowledge/lebenskalender-lanes.md for the schema and the delivery path.
 """
 from __future__ import annotations
 

@@ -68,4 +68,4 @@ szdo:Place: szdo:GeographicalPlace, szdo:Location (SZDSTA), szdo:PlaceOfOrigin
 szdo:ProvenanceEvent, szdo:ProvenanceFeatureInstance
 ```
 
-The design document with alignments, competency questions and the naming decisions of v2.0.0 is [../knowledge/ONTOLOGY.md](../knowledge/ONTOLOGY.md).
+The design document with alignments, competency questions and the naming decisions of v2.0.0 is [../knowledge/ontology.md](../knowledge/ontology.md).

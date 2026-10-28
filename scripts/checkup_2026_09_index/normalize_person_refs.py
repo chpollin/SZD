@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Write every person reference under data/ in the form the RDF mapping reads.
 
-The 2026-09 checkup verification (knowledge/DATA.md, Archive checkup) shows why this matters.
+The 2026-09 checkup verification (knowledge/data-quality.md, Archive checkup) shows why this matters.
 GetPersonlist in szd-TORDF.xsl emits a triple only for a value that contains "#SZDPER." or
 a GND, so a reference written as ref="SZDPER.1315" is silently dropped and the person looks
 unlinked in the person view although the holdings name her.

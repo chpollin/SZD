@@ -1,21 +1,22 @@
 ---
 title: TEI-XML Data Overview
 project:
-  name: Stefan Zweig Digital, data repository
+  name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
   url: https://dhcraft.org/Promptotyping/
 status: complete
+language: en
 created: 2025-10-23
-updated: 2026-09-24
+updated: 2026-10-28
 version: 1.0.0
 tags: [data, zweig, tei, statistics]
 ---
 
 # TEI-XML Data Overview
 
-Coverage of the TEI sources, their documented data gaps and the results of the archive checkups of September 2026. Files, PIDs and encoding of the collections are in [COLLECTIONS.md](COLLECTIONS.md), the open corrections and decisions in the [plan](plan.md).
+Coverage of the TEI sources, their documented data gaps and the results of the archive checkups of September 2026. Files, PIDs and encoding of the collections are in [collections.md](collections.md), the open corrections and decisions in the [plan](plan.md).
 
 ## Counting conventions
 
@@ -70,7 +71,7 @@ An archive-side checkup list against the catalogue view of `o:szd.lebensdokument
 | SZ-AP2/L-S12 Register der Aufsätze | facsimile link missing | `o:szd.175` exists, TEI entry SZDLEB.71 had no PID | PID added, index re-ingested on 10 September 2026, link live |
 | SZ-AAP/L2 [Beilage] K. u. k. Kriegsarchiv Offene Order | no facsimile | no facsimile source anywhere, neither in the Tagebuch book structure nor as a `SZ_AAP_L2_Beilage` folder | the archive checks the server files |
 
-A Beilage object follows the Works pattern, a separate object that keeps the main signature in `dc:source` and marks itself with "[Beilage]" in the title (as `o:szd.234` for SZ-AAP/W45), so no new signature suffix is needed. The delivery of the two PIDs was confirmed on 17 September 2026 against the production `TEI_SOURCE` and the rendered catalogue. The manifest defect and the prepared repairs are described in [COLLECTIONS.md](COLLECTIONS.md#iiif-structure-labels-in-book-sources) and [scripts/iiif_structure_labels/](../scripts/iiif_structure_labels/README.md).
+A Beilage object follows the Works pattern, a separate object that keeps the main signature in `dc:source` and marks itself with "[Beilage]" in the title (as `o:szd.234` for SZ-AAP/W45), so no new signature suffix is needed. The delivery of the two PIDs was confirmed on 17 September 2026 against the production `TEI_SOURCE` and the rendered catalogue. The manifest defect and the prepared repairs are described in [collections.md](collections.md#iiif-structure-labels-in-book-sources) and [scripts/iiif_structure_labels/](../scripts/iiif_structure_labels/README.md).
 
 ## Archive checkup (September 2026)
 
@@ -93,7 +94,7 @@ Corrected in the working tree, each with a script that logs every change and ver
 - further prepared IIIF label repairs ([scripts/iiif_structure_labels/](../scripts/iiif_structure_labels/README.md)),
 - the evidenced defects of the Konvolut files, once all of them were in the repository ([scripts/checkup_2026_09_konvolute/](../scripts/checkup_2026_09_konvolute/README.md)).
 
-The corporate bodies left the person index for the organisation index ([COLLECTIONS.md](COLLECTIONS.md#organisation-index-szdorg)). The presentation-layer causes were fixed in `ZIMLAB/szd` (frontend commit `8ec067b` and later). None of the data corrections reaches production before the affected index objects, the konvolut files and the prepared book sources are re-ingested. The ingest steps are in the [plan](plan.md#staging-ingest).
+The corporate bodies left the person index for the organisation index ([collections.md](collections.md#organisation-index-szdorg)). The presentation-layer causes were fixed in `ZIMLAB/szd` (frontend commit `8ec067b` and later). None of the data corrections reaches production before the affected index objects, the konvolut files and the prepared book sources are re-ingested. The ingest steps are in the [plan](plan.md#staging-ingest).
 
 ### Colour-coded person index list
 
@@ -115,7 +116,7 @@ A person without any reference and without any text hit is certainly unreference
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md), files, PIDs, encoding and rendering contracts
-- [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md), derived timeline data, its coverage and delivery
+- [collections.md](collections.md), files, PIDs, encoding and rendering contracts
+- [lebenskalender-lanes.md](lebenskalender-lanes.md), derived timeline data, its coverage and delivery
 - [plan](plan.md), open corrections, ingest steps and decisions
 - [journal](journal.md), work sessions and decisions

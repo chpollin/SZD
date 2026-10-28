@@ -1,19 +1,20 @@
 ---
 title: Data Model
 project:
-  name: Stefan Zweig Digital, data repository
+  name: Stefan Zweig Digital
   repository: https://github.com/chpollin/SZD
 method:
   name: Promptotyping
   url: https://dhcraft.org/Promptotyping/
 status: complete
+language: en
 created: 2025-10-23
-updated: 2026-09-24
+updated: 2026-10-28
 ---
 
 # Data Model
 
-The TEI P5 encoding patterns that all SZD files share, covering the header, the bilingual encoding, authority references, identifiers and dates. The collection-specific structures, with entry examples taken from the data, are in [COLLECTIONS.md](COLLECTIONS.md), the formal ontology in [ONTOLOGY.md](ONTOLOGY.md).
+The TEI P5 encoding patterns that all SZD files share, covering the header, the bilingual encoding, authority references, identifiers and dates. The collection-specific structures, with entry examples taken from the data, are in [collections.md](collections.md), the formal ontology in [ontology.md](ontology.md).
 
 ## TEI Header
 
@@ -46,7 +47,7 @@ Every file is a TEI document in the namespace `http://www.tei-c.org/ns/1.0` with
 
 ## Bilingual Encoding
 
-User-facing content is encoded in German and English with `xml:lang`, either as parallel elements (`title`, `span`, `ab`, `material`, `date`) or as parallel `span` elements inside one element. The frontend XSL selects the language by a locale parameter, and SPARQL queries filter by language tag. Where a language is missing, the renderers behave differently per field. The rendering contract in [COLLECTIONS.md](COLLECTIONS.md#rendering-contract-grouped-lists) names the keys that must exist in both languages.
+User-facing content is encoded in German and English with `xml:lang`, either as parallel elements (`title`, `span`, `ab`, `material`, `date`) or as parallel `span` elements inside one element. The frontend XSL selects the language by a locale parameter, and SPARQL queries filter by language tag. Where a language is missing, the renderers behave differently per field. The rendering contract in [collections.md](collections.md#rendering-contract-grouped-lists) names the keys that must exist in both languages.
 
 ## Authority References
 
@@ -54,13 +55,13 @@ User-facing content is encoded in German and English with `xml:lang`, either as 
 - `@corresp` carries additional links, the Wikipedia article on `person` and institutional websites on `org` and `orgName`.
 - `idno[@type="wikidata"]` in the person index carries the Wikidata entity (`http://www.wikidata.org/entity/<Q-id>`).
 
-References from the holdings to the indices take the forms `ref="#SZDPER.<n>"`, the GND of the index entry, or for bodies without GND `https://gams.uni-graz.at/o:szd.organisation#SZDORG.<n>` and `https://gams.uni-graz.at/o:szd.standorte#SZDSTA.<n>`. How the RDF transformation resolves them is described per index in [COLLECTIONS.md](COLLECTIONS.md).
+References from the holdings to the indices take the forms `ref="#SZDPER.<n>"`, the GND of the index entry, or for bodies without GND `https://gams.uni-graz.at/o:szd.organisation#SZDORG.<n>` and `https://gams.uni-graz.at/o:szd.standorte#SZDSTA.<n>`. How the RDF transformation resolves them is described per index in [collections.md](collections.md).
 
 The spelling of the GND prefix is not uniform across the files. Headers carry `d-nb.info/gnd/…` without scheme, the holdings `http://d-nb.info/gnd/…`, and some values `https://`. A comparison of GND values therefore normalises scheme and trailing slash, or it matches character for character and inherits this variation.
 
 ## Identifiers
 
-- Object PIDs follow `o:szd.<name>` for collections and indices (`o:szd.werke`, `o:szd.personen`), `o:szd.korrespondenzen.<person>` for konvolut objects and `o:szd.<number>` for facsimile objects. The full list is the overview table in [COLLECTIONS.md](COLLECTIONS.md#collection-overview).
+- Object PIDs follow `o:szd.<name>` for collections and indices (`o:szd.werke`, `o:szd.personen`), `o:szd.korrespondenzen.<person>` for konvolut objects and `o:szd.<number>` for facsimile objects. The full list is the overview table in [collections.md](collections.md#collection-overview).
 - Entries carry `xml:id` values after the pattern `{COLLECTION_CODE}.{NUMBER}` (`SZDKOR.1`, `SZDPER.1`, `SZDBIO.1`), letters in konvolut objects `SZDKOR.<person>.<n>` (`SZDKOR.altmann-hannah.1`).
 - Index identifiers are part of the RDF URIs and are never renumbered. A new entry receives the next free number, and the identifier of a removed or merged entry is never assigned again. Removed persons are kept in `scripts/checkup_2026_09_index/removed_persons.xml`, superseded persons that became corporate bodies stay visible as `idno[@type="SZDPER"][@subtype="superseded"]` in the organisation index.
 
@@ -85,7 +86,7 @@ Machine-readable dates use ISO 8601 values in the attributes of `date` or `origD
 <date when="1939-02" ana="supplied/verified" xml:lang="de">Februar 1939</date>
 ```
 
-The coverage of machine-readable dates and the remaining gaps are in [DATA.md](DATA.md#dates), the reading rules of the timeline generator in [Lebenskalender-Lanes.md](Lebenskalender-Lanes.md#dating-rules).
+The coverage of machine-readable dates and the remaining gaps are in [data-quality.md](data-quality.md#dates), the reading rules of the timeline generator in [lebenskalender-lanes.md](lebenskalender-lanes.md#dating-rules).
 
 ## Metadata Standards
 
@@ -101,8 +102,8 @@ The repository holds no TEI schema or ODD. The processing scripts check well-for
 
 ## Related
 
-- [COLLECTIONS.md](COLLECTIONS.md), collection-specific encoding and rendering contracts
-- [MAPPING.md](MAPPING.md), TEI-CSV schema for correspondence
-- [DATA.md](DATA.md), data gaps
-- [ARCHITECTURE.md](ARCHITECTURE.md), system integration and data flow
-- [ONTOLOGY.md](ONTOLOGY.md), the formal ontology SZDO
+- [collections.md](collections.md), collection-specific encoding and rendering contracts
+- [konvolut-csv-mapping.md](konvolut-csv-mapping.md), TEI-CSV schema for correspondence
+- [data-quality.md](data-quality.md), data gaps
+- [architecture.md](architecture.md), system integration and data flow
+- [ontology.md](ontology.md), the formal ontology SZDO

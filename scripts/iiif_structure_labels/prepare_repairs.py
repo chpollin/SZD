@@ -11,7 +11,7 @@ these attributes remains byte-identical. Source files are always read-only.
 
 This standalone repair uses stdlib XML only for strict structural verification;
 XML serialisation is deliberately avoided to preserve the ingest source bytes.
-The GAMS generator defect is documented in knowledge/COLLECTIONS.md.
+The GAMS generator defect is documented in knowledge/collections.md.
 """
 
 from __future__ import annotations

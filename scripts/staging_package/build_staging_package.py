@@ -239,7 +239,7 @@ def main() -> int:
         "2. Folder `2-bestaende`.",
         "3. Folder `3-konvolute`. Cirilo creates a missing object from the PID in the file.",
         "",
-        "Each folder goes through the Cirilo dialog Ingest objects with the content model `TEI Object | cirilo:TEI.szd`, PID box unticked, button From filesystem. Cirilo takes the PID from `<idno type=\"PID\">` in each file. A new object inherits the references of `cirilo:TEI.szd`, see `knowledge/ARCHITECTURE.md` in the data repository.",
+        "Each folder goes through the Cirilo dialog Ingest objects with the content model `TEI Object | cirilo:TEI.szd`, PID box unticked, button From filesystem. Cirilo takes the PID from `<idno type=\"PID\">` in each file. A new object inherits the references of `cirilo:TEI.szd`, see `knowledge/deployment-architecture.md` in the data repository.",
         "",
         "An existing object needs both references below before the ingest, a new one needs its STYLESHEET set after the ingest. Type or paste them so that nothing follows `.xsl`; a trailing character makes the reference unusable.",
         "",

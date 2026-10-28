@@ -15,7 +15,7 @@ quotes. Their other bytes, including metadata and image references, are preserve
 [repairs.json](prepared/repairs.json) records the exact replacements and SHA-256
 checksums of each original and prepared file. The rule for ingest sources that follows
 from the defect is in
-[`knowledge/COLLECTIONS.md`](../../knowledge/COLLECTIONS.md#iiif-structure-labels-in-book-sources).
+[`knowledge/collections.md`](../../knowledge/collections.md#iiif-structure-labels-in-book-sources).
 
 The archive checkup of September 2026 found four further objects with the same defect,
 `o:szd.939`, `o:szd.2935`, `o:szd.2409` and `o:szd.2291`. Their prepared sources lie in

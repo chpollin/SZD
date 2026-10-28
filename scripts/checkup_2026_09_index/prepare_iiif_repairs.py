@@ -6,7 +6,7 @@ a book div/@type into a range label without escaping the quotation marks it cont
 manifest is not valid JSON and the viewer fails. The repair replaces the straight quotation
 pair by typographic quotes in the ingest source and changes nothing else.
 
-The four objects come from the verification of the 2026-09 checkup (knowledge/DATA.md,
+The four objects come from the verification of the 2026-09 checkup (knowledge/data-quality.md,
 Archive checkup), two from the Werke and two from the Aufsatzablage:
 
     o:szd.939   SZ-SAM/W2         Castellio gegen Calvin, five quoted chapter labels
