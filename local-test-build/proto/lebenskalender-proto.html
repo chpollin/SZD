@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lebenskalender – Prototyp</title>
+<!-- PROTOTYPE (local harness only): alternative presentation of o:szd.lebenskalender,
+     reading the TEI_SOURCE directly. Adds what the production timeline lacks: a
+     sticky year scale with event density, place filters, a compact/full toggle and
+     de/en switching without reload. Served from local-test-build via serve.sh. -->
+<style>
+	:root {
+		--accent: #631a34;
+		--accent-soft: #f3e9ec;
+		--ink: #222;
+		--muted: #6c757d;
+		--line: #ddd;
+		--bg: #fff;
+		font-family: "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
+		color: var(--ink);
+	}
+	body { margin: 0; background: var(--bg); line-height: 1.5; }
+	header.top {
+		position: sticky; top: 0; z-index: 10; background: var(--bg);
+		border-bottom: 1px solid var(--line); padding: .5rem 1rem;
+	}
+	h1 { font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .4rem; color: var(--accent); font-weight: 400; }
+	.controls { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; font-size: .9rem; }
+	.controls button, .chip {
+		border: 1px solid var(--line); background: #fff; border-radius: 999px;
+		padding: .1rem .7rem; font: inherit; font-size: .85rem; cursor: pointer; color: var(--ink);
+	}
+	.controls button[aria-pressed="true"], .chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+	.chip small { opacity: .7; margin-left: .3rem; }
+	.chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+	.scale { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 1px; margin-top: .5rem; align-items: end; height: 52px; }
+	.scale a { display: block; text-decoration: none; position: relative; height: 100%; }
+	.scale a .bar { position: absolute; bottom: 14px; left: 15%; right: 15%; background: #c9b3ba; border-radius: 2px 2px 0 0; }
+	.scale a:hover .bar, .scale a.current .bar { background: var(--accent); }
+	.scale a .lbl { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font-size: .65rem; color: var(--muted); }
+	.scale a.decade .lbl { color: var(--ink); font-weight: 600; }
+	.scale a.dim .bar { opacity: .25; }
+	main { max-width: 900px; margin: 0 auto; padding: 1rem; }
+	.year { margin: 2rem 0 .5rem; font-size: 1.6rem; color: var(--accent); font-weight: 300; border-bottom: 1px solid var(--line); }
+	article.ev { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0 1rem; padding: .6rem 0; border-bottom: 1px dotted var(--line); }
+	article.ev .when { color: var(--muted); font-size: .85rem; }
+	article.ev .where { font-weight: 600; letter-spacing: .03em; text-transform: uppercase; font-size: .8rem; color: var(--accent); }
+	article.ev .text a { color: var(--accent); }
+	article.ev .perma { font-size: .75rem; color: var(--muted); text-decoration: none; margin-left: .5rem; opacity: 0; }
+	article.ev:hover .perma { opacity: 1; }
+	body.compact article.ev .text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	body.compact article.ev { padding: .25rem 0; }
+	article.ev[hidden] { display: none; }
+	.year[hidden] { display: none; }
+	.empty { color: var(--muted); padding: 2rem 0; }
+	@media (max-width: 600px) {
+		article.ev { grid-template-columns: 1fr; }
+		.scale a .lbl { display: none; }
+		.scale a.decade .lbl { display: block; }
+	}
+</style>
+</head>
+<body>
+<header class="top">
+	<h1 id="title">Biographie</h1>
+	<div class="controls">
+		<span>
+			<button type="button" data-lang="de" aria-pressed="true">DE</button>
+			<button type="button" data-lang="en" aria-pressed="false">EN</button>
+		</span>
+		<span>
+			<button type="button" data-density="full" aria-pressed="true">Volltext</button>
+			<button type="button" data-density="compact" aria-pressed="false">Kompakt</button>
+		</span>
+		<span class="chips" id="places"></span>
+	</div>
+	<nav class="scale" id="scale" aria-label="Jahre"></nav>
+</header>
+<main id="main"></main>
+<script>
+(function () {
+	'use strict';
+
+	var TEI_URL = '/local-test-build/build/lebenskalender.xml';
+	var PERSON_SEARCH = 'https://stefanzweig.digital/archive/objects/query:szd.person_search/methods/sdef:Query/get?params=%241%7C%3Chttps%3A%2F%2Fgams.uni-graz.at%2Fo%3Aszd.personen%23{ID}%3E%3B%242%7C{LOC}&locale={LOC}';
+	var TEI = 'http://www.tei-c.org/ns/1.0';
+	var XML = 'http://www.w3.org/XML/1998/namespace';
+
+	var state = { lang: 'de', density: 'full', place: null };
+	var events = [];
+	var L = {
+		de: { title: 'Biographie', full: 'Volltext', compact: 'Kompakt', all: 'Alle Orte', events: 'Einträge', empty: 'Keine Einträge für diese Auswahl.', perma: 'Permalink' },
+		en: { title: 'Biography', full: 'Full text', compact: 'Compact', all: 'All places', events: 'entries', empty: 'No entries for this selection.', perma: 'Permalink' }
+	};
+
+	function childrenNS(el, name) {
+		return Array.prototype.filter.call(el.childNodes, function (n) { return n.nodeType === 1 && n.localName === name; });
+	}
+	function lang(el) { return el.getAttributeNS(XML, 'lang'); }
+
+	function parseHead(span) {
+		var date = span.getElementsByTagNameNS(TEI, 'date')[0];
+		var when = date ? (date.getAttribute('when') || date.getAttribute('from') || '') : '';
+		var clone = span.cloneNode(true);
+		var d = clone.getElementsByTagNameNS(TEI, 'date')[0];
+		if (d) { d.parentNode.removeChild(d); }
+		var place = clone.textContent.replace(/[\s,]+$/, '').replace(/\s+/g, ' ').trim();
+		return { when: when, dateText: date ? date.textContent.trim() : '', place: place };
+	}
+
+	function renderAb(ab, loc) {
+		var out = document.createElement('span');
+		function walk(node, target) {
+			Array.prototype.forEach.call(node.childNodes, function (n) {
+				if (n.nodeType === 3) { target.appendChild(document.createTextNode(n.nodeValue.replace(/\s+/g, ' '))); return; }
+				if (n.nodeType !== 1) { return; }
+				var el;
+				var ref = n.getAttribute('ref') || '';
+				if (n.localName === 'name' && n.getAttribute('type') === 'person' && ref.indexOf('#') === 0) {
+					el = document.createElement('a');
+					el.href = PERSON_SEARCH.replace('{ID}', ref.substring(1)).replace(/\{LOC\}/g, loc);
+					el.target = '_blank';
+				} else if (n.localName === 'name' && n.getAttribute('type') === 'book') {
+					el = document.createElement('a');
+					el.href = 'https://stefanzweig.digital/o:szd.bibliothek/sdef:TEI/get?locale=' + loc + ref;
+					el.target = '_blank';
+				} else if (n.localName === 'hi') {
+					el = document.createElement('em');
+				} else {
+					el = document.createElement('span');
+				}
+				walk(n, el);
+				target.appendChild(el);
+			});
+		}
+		walk(ab, out);
+		return out;
+	}
+
+	function parse(doc) {
+		var list = doc.getElementsByTagNameNS(TEI, 'event');
+		return Array.prototype.map.call(list, function (ev) {
+			var head = ev.getElementsByTagNameNS(TEI, 'head')[0];
+			var spans = head ? childrenNS(head, 'span') : [];
+			var abs = childrenNS(ev, 'ab');
+			var byLang = {};
+			spans.forEach(function (s) { byLang[lang(s)] = parseHead(s); });
+			var abByLang = {};
+			abs.forEach(function (a) { abByLang[lang(a)] = a; });
+			var de = byLang.de || byLang.en || { when: '', dateText: '', place: '' };
+			return {
+				id: ev.getAttributeNS(XML, 'id') || ev.getAttribute('xml:id'),
+				when: de.when,
+				year: de.when.substring(0, 4),
+				head: byLang,
+				ab: abByLang
+			};
+		}).filter(function (e) { return e.year; });
+	}
+
+	function placeKey(e) { return (e.head.de && e.head.de.place) || ''; }
+
+	function buildScale() {
+		var years = {};
+		events.forEach(function (e) { years[e.year] = (years[e.year] || 0) + 1; });
+		var min = Math.min.apply(null, events.map(function (e) { return +e.year; }));
+		var max = Math.max.apply(null, events.map(function (e) { return +e.year; }));
+		var maxCount = Math.max.apply(null, Object.keys(years).map(function (y) { return years[y]; }));
+		var scale = document.getElementById('scale');
+		scale.innerHTML = '';
+		for (var y = min; y <= max; y++) {
+			var a = document.createElement('a');
+			a.href = '#y' + y;
+			a.dataset.year = y;
+			a.className = (y % 10 === 0 ? 'decade' : '') + (years[y] ? '' : ' dim');
+			a.title = y + (years[y] ? ' (' + years[y] + ')' : '');
+			var bar = document.createElement('span');
+			bar.className = 'bar';
+			bar.style.height = years[y] ? Math.max(3, Math.round(34 * years[y] / maxCount)) + 'px' : '1px';
+			a.appendChild(bar);
+			if (y % 10 === 0 || y === min || y === max) {
+				var lbl = document.createElement('span');
+				lbl.className = 'lbl';
+				lbl.textContent = y;
+				a.appendChild(lbl);
+			}
+			scale.appendChild(a);
+		}
+	}
+
+	function buildPlaces() {
+		var counts = {};
+		events.forEach(function (e) { var p = placeKey(e); if (p) { counts[p] = (counts[p] || 0) + 1; } });
+		var names = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+		var box = document.getElementById('places');
+		box.innerHTML = '';
+		var all = chip(L[state.lang].all, events.length, null);
+		box.appendChild(all);
+		names.slice(0, 14).forEach(function (n) { box.appendChild(chip(n, counts[n], n)); });
+		function chip(label, count, value) {
+			var b = document.createElement('button');
+			b.type = 'button';
+			b.className = 'chip';
+			b.textContent = label;
+			var s = document.createElement('small');
+			s.textContent = count;
+			b.appendChild(s);
+			b.setAttribute('aria-pressed', String(state.place === value));
+			b.addEventListener('click', function () { state.place = value; render(); });
+			return b;
+		}
+	}
+
+	function render() {
+		var loc = state.lang;
+		var t = L[loc];
+		document.documentElement.lang = loc;
+		document.getElementById('title').textContent = t.title;
+		document.body.className = state.density;
+		Array.prototype.forEach.call(document.querySelectorAll('[data-lang]'), function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === loc)); });
+		Array.prototype.forEach.call(document.querySelectorAll('[data-density]'), function (b) {
+			b.setAttribute('aria-pressed', String(b.dataset.density === state.density));
+			b.textContent = t[b.dataset.density];
+		});
+		buildPlaces();
+
+		var main = document.getElementById('main');
+		main.innerHTML = '';
+		var shown = 0, currentYear = null, yearHeading = null, yearCount = 0;
+		events.forEach(function (e) {
+			var visible = !state.place || placeKey(e) === state.place;
+			if (e.year !== currentYear) {
+				if (yearHeading) { yearHeading.hidden = yearCount === 0; }
+				currentYear = e.year; yearCount = 0;
+				yearHeading = document.createElement('h2');
+				yearHeading.className = 'year';
+				yearHeading.id = 'y' + e.year;
+				yearHeading.textContent = e.year;
+				main.appendChild(yearHeading);
+			}
+			if (!visible) { return; }
+			yearCount++; shown++;
+			var h = e.head[loc] || e.head.de || {};
+			var art = document.createElement('article');
+			art.className = 'ev';
+			art.id = e.id;
+			var meta = document.createElement('div');
+			var where = document.createElement('div'); where.className = 'where'; where.textContent = h.place || '';
+			var when = document.createElement('div'); when.className = 'when'; when.textContent = h.dateText || e.when;
+			meta.appendChild(where); meta.appendChild(when);
+			var text = document.createElement('div'); text.className = 'text';
+			var ab = e.ab[loc] || e.ab.de;
+			if (ab) { text.appendChild(renderAb(ab, loc)); }
+			var perma = document.createElement('a');
+			perma.className = 'perma'; perma.href = '#' + e.id; perma.textContent = '#' + e.id; perma.title = t.perma;
+			text.appendChild(perma);
+			art.appendChild(meta); art.appendChild(text);
+			main.appendChild(art);
+		});
+		if (yearHeading) { yearHeading.hidden = yearCount === 0; }
+		if (!shown) {
+			var p = document.createElement('p'); p.className = 'empty'; p.textContent = t.empty; main.appendChild(p);
+		}
+		var visibleYears = {};
+		Array.prototype.forEach.call(main.querySelectorAll('h2.year:not([hidden])'), function (h2) { visibleYears[h2.textContent] = true; });
+		Array.prototype.forEach.call(document.querySelectorAll('#scale a'), function (a) { a.classList.toggle('dim', !visibleYears[a.dataset.year]); });
+		observeYears();
+	}
+
+	var observer = null;
+	function observeYears() {
+		if (observer) { observer.disconnect(); }
+		if (!('IntersectionObserver' in window)) { return; }
+		observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (en) {
+				if (!en.isIntersecting) { return; }
+				var y = en.target.textContent;
+				Array.prototype.forEach.call(document.querySelectorAll('#scale a'), function (a) { a.classList.toggle('current', a.dataset.year === y); });
+			});
+		}, { rootMargin: '-120px 0px -70% 0px' });
+		Array.prototype.forEach.call(document.querySelectorAll('h2.year:not([hidden])'), function (h2) { observer.observe(h2); });
+	}
+
+	document.addEventListener('click', function (ev) {
+		var b = ev.target.closest('[data-lang],[data-density]');
+		if (!b) { return; }
+		if (b.dataset.lang) { state.lang = b.dataset.lang; }
+		if (b.dataset.density) { state.density = b.dataset.density; }
+		render();
+	});
+
+	window.lebenskalenderInit = function (xmlText) {
+		var doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+		events = parse(doc).sort(function (a, b) { return a.when < b.when ? -1 : a.when > b.when ? 1 : 0; });
+		buildScale();
+		render();
+		return events.length;
+	};
+
+	if (typeof fetch === 'function' && location.protocol !== 'about:') {
+		fetch(TEI_URL).then(function (r) { return r.text(); }).then(window.lebenskalenderInit).catch(function (e) {
+			document.getElementById('main').textContent = 'TEI konnte nicht geladen werden: ' + e;
+		});
+	}
+})();
+</script>
+</body>
+</html>

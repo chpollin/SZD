@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sparql xmlns="http://www.w3.org/2001/sw/DataAccess/rf1/result">
+  <head>
+    <variable name="container"/>
+    <variable name="cid"/>
+    <variable name="pid"/>
+    <variable name="model"/>
+    <variable name="ownerId"/>
+    <variable name="createdDate"/>
+    <variable name="lastModifiedDate"/>
+    <variable name="title"/>
+    <variable name="identifier"/>
+  </head>
+  <results>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.ontology"/>
+      <model uri="info:fedora/cm:Ontology"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-26T12:49:19.945Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:58:36.828Z</lastModifiedDate>
+      <title>Nachlass-Ontologie</title>
+      <identifier>o:szd.ontology</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.standorte"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:38:34.282Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:47.712Z</lastModifiedDate>
+      <title>Standorte: Stefan Zweig digital</title>
+      <identifier>o:szd.standorte</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.lebensdokumente"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T13:10:28.509Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-10T15:04:20.144Z</lastModifiedDate>
+      <title>Lebensdokumente: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.lebensdokumente</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.autographen"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-18T14:49:35.264Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:01.051Z</lastModifiedDate>
+      <title>Autographensammmlung: Stefan Zweig Digitale Nachlassrekonstruktion: Ich kenne den Zauber der Schrift: Katalog und Geschichte der Autographensammlung Stefan Zweig
+            Mit kommentiertem Abdruck von Stefan Zweigs Aufsätzen über das Sammeln von Handschriften
+            Bearb. von Oliver Matuschek</title>
+      <identifier>o:szd.autographen</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.SZDBRI.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-07T19:02:19.345Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:23.209Z</lastModifiedDate>
+      <title>Friderike von Winternitz an Stefan Zweig | 30.12.1914</title>
+      <identifier>o:szd.SZDBRI.1</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.glossar"/>
+      <model uri="info:fedora/cm:SKOS"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-26T10:02:33.151Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:54.089Z</lastModifiedDate>
+      <title>Glossar</title>
+      <identifier>o:szd.glossar</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.werke"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:39:15.126Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T13:06:02.449Z</lastModifiedDate>
+      <title>Werke: Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+      <identifier>o:szd.werke</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.4"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-29T13:38:42.461Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:05.76Z</lastModifiedDate>
+      <title>Autographen: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.4</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.2"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-26T15:10:40.689Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-27T14:52:59.863Z</lastModifiedDate>
+      <title>Wie Stefan Zweig schreibt: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.2</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.3"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-14T14:26:09.646Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:17:23.347Z</lastModifiedDate>
+      <title>Stefan Zweigs Bibliotheken: Stefan Zweig Digitale
+					Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.3</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.personen"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:36:18.041Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-22T13:25:32.916Z</lastModifiedDate>
+      <title>Personen: Stefan Zweig digital</title>
+      <identifier>o:szd.personen</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-14T14:01:15.31Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-18T17:54:00.806Z</lastModifiedDate>
+      <title>Marie Antoinette: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.1</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.bibliothek"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:40:00.041Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-27T10:35:01.924Z</lastModifiedDate>
+      <title>Bibliothek: Stefan Zweig digital</title>
+      <identifier>o:szd.bibliothek</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.lebenskalender"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:59:26.588Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:52.745Z</lastModifiedDate>
+      <title>Biographie: Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+      <identifier>o:szd.lebenskalender</identifier>
+    </result>
+    <result>
+      <container xml:lang="de">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.collection.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T13:09:03.519Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:53.099Z</lastModifiedDate>
+      <title>Marie Antoinette: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.collection.1</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.ontology"/>
+      <model uri="info:fedora/cm:Ontology"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-26T12:49:19.945Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:58:36.828Z</lastModifiedDate>
+      <title>Nachlass-Ontologie</title>
+      <identifier>o:szd.ontology</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.standorte"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:38:34.282Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:47.712Z</lastModifiedDate>
+      <title>Standorte: Stefan Zweig digital</title>
+      <identifier>o:szd.standorte</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.lebensdokumente"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T13:10:28.509Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-10T15:04:20.144Z</lastModifiedDate>
+      <title>Lebensdokumente: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.lebensdokumente</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.autographen"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-18T14:49:35.264Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:01.051Z</lastModifiedDate>
+      <title>Autographensammmlung: Stefan Zweig Digitale Nachlassrekonstruktion: Ich kenne den Zauber der Schrift: Katalog und Geschichte der Autographensammlung Stefan Zweig
+            Mit kommentiertem Abdruck von Stefan Zweigs Aufsätzen über das Sammeln von Handschriften
+            Bearb. von Oliver Matuschek</title>
+      <identifier>o:szd.autographen</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.SZDBRI.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-07T19:02:19.345Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:23.209Z</lastModifiedDate>
+      <title>Friderike von Winternitz an Stefan Zweig | 30.12.1914</title>
+      <identifier>o:szd.SZDBRI.1</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.glossar"/>
+      <model uri="info:fedora/cm:SKOS"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-26T10:02:33.151Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:54.089Z</lastModifiedDate>
+      <title>Glossar</title>
+      <identifier>o:szd.glossar</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.werke"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:39:15.126Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T13:06:02.449Z</lastModifiedDate>
+      <title>Werke: Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+      <identifier>o:szd.werke</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.4"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-29T13:38:42.461Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:33:05.76Z</lastModifiedDate>
+      <title>Autographen: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.4</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.2"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-26T15:10:40.689Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-27T14:52:59.863Z</lastModifiedDate>
+      <title>Wie Stefan Zweig schreibt: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.2</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.3"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-14T14:26:09.646Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-03T00:17:23.347Z</lastModifiedDate>
+      <title>Stefan Zweigs Bibliotheken: Stefan Zweig Digitale
+					Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.3</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.personen"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:36:18.041Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-22T13:25:32.916Z</lastModifiedDate>
+      <title>Personen: Stefan Zweig digital</title>
+      <identifier>o:szd.personen</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.thema.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-14T14:01:15.31Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-18T17:54:00.806Z</lastModifiedDate>
+      <title>Marie Antoinette: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.thema.1</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.bibliothek"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:40:00.041Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-27T10:35:01.924Z</lastModifiedDate>
+      <title>Bibliothek: Stefan Zweig digital</title>
+      <identifier>o:szd.bibliothek</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.lebenskalender"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T12:59:26.588Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:52.745Z</lastModifiedDate>
+      <title>Biographie: Stefan Zweig Digitale
+                    Nachlassrekonstruktion</title>
+      <identifier>o:szd.lebenskalender</identifier>
+    </result>
+    <result>
+      <container xml:lang="en">Stefan Zweig digital</container>
+      <cid>context:szd</cid>
+      <pid uri="info:fedora/o:szd.collection.1"/>
+      <model uri="info:fedora/cm:TEI"/>
+      <ownerId>szd</ownerId>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T13:09:03.519Z</createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T19:48:53.099Z</lastModifiedDate>
+      <title>Marie Antoinette: Stefan Zweig Digitale Nachlassrekonstruktion</title>
+      <identifier>o:szd.collection.1</identifier>
+    </result>
+  </results>
+</sparql>

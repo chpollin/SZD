@@ -1,0 +1,51 @@
+{
+  "inputs": {
+    "data": "files of the data repository SZD, path relative to its root; the commit is recorded per snapshot",
+    "fixture": "GAMS inputs versioned under local-test-build/fixtures/, fetched read-only from the URL in sources"
+  },
+  "sources": {
+    "context-szd.METADATA.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/METADATA/content (2026-09-29)",
+    "context-szd.LANGUAGES.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/LANGUAGES/content (2026-09-29)",
+    "context-szd.STARTSEITE.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/STARTSEITE/content (2026-09-29)",
+    "context-szd.ABOUT.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/ABOUT/content (2026-09-29)",
+    "context-szd.IMPRINT.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/IMPRINT/content (2026-09-29)",
+    "context-szd.MISCELLANEOUS.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/MISCELLANEOUS/content (2026-09-29)",
+    "context-szd.SEARCH_HELP.xml": "https://gams.uni-graz.at/archive/objects/context:szd/datastreams/SEARCH_HELP/content (2026-09-29)",
+    "context-szd.facsimiles.korrespondenzen.METADATA.xml": "https://gams.uni-graz.at/archive/objects/context:szd.facsimiles.korrespondenzen/datastreams/METADATA/content (2026-09-29)",
+    "o-szd.SZDBRI.1.TEI_SOURCE.xml": "https://gams.uni-graz.at/archive/objects/o:szd.SZDBRI.1/datastreams/TEI_SOURCE/content (2026-09-29)",
+    "query-szd.person_search.xml": "sdef:Query/getXML of query:szd.person_search on gams-staging.uni-graz.at, the hit list of the szd-Suche.xsl refactoring (2026-09-23)",
+    "query-szd.fulltext.xml": "sdef:Query/getXML of query:szd.fulltext with params $1|Bennington;$2|de on gams.uni-graz.at, a hit list with an organisation (2026-10-21)"
+  },
+  "pages": [
+    { "name": "szd-Autographen", "page": "szd-Autographen", "input": "data:data/Autograph/SZDAUT.xml" },
+    { "name": "szd-Bibliothek", "page": "szd-Bibliothek", "input": "data:data/Library/SZDBIB.xml" },
+    { "name": "szd-Essays", "page": "szd-Essays", "input": "data:data/Aufsatzablage/SZDESS.xml" },
+    { "name": "szd-Werke", "page": "szd-Werke", "input": "data:data/Work/SZDMSK.xml" },
+    { "name": "szd-Lebensdokumente", "page": "szd-Werke", "input": "data:data/PersonalDocument/SZDLEB.xml" },
+    { "name": "szd-Korrespondenzen", "page": "szd-Korrespondenzen", "input": "data:data/Correspondence/SZDKOR.xml" },
+    { "name": "szd-Konvolut", "page": "szd-Konvolut", "input": "data:data/Correspondence/konvolute/szd.korrespondenzen.zweig-friderike.xml" },
+    { "name": "szd-Lebenskalender", "page": "szd-Lebenskalender", "input": "data:data/Biography/SZDBIO.xml", "modes": ["", "timeline"] },
+    { "name": "szd-Personenliste", "page": "szd-Personenliste", "input": "data:data/Index/Person/SZDPER.xml" },
+    { "name": "szd-Standortliste", "page": "szd-Standortliste", "input": "data:data/Index/Location/SZDSTA.xml" },
+    { "name": "szd-Organisationen", "page": "szd-Organisationen", "input": "data:data/Index/Organisation/SZDORG.xml" },
+    { "name": "szd-Werkliste", "page": "szd-Werkliste", "input": "data:data/Index/Werke/SZDWRK.xml" },
+    { "name": "szd-Facsimiles", "page": "szd-Facsimiles", "input": "fixture:context-szd.facsimiles.korrespondenzen.METADATA.xml" },
+    { "name": "szd-Glossar", "page": "szd-Glossar", "input": "data:data/Glossary/szd-Glossary.xml" },
+    { "name": "szd-Thema1", "page": "szd-Thema", "input": "data:data/Issue/MarieAntoinette/szd-thema1.xml" },
+    { "name": "szd-Thema2", "page": "szd-Thema", "input": "data:data/Issue/Textgenese/szd-thema2.xml" },
+    { "name": "szd-Thema3", "page": "szd-Thema", "input": "data:data/Issue/Bibliothek/szd-thema3.xml" },
+    { "name": "szd-Thema4", "page": "szd-Thema", "input": "data:data/Issue/Autographen/szd-thema4.xml" },
+    { "name": "szd-Thema5", "page": "szd-Thema", "input": "data:data/Issue/Abschiedsbrief/szd-thema5.xml" },
+    { "name": "szd-Thema6", "page": "szd-Thema", "input": "data:data/Issue/Freud/szd-thema6.xml" },
+    { "name": "szd-Thema7", "page": "szd-Thema", "input": "data:data/Issue/Masereel-Aufsatz/szd-thema7-masareel.xml" },
+    { "name": "szd-Thema8", "page": "szd-Thema", "input": "data:data/Issue/Familienkorrespondenz/szd-thema8.xml" },
+    { "name": "szd-context", "page": "szd-context", "input": "fixture:context-szd.METADATA.xml", "modes": ["", "about", "imprint", "miscellaneous", "databasket", "memory"] },
+    { "name": "szd-Briefedition", "page": "szd-Briefedition", "input": "fixture:o-szd.SZDBRI.1.TEI_SOURCE.xml" },
+    { "name": "szd-Suche", "page": "szd-Suche", "input": "fixture:query-szd.person_search.xml" },
+    { "name": "szd-Suche-Volltext", "page": "szd-Suche", "input": "fixture:query-szd.fulltext.xml" }
+  ],
+  "notCovered": {
+    "szd-Suche without hits and with a glossary query": "needs SEARCH_HELP (versioned) or o:szd.glossar/ONTOLOGY and a hit list of that query, neither is a manifest entry yet",
+    "szd-Index": "rendered through its four wrappers"
+  }
+}

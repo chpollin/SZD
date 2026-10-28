@@ -1,0 +1,271 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Friderike von Winternitz an Stefan Zweig</title>
+        <author>Simone Lettner</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2020-05-25</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>ZIM</publisher>
+        <idno type="PID">o:szd.SZDBRI.1</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Fredonia</settlement>
+            <institution>State University of New York</institution>
+            <repository ref="http://d-nb.info/gnd/2156743-8">Reed Library</repository>
+            <collection>Stefan Zweig Collection</collection>
+            <idno>SC001.01.3</idno>
+          </msIdentifier>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support>
+                  <material ana="szdg:WritingInstrument">Schwarze Tinte</material>
+                </support>
+                <extent>1 Brief, 2 Blatt, 1 Kuvert</extent>
+              </supportDesc>
+            </objectDesc>
+            <handDesc>
+              <ab>Friderike von Winternitz</ab>
+            </handDesc>
+          </physDesc>
+          <history>
+            <provenance>
+              <ab>Friderike Zweig</ab>
+            </provenance>
+            <acquisition>
+              <ab>Ankauf 1974</ab>
+            </acquisition>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <correspDesc>
+        <correspAction type="sent">
+          <persName ref="SZDPER.1556">
+            <forename>Friderike</forename>
+            <surname>von Winternitz</surname>
+          </persName>
+          <placeName>Baden bei Wien</placeName>
+          <date when="1914-12-30">30.12.1914</date>
+        </correspAction>
+        <correspAction type="received">
+          <persName ref="SZDPER.1560">
+            <forename>Stefan</forename>
+            <surname>Zweig</surname>
+          </persName>
+          <placeName>Kochgasse 8, Wien VIII</placeName>
+        </correspAction>
+        <note>
+          <stamp type="postmark">30. XII. 14</stamp>
+        </note>
+        
+        <correspContext>
+          <ref target="/o:szd.SZDBRI.2" type="next">Next letter</ref>
+        </correspContext>
+      </correspDesc>
+    </profileDesc>
+    <encodingDesc>
+      <listPrefixDef>
+        <prefixDef ident="szd" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="https://gams.uni-graz.at/o:szd.ontology#$1">
+          <p>SZD Ontology</p>
+        </prefixDef>
+        <prefixDef ident="wd" matchPattern="([(a-z)|(A-Z)]+)" replacementPattern="http://www.wikidata.org/wiki/$1">
+          <p>
+            <ref target="https://www.wikidata.org/wiki/Help:Namespaces"></ref>
+          </p>
+        </prefixDef>
+      </listPrefixDef>
+      <appInfo>
+        <application ident="TEI_fromDOCX" version="2.15.0" xml:id="docxtotei">
+          <label>DOCX to TEI</label>
+        </application>
+      </appInfo>
+    </encodingDesc>
+    <revisionDesc>
+      <listChange>
+        <change>
+          <date>2020-07-20T13:37:28Z</date>
+          <name>Simone Lettner</name>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <pb facs="IMG.1" n="1" xml:id="DIV.1"></pb>
+      <opener>
+        <dateline>
+          <date cert="medium" when="1914-12-30"> 30. Dec. 14 <note place="comment">[Datumsangabe auf den Kopien leider unleserlich]</note>
+          </date>
+        </dateline>
+        <salute>Lieber ,</salute>
+      </opener>
+
+      <p>zum letzten Tag im Jahr einen Gruß. Ich muß<lb></lb> mit Gewalt wegdenken von jedem
+                sentimentalen<lb></lb> Rückblick. Ich will Dir jetzt in Gedanken einen<lb></lb> Kuss geben
+                und Dir <add place="above">dar</add>in <del rend="strikethrough">ihn</del> einen
+                heißen<lb></lb> Wunsch einschließen: Dir mögen nicht versorgte<lb></lb> Stunden, Kränkung um
+                Freunde im kom<lb></lb> menden Jahr Deinen Frohmut verdüstern.<lb></lb> Mein guter Liebling,
+                ich wünsch Dir alles<lb></lb> Glück, das Du ehrlich genießen kannst.<lb></lb> Und vor vielen
+                anderen Wünschen noch: gute<lb></lb> Arbeit. Du verstandest<sic>,</sic> es nicht, als
+                ich<lb></lb> sagte, das könne mir auch helfen. Du<lb></lb> bist manchmal so weit – in Deiner
+                Arbeit halte<lb></lb> ich Dich immer an meinem Herzen – Du wälzt<lb></lb> so oft fremde
+                Welten <sic>unerbitterlich</sic> zwischen<lb></lb> mich und Dich, Deine Arbeit wölbt
+                mir<lb></lb> goldene Brücken in mein Heim zu Dir.<lb></lb> Es ist ein Heim in den Wolken und
+                doch<lb></lb> in Deinem Herzen <del rend="strikethrough">xxxxxxx</del>[,] &gt;in Deinem<lb></lb>
+                ungetreuen getreuen Herzen. Es ist nicht<lb></lb> jene litterarische Anbetung, die Du
+                nicht </p>
+      <pb facs="IMG.2" n="2" xml:id="DIV.2"></pb>
+      <p> magst (ich bin weniger kritiklos als Du<lb></lb> glaubst: Dein Gedicht <hi style="color">der Krüppel</hi>
+        <note type="footnote">
+          <ref target="http://anno.onb.ac.at/cgi-content/anno?aid=nfp&amp;datum=19141225&amp;seite=49&amp;zoom=33">
+            <hi style="bold">Dein Gedicht „Der Krüppel“:</hi>
+
+          </ref> Stefan Zweigs Gedicht
+                        über einen Kriegsverwundeten war in der Neuen Freien Presse vom 25. Dezember
+                        1914 auf Seite 49 erschienen.</note> fand<lb></lb> ich beinahe schlecht
+                und ich glaube, daß<lb></lb> man es Dir überall zurückschicken würde,<lb></lb> wenn Du es
+                anonym einsenden würdest –<lb></lb> man soll sich aber auf Deiner Höhe – nie seine<lb></lb>
+                Höhe zu Nutze machen, selbst <add place="above">nicht</add>[,] um einer Zeitung<lb></lb>
+                eine Gefälligkeit zu erweisen – und ein <hi style="color">Stefan Zw.</hi>
+        <lb></lb>
+        <hi style="underline">lässt</hi> sich eben nichts streichen.) Nein es ist<lb></lb> nicht
+                das, daß ich auch (trotzdem) in Dir meinen<lb></lb> Meister sehe, es ist etwas von einer
+                gemeinsamen<lb></lb> Heimat, in der wir uns Treue halten wollen für<lb></lb> alle Zeiten.
+                Der Krieg hat <add place="above">sie</add> uns nicht verändert. Wir<lb></lb> haben immer
+                gleich gefühlt in unserer Menschenliebe und<lb></lb> Gerechtigkeit. – Ich wünschte mir
+                manchmal mehr<lb></lb> Herzlichkeit, weniger Spott von Dir; (aber er ist<lb></lb> üblich in
+                Deinem Kreise) <del rend="strikethrough">aber</del>
+        <add place="inline">ich</add> weiß indessen[,] aus<lb></lb> welchen Gefühlen Du oft
+                spottest. Aber es wird<lb></lb> schöner sein <add place="above">zwischen uns</add>[,]
+                wenn Du ihn fahren lässt, weil er<lb></lb> mich oft innerlich Schutzlose zu sehr
+                erschreckt.<lb></lb> Ich bin zu Sylvester allein höchstwahrscheinlich<lb></lb> – weder das
+                    <hi style="color">Mädchen</hi>
+        <note type="footnote">
+          <hi style="bold">das Mädchen:</hi> Kindermädchen im Haushalt von Friderike von Winternitz,
+                    möglicherweise Elise Exner (Lebensdaten unbekannt), genannt Lisi, auch „die
+                    Hopfenstange“, die spätestens ab 1916 für sie arbeitete. Oder Bedienstete bei
+                    Jakob von Winternitz? Name?</note>, das die Nacht in <hi style="color">Floridsdorf</hi>
+        <note type="footnote">
+          <hi style="bold">Floridsdorf:</hi> 21.
+                    Wiener Gemeindebezirk im Nordosten der Stadt.</note>
+        <lb></lb> verbringt, noch <hi style="color">der alte Herr</hi>
+        <note type="footnote">
+          <hi style="bold">der alte Herr:</hi> Der Schriftsteller und Diplomat Jakob von
+                    Winternitz (1843–1921), Vater des Beamten Felix von Winternitz (1877–1950),
+                    Friderike Zweigs erstem Ehemann, von dem sie am 28. Mai 1914 geschieden worden
+                    war.</note> werden bei mir sein!<lb></lb> Doch werd ich es mit voller Sicherheit
+                erst Donnerstag<lb></lb> Nachmittag wissen. Du hast mein Bett gekränkt<lb></lb>
+                    letzthin – dies wirklich unschuldige Bett. Deshalb<lb></lb> ist
+                auch mein Entschluß anders zu werden reifer<lb></lb> geworden, denn Du <del rend="strikethrough">has</del>
+        <add place="inline">beurteilst</add> mich jetzt unrichtig.<lb></lb> Der Schein ist gegen
+                mich, das gebe ich zu. </p>
+      <pb facs="IMG.3" n="3" xml:id="DIV.3"></pb>
+      <fw type="pageNumber">
+        <hi style="text-center">
+          <hi style="underline">2</hi>
+        </hi>
+      </fw>
+
+      <p> Etwas ganz Neues<sic>,</sic> muß ich Dir erzählen:<lb></lb> Ich habe gestern von 9 Uhr
+                Früh bis <note type="author">Anm. der Autorin am rechten Seitenrand: eingekreister
+                    Punkt mit Pfeil nach rechts untenzeigend</note>
+        <lb></lb> 10 Uhr abends
+                ununterbrochen geschrieben<hi style="text-secondary">[.]</hi>
+        <lb></lb> 2 Akte eines neuen <hi style="color">Theaterstückes</hi>
+        <note type="footnote">
+          <hi style="bold">2 Akte eines neuen Theaterstückes:</hi> Für dieses Werk ist weder ein Manuskript noch ein Druck oder eine Aufführung
+                    nachzuweisen. Auch Titel oder Sujet sind nicht überliefert. Möglicherweise
+                    handelt es sich um dasselbe Stück, das Stefan Zweig in einem undatierten Brief
+                    vom August 1918 erwähnt.</note>
+
+        <lb></lb> sind fast ausgeführt, alles weitere<lb></lb> durchdacht. Heute ist
+                herrlichste<lb></lb> Luft, die man trinkt wie etwa<lb></lb> Mosel, so leicht und kühl
+                duftend<lb></lb> – eine gute deutsche Luft. Ich<lb></lb> mußte an den Bahnhof denken,
+                auf<lb></lb> dem wir am Rückweg von <hi style="color">Lübeck</hi>
+        <note type="footnote">
+          <hi style="bold">am Rückweg von Lübeck:</hi> Anspielung auf die erste
+                    gemeinsame Reise, die Friderike und Stefan Zweig 1912 im Zusammenhang mit
+                    Aufführungen seines Theaterstückes Das Haus am Meer unternommen haben. Am 26.
+                    und 27. November hatten sie Lübeck besucht und waren von dort vermutlich
+                    gemeinsam nach Berlin gereist, von wo Friderike von Winternitz zunächst allein
+                    nach Wien weiterfuhr.</note>
+        <lb></lb> Aufenthalt hatten und so heiter<lb></lb> waren. Die Luft rieselte mir<lb></lb> diese
+                Erinnerung durch die<lb></lb> Kehle.</p>
+
+      <p> Noch etwas: Ich habe schon<lb></lb> wieder 3 Riesenthiere bekommen,<lb></lb> eine
+                gigantische Gans darunter,<lb></lb> dann californisches Compot<note type="footnote">
+          <hi style="bold">californisches Compot:</hi> Kompott aus kalifornischen
+                    Trockenfrüchten wie Pfirsich oder Marille/Aprikose.</note>
+        <lb></lb> und viele andere
+                kleine Delicatessen. <pb facs="IMG.4" n="4" xml:id="DIV.4"></pb> Darf ich bei Dir ein
+                kleines gutes<lb></lb> kaltes Nachtmahl geben ? – Sonntag<lb></lb> – oder nächste Woche, für
+                Dich<lb></lb> und <hi style="color">Victor</hi>
+        <note type="footnote">
+          <hi style="bold">Victor:</hi> Viktor Fleischer (1882–1951), mit Stefan Zweig eng
+                    befreundeter Schriftsteller und Verleger. </note> und wenn Du willst<lb></lb> –
+                eine Dame <add place="above">noch </add> vielleicht – am Liebsten<lb></lb> ein
+                    Mädel – oder auch Frau D<hi style="superscript">r</hi>
+        <lb></lb>
+        <hi style="color">Viertel</hi>
+        <note type="footnote">
+          <hi style="bold">Frau Dr.
+                        Viertel:</hi> Die Schauspielerin und Drehbuchautoren Salka Viertel (geb.
+                    Salomé Steuermann, 1889–1978), die mit dem Regisseur Berthold Viertel
+                    (1885–1953) verheiratet war.</note>. Nur wenn Du Lust dazu<lb></lb> hast! Jemand[,]
+                der geigt, wäre auch<lb></lb> hübsch dazu. Du brauchtest nur<lb></lb> von <hi style="color">Josef</hi>       
+ <note type="footnote">
+          <hi style="bold">Josef:</hi> Stefan Zweigs
+                    Diener, von dem bisher kein Nachname oder Lebensdaten bekannt sind. Er war seit
+                    dem 1. Oktober 1912 angestellt und arbeitete noch im Oktober 1921 in Salzburg
+                    für die Familie Zweig.</note> ein bisschen Getränk u. Butter<lb></lb> besorgen
+                lassen und Gebäck. Dein<lb></lb>
+        <hi style="color">Bruder</hi>
+        <note type="footnote">
+          <hi style="bold">Dein
+                        Bruder:</hi> Der Fabrikant Alfred Zweig (1879–1977).</note> wäre auch nett
+                dabei, weil<lb></lb> er lustig ist. Es soll ja <del rend="strikethrough">nich</del>
+        <add place="inline"> kein </add>
+        <lb></lb> Fest sein, aber heiter, damit das<lb></lb> neue Jahr <add place="above">ein<del rend="strikethrough">en</del>
+        </add> helle<del rend="strikethrough">n</del>s Anfangspünktchen<lb></lb> bekommt. Aber
+                nur[,] wenn es Dich „gfreut“ <note type="footnote">
+          <hi style="bold">wenn es Dich
+                        „gfreut“:</hi> bairischer Dialekt, etwa: „Wenn Du Spaß daran
+                hast“.</note>.</p>
+      <p>Ich küss Dich,</p>
+      <p>Dein</p>
+      <p>Lamm</p>
+      
+    </body>
+  </text>
+  <facsimile>
+    <surface start="#DIV.1">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_1.jpg" xml:id="IMG.1"></graphic>
+    </surface>
+    <surface start="#DIV.2">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_2.jpg" xml:id="IMG.2"></graphic>
+    </surface>
+    <surface start="#DIV.3">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_3.jpg" xml:id="IMG.3"></graphic>
+    </surface>
+    <surface start="#DIV.4">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_4.jpg" xml:id="IMG.4"></graphic>
+    </surface>
+    <surface start="#DIV.5">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_5.jpg" xml:id="IMG.5"></graphic>
+    </surface>
+    <surface start="#DIV.6">
+      <graphic mimeType="image/jpeg" url="file:///img/IMG_6.jpg" xml:id="IMG.6"></graphic>
+    </surface>
+  </facsimile>
+</TEI>

@@ -1,0 +1,33 @@
+{
+  "name": "szd-local-test-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local XSLT test harness for Stefan Zweig Digital page stylesheets",
+  "scripts": {
+    "test": "node test/run-all.mjs",
+    "test:frontend": "node test/run-all.mjs --suite unit,proto,pages",
+    "test:data": "node test/run-all.mjs --suite rdf",
+    "test:scope": "node test/test-scope.test.mjs",
+    "test:unit": "node test/databasket.test.mjs",
+    "test:ui": "node test/szd-navigation.smoke.mjs && node test/iiif-download.smoke.mjs",
+    "test:lists": "node test/extended-list-views.smoke.mjs",
+    "test:register": "node test/register-index.smoke.mjs && node test/register-index.golden.mjs",
+    "test:rdf": "node test/tordf.golden.mjs && node test/tordf.smoke.mjs",
+    "test:rdf-strict": "node test/tordf.strict.mjs",
+    "test:rdf-thema": "node test/tordf-thema.smoke.mjs",
+    "test:rdf-fallback": "node test/tordf-org-fallback.smoke.mjs",
+    "test:rdf-staging": "node test/rdf-staging.mjs",
+    "test:hygiene": "node test/page-hygiene.smoke.mjs",
+    "test:pages": "node test/konvolut.smoke.mjs && node test/list-views.smoke.mjs && node test/stack-link.smoke.mjs && node test/konvolut-datum.smoke.mjs && node test/lebenskalender-timeline.smoke.mjs && node test/search-results.smoke.mjs",
+    "test:proto": "node proto/proto.smoke.mjs && node proto/lebenskalender.smoke.mjs && node proto/zeitleiste-lanes.smoke.mjs",
+    "snapshot": "node snapshot.mjs",
+    "check:production": "python check-instance.py --instance production --data",
+    "check:staging": "python check-instance.py --instance staging --data"
+  },
+  "dependencies": {
+    "xslt3": "^2.7.0"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

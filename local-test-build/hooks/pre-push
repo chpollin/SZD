@@ -1,0 +1,7 @@
+#!/bin/sh
+# Opt-in hook for the gams-www clone: select frontend or RDF checks from the refs being pushed.
+# Enable once in gams-www with: git config core.hooksPath <absolute path to this folder>
+SZD_WWW="$(git rev-parse --show-toplevel)" || exit 1
+export SZD_WWW
+cd "$(dirname "$0")/.." || exit 1
+exec node test/pre-push.mjs

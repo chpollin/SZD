@@ -1,0 +1,533 @@
+/* Zeitleiste mit Lanes (prototype). Colours are taken from the live site only:
+   Bordeaux #631a34 and gold #c3a461 from szd.css. The two further lanes use graded
+   tones of the same palette, a lighter gold and a greyed bordeaux, so that four lanes
+   stay apart without a foreign hue. Text gold is darkened to #a08542, which reaches
+   3.54:1 on white and satisfies the 3:1 rule of package 5; surfaces keep #c3a461.
+   The scale carries no rules of its own, only bars, ticks and the cursor. */
+
+#zl-app {
+	--zl-wine: #631a34;
+	--zl-gold: #c3a461;
+	--zl-gold-text: #a08542;
+	--zl-gold-light: #dcc48f;
+	--zl-wine-grey: #8d6f7c;
+	--zl-ink: #131313;
+	--zl-muted: #6c757d;
+	--zl-line: #d4d4d4;
+	--zl-lane-biography: var(--zl-wine);
+	--zl-lane-correspondence: var(--zl-gold);
+	--zl-lane-personal-documents: var(--zl-gold-light);
+	--zl-lane-autographs: var(--zl-wine-grey);
+	text-align: start;
+}
+
+/* one focus style for the whole view, two pixels bordeaux at two pixels distance */
+#zl-app :focus-visible {
+	outline: 2px solid var(--zl-wine);
+	outline-offset: 2px;
+}
+
+#zl-app h2 .info_icon_header,
+#zl-app .zl-year-title {
+	color: var(--zl-gold-text);
+}
+
+/* one custom property per lane, set through the row, chip or entry class, so that
+   bars, marks, icons and dots read their colour from the same place */
+#zl-app .zl-lane-biography {
+	--zl-lane: var(--zl-lane-biography);
+}
+
+#zl-app .zl-lane-correspondence {
+	--zl-lane: var(--zl-lane-correspondence);
+}
+
+#zl-app .zl-lane-personal-documents {
+	--zl-lane: var(--zl-lane-personal-documents);
+}
+
+#zl-app .zl-lane-autographs {
+	--zl-lane: var(--zl-lane-autographs);
+}
+
+/* Bedienzeile */
+
+.zl-head {
+	background: #fff;
+	padding-block-end: .2rem;
+}
+
+.zl-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: .25rem .75rem;
+	margin-block: .2rem;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.zl-tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .25rem .5rem;
+}
+
+.zl-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25rem;
+}
+
+/* the second line exists only while a filter is set */
+.zl-active {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25rem;
+	margin-block-end: .2rem;
+}
+
+.zl-active:empty {
+	display: none;
+}
+
+.zl-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: .35rem;
+	min-block-size: 24px;
+	border: 1px solid var(--zl-line);
+	border-radius: 999px;
+	background: #fff;
+	padding-inline: .6rem;
+	font: inherit;
+	font-size: 12px;
+	color: var(--zl-ink);
+	cursor: pointer;
+}
+
+.zl-chip[aria-pressed="true"] {
+	background: var(--zl-wine);
+	border-color: var(--zl-wine);
+	color: #fff;
+}
+
+.zl-chip .zl-count {
+	opacity: .7;
+}
+
+/* lane chips keep the white ground and mark their state through icon, dot and frame,
+   because a gold fill would put small white text on a light surface */
+.zl-lane-chip[aria-pressed="true"] {
+	background: #fff;
+	color: var(--zl-ink);
+	border-color: var(--zl-lane);
+	box-shadow: inset 0 0 0 1px var(--zl-lane);
+}
+
+.zl-lane-chip[aria-pressed="false"] {
+	color: var(--zl-muted);
+}
+
+.zl-lane-chip .zl-icon {
+	color: var(--zl-lane);
+}
+
+.zl-lane-chip[aria-pressed="false"] .zl-icon {
+	color: var(--zl-muted);
+}
+
+.zl-dot {
+	inline-size: 10px;
+	block-size: 10px;
+	border-radius: 50%;
+	border: 1px solid var(--zl-gold-text);
+	background: var(--zl-lane);
+}
+
+.zl-lane-chip[aria-pressed="false"] .zl-dot {
+	background: #fff;
+}
+
+.zl-person {
+	display: inline-flex;
+	align-items: center;
+	gap: .3rem;
+	font-size: 12px;
+}
+
+.zl-person input {
+	min-block-size: 24px;
+	border: 1px solid var(--zl-line);
+	border-radius: 999px;
+	padding-inline: .6rem;
+	font: inherit;
+	font-size: 12px;
+	inline-size: 9rem;
+}
+
+/* Ortsauswahl als Dropdown */
+
+.zl-select {
+	position: relative;
+}
+
+.zl-select-button {
+	display: inline-flex;
+	align-items: center;
+	gap: .35rem;
+	min-block-size: 24px;
+	border: 1px solid var(--zl-line);
+	border-radius: 999px;
+	background: #fff;
+	padding-inline: .6rem;
+	font: inherit;
+	font-size: 12px;
+	color: var(--zl-ink);
+	cursor: pointer;
+}
+
+.zl-select-button[aria-expanded="true"] {
+	border-color: var(--zl-wine);
+}
+
+.zl-select-popup {
+	position: absolute;
+	z-index: 20;
+	inset-block-start: calc(100% + 4px);
+	inset-inline-start: 0;
+	inline-size: 15rem;
+	max-block-size: 60vh;
+	overflow-y: auto;
+	border: 1px solid var(--zl-line);
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	padding: .4rem;
+}
+
+.zl-select-popup input {
+	inline-size: 100%;
+	min-block-size: 24px;
+	border: 1px solid var(--zl-line);
+	border-radius: 4px;
+	padding-inline: .4rem;
+	font: inherit;
+	font-size: 12px;
+}
+
+.zl-select-list {
+	list-style: none;
+	margin: .3rem 0 0;
+	padding: 0;
+}
+
+.zl-select-list button {
+	display: flex;
+	justify-content: space-between;
+	gap: .5rem;
+	inline-size: 100%;
+	min-block-size: 24px;
+	border: 0;
+	background: none;
+	padding: .1rem .3rem;
+	font: inherit;
+	font-size: 12px;
+	color: var(--zl-ink);
+	text-align: start;
+	cursor: pointer;
+}
+
+.zl-select-list button:hover,
+.zl-select-list button[aria-current="true"] {
+	background: #f3e9ec;
+}
+
+.zl-select-list .zl-count {
+	color: var(--zl-muted);
+}
+
+.zl-tabs .zl-tab {
+	background: none;
+	border: 0;
+	border-block-end: 2px solid transparent;
+	padding: .15rem .75rem;
+	min-block-size: 24px;
+	font: inherit;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: var(--zl-gold-text);
+	opacity: .7;
+	cursor: pointer;
+}
+
+.zl-tabs .zl-tab[aria-pressed="true"] {
+	opacity: 1;
+	border-block-end-color: var(--zl-gold);
+}
+
+/* on a narrow screen the whole control line folds away, the scale stays */
+.zl-filter-toggle {
+	display: none;
+	align-items: center;
+	gap: .35rem;
+	min-block-size: 24px;
+	border: 1px solid var(--zl-line);
+	border-radius: 999px;
+	background: #fff;
+	padding-inline: .6rem;
+	font: inherit;
+	font-size: 12px;
+	color: var(--zl-ink);
+	cursor: pointer;
+}
+
+/* Skala */
+
+.zl-scale {
+	--zl-cols: 1;
+	position: relative;
+	margin-block: .1rem;
+}
+
+.zl-plot {
+	position: relative;
+	display: grid;
+	gap: 0;
+	touch-action: pan-y;
+	cursor: crosshair;
+}
+
+.zl-lane-row {
+	display: grid;
+	grid-template-columns: repeat(var(--zl-cols), minmax(0, 1fr));
+	align-items: end;
+	block-size: 13px;
+}
+
+/* a year without an event carries no bar, so the scale keeps no baseline */
+.zl-lane-row .zl-bar {
+	align-self: end;
+	background: var(--zl-lane);
+}
+
+.zl-axis {
+	display: grid;
+	grid-template-columns: repeat(var(--zl-cols), minmax(0, 1fr));
+	block-size: 18px;
+	margin-block-start: 2px;
+}
+
+.zl-axis a {
+	position: relative;
+	display: block;
+	block-size: 100%;
+	text-decoration: none;
+}
+
+/* fine tick per year, taller at a decade, no rule along the axis */
+.zl-axis a::before {
+	content: "";
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 1px;
+	block-size: 3px;
+	background: var(--zl-line);
+}
+
+.zl-axis a.decade::before {
+	block-size: 6px;
+	background: var(--zl-muted);
+}
+
+.zl-axis a .zl-lbl {
+	position: absolute;
+	inset-inline: -1.4rem;
+	inset-block-start: 7px;
+	text-align: center;
+	font-size: 10px;
+	line-height: 11px;
+	color: var(--zl-muted);
+}
+
+.zl-axis a.current::before {
+	background: var(--zl-wine);
+}
+
+.zl-cursor,
+.zl-brush {
+	position: absolute;
+	inset-block: 0;
+	pointer-events: none;
+}
+
+.zl-cursor {
+	inline-size: 2px;
+	background: var(--zl-wine);
+	transition: inset-inline-start .2s ease;
+}
+
+.zl-brush {
+	background: rgba(99, 26, 52, .14);
+}
+
+/* year and per-lane numbers appear at the pointer or at the focused year only */
+.zl-tip {
+	position: absolute;
+	z-index: 15;
+	inset-block-start: -1.6rem;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	border: 1px solid var(--zl-line);
+	border-radius: 4px;
+	background: #fff;
+	padding-inline: .4rem;
+	font-size: 11px;
+	line-height: 16px;
+	color: var(--zl-ink);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+/* Liste */
+
+.zl-year {
+	margin-block: 1.6rem .3rem;
+	border-block-end: 1px solid var(--zl-line);
+	/* 24px is where the 3:1 gold counts as large text */
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.zl-year .zl-year-count {
+	margin-inline-start: .6rem;
+	font-size: 13px;
+	color: var(--zl-muted);
+}
+
+/* no rule between entries, the colour mark and the spacing carry the grouping */
+.zl-ev {
+	display: grid;
+	grid-template-columns: 11rem 1fr;
+	gap: 0 1rem;
+	border-inline-start: 4px solid var(--zl-lane);
+	padding: .35rem 0 .35rem .6rem;
+	margin-block-end: .35rem;
+}
+
+.zl-ev .zl-where {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--zl-wine);
+}
+
+.zl-ev .zl-when {
+	font-size: 13px;
+	line-height: 18px;
+	color: var(--zl-muted);
+}
+
+.zl-ev .zl-lane-icon {
+	margin-inline-end: .4rem;
+	color: var(--zl-lane);
+}
+
+.zl-ev .zl-text {
+	font-size: 15px;
+	line-height: 22px;
+}
+
+.zl-ev .zl-text a {
+	color: var(--zl-wine);
+}
+
+.zl-ev .zl-meta {
+	font-size: 12px;
+	color: var(--zl-muted);
+}
+
+.zl-ev .zl-meta a {
+	color: var(--zl-gold-text);
+}
+
+.zl-mark {
+	display: inline-block;
+	margin-inline-end: .4rem;
+	border: 1px solid var(--zl-line);
+	border-radius: 3px;
+	padding-inline: .3rem;
+	font-size: 11px;
+	color: var(--zl-muted);
+}
+
+.zl-fac {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-inline-size: 24px;
+	min-block-size: 24px;
+	color: var(--zl-gold-text);
+}
+
+.zl-placeholder {
+	display: block;
+}
+
+.zl-empty {
+	padding-block: 2rem;
+	color: var(--zl-muted);
+	text-align: center;
+}
+
+body.zl-compact .zl-ev:not(.zl-lane-biography) {
+	padding-block: .1rem;
+	margin-block-end: .15rem;
+}
+
+body.zl-compact .zl-ev:not(.zl-lane-biography) .zl-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+body.zl-compact .zl-ev:not(.zl-lane-biography) .zl-meta {
+	display: inline;
+	margin-inline-start: .5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.zl-cursor {
+		transition: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.zl-filter-toggle {
+		display: inline-flex;
+	}
+
+	.zl-head.zl-collapsed .zl-controls {
+		display: none;
+	}
+
+	.zl-controls {
+		justify-content: flex-start;
+	}
+
+	.zl-ev {
+		grid-template-columns: 1fr;
+	}
+
+	.zl-axis a .zl-lbl {
+		display: none;
+	}
+
+	.zl-axis a.decade .zl-lbl {
+		display: block;
+	}
+}

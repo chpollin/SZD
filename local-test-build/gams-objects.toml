@@ -1,0 +1,129 @@
+# Expected Cirilo references of the SZD objects, read by check-instance.py, which checks them
+# read-only against staging or production and writes an operator checklist.
+# Source: knowledge/deployment-architecture.md#cirilo-references. A string names a file in
+# the delivered folder and is resolved against the base of the instance.
+project = "szd"
+# Data repository, relative to the repository root; SZD_DATA_ROOT overrides it.
+data_root = "."
+
+[instances.staging]
+base = "https://gams-staging.uni-graz.at/gamsdev/pollin/szd/gams-www/"
+
+[instances.production]
+base = "https://gams.uni-graz.at/szd/"
+
+# What a newly created object gets from its content model instead of the project stylesheet.
+generic = ["gams.uni-graz.at/styles/teiP5/html/tei.xsl"]
+
+# Content model of every SZD TEI object; a new object inherits its TORDF.
+[[objects]]
+pids = ["cirilo:TEI.szd"]
+TORDF = "szd-TORDF.xsl"
+
+[[objects]]
+pids = ["o:szd.werke", "o:szd.lebensdokumente", "o:szd.nli"]
+STYLESHEET = "szd-Werke.xsl"
+TORDF = "szd-TORDF.xsl"
+
+# The four indexes render from szd-Index.xsl. The include files szd-Personenliste.xsl,
+# szd-Standortliste.xsl and szd-Organisationen.xsl go once every reference points here.
+[[objects]]
+pids = ["o:szd.werkindex", "o:szd.personen", "o:szd.standorte", "o:szd.organisation"]
+STYLESHEET = "szd-Index.xsl"
+TORDF = "szd-TORDF.xsl"
+
+[[objects]]
+pids = ["o:szd.bibliothek"]
+STYLESHEET = "szd-Bibliothek.xsl"
+TORDF = "szd-TORDF.xsl"
+
+[[objects]]
+pids = ["o:szd.autographen"]
+STYLESHEET = "szd-Autographen.xsl"
+TORDF = "szd-TORDF.xsl"
+
+# SKOS, no TORDF datastream.
+[[objects]]
+pids = ["o:szd.glossar"]
+STYLESHEET = "szd-Glossar.xsl"
+
+[[objects]]
+pids = ["o:szd.lebenskalender"]
+STYLESHEET = "szd-Lebenskalender.xsl"
+TORDF = "szd-TORDF.xsl"
+
+[[objects]]
+pids = ["o:szd.korrespondenzen"]
+STYLESHEET = "szd-Korrespondenzen.xsl"
+TORDF = "szd-TORDF.xsl"
+
+# Every Personen-Konvolut, PID = "o:" + file stem in the data repository, which lies next to this
+# repository under GitHub or at SZD_DATA_ROOT, as for the harness.
+[[objects]]
+pids_from = { root_env = "SZD_DATA_ROOT", root = ".", dir = "data/Correspondence/konvolute", glob = "szd.korrespondenzen.*.xml", prefix = "o:" }
+# Production objects whose files name no PID of their own; the staging package leaves them out.
+exclude = ["o:szd.korrespondenzen.judischer-jugendverein", "o:szd.korrespondenzen.judischer-jugendverein-dusseldorf", "o:szd.korrespondenzen.rascher-und-cie"]
+STYLESHEET = "szd-Konvolut.xsl"
+TORDF = { inherit = "cirilo:TEI.szd" }
+
+[[objects]]
+pids = ["o:szd.aufsatzablage"]
+STYLESHEET = "szd-Essays.xsl"
+TORDF = "szd-TORDF.xsl"
+
+[[objects]]
+pids = ["o:szd.thema.1", "o:szd.thema.2", "o:szd.thema.3", "o:szd.thema.4", "o:szd.thema.5", "o:szd.thema.6", "o:szd.thema.7", "o:szd.thema.8"]
+STYLESHEET = "szd-Thema.xsl"
+TORDF = "szd-TORDF.xsl"
+
+# Prototype of the letter edition; szd-TORDF.xsl has no branch for it, so TORDF is not checked.
+[[objects]]
+pids = ["o:szd.SZDBRI.1"]
+STYLESHEET = "szd-Briefedition.xsl"
+
+[[objects]]
+pids = ["o:szd.ontology"]
+STYLESHEET = { gams = "cirilo:Backbone/datastreams/ONTOLOGYtoHTML" }
+
+[[objects]]
+pids = ["context:szd"]
+STYLESHEET = "szd-context.xsl"
+
+[[objects]]
+pids = ["context:szd.facsimiles", "context:szd.facsimiles.korrespondenzen", "context:szd.facsimiles.lebensdokumente", "context:szd.facsimiles.aufsatz"]
+STYLESHEET = "szd-Facsimiles.xsl"
+
+[[objects]]
+pids = ["query:szd.person_search"]
+STYLESHEET = "szd-Suche.xsl"
+QUERY = { template = "../gams/query/person_search.sparql" }
+
+[[objects]]
+pids = ["query:szd.fulltext"]
+STYLESHEET = "szd-Suche.xsl"
+QUERY = { template = "../gams/query/fulltext_search.sparql" }
+
+[[objects]]
+pids = ["query:szd.category_search"]
+STYLESHEET = "szd-Suche.xsl"
+QUERY = { template = "../gams/query/category_search.sparql" }
+
+[[objects]]
+pids = ["query:szd.standort_search"]
+STYLESHEET = "szd-Suche.xsl"
+QUERY = { template = "../gams/query/standort_search.sparql" }
+
+[[objects]]
+pids = ["query:szd.work_search"]
+STYLESHEET = "szd-Suche.xsl"
+QUERY = { template = "../gams/query/work_search.sparql" }
+
+# Static datastreams of context:szd and their sources in the data repository, compared by
+# check-instance.py --data.
+[[datastreams]]
+pid = "context:szd"
+sources = { STARTSEITE = "webpage/STARTSEITE.xml", ABOUT = "webpage/ABOUT.xml", IMPRINT = "webpage/IMPRINT.xml", MISCELLANEOUS = "webpage/MISCELLANEOUS.xml" }
+
+[[datastreams]]
+pid = "o:szd.glossar"
+sources = { ONTOLOGY = "data/Glossary/szd-Glossary.xml" }

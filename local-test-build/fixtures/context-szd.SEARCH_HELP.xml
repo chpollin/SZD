@@ -1,0 +1,104 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Stefan Zweig Digital Suchhilfe</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>ZIM-ACDH, Universität Graz</publisher>
+        <date>2019</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl></bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p></p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="kws">
+          <desc>Default keyword scheme</desc>
+        </taxonomy>
+        <taxonomy xml:lang="de">
+          <category>
+            <catDesc>Hilfe für die Suche</catDesc>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date when="2019">2019</date>
+        <name type="place">Graz, Austria</name>
+      </creation>
+      <langUsage>
+        <language ident="de">German</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="main">
+        <div type="subsection" xml:lang="de">
+          <div>
+            <head>Einfache Suchkriterien</head>
+            <p>Groß-/Kleinschreibung spielt bei der Suche keine Rolle.</p>
+            <p>Es müssen mindestens 3 Zeichen in das Suchfeld eingegeben werden.</p>
+            <p>Werden mehrere Stichwörter eingegeben, sind diese mit Leerzeichen zu trennen. Alle
+            eingegeben Stichwörter werden (logisch) miteinander verknüpft.</p>
+            <p>Die im Folgenden beschriebenen Suchmöglichkeiten können miteinander kombiniert werden.
+            </p>
+          </div>
+          <div>
+            <head>Trunkierung</head>
+            <p>Es besteht die Möglichkeit der Trunkierung mit den Zeichen &quot;*&quot;.
+            Das Stern-Symbol dient als Platzhalter für eine beliebige Anzahl von
+            Zeichen. Dieses Symbole darf jedoch nicht am Wortanfang auftreten.</p>
+            <p>Beispiel: Stefan Z*</p>
+          </div>
+          <div>
+            <head>
+              <ref target="https://gams.uni-graz.at/o:szd.personen">Personensuche</ref>
+            </head>
+            <p>Ermöglicht eine semantische Suche nach Ressourcen, die mit der jeweiligen Person verknüpft sind.</p>
+          </div>
+          <div>
+            <head>
+              <ref target="https://gams.uni-graz.at/o:szd.standorte">Standortsuche</ref>
+            </head>
+            <p>Ermöglicht eine semantische Suche nach Ressourcen, die mit dem jeweiligen Standort verknüpft sind.</p>
+          </div>
+        </div>
+        <div type="subsection" xml:lang="en">
+          <div>
+            <head>Simple search criteria</head>
+            <p>The search is not case-sensitive.</p>
+            <p>At least 3 characters must be entered in the search field.</p>
+            <p>If several keywords are entered, they must be separated by spaces. All keywords are (logically) linked to each other. The order of the
+            Search results are based on the frequency of occurrence of the search terms in the document.</p>
+          </div>
+          <div>
+            <head>Truncation</head>
+            <p>There is a possibility of truncation with the characters. The star symbol serves as a placeholder for any number of
+            character. However, this symbols may not occur at the beginning of a word.</p>
+          </div>
+          <div>
+            <head>
+              <ref target="https://gams.uni-graz.at/o:szd.personen">Personen Search</ref>
+            </head>
+            <p>Enables a semantic search for resources associated with the person.</p>
+          </div>
+          <div>
+            <head>
+              <ref target="https://gams.uni-graz.at/o:szd.standorte">Location Search</ref>
+            </head>
+            <p>Enables a semantic search for resources associated with the location.</p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
