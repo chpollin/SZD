@@ -102,15 +102,31 @@ def _raw_byte(char: str) -> bytes:
         return char.encode("latin-1")
 
 
+def _foreign_letter(char: str) -> bool:
+    return unicodedata.category(char).startswith("L") and not unicodedata.name(char, "").startswith("LATIN ")
+
+
 def mojibake(text: str) -> list[str]:
-    """The characters a text carries double-encoded, each decoded back from its sequence."""
-    found = []
+    """The characters a text carries double-encoded, each decoded back from its sequence.
+
+    A word-final letter followed by a typographic quote is also a valid two-byte sequence:
+    "Anschluß”" reads as DF 94, the NKo letter U+07D4, and "Kompaß’" as U+07D2. A double-encoded
+    word of a non-Latin script leaves a run of adjacent sequences, so a non-Latin letter counts
+    only when its sequence touches another one. A single non-Latin letter double-encoded between
+    Latin words goes undetected, which the corpus does not show.
+    """
+    decoded = []
     for match in MOJIBAKE.finditer(text):
         try:
-            found.append(b"".join(_raw_byte(c) for c in match.group()).decode("utf-8"))
+            decoded.append((match.start(), match.end(), b"".join(_raw_byte(c) for c in match.group()).decode("utf-8")))
         except (UnicodeDecodeError, UnicodeEncodeError):
             continue
-    return found
+    starts = {start for start, _, _ in decoded}
+    ends = {end for _, end, _ in decoded}
+    return [
+        char for start, end, char in decoded
+        if not _foreign_letter(char) or start in ends or end in starts
+    ]
 
 
 def valid_date(value: str) -> bool:

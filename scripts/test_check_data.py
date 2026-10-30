@@ -32,6 +32,10 @@ def test_every_finding_belongs_to_a_declared_check(corpus_report):
         ("H\u00c3\u00b4tel", ["\u00f4"]),
         ("â\u0080\u0099", ["\u2019"]),
         ("Österreich, Hôtel, Ã la", []),  # correct text; "Ã " is no UTF-8 sequence
+        # SZDKLA src-wiki-1973 and src-wiki-313: "ß" before a closing quote reads as an NKo letter
+        ("mit dem “Anschluß” Österreichs", []),
+        ("zum Lesebuch ‘Kompaß’]", []),
+        ("×©×œ×•×", ["ש", "ל", "ו"]),  # a double-encoded Hebrew word stays a run of sequences
     ],
 )
 def test_mojibake(text, chars):
