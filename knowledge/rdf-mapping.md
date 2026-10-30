@@ -9,7 +9,7 @@ method:
 status: complete
 language: en
 created: 2026-06-15
-updated: 2026-10-28
+updated: 2026-10-30
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 related: [data, search-architecture, testing, deployment-architecture]
@@ -57,6 +57,7 @@ Every main resource has the URI `https://gams.uni-graz.at/` + PID + `#` + `@xml:
 | `szd:Organisation` | `o:szd.organisation` | `listOrg/org` |
 | `szd:Collection` | `o:szd.thema.<n>` | theme object |
 | `szd:WorkIndexEntry` | `o:szd.werkindex` | `listBibl/bibl` |
+| `szd:Manifestation` | `o:szd.klawiter` | `text/body/listBibl/biblStruct` |
 
 Value objects with their own URI (base URI plus a suffix) are `szd:Extent` (`EX`), `szd:PublicationStmt` (`PU`), `szd:ProvenanceCharacteristic` (`PC`), `szd:OriginalShelfmark` (`OS`), `szd:Binding` (a shared resource through `for-each-group`), the enclosure (`EN`, written as `szd:Enclosur`), `szd:pubDateStmt` and `szd:creationStmt`.
 
@@ -119,6 +120,22 @@ The template `Collection` maps every object `o:szd.thema.<n>` to one `szd:Collec
 | `gams:isMemberOfCollection` | fixed | `https://gams.uni-graz.at/context:szd` |
 
 `szd:connectedWithPerson` is the bridge to the person search, which queries `?re ?hasrole <…/o:szd.personen#SZDPER.n>`. A new theme page is found only after its graph has been added as a `FROM` line to the person and full-text queries, see [search-architecture](search-architecture.md#query-objects).
+
+## Klawiter bibliography
+
+The template `Klawiter` maps every `biblStruct` of `o:szd.klawiter` to one `szd:Manifestation` with the URI `https://gams.uni-graz.at/o:szd.klawiter#SZDKLA.<page>.<n>`. The bibliography describes publications, not items SZD holds, so the class follows the ontology, which names Manifestation as the bridge to the Klawiter entries, and the holding vocabulary (`szd:location`, `szd:signature`, provenance, `szd:PublicationStmt`) stays out. The TEI profile is described in the repository of the bibliography (https://github.com/chpollin/klawiter-rescue, `knowledge/tei-profile.md`).
+
+| Property | Source | Remark |
+|---|---|---|
+| `szd:title` | `monogr/title` | one literal without language tag, because the titles are transliterated; an empty title gives no triple |
+| `szd:translator`, `szd:editor`, `szd:illustrator`, `szd:partyInvolved` | `monogr/respStmt/persName[@role]`, `contributor` to `szd:partyInvolved` | a blank node with `szd:name`, the name as the source gives it |
+| `szd:dateOfPublication` | `imprint/date/@when` | `xsd:gYear` when castable, a date without `@when` gives no triple |
+| `szd:pubPlace`, `szd:publisher` | `imprint/pubPlace`, `imprint/publisher` | literals |
+| `szd:language` | `monogr/textLang/@mainLang` | ISO 639-1 mapped to the Library of Congress ISO 639-2 URI through the language catalogue of `context:szd`; a code without ISO 639-2 form (`sh`) keeps the language name of `textLang` as a literal |
+| `gams:textualContent` | `FulltextSearchData` | all text of the `biblStruct` and its identifier |
+| `gams:isMemberOfCollection` | fixed | `https://gams.uni-graz.at/o:szd.klawiter` |
+
+No triple asserts an identity. No authority link of the bibliography is confirmed, so places and publishers stay literals instead of the object properties `szd:hasPublicationPlace` and `szd:hasPublisher` of the ontology, and a contributor is a blank node instead of a person URI, which also avoids a new identifier scheme. The person search therefore never finds a Klawiter entry, while the full-text query shows an editor through `szd:name`. Producer (`@resp`), passage (`@source`) and statement state (`@ana`) of every value stay in the TEI, because the RDF has no property for them and `szd:certainty` stands for TEI `@cert`, which the bibliography does not use. Every value reaches the RDF whatever its state, as the page shows it, after the operator decision of 2026-10-30 that the page in SZD shows no provenance. The identifiers `SZDKLA.<page>.<n>` are provisional until the identifier scheme of the bibliography is decided, so the object goes to staging with them and to production only after that decision.
 
 ## Search basis
 

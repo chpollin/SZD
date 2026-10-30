@@ -21,7 +21,7 @@ FROM <o:szd.lebensdokumente>
 FROM <o:szd.korrespondenzen>
 ```
 
-A new collection or theme page is found only after its graph has been added to the queries that should read it.
+A new collection or theme page is found only after its graph has been added to the queries that should read it. The Klawiter bibliography (`FROM <o:szd.klawiter>`) is read by the full-text query only, because its RDF holds none of the URIs the other queries bind.
 
 ## Marking the language of a result
 

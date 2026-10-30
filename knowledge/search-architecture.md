@@ -9,7 +9,7 @@ method:
 status: complete
 language: en
 created: 2026-10-09
-updated: 2026-10-28
+updated: 2026-10-30
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 related: [rdf-mapping, rendering-architecture, deployment-architecture, specification]
@@ -34,13 +34,13 @@ All five queries read the graphs `o:szd.bibliothek`, `o:szd.autographen`, `o:szd
 
 | Query object | Template | Parameter `$1` | Binding | Further graphs |
 |---|---|---|---|---|
-| `query:szd.fulltext` | [fulltext_search.sparql](../gams/query/fulltext_search.sparql) | string | `?text bds:search "$1"` on `gams:textualContent`, with `bds:` = `http://www.bigdata.com/rdf/search#` | `o:szd.aufsatzablage`, `o:szd.organisation`, `o:szd.thema.1` to `o:szd.thema.8` |
+| `query:szd.fulltext` | [fulltext_search.sparql](../gams/query/fulltext_search.sparql) | string | `?text bds:search "$1"` on `gams:textualContent`, with `bds:` = `http://www.bigdata.com/rdf/search#` | `o:szd.aufsatzablage`, `o:szd.klawiter`, `o:szd.organisation`, `o:szd.thema.1` to `o:szd.thema.8` |
 | `query:szd.person_search` | [person_search.sparql](../gams/query/person_search.sparql) | URI `…/o:szd.personen#SZDPER.n` or `…/o:szd.organisation#SZDORG.n` | `?re ?hasrole $1`, any predicate, name through `szd:surname` or `szd:name` | `o:szd.aufsatzablage`, `o:szd.organisation`, `o:szd.thema.1` to `o:szd.thema.8` |
 | `query:szd.standort_search` | [standort_search.sparql](../gams/query/standort_search.sparql) | URI `…/o:szd.standorte#SZDSTA.n` | `?re szd:location $1` | `o:szd.aufsatzablage`, `o:szd.organisation`, `o:szd.standorte` |
 | `query:szd.category_search` | [category_search.sparql](../gams/query/category_search.sparql) | glossary URI `…/o:szd.glossar#…` | `?re szd:glossar $1` or through `szd:provenanceCharacteristic` | `o:szd.organisation` |
 | `query:szd.work_search` | [work_search.sparql](../gams/query/work_search.sparql) | URI `…/o:szd.werkindex#SZDWRK.n` | `?re szd:relationToWork $1` | `o:szd.aufsatzablage` |
 
-The files in [gams/query/](../gams/query/README.md) of this repository, formerly `query/` of gams-www, are the templates of the `QUERY` datastreams. GAMS executes the version the operator has copied into Cirilo, and every query object references `szd-Suche.xsl` as its stylesheet, see [deployment-architecture](deployment-architecture.md#query-datastreams). A new collection or theme page is found only after a `FROM` line for its graph has been added to every query that should read it.
+The files in [gams/query/](../gams/query/README.md) of this repository, formerly `query/` of gams-www, are the templates of the `QUERY` datastreams. GAMS executes the version the operator has copied into Cirilo, and every query object references `szd-Suche.xsl` as its stylesheet, see [deployment-architecture](deployment-architecture.md#query-datastreams). A new collection or theme page is found only after a `FROM` line for its graph has been added to every query that should read it. The Klawiter bibliography `o:szd.klawiter` is read by the full-text query only, because its RDF carries no person, repository, glossary or work index URI that the other four queries bind ([rdf-mapping](rdf-mapping.md#klawiter-bibliography)).
 
 ## Renderer
 
@@ -53,6 +53,8 @@ Each object gets one card, even when the query returns it in several rows, one p
 The filter buttons are visibility switches in the browser, radio buttons with the inline function `filter()`, and trigger no new query. On the server only the language tag `$2` narrows the result.
 
 Hits with a URI under `o:szd.organisation#` stand in the block "Organisationen" (`id="organisation_search"`) after the person block, one entry per organisation with the name from `s:s`, linked relatively to its entry in the organisation index. Before 2026-10-21 the renderer had no row for this collection and dropped them.
+
+Hits with a URI under `o:szd.klawiter#` form the result list "Klawiter-Bibliographie" or "Klawiter Bibliography" (`id="klawiter_search"`). A card of this list carries no "o. V." or "n. a." label when no editor is bound, because the bibliography records no author, and no row for the current location, because a publication Klawiter describes is not held in SZD. Its catalogue link leads to the anchor of the entry on the page of the bibliography.
 
 Hits with a URI under `o:szd.thema.` stand in the block "Themen" (i18n key `subjects`, `id="thema_search"`) before the person block. Every theme page appears once with its title, sorted alphabetically, and links relatively to `/o:szd.thema.<n>/sdef:TEI/get?locale=<de|en>`, so that staging points to staging and not to the production URI from the RDF. Because the URI of a theme page has no fragment, the filter bar groups hits without `#` by the full URI.
 

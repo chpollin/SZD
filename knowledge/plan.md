@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-09-24
-updated: 2026-10-28
+updated: 2026-10-30
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 related: [specification, journal, governance, deployment-architecture]
@@ -35,6 +35,13 @@ On staging after the ingest:
 - Delete `o:szd.375`, `o:szd.263`, the two sister Konvolute, `o:szd.publikation` and `o:szd.korrespondenzen.ferencak-mirko-m.`, and carry signature and date into `o:szd.2939` (decisions of 2026-09-22 and 2026-09-23).
 - Re-ingest the prepared book sources of `scripts/iiif_structure_labels/prepared/` into `o:szd.174`, `o:szd.67`, `o:szd.939`, `o:szd.2935`, `o:szd.2409` and `o:szd.2291`, then check that each manifest is valid JSON.
 - The fix of the autograph RDF in `szd-TORDF.xsl` is on the mirror. `o:szd.autographen` still points its `TORDF` to the dead path `trunk/www` and gets its corrected RDF with the renewed ingest of `2-bestaende` once the reference is set.
+
+For the Klawiter bibliography `o:szd.klawiter` (`data/Klawiter/SZDKLA.xml`), after push and synchronisation of the gamsdev mirror with `szd-klawiter.xsl`, the `Klawiter` branch of `szd-TORDF.xsl` and the row in `szd-Suche.xsl`:
+
+- Ingest the TEI file alone into a new object under `cirilo:TEI.szd`. The staging package builder does not list it yet.
+- Set `STYLESHEET` to `https://gams-staging.uni-graz.at/gamsdev/pollin/szd/gams-www/szd-klawiter.xsl` and check that `TORDF`, inherited from the content model, names the `szd-TORDF.xsl` of the mirror, both ending directly with `.xsl`. If a reference had to be corrected, ingest again, and check that the `RDF` datastream holds `szd:Manifestation` resources instead of the text "No data source define!".
+- Copy `gams/query/fulltext_search.sparql` with the line `FROM <o:szd.klawiter>` into the datastream `QUERY` of `query:szd.fulltext`.
+- Production follows only after the identifier scheme of the bibliography is decided ([rdf-mapping](rdf-mapping.md#klawiter-bibliography)), with the production base `https://gams.uni-graz.at/szd/` for both references.
 
 Staging is not reachable for development since 2026-10-13, as the presentation side records.
 
