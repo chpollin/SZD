@@ -73,3 +73,8 @@ reports/checkup-*/
 
 # Erzeugte Ableitungen, die ihr eigener Generator reproduziert
 data/derived/
+
+# Klawiter-Druckbände: Rechte ungeklärt, nicht veröffentlichen (lokale Kopie in klawiter-rescue/data/print/)
+klawiter/*.pdf
+# Interne Rundmail-Entwürfe
+mail.md
